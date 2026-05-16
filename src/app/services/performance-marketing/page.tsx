@@ -15,17 +15,19 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(PERF_PAGE);
 
+const performanceMarketingCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Request a Free Performance Marketing Audit",
+  description:
+    "A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
+  title: "Stop guessing. Start knowing.",
+};
+
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={PERF_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Request a Free Performance Marketing Audit",
-        description:
-          "A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
-        title: "Stop guessing. Start knowing.",
-      }}
+      ctaBanner={performanceMarketingCtaBanner}
       faq={PERF_FAQ}
       hero={PERF_HERO}
       page={PERF_PAGE}

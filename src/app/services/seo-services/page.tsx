@@ -16,16 +16,24 @@ import { PERF_PAGE } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 
+const seoServicesCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Get a Free SEO Audit",
+  description: "Will they find you — or your competitor?",
+  title: "Your buyers are searching.",
+};
+
+const seoServicesRelatedServices = [
+  { href: "/services/paid-advertising", title: "Paid Advertising" },
+  { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
+  { href: "/services/performance-marketing", title: "Performance Marketing" },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={SEO_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Get a Free SEO Audit",
-        description: "Will they find you — or your competitor?",
-        title: "Your buyers are searching.",
-      }}
+      ctaBanner={seoServicesCtaBanner}
       deliverables={SEO_DELIVERABLES}
       faq={SEO_FAQ}
       hero={SEO_HERO}
@@ -33,11 +41,7 @@ const Page = () => {
       parentPage={PERF_PAGE}
       process={SEO_PROCESS}
       proofBar={SEO_PROOF_BAR}
-      relatedServices={[
-        { href: "/services/paid-advertising", title: "Paid Advertising" },
-        { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
-        { href: "/services/performance-marketing", title: "Performance Marketing" },
-      ]}
+      relatedServices={seoServicesRelatedServices}
       why={SEO_WHY}
     />
   );

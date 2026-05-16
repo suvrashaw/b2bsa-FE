@@ -15,36 +15,40 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(MODULAR_BOOTHS_PAGE);
 
+const modularPortableBoothsCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Get a Modular Booth Quote",
+  description: "",
+  title: "One booth system. Every event. Any market.",
+};
+
+const modularPortableBoothsRelatedServices = [
+  {
+    href: "/services/global-event-solutions/event-booth-rental",
+    title: "Event Booth Rental",
+  },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-builder",
+    title: "Trade Show Booth Builder",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Get a Modular Booth Quote",
-        description: "",
-        title: "One booth system. Every event. Any market.",
-      }}
+      ctaBanner={modularPortableBoothsCtaBanner}
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
       pricing={MODULAR_BOOTHS_FORMATS}
       proofBar={MODULAR_BOOTHS_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/global-event-solutions/event-booth-rental",
-          title: "Event Booth Rental",
-        },
-        {
-          href: "/services/global-event-solutions/trade-show-booth-design",
-          title: "Trade Show Booth Design",
-        },
-        {
-          href: "/services/global-event-solutions/trade-show-booth-builder",
-          title: "Trade Show Booth Builder",
-        },
-      ]}
+      relatedServices={modularPortableBoothsRelatedServices}
       why={MODULAR_BOOTHS_WHY}
     />
   );

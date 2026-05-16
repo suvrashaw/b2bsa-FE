@@ -15,36 +15,40 @@ import { MEDIA_PAGE } from "@/content/services/media-production";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE);
 
+const corporateVideoProductionCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Start Your Corporate Video Project",
+  description: "With the production quality enterprise buyers expect.",
+  title: "When your offering is complex, corporate video makes it clear.",
+};
+
+const corporateVideoProductionRelatedServices = [
+  {
+    href: "/services/media-production/event-video-production",
+    title: "Event Video Production",
+  },
+  {
+    href: "/services/media-production/video-editing-services",
+    title: "Video Editing Services",
+  },
+  {
+    href: "/services/media-production/live-streaming-services",
+    title: "Live Streaming Services",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Start Your Corporate Video Project",
-        description: "With the production quality enterprise buyers expect.",
-        title: "When your offering is complex, corporate video makes it clear.",
-      }}
+      ctaBanner={corporateVideoProductionCtaBanner}
       deliverables={CORPORATE_VIDEO_DELIVERABLES}
       faq={CORPORATE_VIDEO_FAQ}
       hero={CORPORATE_VIDEO_HERO}
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       proofBar={CORPORATE_VIDEO_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/media-production/event-video-production",
-          title: "Event Video Production",
-        },
-        {
-          href: "/services/media-production/video-editing-services",
-          title: "Video Editing Services",
-        },
-        {
-          href: "/services/media-production/live-streaming-services",
-          title: "Live Streaming Services",
-        },
-      ]}
+      relatedServices={corporateVideoProductionRelatedServices}
       why={CORPORATE_VIDEO_WHY}
     />
   );

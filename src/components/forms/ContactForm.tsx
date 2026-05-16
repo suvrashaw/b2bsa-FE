@@ -23,7 +23,7 @@ export function ContactForm({ className, form }: ContactFormProps) {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 600));
+    await new Promise((resolve) => setTimeout(resolve, 600));
     setLoading(false);
     router.push("/thank-you");
   }
@@ -49,7 +49,7 @@ export function ContactForm({ className, form }: ContactFormProps) {
           )}
         </div>
 
-        {(form.companyLabel || form.phoneLabel) && (
+        {(form.companyLabel || form.jobTitleLabel) && (
           <div className="grid grid-cols-2 gap-6">
             {form.companyLabel && (
               <TextInput
@@ -59,24 +59,56 @@ export function ContactForm({ className, form }: ContactFormProps) {
                 type="text"
               />
             )}
-            {form.phoneLabel && (
+            {form.jobTitleLabel && (
               <TextInput
-                id="contact-phone"
-                label={form.phoneLabel}
-                placeholder={form.phonePlaceholder}
-                type="tel"
+                id="contact-job-title"
+                label={form.jobTitleLabel}
+                placeholder={form.jobTitlePlaceholder}
+                type="text"
               />
             )}
           </div>
         )}
 
-        <TextInput
-          id="contact-email"
-          label={form.emailLabel}
-          placeholder={form.emailPlaceholder}
-          required
-          type="email"
-        />
+        <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-2" : "grid-cols-1"}`}>
+          <TextInput
+            id="contact-email"
+            label={form.emailLabel}
+            placeholder={form.emailPlaceholder}
+            required
+            type="email"
+          />
+
+          {form.phoneLabel && (
+            <TextInput
+              id="contact-phone"
+              label={form.phoneLabel}
+              placeholder={form.phonePlaceholder}
+              type="tel"
+            />
+          )}
+        </div>
+
+        {(form.countryLabel || form.timelineLabel) && (
+          <div className="grid grid-cols-2 gap-6">
+            {form.countryLabel && (
+              <TextInput
+                id="contact-country"
+                label={form.countryLabel}
+                placeholder={form.countryPlaceholder}
+                type="text"
+              />
+            )}
+            {form.timelineLabel && (
+              <TextInput
+                id="contact-timeline"
+                label={form.timelineLabel}
+                placeholder={form.timelinePlaceholder}
+                type="text"
+              />
+            )}
+          </div>
+        )}
 
         {form.serviceLabel && form.serviceOptions && (
           <SelectInput
@@ -118,6 +150,8 @@ export function ContactForm({ className, form }: ContactFormProps) {
             </label>
           </div>
         )}
+
+        {form.trustNote && <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>}
 
         <Button
           className="flex w-full items-center justify-center py-4 text-lg"

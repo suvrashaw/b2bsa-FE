@@ -30,17 +30,25 @@ export interface ServiceHubProps {
   faq: FAQProps;
   hero: {
     description: string;
+    primaryCta?: {
+      href: string;
+      label: string;
+    };
+    secondaryCta?: {
+      href: string;
+      label: string;
+    };
     title: string;
   };
   page: MarketingPageIdentity;
   process?: {
     heading?: string;
-    phases: { description: string; title: string; }[];
-    steps?: { description: string; title: string; }[];
+    phases: { description: string; title: string }[];
+    steps?: { description: string; title: string }[];
     title?: string;
   };
   proofBar?: string[];
-  relatedServices?: { href: string; title: string; }[];
+  relatedServices?: { href: string; title: string }[];
   services: OurServicesProps;
   stats?: {
     items: { label: string; value: string }[];
@@ -49,7 +57,37 @@ export interface ServiceHubProps {
   why: WhyChooseUsProps;
 }
 
-export function ServiceHub({
+const primaryServiceHeroCta = { href: "/contact", label: "Book a Strategy Session" };
+const secondaryServiceHeroCta = { href: "/case-studies", label: "View Event Portfolio" };
+const serviceHeroCtasByPath: Record<
+  string,
+  {
+    primaryCta: { href: string; label: string };
+    secondaryCta?: { href: string; label: string };
+  }
+> = {
+  "/services/global-event-solutions": {
+    primaryCta: { href: "/contact", label: "Book a Strategy Session" },
+    secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
+  },
+  "/services/market-research": {
+    primaryCta: { href: "/contact", label: "Request a Research Consultation" },
+    secondaryCta: { href: "/contact", label: "Download a Sample Report" },
+  },
+  "/services/media-production": {
+    primaryCta: { href: "/contact", label: "Start Your Media Project" },
+  },
+  "/services/performance-marketing": {
+    primaryCta: { href: "/contact", label: "Request a Performance Marketing Audit" },
+    secondaryCta: { href: "/contact", label: "Book a Free Consultation" },
+  },
+  "/services/sales-qualified-lead-generation": {
+    primaryCta: { href: "/contact", label: "Request a SQL Strategy Session" },
+    secondaryCta: { href: "/contact", label: "Build Your SQL Program" },
+  },
+};
+
+export const ServiceHub = ({
   caseStudies,
   ctaBanner,
   faq,
@@ -61,13 +99,14 @@ export function ServiceHub({
   services,
   stats,
   why,
-}: ServiceHubProps) {
+}: ServiceHubProps) => {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
   const serviceJsonLd = buildServiceJsonLd({
     description: page.seo.description,
     name: page.pageName,
     url: page.seo.canonicalPath,
   });
+  const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -77,8 +116,10 @@ export function ServiceHub({
 
       <ServiceHero
         description={hero.description}
-        primaryCta={{ href: "/contact", label: "Book a Strategy Session" }}
-        secondaryCta={{ href: "/case-studies", label: "View Event Portfolio" }}
+        primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
+        secondaryCta={
+          hero.secondaryCta ?? (heroCtas ? heroCtas.secondaryCta : secondaryServiceHeroCta)
+        }
         title={hero.title}
       />
 
@@ -95,7 +136,7 @@ export function ServiceHub({
         />
       )}
 
-      {caseStudies && <CaseStudies {...caseStudies} />}
+      {caseStudies && <CaseStudies heading="Real Events. Real Results." {...caseStudies} />}
 
       {stats && <WhoWeAre items={stats.items} title={stats.title} />}
 
@@ -106,11 +147,18 @@ export function ServiceHub({
       <CTABanner
         ctaHref={ctaBanner?.ctaHref ?? "/contact"}
         ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
-        description={ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."}
+        description={
+          ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+        }
         title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
       />
 
       <Footer />
     </main>
   );
-}
+};
+
+const normalizePath = (path: string) => {
+  if (path === "/") return "/";
+  return path.replace(/\/$/, "");
+};

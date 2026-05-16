@@ -15,16 +15,18 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(MEDIA_PAGE);
 
+const mediaCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Start Your Media Project",
+  description: "Build video assets your team can use for months.",
+  title: "Content should keep working long after the campaign ends.",
+};
+
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={MEDIA_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Start Your Media Project",
-        description: "Build video assets your team can use for months.",
-        title: "Content should keep working long after the campaign ends.",
-      }}
+      ctaBanner={mediaCtaBanner}
       faq={MEDIA_FAQ}
       hero={MEDIA_HERO}
       page={MEDIA_PAGE}

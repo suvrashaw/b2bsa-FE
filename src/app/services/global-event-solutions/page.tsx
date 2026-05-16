@@ -15,16 +15,18 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(GES_PAGE);
 
+const gesCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Book a Free Strategy Session",
+  description: "Let's build your event solutions strategy.",
+  title: "250+ events. $1.2B+ influenced. One team, one brief, one outcome.",
+};
+
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={GES_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Book a Free Strategy Session",
-        description: "Let's build your event solutions strategy.",
-        title: "250+ events. $1.2B+ influenced. One team, one brief, one outcome.",
-      }}
+      ctaBanner={gesCtaBanner}
       faq={GES_FAQ}
       hero={GES_HERO}
       page={GES_PAGE}

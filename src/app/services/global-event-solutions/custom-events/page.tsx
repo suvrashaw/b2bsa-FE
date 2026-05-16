@@ -15,17 +15,31 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(CUSTOM_EVENTS_PAGE);
 
+const customEventsCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Plan Your Custom Event",
+  description:
+    "The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
+  title: "Senior buyers protect their time.",
+};
+
+const customEventsRelatedServices = [
+  { href: "/services/global-event-solutions/industry-events", title: "Industry Events" },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/event-lead-generation",
+    title: "Event Lead Generation",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={CUSTOM_EVENTS_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Plan Your Custom Event",
-        description:
-          "The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
-        title: "Senior buyers protect their time.",
-      }}
+      ctaBanner={customEventsCtaBanner}
       deliverables={CUSTOM_EVENTS_DELIVERABLES}
       faq={CUSTOM_EVENTS_FAQ}
       hero={CUSTOM_EVENTS_HERO}
@@ -33,17 +47,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       pricing={CUSTOM_EVENTS_FORMATS}
       proofBar={CUSTOM_EVENTS_PROOF_BAR}
-      relatedServices={[
-        { href: "/services/global-event-solutions/industry-events", title: "Industry Events" },
-        {
-          href: "/services/global-event-solutions/trade-show-booth-design",
-          title: "Trade Show Booth Design",
-        },
-        {
-          href: "/services/global-event-solutions/event-lead-generation",
-          title: "Event Lead Generation",
-        },
-      ]}
+      relatedServices={customEventsRelatedServices}
     />
   );
 }

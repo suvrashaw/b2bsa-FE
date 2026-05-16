@@ -15,13 +15,11 @@ export interface ServiceNavGroup {
   pageId: PageId;
 }
 
-function navLink(name: string, pageId: PageId): NavLink {
-  return {
-    href: resolvePageHref(pageId),
-    name,
-    pageId,
-  };
-}
+const navLink = (name: string, pageId: PageId): NavLink => ({
+  href: resolvePageHref(pageId),
+  name,
+  pageId,
+});
 
 export const topNavigation: NavLink[] = [
   navLink("Home", "home"),
@@ -41,14 +39,12 @@ export const tradeShowLinks: NavLink[] = [
   navLink("Trade Shows in US", "events"),
 ];
 
-function serviceGroup(name: string, pageId: PageId, links: NavLink[]): ServiceNavGroup {
-  return {
-    href: resolvePageHref(pageId),
-    links,
-    name,
-    pageId,
-  };
-}
+const serviceGroup = (name: string, pageId: PageId, links: NavLink[]): ServiceNavGroup => ({
+  href: resolvePageHref(pageId),
+  links,
+  name,
+  pageId,
+});
 
 export const serviceNavigationGroups: ServiceNavGroup[] = [
   serviceGroup("Global Event Solutions", "service.global-event-solutions", [

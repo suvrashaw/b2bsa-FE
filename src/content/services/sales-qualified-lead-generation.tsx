@@ -45,8 +45,7 @@ export const SQL_SERVICES = {
     },
     {
       color: "bg-brand-blue",
-      description:
-        "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
+      description: "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
       icon: "Target",
       id: "icp",
       image:
@@ -62,15 +61,15 @@ export const SQL_WHY = {
   heading: "Why Most Lead Generation Programs Fail Sales Teams",
   reasons: [
     {
-      description: "Verified contact: name, direct email, LinkedIn URL, direct phone where available.",
+      description:
+        "Verified contact: name, direct email, LinkedIn URL, direct phone where available.",
       id: "bant",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       title: "Your Sales-Ready Prospect Profile Includes",
     },
     {
-      description:
-        "Clean profiles routed by territory, account owner, or product interest.",
+      description: "Clean profiles routed by territory, account owner, or product interest.",
       id: "crm",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -83,28 +82,23 @@ export const SQL_PROCESS = {
   heading: "Your Sales-Ready Prospect Profile Includes",
   phases: [
     {
-      description:
-        "Name, direct email, LinkedIn URL, direct phone where available.",
+      description: "Name, direct email, LinkedIn URL, direct phone where available.",
       title: "Verified contact",
     },
     {
-      description:
-        "Size, industry, revenue range, technology stack, and account tier.",
+      description: "Size, industry, revenue range, technology stack, and account tier.",
       title: "Company profile",
     },
     {
-      description:
-        "Confirmed job title, seniority, and buying committee relevance.",
+      description: "Confirmed job title, seniority, and buying committee relevance.",
       title: "Buying role",
     },
     {
-      description:
-        "BANT/CHAMP notes on need, urgency, and authority confirmed.",
+      description: "BANT/CHAMP notes on need, urgency, and authority confirmed.",
       title: "Qualification outcome",
     },
     {
-      description:
-        "Specific outreach based on profile and engagement context.",
+      description: "Specific outreach based on profile and engagement context.",
       title: "Recommended next action",
     },
   ],
@@ -118,24 +112,30 @@ export const SQL_FAQ = {
   faqs: [
     {
       answer:
-        "An MQL has shown interest; an SQL has been verified by a human specialist to have a legitimate business need and the authority to pursue a solution.",
-      id: "sql-vs-mql",
-      question: "What makes an SQL different from an MQL?",
+        "An MQL has engaged enough with marketing content to be considered a potential prospect. A Sales Qualified Lead has been evaluated against agreed criteria with the sales team and confirmed ready for a direct conversation. SQLs convert at significantly higher rates.",
+      id: "mql-vs-sql",
+      question: "What is the difference between MQL and SQL?",
     },
     {
       answer:
-        "We provide realistic forecasts based on your market size and ICP. We focus on 'Show-Rate' and 'Pipeline Value' rather than vanity lead numbers.",
-      id: "guarantees",
-      question: "Do you guarantee meeting volume?",
+        "LinkedIn outbound and paid campaigns: 4–6 weeks. Event-driven capture: immediately post-event. SEO-led inbound: 4–9 months.",
+      id: "timeline",
+      question: "How long before the first qualified leads arrive?",
     },
     {
       answer:
-        "While not strictly required, working directly inside your CRM allows for much tighter sales alignment and faster lead response times.",
-      id: "crm-access",
-      question: "Do you need access to our CRM?",
+        "BANT or CHAMP depending on your sales motion — agreed with your sales leadership before the program begins. Qualification happens in real conversations, not retrospectively from lists.",
+      id: "framework",
+      question: "What qualification framework do you use?",
+    },
+    {
+      answer:
+        "Yes — LinkedIn outbound, paid campaigns, content-led inbound, cold email, and event capture running concurrently for consistent qualified lead volume.",
+      id: "multi-channel",
+      question: "Can you run multi-channel SQL programs simultaneously?",
     },
   ],
-  heading: "SQL Generation FAQs",
+  heading: "Frequently Asked Questions",
 };
 
 export const SQL_PAGE = {

@@ -16,17 +16,25 @@ import { PERF_PAGE } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getMarketingPageMetadata(PAID_ADS_PAGE);
 
+const paidAdvertisingCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Request a Paid Media Audit",
+  description: "Fixing these is faster than increasing budget.",
+  title:
+    "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots.",
+};
+
+const paidAdvertisingRelatedServices = [
+  { href: "/services/seo-services", title: "SEO Services" },
+  { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
+  { href: "/services/performance-marketing", title: "Performance Marketing" },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={PAID_ADS_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Request a Paid Media Audit",
-        description: "Fixing these is faster than increasing budget.",
-        title:
-          "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots.",
-      }}
+      ctaBanner={paidAdvertisingCtaBanner}
       deliverables={PAID_ADS_DELIVERABLES}
       faq={PAID_ADS_FAQ}
       hero={PAID_ADS_HERO}
@@ -34,11 +42,7 @@ const Page = () => {
       parentPage={PERF_PAGE}
       process={PAID_ADS_PROCESS}
       proofBar={PAID_ADS_PROOF_BAR}
-      relatedServices={[
-        { href: "/services/seo-services", title: "SEO Services" },
-        { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
-        { href: "/services/performance-marketing", title: "Performance Marketing" },
-      ]}
+      relatedServices={paidAdvertisingRelatedServices}
       why={PAID_ADS_WHY}
     />
   );

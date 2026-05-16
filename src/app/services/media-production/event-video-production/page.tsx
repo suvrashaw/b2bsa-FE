@@ -16,16 +16,33 @@ import { MEDIA_PAGE } from "@/content/services/media-production";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_VIDEO_PAGE);
 
+const eventVideoProductionCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Book Event Video Production",
+  description: "Make your event work for months after the show closes.",
+  title: "Capture it properly.",
+};
+
+const eventVideoProductionRelatedServices = [
+  {
+    href: "/services/media-production/corporate-video-production",
+    title: "Corporate Video Production",
+  },
+  {
+    href: "/services/media-production/video-editing-services",
+    title: "Video Editing Services",
+  },
+  {
+    href: "/services/media-production/live-streaming-services",
+    title: "Live Streaming Services",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Book Event Video Production",
-        description: "Make your event work for months after the show closes.",
-        title: "Capture it properly.",
-      }}
+      ctaBanner={eventVideoProductionCtaBanner}
       deliverables={EVENT_VIDEO_DELIVERABLES}
       faq={EVENT_VIDEO_FAQ}
       hero={EVENT_VIDEO_HERO}
@@ -33,20 +50,7 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       pricingGuidance={EVENT_VIDEO_PRICING}
       proofBar={EVENT_VIDEO_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/media-production/corporate-video-production",
-          title: "Corporate Video Production",
-        },
-        {
-          href: "/services/media-production/video-editing-services",
-          title: "Video Editing Services",
-        },
-        {
-          href: "/services/media-production/live-streaming-services",
-          title: "Live Streaming Services",
-        },
-      ]}
+      relatedServices={eventVideoProductionRelatedServices}
       why={EVENT_VIDEO_WHY}
     />
   );

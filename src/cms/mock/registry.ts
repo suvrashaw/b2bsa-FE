@@ -1,19 +1,20 @@
-import { getPageByUrl } from "@/content/pages";
+import { HOME_HERO_CONTENT } from "@/content/home";
+import { getMarketingPageById, getMarketingPageByPath } from "@/content/marketing-pages";
 
 import type { CmsHeading, CmsPage, PageId, PageType } from "./types";
 
 import { pageRoutes } from "./routes";
 import { pageSeo } from "./seo";
 
-const serviceHubIds = new Set<PageId>([
-  "service.global-event-solutions",
-  "service.market-research",
-  "service.media-production",
-  "service.performance-marketing",
-  "service.sales-qualified-lead-generation",
-]);
+const siteTitleSuffix = " | B2B Sales Arrow";
 
-function buildHeading(id: PageId, path: string): CmsHeading {
+const stripSiteTitleSuffix = (title: string) => title.replace(siteTitleSuffix, "");
+
+const buildHeading = (
+  id: PageId,
+  seo: CmsPage["seo"],
+  pageName?: string
+): CmsHeading => {
   if (id === "home") {
     return {
       highlight: "Event",
@@ -24,9 +25,9 @@ function buildHeading(id: PageId, path: string): CmsHeading {
 
   if (id === "privacy-policy" || id === "terms-and-conditions" || id === "cookie-policy") {
     return {
-      highlight: pageSeo[id].title.split(" ")[0],
+      highlight: seo.title.split(" ")[0],
       highlightVariant: "blue",
-      text: pageSeo[id].title.replace(" | B2B Sales Arrow", ""),
+      text: stripSiteTitleSuffix(seo.title),
     };
   }
 
@@ -34,22 +35,17 @@ function buildHeading(id: PageId, path: string): CmsHeading {
     return { highlight: "Thank", highlightVariant: "blue", text: "Thank You" };
   }
 
-  try {
-    const page = getPageByUrl(path);
+  return {
+    ...(seo.focusKeyphrase && {
+      highlight: seo.focusKeyphrase.split(" ")[0],
+      highlightVariant: "blue" as const,
+    }),
+    text: pageName ?? stripSiteTitleSuffix(seo.title),
+  };
+};
 
-    return {
-      highlight: page.focusKeyphrase.split(" ")[0],
-      highlightVariant: "blue",
-      text: page.hero.title,
-    };
-  } catch {
-    return {
-      text: pageSeo[id].title.replace(" | B2B Sales Arrow", ""),
-    };
-  }
-}
-
-function getPageType(id: PageId): PageType {
+const getPageType = (id: PageId, marketingPageType?: PageType): PageType => {
+  if (marketingPageType) return marketingPageType;
   if (id === "home") return "home";
   if (id === "about") return "company";
   if (id === "contact") return "contact";
@@ -58,42 +54,31 @@ function getPageType(id: PageId): PageType {
     return "legal";
   }
   if (id === "thank-you") return "system";
-  if (serviceHubIds.has(id)) return "serviceHub";
   return "serviceDetail";
-}
+};
 
 export const cmsPages: CmsPage[] = Object.entries(pageRoutes).map(([id, path]) => {
-  let pageData: null | ReturnType<typeof getPageByUrl> = null;
-
-  try {
-    pageData = getPageByUrl(path);
-  } catch {
-    pageData = null;
-  }
+  const marketingPage = getMarketingPageById(id) ?? getMarketingPageByPath(path);
+  const seo = pageSeo[id];
 
   return {
     id,
-    pageType: getPageType(id),
-    seo: pageSeo[id],
-    title: buildHeading(id, path),
+    pageType: getPageType(id, marketingPage?.pageType),
+    seo,
+    title: buildHeading(id, seo, marketingPage?.pageName),
     ...(id === "home" && {
-      heroBadge: { icon: "Globe", label: "Countries Served", value: "40+" },
+      heroBadge: {
+        icon: HOME_HERO_CONTENT.stat.icon,
+        label: HOME_HERO_CONTENT.stat.label,
+        value: HOME_HERO_CONTENT.stat.value,
+      },
       heroImage: {
-        alt: "B2B trade show event with exhibition booth and lead generation",
+        alt: HOME_HERO_CONTENT.image.alt,
         priority: true as const,
-        src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
+        src: HOME_HERO_CONTENT.image.src,
       },
     }),
-    ctas: pageData?.ctas.map((cta) => ({
-      href: cta.href,
-      label: cta.label,
-    })),
-    faqs: pageData?.faqs,
-    internalLinks: pageData?.internalLinks.map((link) => ({
-      href: link.href,
-      label: link.sourceSection,
-    })),
-    tags: pageData?.secondaryKeywords?.map((keyword) => `#${keyword.replaceAll(/\s+/g, "")}`),
+    tags: seo.secondaryKeywords?.map((keyword) => `#${keyword.replaceAll(/\s+/g, "")}`),
   };
 });
 
@@ -101,6 +86,4 @@ export const cmsPagesById: Record<PageId, CmsPage> = Object.fromEntries(
   cmsPages.map((page) => [page.id, page])
 );
 
-export function getCmsPage(pageId: PageId): CmsPage | undefined {
-  return cmsPagesById[pageId];
-}
+export const getCmsPage = (pageId: PageId): CmsPage | undefined => cmsPagesById[pageId];

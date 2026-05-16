@@ -15,27 +15,31 @@ import { PERF_PAGE } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getMarketingPageMetadata(LINKEDIN_ADS_PAGE);
 
+const linkedInAdsCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Get a Free LinkedIn Ads Audit",
+  description: "Show them the right message at the right moment.",
+  title: "Your next enterprise customer is on LinkedIn right now.",
+};
+
+const linkedInAdsRelatedServices = [
+  { href: "/services/seo-services", title: "SEO Services" },
+  { href: "/services/paid-advertising", title: "Paid Advertising" },
+  { href: "/services/performance-marketing", title: "Performance Marketing" },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={LINKEDIN_ADS_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Get a Free LinkedIn Ads Audit",
-        description: "Show them the right message at the right moment.",
-        title: "Your next enterprise customer is on LinkedIn right now.",
-      }}
+      ctaBanner={linkedInAdsCtaBanner}
       deliverables={LINKEDIN_ADS_DELIVERABLES}
       faq={LINKEDIN_ADS_FAQ}
       hero={LINKEDIN_ADS_HERO}
       page={LINKEDIN_ADS_PAGE}
       parentPage={PERF_PAGE}
       proofBar={LINKEDIN_ADS_PROOF_BAR}
-      relatedServices={[
-        { href: "/services/seo-services", title: "SEO Services" },
-        { href: "/services/paid-advertising", title: "Paid Advertising" },
-        { href: "/services/performance-marketing", title: "Performance Marketing" },
-      ]}
+      relatedServices={linkedInAdsRelatedServices}
       why={LINKEDIN_ADS_WHY}
     />
   );

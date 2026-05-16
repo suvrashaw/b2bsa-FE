@@ -78,6 +78,8 @@ export interface ContactContent {
     companyLabel?: string;
     companyPlaceholder?: string;
     consentLabel?: string;
+    countryLabel?: string;
+    countryPlaceholder?: string;
     ctaLabel: string;
     emailLabel: string;
     emailPlaceholder: string;
@@ -85,6 +87,8 @@ export interface ContactContent {
     eventPlaceholder?: string;
     firstNameLabel: string;
     firstNamePlaceholder: string;
+    jobTitleLabel?: string;
+    jobTitlePlaceholder?: string;
     lastNameLabel?: string;
     lastNamePlaceholder?: string;
     messageLabel?: string;
@@ -94,6 +98,9 @@ export interface ContactContent {
     serviceLabel?: string;
     serviceOptions?: ContactServiceOption[];
     servicePlaceholder?: string;
+    timelineLabel?: string;
+    timelinePlaceholder?: string;
+    trustNote?: string;
   };
   heading: ReactNode;
   illustration: {

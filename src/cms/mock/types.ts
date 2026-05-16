@@ -34,7 +34,7 @@ export interface CmsLink {
 export interface CmsPage {
   ctas?: CmsCTA[];
   faqs?: CmsFAQ[];
-  heroBadge?: { icon?: string; label: string; value: string; };
+  heroBadge?: { icon?: string; label: string; value: string };
   heroImage?: CmsImage;
   id: PageId;
   internalLinks?: CmsLink[];
@@ -50,7 +50,7 @@ export interface CmsSeo {
   description: string;
   focusKeyphrase?: string;
   noIndex?: boolean;
-  secondaryKeywords?: string[];
+  secondaryKeywords?: readonly string[];
   title: string;
 }
 

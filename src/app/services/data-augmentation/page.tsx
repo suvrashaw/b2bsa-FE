@@ -7,14 +7,22 @@ import {
   DATA_AUGMENTATION_DELIVERABLES,
   DATA_AUGMENTATION_FAQ,
   DATA_AUGMENTATION_HERO,
-  DATA_AUGMENTATION_LAYERS,
   DATA_AUGMENTATION_PAGE,
+  DATA_AUGMENTATION_PROCESS,
   DATA_AUGMENTATION_PROOF_BAR,
-  DATA_AUGMENTATION_WHY,
 } from "@/content/services/detail/data-augmentation";
 import { RESEARCH_PAGE } from "@/content/services/market-research";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_AUGMENTATION_PAGE);
+
+const dataAugmentationRelatedServices = [
+  {
+    href: "/services/market-intelligence",
+    title: "Human-Powered Market Intelligence",
+  },
+  { href: "/services/data-validation", title: "Data Validation" },
+  { href: "/services/market-research", title: "Market Research" },
+];
 
 const Page = () => {
   return (
@@ -25,19 +33,11 @@ const Page = () => {
       hero={DATA_AUGMENTATION_HERO}
       page={DATA_AUGMENTATION_PAGE}
       parentPage={RESEARCH_PAGE}
-      pricing={DATA_AUGMENTATION_LAYERS}
+      process={DATA_AUGMENTATION_PROCESS}
       proofBar={DATA_AUGMENTATION_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/market-intelligence",
-          title: "Human-Powered Market Intelligence",
-        },
-        { href: "/services/data-validation", title: "Data Validation" },
-        { href: "/services/market-research", title: "Market Research" },
-      ]}
-      why={DATA_AUGMENTATION_WHY}
+      relatedServices={dataAugmentationRelatedServices}
     />
   );
-}
+};
 
 export default Page;

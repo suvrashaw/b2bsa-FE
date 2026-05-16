@@ -2,76 +2,98 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const DATA_VALIDATION_HERO = {
   description:
-    "Your outreach is only as good as your data. We provide the human-in-the-loop validation that cleans your CRM, removes the decay, and ensures your sales team never wastes another minute on a 'dead' lead.",
-  title: "B2B Data Validation — 100% Accuracy Guaranteed",
+    "Invalid emails, outdated contacts, and duplicate records don't just create inefficiency — they damage sender reputation and cost real SDR time. Our data validation services make your database a reliable commercial asset.",
+  title: "B2B Data Validation Services — Clean Data Your Sales Team Can Actually Trust",
 };
 
 export { GLOBAL_PROOF_STATS as DATA_VALIDATION_PROOF_BAR } from "../../shared";
 
 export const DATA_VALIDATION_WHY = {
   description:
-    "B2B data decays at a rate of 30% per year. People change jobs, companies merge, and email domains expire. If you are running outbound campaigns on year-old data, you are wasting 30% of your budget and damaging your sender reputation. Our validation service is the 'reset button' for your CRM, ensuring every record is accurate, compliant, and ready for high-stakes enterprise outreach.",
-  heading: "The ROI of Clean Data",
+    "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B sales: SDRs waste 25–30% of their time on wrong contacts and outdated information, email campaigns generate high bounce rates that damage domain sender score over time, attribution models produce inaccurate ROI data, and CRM forecasting cannot be trusted.",
+  heading: "Why Data Validation Cannot Be an Afterthought",
   reasons: [
     {
-      description: "Ensure your emails land in the inbox, not the spam folder.",
-      id: "deliverability",
+      description:
+        "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B sales, SDRs waste 25–30% of their time on wrong contacts and outdated information.",
+      id: "cost",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Protected Deliverability",
+      title: "Bad Data Drains Revenue",
     },
     {
-      description: "Stop sales reps from wasting time on incorrect phone numbers.",
-      id: "efficiency",
+      description:
+        "Data validation restores confidence — and with it, the commercial effectiveness of every outreach motion your team runs.",
+      id: "confidence",
       image:
         "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
-      title: "Sales Velocity",
+      title: "Reliable Data Restores Confidence",
     },
   ],
 };
 
 export const DATA_VALIDATION_DELIVERABLES = {
-  heading: "Our Validation Services",
+  heading: "Our Data Validation Services Cover",
   services: [
     {
       color: "bg-brand-blue",
       description:
-        "We perform a deep audit of your CRM, removing duplicates, correcting formatting errors, and standardizing job titles across your entire database.",
-      icon: "Eraser",
-      id: "cleansing",
+        "Syntax check, domain validity, MX record confirmation, and deliverability indicators — reducing bounce rates and protecting sender reputation.",
+      icon: "MailCheck",
+      id: "email",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Comprehensive CRM Cleansing",
+      title: "Email Address Verification",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "We go beyond simple syntax checks, using real-time domain handshakes and SMTP pings to verify inbox existence without ever sending a test email.",
-      icon: "MailCheck",
-      id: "email",
+        "Format, country code, carrier data, and active-line indicators — eliminating wasted calling time on disconnected or reassigned numbers.",
+      icon: "Phone",
+      id: "phone",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Multi-Step Email Verification",
+      title: "Phone Number Validation",
     },
     {
       color: "bg-brand-primary",
       description:
-        "Our human researchers discreetly verify office and mobile numbers to ensure your sales team has a direct path to the decision-maker.",
-      icon: "Phone",
-      id: "phone",
+        "Confirming company name, website domain, location, and business details are accurate and current.",
+      icon: "Building",
+      id: "company-domain",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Direct-Dial and Mobile Verification",
+      title: "Company and Domain Verification",
     },
     {
       color: "bg-brand-blue",
       description:
-        "We cross-reference every contact against their live LinkedIn profile to ensure job titles and company affiliations are 100% current.",
-      icon: "Link",
-      id: "social",
+        "Verifying whether contacts still hold their listed role and whether buying committee relevance is accurate.",
+      icon: "UserCheck",
+      id: "role",
       image:
         "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1200",
-      title: "LinkedIn Profile Synchronization",
+      title: "Job Title and Role Confirmation",
+    },
+    {
+      color: "bg-brand-cyan",
+      description:
+        "Identifying duplicates across contacts, accounts, emails, and domains — creating a cleaner CRM view and reducing repeated outreach.",
+      icon: "CopyCheck",
+      id: "duplicates",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "Duplicate Detection and Merge",
+    },
+    {
+      color: "bg-brand-primary",
+      description:
+        "Flagging contacts who have left the company, changed roles, or should no longer be in active outreach lists.",
+      icon: "UserX",
+      id: "departed",
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200",
+      title: "Departed Contact Removal",
     },
   ],
 };
@@ -80,23 +102,31 @@ export const DATA_VALIDATION_WORKFLOW = {
   headers: ["Stage", "Process"],
   rows: [
     {
-      process: "AI-driven check for syntactical errors and known spam traps",
-      stage: "Automated Filter",
+      process:
+        "Reviewing your CRM export, contact list, or outreach dataset to understand structure, issues, and business purpose.",
+      stage: "Data Intake",
     },
     {
-      process: "Direct server ping to verify email inbox existence",
-      stage: "Domain Handshake",
+      process:
+        "Format checks, syntax validation, duplicate flagging, and missing field identification.",
+      stage: "Automated Layer",
     },
     {
-      process: "Manual audit of high-value records by research specialists",
-      stage: "Human Verification",
+      process:
+        "Manual review of contact status, job title, company association, and role relevance for critical records.",
+      stage: "Human Verification Layer",
     },
     {
-      process: "Seamless re-upload of clean, enriched data into your platform",
-      stage: "CRM Injection",
+      process:
+        "Clean records, invalid records, duplicates, missing fields, and recommended next actions.",
+      stage: "Validation Report",
+    },
+    {
+      process: "Structured, CRM-ready file in your required format.",
+      stage: "Clean Data Delivery",
     },
   ],
-  title: "Validation Workflow",
+  title: "Our Validation Process",
 };
 
 export const DATA_VALIDATION_CASE_STUDIES = {
@@ -107,24 +137,24 @@ export const DATA_VALIDATION_FAQ = {
   faqs: [
     {
       answer:
-        "We recommend a full CRM audit every 6 months, or immediately prior to any major new outbound marketing campaign.",
+        "B2B data degrades at approximately 25–30% per year. Validate every 6 months for active outreach databases. Validate immediately before major campaign launches.",
       id: "frequency",
-      question: "How often should we validate our data?",
+      question: "How often should we validate our database?",
     },
     {
       answer:
-        "Yes. Our validation processes are fully passive or use professional verification methods that adhere to all global privacy standards.",
-      id: "gdpr",
-      question: "Is this process GDPR compliant?",
+        "We flag problematic records with clear recommendations. Your team decides whether to delete, archive, or re-verify.",
+      id: "delete-flag",
+      question: "Will you delete contacts or just flag them?",
     },
     {
       answer:
-        "We offer a 100% accuracy guarantee. If any record we validate bounces within 30 days, we replace it for free.",
-      id: "replacement",
-      question: "What if the data is still incorrect?",
+        "Validation checks and corrects accuracy of existing data. Augmentation adds new information to existing records. Complementary — validate first, then augment.",
+      id: "validation-vs-augmentation",
+      question: "What is the difference between validation and augmentation?",
     },
   ],
-  heading: "Data Validation FAQs",
+  heading: "Frequently Asked Questions",
 };
 
 export const DATA_VALIDATION_PAGE = {

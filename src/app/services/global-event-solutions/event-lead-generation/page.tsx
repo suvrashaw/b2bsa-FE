@@ -16,17 +16,30 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(ELG_PAGE);
 
+const eventLeadGenerationCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Build Your Lead Generation System",
+  description: "Build a system that captures, qualifies, and routes every qualified conversation.",
+  title: "Stop leaving trade show leads on the floor.",
+};
+
+const eventLeadGenerationRelatedServices = [
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  { href: "/services/global-event-solutions/industry-events", title: "Industry Events" },
+  {
+    href: "/services/global-event-solutions/event-booth-rental",
+    title: "Event Booth Rental",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={ELG_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Build Your Lead Generation System",
-        description:
-          "Build a system that captures, qualifies, and routes every qualified conversation.",
-        title: "Stop leaving trade show leads on the floor.",
-      }}
+      ctaBanner={eventLeadGenerationCtaBanner}
       deliverables={ELG_DELIVERABLES}
       faq={ELG_FAQ}
       hero={ELG_HERO}
@@ -34,17 +47,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       process={ELG_PROCESS}
       proofBar={ELG_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/global-event-solutions/trade-show-booth-design",
-          title: "Trade Show Booth Design",
-        },
-        { href: "/services/global-event-solutions/industry-events", title: "Industry Events" },
-        {
-          href: "/services/global-event-solutions/event-booth-rental",
-          title: "Event Booth Rental",
-        },
-      ]}
+      relatedServices={eventLeadGenerationRelatedServices}
       why={ELG_WHY}
     />
   );

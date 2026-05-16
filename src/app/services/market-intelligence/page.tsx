@@ -16,6 +16,12 @@ import { RESEARCH_PAGE } from "@/content/services/market-research";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTEL_PAGE);
 
+const marketIntelligenceRelatedServices = [
+  { href: "/services/data-validation", title: "Data Validation" },
+  { href: "/services/data-augmentation", title: "Data Augmentation" },
+  { href: "/services/market-research", title: "Market Research" },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
@@ -27,11 +33,7 @@ const Page = () => {
       parentPage={RESEARCH_PAGE}
       pricing={MARKET_INTEL_TIERS}
       proofBar={MARKET_INTEL_PROOF_BAR}
-      relatedServices={[
-        { href: "/services/data-validation", title: "Data Validation" },
-        { href: "/services/data-augmentation", title: "Data Augmentation" },
-        { href: "/services/market-research", title: "Market Research" },
-      ]}
+      relatedServices={marketIntelligenceRelatedServices}
       why={MARKET_INTEL_WHY}
     />
   );

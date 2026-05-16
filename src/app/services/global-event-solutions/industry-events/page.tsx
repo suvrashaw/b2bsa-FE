@@ -16,16 +16,30 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(INDUSTRY_EVENTS_PAGE);
 
+const industryEventsCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Get a Free Event ROI Assessment",
+  description: "It is about choosing the rooms where your buyers already gather.",
+  title: "The strongest strategy is not about showing up everywhere.",
+};
+
+const industryEventsRelatedServices = [
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/event-lead-generation",
+    title: "Event Lead Generation",
+  },
+  { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={INDUSTRY_EVENTS_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Get a Free Event ROI Assessment",
-        description: "It is about choosing the rooms where your buyers already gather.",
-        title: "The strongest strategy is not about showing up everywhere.",
-      }}
+      ctaBanner={industryEventsCtaBanner}
       deliverables={INDUSTRY_EVENTS_DELIVERABLES}
       faq={INDUSTRY_EVENTS_FAQ}
       hero={INDUSTRY_EVENTS_HERO}
@@ -33,17 +47,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       pricing={INDUSTRY_EVENTS_PRIORITY}
       proofBar={INDUSTRY_EVENTS_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/global-event-solutions/trade-show-booth-design",
-          title: "Trade Show Booth Design",
-        },
-        {
-          href: "/services/global-event-solutions/event-lead-generation",
-          title: "Event Lead Generation",
-        },
-        { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
-      ]}
+      relatedServices={industryEventsRelatedServices}
       why={INDUSTRY_EVENTS_WHY}
     />
   );

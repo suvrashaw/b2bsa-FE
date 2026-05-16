@@ -31,6 +31,14 @@ export interface ServiceDetailProps {
   faq: FAQProps;
   hero: {
     description: string;
+    primaryCta?: {
+      href: string;
+      label: string;
+    };
+    secondaryCta?: {
+      href: string;
+      label: string;
+    };
     title: string;
   };
   page: MarketingPageIdentity;
@@ -48,11 +56,11 @@ export interface ServiceDetailProps {
     title: string;
   };
   process?: {
-    phases: { description: string; title: string; }[];
+    phases: { description: string; title: string }[];
     title: string;
   };
   proofBar?: string[];
-  relatedServices?: { href: string; title: string; }[];
+  relatedServices?: { href: string; title: string }[];
   stats?: {
     items: { label: string; value: string }[];
     title: string;
@@ -60,21 +68,86 @@ export interface ServiceDetailProps {
   why?: WhyChooseUsProps;
 }
 
+const createJsonLdMarkup = (data: object) => ({
+  __html: JSON.stringify(data).replaceAll("<", String.raw`\u003c`),
+});
+
 // SEO Utility Component
-export function JsonLd({ data }: { data: object }) {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data).replaceAll("<", String.raw`\u003c`),
-      }}
-      type="application/ld+json"
-    />
-  );
-}
+export const JsonLd = ({ data }: { data: object }) => {
+  return <script dangerouslySetInnerHTML={createJsonLdMarkup(data)} type="application/ld+json" />;
+};
 
 const siteUrl = "https://b2bsalesarrow.com";
+const primaryServiceHeroCta = { href: "/contact", label: "Book a Strategy Session" };
+const secondaryServiceHeroCta = { href: "/case-studies", label: "View Event Portfolio" };
+const serviceHeroCtasByPath: Record<
+  string,
+  {
+    primaryCta: { href: string; label: string };
+    secondaryCta?: { href: string; label: string };
+  }
+> = {
+  "/services/data-augmentation": {
+    primaryCta: { href: "/contact", label: "Request a Data Augmentation Demo" },
+    secondaryCta: { href: "/contact", label: "Upload a Sample List" },
+  },
+  "/services/data-validation": {
+    primaryCta: { href: "/contact", label: "Start a Data Validation Project" },
+    secondaryCta: { href: "/contact", label: "Get a Free Data Quality Audit" },
+  },
+  "/services/global-event-solutions/custom-events": {
+    primaryCta: { href: "/contact", label: "Design Your Custom Event" },
+  },
+  "/services/global-event-solutions/event-booth-rental": {
+    primaryCta: { href: "/contact", label: "Check Rental Availability" },
+  },
+  "/services/global-event-solutions/event-lead-generation": {
+    primaryCta: { href: "/contact", label: "Build Your Lead Generation System" },
+  },
+  "/services/global-event-solutions/industry-events": {
+    primaryCta: { href: "/contact", label: "Build Your Industry Event Strategy" },
+  },
+  "/services/global-event-solutions/modular-portable-booths": {
+    primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
+  },
+  "/services/global-event-solutions/trade-show-booth-builder": {
+    primaryCta: { href: "/contact", label: "Get a Build Quote" },
+  },
+  "/services/global-event-solutions/trade-show-booth-design": {
+    primaryCta: { href: "/contact", label: "Request a Design Quote" },
+    secondaryCta: { href: "/case-studies", label: "View Booth Portfolio" },
+  },
+  "/services/linkedin-ads": {
+    primaryCta: { href: "/contact", label: "Request a LinkedIn Ads Audit" },
+    secondaryCta: { href: "/contact", label: "Request a Campaign Strategy" },
+  },
+  "/services/market-intelligence": {
+    primaryCta: { href: "/contact", label: "Commission a Research Report" },
+    secondaryCta: { href: "/contact", label: "Schedule an Intelligence Briefing" },
+  },
+  "/services/media-production/corporate-video-production": {
+    primaryCta: { href: "/contact", label: "Request a Corporate Video Quote" },
+  },
+  "/services/media-production/event-video-production": {
+    primaryCta: { href: "/contact", label: "Get a Production Quote" },
+  },
+  "/services/media-production/live-streaming-services": {
+    primaryCta: { href: "/contact", label: "Get a Live Stream Quote" },
+  },
+  "/services/media-production/video-editing-services": {
+    primaryCta: { href: "/contact", label: "Send Us Your Footage" },
+  },
+  "/services/paid-advertising": {
+    primaryCta: { href: "/contact", label: "Request a Paid Media Audit" },
+    secondaryCta: { href: "/contact", label: "Request a Campaign Proposal" },
+  },
+  "/services/seo-services": {
+    primaryCta: { href: "/contact", label: "Request a Free SEO Audit" },
+    secondaryCta: { href: "/contact", label: "Download Our B2B SEO Playbook" },
+  },
+};
 
-export function ServiceDetail({
+export const ServiceDetail = ({
   caseStudies,
   ctaBanner,
   deliverables,
@@ -89,7 +162,7 @@ export function ServiceDetail({
   relatedServices,
   stats,
   why,
-}: ServiceDetailProps) {
+}: ServiceDetailProps) => {
   const faqJsonLd = faq.faqs?.length ? buildFaqJsonLd(faq.faqs) : null;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(getBreadcrumbs(page, parentPage));
   const serviceJsonLd = buildServiceJsonLd({
@@ -97,6 +170,7 @@ export function ServiceDetail({
     name: page.pageName,
     url: page.seo.canonicalPath,
   });
+  const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -107,8 +181,10 @@ export function ServiceDetail({
 
       <ServiceHero
         description={hero.description}
-        primaryCta={{ href: "/contact", label: "Book a Strategy Session" }}
-        secondaryCta={{ href: "/case-studies", label: "View Event Portfolio" }}
+        primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
+        secondaryCta={
+          hero.secondaryCta ?? (heroCtas ? heroCtas.secondaryCta : secondaryServiceHeroCta)
+        }
         title={hero.title}
       />
 
@@ -139,7 +215,7 @@ export function ServiceDetail({
         </>
       )}
 
-      {caseStudies && <CaseStudies {...caseStudies} />}
+      {caseStudies && <CaseStudies heading="Real Events. Real Results." {...caseStudies} />}
 
       {stats && <WhoWeAre items={stats.items} title={stats.title} />}
 
@@ -159,9 +235,9 @@ export function ServiceDetail({
       <Footer />
     </main>
   );
-}
+};
 
-function getBreadcrumbs(page: MarketingPageIdentity, parentPage?: MarketingPageIdentity) {
+const getBreadcrumbs = (page: MarketingPageIdentity, parentPage?: MarketingPageIdentity) => {
   const crumbs = [{ name: "Home", url: siteUrl }];
 
   if (parentPage) {
@@ -177,9 +253,9 @@ function getBreadcrumbs(page: MarketingPageIdentity, parentPage?: MarketingPageI
   });
 
   return crumbs;
-}
+};
 
-function normalizePath(path: string) {
+const normalizePath = (path: string) => {
   if (path === "/") return "/";
   return path.replace(/\/$/, "");
-}
+};

@@ -2,98 +2,103 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const RESEARCH_HERO = {
   description:
-    "Stop making decisions in the dark. We provide the human-verified market intelligence and competitor analysis that identifies your next $10M opportunity before your rivals even see it.",
-  title: "B2B Market Research and Intelligence — Data-Driven Strategy",
+    "Better strategy starts with better intelligence. Our B2B market research agency helps enterprise teams understand their markets more clearly than the competition — and move on that advantage faster.",
+  title: "B2B Market Research That Gives Your Enterprise an Unfair Competitive Advantage",
 };
 
 export { GLOBAL_PROOF_STATS as RESEARCH_PROOF_BAR } from "../shared";
 
 export const RESEARCH_SERVICES = {
   description:
-    "Generic market reports provide yesterday's news. We provide tomorrow's advantage. Our research teams combine large-scale data collection with human-powered analysis to give you a clear view of your competitive landscape, buyer sentiment, and untapped market segments.",
-  heading: "Our Market Intelligence Capabilities",
+    "Data augmentation, data validation, and human-powered market intelligence for sharper B2B commercial decisions.",
+  heading: "Our B2B Market Research Services",
   services: [
     {
       color: "bg-brand-blue",
       description:
-        "Deep-dive research into specific industry verticals, identifying emerging trends, regulatory shifts, and high-growth opportunities.",
-      href: "/services/market-intelligence",
-      icon: "Search",
-      id: "intelligence",
+        "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
+      href: "/services/data-augmentation",
+      icon: "PlusCircle",
+      id: "augmentation",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-      title: "Human-Powered Market Intelligence",
+      title: "Data Augmentation",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "We audit and refresh your existing CRM data, verifying contact details and firmographic fit to ensure 100% outreach accuracy.",
+        "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
       href: "/services/data-validation",
       icon: "CheckCircle",
       id: "validation",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-      title: "Data Validation and Cleansing",
+      title: "Data Validation",
     },
     {
       color: "bg-brand-primary",
       description:
-        "Enriching your target account lists with deep technographic insights, buying intent signals, and executive contact data.",
-      href: "/services/data-augmentation",
-      icon: "PlusCircle",
-      id: "augmentation",
+        "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
+      href: "/services/market-intelligence",
+      icon: "Search",
+      id: "intelligence",
       image:
         "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
-      title: "B2B Data Augmentation",
+      title: "Human-Powered Market Intelligence",
     },
   ],
 };
 
 export const RESEARCH_WHY = {
   description:
-    "In enterprise sales, being wrong is expensive. Targeting the wrong accounts, using outdated contact data, or misreading competitor moves leads to wasted marketing spend and demoralized sales teams. We provide the 'source of truth' for your growth strategy, ensuring every dollar you invest is backed by verified intelligence.",
-  heading: "The Cost of Inaccurate Market Data",
+    "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions.",
+  heading: "Bad Data Costs Enterprise Sales Teams Millions",
   reasons: [
     {
       description:
-        "We don't trust bots with your data. Every insight is verified by a human analyst.",
+        "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions.",
       id: "accuracy",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Human-Verified Accuracy",
+      title: "Poor Data Is Expensive",
     },
     {
-      description: "We don't just deliver data; we deliver the commercial context you need to win.",
+      description:
+        "Clean, validated, enriched data is the foundation that makes every B2B marketing and sales motion more effective.",
       id: "actionable",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Actionable Intelligence",
+      title: "Validated Intelligence Drives Growth",
     },
   ],
 };
 
 export const RESEARCH_PROCESS = {
-  heading: "Our Research and Intelligence Process",
+  heading: "How We Deliver Market Intelligence",
   phases: [
     {
-      description: "Defining the research objectives and target parameters.",
-      title: "Briefing and Hypothesis",
+      description:
+        "Direct interviews, surveys, and expert panels with buyers, users, partners, and industry stakeholders.",
+      title: "Primary Research",
     },
     {
-      description: "Large-scale harvesting of primary and secondary data points.",
-      title: "Data Collection",
+      description:
+        "Industry reports, competitor positioning, public datasets, analyst commentary, and event activity analysis.",
+      title: "Secondary Research",
     },
     {
-      description: "Manual audit and verification of every data point for 100% accuracy.",
-      title: "Human Verification",
+      description:
+        "Verified firmographic, technographic, role-based, and contextual information added to existing datasets.",
+      title: "Data Enrichment and Augmentation",
     },
     {
-      description: "Turning raw data into strategic insights and commercial recommendations.",
-      title: "Synthesis and Analysis",
+      description: "Duplicate removal, field verification, and data consistency review.",
+      title: "Validation and Quality Assurance",
     },
     {
-      description: "Delivery of findings in actionable formats (CRM sync/Report/Dashboard).",
-      title: "Strategic Handover",
+      description:
+        "Executive briefing decks, research reports, live analyst briefings, or ongoing intelligence subscriptions.",
+      title: "Insight Delivery",
     },
   ],
 };
@@ -106,24 +111,24 @@ export const RESEARCH_FAQ = {
   faqs: [
     {
       answer:
-        "We focus on real-time verification. Unlike static databases, our research teams verify data at the moment of the request.",
-      id: "freshness",
-      question: "How fresh is the data you provide?",
+        "B2B market research is the structured process of gathering, analysing, and interpreting market, competitor, and buyer information specifically to support B2B commercial decisions — including market entry, product-market fit, campaign planning, and sales strategy.",
+      id: "what-is",
+      question: "What is B2B market research?",
     },
     {
       answer:
-        "Yes. We can perform deep-dive 'shadow' research on specific competitors, their pricing models, and their market positioning.",
-      id: "custom",
-      question: "Can you perform custom competitor analysis?",
+        "Primary research gathers new information directly from sources through interviews, surveys, and panels. Secondary research analyses existing information such as reports, competitor websites, and public data. The best programs combine both.",
+      id: "primary-secondary",
+      question: "What is the difference between primary and secondary research?",
     },
     {
       answer:
-        "Findings can be delivered as executive reports, interactive dashboards, or direct data injections into your CRM.",
-      id: "formats",
+        "Executive briefing decks, detailed research reports, live analyst briefings, ongoing subscriptions, or custom dashboards — format agreed at brief stage based on how your team uses the intelligence.",
+      id: "delivery",
       question: "How do you deliver the research findings?",
     },
   ],
-  heading: "Market Research FAQs",
+  heading: "Frequently Asked Questions",
 };
 
 export const RESEARCH_PAGE = {

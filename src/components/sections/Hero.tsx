@@ -23,8 +23,10 @@ export interface HeroProps {
         src: string;
       }
     | string;
-  motionPhrases?: { color: string; id: string; text: string; }[];
+  motionPhrases?: { color: string; id: string; text: string }[];
+  primaryCtaHref?: string;
   primaryCtaLabel?: null | string;
+  secondaryCtaHref?: string;
   secondaryCtaLabel?: null | string;
   showPreloader?: boolean;
   stat?: {
@@ -41,7 +43,9 @@ export function Hero({
   highlight,
   highlightVariant = "blue",
   image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
+  primaryCtaHref = "/contact",
   primaryCtaLabel = "Explore Our Work",
+  secondaryCtaHref = "/case-studies",
   secondaryCtaLabel = "Our Services",
   stat = {
     icon: "Globe",
@@ -85,7 +89,7 @@ export function Hero({
 
           <div className="flex flex-wrap items-center gap-4">
             {primaryCtaLabel ? (
-              <Link href="/contact">
+              <Link href={primaryCtaHref}>
                 <Button variant="primary">
                   {primaryCtaLabel}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -93,7 +97,7 @@ export function Hero({
               </Link>
             ) : null}
             {secondaryCtaLabel ? (
-              <Link href="/case-studies">
+              <Link href={secondaryCtaHref}>
                 <Button variant="secondary">{secondaryCtaLabel}</Button>
               </Link>
             ) : null}

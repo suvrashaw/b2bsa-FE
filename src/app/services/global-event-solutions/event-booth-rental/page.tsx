@@ -16,17 +16,34 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
 
+const eventBoothRentalCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Check Rental Availability",
+  description:
+    "A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
+  title: "Fast does not have to feel temporary.",
+};
+
+const eventBoothRentalRelatedServices = [
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-builder",
+    title: "Trade Show Booth Builder",
+  },
+  {
+    href: "/services/global-event-solutions/modular-portable-booths",
+    title: "Modular and Portable Booths",
+  },
+];
+
 const Page = () => {
   return (
     <ServiceDetail
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
-      ctaBanner={{
-        ctaHref: "/contact",
-        ctaLabel: "Check Rental Availability",
-        description:
-          "A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
-        title: "Fast does not have to feel temporary.",
-      }}
+      ctaBanner={eventBoothRentalCtaBanner}
       faq={BOOTH_RENTAL_FAQ}
       hero={BOOTH_RENTAL_HERO}
       page={BOOTH_RENTAL_PAGE}
@@ -34,20 +51,7 @@ const Page = () => {
       pricing={BOOTH_RENTAL_FORMATS}
       process={BOOTH_RENTAL_PROCESS}
       proofBar={BOOTH_RENTAL_PROOF_BAR}
-      relatedServices={[
-        {
-          href: "/services/global-event-solutions/trade-show-booth-design",
-          title: "Trade Show Booth Design",
-        },
-        {
-          href: "/services/global-event-solutions/trade-show-booth-builder",
-          title: "Trade Show Booth Builder",
-        },
-        {
-          href: "/services/global-event-solutions/modular-portable-booths",
-          title: "Modular and Portable Booths",
-        },
-      ]}
+      relatedServices={eventBoothRentalRelatedServices}
       why={BOOTH_RENTAL_WHY}
     />
   );

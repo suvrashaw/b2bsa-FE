@@ -9,8 +9,12 @@ export interface RelatedItem {
   title: string;
 }
 
-export function getRelatedContent(tags: string[], limit = 3, excludeId?: string): RelatedItem[] {
-  return cmsPages
+export const getRelatedContent = (
+  tags: string[],
+  limit = 3,
+  excludeId?: string
+): RelatedItem[] =>
+  cmsPages
     .filter((page) => page.id !== excludeId && page.tags?.some((tag) => tags.includes(tag)))
     .slice(0, limit)
     .map((page) => ({
@@ -18,15 +22,14 @@ export function getRelatedContent(tags: string[], limit = 3, excludeId?: string)
       id: page.id,
       title: page.title.text,
     }));
-}
 
-export function resolveLink(link: CmsLink): string {
+export const resolveLink = (link: CmsLink): string => {
   if (link.pageId) return resolvePageHref(link.pageId);
   if (link.href) return link.href;
   return "#";
-}
+};
 
-export function resolvePageHref(pageId: PageId): string {
+export const resolvePageHref = (pageId: PageId): string => {
   const path = pageRoutes[pageId];
 
   if (!path) {
@@ -34,4 +37,4 @@ export function resolvePageHref(pageId: PageId): string {
   }
 
   return path;
-}
+};

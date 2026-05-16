@@ -2,102 +2,85 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const DATA_AUGMENTATION_HERO = {
   description:
-    "Stop selling to companies that aren't buying. We provide the technographic and intent-based enrichment that tells you exactly which companies in your ICP are currently in-market for your solution.",
-  title: "B2B Data Augmentation — Deep Intent, Not Just Contact Info",
+    "Blank job titles, missing emails, outdated company names — incomplete data creates misdirected outreach and wasted SDR time. Our data augmentation services turn what your CRM has into what your sales team actually needs.",
+  title: "B2B Data Augmentation Services — Transform Incomplete CRM Data Into Sales Intelligence",
 };
 
 export { GLOBAL_PROOF_STATS as DATA_AUGMENTATION_PROOF_BAR } from "../../shared";
 
-export const DATA_AUGMENTATION_WHY = {
-  description:
-    "A name and an email address are the bare minimum. To win in a competitive enterprise environment, your sales team needs to know what software their prospect is currently using, what their department's budget looks like, and what public signals they've given that indicate a need for your solution. Our augmentation service turns 'thin' leads into 'thick' dossiers, providing the context that allows your reps to lead with value rather than questions.",
-  heading: "Why Enrichment is the Catalyst for Sales Success",
-  reasons: [
-    {
-      description: "Know your prospect's tech stack and pain points before the first call.",
-      id: "context",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Immediate Context",
-    },
-    {
-      description:
-        "Focus your highest-value reps on the accounts with the strongest intent signals.",
-      id: "priority",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Strategic Prioritization",
-    },
-  ],
-};
-
 export const DATA_AUGMENTATION_DELIVERABLES = {
-  heading: "Our Augmentation Services",
+  heading: "Data Fields We Enrich",
   services: [
     {
       color: "bg-brand-blue",
       description:
-        "We add deep organizational data including exact headcount, revenue brackets, funding history, and organizational hierarchy to help you map the buying committee.",
-      icon: "Building",
-      id: "firmographic",
+        "Verified job title, direct business email, LinkedIn profile URL, direct phone number where available, department, seniority level, and buying committee relevance.",
+      icon: "UserPlus",
+      id: "contact-level",
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
-      title: "Firmographic Enrichment",
+      title: "Contact-Level Enrichment",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "Identify the 'digital footprint' of your target accounts — knowing exactly which CRM, cloud provider, or marketing stack they are currently running.",
-      icon: "Cpu",
-      id: "technographic",
+        "Revenue range, employee count, industry classification, headquarters location, technology stack, funding signals, expansion indicators, and hiring activity.",
+      icon: "Building",
+      id: "account-level",
       image:
         "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
-      title: "Technographic Profiling",
+      title: "Account-Level Enrichment",
     },
     {
       color: "bg-brand-primary",
       description:
-        "We track public signals — job postings, news, funding rounds, and social activity — to identify the 'moments that matter' for your sales team.",
+        "Content engagement signals, solution research activity, competitor comparison behaviour, event participation data, and category interest indicators.",
       icon: "Activity",
       id: "intent",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Intent and Trigger Monitoring",
+      title: "Intent Data",
     },
     {
       color: "bg-brand-blue",
       description:
-        "We bridge the gap between accounts and people, adding verified LinkedIn profiles and direct-dial phone numbers for every key stakeholder.",
-      icon: "UserPlus",
-      id: "contact",
+        "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.",
+      icon: "Settings",
+      id: "custom-fields",
       image:
         "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
-      title: "Social and Contact Appending",
+      title: "Custom Fields",
     },
   ],
 };
 
-export const DATA_AUGMENTATION_LAYERS = {
-  headers: ["Layer", "Insights Provided"],
-  rows: [
+export const DATA_AUGMENTATION_PROCESS = {
+  phases: [
     {
-      "insights provided": "Revenue, headcount, funding history, and expansion signals",
-      layer: "Firmographic",
+      description: "You share your CRM export, prospect list, or target account database.",
+      title: "Data Upload",
     },
     {
-      "insights provided": "Current software stack, hardware infrastructure, and IT spend",
-      layer: "Technographic",
+      description:
+        "We identify missing, outdated, or low-value fields and map enrichment requirements.",
+      title: "Gap Analysis",
     },
     {
-      "insights provided": "Live hiring trends, public press releases, and budget triggers",
-      layer: "Intent",
+      description:
+        "Our research team enriches using trusted sources plus manual verification for key fields.",
+      title: "Human-Verified Research",
     },
     {
-      "insights provided": "Decision-maker personality insights and preferred communication styles",
-      layer: "Psychographic",
+      description: "Format correction, field verification, and consistency review throughout.",
+      title: "QA and Deduplication",
+    },
+    {
+      description:
+        "Structured, CRM-ready file in your required format and naming conventions within the agreed timeline.",
+      title: "Clean Delivery",
     },
   ],
-  title: "Enrichment Layers",
+  title: "How Data Augmentation Works",
 };
 
 export const DATA_AUGMENTATION_CASE_STUDIES = {
@@ -108,24 +91,24 @@ export const DATA_AUGMENTATION_FAQ = {
   faqs: [
     {
       answer:
-        "We use a combination of primary research, public record monitoring, and premium B2B intent feeds to provide a 360-degree view of your target accounts.",
-      id: "sources",
-      question: "Where do you get your intent data?",
+        "We target 90%+ accuracy on key fields including job title, direct email, and company association. Email deliverability post-enrichment typically reaches 85–95% for business addresses.",
+      id: "accuracy",
+      question: "How accurate is enriched data?",
     },
     {
       answer:
-        "Yes. We can map our augmented fields directly into your HubSpot, Salesforce, or Microsoft Dynamics fields for immediate sales action.",
-      id: "integration",
-      question: "Can you push enriched data directly to our CRM?",
+        "500–2,000 records: 5–10 business days. 10,000+ records scoped individually after reviewing your data file.",
+      id: "timeline",
+      question: "How long does a project take?",
     },
     {
       answer:
-        "For enterprise-level organizations in the US, Europe, and UAE, we typically achieve a 90%+ match rate for firmographic and technographic data.",
-      id: "match-rate",
-      question: "What is your typical match rate?",
+        "Augmentation adds new information to existing records. Validation checks and corrects accuracy of what already exists. The two are complementary — validate first to clean, then augment to complete.",
+      id: "augmentation-vs-validation",
+      question: "What is the difference between augmentation and validation?",
     },
   ],
-  heading: "Data Augmentation FAQs",
+  heading: "Frequently Asked Questions",
 };
 
 export const DATA_AUGMENTATION_PAGE = {
