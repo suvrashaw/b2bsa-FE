@@ -44,6 +44,7 @@ const Page = () => {
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
       ctaBanner={corporateVideoProductionCtaBanner}
       deliverables={CORPORATE_VIDEO_DELIVERABLES}
+      deliverablesSectionType="carousel"
       faq={CORPORATE_VIDEO_FAQ}
       hero={CORPORATE_VIDEO_HERO}
       page={CORPORATE_VIDEO_PAGE}

@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export interface ServiceHeroProps {
   description: string;
@@ -70,6 +70,43 @@ const TitleLine = ({ index, line }: { index: number; line: ReactNode }) => {
   );
 };
 
+const useTypewriter = (lines: string[], charDelay = 30) => {
+  const [charCount, setCharCount] = useState(0);
+  const totalChars = useMemo(() => lines.reduce((s, l) => s + l.length, 0), [lines]);
+
+  useEffect(() => {
+    if (charCount >= totalChars) return;
+    const t = setTimeout(() => setCharCount((c) => c + 1), charDelay);
+    return () => clearTimeout(t);
+  }, [charCount, totalChars, charDelay]);
+
+  const done = charCount >= totalChars;
+
+  const visibleLines = lines.map((line, idx) => {
+    const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
+    const show = Math.min(line.length, Math.max(0, charCount - charsBeforeThis));
+    return line.slice(0, show);
+  });
+
+  const activeLineIdx = done
+    ? -1
+    : lines.findIndex((line, idx) => {
+        const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
+        return charCount < charsBeforeThis + line.length;
+      });
+
+  return { activeLineIdx, done, visibleLines };
+};
+
+const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string }) => (
+  <span className="block">
+    {text}
+    {isActive && (
+      <span className="ml-0.5 inline-block h-[0.85em] w-[2px] animate-pulse bg-current align-middle" />
+    )}
+  </span>
+);
+
 export const ServiceHero = ({
   description,
   primaryCta,
@@ -82,8 +119,10 @@ export const ServiceHero = ({
   const y = useTransform(scrollY, [0, 500], [0, 100]);
   const contentStyle = useMemo(() => ({ y }), [y]);
 
-  // Split title into lines if it's a string for the staggered reveal
-  const titleLines = typeof title === "string" ? title.split("\n") : [title];
+  const isStringTitle = typeof title === "string";
+  const titleLines = isStringTitle ? (title as string).split("\n") : [title];
+  const stringLines = isStringTitle ? (title as string).split("\n") : [];
+  const { activeLineIdx, visibleLines } = useTypewriter(stringLines, 30);
 
   return (
     <section
@@ -109,14 +148,21 @@ export const ServiceHero = ({
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
-          {/* Staggered Title Reveal */}
           <h1
             className="mb-8 font-heading text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
             style={H1_STYLE}
           >
-            {titleLines.map((line, index) => (
-              <TitleLine index={index} key={index} line={line} />
-            ))}
+            {isStringTitle
+              ? (titleLines as string[]).map((_, index) => (
+                  <TypewriterLine
+                    isActive={activeLineIdx === index}
+                    key={index}
+                    text={visibleLines[index] ?? ""}
+                  />
+                ))
+              : (titleLines as ReactNode[]).map((line, index) => (
+                  <TitleLine index={index} key={index} line={line} />
+                ))}
           </h1>
 
           {/* Description */}

@@ -2,6 +2,7 @@ import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
+import type { FeatureCarouselItem } from "@/components/ui/FeatureCarousel";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { Footer } from "@/components/layout/Footer";
@@ -10,6 +11,7 @@ import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { DataTable } from "@/components/sections/DataTable";
 import { FAQ } from "@/components/sections/FAQ";
+import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { OurServices } from "@/components/sections/OurServices";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
@@ -28,6 +30,7 @@ export interface ServiceDetailProps {
     title: string;
   };
   deliverables?: OurServicesProps;
+  deliverablesSectionType?: "carousel" | "grid";
   faq: FAQProps;
   hero: {
     description: string;
@@ -151,6 +154,7 @@ export const ServiceDetail = ({
   caseStudies,
   ctaBanner,
   deliverables,
+  deliverablesSectionType = "grid",
   faq,
   hero,
   page,
@@ -171,6 +175,29 @@ export const ServiceDetail = ({
     url: page.seo.canonicalPath,
   });
   const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
+  const deliverableServices = deliverables?.services ?? deliverables?.content?.services ?? [];
+  const carouselFeatures: FeatureCarouselItem[] = deliverableServices.map((service) => ({
+    description: service.description,
+    icon: service.icon,
+    id: service.id,
+    image: service.image,
+    label: service.title,
+  }));
+  const shouldUseDeliverablesCarousel =
+    deliverablesSectionType === "carousel" && carouselFeatures.length > 0;
+  let deliverablesSection = null;
+
+  if (deliverables) {
+    deliverablesSection = shouldUseDeliverablesCarousel ? (
+      <FeatureCarouselSection
+        eyebrow={deliverables.eyebrow ?? deliverables.content?.eyebrow}
+        features={carouselFeatures}
+        heading={deliverables.heading ?? deliverables.content?.heading ?? "Our Services"}
+      />
+    ) : (
+      <OurServices {...deliverables} />
+    );
+  }
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -190,7 +217,7 @@ export const ServiceDetail = ({
 
       {proofBar && <ProofBar stats={proofBar} />}
 
-      {deliverables && <OurServices {...deliverables} />}
+      {deliverablesSection}
 
       {why && <WhyChooseUs {...why} />}
 

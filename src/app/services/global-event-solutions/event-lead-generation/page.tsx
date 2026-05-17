@@ -41,6 +41,7 @@ const Page = () => {
       caseStudies={ELG_CASE_STUDIES}
       ctaBanner={eventLeadGenerationCtaBanner}
       deliverables={ELG_DELIVERABLES}
+      deliverablesSectionType="carousel"
       faq={ELG_FAQ}
       hero={ELG_HERO}
       page={ELG_PAGE}

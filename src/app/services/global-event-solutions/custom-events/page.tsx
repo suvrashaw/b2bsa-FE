@@ -41,6 +41,7 @@ const Page = () => {
       caseStudies={CUSTOM_EVENTS_CASE_STUDIES}
       ctaBanner={customEventsCtaBanner}
       deliverables={CUSTOM_EVENTS_DELIVERABLES}
+      deliverablesSectionType="carousel"
       faq={CUSTOM_EVENTS_FAQ}
       hero={CUSTOM_EVENTS_HERO}
       page={CUSTOM_EVENTS_PAGE}

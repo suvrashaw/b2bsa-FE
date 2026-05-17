@@ -43,6 +43,7 @@ const Page = () => {
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
       ctaBanner={boothDesignCtaBanner}
       deliverables={BOOTH_DESIGN_DELIVERABLES}
+      deliverablesSectionType="carousel"
       faq={BOOTH_DESIGN_FAQ}
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}

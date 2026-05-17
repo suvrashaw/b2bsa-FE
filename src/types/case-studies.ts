@@ -24,6 +24,8 @@ export interface CaseStudyIndexEntry {
   challenge: string;
   companySize: string;
   event: string;
+  format: "gallery" | "text" | "video";
+  formatIcon: string;
   geography: string;
   id: string;
   industry: string;

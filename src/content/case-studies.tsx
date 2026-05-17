@@ -8,6 +8,11 @@ export const CASE_STUDIES_PAGE_CONTENT = {
     title:
       "Enterprise results are not accidental. They are engineered through strategy, creative execution, data quality, and disciplined follow-up. Could your next program become our next case study?",
   },
+  emptyState: {
+    description:
+      "Try a different service lens to browse the current case study portfolio.",
+    title: "No case studies match this filter yet.",
+  },
   filters: [
     { id: "serviceCategory", label: "Service Category" },
     { id: "industry", label: "Industry" },
@@ -15,6 +20,12 @@ export const CASE_STUDIES_PAGE_CONTENT = {
     { id: "companySize", label: "Company Size" },
   ] as const,
   filtersTitle: "Filter by: Service Category | Industry | Geography | Company Size",
+  gridFilters: [
+    "All",
+    "Event Lead Generation",
+    "Custom Booth Design",
+    "Full Event Program",
+  ] as const,
   hero: {
     description:
       "Results matter more than promises. Documented outcomes from real enterprise B2B programs — trade show lead generation, booth design, video production, performance marketing, and market research.",
@@ -31,6 +42,15 @@ export const CASE_STUDIES_PAGE_CONTENT = {
       "500+ booth designs",
     ],
     title: "Enterprise Results That Speak for Themselves",
+  },
+  intro: {
+    description:
+      "Our results are not accidental. They are engineered through strategic rigor, creative stand design, clean data quality, and disciplined CRM integration. Take a look at our visual case study portfolio.",
+    title: "DISCOVER HOW LEADING BRANDS TACKLE CHALLENGES AND ACHIEVE SCALE WITH OUR SOLUTIONS",
+  },
+  modal: {
+    ctaHref: "/contact",
+    ctaLabel: "Book a Strategy Session",
   },
   resultsHeading: "Recent Program Results",
   template: {
@@ -74,6 +94,8 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       "Generate qualified pipeline at a flagship US event with high exhibitor competition and a technically sophisticated buyer audience who had attended multiple times previously.",
     companySize: "Enterprise",
     event: "Adobe Summit, Las Vegas",
+    format: "text",
+    formatIcon: "BookOpen",
     geography: "Las Vegas",
     id: "adobe-summit-2025",
     industry: "Enterprise Technology / Digital Experience",
@@ -112,6 +134,8 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       "First-time European market appearance with limited brand recognition and a sales team unfamiliar with the event environment and European buyer expectations.",
     companySize: "Enterprise",
     event: "Money 20/20 Europe, Amsterdam",
+    format: "gallery",
+    formatIcon: "Camera",
     geography: "Amsterdam",
     id: "money-20-20-europe-2025",
     industry: "Fintech / Payments / Embedded Finance",
@@ -157,6 +181,8 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       "Deep relationships with existing accounts needed to be advanced, while simultaneously generating new qualified conversations with procurement and digital transformation decision-makers across EMEA — in a high-trust, relationship-driven sector.",
     companySize: "Enterprise",
     event: "World Aviation Festival, Amsterdam",
+    format: "video",
+    formatIcon: "Play",
     geography: "Amsterdam",
     id: "world-aviation-festival-2025",
     industry: "Aviation Technology / Digital Transformation",

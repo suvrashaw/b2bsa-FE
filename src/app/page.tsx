@@ -8,14 +8,13 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
-import { Hero } from "@/components/sections/Hero";
 import { OurServices } from "@/components/sections/OurServices";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { HOME_FAQ_CONTENT, HOME_HERO_CONTENT, HOME_PAGE } from "@/content/home";
+import { HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildFaqJsonLd } from "@/lib";
 
@@ -27,10 +26,8 @@ const Home = () => {
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header />
       <div id="home">
-        <Hero {...HOME_HERO_CONTENT} />
+        <CinematicSequence />
       </div>
-
-      <CinematicSequence />
 
       <ClientLogos />
 
