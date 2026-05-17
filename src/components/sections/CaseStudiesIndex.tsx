@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { CaseStudyShowcaseCard } from "@/components/ui/CaseStudyShowcaseCard";
@@ -18,61 +18,6 @@ type FilterId = (typeof CASE_STUDIES_PAGE_CONTENT.filters)[number]["id"];
 
 const ALL_FILTER = "All";
 
-const FilterButton = ({
-  filterId,
-  isActive,
-  option,
-  updateFilter,
-}: {
-  filterId: FilterId;
-  isActive: boolean;
-  option: string;
-  updateFilter: (id: FilterId, option: string) => void;
-}) => {
-  const handleClick = useCallback(
-    () => updateFilter(filterId, option),
-    [filterId, option, updateFilter]
-  );
-  return (
-    <Button
-      className={cn(
-        "rounded-full px-4 py-2 text-sm",
-        !isActive && "border-white bg-white text-gray-700"
-      )}
-      onClick={handleClick}
-      size="sm"
-      type="button"
-      variant={isActive ? "primary" : "secondary"}
-    >
-      {option}
-    </Button>
-  );
-};
-
-const StudyCard = ({
-  active,
-  ctaLabel,
-  item,
-  setActiveId,
-  studyId,
-}: {
-  active: boolean;
-  ctaLabel: string;
-  item: (typeof CASE_STUDIES_PAGE_STUDIES)[number]["card"];
-  setActiveId: (id: string) => void;
-  studyId: string;
-}) => {
-  const handleActivate = useCallback(() => setActiveId(studyId), [setActiveId, studyId]);
-  return (
-    <CaseStudyShowcaseCard
-      active={active}
-      ctaLabel={ctaLabel}
-      item={item}
-      onActivate={handleActivate}
-    />
-  );
-};
-
 const filterOptions = {
   companySize: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.companySize))],
   geography: [...new Set(CASE_STUDIES_PAGE_STUDIES.map((study) => study.geography))],
@@ -82,14 +27,7 @@ const filterOptions = {
   ],
 } satisfies Record<FilterId, string[]>;
 
-const HERO_LEFT_ANIMATE = { opacity: 1, x: 0 };
-const HERO_LEFT_INITIAL = { opacity: 0, x: -30 };
-const HERO_LEFT_TRANSITION = { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const };
-const HERO_RIGHT_ANIMATE = { opacity: 1, x: 0 };
-const HERO_RIGHT_INITIAL = { opacity: 0, x: 30 };
-const HERO_RIGHT_TRANSITION = { duration: 1, ease: [0.16, 1, 0.3, 1] as const };
-
-export const CaseStudiesIndex = () => {
+export function CaseStudiesIndex() {
   const [filters, setFilters] = useState<Record<FilterId, string>>({
     companySize: ALL_FILTER,
     geography: ALL_FILTER,
@@ -128,10 +66,10 @@ export const CaseStudiesIndex = () => {
         <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/30" />
         <div className="relative z-10 container mx-auto grid items-center gap-12 px-8 pb-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
           <motion.div
-            animate={HERO_LEFT_ANIMATE}
+            animate={{ opacity: 1, x: 0 }}
             className="max-w-3xl"
-            initial={HERO_LEFT_INITIAL}
-            transition={HERO_LEFT_TRANSITION}
+            initial={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="font-heading text-5xl leading-[1.05] font-bold lg:text-7xl">
               {CASE_STUDIES_PAGE_CONTENT.hero.title}
@@ -142,10 +80,10 @@ export const CaseStudiesIndex = () => {
           </motion.div>
 
           <motion.div
-            animate={HERO_RIGHT_ANIMATE}
+            animate={{ opacity: 1, x: 0 }}
             className="relative hidden h-[520px] overflow-hidden rounded-[2rem] border-8 border-white shadow-2xl lg:block"
-            initial={HERO_RIGHT_INITIAL}
-            transition={HERO_RIGHT_TRANSITION}
+            initial={{ opacity: 0, x: 30 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <Image
               alt={CASE_STUDIES_PAGE_CONTENT.hero.image.alt}
@@ -181,15 +119,25 @@ export const CaseStudiesIndex = () => {
                   {filter.label}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-3">
-                  {[ALL_FILTER, ...filterOptions[filter.id]].map((option) => (
-                    <FilterButton
-                      filterId={filter.id}
-                      isActive={filters[filter.id] === option}
-                      key={`${filter.id}-${option}`}
-                      option={option}
-                      updateFilter={updateFilter}
-                    />
-                  ))}
+                  {[ALL_FILTER, ...filterOptions[filter.id]].map((option) => {
+                    const isActive = filters[filter.id] === option;
+
+                    return (
+                      <Button
+                        className={cn(
+                          "rounded-full px-4 py-2 text-sm",
+                          !isActive && "border-white bg-white text-gray-700"
+                        )}
+                        key={`${filter.id}-${option}`}
+                        onClick={() => updateFilter(filter.id, option)}
+                        size="sm"
+                        type="button"
+                        variant={isActive ? "primary" : "secondary"}
+                      >
+                        {option}
+                      </Button>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -208,13 +156,12 @@ export const CaseStudiesIndex = () => {
           {filteredStudies.length > 0 ? (
             <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
               {filteredStudies.map((study) => (
-                <StudyCard
+                <CaseStudyShowcaseCard
                   active={activeStudyId === study.id}
                   ctaLabel={CASE_STUDIES_PAGE_CONTENT.cardCtaLabel}
                   item={study.card}
                   key={study.id}
-                  setActiveId={setActiveId}
-                  studyId={study.id}
+                  onActivate={() => setActiveId(study.id)}
                 />
               ))}
             </div>
@@ -317,4 +264,4 @@ export const CaseStudiesIndex = () => {
       />
     </>
   );
-};
+}
