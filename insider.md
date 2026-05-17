@@ -4,25 +4,26 @@ This document specifies the exact visual styling, DOM layout, and interactive co
 
 ---
 
-## 🏗️ Architectural Breakdown
+## 🏗️ Architectural & Integration Design
 
-The section will be implemented as a reusable component that can be easily rendered on the Home page, Service hubs, or detail routes:
+The section is implemented as a reusable component integrated as an optional feature within our unified template layout systems (`ServiceHub` and `ServiceDetail`):
 
 ```mermaid
 graph TD
-    Page[ServiceDetail/Hub Page] --> Section[TradeShowInsider]
-    Section --> Grid[3-Column Responsive Grid]
+    Page[Event Routes 1-8] --> Detail[ServiceDetail.tsx / ServiceHub.tsx]
+    Detail --> Template[Optionally renders TradeShowInsider]
+    Template --> Grid[3-Column Responsive Grid]
     Grid --> Card[InsiderMorphCard]
 ```
 
 ### 1. Card Component: `InsiderMorphCard`
 - **Path**: `src/components/cards/InsiderMorphCard.tsx` [NEW]
-- **Exact Skyline Mechanical Spec**:
+- **Key Specifications**:
   * **Morphing Interaction**: 
-    - **Default State**: Displays a standard blog card with a thumbnail image wrapper on top (`h-[238px]`) and a light neutral text background below (`bg-brand-gray` or `bg-neutral-100`).
-    - **Hovered State**: The thumbnail image wrapper height expands smoothly from `238px` to `100%` (covering the full height of the card!). Simultaneously, a rich solid overlay fades in on top of the image (`opacity: 100`), and all text colors transition from black (`text-neutral-900`) to pure white (`text-white`).
+    - **Default State**: Displays a standard blog card with a thumbnail image wrapper on top (`h-[238px]`) and a light B2BSA2 neutral background below (`bg-neutral-100` / `bg-[#F1F1F3]`).
+    - **Hovered State**: The thumbnail image wrapper height expands smoothly from `238px` to `100%` (covering the full height of the card!). Simultaneously, our brand blue overlay (`bg-brand-blue/95`) fades in, and all text colors transition from black (`text-neutral-900`) to pure white (`text-white`).
   * **Visual Stability (Zero-Shift Typography)**:
-    To prevent any visual jumping, text scaling, or layout shifting, the typography coordinates remain absolutely static. Only the background elements morph and fade underneath the copy.
+    To prevent any visual jumping, text scaling, or layout shifting, the typography coordinates remain completely static. Only the background elements morph and fade underneath the copy.
   * **The "3D Title" Effect (GPU Hardware Acceleration)**:
     To keep the heavy geometric text perfectly sharp and avoid blurry font rendering or sub-pixel jitter during browser transitions, we trigger GPU-composited layers on the absolute overlay and text nodes using `transform-style: preserve-3d;` and `will-change: transform`.
 
@@ -61,7 +62,6 @@ interface InsiderMorphCardProps {
   title: string;
   image: string;
   href: string;
-  overlayColor?: string; // Optional custom solid hover color
 }
 
 export const InsiderMorphCard = ({
@@ -71,7 +71,6 @@ export const InsiderMorphCard = ({
   title,
   image,
   href,
-  overlayColor = "bg-brand-blue/95", // Custom B2BSA2 brand-blue overlay
 }: InsiderMorphCardProps) => {
   return (
     <Link
@@ -87,13 +86,8 @@ export const InsiderMorphCard = ({
           sizes="(max-width: 768px) 100vw, 400px"
           className="object-cover"
         />
-        {/* Solid hardware-accelerated overlay */}
-        <div
-          className={cn(
-            "absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 z-10 pointer-events-none transform-style-3d",
-            overlayColor
-          )}
-        />
+        {/* B2BSA2 Brand-Blue solid hardware-accelerated overlay */}
+        <div className="absolute inset-0 bg-brand-blue/95 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 z-10 pointer-events-none transform-style-3d" />
       </div>
 
       {/* 2. Absolute Static Text Overlay (Zero-Shift structure) */}
@@ -137,7 +131,6 @@ export const InsiderMorphCard = ({
 ```tsx
 "use client";
 
-import { motion } from "framer-motion";
 import { InsiderMorphCard } from "@/components/cards/InsiderMorphCard";
 
 export interface InsiderArticle {
@@ -157,7 +150,7 @@ interface TradeShowInsiderProps {
   articles?: InsiderArticle[];
 }
 
-const DEFAULT_ARTICLES: InsiderArticle[] = [
+export const DEFAULT_ARTICLES: InsiderArticle[] = [
   {
     id: "tip-1",
     category: "Strategic Planning",
@@ -244,3 +237,27 @@ To prevent any font rendering issues or text blurring during relative element he
 }
 ```
 This forces browser GPU compositing on text nodes, ensuring buttery-smooth transitions and a pristine visual finish.
+
+---
+
+## 🚀 Deployment Guide: Active Events Pages (Pages 1 to 8)
+
+Codex must activate the morphing tips block on the following **8 Event-focused pages** by passing the `insiderInsights` content block within their respective files:
+
+### Target Routes & Content Files:
+1. **Global Event Solutions Hub** (`/services/global-event-solutions`)
+   * Content file: `src/content/services/global-event-solutions.tsx`
+2. **Trade Show Booth Design** (`/services/global-event-solutions/trade-show-booth-design`)
+   * Content file: `src/content/services/detail/trade-show-booth-design.tsx`
+3. **Event Lead Generation** (`/services/global-event-solutions/event-lead-generation`)
+   * Content file: `src/content/services/detail/event-lead-generation.tsx`
+4. **Industry Events** (`/services/global-event-solutions/industry-events`)
+   * Content file: `src/content/services/detail/industry-events.tsx`
+5. **Custom Events** (`/services/global-event-solutions/custom-events`)
+   * Content file: `src/content/services/detail/custom-events.tsx`
+6. **Event Booth Rental** (`/services/global-event-solutions/event-booth-rental`)
+   * Content file: `src/content/services/detail/event-booth-rental.tsx`
+7. **Trade Show Booth Builder** (`/services/global-event-solutions/trade-show-booth-builder`)
+   * Content file: `src/content/services/detail/trade-show-booth-builder.tsx`
+8. **Modular and Portable Booths** (`/services/global-event-solutions/modular-portable-booths`)
+   * Content file: `src/content/services/detail/modular-portable-booths.tsx`

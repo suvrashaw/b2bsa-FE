@@ -254,6 +254,19 @@ export const BOOTH_DESIGN_FAQ = {
   heading: "Trade Show Booth Design FAQs",
 };
 
+export const BOOTH_DESIGN_SPOTLIGHT = {
+  ctaLabel: "See Our Work",
+  description:
+    "In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible. We engineer spaces around buyer psychology and sales conversion — not how they look in a 3D render.",
+  imageAlt: "Trade show exhibition hall — B2B Sales Arrow booth design",
+  imageUrl:
+    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+  index: "01",
+  label: "Why Design Matters",
+  titleLine1: "Generic Booths",
+  titleLine2: "Cost You Leads",
+};
+
 export const BOOTH_DESIGN_PAGE = {
   pageId: "service.trade-show-booth-design",
   pageName: "Trade Show Booth Design",

@@ -19,6 +19,7 @@ import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceDetailProps {
@@ -64,6 +65,16 @@ export interface ServiceDetailProps {
   };
   proofBar?: string[];
   relatedServices?: { href: string; title: string }[];
+  spotlight?: {
+    ctaLabel?: string;
+    description: string;
+    imageAlt?: string;
+    imageUrl: string;
+    index?: string;
+    label?: string;
+    titleLine1: string;
+    titleLine2: string;
+  };
   stats?: {
     items: { label: string; value: string }[];
     title: string;
@@ -164,6 +175,7 @@ export const ServiceDetail = ({
   process,
   proofBar,
   relatedServices,
+  spotlight,
   stats,
   why,
 }: ServiceDetailProps) => {
@@ -216,6 +228,23 @@ export const ServiceDetail = ({
       />
 
       {proofBar && <ProofBar stats={proofBar} />}
+
+      {spotlight && (
+        <section className="bg-white py-24">
+          <div className="container mx-auto px-8">
+            <FeaturedSpotlight
+              ctaLabel={spotlight.ctaLabel}
+              description={spotlight.description}
+              imageAlt={spotlight.imageAlt}
+              imageUrl={spotlight.imageUrl}
+              index={spotlight.index}
+              label={spotlight.label}
+              titleLine1={spotlight.titleLine1}
+              titleLine2={spotlight.titleLine2}
+            />
+          </div>
+        </section>
+      )}
 
       {deliverablesSection}
 
