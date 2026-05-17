@@ -30,8 +30,8 @@ export const ABOUT_ORIGIN_TIMELINE = {
           <p>
             B2B Sales Arrow was founded to solve a problem we encountered repeatedly across
             enterprise marketing engagements: significant investment in events, campaigns, and
-            market presence, but fragmented execution, poor measurement, and a persistent disconnect
-            between marketing activity and sales outcomes.
+            market presence — but fragmented execution, poor measurement, and a persistent
+            disconnect between marketing activity and sales outcomes.
           </p>
         </div>
       ),
@@ -225,120 +225,6 @@ export const ABOUT_VALUES = {
       title: "Global Thinking, Local Execution",
     },
   ],
-};
-
-export const ABOUT_CASE_STUDIES = {
-  ctaLabel: "Full Study",
-  eyebrow: "FLAGSHIP WORK",
-  heading: <>The Results That Define Our Reputation</>,
-  items: [
-    {
-      challenge: "Low attendee engagement in a 10,000 sq ft booth space.",
-      client: "Global Tech Summit",
-      icon: "BarChart3",
-      id: "tech-summit",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-      metric: "+340%",
-      metricLabel: "Lead Capture Rate",
-      solution: "Interactive structural design with live AR product demos.",
-      title: "Redefining the Enterprise Exhibition Experience",
-    },
-    {
-      challenge: "High customer acquisition cost across generic channels.",
-      client: "FinServe SaaS",
-      icon: "Target",
-      id: "finserve",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      metric: "4.2x",
-      metricLabel: "ROI in 6 Months",
-      solution: "Targeted video thought-leadership campaign.",
-      title: "Scaling Pipeline Through Precision Media",
-    },
-  ],
-  viewAllLabel: "View All Case Studies",
-};
-
-export const ABOUT_TESTIMONIALS = {
-  autoplayInterval: 3000,
-  eyebrow: "CLIENT SUCCESS",
-  heading: <>Trusted by Industry Visionaries</>,
-  initialIndex: 2,
-  testimonials: [
-    {
-      company: "Nexus Technologies",
-      designation: "Chief Marketing Officer",
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-      name: "Sarah Jenkins",
-      quote:
-        "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
-      rating: 5,
-    },
-    {
-      company: "Aura Systems",
-      designation: "VP of Global Sales",
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-      name: "Michael Chen",
-      quote:
-        "The strategic media production and targeted lead generation strategies deployed by the team were instrumental in helping us penetrate the European market 6 months ahead of schedule.",
-      rating: 5,
-    },
-    {
-      company: "Vortex Labs",
-      designation: "Director of Brand Activation",
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-      name: "Elena Rodriguez",
-      quote:
-        "Unlike typical agencies, they understand the deep nuances of enterprise B2B sales cycles. Every piece of collateral and physical asset they produced was highly conversion-focused.",
-      rating: 5,
-    },
-    {
-      company: "Synapse Networks",
-      designation: "Head of Growth",
-      id: 4,
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-      name: "David Alaba",
-      quote:
-        "Their data-driven insights and innovative campaigns created an entirely new paradigm for how we engage our enterprise prospects. A flawless execution.",
-      rating: 5,
-    },
-  ],
-};
-
-export const ABOUT_CONTACT = {
-  description:
-    "We partner with ambitious brands that need event presence, media content, performance marketing, or market intelligence connected to measurable commercial outcomes.",
-  eyebrow: "WORK WITH US",
-  form: {
-    ctaLabel: "Request a Strategy Consultation",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    messageLabel: "Tell Us About Your Business",
-    messagePlaceholder: "What are your growth goals?",
-    serviceLabel: "How Can We Help?",
-    serviceOptions: [
-      { label: "Global Event Solutions", value: "events" },
-      { label: "Media Production", value: "media" },
-      { label: "Performance Marketing", value: "marketing" },
-      { label: "Lead Generation", value: "lead-gen" },
-      { label: "Market Research", value: "research" },
-    ],
-    servicePlaceholder: "Select a service...",
-  },
-  heading: <>Start the Conversation</>,
-  illustration: null,
 };
 
 export const ABOUT_CTA = {

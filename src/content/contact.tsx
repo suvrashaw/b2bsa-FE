@@ -27,90 +27,6 @@ export const CONTACT_HERO = {
   ),
 };
 
-export const CONTACT_WHO_WE_ARE = {
-  attribution: "— Leadership Team, B2B Sales Arrow",
-  heading: (
-    <>
-      Why Brands <br />
-      <span className="text-brand-blue">Trust Us</span>
-    </>
-  ),
-  quote:
-    '"Every engagement begins with a single conversation. That first call has generated over $1.2 billion in pipeline for our clients."',
-  stats: [
-    {
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-      icon: "Clock",
-      label: "Average Response Time",
-      value: "< 24h",
-    },
-    {
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-      icon: "Star",
-      label: "Client Satisfaction Rate",
-      value: "98%",
-    },
-    {
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
-      icon: "Users",
-      label: "Brands Served",
-      value: "240+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
-      icon: "Globe2",
-      label: "Countries Covered",
-      value: "40+",
-    },
-  ],
-};
-
-export const CONTACT_FAQ = {
-  description: "Answers to what most clients ask before starting their first engagement with us.",
-  eyebrow: "BEFORE YOU REACH OUT",
-  faqs: [
-    {
-      answer:
-        "We work on project-based and retainer models. Event projects typically start from $15,000. Lead generation and marketing retainers from $5,000/month. We tailor every proposal.",
-      id: "pricing",
-      question: "What is your pricing structure?",
-    },
-    {
-      answer:
-        "We operate across 40+ countries with deep presence in EMEA, APAC, and the Americas. We have on-ground partners at every major trade show venue globally.",
-      id: "locations",
-      question: "Which markets do you serve?",
-    },
-    {
-      answer:
-        "Lead generation campaigns can launch within 2 weeks. Event booth design and production requires 8–12 weeks. Media production projects take 4–6 weeks from brief to delivery.",
-      id: "turnaround",
-      question: "What is your typical turnaround time?",
-    },
-    {
-      answer:
-        "We work best with brands committing to a 3-month minimum engagement for services like lead generation and marketing. For events, there is no minimum — we take single-event projects.",
-      id: "minimum",
-      question: "Is there a minimum engagement size?",
-    },
-    {
-      answer:
-        "After your first call, we deliver a scoped proposal within 48 hours. Once approved, our team conducts a deep-dive strategy session and assigns a dedicated account lead within a week.",
-      id: "process",
-      question: "What does onboarding look like?",
-    },
-  ],
-  heading: (
-    <>
-      Common <br />
-      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Questions
-      </span>
-    </>
-  ),
-  scrollAmount: 340,
-};
-
 export const CONTACT_FORM = {
   description:
     "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence — one conversation is enough to define the right path.",
@@ -176,6 +92,43 @@ export const CONTACT_FORM = {
     alt: "Contact Us",
     src: "/undraw_contact-us_s4jn.svg",
   },
+};
+
+export const CONTACT_NEXT_STEPS = {
+  description: "",
+  heading: "What Happens Next",
+  items: [
+    {
+      content: <p>We review your inquiry within one business day and confirm receipt.</p>,
+      title: "Step 1",
+    },
+    {
+      content: (
+        <p>A growth architect contacts you to schedule a discovery call at your preferred time.</p>
+      ),
+      title: "Step 2",
+    },
+    {
+      content: (
+        <p>
+          We prepare a customised strategy proposal aligned to your objectives, timeline, and
+          budget.
+        </p>
+      ),
+      title: "Step 3",
+    },
+    {
+      content: <p>Programme kickoff once scope and approach are agreed.</p>,
+      title: "Step 4",
+    },
+  ],
+};
+
+export const CONTACT_CTA = {
+  ctaHref: "/contact",
+  ctaLabel: "Book a Strategy Consultation",
+  description: "Tell us what you are trying to achieve. We will define the right path.",
+  title: "One conversation can clarify your entire growth strategy.",
 };
 
 export const CONTACT_PAGE = {

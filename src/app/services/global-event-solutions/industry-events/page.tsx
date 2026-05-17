@@ -19,8 +19,9 @@ export const metadata: Metadata = getMarketingPageMetadata(INDUSTRY_EVENTS_PAGE)
 const industryEventsCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Get a Free Event ROI Assessment",
-  description: "It is about choosing the rooms where your buyers already gather.",
-  title: "The strongest strategy is not about showing up everywhere.",
+  description: "",
+  title:
+    "The strongest strategy is not about showing up everywhere — it is about choosing the rooms where your buyers already gather.",
 };
 
 const industryEventsRelatedServices = [

@@ -18,8 +18,9 @@ export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE)
 const corporateVideoProductionCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Start Your Corporate Video Project",
-  description: "With the production quality enterprise buyers expect.",
-  title: "When your offering is complex, corporate video makes it clear.",
+  description: "",
+  title:
+    "When your offering is complex, corporate video makes it clear — with the production quality enterprise buyers expect.",
 };
 
 const corporateVideoProductionRelatedServices = [
