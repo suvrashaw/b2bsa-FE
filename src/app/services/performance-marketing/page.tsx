@@ -37,6 +37,6 @@ const Page = () => {
       why={PERF_WHY}
     />
   );
-}
+};
 
 export default Page;

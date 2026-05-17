@@ -18,7 +18,7 @@ export interface ContactUsProps {
 }
 
 const CONTACTUS_ANIMATE = { y: [0, -15, 0] };
-const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity };
+const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity } as const;
 
 export const ContactUs = ({
   content = HOME_CONTACT_CONTENT,
@@ -71,4 +71,4 @@ export const ContactUs = ({
       </div>
     </section>
   );
-}
+};

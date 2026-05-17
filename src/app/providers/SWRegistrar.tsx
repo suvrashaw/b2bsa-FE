@@ -13,4 +13,4 @@ export const SWRegistrar = () => {
   }, []);
 
   return null;
-}
+};

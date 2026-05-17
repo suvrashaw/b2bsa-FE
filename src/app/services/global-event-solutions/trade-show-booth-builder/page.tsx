@@ -55,6 +55,6 @@ const Page = () => {
       why={BOOTH_BUILDER_WHY}
     />
   );
-}
+};
 
 export default Page;

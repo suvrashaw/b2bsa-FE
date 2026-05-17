@@ -167,12 +167,7 @@ export const PAID_ADS_PAGE = {
     description:
       "Specialist B2B PPC agency — Google Search, Display, YouTube, programmatic, and LinkedIn Ads managed around qualified pipeline and cost per qualified opportunity. Not just clicks.",
     focusKeyphrase: "B2B paid advertising",
-    secondaryKeywords: [
-      "PPC agency",
-      "PPC",
-      "paid search for B2B",
-      "digital marketing agency",
-    ],
+    secondaryKeywords: ["PPC agency", "PPC", "paid search for B2B", "digital marketing agency"],
     title: "B2B Paid Advertising and PPC Agency for Enterprise | B2B Sales Arrow",
   },
 } as const;

@@ -82,4 +82,4 @@ export const DataTable = ({ className, description, headers, rows, title }: Data
       </div>
     </section>
   );
-}
+};

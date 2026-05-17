@@ -37,6 +37,6 @@ const Page = () => {
       why={MARKET_INTEL_WHY}
     />
   );
-}
+};
 
 export default Page;

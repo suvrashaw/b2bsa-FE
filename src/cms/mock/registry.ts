@@ -10,11 +10,7 @@ const siteTitleSuffix = " | B2B Sales Arrow";
 
 const stripSiteTitleSuffix = (title: string) => title.replace(siteTitleSuffix, "");
 
-const buildHeading = (
-  id: PageId,
-  seo: CmsPage["seo"],
-  pageName?: string
-): CmsHeading => {
+const buildHeading = (id: PageId, seo: CmsPage["seo"], pageName?: string): CmsHeading => {
   if (id === "home") {
     return {
       highlight: "Event",

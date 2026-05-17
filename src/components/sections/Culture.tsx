@@ -41,7 +41,7 @@ export interface CultureData {
   description: string;
   eyebrow: string;
   heading: React.ReactNode | string;
-  reasons: { description: string; id: string; image: string; title: string; }[];
+  reasons: { description: string; id: string; image: string; title: string }[];
 }
 
 export const Culture = ({ data }: { data: CultureData }) => {

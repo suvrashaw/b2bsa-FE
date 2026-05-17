@@ -17,7 +17,11 @@ const CountryItem = ({ country, isActive }: { country: string; isActive: boolean
     [isActive]
   );
   return (
-    <motion.div animate={itemAnimate} className="relative cursor-default" transition={ITEM_TRANSITION}>
+    <motion.div
+      animate={itemAnimate}
+      className="relative cursor-default"
+      transition={ITEM_TRANSITION}
+    >
       <span className="font-heading text-2xl tracking-wide text-white md:text-3xl">{country}</span>
       {isActive && (
         <motion.div
@@ -59,4 +63,4 @@ export const GlobalPresence = () => {
       </div>
     </div>
   );
-}
+};

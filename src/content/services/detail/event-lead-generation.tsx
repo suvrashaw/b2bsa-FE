@@ -60,8 +60,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-primary",
-      description:
-        "BANT or CHAMP qualification during live conversations",
+      description: "BANT or CHAMP qualification during live conversations",
       icon: "Filter",
       id: "lead-scoring",
       image:
@@ -70,8 +69,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-blue",
-      description:
-        "proactive floor outreach to target accounts beyond booth traffic",
+      description: "proactive floor outreach to target accounts beyond booth traffic",
       icon: "Users",
       id: "active-prospecting",
       image:
@@ -80,8 +78,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-cyan",
-      description:
-        "hot leads flagged and delivered to the right sales owner same-day",
+      description: "hot leads flagged and delivered to the right sales owner same-day",
       icon: "Zap",
       id: "crm-routing",
       image:
@@ -90,8 +87,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-primary",
-      description:
-        "personalised follow-up by lead quality tier and conversation context",
+      description: "personalised follow-up by lead quality tier and conversation context",
       icon: "Mail",
       id: "nurture",
       image:

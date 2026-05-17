@@ -34,9 +34,7 @@ const ParallaxItem = ({ alt, index, scale, src }: ParallaxItemProps) => {
         index === 2
           ? "[&>div]:!-top-[10vh] [&>div]:!-left-[25vw] [&>div]:!h-[45vh] [&>div]:!w-[20vw]"
           : ""
-      } ${
-        index === 3 ? "[&>div]:!left-[27.5vw] [&>div]:!h-[25vh] [&>div]:!w-[25vw]" : ""
-      } ${
+      } ${index === 3 ? "[&>div]:!left-[27.5vw] [&>div]:!h-[25vh] [&>div]:!w-[25vw]" : ""} ${
         index === 4
           ? "[&>div]:!top-[27.5vh] [&>div]:!left-[5vw] [&>div]:!h-[25vh] [&>div]:!w-[20vw]"
           : ""
@@ -85,15 +83,7 @@ export const ZoomParallax = ({ images }: ZoomParallaxProps) => {
         {images.map(({ alt, src }, index) => {
           const scale = scales[index % scales.length];
 
-          return (
-            <ParallaxItem
-              alt={alt}
-              index={index}
-              key={index}
-              scale={scale}
-              src={src}
-            />
-          );
+          return <ParallaxItem alt={alt} index={index} key={index} scale={scale} src={src} />;
         })}
       </div>
     </div>

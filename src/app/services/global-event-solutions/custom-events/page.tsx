@@ -50,6 +50,6 @@ const Page = () => {
       relatedServices={customEventsRelatedServices}
     />
   );
-}
+};
 
 export default Page;

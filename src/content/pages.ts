@@ -19,11 +19,11 @@ export type NavigationGroup =
   | "Sales Qualified Lead Generation";
 
 export type PageBlock =
-  | { items: string[]; ordered: boolean; type: "list"; }
-  | { labels: string[]; type: "cta"; }
-  | { level: number; text: string; type: "heading"; }
-  | { rows: string[][]; type: "table"; }
-  | { text: string; type: "paragraph"; };
+  | { items: string[]; ordered: boolean; type: "list" }
+  | { labels: string[]; type: "cta" }
+  | { level: number; text: string; type: "heading" }
+  | { rows: string[][]; type: "table" }
+  | { text: string; type: "paragraph" };
 
 export interface PageContent {
   ctas: PageCTA[];
@@ -8607,7 +8607,7 @@ export const getPageByUrl = (url: string): PageContent => {
   }
 
   return page;
-}
+};
 
 const pageIdsByUrl: Record<string, string> = Object.fromEntries(
   Object.entries(pageRoutes).map(([id, path]) => [normalizeLookupUrl(path), id])
@@ -8627,4 +8627,4 @@ export const getPageMetadata = (url: string): Metadata => {
     },
     pageIdsByUrl[canonicalPath]
   );
-}
+};

@@ -45,6 +45,6 @@ const Page = () => {
       why={SEO_WHY}
     />
   );
-}
+};
 
 export default Page;

@@ -133,11 +133,11 @@ export const CaseStudies = ({
       </div>
     </section>
   );
-}
+};
 
 const createCaseStudyId = (study: CaseStudyItem, index: number) => {
   return `${study.client ?? study.title}-${study.title}-${index}`
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, "");
-}
+};

@@ -107,7 +107,7 @@ export const CinematicSequence = ({
       </div>
     </section>
   );
-}
+};
 
 const CinematicBeatOverlay = ({
   beat,
@@ -135,7 +135,7 @@ const CinematicBeatOverlay = ({
       )}
     </motion.div>
   );
-}
+};
 
 const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: number, h: number) => {
   const imgRatio = img.width / img.height;
@@ -156,7 +156,7 @@ const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: numb
 
   ctx.clearRect(0, 0, w, h);
   ctx.drawImage(img, x, y, renderW, renderH);
-}
+};
 
 const useCinematicFrameImages = (
   frameCount: number,
@@ -206,4 +206,4 @@ const useCinematicFrameImages = (
   }, [frameCount, frameUrlTemplate, frameUrls, loadSignature]);
 
   return { imagesLoaded: loadedSignature === loadSignature, imagesRef };
-}
+};

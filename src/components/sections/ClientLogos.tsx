@@ -37,7 +37,7 @@ const useLogoMarquee = (speed: number, wheelSpeed: number) => {
   };
 
   return { handleWheel, setIsHovered, x };
-}
+};
 
 const SingleStoreLogo = () => (
   <div className="flex cursor-pointer items-center gap-1.5 transition-all duration-300 hover:scale-125">
@@ -256,4 +256,4 @@ export const ClientLogos = ({
       </div>
     </div>
   );
-}
+};

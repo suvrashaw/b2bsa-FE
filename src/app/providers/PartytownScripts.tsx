@@ -24,10 +24,7 @@ export const PartytownScripts = () => {
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
             type="text/partytown"
           />
-          <script
-            dangerouslySetInnerHTML={GA_INLINE_SCRIPT}
-            type="text/partytown"
-          />
+          <script dangerouslySetInnerHTML={GA_INLINE_SCRIPT} type="text/partytown" />
         </>
       ) : null}
     </>

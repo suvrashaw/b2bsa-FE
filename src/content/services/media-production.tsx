@@ -72,8 +72,7 @@ export const MEDIA_WHY = {
       title: "Strategy-Led Production",
     },
     {
-      description:
-        "Beautiful footage is a means — commercial impact is the objective.",
+      description: "Beautiful footage is a means — commercial impact is the objective.",
       id: "impact",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",

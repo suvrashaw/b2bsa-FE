@@ -28,6 +28,6 @@ const Page = () => {
       why={SQL_WHY}
     />
   );
-}
+};
 
 export default Page;

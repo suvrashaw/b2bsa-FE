@@ -97,7 +97,7 @@ export const BlogCard = ({
       </div>
     </motion.div>
   );
-}
+};
 
 export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
   return (
@@ -130,4 +130,4 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
       </div>
     </div>
   );
-}
+};

@@ -46,6 +46,6 @@ const Page = () => {
       why={PAID_ADS_WHY}
     />
   );
-}
+};
 
 export default Page;

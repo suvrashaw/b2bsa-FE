@@ -9,11 +9,7 @@ export interface RelatedItem {
   title: string;
 }
 
-export const getRelatedContent = (
-  tags: string[],
-  limit = 3,
-  excludeId?: string
-): RelatedItem[] =>
+export const getRelatedContent = (tags: string[], limit = 3, excludeId?: string): RelatedItem[] =>
   cmsPages
     .filter((page) => page.id !== excludeId && page.tags?.some((tag) => tags.includes(tag)))
     .slice(0, limit)

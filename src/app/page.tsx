@@ -69,6 +69,6 @@ const Home = () => {
       <Footer />
     </main>
   );
-}
+};
 
 export default Home;

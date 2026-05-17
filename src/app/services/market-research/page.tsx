@@ -28,6 +28,6 @@ const Page = () => {
       why={RESEARCH_WHY}
     />
   );
-}
+};
 
 export default Page;

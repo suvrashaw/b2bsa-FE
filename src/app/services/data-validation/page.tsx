@@ -40,6 +40,6 @@ const Page = () => {
       why={DATA_VALIDATION_WHY}
     />
   );
-}
+};
 
 export default Page;

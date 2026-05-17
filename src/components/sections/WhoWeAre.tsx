@@ -110,7 +110,7 @@ export const WhoWeAre = ({
       </div>
     </section>
   );
-}
+};
 
 const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
   return (
@@ -126,4 +126,4 @@ const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
       </div>
     </div>
   );
-}
+};

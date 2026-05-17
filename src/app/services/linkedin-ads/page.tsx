@@ -43,6 +43,6 @@ const Page = () => {
       why={LINKEDIN_ADS_WHY}
     />
   );
-}
+};
 
 export default Page;

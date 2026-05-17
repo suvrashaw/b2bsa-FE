@@ -52,6 +52,6 @@ const Page = () => {
       relatedServices={videoEditingServicesRelatedServices}
     />
   );
-}
+};
 
 export default Page;

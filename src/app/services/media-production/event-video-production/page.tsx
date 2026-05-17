@@ -54,6 +54,6 @@ const Page = () => {
       why={EVENT_VIDEO_WHY}
     />
   );
-}
+};
 
 export default Page;

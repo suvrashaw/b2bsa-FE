@@ -130,4 +130,4 @@ export const UpcomingEvents = ({
       </div>
     </section>
   );
-}
+};

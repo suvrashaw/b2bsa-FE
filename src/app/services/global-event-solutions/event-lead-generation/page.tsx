@@ -51,6 +51,6 @@ const Page = () => {
       why={ELG_WHY}
     />
   );
-}
+};
 
 export default Page;

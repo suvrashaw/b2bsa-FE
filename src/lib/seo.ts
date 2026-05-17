@@ -29,4 +29,4 @@ export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
     },
     ...(seo.noIndex && { robots: { follow: false, index: false } }),
   };
-}
+};

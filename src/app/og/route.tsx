@@ -136,9 +136,7 @@ export const GET = (request: { url: string }) => {
       <div style={ogContentStyle}>
         <div style={ogHeaderStyle}>
           <div style={ogBrandRowStyle}>
-            <div style={ogBrandMarkStyle}>
-              B
-            </div>
+            <div style={ogBrandMarkStyle}>B</div>
             <div style={ogBrandTextStyle}>
               <span style={ogBrandTitleStyle}>B2B Sales Arrow</span>
               <span style={ogBrandUrlStyle}>{siteUrl.replace("https://", "")}</span>
@@ -149,9 +147,7 @@ export const GET = (request: { url: string }) => {
 
         <div style={ogMainCopyStyle}>
           <div style={ogEyebrowStyle}>Enterprise growth systems, built to convert.</div>
-          <div style={getOgTitleStyle(content.title.length)}>
-            {content.title}
-          </div>
+          <div style={getOgTitleStyle(content.title.length)}>{content.title}</div>
           <div style={ogDescriptionStyle}>{content.description}</div>
         </div>
 

@@ -74,10 +74,7 @@ export const Footer = () => {
         </motion.div>
 
         {/* 3. Main Footer Links Area (Slides up from bottom) */}
-        <motion.div
-          className="absolute right-0 bottom-0 left-0 z-10 w-full"
-          style={contentStyle}
-        >
+        <motion.div className="absolute right-0 bottom-0 left-0 z-10 w-full" style={contentStyle}>
           <motion.div
             className="absolute inset-0 -z-10 bg-linear-to-t from-brand-blue via-brand-blue/95 to-brand-blue/40 backdrop-blur-sm"
             style={contentBgStyle}
@@ -248,4 +245,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-}
+};

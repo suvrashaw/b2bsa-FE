@@ -198,4 +198,4 @@ export const Globe = () => {
       />
     </div>
   );
-}
+};

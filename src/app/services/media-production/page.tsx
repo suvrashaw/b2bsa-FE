@@ -36,6 +36,6 @@ const Page = () => {
       why={MEDIA_WHY}
     />
   );
-}
+};
 
 export default Page;

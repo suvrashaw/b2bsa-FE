@@ -36,6 +36,6 @@ const Page = () => {
       why={GES_WHY}
     />
   );
-}
+};
 
 export default Page;

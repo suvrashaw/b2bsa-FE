@@ -22,8 +22,7 @@ export interface ServiceHeroProps {
 }
 
 const CINEMATIC_VEIL_STYLE = {
-  background:
-    "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
+  background: "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
 };
 const H1_STYLE = {
   color: "rgba(255, 255, 255, 0.98)",
@@ -40,8 +39,7 @@ const SECONDARY_CTA_STYLE = {
   backdropFilter: "blur(18px) saturate(150%)",
   background: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%)`,
   border: "1px solid rgba(255, 255, 255, 0.28)",
-  boxShadow:
-    "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
+  boxShadow: "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
   WebkitBackdropFilter: "blur(18px) saturate(150%)",
 };
 const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
@@ -105,10 +103,7 @@ export const ServiceHero = ({
         </video>
 
         {/* Cinematic Blue Veil (From OG HeroSection) */}
-        <div
-          className="pointer-events-none absolute inset-0 z-10"
-          style={CINEMATIC_VEIL_STYLE}
-        />
+        <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
       {/* 2. Content Area */}
@@ -185,4 +180,4 @@ export const ServiceHero = ({
       `}</style>
     </section>
   );
-}
+};

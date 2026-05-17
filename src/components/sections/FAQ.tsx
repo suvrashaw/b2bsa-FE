@@ -97,12 +97,7 @@ export const FAQ = ({
           style={FAQ_SCROLLBAR_STYLE}
         >
           {faqs.map((faq, index) => (
-            <FAQMotionCard
-              answer={faq.answer}
-              index={index}
-              key={faq.id}
-              question={faq.question}
-            />
+            <FAQMotionCard answer={faq.answer} index={index} key={faq.id} question={faq.question} />
           ))}
         </div>
 

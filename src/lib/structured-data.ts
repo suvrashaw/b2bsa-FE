@@ -27,9 +27,9 @@ export const buildBreadcrumbJsonLd = (crumbs: Array<{ name: string; url: string 
       position: index + 1,
     })),
   };
-}
+};
 
-export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string; }>) => {
+export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string }>) => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -42,14 +42,14 @@ export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string; }
       name: question,
     })),
   };
-}
+};
 
 export const buildOrganizationJsonLd = () => {
   return {
     "@context": "https://schema.org",
     ...ORGANIZATION,
   };
-}
+};
 
 export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInput) => {
   return {
@@ -64,4 +64,4 @@ export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInpu
     },
     url: `${BASE}${url}`,
   };
-}
+};

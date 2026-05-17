@@ -52,6 +52,6 @@ const Page = () => {
       why={MODULAR_BOOTHS_WHY}
     />
   );
-}
+};
 
 export default Page;

@@ -92,4 +92,4 @@ export const ProcessTimeline = ({
       </div>
     </section>
   );
-}
+};

@@ -46,11 +46,7 @@ export const OurServices = ({
 
         <div className="relative flex flex-col gap-12">
           {services.map((service, index) => (
-            <div
-              className="sticky"
-              key={service.id}
-              style={stickyStyles[index]}
-            >
+            <div className="sticky" key={service.id} style={stickyStyles[index]}>
               <div className="group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
                 {/* Content Area */}
                 <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 transition-all duration-700 md:w-2/5 lg:p-12">
@@ -102,4 +98,4 @@ export const OurServices = ({
       </div>
     </section>
   );
-}
+};

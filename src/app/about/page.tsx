@@ -46,6 +46,6 @@ const Page = () => {
       <Footer />
     </main>
   );
-}
+};
 
 export default Page;

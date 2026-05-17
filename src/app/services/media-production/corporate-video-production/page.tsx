@@ -52,6 +52,6 @@ const Page = () => {
       why={CORPORATE_VIDEO_WHY}
     />
   );
-}
+};
 
 export default Page;

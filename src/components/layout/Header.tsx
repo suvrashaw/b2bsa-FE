@@ -22,7 +22,7 @@ const MOBILE_MENU_EXIT = { opacity: 0, y: -20 };
 export const Header = ({
   darkBackground = false,
   forceLightMode = false,
-}: { darkBackground?: boolean; forceLightMode?: boolean; } = {}) => {
+}: { darkBackground?: boolean; forceLightMode?: boolean } = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const solidHeader = forceLightMode || scrolled;
@@ -228,4 +228,4 @@ export const Header = ({
       </AnimatePresence>
     </motion.header>
   );
-}
+};

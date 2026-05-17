@@ -52,6 +52,6 @@ const Page = () => {
       why={LIVE_STREAMING_WHY}
     />
   );
-}
+};
 
 export default Page;

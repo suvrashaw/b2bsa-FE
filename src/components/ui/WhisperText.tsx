@@ -81,12 +81,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
       );
 
       return (
-        <span
-          className="inline-block whitespace-nowrap"
-          data-word
-          key={i}
-          style={wordStyle}
-        >
+        <span className="inline-block whitespace-nowrap" data-word key={i} style={wordStyle}>
           {content}
         </span>
       );

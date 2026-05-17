@@ -20,7 +20,7 @@ export interface WhyChooseUsProps {
 const WHYCHOOSEUS_ANIMATE = { opacity: 1, y: 0 };
 const WHYCHOOSEUS_EXIT = { opacity: 0, y: -20 };
 const WHYCHOOSEUS_INITIAL = { opacity: 0, y: 20 };
-const WHYCHOOSEUS_TRANSITION = { duration: 0.5, ease: "easeOut" };
+const WHYCHOOSEUS_TRANSITION = { duration: 0.5, ease: "easeOut" } as const;
 
 export const WhyChooseUs = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
@@ -122,4 +122,4 @@ export const WhyChooseUs = ({
       </div>
     </section>
   );
-}
+};

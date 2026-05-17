@@ -51,6 +51,6 @@ const Page = () => {
       why={INDUSTRY_EVENTS_WHY}
     />
   );
-}
+};
 
 export default Page;

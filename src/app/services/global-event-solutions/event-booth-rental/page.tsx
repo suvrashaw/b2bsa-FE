@@ -55,6 +55,6 @@ const Page = () => {
       why={BOOTH_RENTAL_WHY}
     />
   );
-}
+};
 
 export default Page;

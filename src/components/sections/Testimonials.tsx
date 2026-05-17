@@ -209,7 +209,7 @@ export const Testimonials = ({
       </div>
     </section>
   );
-}
+};
 
 const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInterval: number) => {
   const [activeIndex, setActiveIndex] = useState(() =>
@@ -255,4 +255,4 @@ const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInter
     handlePrev,
     setActiveIndex,
   };
-}
+};
