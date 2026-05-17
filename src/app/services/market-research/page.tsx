@@ -15,10 +15,17 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(RESEARCH_PAGE);
 
+const marketResearchCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Start a Research Project",
+  title: "Own your competitive intelligence advantage.",
+};
+
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={RESEARCH_CASE_STUDIES}
+      ctaBanner={marketResearchCtaBanner}
       faq={RESEARCH_FAQ}
       hero={RESEARCH_HERO}
       page={RESEARCH_PAGE}

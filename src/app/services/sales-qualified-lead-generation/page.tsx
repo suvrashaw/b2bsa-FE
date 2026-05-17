@@ -15,10 +15,18 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(SQL_PAGE);
 
+const sqlCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Build Your SQL Generation Program",
+  description: "Give them prospects that are ready.",
+  title: "A lead is only valuable when your team can act on it with confidence.",
+};
+
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={SQL_CASE_STUDIES}
+      ctaBanner={sqlCtaBanner}
       faq={SQL_FAQ}
       hero={SQL_HERO}
       page={SQL_PAGE}

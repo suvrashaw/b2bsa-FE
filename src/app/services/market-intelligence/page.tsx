@@ -16,6 +16,14 @@ import { RESEARCH_PAGE } from "@/content/services/market-research";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTEL_PAGE);
 
+const marketIntelligenceCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Commission a Custom Research Report",
+  description:
+    "Human-powered market intelligence is the advantage that makes decisions faster and more grounded.",
+  title: "The most valuable strategic meetings start with the right intelligence.",
+};
+
 const marketIntelligenceRelatedServices = [
   { href: "/services/data-validation", title: "Data Validation" },
   { href: "/services/data-augmentation", title: "Data Augmentation" },
@@ -26,6 +34,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={MARKET_INTEL_CASE_STUDIES}
+      ctaBanner={marketIntelligenceCtaBanner}
       deliverables={MARKET_INTEL_DELIVERABLES}
       faq={MARKET_INTEL_FAQ}
       hero={MARKET_INTEL_HERO}

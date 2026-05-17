@@ -29,6 +29,48 @@ export const MODULAR_BOOTHS_WHY = {
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
       title: "Logistics Efficiency",
     },
+    {
+      description: "",
+      id: "tool-free",
+      image:
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
+      title: "Tool-free assembly in under 4 hours",
+    },
+    {
+      description: "",
+      id: "graphic-updates",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "Custom graphic panels updated between events without structural changes",
+    },
+    {
+      description: "Digital engagement built in.",
+      id: "led-screens",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "Integrated LED and screen options",
+    },
+    {
+      description: "For international deployment.",
+      id: "international-shipping",
+      image:
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      title: "Hard-case shipping to airline check-in specs",
+    },
+    {
+      description: "",
+      id: "reconfigurable",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      title: "Reconfigurable for different booth footprints",
+    },
+    {
+      description: "Eco-friendly booth options for environmental reporting.",
+      id: "sustainable",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      title: "Sustainable materials available",
+    },
   ],
 };
 

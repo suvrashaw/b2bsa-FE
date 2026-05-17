@@ -42,24 +42,13 @@ export const ABOUT_ORIGIN_TIMELINE = {
         <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
           <p>
             We built a model where event solutions, video production, performance marketing, and
-            market research work together under one accountable team, so every discipline is tied to
-            the same commercial brief.
+            market research work together under one accountable team — and where every program is
+            designed from the brief stage with commercial outcomes as the primary objective. The
+            numbers below reflect what that model produces.
           </p>
         </div>
       ),
       title: "One Accountable Model",
-    },
-    {
-      content: (
-        <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
-          <p>
-            Every program is designed from the brief stage with measurable outcomes as the primary
-            objective. The work is judged by qualified conversations, pipeline movement, and revenue
-            impact, not activity volume.
-          </p>
-        </div>
-      ),
-      title: "Outcomes First",
     },
   ],
 };
@@ -113,7 +102,8 @@ export const ABOUT_PRESENCE = {
     { color: "cyan", lat: -33.8688, lng: 151.2093, name: "Sydney", size: 0.1 },
     { color: "cyan", lat: 43.651_07, lng: -79.347_015, name: "Toronto", size: 0.1 },
   ],
-  description: "New York | London | Dubai | Singapore | Sydney | Toronto",
+  description:
+    "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto — supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
   title: "Where We Operate",
 };
 
@@ -354,9 +344,8 @@ export const ABOUT_CONTACT = {
 export const ABOUT_CTA = {
   ctaHref: "/contact",
   ctaLabel: "Request a Strategy Consultation",
-  description:
+  title:
     "If you need event presence, media content, performance marketing, or market intelligence connected to measurable commercial outcomes — start with one conversation.",
-  title: "Ready to Make B2B Sales Arrow Your Growth Partner?",
 };
 
 export const ABOUT_PAGE = {

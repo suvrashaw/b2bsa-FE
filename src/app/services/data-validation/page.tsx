@@ -16,6 +16,13 @@ import { RESEARCH_PAGE } from "@/content/services/market-research";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
 
+const dataValidationCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Validate My List",
+  description: "Before launching another campaign, make sure the list is worth using.",
+  title: "Do not prospect with broken data.",
+};
+
 const dataValidationRelatedServices = [
   {
     href: "/services/market-intelligence",
@@ -29,6 +36,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={DATA_VALIDATION_CASE_STUDIES}
+      ctaBanner={dataValidationCtaBanner}
       deliverables={DATA_VALIDATION_DELIVERABLES}
       faq={DATA_VALIDATION_FAQ}
       hero={DATA_VALIDATION_HERO}

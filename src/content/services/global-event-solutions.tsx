@@ -97,6 +97,14 @@ export const GES_WHY = {
         "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
       title: "Compressed Trust Cycles",
     },
+    {
+      description:
+        "Our enterprise event programs span North America, EMEA, APAC, the Middle East, and Latin America. Key events include GITEX (Dubai), CES (Las Vegas), MWC (Barcelona), AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and Sibos — alongside major regional industry trade shows in every sector we serve.",
+      id: "global-reach",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      title: "Where We Execute",
+    },
   ],
 };
 

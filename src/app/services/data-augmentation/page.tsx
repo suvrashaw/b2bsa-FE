@@ -15,6 +15,14 @@ import { RESEARCH_PAGE } from "@/content/services/market-research";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_AUGMENTATION_PAGE);
 
+const dataAugmentationCtaBanner = {
+  ctaHref: "/contact",
+  ctaLabel: "Request a Data Audit",
+  description:
+    "Better data enrichment improves segmentation, personalisation, deliverability, and sales productivity simultaneously.",
+  title: "Your CRM is leaking revenue.",
+};
+
 const dataAugmentationRelatedServices = [
   {
     href: "/services/market-intelligence",
@@ -28,6 +36,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={DATA_AUGMENTATION_CASE_STUDIES}
+      ctaBanner={dataAugmentationCtaBanner}
       deliverables={DATA_AUGMENTATION_DELIVERABLES}
       faq={DATA_AUGMENTATION_FAQ}
       hero={DATA_AUGMENTATION_HERO}
