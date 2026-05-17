@@ -52,7 +52,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
 
   return (
     <section className="relative w-full bg-brand-gray py-12 transition-colors duration-500">
-      <div className="relative mb-12 flex min-h-[50vh] flex-col items-start justify-center px-8 text-left">
+      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-8 text-center">
         {/* Radial spotlight */}
         <div
           aria-hidden="true"
@@ -66,14 +66,26 @@ export const Culture = ({ data }: { data: CultureData }) => {
           {data.eyebrow}
         </div>
         <WhisperText
-          className="mb-6 font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
+          className="mb-6 text-center font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
           highlightColor="blue"
           highlights={CULTURE_WHISPER_HIGHLIGHTS}
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
         />
-        <p className="max-w-2xl text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
+        <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
           {data.description}
         </p>
+        <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
+          {data.reasons.map((reason) => (
+            <div className="border-l border-brand-blue/30 pl-5" key={reason.id}>
+              <h3 className="mb-3 font-heading text-xl font-bold text-brand-charcoal">
+                {reason.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-brand-charcoal/70">
+                {reason.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <ZoomParallax images={parallaxImages} />

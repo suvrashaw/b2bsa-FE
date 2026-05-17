@@ -95,17 +95,17 @@ export const Footer = () => {
                     src="/logo.png"
                   />
                 </Link>
-                <h2 className="mb-3 text-lg font-bold text-white!">
+                <h2 className="mb-3 text-lg font-bold !text-white">
                   Turn Your Next Trade Show into a Revenue Engine
                 </h2>
-                <p className="mb-8 max-w-sm text-sm leading-relaxed text-gray-400">
+                <p className="mb-8 max-w-sm text-sm leading-relaxed text-white/90">
                   We deliver premier global event solutions that turn your corporate presence into a
                   measurable revenue engine. Let&apos;s build your pipeline together.
                 </p>
-                <div className="mb-6 space-y-1.5 text-sm text-gray-400">
+                <div className="mb-6 space-y-1.5 text-sm text-white/90">
                   <p>
                     <a
-                      className="transition-colors hover:text-brand-primary"
+                      className="transition-colors hover:text-white hover:underline"
                       href="mailto:info@b2bsalesarrow.com"
                     >
                       info@b2bsalesarrow.com
@@ -113,7 +113,7 @@ export const Footer = () => {
                   </p>
                   <p>New York, USA</p>
                   <p>Bengaluru, India</p>
-                  <p className="text-gray-500">Serving 30+ Countries</p>
+                  <p className="text-white/85">Serving 30+ Countries</p>
                 </div>
                 <div className="flex items-center gap-4">
                   {socialLinks.map((item) => {
@@ -154,14 +154,14 @@ export const Footer = () => {
               </div>
 
               <div className="lg:col-span-2">
-                <span className="mb-4 block text-xs font-semibold tracking-widest text-gray-500 uppercase">
+                <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
                   Navigation
                 </span>
                 <ul className="space-y-3">
                   {footerNavigation.map((item) => (
                     <li key={item.name}>
                       <Link
-                        className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                        className="text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
                         href={item.href}
                       >
                         {item.name}
@@ -172,15 +172,15 @@ export const Footer = () => {
               </div>
 
               <div className="lg:col-span-4">
-                <span className="mb-4 block text-xs font-semibold tracking-widest text-gray-500 uppercase">
+                <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
                   Stay Ahead
                 </span>
-                <p className="mb-4 text-sm text-gray-500">
+                <p className="mb-4 text-sm text-white/90">
                   Subscribe to our enterprise growth newsletter.
                 </p>
                 <div className="pointer-events-auto relative">
                   <input
-                    className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors placeholder:text-gray-500 focus:border-brand-primary focus:outline-none"
+                    className="w-full rounded-lg border border-white/35 bg-white/10 px-4 py-3 text-sm text-white transition-colors placeholder:text-white/85 focus:border-white focus:outline-none"
                     placeholder="Work Email"
                     type="email"
                   />
@@ -200,16 +200,16 @@ export const Footer = () => {
               {footerServiceGroups.map((group) => (
                 <div key={group.name}>
                   <Link
-                    className="mb-3 block text-sm font-semibold text-white transition-colors hover:text-brand-blue"
+                    className="mb-3 block text-sm font-semibold text-white transition-colors hover:text-white hover:underline"
                     href={group.href}
                   >
                     {group.name}
                   </Link>
-                  <ul className="space-y-1.5 border-l border-white/10 pl-3">
+                  <ul className="space-y-1.5 border-l border-white/30 pl-3">
                     {group.links.map((item) => (
                       <li key={item.name}>
                         <Link
-                          className="text-xs leading-5 text-gray-400 transition-colors hover:text-brand-primary"
+                          className="text-xs leading-5 text-white/85 transition-colors hover:text-white hover:underline"
                           href={item.href}
                         >
                           {item.name}
@@ -221,21 +221,21 @@ export const Footer = () => {
               ))}
             </div>
 
-            <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
-              <p className="text-xs text-gray-500">
+            <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/25 pt-8 md:flex-row">
+              <p className="text-xs text-white/80">
                 © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
               </p>
-              <div className="flex gap-6 text-xs text-gray-500">
-                <Link className="transition-colors hover:text-brand-primary" href="/privacy-policy">
+              <div className="flex gap-6 text-xs text-white/80">
+                <Link className="transition-colors hover:text-white hover:underline" href="/privacy-policy">
                   Privacy Policy
                 </Link>
                 <Link
-                  className="transition-colors hover:text-brand-primary"
+                  className="transition-colors hover:text-white hover:underline"
                   href="/terms-and-conditions"
                 >
                   Terms of Service
                 </Link>
-                <Link className="transition-colors hover:text-brand-primary" href="/cookie-policy">
+                <Link className="transition-colors hover:text-white hover:underline" href="/cookie-policy">
                   Cookie Policy
                 </Link>
               </div>

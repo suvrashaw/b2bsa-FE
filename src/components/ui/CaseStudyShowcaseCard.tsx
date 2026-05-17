@@ -98,7 +98,7 @@ export const CaseStudyShowcaseCard = ({
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}
               >
-                <h3 className="mb-4 line-clamp-2 font-heading text-2xl font-bold text-white">
+                <h3 className="mb-4 line-clamp-2 font-heading text-2xl font-bold !text-white">
                   {item.title}
                 </h3>
                 <p className="line-clamp-4 max-w-xl text-sm leading-relaxed text-gray-200">

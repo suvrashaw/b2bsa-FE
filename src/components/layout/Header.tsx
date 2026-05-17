@@ -216,6 +216,20 @@ export const Header = ({
                     ))}
                   </div>
                 )}
+                {link.name === "Trade Shows" && (
+                  <div className="space-y-2 border-l-2 border-brand-blue/10 pl-4">
+                    {tradeShowLinks.map((item) => (
+                      <Link
+                        className="block text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
+                        href={item.href}
+                        key={item.name}
+                        onClick={closeMobileMenu}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
             <Link href="/contact" onClick={closeMobileMenu}>

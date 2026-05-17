@@ -51,7 +51,7 @@ export const GlobalPresence = () => {
   return (
     <div className="relative z-10 w-full overflow-hidden bg-brand-blue py-12">
       <div className="container mx-auto px-8">
-        <h3 className="mb-8 text-center text-xs font-bold tracking-[0.3em] text-white uppercase">
+        <h3 className="mb-8 text-center text-xs font-bold tracking-[0.3em] !text-white uppercase">
           Global Enterprise Reach
         </h3>
 

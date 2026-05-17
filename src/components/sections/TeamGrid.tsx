@@ -31,7 +31,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
   );
 
   return (
-    <section className="relative bg-brand-white py-24 transition-colors duration-500">
+    <section className="relative bg-brand-white py-24 transition-colors duration-500" id="leadership">
       <div className="container mx-auto w-full max-w-7xl px-8">
         <div className="mb-16 text-left">
           <div className="mb-6 inline-block rounded-full border border-brand-blue/20 bg-brand-blue/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-blue uppercase">
