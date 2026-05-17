@@ -226,12 +226,13 @@ h4 {
     inset 0 1px 1px var(--pill-highlight),
     inset 0 -1px 2px var(--pill-inset-shadow);
 
-  /* stylelint-disable-next-line plugin/no-low-performance-animation-properties */
+  /* stylelint-disable plugin/no-low-performance-animation-properties */
   transition:
     border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* stylelint-enable plugin/no-low-performance-animation-properties */
 }
 
 .footer-glass-pill:hover {

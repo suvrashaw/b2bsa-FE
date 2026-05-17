@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 export interface BlogItem {
   category?: string;
   date?: string;
+  excerpt?: string;
   id: number | string;
   image: string;
   title: string;
@@ -179,7 +180,7 @@ export interface TestimonialItem {
 
 export interface TestimonialsContent {
   autoplayInterval: number;
-  eyebrow: string;
+  eyebrow?: string;
   heading: ReactNode;
   initialIndex: number;
   testimonials: TestimonialItem[];
@@ -219,7 +220,7 @@ export interface WhoWeAreStat {
 }
 
 export interface WhyChooseUsContent {
-  eyebrow: string;
+  eyebrow?: string;
   heading: ReactNode;
   reasons: WhyChooseUsReason[];
 }
@@ -597,7 +598,6 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
-  eyebrow: "THE B2BSA ADVANTAGE",
   heading: <>Why Enterprise Brands Trust Our Global Event Solutions?</>,
   reasons: [
     {
@@ -645,7 +645,6 @@ export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
 
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   autoplayInterval: 3000,
-  eyebrow: "CLIENT SUCCESS",
   heading: <>What Our Clients Say?</>,
   initialIndex: 2,
   testimonials: [
@@ -688,18 +687,24 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
 export const HOME_BLOGS_CONTENT: BlogsContent = {
   blogs: [
     {
+      excerpt:
+        "We reveal the critical questions you must ask to ensure your future booth builder actively drives measurable lead generation.",
       id: 1,
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
       title: "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company",
     },
     {
+      excerpt:
+        "We explore the latest structural and visual design trends you need to immediately capture attendee attention on the expo floor.",
       id: 2,
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
       title: "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026",
     },
     {
+      excerpt:
+        "We break down the essential architectural elements you must include to turn your large floor space investment into actual pipeline.",
       id: 3,
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",

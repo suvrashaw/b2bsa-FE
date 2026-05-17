@@ -24,6 +24,19 @@ const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
 type TestimonialItem = TestimonialsContent["testimonials"][number];
 
+const isOuterQuoteMark = (char: string) =>
+  char === '"' || char === "'" || char === "\u201C" || char === "\u201D";
+
+const stripOuterQuoteMarks = (quote: string) => {
+  let start = 0;
+  let end = quote.length;
+
+  while (start < end && isOuterQuoteMark(quote[start] ?? "")) start++;
+  while (end > start && isOuterQuoteMark(quote[end - 1] ?? "")) end--;
+
+  return quote.slice(start, end);
+};
+
 const TestimonialCard = ({
   activeIndex: _activeIndex,
   index,
@@ -92,7 +105,7 @@ const TestimonialCard = ({
         </div>
 
         <p className="relative z-10 text-[15px] leading-relaxed text-gray-600">
-          &quot;{testimonial.quote}&quot;
+          &quot;{stripOuterQuoteMarks(testimonial.quote)}&quot;
         </p>
 
         <div className="border-t border-gray-100 pt-5">
@@ -147,7 +160,7 @@ export const Testimonials = ({
 
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col items-start text-left">
-          <Eyebrow variant="blue">{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="mb-6 text-left">
             {heading}
           </Heading>

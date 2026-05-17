@@ -90,7 +90,12 @@ export const BlogCard = ({
         {blog.date && (
           <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-6 font-heading text-2xl leading-tight font-bold">{blog.title}</h3>
+        <h3 className="mb-4 font-heading text-2xl leading-tight font-bold">{blog.title}</h3>
+        {blog.excerpt && (
+          <p className="mb-6 line-clamp-3 text-sm leading-relaxed text-gray-600">
+            {blog.excerpt}
+          </p>
+        )}
         <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
           {ctaLabel} <ArrowUpRight className="h-4 w-4" />
         </div>
@@ -122,7 +127,12 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
         {blog.date && (
           <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-4 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
+        <h3 className="mb-3 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
+        {blog.excerpt && (
+          <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-gray-600">
+            {blog.excerpt}
+          </p>
+        )}
         <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
           Read Article{" "}
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

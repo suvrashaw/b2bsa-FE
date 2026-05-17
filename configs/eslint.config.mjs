@@ -1,6 +1,7 @@
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import eslintConfigPrettier from "eslint-config-prettier";
+import boundaries from "eslint-plugin-boundaries";
 import checkFile from "eslint-plugin-check-file";
 import compat from "eslint-plugin-compat";
 import depend from "eslint-plugin-depend";
@@ -18,6 +19,7 @@ import promise from "eslint-plugin-promise";
 import reactPerf from "eslint-plugin-react-perf";
 import reactRefresh from "eslint-plugin-react-refresh";
 import regexp from "eslint-plugin-regexp";
+import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
 import tailwind from "eslint-plugin-tailwindcss";
 import unicorn from "eslint-plugin-unicorn";
@@ -33,6 +35,7 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     plugins: {
+      boundaries: boundaries,
       "check-file": checkFile,
       compat: compat,
       depend: depend,
@@ -48,6 +51,7 @@ const eslintConfig = defineConfig([
       "react-perf": reactPerf,
       "react-refresh": reactRefresh,
       regexp: regexp,
+      security: security,
       sonarjs: sonarjs,
       tailwindcss: tailwind,
       unicorn: unicorn,
@@ -55,82 +59,55 @@ const eslintConfig = defineConfig([
       "validate-jsx-nesting": validateJsxNesting,
     },
     rules: {
-      // Secrets (Increased tolerance for high-entropy URLs)
-      "no-secrets/no-secrets": ["error", { tolerance: 4.5 }],
-
-      // Tailwind
-      "tailwindcss/classnames-order": "warn",
-      "tailwindcss/enforces-negative-arbitrary-values": "error",
-      "tailwindcss/enforces-shorthand": "error",
-      "tailwindcss/no-custom-classname": "off",
-
-      // JSX-A11y handled by eslint-config-next/core-web-vitals
-
-      // Perfectionist (Sorting & Beauty)
-      ...perfectionist.configs["recommended-alphabetical"].rules,
-
-      // React Performance
-      ...reactPerf.configs.recommended.rules,
-
-      // Node.js rules
-      ...node.configs["flat/recommended"].rules,
-      // Disable — false positive for TypeScript path aliases (@/)
-      "n/no-missing-import": "off",
-
-      // Hygiene (No extend native)
-      ...noUseExtendNative.configs.recommended.rules,
-
-      // JSX Nesting (SEO & Hydration)
-      "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
-
-      // Supply Chain Security
-      ...depend.configs["flat/recommended"].rules,
-
-      // Browser Compatibility
-      "compat/compat": "warn",
-
-      "no-constructor-bind/no-constructor-bind": "error",
-
-      // Import Standardization
-      "no-relative-import-paths/no-relative-import-paths": [
-        "warn",
-        { allowSameFolder: true, prefix: "@", rootDir: "src" },
-      ],
-      // Aesthetics & Hygiene
-      "prefer-arrow/prefer-arrow-functions": [
-        "warn",
-        {
-          classPropertiesAllowed: false,
-          disallowPrototype: true,
-          singleReturnOnly: false,
-        },
-      ],
-
-      // Regexp
-      ...regexp.configs["flat/recommended"].rules,
-
-      // Promise
-      ...promise.configs["flat/recommended"].rules,
-
       "@typescript-eslint/no-unused-vars": "off",
-      // Unused imports
-      "no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "error",
-      "unused-imports/no-unused-vars": [
+
+      // Architectural Boundaries
+      "boundaries/dependencies": [
         "warn",
         {
-          args: "after-used",
-          argsIgnorePattern: "^_",
-          vars: "all",
-          varsIgnorePattern: "^_",
+          default: "disallow",
+          rules: [
+            { allow: [], from: { type: "types" } },
+            { allow: ["types", "cms"], from: { type: "lib" } },
+            { allow: ["types", "lib", "content"], from: { type: "cms" } },
+            { allow: ["types", "lib", "cms"], from: { type: "content" } },
+            { allow: ["types", "lib", "content"], from: { type: "ui" } },
+            { allow: ["types", "lib", "ui"], from: { type: "cards" } },
+            { allow: ["types", "lib", "content", "ui"], from: { type: "forms" } },
+            { allow: ["types", "lib", "content", "ui"], from: { type: "layout" } },
+            {
+              allow: ["types", "lib", "content", "ui", "cards", "forms"],
+              from: { type: "sections" },
+            },
+            {
+              allow: ["types", "lib", "content", "ui", "cards", "forms", "sections", "layout"],
+              from: { type: "templates" },
+            },
+            {
+              allow: [
+                "types",
+                "lib",
+                "cms",
+                "content",
+                "ui",
+                "cards",
+                "forms",
+                "layout",
+                "sections",
+                "templates",
+              ],
+              from: { type: "app" },
+            },
+          ],
         },
       ],
+      "boundaries/entry-point": "off",
+      "boundaries/external": "off",
+      "boundaries/no-ignored": "off",
+      "boundaries/no-private": "off",
+      "boundaries/no-unknown": "off",
+      "boundaries/no-unknown-files": "off",
 
-      // SonarJS (Modern flat config access)
-      ...sonarjs.configs.recommended.rules,
-
-      // Unicorn
-      ...unicorn.configs.recommended.rules,
       // Check File Naming
       "check-file/filename-naming-convention": [
         "error",
@@ -152,13 +129,108 @@ const eslintConfig = defineConfig([
           "src/utils/**": "KEBAB_CASE",
         },
       ],
+
+      // Browser Compatibility
+      "compat/compat": "warn",
+
+      // Node.js rules
+      ...node.configs["flat/recommended"].rules,
+      // Disable — false positive for TypeScript path aliases (@/)
+      "n/no-missing-import": "off",
+
+      // Hygiene (No extend native)
+      ...noUseExtendNative.configs.recommended.rules,
+
+      "no-constructor-bind/no-constructor-bind": "error",
+
+      // Import Standardization
+      "no-relative-import-paths/no-relative-import-paths": [
+        "warn",
+        { allowSameFolder: true, prefix: "@", rootDir: "src" },
+      ],
+
+      // Secrets (Increased tolerance for high-entropy URLs)
+      "no-secrets/no-secrets": ["error", { tolerance: 4.5 }],
+
+      "no-unused-vars": "off",
+
+      // Perfectionist (Sorting & Beauty)
+      ...perfectionist.configs["recommended-alphabetical"].rules,
+
+      // Aesthetics & Hygiene
+      "prefer-arrow/prefer-arrow-functions": [
+        "warn",
+        {
+          classPropertiesAllowed: false,
+          disallowPrototype: true,
+          singleReturnOnly: false,
+        },
+      ],
+
+      // Promise
+      ...promise.configs["flat/recommended"].rules,
+
+      // React Performance
+      ...reactPerf.configs.recommended.rules,
+
+      // Regexp
+      ...regexp.configs["flat/recommended"].rules,
+
+      // Security
+      ...security.configs.recommended.rules,
+      // false positive: bracket-notation object access is idiomatic in React/Next.js
+      "security/detect-object-injection": "off",
+
+      // SonarJS (Modern flat config access)
+      ...sonarjs.configs.recommended.rules,
+
+      // Supply Chain Security
+      ...depend.configs["flat/recommended"].rules,
+
+      // Tailwind
+      "tailwindcss/classnames-order": "warn",
+      "tailwindcss/enforces-negative-arbitrary-values": "error",
+      "tailwindcss/enforces-shorthand": "error",
+      "tailwindcss/no-custom-classname": "off",
+
+      // Unicorn
+      ...unicorn.configs.recommended.rules,
       "unicorn/filename-case": "off",
       "unicorn/no-null": "off",
-
       "unicorn/prefer-query-selector": "warn",
       "unicorn/prevent-abbreviations": "off",
+
+      // Unused imports
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          args: "after-used",
+          argsIgnorePattern: "^_",
+          vars: "all",
+          varsIgnorePattern: "^_",
+        },
+      ],
+
+      // JSX Nesting (SEO & Hydration)
+      "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
+
+      // JSX-A11y handled by eslint-config-next/core-web-vitals
     },
     settings: {
+      "boundaries/elements": [
+        { pattern: "src/types/**/*", type: "types" },
+        { pattern: "src/lib/**/*", type: "lib" },
+        { pattern: "src/cms/**/*", type: "cms" },
+        { pattern: "src/content/**/*", type: "content" },
+        { pattern: "src/components/ui/**/*", type: "ui" },
+        { pattern: "src/components/cards/**/*", type: "cards" },
+        { pattern: "src/components/forms/**/*", type: "forms" },
+        { pattern: "src/components/layout/**/*", type: "layout" },
+        { pattern: "src/components/sections/**/*", type: "sections" },
+        { pattern: "src/components/templates/**/*", type: "templates" },
+        { pattern: "src/app/**/*", type: "app" },
+      ],
       "import-x/resolver": {
         node: true,
         typescript: true,
@@ -182,6 +254,13 @@ const eslintConfig = defineConfig([
   // JSON Linting (CMS Data Integrity)
   ...jsonc.configs["flat/recommended-with-json"],
   eslintConfigPrettier,
+  // Scripts — intentionally use dynamic fs paths; disable the rule project-wide would be too broad
+  {
+    files: ["scripts/**"],
+    rules: {
+      "security/detect-non-literal-fs-filename": "off",
+    },
+  },
   // Playwright (E2E Testing)
   {
     ...playwright.configs["flat/recommended"],
