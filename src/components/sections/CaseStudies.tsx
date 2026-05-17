@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import type { CaseStudyCardData } from "@/types/case-studies";
 
@@ -26,6 +26,28 @@ export type CaseStudyItem = {
 
 const FALLBACK_CASE_STUDY_ICONS = ["Target", "Sparkles", "Building2"];
 
+const CaseStudyCard = ({
+  active,
+  ctaLabel,
+  item,
+  setActiveId,
+}: {
+  active: boolean;
+  ctaLabel: string;
+  item: CaseStudyCardData;
+  setActiveId: (id: string) => void;
+}) => {
+  const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
+  return (
+    <CaseStudyShowcaseCard
+      active={active}
+      ctaLabel={ctaLabel}
+      item={item}
+      onActivate={handleActivate}
+    />
+  );
+};
+
 export interface CaseStudiesProps {
   caseStudies?: CaseStudyItem[];
   content?: CaseStudiesContent;
@@ -38,7 +60,7 @@ export interface CaseStudiesProps {
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
 }
 
-export function CaseStudies({
+export const CaseStudies = ({
   caseStudies,
   content = HOME_CASE_STUDIES_CONTENT,
   ctaLabel = content.ctaLabel,
@@ -48,7 +70,7 @@ export function CaseStudies({
   items,
   viewAllHref = "/case-studies",
   viewAllLabel = content.viewAllLabel,
-}: CaseStudiesProps = {}) {
+}: CaseStudiesProps = {}) => {
   const resolvedCaseStudies = (items ?? caseStudies ?? content.items).map((study, index) => ({
     ...study,
     icon: study.icon ?? FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
@@ -56,20 +78,20 @@ export function CaseStudies({
   }));
 
   const cards: CaseStudyCardData[] = resolvedCaseStudies.map((study) => ({
-    client: study.client,
+    client: study.client ?? study.title,
     href: getStudyHref(study),
     icon: study.icon,
     id: study.id,
     image: study.image,
-    inactiveLabel: study.client,
-    metric: study.metric,
-    metricLabel: study.metricLabel,
+    inactiveLabel: study.title,
+    metric: study.metric ?? "",
+    metricLabel: study.metricLabel ?? "",
     primarySummary: {
-      label: "Challenge",
-      text: study.challenge,
+      label: "",
+      text: study.challenge ?? "",
     },
     secondarySummary: {
-      label: "Solution",
+      label: "",
       text: study.solution,
     },
     title: study.title,
@@ -83,40 +105,38 @@ export function CaseStudies({
     <section className="relative bg-brand-gray py-20" id="work">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
-          <Eyebrow variant="blue">{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
           <Heading as="h2">{heading}</Heading>
         </div>
 
         <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
-          {cards.map((study) => {
-            const isActive = activeCaseStudyId === study.id;
-
-            return (
-              <CaseStudyShowcaseCard
-                active={isActive}
-                ctaLabel={ctaLabel}
-                item={study}
-                key={study.id}
-                onActivate={() => setActiveId(study.id)}
-              />
-            );
-          })}
+          {cards.map((study) => (
+            <CaseStudyCard
+              active={activeCaseStudyId === study.id}
+              ctaLabel={ctaLabel}
+              item={study}
+              key={study.id}
+              setActiveId={setActiveId}
+            />
+          ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Link href={viewAllHref}>
-            <Button className="hidden md:inline-flex" variant="tertiary">
-              {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
-            </Button>
-          </Link>
-        </div>
+        {viewAllLabel && (
+          <div className="mt-12 text-center">
+            <Link href={viewAllHref}>
+              <Button className="hidden md:inline-flex" variant="tertiary">
+                {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-function createCaseStudyId(study: CaseStudyItem, index: number) {
-  return `${study.client}-${study.title}-${index}`
+const createCaseStudyId = (study: CaseStudyItem, index: number) => {
+  return `${study.client ?? study.title}-${study.title}-${index}`
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, "");

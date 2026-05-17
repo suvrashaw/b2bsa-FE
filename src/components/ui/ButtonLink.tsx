@@ -10,7 +10,7 @@ type ButtonLinkProps = {
   href: string;
 } & Omit<ButtonProps, "onClick" | "type">;
 
-export function ButtonLink({ children, external, href, ...props }: ButtonLinkProps) {
+export const ButtonLink = ({ children, external, href, ...props }: ButtonLinkProps) => {
   if (external) {
     return (
       <Button asChild {...props}>
@@ -26,4 +26,4 @@ export function ButtonLink({ children, external, href, ...props }: ButtonLinkPro
       <Link href={href}>{children}</Link>
     </Button>
   );
-}
+};

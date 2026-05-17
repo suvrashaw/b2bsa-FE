@@ -8,14 +8,14 @@ export interface TextareaInputProps extends TextareaHTMLAttributes<HTMLTextAreaE
   label: string;
 }
 
-export function TextareaInput({
+export const TextareaInput = ({
   className,
   error,
   id,
   label,
   rows = 4,
   ...props
-}: TextareaInputProps) {
+}: TextareaInputProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>
@@ -34,4 +34,4 @@ export function TextareaInput({
       {error && <p className="text-xs text-red-500">{error}</p>}
     </div>
   );
-}
+};

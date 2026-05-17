@@ -11,6 +11,9 @@ if (globalThis.window !== undefined) {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+const wordStyle = { perspective: "1000px", position: "relative" as const };
+const containerStyle = { overflow: "visible" as const };
+
 interface WhisperTextProps {
   className?: string;
   delay?: number;
@@ -82,7 +85,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
           className="inline-block whitespace-nowrap"
           data-word
           key={i}
-          style={{ perspective: "1000px", position: "relative" }}
+          style={wordStyle}
         >
           {content}
         </span>
@@ -93,7 +96,7 @@ export const WhisperText: React.FC<WhisperTextProps> = ({
     <div
       className={`relative inline-flex flex-wrap gap-x-[0.3em] gap-y-[0.1em] ${className}`}
       ref={containerRef}
-      style={{ overflow: "visible" }}
+      style={containerStyle}
     >
       {renderWords()}
     </div>

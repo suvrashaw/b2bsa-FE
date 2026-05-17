@@ -16,7 +16,7 @@ export interface ServiceSchemaInput {
   url: string;
 }
 
-export function buildBreadcrumbJsonLd(crumbs: Array<{ name: string; url: string }>) {
+export const buildBreadcrumbJsonLd = (crumbs: Array<{ name: string; url: string }>) => {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -29,7 +29,7 @@ export function buildBreadcrumbJsonLd(crumbs: Array<{ name: string; url: string 
   };
 }
 
-export function buildFaqJsonLd(faqs: Array<{ answer: string; question: string; }>) {
+export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string; }>) => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -44,14 +44,14 @@ export function buildFaqJsonLd(faqs: Array<{ answer: string; question: string; }
   };
 }
 
-export function buildOrganizationJsonLd() {
+export const buildOrganizationJsonLd = () => {
   return {
     "@context": "https://schema.org",
     ...ORGANIZATION,
   };
 }
 
-export function buildServiceJsonLd({ description, name, url }: ServiceSchemaInput) {
+export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInput) => {
   return {
     "@context": "https://schema.org",
     "@type": "Service",

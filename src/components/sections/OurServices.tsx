@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useMemo } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -22,19 +23,24 @@ export interface OurServicesProps {
   services?: HomeServiceItem[];
 }
 
-export function OurServices({
+export const OurServices = ({
   content = HOME_SERVICES_CONTENT,
   ctaLabel = content.ctaLabel,
   eyebrow = content.eyebrow,
   heading = content.heading,
   serviceLabel = content.serviceLabel,
   services = content.services,
-}: OurServicesProps = {}) {
+}: OurServicesProps = {}) => {
+  const stickyStyles = useMemo(
+    () => services.map((_, index) => ({ top: `calc(100px + ${index * 20}px)`, zIndex: index })),
+    [services]
+  );
+
   return (
     <section className="bg-white pt-20 pb-40" id="services">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
-          <Eyebrow variant="cyan">{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
           <Heading as="h2">{heading}</Heading>
         </div>
 
@@ -43,24 +49,23 @@ export function OurServices({
             <div
               className="sticky"
               key={service.id}
-              style={{
-                top: `calc(100px + ${index * 20}px)`,
-                zIndex: index,
-              }}
+              style={stickyStyles[index]}
             >
               <div className="group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
                 {/* Content Area */}
                 <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 transition-all duration-700 md:w-2/5 lg:p-12">
                   <div className="pointer-events-auto">
-                    <div className="mb-6 flex items-center gap-2">
-                      <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm transition-colors duration-700 md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
-                        <Icon
-                          className="h-3 w-3 text-brand-blue transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white"
-                          name={service.icon}
-                        />
-                        {serviceLabel}
-                      </span>
-                    </div>
+                    {serviceLabel && (
+                      <div className="mb-6 flex items-center gap-2">
+                        <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm transition-colors duration-700 md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
+                          <Icon
+                            className="h-3 w-3 text-brand-blue transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white"
+                            name={service.icon}
+                          />
+                          {serviceLabel}
+                        </span>
+                      </div>
+                    )}
                     <h3 className="mb-6 font-heading text-3xl  leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white">
                       {service.title}
                     </h3>

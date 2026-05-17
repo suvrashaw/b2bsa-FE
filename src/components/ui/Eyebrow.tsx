@@ -29,15 +29,19 @@ interface EyebrowProps extends VariantProps<typeof eyebrowVariants> {
   className?: string;
 }
 
-export function Eyebrow({ children, className, variant }: EyebrowProps) {
+const eyebrowInitial = { opacity: 0, y: 20 };
+const eyebrowViewport = { once: true };
+const eyebrowWhileInView = { opacity: 1, y: 0 };
+
+export const Eyebrow = ({ children, className, variant }: EyebrowProps) => {
   return (
     <motion.div
       className={cn(eyebrowVariants({ variant }), className)}
-      initial={{ opacity: 0, y: 20 }}
-      viewport={{ once: true }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={eyebrowInitial}
+      viewport={eyebrowViewport}
+      whileInView={eyebrowWhileInView}
     >
       {children}
     </motion.div>
   );
-}
+};

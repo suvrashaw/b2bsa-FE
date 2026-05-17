@@ -26,7 +26,7 @@ export const topNavigation: NavLink[] = [
   navLink("About Us", "about"),
   navLink("Services", "service.global-event-solutions"),
   navLink("Trade Shows", "events"),
-  navLink("Blog", "blog"),
+  navLink("Blogs", "blog"),
   navLink("Case Studies", "case-studies"),
   navLink("Contact", "contact"),
 ];
@@ -81,7 +81,7 @@ export const footerServiceGroups: ServiceNavGroup[] = serviceNavigationGroups.ma
 }));
 
 export const footerNavigation: NavLink[] = [
-  navLink("Blog", "blog"),
+  navLink("Blogs", "blog"),
   navLink("Case Studies", "case-studies"),
   navLink("About Us", "about"),
   navLink("Contact", "contact"),

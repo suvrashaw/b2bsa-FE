@@ -19,7 +19,7 @@ const buildHeading = (
     return {
       highlight: "Event",
       highlightVariant: "blue",
-      text: "B2B Global Event Solutions & Trade Show Booth Designs",
+      text: "B2B Global Event Solutions & Trade Show Booth Design s",
     };
   }
 

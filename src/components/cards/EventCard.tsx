@@ -15,7 +15,7 @@ export interface EventCardProps {
   title: string;
 }
 
-export function EventCard({
+export const EventCard = ({
   badgeLabel = "UPCOMING",
   ctaLabel = "View Event",
   date,
@@ -23,7 +23,7 @@ export function EventCard({
   image,
   location,
   title,
-}: EventCardProps) {
+}: EventCardProps) => {
   return (
     <Link
       className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-shadow duration-500 hover:shadow-2xl"
@@ -83,4 +83,4 @@ export function EventCard({
       </div>
     </Link>
   );
-}
+};

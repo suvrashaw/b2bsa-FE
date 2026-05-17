@@ -16,7 +16,12 @@ interface DataTableRow {
   [key: string]: string;
 }
 
-export function DataTable({ className, description, headers, rows, title }: DataTableProps) {
+const DATATABLE_INITIAL = { opacity: 0, y: 20 };
+const DATATABLE_WHILE_IN_VIEW = { opacity: 1, y: 0 };
+const DATATABLE_TRANSITION = { duration: 0.6 };
+const DATATABLE_VIEWPORT = { once: true };
+
+export const DataTable = ({ className, description, headers, rows, title }: DataTableProps) => {
   return (
     <section className={cn("py-20", className)}>
       <div className="container mx-auto px-8">
@@ -35,10 +40,10 @@ export function DataTable({ className, description, headers, rows, title }: Data
 
         <motion.div
           className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-xl shadow-gray-100/50"
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={DATATABLE_INITIAL}
+          transition={DATATABLE_TRANSITION}
+          viewport={DATATABLE_VIEWPORT}
+          whileInView={DATATABLE_WHILE_IN_VIEW}
         >
           <div className="overflow-x-auto">
             <table className="w-full text-left">

@@ -7,7 +7,7 @@ export interface FAQCardProps {
   question: string;
 }
 
-export function FAQCard({ answer, question }: FAQCardProps) {
+export const FAQCard = ({ answer, question }: FAQCardProps) => {
   return (
     <div className="group h-[280px] w-[300px] flex-shrink-0 cursor-pointer snap-center [perspective:1000px] md:w-[320px]">
       <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
@@ -31,4 +31,4 @@ export function FAQCard({ answer, question }: FAQCardProps) {
       </div>
     </div>
   );
-}
+};

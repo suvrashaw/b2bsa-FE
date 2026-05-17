@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import type { ContactContent } from "@/content/home";
 
@@ -16,17 +16,20 @@ export interface ContactFormProps {
   form: ContactContent["form"];
 }
 
-export function ContactForm({ className, form }: ContactFormProps) {
+export const ContactForm = ({ className, form }: ContactFormProps) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setLoading(false);
-    router.push("/thank-you");
-  }
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      setLoading(false);
+      router.push("/thank-you");
+    },
+    [router]
+  );
 
   return (
     <form className={className} onSubmit={handleSubmit}>
@@ -165,4 +168,4 @@ export function ContactForm({ className, form }: ContactFormProps) {
       </div>
     </form>
   );
-}
+};

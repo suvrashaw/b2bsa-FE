@@ -4,7 +4,7 @@ import type { CmsSeo } from "@/cms/mock/types";
 
 const BASE_URL = "https://b2bsalesarrow.com";
 
-export function buildPageMetadata(seo: CmsSeo, pageId?: string): Metadata {
+export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
   const canonicalUrl = `${BASE_URL}${seo.canonicalPath}`;
   const ogImageUrl = pageId
     ? `${BASE_URL}/og?pageId=${pageId}&title=${encodeURIComponent(seo.title)}`

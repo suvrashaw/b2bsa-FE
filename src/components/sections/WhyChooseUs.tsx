@@ -17,13 +17,18 @@ export interface WhyChooseUsProps {
   showImagePanel?: boolean;
 }
 
-export function WhyChooseUs({
+const WHYCHOOSEUS_ANIMATE = { opacity: 1, y: 0 };
+const WHYCHOOSEUS_EXIT = { opacity: 0, y: -20 };
+const WHYCHOOSEUS_INITIAL = { opacity: 0, y: 20 };
+const WHYCHOOSEUS_TRANSITION = { duration: 0.5, ease: "easeOut" };
+
+export const WhyChooseUs = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
   eyebrow = content.eyebrow,
   heading = content.heading,
   reasons = content.reasons,
   showImagePanel = true,
-}: WhyChooseUsProps = {}) {
+}: WhyChooseUsProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const resolvedActiveIndex = Math.min(activeIndex, Math.max(reasons.length - 1, 0));
@@ -69,12 +74,12 @@ export function WhyChooseUs({
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={WHYCHOOSEUS_ANIMATE}
                   className="absolute inset-0 flex flex-col items-start justify-center text-left"
-                  exit={{ opacity: 0, y: -20 }}
-                  initial={{ opacity: 0, y: 20 }}
+                  exit={WHYCHOOSEUS_EXIT}
+                  initial={WHYCHOOSEUS_INITIAL}
                   key={resolvedActiveIndex}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  transition={WHYCHOOSEUS_TRANSITION}
                 >
                   <div className="mb-4 flex items-center gap-3 text-left">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />

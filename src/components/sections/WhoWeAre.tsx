@@ -27,7 +27,7 @@ export interface WhoWeAreProps {
   title?: ReactNode;
 }
 
-export function WhoWeAre({
+export const WhoWeAre = ({
   content = HOME_WHO_WE_ARE_CONTENT,
   attribution = content.attribution,
   heading,
@@ -36,7 +36,7 @@ export function WhoWeAre({
   quote = content.quote,
   stats,
   title,
-}: WhoWeAreProps = {}) {
+}: WhoWeAreProps = {}) => {
   const resolvedHeading = title ?? heading ?? content.heading;
   const resolvedStats: WhoWeAreStat[] = (items ?? stats ?? content.stats).map((stat, index) => ({
     ...stat,
@@ -65,9 +65,11 @@ export function WhoWeAre({
                 <p className="group-hover:text-brand-blue:text-brand-cyan font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
                   {quote}
                 </p>
-                <div className="mt-8 text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors group-hover:text-brand-blue/70">
-                  {attribution}
-                </div>
+                {attribution && (
+                  <div className="mt-8 text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors group-hover:text-brand-blue/70">
+                    {attribution}
+                  </div>
+                )}
               </div>
             </div>
             {mission && (
@@ -110,7 +112,7 @@ export function WhoWeAre({
   );
 }
 
-function StatCard({ stat }: { stat: WhoWeAreStat }) {
+const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
   return (
     <div
       className={`relative overflow-hidden rounded-[4px] p-8 shadow-lg ${stat.bg} border border-transparent text-white`}

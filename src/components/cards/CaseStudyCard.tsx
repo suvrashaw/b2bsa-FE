@@ -19,7 +19,7 @@ export interface CaseStudyCardProps {
   title: string;
 }
 
-export function CaseStudyCard({
+export const CaseStudyCard = ({
   challenge,
   className,
   client,
@@ -30,7 +30,7 @@ export function CaseStudyCard({
   metric,
   metricLabel,
   title,
-}: CaseStudyCardProps) {
+}: CaseStudyCardProps) => {
   return (
     <Link
       className={cn(
@@ -78,4 +78,4 @@ export function CaseStudyCard({
       </div>
     </Link>
   );
-}
+};

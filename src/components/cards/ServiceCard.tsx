@@ -18,7 +18,7 @@ export interface ServiceCardProps {
   title: string;
 }
 
-export function ServiceCard({
+export const ServiceCard = ({
   badge,
   className,
   color = "bg-brand-blue",
@@ -28,7 +28,7 @@ export function ServiceCard({
   icon,
   image,
   title,
-}: ServiceCardProps) {
+}: ServiceCardProps) => {
   const inner = (
     <div
       className={cn(
@@ -81,4 +81,4 @@ export function ServiceCard({
   }
 
   return inner;
-}
+};

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import { cn } from "@/lib";
 
@@ -13,6 +13,8 @@ export const PointerHighlight = ({
   color?: "blue" | "cyan" | "red";
 }) => {
   const [hovered, setHovered] = useState(false);
+  const handleMouseEnter = useCallback(() => setHovered(true), []);
+  const handleMouseLeave = useCallback(() => setHovered(false), []);
 
   const colors = {
     blue: {
@@ -42,8 +44,8 @@ export const PointerHighlight = ({
         active.border,
         className
       )}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <span
         className={cn(

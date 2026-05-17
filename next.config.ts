@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async redirects() {
+  redirects: async () => {
     return [
       {
         destination: "/services/seo-services",
@@ -51,7 +51,8 @@ const nextConfig: NextConfig = {
       },
       { destination: "/about", permanent: true, source: "/about-us" },
       { destination: "/contact", permanent: true, source: "/contact-us" },
-      { destination: "/blog", permanent: true, source: "/insights" },
+      { destination: "/blogs", permanent: true, source: "/blog" },
+      { destination: "/blogs", permanent: true, source: "/insights" },
       {
         destination: "/services/global-event-solutions/modular-portable-booths",
         permanent: true,

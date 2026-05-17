@@ -1,11 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const COUNTRIES = ["New York", "London", "Dubai", "Singapore", "Sydney", "Toronto"];
 
-export function GlobalPresence() {
+const ITEM_TRANSITION = { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const };
+const GLOW_ANIMATE = { opacity: 0.8 };
+const GLOW_EXIT = { opacity: 0 };
+const GLOW_INITIAL = { opacity: 0 };
+const GLOW_TRANSITION = { duration: 0.8, ease: "easeOut" as const };
+
+const CountryItem = ({ country, isActive }: { country: string; isActive: boolean }) => {
+  const itemAnimate = useMemo(
+    () => ({ opacity: isActive ? 1 : 0.3, scale: isActive ? 1.05 : 1, y: isActive ? -2 : 0 }),
+    [isActive]
+  );
+  return (
+    <motion.div animate={itemAnimate} className="relative cursor-default" transition={ITEM_TRANSITION}>
+      <span className="font-heading text-2xl tracking-wide text-white md:text-3xl">{country}</span>
+      {isActive && (
+        <motion.div
+          animate={GLOW_ANIMATE}
+          className="absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-brand-blue blur-[2px]"
+          exit={GLOW_EXIT}
+          initial={GLOW_INITIAL}
+          layoutId="activeCountryGlow"
+          transition={GLOW_TRANSITION}
+        />
+      )}
+    </motion.div>
+  );
+};
+
+export const GlobalPresence = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -24,40 +52,9 @@ export function GlobalPresence() {
         </h3>
 
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-          {COUNTRIES.map((country, index) => {
-            const isActive = index === activeIndex;
-
-            return (
-              <motion.div
-                animate={{
-                  opacity: isActive ? 1 : 0.3,
-                  scale: isActive ? 1.05 : 1,
-                  y: isActive ? -2 : 0,
-                }}
-                className="relative cursor-default"
-                key={country}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1], // premium smooth easing
-                }}
-              >
-                <span className="font-heading text-2xl tracking-wide text-white md:text-3xl">
-                  {country}
-                </span>
-
-                {isActive && (
-                  <motion.div
-                    animate={{ opacity: 0.8 }}
-                    className="absolute -bottom-2 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-brand-blue blur-[2px]"
-                    exit={{ opacity: 0 }}
-                    initial={{ opacity: 0 }}
-                    layoutId="activeCountryGlow"
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                  />
-                )}
-              </motion.div>
-            );
-          })}
+          {COUNTRIES.map((country, index) => (
+            <CountryItem country={country} isActive={index === activeIndex} key={country} />
+          ))}
         </div>
       </div>
     </div>

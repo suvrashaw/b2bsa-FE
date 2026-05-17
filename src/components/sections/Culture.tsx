@@ -4,6 +4,8 @@ import { WhisperText } from "@/components/ui/WhisperText";
 import { ZoomParallax } from "@/components/ui/ZoomParallax";
 import { cn } from "@/lib";
 
+const CULTURE_WHISPER_HIGHLIGHTS = ["Believe"];
+
 const PARALLAX_IMAGES = [
   {
     alt: "Team collaboration",
@@ -66,7 +68,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <WhisperText
           className="mb-6 font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
           highlightColor="blue"
-          highlights={["Believe"]}
+          highlights={CULTURE_WHISPER_HIGHLIGHTS}
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
         />
         <p className="max-w-2xl text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">

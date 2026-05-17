@@ -8,7 +8,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import {
@@ -26,14 +26,14 @@ export interface CinematicSequenceProps {
   loadingText?: CinematicSequenceContent["loadingText"];
 }
 
-export function CinematicSequence({
+export const CinematicSequence = ({
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
   beats = content.beats,
   frameCount = content.frameCount,
   frameUrls = content.frameUrls,
   frameUrlTemplate = content.frameUrlTemplate,
   loadingText = content.loadingText,
-}: CinematicSequenceProps = {}) {
+}: CinematicSequenceProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { imagesLoaded, imagesRef } = useCinematicFrameImages(
@@ -109,19 +109,20 @@ export function CinematicSequence({
   );
 }
 
-function CinematicBeatOverlay({
+const CinematicBeatOverlay = ({
   beat,
   progress,
 }: {
   beat: CinematicStoryBeat;
   progress: MotionValue<number>;
-}) {
+}) => {
   const opacity = useTransform(progress, beat.opacityInput, beat.opacityOutput);
   const y = useTransform(progress, beat.yInput, beat.yOutput);
   const pointerEvents = useTransform(opacity, (v) => (v > 0 ? "auto" : "none"));
+  const beatStyle = useMemo(() => ({ opacity, pointerEvents, y }), [opacity, pointerEvents, y]);
 
   return (
-    <motion.div className={beat.className} style={{ opacity, pointerEvents, y }}>
+    <motion.div className={beat.className} style={beatStyle}>
       {beat.eyebrow && <span className={beat.eyebrow.className}>{beat.eyebrow.text}</span>}
       <h2 className={beat.titleClassName}>{beat.title}</h2>
       {beat.description && <p className={beat.description.className}>{beat.description.text}</p>}
@@ -136,7 +137,7 @@ function CinematicBeatOverlay({
   );
 }
 
-function drawCover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: number, h: number) {
+const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: number, h: number) => {
   const imgRatio = img.width / img.height;
   const canvasRatio = w / h;
   let renderH, renderW, x, y;
@@ -157,11 +158,11 @@ function drawCover(ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: numb
   ctx.drawImage(img, x, y, renderW, renderH);
 }
 
-function useCinematicFrameImages(
+const useCinematicFrameImages = (
   frameCount: number,
   frameUrlTemplate?: string,
   frameUrls?: string[]
-) {
+) => {
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
   const [loadedSignature, setLoadedSignature] = useState<null | string>(null);

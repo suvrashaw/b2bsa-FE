@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 
 export interface BlogItem {
-  category: string;
-  date: string;
+  category?: string;
+  date?: string;
   id: number | string;
   image: string;
   title: string;
@@ -17,20 +17,20 @@ export interface BlogsContent {
 
 export interface CaseStudiesContent {
   ctaLabel: string;
-  eyebrow: string;
+  eyebrow?: string;
   heading: ReactNode;
   items: CaseStudyItem[];
-  viewAllLabel: string;
+  viewAllLabel?: string;
 }
 
 export interface CaseStudyItem {
-  challenge: string;
-  client: string;
+  challenge?: string;
+  client?: string;
   icon: string;
   id: string;
   image: string;
-  metric: string;
-  metricLabel: string;
+  metric?: string;
+  metricLabel?: string;
   solution: string;
   title: string;
 }
@@ -73,7 +73,7 @@ export interface ClientLogoItem {
 
 export interface ContactContent {
   description: string;
-  eyebrow: string;
+  eyebrow?: string;
   form: {
     companyLabel?: string;
     companyPlaceholder?: string;
@@ -115,8 +115,8 @@ export interface ContactServiceOption {
 }
 
 export interface FAQContent {
-  description: string;
-  eyebrow: string;
+  description?: string;
+  eyebrow?: string;
   faqs: FAQItem[];
   heading: ReactNode;
   scrollAmount: number;
@@ -161,9 +161,9 @@ export interface HomeServiceItem {
 
 export interface HomeServicesContent {
   ctaLabel: string;
-  eyebrow: string;
+  eyebrow?: string;
   heading: ReactNode;
-  serviceLabel: string;
+  serviceLabel?: string;
   services: HomeServiceItem[];
 }
 
@@ -186,25 +186,25 @@ export interface TestimonialsContent {
 }
 
 export interface UpcomingEventItem {
-  date: string;
+  date?: string;
   id: string;
   image: string;
-  location: string;
+  location?: string;
   title: string;
 }
 
 export interface UpcomingEventsContent {
-  badgeLabel: string;
+  badgeLabel?: string;
   ctaLabel: string;
   description?: string;
   events: UpcomingEventItem[];
-  eyebrow: string;
+  eyebrow?: string;
   heading: ReactNode;
-  viewAllLabel: string;
+  viewAllLabel?: string;
 }
 
 export interface WhoWeAreContent {
-  attribution: string;
+  attribution?: string;
   heading: ReactNode;
   mission?: string;
   quote: string;
@@ -251,7 +251,7 @@ export const HOME_HERO_CONTENT: HomeHeroContent = {
     doneDelay: 2800,
     expandDelay: 2000,
   },
-  title: <>B2B Global Event Solutions & Trade Show Booth Designs</>,
+  title: <>B2B Global Event Solutions & Trade Show Booth Design s</>,
 };
 
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
@@ -339,7 +339,6 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
-  attribution: "\u2014 Leadership Team, B2B Sales Arrow",
   heading: <>Your Trusted Global B2B Event Partner</>,
   mission:
     "To transform your global event presence into measurable, high-impact commercial outcomes.",
@@ -375,9 +374,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
 
 export const HOME_SERVICES_CONTENT: HomeServicesContent = {
   ctaLabel: "Learn More",
-  eyebrow: "OUR CORE PILLARS",
   heading: <>Our B2B Event Services & Trade Show Solutions</>,
-  serviceLabel: "Service",
   services: [
     {
       color: "bg-brand-blue",
@@ -474,174 +471,129 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
 
 export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ctaLabel: "Full Study",
-  eyebrow: "PROVEN EXECUTION",
   heading: <>Proven Global Event Solutions: Enterprise Success Stories</>,
   items: [
     {
-      challenge: "Sustainable booth design and high-volume lead capture.",
-      client: "Adobe Summit",
       icon: "Leaf",
       id: "adobe-summit",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-      metric: "70+",
-      metricLabel: "SQLs Secured",
       solution:
         "We delivered a custom eco-friendly island booth and active on-site prospecting to secure 70+ SQLs and engage 60 unique billion-dollar enterprise accounts.",
-      title: "Sustainable Design & Lead Generation",
+      title: "Adobe Summit: Sustainable Design & Lead Generation",
     },
     {
-      challenge: "High-speed outreach for executive meetings.",
-      client: "World Aviation Festival",
       icon: "Plane",
       id: "world-aviation",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      metric: "60",
-      metricLabel: "Meetings Secured",
       solution:
         "Through rapid pre-event outreach and on-ground prospecting, we secured 60 executive meetings—doubling the initial target within a high-speed, 10-day campaign.",
-      title: "Doubling Executive Pipeline",
+      title: "World Aviation Festival: Doubling Executive Pipeline",
     },
     {
-      challenge: "Personalized global outreach and visitor engagement.",
-      client: "SIBOS",
       icon: "BarChart3",
       id: "sibos",
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-      metric: "270+",
-      metricLabel: "Leads Captured",
       solution:
         "We created hyper-personalized global outreach and interactive booth design for two financial leaders, capturing 270+ leads and 64 strategic executive meetings.",
-      title: "High-Impact Outreach & Interactive Exhibits",
+      title: "SIBOS: High-Impact Outreach & Interactive Exhibits",
     },
   ],
-  viewAllLabel: "View All Work",
 };
 
 export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
-  badgeLabel: "Upcoming",
   ctaLabel: "Meet Us There!",
   description:
     "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
   events: [
     {
-      date: "2026",
       id: "adobe",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "Adobe Summit",
     },
     {
-      date: "2026",
       id: "autotech",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "Autotech",
     },
     {
-      date: "2026",
       id: "cba",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "CBA Live",
     },
     {
-      date: "2026",
       id: "databricks",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "Databricks Summit",
     },
     {
-      date: "2026",
       id: "hannover",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Germany",
       title: "Hannover Messe",
     },
     {
-      date: "2026",
       id: "hp",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "HP Discovery",
     },
     {
-      date: "2026",
       id: "iucx",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "IUCX",
     },
     {
-      date: "2026",
       id: "itw",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "ITW (International Telecoms Week)",
     },
     {
-      date: "2026",
       id: "nvidia",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      location: "USA",
       title: "NVIDIA GTC 2026",
     },
     {
-      date: "2026",
       id: "sap-madrid",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "Spain",
       title: "SAP Sapphire 2026 Madrid",
     },
     {
-      date: "2026",
       id: "sap-orlando",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "USA",
       title: "SAP Sapphire 2026 Orlando",
     },
     {
-      date: "2026",
       id: "servicenow",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "ServiceNow Knowledge 2026",
     },
     {
-      date: "2026",
       id: "snowflake",
       image:
         "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "Snowflake Summit",
     },
     {
-      date: "2026",
       id: "zenith",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "Global",
       title: "Zenith Live",
     },
   ],
-  eyebrow: "GLOBAL PRESENCE",
   heading: <>Upcoming Trade Shows & Global Industry Events</>,
-  viewAllLabel: "View All Events",
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
@@ -736,24 +688,18 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
 export const HOME_BLOGS_CONTENT: BlogsContent = {
   blogs: [
     {
-      category: "Design",
-      date: "Oct 12, 2025",
       id: 1,
       image:
         "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
       title: "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company",
     },
     {
-      category: "Trends",
-      date: "Sep 28, 2025",
       id: 2,
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
       title: "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026",
     },
     {
-      category: "Features",
-      date: "Sep 15, 2025",
       id: 3,
       image:
         "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
@@ -766,9 +712,6 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
 };
 
 export const HOME_FAQ_CONTENT: FAQContent = {
-  description:
-    "Everything you need to know about our global event solutions and how we drive pipeline for enterprise brands.",
-  eyebrow: "INTELLIGENCE & CLARITY",
   faqs: [
     {
       answer:
@@ -826,7 +769,6 @@ export const HOME_FAQ_CONTENT: FAQContent = {
 export const HOME_CONTACT_CONTENT: ContactContent = {
   description:
     "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline. Share your requirements, and our team will create a tailored plan for your next exhibition.",
-  eyebrow: "START THE CONVERSATION",
   form: {
     companyLabel: "Company Name",
     companyPlaceholder: "Your Company",

@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 
 export interface ServiceHeroProps {
   description: string;
@@ -21,16 +21,68 @@ export interface ServiceHeroProps {
   videoUrl?: string;
 }
 
-export function ServiceHero({
+const CINEMATIC_VEIL_STYLE = {
+  background:
+    "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
+};
+const H1_STYLE = {
+  color: "rgba(255, 255, 255, 0.98)",
+  textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",
+};
+const DESCRIPTION_STYLE = { color: "rgba(255, 255, 255, 0.86)" };
+const PRIMARY_CTA_STYLE = {
+  background: `linear-gradient(135deg, rgba(116, 219, 243, 0.96) 0%, rgba(52, 144, 181, 0.98) 38%, rgba(30, 96, 145, 1) 100%)`,
+  border: "1px solid rgba(201, 244, 255, 0.68)",
+  boxShadow:
+    "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
+};
+const SECONDARY_CTA_STYLE = {
+  backdropFilter: "blur(18px) saturate(150%)",
+  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%)`,
+  border: "1px solid rgba(255, 255, 255, 0.28)",
+  boxShadow:
+    "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
+  WebkitBackdropFilter: "blur(18px) saturate(150%)",
+};
+const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
+const DESCRIPTION_INITIAL = { opacity: 0, y: 20 };
+const DESCRIPTION_TRANSITION = { delay: 0.7, duration: 0.8 };
+const CTA_ANIMATE = { opacity: 1, y: 0 };
+const CTA_INITIAL = { opacity: 0, y: 20 };
+const CTA_TRANSITION = { delay: 0.9, duration: 0.6 };
+const TITLE_LINE_ANIMATE = { opacity: 1, y: 0 };
+const TITLE_LINE_INITIAL = { opacity: 0, y: "110%" };
+
+const TitleLine = ({ index, line }: { index: number; line: ReactNode }) => {
+  const lineTransition = useMemo(
+    () => ({ delay: 0.4 + index * 0.15, duration: 0.72, ease: [0.22, 1, 0.36, 1] as const }),
+    [index]
+  );
+  return (
+    <span className="block overflow-hidden">
+      <motion.span
+        animate={TITLE_LINE_ANIMATE}
+        className="block"
+        initial={TITLE_LINE_INITIAL}
+        transition={lineTransition}
+      >
+        {line}
+      </motion.span>
+    </span>
+  );
+};
+
+export const ServiceHero = ({
   description,
   primaryCta,
   secondaryCta,
   title,
   videoUrl = "/videos/hero-gtc-2026.mp4",
-}: ServiceHeroProps) {
+}: ServiceHeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 100]);
+  const contentStyle = useMemo(() => ({ y }), [y]);
 
   // Split title into lines if it's a string for the staggered reveal
   const titleLines = typeof title === "string" ? title.split("\n") : [title];
@@ -55,70 +107,46 @@ export function ServiceHero({
         {/* Cinematic Blue Veil (From OG HeroSection) */}
         <div
           className="pointer-events-none absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
-          }}
+          style={CINEMATIC_VEIL_STYLE}
         />
       </div>
 
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
-        <motion.div className="max-w-4xl" style={{ y }}>
+        <motion.div className="max-w-4xl" style={contentStyle}>
           {/* Staggered Title Reveal */}
           <h1
             className="mb-8 font-heading text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
-            style={{
-              color: "rgba(255, 255, 255, 0.98)",
-              textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",
-            }}
+            style={H1_STYLE}
           >
             {titleLines.map((line, index) => (
-              <span className="block overflow-hidden" key={index}>
-                <motion.span
-                  animate={{ opacity: 1, y: 0 }}
-                  className="block"
-                  initial={{ opacity: 0, y: "110%" }}
-                  transition={{
-                    delay: 0.4 + index * 0.15,
-                    duration: 0.72,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                >
-                  {line}
-                </motion.span>
-              </span>
+              <TitleLine index={index} key={index} line={line} />
             ))}
           </h1>
 
           {/* Description */}
           <motion.p
-            animate={{ opacity: 1, y: 0 }}
+            animate={DESCRIPTION_ANIMATE}
             className="mb-12 max-w-2xl text-lg leading-relaxed font-semibold lg:text-xl"
-            initial={{ opacity: 0, y: 20 }}
-            style={{ color: "rgba(255, 255, 255, 0.86)" }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            initial={DESCRIPTION_INITIAL}
+            style={DESCRIPTION_STYLE}
+            transition={DESCRIPTION_TRANSITION}
           >
             {description}
           </motion.p>
 
           {/* Glossy CTAs */}
           <motion.div
-            animate={{ opacity: 1, y: 0 }}
+            animate={CTA_ANIMATE}
             className="flex flex-wrap items-center gap-6"
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
+            initial={CTA_INITIAL}
+            transition={CTA_TRANSITION}
           >
             {primaryCta && (
               <Link
                 className="hero-primary-cta group relative flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                 href={primaryCta.href}
-                style={{
-                  background: `linear-gradient(135deg, rgba(116, 219, 243, 0.96) 0%, rgba(52, 144, 181, 0.98) 38%, rgba(30, 96, 145, 1) 100%)`,
-                  border: "1px solid rgba(201, 244, 255, 0.68)",
-                  boxShadow:
-                    "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
-                }}
+                style={PRIMARY_CTA_STYLE}
               >
                 {primaryCta.label}
                 <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -129,14 +157,7 @@ export function ServiceHero({
               <Link
                 className="hero-secondary-cta flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                 href={secondaryCta.href}
-                style={{
-                  backdropFilter: "blur(18px) saturate(150%)",
-                  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%)`,
-                  border: "1px solid rgba(255, 255, 255, 0.28)",
-                  boxShadow:
-                    "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
-                  WebkitBackdropFilter: "blur(18px) saturate(150%)",
-                }}
+                style={SECONDARY_CTA_STYLE}
               >
                 {secondaryCta.label}
               </Link>

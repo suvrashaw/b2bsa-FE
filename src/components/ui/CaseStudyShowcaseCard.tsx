@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 
 import type { CaseStudyCardData } from "@/types/case-studies";
 
@@ -20,13 +21,28 @@ interface CaseStudyShowcaseCardProps {
   onActivate?: () => void;
 }
 
-export function CaseStudyShowcaseCard({
+const CARD_TRANSITION = { layout: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } };
+const ACTIVE_CONTENT_ANIMATE = { opacity: 1, x: 0 };
+const ACTIVE_CONTENT_INITIAL = { opacity: 0, x: -20 };
+const ACTIVE_CONTENT_EXIT = { opacity: 0, x: -20 };
+const ACTIVE_CONTENT_TRANSITION = { duration: 0.3 };
+const CTA_ANIMATE = { opacity: 1, y: 0 };
+const CTA_INITIAL = { opacity: 0, y: 20 };
+const CTA_EXIT = { opacity: 0, y: 20 };
+const CTA_TRANSITION = { delay: 0.2, duration: 0.3 };
+
+export const CaseStudyShowcaseCard = ({
   active,
   className,
   ctaLabel,
   item,
   onActivate,
-}: CaseStudyShowcaseCardProps) {
+}: CaseStudyShowcaseCardProps) => {
+  const cardStyle = useMemo(
+    () => ({ height: active ? "100%" : "auto", minHeight: "100px" }),
+    [active]
+  );
+
   return (
     <motion.div
       className={cn(
@@ -38,11 +54,8 @@ export function CaseStudyShowcaseCard({
       onClick={onActivate}
       onFocusCapture={onActivate}
       onHoverStart={onActivate}
-      style={{
-        height: active ? "100%" : "auto",
-        minHeight: "100px",
-      }}
-      transition={{ layout: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
+      style={cardStyle}
+      transition={CARD_TRANSITION}
     >
       <div className="absolute inset-0 h-full w-full">
         <Image
@@ -79,92 +92,37 @@ export function CaseStudyShowcaseCard({
           <AnimatePresence mode="popLayout">
             {active ? (
               <motion.div
-                animate={{ opacity: 1, x: 0 }}
+                animate={ACTIVE_CONTENT_ANIMATE}
                 className="flex min-w-0 flex-1 flex-col"
-                exit={{ opacity: 0, x: -20 }}
-                initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
+                exit={ACTIVE_CONTENT_EXIT}
+                initial={ACTIVE_CONTENT_INITIAL}
+                transition={ACTIVE_CONTENT_TRANSITION}
               >
-                <div className="mb-3 flex flex-wrap gap-2">
-                  <span className="w-max rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
-                    {item.client}
-                  </span>
-                  {item.badge ? (
-                    <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-white">
-                      {item.badge}
-                    </span>
-                  ) : null}
-                </div>
                 <h3 className="mb-4 line-clamp-2 font-heading text-2xl font-bold text-white">
                   {item.title}
                 </h3>
-                <div className="flex flex-col gap-4 xl:flex-row xl:gap-10">
-                  <div className="max-w-[220px]">
-                    <h4 className="mb-1 text-[10px] font-bold tracking-wider text-white uppercase opacity-70">
-                      {item.primarySummary.label}
-                    </h4>
-                    <p className="line-clamp-3 text-xs text-gray-200">{item.primarySummary.text}</p>
-                  </div>
-                  <div className="max-w-[280px]">
-                    <h4 className="mb-1 text-[10px] font-bold tracking-wider text-white uppercase opacity-70">
-                      {item.secondarySummary.label}
-                    </h4>
-                    <p className="line-clamp-3 text-xs text-gray-200">
-                      {item.secondarySummary.text}
-                    </p>
-                  </div>
-                </div>
+                <p className="line-clamp-4 max-w-xl text-sm leading-relaxed text-gray-200">
+                  {item.secondarySummary.text}
+                </p>
               </motion.div>
             ) : null}
           </AnimatePresence>
         </div>
 
         <AnimatePresence>
-          {active ? null : (
-            <motion.div
-              animate={{ opacity: 1 }}
-              className="absolute bottom-8 left-0 hidden w-full justify-center lg:top-1/2 lg:bottom-auto lg:block lg:-translate-y-1/2 lg:-rotate-90"
-              exit={{ opacity: 0 }}
-              initial={{ opacity: 0 }}
-            >
-              <span className="font-heading font-semibold tracking-wider whitespace-nowrap text-white">
-                {item.inactiveLabel ?? item.client}
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <AnimatePresence>
           {active && item.href ? (
             <motion.div
-              animate={{ opacity: 1, y: 0 }}
+              animate={CTA_ANIMATE}
               className="absolute right-8 bottom-8"
-              exit={{ opacity: 0, y: 20 }}
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ delay: 0.2, duration: 0.3 }}
+              exit={CTA_EXIT}
+              initial={CTA_INITIAL}
+              transition={CTA_TRANSITION}
             >
               <Link href={item.href}>
                 <Button className="shadow-lg" variant="primary">
                   {ctaLabel} <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </Link>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {active ? (
-            <motion.div
-              animate={{ opacity: 1, scale: 1 }}
-              className="absolute top-8 right-8 flex flex-col items-center rounded-2xl border border-white/20 bg-white/90 px-4 py-3 text-center shadow-lg backdrop-blur-md"
-              exit={{ opacity: 0, scale: 0.8 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-            >
-              <span className="font-heading text-2xl font-bold text-brand-blue">{item.metric}</span>
-              <span className="text-[10px] font-bold tracking-wider text-gray-500 uppercase">
-                {item.metricLabel}
-              </span>
             </motion.div>
           ) : null}
         </AnimatePresence>

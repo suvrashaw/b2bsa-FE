@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
+import { useMemo } from "react";
 
 import { cn } from "@/lib";
 
@@ -17,11 +18,20 @@ interface RelatedServicesProps {
   title?: string;
 }
 
-export function RelatedServices({
+const RELATEDSERVICES_INITIAL = { opacity: 0, scale: 0.95 };
+const RELATEDSERVICES_WHILE_IN_VIEW = { opacity: 1, scale: 1 };
+const RELATEDSERVICES_VIEWPORT = { once: true };
+
+export const RelatedServices = ({
   className,
   services,
   title = "Explore Related Solutions",
-}: RelatedServicesProps) {
+}: RelatedServicesProps) => {
+  const serviceTransitions = useMemo(
+    () => services.map((_, index) => ({ delay: index * 0.1, duration: 0.4 })),
+    [services]
+  );
+
   if (!services || services.length === 0) return null;
 
   return (
@@ -34,11 +44,11 @@ export function RelatedServices({
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={RELATEDSERVICES_INITIAL}
               key={index}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              transition={serviceTransitions[index]}
+              viewport={RELATEDSERVICES_VIEWPORT}
+              whileInView={RELATEDSERVICES_WHILE_IN_VIEW}
             >
               <Link
                 className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-gray-100 bg-white p-8 transition-all hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5"

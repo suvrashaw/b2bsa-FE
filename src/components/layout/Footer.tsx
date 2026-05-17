@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 import { Button } from "@/components/ui/Button";
@@ -29,10 +29,12 @@ const socialLinks = [
   },
 ];
 
-export function Footer() {
+const FOOTER_SCROLL_OFFSET: ["start start", "end end"] = ["start start", "end end"];
+
+export const Footer = () => {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
-    offset: ["start start", "end end"],
+    offset: FOOTER_SCROLL_OFFSET,
     target: containerRef,
   });
 
@@ -44,6 +46,10 @@ export function Footer() {
   const contentY = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
   // Optional opacity fade for the content wrapper background so it feels like a soft overlay
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
+
+  const globeStyle = useMemo(() => ({ scale: globeScale, y: globeY }), [globeScale, globeY]);
+  const contentStyle = useMemo(() => ({ y: contentY }), [contentY]);
+  const contentBgStyle = useMemo(() => ({ opacity: contentBgOpacity }), [contentBgOpacity]);
 
   return (
     <footer className="relative z-0 h-[200vh] bg-brand-blue" ref={containerRef}>
@@ -59,7 +65,7 @@ export function Footer() {
         {/* 2. Interactive 3D Globe Centerpiece (Background layer) */}
         <motion.div
           className="absolute inset-0 z-0 flex origin-center items-center justify-center"
-          style={{ scale: globeScale, y: globeY }}
+          style={globeStyle}
         >
           {/* We ensure it's fully interactive when dragged */}
           <div className="flex h-[min(62vh,800px)] w-[min(92vw,800px)] items-center justify-center">
@@ -70,11 +76,11 @@ export function Footer() {
         {/* 3. Main Footer Links Area (Slides up from bottom) */}
         <motion.div
           className="absolute right-0 bottom-0 left-0 z-10 w-full"
-          style={{ y: contentY }}
+          style={contentStyle}
         >
           <motion.div
             className="absolute inset-0 -z-10 bg-linear-to-t from-brand-blue via-brand-blue/95 to-brand-blue/40 backdrop-blur-sm"
-            style={{ opacity: contentBgOpacity }}
+            style={contentBgStyle}
           />
           <div className="relative container mx-auto px-8 pt-32 pb-8">
             {/* Row 1: Brand + Navigation + Stay Ahead */}

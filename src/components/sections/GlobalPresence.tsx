@@ -2,12 +2,20 @@
 
 import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { WhisperText } from "@/components/ui/WhisperText";
 
 // Dynamically import Globe to avoid SSR issues
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
+
+const LEFT_INITIAL = { opacity: 0, x: -30 };
+const LEFT_TRANSITION = { duration: 0.8, ease: "easeOut" as const };
+const RIGHT_INITIAL = { opacity: 0, scale: 0.9 };
+const RIGHT_TRANSITION = { delay: 0.2, duration: 1 };
+const LEFT_ANIMATE_IN = { opacity: 1, x: 0 };
+const RIGHT_ANIMATE_IN = { opacity: 1, scale: 1 };
+const ANIMATE_EMPTY = {};
 
 export interface GlobalPresenceData {
   cities: LocationItem[];
@@ -38,6 +46,22 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
     }
   }, [globeReady]);
 
+  const handleGlobeReady = useCallback(() => setGlobeReady(true), []);
+  const getHtmlElement = useCallback((d: object) => {
+    const item = d as LocationItem;
+    const el = document.createElement("div");
+    el.innerHTML = `
+      <div class="flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <div class="w-2 h-2 rounded-full bg-[${item.color}] shadow-[0_0_10px_${item.color}] animate-pulse"></div>
+        <span class="text-xs font-bold text-white whitespace-nowrap bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">${item.name}</span>
+      </div>
+    `;
+    return el;
+  }, []);
+  const titleHighlights = useMemo(() => [data.title.split(" ")[0] || ""], [data.title]);
+  const leftAnimate = isInView ? LEFT_ANIMATE_IN : ANIMATE_EMPTY;
+  const rightAnimate = isInView ? RIGHT_ANIMATE_IN : ANIMATE_EMPTY;
+
   return (
     <section
       className="relative overflow-hidden  bg-brand-white py-12 transition-colors duration-500"
@@ -47,10 +71,10 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 gap-16 px-8 lg:grid-cols-2">
         <motion.div
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          animate={leftAnimate}
           className="flex max-w-2xl flex-col items-start text-left"
-          initial={{ opacity: 0, x: -30 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={LEFT_INITIAL}
+          transition={LEFT_TRANSITION}
         >
           <div className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-cyan uppercase">
             Global Presence
@@ -59,7 +83,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           <WhisperText
             className="mb-8 font-heading text-4xl leading-[1.1] font-bold transition-colors duration-500  md:text-5xl lg:text-7xl"
             highlightColor="blue"
-            highlights={[data.title.split(" ")[0] || ""]}
+            highlights={titleHighlights}
             text={data.title}
           />
 
@@ -69,28 +93,18 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
         </motion.div>
 
         <motion.div
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          animate={rightAnimate}
           className="relative flex h-[500px] w-full cursor-move items-center justify-center lg:h-[850px] lg:-translate-x-48"
-          initial={{ opacity: 0, scale: 0.9 }}
-          transition={{ delay: 0.2, duration: 1 }}
+          initial={RIGHT_INITIAL}
+          transition={RIGHT_TRANSITION}
         >
           <div className="absolute inset-0 h-full w-full">
             <Globe
               backgroundColor="rgba(0,0,0,0)"
               globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-              htmlElement={(d: object) => {
-                const item = d as LocationItem;
-                const el = document.createElement("div");
-                el.innerHTML = `
-                  <div class="flex items-center gap-2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                    <div class="w-2 h-2 rounded-full bg-[${item.color}] shadow-[0_0_10px_${item.color}] animate-pulse"></div>
-                    <span class="text-xs font-bold text-white whitespace-nowrap bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">${item.name}</span>
-                  </div>
-                `;
-                return el;
-              }}
+              htmlElement={getHtmlElement}
               htmlElementsData={data.cities}
-              onGlobeReady={() => setGlobeReady(true)}
+              onGlobeReady={handleGlobeReady}
               pointAltitude="size"
               pointColor="color"
               pointLat="lat"

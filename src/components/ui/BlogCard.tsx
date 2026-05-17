@@ -5,19 +5,29 @@ import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import type { BlogItem } from "@/content/home";
 
 export interface BlogCardProps {
   blog: BlogItem;
+  ctaLabel?: string;
   index: number;
   isHovered: boolean;
   spread: MotionValue<number>;
   total: number;
 }
 
-export function BlogCard({ blog, index, isHovered, spread, total }: BlogCardProps) {
+const BLOG_CARD_TRANSITION = { damping: 30, stiffness: 300, type: "spring" } as const;
+
+export const BlogCard = ({
+  blog,
+  ctaLabel = "Read the complete blog",
+  index,
+  isHovered,
+  spread,
+  total,
+}: BlogCardProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -42,19 +52,23 @@ export function BlogCard({ blog, index, isHovered, spread, total }: BlogCardProp
   const activeX = isMobile ? 0 : hoverX;
   const activeY = isMobile ? hoverY : 0;
 
+  const cardAnimate = useMemo(() => ({ scale: isHovered ? 0.9 : 1 }), [isHovered]);
+  const cardStyle = useMemo(
+    () => ({
+      rotate: isHovered ? 0 : rotate,
+      x: isHovered ? activeX : x,
+      y: isHovered ? activeY : y,
+      zIndex: index,
+    }),
+    [isHovered, rotate, activeX, x, activeY, y, index]
+  );
+
   return (
     <motion.div
-      animate={{
-        scale: isHovered ? 0.9 : 1,
-      }}
+      animate={cardAnimate}
       className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
-      style={{
-        rotate: isHovered ? 0 : rotate,
-        x: isHovered ? activeX : x,
-        y: isHovered ? activeY : y,
-        zIndex: index,
-      }}
-      transition={{ damping: 30, stiffness: 300, type: "spring" }}
+      style={cardStyle}
+      transition={BLOG_CARD_TRANSITION}
     >
       <div className="relative h-56 w-full">
         <Image
@@ -64,24 +78,28 @@ export function BlogCard({ blog, index, isHovered, spread, total }: BlogCardProp
           sizes="(max-width: 768px) 100vw, 400px"
           src={blog.image}
         />
-        <div className="absolute top-4 left-4">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
-            {blog.category}
-          </span>
-        </div>
+        {blog.category && (
+          <div className="absolute top-4 left-4">
+            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
+              {blog.category}
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-8">
-        <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
+        {blog.date && (
+          <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
+        )}
         <h3 className="mb-6 font-heading text-2xl leading-tight font-bold">{blog.title}</h3>
         <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
-          Read Article <ArrowUpRight className="h-4 w-4" />
+          {ctaLabel} <ArrowUpRight className="h-4 w-4" />
         </div>
       </div>
     </motion.div>
   );
 }
 
-export function BlogCardGrid({ blog }: { blog: BlogItem }) {
+export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
   return (
     <div className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
       <div className="relative h-52 w-full overflow-hidden">
@@ -92,14 +110,18 @@ export function BlogCardGrid({ blog }: { blog: BlogItem }) {
           sizes="(max-width: 768px) 100vw, 400px"
           src={blog.image}
         />
-        <div className="absolute top-4 left-4">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
-            {blog.category}
-          </span>
-        </div>
+        {blog.category && (
+          <div className="absolute top-4 left-4">
+            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
+              {blog.category}
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-6">
-        <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
+        {blog.date && (
+          <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
+        )}
         <h3 className="mb-4 font-heading text-lg leading-snug font-bold">{blog.title}</h3>
         <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">
           Read Article{" "}

@@ -1,8 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
-
 import { motion } from "framer-motion";
+import { type ReactNode, useMemo } from "react";
 
 import { cn } from "@/lib";
 
@@ -20,16 +19,24 @@ interface Step {
   title: string;
 }
 
-export function ProcessTimeline({
+const PROCESSTIMELINE_INITIAL = { opacity: 0, y: 30 };
+const PROCESSTIMELINE_WHILE_IN_VIEW = { opacity: 1, y: 0 };
+const PROCESSTIMELINE_VIEWPORT = { once: true };
+
+export const ProcessTimeline = ({
   className,
   heading,
   phases,
   steps,
   subtitle,
   title,
-}: ProcessTimelineProps) {
+}: ProcessTimelineProps) => {
   const resolvedSteps = steps ?? phases ?? [];
   const resolvedTitle = title ?? heading;
+  const stepTransitions = useMemo(
+    () => (steps ?? phases ?? []).map((_, index) => ({ delay: index * 0.1, duration: 0.6 })),
+    [steps, phases]
+  );
 
   return (
     <section className={cn("py-24 bg-brand-gray/10 ", className)}>
@@ -57,11 +64,11 @@ export function ProcessTimeline({
             {resolvedSteps.map((step, index) => (
               <motion.div
                 className="relative flex flex-col items-start"
-                initial={{ opacity: 0, y: 30 }}
+                initial={PROCESSTIMELINE_INITIAL}
                 key={index}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1, y: 0 }}
+                transition={stepTransitions[index]}
+                viewport={PROCESSTIMELINE_VIEWPORT}
+                whileInView={PROCESSTIMELINE_WHILE_IN_VIEW}
               >
                 {/* Dot */}
                 <div className="absolute top-1/2 left-0 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)]" />

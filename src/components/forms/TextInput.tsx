@@ -8,7 +8,7 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-export function TextInput({ className, error, id, label, ...props }: TextInputProps) {
+export const TextInput = ({ className, error, id, label, ...props }: TextInputProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>
@@ -26,4 +26,4 @@ export function TextInput({ className, error, id, label, ...props }: TextInputPr
       {error && <p className="text-xs text-red-500">{error}</p>}
     </div>
   );
-}
+};

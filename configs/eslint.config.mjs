@@ -128,8 +128,6 @@ const eslintConfig = defineConfig([
 
       // SonarJS (Modern flat config access)
       ...sonarjs.configs.recommended.rules,
-      "sonarjs/cognitive-complexity": ["warn", 25],
-      "sonarjs/no-duplicate-string": "off",
 
       // Unicorn
       ...unicorn.configs.recommended.rules,
@@ -155,9 +153,7 @@ const eslintConfig = defineConfig([
         },
       ],
       "unicorn/filename-case": "off",
-      "unicorn/no-array-reduce": "off",
       "unicorn/no-null": "off",
-      "unicorn/prefer-module": "off",
 
       "unicorn/prefer-query-selector": "warn",
       "unicorn/prevent-abbreviations": "off",

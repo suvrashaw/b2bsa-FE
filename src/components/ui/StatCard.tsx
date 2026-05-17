@@ -9,13 +9,13 @@ export interface StatCardProps {
   value: string;
 }
 
-export function StatCard({
+export const StatCard = ({
   bg = "bg-brand-blue/10",
   className,
   icon,
   label,
   value,
-}: StatCardProps) {
+}: StatCardProps) => {
   return (
     <div className={cn("flex flex-col items-start gap-2 rounded-2xl p-6", bg, className)}>
       {icon && (
@@ -27,4 +27,4 @@ export function StatCard({
       <span className="text-sm font-medium text-gray-600">{label}</span>
     </div>
   );
-}
+};

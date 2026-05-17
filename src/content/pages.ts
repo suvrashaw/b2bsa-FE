@@ -7705,7 +7705,7 @@ const pages: PageContent[] = [
       "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research — written for enterprise marketers and sales leaders.",
     metaTitle: "B2B Growth Insights and Strategy Blog | B2B Sales Arrow",
     navigationGroup: "Resources",
-    pageName: "Blog",
+    pageName: "Blogs",
     pageNumber: 23,
     requiredSections: [
       "Hero",
@@ -7838,7 +7838,7 @@ const pages: PageContent[] = [
     seoInternal: {
       pageType: "Blog Index",
       rawMarkdown:
-        '## **PAGE 23**\n\n### **/blog/**\n\n**Page Type:** Blog Index\n\n **Search Intent:** Informational\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B marketing blog | 3–4x |\n| **Secondary:** enterprise marketing insights | 2–3x |\n| **Secondary:** trade show strategy blog | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Growth Insights & Strategy Blog | B2B Sales Arrow\n\n **Meta Description:** Expert insights on B2B event marketing, performance marketing, media production, and enterprise growth strategy from the team at B2B Sales Arrow.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Thought Leadership for Enterprise Growth\n\n**Subheading:** Strategy, insights, and intelligence from the team behind $1.2B in pipeline generation.\n\n**Filter/Category Bar:** All | Event Strategy | Performance Marketing | Media Production | Market Research | Case Studies\n\n**\\[SECTION 2 — Featured Article\\]**\n\n*Large card: hero image, category tag, title, excerpt, read time, CTA → Read Article*\n\n**\\[SECTION 3 — Article Grid\\]**\n\n*3-column grid: thumbnail, category, title, excerpt, date, read time*\n\n**Recommended Blog Categories & Pillar Topics:**\n\n| Category | Pillar Article Title (Target Keyword in Title) |\n| ----- | ----- |\n| Event Strategy | "Trade Show ROI: How to Measure Event Success" |\n| Event Strategy | "How to Choose the Right Trade Show Booth Design" |\n| Event Strategy | "GITEX 2026: Complete Guide for Enterprise Exhibitors" |\n| Performance Marketing | "B2B LinkedIn Ads: The Complete Enterprise Guide" |\n| Performance Marketing | "How to Build a B2B SEO Strategy That Generates Pipeline" |\n| Media Production | "Corporate Video Production: The Enterprise Guide" |\n| Market Research | "B2B Data Hygiene: Why Your CRM Is Costing You Revenue" |\n| Lead Generation | "MQL vs SQL: Why the Distinction Matters for Revenue" |\n\n**\\[SECTION 4 — Newsletter CTA\\]**\n\n**H2:** Get Enterprise Growth Intelligence in Your Inbox\n\n*Email capture form for newsletter.*',
+        '## **PAGE 23**\n\n### **/blogs/**\n\n**Page Type:** Blog Index\n\n **Search Intent:** Informational\n\n### **Target Keywords**\n\n| Keyword | Usage Target |\n| ----- | ----- |\n| **Primary:** B2B marketing blog | 3–4x |\n| **Secondary:** enterprise marketing insights | 2–3x |\n| **Secondary:** trade show strategy blog | 2–3x |\n\n### **Meta Tags**\n\n**Meta Title:** B2B Growth Insights & Strategy Blog | B2B Sales Arrow\n\n **Meta Description:** Expert insights on B2B event marketing, performance marketing, media production, and enterprise growth strategy from the team at B2B Sales Arrow.\n\n### **Page Structure**\n\n**\\[HERO\\]**\n\n**H1:** Thought Leadership for Enterprise Growth\n\n**Subheading:** Strategy, insights, and intelligence from the team behind $1.2B in pipeline generation.\n\n**Filter/Category Bar:** All | Event Strategy | Performance Marketing | Media Production | Market Research | Case Studies\n\n**\\[SECTION 2 — Featured Article\\]**\n\n*Large card: hero image, category tag, title, excerpt, read time, CTA → Read Article*\n\n**\\[SECTION 3 — Article Grid\\]**\n\n*3-column grid: thumbnail, category, title, excerpt, date, read time*\n\n**Recommended Blog Categories & Pillar Topics:**\n\n| Category | Pillar Article Title (Target Keyword in Title) |\n| ----- | ----- |\n| Event Strategy | "Trade Show ROI: How to Measure Event Success" |\n| Event Strategy | "How to Choose the Right Trade Show Booth Design" |\n| Event Strategy | "GITEX 2026: Complete Guide for Enterprise Exhibitors" |\n| Performance Marketing | "B2B LinkedIn Ads: The Complete Enterprise Guide" |\n| Performance Marketing | "How to Build a B2B SEO Strategy That Generates Pipeline" |\n| Media Production | "Corporate Video Production: The Enterprise Guide" |\n| Market Research | "B2B Data Hygiene: Why Your CRM Is Costing You Revenue" |\n| Lead Generation | "MQL vs SQL: Why the Distinction Matters for Revenue" |\n\n**\\[SECTION 4 — Newsletter CTA\\]**\n\n**H2:** Get Enterprise Growth Intelligence in Your Inbox\n\n*Email capture form for newsletter.*',
       searchIntent: "Informational",
       targetKeywords: [
         {
@@ -7860,9 +7860,9 @@ const pages: PageContent[] = [
           usageTarget: "2–3x",
         },
       ],
-      url: "/blog",
+      url: "/blogs",
     },
-    url: "/blog",
+    url: "/blogs",
   },
   {
     ctas: [
@@ -8599,7 +8599,7 @@ const pagesByUrl: Record<string, PageContent> = Object.fromEntries(
   pages.map((page) => [normalizeLookupUrl(page.url), page])
 );
 
-export function getPageByUrl(url: string): PageContent {
+export const getPageByUrl = (url: string): PageContent => {
   const page = pagesByUrl[normalizeLookupUrl(url)];
 
   if (!page) {
@@ -8613,7 +8613,7 @@ const pageIdsByUrl: Record<string, string> = Object.fromEntries(
   Object.entries(pageRoutes).map(([id, path]) => [normalizeLookupUrl(path), id])
 );
 
-export function getPageMetadata(url: string): Metadata {
+export const getPageMetadata = (url: string): Metadata => {
   const page = getPageByUrl(url);
   const canonicalPath = normalizeLookupUrl(page.url);
 

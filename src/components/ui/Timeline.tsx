@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import { WhisperText } from "@/components/ui/WhisperText";
 
@@ -37,13 +37,20 @@ export const Timeline = ({
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const headingHighlights = useMemo(() => [heading.split(" ").pop() || ""], [heading]);
+  const trackStyle = useMemo(() => ({ height: height + "px" }), [height]);
+  const progressStyle = useMemo(
+    () => ({ height: heightTransform, opacity: opacityTransform }),
+    [heightTransform, opacityTransform]
+  );
+
   return (
     <div className="w-full font-sans transition-colors duration-500 md:px-10" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-8 lg:px-10">
         <WhisperText
           className="mb-4 max-w-4xl font-heading text-4xl  font-bold transition-colors duration-500 md:text-5xl lg:text-6xl"
           highlightColor="blue"
-          highlights={[heading.split(" ").pop() || ""]}
+          highlights={headingHighlights}
           text={heading}
         />
         <p className="/70 max-w-sm text-sm transition-colors duration-500 md:text-base">
@@ -73,16 +80,11 @@ export const Timeline = ({
         ))}
         <div
           className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-brand-charcoal/20 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 "
-          style={{
-            height: height + "px",
-          }}
+          style={trackStyle}
         >
           <motion.div
             className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-brand-blue from-[0%] via-brand-cyan via-[10%] to-transparent"
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
+            style={progressStyle}
           />
         </div>
       </div>

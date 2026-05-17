@@ -15,7 +15,7 @@ export interface SelectOption {
   value: string;
 }
 
-export function SelectInput({
+export const SelectInput = ({
   className,
   error,
   id,
@@ -23,7 +23,7 @@ export function SelectInput({
   options,
   placeholder,
   ...props
-}: SelectInputProps) {
+}: SelectInputProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>
@@ -48,4 +48,4 @@ export function SelectInput({
       {error && <p className="text-xs text-red-500">{error}</p>}
     </div>
   );
-}
+};

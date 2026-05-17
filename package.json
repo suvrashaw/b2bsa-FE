@@ -16,7 +16,6 @@
     "check": "npm run format:check && npm run lint && npm run lint:styles && npm run typecheck && npm run build",
     "analyze": "ANALYZE=true npm run build",
     "knip": "knip --config configs/knip.json",
-    "depcheck": "depcheck --config configs/.depcheckrc",
     "audit": "lighthouse http://localhost:3000 --output html --output-path ./reports/lighthouse-report.html --view",
     "test": "playwright test --config configs/playwright.config.ts",
     "test:ui": "playwright test --config configs/playwright.config.ts --ui"
@@ -46,7 +45,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "depcheck": "^1.4.7",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "^10.1.8",

@@ -112,10 +112,10 @@ export const BLOG_CONTACT = {
 
 export const BLOG_PAGE = {
   pageId: "blog",
-  pageName: "Blog",
+  pageName: "Blogs",
   pageType: "resourceIndex",
   seo: {
-    canonicalPath: "/blog",
+    canonicalPath: "/blogs",
     description:
       "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research — written for enterprise marketers and sales leaders.",
     focusKeyphrase: "B2B marketing blog",

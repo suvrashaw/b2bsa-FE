@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 };
 
 const jsonLd = buildOrganizationJsonLd();
+const JSON_LD_SCRIPT = { __html: JSON.stringify(jsonLd) };
 
 const RootLayout = ({
   children,
@@ -46,7 +47,7 @@ const RootLayout = ({
     >
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <script
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={JSON_LD_SCRIPT}
           type="application/ld+json"
         />
         <PartytownScripts />

@@ -17,14 +17,17 @@ export interface ContactUsProps {
   illustration?: ContactContent["illustration"] | null;
 }
 
-export function ContactUs({
+const CONTACTUS_ANIMATE = { y: [0, -15, 0] };
+const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity };
+
+export const ContactUs = ({
   content = HOME_CONTACT_CONTENT,
   description = content.description,
   eyebrow = content.eyebrow,
   form = content.form,
   heading = content.heading,
   illustration = content.illustration,
-}: ContactUsProps = {}) {
+}: ContactUsProps = {}) => {
   return (
     <section className="relative overflow-hidden bg-white py-24" id="contact">
       {/* Decorative background flare */}
@@ -45,9 +48,9 @@ export function ContactUs({
 
             {illustration && (
               <motion.div
-                animate={{ y: [0, -15, 0] }}
+                animate={CONTACTUS_ANIMATE}
                 className="mt-4 w-full max-w-md"
-                transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                transition={CONTACTUS_TRANSITION}
               >
                 <Image
                   alt={illustration.alt}

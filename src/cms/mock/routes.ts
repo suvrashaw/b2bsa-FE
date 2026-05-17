@@ -2,7 +2,7 @@ import type { PageId } from "./types";
 
 export const pageRoutes: Record<PageId, string> = {
   about: "/about",
-  blog: "/blog",
+  blog: "/blogs",
   "case-studies": "/case-studies",
   contact: "/contact",
   "cookie-policy": "/cookie-policy",

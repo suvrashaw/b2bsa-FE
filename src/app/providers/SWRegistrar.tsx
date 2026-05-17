@@ -1,7 +1,8 @@
 "use client";
+/* eslint-disable n/no-unsupported-features/node-builtins */
 import { useEffect } from "react";
 
-export function SWRegistrar() {
+export const SWRegistrar = () => {
   useEffect(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker

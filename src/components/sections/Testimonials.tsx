@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -18,14 +18,125 @@ export interface TestimonialsProps {
   testimonials?: TestimonialsContent["testimonials"];
 }
 
-export function Testimonials({
+const CAROUSEL_PERSPECTIVE_STYLE = { perspective: "1000px" };
+const CARD_STYLE_BASE = { transformOrigin: "center", transformStyle: "preserve-3d" as const };
+const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
+
+type TestimonialItem = TestimonialsContent["testimonials"][number];
+
+const TestimonialCard = ({
+  activeIndex: _activeIndex,
+  index,
+  isCenter,
+  isVisible,
+  setActiveIndex,
+  testimonial,
+}: {
+  activeIndex: number;
+  index: number;
+  isCenter: boolean;
+  isVisible: boolean;
+  setActiveIndex: (i: number) => void;
+  testimonial: TestimonialItem;
+}) => {
+  const pos = index - _activeIndex;
+  const absPos = Math.abs(pos);
+  const sideRotateY = pos > 0 ? -25 : 25;
+  const rotateY = isCenter ? 0 : sideRotateY;
+  const sideX = pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
+  const x = isCenter ? 0 : sideX;
+  const z = isCenter ? 100 : -100 * absPos;
+  const scale = isCenter ? 1 : 1 - 0.1 * absPos;
+  const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
+  const blur = isCenter ? 0 : 3 * absPos;
+  const zIndex = 50 - absPos * 10;
+  const cardAnimate = useMemo(
+    () => ({ filter: `blur(${blur}px)`, opacity, rotateY, scale, x, z, zIndex }),
+    [blur, opacity, rotateY, scale, x, z, zIndex]
+  );
+  const handleClick = useCallback(() => setActiveIndex(index), [index, setActiveIndex]);
+
+  return (
+    <motion.div
+      animate={cardAnimate}
+      className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-[20px] border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
+        isVisible ? "" : "pointer-events-none"
+      }`}
+      initial={false}
+      key={testimonial.id}
+      onClick={handleClick}
+      style={CARD_STYLE_BASE}
+      transition={CARD_TRANSITION}
+    >
+      <div className="relative flex h-full flex-col justify-between gap-6">
+        <div className="flex items-center gap-4">
+          <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-[#1E6091]">
+            <Image
+              alt={testimonial.name}
+              className="object-cover"
+              fill
+              sizes="56px"
+              src={testimonial.image}
+            />
+          </div>
+          <div>
+            <p className="font-heading text-lg leading-tight font-bold text-gray-900">
+              {testimonial.name}
+            </p>
+            <div className="mt-1 flex gap-1">
+              {Array.from({ length: testimonial.rating }).map((_, i) => (
+                <Star className="h-3.5 w-3.5 fill-[#1E6091] text-[#1E6091]" key={i} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <p className="relative z-10 text-[15px] leading-relaxed text-gray-600">
+          &quot;{testimonial.quote}&quot;
+        </p>
+
+        <div className="border-t border-gray-100 pt-5">
+          <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
+          <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
+        </div>
+
+        {!isCenter && (
+          <div className="absolute inset-0 rounded-[20px] bg-white/5 transition-colors duration-300 hover:bg-transparent" />
+        )}
+      </div>
+    </motion.div>
+  );
+};
+
+const DotButton = ({
+  activeIndex,
+  idx,
+  setActiveIndex,
+}: {
+  activeIndex: number;
+  idx: number;
+  setActiveIndex: (i: number) => void;
+}) => {
+  const handleClick = useCallback(() => setActiveIndex(idx), [idx, setActiveIndex]);
+  return (
+    <button
+      aria-label={`Go to slide ${idx + 1}`}
+      className={`h-2 rounded-full transition-all duration-500 ease-out ${
+        activeIndex === idx ? "w-10 bg-[#1E6091]" : "w-2 bg-gray-300"
+      }`}
+      onClick={handleClick}
+    />
+  );
+};
+
+export const Testimonials = ({
   content = HOME_TESTIMONIALS_CONTENT,
   autoplayInterval = content.autoplayInterval,
   eyebrow = content.eyebrow,
   heading = content.heading,
   initialIndex = content.initialIndex,
   testimonials = content.testimonials,
-}: TestimonialsProps = {}) {
+}: TestimonialsProps = {}) => {
   const { activeIndex, getRelativePosition, handleNext, handlePrev, setActiveIndex } =
     useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
 
@@ -45,91 +156,23 @@ export function Testimonials({
         {/* 3D Coverflow Container */}
         <div
           className="relative flex h-[450px] w-full items-center justify-center sm:h-[400px]"
-          style={{ perspective: "1000px" }}
+          style={CAROUSEL_PERSPECTIVE_STYLE}
         >
           {testimonials.map((testimonial, index) => {
             const pos = getRelativePosition(index);
             const isCenter = pos === 0;
             const absPos = Math.abs(pos);
             const isVisible = absPos <= 2;
-
-            // Apple Coverflow Animation Variables
-            const sideRotateY = pos > 0 ? -25 : 25;
-            const rotateY = isCenter ? 0 : sideRotateY;
-            const sideX = pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
-            const x = isCenter ? 0 : sideX;
-            const z = isCenter ? 100 : -100 * absPos;
-            const scale = isCenter ? 1 : 1 - 0.1 * absPos;
-            const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
-            const blur = isCenter ? 0 : 3 * absPos;
-            const zIndex = 50 - absPos * 10;
-
             return (
-              <motion.div
-                animate={{
-                  filter: `blur(${blur}px)`,
-                  opacity,
-                  rotateY,
-                  scale,
-                  x,
-                  z,
-                  zIndex,
-                }}
-                className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-[20px] border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
-                  isVisible ? "" : "pointer-events-none"
-                }`}
-                initial={false}
+              <TestimonialCard
+                activeIndex={activeIndex}
+                index={index}
+                isCenter={isCenter}
+                isVisible={isVisible}
                 key={testimonial.id}
-                onClick={() => setActiveIndex(index)}
-                style={{
-                  transformOrigin: "center",
-                  transformStyle: "preserve-3d",
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1], // Custom smooth easing
-                }}
-              >
-                <div className="relative flex h-full flex-col justify-between gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-[#1E6091]">
-                      <Image
-                        alt={testimonial.name}
-                        className="object-cover"
-                        fill
-                        sizes="56px"
-                        src={testimonial.image}
-                      />
-                    </div>
-                    <div>
-                      <p className="font-heading text-lg leading-tight font-bold text-gray-900">
-                        {testimonial.name}
-                      </p>
-                      <div className="mt-1 flex gap-1">
-                        {Array.from({ length: testimonial.rating }).map((_, i) => (
-                          <Star className="h-3.5 w-3.5 fill-[#1E6091] text-[#1E6091]" key={i} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="relative z-10 text-[15px] leading-relaxed text-gray-600">
-                    &quot;{testimonial.quote}&quot;
-                  </p>
-
-                  <div className="border-t border-gray-100 pt-5">
-                    <p className="text-sm font-semibold text-[#1E6091]">
-                      {testimonial.designation}
-                    </p>
-                    <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
-                  </div>
-
-                  {/* Subtle interaction overlay for side cards */}
-                  {!isCenter && (
-                    <div className="absolute inset-0 rounded-[20px] bg-white/5 transition-colors duration-300 hover:bg-transparent" />
-                  )}
-                </div>
-              </motion.div>
+                setActiveIndex={setActiveIndex}
+                testimonial={testimonial}
+              />
             );
           })}
         </div>
@@ -146,13 +189,11 @@ export function Testimonials({
 
           <div className="flex gap-3">
             {testimonials.map((_, idx) => (
-              <button
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2 rounded-full transition-all duration-500 ease-out ${
-                  activeIndex === idx ? "w-10 bg-[#1E6091]" : "w-2 bg-gray-300"
-                }`}
+              <DotButton
+                activeIndex={activeIndex}
+                idx={idx}
                 key={idx}
-                onClick={() => setActiveIndex(idx)}
+                setActiveIndex={setActiveIndex}
               />
             ))}
           </div>
@@ -170,7 +211,7 @@ export function Testimonials({
   );
 }
 
-function useCoverflowCarousel(total: number, initialIndex: number, autoplayInterval: number) {
+const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInterval: number) => {
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.min(initialIndex, Math.max(total - 1, 0))
   );

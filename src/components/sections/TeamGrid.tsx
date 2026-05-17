@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 
@@ -19,7 +20,16 @@ export interface TeamMember {
   role: string;
 }
 
+const TEAMGRID_INITIAL = { opacity: 0, y: 30 };
+const TEAMGRID_WHILE_IN_VIEW = { opacity: 1, y: 0 };
+const TEAMGRID_VIEWPORT = { margin: "-50px", once: true };
+
 export const TeamGrid = ({ data }: { data: TeamGridData }) => {
+  const memberTransitions = useMemo(
+    () => data.members.map((_, index) => ({ delay: index * 0.1, duration: 0.6 })),
+    [data.members]
+  );
+
   return (
     <section className="relative bg-brand-white py-24 transition-colors duration-500">
       <div className="container mx-auto w-full max-w-7xl px-8">
@@ -41,11 +51,11 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
           {data.members.map((member, index) => (
             <motion.div
               className="group"
-              initial={{ opacity: 0, y: 30 }}
+              initial={TEAMGRID_INITIAL}
               key={member.name}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              viewport={{ margin: "-50px", once: true }}
-              whileInView={{ opacity: 1, y: 0 }}
+              transition={memberTransitions[index]}
+              viewport={TEAMGRID_VIEWPORT}
+              whileInView={TEAMGRID_WHILE_IN_VIEW}
             >
               <div className="relative mb-6 aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gray-100">
                 <Image

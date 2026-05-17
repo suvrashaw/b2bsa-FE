@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
-import { Fragment, useState } from "react";
+import { Fragment, useCallback, useMemo, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home";
@@ -14,7 +14,7 @@ export interface ClientLogosProps {
   wheelSpeed?: number;
 }
 
-function useLogoMarquee(speed: number, wheelSpeed: number) {
+const useLogoMarquee = (speed: number, wheelSpeed: number) => {
   const baseX = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -208,14 +208,18 @@ const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
   </>
 );
 
-export function ClientLogos({
+export const ClientLogos = ({
   heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
   logos = HOME_CLIENT_LOGOS,
   overlap = true,
   speed = 4,
   wheelSpeed = 0.05,
-}: ClientLogosProps = {}) {
+}: ClientLogosProps = {}) => {
   const { handleWheel, setIsHovered, x } = useLogoMarquee(speed, wheelSpeed);
+
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
+  const marqueeStyle = useMemo(() => ({ x }), [x]);
 
   return (
     <div
@@ -232,15 +236,15 @@ export function ClientLogos({
       )}
       <div
         className="shadow-[0_8px_30px_rgb(0,0,0,0.08)](0,0,0,0.5)] pointer-events-auto relative overflow-hidden rounded-xl border border-gray-100 bg-white py-6"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         onWheel={handleWheel}
       >
         {/* Gradient Masks to make the edges fade smoothly */}
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
 
-        <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={{ x }}>
+        <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           {/* We render the row twice so it seamlessly loops when it translates -50% */}
           <div className="flex items-center gap-16 px-8 md:gap-24 md:px-12">
             <LogosRow logos={logos} />

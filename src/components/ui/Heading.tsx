@@ -25,30 +25,11 @@ interface HeadingProps extends VariantProps<typeof headingVariants> {
   preserveClassName?: boolean;
 }
 
-export function Heading({
-  as: Tag,
-  children,
-  className,
-  highlight,
-  highlightVariant = "blue",
-  level,
-  preserveClassName,
-}: HeadingProps) {
-  const resolvedLevel = level ?? Tag;
-  const classes = preserveClassName
-    ? className
-    : cn(headingVariants({ level: resolvedLevel }), className);
-
-  return (
-    <Tag className={classes}>{renderHighlightedText(children, highlight, highlightVariant)}</Tag>
-  );
-}
-
-function renderHighlightedText(
+const renderHighlightedText = (
   children: ReactNode,
   highlight?: string,
   highlightVariant: "blue" | "cyan" = "blue"
-) {
+) => {
   if (typeof children !== "string" || !highlight?.trim()) return children;
 
   const target = highlight.trim();
@@ -67,4 +48,23 @@ function renderHighlightedText(
       {children.slice(endIndex)}
     </>
   );
-}
+};
+
+export const Heading = ({
+  as: Tag,
+  children,
+  className,
+  highlight,
+  highlightVariant = "blue",
+  level,
+  preserveClassName,
+}: HeadingProps) => {
+  const resolvedLevel = level ?? Tag;
+  const classes = preserveClassName
+    ? className
+    : cn(headingVariants({ level: resolvedLevel }), className);
+
+  return (
+    <Tag className={classes}>{renderHighlightedText(children, highlight, highlightVariant)}</Tag>
+  );
+};

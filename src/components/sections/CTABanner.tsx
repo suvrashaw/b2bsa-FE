@@ -17,7 +17,12 @@ interface CTABannerProps {
   title: string;
 }
 
-export function CTABanner({
+const CATABANNER_INITIAL = { opacity: 0, y: 20 };
+const CATABANNER_WHILE_IN_VIEW = { opacity: 1, y: 0 };
+const CATABANNER_TRANSITION = { duration: 0.6 };
+const CATABANNER_VIEWPORT = { once: true };
+
+export const CTABanner = ({
   className,
   ctaHref,
   ctaLabel,
@@ -25,7 +30,7 @@ export function CTABanner({
   description,
   subtitle,
   title,
-}: CTABannerProps) {
+}: CTABannerProps) => {
   const resolvedSubtitle = subtitle ?? description;
   const resolvedCtaText = ctaText ?? ctaLabel ?? "Book a Strategy Session";
 
@@ -34,10 +39,10 @@ export function CTABanner({
       <div className="container mx-auto">
         <motion.div
           className="relative overflow-hidden rounded-[3rem] bg-brand-blue p-12 text-center shadow-2xl shadow-brand-blue/30 md:p-24"
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={CATABANNER_INITIAL}
+          transition={CATABANNER_TRANSITION}
+          viewport={CATABANNER_VIEWPORT}
+          whileInView={CATABANNER_WHILE_IN_VIEW}
         >
           {/* Decorative Elements */}
           <div className="pointer-events-none absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />

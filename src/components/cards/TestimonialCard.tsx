@@ -13,7 +13,7 @@ export interface TestimonialCardProps {
   rating: number;
 }
 
-export function TestimonialCard({
+export const TestimonialCard = ({
   className,
   company,
   designation,
@@ -21,7 +21,7 @@ export function TestimonialCard({
   name,
   quote,
   rating,
-}: TestimonialCardProps) {
+}: TestimonialCardProps) => {
   return (
     <div
       className={cn(
@@ -51,4 +51,4 @@ export function TestimonialCard({
       </div>
     </div>
   );
-}
+};

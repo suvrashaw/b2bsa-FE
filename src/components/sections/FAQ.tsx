@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 
 import { FAQCard } from "@/components/cards/FAQCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -18,24 +18,60 @@ export interface FAQProps {
   scrollAmount?: FAQContent["scrollAmount"];
 }
 
-export function FAQ({
+const FAQ_SCROLLBAR_STYLE = { msOverflowStyle: "none", scrollbarWidth: "none" } as const;
+const FAQ_CSS = `
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+      `;
+const FAQ_SCROLLBAR_INNER = { __html: FAQ_CSS };
+const FAQ_ITEM_INITIAL = { opacity: 0, x: 20 };
+const FAQ_ITEM_WHILEINVIEW = { opacity: 1, x: 0 };
+const FAQ_VIEWPORT = { once: true };
+
+const FAQMotionCard = ({
+  answer,
+  index,
+  question,
+}: {
+  answer: string;
+  index: number;
+  question: string;
+}) => {
+  const faqTransition = useMemo(() => ({ delay: index * 0.1 }), [index]);
+  return (
+    <motion.div
+      initial={FAQ_ITEM_INITIAL}
+      transition={faqTransition}
+      viewport={FAQ_VIEWPORT}
+      whileInView={FAQ_ITEM_WHILEINVIEW}
+    >
+      <FAQCard answer={answer} question={question} />
+    </motion.div>
+  );
+};
+
+export const FAQ = ({
   content = HOME_FAQ_CONTENT,
   description = content.description,
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
   scrollAmount = content.scrollAmount,
-}: FAQProps = {}) {
+}: FAQProps = {}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: "left" | "right") => {
+  const scrollLeft = useCallback(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        behavior: "smooth",
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-      });
+      scrollRef.current.scrollBy({ behavior: "smooth", left: -scrollAmount });
     }
-  };
+  }, [scrollAmount]);
+
+  const scrollRight = useCallback(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ behavior: "smooth", left: scrollAmount });
+    }
+  }, [scrollAmount]);
 
   return (
     <section className="relative overflow-hidden bg-brand-gray py-24" id="faq">
@@ -46,11 +82,11 @@ export function FAQ({
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="text-left">
-            <Eyebrow variant="neutral">{eyebrow}</Eyebrow>
+            {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
             <Heading as="h2" className="mb-4">
               {heading}
             </Heading>
-            <p className="max-w-xl text-lg text-gray-600">{description}</p>
+            {description && <p className="max-w-xl text-lg text-gray-600">{description}</p>}
           </div>
         </div>
 
@@ -58,18 +94,15 @@ export function FAQ({
         <div
           className="scrollbar-hide flex snap-x snap-mandatory gap-6 overflow-x-auto pb-8"
           ref={scrollRef}
-          style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
+          style={FAQ_SCROLLBAR_STYLE}
         >
           {faqs.map((faq, index) => (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
+            <FAQMotionCard
+              answer={faq.answer}
+              index={index}
               key={faq.id}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-            >
-              <FAQCard answer={faq.answer} question={faq.question} />
-            </motion.div>
+              question={faq.question}
+            />
           ))}
         </div>
 
@@ -77,13 +110,13 @@ export function FAQ({
         <div className="mt-12 flex items-center justify-center gap-8">
           <button
             className="hover:text-white:bg-brand-cyan flex h-12 w-12 items-center justify-center  rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue"
-            onClick={() => scroll("left")}
+            onClick={scrollLeft}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             className="hover:text-white:bg-brand-cyan flex h-12 w-12 items-center justify-center  rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue"
-            onClick={() => scroll("right")}
+            onClick={scrollRight}
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -91,15 +124,7 @@ export function FAQ({
       </div>
 
       {/* Global styles to hide scrollbar for webkit */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-      `,
-        }}
-      />
+      <style dangerouslySetInnerHTML={FAQ_SCROLLBAR_INNER} />
     </section>
   );
-}
+};

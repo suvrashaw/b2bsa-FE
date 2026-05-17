@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { serviceNavigationGroups, topNavigation, tradeShowLinks } from "@/content/navigation";
@@ -12,15 +12,23 @@ import { cn } from "@/lib";
 
 // Remove ThemeToggle import
 
-export function Header({
+const HEADER_ANIMATE = { y: 0 };
+const HEADER_INITIAL = { y: -100 };
+const HEADER_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
+const MOBILE_MENU_ANIMATE = { opacity: 1, y: 0 };
+const MOBILE_MENU_INITIAL = { opacity: 0, y: -20 };
+const MOBILE_MENU_EXIT = { opacity: 0, y: -20 };
+
+export const Header = ({
   darkBackground = false,
   forceLightMode = false,
-}: { darkBackground?: boolean; forceLightMode?: boolean; } = {}) {
+}: { darkBackground?: boolean; forceLightMode?: boolean; } = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const solidHeader = forceLightMode || scrolled;
   const lightText = darkBackground && !solidHeader;
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
+  const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,15 +43,15 @@ export function Header({
 
   return (
     <motion.header
-      animate={{ y: 0 }}
+      animate={HEADER_ANIMATE}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
         solidHeader
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       )}
-      initial={{ y: -100 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      initial={HEADER_INITIAL}
+      transition={HEADER_TRANSITION}
     >
       <div className="flex items-center gap-2">
         <Link
@@ -159,7 +167,7 @@ export function Header({
               "rounded-full p-2 transition-colors hover:bg-brand-gray/5",
               lightText ? "text-white" : ""
             )}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -169,10 +177,10 @@ export function Header({
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            animate={{ opacity: 1, y: 0 }}
+            animate={MOBILE_MENU_ANIMATE}
             className="absolute top-full right-0 left-0 flex flex-col gap-6 border-b border-gray-100 bg-white p-8 shadow-2xl lg:hidden"
-            exit={{ opacity: 0, y: -20 }}
-            initial={{ opacity: 0, y: -20 }}
+            exit={MOBILE_MENU_EXIT}
+            initial={MOBILE_MENU_INITIAL}
           >
             {topNavigation.map((link) => (
               <div className="space-y-4" key={link.name}>

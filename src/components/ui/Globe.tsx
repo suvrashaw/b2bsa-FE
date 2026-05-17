@@ -3,7 +3,7 @@
 import type { GlobeMethods } from "react-globe.gl";
 
 import dynamic from "next/dynamic";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 // Dynamically import react-globe.gl to prevent SSR issues with WebGL/Canvas
 const GlobeGL = dynamic(() => import("react-globe.gl"), {
@@ -122,7 +122,7 @@ const MARKERS = [
   { lat: 43.6532, lng: -79.3832, name: "Toronto" },
 ];
 
-export function Globe() {
+export const Globe = () => {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const [dimensions, setDimensions] = useState({ height: 800, width: 800 });
 
@@ -138,6 +138,13 @@ export function Globe() {
       globeRef.current.pointOfView({ altitude: 2.2, lat: 20, lng: 0 }, 1000);
     }
   }, []);
+
+  const getArcDashInitialGap = useCallback((arc: object) => (arc as ArcData).dashInitialGap, []);
+  const getLabelColor = useCallback(() => "rgba(255, 255, 255, 0.9)", []);
+  const getLabelLat = useCallback((d: unknown) => (d as GlobeMarker).lat, []);
+  const getLabelLng = useCallback((d: unknown) => (d as GlobeMarker).lng, []);
+  const getLabelText = useCallback((d: unknown) => (d as GlobeMarker).name, []);
+  const getPointColor = useCallback(() => "#ffffff", []);
 
   // Handle resizing so the globe fits nicely on mobile vs desktop
   useEffect(() => {
@@ -157,7 +164,7 @@ export function Globe() {
         arcColor="color"
         arcDashAnimateTime={4000}
         arcDashGap={4}
-        arcDashInitialGap={(arc: object) => (arc as ArcData).dashInitialGap}
+        arcDashInitialGap={getArcDashInitialGap}
         arcDashLength={0.4}
         // Arcs
         arcsData={arcsData}
@@ -168,18 +175,18 @@ export function Globe() {
         bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-water.png"
         height={dimensions.height}
-        labelColor={() => "rgba(255, 255, 255, 0.9)"}
+        labelColor={getLabelColor}
         labelDotRadius={0.3}
         labelIncludeDot={true}
-        labelLat={(d: unknown) => (d as GlobeMarker).lat}
-        labelLng={(d: unknown) => (d as GlobeMarker).lng}
+        labelLat={getLabelLat}
+        labelLng={getLabelLng}
         labelResolution={2}
         // Labels for points
         labelsData={MARKERS}
         labelSize={1.5}
-        labelText={(d: unknown) => (d as GlobeMarker).name}
+        labelText={getLabelText}
         pointAltitude={0.05}
-        pointColor={() => "#ffffff"}
+        pointColor={getPointColor}
         pointRadius={0.5}
         // Custom Points (Locations)
         pointsData={MARKERS}
