@@ -1,4 +1,5 @@
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
+import type { CreativePricingProps } from "@/components/sections/CreativePricing";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { OurServicesProps } from "@/components/sections/OurServices";
 import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
@@ -8,6 +9,7 @@ import type { MarketingPageIdentity } from "@/content/page-definitions";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
+import { CreativePricing } from "@/components/sections/CreativePricing";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { DataTable } from "@/components/sections/DataTable";
 import { FAQ } from "@/components/sections/FAQ";
@@ -24,10 +26,11 @@ import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib
 
 export interface ServiceDetailProps {
   caseStudies?: CaseStudiesProps;
+  creativePricing?: CreativePricingProps;
   ctaBanner?: {
     ctaHref?: string;
     ctaLabel: string;
-    description: string;
+    description?: string;
     title: string;
   };
   deliverables?: OurServicesProps;
@@ -105,10 +108,6 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Request a Data Augmentation Demo" },
     secondaryCta: { href: "/contact", label: "Upload a Sample List" },
   },
-  "/services/data-validation": {
-    primaryCta: { href: "/contact", label: "Start a Data Validation Project" },
-    secondaryCta: { href: "/contact", label: "Get a Free Data Quality Audit" },
-  },
   "/services/global-event-solutions/custom-events": {
     primaryCta: { href: "/contact", label: "Design Your Custom Event" },
   },
@@ -135,10 +134,6 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Request a LinkedIn Ads Audit" },
     secondaryCta: { href: "/contact", label: "Request a Campaign Strategy" },
   },
-  "/services/market-intelligence": {
-    primaryCta: { href: "/contact", label: "Commission a Research Report" },
-    secondaryCta: { href: "/contact", label: "Schedule an Intelligence Briefing" },
-  },
   "/services/media-production/corporate-video-production": {
     primaryCta: { href: "/contact", label: "Request a Corporate Video Quote" },
   },
@@ -163,6 +158,7 @@ const serviceHeroCtasByPath: Record<
 
 export const ServiceDetail = ({
   caseStudies,
+  creativePricing,
   ctaBanner,
   deliverables,
   deliverablesSectionType = "grid",
@@ -253,6 +249,8 @@ export const ServiceDetail = ({
       {process && <ProcessTimeline phases={process.phases} title={process.title} />}
 
       {pricing && <DataTable headers={pricing.headers} rows={pricing.rows} title={pricing.title} />}
+
+      {creativePricing && <CreativePricing {...creativePricing} />}
 
       {pricingGuidance && (
         <>

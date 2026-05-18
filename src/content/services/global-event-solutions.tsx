@@ -10,7 +10,7 @@ export { GLOBAL_PROOF_STATS as GES_PROOF_BAR } from "../shared";
 
 export const GES_SERVICES = {
   description:
-    "Running a major trade show program through five separate vendors creates fragmentation — no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution — all under one team. When the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
+    "Running a major trade show program through five separate vendors creates fragmentation — no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution — all under one team.\n\nWhen the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
   heading: "End-to-End Corporate Event Solutions Under One Roof",
   services: [
     {
@@ -78,7 +78,7 @@ export const GES_SERVICES = {
 
 export const GES_WHY = {
   description:
-    "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities. CEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
+    "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.\n\nCEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
   heading: "The Business Case for Live Events in Enterprise B2B",
   reasons: [
     {
@@ -115,16 +115,16 @@ export const GES_PROCESS = {
       title: "Strategic Planning",
     },
     {
-      description: "booth architecture, visitor journey, demo zones, and meeting area placement.",
+      description: "Booth architecture, visitor journey, demo zones, and meeting area placement.",
       title: "Concept Design",
     },
     {
-      description: "production, shipping, customs, and venue scheduling managed in advance.",
+      description: "Production, shipping, customs, and venue scheduling managed in advance.",
       title: "Fabrication and Logistics",
     },
     {
       description:
-        "booth operations, staff briefing, real-time lead capture, and hot-lead routing.",
+        "Booth operations, staff briefing, real-time lead capture, and hot-lead routing.",
       title: "On-Ground Execution",
     },
     {

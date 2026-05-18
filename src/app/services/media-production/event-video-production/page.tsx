@@ -4,11 +4,11 @@ import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   EVENT_VIDEO_CASE_STUDIES,
+  EVENT_VIDEO_CREATIVE_PRICING,
   EVENT_VIDEO_DELIVERABLES,
   EVENT_VIDEO_FAQ,
   EVENT_VIDEO_HERO,
   EVENT_VIDEO_PAGE,
-  EVENT_VIDEO_PRICING,
   EVENT_VIDEO_PROOF_BAR,
   EVENT_VIDEO_WHY,
 } from "@/content/services/detail/event-video-production";
@@ -19,8 +19,8 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_VIDEO_PAGE);
 const eventVideoProductionCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Book Event Video Production",
-  description: "Make your event work for months after the show closes.",
-  title: "Capture it properly.",
+  description: "",
+  title: "Capture it properly. Make your event work for months after the show closes.",
 };
 
 const eventVideoProductionRelatedServices = [
@@ -42,13 +42,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
+      creativePricing={EVENT_VIDEO_CREATIVE_PRICING}
       ctaBanner={eventVideoProductionCtaBanner}
       deliverables={EVENT_VIDEO_DELIVERABLES}
       faq={EVENT_VIDEO_FAQ}
       hero={EVENT_VIDEO_HERO}
       page={EVENT_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      pricingGuidance={EVENT_VIDEO_PRICING}
       proofBar={EVENT_VIDEO_PROOF_BAR}
       relatedServices={eventVideoProductionRelatedServices}
       why={EVENT_VIDEO_WHY}

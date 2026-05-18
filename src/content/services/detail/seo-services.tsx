@@ -115,22 +115,22 @@ export const SEO_PROCESS = {
   phases: [
     {
       description:
-        "making the website crawlable, indexable, and fast before any content investment.",
+        "Making the website crawlable, indexable, and fast before any content investment.",
       title: "Technical Foundation",
     },
     {
       description:
-        "pillar-and-cluster content model built around buyer intent across the full purchase journey.",
+        "Pillar-and-cluster content model built around buyer intent across the full purchase journey.",
       title: "Content Architecture",
     },
     {
       description:
-        "quality backlinks, digital PR, and thought leadership content that builds domain credibility over time.",
+        "Quality backlinks, digital PR, and thought leadership content that builds domain credibility over time.",
       title: "Authority Building",
     },
     {
       description:
-        "quarterly strategy refinement based on rankings, organic traffic, qualified leads, and pipeline data.",
+        "Quarterly strategy refinement based on rankings, organic traffic, qualified leads, and pipeline data.",
       title: "Measurement and Iteration",
     },
   ],

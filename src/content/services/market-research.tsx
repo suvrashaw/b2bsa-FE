@@ -28,7 +28,6 @@ export const RESEARCH_SERVICES = {
       color: "bg-brand-cyan",
       description:
         "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
-      href: "/services/data-validation",
       icon: "CheckCircle",
       id: "validation",
       image:
@@ -39,7 +38,6 @@ export const RESEARCH_SERVICES = {
       color: "bg-brand-primary",
       description:
         "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
-      href: "/services/market-intelligence",
       icon: "Search",
       id: "intelligence",
       image:
@@ -51,7 +49,7 @@ export const RESEARCH_SERVICES = {
 
 export const RESEARCH_WHY = {
   description:
-    "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions.",
+    "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions. Clean, validated, enriched data is the foundation that makes every B2B marketing and sales motion more effective.",
   heading: "Bad Data Costs Enterprise Sales Teams Millions",
   reasons: [
     {
@@ -117,7 +115,7 @@ export const RESEARCH_FAQ = {
     },
     {
       answer:
-        "Primary research gathers new information directly from sources through interviews, surveys, and panels. Secondary research analyses existing information such as reports, competitor websites, and public data. The best programs combine both.",
+        "Primary: new information gathered directly from sources — interviews, surveys, panels. Secondary: analysis of existing information — reports, competitor websites, public data. Best programs combine both.",
       id: "primary-secondary",
       question: "What is the difference between primary and secondary research?",
     },
@@ -125,7 +123,7 @@ export const RESEARCH_FAQ = {
       answer:
         "Executive briefing decks, detailed research reports, live analyst briefings, ongoing subscriptions, or custom dashboards — format agreed at brief stage based on how your team uses the intelligence.",
       id: "delivery",
-      question: "How do you deliver the research findings?",
+      question: "How do you deliver findings?",
     },
   ],
   heading: "Frequently Asked Questions",

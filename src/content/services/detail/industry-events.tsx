@@ -38,7 +38,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact — recommending only events where the return justifies the investment.",
+        "Our event ROI forecasting framework evaluates five criteria before committing budget: audience quality and buyer intent density, ICP attendance patterns, competitive presence, sponsorship opportunity value, and historical pipeline impact for brands in your category.",
       icon: "Map",
       id: "selection",
       image:
@@ -48,7 +48,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "End-to-end booth design, fabrication, freight, customs compliance, and venue scheduling — managed under one team with full accountability for on-site delivery.",
+        "Full booth design, fabrication coordination, and logistics management for every event in your calendar.",
       icon: "Layers",
       id: "booth-design",
       image:
@@ -58,7 +58,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "ICP mapping, target account list building from registered attendee data, LinkedIn outreach, and pre-event meeting booking to fill your calendar before the floor opens.",
+        "Pre-event targeting and meeting generation with priority accounts before the floor opens.",
       icon: "Target",
       id: "lead-targeting",
       image:
@@ -68,7 +68,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Dedicated project managers on-site, booth team briefing, BANT/CHAMP lead qualification, real-time CRM routing, and full visitor engagement management throughout the event.",
+        "Booth operations, staff briefing, real-time lead capture, and hot-lead routing on the ground.",
       icon: "Users",
       id: "on-site",
       image:
@@ -83,7 +83,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
       id: "post-show",
       image:
         "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
-      title: "Post-Show Analytics and Pipeline Report Within 72 Hours",
+      title: "Post-Show Analytics and Pipeline Report",
     },
   ],
 };

@@ -69,8 +69,6 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
   ]),
   serviceGroup("Sales Qualified Lead Generation", "service.sales-qualified-lead-generation", []),
   serviceGroup("Market Research", "service.market-research", [
-    navLink("Human-Powered Intelligence", "service.market-intelligence"),
-    navLink("Data Validation", "service.data-validation"),
     navLink("Data Augmentation", "service.data-augmentation"),
   ]),
 ];

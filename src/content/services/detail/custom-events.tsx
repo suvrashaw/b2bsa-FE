@@ -40,7 +40,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Matching the format, audience, and brand positioning — from private members' clubs to luxury yachts, private dining rooms to premium waterfront venues.",
+        "Matching the format, audience, and brand positioning.",
       icon: "MapPin",
       id: "venue",
       image:
@@ -50,7 +50,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "Invitations, signage, stage graphics, and all branded touchpoints — creating a cohesive, premium brand experience from the first communication to the final follow-up.",
+        "Invitations, signage, stage graphics, and all branded touchpoints.",
       icon: "Palette",
       id: "identity",
       image:
@@ -60,7 +60,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "Content sequencing, panel formats, and executive moments — designed to position your brand as a category thought leader while creating peer-level trust between your team and the buyers in the room.",
+        "Content sequencing, panel formats, and executive moments.",
       icon: "Mic",
       id: "agenda",
       image:
@@ -70,7 +70,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Sound, lighting, screens, live feeds, and recording — full-scale event production for zero-error live execution.",
+        "Sound, lighting, screens, live feeds, recording.",
       icon: "Clapperboard",
       id: "av",
       image:
@@ -80,7 +80,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "Registration flow, seating, hospitality, and follow-up — managing the full guest journey to ensure every interaction reinforces your brand and commercial objectives.",
+        "Registration flow, seating, hospitality, and follow-up.",
       icon: "Users",
       id: "experience",
       image:
@@ -90,7 +90,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "For hybrid events and post-event asset creation — broadcast-quality capture that extends the reach and shelf-life of your proprietary event.",
+        "For hybrid events and post-event asset creation.",
       icon: "Video",
       id: "streaming",
       image:
@@ -100,7 +100,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Email sequences, recap content, and next-step recommendations for priority accounts — keeping the commercial conversation warm after the room empties.",
+        "Email sequences, recap content, and next-step recommendations for priority accounts.",
       icon: "Mail",
       id: "follow-up",
       image:
@@ -116,57 +116,57 @@ export const CUSTOM_EVENTS_FORMATS = {
     {
       "event type": "Executive Roundtables and C-Suite Dinners",
       focus:
-        "Intimate formats for 8–20 senior decision-makers — designed for focused, high-trust conversation that public trade shows cannot deliver",
+        "Intimate formats for 8–20 senior decision-makers — designed for focused, high-trust conversation that public trade shows cannot deliver. Think private dining rooms, curated seating, and structured conversation that advances specific commercial relationships.",
     },
     {
       "event type": "Gala Cruise Dinners",
       focus:
-        "Premium waterfront or on-board experiences combining fine dining, entertainment, and exclusive networking for VIP clients, partners, and senior prospects",
+        "Premium waterfront or on-board experiences combining fine dining, entertainment, and exclusive networking for VIP clients, partners, and senior prospects. A gala cruise dinner creates the kind of relaxed, relationship-first environment where high-value partnerships are formed.",
     },
     {
       "event type": "Round Table Conferences",
       focus:
-        "Structured facilitated sessions — typically 12–30 participants — designed around a specific industry challenge, market trend, or strategic theme",
+        "Structured facilitated sessions — typically 12–30 participants — designed around a specific industry challenge, market trend, or strategic theme. Ideal for positioning your brand as a category thought leader while creating peer-level trust between your team and the buyers in the room.",
     },
     {
       "event type": "Roadshows",
       focus:
-        "Sequential multi-city event tours bringing your brand and message to buyers in their own markets — creating pipeline density across multiple geographies in one coordinated campaign",
+        "Sequential multi-city event tours bringing your brand and message to buyers in their own markets — creating pipeline density across multiple geographies in one coordinated campaign.",
     },
     {
       "event type": "Hosted Buyer and VIP Networking Events",
       focus:
-        "Curated hosted buyer programs where selected buyers, partners, and stakeholders engage in a structured, relationship-first setting",
+        "Curated hosted buyer programs where selected buyers, partners, and stakeholders engage with your brand in a structured, relationship-first setting.",
     },
     {
       "event type": "Cricket Matches and Premium Sporting Experiences",
       focus:
-        "Cricket hospitality, box events, and premium sporting packages create informal, high-trust access to senior decision-makers in a setting entirely different from a meeting room",
+        "Cricket hospitality, box events, and premium sporting packages create informal, high-trust access to senior decision-makers in a setting entirely different from a meeting room. These experiences build the kind of personal relationship that accelerates long B2B sales cycles.",
     },
     {
       "event type": "Museum Visits and Cultural Experiences",
       focus:
-        "Exclusive private tours, curator-led museum experiences, and cultural events for executive-level clients who value substance and sophistication",
+        "Exclusive private tours, curator-led museum experiences, and cultural events for executive-level clients who value substance and sophistication. An unexpected, premium experience is often remembered longer than a conventional networking dinner.",
     },
     {
       "event type": "Premium Automotive Experiences",
       focus:
-        "Track days, brand-led automotive experiences, and prestige vehicle test drives for senior prospects and VIP clients — a distinctive, high-impact format for building executive relationships",
+        "Track days, brand-led automotive experiences, and prestige vehicle test drives for senior prospects and VIP clients — a distinctive, high-impact format for building executive relationships.",
     },
     {
       "event type": "Product Launches and Brand Reveals",
       focus:
-        "Events that create genuine market attention and communicate your value clearly — designed for B2B audiences who evaluate with precision",
+        "Events that create genuine market attention and communicate your value clearly — designed for B2B audiences who evaluate with precision.",
     },
     {
       "event type": "Client Summits and User Conferences",
       focus:
-        "Structured agenda events that bring customers, users, and partners together through branded environments, content sessions, and meaningful networking",
+        "Structured agenda events that bring customers, users, and partners together through branded environments, content sessions, and meaningful networking.",
     },
     {
       "event type": "Hybrid Events (Physical + Digital)",
       focus:
-        "In-person events extended to global virtual audiences through broadcast-quality live streaming, audience engagement tools, and post-event content distribution",
+        "In-person events extended to global virtual audiences through broadcast-quality live streaming, audience engagement tools, and post-event content distribution.",
     },
   ],
   title: "Custom Event Formats We Produce",

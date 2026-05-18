@@ -18,6 +18,7 @@ export const metadata: Metadata = getMarketingPageMetadata(RESEARCH_PAGE);
 const marketResearchCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Start a Research Project",
+  description: "",
   title: "Own your competitive intelligence advantage.",
 };
 

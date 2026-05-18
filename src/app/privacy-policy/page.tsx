@@ -15,7 +15,7 @@ const Page = () => {
         <div className="container mx-auto max-w-4xl px-8">
           <Heading
             as="h1"
-            className="mb-12 font-heading text-4xl font-bold md:text-6xl"
+            className="mb-12 font-heading text-2xl font-bold md:text-2xl"
             preserveClassName
           >
             Privacy Policy

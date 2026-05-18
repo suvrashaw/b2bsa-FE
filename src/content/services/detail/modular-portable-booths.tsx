@@ -30,42 +30,45 @@ export const MODULAR_BOOTHS_WHY = {
       title: "Logistics Efficiency",
     },
     {
-      description: "",
+      description:
+        "No tools, no specialist crew required. Standard formats are floor-ready in under 4 hours — critical for venues with tight build windows and overnight setups.",
       id: "tool-free",
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
       title: "Tool-free assembly in under 4 hours",
     },
     {
-      description: "",
+      description:
+        "Update messaging, imagery, and branding between events without touching the structure. One hardware investment, unlimited creative flexibility across your show calendar.",
       id: "graphic-updates",
       image:
         "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
       title: "Custom graphic panels updated between events without structural changes",
     },
     {
-      description: "Digital engagement built in.",
+      description: "Digital engagement built in — touchscreens, LED displays, and interactive content zones configurable within the modular framework.",
       id: "led-screens",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
       title: "Integrated LED and screen options",
     },
     {
-      description: "For international deployment.",
+      description: "Hard-shell cases engineered to international shipping standards — deployable to any venue globally without specialist freight requirements.",
       id: "international-shipping",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
       title: "Hard-case shipping to airline check-in specs",
     },
     {
-      description: "",
+      description:
+        "The same components reconfigure into a 10x10, 10x20, or 20x20 island layout — adapting to different venues and budgets without purchasing a second system.",
       id: "reconfigurable",
       image:
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
       title: "Reconfigurable for different booth footprints",
     },
     {
-      description: "Eco-friendly booth options for environmental reporting.",
+      description: "Eco-friendly booth options for environmental reporting — reusable components, lower-waste fabrication, and recyclable graphic choices.",
       id: "sustainable",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",

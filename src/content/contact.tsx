@@ -71,8 +71,6 @@ export const CONTACT_FORM = {
       { label: "Sales Qualified Lead Generation", value: "sales-qualified-lead-generation" },
       { label: "Market Research", value: "market-research" },
       { label: "Data Augmentation", value: "data-augmentation" },
-      { label: "Data Validation", value: "data-validation" },
-      { label: "Human-Powered Market Intelligence", value: "market-intelligence" },
     ],
     servicePlaceholder: "Select a service of interest...",
     timelineLabel: "Estimated Project Timeline",

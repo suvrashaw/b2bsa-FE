@@ -18,8 +18,8 @@ export const metadata: Metadata = getMarketingPageMetadata(GES_PAGE);
 const gesCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Book a Free Strategy Session",
-  description: "Let's build your event solutions strategy.",
-  title: "250+ events. $1.2B+ influenced. One team, one brief, one outcome.",
+  description: "",
+  title: "250+ events. $1.2B+ influenced. One team, one brief, one outcome. Let's build your event solutions strategy.",
 };
 
 const Page = () => {

@@ -13,7 +13,7 @@ export const BOOTH_RENTAL_WHY = {
   reasons: [
     {
       description:
-        "Custom fabrication is not feasible — rental systems deploy fast without sacrificing brand quality.",
+        "Custom fabrication not feasible — rental delivers a professional branded presence on short notice.",
       id: "timeline",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -21,7 +21,7 @@ export const BOOTH_RENTAL_WHY = {
     },
     {
       description:
-        "Validate event ROI before committing to a full custom build in an unfamiliar geography.",
+        "Validate event ROI before committing to a full custom build.",
       id: "new-market",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
@@ -29,7 +29,7 @@ export const BOOTH_RENTAL_WHY = {
     },
     {
       description:
-        "Spread cost across specific events without the capital commitment of a permanent build.",
+        "Spread cost across specific events.",
       id: "budget",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -37,7 +37,7 @@ export const BOOTH_RENTAL_WHY = {
     },
     {
       description:
-        "Secondary presence while your custom booth is at another show — no gaps in your event calendar.",
+        "Secondary presence while your custom booth is at another show.",
       id: "concurrent",
       image:
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
@@ -45,7 +45,7 @@ export const BOOTH_RENTAL_WHY = {
     },
     {
       description:
-        "Learn the environment before investing in a major custom build — de-risk your event investment.",
+        "Learn the environment before investing in a major build.",
       id: "first-time",
       image:
         "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
@@ -139,22 +139,22 @@ export const BOOTH_RENTAL_PROCESS = {
     },
     {
       description: "Confirm inventory and venue compliance.",
-      title: "Availability check",
+      title: "Availability Check",
     },
     {
       description: "Graphics, furniture, AV, and meeting zones.",
-      title: "Branding configuration",
+      title: "Branding Configuration",
     },
     {
       description: "Installed and quality-checked before the show opens.",
-      title: "Delivery and setup",
+      title: "Delivery and Setup",
     },
     {
       description: "Breakdown and storage managed after close.",
-      title: "Post-event collection",
+      title: "Post-Event Collection",
     },
   ],
-  title: "How Rental Works",
+  title: "Our Rental Process",
 };
 
 export const BOOTH_RENTAL_CASE_STUDIES = {

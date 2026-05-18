@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 
 import type { CaseStudyIndexEntry } from "@/types/case-studies";
 
+import { Heading } from "@/components/ui/Heading";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 
 import { CaseStudiesGrid } from "./CaseStudiesGrid";
@@ -56,9 +57,9 @@ export const CaseStudiesIndex = () => {
             initial={HERO_LEFT_INITIAL}
             transition={HERO_LEFT_TRANSITION}
           >
-            <h1 className="font-heading text-5xl leading-[1.05] font-bold lg:text-7xl">
+            <Heading as="h1" className="leading-[1.05]">
               {CASE_STUDIES_PAGE_CONTENT.hero.title}
-            </h1>
+            </Heading>
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-700">
               {CASE_STUDIES_PAGE_CONTENT.hero.description}
             </p>

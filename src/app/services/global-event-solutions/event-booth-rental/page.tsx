@@ -19,9 +19,9 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
 const eventBoothRentalCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Check Rental Availability",
-  description:
-    "A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
-  title: "Fast does not have to feel temporary.",
+  description: "",
+  title:
+    "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
 };
 
 const eventBoothRentalRelatedServices = [

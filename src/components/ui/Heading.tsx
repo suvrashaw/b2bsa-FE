@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -8,8 +8,8 @@ import { cn } from "@/lib";
 const headingVariants = cva("", {
   variants: {
     level: {
-      h1: "font-heading text-5xl leading-[1.1] font-bold text-[var(--heading-h1)] lg:text-7xl",
-      h2: "font-heading text-4xl leading-tight font-bold text-[var(--heading-h2)] lg:text-5xl",
+      h1: "font-heading text-3xl leading-[1.02] font-black text-[var(--heading-h1)] lg:text-6xl xl:text-7xl",
+      h2: "font-heading text-3xl leading-tight font-bold text-[var(--heading-h2)] lg:text-4xl",
       h3: "font-heading text-2xl leading-tight font-bold text-[var(--heading-h3)] lg:text-3xl",
       h4: "text-xs font-bold tracking-wider text-[var(--heading-h4)] uppercase",
     },
@@ -23,6 +23,7 @@ interface HeadingProps extends VariantProps<typeof headingVariants> {
   highlight?: string;
   highlightVariant?: "blue" | "cyan";
   preserveClassName?: boolean;
+  style?: CSSProperties;
 }
 
 const renderHighlightedText = (
@@ -58,6 +59,7 @@ export const Heading = ({
   highlightVariant = "blue",
   level,
   preserveClassName,
+  style,
 }: HeadingProps) => {
   const resolvedLevel = level ?? Tag;
   const classes = preserveClassName
@@ -65,6 +67,8 @@ export const Heading = ({
     : cn(headingVariants({ level: resolvedLevel }), className);
 
   return (
-    <Tag className={classes}>{renderHighlightedText(children, highlight, highlightVariant)}</Tag>
+    <Tag className={classes} style={style}>
+      {renderHighlightedText(children, highlight, highlightVariant)}
+    </Tag>
   );
 };

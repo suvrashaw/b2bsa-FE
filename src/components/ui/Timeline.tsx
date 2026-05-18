@@ -48,7 +48,7 @@ export const Timeline = ({
     <div className="w-full font-sans transition-colors duration-500 md:px-10" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-8 lg:px-10">
         <WhisperText
-          className="mb-4 max-w-4xl font-heading text-4xl  font-bold transition-colors duration-500 md:text-5xl lg:text-6xl"
+          className="mb-4 max-w-4xl font-heading text-2xl  font-bold transition-colors duration-500 md:text-3xl lg:text-2xl"
           highlightColor="blue"
           highlights={headingHighlights}
           text={heading}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 interface DataTableProps {
@@ -28,12 +29,12 @@ export const DataTable = ({ className, description, headers, rows, title }: Data
         {(title || description) && (
           <div className="mb-12 max-w-3xl">
             {title && (
-              <h2 className="mb-4 font-heading text-3xl font-bold text-brand-gray md:text-4xl">
+              <Heading as="h2" className="mb-4 text-brand-charcoal">
                 {title}
-              </h2>
+              </Heading>
             )}
             {description && (
-              <p className="text-lg leading-relaxed text-brand-gray/70">{description}</p>
+              <p className="text-lg leading-relaxed text-brand-charcoal/70">{description}</p>
             )}
           </div>
         )}
@@ -65,7 +66,7 @@ export const DataTable = ({ className, description, headers, rows, title }: Data
                     {headers.map((header, colIndex) => (
                       <td
                         className={cn(
-                          "px-8 py-6 text-brand-gray text-base",
+                          "px-8 py-6 text-brand-charcoal text-base",
                           colIndex === 0 ? "font-bold" : "font-medium"
                         )}
                         key={colIndex}

@@ -81,7 +81,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           </div>
 
           <WhisperText
-            className="mb-8 font-heading text-4xl leading-[1.1] font-bold transition-colors duration-500  md:text-5xl lg:text-7xl"
+            className="mb-8 font-heading text-2xl leading-[1.1] font-bold transition-colors duration-500  md:text-3xl lg:text-3xl"
             highlightColor="blue"
             highlights={titleHighlights}
             text={data.title}

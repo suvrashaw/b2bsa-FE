@@ -1,19 +1,6 @@
 "use client";
 
-import type { IconSvgElement } from "@hugeicons/react";
-
-import {
-  AiCloudIcon,
-  CheckmarkCircle01Icon,
-  CommandFreeIcons,
-  DashboardSquare01Icon,
-  GlobalSearchIcon,
-  MagicWandIcon,
-  Pizza04Icon,
-  SmartPhone01Icon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
@@ -22,7 +9,7 @@ import { cn } from "@/lib";
 
 export interface FeatureCarouselItem {
   description: string;
-  icon: IconSvgElement | string;
+  icon: string;
   id: string;
   image: string;
   label: string;
@@ -32,82 +19,10 @@ interface FeatureCarouselProps {
   features?: FeatureCarouselItem[];
 }
 
-export const DEFAULT_FEATURES: FeatureCarouselItem[] = [
-  {
-    description: "Ethically sourced ingredients from local farmers.",
-    icon: Pizza04Icon,
-    id: "sustainable",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200",
-    label: "Sustainable Sourcing",
-  },
-  {
-    description: "Building stronger bonds through shared experiences.",
-    icon: CommandFreeIcons,
-    id: "community",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200",
-    label: "Community Focused",
-  },
-  {
-    description: "Connecting visionaries across all continents.",
-    icon: GlobalSearchIcon,
-    id: "global",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200",
-    label: "Global Reach",
-  },
-  {
-    description: "Recognized excellence in design and innovation.",
-    icon: CheckmarkCircle01Icon,
-    id: "award",
-    image: "https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?q=80&w=1200",
-    label: "Award Winning",
-  },
-  {
-    description: "Scale your infrastructure with seamless ease.",
-    icon: AiCloudIcon,
-    id: "cloud",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200",
-    label: "Cloud Ready",
-  },
-  {
-    description: "A world-class experience on every single device.",
-    icon: SmartPhone01Icon,
-    id: "mobile",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
-    label: "Mobile First",
-  },
-  {
-    description: "Insights at your fingertips, updated in real-time.",
-    icon: DashboardSquare01Icon,
-    id: "analytics",
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=1200",
-    label: "Real-time Analytics",
-  },
-  {
-    description: "Bank-grade security protocols for your data.",
-    icon: CheckmarkCircle01Icon,
-    id: "security",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
-    label: "Enterprise Security",
-  },
-  {
-    description: "Let AI handle the repetitive tasks for you.",
-    icon: MagicWandIcon,
-    id: "magic",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200",
-    label: "Magic Automations",
-  },
-  {
-    description: "Supporting local businesses and creators.",
-    icon: CheckmarkCircle01Icon,
-    id: "local",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200",
-    label: "Locally Owned",
-  },
-];
 
 const AUTO_PLAY_INTERVAL = 3000;
 const ITEM_HEIGHT = 65;
-const NAV_ITEM_STYLE = { height: ITEM_HEIGHT, width: "fit-content" } as const;
+const NAV_ITEM_STYLE = { height: ITEM_HEIGHT, width: "100%" } as const;
 const NAV_ITEM_TRANSITION = {
   damping: 22,
   mass: 1,
@@ -136,9 +51,6 @@ const camelToKebab = (value: string) => {
     .toLowerCase();
 };
 
-const isHugeIcon = (icon: FeatureCarouselItem["icon"]): icon is IconSvgElement => {
-  return typeof icon !== "string";
-};
 
 type CardStatus = "active" | "hidden" | "next" | "prev";
 
@@ -162,18 +74,18 @@ const getNavItemMotion = (wrappedDistance: number) => ({
 
 const getShowcaseMotion = (status: CardStatus) => {
   if (status === "active") {
-    return { opacity: 1, rotate: 0, scale: 1, x: 0 };
+    return { opacity: 1, rotate: 0, scale: 1, y: 0 };
   }
 
   if (status === "prev") {
-    return { opacity: 0.4, rotate: -3, scale: 0.85, x: -100 };
+    return { opacity: 0.4, rotate: -3, scale: 0.85, y: -60 };
   }
 
   if (status === "next") {
-    return { opacity: 0.4, rotate: 3, scale: 0.85, x: 100 };
+    return { opacity: 0.4, rotate: 3, scale: 0.85, y: 60 };
   }
 
-  return { opacity: 0, rotate: 0, scale: 0.7, x: 0 };
+  return { opacity: 0, rotate: 0, scale: 0.7, y: 0 };
 };
 
 const getShowcaseCardClassName = (status: CardStatus) => {
@@ -190,7 +102,7 @@ const getShowcaseCardClassName = (status: CardStatus) => {
   const pointerEventsClassName = isActive ? "pointer-events-auto" : "pointer-events-none";
 
   return cn(
-    "absolute inset-0 origin-center overflow-hidden rounded-[2rem] border-4 border-zinc-950 bg-zinc-950 shadow-2xl md:rounded-[2.8rem] md:border-8",
+    "absolute inset-0 origin-center overflow-hidden rounded-[2rem] bg-white shadow-2xl md:rounded-[2.8rem]",
     depthClassName,
     pointerEventsClassName
   );
@@ -206,20 +118,12 @@ const getFeatureImageClassName = (isActive: boolean) => {
 const getFeatureIconClassName = (isActive: boolean) => {
   return cn(
     "flex items-center justify-center transition-colors duration-500",
-    isActive ? "text-[#62B2FE]" : "text-white/40"
+    isActive ? "text-white" : "text-brand-charcoal/40"
   );
 };
 
 const renderFeatureIcon = (icon: FeatureCarouselItem["icon"], isActive: boolean) => {
   const iconClassName = getFeatureIconClassName(isActive);
-
-  if (isHugeIcon(icon)) {
-    return (
-      <div className={iconClassName}>
-        <HugeiconsIcon icon={icon} size={18} strokeWidth={2} />
-      </div>
-    );
-  }
 
   return (
     <div className={iconClassName}>
@@ -250,10 +154,10 @@ const FeatureNavItem = ({
   const wrappedDistance = wrap(-(itemCount / 2), itemCount / 2, distance);
   const navItemMotion = getNavItemMotion(wrappedDistance);
   const buttonClassName = cn(
-    "group relative flex items-center gap-4 rounded-full border px-6 py-3.5 text-left transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4",
+    "group relative flex w-[90%] md:w-full items-center justify-center gap-4 rounded-full px-6 py-3.5 text-center transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4 mx-auto",
     isActive
-      ? "z-10 border-white bg-white text-[#62B2FE] shadow-xl"
-      : "border-white/20 bg-transparent text-white/60 hover:border-white/40 hover:text-white"
+      ? "z-10 bg-brand-blue text-white shadow-xl shadow-brand-blue/20"
+      : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal"
   );
   const handleClick = useCallback(() => {
     onChipClick(index);
@@ -268,7 +172,7 @@ const FeatureNavItem = ({
   return (
     <motion.div
       animate={navItemMotion}
-      className="absolute left-0 flex items-center justify-start"
+      className="absolute inset-x-0 flex items-center justify-center px-4 md:px-0"
       style={NAV_ITEM_STYLE}
       transition={NAV_ITEM_TRANSITION}
     >
@@ -280,7 +184,7 @@ const FeatureNavItem = ({
         type="button"
       >
         {renderFeatureIcon(feature.icon, isActive)}
-        <span className="text-xs font-semibold tracking-wider whitespace-nowrap uppercase md:text-[13px]">
+        <span className="truncate text-xs font-semibold tracking-wider uppercase md:text-[13px]">
           {feature.label}
         </span>
       </button>
@@ -306,10 +210,7 @@ const FeatureShowcaseCard = ({
   const showcaseMotion = getShowcaseMotion(status);
   const showcaseCardClassName = getShowcaseCardClassName(status);
   const featureImageClassName = getFeatureImageClassName(isActive);
-  const headerClassName = cn(
-    "absolute left-8 top-8 flex items-center gap-3 transition-opacity duration-300",
-    isActive ? "opacity-100" : "opacity-0"
-  );
+
 
   return (
     <motion.div
@@ -326,36 +227,27 @@ const FeatureShowcaseCard = ({
         src={feature.image}
       />
 
-      <AnimatePresence>
-        {isActive ? (
-          <motion.div
-            animate={ACTIVE_COPY_ANIMATE}
-            className="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24"
-            exit={ACTIVE_COPY_EXIT}
-            initial={ACTIVE_COPY_INITIAL}
-          >
-            <div className="mb-3 w-fit rounded-full border border-zinc-800 bg-zinc-900 px-3.5 py-1 text-[10px] font-bold tracking-widest text-lime-400 uppercase shadow-lg">
-              {index + 1} • {feature.label}
-            </div>
-            <p className="text-lg leading-snug font-medium tracking-tight text-white drop-shadow-md md:text-xl">
-              {feature.description}
-            </p>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-
-      <div className={headerClassName}>
-        <div className="h-2 w-2 animate-pulse rounded-full bg-lime-400 shadow-[0_0_10px_#84cc16]" />
-        <span className="font-mono text-[10px] font-bold tracking-[0.2em] text-white/80 uppercase">
-          B2B Sales Arrow
-        </span>
+      <div
+        className={cn(
+          "pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 transition-opacity duration-500",
+          isActive ? "opacity-100" : "opacity-0"
+        )}
+      >
+        <div className="mb-3 w-fit rounded-full bg-brand-blue/80 px-3.5 py-1 font-heading text-[10px] font-bold tracking-widest text-white uppercase shadow-lg backdrop-blur-sm">
+          {index + 1} • {feature.label}
+        </div>
+        <p className="text-base leading-relaxed text-gray-200 md:text-lg">
+          {feature.description}
+        </p>
       </div>
+
+
     </motion.div>
   );
 };
 
-const FeatureCarousel = ({ features = DEFAULT_FEATURES }: FeatureCarouselProps) => {
-  const resolvedFeatures = features.length > 0 ? features : DEFAULT_FEATURES;
+const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
+  const resolvedFeatures = features;
   const [step, setStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -380,10 +272,10 @@ const FeatureCarousel = ({ features = DEFAULT_FEATURES }: FeatureCarouselProps) 
 
   return (
     <div className="mx-auto w-full max-w-7xl md:p-8">
-      <div className="relative flex min-h-[600px] flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 lg:min-h-[640px] lg:flex-row lg:rounded-[4rem]">
-        <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden bg-[#62B2FE] px-8 md:min-h-[450px] md:px-16 lg:h-full lg:w-[40%] lg:pl-16">
-          <div className="absolute inset-x-0 top-0 z-40 h-12 bg-gradient-to-b from-[#62B2FE] via-[#62B2FE]/80 to-transparent md:h-20 lg:h-16" />
-          <div className="absolute inset-x-0 bottom-0 z-40 h-12 bg-gradient-to-t from-[#62B2FE] via-[#62B2FE]/80 to-transparent md:h-20 lg:h-16" />
+      <div className="relative flex min-h-[600px] flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-sm lg:min-h-[640px] lg:flex-row lg:rounded-[4rem]">
+        <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden bg-brand-gray/50 px-8 md:min-h-[450px] md:px-16 lg:w-[45%] lg:pl-16">
+          <div className="absolute inset-x-0 top-0 z-40 h-12 bg-gradient-to-b from-brand-gray/50 via-brand-gray/40 to-transparent md:h-20 lg:h-16" />
+          <div className="absolute inset-x-0 bottom-0 z-40 h-12 bg-gradient-to-t from-brand-gray/50 via-brand-gray/40 to-transparent md:h-20 lg:h-16" />
 
           <div className="relative z-20 flex h-[300px] w-full items-center justify-center lg:justify-start">
             {resolvedFeatures.map((feature, index) => (
@@ -400,7 +292,7 @@ const FeatureCarousel = ({ features = DEFAULT_FEATURES }: FeatureCarouselProps) 
           </div>
         </div>
 
-        <div className="relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden border-t border-white/5 bg-zinc-900/40 px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:h-full lg:border-t-0 lg:border-l lg:px-10 lg:py-16">
+        <div className="relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden bg-brand-gray/20 px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:px-10 lg:py-16">
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">
             {resolvedFeatures.map((feature, index) => (
               <FeatureShowcaseCard

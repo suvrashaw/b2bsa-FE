@@ -4,12 +4,12 @@ import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_DESIGN_CASE_STUDIES,
+  BOOTH_DESIGN_CREATIVE_PRICING,
   BOOTH_DESIGN_DELIVERABLES,
   BOOTH_DESIGN_FAQ,
   BOOTH_DESIGN_HERO,
   BOOTH_DESIGN_PAGE,
   BOOTH_DESIGN_PRICING,
-  BOOTH_DESIGN_PRICING_GUIDANCE,
   BOOTH_DESIGN_PROCESS,
   BOOTH_DESIGN_PROOF_BAR,
   BOOTH_DESIGN_SPOTLIGHT,
@@ -22,8 +22,8 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 const boothDesignCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Start Your Design Project",
-  description: "Build a custom trade show booth engineered for commercial momentum.",
-  title: "Every square foot of your booth should earn its place.",
+  description: "",
+  title: "Every square foot of your booth should earn its place. Build a custom trade show booth engineered for commercial momentum.",
 };
 
 const boothDesignRelatedServices = [
@@ -42,6 +42,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
+      creativePricing={BOOTH_DESIGN_CREATIVE_PRICING}
       ctaBanner={boothDesignCtaBanner}
       deliverables={BOOTH_DESIGN_DELIVERABLES}
       deliverablesSectionType="carousel"
@@ -50,7 +51,6 @@ const Page = () => {
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
       pricing={BOOTH_DESIGN_PRICING}
-      pricingGuidance={BOOTH_DESIGN_PRICING_GUIDANCE}
       process={BOOTH_DESIGN_PROCESS}
       proofBar={BOOTH_DESIGN_PROOF_BAR}
       relatedServices={boothDesignRelatedServices}

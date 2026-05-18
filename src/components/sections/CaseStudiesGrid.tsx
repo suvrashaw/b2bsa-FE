@@ -5,6 +5,7 @@ import { useCallback } from "react";
 import type { CaseStudyIndexEntry } from "@/types/case-studies";
 
 import { CaseStudyGridCard } from "@/components/cards/CaseStudyGridCard";
+import { Heading } from "@/components/ui/Heading";
 
 const DEFAULT_GRID_SPANS = [
   "md:col-span-1 lg:col-span-3",
@@ -127,9 +128,9 @@ export const CaseStudiesGrid = ({
             </div>
           ) : (
             <div className="rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
-              <h2 className="font-heading text-3xl leading-tight font-bold text-brand-charcoal">
+              <Heading as="h2" className="text-brand-charcoal">
                 {emptyStateTitle}
-              </h2>
+              </Heading>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
                 {emptyStateDescription}
               </p>

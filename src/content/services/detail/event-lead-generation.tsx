@@ -13,7 +13,7 @@ export { GLOBAL_PROOF_STATS as ELG_PROOF_BAR } from "../../shared";
 
 export const ELG_WHY = {
   description:
-    "We use two structured qualification frameworks, agreed with your sales team before the event begins.\n\nBANT — Budget (is there budget available?), Authority (is this the decision-maker?), Need (is there a verified business problem?), Timeline (when are they solving it?). Ideal for enterprise sales with clear procurement cycles.\n\nCHAMP — Challenges (what is the core problem?), Authority (who owns the decision?), Money (is budget allocated?), Prioritisation (how urgent is this?). Ideal for consultative, complex sales where the challenge comes first.\n\nBoth frameworks ensure qualification happens during the live booth conversation — not retrospectively from a contact list.",
+    "We use two structured qualification frameworks, agreed with your sales team before the event begins:\n\nBANT — Budget (is there budget available?), Authority (is this the decision-maker?), Need (is there a verified business problem?), Timeline (when are they solving it?). Ideal for enterprise sales with clear procurement cycles.\n\nCHAMP — Challenges (what is the core problem?), Authority (who owns the decision?), Money (is budget allocated?), Prioritisation (how urgent is this?). Ideal for consultative, complex sales where the challenge comes first.\n\nBoth frameworks ensure qualification happens during the live booth conversation — not retrospectively from a contact list.",
   heading: "How We Qualify Leads — BANT and CHAMP",
   reasons: [
     {
@@ -41,7 +41,7 @@ export const ELG_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "defining your ideal attendee by role, company, and intent before the show opens",
+        "Defining your ideal attendee by role, company, and intent before the show opens.",
       icon: "Target",
       id: "icp-mapping",
       image:
@@ -51,7 +51,7 @@ export const ELG_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo)",
+        "NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo).",
       icon: "Scan",
       id: "capture-tech",
       image:
@@ -60,7 +60,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-primary",
-      description: "BANT or CHAMP qualification during live conversations",
+      description: "BANT or CHAMP qualification during live conversations.",
       icon: "Filter",
       id: "lead-scoring",
       image:
@@ -69,7 +69,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-blue",
-      description: "proactive floor outreach to target accounts beyond booth traffic",
+      description: "Proactive floor outreach to target accounts beyond booth traffic.",
       icon: "Users",
       id: "active-prospecting",
       image:
@@ -78,7 +78,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-cyan",
-      description: "hot leads flagged and delivered to the right sales owner same-day",
+      description: "Hot leads flagged and delivered to the right sales owner same-day.",
       icon: "Zap",
       id: "crm-routing",
       image:
@@ -87,7 +87,7 @@ export const ELG_DELIVERABLES = {
     },
     {
       color: "bg-brand-primary",
-      description: "personalised follow-up by lead quality tier and conversation context",
+      description: "Personalised follow-up by lead quality tier and conversation context.",
       icon: "Mail",
       id: "nurture",
       image:
@@ -97,7 +97,7 @@ export const ELG_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "lead volume, qualification rate, meeting conversion, and event ROI vs. pre-event forecast",
+        "Lead volume, qualification rate, meeting conversion, and event ROI vs. pre-event forecast.",
       icon: "BarChart3",
       id: "attribution",
       image:

@@ -10,7 +10,7 @@ export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
 
 export const BOOTH_BUILDER_WHY = {
   description:
-    "We offer three engagement models for enterprise clients:\n\n• Full exhibition stand design and build — concept, 3D design, fabrication, logistics, and on-site installation under one team\n\n• Turnkey booth solutions — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps\n\n• Design-only with production-ready files — for clients with a preferred fabrication partner\n\nOur turnkey exhibition booths are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.",
+    "We offer three engagement models for enterprise clients:\n\n• Full exhibition stand design and build — concept, 3D design, fabrication, logistics, and on-site installation under one team\n• Turnkey booth solutions — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps\n• Design-only with production-ready files — for clients with a preferred fabrication partner\n\nOur turnkey exhibition booths are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.",
   heading: "Exhibition Stand Design, Build, and Turnkey Solutions",
   reasons: [
     {

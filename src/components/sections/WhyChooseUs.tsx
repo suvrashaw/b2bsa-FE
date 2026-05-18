@@ -66,11 +66,11 @@ export const WhyChooseUs = ({
           className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "max-w-4xl items-center text-center md:w-3/4"} flex h-auto flex-col items-start justify-center py-20 md:sticky md:top-0 md:h-screen md:py-0`}
         >
           {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-8 w-full text-left">
+          <Heading as="h2" className="mb-14 w-full text-left">
             {heading}
           </Heading>
 
-          <div className="relative flex h-[150px] w-full justify-center">
+          <div className="relative mt-4 flex min-h-[200px] w-full justify-center">
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div

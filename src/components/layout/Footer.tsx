@@ -10,6 +10,7 @@ import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Button } from "@/components/ui/Button";
 import { Globe } from "@/components/ui/Globe";
 import { GlobalPresence } from "@/components/ui/GlobeVisualization";
+import { Heading } from "@/components/ui/Heading";
 import { footerNavigation, footerServiceGroups } from "@/content/navigation";
 import { cn } from "@/lib";
 
@@ -95,9 +96,9 @@ export const Footer = () => {
                     src="/logo.png"
                   />
                 </Link>
-                <h2 className="mb-3 text-lg font-bold !text-white">
+                <Heading as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>
                   Turn Your Next Trade Show into a Revenue Engine
-                </h2>
+                </Heading>
                 <p className="mb-8 max-w-sm text-sm leading-relaxed text-white/90">
                   We deliver premier global event solutions that turn your corporate presence into a
                   measurable revenue engine. Let&apos;s build your pipeline together.

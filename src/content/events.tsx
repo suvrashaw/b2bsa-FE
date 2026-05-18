@@ -1,14 +1,16 @@
+import React from "react";
+
 export const EVENTS_HERO = {
   description:
-    "From booth design to on-floor lead capture, we give enterprise brands the infrastructure to dominate every trade show they attend.",
+    "As a specialist B2B events agency and experiential marketing agency, we help enterprise brands choose the right events, build a presence strong enough to be remembered, and convert attention into qualified pipeline.",
   eyebrow: "INDUSTRY EVENTS",
   image: {
     alt: "Enterprise trade show floor",
     loaderAlt: "Loading",
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
   },
-  primaryCtaLabel: "View Events",
-  secondaryCtaLabel: "Get Booth Support",
+  primaryCtaLabel: "Build Your Event Strategy",
+  secondaryCtaLabel: "Get a Free Event ROI Assessment",
   showPreloader: false,
   stat: {
     icon: "Globe2",
@@ -17,243 +19,219 @@ export const EVENTS_HERO = {
   },
   title: (
     <>
-      B2B Events That <br />
+      Dominate the Industry Events <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Build Pipeline
+        That Drive Your Market
       </span>
     </>
   ),
 };
 
-export const EVENTS_UPCOMING = {
-  badgeLabel: "Upcoming",
-  ctaLabel: "Register Interest",
-  events: [
-    {
-      date: "Oct 12 - 16, 2026",
-      id: "gitex-2026",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-      location: "Dubai World Trade Centre",
-      title: "GITEX Technology Week 2026",
-    },
-    {
-      date: "Feb 23 - 26, 2026",
-      id: "mwc-2026",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
-      location: "Fira Gran Via, Barcelona",
-      title: "Mobile World Congress 2026",
-    },
-    {
-      date: "Nov 30 - Dec 4, 2026",
-      id: "aws-re-invent",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
-      location: "Las Vegas, Nevada",
-      title: "AWS re:Invent 2026",
-    },
-    {
-      date: "Jan 6 - 9, 2026",
-      id: "ces-2026",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
-      location: "Las Vegas Convention Center",
-      title: "CES 2026",
-    },
-  ],
-  eyebrow: "GLOBAL PRESENCE",
+export const EVENTS_POSITIONING = {
+  eyebrow: "OUR APPROACH",
   heading: (
     <>
-      Upcoming <br />
-      <span className="text-brand-blue">Industry Events</span>
-    </>
-  ),
-  viewAllLabel: "View All Events",
-};
-
-export const EVENTS_STATS = {
-  attribution: "— Events Strategy Team, B2B Sales Arrow",
-  heading: (
-    <>
-      Events That Move <br />
-      <span className="text-brand-blue">Enterprise Pipeline</span>
-    </>
-  ),
-  quote:
-    '"We\'ve been on every major trade show floor across 40+ countries. We know what converts and what gets ignored."',
-  stats: [
-    {
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-      icon: "Globe2",
-      label: "Events Managed",
-      value: "250+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-      icon: "Target",
-      label: "Countries Represented",
-      value: "40+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
-      icon: "Users",
-      label: "Avg Leads per Event",
-      value: "280+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
-      icon: "TrendingUp",
-      label: "Exhibitors Supported",
-      value: "500+",
-    },
-  ],
-};
-
-export const EVENTS_CASE_STUDIES = {
-  ctaLabel: "Full Recap",
-  eyebrow: "PAST EVENT HIGHLIGHTS",
-  heading: (
-    <>
-      Events That Defined <br />
-      <span className="text-brand-blue">Market Leadership</span>
+      Experiential Marketing <br />
+      <span className="text-brand-cyan">Positioning</span>
     </>
   ),
   items: [
     {
-      challenge: "Client struggling with generic booth presence among 6,000 exhibitors.",
-      client: "GITEX 2025",
-      icon: "BarChart3",
-      id: "gitex-2025",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-      metric: "+340%",
-      metricLabel: "Lead Capture Rate",
-      solution: "Immersive 2-storey booth with live AR demos and NFC lead capture.",
-      title: "340% Lead Surge at the World's Largest Tech Event",
-    },
-    {
-      challenge: "New-to-market brand needed to establish credibility fast.",
-      client: "MWC Barcelona 2025",
-      icon: "Target",
-      id: "mwc-2025",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
-      metric: "220",
-      metricLabel: "Enterprise SQLs",
-      solution: "Premium modular booth, influencer-led product launch, social media activation.",
-      title: "SaaS Brand Dominates Mobile World Congress Floor",
-    },
-    {
-      challenge: "Competing against hyperscalers in the world's largest cloud event.",
-      client: "AWS re:Invent 2025",
-      icon: "TrendingUp",
-      id: "aws-2025",
+      description:
+        "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.",
+      id: "agency",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
-      metric: "$4M",
-      metricLabel: "Pipeline in 4 Days",
-      solution: "Technical demo environment, pre-scheduled meeting programme, CRM integration.",
-      title: "Cloud Platform Closes $4M Pipeline in 4 Days",
+      title: "B2B Sales Arrow as Your Experiential Marketing Agency",
+    },
+    {
+      description:
+        "Experiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
+      id: "why",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "Why Experiential Works for B2B",
+    },
+  ],
+};
+
+export const EVENTS_INDUSTRIES = {
+  eyebrow: "EVENTS WE COVER",
+  heading: (
+    <>
+      Key Events <br />
+      <span className="text-brand-blue">Where We Execute</span>
+    </>
+  ),
+  industries: [
+    {
+      description: "Delivering corporate event solutions that generate qualified meetings with buyers and partners.",
+      events: "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce",
+      icon: "Cpu",
+      id: "technology",
+      title: "Technology and SaaS",
+    },
+    {
+      description: "Creating conversations with CFOs, CTOs, and digital transformation leaders.",
+      events: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate",
+      icon: "Building2",
+      id: "fintech",
+      title: "Financial Services and Fintech",
+    },
+    {
+      description: "Compliant, credible event presence for technically sophisticated buyers.",
+      events: "BIO International Convention, Arab Health (Dubai), HIMSS",
+      icon: "HeartPulse",
+      id: "healthcare",
+      title: "Healthcare and Life Sciences",
+    },
+    {
+      description: "Built for technical decision-makers and long-cycle partnership development.",
+      events: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe",
+      icon: "Factory",
+      id: "energy",
+      title: "Energy and Infrastructure",
+    },
+    {
+      description: "The single most concentrated gathering of telecom and cloud buyers globally.",
+      events: "Mobile World Congress (Barcelona)",
+      icon: "Globe",
+      id: "telecom",
+      title: "Telecom and Connectivity",
+    },
+  ],
+};
+
+export const EVENTS_PROCESS = {
+  phases: [
+    {
+      description:
+        "Our event ROI forecasting framework evaluates five criteria before committing budget: audience quality, ICP patterns, competitive presence, sponsorship value, and historical pipeline impact. We only recommend events where return justifies investment.",
+      title: "Event Selection and ROI Forecasting",
+    },
+    {
+      description:
+        "We handle the end-to-end design, fabrication, and logistics of your custom exhibition stand, engineered for visitor flow and lead conversion.",
+      title: "Booth Design & Fabrication",
+    },
+    {
+      description:
+        "Active prospecting using pre-event target account lists, real-time event app intelligence, and structured outreach to secure qualified meetings before you land.",
+      title: "Pre-Show Targeting & Meetings",
+    },
+    {
+      description:
+        "On-the-ground management including briefed event staff, visitor engagement, lead capture systems, and meeting coordination.",
+      title: "On-Site Execution & Capture",
+    },
+    {
+      description:
+        "Full reporting delivered within 72 hours of event close: qualified lead volume, cost per qualified opportunity, CRM pipeline movement, and ROI vs. forecast.",
+      title: "Post-Show Analytics & Pipeline",
+    },
+  ],
+  title: "What We Manage",
+};
+
+export const EVENTS_CASE_STUDIES = {
+  ctaLabel: "Full Recap",
+  eyebrow: "CLIENT SUCCESS STORIES",
+  heading: (
+    <>
+      Real Events. <br />
+      <span className="text-brand-blue">Real Results.</span>
+    </>
+  ),
+  items: [
+    {
+      challenge: "Securing executive meetings within a short campaign timeline",
+      client: "Global digital services and AI transformation leader",
+      icon: "Target",
+      id: "waf-2025",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      metric: "60",
+      metricLabel: "Qualified Meetings",
+      solution: "Delivered active prospecting and meeting coordination to secure 60 qualified meetings",
+      title: "World Aviation Festival 2025",
+    },
+    {
+      challenge: "Standing out in a competitive expo without attendee data",
+      client: "Enterprise digital experience and cloud transformation brand",
+      icon: "BarChart3",
+      id: "adobe-2025",
+      image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
+      metric: "70+",
+      metricLabel: "Qualified Leads",
+      solution: "Delivered booth engagement and prospecting support to generate 70+ qualified leads",
+      title: "Adobe Summit 2025",
+    },
+    {
+      challenge: "Managing dual-client outreach under restricted event timelines",
+      client: "Core banking and revenue management technology brands",
+      icon: "TrendingUp",
+      id: "sibos-2025",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      metric: "ROI",
+      metricLabel: "Pipeline Growth",
+      solution: "Delivered active prospecting, meeting coordination, and booth engagement support",
+      title: "SIBOS 2025",
     },
   ],
   viewAllLabel: "View All Events",
 };
 
-export const EVENTS_WHY = {
-  eyebrow: "WHY EXHIBIT",
-  heading: (
-    <>
-      The Case for <br />
-      <span className="text-brand-cyan">Face-to-Face</span>
-    </>
-  ),
-  reasons: [
+export const EVENTS_FAQ = {
+  eyebrow: "FREQUENTLY ASKED QUESTIONS",
+  faqs: [
     {
-      description:
-        "In-person meetings close 40% faster than digital outreach. Events compress the sales cycle dramatically.",
-      id: "conversion",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
-      title: "Face-to-Face Conversion",
+      answer:
+        "A B2B experiential marketing agency designs event presences that create memorable, trust-building experiences for enterprise buyers — going beyond booth logistics to engineer the full brand encounter from arrival to follow-up.",
+      id: "experiential-marketing",
+      question: "What is an experiential marketing agency for B2B?",
     },
     {
-      description:
-        "A single well-designed booth can generate more brand awareness than months of digital advertising in a target market.",
-      id: "visibility",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
-      title: "Brand Visibility at Scale",
+      answer:
+        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact — recommending only events where the return justifies the investment.",
+      id: "selection",
+      question: "How do you select the right industry events?",
     },
     {
-      description:
-        "Events bring your entire ICP into one room. Our lead capture systems ensure you leave with qualified, segmented prospect data.",
-      id: "pipeline",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-      title: "Pipeline Acceleration",
+      answer:
+        "Before committing budget, we estimate the commercial return: expected meeting volume, qualified lead rate, cost per qualified opportunity, and pipeline influenced — benchmarked against your pre-event commercial targets.",
+      id: "roi",
+      question: "What is event ROI forecasting?",
     },
     {
-      description:
-        "Walking the show floor gives you competitive intelligence that no research report can replicate.",
-      id: "intelligence",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Real-Time Market Intelligence",
-    },
-  ],
-};
-
-export const EVENTS_TESTIMONIALS = {
-  autoplayInterval: 3500,
-  eyebrow: "EXHIBITOR FEEDBACK",
-  heading: (
-    <>
-      From the Brands <br />
-      <span className="text-[#1E6091]">That Showed Up</span>
-    </>
-  ),
-  initialIndex: 1,
-  testimonials: [
-    {
-      company: "Nexus Technologies",
-      designation: "Chief Marketing Officer",
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-      name: "Sarah Jenkins",
-      quote:
-        "B2B Sales Arrow transformed our exhibition presence. Their architectural approach to booth design and lead capture systems increased our qualified pipeline by 340% at GITEX.",
-      rating: 5,
+      answer:
+        "Yes — concurrent multi-event programs are a standard delivery mode for our enterprise clients. Our logistics and project management networks are designed for parallel deployment.",
+      id: "multiple",
+      question: "Can you support multiple events in the same quarter?",
     },
     {
-      company: "CloudCore Systems",
-      designation: "Head of Partnerships",
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
-      name: "James Okafor",
-      quote:
-        "The pre-event strategy, on-floor activation, and post-show lead nurturing process they built for us was unlike anything we'd experienced with a previous event agency.",
-      rating: 5,
+      answer:
+        "Yes — briefed event staff for booth management, visitor engagement, lead capture, and meeting coordination.",
+      id: "staff",
+      question: "Do you provide on-site staff?",
     },
     {
-      company: "TechBridge Global",
-      designation: "VP Events",
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400",
-      name: "Priya Nair",
-      quote:
-        "We've exhibited at 20+ shows globally. B2BSA is the only partner that genuinely understands enterprise buyer psychology on the trade show floor.",
-      rating: 5,
+      answer:
+        "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast — delivered within 72 hours of event close.",
+      id: "reporting",
+      question: "How do you report post-event outcomes?",
+    },
+    {
+      answer:
+        "A B2B events agency measures success by pipeline and revenue. An event management company measures success by logistics execution. We do both — but commercial outcome is always the primary brief.",
+      id: "difference",
+      question: "What makes a B2B events agency different from an event management company?",
     },
   ],
+  heading: "Event Strategy FAQs",
 };
 
 export const EVENTS_CONTACT = {
   description:
-    "Tell us which events you're targeting and we'll design a presence strategy that outperforms your competitors.",
+    "The strongest strategy is not about showing up everywhere — it is about choosing the rooms where your buyers already gather.",
   eyebrow: "PLAN YOUR PRESENCE",
   form: {
     ctaLabel: "Get Event Strategy",
@@ -265,21 +243,20 @@ export const EVENTS_CONTACT = {
     lastNamePlaceholder: "Doe",
     messageLabel: "Tell Us About Your Goals",
     messagePlaceholder: "Which events are you targeting? What results do you need?",
-    serviceLabel: "Event of Interest",
+    serviceLabel: "Service of Interest",
     serviceOptions: [
-      { label: "GITEX Technology Week", value: "gitex" },
-      { label: "Mobile World Congress", value: "mwc" },
-      { label: "AWS re:Invent", value: "aws" },
-      { label: "CES", value: "ces" },
-      { label: "Other / Custom Event", value: "other" },
+      { label: "Event Strategy & Selection", value: "strategy" },
+      { label: "Booth Design & Fabrication", value: "booth" },
+      { label: "Pre-Show Lead Generation", value: "lead-gen" },
+      { label: "Full Event Management", value: "full" },
     ],
-    servicePlaceholder: "Select an event...",
+    servicePlaceholder: "Select a service...",
   },
   heading: (
     <>
-      Let&apos;s Plan Your <br />
+      Get a Free Event <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Event Presence
+        ROI Assessment
       </span>
     </>
   ),
@@ -291,13 +268,13 @@ export const EVENTS_CONTACT = {
 
 export const EVENTS_PAGE = {
   pageId: "events",
-  pageName: "Events",
-  pageType: "resourceIndex",
+  pageName: "Industry Events",
+  pageType: "serviceDetail",
   seo: {
     canonicalPath: "/events",
     description:
-      "Upcoming B2B trade shows and industry events. Let B2B Sales Arrow design your booth presence and maximise your pipeline at every event.",
-    focusKeyphrase: "B2B industry events",
-    title: "B2B Industry Events | B2B Sales Arrow",
+      "Full-service corporate event management for enterprise brands — event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries.",
+    focusKeyphrase: "B2B events agency",
+    title: "Industry Events Strategy and Execution | B2B Sales Arrow",
   },
 } as const;

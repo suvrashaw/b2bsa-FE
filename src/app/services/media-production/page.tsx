@@ -18,8 +18,8 @@ export const metadata: Metadata = getMarketingPageMetadata(MEDIA_PAGE);
 const mediaCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Start Your Media Project",
-  description: "Build video assets your team can use for months.",
-  title: "Content should keep working long after the campaign ends.",
+  description: "",
+  title: "Content should keep working long after the campaign ends. Build video assets your team can use for months.",
 };
 
 const Page = () => {

@@ -19,9 +19,9 @@ export const metadata: Metadata = getMarketingPageMetadata(PAID_ADS_PAGE);
 const paidAdvertisingCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Request a Paid Media Audit",
-  description: "Fixing these is faster than increasing budget.",
+  description: "",
   title:
-    "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots.",
+    "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots. Fixing these is faster than increasing budget.",
 };
 
 const paidAdvertisingRelatedServices = [

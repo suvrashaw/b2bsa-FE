@@ -18,8 +18,9 @@ export const metadata: Metadata = getMarketingPageMetadata(LINKEDIN_ADS_PAGE);
 const linkedInAdsCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Get a Free LinkedIn Ads Audit",
-  description: "Show them the right message at the right moment.",
-  title: "Your next enterprise customer is on LinkedIn right now.",
+  description: "",
+  title:
+    "Your next enterprise customer is on LinkedIn right now. Show them the right message at the right moment.",
 };
 
 const linkedInAdsRelatedServices = [

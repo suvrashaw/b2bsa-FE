@@ -7,6 +7,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { Heading } from "@/components/ui/Heading";
+
 export interface ServiceHeroProps {
   description: string;
   primaryCta?: {
@@ -32,15 +34,17 @@ const DESCRIPTION_STYLE = { color: "rgba(255, 255, 255, 0.86)" };
 const PRIMARY_CTA_STYLE = {
   background: `linear-gradient(135deg, rgba(116, 219, 243, 0.96) 0%, rgba(52, 144, 181, 0.98) 38%, rgba(30, 96, 145, 1) 100%)`,
   border: "1px solid rgba(201, 244, 255, 0.68)",
+  borderRadius: "4px",
   boxShadow:
     "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
 };
 const SECONDARY_CTA_STYLE = {
-  backdropFilter: "blur(18px) saturate(150%)",
-  background: `linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%)`,
-  border: "1px solid rgba(255, 255, 255, 0.28)",
-  boxShadow: "0 18px 38px rgba(8, 12, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28)",
-  WebkitBackdropFilter: "blur(18px) saturate(150%)",
+  backdropFilter: "blur(12px)",
+  background: `linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)`,
+  border: "1px solid rgba(255, 255, 255, 0.25)",
+  borderRadius: "4px",
+  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
+  WebkitBackdropFilter: "blur(12px)",
 };
 const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
 const DESCRIPTION_INITIAL = { opacity: 0, y: 20 };
@@ -116,8 +120,9 @@ export const ServiceHero = ({
 }: ServiceHeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 100]);
-  const contentStyle = useMemo(() => ({ y }), [y]);
+  const y = useTransform(scrollY, [0, 500], [0, -100]);
+  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  const contentStyle = useMemo(() => ({ opacity, y }), [y, opacity]);
 
   const isStringTitle = typeof title === "string";
   const titleLines = isStringTitle ? (title as string).split("\n") : [title];
@@ -148,8 +153,9 @@ export const ServiceHero = ({
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
-          <h1
-            className="mb-8 font-heading text-4xl leading-[1.02] font-black lg:text-7xl xl:text-8xl"
+          <Heading
+            as="h1"
+            className="mb-8"
             style={H1_STYLE}
           >
             {isStringTitle
@@ -163,7 +169,7 @@ export const ServiceHero = ({
               : (titleLines as ReactNode[]).map((line, index) => (
                   <TitleLine index={index} key={index} line={line} />
                 ))}
-          </h1>
+          </Heading>
 
           {/* Description */}
           <motion.p
@@ -185,7 +191,7 @@ export const ServiceHero = ({
           >
             {primaryCta && (
               <Link
-                className="hero-primary-cta group relative flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                className="hero-primary-cta group relative flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                 href={primaryCta.href}
                 style={PRIMARY_CTA_STYLE}
               >
@@ -196,7 +202,7 @@ export const ServiceHero = ({
 
             {secondaryCta && (
               <Link
-                className="hero-secondary-cta flex min-h-[58px] items-center justify-center rounded-full px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                className="hero-secondary-cta flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                 href={secondaryCta.href}
                 style={SECONDARY_CTA_STYLE}
               >

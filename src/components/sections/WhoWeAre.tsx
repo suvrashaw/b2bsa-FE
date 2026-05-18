@@ -120,7 +120,7 @@ const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
       <div className="relative z-10">
         <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>
         <div className="flex items-center justify-between">
-          <div className="font-heading text-4xl font-bold">{stat.value}</div>
+          <div className="font-heading text-2xl font-bold">{stat.value}</div>
           <Icon className="h-6 w-6 opacity-50" name={stat.icon} />
         </div>
       </div>

@@ -51,7 +51,7 @@ export const CTABanner = ({
           <div className="relative z-10 mx-auto max-w-4xl">
             <Heading
               as="h2"
-              className="mb-8 font-heading text-3xl leading-tight font-bold text-white md:text-6xl"
+              className="mb-8 font-heading text-3xl leading-tight font-bold text-white md:text-2xl"
               preserveClassName
             >
               {title}

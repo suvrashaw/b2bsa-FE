@@ -66,7 +66,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
           {data.eyebrow}
         </div>
         <WhisperText
-          className="mb-6 text-center font-heading text-4xl font-bold text-brand-charcoal transition-colors duration-500 md:text-5xl lg:text-6xl"
+          className="mb-6 text-center font-heading text-2xl font-bold text-brand-charcoal transition-colors duration-500 md:text-3xl lg:text-2xl"
           highlightColor="blue"
           highlights={CULTURE_WHISPER_HIGHLIGHTS}
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}

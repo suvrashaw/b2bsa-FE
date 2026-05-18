@@ -18,17 +18,11 @@ export const metadata: Metadata = getMarketingPageMetadata(DATA_AUGMENTATION_PAG
 const dataAugmentationCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Request a Data Audit",
-  description:
-    "Better data enrichment improves segmentation, personalisation, deliverability, and sales productivity simultaneously.",
-  title: "Your CRM is leaking revenue.",
+  description: "",
+  title: "Your CRM is leaking revenue. Better data enrichment improves segmentation, personalisation, deliverability, and sales productivity simultaneously.",
 };
 
 const dataAugmentationRelatedServices = [
-  {
-    href: "/services/market-intelligence",
-    title: "Human-Powered Market Intelligence",
-  },
-  { href: "/services/data-validation", title: "Data Validation" },
   { href: "/services/market-research", title: "Market Research" },
 ];
 

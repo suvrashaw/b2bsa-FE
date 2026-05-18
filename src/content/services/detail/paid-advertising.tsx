@@ -92,32 +92,32 @@ export const PAID_ADS_PROCESS = {
   phases: [
     {
       description:
-        "defining the audience by role, company, industry, company size, and intent before a single pound or dollar is committed.",
+        "Defining the audience by role, company, industry, company size, and intent before a single pound or dollar is committed.",
       title: "ICP Targeting Strategy",
     },
     {
       description:
-        "built around buyer pain points, decision-making triggers, and commercial urgency — not generic brand messaging.",
+        "Built around buyer pain points, decision-making triggers, and commercial urgency — not generic brand messaging.",
       title: "Ad Copy and Creative",
     },
     {
       description:
-        "ensuring paid traffic has a high-quality conversion path: clear messaging, strong proof points, fast loading, and a compelling next step.",
+        "Ensuring paid traffic has a high-quality conversion path: clear messaging, strong proof points, fast loading, and a compelling next step.",
       title: "Landing Page CRO",
     },
     {
       description:
-        "continuous adjustment based on conversion data, pipeline value, and competitive signals.",
+        "Continuous adjustment based on conversion data, pipeline value, and competitive signals.",
       title: "Bid Strategy and Budget Management",
     },
     {
       description:
-        "systematic testing of headlines, copy, creative, landing pages, CTAs, and audiences to reduce guesswork.",
+        "Systematic testing of headlines, copy, creative, landing pages, CTAs, and audiences to reduce guesswork.",
       title: "A/B Testing",
     },
     {
       description:
-        "connecting paid media to form submissions, qualified leads, booked meetings, and pipeline influenced.",
+        "Connecting paid media to form submissions, qualified leads, booked meetings, and pipeline influenced.",
       title: "Full-Funnel Attribution Reporting",
     },
   ],

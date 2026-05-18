@@ -8,6 +8,7 @@ import { useEffect, useId } from "react";
 import type { CaseStudyIndexEntry } from "@/types/case-studies";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Heading } from "@/components/ui/Heading";
 
 const BACKDROP_ANIMATE = { opacity: 1 };
 const BACKDROP_INITIAL = { opacity: 0 };
@@ -91,12 +92,13 @@ export const CaseStudyModal = ({
           <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
             {study.industry}
           </span>
-          <h2
-            className="mt-4 max-w-3xl font-heading text-3xl leading-tight font-bold text-brand-charcoal md:text-5xl"
+          <Heading
+            as="h2"
+            className="mt-4 max-w-3xl text-brand-charcoal"
             id={titleId}
           >
             {study.title}
-          </h2>
+          </Heading>
 
           <div className="mt-10 space-y-8 pr-0 md:pr-6">
             <section>
@@ -178,7 +180,7 @@ export const CaseStudyModal = ({
               <div className="text-sm font-bold tracking-widest text-brand-blue uppercase">
                 Impact Delivered
               </div>
-              <div className="mt-2 font-heading text-4xl font-bold text-brand-blue">
+              <div className="mt-2 font-heading text-2xl font-bold text-brand-blue">
                 {study.card.metric}
               </div>
               <div className="mt-1 text-xs font-medium text-gray-500">

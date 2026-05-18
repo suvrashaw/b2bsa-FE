@@ -116,7 +116,7 @@ export const VIDEO_EDITING_TIMELINE = {
       "typical turnaround": "Custom workflow + weekly delivery capacity agreed upfront",
     },
   ],
-  title: "Typical Turnaround Times",
+  title: "Turnaround Times",
 };
 
 export const VIDEO_EDITING_CASE_STUDIES = {
@@ -165,3 +165,56 @@ export const VIDEO_EDITING_PAGE = {
     title: "Professional Video Editing Services for B2B Brands | B2B Sales Arrow",
   },
 } as const;
+
+import { Pencil, Sparkles, Star } from "lucide-react";
+
+export const VIDEO_EDITING_PRICING = {
+  description: "High-end post-production packages tailored to B2B teams",
+  tag: "Video Editing Plans",
+  tiers: [
+    {
+      color: "blue",
+      description: "Ideal for event highlight reels and single product updates",
+      features: [
+        "1 Fully Edited Video (up to 5 min)",
+        "Premium Color Grading & Correction",
+        "Professional Sound Design & Mix",
+        "2 Rounds of Revisions",
+        "3-5 Business Days Delivery",
+      ],
+      icon: <Pencil className="h-5 w-5" />,
+      name: "Starter Edit",
+      price: 499,
+    },
+    {
+      color: "primary",
+      description: "Perfect for high-engagement, active marketing campaigns",
+      features: [
+        "3 Edited Brand or Demo Videos",
+        "5 Social Media Cut-downs (9:16 / 1:1)",
+        "Motion Graphics & Lower Thirds",
+        "Subtitle & Caption Creation",
+        "48-Hour Priority Turnaround",
+      ],
+      icon: <Sparkles className="h-5 w-5" />,
+      name: "Growth Suite",
+      popular: true,
+      price: 1299,
+    },
+    {
+      color: "cyan",
+      description: "Scale your entire corporate media engine seamlessly",
+      features: [
+        "Dedicated Lead Post-Production Editor",
+        "Unlimited Monthly Editing Volume",
+        "Custom 3D Animations & Graphics",
+        "Direct Slack & Project Management Access",
+        "Priority Same-Day Delivery Support",
+      ],
+      icon: <Star className="h-5 w-5" />,
+      name: "Enterprise Engine",
+      price: 2999,
+    },
+  ],
+  title: "Creative Video Editing Pricing",
+};

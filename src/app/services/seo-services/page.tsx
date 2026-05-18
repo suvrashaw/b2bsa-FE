@@ -19,8 +19,8 @@ export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 const seoServicesCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Get a Free SEO Audit",
-  description: "Will they find you — or your competitor?",
-  title: "Your buyers are searching.",
+  description: "",
+  title: "Your buyers are searching. Will they find you — or your competitor?",
 };
 
 const seoServicesRelatedServices = [

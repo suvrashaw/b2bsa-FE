@@ -5,6 +5,7 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 interface RelatedService {
@@ -37,9 +38,9 @@ export const RelatedServices = ({
   return (
     <section className={cn("bg-brand-gray/5 py-24", className)}>
       <div className="container mx-auto px-8">
-        <h2 className="mb-12 text-center font-heading text-3xl font-bold text-brand-gray">
+        <Heading as="h2" className="mb-12 text-center text-brand-gray">
           {title}
-        </h2>
+        </Heading>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (

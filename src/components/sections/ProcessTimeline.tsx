@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { type ReactNode, useMemo } from "react";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 interface ProcessTimelineProps {
@@ -49,9 +50,9 @@ export const ProcessTimeline = ({
               </div>
             )}
             {resolvedTitle && (
-              <h2 className="font-heading text-3xl leading-tight   font-bold md:text-5xl">
+              <Heading as="h2">
                 {resolvedTitle}
-              </h2>
+              </Heading>
             )}
           </div>
         )}

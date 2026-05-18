@@ -18,9 +18,9 @@ export const metadata: Metadata = getMarketingPageMetadata(PERF_PAGE);
 const performanceMarketingCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Request a Free Performance Marketing Audit",
-  description:
-    "A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
-  title: "Stop guessing. Start knowing.",
+  description: "",
+  title:
+    "Stop guessing. Start knowing. A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
 };
 
 const Page = () => {

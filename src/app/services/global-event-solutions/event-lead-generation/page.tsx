@@ -19,8 +19,8 @@ export const metadata: Metadata = getMarketingPageMetadata(ELG_PAGE);
 const eventLeadGenerationCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Build Your Lead Generation System",
-  description: "Build a system that captures, qualifies, and routes every qualified conversation.",
-  title: "Stop leaving trade show leads on the floor.",
+  description: "",
+  title: "Stop leaving trade show leads on the floor. Build a system that captures, qualifies, and routes every qualified conversation.",
 };
 
 const eventLeadGenerationRelatedServices = [

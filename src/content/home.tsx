@@ -75,8 +75,9 @@ export interface CinematicStoryBeat {
 }
 
 export interface ClientLogoItem {
+  alt: string;
   id: string;
-  logoName?: string;
+  src: string;
 }
 
 export interface ContactContent {
@@ -273,7 +274,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1, 0],
       title: <>Immersive Experience.</>,
       titleClassName:
-        "font-heading text-5xl md:text-7xl font-bold !text-white leading-tight drop-shadow-lg",
+        "font-heading text-3xl md:text-3xl font-bold !text-white leading-tight drop-shadow-lg",
       yInput: [0, 0.15],
       yOutput: [30, 0],
     },
@@ -294,7 +295,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1, 0],
       title: <>A strategic approach to spatial storytelling.</>,
       titleClassName:
-        "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
+        "font-heading text-2xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg",
       yInput: [0.25, 0.35],
       yOutput: [30, 0],
     },
@@ -311,7 +312,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1, 0],
       title: <>From Blueprint to Reality.</>,
       titleClassName:
-        "font-heading text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg",
+        "font-heading text-2xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg",
       yInput: [0.5, 0.6],
       yOutput: [30, 0],
     },
@@ -328,7 +329,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
       opacityOutput: [0, 1, 1],
       title: <>Command The Floor.</>,
       titleClassName:
-        "font-heading text-5xl md:text-7xl font-bold text-white leading-tight mb-8 drop-shadow-lg",
+        "font-heading text-3xl md:text-3xl font-bold text-white leading-tight mb-8 drop-shadow-lg",
       yInput: [0.75, 0.85],
       yOutput: [30, 0],
     },
@@ -347,12 +348,15 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
 };
 
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
-  { id: "singlestore" },
-  { id: "temenos" },
-  { id: "worldpay" },
-  { id: "syngene" },
-  { id: "airtel" },
-  { id: "infosys" },
+  { alt: "Airtel", id: "airtel", src: "/logos/Airtel.svg" },
+  { alt: "BOSCH", id: "bosch", src: "/logos/BOSCH.svg" },
+  { alt: "CSC", id: "csc", src: "/logos/CSC.svg" },
+  { alt: "Infosys", id: "infosys", src: "/logos/Infosys.svg" },
+  { alt: "SingleStore", id: "singlestore", src: "/logos/SingleStore.svg" },
+  { alt: "Syngene", id: "syngene", src: "/logos/Syngene.svg" },
+  { alt: "Temenos", id: "temenos", src: "/logos/Temenos.svg" },
+  { alt: "United Payment", id: "unitedpayment", src: "/logos/UnitedPayment.svg" },
+  { alt: "Worldpay", id: "worldpay", src: "/logos/Worldpay.svg" },
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {

@@ -13,7 +13,6 @@ export const pageRoutes: Record<PageId, string> = {
   "service.corporate-video-production": "/services/media-production/corporate-video-production",
   "service.custom-events": "/services/global-event-solutions/custom-events",
   "service.data-augmentation": "/services/data-augmentation",
-  "service.data-validation": "/services/data-validation",
   "service.event-booth-rental": "/services/global-event-solutions/event-booth-rental",
   "service.event-lead-generation": "/services/global-event-solutions/event-lead-generation",
 
@@ -23,7 +22,6 @@ export const pageRoutes: Record<PageId, string> = {
   "service.linkedin-ads": "/services/linkedin-ads",
   "service.live-streaming-services": "/services/media-production/live-streaming-services",
 
-  "service.market-intelligence": "/services/market-intelligence",
   "service.market-research": "/services/market-research",
   "service.media-production": "/services/media-production",
   "service.modular-portable-booths": "/services/global-event-solutions/modular-portable-booths",

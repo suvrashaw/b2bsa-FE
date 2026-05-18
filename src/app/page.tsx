@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
-      <Header />
+      <Header darkBackground />
       <div id="home">
         <CinematicSequence />
       </div>

@@ -39,7 +39,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
           </div>
           <Heading
             as="h2"
-            className="font-heading text-3xl font-bold md:text-5xl"
+            className="font-heading text-3xl font-bold md:text-3xl"
             preserveClassName
           >
             {data.heading}

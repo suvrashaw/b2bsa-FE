@@ -4,6 +4,7 @@ import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
+  MODULAR_BOOTHS_DELIVERABLES,
   MODULAR_BOOTHS_FAQ,
   MODULAR_BOOTHS_FORMATS,
   MODULAR_BOOTHS_HERO,
@@ -42,6 +43,7 @@ const Page = () => {
     <ServiceDetail
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
       ctaBanner={modularPortableBoothsCtaBanner}
+      deliverables={MODULAR_BOOTHS_DELIVERABLES}
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}

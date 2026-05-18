@@ -13,11 +13,9 @@ import { HOME_PAGE } from "./home";
 import { CORPORATE_VIDEO_PAGE } from "./services/detail/corporate-video-production";
 import { CUSTOM_EVENTS_PAGE } from "./services/detail/custom-events";
 import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
-import { DATA_VALIDATION_PAGE } from "./services/detail/data-validation";
 import { BOOTH_RENTAL_PAGE } from "./services/detail/event-booth-rental";
 import { ELG_PAGE } from "./services/detail/event-lead-generation";
 import { EVENT_VIDEO_PAGE } from "./services/detail/event-video-production";
-import { MARKET_INTEL_PAGE } from "./services/detail/human-powered-market-intelligence";
 import { INDUSTRY_EVENTS_PAGE } from "./services/detail/industry-events";
 import { LINKEDIN_ADS_PAGE } from "./services/detail/linkedin-ads-b2b";
 import { LIVE_STREAMING_PAGE } from "./services/detail/live-streaming-services";
@@ -60,8 +58,6 @@ const marketingPages = [
   SQL_PAGE,
   RESEARCH_PAGE,
   DATA_AUGMENTATION_PAGE,
-  DATA_VALIDATION_PAGE,
-  MARKET_INTEL_PAGE,
 ] satisfies MarketingPageDefinition[];
 
 const normalizeLookupPath = (path: string) => {

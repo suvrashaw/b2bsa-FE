@@ -8,6 +8,7 @@ import {
   VIDEO_EDITING_FAQ,
   VIDEO_EDITING_HERO,
   VIDEO_EDITING_PAGE,
+  VIDEO_EDITING_PRICING,
   VIDEO_EDITING_PROOF_BAR,
   VIDEO_EDITING_TIMELINE,
 } from "@/content/services/detail/video-editing-services";
@@ -18,8 +19,8 @@ export const metadata: Metadata = getMarketingPageMetadata(VIDEO_EDITING_PAGE);
 const videoEditingServicesCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Upload Your Project Brief",
-  description: "We shape it into content people watch, understand, and act on.",
-  title: "You already have the raw material.",
+  description: "",
+  title: "You already have the raw material. We shape it into content people watch, understand, and act on.",
 };
 
 const videoEditingServicesRelatedServices = [
@@ -41,6 +42,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={VIDEO_EDITING_CASE_STUDIES}
+      creativePricing={VIDEO_EDITING_PRICING}
       ctaBanner={videoEditingServicesCtaBanner}
       deliverables={VIDEO_EDITING_DELIVERABLES}
       faq={VIDEO_EDITING_FAQ}

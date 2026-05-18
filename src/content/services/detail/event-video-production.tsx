@@ -222,7 +222,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       title: "Virtual Event Streaming",
     },
     {
-      category: "Graphics",
+      category: "Graphics Designing",
       color: "bg-brand-blue",
       description: "Digital and print banners for events, social, and campaigns.",
       icon: "Image",
@@ -232,7 +232,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       title: "Banners",
     },
     {
-      category: "Graphics",
+      category: "Graphics Designing",
       color: "bg-brand-cyan",
       description: "Branded print and digital poster design for event marketing.",
       icon: "Layout",
@@ -242,7 +242,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       title: "Posters",
     },
     {
-      category: "Graphics",
+      category: "Graphics Designing",
       color: "bg-brand-primary",
       description: "Animated social content for campaigns and event promotion.",
       icon: "Zap",
@@ -252,7 +252,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       title: "GIFs",
     },
     {
-      category: "Graphics",
+      category: "Graphics Designing",
       color: "bg-brand-blue",
       description: "Multi-slide social media content for LinkedIn and Instagram.",
       icon: "Layers",
@@ -262,7 +262,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       title: "Carousel",
     },
     {
-      category: "Graphics",
+      category: "Graphics Designing",
       color: "bg-brand-cyan",
       description: "Event invitation and follow-up postcard design.",
       icon: "Mail",
@@ -366,3 +366,56 @@ export const EVENT_VIDEO_PAGE = {
     title: "Event Video Production Company for Trade Shows and Conferences | B2B Sales Arrow",
   },
 } as const;
+
+import { Camera, Film, Video } from "lucide-react";
+
+export const EVENT_VIDEO_CREATIVE_PRICING = {
+  description: "B2B event media production packages that extend your event ROI for years",
+  tag: "Event Production Plans",
+  tiers: [
+    {
+      color: "blue",
+      description: "Perfect for single keynotes, testimonials, or quick highlight reels",
+      features: [
+        "Event Highlight Reel (1–2 min, single camera)",
+        "On-Site Testimonial Capture (3–5 subjects)",
+        "Standard Audio & Color Correction",
+        "Includes Web & Social Optimized Drafts",
+        "Typical Delivery: 5–8 Business Days",
+      ],
+      icon: <Camera className="h-5 w-5" />,
+      name: "Essential Coverage",
+      price: 1500,
+    },
+    {
+      color: "primary",
+      description: "Best for comprehensive event recaps and multi-channel assets",
+      features: [
+        "Multi-Camera Highlight Reel (Full Production)",
+        "Full-Day Keynote & Speaker Coverage",
+        "Social Cut-Downs (Set of 5 Custom Clips)",
+        "Branded Motion Graphics & 2D Explainer (60s)",
+        "Priority Post-Production Vetting",
+      ],
+      icon: <Video className="h-5 w-5" />,
+      name: "Premium Production",
+      popular: true,
+      price: 4000,
+    },
+    {
+      color: "cyan",
+      description: "Flagship multi-format production for global B2B events",
+      features: [
+        "Full Event Video Package (All Formats)",
+        "Live Event Streaming (Half-Day, Multi-Camera)",
+        "High-End 3D Animated Branding Elements",
+        "Dedicated Creative Director Allocation",
+        "Priority Same-Day Video Draft Delivery",
+      ],
+      icon: <Film className="h-5 w-5" />,
+      name: "Elite Experience",
+      price: 8000,
+    },
+  ],
+  title: "Event Video Production Pricing Guide",
+};

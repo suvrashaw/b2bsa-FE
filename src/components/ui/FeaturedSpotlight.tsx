@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 export interface FeaturedSpotlightProps {
@@ -85,7 +86,7 @@ const SpotlightTextBlock = ({
   );
 
   return (
-    <div className="relative z-10 flex w-full max-w-[320px] shrink-0 flex-col items-center text-center md:w-[240px] md:items-start md:text-left lg:w-[280px] lg:pt-4">
+    <div className="relative z-10 flex w-full max-w-[320px] shrink-0 flex-col items-center text-center md:w-[240px] lg:w-[280px] lg:pt-4">
       <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
         <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
@@ -93,14 +94,14 @@ const SpotlightTextBlock = ({
         </span>
       </div>
 
-      <h2 className="relative">
-        <span className="block font-heading text-4xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:text-5xl lg:text-6xl" style={title1Style}>
+      <Heading as="h2" className="relative" preserveClassName>
+        <span className="block font-heading text-2xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:text-3xl lg:text-2xl" style={title1Style}>
           {titleLine1}
         </span>
-        <span className="block font-heading text-4xl font-bold tracking-tight text-brand-blue transition-all duration-700 sm:text-5xl lg:text-6xl" style={title2Style}>
+        <span className="block font-heading text-2xl font-bold tracking-tight text-brand-blue transition-all duration-700 sm:text-3xl lg:text-2xl" style={title2Style}>
           {titleLine2}
         </span>
-      </h2>
+      </Heading>
 
       <p className="mt-6 max-w-[260px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[220px] md:text-base lg:mt-10 lg:max-w-[240px]" style={descStyle}>
         {description}
@@ -194,9 +195,6 @@ const SpotlightImageBlock = ({
         <div className="absolute right-2 bottom-2 h-px w-5 bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:w-6" style={cornerBRH} />
       </div>
 
-      <span className="absolute right-0 -bottom-6 font-mono text-xs text-gray-400 transition-all duration-700 md:-bottom-8 md:text-sm" style={indexStyle}>
-        {index}
-      </span>
     </div>
   );
 };
@@ -219,7 +217,7 @@ export const FeaturedSpotlight = ({
   return (
     <div
       className={cn(
-        "group relative flex cursor-pointer flex-col items-center gap-8 md:flex-row md:items-start md:gap-12 lg:gap-16",
+        "group relative mx-auto flex w-full max-w-5xl cursor-pointer flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16",
         className
       )}
       onMouseEnter={handleMouseEnter}

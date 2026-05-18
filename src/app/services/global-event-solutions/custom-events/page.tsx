@@ -18,9 +18,9 @@ export const metadata: Metadata = getMarketingPageMetadata(CUSTOM_EVENTS_PAGE);
 const customEventsCtaBanner = {
   ctaHref: "/contact",
   ctaLabel: "Plan Your Custom Event",
-  description:
-    "The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
-  title: "Senior buyers protect their time.",
+  description: "",
+  title:
+    "Senior buyers protect their time. The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
 };
 
 const customEventsRelatedServices = [
