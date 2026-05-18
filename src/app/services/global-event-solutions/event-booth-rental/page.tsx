@@ -5,11 +5,11 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_RENTAL_CASE_STUDIES,
   BOOTH_RENTAL_FAQ,
-  BOOTH_RENTAL_FORMATS,
   BOOTH_RENTAL_HERO,
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
   BOOTH_RENTAL_PROOF_BAR,
+  BOOTH_RENTAL_RANGE_SECTION,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/detail/event-booth-rental";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -48,10 +48,11 @@ const Page = () => {
       hero={BOOTH_RENTAL_HERO}
       page={BOOTH_RENTAL_PAGE}
       parentPage={GES_PAGE}
-      pricing={BOOTH_RENTAL_FORMATS}
       process={BOOTH_RENTAL_PROCESS}
       proofBar={BOOTH_RENTAL_PROOF_BAR}
       relatedServices={eventBoothRentalRelatedServices}
+      secondaryServices={BOOTH_RENTAL_RANGE_SECTION}
+      secondaryServicesSectionType="carousel"
       why={BOOTH_RENTAL_WHY}
     />
   );

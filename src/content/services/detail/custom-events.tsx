@@ -93,66 +93,121 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
   ],
 };
 
-export const CUSTOM_EVENTS_FORMATS = {
-  headers: ["Event Type", "Focus"],
-  rows: [
+export const CUSTOM_EVENTS_FORMATS_SECTION = {
+  eyebrow: "Formats",
+  heading: "Custom Event Formats We Produce",
+  services: [
     {
-      "event type": "Executive Roundtables and C-Suite Dinners",
-      focus:
-        "Intimate formats for 8–20 senior decision-makers — designed for focused, high-trust conversation that public trade shows cannot deliver. Think private dining rooms, curated seating, and structured conversation that advances specific commercial relationships.",
+      color: "bg-brand-blue",
+      description:
+        "Intimate formats for 8–20 senior decision-makers designed for focused, high-trust conversation that public trade shows cannot deliver.",
+      icon: "Users",
+      id: "custom-roundtables",
+      image:
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+      title: "Executive Roundtables and C-Suite Dinners",
     },
     {
-      "event type": "Gala Cruise Dinners",
-      focus:
-        "Premium waterfront or on-board experiences combining fine dining, entertainment, and exclusive networking for VIP clients, partners, and senior prospects. A gala cruise dinner creates the kind of relaxed, relationship-first environment where high-value partnerships are formed.",
+      color: "bg-brand-cyan",
+      description:
+        "Premium waterfront or on-board experiences combining fine dining, entertainment, and exclusive networking for VIP clients, partners, and senior prospects.",
+      icon: "Sparkles",
+      id: "custom-cruise",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      title: "Gala Cruise Dinners",
     },
     {
-      "event type": "Round Table Conferences",
-      focus:
-        "Structured facilitated sessions — typically 12–30 participants — designed around a specific industry challenge, market trend, or strategic theme. Ideal for positioning your brand as a category thought leader while creating peer-level trust between your team and the buyers in the room.",
+      color: "bg-brand-primary",
+      description:
+        "Structured facilitated sessions built around a specific industry challenge, market trend, or strategic theme to position your brand as a category thought leader.",
+      icon: "Mic",
+      id: "custom-conferences",
+      image:
+        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      title: "Round Table Conferences",
     },
     {
-      "event type": "Roadshows",
-      focus:
-        "Sequential multi-city event tours bringing your brand and message to buyers in their own markets — creating pipeline density across multiple geographies in one coordinated campaign.",
+      color: "bg-brand-blue",
+      description:
+        "Sequential multi-city event tours bringing your brand and message to buyers in their own markets for coordinated pipeline generation.",
+      icon: "MapPin",
+      id: "custom-roadshows",
+      image:
+        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      title: "Roadshows",
     },
     {
-      "event type": "Hosted Buyer and VIP Networking Events",
-      focus:
+      color: "bg-brand-cyan",
+      description:
         "Curated hosted buyer programs where selected buyers, partners, and stakeholders engage with your brand in a structured, relationship-first setting.",
+      icon: "Target",
+      id: "custom-hosted-buyer",
+      image:
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      title: "Hosted Buyer and VIP Networking Events",
     },
     {
-      "event type": "Cricket Matches and Premium Sporting Experiences",
-      focus:
-        "Cricket hospitality, box events, and premium sporting packages create informal, high-trust access to senior decision-makers in a setting entirely different from a meeting room. These experiences build the kind of personal relationship that accelerates long B2B sales cycles.",
+      color: "bg-brand-primary",
+      description:
+        "Cricket hospitality, box events, and premium sporting packages that create informal, high-trust access to senior decision-makers.",
+      icon: "Users",
+      id: "custom-sporting",
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      title: "Cricket Matches and Premium Sporting Experiences",
     },
     {
-      "event type": "Museum Visits and Cultural Experiences",
-      focus:
-        "Exclusive private tours, curator-led museum experiences, and cultural events for executive-level clients who value substance and sophistication. An unexpected, premium experience is often remembered longer than a conventional networking dinner.",
+      color: "bg-brand-blue",
+      description:
+        "Exclusive private tours, curator-led museum experiences, and cultural programs for executive-level clients who value substance and sophistication.",
+      icon: "Sparkles",
+      id: "custom-cultural",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      title: "Museum Visits and Cultural Experiences",
     },
     {
-      "event type": "Premium Automotive Experiences",
-      focus:
-        "Track days, brand-led automotive experiences, and prestige vehicle test drives for senior prospects and VIP clients — a distinctive, high-impact format for building executive relationships.",
+      color: "bg-brand-cyan",
+      description:
+        "Track days, brand-led automotive experiences, and prestige vehicle test drives for senior prospects and VIP clients.",
+      icon: "Target",
+      id: "custom-automotive",
+      image:
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=1600",
+      title: "Premium Automotive Experiences",
     },
     {
-      "event type": "Product Launches and Brand Reveals",
-      focus:
-        "Events that create genuine market attention and communicate your value clearly — designed for B2B audiences who evaluate with precision.",
+      color: "bg-brand-primary",
+      description:
+        "Events that create genuine market attention and communicate your value clearly for B2B audiences who evaluate with precision.",
+      icon: "Clapperboard",
+      id: "custom-launches",
+      image:
+        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      title: "Product Launches and Brand Reveals",
     },
     {
-      "event type": "Client Summits and User Conferences",
-      focus:
+      color: "bg-brand-blue",
+      description:
         "Structured agenda events that bring customers, users, and partners together through branded environments, content sessions, and meaningful networking.",
+      icon: "Users",
+      id: "custom-summits",
+      image:
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      title: "Client Summits and User Conferences",
     },
     {
-      "event type": "Hybrid Events (Physical + Digital)",
-      focus:
-        "In-person events extended to global virtual audiences through broadcast-quality live streaming, audience engagement tools, and post-event content distribution.",
+      color: "bg-brand-cyan",
+      description:
+        "In-person events extended to global virtual audiences through broadcast-quality live streaming, engagement tools, and post-event content distribution.",
+      icon: "Video",
+      id: "custom-hybrid",
+      image:
+        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      title: "Hybrid Events (Physical + Digital)",
     },
   ],
-  title: "Custom Event Formats We Produce",
 };
 
 export const CUSTOM_EVENTS_CASE_STUDIES = {

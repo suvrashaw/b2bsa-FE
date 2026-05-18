@@ -7,8 +7,8 @@ import {
   INDUSTRY_EVENTS_DELIVERABLES,
   INDUSTRY_EVENTS_FAQ,
   INDUSTRY_EVENTS_HERO,
+  INDUSTRY_EVENTS_MARKETS_SECTION,
   INDUSTRY_EVENTS_PAGE,
-  INDUSTRY_EVENTS_PRIORITY,
   INDUSTRY_EVENTS_PROOF_BAR,
   INDUSTRY_EVENTS_WHY,
 } from "@/content/services/detail/industry-events";
@@ -46,9 +46,10 @@ const Page = () => {
       hero={INDUSTRY_EVENTS_HERO}
       page={INDUSTRY_EVENTS_PAGE}
       parentPage={GES_PAGE}
-      pricing={INDUSTRY_EVENTS_PRIORITY}
       proofBar={INDUSTRY_EVENTS_PROOF_BAR}
       relatedServices={industryEventsRelatedServices}
+      secondaryServices={INDUSTRY_EVENTS_MARKETS_SECTION}
+      secondaryServicesSectionType="carousel"
       why={INDUSTRY_EVENTS_WHY}
     />
   );

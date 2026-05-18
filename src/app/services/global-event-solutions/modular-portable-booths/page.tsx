@@ -6,10 +6,10 @@ import {
   MODULAR_BOOTHS_CASE_STUDIES,
   MODULAR_BOOTHS_DELIVERABLES,
   MODULAR_BOOTHS_FAQ,
-  MODULAR_BOOTHS_FORMATS,
   MODULAR_BOOTHS_HERO,
   MODULAR_BOOTHS_PAGE,
   MODULAR_BOOTHS_PROOF_BAR,
+  MODULAR_BOOTHS_RANGE_SECTION,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/detail/modular-portable-booths";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -48,9 +48,10 @@ const Page = () => {
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
-      pricing={MODULAR_BOOTHS_FORMATS}
       proofBar={MODULAR_BOOTHS_PROOF_BAR}
       relatedServices={modularPortableBoothsRelatedServices}
+      secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
+      secondaryServicesSectionType="carousel"
       why={MODULAR_BOOTHS_WHY}
     />
   );

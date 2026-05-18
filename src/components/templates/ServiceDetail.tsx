@@ -11,7 +11,6 @@ import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CreativePricing } from "@/components/sections/CreativePricing";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { DataTable } from "@/components/sections/DataTable";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { OurServices } from "@/components/sections/OurServices";
@@ -49,24 +48,14 @@ export interface ServiceDetailProps {
   };
   page: MarketingPageIdentity;
   parentPage?: MarketingPageIdentity;
-  pricing?: {
-    headers: string[];
-    rows: { [key: string]: string }[];
-    title: string;
-  };
-  pricingGuidance?: {
-    description: string;
-    footer?: string;
-    headers: string[];
-    rows: { [key: string]: string }[];
-    title: string;
-  };
   process?: {
     phases: { description: string; title: string }[];
     title: string;
   };
   proofBar?: string[];
   relatedServices?: { href: string; title: string }[];
+  secondaryServices?: OurServicesProps;
+  secondaryServicesSectionType?: "carousel" | "grid";
   spotlight?: {
     ctaLabel?: string;
     description: string;
@@ -165,11 +154,11 @@ export const ServiceDetail = ({
   hero,
   page,
   parentPage,
-  pricing,
-  pricingGuidance,
   process,
   proofBar,
   relatedServices,
+  secondaryServices,
+  secondaryServicesSectionType = "grid",
   spotlight,
   stats,
   why,
@@ -182,29 +171,41 @@ export const ServiceDetail = ({
     url: page.seo.canonicalPath,
   });
   const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
-  const deliverableServices = deliverables?.services ?? deliverables?.content?.services ?? [];
-  const carouselFeatures: FeatureCarouselItem[] = deliverableServices.map((service) => ({
-    description: service.description,
-    icon: service.icon,
-    id: service.id,
-    image: service.image,
-    label: service.title,
-  }));
-  const shouldUseDeliverablesCarousel =
-    deliverablesSectionType === "carousel" && carouselFeatures.length > 0;
-  let deliverablesSection = null;
+  const renderServiceSection = (
+    section: OurServicesProps | undefined,
+    sectionType: "carousel" | "grid"
+  ) => {
+    if (!section) {
+      return null;
+    }
 
-  if (deliverables) {
-    deliverablesSection = shouldUseDeliverablesCarousel ? (
-      <FeatureCarouselSection
-        eyebrow={deliverables.eyebrow ?? deliverables.content?.eyebrow}
-        features={carouselFeatures}
-        heading={deliverables.heading ?? deliverables.content?.heading ?? "Our Services"}
-      />
-    ) : (
-      <OurServices {...deliverables} />
-    );
-  }
+    const sectionServices = section.services ?? section.content?.services ?? [];
+    const carouselFeatures: FeatureCarouselItem[] = sectionServices.map((service) => ({
+      description: service.description,
+      icon: service.icon,
+      id: service.id,
+      image: service.image,
+      label: service.title,
+    }));
+
+    if (sectionType === "carousel" && carouselFeatures.length > 0) {
+      return (
+        <FeatureCarouselSection
+          eyebrow={section.eyebrow ?? section.content?.eyebrow}
+          features={carouselFeatures}
+          heading={section.heading ?? section.content?.heading ?? "Our Services"}
+        />
+      );
+    }
+
+    return <OurServices {...section} />;
+  };
+
+  const deliverablesSection = renderServiceSection(deliverables, deliverablesSectionType);
+  const secondaryServicesSection = renderServiceSection(
+    secondaryServices,
+    secondaryServicesSectionType
+  );
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -253,26 +254,9 @@ export const ServiceDetail = ({
 
       {process && <ProcessTimeline phases={process.phases} title={process.title} />}
 
-      {pricing && <DataTable headers={pricing.headers} rows={pricing.rows} title={pricing.title} />}
+      {secondaryServicesSection}
 
       {creativePricing && <CreativePricing {...creativePricing} />}
-
-      {pricingGuidance && (
-        <>
-          <DataTable
-            className="bg-brand-gray/50"
-            description={pricingGuidance.description}
-            headers={pricingGuidance.headers}
-            rows={pricingGuidance.rows}
-            title={pricingGuidance.title}
-          />
-          {pricingGuidance.footer && (
-            <div className="container mx-auto -mt-12 px-8 pb-8">
-              <p className="text-sm text-brand-gray/60">{pricingGuidance.footer}</p>
-            </div>
-          )}
-        </>
-      )}
 
       {caseStudies && <CaseStudies heading="Real Events. Real Results." {...caseStudies} />}
 

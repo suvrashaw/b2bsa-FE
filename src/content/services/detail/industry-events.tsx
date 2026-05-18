@@ -73,32 +73,57 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
   ],
 };
 
-export const INDUSTRY_EVENTS_PRIORITY = {
-  headers: ["Sector", "Events"],
-  rows: [
+export const INDUSTRY_EVENTS_MARKETS_SECTION = {
+  eyebrow: "Sectors",
+  heading: "Key Events Where We Execute",
+  services: [
     {
-      events:
-        "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce",
-      sector: "Technology and SaaS",
+      color: "bg-brand-blue",
+      description:
+        "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce.",
+      icon: "Target",
+      id: "industry-tech",
+      image:
+        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
+      title: "Technology and SaaS",
     },
     {
-      events: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate",
-      sector: "Financial Services and Fintech",
+      color: "bg-brand-cyan",
+      description: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate.",
+      icon: "BarChart3",
+      id: "industry-fintech",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "Financial Services and Fintech",
     },
     {
-      events: "BIO International Convention, Arab Health (Dubai), HIMSS",
-      sector: "Healthcare and Life Sciences",
+      color: "bg-brand-primary",
+      description: "BIO International Convention, Arab Health (Dubai), HIMSS.",
+      icon: "Users",
+      id: "industry-healthcare",
+      image:
+        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
+      title: "Healthcare and Life Sciences",
     },
     {
-      events: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe",
-      sector: "Energy and Infrastructure",
+      color: "bg-brand-blue",
+      description: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe.",
+      icon: "Layers",
+      id: "industry-energy",
+      image:
+        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      title: "Energy and Infrastructure",
     },
     {
-      events: "Mobile World Congress (Barcelona)",
-      sector: "Telecom and Connectivity",
+      color: "bg-brand-cyan",
+      description: "Mobile World Congress (Barcelona).",
+      icon: "Map",
+      id: "industry-telecom",
+      image:
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+      title: "Telecom and Connectivity",
     },
   ],
-  title: "Key Events Where We Execute",
 };
 
 export const INDUSTRY_EVENTS_CASE_STUDIES = {

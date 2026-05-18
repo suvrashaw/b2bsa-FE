@@ -63,42 +63,72 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
   ],
 };
 
-export const MODULAR_BOOTHS_FORMATS = {
-  headers: ["System Type", "Best For"],
-  rows: [
+export const MODULAR_BOOTHS_RANGE_SECTION = {
+  eyebrow: "Formats",
+  heading: "Our Modular Booth Range",
+  services: [
     {
-      "best for":
-        "Compact, tool-free assembly for regional shows and satellite presences. Trade show booth 10x10 format — ready in under 4 hours.",
-      "system type": "10x10 Modular Kits",
+      color: "bg-brand-blue",
+      description:
+        "Compact, tool-free assembly for regional shows and satellite presences. Trade show booth 10x10 format ready in under 4 hours.",
+      icon: "Layers",
+      id: "modular-10x10",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      title: "10x10 Modular Kits",
     },
     {
-      "best for":
+      color: "bg-brand-cyan",
+      description:
         "Mid-format portable trade show booth displays with room for demos, meetings, and brand storytelling.",
-      "system type": "10x20 and 20x20 Inline Configurations",
+      icon: "Monitor",
+      id: "modular-inline",
+      image:
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
+      title: "10x20 and 20x20 Inline Configurations",
     },
     {
-      "best for":
+      color: "bg-brand-primary",
+      description:
         "Multi-sided open systems for higher-traffic exhibition floors with stronger visibility and multiple engagement zones.",
-      "system type": "Island Modular Systems",
+      icon: "Target",
+      id: "modular-island",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "Island Modular Systems",
     },
     {
-      "best for":
-        "Reusable modular structure with custom branded finishes, feature walls, and premium lighting — modular system efficiency with custom booth premium.",
-      "system type": "Hybrid Modular + Custom Accent Builds",
+      color: "bg-brand-blue",
+      description:
+        "Reusable modular structure with custom branded finishes, feature walls, and premium lighting for custom-booth impact.",
+      icon: "Palette",
+      id: "modular-hybrid",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      title: "Hybrid Modular + Custom Accent Builds",
     },
     {
-      "best for":
-        "Lightweight, high-impact backlit fabric displays — maximum visual impact, minimum shipping weight.",
-      "system type": "Branded Tensile Fabric Displays",
+      color: "bg-brand-cyan",
+      description:
+        "Lightweight, high-impact backlit fabric displays with maximum visual presence and minimum shipping weight.",
+      icon: "Sparkles",
+      id: "modular-fabric",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "Branded Tensile Fabric Displays",
     },
     {
-      "best for": "Fast-deploy for roadshows, sales activations, and internal events.",
-      "system type": "Portable Pop-Up and Tabletop",
+      color: "bg-brand-primary",
+      description:
+        "Fast-deploy setups for roadshows, sales activations, and internal events.",
+      icon: "Wrench",
+      id: "modular-portable",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      title: "Portable Pop-Up and Tabletop",
     },
   ],
-  title: "Our Modular Booth Range",
 };
-
 
 export const MODULAR_BOOTHS_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,

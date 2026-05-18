@@ -7,9 +7,9 @@ import {
   BOOTH_DESIGN_CREATIVE_PRICING,
   BOOTH_DESIGN_DELIVERABLES,
   BOOTH_DESIGN_FAQ,
+  BOOTH_DESIGN_FORMATS_SECTION,
   BOOTH_DESIGN_HERO,
   BOOTH_DESIGN_PAGE,
-  BOOTH_DESIGN_PRICING,
   BOOTH_DESIGN_PROCESS,
   BOOTH_DESIGN_PROOF_BAR,
   BOOTH_DESIGN_WHY,
@@ -49,10 +49,11 @@ const Page = () => {
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
-      pricing={BOOTH_DESIGN_PRICING}
       process={BOOTH_DESIGN_PROCESS}
       proofBar={BOOTH_DESIGN_PROOF_BAR}
       relatedServices={boothDesignRelatedServices}
+      secondaryServices={BOOTH_DESIGN_FORMATS_SECTION}
+      secondaryServicesSectionType="carousel"
       why={BOOTH_DESIGN_WHY}
     />
   );

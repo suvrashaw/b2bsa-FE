@@ -63,35 +63,61 @@ export const BOOTH_RENTAL_DELIVERABLES = {
   ],
 };
 
-export const BOOTH_RENTAL_FORMATS = {
-  headers: ["Format", "Best For"],
-  rows: [
+export const BOOTH_RENTAL_RANGE_SECTION = {
+  eyebrow: "Formats",
+  heading: "Our Rental Booth Range",
+  services: [
     {
-      "best for":
+      color: "bg-brand-blue",
+      description:
         "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
-      format: "10x10 Standard — Focused Presence",
+      icon: "Layers",
+      id: "rental-standard",
+      image:
+        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      title: "10x10 Standard — Focused Presence",
     },
     {
-      "best for": "Room for product-led demos, a defined visitor journey, and a meeting zone.",
-      format: "10x20 Inline — Extended Format",
+      color: "bg-brand-cyan",
+      description:
+        "Room for product-led demos, a defined visitor journey, and a meeting zone.",
+      icon: "Monitor",
+      id: "rental-inline",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "10x20 Inline — Extended Format",
     },
     {
-      "best for":
+      color: "bg-brand-primary",
+      description:
         "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
-      format: "20x20 Island — High Visibility",
+      icon: "Target",
+      id: "rental-island",
+      image:
+        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      title: "20x20 Island — High Visibility",
     },
     {
-      "best for":
-        "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
-      format: "Double-Deck — Premium Floor Presence",
+      color: "bg-brand-blue",
+      description:
+        "Upper-level executive meeting suite plus a lower-level engagement zone for major global events.",
+      icon: "Users",
+      id: "rental-double-deck",
+      image:
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      title: "Double-Deck — Premium Floor Presence",
     },
     {
-      "best for":
+      color: "bg-brand-cyan",
+      description:
         "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
-      format: "Custom-Branded Rentals",
+      icon: "Palette",
+      id: "rental-custom-branded",
+      image:
+        "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1600",
+      title: "Custom-Branded Rentals",
     },
   ],
-  title: "Our Rental Booth Range",
 };
 
 export const BOOTH_RENTAL_PROCESS = {

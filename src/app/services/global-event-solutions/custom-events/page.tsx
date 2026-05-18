@@ -6,7 +6,7 @@ import {
   CUSTOM_EVENTS_CASE_STUDIES,
   CUSTOM_EVENTS_DELIVERABLES,
   CUSTOM_EVENTS_FAQ,
-  CUSTOM_EVENTS_FORMATS,
+  CUSTOM_EVENTS_FORMATS_SECTION,
   CUSTOM_EVENTS_HERO,
   CUSTOM_EVENTS_PAGE,
   CUSTOM_EVENTS_PROOF_BAR,
@@ -46,9 +46,10 @@ const Page = () => {
       hero={CUSTOM_EVENTS_HERO}
       page={CUSTOM_EVENTS_PAGE}
       parentPage={GES_PAGE}
-      pricing={CUSTOM_EVENTS_FORMATS}
       proofBar={CUSTOM_EVENTS_PROOF_BAR}
       relatedServices={customEventsRelatedServices}
+      secondaryServices={CUSTOM_EVENTS_FORMATS_SECTION}
+      secondaryServicesSectionType="carousel"
     />
   );
 };

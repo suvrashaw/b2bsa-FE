@@ -83,62 +83,57 @@ export const BOOTH_DESIGN_DELIVERABLES = {
   ],
 };
 
-export const BOOTH_DESIGN_PRICING = {
-  headers: ["Format", "Best For"],
-  rows: [
+export const BOOTH_DESIGN_FORMATS_SECTION = {
+  eyebrow: "Formats",
+  heading: "Booth Sizes and Formats We Design",
+  services: [
     {
-      "best for": "Regional shows, first-time exhibitors, satellite presences",
-      format: "10x10 Booth (100 sq ft)",
+      color: "bg-brand-blue",
+      description: "Regional shows, first-time exhibitors, and satellite presences.",
+      icon: "Layers",
+      id: "booth-design-10x10",
+      image:
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+      title: "10x10 Booth (100 sq ft)",
     },
     {
-      "best for": "Product demos with visitor journey and conversation zone",
-      format: "10x20 Inline (200 sq ft)",
+      color: "bg-brand-cyan",
+      description: "Product demos with visitor journey and conversation zone.",
+      icon: "Monitor",
+      id: "booth-design-10x20",
+      image:
+        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      title: "10x20 Inline (200 sq ft)",
     },
     {
-      "best for": "Premium four-sided visibility — demos, meetings, AV zones",
-      format: "20x20 Island (400 sq ft)",
+      color: "bg-brand-primary",
+      description: "Premium four-sided visibility with demos, meetings, and AV zones.",
+      icon: "Target",
+      id: "booth-design-20x20",
+      image:
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      title: "20x20 Island (400 sq ft)",
     },
     {
-      "best for": "Executive meeting suite + lower engagement zone. Major global shows",
-      format: "Double-Deck Structure",
+      color: "bg-brand-blue",
+      description:
+        "Executive meeting suite plus lower engagement zone for major global shows.",
+      icon: "Users",
+      id: "booth-design-double-deck",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      title: "Double-Deck Structure",
     },
     {
-      "best for": "Fully bespoke flagship builds for maximum commercial impact",
-      format: "Custom Environments",
-    },
-  ],
-  title: "Booth Sizes and Formats We Design",
-};
-
-export const BOOTH_DESIGN_PRICING_GUIDANCE = {
-  description:
-    "Buyers researching booth design need pricing context before they enquire. Use these as approximate guide ranges (not quotes — always scope per brief):",
-  footer:
-    "Note: Final cost depends on materials, technology integration, geography, and fabrication scope. Contact us for a project-specific estimate.",
-  headers: ["Booth Type", "Approximate Design Investment Range"],
-  rows: [
-    {
-      "approximate design investment range": "$3,000 – $8,000 design fee + fabrication from $8,000",
-      "booth type": "10x10 Custom Design",
-    },
-    {
-      "approximate design investment range": "$6,000 – $15,000 design + fabrication from $15,000",
-      "booth type": "10x20 Inline Design",
-    },
-    {
-      "approximate design investment range": "$10,000 – $25,000 design + fabrication from $30,000",
-      "booth type": "20x20 Island Design",
-    },
-    {
-      "approximate design investment range": "$20,000 – $60,000+ design + fabrication from $60,000",
-      "booth type": "Double-Deck / Large Custom",
-    },
-    {
-      "approximate design investment range": "$5,000 – $18,000 design + system from $12,000",
-      "booth type": "Modular / Reusable System",
+      color: "bg-brand-cyan",
+      description: "Fully bespoke flagship builds for maximum commercial impact.",
+      icon: "Sparkles",
+      id: "booth-design-custom",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      title: "Custom Environments",
     },
   ],
-  title: "What Does Trade Show Booth Design Cost?",
 };
 
 export const BOOTH_DESIGN_PROCESS = {

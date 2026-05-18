@@ -8,8 +8,8 @@ import {
   VIDEO_EDITING_FAQ,
   VIDEO_EDITING_HERO,
   VIDEO_EDITING_PAGE,
+  VIDEO_EDITING_PROCESS,
   VIDEO_EDITING_PROOF_BAR,
-  VIDEO_EDITING_TIMELINE,
 } from "@/content/services/detail/video-editing-services";
 import { MEDIA_PAGE } from "@/content/services/media-production";
 
@@ -47,7 +47,7 @@ const Page = () => {
       hero={VIDEO_EDITING_HERO}
       page={VIDEO_EDITING_PAGE}
       parentPage={MEDIA_PAGE}
-      pricing={VIDEO_EDITING_TIMELINE}
+      process={VIDEO_EDITING_PROCESS}
       proofBar={VIDEO_EDITING_PROOF_BAR}
       relatedServices={videoEditingServicesRelatedServices}
     />

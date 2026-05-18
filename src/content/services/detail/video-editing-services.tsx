@@ -81,27 +81,30 @@ export const VIDEO_EDITING_DELIVERABLES = {
   ],
 };
 
-export const VIDEO_EDITING_TIMELINE = {
-  headers: ["Deliverable", "Typical Turnaround"],
-  rows: [
+export const VIDEO_EDITING_PROCESS = {
+  phases: [
     {
-      deliverable: "Single video edit (under 5 min)",
-      "typical turnaround": "3–5 business days",
+      description:
+        "Typical turnaround: 3–5 business days for a focused edit with assembly, polish, and export-ready delivery.",
+      title: "Single Video Edit (Under 5 Minutes)",
     },
     {
-      deliverable: "Event highlight reel",
-      "typical turnaround": "5–8 business days",
+      description:
+        "Typical turnaround: 5–8 business days for event recap storytelling, pacing, graphics, music, and final channel-ready outputs.",
+      title: "Event Highlight Reel",
     },
     {
-      deliverable: "Multi-video package (5+ videos)",
-      "typical turnaround": "10–15 business days",
+      description:
+        "Typical turnaround: 10–15 business days for coordinated editing across multiple assets, cut-downs, review rounds, and export formats.",
+      title: "Multi-Video Package (5+ Videos)",
     },
     {
-      deliverable: "Ongoing high-volume program",
-      "typical turnaround": "Custom workflow + weekly delivery capacity agreed upfront",
+      description:
+        "Custom workflow with agreed weekly delivery capacity, dedicated editing support, and rollout planning for always-on content programs.",
+      title: "Ongoing High-Volume Program",
     },
   ],
-  title: "Turnaround Times",
+  title: "Turnaround and Delivery Windows",
 };
 
 export const VIDEO_EDITING_CASE_STUDIES = {
@@ -150,4 +153,3 @@ export const VIDEO_EDITING_PAGE = {
     title: "Professional Video Editing Services for B2B Brands | B2B Sales Arrow",
   },
 } as const;
-
