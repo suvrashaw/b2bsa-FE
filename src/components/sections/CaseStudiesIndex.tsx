@@ -84,7 +84,7 @@ export const CaseStudiesIndex = () => {
         </div>
 
         <ProofBar
-          className="border-t border-gray-100 bg-brand-gray/40"
+          className="!border-0 bg-brand-gray/40"
           stats={CASE_STUDIES_PAGE_CONTENT.hero.proofBarStats}
         />
       </section>

@@ -41,8 +41,8 @@ const FilterPill = ({ filter, isActive, onFilterChange }: FilterPillProps) => {
     <button
       className={`rounded-full border px-6 py-2.5 text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
         isActive
-          ? "border-brand-blue bg-brand-blue text-white shadow-md shadow-brand-blue/20"
-          : "border-gray-200 bg-white text-gray-600 hover:border-brand-blue hover:text-brand-blue"
+          ? "border-transparent bg-brand-blue text-white shadow-md shadow-brand-blue/20"
+          : "border-transparent bg-white text-gray-600 shadow-sm hover:text-brand-blue"
       }`}
       onClick={handleClick}
       type="button"
@@ -100,7 +100,7 @@ export const CaseStudiesGrid = ({
 }: CaseStudiesGridProps) => {
   return (
     <section className="w-full bg-white pb-20 md:pb-24">
-      <div className="border-y border-gray-100 bg-brand-gray/30 py-8">
+      <div className="bg-brand-gray/30 py-8">
         <div className="container mx-auto flex flex-wrap justify-center gap-3 px-8">
           {filters.map((filter) => (
             <FilterPill

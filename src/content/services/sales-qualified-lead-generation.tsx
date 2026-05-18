@@ -58,24 +58,10 @@ export const SQL_SERVICES = {
 export const SQL_WHY = {
   description:
     "Generic lists create activity, not revenue. MQLs often lack the intent, context, or urgency that makes them actionable for a sales team. Cold data delivers names without conversations. The result: SDRs spend most of their time chasing the wrong people, conversion rates stay low, and leadership loses confidence in the pipeline.\n\nWe solve this by defining qualification standards with your sales team first, tracking intent signals across multiple channels, applying BANT or CHAMP qualification frameworks, and routing only prospects meeting agreed criteria — with full conversation context.",
-  heading: "Why Most Lead Generation Programs Fail Sales Teams",
-  reasons: [
-    {
-      description:
-        "Verified contact: name, direct email, LinkedIn URL, direct phone where available.",
-      id: "bant",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Your Sales-Ready Prospect Profile Includes",
-    },
-    {
-      description: "Clean profiles routed by territory, account owner, or product interest.",
-      id: "crm",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "CRM Delivery and Routing",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Why Most Lead Generation",
+  titleLine2: "Programs Fail Sales Teams",
 };
 
 export const SQL_PROCESS = {

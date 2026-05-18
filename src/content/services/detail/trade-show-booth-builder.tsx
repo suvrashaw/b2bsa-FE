@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
 export const BOOTH_BUILDER_WHY = {
   description:
     "We offer three engagement models for enterprise clients:\n\n• Full exhibition stand design and build — concept, 3D design, fabrication, logistics, and on-site installation under one team\n• Turnkey booth solutions — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps\n• Design-only with production-ready files — for clients with a preferred fabrication partner\n\nOur turnkey exhibition booths are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.",
-  heading: "Exhibition Stand Design, Build, and Turnkey Solutions",
-  reasons: [
-    {
-      description:
-        "Our builds match your 3D renders with millimetre accuracy — premium finish and structural integrity across any booth size.",
-      id: "precision",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
-      title: "Precision Engineering",
-    },
-    {
-      description:
-        "Zero-error delivery. Your booth is show-ready 24 hours before the doors open — managed end-to-end by our project team.",
-      id: "reliability",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
-      title: "On-Time Reliability",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Exhibition Stand Design,",
+  titleLine2: "Build, and Turnkey Solutions",
 };
 
 export const BOOTH_BUILDER_DELIVERABLES = {

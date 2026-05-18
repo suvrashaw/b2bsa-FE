@@ -9,49 +9,12 @@ export const BOOTH_RENTAL_HERO = {
 export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
 
 export const BOOTH_RENTAL_WHY = {
-  heading: "When Rental Is the Smarter Decision",
-  reasons: [
-    {
-      description:
-        "Custom fabrication not feasible — rental delivers a professional branded presence on short notice.",
-      id: "timeline",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Timeline Under 8 Weeks",
-    },
-    {
-      description:
-        "Validate event ROI before committing to a full custom build.",
-      id: "new-market",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-      title: "Testing a New Market",
-    },
-    {
-      description:
-        "Spread cost across specific events.",
-      id: "budget",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Budget Flexibility Required",
-    },
-    {
-      description:
-        "Secondary presence while your custom booth is at another show.",
-      id: "concurrent",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
-      title: "Concurrent Deployment",
-    },
-    {
-      description:
-        "Learn the environment before investing in a major build.",
-      id: "first-time",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
-      title: "First Time at a Specific Event",
-    },
-  ],
+  description:
+    "Timeline under 8 weeks — custom fabrication not feasible. Testing a new market — validate event ROI before committing to a full custom build. Budget flexibility required — spread cost across specific events. Concurrent deployment — secondary presence while your custom booth is at another show. First time at a specific event — learn the environment before investing in a major build.",
+  imageUrl:
+    "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "When Rental Is",
+  titleLine2: "the Smarter Decision",
 };
 
 export const BOOTH_RENTAL_DELIVERABLES = {

@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as PAID_ADS_PROOF_BAR } from "../../shared";
 export const PAID_ADS_WHY = {
   description:
     "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
-  heading: "Every Action Has a Number",
-  reasons: [
-    {
-      description:
-        "Campaigns aimed at the wrong audience produce the wrong leads at any budget level. We define who your campaigns should actually reach — by ideal customer profile, buying role, pain point, and intent signal.",
-      id: "precision",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "ICP-Precise Targeting",
-    },
-    {
-      description:
-        "Qualified leads typically begin within 4–8 weeks with strong targeting, messaging, and conversion paths from day one — complementing your longer-term SEO investment.",
-      id: "speed",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Speed of Paid Acquisition",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Every Action",
+  titleLine2: "Has a Number",
 };
 
 export const PAID_ADS_DELIVERABLES = {

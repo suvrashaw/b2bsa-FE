@@ -50,25 +50,10 @@ export const RESEARCH_SERVICES = {
 export const RESEARCH_WHY = {
   description:
     "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions. Clean, validated, enriched data is the foundation that makes every B2B marketing and sales motion more effective.",
-  heading: "Bad Data Costs Enterprise Sales Teams Millions",
-  reasons: [
-    {
-      description:
-        "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions.",
-      id: "accuracy",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Poor Data Is Expensive",
-    },
-    {
-      description:
-        "Clean, validated, enriched data is the foundation that makes every B2B marketing and sales motion more effective.",
-      id: "actionable",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Validated Intelligence Drives Growth",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Bad Data Costs",
+  titleLine2: "Enterprise Sales Teams Millions",
 };
 
 export const RESEARCH_PROCESS = {

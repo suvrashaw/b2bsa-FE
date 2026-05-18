@@ -79,33 +79,10 @@ export const GES_SERVICES = {
 export const GES_WHY = {
   description:
     "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.\n\nCEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
-  heading: "The Business Case for Live Events in Enterprise B2B",
-  reasons: [
-    {
-      description:
-        "CEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
-      id: "authority",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "81% Buying Authority",
-    },
-    {
-      description:
-        "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.",
-      id: "trust",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
-      title: "Compressed Trust Cycles",
-    },
-    {
-      description:
-        "Our enterprise event programs span North America, EMEA, APAC, the Middle East, and Latin America. Key events include GITEX (Dubai), CES (Las Vegas), MWC (Barcelona), AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and Sibos — alongside major regional industry trade shows in every sector we serve.",
-      id: "global-reach",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-      title: "Where We Execute",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "The Business Case for Live Events",
+  titleLine2: "in Enterprise B2B",
 };
 
 export const GES_PROCESS = {

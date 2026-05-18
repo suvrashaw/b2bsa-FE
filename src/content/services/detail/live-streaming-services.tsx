@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
 export const LIVE_STREAMING_WHY = {
   description:
     "As a hybrid event solutions company, we combine the credibility of in-person presence with the reach of digital access — connecting in-room and remote audiences simultaneously. Your content reaches more stakeholders without increasing venue footprint, travel cost, or logistical complexity.",
-  heading: "Hybrid Event Solutions",
-  reasons: [
-    {
-      description:
-        "Your event reaches buyers, partners, and employees worldwide — in-person impact extended to every screen with broadcast quality.",
-      id: "reach",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-      title: "Global Reach Without Travel",
-    },
-    {
-      description:
-        "Redundancy at every level: backup internet, secondary encoding hardware, backup streaming pathways, and a live technical team monitoring throughout.",
-      id: "reliability",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
-      title: "Mission-Critical Reliability",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Hybrid Event",
+  titleLine2: "Solutions",
 };
 
 export const LIVE_STREAMING_DELIVERABLES = {

@@ -86,7 +86,7 @@ const SpotlightTextBlock = ({
   );
 
   return (
-    <div className="relative z-10 flex w-full max-w-[320px] shrink-0 flex-col items-center text-center md:w-[240px] lg:w-[280px] lg:pt-4">
+    <div className="relative z-10 flex w-full max-w-[360px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[340px] lg:max-w-[420px] lg:pt-4">
       <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
         <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
@@ -103,7 +103,7 @@ const SpotlightTextBlock = ({
         </span>
       </Heading>
 
-      <p className="mt-6 max-w-[260px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[220px] md:text-base lg:mt-10 lg:max-w-[240px]" style={descStyle}>
+      <p className="mt-6 max-w-[300px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[320px] md:text-base lg:mt-10 lg:max-w-[380px]" style={descStyle}>
         {description}
       </p>
 
@@ -122,12 +122,10 @@ const SpotlightTextBlock = ({
 const SpotlightImageBlock = ({
   imageAlt,
   imageUrl,
-  index,
   isHovered,
 }: {
   imageAlt: string;
   imageUrl: string;
-  index: string;
   isHovered: boolean;
 }) => {
   const wrapStyle = useMemo(
@@ -176,18 +174,13 @@ const SpotlightImageBlock = ({
     () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleX(1)" : "scaleX(0)", transformOrigin: "right" as const, transitionDelay: "200ms", transitionTimingFunction: EASE }),
     [isHovered]
   );
-  const indexStyle = useMemo(
-    () => ({ opacity: isHovered ? 1 : 0.4, transform: isHovered ? "translateY(12px)" : "translateY(0)", transitionTimingFunction: EASE }),
-    [isHovered]
-  );
-
   return (
     <div className="relative transition-all duration-700" style={wrapStyle}>
       <div className="absolute -inset-3 border transition-all duration-700 md:-inset-4" style={frameStyle} />
 
-      <div className="relative h-[280px] w-[260px] overflow-hidden sm:h-[320px] sm:w-[300px] md:h-[360px] md:w-[320px] lg:h-[420px] lg:w-[380px]">
+      <div className="relative h-[300px] w-[280px] overflow-hidden sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
         <div className="absolute -inset-1 transition-all duration-700" style={shadowStyle} />
-        <Image alt={imageAlt} className="h-full w-full object-cover transition-all duration-1000" fill sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, (max-width: 1024px) 320px, 380px" src={imageUrl} style={imgStyle} />
+        <Image alt={imageAlt} className="h-full w-full object-cover transition-all duration-1000" fill sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px" src={imageUrl} style={imgStyle} />
         <div className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700" style={overlayStyle} />
         <div className="absolute top-2 left-2 h-5 w-px bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:h-6" style={cornerTLV} />
         <div className="absolute top-2 left-2 h-px w-5 bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:w-6" style={cornerTLH} />
@@ -205,7 +198,7 @@ export const FeaturedSpotlight = ({
   description,
   imageAlt = "Feature image",
   imageUrl,
-  index = "01",
+  index: _index = "01",
   label = "Featured",
   titleLine1,
   titleLine2,
@@ -217,7 +210,7 @@ export const FeaturedSpotlight = ({
   return (
     <div
       className={cn(
-        "group relative mx-auto flex w-full max-w-5xl cursor-pointer flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16",
+        "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-[minmax(320px,0.9fr)_minmax(420px,1.1fr)] md:gap-14 lg:max-w-7xl lg:grid-cols-[minmax(380px,0.9fr)_minmax(560px,1.1fr)] lg:gap-20",
         className
       )}
       onMouseEnter={handleMouseEnter}
@@ -234,7 +227,6 @@ export const FeaturedSpotlight = ({
       <SpotlightImageBlock
         imageAlt={imageAlt}
         imageUrl={imageUrl}
-        index={index}
         isHovered={isHovered}
       />
     </div>

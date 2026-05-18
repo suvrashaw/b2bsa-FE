@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as EVENT_VIDEO_PROOF_BAR } from "../../shared";
 export const EVENT_VIDEO_WHY = {
   description:
     "A major trade show investment often runs to six figures. Without event video, its commercial value ends when the booth is packed away. With it, every keynote, customer story, and product demo becomes a reusable revenue asset across campaigns, sales decks, investor communications, and future event promotion.",
-  heading: "Your Event Lasts 3 Days. Your Video Lasts 3 Years.",
-  reasons: [
-    {
-      description:
-        "Turn a single 3-day event into a year-long marketing campaign — every session, testimonial, and product demo repurposed across every channel.",
-      id: "longevity",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-      title: "Content Longevity",
-    },
-    {
-      description:
-        "High-quality production values signal an enterprise-grade brand — the content your sales team uses to close deals months after the show.",
-      id: "authority",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
-      title: "Brand Authority",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Your Event Lasts 3 Days.",
+  titleLine2: "Your Video Lasts 3 Years.",
 };
 
 export const EVENT_VIDEO_DELIVERABLES = {

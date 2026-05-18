@@ -14,25 +14,10 @@ export { GLOBAL_PROOF_STATS as ELG_PROOF_BAR } from "../../shared";
 export const ELG_WHY = {
   description:
     "We use two structured qualification frameworks, agreed with your sales team before the event begins:\n\nBANT — Budget (is there budget available?), Authority (is this the decision-maker?), Need (is there a verified business problem?), Timeline (when are they solving it?). Ideal for enterprise sales with clear procurement cycles.\n\nCHAMP — Challenges (what is the core problem?), Authority (who owns the decision?), Money (is budget allocated?), Prioritisation (how urgent is this?). Ideal for consultative, complex sales where the challenge comes first.\n\nBoth frameworks ensure qualification happens during the live booth conversation — not retrospectively from a contact list.",
-  heading: "How We Qualify Leads — BANT and CHAMP",
-  reasons: [
-    {
-      description:
-        "Active prospecting at trade shows means your team does not wait for visitors to arrive at the booth. We train and support your staff to proactively identify and approach target attendees across the event floor — using pre-event target account lists, real-time event app intelligence, and structured outreach scripts. Combined with your booth as the destination, active prospecting typically increases qualified lead volume by 30–50% compared to passive booth-only strategies.",
-      id: "active-prospecting",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
-      title: "Active Prospecting — Going Beyond Passive Booth Traffic",
-    },
-    {
-      description:
-        "B2B Sales Arrow programs have generated 15,000+ verified enterprise leads and contributed to $1.2B+ in influenced pipeline across technology, financial services, healthcare, and energy sectors. We measure trade show lead generation success through qualified lead volume, sales acceptance rate, meeting-to-pipeline conversion, and revenue attribution within 90 days of event close — not badge scan counts.",
-      id: "results",
-      image:
-        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
-      title: "Proven Results",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "How We Qualify Leads",
+  titleLine2: "BANT and CHAMP",
 };
 
 export const ELG_DELIVERABLES = {

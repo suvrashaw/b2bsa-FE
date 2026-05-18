@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as BOOTH_DESIGN_PROOF_BAR } from "../../shared";
 export const BOOTH_DESIGN_WHY = {
   description:
     "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible.\n\nThe gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?",
-  heading: "Why Generic Exhibition Booth Design Costs You Qualified Leads",
-  reasons: [
-    {
-      description:
-        "We engineer spaces around how buyers actually think and move, not just aesthetics.",
-      id: "psychology",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-      title: "Buyer Psychology",
-    },
-    {
-      description:
-        "Stand out in a hall of 300+ competitors with design that is impossible to ignore.",
-      id: "visibility",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
-      title: "Strategic Visibility",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Why Generic Booth Design",
+  titleLine2: "Costs You Qualified Leads",
 };
 
 export const BOOTH_DESIGN_DELIVERABLES = {
@@ -254,18 +239,6 @@ export const BOOTH_DESIGN_FAQ = {
   heading: "Trade Show Booth Design FAQs",
 };
 
-export const BOOTH_DESIGN_SPOTLIGHT = {
-  ctaLabel: "See Our Work",
-  description:
-    "In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible. We engineer spaces around buyer psychology and sales conversion — not how they look in a 3D render.",
-  imageAlt: "Trade show exhibition hall — B2B Sales Arrow booth design",
-  imageUrl:
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-  index: "01",
-  label: "Why Design Matters",
-  titleLine1: "Generic Booths",
-  titleLine2: "Cost You Leads",
-};
 
 export const BOOTH_DESIGN_PAGE = {
   pageId: "service.trade-show-booth-design",

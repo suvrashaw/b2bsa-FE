@@ -11,27 +11,10 @@ export { GLOBAL_PROOF_STATS as CUSTOM_EVENTS_PROOF_BAR } from "../../shared";
 export const CUSTOM_EVENTS_WHY = {
   description:
     "In a crowded industry calendar, shared space has limitations. When you own the event, you own the environment, the audience, and the narrative. Custom events allow for deep relationship building with C-suite decision-makers that is rarely possible on a trade show floor. Whether it's a private executive dinner or a large-scale user conference, we ensure every detail — from the venue to the menu to the messaging — is engineered to advance your commercial objectives.",
-  heading: "Why Proprietary Events Outperform Generic Sponsorships",
-  reasons: [
-    {
-      color: "bg-brand-blue",
-      description:
-        "You control the environment, the audience, and the commercial journey from start to finish.",
-      id: "ownership",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
-      title: "Full Narrative Ownership",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "Proprietary environments facilitate the high-trust conversations required for enterprise deals.",
-      id: "relationships",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Deep Executive Access",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "Why Proprietary Events",
+  titleLine2: "Outperform Generic Sponsorships",
 };
 
 export const CUSTOM_EVENTS_DELIVERABLES = {

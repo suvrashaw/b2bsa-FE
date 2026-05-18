@@ -14,25 +14,10 @@ export { GLOBAL_PROOF_STATS as SEO_PROOF_BAR } from "../../shared";
 export const SEO_WHY = {
   description:
     "B2B buyers operate in buying committees of 3–7 decision-makers. They research for months using lower-volume but highly specific search terms. They need content at every stage of a long evaluation cycle. Ranking for high-volume consumer keywords is a poor strategic objective for an enterprise brand. The goal is to rank for terms your actual buyers use when they are actively evaluating — and to be credible and authoritative throughout the entire research process.",
-  heading: "B2B SEO Is Fundamentally Different From B2C",
-  reasons: [
-    {
-      description:
-        "SEO is the most durable and cost-efficient long-term B2B channel — organic traffic and pipeline compound over time as domain authority grows.",
-      id: "compound",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Compounding Returns",
-    },
-    {
-      description:
-        "Enterprise buyers who find you through organic search are already in research mode — higher quality than paid traffic at every funnel stage.",
-      id: "intent",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "High-Intent Organic Traffic",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "B2B SEO Is Fundamentally",
+  titleLine2: "Different From B2C",
 };
 
 export const SEO_DELIVERABLES = {

@@ -61,24 +61,10 @@ export const MEDIA_SERVICES = {
 export const MEDIA_WHY = {
   description:
     "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means — commercial impact is the objective.",
-  heading: "We Don't Just Film — We Tell Stories That Sell",
-  reasons: [
-    {
-      description:
-        "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching.",
-      id: "strategy",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
-      title: "Strategy-Led Production",
-    },
-    {
-      description: "Beautiful footage is a means — commercial impact is the objective.",
-      id: "impact",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Commercial Impact",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "We Don't Just Film —",
+  titleLine2: "We Tell Stories That Sell",
 };
 
 export const MEDIA_PROCESS = {

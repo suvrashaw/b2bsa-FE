@@ -63,18 +63,18 @@ export const CaseStudyGridCard = ({
       </div>
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/20 bg-white/5 text-white backdrop-blur-[2px] transition-all duration-500 group-hover:scale-110 group-hover:border-brand-cyan/60 group-hover:bg-brand-blue/30 group-hover:shadow-[0_0_20px_rgba(75,192,217,0.4)]">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/20 bg-white/5 text-white backdrop-blur-[2px] transition-all duration-500 group-hover:scale-110 group-hover:border-white/70 group-hover:bg-white/12 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
           <Icon
-            className="h-5 w-5 text-white transition-colors duration-300 group-hover:text-brand-cyan"
+            className="h-5 w-5 text-white transition-colors duration-300 group-hover:text-white"
             name={iconName}
           />
         </div>
 
         <div className="mt-6 transform transition-transform duration-300 group-hover:-translate-y-1">
-          <h3 className="max-w-xs font-sans text-lg leading-snug font-bold text-white drop-shadow-md md:text-xl">
+          <h3 className="max-w-xs font-sans text-lg leading-snug font-bold !text-white drop-shadow-md md:text-xl">
             {title}
           </h3>
-          <span className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-brand-cyan opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <span className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             VIEW SUCCESS STORY
           </span>
         </div>

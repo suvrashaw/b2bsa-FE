@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
 export const LINKEDIN_ADS_WHY = {
   description:
     "LinkedIn targeting gives enterprise marketers verified professional attributes — job title, company size, industry, seniority, department, geography, and named account lists — available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality — measured by ICP fit and conversion to sales opportunity — is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.",
-  heading: "The Most Precise B2B Targeting Channel",
-  reasons: [
-    {
-      description:
-        "Target by job title, company size, industry, seniority, department, geography, and named account lists — reaching the full buying committee, not just one contact.",
-      id: "precision",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Decision-Maker Precision",
-    },
-    {
-      description:
-        "LinkedIn's account targeting makes it the most powerful paid channel for ABM campaigns. We build programs targeting named account lists, segmenting messaging by buying committee role, tailoring creative by account tier, and connecting LinkedIn activity to broader sales outreach — creating digital surround-sound for target accounts before the first sales conversation begins.",
-      id: "abm",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "LinkedIn Ads and Account-Based Marketing",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "The Most Precise",
+  titleLine2: "B2B Targeting Channel",
 };
 
 export const LINKEDIN_ADS_DELIVERABLES = {

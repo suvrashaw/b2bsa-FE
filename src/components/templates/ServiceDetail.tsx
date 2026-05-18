@@ -2,8 +2,8 @@ import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { CreativePricingProps } from "@/components/sections/CreativePricing";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { OurServicesProps } from "@/components/sections/OurServices";
-import type { WhyChooseUsProps } from "@/components/sections/WhyChooseUs";
 import type { FeatureCarouselItem } from "@/components/ui/FeatureCarousel";
+import type { FeaturedSpotlightProps } from "@/components/ui/FeaturedSpotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { Footer } from "@/components/layout/Footer";
@@ -20,7 +20,6 @@ import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
@@ -82,7 +81,7 @@ export interface ServiceDetailProps {
     items: { label: string; value: string }[];
     title: string;
   };
-  why?: WhyChooseUsProps;
+  why?: FeaturedSpotlightProps;
 }
 
 const createJsonLdMarkup = (data: object) => ({
@@ -244,7 +243,13 @@ export const ServiceDetail = ({
 
       {deliverablesSection}
 
-      {why && <WhyChooseUs {...why} />}
+      {why && (
+        <section className="bg-brand-gray py-24">
+          <div className="container mx-auto px-8">
+            <FeaturedSpotlight {...why} />
+          </div>
+        </section>
+      )}
 
       {process && <ProcessTimeline phases={process.phases} title={process.title} />}
 

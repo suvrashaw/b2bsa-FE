@@ -12,7 +12,6 @@ import {
   BOOTH_DESIGN_PRICING,
   BOOTH_DESIGN_PROCESS,
   BOOTH_DESIGN_PROOF_BAR,
-  BOOTH_DESIGN_SPOTLIGHT,
   BOOTH_DESIGN_WHY,
 } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -54,7 +53,6 @@ const Page = () => {
       process={BOOTH_DESIGN_PROCESS}
       proofBar={BOOTH_DESIGN_PROOF_BAR}
       relatedServices={boothDesignRelatedServices}
-      spotlight={BOOTH_DESIGN_SPOTLIGHT}
       why={BOOTH_DESIGN_WHY}
     />
   );

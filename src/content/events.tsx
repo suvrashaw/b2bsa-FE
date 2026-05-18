@@ -55,50 +55,30 @@ export const EVENTS_POSITIONING = {
   ],
 };
 
-export const EVENTS_INDUSTRIES = {
+export const TRADE_SHOWS_DIRECTORY = {
   eyebrow: "EVENTS WE COVER",
   heading: (
     <>
-      Key Events <br />
+      Trade Shows <br />
       <span className="text-brand-blue">Where We Execute</span>
     </>
   ),
-  industries: [
-    {
-      description: "Delivering corporate event solutions that generate qualified meetings with buyers and partners.",
-      events: "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce",
-      icon: "Cpu",
-      id: "technology",
-      title: "Technology and SaaS",
-    },
-    {
-      description: "Creating conversations with CFOs, CTOs, and digital transformation leaders.",
-      events: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate",
-      icon: "Building2",
-      id: "fintech",
-      title: "Financial Services and Fintech",
-    },
-    {
-      description: "Compliant, credible event presence for technically sophisticated buyers.",
-      events: "BIO International Convention, Arab Health (Dubai), HIMSS",
-      icon: "HeartPulse",
-      id: "healthcare",
-      title: "Healthcare and Life Sciences",
-    },
-    {
-      description: "Built for technical decision-makers and long-cycle partnership development.",
-      events: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe",
-      icon: "Factory",
-      id: "energy",
-      title: "Energy and Infrastructure",
-    },
-    {
-      description: "The single most concentrated gathering of telecom and cloud buyers globally.",
-      events: "Mobile World Congress (Barcelona)",
-      icon: "Globe",
-      id: "telecom",
-      title: "Telecom and Connectivity",
-    },
+  shows: [
+    { id: "gitex", industry: "Technology and SaaS", location: "Dubai, UAE", name: "GITEX" },
+    { id: "ces", industry: "Technology and SaaS", location: "Las Vegas, NV", name: "CES" },
+    { id: "web-summit", industry: "Technology and SaaS", location: "Lisbon, Portugal", name: "Web Summit" },
+    { id: "aws-reinvent", industry: "Technology and SaaS", location: "Las Vegas, NV", name: "AWS re:Invent" },
+    { id: "dreamforce", industry: "Technology and SaaS", location: "San Francisco, CA", name: "Salesforce Dreamforce" },
+    { id: "sibos", industry: "Financial Services", location: "Global", name: "Sibos" },
+    { id: "money2020", industry: "Financial Services", location: "Las Vegas & Amsterdam", name: "Money20/20" },
+    { id: "finovate", industry: "Financial Services", location: "Global", name: "Finovate" },
+    { id: "bio", industry: "Healthcare", location: "USA", name: "BIO International Convention" },
+    { id: "arab-health", industry: "Healthcare", location: "Dubai, UAE", name: "Arab Health" },
+    { id: "himss", industry: "Healthcare", location: "USA", name: "HIMSS" },
+    { id: "adipec", industry: "Energy", location: "Abu Dhabi, UAE", name: "ADIPEC" },
+    { id: "ceraweek", industry: "Energy", location: "Houston, TX", name: "CERAWeek" },
+    { id: "hannover", industry: "Energy", location: "Hannover, Germany", name: "Hannover Messe" },
+    { id: "mwc", industry: "Telecom", location: "Barcelona, Spain", name: "Mobile World Congress" },
   ],
 };
 

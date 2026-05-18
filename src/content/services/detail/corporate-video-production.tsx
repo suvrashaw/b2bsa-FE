@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as CORPORATE_VIDEO_PROOF_BAR } from "../../shared";
 export const CORPORATE_VIDEO_WHY = {
   description:
     "Research shows 87% of video marketers report video has directly increased sales. For enterprise B2B, corporate video shortens the time buyers need to understand your value, builds decision-maker confidence before the first meeting, and creates consistent messaging that scales across every channel.",
-  heading: "How Corporate Video Accelerates Your Sales Cycle",
-  reasons: [
-    {
-      description:
-        "People buy from people. We help you put your experts front and center — turning complex enterprise solutions into compelling, human stories.",
-      id: "trust",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
-      title: "Humanizing the Brand",
-    },
-    {
-      description:
-        "Simplify your most complex products into compelling visual narratives — eliminating friction from every sales qualification call.",
-      id: "clarity",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-      title: "Strategic Clarity",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "How Corporate Video",
+  titleLine2: "Accelerates Your Sales Cycle",
 };
 
 export const CORPORATE_VIDEO_DELIVERABLES = {

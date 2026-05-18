@@ -8,7 +8,6 @@ import {
   VIDEO_EDITING_FAQ,
   VIDEO_EDITING_HERO,
   VIDEO_EDITING_PAGE,
-  VIDEO_EDITING_PRICING,
   VIDEO_EDITING_PROOF_BAR,
   VIDEO_EDITING_TIMELINE,
 } from "@/content/services/detail/video-editing-services";
@@ -42,7 +41,6 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={VIDEO_EDITING_CASE_STUDIES}
-      creativePricing={VIDEO_EDITING_PRICING}
       ctaBanner={videoEditingServicesCtaBanner}
       deliverables={VIDEO_EDITING_DELIVERABLES}
       faq={VIDEO_EDITING_FAQ}

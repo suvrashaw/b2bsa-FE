@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as VIDEO_EDITING_PROOF_BAR } from "../../shared";
 export const VIDEO_EDITING_WHY = {
   description:
     "Great footage without great editing is invisible. The edit is where pacing, emotion, and commercial intent are built into the final asset. Our post-production team works from a clear brief — what should the viewer feel, understand, and do after watching — and structures every cut around that outcome.",
-  heading: "The Edit is Where the Story Happens",
-  reasons: [
-    {
-      description:
-        "We select the strongest material, structure the narrative, and shape a complete video with clear intent and pacing.",
-      id: "story",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
-      title: "Story-Led Editing",
-    },
-    {
-      description:
-        "Professional colour grading, sound design, and motion graphics — production values that match your enterprise brand positioning.",
-      id: "quality",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
-      title: "Enterprise Production Quality",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "The Edit is Where",
+  titleLine2: "the Story Happens",
 };
 
 export const VIDEO_EDITING_DELIVERABLES = {
@@ -166,55 +151,3 @@ export const VIDEO_EDITING_PAGE = {
   },
 } as const;
 
-import { Pencil, Sparkles, Star } from "lucide-react";
-
-export const VIDEO_EDITING_PRICING = {
-  description: "High-end post-production packages tailored to B2B teams",
-  tag: "Video Editing Plans",
-  tiers: [
-    {
-      color: "blue",
-      description: "Ideal for event highlight reels and single product updates",
-      features: [
-        "1 Fully Edited Video (up to 5 min)",
-        "Premium Color Grading & Correction",
-        "Professional Sound Design & Mix",
-        "2 Rounds of Revisions",
-        "3-5 Business Days Delivery",
-      ],
-      icon: <Pencil className="h-5 w-5" />,
-      name: "Starter Edit",
-      price: 499,
-    },
-    {
-      color: "primary",
-      description: "Perfect for high-engagement, active marketing campaigns",
-      features: [
-        "3 Edited Brand or Demo Videos",
-        "5 Social Media Cut-downs (9:16 / 1:1)",
-        "Motion Graphics & Lower Thirds",
-        "Subtitle & Caption Creation",
-        "48-Hour Priority Turnaround",
-      ],
-      icon: <Sparkles className="h-5 w-5" />,
-      name: "Growth Suite",
-      popular: true,
-      price: 1299,
-    },
-    {
-      color: "cyan",
-      description: "Scale your entire corporate media engine seamlessly",
-      features: [
-        "Dedicated Lead Post-Production Editor",
-        "Unlimited Monthly Editing Volume",
-        "Custom 3D Animations & Graphics",
-        "Direct Slack & Project Management Access",
-        "Priority Same-Day Delivery Support",
-      ],
-      icon: <Star className="h-5 w-5" />,
-      name: "Enterprise Engine",
-      price: 2999,
-    },
-  ],
-  title: "Creative Video Editing Pricing",
-};

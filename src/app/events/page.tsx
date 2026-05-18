@@ -7,18 +7,18 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { TradeShowsDirectory } from "@/components/sections/TradeShowsDirectory";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
-import Icon from "@/components/ui/Icon";
 import {
   EVENTS_CASE_STUDIES,
   EVENTS_CONTACT,
   EVENTS_FAQ,
   EVENTS_HERO,
-  EVENTS_INDUSTRIES,
   EVENTS_PAGE,
   EVENTS_POSITIONING,
   EVENTS_PROCESS,
+  TRADE_SHOWS_DIRECTORY,
 } from "@/content/events";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
@@ -62,40 +62,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="bg-brand-gray py-24 lg:py-32">
-        <div className="container mx-auto px-8">
-          <div className="mb-16 flex flex-col items-start">
-            <Eyebrow variant="blue">{EVENTS_INDUSTRIES.eyebrow}</Eyebrow>
-            <Heading as="h2">{EVENTS_INDUSTRIES.heading}</Heading>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {EVENTS_INDUSTRIES.industries.map((industry) => (
-              <div
-                className="flex flex-col rounded-3xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-                key={industry.id}
-              >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-cyan/10 text-brand-cyan">
-                  <Icon className="h-6 w-6" name={industry.icon} />
-                </div>
-                <h3 className="mb-2 font-heading text-xl font-bold text-brand-charcoal">
-                  {industry.title}
-                </h3>
-                <p className="mb-6 text-sm leading-relaxed text-brand-charcoal/70">
-                  {industry.description}
-                </p>
-
-                <div className="mt-auto rounded-xl bg-brand-gray/50 p-4">
-                  <p className="mb-2 text-xs font-bold tracking-wider text-brand-blue uppercase">
-                    Target Events
-                  </p>
-                  <p className="text-sm font-medium text-brand-charcoal">{industry.events}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TradeShowsDirectory {...TRADE_SHOWS_DIRECTORY} />
 
       <CaseStudies {...EVENTS_CASE_STUDIES} />
 

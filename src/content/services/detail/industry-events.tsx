@@ -11,25 +11,10 @@ export { GLOBAL_PROOF_STATS as INDUSTRY_EVENTS_PROOF_BAR } from "../../shared";
 export const INDUSTRY_EVENTS_WHY = {
   description:
     "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.\n\nExperiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
-  heading: "B2B Sales Arrow as Your Experiential Marketing Agency",
-  reasons: [
-    {
-      description:
-        "Our event ROI forecasting framework evaluates five criteria before committing budget: audience quality and buyer intent density, ICP attendance patterns, competitive presence, sponsorship opportunity value, and historical pipeline impact for brands in your category. Events that pass get a full execution program. Those that don't get removed from the calendar — freeing budget for the ones that return.",
-      id: "event-selection",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
-      title: "Why the Right Events Are Your Best Sales Channel",
-    },
-    {
-      description:
-        "Managing the complexity of international venues so your team can focus on the buyers. Our logistics and project management networks are designed for parallel deployment across multiple markets.",
-      id: "execution",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-      title: "Seamless Global Execution",
-    },
-  ],
+  imageUrl:
+    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+  titleLine1: "B2B Sales Arrow as Your",
+  titleLine2: "Experiential Marketing Agency",
 };
 
 export const INDUSTRY_EVENTS_DELIVERABLES = {
