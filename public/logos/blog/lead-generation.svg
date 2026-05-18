@@ -1,0 +1,7 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="64" rx="20" fill="#FDF4FF" />
+  <rect x="8" y="8" width="204" height="48" rx="16" fill="white" stroke="#F5D0FE" />
+  <circle cx="34" cy="28" r="7" fill="#C026D3" />
+  <path d="M24 41C26.5 36.5 30 34 34 34C38 34 41.5 36.5 44 41" stroke="#C026D3" stroke-linecap="round" stroke-width="3" />
+  <text x="56" y="38" fill="#0F172A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">DEMAND</text>
+</svg>

@@ -1,3 +1,5 @@
+import type { ClientLogoItem } from "@/content/home";
+
 export const BLOG_HERO = {
   description:
     "Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
@@ -25,14 +27,18 @@ export const BLOG_HERO = {
   ),
 };
 
-export const BLOG_LOGOS = [
-  { id: "event-strategy" },
-  { id: "booth-design" },
-  { id: "performance-marketing" },
-  { id: "video-production" },
-  { id: "market-research" },
-  { id: "lead-generation" },
-  { id: "case-studies" },
+export const BLOG_LOGOS: ClientLogoItem[] = [
+  { alt: "Event strategy category", id: "event-strategy", src: "/logos/blog/event-strategy.svg" },
+  { alt: "Booth design category", id: "booth-design", src: "/logos/blog/booth-design.svg" },
+  {
+    alt: "Performance marketing category",
+    id: "performance-marketing",
+    src: "/logos/blog/performance-marketing.svg",
+  },
+  { alt: "Video production category", id: "video-production", src: "/logos/blog/video-production.svg" },
+  { alt: "Market research category", id: "market-research", src: "/logos/blog/market-research.svg" },
+  { alt: "Lead generation category", id: "lead-generation", src: "/logos/blog/lead-generation.svg" },
+  { alt: "Case studies category", id: "case-studies", src: "/logos/blog/case-studies.svg" },
 ];
 
 export const BLOG_POSTS = {

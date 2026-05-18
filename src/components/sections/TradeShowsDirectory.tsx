@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Search } from "lucide-react";
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -40,6 +40,14 @@ export const TradeShowsDirectory = ({
     return ["All", ...inds];
   }, [shows]);
 
+  const handleSearchChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  }, []);
+
+  const handleIndustryChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedIndustry(event.target.value);
+  }, []);
+
   const filteredShows = useMemo(() => {
     return shows.filter((show) => {
       const matchesSearch =
@@ -64,7 +72,7 @@ export const TradeShowsDirectory = ({
             <Search className="absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-brand-charcoal/40" />
             <input
               className="w-full rounded-2xl border border-gray-100 bg-white py-4 pr-4 pl-12 text-brand-charcoal shadow-sm transition-shadow outline-none focus:border-brand-blue/30 focus:shadow-md focus:ring-4 focus:ring-brand-blue/10"
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={handleSearchChange}
               placeholder="Search trade shows or locations..."
               type="text"
               value={searchQuery}
@@ -73,7 +81,7 @@ export const TradeShowsDirectory = ({
           <div className="relative w-full md:w-72">
             <select
               className="w-full appearance-none rounded-2xl border border-gray-100 bg-white px-4 py-4 pr-10 text-brand-charcoal shadow-sm transition-shadow outline-none focus:border-brand-blue/30 focus:shadow-md focus:ring-4 focus:ring-brand-blue/10"
-              onChange={(e) => setSelectedIndustry(e.target.value)}
+              onChange={handleIndustryChange}
               value={selectedIndustry}
             >
               {industries.map((ind) => (

@@ -35,9 +35,6 @@ const SHOWCASE_CARD_TRANSITION = {
   stiffness: 260,
   type: "spring",
 } as const;
-const ACTIVE_COPY_ANIMATE = { opacity: 1, y: 0 } as const;
-const ACTIVE_COPY_EXIT = { opacity: 0, y: 10 } as const;
-const ACTIVE_COPY_INITIAL = { opacity: 0, y: 20 } as const;
 
 const wrap = (min: number, max: number, value: number) => {
   const rangeSize = max - min;
