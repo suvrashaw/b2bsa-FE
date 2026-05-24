@@ -1,5 +1,7 @@
 import type { ClientLogoItem } from "@/content/home";
 
+import { SHARED_BLOG_POSTS } from "./blogs";
+
 export const BLOG_HERO = {
   description:
     "Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
@@ -42,48 +44,7 @@ export const BLOG_LOGOS: ClientLogoItem[] = [
 ];
 
 export const BLOG_POSTS = {
-  blogs: [
-    {
-      category: "Event Strategy",
-      date: "Jan 15, 2026",
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
-      title: "Trade Show ROI — How to Measure Real Return From Your Event Investment",
-    },
-    {
-      category: "Booth Design",
-      date: "Jan 08, 2026",
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "Trade Show Booth Design — How to Choose the Right Format for Your Goals",
-    },
-    {
-      category: "Performance Marketing",
-      date: "Dec 22, 2025",
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
-      title: "B2B LinkedIn Ads — The Complete Enterprise Guide",
-    },
-    {
-      category: "Lead Generation",
-      date: "Dec 10, 2025",
-      id: 4,
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      title: "MQL vs SQL — Why the Distinction Determines Revenue",
-    },
-    {
-      category: "Event Strategy",
-      date: "Nov 28, 2025",
-      id: 5,
-      image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800",
-      title: "GITEX 2025 — The Complete Exhibitor Guide for Enterprise B2B Brands",
-    },
-  ],
+  blogs: SHARED_BLOG_POSTS,
   ctaLabel: "Browse All Articles",
   eyebrow: "INSIGHTS & INTELLIGENCE",
   heading: (

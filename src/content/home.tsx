@@ -1,9 +1,12 @@
 import type { ReactNode } from "react";
 
+import { HOME_BLOG_POSTS } from "./blogs";
+
 export interface BlogItem {
   category?: string;
   date?: string;
   excerpt?: string;
+  href?: string;
   id: number | string;
   image: string;
   title: string;
@@ -128,6 +131,7 @@ export interface FAQContent {
   eyebrow?: string;
   faqs: FAQItem[];
   heading: ReactNode;
+  layoutMode?: "auto" | "carousel" | "fit";
   scrollAmount: number;
 }
 
@@ -495,31 +499,28 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   heading: <>Proven Global Event Solutions: Enterprise Success Stories</>,
   items: [
     {
-      icon: "Leaf",
-      id: "adobe-summit",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
-      solution:
-        "We delivered a custom eco-friendly island booth and active on-site prospecting to secure 70+ SQLs and engage 60 unique billion-dollar enterprise accounts.",
-      title: "Adobe Summit: Sustainable Design & Lead Generation",
-    },
-    {
       icon: "Plane",
-      id: "world-aviation",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      id: "world-aviation-festival-2023",
+      image: "/images/case-studies/waf.jpg",
       solution:
-        "Through rapid pre-event outreach and on-ground prospecting, we secured 60 executive meetings—doubling the initial target within a high-speed, 10-day campaign.",
-      title: "World Aviation Festival: Doubling Executive Pipeline",
+        "Fueling global brand recognition and lead generation success with 70% hot and warm leads from 80% of $1B+ organisations.",
+      title: "World Aviation Festival 2023",
     },
     {
-      icon: "BarChart3",
-      id: "sibos",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
+      icon: "Building2",
+      id: "sibos-2023",
+      image: "/images/case-studies/sibos.jpg",
       solution:
-        "We created hyper-personalized global outreach and interactive booth design for two financial leaders, capturing 270+ leads and 64 strategic executive meetings.",
-      title: "SIBOS: High-Impact Outreach & Interactive Exhibits",
+        "Boosting on-ground lead generation 40% beyond target with 85%+ hot and warm leads and 75%+ director-level prospects.",
+      title: "SIBOS 2023",
+    },
+    {
+      icon: "Sparkles",
+      id: "sap-sapphire-2023",
+      image: "/images/case-studies/sap.jpg",
+      solution:
+        "Empowering global branding and on-ground lead generation success, delivering 80% hot and warm leads and 100% unique accounts.",
+      title: "SAP Sapphire 2023",
     },
   ],
 };
@@ -530,88 +531,39 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
     "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
   events: [
     {
-      id: "adobe",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "Adobe Summit",
+      id: "world-aviation-festival",
+      image: "/images/recent-events/frame-219.png",
+      title: "World Aviation Festival",
     },
     {
-      id: "autotech",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      title: "Autotech",
+      id: "fintech-festival",
+      image: "/images/recent-events/frame-220.png",
+      title: "Fintech Festival",
     },
     {
-      id: "cba",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      title: "CBA Live",
+      id: "itc-vegas",
+      image: "/images/recent-events/frame-221.png",
+      title: "ITC Vegas",
     },
     {
-      id: "databricks",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "Databricks Summit",
+      id: "sibos-amsterdam",
+      image: "/images/recent-events/frame-222.png",
+      title: "SIBOS",
     },
     {
-      id: "hannover",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "Hannover Messe",
+      id: "money-20-20-amsterdam",
+      image: "/images/recent-events/frame-223.png",
+      title: "Money 20/20",
     },
     {
-      id: "hp",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      title: "HP Discovery",
+      id: "constellate",
+      image: "/images/recent-events/frame-224.png",
+      title: "Constellate",
     },
     {
-      id: "iucx",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      title: "IUCX",
-    },
-    {
-      id: "itw",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "ITW (International Telecoms Week)",
-    },
-    {
-      id: "nvidia",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      title: "NVIDIA GTC 2026",
-    },
-    {
-      id: "sap-madrid",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      title: "SAP Sapphire 2026 Madrid",
-    },
-    {
-      id: "sap-orlando",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      title: "SAP Sapphire 2026 Orlando",
-    },
-    {
-      id: "servicenow",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "ServiceNow Knowledge 2026",
-    },
-    {
-      id: "snowflake",
-      image:
-        "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=800",
-      title: "Snowflake Summit",
-    },
-    {
-      id: "zenith",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      title: "Zenith Live",
+      id: "converse",
+      image: "/images/recent-events/frame-225.png",
+      title: "Converse",
     },
   ],
   heading: <>Upcoming Trade Shows & Global Industry Events</>,
@@ -705,32 +657,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
 };
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
-  blogs: [
-    {
-      excerpt:
-        "We reveal the critical questions you must ask to ensure your future booth builder actively drives measurable lead generation.",
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
-      title: "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company",
-    },
-    {
-      excerpt:
-        "We explore the latest structural and visual design trends you need to immediately capture attendee attention on the expo floor.",
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      title: "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026",
-    },
-    {
-      excerpt:
-        "We break down the essential architectural elements you must include to turn your large floor space investment into actual pipeline.",
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
-      title: "6 Must-Have Features for Effective B2B Booth Design",
-    },
-  ],
+  blogs: HOME_BLOG_POSTS,
   ctaLabel: "Read the complete blog",
   eyebrow: "BLOGS",
   heading: <>Expert Strategies to Maximize Your Global Event Solutions</>,

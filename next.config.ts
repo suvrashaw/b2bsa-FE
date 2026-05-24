@@ -7,7 +7,15 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
+        hostname: "b2bsalesarrow.com",
+        protocol: "https",
+      },
+      {
         hostname: "images.unsplash.com",
+        protocol: "https",
+      },
+      {
+        hostname: "www.b2bsalesarrow.com",
         protocol: "https",
       },
     ],

@@ -92,8 +92,7 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
       description: "Regional shows, first-time exhibitors, and satellite presences.",
       icon: "Layers",
       id: "booth-design-10x10",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/10x30.png",
       title: "10x10 Booth (100 sq ft)",
     },
     {
@@ -101,8 +100,7 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
       description: "Product demos with visitor journey and conversation zone.",
       icon: "Monitor",
       id: "booth-design-10x20",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/20x30.jpg",
       title: "10x20 Inline (200 sq ft)",
     },
     {
@@ -110,8 +108,7 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
       description: "Premium four-sided visibility with demos, meetings, and AV zones.",
       icon: "Target",
       id: "booth-design-20x20",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/20x40.jpg",
       title: "20x20 Island (400 sq ft)",
     },
     {
@@ -120,8 +117,7 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
         "Executive meeting suite plus lower engagement zone for major global shows.",
       icon: "Users",
       id: "booth-design-double-deck",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/30x40.png",
       title: "Double-Deck Structure",
     },
     {
@@ -129,12 +125,12 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
       description: "Fully bespoke flagship builds for maximum commercial impact.",
       icon: "Sparkles",
       id: "booth-design-custom",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/40x40.jpg",
       title: "Custom Environments",
     },
   ],
 };
+
 
 export const BOOTH_DESIGN_PROCESS = {
   phases: [

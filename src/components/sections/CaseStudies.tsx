@@ -52,6 +52,7 @@ export interface CaseStudiesProps {
   caseStudies?: CaseStudyItem[];
   content?: CaseStudiesContent;
   ctaLabel?: CaseStudiesContent["ctaLabel"];
+  description?: string;
   eyebrow?: CaseStudiesContent["eyebrow"];
   getStudyHref?: (study: CaseStudyItem) => string;
   heading?: ReactNode;
@@ -64,6 +65,7 @@ export const CaseStudies = ({
   caseStudies,
   content = HOME_CASE_STUDIES_CONTENT,
   ctaLabel = content.ctaLabel,
+  description,
   eyebrow = content.eyebrow,
   getStudyHref = (study) => study.href ?? viewAllHref,
   heading = content.heading,
@@ -107,6 +109,11 @@ export const CaseStudies = ({
         <div className="mb-16 flex flex-col items-start text-left">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
           <Heading as="h2">{heading}</Heading>
+          {description && (
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+              {description}
+            </p>
+          )}
         </div>
 
         <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">

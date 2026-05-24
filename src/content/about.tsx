@@ -160,27 +160,24 @@ export const ABOUT_RECENT_EVENTS = {
   events: [
     {
       date: "2025",
-      id: "adobe-summit-2025",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      location: "Las Vegas, USA",
-      title: "Adobe Summit",
-    },
-    {
-      date: "2025",
-      id: "money-2020-europe-2025",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
-      location: "Amsterdam, Netherlands",
-      title: "Money 20/20 Europe",
-    },
-    {
-      date: "2025",
       id: "world-aviation-festival-2025",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-      location: "Amsterdam, Netherlands",
+      image: "/images/recent-events/frame-219.png",
+      location: "Lisbon, Portugal",
       title: "World Aviation Festival",
+    },
+    {
+      date: "2025",
+      id: "sibos-amsterdam-2025",
+      image: "/images/recent-events/frame-222.png",
+      location: "Amsterdam, Netherlands",
+      title: "SIBOS",
+    },
+    {
+      date: "2025",
+      id: "money-20-20-europe-2025",
+      image: "/images/recent-events/frame-223.png",
+      location: "Amsterdam, Netherlands",
+      title: "Money 20/20",
     },
   ],
   heading: <>Where We Have Been Delivering This Year</>,

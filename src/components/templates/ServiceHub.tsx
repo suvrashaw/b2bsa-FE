@@ -140,7 +140,13 @@ export const ServiceHub = ({
         />
       )}
 
-      {caseStudies && <CaseStudies heading="Real Events. Real Results." {...caseStudies} />}
+      {caseStudies && (
+        <CaseStudies
+          description="B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026."
+          heading="Real Events. Real Results."
+          {...caseStudies}
+        />
+      )}
 
       {stats && <WhoWeAre items={stats.items} title={stats.title} />}
 

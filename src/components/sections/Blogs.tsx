@@ -18,6 +18,8 @@ export interface BlogsProps {
   layout?: "deck" | "grid";
 }
 
+const getBlogHref = (id: number | string, href?: string) => href ?? `/blogs/${id}`;
+
 export const Blogs = ({
   content = HOME_BLOGS_CONTENT,
   blogs = content.blogs,
@@ -50,7 +52,7 @@ export const Blogs = ({
         {layout === "grid" ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((blog) => (
-              <Link href={`/blogs/${blog.id}`} key={blog.id}>
+              <Link href={getBlogHref(blog.id, blog.href)} key={blog.id}>
                 <BlogCardGrid blog={blog} />
               </Link>
             ))}
@@ -62,7 +64,7 @@ export const Blogs = ({
             onMouseLeave={handleMouseLeave}
           >
             {blogs.map((blog, index) => (
-              <Link className="contents" href={`/blogs/${blog.id}`} key={blog.id}>
+              <Link className="contents" href={getBlogHref(blog.id, blog.href)} key={blog.id}>
                 <BlogCard
                   blog={blog}
                   ctaLabel={ctaLabel}

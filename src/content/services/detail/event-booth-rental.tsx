@@ -1,5 +1,31 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
+export const BOOTH_RENTAL_RENT_VS_BUY = {
+  description:
+    "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics — making it the strategically smarter choice for most programs.",
+  heading: "Top 3 Reasons to Rent vs. Buy",
+  reasons: [
+    {
+      description:
+        "You can stretch your budget without sacrificing design with the right custom rental solutions.",
+      icon: "DollarSign",
+      title: "Save Money",
+    },
+    {
+      description:
+        "If your exhibit needs change from show to show or year to year, rentals can help you quickly scale.",
+      icon: "Maximize2",
+      title: "Stay Flexible",
+    },
+    {
+      description:
+        "By renting, you avoid storage, booth maintenance, and crating hassles and costs.",
+      icon: "Truck",
+      title: "Make it Easy",
+    },
+  ],
+} as const;
+
 export const BOOTH_RENTAL_HERO = {
   description:
     "When speed matters or you're testing a new market, trade show booth rental gives your brand a polished, fully branded exhibition presence — without the fabrication lead time or capital commitment.",
@@ -9,12 +35,15 @@ export const BOOTH_RENTAL_HERO = {
 export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
 
 export const BOOTH_RENTAL_WHY = {
+  ctaHref: "/contact",
+  ctaLabel: "Let's Connect",
   description:
-    "Timeline under 8 weeks — custom fabrication not feasible. Testing a new market — validate event ROI before committing to a full custom build. Budget flexibility required — spread cost across specific events. Concurrent deployment — secondary presence while your custom booth is at another show. First time at a specific event — learn the environment before investing in a major build.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1600",
-  titleLine1: "When Rental Is",
-  titleLine2: "the Smarter Decision",
+    "At B2B Sales Arrow, we provide fully managed trade show booth rental solutions that give enterprise brands a polished, fully branded exhibition presence — without custom fabrication timelines or capital commitment. Deployed across global events, every rental is configured to your brand, professionally installed, and supported end-to-end.",
+  imageAlt: "B2B Sales Arrow trade show booth rental",
+  imageUrl: "/images/booth/30x40.png",
+  label: "Our Services",
+  titleLine1: "Introduction to Our",
+  titleLine2: "Rental Services",
 };
 
 export const BOOTH_RENTAL_DELIVERABLES = {
@@ -73,8 +102,7 @@ export const BOOTH_RENTAL_RANGE_SECTION = {
         "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
       icon: "Layers",
       id: "rental-standard",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/10x10.jpg",
       title: "10x10 Standard — Focused Presence",
     },
     {
@@ -83,8 +111,7 @@ export const BOOTH_RENTAL_RANGE_SECTION = {
         "Room for product-led demos, a defined visitor journey, and a meeting zone.",
       icon: "Monitor",
       id: "rental-inline",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/10x20.jpg",
       title: "10x20 Inline — Extended Format",
     },
     {
@@ -93,8 +120,7 @@ export const BOOTH_RENTAL_RANGE_SECTION = {
         "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
       icon: "Target",
       id: "rental-island",
-      image:
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/20x20.jpg",
       title: "20x20 Island — High Visibility",
     },
     {
@@ -103,8 +129,7 @@ export const BOOTH_RENTAL_RANGE_SECTION = {
         "Upper-level executive meeting suite plus a lower-level engagement zone for major global events.",
       icon: "Users",
       id: "rental-double-deck",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/30x30.png",
       title: "Double-Deck — Premium Floor Presence",
     },
     {
@@ -113,12 +138,12 @@ export const BOOTH_RENTAL_RANGE_SECTION = {
         "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
       icon: "Palette",
       id: "rental-custom-branded",
-      image:
-        "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/booth/40x40.jpg",
       title: "Custom-Branded Rentals",
     },
   ],
 };
+
 
 export const BOOTH_RENTAL_PROCESS = {
   phases: [
@@ -184,6 +209,108 @@ export const BOOTH_RENTAL_FAQ = {
     },
   ],
   heading: "Event Booth Rental FAQs",
+  layoutMode: "fit" as const,
+};
+
+export const BOOTH_RENTAL_RELATED_SERVICES = [
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-builder",
+    title: "Trade Show Booth Builder",
+  },
+  {
+    href: "/services/global-event-solutions/modular-portable-booths",
+    title: "Modular and Portable Booths",
+  },
+];
+
+export const BOOTH_RENTAL_WHY_CHOOSE_US = {
+  heading: "Why Choose B2B Sales Arrow for Booth Rental?",
+  items: [
+    {
+      description: "Recognized by industry leaders for creative excellence and innovation",
+      icon: "Award" as const,
+      title: "Award-Winning",
+    },
+    {
+      description: "150+ experienced professionals in design, production, and strategy",
+      icon: "Users2" as const,
+      title: "Expert Team",
+    },
+    {
+      description: "Delivering experiences across 30+ countries worldwide",
+      icon: "Globe2" as const,
+      title: "Global Reach",
+    },
+    {
+      description: "Consistently exceeding client KPIs and ROI expectations",
+      icon: "TrendingUp" as const,
+      title: "Proven Results",
+    },
+  ],
+};
+
+export const BOOTH_RENTAL_BLOGS_SECTION = {
+  heading: "Blogs",
+};
+
+export const BOOTH_RENTAL_CONTACT_CTA = {
+  backgroundImage: {
+    alt: "Trade show booth rental consultation backdrop",
+    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
+  },
+  badge: "Ready to Get Started?",
+  description:
+    "Ready to transform your next event into an unforgettable experience? Our team is here to bring your vision to life.",
+  headingLines: ["Let's Create Something", "Extraordinary Together"] as [string, string],
+  primaryCta: {
+    href: "/contact",
+    label: "Schedule a Consultation",
+  },
+  proofLabel: "Trusted by 500+ companies",
+  proofLogos: [
+    {
+      alt: "Bosch",
+      src: "/logos/BOSCH.svg",
+    },
+    {
+      alt: "SingleStore",
+      src: "/logos/SingleStore.svg",
+    },
+    {
+      alt: "Temenos",
+      src: "/logos/Temenos.svg",
+    },
+    {
+      alt: "Worldpay",
+      src: "/logos/Worldpay.svg",
+    },
+  ],
+  secondaryCta: {
+    href: "mailto:info@b2bsalesarrow.com",
+    label: "Contact Us",
+  },
+  trustItems: [
+    {
+      label: "Response within 24h",
+      value: "24h",
+    },
+    {
+      label: "Free consultation",
+      value: "Free",
+    },
+    {
+      label: "Custom proposals",
+      value: "Custom",
+    },
+    {
+      label: "Flexible budgets",
+      value: "Flex",
+    },
+  ],
 };
 
 export const BOOTH_RENTAL_PAGE = {

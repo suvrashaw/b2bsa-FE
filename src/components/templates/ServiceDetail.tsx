@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { CreativePricingProps } from "@/components/sections/CreativePricing";
 import type { FAQProps } from "@/components/sections/FAQ";
@@ -24,6 +26,7 @@ import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib
 
 export interface ServiceDetailProps {
   caseStudies?: CaseStudiesProps;
+  closingSections?: ReactNode;
   creativePricing?: CreativePricingProps;
   ctaBanner?: {
     ctaHref?: string;
@@ -46,6 +49,7 @@ export interface ServiceDetailProps {
     };
     title: string;
   };
+  middleSections?: ReactNode;
   page: MarketingPageIdentity;
   parentPage?: MarketingPageIdentity;
   process?: {
@@ -146,12 +150,14 @@ const serviceHeroCtasByPath: Record<
 
 export const ServiceDetail = ({
   caseStudies,
+  closingSections,
   creativePricing,
   ctaBanner,
   deliverables,
   deliverablesSectionType = "grid",
   faq,
   hero,
+  middleSections,
   page,
   parentPage,
   process,
@@ -254,26 +260,38 @@ export const ServiceDetail = ({
 
       {process && <ProcessTimeline phases={process.phases} title={process.title} />}
 
+      {middleSections}
+
       {secondaryServicesSection}
 
       {creativePricing && <CreativePricing {...creativePricing} />}
 
-      {caseStudies && <CaseStudies heading="Real Events. Real Results." {...caseStudies} />}
+      {caseStudies && (
+        <CaseStudies
+          description="B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026."
+          heading="Real Events. Real Results."
+          {...caseStudies}
+        />
+      )}
 
       {stats && <WhoWeAre items={stats.items} title={stats.title} />}
 
-      <FAQ {...faq} />
+      {closingSections ?? (
+        <>
+          <FAQ {...faq} />
 
-      {relatedServices && <RelatedServices services={relatedServices} />}
+          {relatedServices && <RelatedServices services={relatedServices} />}
 
-      <CTABanner
-        ctaHref={ctaBanner?.ctaHref ?? "/contact"}
-        ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
-        description={
-          ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
-        }
-        title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
-      />
+          <CTABanner
+            ctaHref={ctaBanner?.ctaHref ?? "/contact"}
+            ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
+            description={
+              ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+            }
+            title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
+          />
+        </>
+      )}
 
       <Footer />
     </main>

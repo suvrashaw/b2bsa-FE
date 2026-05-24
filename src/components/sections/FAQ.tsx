@@ -16,6 +16,7 @@ export interface FAQProps {
   eyebrow?: FAQContent["eyebrow"];
   faqs?: FAQContent["faqs"];
   heading?: FAQContent["heading"];
+  layoutMode?: FAQContent["layoutMode"];
   scrollAmount?: FAQContent["scrollAmount"];
 }
 
@@ -34,11 +35,13 @@ const FAQMotionCard = ({
   answer,
   icon,
   index,
+  layoutMode,
   question,
 }: {
   answer: string;
   icon?: ReactNode;
   index: number;
+  layoutMode: "carousel" | "fit";
   question: string;
 }) => {
   const faqTransition = useMemo(() => ({ delay: index * 0.1 }), [index]);
@@ -49,7 +52,7 @@ const FAQMotionCard = ({
       viewport={FAQ_VIEWPORT}
       whileInView={FAQ_ITEM_WHILEINVIEW}
     >
-      <FAQCard answer={answer} icon={icon} question={question} />
+      <FAQCard answer={answer} icon={icon} layoutMode={layoutMode} question={question} />
     </motion.div>
   );
 };
@@ -60,6 +63,7 @@ export const FAQ = ({
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
+  layoutMode = content.layoutMode ?? "auto",
   scrollAmount = content.scrollAmount,
 }: FAQProps = {}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -73,9 +77,13 @@ export const FAQ = ({
   }, []);
 
   useEffect(() => {
+    if (layoutMode !== "auto") {
+      return;
+    }
+
     checkOverflow();
     window.addEventListener("resize", checkOverflow);
-    
+
     // Check multiple times with small delays to ensure layout settles
     const timers = [
       setTimeout(checkOverflow, 50),
@@ -89,7 +97,7 @@ export const FAQ = ({
         clearTimeout(timer);
       }
     };
-  }, [checkOverflow, faqs]);
+  }, [checkOverflow, faqs, layoutMode]);
 
   const scrollLeft = useCallback(() => {
     if (scrollRef.current) {
@@ -102,6 +110,18 @@ export const FAQ = ({
       scrollRef.current.scrollBy({ behavior: "smooth", left: scrollAmount });
     }
   }, [scrollAmount]);
+
+  let resolvedLayoutMode: "carousel" | "fit";
+
+  if (layoutMode === "fit") {
+    resolvedLayoutMode = "fit";
+  } else if (layoutMode === "carousel") {
+    resolvedLayoutMode = "carousel";
+  } else {
+    resolvedLayoutMode = isOverflowing ? "carousel" : "fit";
+  }
+
+  const showArrows = resolvedLayoutMode === "carousel";
 
   return (
     <section className="relative bg-brand-gray py-24" id="faq">
@@ -134,13 +154,13 @@ export const FAQ = ({
         {/* Dynamic carousel / centered row grid */}
         <div
           className={cn(
-            "scrollbar-hide flex gap-6 pb-8",
-            isOverflowing
-              ? "faq-carousel-container snap-x snap-mandatory overflow-x-auto"
-              : "container mx-auto justify-center px-8"
+            "gap-6 pb-8",
+            resolvedLayoutMode === "carousel"
+              ? "scrollbar-hide faq-carousel-container flex snap-x snap-mandatory overflow-x-auto"
+              : "container mx-auto flex flex-wrap justify-center px-8"
           )}
           ref={scrollRef}
-          style={isOverflowing ? FAQ_SCROLLBAR_STYLE : undefined}
+          style={showArrows ? FAQ_SCROLLBAR_STYLE : undefined}
         >
           {faqs.map((faq, index) => (
             <FAQMotionCard
@@ -148,13 +168,14 @@ export const FAQ = ({
               icon={faq.icon}
               index={index}
               key={faq.id}
+              layoutMode={resolvedLayoutMode}
               question={faq.question}
             />
           ))}
         </div>
 
         {/* Dynamic Navigation Arrows */}
-        {isOverflowing && (
+        {showArrows && (
           <div className="container mx-auto mt-12 flex items-center justify-center gap-8 px-8">
             <button
               className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"

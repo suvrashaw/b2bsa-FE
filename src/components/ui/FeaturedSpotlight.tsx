@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
@@ -9,6 +10,7 @@ import { cn } from "@/lib";
 
 export interface FeaturedSpotlightProps {
   className?: string;
+  ctaHref?: string;
   ctaLabel?: string;
   description: string;
   imageAlt?: string;
@@ -22,6 +24,7 @@ export interface FeaturedSpotlightProps {
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
 const SpotlightTextBlock = ({
+  ctaHref,
   ctaLabel,
   description,
   isHovered,
@@ -29,6 +32,7 @@ const SpotlightTextBlock = ({
   titleLine1,
   titleLine2,
 }: {
+  ctaHref?: string;
   ctaLabel: string;
   description: string;
   isHovered: boolean;
@@ -107,14 +111,25 @@ const SpotlightTextBlock = ({
         {description}
       </p>
 
-      <div className="mt-6 flex items-center gap-4 md:mt-8 lg:mt-10">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-500 md:h-11 md:w-11 lg:h-12 lg:w-12" style={ctaBtnStyle}>
-          <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 md:h-4 md:w-4" style={arrowStyle} />
+      {ctaHref ? (
+        <Link className="mt-6 flex items-center gap-4 md:mt-8 lg:mt-10" href={ctaHref}>
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-500 md:h-11 md:w-11 lg:h-12 lg:w-12" style={ctaBtnStyle}>
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 md:h-4 md:w-4" style={arrowStyle} />
+          </div>
+          <span className="text-[10px] font-medium tracking-widest text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={ctaLabelStyle}>
+            {ctaLabel}
+          </span>
+        </Link>
+      ) : (
+        <div className="mt-6 flex items-center gap-4 md:mt-8 lg:mt-10">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-500 md:h-11 md:w-11 lg:h-12 lg:w-12" style={ctaBtnStyle}>
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 md:h-4 md:w-4" style={arrowStyle} />
+          </div>
+          <span className="text-[10px] font-medium tracking-widest text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={ctaLabelStyle}>
+            {ctaLabel}
+          </span>
         </div>
-        <span className="text-[10px] font-medium tracking-widest text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={ctaLabelStyle}>
-          {ctaLabel}
-        </span>
-      </div>
+      )}
     </div>
   );
 };
@@ -194,6 +209,7 @@ const SpotlightImageBlock = ({
 
 export const FeaturedSpotlight = ({
   className,
+  ctaHref,
   ctaLabel = "Explore",
   description,
   imageAlt = "Feature image",
@@ -217,6 +233,7 @@ export const FeaturedSpotlight = ({
       onMouseLeave={handleMouseLeave}
     >
       <SpotlightTextBlock
+        ctaHref={ctaHref}
         ctaLabel={ctaLabel}
         description={description}
         isHovered={isHovered}
