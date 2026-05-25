@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
@@ -247,6 +247,8 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
   const resolvedFeatures = features;
   const [step, setStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const currentIndex =
     ((step % resolvedFeatures.length) + resolvedFeatures.length) % resolvedFeatures.length;
@@ -261,14 +263,25 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
   };
 
   useEffect(() => {
-    if (isPaused || resolvedFeatures.length < 2) return;
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || !isVisible || resolvedFeatures.length < 2) return;
 
     const interval = setInterval(nextStep, AUTO_PLAY_INTERVAL);
     return () => clearInterval(interval);
-  }, [isPaused, nextStep, resolvedFeatures.length]);
+  }, [isPaused, isVisible, nextStep, resolvedFeatures.length]);
 
   return (
-    <div className="mx-auto w-full max-w-7xl md:p-8">
+    <div className="mx-auto w-full max-w-7xl md:p-8" ref={containerRef}>
       <div className="relative flex min-h-[600px] flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-sm lg:min-h-[640px] lg:flex-row lg:rounded-[4rem]">
         <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden bg-brand-gray/50 px-8 md:min-h-[450px] md:px-16 lg:w-[45%] lg:pl-16">
           <div className="absolute inset-x-0 top-0 z-40 h-12 bg-gradient-to-b from-brand-gray/50 via-brand-gray/40 to-transparent md:h-20 lg:h-16" />

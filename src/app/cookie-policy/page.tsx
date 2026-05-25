@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 
-import { getCmsPageMetadata } from "@/cms/mock/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Heading } from "@/components/ui/Heading";
 
-export const metadata: Metadata = getCmsPageMetadata("cookie-policy");
+export const metadata: Metadata = buildPageMetadata({
+  canonicalPath: "/cookie-policy",
+  description:
+    "Learn how B2B Sales Arrow uses session, analytics, and functional cookies to operate and improve the website.",
+  title: "Cookie Policy | B2B Sales Arrow",
+});
 
 const cookieSections = [
   {

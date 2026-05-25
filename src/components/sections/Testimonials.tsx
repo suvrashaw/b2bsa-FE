@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -150,11 +150,25 @@ export const Testimonials = ({
   initialIndex = content.initialIndex,
   testimonials = content.testimonials,
 }: TestimonialsProps = {}) => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const { activeIndex, getRelativePosition, handleNext, handlePrev, setActiveIndex } =
-    useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval);
+    useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval, isVisible);
 
   return (
-    <section className="relative overflow-hidden bg-[#F8F9FA] py-20">
+    <section className="relative overflow-hidden bg-[#F8F9FA] py-20" ref={sectionRef}>
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
@@ -224,20 +238,20 @@ export const Testimonials = ({
   );
 };
 
-const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInterval: number) => {
+const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInterval: number, isVisible: boolean) => {
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.min(initialIndex, Math.max(total - 1, 0))
   );
 
   // Auto-scroll functionality
   useEffect(() => {
-    if (total <= 1 || autoplayInterval <= 0) return;
+    if (total <= 1 || autoplayInterval <= 0 || !isVisible) return;
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % total);
     }, autoplayInterval);
     return () => clearInterval(interval);
-  }, [autoplayInterval, total]);
+  }, [autoplayInterval, isVisible, total]);
 
   const handleNext = () => {
     if (total === 0) return;

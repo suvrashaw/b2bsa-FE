@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 import { Button } from "@/components/ui/Button";
@@ -34,6 +34,24 @@ const FOOTER_SCROLL_OFFSET: ["start start", "end end"] = ["start start", "end en
 
 export const Footer = () => {
   const containerRef = useRef<HTMLElement>(null);
+  const [footerInView, setFooterInView] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFooterInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const { scrollYProgress } = useScroll({
     offset: FOOTER_SCROLL_OFFSET,
     target: containerRef,
@@ -59,7 +77,7 @@ export const Footer = () => {
         <div className="pointer-events-none absolute top-0 right-0 left-0 z-20 bg-linear-to-b from-brand-blue via-brand-blue/80 to-transparent pt-12 pb-24">
           {/* We wrap it in a pointer-events-auto div to ensure it's still clickable/selectable if needed */}
           <div className="pointer-events-auto">
-            <GlobalPresence />
+            {footerInView && <GlobalPresence />}
           </div>
         </div>
 
@@ -70,7 +88,7 @@ export const Footer = () => {
         >
           {/* We ensure it's fully interactive when dragged */}
           <div className="flex h-[min(62vh,800px)] w-[min(92vw,800px)] items-center justify-center">
-            <Globe />
+            {footerInView && <Globe />}
           </div>
         </motion.div>
 

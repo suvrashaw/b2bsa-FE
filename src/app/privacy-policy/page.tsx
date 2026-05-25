@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 
-import { getCmsPageMetadata } from "@/cms/mock/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Heading } from "@/components/ui/Heading";
 
-export const metadata: Metadata = getCmsPageMetadata("privacy-policy");
+export const metadata: Metadata = buildPageMetadata({
+  canonicalPath: "/privacy-policy",
+  description:
+    "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
+  title: "Privacy Policy | B2B Sales Arrow",
+});
 
 const Page = () => {
   return (

@@ -1,4 +1,21 @@
-import type { CmsSeo, PageType } from "@/cms/mock/types";
+export interface CmsSeo {
+  canonicalPath: string;
+  description: string;
+  focusKeyphrase?: string;
+  noIndex?: boolean;
+  secondaryKeywords?: readonly string[];
+  title: string;
+}
+
+export type PageType =
+  | "company"
+  | "contact"
+  | "home"
+  | "legal"
+  | "resourceIndex"
+  | "serviceDetail"
+  | "serviceHub"
+  | "system";
 
 export interface MarketingPageDefinition {
   pageId: string;

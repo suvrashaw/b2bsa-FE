@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { CmsSeo } from "@/cms/mock/types";
+import type { CmsSeo } from "@/content/page-definitions";
 
 const BASE_URL = "https://b2bsalesarrow.com";
 

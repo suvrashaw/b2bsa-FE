@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { getCmsPageMetadata } from "@/cms/mock/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactUs } from "@/components/sections/ContactUs";
@@ -8,7 +8,12 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { TERMS_CONTACT, TERMS_FAQ, TERMS_HERO } from "@/content/terms";
 
-export const metadata: Metadata = getCmsPageMetadata("terms-and-conditions");
+export const metadata: Metadata = buildPageMetadata({
+  canonicalPath: "/terms-and-conditions",
+  description:
+    "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
+  title: "Terms & Conditions | B2B Sales Arrow",
+});
 
 const Page = () => {
   return (

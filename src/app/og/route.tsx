@@ -1,6 +1,5 @@
 import { ImageResponse } from "@vercel/og";
 
-import { getCmsPage } from "@/cms/mock/registry";
 import {
   getMarketingPageById,
   getMarketingPageByPath,
@@ -188,17 +187,6 @@ const getOgContent = (searchParams: URLSearchParams) => {
       };
     }
 
-    const page = getCmsPage(pageId);
-
-    if (page) {
-      const resolvedTitle = title ?? page.seo.title;
-
-      return {
-        description: page.seo.description,
-        group: page.pageType === "serviceDetail" ? "Service" : "B2B Growth",
-        title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
-      };
-    }
   }
 
   if (!path) {

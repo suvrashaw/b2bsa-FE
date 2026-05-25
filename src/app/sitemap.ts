@@ -1,23 +1,32 @@
 import type { MetadataRoute } from "next";
 
-import { pageRoutes } from "@/cms/mock/routes";
-import { pageSeo } from "@/cms/mock/seo";
+import { marketingPages } from "@/content/marketing-pages";
 
 const siteUrl = "https://b2bsalesarrow.com";
 
-const sitemap = (): MetadataRoute.Sitemap =>
-  Object.entries(pageRoutes)
-    .filter(([id]) => !pageSeo[id]?.noIndex)
-    .map(([, path]) => ({
-      changeFrequency: path === "/" ? "weekly" : "monthly",
-      lastModified: new Date(),
-      priority: getPriority(path),
-      url: `${siteUrl}${path}`,
-    }));
+const legalPaths = ["/cookie-policy", "/privacy-policy", "/terms-and-conditions"];
 
-const getPriority = (url: string): number => {
-  if (url === "/") return 1;
-  return url.split("/").filter(Boolean).length <= 1 ? 0.8 : 0.6;
+const sitemap = (): MetadataRoute.Sitemap => {
+  const marketingEntries: MetadataRoute.Sitemap = marketingPages.map((page) => ({
+    changeFrequency: page.seo.canonicalPath === "/" ? "weekly" : "monthly",
+    lastModified: new Date(),
+    priority: getPriority(page.seo.canonicalPath),
+    url: `${siteUrl}${page.seo.canonicalPath}`,
+  }));
+
+  const legalEntries: MetadataRoute.Sitemap = legalPaths.map((path) => ({
+    changeFrequency: "yearly",
+    lastModified: new Date(),
+    priority: 0.3,
+    url: `${siteUrl}${path}`,
+  }));
+
+  return [...marketingEntries, ...legalEntries];
+};
+
+const getPriority = (path: string): number => {
+  if (path === "/") return 1;
+  return path.split("/").filter(Boolean).length <= 1 ? 0.8 : 0.6;
 };
 
 export default sitemap;
