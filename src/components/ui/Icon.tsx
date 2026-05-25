@@ -1,28 +1,134 @@
-"use client";
-
-/* eslint-disable react-hooks/immutability */
-
-import { LucideProps } from "lucide-react";
-import dynamicIconImports from "lucide-react/dynamicIconImports";
-import dynamic from "next/dynamic";
+import type { LucideProps } from "lucide-react";
+import {
+  Activity,
+  Archive,
+  Armchair,
+  Award,
+  BarChart3,
+  BookOpen,
+  Box,
+  Briefcase,
+  Building,
+  Building2,
+  Calendar,
+  CalendarCheck,
+  Camera,
+  CheckCircle,
+  Clapperboard,
+  ClipboardList,
+  Coffee,
+  Coins,
+  Cpu,
+  Database,
+  DollarSign,
+  ExternalLink,
+  File,
+  FileText,
+  Film,
+  Filter,
+  Gift,
+  Globe,
+  Globe2,
+  GraduationCap,
+  Hammer,
+  Headphones,
+  HelpCircle,
+  Image,
+  Key,
+  Landmark,
+  Layers,
+  Layout,
+  Leaf,
+  Lightbulb,
+  Link,
+  Mail,
+  Map,
+  MapPin,
+  Maximize2,
+  Megaphone,
+  MessageSquare,
+  Mic,
+  Monitor,
+  MonitorPlay,
+  Music,
+  Palette,
+  PenLine,
+  Plane,
+  Play,
+  PlusCircle,
+  Presentation,
+  Radio,
+  Rocket,
+  Scan,
+  Scissors,
+  Search,
+  Settings,
+  Share2,
+  Shield,
+  ShieldCheck,
+  ShoppingBag,
+  Sparkles,
+  Star,
+  Sun,
+  Target,
+  TrendingUp,
+  Truck,
+  Type,
+  UserPlus,
+  Users,
+  Users2,
+  Video,
+  Wifi,
+  Wrench,
+  Zap,
+} from "lucide-react";
+import type { ComponentType } from "react";
 
 interface IconProps extends LucideProps {
   name: string;
 }
 
-const iconCache: Record<string, React.ComponentType<LucideProps>> = {};
+const ICONS: Record<string, ComponentType<LucideProps>> = {
+  // PascalCase (used by sections directly)
+  Activity, Archive, Armchair, Award, BarChart3, BookOpen, Box, Briefcase,
+  Building, Building2, Calendar, CalendarCheck, Camera, CheckCircle,
+  Clapperboard, ClipboardList, Coffee, Coins, Cpu, Database, DollarSign,
+  ExternalLink, File, FileText, Film, Filter, Gift, Globe, Globe2,
+  GraduationCap, Hammer, Headphones, Image, Key, Landmark, Layers, Layout,
+  Leaf, Lightbulb, Link, Mail, Map, MapPin, Maximize2, Megaphone,
+  MessageSquare, Mic, Monitor, MonitorPlay, Music, Palette, PenLine, Plane,
+  Play, PlusCircle, Presentation, Radio, Rocket, Scan, Scissors, Search,
+  Settings, Share2, Shield, ShieldCheck, ShoppingBag, Sparkles, Star, Sun,
+  Target, TrendingUp, Truck, Type, UserPlus, Users, Users2, Video, Wifi,
+  Wrench, Zap,
+  // kebab-case (used by FeatureCarousel after camelToKebab conversion)
+  "activity": Activity, "archive": Archive, "armchair": Armchair,
+  "award": Award, "bar-chart-3": BarChart3, "book-open": BookOpen,
+  "box": Box, "briefcase": Briefcase, "building": Building,
+  "building-2": Building2, "calendar": Calendar, "calendar-check": CalendarCheck,
+  "camera": Camera, "check-circle": CheckCircle, "clapperboard": Clapperboard,
+  "clipboard-list": ClipboardList, "coffee": Coffee, "coins": Coins,
+  "cpu": Cpu, "database": Database, "dollar-sign": DollarSign,
+  "external-link": ExternalLink, "file": File, "file-text": FileText,
+  "film": Film, "filter": Filter, "gift": Gift, "globe": Globe,
+  "globe-2": Globe2, "graduation-cap": GraduationCap, "hammer": Hammer,
+  "headphones": Headphones, "image": Image, "key": Key, "landmark": Landmark,
+  "layers": Layers, "layout": Layout, "leaf": Leaf, "lightbulb": Lightbulb,
+  "link": Link, "mail": Mail, "map": Map, "map-pin": MapPin,
+  "maximize-2": Maximize2, "megaphone": Megaphone, "message-square": MessageSquare,
+  "mic": Mic, "monitor": Monitor, "monitor-play": MonitorPlay, "music": Music,
+  "palette": Palette, "pen-line": PenLine, "plane": Plane, "play": Play,
+  "plus-circle": PlusCircle, "presentation": Presentation, "radio": Radio,
+  "rocket": Rocket, "scan": Scan, "scissors": Scissors, "search": Search,
+  "settings": Settings, "share-2": Share2, "shield": Shield,
+  "shield-check": ShieldCheck, "shopping-bag": ShoppingBag, "sparkles": Sparkles,
+  "star": Star, "sun": Sun, "target": Target, "trending-up": TrendingUp,
+  "truck": Truck, "type": Type, "user-plus": UserPlus, "users": Users,
+  "users-2": Users2, "video": Video, "wifi": Wifi, "wrench": Wrench, "zap": Zap,
+};
 
 const Icon = ({ name, ...props }: IconProps) => {
-  const iconName = (
-    name in dynamicIconImports ? name : "HelpCircle"
-  ) as keyof typeof dynamicIconImports;
-
-  if (!iconCache[iconName]) {
-    iconCache[iconName] = dynamic(dynamicIconImports[iconName]);
-  }
-
-  const LucideIcon = iconCache[iconName];
-
+  const LucideIcon = ICONS[name] ?? HelpCircle;
   return <LucideIcon {...props} />;
 };
 

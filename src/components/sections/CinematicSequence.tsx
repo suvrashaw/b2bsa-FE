@@ -49,7 +49,7 @@ export const CinematicSequence = ({
 }: CinematicSequenceProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { imagesLoaded, imagesRef } = useCinematicFrameImages(
+  const { firstFrameLoaded, imagesRef } = useCinematicFrameImages(
     frameCount,
     frameUrlTemplate,
     frameUrls
@@ -60,14 +60,24 @@ export const CinematicSequence = ({
     target: containerRef,
   });
 
+  const getNearestFrame = (index: number) => {
+    const images = imagesRef.current;
+    if (images[index]) return images[index];
+    for (let offset = 1; offset < frameCount; offset++) {
+      if (index - offset >= 0 && images[index - offset]) return images[index - offset];
+      if (index + offset < frameCount && images[index + offset]) return images[index + offset];
+    }
+    return null;
+  };
+
   // Track progress and draw the corresponding frame
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (!imagesLoaded || !canvasRef.current) return;
+    if (!firstFrameLoaded || !canvasRef.current) return;
 
     const frameIndex = Math.min(frameCount - 1, Math.floor(latest * frameCount));
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const img = imagesRef.current[frameIndex];
+    const img = getNearestFrame(frameIndex);
 
     if (ctx && img) {
       drawCover(ctx, img, canvas.width, canvas.height);
@@ -76,7 +86,7 @@ export const CinematicSequence = ({
 
   // Initial draw and handle resize
   useEffect(() => {
-    if (!imagesLoaded || !canvasRef.current) return;
+    if (!firstFrameLoaded || !canvasRef.current) return;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
@@ -84,8 +94,9 @@ export const CinematicSequence = ({
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       const frameIndex = Math.min(frameCount - 1, Math.floor(scrollYProgress.get() * frameCount));
-      if (ctx && imagesRef.current[frameIndex]) {
-        drawCover(ctx, imagesRef.current[frameIndex], canvas.width, canvas.height);
+      const img = getNearestFrame(frameIndex);
+      if (ctx && img) {
+        drawCover(ctx, img, canvas.width, canvas.height);
       }
     };
 
@@ -93,7 +104,8 @@ export const CinematicSequence = ({
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [frameCount, imagesLoaded, imagesRef, scrollYProgress]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [frameCount, firstFrameLoaded, scrollYProgress]);
 
   return (
     <section className="relative h-[400vh] bg-black" ref={containerRef}>
@@ -170,50 +182,63 @@ const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: numb
   ctx.drawImage(img, x, y, renderW, renderH);
 };
 
+const LOAD_CONCURRENCY = 8;
+
 const useCinematicFrameImages = (
   frameCount: number,
   frameUrlTemplate?: string,
   frameUrls?: string[]
 ) => {
-  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const imagesRef = useRef<(HTMLImageElement | null)[]>(Array(frameCount).fill(null));
+  const [firstFrameLoaded, setFirstFrameLoaded] = useState(false);
   const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
-  const [loadedSignature, setLoadedSignature] = useState<null | string>(null);
 
   useEffect(() => {
+    let cancelled = false;
+    imagesRef.current = Array(frameCount).fill(null);
+    setFirstFrameLoaded(false);
+
     const getFrameUrl = (index: number) => {
-      if (frameUrls && frameUrls.length >= index) {
-        return frameUrls[index - 1];
-      }
-      if (frameUrlTemplate) {
-        return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
-      }
+      if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
+      if (frameUrlTemplate) return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
       return "";
     };
 
-    const loadedImages: HTMLImageElement[] = [];
-    let loadedCount = 0;
-    let cancelled = false;
-
-    for (let i = 1; i <= frameCount; i++) {
-      const img = new globalThis.Image();
-      img.src = getFrameUrl(i);
-      img.addEventListener("load", () => {
-        if (cancelled) return;
-
-        loadedCount++;
-        if (loadedCount === frameCount) {
-          setLoadedSignature(loadSignature);
-        }
+    const loadFrame = (i: number): Promise<void> =>
+      new Promise((resolve) => {
+        const img = new globalThis.Image();
+        img.onload = () => {
+          if (!cancelled) {
+            imagesRef.current[i - 1] = img;
+            if (i === 1) setFirstFrameLoaded(true);
+          }
+          resolve();
+        };
+        img.onerror = () => resolve();
+        img.src = getFrameUrl(i);
       });
-      loadedImages.push(img);
-    }
 
-    imagesRef.current = loadedImages;
+    // Batched loader with LOAD_CONCURRENCY concurrent slots
+    let queueIndex = 0;
+    let active = 0;
 
-    return () => {
-      cancelled = true;
+    const pump = () => {
+      while (active < LOAD_CONCURRENCY && queueIndex < frameCount) {
+        const frameNum = queueIndex + 1;
+        queueIndex++;
+        active++;
+        loadFrame(frameNum).then(() => {
+          active--;
+          if (!cancelled) pump();
+        });
+      }
     };
-  }, [frameCount, frameUrlTemplate, frameUrls, loadSignature]);
 
-  return { imagesLoaded: loadedSignature === loadSignature, imagesRef };
+    pump();
+
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loadSignature]);
+
+  return { firstFrameLoaded, imagesRef };
 };

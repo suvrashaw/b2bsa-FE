@@ -142,6 +142,7 @@ export const ServiceHero = ({
           loop
           muted
           playsInline
+          preload="metadata"
         >
           <source src={videoUrl} type="video/mp4" />
         </video>

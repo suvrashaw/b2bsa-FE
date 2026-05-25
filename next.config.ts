@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 import withBundleAnalyzer from "@next/bundle-analyzer";
-import { withNextVideo } from "next-video/process";
 
 const nextConfig: NextConfig = {
   images: {
@@ -74,4 +73,4 @@ const analyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-export default analyzer(withNextVideo(nextConfig));
+export default analyzer(nextConfig);

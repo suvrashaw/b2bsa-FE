@@ -68,9 +68,8 @@ const eslintConfig = defineConfig([
           default: "disallow",
           rules: [
             { allow: [], from: { type: "types" } },
-            { allow: ["types", "cms"], from: { type: "lib" } },
-            { allow: ["types", "lib", "content"], from: { type: "cms" } },
-            { allow: ["types", "lib", "cms"], from: { type: "content" } },
+            { allow: ["types"], from: { type: "lib" } },
+            { allow: ["types", "lib"], from: { type: "content" } },
             { allow: ["types", "lib", "content"], from: { type: "ui" } },
             { allow: ["types", "lib", "ui"], from: { type: "cards" } },
             { allow: ["types", "lib", "content", "ui"], from: { type: "forms" } },
@@ -87,7 +86,6 @@ const eslintConfig = defineConfig([
               allow: [
                 "types",
                 "lib",
-                "cms",
                 "content",
                 "ui",
                 "cards",
@@ -221,7 +219,6 @@ const eslintConfig = defineConfig([
       "boundaries/elements": [
         { pattern: "src/types/**/*", type: "types" },
         { pattern: "src/lib/**/*", type: "lib" },
-        { pattern: "src/cms/**/*", type: "cms" },
         { pattern: "src/content/**/*", type: "content" },
         { pattern: "src/components/ui/**/*", type: "ui" },
         { pattern: "src/components/cards/**/*", type: "cards" },
@@ -247,7 +244,6 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "node_modules/**",
     "public/**",
-    "videos/**",
     "package-lock.json",
     "*.lock",
   ]),
