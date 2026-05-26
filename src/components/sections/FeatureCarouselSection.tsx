@@ -20,7 +20,7 @@ export const FeatureCarouselSection = ({
   heading,
 }: FeatureCarouselSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-brand-gray py-20">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-8 right-[8%] h-48 w-48 rounded-full bg-brand-cyan/12 blur-3xl" />
         <div className="absolute bottom-0 left-[6%] h-56 w-56 rounded-full bg-brand-blue/10 blur-3xl" />

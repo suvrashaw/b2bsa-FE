@@ -1,7 +1,11 @@
-import { DollarSign, Maximize2, Truck } from "lucide-react";
+import { Clock, DollarSign, MapPin, Maximize2, Truck } from "lucide-react";
+
+import { Heading } from "@/components/ui/Heading";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
+  Clock: <Clock className="h-8 w-8" strokeWidth={1.5} />,
   DollarSign: <DollarSign className="h-8 w-8" strokeWidth={1.5} />,
+  MapPin: <MapPin className="h-8 w-8" strokeWidth={1.5} />,
   Maximize2: <Maximize2 className="h-8 w-8" strokeWidth={1.5} />,
   Truck: <Truck className="h-8 w-8" strokeWidth={1.5} />,
 };
@@ -24,11 +28,11 @@ export const RentVsBuySection = ({
   reasons,
 }: RentVsBuySectionProps) => {
   return (
-    <section className="bg-brand-gray py-20 lg:py-28">
+    <section className="bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
-          <h2 className="inline font-heading text-3xl font-extrabold tracking-tight text-brand-charcoal md:text-4xl lg:text-[2.6rem]">
+          <Heading as="h2" className="inline tracking-tight text-brand-charcoal">
             <span className="relative inline-block px-3 uppercase">
               <span className="relative z-10">{heading}</span>
               <span
@@ -36,7 +40,7 @@ export const RentVsBuySection = ({
                 className="absolute inset-x-0 top-[30%] bottom-0 bg-brand-blue/20"
               />
             </span>
-          </h2>
+          </Heading>
         </div>
 
         {/* Short description */}

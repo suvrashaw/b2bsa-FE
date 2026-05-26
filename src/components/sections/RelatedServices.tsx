@@ -36,7 +36,7 @@ export const RelatedServices = ({
   if (!services || services.length === 0) return null;
 
   return (
-    <section className={cn("bg-brand-gray/5 py-24", className)}>
+    <section className={cn("bg-brand-gray py-20", className)}>
       <div className="container mx-auto px-8">
         <Heading as="h2" className="mb-12 text-center text-brand-gray">
           {title}

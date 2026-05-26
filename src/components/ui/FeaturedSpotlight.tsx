@@ -98,11 +98,11 @@ const SpotlightTextBlock = ({
         </span>
       </div>
 
-      <Heading as="h2" className="relative" preserveClassName>
-        <span className="block font-heading text-2xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:text-3xl lg:text-2xl" style={title1Style}>
+      <Heading as="h2" className="relative">
+        <span className="block font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
           {titleLine1}
         </span>
-        <span className="block font-heading text-2xl font-bold tracking-tight text-brand-blue transition-all duration-700 sm:text-3xl lg:text-2xl" style={title2Style}>
+        <span className="block font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
           {titleLine2}
         </span>
       </Heading>

@@ -40,7 +40,7 @@ export const ProcessTimeline = ({
   );
 
   return (
-    <section className={cn("py-24 bg-brand-gray/10 ", className)}>
+    <section className={cn("py-20 bg-brand-gray", className)}>
       <div className="container mx-auto px-8">
         {(resolvedTitle || subtitle) && (
           <div className="mb-20 text-left">

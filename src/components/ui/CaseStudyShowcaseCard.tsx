@@ -93,7 +93,7 @@ export const CaseStudyShowcaseCard = ({
             {active ? (
               <motion.div
                 animate={ACTIVE_CONTENT_ANIMATE}
-                className="flex min-w-0 flex-1 flex-col"
+                className="flex min-w-0 flex-1 flex-col pr-40"
                 exit={ACTIVE_CONTENT_EXIT}
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}

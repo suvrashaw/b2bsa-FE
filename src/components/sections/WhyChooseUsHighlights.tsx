@@ -59,7 +59,7 @@ const highlightCtaVariants = {
 
 export const WhyChooseUsHighlights = ({ cta, heading, items }: WhyChooseUsHighlightsProps) => {
   return (
-    <section className="bg-white py-24" id="why-choose-us">
+    <section className="bg-brand-gray py-20" id="why-choose-us">
       <div className="container mx-auto px-8">
         <motion.div
           className="mx-auto max-w-5xl text-center"
@@ -70,8 +70,7 @@ export const WhyChooseUsHighlights = ({ cta, heading, items }: WhyChooseUsHighli
         >
           <Heading
             as="h2"
-            className="inline font-heading text-4xl leading-tight font-black text-brand-charcoal md:text-6xl"
-            preserveClassName
+            className="inline text-brand-charcoal"
           >
             <span className="bg-brand-blue/10 box-decoration-clone px-3 py-1">{heading}</span>
           </Heading>

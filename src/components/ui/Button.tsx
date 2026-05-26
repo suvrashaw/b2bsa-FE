@@ -31,6 +31,10 @@ const buttonVariants = cva(
           "border-2 border-brand-blue/20 bg-transparent text-brand-blue hover:border-brand-blue hover:bg-brand-blue/5",
         tertiary:
           "gap-2 bg-transparent font-semibold text-brand-blue hover:gap-4 hover:text-brand-blue/80",
+        white:
+          "relative overflow-hidden bg-white text-brand-blue hover:bg-white/95 before:pointer-events-none before:absolute before:inset-y-0 before:-translate-x-full before:w-full before:skew-x-[-20deg] before:bg-linear-to-r before:from-transparent before:via-brand-blue/10 before:to-transparent hover:before:translate-x-full before:transition-transform before:duration-700",
+        "white-outline":
+          "border-2 border-white/60 bg-transparent text-white hover:border-white hover:bg-white/10",
       },
     },
   }

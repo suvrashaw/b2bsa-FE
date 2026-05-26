@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
 import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
@@ -34,13 +34,14 @@ const Page = () => {
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
       closingSections={
         <>
+          {/* Normalized spacing */}
           <RelatedServices services={BOOTH_RENTAL_RELATED_SERVICES} />
           <WhyChooseUsHighlights {...BOOTH_RENTAL_WHY_CHOOSE_US} />
           <RentalBlogsSection
             heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
             posts={RENTAL_BLOG_POSTS}
           />
-          <FAQ {...BOOTH_RENTAL_FAQ} />
+          <FAQAccordion {...BOOTH_RENTAL_FAQ} />
           <ContactCinematicCTA {...BOOTH_RENTAL_CONTACT_CTA} />
         </>
       }

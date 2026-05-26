@@ -11,6 +11,7 @@ import type { MarketingPageIdentity } from "@/content/page-definitions";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
+import { ClientLogos } from "@/components/sections/ClientLogos";
 import { CreativePricing } from "@/components/sections/CreativePricing";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { FAQ } from "@/components/sections/FAQ";
@@ -105,6 +106,7 @@ const serviceHeroCtasByPath: Record<
   },
   "/services/global-event-solutions/event-booth-rental": {
     primaryCta: { href: "/contact", label: "Check Rental Availability" },
+    secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
   },
   "/services/global-event-solutions/event-lead-generation": {
     primaryCta: { href: "/contact", label: "Build Your Lead Generation System" },
@@ -229,10 +231,12 @@ export const ServiceDetail = ({
         title={hero.title}
       />
 
+      <ClientLogos overlap={false} />
+
       {proofBar && <ProofBar stats={proofBar} />}
 
       {spotlight && (
-        <section className="bg-white py-24">
+        <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
             <FeaturedSpotlight
               ctaLabel={spotlight.ctaLabel}
@@ -251,7 +255,7 @@ export const ServiceDetail = ({
       {deliverablesSection}
 
       {why && (
-        <section className="bg-brand-gray py-24">
+        <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
             <FeaturedSpotlight {...why} />
           </div>

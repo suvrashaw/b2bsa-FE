@@ -133,7 +133,7 @@ export const ContactCinematicCTA = ({
 
   return (
     <section
-      className="relative overflow-hidden bg-brand-charcoal py-24"
+      className="relative overflow-hidden bg-brand-charcoal py-20"
       id="contact"
       onMouseLeave={resetPointer}
       onMouseMove={handlePointerMove}
@@ -217,13 +217,10 @@ export const ContactCinematicCTA = ({
           >
             <Heading
               as="h2"
-              className="mt-8 font-heading text-4xl leading-[1.02] font-black text-white md:text-6xl"
-              preserveClassName
+              className="mt-8 text-white"
             >
-              <span className="block">{headingLines[0]}</span>
-              <span className="mt-2 block bg-linear-to-r from-white via-brand-cyan to-white bg-clip-text text-transparent">
-                {headingLines[1]}
-              </span>
+              <span className="block text-white/80">{headingLines[0]}</span>
+              <span className="mt-2 block text-white">{headingLines[1]}</span>
             </Heading>
           </motion.div>
 
@@ -246,12 +243,7 @@ export const ContactCinematicCTA = ({
             viewport={ctaViewport}
             whileInView="visible"
           >
-            <Button
-              asChild
-              className="min-w-[250px] rounded-full px-8 py-6 text-base shadow-2xl shadow-brand-charcoal/30"
-              size="lg"
-              variant="primary"
-            >
+            <Button asChild size="lg" variant="white">
               <Link href={primaryCta.href}>
                 <CalendarDays className="mr-2 h-5 w-5" />
                 {primaryCta.label}
@@ -259,12 +251,7 @@ export const ContactCinematicCTA = ({
               </Link>
             </Button>
 
-            <Button
-              asChild
-              className="min-w-[200px] rounded-full border-white/30 bg-white/10 px-8 py-6 text-base text-white backdrop-blur-md hover:border-white/50 hover:bg-white/18 hover:text-white"
-              size="lg"
-              variant="outline"
-            >
+            <Button asChild size="lg" variant="white-outline">
               <Link href={secondaryCta.href}>
                 <Mail className="mr-2 h-5 w-5" />
                 {secondaryCta.label}
@@ -273,24 +260,24 @@ export const ContactCinematicCTA = ({
           </motion.div>
 
           <motion.div
-            className="mt-12 flex flex-col items-center justify-center gap-4"
+            className="mt-12 flex items-center justify-center gap-4"
             custom={0.32}
             initial="hidden"
             variants={ctaRevealVariants}
             viewport={ctaViewport}
             whileInView="visible"
           >
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex -space-x-3">
               {proofLogos.map((logo) => (
                 <div
-                  className="flex h-14 items-center rounded-full border border-white/18 bg-white/92 px-5 shadow-lg shadow-brand-charcoal/10"
+                  className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
                   key={logo.alt}
                 >
-                  <Image alt={logo.alt} height={22} src={logo.src} width={92} />
+                  <Image alt={logo.alt} className="object-cover" height={40} src={logo.src} width={40} />
                 </div>
               ))}
             </div>
-            <p className="text-sm font-medium tracking-[0.12em] text-white/82 uppercase">
+            <p className="text-sm font-medium text-white/80">
               {proofLabel}
             </p>
           </motion.div>

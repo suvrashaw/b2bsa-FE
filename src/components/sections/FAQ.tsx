@@ -124,7 +124,7 @@ export const FAQ = ({
   const showArrows = resolvedLayoutMode === "carousel";
 
   return (
-    <section className="relative bg-brand-gray py-24" id="faq">
+    <section className="relative bg-brand-gray py-20" id="faq">
       {/* Decorative Gradients — isolated so they don't create a clip context for cards */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />

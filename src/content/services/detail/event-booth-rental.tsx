@@ -3,25 +3,25 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 export const BOOTH_RENTAL_RENT_VS_BUY = {
   description:
     "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics — making it the strategically smarter choice for most programs.",
-  heading: "Top 3 Reasons to Rent vs. Buy",
+  heading: "When Rental Is the Smarter Decision",
   reasons: [
     {
       description:
-        "You can stretch your budget without sacrificing design with the right custom rental solutions.",
+        "Custom fabrication isn't feasible under 8 weeks. Rental delivers a polished, fully branded presence without the production lead time — including when it's your first time at a specific event.",
+      icon: "Clock",
+      title: "Under 8 Weeks to Show Date",
+    },
+    {
+      description:
+        "Validate event ROI before committing to a full custom build. Ideal for testing a new market, emerging geographies, and concurrent satellite presences alongside your flagship booth.",
+      icon: "MapPin",
+      title: "Testing a New Market",
+    },
+    {
+      description:
+        "Spread cost across specific events without capital commitment. Avoid storage, booth maintenance, and crating costs entirely — budget flexibility with no compromise on brand quality.",
       icon: "DollarSign",
-      title: "Save Money",
-    },
-    {
-      description:
-        "If your exhibit needs change from show to show or year to year, rentals can help you quickly scale.",
-      icon: "Maximize2",
-      title: "Stay Flexible",
-    },
-    {
-      description:
-        "By renting, you avoid storage, booth maintenance, and crating hassles and costs.",
-      icon: "Truck",
-      title: "Make it Easy",
+      title: "Budget Flexibility Required",
     },
   ],
 } as const;
@@ -262,31 +262,31 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
     alt: "Trade show booth rental consultation backdrop",
     src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
   },
-  badge: "Ready to Get Started?",
+  badge: "Ready to Rent?",
   description:
-    "Ready to transform your next event into an unforgettable experience? Our team is here to bring your vision to life.",
-  headingLines: ["Let's Create Something", "Extraordinary Together"] as [string, string],
+    "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
+  headingLines: ["Fast Does Not Have To", "Feel Temporary"] as [string, string],
   primaryCta: {
     href: "/contact",
-    label: "Schedule a Consultation",
+    label: "Check Rental Availability",
   },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [
     {
-      alt: "Bosch",
-      src: "/logos/BOSCH.svg",
+      alt: "Airtel",
+      src: "/logos/circle-airtel.svg",
     },
     {
       alt: "SingleStore",
-      src: "/logos/SingleStore.svg",
+      src: "/logos/circle-singlestore.svg",
     },
     {
-      alt: "Temenos",
-      src: "/logos/Temenos.svg",
+      alt: "CSC",
+      src: "/logos/circle-csc.svg",
     },
     {
-      alt: "Worldpay",
-      src: "/logos/Worldpay.svg",
+      alt: "United Payments",
+      src: "/logos/circle-united-payments.svg",
     },
   ],
   secondaryCta: {

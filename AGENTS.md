@@ -23,6 +23,8 @@ Use only the project-local MCP servers configured in this repository:
 - magicui
 - vercel-v0
 - tailwindcss
+- chrome-devtools
+- chrome_devtools
 
 These MCP servers must load credentials from this project’s `.env.mcp`.
 
