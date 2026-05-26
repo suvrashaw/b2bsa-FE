@@ -20,7 +20,7 @@ const ITEM_VIEWPORT = { once: true } as const;
 
 interface FAQAccordionRowProps {
   answer: string;
-  id: string;
+  id: string | number;
   index: number;
   isOpen: boolean;
   onToggle: (i: number) => void;
