@@ -49,7 +49,7 @@ export const EventCard = ({
           <Badge className="mb-3" variant="solid">
             {badgeLabel}
           </Badge>
-          <h3 className="line-clamp-2 font-heading text-2xl leading-tight font-bold !text-white">
+          <h3 className="line-clamp-2 font-heading text-xl leading-tight font-bold !text-white md:text-2xl">
             {title}
           </h3>
         </div>

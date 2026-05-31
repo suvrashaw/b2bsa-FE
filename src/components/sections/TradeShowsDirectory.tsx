@@ -63,7 +63,7 @@ export const TradeShowsDirectory = ({
       <div className="container mx-auto px-8">
         <div className="mb-12 flex flex-col items-start">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          {heading && <Heading as="h2">{heading}</Heading>}
+          {heading && <Heading as="h2" className="text-center">{heading}</Heading>}
         </div>
 
         {/* Filters */}

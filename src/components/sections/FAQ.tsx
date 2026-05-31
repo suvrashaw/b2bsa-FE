@@ -144,7 +144,7 @@ export const FAQ = ({
               {heading}
             </Heading>
             {description && (
-              <p className="max-w-xl text-lg text-gray-600">
+              <p className="max-w-xl text-base text-gray-600">
                 {description}
               </p>
             )}

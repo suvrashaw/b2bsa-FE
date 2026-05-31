@@ -9,6 +9,7 @@ import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from
 export interface WhoWeAreProps {
   attribution?: WhoWeAreContent["attribution"];
   content?: WhoWeAreContent;
+  description?: string;
   heading?: WhoWeAreContent["heading"];
   items?: Array<{
     bg?: string;
@@ -30,6 +31,7 @@ export interface WhoWeAreProps {
 export const WhoWeAre = ({
   content = HOME_WHO_WE_ARE_CONTENT,
   attribution = content.attribution,
+  description,
   heading,
   items,
   mission = content.mission,
@@ -57,6 +59,9 @@ export const WhoWeAre = ({
             <Heading as="h2" className="mb-6">
               {resolvedHeading}
             </Heading>
+            {description && (
+              <p className="text-base leading-relaxed text-brand-charcoal/80">{description}</p>
+            )}
           </div>
 
           <div className="w-full">
@@ -115,7 +120,7 @@ export const WhoWeAre = ({
 const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
   return (
     <div
-      className={`relative overflow-hidden rounded-[4px] p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
+      className={`relative overflow-hidden rounded-xl p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
     >
       <div className="relative z-10">
         <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>

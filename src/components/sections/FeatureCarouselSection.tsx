@@ -35,7 +35,7 @@ export const FeatureCarouselSection = ({
             {heading}
           </Heading>
           {description ? (
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-brand-charcoal/70">
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-brand-charcoal/70">
               {description}
             </p>
           ) : null}

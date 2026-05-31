@@ -38,7 +38,7 @@ export const CTABanner = ({
     <section className={cn("py-24 px-8", className)}>
       <div className="container mx-auto">
         <motion.div
-          className="relative overflow-hidden rounded-[3rem] bg-brand-blue p-12 text-center shadow-2xl shadow-brand-blue/30 md:p-24"
+          className="relative overflow-hidden rounded-[2.5rem] bg-brand-blue p-12 text-center shadow-2xl shadow-brand-blue/30 md:p-24"
           initial={CATABANNER_INITIAL}
           transition={CATABANNER_TRANSITION}
           viewport={CATABANNER_VIEWPORT}
@@ -57,7 +57,7 @@ export const CTABanner = ({
               {title}
             </Heading>
             {resolvedSubtitle && (
-              <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
+              <p className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-white/80 md:text-xl">
                 {resolvedSubtitle}
               </p>
             )}

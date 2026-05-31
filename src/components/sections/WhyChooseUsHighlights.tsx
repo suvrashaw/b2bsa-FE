@@ -122,7 +122,7 @@ export const WhyChooseUsHighlights = ({ cta, heading, items }: WhyChooseUsHighli
                   <Icon className="h-8 w-8" />
                 </div>
 
-                <h3 className="mt-8 font-sans text-3xl leading-tight font-semibold text-brand-charcoal">
+                <h3 className="mt-8 font-sans text-xl leading-tight font-semibold text-brand-charcoal md:text-2xl">
                   {item.title}
                 </h3>
                 <p className="mt-4 max-w-[18rem] text-base leading-relaxed text-brand-charcoal/68">

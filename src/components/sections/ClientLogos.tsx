@@ -79,8 +79,13 @@ export const ClientLogos = ({
 
   return (
     <div className={`pointer-events-none relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`} ref={containerRef}>
+      {heading && (
+        <Heading as="h2" className="pt-10 pb-3 text-center">
+          {heading}
+        </Heading>
+      )}
       <div
-        className="pointer-events-auto relative overflow-hidden py-6"
+        className="pointer-events-auto relative overflow-hidden py-6 pb-10"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onWheel={handleWheel}
@@ -97,15 +102,6 @@ export const ClientLogos = ({
           </div>
         </motion.div>
       </div>
-      {heading && (
-        <Heading
-          as="h4"
-          className="mt-4 text-center text-sm font-semibold tracking-widest text-gray-400 uppercase"
-          preserveClassName
-        >
-          {heading}
-        </Heading>
-      )}
     </div>
   );
 };

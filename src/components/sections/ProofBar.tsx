@@ -1,12 +1,15 @@
 "use client";
 
 import { animate, motion, useInView, useMotionValue } from "framer-motion";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 
+import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 interface ProofBarProps {
   className?: string;
+  description?: ReactNode;
+  heading?: string;
   stats: string[];
 }
 
@@ -53,7 +56,7 @@ const PROOFBAR_INITIAL = { opacity: 0, y: 10 };
 const PROOFBAR_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const PROOFBAR_VIEWPORT = { once: true };
 
-export const ProofBar = ({ className, stats }: ProofBarProps) => {
+export const ProofBar = ({ className, description, heading, stats }: ProofBarProps) => {
   const statGroups = useMemo(
     () =>
       stats.map((stat, index) => {
@@ -77,6 +80,12 @@ export const ProofBar = ({ className, stats }: ProofBarProps) => {
   return (
     <div className={cn("bg-brand-gray py-6", className)}>
       <div className="container mx-auto px-8">
+        {heading && (
+          <Heading as="h2" className="mb-4 text-center">{heading}</Heading>
+        )}
+        {description && (
+          <p className="mx-auto mb-8 max-w-4xl text-center text-base leading-relaxed text-brand-charcoal/70">{description}</p>
+        )}
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
           {statGroups.map((group, index) => (
             <div

@@ -131,7 +131,7 @@ export const RentalBlogsSection = ({ heading, posts }: RentalBlogsSectionProps) 
             viewport={HEADING_VIEWPORT}
             whileInView={HEADING_ANIMATE}
           >
-            <Heading as="h2" className="text-brand-charcoal">
+            <Heading as="h2" className="text-center text-brand-charcoal">
               {heading}
             </Heading>
           </motion.div>

@@ -46,7 +46,7 @@ export const Blogs = ({
       <div className="container mx-auto px-8">
         <div className="mb-4 flex flex-col items-start text-left lg:mb-8">
           <Eyebrow variant="primary">{eyebrow}</Eyebrow>
-          <Heading as="h2">{heading}</Heading>
+          <Heading as="h2" className="text-center">{heading}</Heading>
         </div>
 
         {layout === "grid" ? (

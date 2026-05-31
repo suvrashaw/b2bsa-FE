@@ -22,7 +22,7 @@ export const FutureReadyStands = ({ heading, items }: FutureReadyStandsProps) =>
     <section className="bg-white py-20">
       <div className="container mx-auto px-8">
         <div className="mb-14 text-center">
-          <Heading as="h2" className="text-brand-charcoal">
+          <Heading as="h2" className="text-center text-brand-charcoal">
             {heading}
           </Heading>
         </div>

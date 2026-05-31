@@ -44,9 +44,9 @@ export const UpcomingEvents = ({
   return (
     <section className="relative bg-brand-gray py-20" id="events">
       <div className="container mx-auto px-8">
-        <div className="mb-16 flex flex-col items-start text-left">
+        <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2">{heading}</Heading>
+          <Heading as="h2" className="text-center">{heading}</Heading>
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}
         </div>
 
@@ -86,7 +86,7 @@ export const UpcomingEvents = ({
                       {badgeLabel}
                     </span>
                   )}
-                  <h3 className="line-clamp-2 font-heading text-2xl leading-tight font-bold !text-white md:text-3xl">
+                  <h3 className="line-clamp-2 font-heading text-xl leading-tight font-bold !text-white md:text-2xl">
                     {event.title}
                   </h3>
                 </div>

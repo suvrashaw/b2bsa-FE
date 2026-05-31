@@ -62,7 +62,7 @@ export const RentVsBuySection = ({
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 font-heading text-lg font-bold text-brand-charcoal">
+                <h3 className="mb-3 font-heading text-base font-bold text-brand-charcoal">
                   {reason.title}
                 </h3>
 

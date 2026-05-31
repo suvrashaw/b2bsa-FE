@@ -20,7 +20,7 @@ const ITEM_VIEWPORT = { once: true } as const;
 
 interface FAQAccordionRowProps {
   answer: string;
-  id: string | number;
+  id: number | string;
   index: number;
   isOpen: boolean;
   onToggle: (i: number) => void;
@@ -87,7 +87,7 @@ export const FAQAccordion = ({
             {heading}
           </Heading>
           {description && (
-            <p className="mx-auto max-w-xl text-lg text-gray-600">{description}</p>
+            <p className="mx-auto max-w-xl text-base text-gray-600">{description}</p>
           )}
         </motion.div>
 

@@ -225,7 +225,7 @@ export const ContactCinematicCTA = ({
           </motion.div>
 
           <motion.p
-            className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/88 md:text-xl"
+            className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-xl"
             custom={0.16}
             initial="hidden"
             variants={ctaRevealVariants}
@@ -292,7 +292,7 @@ export const ContactCinematicCTA = ({
           >
             {trustItems.map((item) => (
               <div
-                className="rounded-[1.5rem] border border-white/16 bg-white/10 px-6 py-5 text-left backdrop-blur-md"
+                className="rounded-3xl border border-white/16 bg-white/10 px-6 py-5 text-left backdrop-blur-md"
                 key={item.label}
               >
                 <p className="font-heading text-3xl font-bold text-white">{item.value}</p>

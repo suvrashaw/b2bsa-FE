@@ -1,0 +1,844 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - link "B2B Sales Arrow" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "B2B Sales Arrow" [ref=e6]
+      - navigation [ref=e7]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About Us" [ref=e11] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+        - link "Services" [ref=e13] [cursor=pointer]:
+          - /url: /services/global-event-solutions
+          - text: Services
+          - img [ref=e14]
+        - link "Trade Shows" [ref=e17] [cursor=pointer]:
+          - /url: /events
+          - text: Trade Shows
+          - img [ref=e18]
+        - link "Blogs" [ref=e21] [cursor=pointer]:
+          - /url: /blogs
+          - text: Blogs
+        - link "Case Studies" [ref=e23] [cursor=pointer]:
+          - /url: /case-studies
+          - text: Case Studies
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - generic [ref=e26]:
+        - button "EN" [ref=e27]:
+          - img [ref=e29]
+          - generic [ref=e32]: EN
+          - img [ref=e34]
+        - link "Let's Talk" [ref=e36] [cursor=pointer]:
+          - /url: /contact
+          - button "Let's Talk" [ref=e37]
+    - generic [ref=e42]:
+      - heading "Trade Show Booth Design Th" [level=1] [ref=e43]:
+        - generic [ref=e44]: Trade Show Booth Design Th
+      - paragraph [ref=e46]: We design custom trade show booths that buyers stop at deliberately — because the space, the story, and the sales system inside it were built together from day one.
+      - generic [ref=e47]:
+        - link "Request a Design Quote" [ref=e48] [cursor=pointer]:
+          - /url: /contact
+          - text: Request a Design Quote
+          - img [ref=e49]
+        - link "View Booth Portfolio" [ref=e51] [cursor=pointer]:
+          - /url: /case-studies
+    - generic:
+      - heading "Trusted by Leading Brands for Trade Show & Exhibition Solutions" [level=2]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img "Airtel" [ref=e56]
+          - img "BOSCH" [ref=e58]
+          - img "CSC" [ref=e60]
+          - img "Infosys" [ref=e62]
+          - img "SingleStore" [ref=e64]
+          - img "Syngene" [ref=e66]
+          - img "Temenos" [ref=e68]
+          - img "United Payment" [ref=e70]
+          - img "Worldpay" [ref=e72]
+        - generic [ref=e73]:
+          - img "Airtel" [ref=e75]
+          - img "BOSCH" [ref=e77]
+          - img "CSC" [ref=e79]
+          - img "Infosys" [ref=e81]
+          - img "SingleStore" [ref=e83]
+          - img "Syngene" [ref=e85]
+          - img "Temenos" [ref=e87]
+          - img "United Payment" [ref=e89]
+          - img "Worldpay" [ref=e91]
+    - generic [ref=e94]:
+      - generic [ref=e96]:
+        - generic [ref=e97]: 0+
+        - generic [ref=e98]: events
+      - generic [ref=e100]:
+        - generic [ref=e101]: $0B+
+        - generic [ref=e102]: pipeline influenced
+      - generic [ref=e104]:
+        - generic [ref=e105]: 0+
+        - generic [ref=e106]: enterprise leads
+      - generic [ref=e108]:
+        - generic [ref=e109]: 0%
+        - generic [ref=e110]: client retention
+      - generic [ref=e112]:
+        - generic [ref=e113]: 0+
+        - generic [ref=e114]: booth designs
+      - generic [ref=e116]:
+        - generic [ref=e117]: 0+
+        - generic [ref=e118]: countries
+    - generic [ref=e121] [cursor=pointer]:
+      - generic [ref=e122]:
+        - generic [ref=e125]: Featured
+        - heading "Why Generic Booth Design Costs You Qualified Leads" [level=2] [ref=e126]:
+          - generic [ref=e127]: Why Generic Booth Design
+          - generic [ref=e128]: Costs You Qualified Leads
+        - paragraph [ref=e129]: "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible. The gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?"
+        - generic [ref=e130]:
+          - img [ref=e132]
+          - generic [ref=e135]: Explore
+      - img "Empty trade show booth without footfall" [ref=e140]
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - generic [ref=e145]: Capabilities
+        - heading "Our Trade Show Booth Design Services" [level=2] [ref=e146]
+      - generic [ref=e148]:
+        - generic [ref=e152]:
+          - button "Spatial Architecture and Traffic Flow" [ref=e154]:
+            - img [ref=e156]
+            - generic [ref=e159]: Spatial Architecture and Traffic Flow
+          - button "Graphic Design and Brand Integration" [ref=e161]:
+            - img [ref=e163]
+            - generic [ref=e169]: Graphic Design and Brand Integration
+          - button "Interactive and Digital Display Integration" [ref=e171]:
+            - img [ref=e173]
+            - generic [ref=e176]: Interactive and Digital Display Integration
+          - button "AR/VR Experience Design" [ref=e178]:
+            - img [ref=e180]
+            - generic [ref=e182]: AR/VR Experience Design
+          - button "Meeting Room and Demo Zone Planning" [ref=e184]:
+            - img [ref=e186]
+            - generic [ref=e191]: Meeting Room and Demo Zone Planning
+          - button "Lighting and Atmosphere Engineering" [ref=e193]:
+            - img [ref=e195]
+            - generic [ref=e201]: Lighting and Atmosphere Engineering
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - img "Spatial Architecture and Traffic Flow" [ref=e205]
+            - generic:
+              - generic: 1 • Spatial Architecture and Traffic Flow
+              - paragraph: We design booth layouts around how attendees actually move through a crowded exhibition floor — entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.
+          - generic:
+            - img "Graphic Design and Brand Integration"
+            - generic:
+              - generic: 2 • Graphic Design and Brand Integration
+              - paragraph: Your exhibition booth design should be unmistakably yours from 30 feet away — translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.
+          - generic:
+            - img "Interactive and Digital Display Integration"
+            - generic:
+              - generic: 3 • Interactive and Digital Display Integration
+              - paragraph: Touchscreens, live product demos, and digital storytelling that turn passive floor visits into active brand engagement.
+          - generic:
+            - img "AR/VR Experience Design"
+            - generic:
+              - generic: 4 • AR/VR Experience Design
+              - paragraph: For complex products that cannot be shown on a trade show floor — immersive technology that lets buyers explore what they cannot see.
+          - generic:
+            - img "Meeting Room and Demo Zone Planning"
+            - generic:
+              - generic: 5 • Meeting Room and Demo Zone Planning
+              - paragraph: Private meeting rooms, semi-private discussion areas, and live demo zones — planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.
+          - generic:
+            - img "Lighting and Atmosphere Engineering"
+            - generic:
+              - generic: 6 • Lighting and Atmosphere Engineering
+              - paragraph: The most underused commercial tool in exhibition stand design — accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.
+    - generic [ref=e208] [cursor=pointer]:
+      - generic [ref=e209]:
+        - generic [ref=e212]: Our Services
+        - heading "Introduction to Our Design Services" [level=2] [ref=e213]:
+          - generic [ref=e214]: Introduction to Our
+          - generic [ref=e215]: Design Services
+        - paragraph [ref=e216]: At B2B Sales Arrow, we design custom trade show booths that stop the right buyers deliberately — because the space, the story, and the sales system inside it were built together from day one. Every square foot is engineered around buyer psychology and commercial conversion, not aesthetics alone.
+        - link "Request a Design Quote" [ref=e217]:
+          - /url: /contact
+          - img [ref=e219]
+          - generic [ref=e222]: Request a Design Quote
+      - img "Custom trade show booth design by B2B Sales Arrow" [ref=e227]
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e232]: Formats
+        - heading "Booth Sizes and Formats We Design" [level=2] [ref=e233]
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - button "10x10 Booth (100 sq ft) Regional shows, first-time exhibitors, and satellite presences. Get a Quote" [ref=e236]:
+            - heading "10x10 Booth (100 sq ft)" [level=3] [ref=e238]
+            - generic [ref=e240]:
+              - paragraph [ref=e241]: Regional shows, first-time exhibitors, and satellite presences.
+              - link "Get a Quote" [ref=e242] [cursor=pointer]:
+                - /url: /contact
+                - text: Get a Quote
+                - img [ref=e243]
+          - button "10x20 Inline (200 sq ft)" [ref=e245]:
+            - heading "10x20 Inline (200 sq ft)" [level=3] [ref=e247]
+          - button "20x20 Island (400 sq ft)" [ref=e249]:
+            - heading "20x20 Island (400 sq ft)" [level=3] [ref=e251]
+          - button "Double-Deck Structure" [ref=e253]:
+            - heading "Double-Deck Structure" [level=3] [ref=e255]
+          - button "Custom Environments" [ref=e257]:
+            - heading "Custom Environments" [level=3] [ref=e259]
+        - generic [ref=e262]:
+          - img "10x10 Booth (100 sq ft)" [ref=e263]
+          - paragraph [ref=e266]: 10x10 Booth (100 sq ft)
+    - generic [ref=e268]:
+      - heading "From Brief to Build — Our 8-Phase Booth Design Process" [level=2] [ref=e270]
+      - generic [ref=e273]:
+        - generic [ref=e277]:
+          - 'heading "Phase 1: Deep-Dive Discovery" [level=3] [ref=e278]'
+          - paragraph [ref=e279]: Budget and goal alignment. We understand your commercial objectives, event brief, audience, and success metrics before any design work begins.
+        - generic [ref=e283]:
+          - 'heading "Phase 2: Narrative Design" [level=3] [ref=e284]'
+          - paragraph [ref=e285]: Storyboarding the brand experience. We map how visitors move, feel, and think through every stage of the booth journey.
+        - generic [ref=e289]:
+          - 'heading "Phase 3: Visual Prototyping" [level=3] [ref=e290]'
+          - paragraph [ref=e291]: 3D rendering and iterative feedback. Full visualisation of the space — structure, graphics, lighting, and interaction zones reviewed with your team.
+        - generic [ref=e295]:
+          - 'heading "Phase 4: Expert Curation" [level=3] [ref=e296]'
+          - paragraph [ref=e297]: Material sourcing and builder vetting. Materials, finishes, and fabrication partners selected for quality, durability, and logistics practicality.
+        - generic [ref=e301]:
+          - 'heading "Phase 5: Performance Testing" [level=3] [ref=e302]'
+          - paragraph [ref=e303]: Pre-build validation for zero errors. Structural review, compliance check, and pre-assembly quality gate before production begins.
+        - generic [ref=e307]:
+          - 'heading "Phase 6: Tactical Deployment" [level=3] [ref=e308]'
+          - paragraph [ref=e309]: Global shipping and on-site assembly. Packaging, customs, venue delivery, and installation managed end-to-end.
+        - generic [ref=e313]:
+          - 'heading "Phase 7: Elite Handover" [level=3] [ref=e314]'
+          - paragraph [ref=e315]: Final 'white-glove' inspection and delivery. Every detail checked against the approved design before the show opens.
+        - generic [ref=e319]:
+          - 'heading "Phase 8: Post-Event Recovery" [level=3] [ref=e320]'
+          - paragraph [ref=e321]: Deconstruction and storage management. Breakdown, packing, return logistics, and reuse planning for future events.
+    - generic [ref=e322]:
+      - generic [ref=e323]:
+        - generic [ref=e324]:
+          - generic [ref=e325]: Design Pricing Guide
+          - heading "Booth Design Investment Guide" [level=2] [ref=e327]:
+            - text: Booth Design Investment Guide
+            - img [ref=e329]
+            - img [ref=e335]
+          - paragraph [ref=e338]: Custom exhibition stands built for buyer psychology and pipeline conversion
+        - generic [ref=e339]:
+          - generic [ref=e342]:
+            - generic [ref=e343]:
+              - img [ref=e345]
+              - heading "Compact Custom" [level=3] [ref=e349]
+              - paragraph [ref=e350]: Ideal for custom 10x10 spaces and compact satellite booths
+            - generic [ref=e351]:
+              - generic [ref=e352]: $3000
+              - generic [ref=e353]: /month
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - img [ref=e357]
+                - generic [ref=e359]: 10x10 Custom Architecture Design
+              - generic [ref=e360]:
+                - img [ref=e362]
+                - generic [ref=e364]: Spatial Layout & Traffic Flow Planning
+              - generic [ref=e365]:
+                - img [ref=e367]
+                - generic [ref=e369]: Premium Large-Format Graphics Vetting
+              - generic [ref=e370]:
+                - img [ref=e372]
+                - generic [ref=e374]: Fabricator Selection & Vetting Support
+              - generic [ref=e375]:
+                - img [ref=e377]
+                - generic [ref=e379]: "Typical Turnaround: 2–3 Weeks"
+            - button "Get Started" [ref=e380]
+          - generic [ref=e383]:
+            - generic [ref=e384]: Popular!
+            - generic [ref=e385]:
+              - img [ref=e387]
+              - heading "Flagship Island" [level=3] [ref=e392]
+              - paragraph [ref=e393]: Perfect for high-impact 20x20 islands or modular systems
+            - generic [ref=e394]:
+              - generic [ref=e395]: $10000
+              - generic [ref=e396]: /month
+            - generic [ref=e397]:
+              - generic [ref=e398]:
+                - img [ref=e400]
+                - generic [ref=e402]: 20x20 Island or Modular Design
+              - generic [ref=e403]:
+                - img [ref=e405]
+                - generic [ref=e407]: Semi-Private Discussion & Keynote Zones
+              - generic [ref=e408]:
+                - img [ref=e410]
+                - generic [ref=e412]: Interactive Digital Display Vetting
+              - generic [ref=e413]:
+                - img [ref=e415]
+                - generic [ref=e417]: Full 3D Visual Walkthrough Prototypes
+              - generic [ref=e418]:
+                - img [ref=e420]
+                - generic [ref=e422]: Fabrication Liaison & On-site Vetting
+            - button "Get Started" [ref=e423]
+          - generic [ref=e426]:
+            - generic [ref=e427]:
+              - img [ref=e429]
+              - heading "Elite Double-Deck" [level=3] [ref=e433]
+              - paragraph [ref=e434]: Fully bespoke multi-tier builds and flagship custom stands
+            - generic [ref=e435]:
+              - generic [ref=e436]: $20000
+              - generic [ref=e437]: /month
+            - generic [ref=e438]:
+              - generic [ref=e439]:
+                - img [ref=e441]
+                - generic [ref=e443]: Double-Deck or Elite Custom Layouts
+              - generic [ref=e444]:
+                - img [ref=e446]
+                - generic [ref=e448]: Integrated Private Executive Suites & VIP Lounge
+              - generic [ref=e449]:
+                - img [ref=e451]
+                - generic [ref=e453]: AR/VR Experience & Spatial Audio Design
+              - generic [ref=e454]:
+                - img [ref=e456]
+                - generic [ref=e458]: Dedicated Lead Architect Allocation
+              - generic [ref=e459]:
+                - img [ref=e461]
+                - generic [ref=e463]: Structural Compliance & Geographic Vetting
+            - button "Get Started" [ref=e464]
+      - generic:
+        - generic: ✎
+        - generic: ✏️
+    - generic [ref=e466]:
+      - generic [ref=e467]:
+        - heading "Real Events. Real Results." [level=2] [ref=e468]
+        - paragraph [ref=e469]: B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.
+      - generic [ref=e470]:
+        - generic [ref=e471] [cursor=pointer]:
+          - img "World Aviation Festival 2023" [ref=e473]
+          - generic [ref=e475]:
+            - generic [ref=e476]:
+              - img [ref=e478]
+              - generic [ref=e480]:
+                - heading "World Aviation Festival 2023" [level=3] [ref=e481]
+                - paragraph [ref=e482]: Delivered booth engagement, prospecting support, and meeting coordination that turned heavy event traffic into qualified executive conversations.
+            - link "Full Study" [ref=e484]:
+              - /url: /case-studies
+              - button "Full Study" [ref=e485]:
+                - text: Full Study
+                - img [ref=e486]
+        - generic [ref=e489] [cursor=pointer]:
+          - img "SIBOS 2023" [ref=e491]
+          - img [ref=e496]
+        - generic [ref=e500] [cursor=pointer]:
+          - img "DistribuTECH International 2023" [ref=e502]
+          - img [ref=e507]
+        - generic [ref=e510] [cursor=pointer]:
+          - img "SAP Sapphire 2023" [ref=e512]
+          - img [ref=e517]
+        - generic [ref=e520] [cursor=pointer]:
+          - img "Money 20/20 2023" [ref=e522]
+          - img [ref=e527]
+    - generic [ref=e533]:
+      - generic [ref=e534]:
+        - generic [ref=e535]:
+          - heading "Introduction to Our Services" [level=2] [ref=e536]
+          - paragraph [ref=e537]: At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.
+        - generic [ref=e538]:
+          - paragraph [ref=e541]: We don't just design exhibition booths — we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.
+          - generic [ref=e542]:
+            - generic [ref=e543]: "Our Mission:"
+            - paragraph [ref=e544]: “To transform your global event presence into measurable, high-impact commercial outcomes.”
+      - generic [ref=e546]:
+        - generic [ref=e547]:
+          - generic [ref=e549]:
+            - generic [ref=e550]: Countries Served
+            - generic [ref=e551]:
+              - generic [ref=e552]: 30+
+              - img [ref=e553]
+          - generic [ref=e557]:
+            - generic [ref=e558]: Global Events Handled
+            - generic [ref=e559]:
+              - generic [ref=e560]: 300+
+              - img [ref=e561]
+          - generic [ref=e565]:
+            - generic [ref=e566]: SQLs Delivered
+            - generic [ref=e567]:
+              - generic [ref=e568]: 2,500+
+              - img [ref=e569]
+          - generic [ref=e574]:
+            - generic [ref=e575]: Years of B2B Experience
+            - generic [ref=e576]:
+              - generic [ref=e577]: 10+
+              - img [ref=e578]
+          - generic [ref=e582]:
+            - generic [ref=e583]: Countries Served
+            - generic [ref=e584]:
+              - generic [ref=e585]: 30+
+              - img [ref=e586]
+          - generic [ref=e590]:
+            - generic [ref=e591]: Global Events Handled
+            - generic [ref=e592]:
+              - generic [ref=e593]: 300+
+              - img [ref=e594]
+          - generic [ref=e598]:
+            - generic [ref=e599]: SQLs Delivered
+            - generic [ref=e600]:
+              - generic [ref=e601]: 2,500+
+              - img [ref=e602]
+          - generic [ref=e607]:
+            - generic [ref=e608]: Years of B2B Experience
+            - generic [ref=e609]:
+              - generic [ref=e610]: 10+
+              - img [ref=e611]
+        - generic [ref=e614]:
+          - generic [ref=e616]:
+            - generic [ref=e617]: Years of B2B Experience
+            - generic [ref=e618]:
+              - generic [ref=e619]: 10+
+              - img [ref=e620]
+          - generic [ref=e624]:
+            - generic [ref=e625]: Countries Served
+            - generic [ref=e626]:
+              - generic [ref=e627]: 30+
+              - img [ref=e628]
+          - generic [ref=e632]:
+            - generic [ref=e633]: Global Events Handled
+            - generic [ref=e634]:
+              - generic [ref=e635]: 300+
+              - img [ref=e636]
+          - generic [ref=e640]:
+            - generic [ref=e641]: SQLs Delivered
+            - generic [ref=e642]:
+              - generic [ref=e643]: 2,500+
+              - img [ref=e644]
+          - generic [ref=e649]:
+            - generic [ref=e650]: Years of B2B Experience
+            - generic [ref=e651]:
+              - generic [ref=e652]: 10+
+              - img [ref=e653]
+          - generic [ref=e657]:
+            - generic [ref=e658]: Countries Served
+            - generic [ref=e659]:
+              - generic [ref=e660]: 30+
+              - img [ref=e661]
+          - generic [ref=e665]:
+            - generic [ref=e666]: Global Events Handled
+            - generic [ref=e667]:
+              - generic [ref=e668]: 300+
+              - img [ref=e669]
+          - generic [ref=e673]:
+            - generic [ref=e674]: SQLs Delivered
+            - generic [ref=e675]:
+              - generic [ref=e676]: 2,500+
+              - img [ref=e677]
+    - generic [ref=e682]:
+      - heading "Explore Related Solutions" [level=2] [ref=e683]
+      - generic [ref=e684]:
+        - link "Event Lead Generation" [ref=e686] [cursor=pointer]:
+          - /url: /services/global-event-solutions/event-lead-generation
+          - generic [ref=e687]:
+            - heading "Event Lead Generation" [level=3] [ref=e688]
+            - img [ref=e690]
+        - link "Custom Events" [ref=e693] [cursor=pointer]:
+          - /url: /services/global-event-solutions/custom-events
+          - generic [ref=e694]:
+            - heading "Custom Events" [level=3] [ref=e695]
+            - img [ref=e697]
+        - link "Event Booth Rental" [ref=e700] [cursor=pointer]:
+          - /url: /services/global-event-solutions/event-booth-rental
+          - generic [ref=e701]:
+            - heading "Event Booth Rental" [level=3] [ref=e702]
+            - img [ref=e704]
+    - generic [ref=e707]:
+      - generic [ref=e708]:
+        - heading "Why Choose B2B Sales Arrow for Booth Design?" [level=2] [ref=e709]
+        - img [ref=e711]
+      - generic [ref=e713]:
+        - article [ref=e714]:
+          - img [ref=e737]
+          - heading "Award-Winning Design" [level=3] [ref=e740]
+          - paragraph [ref=e741]: Recognized by industry leaders for creative excellence and innovation
+        - article [ref=e742]:
+          - img [ref=e765]
+          - heading "Expert Team" [level=3] [ref=e769]
+          - paragraph [ref=e770]: 150+ experienced professionals in design, production, and strategy
+        - article [ref=e771]:
+          - img [ref=e794]
+          - heading "Global Reach" [level=3] [ref=e799]
+          - paragraph [ref=e800]: Delivering booth experiences across 40+ countries worldwide
+        - article [ref=e801]:
+          - img [ref=e824]
+          - heading "Proven Results" [level=3] [ref=e827]
+          - paragraph [ref=e828]: Consistently exceeding client KPIs and ROI expectations
+    - generic [ref=e830]:
+      - generic [ref=e831]:
+        - heading "Upcoming Trade Shows & Global Industry Events" [level=2] [ref=e832]
+        - paragraph [ref=e833]: "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:"
+      - generic [ref=e834]:
+        - generic [ref=e836]:
+          - img "World Aviation Festival" [ref=e837]
+          - button "Meet Us There!" [ref=e840]:
+            - text: Meet Us There!
+            - img [ref=e841]
+          - heading "World Aviation Festival" [level=3] [ref=e845]
+        - generic [ref=e847]:
+          - img "Fintech Festival" [ref=e848]
+          - button "Meet Us There!" [ref=e851]:
+            - text: Meet Us There!
+            - img [ref=e852]
+          - heading "Fintech Festival" [level=3] [ref=e856]
+        - generic [ref=e858]:
+          - img "ITC Vegas" [ref=e859]
+          - button "Meet Us There!" [ref=e862]:
+            - text: Meet Us There!
+            - img [ref=e863]
+          - heading "ITC Vegas" [level=3] [ref=e867]
+        - generic [ref=e869]:
+          - img "SIBOS" [ref=e870]
+          - button "Meet Us There!" [ref=e873]:
+            - text: Meet Us There!
+            - img [ref=e874]
+          - heading "SIBOS" [level=3] [ref=e878]
+        - generic [ref=e880]:
+          - img "Money 20/20" [ref=e881]
+          - button "Meet Us There!" [ref=e884]:
+            - text: Meet Us There!
+            - img [ref=e885]
+          - heading "Money 20/20" [level=3] [ref=e889]
+        - generic [ref=e891]:
+          - img "Constellate" [ref=e892]
+          - button "Meet Us There!" [ref=e895]:
+            - text: Meet Us There!
+            - img [ref=e896]
+          - heading "Constellate" [level=3] [ref=e900]
+        - generic [ref=e902]:
+          - img "Converse" [ref=e903]
+          - button "Meet Us There!" [ref=e906]:
+            - text: Meet Us There!
+            - img [ref=e907]
+          - heading "Converse" [level=3] [ref=e911]
+    - generic [ref=e913]:
+      - generic [ref=e914]:
+        - heading "Blogs" [level=2] [ref=e916]
+        - link "View All Blogs" [ref=e917] [cursor=pointer]:
+          - /url: /blogs
+      - generic [ref=e919]:
+        - link [ref=e921] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/hiring-trade-show-booth-design-company/
+          - article [ref=e922]:
+            - img "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [ref=e925]
+            - generic [ref=e926]:
+              - paragraph [ref=e927]: Mar 18, 2026
+              - heading "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [level=3] [ref=e928]
+        - link [ref=e930] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/5-trade-show-booth-design-setup/
+          - article [ref=e931]:
+            - img "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [ref=e934]
+            - generic [ref=e935]:
+              - paragraph [ref=e936]: Mar 10, 2026
+              - heading "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [level=3] [ref=e937]
+        - link [ref=e939] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/b2b-exhibit-booth-design-features/
+          - article [ref=e940]:
+            - img "6 Must-Have Features for Effective B2B Booth Design" [ref=e943]
+            - generic [ref=e944]:
+              - paragraph [ref=e945]: Feb 9, 2026
+              - heading "6 Must-Have Features for Effective B2B Booth Design" [level=3] [ref=e946]
+        - link [ref=e948] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/booth-design-metrics/
+          - article [ref=e949]:
+            - img "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [ref=e952]
+            - generic [ref=e953]:
+              - paragraph [ref=e954]: Jan 12, 2026
+              - heading "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [level=3] [ref=e955]
+        - link [ref=e957] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/mid-event-trade-show-engagement-ideas/
+          - article [ref=e958]:
+            - img "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [ref=e961]
+            - generic [ref=e962]:
+              - paragraph [ref=e963]: Dec 5, 2025
+              - heading "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [level=3] [ref=e964]
+        - link [ref=e966] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/hiring-trade-show-booth-design-company/
+          - article [ref=e967]:
+            - img "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [ref=e970]
+            - generic [ref=e971]:
+              - paragraph [ref=e972]: Mar 18, 2026
+              - heading "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [level=3] [ref=e973]
+        - link [ref=e975] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/5-trade-show-booth-design-setup/
+          - article [ref=e976]:
+            - img "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [ref=e979]
+            - generic [ref=e980]:
+              - paragraph [ref=e981]: Mar 10, 2026
+              - heading "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [level=3] [ref=e982]
+        - link [ref=e984] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/b2b-exhibit-booth-design-features/
+          - article [ref=e985]:
+            - img "6 Must-Have Features for Effective B2B Booth Design" [ref=e988]
+            - generic [ref=e989]:
+              - paragraph [ref=e990]: Feb 9, 2026
+              - heading "6 Must-Have Features for Effective B2B Booth Design" [level=3] [ref=e991]
+        - link [ref=e993] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/booth-design-metrics/
+          - article [ref=e994]:
+            - img "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [ref=e997]
+            - generic [ref=e998]:
+              - paragraph [ref=e999]: Jan 12, 2026
+              - heading "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [level=3] [ref=e1000]
+        - link [ref=e1002] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/mid-event-trade-show-engagement-ideas/
+          - article [ref=e1003]:
+            - img "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [ref=e1006]
+            - generic [ref=e1007]:
+              - paragraph [ref=e1008]: Dec 5, 2025
+              - heading "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [level=3] [ref=e1009]
+        - link [ref=e1011] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/hiring-trade-show-booth-design-company/
+          - article [ref=e1012]:
+            - img "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [ref=e1015]
+            - generic [ref=e1016]:
+              - paragraph [ref=e1017]: Mar 18, 2026
+              - heading "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [level=3] [ref=e1018]
+        - link [ref=e1020] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/5-trade-show-booth-design-setup/
+          - article [ref=e1021]:
+            - img "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [ref=e1024]
+            - generic [ref=e1025]:
+              - paragraph [ref=e1026]: Mar 10, 2026
+              - heading "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [level=3] [ref=e1027]
+        - link [ref=e1029] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/b2b-exhibit-booth-design-features/
+          - article [ref=e1030]:
+            - img "6 Must-Have Features for Effective B2B Booth Design" [ref=e1033]
+            - generic [ref=e1034]:
+              - paragraph [ref=e1035]: Feb 9, 2026
+              - heading "6 Must-Have Features for Effective B2B Booth Design" [level=3] [ref=e1036]
+        - link [ref=e1038] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/booth-design-metrics/
+          - article [ref=e1039]:
+            - img "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [ref=e1042]
+            - generic [ref=e1043]:
+              - paragraph [ref=e1044]: Jan 12, 2026
+              - heading "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [level=3] [ref=e1045]
+        - link [ref=e1047] [cursor=pointer]:
+          - /url: https://b2bsalesarrow.com/blogs/mid-event-trade-show-engagement-ideas/
+          - article [ref=e1048]:
+            - img "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [ref=e1051]
+            - generic [ref=e1052]:
+              - paragraph [ref=e1053]: Dec 5, 2025
+              - heading "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [level=3] [ref=e1054]
+      - generic [ref=e1055]:
+        - button [ref=e1056]
+        - button [ref=e1057]
+        - button [ref=e1058]
+        - button [ref=e1059]
+        - button [ref=e1060]
+    - generic [ref=e1062]:
+      - heading "Trade Show Booth Design FAQs" [level=2] [ref=e1064]
+      - generic [ref=e1065]:
+        - generic [ref=e1067]:
+          - button "01. How much does custom trade show booth design cost?" [ref=e1068]:
+            - generic [ref=e1069]: "01."
+            - generic [ref=e1070]: How much does custom trade show booth design cost?
+            - img [ref=e1072]
+          - paragraph [ref=e1077]: Design fees typically range from $3,000 for a compact 10x10 to $60,000+ for large custom or double-deck structures. See our pricing guide table above for reference ranges. Contact us for a project-specific estimate based on your booth size, event, and brief.
+        - button "02. What is the difference between modular and custom booth design?" [ref=e1080]:
+          - generic [ref=e1081]: "02."
+          - generic [ref=e1082]: What is the difference between modular and custom booth design?
+          - img [ref=e1084]
+        - button "03. How long does the design process take?" [ref=e1087]:
+          - generic [ref=e1088]: "03."
+          - generic [ref=e1089]: How long does the design process take?
+          - img [ref=e1091]
+        - button "04. Can you work with our existing brand guidelines?" [ref=e1094]:
+          - generic [ref=e1095]: "04."
+          - generic [ref=e1096]: Can you work with our existing brand guidelines?
+          - img [ref=e1098]
+        - button "05. Can the booth be reused at multiple events?" [ref=e1101]:
+          - generic [ref=e1102]: "05."
+          - generic [ref=e1103]: Can the booth be reused at multiple events?
+          - img [ref=e1105]
+        - button "06. Do you handle fabrication and build as well?" [ref=e1108]:
+          - generic [ref=e1109]: "06."
+          - generic [ref=e1110]: Do you handle fabrication and build as well?
+          - img [ref=e1112]
+        - button "07. What events do you design booths for?" [ref=e1115]:
+          - generic [ref=e1116]: "07."
+          - generic [ref=e1117]: What events do you design booths for?
+          - img [ref=e1119]
+    - generic [ref=e1120]:
+      - img "Trade show booth design consultation backdrop" [ref=e1122]
+      - generic:
+        - generic:
+          - generic:
+            - img
+          - generic:
+            - img
+          - generic:
+            - img
+          - generic:
+            - img
+          - generic:
+            - img
+          - generic:
+            - img
+      - generic [ref=e1126]:
+        - generic [ref=e1127]: Ready to Design?
+        - heading "Every Square Foot Should Earn Its Place" [level=2] [ref=e1131]:
+          - generic [ref=e1132]: Every Square Foot
+          - generic [ref=e1133]: Should Earn Its Place
+        - paragraph [ref=e1134]: Every square foot of your booth should earn its place. We design custom trade show booths engineered for commercial momentum — because the space, the story, and the sales system inside it were built together from day one.
+        - generic [ref=e1135]:
+          - link "Request a Design Quote" [ref=e1136] [cursor=pointer]:
+            - /url: /contact
+            - img [ref=e1137]
+            - text: Request a Design Quote
+            - img [ref=e1139]
+          - link "Contact Us" [ref=e1141] [cursor=pointer]:
+            - /url: mailto:info@b2bsalesarrow.com
+            - img [ref=e1142]
+            - text: Contact Us
+        - generic [ref=e1145]:
+          - generic [ref=e1146]:
+            - img "Airtel" [ref=e1148]
+            - img "SingleStore" [ref=e1150]
+            - img "CSC" [ref=e1152]
+            - img "United Payments" [ref=e1154]
+          - paragraph [ref=e1155]: Trusted by 500+ companies
+        - generic [ref=e1156]:
+          - generic [ref=e1157]:
+            - paragraph [ref=e1158]: 24h
+            - paragraph [ref=e1159]: Response within 24h
+          - generic [ref=e1160]:
+            - paragraph [ref=e1161]: Free
+            - paragraph [ref=e1162]: Free consultation
+          - generic [ref=e1163]:
+            - paragraph [ref=e1164]: Custom
+            - paragraph [ref=e1165]: Custom proposals
+          - generic [ref=e1166]:
+            - paragraph [ref=e1167]: Flex
+            - paragraph [ref=e1168]: Flexible budgets
+    - generic [ref=e1175]:
+      - generic [ref=e1176]:
+        - generic [ref=e1177]:
+          - link "B2B Sales Arrow" [ref=e1178] [cursor=pointer]:
+            - /url: /
+            - img "B2B Sales Arrow" [ref=e1179]
+          - heading "Turn Your Next Trade Show into a Revenue Engine" [level=2] [ref=e1180]
+          - paragraph [ref=e1181]: We deliver premier global event solutions that turn your corporate presence into a measurable revenue engine. Let's build your pipeline together.
+          - generic [ref=e1182]:
+            - paragraph [ref=e1183]:
+              - link "info@b2bsalesarrow.com" [ref=e1184] [cursor=pointer]:
+                - /url: mailto:info@b2bsalesarrow.com
+            - paragraph [ref=e1185]: New York, USA
+            - paragraph [ref=e1186]: Bengaluru, India
+            - paragraph [ref=e1187]: Serving 30+ Countries
+          - generic [ref=e1188]:
+            - link "Visit B2B Sales Arrow on LinkedIn" [ref=e1189] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/b2b-sales-arrow/
+              - img [ref=e1190]
+            - generic "Twitter profile coming soon" [ref=e1192]:
+              - img [ref=e1193]
+            - generic "Instagram profile coming soon" [ref=e1195]:
+              - img [ref=e1196]
+        - generic [ref=e1198]:
+          - generic [ref=e1199]: Navigation
+          - list [ref=e1200]:
+            - listitem [ref=e1201]:
+              - link "Blogs" [ref=e1202] [cursor=pointer]:
+                - /url: /blogs
+            - listitem [ref=e1203]:
+              - link "Case Studies" [ref=e1204] [cursor=pointer]:
+                - /url: /case-studies
+            - listitem [ref=e1205]:
+              - link "About Us" [ref=e1206] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e1207]:
+              - link "Contact" [ref=e1208] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e1209]:
+          - generic [ref=e1210]: Stay Ahead
+          - paragraph [ref=e1211]: Subscribe to our enterprise growth newsletter.
+          - generic [ref=e1212]:
+            - textbox "Work Email" [ref=e1213]
+            - button [ref=e1214]:
+              - img [ref=e1215]
+      - generic [ref=e1217]:
+        - generic [ref=e1218]:
+          - link "Global Event Solutions" [ref=e1219] [cursor=pointer]:
+            - /url: /services/global-event-solutions
+          - list [ref=e1220]:
+            - listitem [ref=e1221]:
+              - link "Trade Show Booth Design" [ref=e1222] [cursor=pointer]:
+                - /url: /services/global-event-solutions/trade-show-booth-design
+            - listitem [ref=e1223]:
+              - link "Event Lead Generation" [ref=e1224] [cursor=pointer]:
+                - /url: /services/global-event-solutions/event-lead-generation
+            - listitem [ref=e1225]:
+              - link "Industry Events" [ref=e1226] [cursor=pointer]:
+                - /url: /services/global-event-solutions/industry-events
+            - listitem [ref=e1227]:
+              - link "Custom Events" [ref=e1228] [cursor=pointer]:
+                - /url: /services/global-event-solutions/custom-events
+            - listitem [ref=e1229]:
+              - link "Event Booth Rental" [ref=e1230] [cursor=pointer]:
+                - /url: /services/global-event-solutions/event-booth-rental
+            - listitem [ref=e1231]:
+              - link "Trade Show Booth Builder" [ref=e1232] [cursor=pointer]:
+                - /url: /services/global-event-solutions/trade-show-booth-builder
+            - listitem [ref=e1233]:
+              - link "Modular and Portable Booths" [ref=e1234] [cursor=pointer]:
+                - /url: /services/global-event-solutions/modular-portable-booths
+        - generic [ref=e1235]:
+          - link "Media Production" [ref=e1236] [cursor=pointer]:
+            - /url: /services/media-production
+          - list [ref=e1237]:
+            - listitem [ref=e1238]:
+              - link "Event Video Production" [ref=e1239] [cursor=pointer]:
+                - /url: /services/media-production/event-video-production
+            - listitem [ref=e1240]:
+              - link "Corporate Video Production" [ref=e1241] [cursor=pointer]:
+                - /url: /services/media-production/corporate-video-production
+            - listitem [ref=e1242]:
+              - link "Live Streaming Services" [ref=e1243] [cursor=pointer]:
+                - /url: /services/media-production/live-streaming-services
+            - listitem [ref=e1244]:
+              - link "Video Editing Services" [ref=e1245] [cursor=pointer]:
+                - /url: /services/media-production/video-editing-services
+        - generic [ref=e1246]:
+          - link "Performance Marketing" [ref=e1247] [cursor=pointer]:
+            - /url: /services/performance-marketing
+          - list [ref=e1248]:
+            - listitem [ref=e1249]:
+              - link "SEO Services" [ref=e1250] [cursor=pointer]:
+                - /url: /services/seo-services
+            - listitem [ref=e1251]:
+              - link "Paid Advertising" [ref=e1252] [cursor=pointer]:
+                - /url: /services/paid-advertising
+            - listitem [ref=e1253]:
+              - link "LinkedIn Ads for B2B" [ref=e1254] [cursor=pointer]:
+                - /url: /services/linkedin-ads
+        - generic [ref=e1255]:
+          - link "Sales Qualified Lead Generation" [ref=e1256] [cursor=pointer]:
+            - /url: /services/sales-qualified-lead-generation
+          - list
+        - generic [ref=e1257]:
+          - link "Market Research" [ref=e1258] [cursor=pointer]:
+            - /url: /services/market-research
+          - list [ref=e1259]:
+            - listitem [ref=e1260]:
+              - link "Data Augmentation" [ref=e1261] [cursor=pointer]:
+                - /url: /services/data-augmentation
+      - generic [ref=e1262]:
+        - paragraph [ref=e1263]: © 2026 B2B Sales Arrow. All Rights Reserved.
+        - generic [ref=e1264]:
+          - link "Privacy Policy" [ref=e1265] [cursor=pointer]:
+            - /url: /privacy-policy
+          - link "Terms of Service" [ref=e1266] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - link "Cookie Policy" [ref=e1267] [cursor=pointer]:
+            - /url: /cookie-policy
+  - button "Open Next.js Dev Tools" [ref=e1273] [cursor=pointer]:
+    - img [ref=e1274]
+  - alert [ref=e1277]

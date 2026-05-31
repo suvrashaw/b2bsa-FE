@@ -11,14 +11,14 @@ const eyebrowVariants = cva(
   "mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-semibold tracking-wide",
   {
     defaultVariants: {
-      variant: "neutral",
+      variant: "blue",
     },
     variants: {
       variant: {
         blue: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-        cyan: "border border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
-        neutral: "border border-brand-charcoal/10 bg-brand-charcoal/5 text-brand-charcoal",
-        primary: "border border-brand-primary/20 bg-brand-primary/10 text-brand-primary",
+        cyan: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+        neutral: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+        primary: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
       },
     },
   }

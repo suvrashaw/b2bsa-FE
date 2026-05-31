@@ -132,7 +132,7 @@ export const CinematicSequence = ({
               {heroOverlay.title}
             </Heading>
             <p
-              className="mb-10 max-w-xl text-lg leading-relaxed font-semibold"
+              className="mb-10 max-w-xl text-base leading-relaxed font-semibold"
               style={HERO_DESC_STYLE}
             >
               {heroOverlay.description}

@@ -1,10 +1,11 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
+import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
@@ -64,33 +65,9 @@ const SpotlightTextBlock = ({
     }),
     [isHovered]
   );
-  const ctaBtnStyle = useMemo(
-    () => ({
-      backgroundColor: isHovered ? "rgb(30 96 145)" : "transparent",
-      borderColor: isHovered ? "rgb(30 96 145)" : "rgb(107 114 128 / 0.3)",
-      boxShadow: isHovered ? "0 8px 32px rgb(30 96 145 / 0.25)" : "0 0 0 transparent",
-      color: isHovered ? "white" : "rgb(30 96 145)",
-      transform: isHovered ? "scale(1.05)" : "scale(1)",
-      transitionTimingFunction: EASE,
-    }),
-    [isHovered]
-  );
-  const arrowStyle = useMemo(
-    () => ({ transform: isHovered ? "rotate(45deg)" : "rotate(0deg)", transitionTimingFunction: EASE }),
-    [isHovered]
-  );
-  const ctaLabelStyle = useMemo(
-    () => ({
-      opacity: isHovered ? 1 : 0.5,
-      transform: isHovered ? "translateX(0)" : "translateX(-8px)",
-      transitionDelay: isHovered ? "100ms" : "0ms",
-      transitionTimingFunction: EASE,
-    }),
-    [isHovered]
-  );
 
   return (
-    <div className="relative z-10 flex w-full max-w-[360px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[340px] lg:max-w-[420px] lg:pt-4">
+    <div className="relative z-10 flex w-full max-w-[480px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[440px] lg:max-w-[520px] lg:pt-4">
       <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
         <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
@@ -99,37 +76,46 @@ const SpotlightTextBlock = ({
       </div>
 
       <Heading as="h2" className="relative">
-        <span className="block font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
+        <span className="block whitespace-nowrap font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
           {titleLine1}
         </span>
-        <span className="block font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
+        <span className="block whitespace-nowrap font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
           {titleLine2}
         </span>
       </Heading>
 
-      <p className="mt-6 max-w-[300px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[320px] md:text-base lg:mt-10 lg:max-w-[380px]" style={descStyle}>
+      <p className="mt-6 max-w-[420px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[400px] md:text-base lg:mt-10 lg:max-w-[480px]" style={descStyle}>
         {description}
       </p>
 
-      {ctaHref ? (
-        <Link className="mt-6 flex items-center gap-4 md:mt-8 lg:mt-10" href={ctaHref}>
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-500 md:h-11 md:w-11 lg:h-12 lg:w-12" style={ctaBtnStyle}>
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 md:h-4 md:w-4" style={arrowStyle} />
-          </div>
-          <span className="text-[10px] font-medium tracking-widest text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={ctaLabelStyle}>
+      <div className="mt-6 md:mt-8 lg:mt-10">
+        {ctaHref ? (
+          <Button
+            asChild
+            className={cn(
+              "gap-2 transition-all duration-500",
+              isHovered && "border-brand-blue bg-brand-blue/5"
+            )}
+            variant="secondary"
+          >
+            <Link href={ctaHref}>
+              {ctaLabel}
+              {isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
+            </Link>
+          </Button>
+        ) : (
+          <Button
+            className={cn(
+              "gap-2 transition-all duration-500",
+              isHovered && "border-brand-blue bg-brand-blue/5"
+            )}
+            variant="secondary"
+          >
             {ctaLabel}
-          </span>
-        </Link>
-      ) : (
-        <div className="mt-6 flex items-center gap-4 md:mt-8 lg:mt-10">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-500 md:h-11 md:w-11 lg:h-12 lg:w-12" style={ctaBtnStyle}>
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 md:h-4 md:w-4" style={arrowStyle} />
-          </div>
-          <span className="text-[10px] font-medium tracking-widest text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={ctaLabelStyle}>
-            {ctaLabel}
-          </span>
-        </div>
-      )}
+            {isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
+          </Button>
+        )}
+      </div>
     </div>
   );
 };
@@ -190,9 +176,8 @@ const SpotlightImageBlock = ({
     [isHovered]
   );
   return (
-    <div className="relative transition-all duration-700" style={wrapStyle}>
+    <div className="relative w-fit transition-all duration-700" style={wrapStyle}>
       <div className="absolute -inset-3 border transition-all duration-700 md:-inset-4" style={frameStyle} />
-
       <div className="relative h-[300px] w-[280px] overflow-hidden sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
         <div className="absolute -inset-1 transition-all duration-700" style={shadowStyle} />
         <Image alt={imageAlt} className="h-full w-full object-cover transition-all duration-1000" fill sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px" src={imageUrl} style={imgStyle} />
@@ -226,7 +211,7 @@ export const FeaturedSpotlight = ({
   return (
     <div
       className={cn(
-        "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-[minmax(320px,0.9fr)_minmax(420px,1.1fr)] md:gap-14 lg:max-w-7xl lg:grid-cols-[minmax(380px,0.9fr)_minmax(560px,1.1fr)] lg:gap-20",
+        "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
         className
       )}
       onMouseEnter={handleMouseEnter}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { BoothScrollShowcase } from "@/components/sections/BoothScrollShowcase";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -18,12 +19,12 @@ import {
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
   BOOTH_RENTAL_PROOF_BAR,
-  BOOTH_RENTAL_RANGE_SECTION,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
   BOOTH_RENTAL_WHY_CHOOSE_US,
 } from "@/content/services/detail/event-booth-rental";
+import { BOOTH_DESIGN_SHOWCASE_ITEMS } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
@@ -57,9 +58,8 @@ const Page = () => {
       page={BOOTH_RENTAL_PAGE}
       parentPage={GES_PAGE}
       process={BOOTH_RENTAL_PROCESS}
+      preProcessSections={<BoothScrollShowcase heading="Our Rental Booth Range" items={BOOTH_DESIGN_SHOWCASE_ITEMS} />}
       proofBar={BOOTH_RENTAL_PROOF_BAR}
-      secondaryServices={BOOTH_RENTAL_RANGE_SECTION}
-      secondaryServicesSectionType="carousel"
       why={BOOTH_RENTAL_WHY}
     />
   );

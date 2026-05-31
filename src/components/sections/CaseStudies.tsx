@@ -105,12 +105,12 @@ export const CaseStudies = ({
 
   return (
     <section className="relative bg-brand-gray py-20" id="work">
-      <div className="container mx-auto px-8">
-        <div className="mb-16 flex flex-col items-start text-left">
+      <div className="container mx-auto max-w-6xl px-8">
+        <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2">{heading}</Heading>
+          <Heading as="h2" className="text-center">{heading}</Heading>
           {description && (
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
               {description}
             </p>
           )}

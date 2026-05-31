@@ -25,7 +25,7 @@ export const TestimonialCard = ({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between gap-6 rounded-[20px] border border-gray-100 bg-white p-8 shadow-md",
+        "flex flex-col justify-between gap-6 rounded-3xl border border-gray-100 bg-white p-8 shadow-md",
         className
       )}
     >

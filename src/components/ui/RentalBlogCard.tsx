@@ -28,7 +28,7 @@ export const RentalBlogCard = ({ post }: RentalBlogCardProps) => {
             <p className="text-sm font-semibold tracking-wide text-brand-primary">{post.date}</p>
           ) : null}
 
-          <h3 className="mt-3 font-heading text-[2rem] leading-[1.12] font-bold text-black transition-colors duration-300 group-hover:text-brand-blue">
+          <h3 className="mt-3 font-heading text-xl leading-[1.12] font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-brand-blue md:text-2xl">
             {post.title}
           </h3>
         </div>

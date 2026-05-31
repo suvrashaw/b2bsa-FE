@@ -119,7 +119,7 @@ export const Hero = ({
         <div className="relative hidden h-[600px] w-full lg:block">
           <motion.div
             animate={HERO_RIGHT_ANIMATE}
-            className="absolute inset-0 overflow-hidden rounded-2xl border-8 border-white shadow-2xl"
+            className="absolute inset-0 overflow-hidden rounded-3xl border-8 border-white shadow-2xl"
             initial={HERO_RIGHT_INITIAL}
             transition={HERO_RIGHT_TRANSITION}
           >

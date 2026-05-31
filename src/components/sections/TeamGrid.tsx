@@ -57,7 +57,7 @@ export const TeamGrid = ({ data }: { data: TeamGridData }) => {
               viewport={TEAMGRID_VIEWPORT}
               whileInView={TEAMGRID_WHILE_IN_VIEW}
             >
-              <div className="relative mb-6 aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gray-100">
+              <div className="relative mb-6 aspect-[4/5] w-full overflow-hidden rounded-3xl bg-gray-100">
                 <Image
                   alt={member.name}
                   className="object-cover transition-all duration-700 group-hover:scale-105"

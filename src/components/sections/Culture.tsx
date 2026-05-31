@@ -71,7 +71,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
           highlights={CULTURE_WHISPER_HIGHLIGHTS}
           text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
         />
-        <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
+        <p className="mx-auto max-w-2xl text-center text-base leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
           {data.description}
         </p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">

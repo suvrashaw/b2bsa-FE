@@ -128,7 +128,7 @@ export const CaseStudiesGrid = ({
             </div>
           ) : (
             <div className="rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
-              <Heading as="h2" className="text-brand-charcoal">
+              <Heading as="h2" className="text-center text-brand-charcoal">
                 {emptyStateTitle}
               </Heading>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">

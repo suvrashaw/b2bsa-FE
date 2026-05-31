@@ -56,7 +56,7 @@ export const BoothSizesFeature = ({
       <div className="container mx-auto px-8">
         <div className="mb-14">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2">{heading}</Heading>
+          <Heading as="h2" className="text-center">{heading}</Heading>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
@@ -65,7 +65,7 @@ export const BoothSizesFeature = ({
             {items.map((item, index) => (
               <button
                 className={cn(
-                  "group w-full rounded-2xl border bg-white p-6 text-left transition-all duration-300",
+                  "group w-full rounded-xl border bg-white p-6 text-left transition-all duration-300",
                   activeIndex === index
                     ? "border-brand-blue/30 shadow-lg"
                     : "border-gray-100 shadow-sm hover:border-brand-blue/15 hover:shadow-md"
@@ -78,7 +78,7 @@ export const BoothSizesFeature = ({
                 <div className="flex items-center justify-between">
                   <h3
                     className={cn(
-                      "text-lg font-bold transition-colors duration-200",
+                      "text-base font-bold transition-colors duration-200",
                       activeIndex === index ? "text-brand-blue" : "text-brand-charcoal"
                     )}
                   >

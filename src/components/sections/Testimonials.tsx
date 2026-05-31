@@ -72,7 +72,7 @@ const TestimonialCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-[20px] border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
+      className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-3xl border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
         isVisible ? "" : "pointer-events-none"
       }`}
       initial={false}
@@ -93,7 +93,7 @@ const TestimonialCard = ({
             />
           </div>
           <div>
-            <p className="font-heading text-lg leading-tight font-bold text-gray-900">
+            <p className="font-heading text-base leading-tight font-bold text-gray-900">
               {testimonial.name}
             </p>
             <div className="mt-1 flex gap-1">
@@ -114,7 +114,7 @@ const TestimonialCard = ({
         </div>
 
         {!isCenter && (
-          <div className="absolute inset-0 rounded-[20px] bg-white/5 transition-colors duration-300 hover:bg-transparent" />
+          <div className="absolute inset-0 rounded-3xl bg-white/5 transition-colors duration-300 hover:bg-transparent" />
         )}
       </div>
     </motion.div>

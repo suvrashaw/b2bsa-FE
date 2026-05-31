@@ -59,6 +59,8 @@ export interface ServiceDetailProps {
     title: string;
   };
   proofBar?: string[];
+  proofBarDescription?: React.ReactNode;
+  proofBarHeading?: string;
   relatedServices?: { href: string; title: string }[];
   secondaryServices?: OurServicesProps;
   secondaryServicesSectionType?: "carousel" | "grid";
@@ -74,6 +76,7 @@ export interface ServiceDetailProps {
     titleLine2: string;
   };
   stats?: {
+    description?: string;
     items: { label: string; value: string }[];
     title: string;
   };
@@ -167,6 +170,8 @@ export const ServiceDetail = ({
   preProcessSections,
   process,
   proofBar,
+  proofBarDescription,
+  proofBarHeading,
   relatedServices,
   secondaryServices,
   secondaryServicesSectionType = "grid",
@@ -237,7 +242,7 @@ export const ServiceDetail = ({
 
       <ClientLogos overlap={false} />
 
-      {proofBar && <ProofBar stats={proofBar} />}
+      {proofBar && <ProofBar description={proofBarDescription} heading={proofBarHeading} stats={proofBar} />}
 
       {spotlight && (
         <section className="bg-brand-gray py-20">
@@ -290,7 +295,7 @@ export const ServiceDetail = ({
         />
       )}
 
-      {stats && <WhoWeAre items={stats.items} title={stats.title} />}
+      {stats && <WhoWeAre description={stats.description} items={stats.items} title={stats.title} />}
 
       {closingSections ?? (
         <>

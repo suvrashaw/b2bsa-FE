@@ -175,7 +175,7 @@ export const ServiceHero = ({
           {/* Description */}
           <motion.p
             animate={DESCRIPTION_ANIMATE}
-            className="mb-12 max-w-2xl text-lg leading-relaxed font-semibold lg:text-xl"
+            className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
             initial={DESCRIPTION_INITIAL}
             style={DESCRIPTION_STYLE}
             transition={DESCRIPTION_TRANSITION}

@@ -45,7 +45,7 @@ export const ProcessTimeline = ({
     <section className={cn("py-20 bg-brand-gray", className)}>
       <div className="container mx-auto px-8">
         {(resolvedTitle || subtitle) && (
-          <div className="mb-20 text-left">
+          <div className="mb-20 text-center">
             {subtitle && (
               <div className="mb-4  text-sm font-bold tracking-widest text-brand-blue uppercase">
                 {subtitle}
@@ -78,9 +78,9 @@ export const ProcessTimeline = ({
 
                 {/* Content */}
                 <div className="w-full pl-8">
-                  <div className="[#212529] rounded-2xl border border-gray-100 bg-white p-8 text-left shadow-xl transition-all duration-300 hover:border-brand-blue/30">
+                  <div className="[#212529] rounded-xl border border-gray-100 bg-white p-8 text-left shadow-xl transition-all duration-300 hover:border-brand-blue/30">
                     {showPhaseNumbers && (
-                      <div className="mb-2 text-lg font-bold text-brand-blue">
+                      <div className="mb-2 text-base font-bold text-brand-blue">
                         Phase 0{index + 1}
                       </div>
                     )}

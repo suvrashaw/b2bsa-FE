@@ -90,15 +90,14 @@ export const CreativePricing = ({
       <div className="relative z-10 container mx-auto px-8">
         {/* Header Block */}
         <div className="mb-20 flex flex-col items-center text-center">
-          <Eyebrow className="mb-4 rotate-[-1deg] font-sans" variant="primary">
+          <Eyebrow className="mb-4 font-sans" variant="primary">
             {tag}
           </Eyebrow>
 
           <div className="relative mb-6">
             <Heading
               as="h2"
-              className="relative rotate-[-1deg] font-heading text-2xl font-black text-brand-charcoal md:text-3xl lg:text-2xl"
-              preserveClassName
+              className="relative"
             >
               {title}
               <span className="absolute top-0 -right-12 rotate-12 text-brand-primary max-sm:hidden">
@@ -108,10 +107,10 @@ export const CreativePricing = ({
                 <Star className="h-6 w-6 animate-pulse fill-brand-blue/20 text-brand-blue" />
               </span>
             </Heading>
-            <div className="absolute -bottom-2 left-1/2 h-3 w-44 -translate-x-1/2 rotate-[-1deg] rounded-full bg-brand-blue/15 blur-xs" />
+            <div className="absolute -bottom-2 left-1/2 h-3 w-44 -translate-x-1/2 rounded-full bg-brand-blue/15 blur-xs" />
           </div>
 
-          <p className="max-w-xl rotate-[-1deg] font-sans text-lg font-medium text-gray-600 lg:text-xl">
+          <p className="max-w-xl font-sans text-base font-medium text-gray-600 lg:text-xl">
             {description}
           </p>
         </div>
@@ -125,10 +124,7 @@ export const CreativePricing = ({
             return (
               <div
                 className={cn(
-                  "group relative transition-all duration-500",
-                  isFirst && "rotate-[-1deg] hover:rotate-0",
-                  isSecond && "rotate-[1deg] hover:rotate-0",
-                  !isFirst && !isSecond && "rotate-[-1.5deg] hover:rotate-0"
+                  "group relative transition-all duration-500"
                 )}
                 key={tier.name}
               >

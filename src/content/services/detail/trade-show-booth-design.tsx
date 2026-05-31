@@ -10,6 +10,120 @@ export const BOOTH_DESIGN_HERO = {
 
 export { GLOBAL_PROOF_STATS as BOOTH_DESIGN_PROOF_BAR } from "../../shared";
 
+export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
+  {
+    cta: { href: "/contact", label: "Get 10×10 Booth Quote" },
+    descriptions: [
+      "100 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Small",
+    heading: "10×10",
+    id: "showcase-10x10",
+    image: "/images/booth/10x10.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 10×20 Booth Quote" },
+    descriptions: [
+      "200 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Medium",
+    heading: "10×20",
+    id: "showcase-10x20",
+    image: "/images/booth/10x20.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 10×30 Booth Quote" },
+    descriptions: [
+      "400 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Large",
+    heading: "10×30",
+    id: "showcase-10x30",
+    image: "/images/booth/10x30.png",
+  },
+  {
+    cta: { href: "/contact", label: "Get 20×20 Booth Quote" },
+    descriptions: [
+      "400 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Large",
+    heading: "20×20",
+    id: "showcase-20x20",
+    image: "/images/booth/20x20.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 20×30 Booth Quote" },
+    descriptions: [
+      "600 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "X-Large",
+    heading: "20×30",
+    id: "showcase-20x30",
+    image: "/images/booth/20x30.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 20×40 Booth Quote" },
+    descriptions: [
+      "600 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "X-Large",
+    heading: "20×40",
+    id: "showcase-20x40",
+    image: "/images/booth/20x40.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 30×30 Booth Quote" },
+    descriptions: [
+      "900 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Island",
+    heading: "30×30",
+    id: "showcase-30x30",
+    image: "/images/booth/30x30.png",
+  },
+  {
+    cta: { href: "/contact", label: "Get 30×40 Booth Quote" },
+    descriptions: [
+      "900 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Island",
+    heading: "30×40",
+    id: "showcase-30x40",
+    image: "/images/booth/30x40.png",
+  },
+  {
+    cta: { href: "/contact", label: "Get 40×40 Booth Quote" },
+    descriptions: [
+      "1600 sq ft",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
+    eyebrow: "Mega",
+    heading: "40×40",
+    id: "showcase-40x40",
+    image: "/images/booth/40x40.jpg",
+  },
+];
+
+export const BOOTH_DESIGN_STATS = {
+  description:
+    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.",
+  items: [
+    { label: "Countries Served", value: "30+" },
+    { label: "Global Events Handled", value: "300+" },
+    { label: "SQLs Delivered", value: "2,500+" },
+    { label: "Years of B2B Experience", value: "10+" },
+  ],
+  title: "Introduction to Our Services",
+};
+
 export const BOOTH_DESIGN_WHY = {
   ctaHref: "/contact",
   ctaLabel: "Request a Design Quote",
@@ -332,24 +446,28 @@ export const BOOTH_DESIGN_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Booth Design?",
   items: [
     {
-      description: "Recognized by industry leaders for creative excellence and innovation",
+      description:
+        "We manage every detail, from design to execution, ensuring a seamless and impactful booth experience.",
       icon: "Award" as const,
-      title: "Award-Winning Design",
+      title: "360-Degree Booth Solutions",
     },
     {
-      description: "150+ experienced professionals in design, production, and strategy",
-      icon: "Users2" as const,
-      title: "Expert Team",
-    },
-    {
-      description: "Delivering booth experiences across 40+ countries worldwide",
+      description:
+        "We've showcased at top international events in Dubai, Beijing, Toronto, the USA, and Australia, including Money20/20, Adobe Summit, Sibos, WAF, ONS, and more.",
       icon: "Globe2" as const,
-      title: "Global Reach",
+      title: "Global Reach & Premier Events",
     },
     {
-      description: "Consistently exceeding client KPIs and ROI expectations",
+      description:
+        "Our booths incorporate the latest technology to boost engagement and enhance brand visibility.",
       icon: "TrendingUp" as const,
-      title: "Proven Results",
+      title: "Tech-Integrated Booths",
+    },
+    {
+      description:
+        "With experience across IT, finance, healthcare, BFSI, and more, we deliver customized solutions for every sector.",
+      icon: "Users2" as const,
+      title: "Industry Expertise",
     },
   ],
 };

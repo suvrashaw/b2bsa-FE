@@ -99,7 +99,7 @@ const getShowcaseCardClassName = (status: CardStatus) => {
   const pointerEventsClassName = isActive ? "pointer-events-auto" : "pointer-events-none";
 
   return cn(
-    "absolute inset-0 origin-center overflow-hidden rounded-[2rem] bg-white shadow-2xl md:rounded-[2.8rem]",
+    "absolute inset-0 origin-center overflow-hidden rounded-[2rem] bg-white shadow-2xl",
     depthClassName,
     pointerEventsClassName
   );
@@ -151,7 +151,7 @@ const FeatureNavItem = ({
   const wrappedDistance = wrap(-(itemCount / 2), itemCount / 2, distance);
   const navItemMotion = getNavItemMotion(wrappedDistance);
   const buttonClassName = cn(
-    "group relative flex w-[90%] md:w-full items-center justify-center gap-4 rounded-full px-6 py-3.5 text-center transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4 mx-auto",
+    "group relative inline-flex w-fit items-center gap-4 rounded-full px-6 py-3.5 transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4",
     isActive
       ? "z-10 bg-brand-blue text-white shadow-xl shadow-brand-blue/20"
       : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal"
@@ -181,7 +181,7 @@ const FeatureNavItem = ({
         type="button"
       >
         {renderFeatureIcon(feature.icon, isActive)}
-        <span className="truncate text-xs font-semibold tracking-wider uppercase md:text-[13px]">
+        <span className="text-xs font-semibold tracking-wider uppercase md:text-[13px]">
           {feature.label}
         </span>
       </button>
@@ -230,9 +230,6 @@ const FeatureShowcaseCard = ({
           isActive ? "opacity-100" : "opacity-0"
         )}
       >
-        <div className="mb-3 w-fit rounded-full bg-brand-blue/80 px-3.5 py-1 font-heading text-[10px] font-bold tracking-widest text-white uppercase shadow-lg backdrop-blur-sm">
-          {index + 1} • {feature.label}
-        </div>
         <p className="text-base leading-relaxed text-gray-200 md:text-lg">
           {feature.description}
         </p>
@@ -281,11 +278,9 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
   }, [isPaused, isVisible, nextStep, resolvedFeatures.length]);
 
   return (
-    <div className="mx-auto w-full max-w-7xl md:p-8" ref={containerRef}>
-      <div className="relative flex min-h-[600px] flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-sm lg:min-h-[640px] lg:flex-row lg:rounded-[4rem]">
-        <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden bg-brand-gray/50 px-8 md:min-h-[450px] md:px-16 lg:w-[45%] lg:pl-16">
-          <div className="absolute inset-x-0 top-0 z-40 h-12 bg-gradient-to-b from-brand-gray/50 via-brand-gray/40 to-transparent md:h-20 lg:h-16" />
-          <div className="absolute inset-x-0 bottom-0 z-40 h-12 bg-gradient-to-t from-brand-gray/50 via-brand-gray/40 to-transparent md:h-20 lg:h-16" />
+    <div className="mx-auto w-full max-w-7xl" ref={containerRef}>
+      <div className="relative flex min-h-[600px] flex-col overflow-hidden lg:min-h-[640px] lg:flex-row">
+        <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 lg:w-[55%] lg:pl-16">
 
           <div className="relative z-20 flex h-[300px] w-full items-center justify-center lg:justify-start">
             {resolvedFeatures.map((feature, index) => (
@@ -302,7 +297,7 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
           </div>
         </div>
 
-        <div className="relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden bg-brand-gray/20 px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:px-10 lg:py-16">
+        <div className="relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:py-16 lg:pr-14 lg:pl-0">
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">
             {resolvedFeatures.map((feature, index) => (
               <FeatureShowcaseCard

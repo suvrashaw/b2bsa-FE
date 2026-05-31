@@ -41,7 +41,7 @@ export const OurServices = ({
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2">{heading}</Heading>
+          <Heading as="h2" className="text-center">{heading}</Heading>
         </div>
 
         <div className="relative flex flex-col gap-12">

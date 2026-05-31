@@ -35,10 +35,10 @@ export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: 
         onClick={handleClick}
         type="button"
       >
-        <span className="w-9 shrink-0 font-heading text-sm font-bold text-brand-cyan">
+        <span className="w-9 shrink-0 text-base font-bold text-brand-blue">
           {num}.
         </span>
-        <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-[17px]">
+        <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-lg">
           {question}
         </span>
         <span className="shrink-0 text-brand-cyan">
@@ -55,7 +55,7 @@ export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: 
             initial={ANSWER_INITIAL}
             transition={ANSWER_TRANSITION}
           >
-            <div className="border-t border-gray-100 px-6 pt-5 pb-6">
+            <div className="px-6 pt-1 pb-6">
               <p className="text-[15px] leading-relaxed text-brand-charcoal/60">{answer}</p>
             </div>
           </motion.div>
