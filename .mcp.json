@@ -4,6 +4,22 @@
       "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-figma.sh",
       "args": []
     },
+    "figma-console": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-figma-console.sh",
+      "args": []
+    },
+    "framelink": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-framelink.sh",
+      "args": []
+    },
+    "github": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-github.sh",
+      "args": []
+    },
+    "playwright": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-playwright.sh",
+      "args": []
+    },
     "21st-dev": {
       "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-21st-dev.sh",
       "args": []
@@ -22,6 +38,14 @@
     },
     "tailwindcss": {
       "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-tailwindcss.sh",
+      "args": []
+    },
+    "chrome-devtools": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-chrome-devtools.sh",
+      "args": []
+    },
+    "chrome_devtools": {
+      "command": "/Users/suvra/Documents/B2BSA2/scripts/mcp-chrome-devtools.sh",
       "args": []
     }
   }

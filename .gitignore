@@ -57,10 +57,15 @@ next-env.d.ts
 .gemini/
 .antigravity/
 scripts/*
+!scripts/mcp-figma.sh
+!scripts/mcp-figma-console.sh
+!scripts/mcp-framelink.sh
+!scripts/mcp-github.sh
+!scripts/mcp-playwright.sh
 !scripts/mcp-21st-dev.sh
 !scripts/mcp-shadcn.sh
 !scripts/mcp-magic-ui.sh
 !scripts/mcp-v0.sh
 !scripts/mcp-tailwindcss.sh
+!scripts/mcp-chrome-devtools.sh
 !scripts/load-env-mcp.sh
-

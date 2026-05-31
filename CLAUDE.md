@@ -18,8 +18,25 @@ Use only the project-local MCP servers configured in this repository:
 - figma
 - figma-console
 - framelink
+- github
+- playwright
+- 21st-dev
+- shadcn
+- magicui
+- vercel-v0
+- tailwindcss
+- chrome-devtools
+- chrome_devtools
 
 These MCP servers must load credentials from this project’s `.env.mcp`.
+
+The Figma MCP context must use the personal Suvra Shaw Figma account and the B2B Sales Arrow file listed above.
+
+Figma-specific local MCP wrappers:
+
+- figma: `/Users/suvra/Documents/B2BSA2/scripts/mcp-figma.sh`
+- figma-console: `/Users/suvra/Documents/B2BSA2/scripts/mcp-figma-console.sh`
+- framelink: `/Users/suvra/Documents/B2BSA2/scripts/mcp-framelink.sh`
 
 ## Stack
 
