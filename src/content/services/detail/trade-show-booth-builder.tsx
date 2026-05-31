@@ -1,3 +1,4 @@
+import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_BUILDER_HERO = {
@@ -8,67 +9,119 @@ export const BOOTH_BUILDER_HERO = {
 
 export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
 
-export const BOOTH_BUILDER_WHY = {
+export const BOOTH_BUILDER_INTRO = {
+  ctaHref: "/contact",
+  ctaLabel: "Plan Your Stand",
   description:
-    "We offer three engagement models for enterprise clients:\n\n• Full exhibition stand design and build — concept, 3D design, fabrication, logistics, and on-site installation under one team\n• Turnkey booth solutions — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps\n• Design-only with production-ready files — for clients with a preferred fabrication partner\n\nOur turnkey exhibition booths are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600",
-  titleLine1: "Exhibition Stand Design,",
-  titleLine2: "Build, and Turnkey Solutions",
+    "Global exhibitors need more than a booth fabricator. They need a partner who can translate brand requirements into a buildable exhibition stand, coordinate remotely with internal teams, manage fabrication quality, and deliver the finished environment on-site without vendor gaps. B2B Sales Arrow provides exhibition stand design, turnkey booth construction, logistics, installation, and post-show support for enterprise teams exhibiting across international markets.",
+  imageAlt: "Enterprise exhibition stand built for a global trade show",
+  imageUrl: "/images/booth/30x40.png",
+  label: "Introduction",
+  titleLine1: "Exhibition Stand Builder",
+  titleLine2: "and Turnkey Solutions",
 };
 
 export const BOOTH_BUILDER_DELIVERABLES = {
-  heading: "What We Build",
+  heading: "What We Do in Exhibition Stand Builder",
   services: [
     {
       color: "bg-brand-blue",
       description:
-        "Fully bespoke builds for premium finish and structural integrity across any booth size.",
+        "Bespoke exhibition structures engineered for premium finish, structural integrity, and brand impact across compact booths and large-format stands.",
       icon: "Hammer",
       id: "timber-steel",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/40x40.jpg",
       title: "Custom Timber and Steel Structures",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "Flexible, reusable structures that adapt across different booth sizes and event formats without losing brand consistency.",
+        "Reusable booth systems configured for different event footprints while keeping the same brand language, visitor journey, and commercial intent.",
       icon: "Layers",
       id: "modular",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/20x30.jpg",
       title: "Modular System Builds",
     },
     {
       color: "bg-brand-primary",
       description:
-        "Executive meeting suites above, public engagement zones below — maximising commercial use of allocated floor space.",
+        "Multi-level exhibition stands that combine executive meeting suites, demo zones, and public engagement areas in one high-value footprint.",
       icon: "Building2",
       id: "double-deck",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/30x40.png",
       title: "Double-Deck and Multi-Level Booths",
     },
     {
       color: "bg-brand-blue",
       description:
-        "LED walls, digital displays, interactive screens, and product demo systems built into the booth architecture.",
+        "LED walls, display screens, demo stations, and interactive technology integrated directly into the stand architecture.",
       icon: "Monitor",
       id: "digital-led",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/20x40.jpg",
       title: "Digital and LED Integration",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "Reusable components, lower-waste fabrication, and recyclable graphic options for brands with environmental commitments.",
+        "Lower-waste fabrication choices, reusable components, and recyclable graphic options for brands with sustainability commitments.",
       icon: "Leaf",
       id: "sustainable",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/booth/10x30.png",
       title: "Sustainable Builds",
+    },
+  ],
+};
+
+export const BOOTH_BUILDER_FORMATS_SECTION = {
+  ctaLabel: "Learn More",
+  eyebrow: "Formats",
+  heading: "Booth Sizes and Formats We Design",
+  serviceLabel: "Booth Size",
+  services: [
+    {
+      color: "bg-brand-blue",
+      description:
+        "A focused format for regional shows, first-time exhibitors, and satellite event presences that still need a polished brand environment.",
+      icon: "Layers",
+      id: "builder-10x10",
+      image: "/images/booth/10x10.jpg",
+      title: "10x10 Booth (100 sq ft)",
+    },
+    {
+      color: "bg-brand-cyan",
+      description:
+        "An extended inline stand with room for product demos, messaging hierarchy, and a compact conversation zone.",
+      icon: "Monitor",
+      id: "builder-10x20",
+      image: "/images/booth/10x20.jpg",
+      title: "10x20 Inline (200 sq ft)",
+    },
+    {
+      color: "bg-brand-primary",
+      description:
+        "A high-visibility island format for four-sided traffic, demo areas, meeting space, storage, and AV integration.",
+      icon: "Target",
+      id: "builder-20x20",
+      image: "/images/booth/20x20.jpg",
+      title: "20x20 Island (400 sq ft)",
+    },
+    {
+      color: "bg-brand-blue",
+      description:
+        "A premium structure with upper-level private meetings and a lower-level engagement environment for major global events.",
+      icon: "Users",
+      id: "builder-double-deck",
+      image: "/images/booth/30x30.png",
+      title: "Double-Deck Structure",
+    },
+    {
+      color: "bg-brand-cyan",
+      description:
+        "A fully bespoke exhibition environment for flagship launches, category-defining brand moments, and complex sales experiences.",
+      icon: "Sparkles",
+      id: "builder-custom-environments",
+      image: "/images/booth/40x40.jpg",
+      title: "Custom Environments",
     },
   ],
 };
@@ -112,7 +165,49 @@ export const BOOTH_BUILDER_PROCESS = {
       title: "Breakdown and Storage",
     },
   ],
-  title: "Our Booth Build Process",
+  title: "Our Trade Show Booth Build Process",
+};
+
+export const BOOTH_BUILDER_FUTURE_READY = {
+  heading: "Future-Ready Stands for Exhibitions & Trade Shows",
+  items: [
+    {
+      bullets: [
+        "Flexible timelines for short-term builds, flagship exhibitions, and multi-market programs.",
+        "In-house fabrication planning with quality-checked components ready for on-site installation.",
+        "Global delivery support for international venues, shipping windows, and event deadlines.",
+      ],
+      image: {
+        alt: "Custom modular exhibition stand",
+        src: "/images/booth/20x40.jpg",
+      },
+      title: "Custom Exhibition Stand Solutions - Modular & Bespoke",
+    },
+    {
+      bullets: [
+        "End-to-end project management from concept alignment through production and final handover.",
+        "Virtual and on-site consultation to align booth architecture with brand and sales objectives.",
+        "Dedicated guidance across design approvals, materials, technical details, and venue coordination.",
+      ],
+      image: {
+        alt: "3D exhibition stand design and project planning",
+        src: "/images/booth/30x40.png",
+      },
+      title: "3D Design & Project Management Services",
+    },
+    {
+      bullets: [
+        "Design and customization shaped around visitor flow, demo requirements, and meeting spaces.",
+        "Fabrication, construction, logistics, and installation managed as one connected delivery path.",
+        "On-site supervision and final quality checks before the show floor opens.",
+      ],
+      image: {
+        alt: "Finished trade show stand ready for attendees",
+        src: "/images/booth/40x40.jpg",
+      },
+      title: "Our Process To Get Your Stand Ready",
+    },
+  ],
 };
 
 export const BOOTH_BUILDER_CASE_STUDIES = {
@@ -123,42 +218,170 @@ export const BOOTH_BUILDER_FAQ = {
   faqs: [
     {
       answer:
-        "A turnkey exhibition booth is an all-inclusive service — design, fabrication, logistics, installation, and breakdown — managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
+        "A turnkey exhibition booth is an all-inclusive build service covering design, fabrication, graphics, logistics, installation, dismantling, and post-event support. Your team works with one accountable partner instead of coordinating separate vendors.",
       id: "turnkey",
       question: "What is a turnkey trade show booth?",
     },
     {
       answer:
-        "Yes — exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
+        "Yes. We support full exhibition stand design and build, from concept and 3D visualization through production files, material planning, fabrication, shipping, and on-site installation.",
       id: "design-build",
       question: "Do you also do exhibition stand design and building?",
     },
     {
       answer:
-        "Standard custom builds: 12–16 weeks from design brief to installation. Double-deck or technology-heavy structures: 16–20 weeks. For tight timelines, modular or rental options may be more appropriate.",
+        "Standard custom booths usually need 12-16 weeks from approved brief to installation. Double-deck, technology-heavy, or international builds can require 16-20 weeks depending on venue approvals and logistics.",
       id: "lead-time",
       question: "What is the typical build lead time?",
     },
     {
       answer:
-        "Yes — included in our turnkey booth service. We have managed deliveries across 40+ countries.",
+        "Yes. For turnkey programs, we coordinate crating, shipping, customs documentation, venue delivery windows, and local installation partners across international event markets.",
       id: "shipping",
       question: "Do you handle international shipping and customs?",
     },
     {
       answer:
-        "Yes — reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
+        "Yes. Reuse planning can be built into the structure from the start so core components can travel between events while graphics, surfaces, and messaging refresh for each show.",
       id: "reuse",
       question: "Can the booth be reused?",
     },
     {
       answer:
-        "Yes — our team manages assembly, alignment, quality review, and on-site support throughout the event.",
+        "Yes. We manage assembly, alignment, technical checks, finishing details, and final quality review before the show opens.",
       id: "installation",
       question: "Do you manage on-site installation?",
     },
+    {
+      answer:
+        "A modular booth uses reusable structural systems that can be reconfigured across event sizes. A custom booth is designed and fabricated around one specific brand experience. We recommend the format based on timeline, budget, reuse goals, and event importance.",
+      id: "modular-vs-custom",
+      question: "What is the difference between modular and custom booth builds?",
+    },
+    {
+      answer:
+        "Yes. We build compact 10x10 booths, inline 10x20 stands, 20x20 island booths, double-deck structures, and custom environments for flagship exhibitions.",
+      id: "sizes",
+      question: "What booth sizes can you build?",
+    },
   ],
-  heading: "Booth Production FAQs",
+  heading: "Trade Show Booth Builder FAQs",
+  layoutMode: "fit" as const,
+};
+
+export const BOOTH_BUILDER_RELATED_SERVICES = [
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/event-booth-rental",
+    title: "Event Booth Rental",
+  },
+  {
+    href: "/services/global-event-solutions/modular-portable-booths",
+    title: "Modular and Portable Booths",
+  },
+];
+
+export const BOOTH_BUILDER_WHY_CHOOSE_US = {
+  heading: "Why Choose B2B Sales Arrow for Exhibition Stand Building?",
+  items: [
+    {
+      description: "Recognized by industry leaders for creative excellence and innovation",
+      icon: "Award" as const,
+      title: "Award-Winning",
+    },
+    {
+      description: "150+ experienced professionals across design, production, and strategy",
+      icon: "Users2" as const,
+      title: "Expert Team",
+    },
+    {
+      description: "Delivering exhibition experiences across 30+ countries worldwide",
+      icon: "Globe2" as const,
+      title: "Global Reach",
+    },
+    {
+      description: "Consistently exceeding client KPIs and ROI expectations",
+      icon: "TrendingUp" as const,
+      title: "Proven Results",
+    },
+  ],
+};
+
+export const BOOTH_BUILDER_BLOGS_SECTION = {
+  heading: "Blogs",
+};
+
+const BOOTH_BUILDER_BLOG_IDS = [
+  "hiring-trade-show-booth-design-company",
+  "5-trade-show-booth-design-setup",
+  "b2b-exhibit-booth-design-features",
+  "booth-design-metrics",
+  "mid-event-trade-show-engagement-ideas",
+  "eco-booth-design-5-unexpected-materials-that-make-a-big-impact",
+];
+
+export const BOOTH_BUILDER_BLOG_POSTS = BOOTH_BUILDER_BLOG_IDS.flatMap((id) => {
+  const post = SHARED_BLOG_POSTS.find((blogPost) => blogPost.id === id);
+  return post ? [post] : [];
+});
+
+export const BOOTH_BUILDER_CONTACT_CTA = {
+  backgroundImage: {
+    alt: "Exhibition stand build consultation backdrop",
+    src: "/images/booth/40x40.jpg",
+  },
+  badge: "Ready to Build?",
+  description:
+    "From first brief to final installation, your exhibition stand should move with the same discipline as your sales strategy. Share the event, footprint, timeline, and goals, and we will map the right build path.",
+  headingLines: ["Let's Build Your Next", "Exhibition Stand"] as [string, string],
+  primaryCta: {
+    href: "/contact",
+    label: "Request a Build Quote",
+  },
+  proofLabel: "Trusted by 500+ companies",
+  proofLogos: [
+    {
+      alt: "Airtel",
+      src: "/logos/circle-airtel.svg",
+    },
+    {
+      alt: "SingleStore",
+      src: "/logos/circle-singlestore.svg",
+    },
+    {
+      alt: "CSC",
+      src: "/logos/circle-csc.svg",
+    },
+    {
+      alt: "United Payments",
+      src: "/logos/circle-united-payments.svg",
+    },
+  ],
+  secondaryCta: {
+    href: "mailto:info@b2bsalesarrow.com",
+    label: "Contact Us",
+  },
+  trustItems: [
+    {
+      label: "Response within 24h",
+      value: "24h",
+    },
+    {
+      label: "Free consultation",
+      value: "Free",
+    },
+    {
+      label: "Custom proposals",
+      value: "Custom",
+    },
+    {
+      label: "Flexible budgets",
+      value: "Flex",
+    },
+  ],
 };
 
 export const BOOTH_BUILDER_PAGE = {

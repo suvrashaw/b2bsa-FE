@@ -53,6 +53,7 @@ export interface ServiceDetailProps {
   middleSections?: ReactNode;
   page: MarketingPageIdentity;
   parentPage?: MarketingPageIdentity;
+  preProcessSections?: ReactNode;
   process?: {
     phases: { description: string; title: string }[];
     title: string;
@@ -61,6 +62,7 @@ export interface ServiceDetailProps {
   relatedServices?: { href: string; title: string }[];
   secondaryServices?: OurServicesProps;
   secondaryServicesSectionType?: "carousel" | "grid";
+  showPhaseNumbers?: boolean;
   spotlight?: {
     ctaLabel?: string;
     description: string;
@@ -162,11 +164,13 @@ export const ServiceDetail = ({
   middleSections,
   page,
   parentPage,
+  preProcessSections,
   process,
   proofBar,
   relatedServices,
   secondaryServices,
   secondaryServicesSectionType = "grid",
+  showPhaseNumbers = true,
   spotlight,
   stats,
   why,
@@ -262,7 +266,15 @@ export const ServiceDetail = ({
         </section>
       )}
 
-      {process && <ProcessTimeline phases={process.phases} title={process.title} />}
+      {preProcessSections}
+
+      {process && (
+        <ProcessTimeline
+          phases={process.phases}
+          showPhaseNumbers={showPhaseNumbers}
+          title={process.title}
+        />
+      )}
 
       {middleSections}
 

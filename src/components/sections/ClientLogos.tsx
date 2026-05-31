@@ -43,7 +43,7 @@ const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
       >
         <img
           alt={logo.alt}
-          className="h-8 w-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
+          className="h-8 w-auto max-w-[140px] object-contain grayscale transition-all duration-300 hover:scale-110 hover:grayscale-0"
           draggable={false}
           src={logo.src}
         />

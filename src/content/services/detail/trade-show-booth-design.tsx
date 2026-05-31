@@ -1,3 +1,5 @@
+import { Layers, Layout, Maximize } from "lucide-react";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_DESIGN_HERO = {
@@ -9,10 +11,24 @@ export const BOOTH_DESIGN_HERO = {
 export { GLOBAL_PROOF_STATS as BOOTH_DESIGN_PROOF_BAR } from "../../shared";
 
 export const BOOTH_DESIGN_WHY = {
+  ctaHref: "/contact",
+  ctaLabel: "Request a Design Quote",
+  description:
+    "At B2B Sales Arrow, we design custom trade show booths that stop the right buyers deliberately — because the space, the story, and the sales system inside it were built together from day one. Every square foot is engineered around buyer psychology and commercial conversion, not aesthetics alone.",
+  imageAlt: "Custom trade show booth design by B2B Sales Arrow",
+  imageUrl:
+    "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=80&w=1600",
+  label: "Our Services",
+  titleLine1: "Introduction to Our",
+  titleLine2: "Design Services",
+};
+
+export const BOOTH_DESIGN_SPOTLIGHT = {
   description:
     "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible.\n\nThe gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?",
+  imageAlt: "Empty trade show booth without footfall",
   imageUrl:
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1600",
   titleLine1: "Why Generic Booth Design",
   titleLine2: "Costs You Qualified Leads",
 };
@@ -27,7 +43,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
       icon: "box",
       id: "architecture",
       image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=1200",
       title: "Spatial Architecture and Traffic Flow",
     },
     {
@@ -37,7 +53,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
       icon: "palette",
       id: "branding",
       image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1605289982774-9a6fef564df8?auto=format&fit=crop&q=80&w=1200",
       title: "Graphic Design and Brand Integration",
     },
     {
@@ -47,7 +63,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
       icon: "cpu",
       id: "digital",
       image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=1200",
       title: "Interactive and Digital Display Integration",
     },
     {
@@ -67,7 +83,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
       icon: "users",
       id: "planning",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=1200",
       title: "Meeting Room and Demo Zone Planning",
     },
     {
@@ -77,7 +93,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
       icon: "sun",
       id: "lighting",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+        "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=1200",
       title: "Lighting and Atmosphere Engineering",
     },
   ],
@@ -130,7 +146,6 @@ export const BOOTH_DESIGN_FORMATS_SECTION = {
     },
   ],
 };
-
 
 export const BOOTH_DESIGN_PROCESS = {
   phases: [
@@ -230,7 +245,6 @@ export const BOOTH_DESIGN_FAQ = {
   heading: "Trade Show Booth Design FAQs",
 };
 
-
 export const BOOTH_DESIGN_PAGE = {
   pageId: "service.trade-show-booth-design",
   pageName: "Trade Show Booth Design",
@@ -250,8 +264,6 @@ export const BOOTH_DESIGN_PAGE = {
     title: "Custom Trade Show Booth Design for Enterprise Brands | B2B Sales Arrow",
   },
 } as const;
-
-import { Layers, Layout, Maximize } from "lucide-react";
 
 export const BOOTH_DESIGN_CREATIVE_PRICING = {
   description: "Custom exhibition stands built for buyer psychology and pipeline conversion",
@@ -302,4 +314,102 @@ export const BOOTH_DESIGN_CREATIVE_PRICING = {
     },
   ],
   title: "Booth Design Investment Guide",
+};
+
+export const BOOTH_DESIGN_RELATED_SERVICES = [
+  {
+    href: "/services/global-event-solutions/event-lead-generation",
+    title: "Event Lead Generation",
+  },
+  { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
+  {
+    href: "/services/global-event-solutions/event-booth-rental",
+    title: "Event Booth Rental",
+  },
+];
+
+export const BOOTH_DESIGN_WHY_CHOOSE_US = {
+  heading: "Why Choose B2B Sales Arrow for Booth Design?",
+  items: [
+    {
+      description: "Recognized by industry leaders for creative excellence and innovation",
+      icon: "Award" as const,
+      title: "Award-Winning Design",
+    },
+    {
+      description: "150+ experienced professionals in design, production, and strategy",
+      icon: "Users2" as const,
+      title: "Expert Team",
+    },
+    {
+      description: "Delivering booth experiences across 40+ countries worldwide",
+      icon: "Globe2" as const,
+      title: "Global Reach",
+    },
+    {
+      description: "Consistently exceeding client KPIs and ROI expectations",
+      icon: "TrendingUp" as const,
+      title: "Proven Results",
+    },
+  ],
+};
+
+export const BOOTH_DESIGN_BLOGS_SECTION = {
+  heading: "Blogs",
+};
+
+export const BOOTH_DESIGN_CONTACT_CTA = {
+  backgroundImage: {
+    alt: "Trade show booth design consultation backdrop",
+    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
+  },
+  badge: "Ready to Design?",
+  description:
+    "Every square foot of your booth should earn its place. We design custom trade show booths engineered for commercial momentum — because the space, the story, and the sales system inside it were built together from day one.",
+  headingLines: ["Every Square Foot", "Should Earn Its Place"] as [string, string],
+  primaryCta: {
+    href: "/contact",
+    label: "Request a Design Quote",
+  },
+  proofLabel: "Trusted by 500+ companies",
+  proofLogos: [
+    {
+      alt: "Airtel",
+      src: "/logos/circle-airtel.svg",
+    },
+    {
+      alt: "SingleStore",
+      src: "/logos/circle-singlestore.svg",
+    },
+    {
+      alt: "CSC",
+      src: "/logos/circle-csc.svg",
+    },
+    {
+      alt: "United Payments",
+      src: "/logos/circle-united-payments.svg",
+    },
+  ],
+  secondaryCta: {
+    href: "mailto:info@b2bsalesarrow.com",
+    label: "Contact Us",
+  },
+  trustItems: [
+    {
+      label: "Response within 24h",
+      value: "24h",
+    },
+    {
+      label: "Free consultation",
+      value: "Free",
+    },
+    {
+      label: "Custom proposals",
+      value: "Custom",
+    },
+    {
+      label: "Flexible budgets",
+      value: "Flex",
+    },
+  ],
 };
