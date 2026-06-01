@@ -1,0 +1,241 @@
+export interface CalendarTradeShow {
+  attendeeCount: number;
+  city: string;
+  country: string;
+  endDate: string;
+  exhibitorCount: number;
+  id: string;
+  industry: string;
+  name: string;
+  region?: string;
+  sourceUrl: string;
+  startDate: string;
+  summary: string;
+  venue: string;
+}
+
+export const TRADE_SHOW_CALENDAR_HERO = {
+  description:
+    "Search major global trade shows by market, location, date, attendee scale, and exhibitor density so your team can prioritize the rooms with the strongest pipeline potential.",
+  eyebrow: "TRADE SHOW CALENDAR",
+  searchPlaceholder: "Search by name, city, venue, country, or industry...",
+  title: "Find Trade Shows & Global Exhibitions",
+};
+
+export const TRADE_SHOW_CALENDAR_EVENTS: CalendarTradeShow[] = [
+  {
+    attendeeCount: 8500,
+    city: "Amsterdam",
+    country: "Netherlands",
+    endDate: "2026-06-04",
+    exhibitorCount: 300,
+    id: "money2020-europe-2026",
+    industry: "Financial Services",
+    name: "Money20/20 Europe",
+    sourceUrl: "https://europe.money2020.com/attend/faq",
+    startDate: "2026-06-02",
+    summary:
+      "European fintech, payments, banking, and financial services leaders gather for dealmaking, partnerships, and market insight.",
+    venue: "RAI Amsterdam",
+  },
+  {
+    attendeeCount: 20_000,
+    city: "San Diego",
+    country: "United States",
+    endDate: "2026-06-25",
+    exhibitorCount: 900,
+    id: "bio-international-2026",
+    industry: "Healthcare",
+    name: "BIO International Convention",
+    region: "CA",
+    sourceUrl: "https://www.bio.org/calendar/bio-international-convention",
+    startDate: "2026-06-22",
+    summary:
+      "A global biotechnology and life sciences convention for partnering, investor conversations, and healthcare innovation.",
+    venue: "San Diego Convention Center",
+  },
+  {
+    attendeeCount: 40_000,
+    city: "San Francisco",
+    country: "United States",
+    endDate: "2026-09-17",
+    exhibitorCount: 300,
+    id: "dreamforce-2026",
+    industry: "Technology and SaaS",
+    name: "Dreamforce",
+    region: "CA",
+    sourceUrl: "https://www.salesforce.com/dreamforce/faq",
+    startDate: "2026-09-15",
+    summary:
+      "Salesforce's flagship customer, partner, developer, and enterprise AI conference at Moscone Center.",
+    venue: "Moscone Center",
+  },
+  {
+    attendeeCount: 10_000,
+    city: "Miami Beach",
+    country: "United States",
+    endDate: "2026-10-01",
+    exhibitorCount: 200,
+    id: "sibos-2026",
+    industry: "Financial Services",
+    name: "Sibos",
+    region: "FL",
+    sourceUrl: "https://www.swift.com/news-events/events/sibos-2026-miami",
+    startDate: "2026-09-28",
+    summary:
+      "Swift's global financial services event focused on banking, payments, securities, and digital finance.",
+    venue: "Miami Beach Convention Center",
+  },
+  {
+    attendeeCount: 11_000,
+    city: "Las Vegas",
+    country: "United States",
+    endDate: "2026-10-21",
+    exhibitorCount: 350,
+    id: "money2020-usa-2026",
+    industry: "Financial Services",
+    name: "Money20/20 USA",
+    region: "NV",
+    sourceUrl: "https://us.money2020.com/attend/faq",
+    startDate: "2026-10-18",
+    summary:
+      "The flagship US fintech and payments show for executive buyers, banking innovators, and commerce platforms.",
+    venue: "The Venetian Las Vegas",
+  },
+  {
+    attendeeCount: 205_000,
+    city: "Abu Dhabi",
+    country: "United Arab Emirates",
+    endDate: "2026-11-05",
+    exhibitorCount: 2200,
+    id: "adipec-2026",
+    industry: "Energy",
+    name: "ADIPEC",
+    sourceUrl: "https://www.adnec.ae/en/eventlisting/adipec-2026",
+    startDate: "2026-11-02",
+    summary:
+      "A global energy exhibition and conference bringing together operators, suppliers, and energy transition leaders.",
+    venue: "ADNEC Centre Abu Dhabi",
+  },
+  {
+    attendeeCount: 71_000,
+    city: "Lisbon",
+    country: "Portugal",
+    endDate: "2026-11-12",
+    exhibitorCount: 5000,
+    id: "web-summit-2026",
+    industry: "Technology and SaaS",
+    name: "Web Summit",
+    sourceUrl: "https://websummit.com/essentials/venue-essentials/",
+    startDate: "2026-11-09",
+    summary:
+      "A major technology, startup, investor, and enterprise innovation conference across Lisbon's core venues.",
+    venue: "MEO Arena and FIL",
+  },
+  {
+    attendeeCount: 60_000,
+    city: "Las Vegas",
+    country: "United States",
+    endDate: "2026-12-04",
+    exhibitorCount: 400,
+    id: "aws-reinvent-2026",
+    industry: "Technology and SaaS",
+    name: "AWS re:Invent",
+    region: "NV",
+    sourceUrl: "https://aws.amazon.com/events/reinvent/",
+    startDate: "2026-11-30",
+    summary:
+      "AWS's annual cloud and AI gathering for builders, partners, enterprise technology leaders, and technical teams.",
+    venue: "Las Vegas, NV",
+  },
+  {
+    attendeeCount: 200_000,
+    city: "Dubai",
+    country: "United Arab Emirates",
+    endDate: "2026-12-11",
+    exhibitorCount: 6800,
+    id: "gitex-global-2026",
+    industry: "Technology and SaaS",
+    name: "GITEX Global",
+    sourceUrl: "https://www.gitex.com/gitex-global-2026",
+    startDate: "2026-12-07",
+    summary:
+      "A large-scale technology, AI, startup, cybersecurity, cloud, and government innovation show in Dubai.",
+    venue: "Dubai Exhibition Centre",
+  },
+  {
+    attendeeCount: 140_000,
+    city: "Las Vegas",
+    country: "United States",
+    endDate: "2027-01-09",
+    exhibitorCount: 4500,
+    id: "ces-2027",
+    industry: "Technology and SaaS",
+    name: "CES",
+    region: "NV",
+    sourceUrl: "https://www.ces.tech/attend/registration-notification/",
+    startDate: "2027-01-06",
+    summary:
+      "The global consumer technology showcase for innovation launches, enterprise partnerships, and media visibility.",
+    venue: "Las Vegas",
+  },
+  {
+    attendeeCount: 235_000,
+    city: "Dubai",
+    country: "United Arab Emirates",
+    endDate: "2027-01-28",
+    exhibitorCount: 4300,
+    id: "whx-dubai-2027",
+    industry: "Healthcare",
+    name: "WHX Dubai",
+    sourceUrl:
+      "https://www.worldhealthexpo.com/events/healthcare/dubai/en/overview/general-event-FAQs.html",
+    startDate: "2027-01-25",
+    summary:
+      "The rebranded Arab Health platform connecting healthcare, medical technology, diagnostics, and provider ecosystems.",
+    venue: "Dubai Exhibition Centre",
+  },
+  {
+    attendeeCount: 105_000,
+    city: "Barcelona",
+    country: "Spain",
+    endDate: "2027-03-04",
+    exhibitorCount: 2900,
+    id: "mwc-barcelona-2027",
+    industry: "Telecom",
+    name: "MWC Barcelona",
+    sourceUrl: "https://www.mwcbarcelona.com/",
+    startDate: "2027-03-01",
+    summary:
+      "The leading connectivity, telecom, device, mobile infrastructure, and digital ecosystem event in Barcelona.",
+    venue: "Fira Gran Via",
+  },
+  {
+    attendeeCount: 127_000,
+    city: "Hannover",
+    country: "Germany",
+    endDate: "2027-04-08",
+    exhibitorCount: 4000,
+    id: "hannover-messe-2027",
+    industry: "Manufacturing",
+    name: "Hannover Messe",
+    sourceUrl: "https://www.hannovermesse.de/en/for-visitors/opening-hours/",
+    startDate: "2027-04-05",
+    summary:
+      "A major industrial technology event covering manufacturing, automation, robotics, energy, and digital factories.",
+    venue: "Hannover Messe",
+  },
+];
+
+export const TRADE_SHOW_CALENDAR_PAGE = {
+  pageId: "trade-show-calendar",
+  pageName: "Trade Show Calendar",
+  pageType: "resourceIndex",
+  seo: {
+    canonicalPath: "/trade-show-calendar",
+    description:
+      "Browse a curated B2B trade show calendar with dates, locations, industries, attendee scale, exhibitor counts, and planning CTAs for global exhibitions.",
+    focusKeyphrase: "trade show calendar",
+    title: "Trade Show Calendar | B2B Sales Arrow",
+  },
+} as const;

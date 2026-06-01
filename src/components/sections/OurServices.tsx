@@ -37,7 +37,7 @@ export const OurServices = ({
   );
 
   return (
-    <section className="bg-white pt-20 pb-40" id="services">
+    <section className="bg-brand-gray pt-20 pb-40" id="services">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-start text-left">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}

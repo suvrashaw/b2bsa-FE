@@ -1,0 +1,31 @@
+import type { Metadata } from "next";
+
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  TRADE_SHOW_CALENDAR_EVENTS,
+  TRADE_SHOW_CALENDAR_HERO,
+  TRADE_SHOW_CALENDAR_PAGE,
+} from "@/content/trade-show-calendar";
+
+export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
+
+const Page = () => {
+  return (
+    <main className="min-h-screen bg-brand-gray">
+      <Header forceLightMode />
+      <TradeShowCalendarDirectory
+        description={TRADE_SHOW_CALENDAR_HERO.description}
+        events={TRADE_SHOW_CALENDAR_EVENTS}
+        eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
+        searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
+        title={TRADE_SHOW_CALENDAR_HERO.title}
+      />
+      <Footer />
+    </main>
+  );
+};
+
+export default Page;

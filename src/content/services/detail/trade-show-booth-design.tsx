@@ -443,24 +443,28 @@ export const BOOTH_DESIGN_WHY_CHOOSE_US = {
       description:
         "We manage every detail, from design to execution, ensuring a seamless and impactful booth experience.",
       icon: "Award" as const,
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=400&h=300",
       title: "360-Degree Booth Solutions",
     },
     {
       description:
         "We've showcased at top international events in Dubai, Beijing, Toronto, the USA, and Australia, including Money20/20, Adobe Summit, Sibos, WAF, ONS, and more.",
       icon: "Globe2" as const,
+      image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Global Reach & Premier Events",
     },
     {
       description:
         "Our booths incorporate the latest technology to boost engagement and enhance brand visibility.",
       icon: "TrendingUp" as const,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Tech-Integrated Booths",
     },
     {
       description:
         "With experience across IT, finance, healthcare, BFSI, and more, we deliver customized solutions for every sector.",
       icon: "Users2" as const,
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Industry Expertise",
     },
   ],
@@ -506,22 +510,4 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
     href: "mailto:info@b2bsalesarrow.com",
     label: "Contact Us",
   },
-  trustItems: [
-    {
-      label: "Response within 24h",
-      value: "24h",
-    },
-    {
-      label: "Free consultation",
-      value: "Free",
-    },
-    {
-      label: "Custom proposals",
-      value: "Custom",
-    },
-    {
-      label: "Flexible budgets",
-      value: "Flex",
-    },
-  ],
 };

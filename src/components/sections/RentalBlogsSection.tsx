@@ -137,7 +137,7 @@ export const RentalBlogsSection = ({ heading, posts }: RentalBlogsSectionProps) 
             </Heading>
           </motion.div>
 
-          <Button asChild size="sm" variant="secondary">
+          <Button asChild variant="secondary">
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         </div>

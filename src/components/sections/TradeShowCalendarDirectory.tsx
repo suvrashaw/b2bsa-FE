@@ -1,0 +1,742 @@
+"use client";
+
+import {
+  ArrowUpDown,
+  Building2,
+  CalendarDays,
+  ExternalLink,
+  Grid2X2,
+  List,
+  MapPin,
+  RotateCcw,
+  Search,
+  Users,
+} from "lucide-react";
+import Link from "next/link";
+import { type ChangeEvent, type ReactNode, useCallback, useMemo, useState } from "react";
+
+import type { CalendarTradeShow } from "@/content/trade-show-calendar";
+
+import { Button } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { cn } from "@/lib";
+
+const VIEW_MODES = [
+  { icon: Grid2X2, label: "Cards", value: "cards" },
+  { icon: List, label: "List", value: "list" },
+] as const;
+
+const SORT_OPTIONS = [
+  { label: "Start Date", value: "startDate" },
+  { label: "Name", value: "name" },
+  { label: "Location", value: "location" },
+  { label: "Attendees", value: "attendees" },
+  { label: "Exhibitors", value: "exhibitors" },
+] as const;
+
+const DATE_RANGE_OPTIONS = [
+  { label: "All Dates", value: "all" },
+  { label: "Next 3 Months", value: "next-3-months" },
+  { label: "Next 6 Months", value: "next-6-months" },
+  { label: "This Year", value: "this-year" },
+  { label: "Next Year", value: "next-year" },
+] as const;
+
+export interface TradeShowCalendarDirectoryProps {
+  description: string;
+  events: CalendarTradeShow[];
+  eyebrow: string;
+  searchPlaceholder: string;
+  title: string;
+}
+
+const NUMBER_OPERATOR_OPTIONS = [
+  { label: ">=", value: "gte" },
+  { label: "<=", value: "lte" },
+] as const;
+
+type DateRange = (typeof DATE_RANGE_OPTIONS)[number]["value"];
+type NumberOperator = (typeof NUMBER_OPERATOR_OPTIONS)[number]["value"];
+type SortDirection = "asc" | "desc";
+type SortField = (typeof SORT_OPTIONS)[number]["value"];
+type ViewMode = (typeof VIEW_MODES)[number]["value"];
+
+const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+  year: "numeric",
+});
+
+const NUMBER_FORMAT = new Intl.NumberFormat("en-US");
+
+const CONTROL_PANEL_CLASS =
+  "rounded-lg border border-gray-200 bg-white p-4 shadow-sm shadow-gray-200/40";
+
+const FORM_CONTROL_CLASS =
+  "w-full rounded-lg border border-gray-200 bg-white px-3 py-3 text-sm font-medium text-brand-charcoal outline-none transition focus:border-brand-blue/40 focus:ring-4 focus:ring-brand-blue/10";
+
+const toDate = (value: string) => new Date(`${value}T00:00:00.000Z`);
+
+const addMonths = (date: Date, months: number) => {
+  const nextDate = new Date(date);
+  nextDate.setUTCMonth(nextDate.getUTCMonth() + months);
+  return nextDate;
+};
+
+const formatDateRange = (startDate: string, endDate: string) => {
+  const start = toDate(startDate);
+  const end = toDate(endDate);
+
+  if (startDate === endDate) {
+    return DATE_FORMAT.format(start);
+  }
+
+  return `${DATE_FORMAT.format(start)} - ${DATE_FORMAT.format(end)}`;
+};
+
+const formatLocation = ({ city, country, region }: CalendarTradeShow) =>
+  [city, region, country].filter(Boolean).join(", ");
+
+const formatCompactLocation = ({ city, country, region }: CalendarTradeShow) =>
+  [city, region].filter(Boolean).join(", ") || country;
+
+const sortItems = <T,>(items: T[], compare: (first: T, second: T) => number) => {
+  const sortedItems = [...items];
+  sortedItems.sort(compare);
+  return sortedItems;
+};
+
+const matchesNumberFilter = (
+  actualValue: number,
+  operator: NumberOperator,
+  requestedValue: string
+) => {
+  if (!requestedValue.trim()) return true;
+
+  const parsedValue = Number(requestedValue);
+  if (Number.isNaN(parsedValue)) return true;
+
+  return operator === "gte" ? actualValue >= parsedValue : actualValue <= parsedValue;
+};
+
+const matchesDateRange = (show: CalendarTradeShow, range: DateRange, today: Date) => {
+  if (range === "all") return true;
+
+  const startDate = toDate(show.startDate);
+  const endDate = toDate(show.endDate);
+
+  if (range === "next-3-months") {
+    return endDate >= today && startDate <= addMonths(today, 3);
+  }
+
+  if (range === "next-6-months") {
+    return endDate >= today && startDate <= addMonths(today, 6);
+  }
+
+  const currentYear = today.getUTCFullYear();
+  const startYear = startDate.getUTCFullYear();
+  const endYear = endDate.getUTCFullYear();
+
+  if (range === "this-year") {
+    return startYear === currentYear || endYear === currentYear;
+  }
+
+  return startYear === currentYear + 1 || endYear === currentYear + 1;
+};
+
+const getSortText = (sortDirection: SortDirection) =>
+  sortDirection === "asc" ? "Ascending" : "Descending";
+
+const ViewModeButton = ({
+  activeMode,
+  mode,
+  onChange,
+}: {
+  activeMode: ViewMode;
+  mode: (typeof VIEW_MODES)[number];
+  onChange: (mode: ViewMode) => void;
+}) => {
+  const Icon = mode.icon;
+  const handleClick = useCallback(() => {
+    onChange(mode.value);
+  }, [mode.value, onChange]);
+
+  return (
+    <button
+      className={cn(
+        "flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition",
+        activeMode === mode.value
+          ? "border-brand-charcoal bg-brand-charcoal text-white"
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue"
+      )}
+      onClick={handleClick}
+      type="button"
+    >
+      <Icon className="h-4 w-4" />
+      {mode.label}
+    </button>
+  );
+};
+
+const FilterPanel = ({
+  children,
+  title,
+}: {
+  children: ReactNode;
+  title: string;
+}) => (
+  <section className={CONTROL_PANEL_CLASS}>
+    <h2 className="mb-3 text-sm font-bold text-brand-charcoal">{title}</h2>
+    {children}
+  </section>
+);
+
+const LocationCheckbox = ({
+  checked,
+  label,
+  onChange,
+}: {
+  checked: boolean;
+  label: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}) => (
+  <label className="flex cursor-pointer items-start gap-2 text-sm leading-relaxed font-medium text-brand-charcoal/80">
+    <input
+      checked={checked}
+      className="mt-1 h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
+      onChange={onChange}
+      type="checkbox"
+      value={label}
+    />
+    <span>{label}</span>
+  </label>
+);
+
+const DirectionButton = ({
+  direction,
+  onChange,
+  selectedDirection,
+}: {
+  direction: SortDirection;
+  onChange: (direction: SortDirection) => void;
+  selectedDirection: SortDirection;
+}) => {
+  const handleClick = useCallback(() => {
+    onChange(direction);
+  }, [direction, onChange]);
+
+  return (
+    <button
+      className={cn(
+        "min-h-11 flex-1 rounded-lg border px-3 text-sm font-semibold transition",
+        selectedDirection === direction
+          ? "border-brand-charcoal bg-brand-charcoal text-white"
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue"
+      )}
+      onClick={handleClick}
+      type="button"
+    >
+      {getSortText(direction)}
+    </button>
+  );
+};
+
+const NumberFilter = ({
+  onOperatorChange,
+  onValueChange,
+  operator,
+  placeholder,
+  value,
+}: {
+  onOperatorChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  onValueChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  operator: NumberOperator;
+  placeholder: string;
+  value: string;
+}) => (
+  <div className="grid grid-cols-[0.85fr_1.15fr] gap-3">
+    <select className={FORM_CONTROL_CLASS} onChange={onOperatorChange} value={operator}>
+      {NUMBER_OPERATOR_OPTIONS.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+    <input
+      className={FORM_CONTROL_CLASS}
+      inputMode="numeric"
+      min="0"
+      onChange={onValueChange}
+      placeholder={placeholder}
+      type="number"
+      value={value}
+    />
+  </div>
+);
+
+const EventMeta = ({
+  icon: Icon,
+  label,
+}: {
+  icon: typeof CalendarDays;
+  label: string;
+}) => (
+  <div className="flex items-start gap-2 text-sm font-medium text-brand-charcoal/75">
+    <Icon className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+    <span>{label}</span>
+  </div>
+);
+
+const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
+  <article className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
+    <div className="mb-5 flex items-start justify-between gap-4">
+      <div>
+        <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
+          {show.industry}
+        </p>
+        <h3 className="mt-2 font-heading text-2xl leading-tight font-bold text-brand-charcoal">
+          {show.name}
+        </h3>
+      </div>
+      <div className="rounded-lg bg-brand-blue/10 px-3 py-2 text-right text-xs font-bold text-brand-blue">
+        {formatDateRange(show.startDate, show.endDate)}
+      </div>
+    </div>
+
+    <p className="mb-5 flex-1 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
+
+    <div className="space-y-3 border-y border-gray-100 py-4">
+      <EventMeta icon={MapPin} label={`${show.venue}, ${formatLocation(show)}`} />
+      <EventMeta
+        icon={Users}
+        label={`${NUMBER_FORMAT.format(show.attendeeCount)} attendees`}
+      />
+      <EventMeta
+        icon={Building2}
+        label={`${NUMBER_FORMAT.format(show.exhibitorCount)} exhibitors`}
+      />
+    </div>
+
+    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <a
+        className="inline-flex items-center gap-2 text-sm font-bold text-brand-blue transition hover:text-brand-cyan"
+        href={show.sourceUrl}
+        rel="noreferrer"
+        target="_blank"
+      >
+        Official site <ExternalLink className="h-4 w-4" />
+      </a>
+      <Button asChild size="sm" variant="primary">
+        <Link href="/contact">Plan Strategy</Link>
+      </Button>
+    </div>
+  </article>
+);
+
+const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
+  <article className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
+    <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr_0.8fr_auto] lg:items-center">
+      <div>
+        <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
+          {show.industry}
+        </p>
+        <h3 className="mt-2 font-heading text-2xl font-bold text-brand-charcoal">{show.name}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
+      </div>
+      <div className="space-y-2">
+        <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
+        <EventMeta icon={MapPin} label={`${show.venue}, ${formatCompactLocation(show)}`} />
+      </div>
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
+        <div>
+          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
+            Attendees
+          </p>
+          <p className="font-bold text-brand-charcoal">
+            {NUMBER_FORMAT.format(show.attendeeCount)}
+          </p>
+        </div>
+        <div>
+          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
+            Exhibitors
+          </p>
+          <p className="font-bold text-brand-charcoal">
+            {NUMBER_FORMAT.format(show.exhibitorCount)}
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-3 lg:justify-end">
+        <Button asChild size="sm" variant="secondary">
+          <a href={show.sourceUrl} rel="noreferrer" target="_blank">
+            Official site
+          </a>
+        </Button>
+        <Button asChild size="sm" variant="primary">
+          <Link href="/contact">Plan Strategy</Link>
+        </Button>
+      </div>
+    </div>
+  </article>
+);
+
+export const TradeShowCalendarDirectory = ({
+  description,
+  events,
+  eyebrow,
+  searchPlaceholder,
+  title,
+}: TradeShowCalendarDirectoryProps) => {
+  const [attendeeOperator, setAttendeeOperator] = useState<NumberOperator>("gte");
+  const [attendeeValue, setAttendeeValue] = useState("");
+  const [dateRange, setDateRange] = useState<DateRange>("all");
+  const [exhibitorOperator, setExhibitorOperator] = useState<NumberOperator>("gte");
+  const [exhibitorValue, setExhibitorValue] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedIndustry, setSelectedIndustry] = useState("All Industries");
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+  const [sortField, setSortField] = useState<SortField>("startDate");
+  const [viewMode, setViewMode] = useState<ViewMode>("cards");
+
+  const today = useMemo(() => {
+    const now = new Date();
+    return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  }, []);
+
+  const locationOptions = useMemo(
+    () =>
+      sortItems([...new Set(events.map((event) => formatLocation(event)))], (first, second) =>
+        first.localeCompare(second)
+      ),
+    [events]
+  );
+
+  const industryOptions = useMemo(
+    () =>
+      [
+        "All Industries",
+        ...sortItems([...new Set(events.map((event) => event.industry))], (first, second) =>
+          first.localeCompare(second)
+        ),
+      ],
+    [events]
+  );
+
+  const handleAttendeeOperatorChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setAttendeeOperator(event.currentTarget.value as NumberOperator);
+    },
+    []
+  );
+
+  const handleAttendeeValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setAttendeeValue(event.currentTarget.value);
+  }, []);
+
+  const handleClearFilters = useCallback(() => {
+    setAttendeeOperator("gte");
+    setAttendeeValue("");
+    setDateRange("all");
+    setExhibitorOperator("gte");
+    setExhibitorValue("");
+    setSearchQuery("");
+    setSelectedIndustry("All Industries");
+    setSelectedLocations([]);
+    setSortDirection("asc");
+    setSortField("startDate");
+    setViewMode("cards");
+  }, []);
+
+  const handleDateRangeChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    setDateRange(event.currentTarget.value as DateRange);
+  }, []);
+
+  const handleExhibitorOperatorChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setExhibitorOperator(event.currentTarget.value as NumberOperator);
+    },
+    []
+  );
+
+  const handleExhibitorValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setExhibitorValue(event.currentTarget.value);
+  }, []);
+
+  const handleIndustryChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedIndustry(event.currentTarget.value);
+  }, []);
+
+  const handleLocationChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    const { checked, value } = event.currentTarget;
+
+    setSelectedLocations((currentLocations) =>
+      checked
+        ? [...currentLocations, value]
+        : currentLocations.filter((location) => location !== value)
+    );
+  }, []);
+
+  const handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.currentTarget.value);
+  }, []);
+
+  const handleSortFieldChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    setSortField(event.currentTarget.value as SortField);
+  }, []);
+
+  const filteredEvents = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+
+    const matchingEvents = events.filter((show) => {
+      const location = formatLocation(show);
+      const searchableText = [
+        show.name,
+        show.venue,
+        show.city,
+        show.region,
+        show.country,
+        show.industry,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+      const matchesSearch = !normalizedQuery || searchableText.includes(normalizedQuery);
+      const matchesIndustry =
+        selectedIndustry === "All Industries" || show.industry === selectedIndustry;
+      const matchesLocation =
+        selectedLocations.length === 0 || selectedLocations.includes(location);
+
+      return (
+        matchesSearch &&
+        matchesIndustry &&
+        matchesLocation &&
+        matchesNumberFilter(show.attendeeCount, attendeeOperator, attendeeValue) &&
+        matchesNumberFilter(show.exhibitorCount, exhibitorOperator, exhibitorValue) &&
+        matchesDateRange(show, dateRange, today)
+      );
+    });
+
+    return sortItems(matchingEvents, (first, second) => {
+      const direction = sortDirection === "asc" ? 1 : -1;
+
+      if (sortField === "name") {
+        return first.name.localeCompare(second.name) * direction;
+      }
+
+      if (sortField === "location") {
+        return formatLocation(first).localeCompare(formatLocation(second)) * direction;
+      }
+
+      if (sortField === "attendees") {
+        return (first.attendeeCount - second.attendeeCount) * direction;
+      }
+
+      if (sortField === "exhibitors") {
+        return (first.exhibitorCount - second.exhibitorCount) * direction;
+      }
+
+      return (
+        (toDate(first.startDate).getTime() - toDate(second.startDate).getTime()) * direction
+      );
+    });
+  }, [
+    attendeeOperator,
+    attendeeValue,
+    dateRange,
+    events,
+    exhibitorOperator,
+    exhibitorValue,
+    searchQuery,
+    selectedIndustry,
+    selectedLocations,
+    sortDirection,
+    sortField,
+    today,
+  ]);
+
+  const resultLabel = filteredEvents.length === 1 ? "trade show" : "trade shows";
+  let resultsContent: ReactNode;
+
+  if (filteredEvents.length === 0) {
+    resultsContent = (
+      <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
+        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
+          No trade shows found
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
+          Adjust the search, filters, or date range to broaden the calendar results.
+        </p>
+        <Button className="mt-6 gap-2" onClick={handleClearFilters} variant="primary">
+          <RotateCcw className="h-4 w-4" />
+          Reset Calendar
+        </Button>
+      </div>
+    );
+  } else if (viewMode === "cards") {
+    resultsContent = (
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {filteredEvents.map((show) => (
+          <TradeShowCard key={show.id} show={show} />
+        ))}
+      </div>
+    );
+  } else {
+    resultsContent = (
+      <div className="space-y-4">
+        {filteredEvents.map((show) => (
+          <TradeShowListItem key={show.id} show={show} />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <section className="bg-white pt-36 pb-16 lg:pt-44 lg:pb-20">
+        <div className="container mx-auto px-8 text-center">
+          <Eyebrow className="justify-center" variant="blue">
+            {eyebrow}
+          </Eyebrow>
+          <h1 className="mx-auto mt-5 max-w-5xl font-heading text-5xl leading-tight font-black text-brand-charcoal md:text-7xl">
+            {title}
+          </h1>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed font-medium text-brand-charcoal/70">
+            {description}
+          </p>
+          <div className="relative mx-auto mt-10 max-w-3xl">
+            <Search className="absolute top-1/2 left-5 h-5 w-5 -translate-y-1/2 text-brand-charcoal/40" />
+            <input
+              className="w-full rounded-lg border border-gray-200 bg-white py-4 pr-5 pl-14 text-base font-medium text-brand-charcoal shadow-sm transition outline-none placeholder:text-brand-charcoal/40 focus:border-brand-blue/40 focus:ring-4 focus:ring-brand-blue/10"
+              onChange={handleSearchChange}
+              placeholder={searchPlaceholder}
+              type="search"
+              value={searchQuery}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-gray py-12 lg:py-16">
+        <div className="container mx-auto grid gap-8 px-8 lg:grid-cols-[18rem_1fr] lg:items-start">
+          <aside className="space-y-5 lg:sticky lg:top-28">
+            <FilterPanel title="View Mode">
+              <div className="flex gap-3">
+                {VIEW_MODES.map((mode) => (
+                  <ViewModeButton
+                    activeMode={viewMode}
+                    key={mode.value}
+                    mode={mode}
+                    onChange={setViewMode}
+                  />
+                ))}
+              </div>
+            </FilterPanel>
+
+            <FilterPanel title="Sort By">
+              <div className="space-y-3">
+                <select className={FORM_CONTROL_CLASS} onChange={handleSortFieldChange} value={sortField}>
+                  {SORT_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <div className="flex gap-3">
+                  <DirectionButton
+                    direction="asc"
+                    onChange={setSortDirection}
+                    selectedDirection={sortDirection}
+                  />
+                  <DirectionButton
+                    direction="desc"
+                    onChange={setSortDirection}
+                    selectedDirection={sortDirection}
+                  />
+                </div>
+              </div>
+            </FilterPanel>
+
+            <FilterPanel title="Location">
+              <div className="max-h-52 space-y-3 overflow-y-auto pr-2">
+                {locationOptions.map((location) => (
+                  <LocationCheckbox
+                    checked={selectedLocations.includes(location)}
+                    key={location}
+                    label={location}
+                    onChange={handleLocationChange}
+                  />
+                ))}
+              </div>
+            </FilterPanel>
+
+            <FilterPanel title="Industry">
+              <select
+                className={FORM_CONTROL_CLASS}
+                onChange={handleIndustryChange}
+                value={selectedIndustry}
+              >
+                {industryOptions.map((industry) => (
+                  <option key={industry} value={industry}>
+                    {industry}
+                  </option>
+                ))}
+              </select>
+            </FilterPanel>
+
+            <FilterPanel title="Number of Attendees">
+              <NumberFilter
+                onOperatorChange={handleAttendeeOperatorChange}
+                onValueChange={handleAttendeeValueChange}
+                operator={attendeeOperator}
+                placeholder="e.g. 10000"
+                value={attendeeValue}
+              />
+            </FilterPanel>
+
+            <FilterPanel title="Number of Exhibitors">
+              <NumberFilter
+                onOperatorChange={handleExhibitorOperatorChange}
+                onValueChange={handleExhibitorValueChange}
+                operator={exhibitorOperator}
+                placeholder="e.g. 500"
+                value={exhibitorValue}
+              />
+            </FilterPanel>
+
+            <FilterPanel title="Date Range">
+              <select className={FORM_CONTROL_CLASS} onChange={handleDateRangeChange} value={dateRange}>
+                {DATE_RANGE_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </FilterPanel>
+
+            <Button className="w-full gap-2" onClick={handleClearFilters} variant="secondary">
+              <RotateCcw className="h-4 w-4" />
+              Clear Filters
+            </Button>
+          </aside>
+
+          <div>
+            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="font-bold text-brand-charcoal">
+                Showing {filteredEvents.length} {resultLabel}
+              </p>
+              <div className="flex items-center gap-2 text-sm font-semibold text-brand-charcoal/60">
+                <ArrowUpDown className="h-4 w-4" />
+                {SORT_OPTIONS.find((option) => option.value === sortField)?.label},{" "}
+                {getSortText(sortDirection).toLowerCase()}
+              </div>
+            </div>
+
+            {resultsContent}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};

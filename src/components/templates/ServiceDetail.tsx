@@ -59,6 +59,7 @@ export interface ServiceDetailProps {
     title: string;
   };
   proofBar?: string[];
+  proofBarClassName?: string;
   proofBarDescription?: React.ReactNode;
   proofBarHeading?: string;
   relatedServices?: { href: string; title: string }[];
@@ -170,6 +171,7 @@ export const ServiceDetail = ({
   preProcessSections,
   process,
   proofBar,
+  proofBarClassName,
   proofBarDescription,
   proofBarHeading,
   relatedServices,
@@ -242,7 +244,14 @@ export const ServiceDetail = ({
 
       <ClientLogos overlap={false} />
 
-      {proofBar && <ProofBar description={proofBarDescription} heading={proofBarHeading} stats={proofBar} />}
+      {proofBar && (
+        <ProofBar
+          className={proofBarClassName}
+          description={proofBarDescription}
+          heading={proofBarHeading}
+          stats={proofBar}
+        />
+      )}
 
       {spotlight && (
         <section className="bg-brand-gray py-20">

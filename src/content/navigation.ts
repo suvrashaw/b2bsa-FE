@@ -13,18 +13,10 @@ export const topNavigation: NavLink[] = [
   { href: "/", name: "Home" },
   { href: "/about", name: "About Us" },
   { href: "/services/global-event-solutions", name: "Services" },
-  { href: "/events", name: "Trade Shows" },
+  { href: "/trade-show-calendar", name: "Trade Show Calendar" },
   { href: "/blogs", name: "Blogs" },
   { href: "/case-studies", name: "Case Studies" },
   { href: "/contact", name: "Contact" },
-];
-
-export const tradeShowLinks: NavLink[] = [
-  { href: "/events", name: "Upcoming Trade Shows 2026" },
-  { href: "/events", name: "Trade Shows in Las Vegas" },
-  { href: "/events", name: "Trade Shows in Germany" },
-  { href: "/events", name: "Trade Shows in Dubai" },
-  { href: "/events", name: "Trade Shows in US" },
 ];
 
 export const serviceNavigationGroups: ServiceNavGroup[] = [

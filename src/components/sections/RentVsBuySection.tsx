@@ -3,11 +3,11 @@ import { Clock, DollarSign, MapPin, Maximize2, Truck } from "lucide-react";
 import { Heading } from "@/components/ui/Heading";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  Clock: <Clock className="h-8 w-8" strokeWidth={1.5} />,
-  DollarSign: <DollarSign className="h-8 w-8" strokeWidth={1.5} />,
-  MapPin: <MapPin className="h-8 w-8" strokeWidth={1.5} />,
-  Maximize2: <Maximize2 className="h-8 w-8" strokeWidth={1.5} />,
-  Truck: <Truck className="h-8 w-8" strokeWidth={1.5} />,
+  Clock: <Clock className="h-20 w-20" strokeWidth={1.5} />,
+  DollarSign: <DollarSign className="h-20 w-20" strokeWidth={1.5} />,
+  MapPin: <MapPin className="h-20 w-20" strokeWidth={1.5} />,
+  Maximize2: <Maximize2 className="h-20 w-20" strokeWidth={1.5} />,
+  Truck: <Truck className="h-20 w-20" strokeWidth={1.5} />,
 };
 
 export interface RentVsBuySectionProps {
@@ -33,7 +33,7 @@ export const RentVsBuySection = ({
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
           <Heading as="h2" className="inline tracking-tight text-brand-charcoal">
-            <span className="relative inline-block px-3 uppercase">
+            <span className="relative inline-block px-3">
               <span className="relative z-10">{heading}</span>
               <span
                 aria-hidden="true"
@@ -57,17 +57,17 @@ export const RentVsBuySection = ({
                 key={reason.title}
               >
                 {/* Icon container */}
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-blue/10 text-brand-blue">
-                  {ICON_MAP[reason.icon] ?? <DollarSign className="h-8 w-8" />}
+                <div className="mb-6 flex items-center justify-center text-brand-blue">
+                  {ICON_MAP[reason.icon] ?? <DollarSign className="h-20 w-20" strokeWidth={1.5} />}
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 font-heading text-base font-bold text-brand-charcoal">
+                <h3 className="mb-4 font-heading text-xl font-bold text-brand-charcoal">
                   {reason.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm leading-relaxed text-brand-charcoal/65 md:text-[15px]">
+                <p className="text-base leading-relaxed text-brand-charcoal/65">
                   {reason.description}
                 </p>
               </div>

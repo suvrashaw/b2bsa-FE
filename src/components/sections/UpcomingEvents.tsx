@@ -19,6 +19,7 @@ export interface UpcomingEventsProps {
   events?: UpcomingEventsContent["events"];
   eyebrow?: UpcomingEventsContent["eyebrow"];
   heading?: UpcomingEventsContent["heading"];
+  viewAllHref?: string;
   viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
 }
 
@@ -34,6 +35,7 @@ export const UpcomingEvents = ({
   events = content.events,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  viewAllHref = "/trade-show-calendar",
   viewAllLabel = content.viewAllLabel,
 }: UpcomingEventsProps = {}) => {
   const eventTransitions = useMemo(
@@ -60,39 +62,40 @@ export const UpcomingEvents = ({
               viewport={UPCOMINGEVENTS_VIEWPORT}
               whileInView={UPCOMINGEVENTS_WHILE_IN_VIEW}
             >
-              <div className="relative h-[250px] w-full overflow-hidden md:h-[300px]">
-                <Image
-                  alt={event.title}
-                  className="transform object-cover transition-transform duration-700 group-hover:scale-105"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  src={event.image}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              {event.image && (
+                <div className="relative h-[250px] w-full overflow-hidden md:h-[300px]">
+                  <Image
+                    alt={event.title}
+                    className="transform object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    src={event.image}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                {/* Hover Reveal CTA */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-brand-charcoal/20 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
-                  <Button
-                    className="translate-y-4 shadow-lg group-hover:translate-y-0"
-                    variant="primary"
-                  >
-                    {ctaLabel} <ArrowUpRight className="h-4 w-4" />
-                  </Button>
+                  <div className="absolute inset-0 z-20 flex items-center justify-center bg-brand-charcoal/20 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100">
+                    <Button
+                      className="translate-y-4 shadow-lg group-hover:translate-y-0"
+                      variant="primary"
+                    >
+                      {ctaLabel} <ArrowUpRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+
+                  <div className="absolute right-6 bottom-6 left-6 z-10">
+                    {badgeLabel && (
+                      <span className="mb-3 inline-block rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
+                        {badgeLabel}
+                      </span>
+                    )}
+                    <h3 className="line-clamp-2 font-heading text-xl leading-tight font-bold !text-white md:text-2xl">
+                      {event.title}
+                    </h3>
+                  </div>
                 </div>
+              )}
 
-                <div className="absolute right-6 bottom-6 left-6 z-10">
-                  {badgeLabel && (
-                    <span className="mb-3 inline-block rounded-full bg-brand-blue px-3 py-1 text-xs font-bold tracking-wider text-white uppercase">
-                      {badgeLabel}
-                    </span>
-                  )}
-                  <h3 className="line-clamp-2 font-heading text-xl leading-tight font-bold !text-white md:text-2xl">
-                    {event.title}
-                  </h3>
-                </div>
-              </div>
-
-              {(event.date || event.location) && (
+              {(event.date ?? event.location) && (
                 <div className="relative flex flex-1 flex-col justify-center p-8">
                   <div className="relative z-10 grid grid-cols-2 gap-4">
                     {event.date && (
@@ -120,11 +123,11 @@ export const UpcomingEvents = ({
 
         {viewAllLabel && (
           <div className="mt-12 text-center">
-            <Link href="/events">
-              <Button className="hidden md:inline-flex" variant="tertiary">
+            <Button asChild variant="tertiary">
+              <Link href={viewAllHref}>
                 {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         )}
       </div>

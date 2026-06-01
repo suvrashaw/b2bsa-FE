@@ -3,7 +3,6 @@
 import type { ReactNode } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import Icon from "@/components/ui/Icon";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
 
 export interface WhoWeAreProps {
@@ -51,7 +50,7 @@ export const WhoWeAre = ({
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
-    <section className="overflow-hidden bg-white py-20" id="about">
+    <section className="overflow-hidden bg-brand-gray py-20" id="about">
       <div className="container mx-auto grid items-center gap-16 px-8 lg:grid-cols-2">
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
@@ -93,8 +92,8 @@ export const WhoWeAre = ({
         {/* Right Side: Scrolling Insights */}
         <div className="group/scroller relative h-[600px] overflow-hidden p-4">
           {/* Top/Bottom Fade Masks */}
-          <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-white to-transparent" />
-          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-white to-transparent" />
+          <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
+          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
 
           <div className="relative grid h-full grid-cols-2 gap-6">
             {/* Column 1 - Scroll Up */}
@@ -123,11 +122,8 @@ const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
       className={`relative overflow-hidden rounded-xl p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
     >
       <div className="relative z-10">
-        <div className="mb-4 text-sm font-bold opacity-90">{stat.label}</div>
-        <div className="flex items-center justify-between">
-          <div className="font-heading text-2xl font-bold">{stat.value}</div>
-          <Icon className="h-6 w-6 opacity-50" name={stat.icon} />
-        </div>
+        <div className="text-sm font-medium opacity-80">{stat.label}</div>
+        <div className="mt-2 font-heading text-5xl font-bold">{stat.value}</div>
       </div>
     </div>
   );

@@ -30,6 +30,7 @@ import { RESEARCH_PAGE } from "./services/market-research";
 import { MEDIA_PAGE } from "./services/media-production";
 import { PERF_PAGE } from "./services/performance-marketing";
 import { SQL_PAGE } from "./services/sales-qualified-lead-generation";
+import { TRADE_SHOW_CALENDAR_PAGE } from "./trade-show-calendar";
 
 export const marketingPages = [
   HOME_PAGE,
@@ -38,6 +39,7 @@ export const marketingPages = [
   CASE_STUDIES_PAGE,
   CONTACT_PAGE,
   EVENTS_PAGE,
+  TRADE_SHOW_CALENDAR_PAGE,
   GES_PAGE,
   BOOTH_DESIGN_PAGE,
   ELG_PAGE,

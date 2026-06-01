@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
@@ -15,10 +15,10 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const montserrat = Montserrat({
+const inter = Inter({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html
-      className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
       lang="en"
       suppressHydrationWarning
     >

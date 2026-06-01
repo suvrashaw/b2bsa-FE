@@ -202,7 +202,7 @@ export interface TestimonialsContent {
 export interface UpcomingEventItem {
   date?: string;
   id: string;
-  image: string;
+  image?: string;
   location?: string;
   title: string;
 }
@@ -526,47 +526,69 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
 };
 
 export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
-  ctaLabel: "Meet Us There!",
+  ctaLabel: "Meet Us There",
   description:
     "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
   events: [
     {
+      date: "Sep 2025",
       id: "world-aviation-festival",
       image: "/images/recent-events/frame-219.png",
+      location: "London, UK",
       title: "World Aviation Festival",
     },
     {
+      date: "Nov 2025",
       id: "fintech-festival",
       image: "/images/recent-events/frame-220.png",
-      title: "Fintech Festival",
+      location: "Singapore",
+      title: "Singapore Fintech Festival",
     },
     {
+      date: "Oct 2025",
       id: "itc-vegas",
       image: "/images/recent-events/frame-221.png",
+      location: "Las Vegas, USA",
       title: "ITC Vegas",
     },
     {
+      date: "Oct 2025",
       id: "sibos-amsterdam",
       image: "/images/recent-events/frame-222.png",
-      title: "SIBOS",
+      location: "Amsterdam, Netherlands",
+      title: "SIBOS 2025",
     },
     {
+      date: "Oct 2025",
       id: "money-20-20-amsterdam",
       image: "/images/recent-events/frame-223.png",
+      location: "Amsterdam, Netherlands",
       title: "Money 20/20",
     },
     {
-      id: "constellate",
+      date: "Oct 2025",
+      id: "gitex-global",
       image: "/images/recent-events/frame-224.png",
-      title: "Constellate",
+      location: "Dubai, UAE",
+      title: "GITEX Global 2025",
     },
     {
-      id: "converse",
+      date: "Dec 2025",
+      id: "constellate",
       image: "/images/recent-events/frame-225.png",
-      title: "Converse",
+      location: "New York, USA",
+      title: "Constellate 2025",
+    },
+    {
+      date: "Nov 2025",
+      id: "converse",
+      image: "/images/recent-events/frame-219.png",
+      location: "Mumbai, India",
+      title: "Converse 2025",
     },
   ],
   heading: <>Upcoming Trade Shows & Global Industry Events</>,
+  viewAllLabel: "Explore All Upcoming Events",
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {

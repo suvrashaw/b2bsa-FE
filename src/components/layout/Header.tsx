@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { serviceNavigationGroups, topNavigation, tradeShowLinks } from "@/content/navigation";
+import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 import { cn } from "@/lib";
 
 const HEADER_ANIMATE = { y: 0 };
@@ -16,6 +16,18 @@ const HEADER_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 const MOBILE_MENU_ANIMATE = { opacity: 1, y: 0 };
 const MOBILE_MENU_INITIAL = { opacity: 0, y: -20 };
 const MOBILE_MENU_EXIT = { opacity: 0, y: -20 };
+
+const LANG_DROPDOWN_ANIMATE = { opacity: 1, y: 0 };
+const LANG_DROPDOWN_EXIT = { opacity: 0, y: 8 };
+const LANG_DROPDOWN_INITIAL = { opacity: 0, y: 8 };
+const LANG_DROPDOWN_TRANSITION = { duration: 0.18, ease: "easeOut" } as const;
+
+const LANGUAGES = [
+  { code: "EN", name: "English" },
+  { code: "HI", name: "हिंदी" },
+  { code: "AR", name: "العربية" },
+  { code: "ZH", name: "中文" },
+] as const;
 
 const MEGAMENU_ANIMATE = { opacity: 1, y: 0 };
 const MEGAMENU_INITIAL = { opacity: 0, y: 10 };
@@ -29,7 +41,7 @@ const DesktopNavLink = ({
   link,
   onMouseEnter,
 }: {
-  activeDropdown: "services" | "tradeshows" | null;
+  activeDropdown: "services" | null;
   lightText: boolean;
   link: (typeof topNavigation)[number];
   onMouseEnter: (name: string) => void;
@@ -49,24 +61,18 @@ const DesktopNavLink = ({
         onMouseEnter={handleMouseEnter}
       >
         {link.name}
-        {(link.name === "Services" || link.name === "Trade Shows") && (
+        {link.name === "Services" && (
           <ChevronDown
             className={cn(
               "h-3.5 w-3.5 opacity-70 transition-transform duration-300",
-              (link.name === "Services" && activeDropdown === "services") ||
-                (link.name === "Trade Shows" && activeDropdown === "tradeshows")
-                ? "rotate-180"
-                : ""
+              activeDropdown === "services" ? "rotate-180" : ""
             )}
           />
         )}
         <span
           className={cn(
             "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
-            (link.name === "Services" && activeDropdown === "services") ||
-              (link.name === "Trade Shows" && activeDropdown === "tradeshows")
-              ? "w-full"
-              : ""
+            link.name === "Services" && activeDropdown === "services" ? "w-full" : ""
           )}
         />
       </Link>
@@ -118,21 +124,62 @@ const MegamenuServiceGroup = ({
   );
 };
 
-const TradeShowLink = ({
-  item,
-  onClose,
-}: {
-  item: (typeof tradeShowLinks)[number];
-  onClose: () => void;
-}) => {
+const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleMouseEnter = useCallback(() => setIsOpen(true), []);
+  const handleMouseLeave = useCallback(() => setIsOpen(false), []);
+
   return (
-    <Link
-      className="block text-sm font-semibold text-gray-700 transition-colors hover:text-brand-blue"
-      href={item.href}
-      onClick={onClose}
+    <div
+      className="relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {item.name}
-    </Link>
+      <button
+        className={cn(
+          "flex items-center gap-1.5 text-sm font-medium transition-colors",
+          lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
+        )}
+        type="button"
+      >
+        <Globe className="h-4 w-4" />
+        <span>EN</span>
+        <ChevronDown
+          className={cn(
+            "h-3 w-3 transition-transform duration-200",
+            isOpen ? "rotate-180" : ""
+          )}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            animate={LANG_DROPDOWN_ANIMATE}
+            className="absolute top-full right-0 mt-2 min-w-[148px] overflow-hidden rounded-xl border border-gray-100 bg-white py-1.5 shadow-xl"
+            exit={LANG_DROPDOWN_EXIT}
+            initial={LANG_DROPDOWN_INITIAL}
+            transition={LANG_DROPDOWN_TRANSITION}
+          >
+            {LANGUAGES.map((lang) => (
+              <button
+                className={cn(
+                  "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue",
+                  lang.code === "EN"
+                    ? "font-semibold text-brand-blue"
+                    : "text-brand-charcoal"
+                )}
+                key={lang.code}
+                type="button"
+              >
+                <span className="w-7 text-xs font-bold">{lang.code}</span>
+                <span>{lang.name}</span>
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
@@ -142,7 +189,7 @@ export const Header = ({
 }: { darkBackground?: boolean; forceLightMode?: boolean } = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<"services" | "tradeshows" | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<"services" | null>(null);
 
   const solidHeader = forceLightMode || scrolled;
   const lightText = darkBackground && !solidHeader;
@@ -152,8 +199,6 @@ export const Header = ({
   const handleMouseEnterLink = useCallback((name: string) => {
     if (name === "Services") {
       setActiveDropdown("services");
-    } else if (name === "Trade Shows") {
-      setActiveDropdown("tradeshows");
     } else {
       setActiveDropdown(null);
     }
@@ -165,10 +210,6 @@ export const Header = ({
 
   const handleMouseEnterServicesMegamenu = useCallback(() => {
     setActiveDropdown("services");
-  }, []);
-
-  const handleMouseEnterTradeshowsMegamenu = useCallback(() => {
-    setActiveDropdown("tradeshows");
   }, []);
 
   useEffect(() => {
@@ -224,20 +265,7 @@ export const Header = ({
       </nav>
 
       <div className="flex items-center gap-6">
-        <button
-          className={cn(
-            "flex items-center gap-2 text-sm font-medium transition-colors",
-            lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
-          )}
-        >
-          <span className="flex items-center" suppressHydrationWarning>
-            <Globe className="h-4 w-4" />
-          </span>
-          <span>EN</span>
-          <span className="flex items-center" suppressHydrationWarning>
-            <ChevronDown className="h-3 w-3" />
-          </span>
-        </button>
+        <LanguageSelector lightText={lightText} />
 
         <Link href="/contact">
           <Button size="sm" variant="primary">
@@ -284,29 +312,6 @@ export const Header = ({
       </AnimatePresence>
 
       <AnimatePresence>
-        {activeDropdown === "tradeshows" && (
-          <motion.div
-            animate={MEGAMENU_ANIMATE}
-            className="absolute top-full right-0 left-0 z-[100] w-full bg-white/95 p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md"
-            exit={MEGAMENU_EXIT}
-            initial={MEGAMENU_INITIAL}
-            onMouseEnter={handleMouseEnterTradeshowsMegamenu}
-            transition={MEGAMENU_TRANSITION}
-          >
-            <div className="mx-auto flex max-w-7xl justify-center px-8">
-              <div className="w-80 rounded-lg p-5 transition-all hover:bg-brand-blue/[0.02]">
-                <div className="flex flex-col gap-4">
-                  {tradeShowLinks.map((item) => (
-                    <TradeShowLink item={item} key={item.name} onClose={handleCloseMegamenu} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             animate={MOBILE_MENU_ANIMATE}
@@ -345,20 +350,6 @@ export const Header = ({
                           </Link>
                         ))}
                       </div>
-                    ))}
-                  </div>
-                )}
-                {link.name === "Trade Shows" && (
-                  <div className="space-y-2 border-l-2 border-brand-blue/10 pl-4">
-                    {tradeShowLinks.map((item) => (
-                      <Link
-                        className="block text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
-                        href={item.href}
-                        key={item.name}
-                        onClick={closeMobileMenu}
-                      >
-                        {item.name}
-                      </Link>
                     ))}
                   </div>
                 )}

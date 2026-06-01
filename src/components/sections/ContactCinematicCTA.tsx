@@ -31,10 +31,6 @@ export interface ContactCinematicCTAProps {
     href: string;
     label: string;
   };
-  trustItems: {
-    label: string;
-    value: string;
-  }[];
 }
 
 const decorativeStars = [
@@ -103,7 +99,6 @@ export const ContactCinematicCTA = ({
   proofLabel,
   proofLogos,
   secondaryCta,
-  trustItems,
 }: ContactCinematicCTAProps) => {
   const [pointerOffset, setPointerOffset] = useState({ x: 0, y: 0 });
 
@@ -282,24 +277,6 @@ export const ContactCinematicCTA = ({
             </p>
           </motion.div>
 
-          <motion.div
-            className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
-            custom={0.4}
-            initial="hidden"
-            variants={ctaRevealVariants}
-            viewport={ctaViewport}
-            whileInView="visible"
-          >
-            {trustItems.map((item) => (
-              <div
-                className="rounded-3xl border border-white/16 bg-white/10 px-6 py-5 text-left backdrop-blur-md"
-                key={item.label}
-              >
-                <p className="font-heading text-3xl font-bold text-white">{item.value}</p>
-                <p className="mt-2 text-sm text-white/74">{item.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>

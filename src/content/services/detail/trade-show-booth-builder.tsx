@@ -17,8 +17,8 @@ export const BOOTH_BUILDER_INTRO = {
   imageAlt: "Enterprise exhibition stand built for a global trade show",
   imageUrl: "/images/booth/30x40.png",
   label: "Introduction",
-  titleLine1: "Exhibition Stand Builder",
-  titleLine2: "and Turnkey Solutions",
+  titleLine1: "Remote Coordination",
+  titleLine2: "On-Site Delivery",
 };
 
 export const BOOTH_BUILDER_DELIVERABLES = {
@@ -218,51 +218,39 @@ export const BOOTH_BUILDER_FAQ = {
   faqs: [
     {
       answer:
-        "A turnkey exhibition booth is an all-inclusive build service covering design, fabrication, graphics, logistics, installation, dismantling, and post-event support. Your team works with one accountable partner instead of coordinating separate vendors.",
-      id: "turnkey",
-      question: "What is a turnkey trade show booth?",
+        "Booth design is critical because it creates the first impression of your brand. A well-designed booth attracts attention, communicates value instantly, and encourages meaningful conversations that convert visitors into qualified leads.",
+      id: "importance",
+      question: "Why is booth design important for trade shows?",
     },
     {
       answer:
-        "Yes. We support full exhibition stand design and build, from concept and 3D visualization through production files, material planning, fabrication, shipping, and on-site installation.",
-      id: "design-build",
-      question: "Do you also do exhibition stand design and building?",
+        "Costs vary based on size, customization, materials, and location. Small booths may start around $5,000–$10,000, while larger custom exhibits can exceed $50,000 depending on technology, logistics, and design complexity.",
+      id: "cost",
+      question: "How much does a custom trade show booth design cost?",
     },
     {
       answer:
-        "Standard custom booths usually need 12-16 weeks from approved brief to installation. Double-deck, technology-heavy, or international builds can require 16-20 weeks depending on venue approvals and logistics.",
-      id: "lead-time",
-      question: "What is the typical build lead time?",
+        "Ideally, planning should begin 3–6 months before the event. Early planning ensures better design execution, cost efficiency, smoother logistics, and compliance with venue deadlines.",
+      id: "timeline",
+      question: "How soon should I start planning my trade show booth design?",
     },
     {
       answer:
-        "Yes. For turnkey programs, we coordinate crating, shipping, customs documentation, venue delivery windows, and local installation partners across international event markets.",
-      id: "shipping",
-      question: "Do you handle international shipping and customs?",
+        "Yes. Full-service booth partners manage shipping, customs, venue approvals, installation, dismantling, and on-site coordination—ensuring a stress-free exhibition experience.",
+      id: "logistics",
+      question: "Can you help with booth logistics and setup?",
     },
     {
       answer:
-        "Yes. Reuse planning can be built into the structure from the start so core components can travel between events while graphics, surfaces, and messaging refresh for each show.",
-      id: "reuse",
-      question: "Can the booth be reused?",
+        "Strong branding, bold visuals, open layouts, interactive elements, and clear messaging help your booth attract attention and increase visitor engagement in competitive show environments.",
+      id: "standout",
+      question: "How do I make my trade show booth stand out?",
     },
     {
       answer:
-        "Yes. We manage assembly, alignment, technical checks, finishing details, and final quality review before the show opens.",
-      id: "installation",
-      question: "Do you manage on-site installation?",
-    },
-    {
-      answer:
-        "A modular booth uses reusable structural systems that can be reconfigured across event sizes. A custom booth is designed and fabricated around one specific brand experience. We recommend the format based on timeline, budget, reuse goals, and event importance.",
-      id: "modular-vs-custom",
-      question: "What is the difference between modular and custom booth builds?",
-    },
-    {
-      answer:
-        "Yes. We build compact 10x10 booths, inline 10x20 stands, 20x20 island booths, double-deck structures, and custom environments for flagship exhibitions.",
-      id: "sizes",
-      question: "What booth sizes can you build?",
+        "A strategically designed booth increases qualified traffic, improves brand recall, and boosts lead conversion rates—resulting in stronger pipeline opportunities and measurable event ROI.",
+      id: "roi",
+      question: "What ROI can I expect from a well-designed booth?",
     },
   ],
   heading: "Trade Show Booth Builder FAQs",
@@ -364,24 +352,6 @@ export const BOOTH_BUILDER_CONTACT_CTA = {
     href: "mailto:info@b2bsalesarrow.com",
     label: "Contact Us",
   },
-  trustItems: [
-    {
-      label: "Response within 24h",
-      value: "24h",
-    },
-    {
-      label: "Free consultation",
-      value: "Free",
-    },
-    {
-      label: "Custom proposals",
-      value: "Custom",
-    },
-    {
-      label: "Flexible budgets",
-      value: "Flex",
-    },
-  ],
 };
 
 export const BOOTH_BUILDER_PAGE = {

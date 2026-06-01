@@ -19,6 +19,7 @@ export interface BoothShowcaseItem {
 }
 
 interface BoothScrollShowcaseProps {
+  ctaLabel?: string;
   heading?: string;
   items: BoothShowcaseItem[];
 }
@@ -54,7 +55,7 @@ const DotButton = ({ active, index, onClick }: DotButtonProps) => {
   );
 };
 
-export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps) => {
+export const BoothScrollShowcase = ({ ctaLabel = "Learn More", heading, items }: BoothScrollShowcaseProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -78,31 +79,15 @@ export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps
       ref={containerRef}
       style={sectionStyle}
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-center pt-16 pb-12">
+      <div className="sticky top-0 flex h-[80vh] flex-col justify-center pt-16">
         {heading && (
-          <div className="container mx-auto px-8 pb-12">
+          <div className="container mx-auto px-8 pb-16">
             <Heading as="h2" className="text-center">{heading}</Heading>
           </div>
         )}
-        <div className="container mx-auto grid flex-1 grid-cols-2 items-center gap-16 px-8">
+        <div className="container mx-auto grid grid-cols-2 items-center gap-16 px-8">
 
-          {/* Left: Sticky image */}
-          <div className="relative flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                animate={IMG_ANIMATE}
-                className="relative aspect-[4/5] max-h-[calc(100vh-10rem)] w-full max-w-[540px] overflow-hidden shadow-2xl"
-                exit={IMG_EXIT}
-                initial={IMG_INITIAL}
-                key={active.id}
-                transition={IMG_TRANSITION}
-              >
-                <Image alt={active.heading} className="object-cover" fill sizes="540px" src={active.image} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Right: Content */}
+          {/* Left: Content */}
           <div className="flex flex-col justify-center">
             <AnimatePresence mode="wait">
               <motion.div
@@ -128,7 +113,7 @@ export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps
                 </div>
                 <div className="mt-8">
                   <Button asChild variant="secondary">
-                    <Link href={active.cta.href}>{active.cta.label}</Link>
+                    <Link href={active.cta.href}>{ctaLabel}</Link>
                   </Button>
                 </div>
               </motion.div>
@@ -145,6 +130,22 @@ export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps
                 />
               ))}
             </div>
+          </div>
+
+          {/* Right: Sticky image */}
+          <div className="relative flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                animate={IMG_ANIMATE}
+                className="relative aspect-[3/2] max-h-[calc(100vh-10rem)] w-full max-w-[540px] overflow-hidden shadow-2xl"
+                exit={IMG_EXIT}
+                initial={IMG_INITIAL}
+                key={active.id}
+                transition={IMG_TRANSITION}
+              >
+                <Image alt={active.heading} className="object-cover" fill sizes="540px" src={active.image} />
+              </motion.div>
+            </AnimatePresence>
           </div>
 
         </div>

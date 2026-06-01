@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import { BoothSizesFeature } from "@/components/sections/BoothSizesFeature";
+import { BoothScrollShowcase } from "@/components/sections/BoothScrollShowcase";
+import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FutureReadyStands } from "@/components/sections/FutureReadyStands";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
-import { WhyChooseUsHighlights } from "@/components/sections/WhyChooseUsHighlights";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -14,18 +14,18 @@ import {
   BOOTH_BUILDER_BLOGS_SECTION,
   BOOTH_BUILDER_CASE_STUDIES,
   BOOTH_BUILDER_CONTACT_CTA,
-  BOOTH_BUILDER_DELIVERABLES,
   BOOTH_BUILDER_FAQ,
-  BOOTH_BUILDER_FORMATS_SECTION,
   BOOTH_BUILDER_FUTURE_READY,
   BOOTH_BUILDER_HERO,
-  BOOTH_BUILDER_INTRO,
   BOOTH_BUILDER_PAGE,
   BOOTH_BUILDER_PROCESS,
   BOOTH_BUILDER_PROOF_BAR,
   BOOTH_BUILDER_RELATED_SERVICES,
-  BOOTH_BUILDER_WHY_CHOOSE_US,
 } from "@/content/services/detail/trade-show-booth-builder";
+import {
+  BOOTH_DESIGN_SHOWCASE_ITEMS,
+  BOOTH_DESIGN_WHY_CHOOSE_US,
+} from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
@@ -36,7 +36,7 @@ const Page = () => {
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
       closingSections={
         <>
-          <WhyChooseUsHighlights {...BOOTH_BUILDER_WHY_CHOOSE_US} />
+          <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
           <RentalBlogsSection
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
             posts={BOOTH_BUILDER_BLOG_POSTS}
@@ -46,23 +46,32 @@ const Page = () => {
           <ContactCinematicCTA {...BOOTH_BUILDER_CONTACT_CTA} />
         </>
       }
-      deliverables={BOOTH_BUILDER_DELIVERABLES}
-      deliverablesSectionType="carousel"
       faq={BOOTH_BUILDER_FAQ}
       hero={BOOTH_BUILDER_HERO}
       middleSections={<FutureReadyStands {...BOOTH_BUILDER_FUTURE_READY} />}
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <BoothSizesFeature
-          eyebrow={BOOTH_BUILDER_FORMATS_SECTION.eyebrow}
-          heading={BOOTH_BUILDER_FORMATS_SECTION.heading}
-          items={BOOTH_BUILDER_FORMATS_SECTION.services}
-        />
+        <BoothScrollShowcase heading="What We Do in Exhibition Stand Builder" items={BOOTH_DESIGN_SHOWCASE_ITEMS} />
       }
       process={BOOTH_BUILDER_PROCESS}
       proofBar={BOOTH_BUILDER_PROOF_BAR}
-      spotlight={BOOTH_BUILDER_INTRO}
+      proofBarClassName="[&_p]:max-w-5xl"
+      proofBarDescription={
+        <>
+          India is one of the fastest-growing exhibition markets, hosting major trade shows across
+          industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in
+          India offers access to a large and diverse business audience, making it a key destination
+          for global brands.
+          <br />
+          <br />
+          B2B Sales Arrow is an experienced trade show booth builder in India, helping international
+          exhibitors design and build impactful exhibition stands across major Indian exhibition
+          cities. We specialize in delivering high-quality booth design and fabrication services
+          while ensuring smooth coordination for clients managing projects remotely.
+        </>
+      }
+      proofBarHeading="Exhibition stand builder and Turnkey Solutions"
     />
   );
 };

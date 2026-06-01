@@ -38,12 +38,12 @@ export const BOOTH_RENTAL_WHY = {
   ctaHref: "/contact",
   ctaLabel: "Let's Connect",
   description:
-    "At B2B Sales Arrow, we provide fully managed trade show booth rental solutions that give enterprise brands a polished, fully branded exhibition presence — without custom fabrication timelines or capital commitment. Deployed across global events, every rental is configured to your brand, professionally installed, and supported end-to-end.",
+    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.",
   imageAlt: "B2B Sales Arrow trade show booth rental",
   imageUrl: "/images/booth/30x40.png",
   label: "Our Services",
   titleLine1: "Introduction to Our",
-  titleLine2: "Rental Services",
+  titleLine2: "Services",
 };
 
 export const BOOTH_RENTAL_DELIVERABLES = {
@@ -293,24 +293,6 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
     href: "mailto:info@b2bsalesarrow.com",
     label: "Contact Us",
   },
-  trustItems: [
-    {
-      label: "Response within 24h",
-      value: "24h",
-    },
-    {
-      label: "Free consultation",
-      value: "Free",
-    },
-    {
-      label: "Custom proposals",
-      value: "Custom",
-    },
-    {
-      label: "Flexible budgets",
-      value: "Flex",
-    },
-  ],
 };
 
 export const BOOTH_RENTAL_PAGE = {

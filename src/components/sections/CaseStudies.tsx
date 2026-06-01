@@ -98,7 +98,8 @@ export const CaseStudies = ({
     },
     title: study.title,
   }));
-  const [activeId, setActiveId] = useState<string>(resolvedCaseStudies[0]?.id ?? "");
+  const middleIndex = Math.floor(resolvedCaseStudies.length / 2);
+  const [activeId, setActiveId] = useState<string>(resolvedCaseStudies[middleIndex]?.id ?? "");
   const activeCaseStudyId = cards.some((study) => study.id === activeId)
     ? activeId
     : (cards[0]?.id ?? "");

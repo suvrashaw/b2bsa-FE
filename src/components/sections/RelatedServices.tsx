@@ -38,7 +38,7 @@ export const RelatedServices = ({
   return (
     <section className={cn("bg-brand-gray py-20", className)}>
       <div className="container mx-auto px-8">
-        <Heading as="h2" className="mb-12 text-center text-brand-gray">
+        <Heading as="h2" className="mb-12 text-center">
           {title}
         </Heading>
 
@@ -52,18 +52,22 @@ export const RelatedServices = ({
               whileInView={RELATEDSERVICES_WHILE_IN_VIEW}
             >
               <Link
-                className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-gray-100 bg-white p-8 transition-all hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5"
+                className="group relative flex h-full items-center justify-between overflow-hidden rounded-xl border border-gray-100 bg-white px-8 py-7 transition-colors duration-300 hover:border-brand-blue hover:bg-brand-blue"
                 href={service.href}
               >
-                <div className="flex items-start justify-between">
-                  <h3 className="font-heading text-xl font-bold text-brand-gray transition-colors group-hover:text-brand-blue">
-                    {service.title}
-                  </h3>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 text-brand-blue transition-all group-hover:bg-brand-blue group-hover:text-white">
-                    <MoveRight className="h-5 w-5" />
-                  </div>
+                {/* Cyan glow orb blooms from top-right corner on hover */}
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
+                />
+
+                <h3 className="relative font-heading text-xl font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-white">
+                  {service.title}
+                </h3>
+
+                <div className="relative ml-6 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-50 text-brand-blue transition-all duration-300 group-hover:bg-brand-cyan group-hover:text-brand-charcoal">
+                  <MoveRight className="h-5 w-5" />
                 </div>
-                <div className="mt-8 h-1 w-0 bg-brand-blue transition-all group-hover:w-full" />
               </Link>
             </motion.div>
           ))}

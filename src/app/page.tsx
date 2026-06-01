@@ -16,6 +16,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import { buildFaqJsonLd } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
@@ -40,7 +41,7 @@ const Home = () => {
       </div>
 
       <div id="work">
-        <CaseStudies />
+        <CaseStudies items={GLOBAL_CASE_STUDIES} />
       </div>
 
       <div id="events">
