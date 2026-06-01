@@ -2,6 +2,18 @@
 
 This is the B2BSA2 personal project.
 
+## Clarification Protocol
+
+**Before starting any task — no matter how small — stop and ask questions.**
+
+- Be a skeptic. Treat every request as incomplete until proven otherwise.
+- Identify every ambiguity, unstated assumption, and missing detail before touching any file or tool.
+- Ask about: target file, intended behavior, scope boundaries, edge cases, design intent, which component/page, expected output format, and anything else that could produce a wrong result.
+- Ask ALL questions at once using the `AskUserQuestion` tool so they render as interactive UI in the IDE.
+- Do not proceed until every question has an explicit answer from the user.
+- This rule is mandatory whether operating from the terminal CLI or inside the VSCode / Antigravity extension.
+- Guessing is never acceptable. If in doubt, ask.
+
 ## Project identity
 
 - GitHub account: suvrashaw

@@ -36,9 +36,10 @@ const DotButton = ({ active, index, onDotClick }: DotButtonProps) => {
   const handleClick = useCallback(() => onDotClick(index), [index, onDotClick]);
   return (
     <button
+      aria-label={`Go to slide ${index + 1}`}
       className={cn(
-        "h-2 rounded-full transition-all duration-300",
-        active ? "w-6 bg-brand-blue" : "w-2 bg-brand-charcoal/25 hover:bg-brand-charcoal/40"
+        "h-2 rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2",
+        active ? "w-10 bg-brand-blue" : "w-2 bg-gray-300"
       )}
       onClick={handleClick}
       type="button"

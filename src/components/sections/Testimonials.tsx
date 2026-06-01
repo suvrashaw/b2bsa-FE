@@ -8,6 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
+import { cn } from "@/lib";
 
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];
@@ -134,10 +135,12 @@ const DotButton = ({
   return (
     <button
       aria-label={`Go to slide ${idx + 1}`}
-      className={`h-2 rounded-full transition-all duration-500 ease-out ${
-        activeIndex === idx ? "w-10 bg-[#1E6091]" : "w-2 bg-gray-300"
-      }`}
+      className={cn(
+        "h-2 rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2",
+        activeIndex === idx ? "w-10 bg-brand-blue" : "w-2 bg-gray-300"
+      )}
       onClick={handleClick}
+      type="button"
     />
   );
 };

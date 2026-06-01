@@ -315,45 +315,39 @@ export const BOOTH_DESIGN_FAQ = {
   faqs: [
     {
       answer:
-        "Design fees typically range from $3,000 for a compact 10x10 to $60,000+ for large custom or double-deck structures. See our pricing guide table above for reference ranges. Contact us for a project-specific estimate based on your booth size, event, and brief.",
+        "Booth design is critical because it creates the first impression of your brand. A well-designed booth attracts attention, communicates value instantly, and encourages meaningful conversations that convert visitors into qualified leads.",
+      id: "importance",
+      question: "Why is booth design important for trade shows?",
+    },
+    {
+      answer:
+        "Costs vary based on size, customization, materials, and location. Small booths may start around $5,000–$10,000, while larger custom exhibits can exceed $50,000 depending on technology, logistics, and design complexity.",
       id: "cost",
-      question: "How much does custom trade show booth design cost?",
+      question: "How much does a custom trade show booth design cost?",
     },
     {
       answer:
-        "A custom trade show booth is designed and built specifically for your brand. A modular booth uses a reusable system with updated graphics between events — faster and more cost-efficient for multi-event programs. We design and build both.",
-      id: "modular-vs-custom",
-      question: "What is the difference between modular and custom booth design?",
-    },
-    {
-      answer:
-        "From brief to approved 3D renders: 3–5 weeks. Fabrication lead time varies by complexity. For major international events, engage us 14–20 weeks before the show.",
+        "Ideally, planning should begin 3–6 months before the event. Early planning ensures better design execution, cost efficiency, smoother logistics, and compliance with venue deadlines.",
       id: "timeline",
-      question: "How long does the design process take?",
+      question: "How soon should I start planning my trade show booth design?",
     },
     {
       answer:
-        "Yes. We extend your brand system — typefaces, colour palette, photography style — into a physical exhibition environment without losing consistency.",
-      id: "guidelines",
-      question: "Can you work with our existing brand guidelines?",
+        "Yes. Full-service booth partners manage shipping, customs, venue approvals, installation, dismantling, and on-site coordination—ensuring a stress-free exhibition experience.",
+      id: "logistics",
+      question: "Can you help with booth logistics and setup?",
     },
     {
       answer:
-        "Yes. Reuse planning is built into the design from the start. Many clients run the same booth system for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
-      id: "reuse",
-      question: "Can the booth be reused at multiple events?",
+        "Strong branding, bold visuals, open layouts, interactive elements, and clear messaging help your booth attract attention and increase visitor engagement in competitive show environments.",
+      id: "standout",
+      question: "How do I make my trade show booth stand out?",
     },
     {
       answer:
-        "Yes — full design-to-build service or design-only with production-ready files for your fabrication partner. You choose the scope.",
-      id: "fabrication",
-      question: "Do you handle fabrication and build as well?",
-    },
-    {
-      answer:
-        "GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and major regional industry trade shows across all sectors and markets.",
-      id: "events",
-      question: "What events do you design booths for?",
+        "A strategically designed booth increases qualified traffic, improves brand recall, and boosts lead conversion rates—resulting in stronger pipeline opportunities and measurable event ROI.",
+      id: "roi",
+      question: "What ROI can I expect from a well-designed booth?",
     },
   ],
   heading: "Trade Show Booth Design FAQs",

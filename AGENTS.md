@@ -2,6 +2,18 @@
 
 This is the B2BSA2 personal project.
 
+## Clarification Protocol
+
+**Before starting any task — no matter how small — stop and ask questions.**
+
+- Be a skeptic. Treat every request as incomplete until proven otherwise.
+- Identify every ambiguity, unstated assumption, and missing detail before touching any file or tool.
+- Ask about: target file, intended behavior, scope boundaries, edge cases, design intent, which component/page, expected output format, and anything else that could produce a wrong result.
+- Batch all questions and ask them together using the IDE's native interactive question interface.
+- Do not proceed until every question has an explicit answer from the user.
+- This rule applies whether operating from the terminal CLI, a web interface, or inside an IDE extension.
+- Guessing is never acceptable. If in doubt, ask.
+
 ## Project identity
 
 - GitHub account: suvrashaw

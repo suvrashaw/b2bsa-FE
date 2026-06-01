@@ -3,10 +3,11 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
+import { cn } from "@/lib";
 
 export interface BoothShowcaseItem {
   cta: { href: string; label: string };
@@ -31,6 +32,27 @@ const CONTENT_EXIT = { x: -40 };
 const CONTENT_INITIAL = { x: 40 };
 const IMG_TRANSITION = { duration: 0.55, ease: [0.4, 0, 0.2, 1] } as const;
 const CONTENT_TRANSITION = { duration: 0.4, ease: [0.4, 0, 0.2, 1] } as const;
+
+interface DotButtonProps {
+  active: boolean;
+  index: number;
+  onClick: (i: number) => void;
+}
+
+const DotButton = ({ active, index, onClick }: DotButtonProps) => {
+  const handleClick = useCallback(() => onClick(index), [index, onClick]);
+  return (
+    <button
+      aria-label={`Go to slide ${index + 1}`}
+      className={cn(
+        "h-2 rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2",
+        active ? "w-10 bg-brand-cyan" : "w-2 bg-gray-300"
+      )}
+      onClick={handleClick}
+      type="button"
+    />
+  );
+};
 
 export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -113,13 +135,13 @@ export const BoothScrollShowcase = ({ heading, items }: BoothScrollShowcaseProps
             </AnimatePresence>
 
             {/* Progress dots */}
-            <div className="mt-12 flex items-center gap-2">
+            <div className="mt-12 flex items-center gap-3">
               {items.map((_, i) => (
-                <div
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    i === activeIndex ? "w-8 bg-brand-cyan" : "w-2 bg-gray-200"
-                  }`}
+                <DotButton
+                  active={i === activeIndex}
+                  index={i}
                   key={i}
+                  onClick={setActiveIndex}
                 />
               ))}
             </div>

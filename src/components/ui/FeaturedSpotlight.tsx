@@ -67,7 +67,7 @@ const SpotlightTextBlock = ({
   );
 
   return (
-    <div className="relative z-10 flex w-full max-w-[480px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[440px] lg:max-w-[520px] lg:pt-4">
+    <div className="relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[480px] lg:max-w-[560px] lg:pt-4">
       <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
         <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
@@ -76,15 +76,15 @@ const SpotlightTextBlock = ({
       </div>
 
       <Heading as="h2" className="relative">
-        <span className="block whitespace-nowrap font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
+        <span className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
           {titleLine1}
         </span>
-        <span className="block whitespace-nowrap font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
+        <span className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
           {titleLine2}
         </span>
       </Heading>
 
-      <p className="mt-6 max-w-[420px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[400px] md:text-base lg:mt-10 lg:max-w-[480px]" style={descStyle}>
+      <p className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]" style={descStyle}>
         {description}
       </p>
 
