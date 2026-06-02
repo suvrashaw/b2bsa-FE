@@ -6,7 +6,38 @@ export const CORPORATE_VIDEO_HERO = {
   title: "Corporate Video Production Solutions That Command Enterprise Attention",
 };
 
-export { GLOBAL_PROOF_STATS as CORPORATE_VIDEO_PROOF_BAR } from "../../shared";
+export const CORPORATE_VIDEO_PROOF_BAR = [
+  "250+ events",
+  "$1.2B+ pipeline influenced",
+  "500+ corporate video production service",
+  "98% client retention",
+  "100+ live streaming services",
+  "40+ countries",
+];
+
+export const CORPORATE_VIDEO_INTRO = {
+  description: (
+    <>
+      Corporate video production is the process of creating video content specifically for business
+      purposes. Unlike traditional advertising or entertainment media, corporate videos are designed
+      to support organizational goals such as marketing, training, internal communication, or
+      stakeholder engagement.
+      <br />
+      <br />
+      The process typically involves multiple stages: planning, scripting, production, and
+      distribution. The aim is to ensure that videos are aligned with brand messaging and tailored to
+      their target audiences. These videos can take many forms, from short promotional clips and
+      product explainers to long-form training modules or event documentation.
+      <br />
+      <br />
+      Their purpose is both to inform and to influence behavior, whether that means motivating
+      employees, attracting customers, or building trust with partners. By combining visuals, sound,
+      and narrative, corporate video production provides companies with a versatile communication
+      tool that is both scalable and impactful.
+    </>
+  ),
+  heading: "What Is Corporate Video Production?",
+};
 
 export const CORPORATE_VIDEO_WHY = {
   description:
@@ -17,8 +48,41 @@ export const CORPORATE_VIDEO_WHY = {
   titleLine2: "Accelerates Your Sales Cycle",
 };
 
+export const CORPORATE_VIDEO_INDUSTRIES = {
+  description:
+    "We’re all about crafting standout video content across a range of industries. From finance to tech and energy, we've got you covered!",
+  heading: "Video production tailored to your industry.",
+  industries: [
+    {
+      description:
+        "Lead the market with a San Francisco video production company that transforms software into captivating stories. Drive user adoption faster.",
+      title: "Tech Video Production",
+    },
+    {
+      description:
+        "Build credibility with a video production agency that simplifies complex offerings. Use recruiting videos to attract top talent and foster trust.",
+      title: "Financial Services Video Production",
+    },
+    {
+      description:
+        "Inspire donors and volunteers with heartfelt recruiting videos. Our video production agency highlights your mission’s true impact.",
+      title: "Nonprofit Video Production",
+    },
+    {
+      description:
+        "Showcase innovation with commercial video production that highlights sustainability. Let our production teams power your story for the future.",
+      title: "Energy Company Video Production",
+    },
+    {
+      description:
+        "Elevate your products through commercial video production that boosts brand recognition. Our production teams spark customer engagement.",
+      title: "CPG & Retail Video Production",
+    },
+  ],
+};
+
 export const CORPORATE_VIDEO_DELIVERABLES = {
-  heading: "What We Produce",
+  heading: "What We Produce in Our Corporate Video Production Services",
   services: [
     {
       color: "bg-brand-blue",

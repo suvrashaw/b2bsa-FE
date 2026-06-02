@@ -1,27 +1,29 @@
+import { Fragment } from "react";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_RENTAL_RENT_VS_BUY = {
   description:
     "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics — making it the strategically smarter choice for most programs.",
-  heading: "When Rental Is the Smarter Decision",
+  heading: "TOP 3 REASONS TO RENT VS. BUY",
   reasons: [
     {
       description:
-        "Custom fabrication isn't feasible under 8 weeks. Rental delivers a polished, fully branded presence without the production lead time — including when it's your first time at a specific event.",
-      icon: "Clock",
-      title: "Under 8 Weeks to Show Date",
+        "You can stretch your budget without sacrificing design with the right custom rental solutions.",
+      icon: "Coins",
+      title: "Save Money",
     },
     {
       description:
-        "Validate event ROI before committing to a full custom build. Ideal for testing a new market, emerging geographies, and concurrent satellite presences alongside your flagship booth.",
-      icon: "MapPin",
-      title: "Testing a New Market",
+        "If your exhibit needs change from show to show or year to year, rentals can help you quickly scale.",
+      icon: "Move",
+      title: "Stay Flexible",
     },
     {
       description:
-        "Spread cost across specific events without capital commitment. Avoid storage, booth maintenance, and crating costs entirely — budget flexibility with no compromise on brand quality.",
-      icon: "DollarSign",
-      title: "Budget Flexibility Required",
+        "By renting, you avoid storage, booth maintenance, and crating hassles and costs.",
+      icon: "Truck",
+      title: "Make it Easy",
     },
   ],
 } as const;
@@ -100,7 +102,7 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 10×10 Rental Quote" },
     descriptions: [
-      <>Branded back wall, counter, lighting, screen option, and <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.</>
+      <Fragment key="focused-presence">Branded back wall, counter, lighting, screen option, and <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.</Fragment>
     ],
     eyebrow: "Focused Presence",
     heading: "10x10 Standard",
@@ -120,7 +122,7 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 20×20 Rental Quote" },
     descriptions: [
-      <>Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas, meeting space, and AV support.</>
+      <Fragment key="exhibition-visibility">Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas, meeting space, and AV support.</Fragment>
     ],
     eyebrow: "High Visibility",
     heading: "20x20 Island",
@@ -140,7 +142,7 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get Custom Rental Quote" },
     descriptions: [
-      <>Existing <strong className="font-bold">rental structures</strong> adapted with your full brand identity, messaging, and engagement zones.</>
+      <Fragment key="rental-structures">Existing <strong className="font-bold">rental structures</strong> adapted with your full brand identity, messaging, and engagement zones.</Fragment>
     ],
     eyebrow: "Bespoke",
     heading: "Custom-Branded Rentals",

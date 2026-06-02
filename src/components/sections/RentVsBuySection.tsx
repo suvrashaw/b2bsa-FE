@@ -1,12 +1,14 @@
-import { Clock, DollarSign, MapPin, Maximize2, Truck } from "lucide-react";
+import { Clock, Coins, DollarSign, MapPin, Maximize2, Move, Truck } from "lucide-react";
 
 import { Heading } from "@/components/ui/Heading";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Clock: <Clock className="h-20 w-20" strokeWidth={1.5} />,
+  Coins: <Coins className="h-20 w-20" strokeWidth={1.5} />,
   DollarSign: <DollarSign className="h-20 w-20" strokeWidth={1.5} />,
   MapPin: <MapPin className="h-20 w-20" strokeWidth={1.5} />,
   Maximize2: <Maximize2 className="h-20 w-20" strokeWidth={1.5} />,
+  Move: <Move className="h-20 w-20" strokeWidth={1.5} />,
   Truck: <Truck className="h-20 w-20" strokeWidth={1.5} />,
 };
 

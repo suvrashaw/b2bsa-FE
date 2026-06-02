@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
@@ -11,6 +12,8 @@ import {
   CORPORATE_VIDEO_DELIVERABLES,
   CORPORATE_VIDEO_FAQ,
   CORPORATE_VIDEO_HERO,
+  CORPORATE_VIDEO_INDUSTRIES,
+  CORPORATE_VIDEO_INTRO,
   CORPORATE_VIDEO_PAGE,
   CORPORATE_VIDEO_PROOF_BAR,
   CORPORATE_VIDEO_WHY,
@@ -46,6 +49,7 @@ const corporateVideoProductionRelatedServices = [
 const Page = () => {
   return (
     <ServiceDetail
+      afterSpotlightSections={<CorporateVideoIndustriesSection {...CORPORATE_VIDEO_INDUSTRIES} />}
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
       closingSections={
         <>
@@ -61,7 +65,9 @@ const Page = () => {
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       proofBar={CORPORATE_VIDEO_PROOF_BAR}
-      why={CORPORATE_VIDEO_WHY}
+      proofBarDescription={CORPORATE_VIDEO_INTRO.description}
+      proofBarHeading={CORPORATE_VIDEO_INTRO.heading}
+      spotlight={CORPORATE_VIDEO_WHY}
     />
   );
 };

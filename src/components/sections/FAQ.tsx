@@ -47,6 +47,7 @@ const FAQMotionCard = ({
   const faqTransition = useMemo(() => ({ delay: index * 0.1 }), [index]);
   return (
     <motion.div
+      className={layoutMode === "carousel" ? "w-[300px] shrink-0 snap-center md:w-[320px]" : "w-full sm:max-w-[320px] shrink-0"}
       initial={FAQ_ITEM_INITIAL}
       transition={faqTransition}
       viewport={FAQ_VIEWPORT}
@@ -63,11 +64,11 @@ export const FAQ = ({
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
-  layoutMode = content.layoutMode ?? "auto",
+  layoutMode = content.layoutMode ?? "carousel",
   scrollAmount = content.scrollAmount,
 }: FAQProps = {}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(true);
 
   const checkOverflow = useCallback(() => {
     if (scrollRef.current) {

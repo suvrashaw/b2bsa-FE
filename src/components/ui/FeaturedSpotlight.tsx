@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
+import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
@@ -15,11 +16,14 @@ export interface FeaturedSpotlightProps {
   ctaLabel?: string;
   description: string;
   imageAlt?: string;
-  imageUrl: string;
+  imageUrl?: string;
   index?: string;
   label?: string;
+  onClick?: () => void;
   titleLine1: string;
   titleLine2: string;
+  triggerContactModal?: boolean;
+  videoUrl?: string;
 }
 
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
@@ -30,6 +34,7 @@ const SpotlightTextBlock = ({
   description,
   isHovered,
   label,
+  onClick,
   titleLine1,
   titleLine2,
 }: {
@@ -37,7 +42,8 @@ const SpotlightTextBlock = ({
   ctaLabel: string;
   description: string;
   isHovered: boolean;
-  label: string;
+  label?: string;
+  onClick?: () => void;
   titleLine1: string;
   titleLine2: string;
 }) => {
@@ -68,12 +74,14 @@ const SpotlightTextBlock = ({
 
   return (
     <div className="relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[480px] lg:max-w-[560px] lg:pt-4">
-      <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
-        <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
-        <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
-          {label}
-        </span>
-      </div>
+      {label && (
+        <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
+          <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
+          <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
+            {label}
+          </span>
+        </div>
+      )}
 
       <Heading as="h2" className="relative">
         <span className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
@@ -109,6 +117,7 @@ const SpotlightTextBlock = ({
               "gap-2 transition-all duration-500",
               isHovered && "border-brand-blue bg-brand-blue/5"
             )}
+            onClick={onClick}
             variant="secondary"
           >
             {ctaLabel}
@@ -124,10 +133,12 @@ const SpotlightImageBlock = ({
   imageAlt,
   imageUrl,
   isHovered,
+  videoUrl,
 }: {
   imageAlt: string;
-  imageUrl: string;
+  imageUrl?: string;
   isHovered: boolean;
+  videoUrl?: string;
 }) => {
   const wrapStyle = useMemo(
     () => ({
@@ -175,12 +186,40 @@ const SpotlightImageBlock = ({
     () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleX(1)" : "scaleX(0)", transformOrigin: "right" as const, transitionDelay: "200ms", transitionTimingFunction: EASE }),
     [isHovered]
   );
+  let mediaElement: React.ReactNode = null;
+  if (videoUrl) {
+    mediaElement = (
+      <video
+        autoPlay
+        className="h-full w-full object-cover transition-all duration-1000"
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        style={imgStyle}
+      >
+        <source src={videoUrl} type="video/mp4" />
+      </video>
+    );
+  } else if (imageUrl) {
+    mediaElement = (
+      <Image
+        alt={imageAlt}
+        className="h-full w-full object-cover transition-all duration-1000"
+        fill
+        sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px"
+        src={imageUrl}
+        style={imgStyle}
+      />
+    );
+  }
+
   return (
     <div className="relative w-fit transition-all duration-700" style={wrapStyle}>
       <div className="absolute -inset-3 border transition-all duration-700 md:-inset-4" style={frameStyle} />
       <div className="relative h-[300px] w-[280px] overflow-hidden sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
         <div className="absolute -inset-1 transition-all duration-700" style={shadowStyle} />
-        <Image alt={imageAlt} className="h-full w-full object-cover transition-all duration-1000" fill sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px" src={imageUrl} style={imgStyle} />
+        {mediaElement}
         <div className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700" style={overlayStyle} />
         <div className="absolute top-2 left-2 h-5 w-px bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:h-6" style={cornerTLV} />
         <div className="absolute top-2 left-2 h-px w-5 bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:w-6" style={cornerTLH} />
@@ -200,37 +239,62 @@ export const FeaturedSpotlight = ({
   imageAlt = "Feature image",
   imageUrl,
   index: _index = "01",
-  label = "Featured",
+  label,
+  onClick,
   titleLine1,
   titleLine2,
+  triggerContactModal = false,
+  videoUrl,
 }: FeaturedSpotlightProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
+  const handleCtaClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+    if (triggerContactModal) {
+      setIsModalOpen(true);
+    }
+  }, [onClick, triggerContactModal]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
   return (
-    <div
-      className={cn(
-        "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
-        className
+    <>
+      <div
+        className={cn(
+          "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
+          className
+        )}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <SpotlightTextBlock
+          ctaHref={ctaHref}
+          ctaLabel={ctaLabel}
+          description={description}
+          isHovered={isHovered}
+          label={label}
+          onClick={handleCtaClick}
+          titleLine1={titleLine1}
+          titleLine2={titleLine2}
+        />
+        <SpotlightImageBlock
+          imageAlt={imageAlt}
+          imageUrl={imageUrl}
+          isHovered={isHovered}
+          videoUrl={videoUrl}
+        />
+      </div>
+      {triggerContactModal && (
+        <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
       )}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <SpotlightTextBlock
-        ctaHref={ctaHref}
-        ctaLabel={ctaLabel}
-        description={description}
-        isHovered={isHovered}
-        label={label}
-        titleLine1={titleLine1}
-        titleLine2={titleLine2}
-      />
-      <SpotlightImageBlock
-        imageAlt={imageAlt}
-        imageUrl={imageUrl}
-        isHovered={isHovered}
-      />
-    </div>
+    </>
   );
 };

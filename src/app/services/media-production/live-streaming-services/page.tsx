@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -11,8 +12,10 @@ import {
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_FAQ,
   LIVE_STREAMING_HERO,
+  LIVE_STREAMING_INTRODUCTION,
   LIVE_STREAMING_PAGE,
   LIVE_STREAMING_PROOF_BAR,
+  LIVE_STREAMING_SPOTLIGHT,
   LIVE_STREAMING_WHY,
 } from "@/content/services/detail/live-streaming-services";
 import { MEDIA_PAGE } from "@/content/services/media-production";
@@ -45,7 +48,9 @@ const liveStreamingServicesRelatedServices = [
 const Page = () => {
   return (
     <ServiceDetail
+      afterSpotlightSections={<WhoWeAre {...LIVE_STREAMING_INTRODUCTION} />}
       caseStudies={LIVE_STREAMING_CASE_STUDIES}
+      clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       closingSections={
         <>
           <FAQ {...LIVE_STREAMING_FAQ} />
@@ -59,6 +64,7 @@ const Page = () => {
       page={LIVE_STREAMING_PAGE}
       parentPage={MEDIA_PAGE}
       proofBar={LIVE_STREAMING_PROOF_BAR}
+      spotlight={LIVE_STREAMING_SPOTLIGHT}
       why={LIVE_STREAMING_WHY}
     />
   );

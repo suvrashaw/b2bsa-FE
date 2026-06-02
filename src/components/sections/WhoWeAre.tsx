@@ -8,7 +8,7 @@ import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from
 export interface WhoWeAreProps {
   attribution?: WhoWeAreContent["attribution"];
   content?: WhoWeAreContent;
-  description?: string;
+  description?: ReactNode | string;
   heading?: WhoWeAreContent["heading"];
   items?: Array<{
     bg?: string;
@@ -59,7 +59,9 @@ export const WhoWeAre = ({
               {resolvedHeading}
             </Heading>
             {description && (
-              <p className="text-base leading-relaxed text-brand-charcoal/80">{description}</p>
+              <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80">
+                {description}
+              </div>
             )}
           </div>
 

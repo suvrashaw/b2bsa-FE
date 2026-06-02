@@ -42,7 +42,7 @@ export const Blogs = ({
   const spread = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="relative overflow-hidden bg-white py-20" id="blogs" ref={containerRef}>
+    <section className="relative overflow-hidden bg-brand-gray py-20" id="blogs" ref={containerRef}>
       <div className="container mx-auto px-8">
         <div className="mb-4 flex flex-col items-start text-left lg:mb-8">
           <Eyebrow variant="primary">{eyebrow}</Eyebrow>

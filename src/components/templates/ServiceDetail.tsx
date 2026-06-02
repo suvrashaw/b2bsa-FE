@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { CreativePricingProps } from "@/components/sections/CreativePricing";
@@ -27,9 +27,11 @@ import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceDetailProps {
+  afterSpotlightSections?: ReactNode;
   caseStudies?: CaseStudiesProps;
   caseStudiesDescription?: string;
   caseStudiesHeading?: ReactNode;
+  clientLogosHeading?: string;
   closingSections?: ReactNode;
   creativePricing?: CreativePricingProps;
   ctaBanner?: {
@@ -46,11 +48,11 @@ export interface ServiceDetailProps {
     primaryCta?: {
       href: string;
       label: string;
-    };
+    } | null;
     secondaryCta?: {
       href: string;
       label: string;
-    };
+    } | null;
     title: ReactNode;
   };
   imageHero?: ImageHeroProps;
@@ -70,16 +72,7 @@ export interface ServiceDetailProps {
   secondaryServices?: OurServicesProps;
   secondaryServicesSectionType?: "carousel" | "grid";
   showPhaseNumbers?: boolean;
-  spotlight?: {
-    ctaLabel?: string;
-    description: string;
-    imageAlt?: string;
-    imageUrl: string;
-    index?: string;
-    label?: string;
-    titleLine1: string;
-    titleLine2: string;
-  };
+  spotlight?: FeaturedSpotlightProps;
   stats?: {
     description?: string;
     items: { label: string; value: string }[];
@@ -161,9 +154,11 @@ const serviceHeroCtasByPath: Record<
 };
 
 export const ServiceDetail = ({
+  afterSpotlightSections,
   caseStudies,
   caseStudiesDescription = "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
   caseStudiesHeading = "Real Events. Real Results.",
+  clientLogosHeading,
   closingSections,
   creativePricing,
   ctaBanner,
@@ -197,6 +192,18 @@ export const ServiceDetail = ({
     url: page.seo.canonicalPath,
   });
   const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
+
+  const finalPrimaryCta = useMemo(() => {
+    if (!hero) return;
+    if (hero.primaryCta === null) return;
+    return hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta;
+  }, [hero, heroCtas]);
+
+  const finalSecondaryCta = useMemo(() => {
+    if (!hero) return;
+    if (hero.secondaryCta === null) return;
+    return hero.secondaryCta ?? heroCtas?.secondaryCta ?? secondaryServiceHeroCta;
+  }, [hero, heroCtas]);
   const renderServiceSection = (
     section: OurServicesProps | undefined,
     sectionType: "carousel" | "grid"
@@ -244,15 +251,13 @@ export const ServiceDetail = ({
       {!imageHero && hero && (
         <ServiceHero
           description={hero.description}
-          primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
-          secondaryCta={
-            hero.secondaryCta ?? (heroCtas ? heroCtas.secondaryCta : secondaryServiceHeroCta)
-          }
+          primaryCta={finalPrimaryCta}
+          secondaryCta={finalSecondaryCta}
           title={hero.title}
         />
       )}
 
-      <ClientLogos overlap={false} />
+      <ClientLogos heading={clientLogosHeading} overlap={false} />
 
       {proofBar && (
         <ProofBar
@@ -266,19 +271,12 @@ export const ServiceDetail = ({
       {spotlight && (
         <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
-            <FeaturedSpotlight
-              ctaLabel={spotlight.ctaLabel}
-              description={spotlight.description}
-              imageAlt={spotlight.imageAlt}
-              imageUrl={spotlight.imageUrl}
-              index={spotlight.index}
-              label={spotlight.label}
-              titleLine1={spotlight.titleLine1}
-              titleLine2={spotlight.titleLine2}
-            />
+            <FeaturedSpotlight {...spotlight} />
           </div>
         </section>
       )}
+
+      {afterSpotlightSections}
 
       {deliverablesSection}
 

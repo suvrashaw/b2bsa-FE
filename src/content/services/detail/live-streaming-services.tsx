@@ -2,8 +2,13 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const LIVE_STREAMING_HERO = {
   description:
-    "Our corporate live streaming and hybrid event solutions bring your event to buyers, partners, and employees worldwide — with broadcast quality and technical reliability from setup to archive.",
-  title: "Live Streaming and Hybrid Event Solutions That Extend Your Event to Every Screen",
+    "Deliver seamless live streaming experiences for conferences, trade shows, webinars, and corporate events with multi-camera production, branded visuals, and reliable technical support.",
+  primaryCta: {
+    href: "/contact",
+    label: "Stream Your Event",
+  },
+  secondaryCta: null,
+  title: "Event Live Streaming Services for\nCorporate Events, Conferences & Trade Shows",
 };
 
 export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
@@ -138,3 +143,41 @@ export const LIVE_STREAMING_PAGE = {
     title: "Corporate Live Streaming and Hybrid Event Solutions | B2B Sales Arrow",
   },
 } as const;
+
+export const LIVE_STREAMING_SPOTLIGHT = {
+  ctaLabel: "Take Your Event Live",
+  description:
+    "Audiences have come to expect live event production services, so they can tune in from anywhere. Power Plus Productions has years of expertise in live event production. We provide scalable live event production solutions for corporate conferences, entertainment, and sporting events, using high-quality streaming, multiple camera angles, real-time interaction, and wide content distribution.",
+  titleLine1: "Virtual and Live",
+  titleLine2: "Streaming Event Services",
+  triggerContactModal: true,
+  videoUrl: "/videos/hero-gtc-2026.mp4",
+};
+
+export const LIVE_STREAMING_INTRODUCTION = {
+  attribution: "B2B Sales Arrow Production Team",
+  description: (
+    <>
+      <p>
+        Today’s events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.
+      </p>
+      <p>
+        At B2B Sales Arrow, we deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events. Our team manages every aspect of the production process, including event streaming setup, camera operations, audio management, branded visuals, streaming platform integration, and live technical support.
+      </p>
+      <p>
+        Whether you are hosting an in-person, hybrid, or virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.
+      </p>
+    </>
+  ),
+  heading: "Professional Event Live Streaming Services for Modern Corporate Events",
+  mission: "To deliver broadcast-grade reliability and immersive hybrid engagement for enterprise events worldwide.",
+  quote: "Live streaming doesn't just broadcast your event—it breaks physical boundaries to unite your global audience in real-time.",
+  stats: [
+    { label: "Uptime Reliability", value: "99.9%" },
+    { label: "Successful Streams", value: "500+" },
+    { label: "Broadcast Quality", value: "1080p/4K" },
+    { label: "Countries Reached", value: "30+" },
+    { label: "Combined Viewers", value: "10M+" },
+    { label: "Technical Support", value: "24/7" },
+  ],
+};

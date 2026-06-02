@@ -655,7 +655,7 @@ export const UpcomingEvents = ({
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-[1050px] gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
           {resolvedEvents.map((event, index) => (
             <UpcomingEventFlipCard
               badgeLabel={badgeLabel}

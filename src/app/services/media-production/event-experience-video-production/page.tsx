@@ -53,13 +53,13 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <ContactModalTrigger label="Create Event Videos" />
+          <ContactModalTrigger label="Create Event Videos" variant="secondary" />
           <ProcessTimeline
             phases={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.phases}
             showPhaseNumbers={false}
             title={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.title}
           />
-          <ContactModalTrigger label="Book Event Video Production" />
+          <ContactModalTrigger label="Book Event Video Production" variant="secondary" />
         </>
       }
       proofBar={EVENT_EXPERIENCE_VIDEO_PROOF_BAR}
