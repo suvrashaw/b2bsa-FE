@@ -21,10 +21,10 @@ import {
   BOOTH_RENTAL_PROOF_BAR,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
+  BOOTH_RENTAL_SHOWCASE_ITEMS,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/detail/event-booth-rental";
 import {
-  BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -61,7 +61,7 @@ const Page = () => {
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
             reasons={BOOTH_RENTAL_RENT_VS_BUY.reasons}
           />
-          <BoothScrollShowcase heading="Our Rental Booth Range" items={BOOTH_DESIGN_SHOWCASE_ITEMS} />
+          <BoothScrollShowcase heading="Our Rental Booth Range" items={BOOTH_RENTAL_SHOWCASE_ITEMS} />
         </>
       }
       process={BOOTH_RENTAL_PROCESS}

@@ -1,3 +1,5 @@
+import { isValidElement, type ReactNode } from "react";
+
 const BASE = "https://b2bsalesarrow.com";
 
 const ORGANIZATION = {
@@ -29,7 +31,27 @@ export const buildBreadcrumbJsonLd = (crumbs: Array<{ name: string; url: string 
   };
 };
 
-export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string }>) => {
+const toJsonLdText = (node: ReactNode): string => {
+  if (node === null || node === undefined || typeof node === "boolean") {
+    return "";
+  }
+
+  if (typeof node === "string" || typeof node === "number" || typeof node === "bigint") {
+    return String(node);
+  }
+
+  if (Array.isArray(node)) {
+    return node.map((child) => toJsonLdText(child)).join("");
+  }
+
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return toJsonLdText(node.props.children);
+  }
+
+  return "";
+};
+
+export const buildFaqJsonLd = (faqs: Array<{ answer: ReactNode; question: string }>) => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -37,7 +59,7 @@ export const buildFaqJsonLd = (faqs: Array<{ answer: string; question: string }>
       "@type": "Question",
       acceptedAnswer: {
         "@type": "Answer",
-        text: answer,
+        text: toJsonLdText(answer),
       },
       name: question,
     })),

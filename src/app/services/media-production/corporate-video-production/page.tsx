@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   CORPORATE_VIDEO_CASE_STUDIES,
@@ -15,12 +19,13 @@ import { MEDIA_PAGE } from "@/content/services/media-production";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE);
 
-const corporateVideoProductionCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Start Your Corporate Video Project",
-  description: "",
-  title:
+const corporateVideoContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Build Authority",
+  description:
     "When your offering is complex, corporate video makes it clear — with the production quality enterprise buyers expect.",
+  headingLines: ["Complex Offerings", "Made Crystal Clear."] as [string, string],
+  primaryCta: { href: "/contact", label: "Start Your Corporate Video Project" },
 };
 
 const corporateVideoProductionRelatedServices = [
@@ -42,7 +47,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
-      ctaBanner={corporateVideoProductionCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...CORPORATE_VIDEO_FAQ} />
+          <RelatedServices services={corporateVideoProductionRelatedServices} />
+          <ContactCinematicCTA {...corporateVideoContactCta} />
+        </>
+      }
       deliverables={CORPORATE_VIDEO_DELIVERABLES}
       deliverablesSectionType="carousel"
       faq={CORPORATE_VIDEO_FAQ}
@@ -50,7 +61,6 @@ const Page = () => {
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       proofBar={CORPORATE_VIDEO_PROOF_BAR}
-      relatedServices={corporateVideoProductionRelatedServices}
       why={CORPORATE_VIDEO_WHY}
     />
   );

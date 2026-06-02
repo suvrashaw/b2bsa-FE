@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   SEO_CASE_STUDIES,
@@ -16,11 +20,12 @@ import { PERF_PAGE } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 
-const seoServicesCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Get a Free SEO Audit",
-  description: "",
-  title: "Your buyers are searching. Will they find you — or your competitor?",
+const seoContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Own Your Organic Pipeline",
+  description: "Your buyers are searching. Will they find you — or your competitor?",
+  headingLines: ["Your Buyers Are Searching.", "Will They Find You?"] as [string, string],
+  primaryCta: { href: "/contact", label: "Get a Free SEO Audit" },
 };
 
 const seoServicesRelatedServices = [
@@ -33,7 +38,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={SEO_CASE_STUDIES}
-      ctaBanner={seoServicesCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...SEO_FAQ} />
+          <RelatedServices services={seoServicesRelatedServices} />
+          <ContactCinematicCTA {...seoContactCta} />
+        </>
+      }
       deliverables={SEO_DELIVERABLES}
       faq={SEO_FAQ}
       hero={SEO_HERO}
@@ -41,7 +52,6 @@ const Page = () => {
       parentPage={PERF_PAGE}
       process={SEO_PROCESS}
       proofBar={SEO_PROOF_BAR}
-      relatedServices={seoServicesRelatedServices}
       why={SEO_WHY}
     />
   );

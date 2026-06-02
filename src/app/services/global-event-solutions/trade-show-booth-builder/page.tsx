@@ -28,7 +28,14 @@ import {
 } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
 
-export const metadata: Metadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
+const pageMetadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
+
+export const metadata: Metadata = {
+  ...pageMetadata,
+  title: {
+    absolute: BOOTH_BUILDER_PAGE.seo.title,
+  },
+};
 
 const Page = () => {
   return (

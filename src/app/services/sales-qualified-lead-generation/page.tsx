@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ServiceHub } from "@/components/templates/ServiceHub";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   SQL_CASE_STUDIES,
@@ -15,18 +17,20 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(SQL_PAGE);
 
-const sqlCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Build Your SQL Generation Program",
-  description: "",
-  title: "A lead is only valuable when your team can act on it with confidence. Give them prospects that are ready.",
+const sqlContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Pipeline-Ready Leads",
+  description:
+    "A lead is only valuable when your team can act on it with confidence. Give them prospects that are ready.",
+  headingLines: ["Give Your Team", "Leads That Are Ready."] as [string, string],
+  primaryCta: { href: "/contact", label: "Build Your SQL Generation Program" },
 };
 
 const Page = () => {
   return (
     <ServiceHub
       caseStudies={SQL_CASE_STUDIES}
-      ctaBanner={sqlCtaBanner}
+      closingSections={<ContactCinematicCTA {...sqlContactCta} />}
       faq={SQL_FAQ}
       hero={SQL_HERO}
       page={SQL_PAGE}

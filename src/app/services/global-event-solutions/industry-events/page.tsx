@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   INDUSTRY_EVENTS_CASE_STUDIES,
@@ -16,12 +20,13 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(INDUSTRY_EVENTS_PAGE);
 
-const industryEventsCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Get a Free Event ROI Assessment",
-  description: "",
-  title:
+const industryEventsContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Plan Your Presence",
+  description:
     "The strongest strategy is not about showing up everywhere — it is about choosing the rooms where your buyers already gather.",
+  headingLines: ["The Strongest Strategy", "Chooses the Right Rooms."] as [string, string],
+  primaryCta: { href: "/contact", label: "Get a Free Event ROI Assessment" },
 };
 
 const industryEventsRelatedServices = [
@@ -40,14 +45,19 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={INDUSTRY_EVENTS_CASE_STUDIES}
-      ctaBanner={industryEventsCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...INDUSTRY_EVENTS_FAQ} />
+          <RelatedServices services={industryEventsRelatedServices} />
+          <ContactCinematicCTA {...industryEventsContactCta} />
+        </>
+      }
       deliverables={INDUSTRY_EVENTS_DELIVERABLES}
       faq={INDUSTRY_EVENTS_FAQ}
       hero={INDUSTRY_EVENTS_HERO}
       page={INDUSTRY_EVENTS_PAGE}
       parentPage={GES_PAGE}
       proofBar={INDUSTRY_EVENTS_PROOF_BAR}
-      relatedServices={industryEventsRelatedServices}
       secondaryServices={INDUSTRY_EVENTS_MARKETS_SECTION}
       secondaryServicesSectionType="carousel"
       why={INDUSTRY_EVENTS_WHY}

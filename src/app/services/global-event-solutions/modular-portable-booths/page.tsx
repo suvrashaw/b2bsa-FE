@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
@@ -16,11 +20,12 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(MODULAR_BOOTHS_PAGE);
 
-const modularPortableBoothsCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Get a Modular Booth Quote",
-  description: "",
-  title: "One booth system. Every event. Any market.",
+const modularBoothsContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Flexible Presence",
+  description: "One booth system. Every event. Any market.",
+  headingLines: ["One Booth System.", "Every Event. Any Market."] as [string, string],
+  primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
 };
 
 const modularPortableBoothsRelatedServices = [
@@ -42,14 +47,19 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
-      ctaBanner={modularPortableBoothsCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...MODULAR_BOOTHS_FAQ} />
+          <RelatedServices services={modularPortableBoothsRelatedServices} />
+          <ContactCinematicCTA {...modularBoothsContactCta} />
+        </>
+      }
       deliverables={MODULAR_BOOTHS_DELIVERABLES}
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
       proofBar={MODULAR_BOOTHS_PROOF_BAR}
-      relatedServices={modularPortableBoothsRelatedServices}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       why={MODULAR_BOOTHS_WHY}

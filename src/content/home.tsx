@@ -136,7 +136,7 @@ export interface FAQContent {
 }
 
 export interface FAQItem {
-  answer: string;
+  answer: ReactNode | string;
   icon?: ReactNode;
   id: number | string;
   question: string;

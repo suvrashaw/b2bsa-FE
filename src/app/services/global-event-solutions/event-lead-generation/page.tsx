@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   ELG_CASE_STUDIES,
@@ -16,11 +20,13 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(ELG_PAGE);
 
-const eventLeadGenerationCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Build Your Lead Generation System",
-  description: "",
-  title: "Stop leaving trade show leads on the floor. Build a system that captures, qualifies, and routes every qualified conversation.",
+const eventLeadGenerationContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Capture Every Lead",
+  description:
+    "Stop leaving trade show leads on the floor. Build a system that captures, qualifies, and routes every qualified conversation.",
+  headingLines: ["Stop Leaving", "Leads on the Floor."] as [string, string],
+  primaryCta: { href: "/contact", label: "Build Your Lead Generation System" },
 };
 
 const eventLeadGenerationRelatedServices = [
@@ -39,7 +45,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={ELG_CASE_STUDIES}
-      ctaBanner={eventLeadGenerationCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...ELG_FAQ} />
+          <RelatedServices services={eventLeadGenerationRelatedServices} />
+          <ContactCinematicCTA {...eventLeadGenerationContactCta} />
+        </>
+      }
       deliverables={ELG_DELIVERABLES}
       deliverablesSectionType="carousel"
       faq={ELG_FAQ}
@@ -48,7 +60,6 @@ const Page = () => {
       parentPage={GES_PAGE}
       process={ELG_PROCESS}
       proofBar={ELG_PROOF_BAR}
-      relatedServices={eventLeadGenerationRelatedServices}
       why={ELG_WHY}
     />
   );

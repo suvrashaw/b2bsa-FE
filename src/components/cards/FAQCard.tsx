@@ -7,7 +7,7 @@ import { HelpCircle } from "lucide-react";
 import { cn } from "@/lib";
 
 export interface FAQCardProps {
-  answer: string;
+  answer: React.ReactNode | string;
   icon?: ReactNode;
   layoutMode?: "carousel" | "fit";
   question: string;

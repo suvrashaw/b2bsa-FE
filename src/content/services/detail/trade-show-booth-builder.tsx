@@ -218,39 +218,39 @@ export const BOOTH_BUILDER_FAQ = {
   faqs: [
     {
       answer:
-        "Booth design is critical because it creates the first impression of your brand. A well-designed booth attracts attention, communicates value instantly, and encourages meaningful conversations that convert visitors into qualified leads.",
-      id: "importance",
-      question: "Why is booth design important for trade shows?",
+        "A turnkey exhibition booth is an all-inclusive service — design, fabrication, logistics, installation, and breakdown — managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
+      id: "turnkey",
+      question: "What is a turnkey trade show booth?",
     },
     {
       answer:
-        "Costs vary based on size, customization, materials, and location. Small booths may start around $5,000–$10,000, while larger custom exhibits can exceed $50,000 depending on technology, logistics, and design complexity.",
-      id: "cost",
-      question: "How much does a custom trade show booth design cost?",
+        "Yes — exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
+      id: "design-build",
+      question: "Do you also do exhibition stand design and building?",
     },
     {
       answer:
-        "Ideally, planning should begin 3–6 months before the event. Early planning ensures better design execution, cost efficiency, smoother logistics, and compliance with venue deadlines.",
-      id: "timeline",
-      question: "How soon should I start planning my trade show booth design?",
+        "Standard custom builds: 12–16 weeks from design brief to installation. Double-deck or technology-heavy structures: 16–20 weeks. For tight timelines, modular or rental options may be more appropriate.",
+      id: "lead-time",
+      question: "What is the typical build lead time?",
     },
     {
       answer:
-        "Yes. Full-service booth partners manage shipping, customs, venue approvals, installation, dismantling, and on-site coordination—ensuring a stress-free exhibition experience.",
-      id: "logistics",
-      question: "Can you help with booth logistics and setup?",
+        "Yes — included in our turnkey booth service. We have managed deliveries across 40+ countries.",
+      id: "shipping-customs",
+      question: "Do you handle international shipping and customs?",
     },
     {
       answer:
-        "Strong branding, bold visuals, open layouts, interactive elements, and clear messaging help your booth attract attention and increase visitor engagement in competitive show environments.",
-      id: "standout",
-      question: "How do I make my trade show booth stand out?",
+        "Yes — reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
+      id: "reuse",
+      question: "Can the booth be reused?",
     },
     {
       answer:
-        "A strategically designed booth increases qualified traffic, improves brand recall, and boosts lead conversion rates—resulting in stronger pipeline opportunities and measurable event ROI.",
-      id: "roi",
-      question: "What ROI can I expect from a well-designed booth?",
+        "Yes — our team manages assembly, alignment, quality review, and on-site support throughout the event.",
+      id: "installation",
+      question: "Do you manage on-site installation?",
     },
   ],
   heading: "Trade Show Booth Builder FAQs",

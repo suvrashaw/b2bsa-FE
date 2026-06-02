@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   CUSTOM_EVENTS_CASE_STUDIES,
@@ -15,12 +19,13 @@ import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 export const metadata: Metadata = getMarketingPageMetadata(CUSTOM_EVENTS_PAGE);
 
-const customEventsCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Plan Your Custom Event",
-  description: "",
-  title:
+const customEventsContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Design Your Event",
+  description:
     "Senior buyers protect their time. The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
+  headingLines: ["Senior Buyers", "Protect Their Time."] as [string, string],
+  primaryCta: { href: "/contact", label: "Plan Your Custom Event" },
 };
 
 const customEventsRelatedServices = [
@@ -39,7 +44,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={CUSTOM_EVENTS_CASE_STUDIES}
-      ctaBanner={customEventsCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...CUSTOM_EVENTS_FAQ} />
+          <RelatedServices services={customEventsRelatedServices} />
+          <ContactCinematicCTA {...customEventsContactCta} />
+        </>
+      }
       deliverables={CUSTOM_EVENTS_DELIVERABLES}
       deliverablesSectionType="carousel"
       faq={CUSTOM_EVENTS_FAQ}
@@ -47,7 +58,6 @@ const Page = () => {
       page={CUSTOM_EVENTS_PAGE}
       parentPage={GES_PAGE}
       proofBar={CUSTOM_EVENTS_PROOF_BAR}
-      relatedServices={customEventsRelatedServices}
       secondaryServices={CUSTOM_EVENTS_FORMATS_SECTION}
       secondaryServicesSectionType="carousel"
     />

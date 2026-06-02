@@ -12,7 +12,7 @@ const icons = { Award, Globe2, TrendingUp, Users2 } as const;
 
 export interface BoothWhyChooseUsItem {
   description: string;
-  icon: keyof typeof icons;
+  icon: string;
   image: string;
   title: string;
 }
@@ -51,7 +51,7 @@ const BoothWhyChooseUsCard = ({
   item: BoothWhyChooseUsItem;
 }) => {
   const [hovered, setHovered] = useState(false);
-  const Icon = icons[item.icon];
+  const Icon = icons[item.icon as keyof typeof icons] ?? Award;
 
   const handleMouseEnter = useCallback(() => setHovered(true), []);
   const handleMouseLeave = useCallback(() => setHovered(false), []);

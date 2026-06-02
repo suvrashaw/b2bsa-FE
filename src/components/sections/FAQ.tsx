@@ -38,7 +38,7 @@ const FAQMotionCard = ({
   layoutMode,
   question,
 }: {
-  answer: string;
+  answer: ReactNode;
   icon?: ReactNode;
   index: number;
   layoutMode: "carousel" | "fit";

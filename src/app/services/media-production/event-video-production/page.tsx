@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   EVENT_VIDEO_CASE_STUDIES,
@@ -16,11 +20,12 @@ import { MEDIA_PAGE } from "@/content/services/media-production";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_VIDEO_PAGE);
 
-const eventVideoProductionCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Book Event Video Production",
-  description: "",
-  title: "Capture it properly. Make your event work for months after the show closes.",
+const eventVideoContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Extend Your ROI",
+  description: "Capture it properly. Make your event work for months after the show closes.",
+  headingLines: ["Capture It Properly.", "Make It Last."] as [string, string],
+  primaryCta: { href: "/contact", label: "Book Event Video Production" },
 };
 
 const eventVideoProductionRelatedServices = [
@@ -42,15 +47,20 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
+      closingSections={
+        <>
+          <FAQ {...EVENT_VIDEO_FAQ} />
+          <RelatedServices services={eventVideoProductionRelatedServices} />
+          <ContactCinematicCTA {...eventVideoContactCta} />
+        </>
+      }
       creativePricing={EVENT_VIDEO_CREATIVE_PRICING}
-      ctaBanner={eventVideoProductionCtaBanner}
       deliverables={EVENT_VIDEO_DELIVERABLES}
       faq={EVENT_VIDEO_FAQ}
       hero={EVENT_VIDEO_HERO}
       page={EVENT_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       proofBar={EVENT_VIDEO_PROOF_BAR}
-      relatedServices={eventVideoProductionRelatedServices}
       why={EVENT_VIDEO_WHY}
     />
   );

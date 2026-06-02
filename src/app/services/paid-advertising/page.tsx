@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   PAID_ADS_CASE_STUDIES,
@@ -16,12 +20,13 @@ import { PERF_PAGE } from "@/content/services/performance-marketing";
 
 export const metadata: Metadata = getMarketingPageMetadata(PAID_ADS_PAGE);
 
-const paidAdvertisingCtaBanner = {
-  ctaHref: "/contact",
-  ctaLabel: "Request a Paid Media Audit",
-  description: "",
-  title:
+const paidAdsContactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Audit Your Spend",
+  description:
     "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots. Fixing these is faster than increasing budget.",
+  headingLines: ["Fix the Leaks", "Before Adding Budget."] as [string, string],
+  primaryCta: { href: "/contact", label: "Request a Paid Media Audit" },
 };
 
 const paidAdvertisingRelatedServices = [
@@ -34,7 +39,13 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={PAID_ADS_CASE_STUDIES}
-      ctaBanner={paidAdvertisingCtaBanner}
+      closingSections={
+        <>
+          <FAQ {...PAID_ADS_FAQ} />
+          <RelatedServices services={paidAdvertisingRelatedServices} />
+          <ContactCinematicCTA {...paidAdsContactCta} />
+        </>
+      }
       deliverables={PAID_ADS_DELIVERABLES}
       faq={PAID_ADS_FAQ}
       hero={PAID_ADS_HERO}
@@ -42,7 +53,6 @@ const Page = () => {
       parentPage={PERF_PAGE}
       process={PAID_ADS_PROCESS}
       proofBar={PAID_ADS_PROOF_BAR}
-      relatedServices={paidAdvertisingRelatedServices}
       why={PAID_ADS_WHY}
     />
   );

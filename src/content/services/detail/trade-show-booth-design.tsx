@@ -5,7 +5,11 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 export const BOOTH_DESIGN_HERO = {
   description:
     "We design custom trade show booths that buyers stop at deliberately — because the space, the story, and the sales system inside it were built together from day one.",
-  title: "Trade Show Booth Design That Converts Foot Traffic Into Pipeline",
+  title: (
+    <>
+      <strong className="font-bold">Trade Show Booth Design</strong> That Converts Foot Traffic Into Pipeline
+    </>
+  ),
 };
 
 export { GLOBAL_PROOF_STATS as BOOTH_DESIGN_PROOF_BAR } from "../../shared";
@@ -14,100 +18,51 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 10×10 Booth Quote" },
     descriptions: [
-      "100 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Regional shows, first-time exhibitors, satellite presences",
     ],
-    eyebrow: "Small",
-    heading: "10×10",
+    eyebrow: "100 sq ft",
+    heading: "10x10 Booth",
     id: "showcase-10x10",
     image: "/images/booth/10x10.jpg",
   },
   {
     cta: { href: "/contact", label: "Get 10×20 Booth Quote" },
     descriptions: [
-      "200 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Product demos with visitor journey and conversation zone",
     ],
-    eyebrow: "Medium",
-    heading: "10×20",
+    eyebrow: "200 sq ft",
+    heading: "10x20 Inline",
     id: "showcase-10x20",
     image: "/images/booth/10x20.jpg",
   },
   {
-    cta: { href: "/contact", label: "Get 10×30 Booth Quote" },
-    descriptions: [
-      "400 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ],
-    eyebrow: "Large",
-    heading: "10×30",
-    id: "showcase-10x30",
-    image: "/images/booth/10x30.png",
-  },
-  {
     cta: { href: "/contact", label: "Get 20×20 Booth Quote" },
     descriptions: [
-      "400 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Premium four-sided visibility — demos, meetings, AV zones",
     ],
-    eyebrow: "Large",
-    heading: "20×20",
+    eyebrow: "400 sq ft",
+    heading: "20x20 Island",
     id: "showcase-20x20",
     image: "/images/booth/20x20.jpg",
   },
   {
-    cta: { href: "/contact", label: "Get 20×30 Booth Quote" },
+    cta: { href: "/contact", label: "Get Double-Deck Quote" },
     descriptions: [
-      "600 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Executive meeting suite + lower engagement zone. Major global shows",
     ],
-    eyebrow: "X-Large",
-    heading: "20×30",
-    id: "showcase-20x30",
-    image: "/images/booth/20x30.jpg",
-  },
-  {
-    cta: { href: "/contact", label: "Get 20×40 Booth Quote" },
-    descriptions: [
-      "600 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ],
-    eyebrow: "X-Large",
-    heading: "20×40",
-    id: "showcase-20x40",
-    image: "/images/booth/20x40.jpg",
-  },
-  {
-    cta: { href: "/contact", label: "Get 30×30 Booth Quote" },
-    descriptions: [
-      "900 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ],
-    eyebrow: "Island",
-    heading: "30×30",
-    id: "showcase-30x30",
-    image: "/images/booth/30x30.png",
-  },
-  {
-    cta: { href: "/contact", label: "Get 30×40 Booth Quote" },
-    descriptions: [
-      "900 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ],
-    eyebrow: "Island",
-    heading: "30×40",
-    id: "showcase-30x40",
+    eyebrow: "Premium",
+    heading: "Double-Deck Structure",
+    id: "showcase-double-deck",
     image: "/images/booth/30x40.png",
   },
   {
-    cta: { href: "/contact", label: "Get 40×40 Booth Quote" },
+    cta: { href: "/contact", label: "Get Custom Booth Quote" },
     descriptions: [
-      "1600 sq ft",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Fully bespoke flagship builds for maximum commercial impact",
     ],
-    eyebrow: "Mega",
-    heading: "40×40",
-    id: "showcase-40x40",
+    eyebrow: "Bespoke",
+    heading: "Custom Environments",
+    id: "showcase-custom",
     image: "/images/booth/40x40.jpg",
   },
 ];
@@ -143,7 +98,7 @@ export const BOOTH_DESIGN_SPOTLIGHT = {
   imageAlt: "Empty trade show booth without footfall",
   imageUrl:
     "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1600",
-  titleLine1: "Why Generic Booth Design",
+  titleLine1: "Why Generic Exhibition Booth Design",
   titleLine2: "Costs You Qualified Leads",
 };
 
@@ -213,54 +168,6 @@ export const BOOTH_DESIGN_DELIVERABLES = {
   ],
 };
 
-export const BOOTH_DESIGN_FORMATS_SECTION = {
-  eyebrow: "Formats",
-  heading: "Booth Sizes and Formats We Design",
-  services: [
-    {
-      color: "bg-brand-blue",
-      description: "Regional shows, first-time exhibitors, and satellite presences.",
-      icon: "Layers",
-      id: "booth-design-10x10",
-      image: "/images/booth/10x30.png",
-      title: "10x10 Booth (100 sq ft)",
-    },
-    {
-      color: "bg-brand-cyan",
-      description: "Product demos with visitor journey and conversation zone.",
-      icon: "Monitor",
-      id: "booth-design-10x20",
-      image: "/images/booth/20x30.jpg",
-      title: "10x20 Inline (200 sq ft)",
-    },
-    {
-      color: "bg-brand-primary",
-      description: "Premium four-sided visibility with demos, meetings, and AV zones.",
-      icon: "Target",
-      id: "booth-design-20x20",
-      image: "/images/booth/20x40.jpg",
-      title: "20x20 Island (400 sq ft)",
-    },
-    {
-      color: "bg-brand-blue",
-      description:
-        "Executive meeting suite plus lower engagement zone for major global shows.",
-      icon: "Users",
-      id: "booth-design-double-deck",
-      image: "/images/booth/30x40.png",
-      title: "Double-Deck Structure",
-    },
-    {
-      color: "bg-brand-cyan",
-      description: "Fully bespoke flagship builds for maximum commercial impact.",
-      icon: "Sparkles",
-      id: "booth-design-custom",
-      image: "/images/booth/40x40.jpg",
-      title: "Custom Environments",
-    },
-  ],
-};
-
 export const BOOTH_DESIGN_PROCESS = {
   phases: [
     {
@@ -315,39 +222,51 @@ export const BOOTH_DESIGN_FAQ = {
   faqs: [
     {
       answer:
-        "Booth design is critical because it creates the first impression of your brand. A well-designed booth attracts attention, communicates value instantly, and encourages meaningful conversations that convert visitors into qualified leads.",
-      id: "importance",
-      question: "Why is booth design important for trade shows?",
-    },
-    {
-      answer:
-        "Costs vary based on size, customization, materials, and location. Small booths may start around $5,000–$10,000, while larger custom exhibits can exceed $50,000 depending on technology, logistics, and design complexity.",
+        "Design fees typically range from $3,000 for a compact 10x10 to $60,000+ for large custom or double-deck structures. See our pricing guide table above for reference ranges. Contact us for a project-specific estimate based on your booth size, event, and brief.",
       id: "cost",
-      question: "How much does a custom trade show booth design cost?",
+      question: "How much does custom trade show booth design cost?",
+    },
+    {
+      answer: (
+        <>
+          A <strong className="font-bold">custom trade show booth</strong> is designed and built specifically for your brand. A <strong className="font-bold">modular booth</strong> uses a reusable system with updated graphics between events — faster and more cost-efficient for multi-event programs. We design and build both.
+        </>
+      ),
+      id: "modular-vs-custom",
+      question: "What is the difference between modular and custom booth design?",
     },
     {
       answer:
-        "Ideally, planning should begin 3–6 months before the event. Early planning ensures better design execution, cost efficiency, smoother logistics, and compliance with venue deadlines.",
+        "From brief to approved 3D renders: 3–5 weeks. Fabrication lead time varies by complexity. For major international events, engage us 14–20 weeks before the show.",
       id: "timeline",
-      question: "How soon should I start planning my trade show booth design?",
+      question: "How long does the design process take?",
     },
     {
       answer:
-        "Yes. Full-service booth partners manage shipping, customs, venue approvals, installation, dismantling, and on-site coordination—ensuring a stress-free exhibition experience.",
-      id: "logistics",
-      question: "Can you help with booth logistics and setup?",
+        "Yes. We extend your brand system — typefaces, colour palette, photography style — into a physical exhibition environment without losing consistency.",
+      id: "brand-guidelines",
+      question: "Can you work with our existing brand guidelines?",
     },
     {
       answer:
-        "Strong branding, bold visuals, open layouts, interactive elements, and clear messaging help your booth attract attention and increase visitor engagement in competitive show environments.",
-      id: "standout",
-      question: "How do I make my trade show booth stand out?",
+        "Yes. Reuse planning is built into the design from the start. Many clients run the same booth system for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
+      id: "reuse",
+      question: "Can the booth be reused at multiple events?",
     },
     {
       answer:
-        "A strategically designed booth increases qualified traffic, improves brand recall, and boosts lead conversion rates—resulting in stronger pipeline opportunities and measurable event ROI.",
-      id: "roi",
-      question: "What ROI can I expect from a well-designed booth?",
+        "Yes — full design-to-build service or design-only with production-ready files for your fabrication partner. You choose the scope.",
+      id: "fabrication",
+      question: "Do you handle fabrication and build as well?",
+    },
+    {
+      answer: (
+        <>
+          GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and major regional <strong className="font-bold">industry trade shows</strong> across all sectors and markets.
+        </>
+      ),
+      id: "events",
+      question: "What events do you design booths for?",
     },
   ],
   heading: "Trade Show Booth Design FAQs",
@@ -437,7 +356,7 @@ export const BOOTH_DESIGN_RELATED_SERVICES = [
 ];
 
 export const BOOTH_DESIGN_WHY_CHOOSE_US = {
-  heading: "Why Choose B2B Sales Arrow for Booth Design?",
+  heading: "Why Choose B2B Sales Arrow for Booth Designing?",
   items: [
     {
       description:
@@ -481,11 +400,11 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
   },
   badge: "Ready to Design?",
   description:
-    "Every square foot of your booth should earn its place. We design custom trade show booths engineered for commercial momentum — because the space, the story, and the sales system inside it were built together from day one.",
+    "Every square foot of your booth should earn its place. Build a custom trade show booth engineered for commercial momentum.",
   headingLines: ["Every Square Foot", "Should Earn Its Place"] as [string, string],
   primaryCta: {
     href: "/contact",
-    label: "Request a Design Quote",
+    label: "Start Your Design Project",
   },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [

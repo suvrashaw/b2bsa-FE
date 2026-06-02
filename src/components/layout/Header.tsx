@@ -81,6 +81,8 @@ const DesktopNavLink = ({
 };
 
 // Pure sub-components for Megamenu to satisfy react-perf / no-new-function rules
+const NOWRAP_NAMES = new Set(["Event Experience Video Production"]);
+
 const MegamenuSubLink = ({
   onClose,
   sub,
@@ -90,7 +92,10 @@ const MegamenuSubLink = ({
 }) => {
   return (
     <Link
-      className="block text-xs font-semibold text-gray-500 transition-colors hover:text-brand-blue"
+      className={cn(
+        "block text-xs font-semibold text-gray-500 transition-colors hover:text-gray-900",
+        NOWRAP_NAMES.has(sub.name) && "whitespace-nowrap"
+      )}
       href={sub.href}
       onClick={onClose}
     >
@@ -101,21 +106,28 @@ const MegamenuSubLink = ({
 
 const MegamenuServiceGroup = ({
   group,
+  noWrapTitle = false,
   onClose,
+  twoColumnLinks = false,
 }: {
   group: (typeof serviceNavigationGroups)[number];
+  noWrapTitle?: boolean;
   onClose: () => void;
+  twoColumnLinks?: boolean;
 }) => {
   return (
-    <div className="rounded-lg p-5 transition-all hover:bg-brand-blue/[0.02]">
+    <div className="rounded-lg p-5 transition-all hover:bg-gray-50">
       <Link
-        className="mb-4 block text-sm font-black text-brand-charcoal transition-colors hover:text-brand-blue"
+        className={cn(
+          "mb-4 block text-sm font-black text-brand-charcoal transition-colors hover:text-brand-blue",
+          noWrapTitle && "whitespace-nowrap"
+        )}
         href={group.href}
         onClick={onClose}
       >
         {group.name}
       </Link>
-      <div className="space-y-3">
+      <div className={twoColumnLinks ? "grid grid-cols-2 gap-x-4 gap-y-3" : "space-y-3"}>
         {group.links.map((sub) => (
           <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
         ))}
@@ -223,14 +235,20 @@ export const Header = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  let headerSurfaceClass = "bg-transparent";
+  if (solidHeader) {
+    headerSurfaceClass = "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100";
+  } else if (lightText) {
+    headerSurfaceClass =
+      "border-b border-white/10 bg-brand-charcoal/30 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md";
+  }
+
   return (
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
-        solidHeader
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
-          : "bg-transparent"
+        headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
       onMouseLeave={handleCloseMegamenu}
@@ -298,13 +316,38 @@ export const Header = ({
           >
             <div className="mx-auto max-w-7xl px-8">
               <div className="grid grid-cols-5 gap-6">
-                {serviceNavigationGroups.map((group) => (
+                {/* Global Event Solutions — spans 2 columns with 2-column link layout */}
+                <div className="col-span-2">
                   <MegamenuServiceGroup
-                    group={group}
-                    key={group.name}
+                    group={serviceNavigationGroups[0]}
+                    onClose={handleCloseMegamenu}
+                    twoColumnLinks
+                  />
+                </div>
+                {/* Media Production */}
+                <MegamenuServiceGroup
+                  group={serviceNavigationGroups[1]}
+                  onClose={handleCloseMegamenu}
+                />
+                {/* Performance Marketing */}
+                <MegamenuServiceGroup
+                  group={serviceNavigationGroups[2]}
+                  onClose={handleCloseMegamenu}
+                />
+                {/* Market Research + Sales Qualified Lead Generation — stacked in one column */}
+                <div>
+                  <MegamenuServiceGroup
+                    group={serviceNavigationGroups[4]}
                     onClose={handleCloseMegamenu}
                   />
-                ))}
+                  <div className="mt-1">
+                    <MegamenuServiceGroup
+                      group={serviceNavigationGroups[3]}
+                      noWrapTitle
+                      onClose={handleCloseMegamenu}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

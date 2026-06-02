@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useCallback, useMemo, useState } from "react";
+import { type ReactNode, useCallback, useMemo, useState } from "react";
 
 import type { FAQProps } from "@/components/sections/FAQ";
 
@@ -19,7 +19,7 @@ const ITEM_ANIMATE = { opacity: 1, y: 0 } as const;
 const ITEM_VIEWPORT = { once: true } as const;
 
 interface FAQAccordionRowProps {
-  answer: string;
+  answer: ReactNode;
   id: number | string;
   index: number;
   isOpen: boolean;

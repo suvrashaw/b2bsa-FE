@@ -125,19 +125,19 @@ export const RentalBlogsSection = ({ heading, posts }: RentalBlogsSectionProps) 
   return (
     <section className="bg-brand-gray py-20" id="blogs">
       <div className="container mx-auto px-8">
-        <div className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mb-14 flex items-center justify-between gap-6">
           <motion.div
             initial={HEADING_INITIAL}
             transition={HEADING_TRANSITION}
             viewport={HEADING_VIEWPORT}
             whileInView={HEADING_ANIMATE}
           >
-            <Heading as="h2" className="text-center text-brand-charcoal">
+            <Heading as="h2" className="text-xl text-brand-charcoal lg:text-2xl">
               {heading}
             </Heading>
           </motion.div>
 
-          <Button asChild variant="secondary">
+          <Button asChild className="shrink-0" variant="secondary">
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         </div>

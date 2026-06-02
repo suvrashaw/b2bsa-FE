@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
+import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
@@ -21,9 +22,10 @@ export interface ContactCinematicCTAProps {
   primaryCta: {
     href: string;
     label: string;
+    opensModal?: boolean;
   };
   proofLabel: string;
-  proofLogos: {
+  proofLogos: readonly {
     alt: string;
     src: string;
   }[];
@@ -101,6 +103,7 @@ export const ContactCinematicCTA = ({
   secondaryCta,
 }: ContactCinematicCTAProps) => {
   const [pointerOffset, setPointerOffset] = useState({ x: 0, y: 0 });
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handlePointerMove = useCallback((event: React.MouseEvent<HTMLElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -108,6 +111,9 @@ export const ContactCinematicCTA = ({
     const y = ((event.clientY - rect.top) / rect.height - 0.5) * 36;
     setPointerOffset({ x, y });
   }, []);
+
+  const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
+  const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
 
   const resetPointer = useCallback(() => {
     setPointerOffset({ x: 0, y: 0 });
@@ -238,13 +244,21 @@ export const ContactCinematicCTA = ({
             viewport={ctaViewport}
             whileInView="visible"
           >
-            <Button asChild size="lg" variant="white">
-              <Link href={primaryCta.href}>
+            {primaryCta.opensModal ? (
+              <Button onClick={openContactModal} size="lg" variant="white">
                 <CalendarDays className="mr-2 h-5 w-5" />
                 {primaryCta.label}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+              </Button>
+            ) : (
+              <Button asChild size="lg" variant="white">
+                <Link href={primaryCta.href}>
+                  <CalendarDays className="mr-2 h-5 w-5" />
+                  {primaryCta.label}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            )}
 
             <Button asChild size="lg" variant="white-outline">
               <Link href={secondaryCta.href}>
@@ -279,6 +293,7 @@ export const ContactCinematicCTA = ({
 
         </div>
       </div>
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </section>
   );
 };

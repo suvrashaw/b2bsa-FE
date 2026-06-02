@@ -29,7 +29,11 @@ export const BOOTH_RENTAL_RENT_VS_BUY = {
 export const BOOTH_RENTAL_HERO = {
   description:
     "When speed matters or you're testing a new market, trade show booth rental gives your brand a polished, fully branded exhibition presence — without the fabrication lead time or capital commitment.",
-  title: "Trade Show Booth Rental — Enterprise Presence Without the Build Timeline",
+  title: (
+    <strong className="font-bold">
+      Trade Show Booth Rental — Enterprise Presence Without the Build Timeline
+    </strong>
+  ),
 };
 
 export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
@@ -92,57 +96,58 @@ export const BOOTH_RENTAL_DELIVERABLES = {
   ],
 };
 
-export const BOOTH_RENTAL_RANGE_SECTION = {
-  eyebrow: "Formats",
-  heading: "Our Rental Booth Range",
-  services: [
-    {
-      color: "bg-brand-blue",
-      description:
-        "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
-      icon: "Layers",
-      id: "rental-standard",
-      image: "/images/booth/10x10.jpg",
-      title: "10x10 Standard — Focused Presence",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "Room for product-led demos, a defined visitor journey, and a meeting zone.",
-      icon: "Monitor",
-      id: "rental-inline",
-      image: "/images/booth/10x20.jpg",
-      title: "10x20 Inline — Extended Format",
-    },
-    {
-      color: "bg-brand-primary",
-      description:
-        "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
-      icon: "Target",
-      id: "rental-island",
-      image: "/images/booth/20x20.jpg",
-      title: "20x20 Island — High Visibility",
-    },
-    {
-      color: "bg-brand-blue",
-      description:
-        "Upper-level executive meeting suite plus a lower-level engagement zone for major global events.",
-      icon: "Users",
-      id: "rental-double-deck",
-      image: "/images/booth/30x30.png",
-      title: "Double-Deck — Premium Floor Presence",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
-      icon: "Palette",
-      id: "rental-custom-branded",
-      image: "/images/booth/40x40.jpg",
-      title: "Custom-Branded Rentals",
-    },
-  ],
-};
+export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
+  {
+    cta: { href: "/contact", label: "Get 10×10 Rental Quote" },
+    descriptions: [
+      <>Branded back wall, counter, lighting, screen option, and <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.</>
+    ],
+    eyebrow: "Focused Presence",
+    heading: "10x10 Standard",
+    id: "rental-10x10",
+    image: "/images/booth/10x10.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 10×20 Rental Quote" },
+    descriptions: [
+      "Room for product-led demos, a defined visitor journey, and a meeting zone."
+    ],
+    eyebrow: "Extended Format",
+    heading: "10x20 Inline",
+    id: "rental-10x20",
+    image: "/images/booth/10x20.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get 20×20 Rental Quote" },
+    descriptions: [
+      <>Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas, meeting space, and AV support.</>
+    ],
+    eyebrow: "High Visibility",
+    heading: "20x20 Island",
+    id: "rental-20x20",
+    image: "/images/booth/20x20.jpg",
+  },
+  {
+    cta: { href: "/contact", label: "Get Double-Deck Quote" },
+    descriptions: [
+      "Upper-level executive meeting suite + lower-level engagement zone for major global events."
+    ],
+    eyebrow: "Premium Floor Presence",
+    heading: "Double-Deck",
+    id: "rental-double-deck",
+    image: "/images/booth/30x30.png",
+  },
+  {
+    cta: { href: "/contact", label: "Get Custom Rental Quote" },
+    descriptions: [
+      <>Existing <strong className="font-bold">rental structures</strong> adapted with your full brand identity, messaging, and engagement zones.</>
+    ],
+    eyebrow: "Bespoke",
+    heading: "Custom-Branded Rentals",
+    id: "rental-custom",
+    image: "/images/booth/40x40.jpg",
+  },
+];
 
 
 export const BOOTH_RENTAL_PROCESS = {
@@ -178,8 +183,11 @@ export const BOOTH_RENTAL_CASE_STUDIES = {
 export const BOOTH_RENTAL_FAQ = {
   faqs: [
     {
-      answer:
-        "For major global events, rental booths book 6–10 weeks in advance. Enquire as soon as participation is confirmed.",
+      answer: (
+        <>
+          For major global events, <strong className="font-bold">rental booths</strong> book 6–10 weeks in advance. Enquire as soon as participation is confirmed.
+        </>
+      ),
       id: "booking",
       question: "How far ahead should I book?",
     },
@@ -196,8 +204,11 @@ export const BOOTH_RENTAL_FAQ = {
       question: "Can we use the same rental at multiple events?",
     },
     {
-      answer:
-        "A rental booth uses a pre-existing structural system with custom branding. A custom booth is designed and built specifically for your brand. Rental suits speed and budget flexibility; custom delivers maximum creative and commercial impact for flagship events.",
+      answer: (
+        <>
+          A <strong className="font-bold">rental booth</strong> uses a pre-existing structural system with custom branding. A custom booth is designed and built specifically for your brand. Rental suits speed and budget flexibility; custom delivers maximum creative and commercial impact for flagship events.
+        </>
+      ),
       id: "vs-custom",
       question: "What is the difference between rental and custom?",
     },

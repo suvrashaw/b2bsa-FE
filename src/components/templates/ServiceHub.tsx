@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { OurServicesProps } from "@/components/sections/OurServices";
@@ -21,6 +23,7 @@ import { buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceHubProps {
   caseStudies?: CaseStudiesProps;
+  closingSections?: ReactNode;
   ctaBanner?: {
     ctaHref?: string;
     ctaLabel: string;
@@ -38,7 +41,7 @@ export interface ServiceHubProps {
       href: string;
       label: string;
     };
-    title: string;
+    title: ReactNode;
   };
   page: MarketingPageIdentity;
   process?: {
@@ -89,6 +92,7 @@ const serviceHeroCtasByPath: Record<
 
 export const ServiceHub = ({
   caseStudies,
+  closingSections,
   ctaBanner,
   faq,
   hero,
@@ -154,14 +158,16 @@ export const ServiceHub = ({
 
       {relatedServices && <RelatedServices services={relatedServices} />}
 
-      <CTABanner
-        ctaHref={ctaBanner?.ctaHref ?? "/contact"}
-        ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
-        description={
-          ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
-        }
-        title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
-      />
+      {closingSections ?? (
+        <CTABanner
+          ctaHref={ctaBanner?.ctaHref ?? "/contact"}
+          ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
+          description={
+            ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+          }
+          title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
+        />
+      )}
 
       <Footer />
     </main>

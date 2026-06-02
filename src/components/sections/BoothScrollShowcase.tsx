@@ -11,7 +11,7 @@ import { cn } from "@/lib";
 
 export interface BoothShowcaseItem {
   cta: { href: string; label: string };
-  descriptions: string[];
+  descriptions: (React.ReactNode | string)[];
   eyebrow: string;
   heading: string;
   id: string;

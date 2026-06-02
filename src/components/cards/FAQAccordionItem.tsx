@@ -7,7 +7,7 @@ import { useCallback } from "react";
 import { cn } from "@/lib";
 
 export interface FAQAccordionItemProps {
-  answer: string;
+  answer: React.ReactNode | string;
   index: number;
   isOpen: boolean;
   onToggle: (index: number) => void;

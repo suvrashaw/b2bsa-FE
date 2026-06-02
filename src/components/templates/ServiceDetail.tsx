@@ -16,6 +16,7 @@ import { CreativePricing } from "@/components/sections/CreativePricing";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { ImageHero, type ImageHeroProps } from "@/components/sections/ImageHero";
 import { OurServices } from "@/components/sections/OurServices";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
@@ -27,6 +28,8 @@ import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib
 
 export interface ServiceDetailProps {
   caseStudies?: CaseStudiesProps;
+  caseStudiesDescription?: string;
+  caseStudiesHeading?: ReactNode;
   closingSections?: ReactNode;
   creativePricing?: CreativePricingProps;
   ctaBanner?: {
@@ -38,7 +41,7 @@ export interface ServiceDetailProps {
   deliverables?: OurServicesProps;
   deliverablesSectionType?: "carousel" | "grid";
   faq: FAQProps;
-  hero: {
+  hero?: {
     description: string;
     primaryCta?: {
       href: string;
@@ -48,8 +51,9 @@ export interface ServiceDetailProps {
       href: string;
       label: string;
     };
-    title: string;
+    title: ReactNode;
   };
+  imageHero?: ImageHeroProps;
   middleSections?: ReactNode;
   page: MarketingPageIdentity;
   parentPage?: MarketingPageIdentity;
@@ -158,6 +162,8 @@ const serviceHeroCtasByPath: Record<
 
 export const ServiceDetail = ({
   caseStudies,
+  caseStudiesDescription = "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  caseStudiesHeading = "Real Events. Real Results.",
   closingSections,
   creativePricing,
   ctaBanner,
@@ -165,6 +171,7 @@ export const ServiceDetail = ({
   deliverablesSectionType = "grid",
   faq,
   hero,
+  imageHero,
   middleSections,
   page,
   parentPage,
@@ -233,14 +240,17 @@ export const ServiceDetail = ({
       <JsonLd data={breadcrumbJsonLd} />
       <Header darkBackground />
 
-      <ServiceHero
-        description={hero.description}
-        primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
-        secondaryCta={
-          hero.secondaryCta ?? (heroCtas ? heroCtas.secondaryCta : secondaryServiceHeroCta)
-        }
-        title={hero.title}
-      />
+      {imageHero && <ImageHero {...imageHero} />}
+      {!imageHero && hero && (
+        <ServiceHero
+          description={hero.description}
+          primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
+          secondaryCta={
+            hero.secondaryCta ?? (heroCtas ? heroCtas.secondaryCta : secondaryServiceHeroCta)
+          }
+          title={hero.title}
+        />
+      )}
 
       <ClientLogos overlap={false} />
 
@@ -298,8 +308,8 @@ export const ServiceDetail = ({
 
       {caseStudies && (
         <CaseStudies
-          description="B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026."
-          heading="Real Events. Real Results."
+          description={caseStudiesDescription}
+          heading={caseStudiesHeading}
           {...caseStudies}
         />
       )}
