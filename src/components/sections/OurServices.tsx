@@ -39,7 +39,7 @@ export const OurServices = ({
   return (
     <section className="bg-brand-gray pt-20 pb-40" id="services">
       <div className="container mx-auto px-8">
-        <div className="mb-16 flex flex-col items-start text-left">
+        <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="text-center">{heading}</Heading>
         </div>

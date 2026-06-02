@@ -81,6 +81,11 @@ export const CORPORATE_VIDEO_INDUSTRIES = {
   ],
 };
 
+export const CORPORATE_VIDEO_PORTFOLIO = {
+  heading: "Check out our video production portfolio.",
+  items: GLOBAL_CASE_STUDIES.slice(0, 3),
+};
+
 export const CORPORATE_VIDEO_DELIVERABLES = {
   heading: "What We Produce in Our Corporate Video Production Services",
   services: [

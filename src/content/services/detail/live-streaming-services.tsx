@@ -154,6 +154,37 @@ export const LIVE_STREAMING_SPOTLIGHT = {
   videoUrl: "/videos/hero-gtc-2026.mp4",
 };
 
+export const LIVE_STREAMING_WHY_CHOOSE_US = {
+  eyebrow: "Why B2B Sales Arrow",
+  heading: "Professional Event Live Streaming for Modern Corporate Events",
+  reasons: [
+    {
+      description:
+        "Today's events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.",
+      id: "global-reach",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      title: "Break Geographic Limits",
+    },
+    {
+      description:
+        "We deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events — managing every aspect of event streaming setup, camera operations, audio, branded visuals, platform integration, and live technical support.",
+      id: "end-to-end",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      title: "End-to-End Production Management",
+    },
+    {
+      description:
+        "Whether you are hosting an in-person, hybrid, or fully virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.",
+      id: "broadcast-quality",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      title: "Any Format. Broadcast Quality.",
+    },
+  ],
+};
+
 export const LIVE_STREAMING_INTRODUCTION = {
   attribution: "B2B Sales Arrow Production Team",
   description: (
