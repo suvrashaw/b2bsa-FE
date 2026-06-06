@@ -6,7 +6,7 @@ const ORGANIZATION = {
   "@type": "Organization" as const,
   description:
     "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
-  logo: `${BASE}/logo.png`,
+  logo: `${BASE}/logos/logo_primary.png`,
   name: "B2B Sales Arrow",
   sameAs: ["https://www.linkedin.com/company/b2b-sales-arrow/"],
   url: BASE,

@@ -5,7 +5,7 @@ export const ABOUT_HERO = {
   image: {
     alt: "B2B Sales Arrow team and office",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/about/hero.avif",
   },
   primaryCtaHref: "/contact",
   primaryCtaLabel: "Request a Strategy Consultation",
@@ -161,21 +161,21 @@ export const ABOUT_RECENT_EVENTS = {
     {
       date: "2025",
       id: "world-aviation-festival-2025",
-      image: "/images/recent-events/frame-219.png",
+      image: "/images/recent-events/event_other_1.avif",
       location: "Lisbon, Portugal",
       title: "World Aviation Festival",
     },
     {
       date: "2025",
       id: "sibos-amsterdam-2025",
-      image: "/images/recent-events/frame-222.png",
+      image: "/images/recent-events/event_other_2.avif",
       location: "Amsterdam, Netherlands",
       title: "SIBOS",
     },
     {
       date: "2025",
       id: "money-20-20-europe-2025",
-      image: "/images/recent-events/frame-223.png",
+      image: "/images/recent-events/event_other_3.avif",
       location: "Amsterdam, Netherlands",
       title: "Money 20/20",
     },
@@ -193,32 +193,28 @@ export const ABOUT_VALUES = {
       description:
         "We measure success by commercial outcomes — qualified conversations, measurable pipeline, and revenue impact. Not campaign volume or impression counts.",
       id: "accountability",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/about/values/accountability.avif",
       title: "Accountability Over Activity",
     },
     {
       description:
         "Quality, relevance, and conversion — not vanity numbers that look impressive on a report but do not move a sales team forward.",
       id: "precision",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/about/values/precision.avif",
       title: "Precision Over Volume",
     },
     {
       description:
         "Enterprise growth work requires more than execution. It requires context, genuine trust, and shared accountability for outcomes across the life of the program.",
       id: "partnership",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/about/values/partnership.avif",
       title: "Partnership Over Vendor Relationships",
     },
     {
       description:
         "International strategy combined with regional market knowledge, cultural context, and on-ground delivery capability across every market we serve.",
       id: "global",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/about/values/global-reach.avif",
       title: "Global Thinking, Local Execution",
     },
   ],

@@ -108,10 +108,10 @@ export const Footer = () => {
                 >
                   <Image
                     alt="B2B Sales Arrow"
-                    className="rounded-md bg-transparent object-contain object-left brightness-0 invert"
+                    className="rounded-md bg-transparent object-contain object-left"
                     fill
                     sizes="192px"
-                    src="/logo.png"
+                    src="/logos/logo_white.svg"
                   />
                 </Link>
                 <Heading as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>

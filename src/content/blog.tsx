@@ -1,5 +1,11 @@
 import type { ClientLogoItem } from "@/content/home";
 
+import { GES_SERVICES } from "@/content/services/global-event-solutions";
+import { RESEARCH_SERVICES } from "@/content/services/market-research";
+import { MEDIA_SERVICES } from "@/content/services/media-production";
+import { PERF_SERVICES } from "@/content/services/performance-marketing";
+import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation";
+
 import { SHARED_BLOG_POSTS } from "./blogs";
 
 export const BLOG_HERO = {
@@ -9,7 +15,7 @@ export const BLOG_HERO = {
   image: {
     alt: "Content and insights hub",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/blog/hero.avif",
   },
   primaryCtaLabel: "Read the Latest Insights",
   secondaryCtaLabel: "Subscribe for Growth Intelligence",
@@ -95,3 +101,40 @@ export const BLOG_PAGE = {
     title: "B2B Growth Insights and Strategy Blog | B2B Sales Arrow",
   },
 } as const;
+
+type LooseService = {
+  description: string;
+  href?: string;
+  id: string;
+  image: string;
+  title: string;
+};
+
+const SERVICE_FALLBACK_HREFS: Record<string, string> = {
+  appointment: "/services/sales-qualified-lead-generation",
+  database: "/services/sales-qualified-lead-generation",
+  icp: "/services/sales-qualified-lead-generation",
+  intelligence: "/services/market-research",
+  prospecting: "/services/sales-qualified-lead-generation",
+  validation: "/services/market-research",
+};
+
+export const BLOG_SERVICE_CAROUSEL = {
+  eyebrow: "WHAT WE DO",
+  heading: "Explore Our Services",
+  items: (
+    [
+      ...GES_SERVICES.services,
+      ...MEDIA_SERVICES.services,
+      ...PERF_SERVICES.services,
+      ...RESEARCH_SERVICES.services,
+      ...SQL_SERVICES.services,
+    ] as LooseService[]
+  ).map((s) => ({
+    description: s.description,
+    href: s.href ?? SERVICE_FALLBACK_HREFS[s.id] ?? "/services",
+    id: s.id,
+    image: s.image,
+    title: s.title,
+  })),
+};

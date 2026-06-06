@@ -5,7 +5,7 @@ export const CONTACT_HERO = {
   image: {
     alt: "Team collaboration",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/contact/hero.avif",
   },
   primaryCtaHref: "#contact",
   primaryCtaLabel: "Submit Inquiry",
@@ -88,7 +88,7 @@ export const CONTACT_FORM = {
   ),
   illustration: {
     alt: "Contact Us",
-    src: "/undraw_contact-us_s4jn.svg",
+    src: "/contact_illu.svg",
   },
 };
 

@@ -13,6 +13,7 @@ import { Heading } from "@/components/ui/Heading";
 
 export interface HeroProps {
   badge?: string;
+  compact?: boolean;
   description?: string;
   eyebrow?: string;
   highlight?: string;
@@ -50,6 +51,7 @@ const HERO_STAT_INITIAL = { opacity: 0, y: 20 };
 const HERO_STAT_TRANSITION = { delay: 0.6, duration: 0.6 };
 
 export const Hero = ({
+  compact = false,
   description,
   highlight,
   highlightVariant = "blue",
@@ -77,7 +79,7 @@ export const Hero = ({
   const resolvedSubtitle = description ?? subtitle;
 
   return (
-    <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-white pt-24">
+    <section className={`relative flex ${compact ? "min-h-[50vh]" : "min-h-[90vh]"} items-center overflow-hidden bg-white pt-24`}>
       {/* Background Gradients */}
       <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/20" />
 

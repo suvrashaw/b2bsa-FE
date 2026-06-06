@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
+import { type NavLink, type ServiceNavGroup, serviceNavigationGroups, topNavigation } from "@/content/navigation";
 import { cn } from "@/lib";
 
 const HEADER_ANIMATE = { y: 0 };
@@ -54,7 +54,7 @@ const DesktopNavLink = ({
     <div className="group/nav-item relative flex items-center py-4">
       <Link
         className={cn(
-          "group relative text-sm font-medium transition-colors flex items-center gap-1.5",
+          "group relative whitespace-nowrap text-sm font-medium transition-colors flex items-center gap-0.5",
           lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
         )}
         href={link.href}
@@ -80,15 +80,36 @@ const DesktopNavLink = ({
   );
 };
 
-// Pure sub-components for Megamenu to satisfy react-perf / no-new-function rules
-const NOWRAP_NAMES = new Set(["Event Experience Video Production"]);
+// Pure sub-components for Megamenu and Mobile menu to satisfy react-perf / sonarjs rules
+const NOWRAP_NAMES = new Set(["Event Experience Video Production", "Event Live Streaming Services"]);
+
+const MobileSubGroupLinks = ({
+  links,
+  onClose,
+}: {
+  links: NavLink[];
+  onClose: () => void;
+}) => (
+  <>
+    {links.map((sub) => (
+      <Link
+        className="block pl-8 text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
+        href={sub.href}
+        key={sub.name}
+        onClick={onClose}
+      >
+        {sub.name}
+      </Link>
+    ))}
+  </>
+);
 
 const MegamenuSubLink = ({
   onClose,
   sub,
 }: {
   onClose: () => void;
-  sub: (typeof serviceNavigationGroups)[number]["links"][number];
+  sub: NavLink;
 }) => {
   return (
     <Link
@@ -108,15 +129,16 @@ const MegamenuServiceGroup = ({
   group,
   noWrapTitle = false,
   onClose,
-  twoColumnLinks = false,
 }: {
-  group: (typeof serviceNavigationGroups)[number];
+  group: ServiceNavGroup;
   noWrapTitle?: boolean;
   onClose: () => void;
-  twoColumnLinks?: boolean;
 }) => {
+  const flatLinks = group.links ?? [];
+  const subGroups = group.groups ?? [];
+
   return (
-    <div className="rounded-lg p-5 transition-all hover:bg-gray-50">
+    <div className="p-5">
       <Link
         className={cn(
           "mb-4 block text-sm font-black text-brand-charcoal transition-colors hover:text-brand-blue",
@@ -127,11 +149,28 @@ const MegamenuServiceGroup = ({
       >
         {group.name}
       </Link>
-      <div className={twoColumnLinks ? "grid grid-cols-2 gap-x-4 gap-y-3" : "space-y-3"}>
-        {group.links.map((sub) => (
-          <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
-        ))}
-      </div>
+      {subGroups.length > 0 ? (
+        <div className="grid grid-cols-2 gap-x-4">
+          {subGroups.map((sg) => (
+            <div key={sg.name}>
+              <p className="mb-4 text-xs font-bold tracking-wide text-gray-400 uppercase">
+                {sg.name}
+              </p>
+              <div className="space-y-3">
+                {sg.links.map((sub) => (
+                  <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {flatLinks.map((sub) => (
+            <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -256,7 +295,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-14 w-52 transition-all duration-300 hover:opacity-80"
+          className="relative block h-10 w-40 transition-all duration-300 hover:opacity-80"
           href="/"
         >
           <Image
@@ -265,12 +304,12 @@ export const Header = ({
             fill
             priority
             sizes="160px"
-            src="/logo.png"
+            src="/logos/logo_primary.svg"
           />
         </Link>
       </div>
 
-      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
+      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 lg:flex">
         {topNavigation.map((link) => (
           <DesktopNavLink
             activeDropdown={activeDropdown}
@@ -316,12 +355,11 @@ export const Header = ({
           >
             <div className="mx-auto max-w-7xl px-8">
               <div className="grid grid-cols-5 gap-6">
-                {/* Global Event Solutions — spans 2 columns with 2-column link layout */}
+                {/* Global Event Solutions — spans 2 columns, internally 2-column sub-groups */}
                 <div className="col-span-2">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
                     onClose={handleCloseMegamenu}
-                    twoColumnLinks
                   />
                 </div>
                 {/* Media Production */}
@@ -331,19 +369,25 @@ export const Header = ({
                 />
                 {/* Performance Marketing */}
                 <MegamenuServiceGroup
-                  group={serviceNavigationGroups[2]}
+                  group={serviceNavigationGroups[3]}
                   onClose={handleCloseMegamenu}
                 />
-                {/* Market Research + Sales Qualified Lead Generation — stacked in one column */}
+                {/* Sales Qualified Lead Generation + Market Research + HPMI — stacked */}
                 <div>
                   <MegamenuServiceGroup
-                    group={serviceNavigationGroups[4]}
+                    group={serviceNavigationGroups[2]}
+                    noWrapTitle
                     onClose={handleCloseMegamenu}
                   />
                   <div className="mt-1">
                     <MegamenuServiceGroup
-                      group={serviceNavigationGroups[3]}
-                      noWrapTitle
+                      group={serviceNavigationGroups[4]}
+                      onClose={handleCloseMegamenu}
+                    />
+                  </div>
+                  <div className="mt-1">
+                    <MegamenuServiceGroup
+                      group={serviceNavigationGroups[5]}
                       onClose={handleCloseMegamenu}
                     />
                   </div>
@@ -376,13 +420,21 @@ export const Header = ({
                     {serviceNavigationGroups.map((group) => (
                       <div className="space-y-2" key={group.name}>
                         <Link
-                          className="block text-lg  font-bold transition-colors hover:text-brand-blue"
+                          className="block text-lg font-bold transition-colors hover:text-brand-blue"
                           href={group.href}
                           onClick={closeMobileMenu}
                         >
                           {group.name}
                         </Link>
-                        {group.links.map((sub) => (
+                        {group.groups?.map((sg) => (
+                          <div key={sg.name}>
+                            <p className="mt-2 pl-4 text-xs font-semibold tracking-wide text-gray-400 uppercase">
+                              {sg.name}
+                            </p>
+                            <MobileSubGroupLinks links={sg.links} onClose={closeMobileMenu} />
+                          </div>
+                        ))}
+                        {group.links?.map((sub) => (
                           <Link
                             className="block pl-4 text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
                             href={sub.href}

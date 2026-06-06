@@ -252,7 +252,7 @@ export const HOME_HERO_CONTENT: HomeHeroContent = {
   image: {
     alt: "Global B2B enterprise growth strategy",
     loaderAlt: "Loader",
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/home/hero/home_hero_bg.avif",
   },
   primaryCtaLabel: "Get a Custom Proposal",
   secondaryCtaLabel: "See Our Work",
@@ -407,8 +407,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
       icon: "Presentation",
       id: "booth-design",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Booth Design & Production",
     },
     {
@@ -417,8 +416,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
       icon: "Users",
       id: "active-prospecting",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Active Prospecting",
     },
     {
@@ -427,8 +425,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We capture broadcast-quality video, interviews, and 3D animations at your event — turning a single day on the floor into 12 months of high-impact digital content.",
       icon: "MonitorPlay",
       id: "media",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/media-production-2.avif",
       title: "Corporate Media Production",
     },
     {
@@ -477,8 +474,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We build verified, account-level prospect databases and deploy our proprietary HPMI methodology to uncover deep target market intelligence before your event begins.",
       icon: "Database",
       id: "market-research",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/database-research-revised.avif",
       title: "Database & Market Research",
     },
     {
@@ -487,8 +483,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We run targeted pre-event marketing campaigns across email and social to drive qualified attendee traffic to your booth and fill your team's calendar with high-intent meetings before day one.",
       icon: "Rocket",
       id: "performance-marketing",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Performance Marketing",
     },
   ],
@@ -501,7 +496,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
     {
       icon: "Plane",
       id: "world-aviation-festival-2023",
-      image: "/images/case-studies/waf.jpg",
+      image: "/images/case-studies/waf.avif",
       solution:
         "Fueling global brand recognition and lead generation success with 70% hot and warm leads from 80% of $1B+ organisations.",
       title: "World Aviation Festival 2023",
@@ -509,7 +504,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
     {
       icon: "Building2",
       id: "sibos-2023",
-      image: "/images/case-studies/sibos.jpg",
+      image: "/images/case-studies/sibos.avif",
       solution:
         "Boosting on-ground lead generation 40% beyond target with 85%+ hot and warm leads and 75%+ director-level prospects.",
       title: "SIBOS 2023",
@@ -531,60 +526,53 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
     "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
   events: [
     {
-      date: "Sep 2025",
-      id: "world-aviation-festival",
-      image: "/images/recent-events/frame-219.png",
-      location: "London, UK",
-      title: "World Aviation Festival",
-    },
-    {
-      date: "Nov 2025",
-      id: "fintech-festival",
-      image: "/images/recent-events/frame-220.png",
-      location: "Singapore",
-      title: "Singapore Fintech Festival",
-    },
-    {
-      date: "Oct 2025",
-      id: "itc-vegas",
-      image: "/images/recent-events/frame-221.png",
+      date: "Mar 2026",
+      id: "adobe-summit-2026",
+      image: "/images/recent-events/adobe_summit_2026.avif",
       location: "Las Vegas, USA",
-      title: "ITC Vegas",
+      title: "Adobe Summit 2026",
+    },
+    {
+      date: "2026",
+      id: "inma-2026",
+      image: "/images/recent-events/inma_2026.avif",
+      location: "Global",
+      title: "INMA World Congress 2026",
+    },
+    {
+      date: "2026",
+      id: "servicenow-2026",
+      image: "/images/recent-events/servicenow_2026.avif",
+      location: "Las Vegas, USA",
+      title: "ServiceNow Knowledge 2026",
     },
     {
       date: "Oct 2025",
       id: "sibos-amsterdam",
-      image: "/images/recent-events/frame-222.png",
+      image: "/images/recent-events/event_other_1.avif",
       location: "Amsterdam, Netherlands",
       title: "SIBOS 2025",
     },
     {
       date: "Oct 2025",
       id: "money-20-20-amsterdam",
-      image: "/images/recent-events/frame-223.png",
+      image: "/images/recent-events/event_other_2.avif",
       location: "Amsterdam, Netherlands",
       title: "Money 20/20",
     },
     {
       date: "Oct 2025",
       id: "gitex-global",
-      image: "/images/recent-events/frame-224.png",
+      image: "/images/recent-events/event_other_3.avif",
       location: "Dubai, UAE",
       title: "GITEX Global 2025",
     },
     {
       date: "Dec 2025",
       id: "constellate",
-      image: "/images/recent-events/frame-225.png",
+      image: "/images/recent-events/event_other_4.avif",
       location: "New York, USA",
       title: "Constellate 2025",
-    },
-    {
-      date: "Nov 2025",
-      id: "converse",
-      image: "/images/recent-events/frame-219.png",
-      location: "Mumbai, India",
-      title: "Converse 2025",
     },
   ],
   heading: <>Upcoming Trade Shows & Global Industry Events</>,
@@ -597,42 +585,30 @@ export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
     {
       description:
         "We deliberately engineer every event strategy directly from your commercial goals to drive measurable pipeline outcomes.",
-      id: "revenue-driven",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Revenue-Driven Execution",
+      id: "proven-execution",
+      image: "/images/home/why-choose-us/proven_execution.avif",
+      title: "Proven Execution",
     },
     {
       description:
         "We consolidate booth design, media production, and marketing under one accountable roof to eliminate vendor gaps.",
-      id: "zero-coordination",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
-      title: "Zero Coordination Tax",
+      id: "strategic-creativity",
+      image: "/images/home/why-choose-us/strategic_creativity.avif",
+      title: "Strategic Creativity",
     },
     {
       description:
         "We leverage deep regional intelligence across three continents to ensure flawless corporate experiences around the globe.",
-      id: "seamless-delivery",
-      image:
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
-      title: "Seamless Worldwide Delivery",
+      id: "global-reach",
+      image: "/images/home/why-choose-us/global_reach.avif",
+      title: "Global Reach",
     },
     {
       description:
-        "We deploy trained sales specialists directly onto the active event floor to hunt high-value enterprise decision-makers.",
-      id: "active-prospecting",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      title: "Proprietary Active Prospecting",
-    },
-    {
-      description:
-        "We possess extensive domain expertise across major global sectors so we already understand your specific language.",
-      id: "industry-expertise",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-      title: "Deep Industry Expertise",
+        "We deploy cutting-edge technology and tools across every stage of event execution to deliver consistently superior outcomes.",
+      id: "technology-led-delivery",
+      image: "/images/home/why-choose-us/technology_led_delivery.avif",
+      title: "Technology-Led Delivery",
     },
   ],
 };
@@ -646,8 +622,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       company: "[Enterprise Brand]",
       designation: "[Job Title]",
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      image: "/images/home/testimonials/testimonial-1.avif",
       name: "[Client Name]",
       quote:
         '"Their team built an incredible sustainable booth that perfectly captured our global brand identity this year."',
@@ -657,8 +632,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       company: "[Enterprise Brand]",
       designation: "[Job Title]",
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
+      image: "/images/home/testimonials/testimonial-2.avif",
       name: "[Client Name]",
       quote:
         '"Their active prospecting team navigated the event floor and delivered fifty highly qualified sales leads daily."',
@@ -668,8 +642,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       company: "[Enterprise Brand]",
       designation: "[Job Title]",
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
+      image: "/images/home/testimonials/testimonial-3.avif",
       name: "[Client Name]",
       quote:
         '"They curated an exclusive networking experiences and provided premium custom giveaways that kept our attendees fully engaged."',
@@ -815,7 +788,7 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
   heading: <>Ready to Build Your Global Event Strategy?</>,
   illustration: {
     alt: "Contact Us",
-    src: "/undraw_contact-us_s4jn.svg",
+    src: "/contact_illu.svg",
   },
 };
 
