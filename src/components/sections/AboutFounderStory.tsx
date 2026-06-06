@@ -13,7 +13,7 @@ export interface AboutFounderStoryData {
 
 export const AboutFounderStory = ({ data }: { data: AboutFounderStoryData }) => {
   return (
-    <section className="bg-brand-white py-20" id="founder">
+    <section className="scroll-mt-28 bg-brand-white py-20" id="founder">
       <div className="container mx-auto grid items-center gap-12 px-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-brand-gray shadow-xl">
           <Image
@@ -29,9 +29,7 @@ export const AboutFounderStory = ({ data }: { data: AboutFounderStoryData }) => 
           <Heading as="h2" className="mb-8">
             {data.name}
           </Heading>
-          <p className="text-xl leading-relaxed text-brand-charcoal/80 md:text-2xl">
-            {data.story}
-          </p>
+          <p className="text-xl leading-relaxed text-brand-charcoal/80 md:text-2xl">{data.story}</p>
         </div>
       </div>
     </section>

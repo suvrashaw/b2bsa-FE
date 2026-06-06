@@ -22,10 +22,10 @@ export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header />
+      <Header lightHeaderText />
       <Hero {...BLOG_HERO} compact />
+      <ClientLogos heading="Content Categories" logos={BLOG_LOGOS} overlap={false} wrapItems />
       <ServiceCarouselSection {...BLOG_SERVICE_CAROUSEL} />
-      <ClientLogos heading="Content Categories" logos={BLOG_LOGOS} overlap={false} />
       <Blogs {...BLOG_POSTS} layout="grid" />
       <ContactUs {...BLOG_CONTACT} />
       <Footer />

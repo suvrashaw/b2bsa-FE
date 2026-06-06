@@ -27,6 +27,8 @@ type ImportedBlogPost = {
 };
 
 const BLOG_HOST = "https://b2bsalesarrow.com";
+export const DEFAULT_BLOG_POST_ID = "hiring-trade-show-booth-design-company";
+export const DEFAULT_BLOG_POST_HREF = `/blogs/${DEFAULT_BLOG_POST_ID}`;
 
 const createBlogId = (url: string, fallbackIndex: number) => {
   try {
@@ -59,7 +61,7 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       date: post.date,
       excerpt: post.excerpt,
       externalUrl: post.url,
-      href: `/blogs/${id}`,
+      href: DEFAULT_BLOG_POST_HREF,
       id,
       image: post.image,
       sortIndex: index,

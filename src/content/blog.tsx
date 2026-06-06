@@ -9,22 +9,23 @@ import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation
 import { SHARED_BLOG_POSTS } from "./blogs";
 
 export const BLOG_HERO = {
-  className: "bg-brand-gray",
+  className: "bg-brand-blue",
   description:
     "Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
   eyebrow: "B2B GROWTH INSIGHTS",
   headingClassName: "lg:text-5xl xl:text-5xl",
   image: null,
   primaryCtaLabel: "Read the Latest Insights",
+  primaryCtaVariant: "white" as const,
   secondaryCtaLabel: "Subscribe for Growth Intelligence",
+  secondaryCtaVariant: "white-outline" as const,
   showPreloader: false,
   stat: null,
+  textColor: "white" as const,
   title: (
     <>
       Thought Leadership for <br />
-      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Enterprise Growth Teams
-      </span>
+      <span className="text-white">Enterprise Growth Teams</span>
     </>
   ),
 };
@@ -41,6 +42,11 @@ export const BLOG_LOGOS: ClientLogoItem[] = [
   { alt: "Market research category", id: "market-research", src: "/logos/blog/market-research.svg" },
   { alt: "Lead generation category", id: "lead-generation", src: "/logos/blog/lead-generation.svg" },
   { alt: "Case studies category", id: "case-studies", src: "/logos/blog/case-studies.svg" },
+  { alt: "Trade shows category", id: "trade-shows", src: "/logos/blog/trade-shows.svg" },
+  { alt: "B2B sales category", id: "b2b-sales", src: "/logos/blog/b2b-sales.svg" },
+  { alt: "Exhibition category", id: "exhibition", src: "/logos/blog/exhibition.svg" },
+  { alt: "Digital ads category", id: "digital-ads", src: "/logos/blog/digital-ads.svg" },
+  { alt: "SQLs category", id: "sqls", src: "/logos/blog/sqls.svg" },
 ];
 
 export const BLOG_POSTS = {

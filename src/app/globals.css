@@ -38,7 +38,7 @@
   --heading-h4: color-mix(in srgb, #3590b5, black 45%);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-heading: var(--font-playfair);
+  --font-heading: var(--font-inter);
   --font-sans: var(--font-inter);
   --animate-scroll-up: scroll-up 20s linear infinite;
   --animate-scroll-down: scroll-down 25s linear infinite;

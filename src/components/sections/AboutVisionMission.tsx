@@ -12,7 +12,7 @@ export interface AboutVisionMissionData {
 
 export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) => {
   return (
-    <section className="bg-brand-white py-20" id="vision-mission">
+    <section className="scroll-mt-28 bg-brand-white py-20" id="vision-mission">
       <div className="container mx-auto px-8">
         <div className="mb-12 max-w-3xl">
           <Heading as="h2">{data.heading}</Heading>
@@ -34,7 +34,10 @@ export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) =
             </p>
             <ul className="space-y-5">
               {data.missionItems.map((item) => (
-                <li className="flex gap-4 text-base leading-relaxed text-brand-charcoal/80" key={item}>
+                <li
+                  className="flex gap-4 text-base leading-relaxed text-brand-charcoal/80"
+                  key={item}
+                >
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-cyan" />
                   <span>{item}</span>
                 </li>

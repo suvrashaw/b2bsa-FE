@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
 import { BlogPost } from "@/components/templates/BlogPost";
-import { SHARED_BLOG_POSTS } from "@/content/blogs";
+import {
+  DEFAULT_BLOG_POST_HREF,
+  DEFAULT_BLOG_POST_ID,
+  SHARED_BLOG_POSTS,
+} from "@/content/blogs";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -13,6 +17,8 @@ type BlogPostPageProps = {
 
 const findPostBySlug = (slug: string) =>
   SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
+
+const getDefaultPost = () => findPostBySlug(DEFAULT_BLOG_POST_ID);
 
 export const generateStaticParams = () => {
   return SHARED_BLOG_POSTS.filter((post) => post.body).map((post) => ({
@@ -25,8 +31,9 @@ export const generateMetadata = async ({
 }: BlogPostPageProps): Promise<Metadata> => {
   const { slug } = await params;
   const post = findPostBySlug(slug);
+  const metadataPost = post?.body ? post : getDefaultPost();
 
-  if (!post) {
+  if (!metadataPost) {
     return {
       title: "Blog Not Found",
     };
@@ -34,26 +41,26 @@ export const generateMetadata = async ({
 
   return {
     alternates: {
-      canonical: `/blogs/${post.id}`,
+      canonical: `/blogs/${metadataPost.id}`,
     },
-    description: post.excerpt,
+    description: metadataPost.excerpt,
     openGraph: {
-      description: post.excerpt,
+      description: metadataPost.excerpt,
       images: [
         {
-          alt: post.title,
-          url: post.image,
+          alt: metadataPost.title,
+          url: metadataPost.image,
         },
       ],
-      title: post.title,
+      title: metadataPost.title,
       type: "article",
     },
-    title: post.title,
+    title: metadataPost.title,
     twitter: {
       card: "summary_large_image",
-      description: post.excerpt,
-      images: [post.image],
-      title: post.title,
+      description: metadataPost.excerpt,
+      images: [metadataPost.image],
+      title: metadataPost.title,
     },
   };
 };
@@ -62,12 +69,12 @@ const Page = async ({ params }: BlogPostPageProps) => {
   const { slug } = await params;
   const post = findPostBySlug(slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post || !post.body) {
+    if (slug !== DEFAULT_BLOG_POST_ID) {
+      redirect(DEFAULT_BLOG_POST_HREF);
+    }
 
-  if (!post.body) {
-    redirect(post.externalUrl);
+    notFound();
   }
 
   return <BlogPost post={post} />;

@@ -124,9 +124,9 @@ export const BlogPost = ({ post }: BlogPostProps) => {
 
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header />
+      <Header lightHeaderText />
 
-      <section className="relative isolate overflow-hidden bg-brand-charcoal py-28 text-white lg:py-36">
+      <section className="relative isolate flex min-h-[50vh] items-center overflow-hidden bg-brand-charcoal pt-24 text-white">
         <Image
           alt={post.title}
           className="object-cover opacity-35"
@@ -138,9 +138,9 @@ export const BlogPost = ({ post }: BlogPostProps) => {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/40 to-brand-cyan/20" />
         <div className="absolute inset-0 bg-brand-charcoal/45" />
 
-        <div className="relative z-10 container mx-auto px-6">
-          <div className="max-w-4xl">
-            <div className="mb-6 flex flex-wrap items-center gap-3 text-sm font-semibold tracking-widest uppercase">
+        <div className="relative z-10 container mx-auto px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold tracking-widest uppercase">
               {post.category && (
                 <span className="rounded-full bg-white/15 px-4 py-2 text-white backdrop-blur-md">
                   {post.category}
@@ -149,7 +149,7 @@ export const BlogPost = ({ post }: BlogPostProps) => {
               {post.date && <span>{post.date}</span>}
               <span>{readTime}</span>
             </div>
-            <h1 className="max-w-4xl font-heading text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl">
+            <h1 className="mx-auto max-w-4xl font-heading text-4xl leading-tight font-bold text-white md:text-5xl lg:text-5xl">
               {post.title}
             </h1>
           </div>

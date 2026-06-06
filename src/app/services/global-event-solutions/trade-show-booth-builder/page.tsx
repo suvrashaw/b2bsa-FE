@@ -23,6 +23,7 @@ import {
   BOOTH_BUILDER_RELATED_SERVICES,
 } from "@/content/services/detail/trade-show-booth-builder";
 import {
+  BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -58,7 +59,16 @@ const Page = () => {
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <WhyChooseUs />
+        <WhyChooseUs
+          heading="What We Do in Exhibition Stand Builder"
+          reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+            description: item.descriptions.join(" "),
+            id: item.id,
+            image: item.image,
+            title: item.heading,
+          }))}
+          showImagePanel
+        />
       }
       process={BOOTH_BUILDER_PROCESS}
       proofBar={BOOTH_BUILDER_PROOF_BAR}

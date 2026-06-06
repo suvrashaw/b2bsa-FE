@@ -69,11 +69,11 @@ export const BlogSidebarSubscribe = () => {
         </div>
 
         <button
-          className="w-full rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
+          className="w-full rounded-[4px] bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
           disabled={loading}
           type="submit"
         >
-          {loading ? "Joining..." : "I'm In"}
+          {loading ? "Subscribing..." : "Subscribe"}
         </button>
       </form>
     </section>

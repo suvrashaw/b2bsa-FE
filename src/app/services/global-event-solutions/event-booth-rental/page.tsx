@@ -60,7 +60,17 @@ const Page = () => {
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
             reasons={BOOTH_RENTAL_RENT_VS_BUY.reasons}
           />
-          <WhyChooseUs />
+          <WhyChooseUs
+            heading="Our Rental Booth Range"
+            reasons={[
+              { description: "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.", id: "rental-10x10", image: "/images/booth/10x10.jpg", title: "10x10 Standard" },
+              { description: "Room for product-led demos, a defined visitor journey, and a meeting zone.", id: "rental-10x20", image: "/images/booth/10x20.jpg", title: "10x20 Inline" },
+              { description: "Four-sided exhibition visibility with demo areas, meeting space, and AV support.", id: "rental-20x20", image: "/images/booth/20x20.jpg", title: "20x20 Island" },
+              { description: "Upper-level executive meeting suite + lower-level engagement zone for major global events.", id: "rental-double-deck", image: "/images/booth/30x30.png", title: "Double-Deck" },
+              { description: "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.", id: "rental-custom", image: "/images/booth/40x40.jpg", title: "Custom-Branded Rentals" },
+            ]}
+            showImagePanel
+          />
         </>
       }
       process={BOOTH_RENTAL_PROCESS}

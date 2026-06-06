@@ -10,7 +10,7 @@ export interface AboutCoreValuesData {
 
 export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
   return (
-    <section className="bg-brand-white py-20" id="core-values">
+    <section className="scroll-mt-28 bg-brand-white py-20" id="core-values">
       <div className="container mx-auto px-8">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>

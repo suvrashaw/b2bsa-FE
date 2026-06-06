@@ -8,16 +8,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import { Button } from "@/components/ui/Button";
+import { Button, type ButtonProps } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
+import { cn } from "@/lib";
 
 export interface HeroProps {
   badge?: string;
   className?: string;
   compact?: boolean;
-  headingClassName?: string;
   description?: string;
   eyebrow?: string;
+  headingClassName?: string;
   highlight?: string;
   highlightVariant?: "blue" | "cyan";
   image?:
@@ -31,8 +32,10 @@ export interface HeroProps {
   motionPhrases?: { color: string; id: string; text: string }[];
   primaryCtaHref?: string;
   primaryCtaLabel?: null | string;
+  primaryCtaVariant?: ButtonProps["variant"];
   secondaryCtaHref?: string;
   secondaryCtaLabel?: null | string;
+  secondaryCtaVariant?: ButtonProps["variant"];
   showPreloader?: boolean;
   stat?: {
     icon?: string;
@@ -40,6 +43,7 @@ export interface HeroProps {
     value: string;
   } | null;
   subtitle?: string;
+  textColor?: "default" | "white";
   title?: ReactNode | string;
 }
 
@@ -71,14 +75,17 @@ export const Hero = ({
   image = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
   primaryCtaHref = "/contact",
   primaryCtaLabel = "Explore Our Work",
+  primaryCtaVariant = "primary",
   secondaryCtaHref = "/case-studies",
   secondaryCtaLabel = "Our Services",
+  secondaryCtaVariant = "secondary",
   stat = {
     icon: "Globe",
     label: "Countries Served",
     value: "40+",
   },
   subtitle = "End-to-End Solutions That Drive Pipeline and Revenue",
+  textColor = "default",
   title = "Global B2B Event, Booth & Lead Generation Experts",
 }: HeroProps) => {
   const { scrollY } = useScroll();
@@ -87,6 +94,7 @@ export const Hero = ({
   const resolvedImage = resolveImageProps(image);
   const hasImage = resolvedImage !== null;
   const resolvedSubtitle = description ?? subtitle;
+  const lightText = textColor === "white";
 
   return (
     <section className={`relative flex ${compact ? "min-h-[50vh]" : "min-h-[90vh]"} items-center overflow-hidden pt-24 ${className ?? "bg-white"}`}>
@@ -102,19 +110,27 @@ export const Hero = ({
         >
           <Heading
             as="h1"
-            className={headingClassName ? `mb-6 ${headingClassName}` : "mb-6"}
+            className={cn("mb-6", lightText && "text-white", headingClassName)}
             highlight={highlight}
             highlightVariant={highlightVariant}
           >
             {title}
           </Heading>
 
-          <p className={`/70 mb-10 text-xl leading-relaxed ${hasImage ? "max-w-lg" : "mx-auto max-w-2xl"}`}>{resolvedSubtitle}</p>
+          <p
+            className={cn(
+              "mb-10 text-xl leading-relaxed",
+              hasImage ? "max-w-lg" : "mx-auto max-w-2xl",
+              lightText ? "text-white/90" : "text-gray-700"
+            )}
+          >
+            {resolvedSubtitle}
+          </p>
 
           <div className={`flex flex-wrap gap-4 ${hasImage ? "items-center" : "items-center justify-center"}`}>
             {primaryCtaLabel ? (
               <Link href={primaryCtaHref}>
-                <Button variant="primary">
+                <Button variant={primaryCtaVariant}>
                   {primaryCtaLabel}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -122,7 +138,7 @@ export const Hero = ({
             ) : null}
             {secondaryCtaLabel ? (
               <Link href={secondaryCtaHref}>
-                <Button variant="secondary">{secondaryCtaLabel}</Button>
+                <Button variant={secondaryCtaVariant}>{secondaryCtaLabel}</Button>
               </Link>
             ) : null}
           </div>

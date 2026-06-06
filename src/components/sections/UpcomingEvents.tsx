@@ -4,22 +4,13 @@ import { useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  type KeyboardEvent,
-  type MouseEvent,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
+import { type KeyboardEvent, type MouseEvent, useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
-import {
-  type CalendarTradeShow,
-  TRADE_SHOW_CALENDAR_EVENTS,
-} from "@/content/trade-show-calendar";
+import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/trade-show-calendar";
 import { cn } from "@/lib";
 
 export interface UpcomingEventsProps {
@@ -37,9 +28,9 @@ export interface UpcomingEventsProps {
 interface EventDetailsPanelProps {
   ctaLabel: string;
   event: UpcomingEventCard;
-  eventCountry: string;
+  eventCountry?: string;
   eventCtaHref: string;
-  eventDate: string;
+  eventDate?: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
 }
 
@@ -124,7 +115,10 @@ const getFallbackImage = (index: number) =>
 const getCountryFromLocation = (location?: string) => {
   if (!location) return;
 
-  const locationParts = location.split(",").map((part) => part.trim()).filter(Boolean);
+  const locationParts = location
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
   return locationParts.at(-1) ?? location;
 };
 
@@ -203,9 +197,9 @@ const EventDetails = ({
 }: {
   ctaLabel: string;
   event: UpcomingEventCard;
-  eventCountry: string;
+  eventCountry?: string;
   eventCtaHref: string;
-  eventDate: string;
+  eventDate?: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
 }) => (
   <>
@@ -214,18 +208,22 @@ const EventDetails = ({
         {event.title}
       </h3>
       <div className="mt-5 space-y-3">
-        <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
-            <Calendar className="h-4 w-4 text-[#1E6091]" />
-          </span>
-          <span>{eventDate}</span>
-        </div>
-        <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#B23A48]/10">
-            <MapPin className="h-4 w-4 text-[#B23A48]" />
-          </span>
-          <span className="line-clamp-1">{eventCountry}</span>
-        </div>
+        {eventDate ? (
+          <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
+              <Calendar className="h-4 w-4 text-[#1E6091]" />
+            </span>
+            <span>{eventDate}</span>
+          </div>
+        ) : null}
+        {eventCountry ? (
+          <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#B23A48]/10">
+              <MapPin className="h-4 w-4 text-[#B23A48]" />
+            </span>
+            <span className="line-clamp-1">{eventCountry}</span>
+          </div>
+        ) : null}
       </div>
     </div>
 
@@ -560,8 +558,8 @@ const UpcomingEventFlipCard = ({
   shouldReduceMotion,
   viewAllHref,
 }: UpcomingEventFlipCardProps) => {
-  const eventCountry = event.country ?? event.location ?? "Global";
-  const eventDate = event.date ?? "Date TBA";
+  const eventCountry = event.country ?? event.location;
+  const eventDate = event.date;
   const eventCtaHref = event.ctaHref ?? viewAllHref;
   const eventImage = event.image ?? getFallbackImage(index);
   const FlipCard = FLIP_CARD_COMPONENTS[flipStyle];
@@ -594,10 +592,7 @@ const UpcomingEventFlipCard = ({
     <div className="mx-auto w-full max-w-[500px]">
       <article
         aria-label={`Show details for ${event.title}`}
-        className={cn(
-          CARD_SHELL_CLASS,
-          isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]"
-        )}
+        className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         tabIndex={0}
@@ -651,7 +646,9 @@ export const UpcomingEvents = ({
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center">{heading}</Heading>
+          <Heading as="h2" className="text-center">
+            {heading}
+          </Heading>
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}
         </div>
 

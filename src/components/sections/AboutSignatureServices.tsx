@@ -18,7 +18,7 @@ export interface AboutSignatureServicesData {
 
 export const AboutSignatureServices = ({ data }: { data: AboutSignatureServicesData }) => {
   return (
-    <section className="bg-brand-gray py-20" id="signature-services">
+    <section className="scroll-mt-28 bg-brand-gray py-20" id="signature-services">
       <div className="container mx-auto px-8">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

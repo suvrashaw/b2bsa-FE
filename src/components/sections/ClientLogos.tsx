@@ -12,6 +12,7 @@ export interface ClientLogosProps {
   overlap?: boolean;
   speed?: number;
   wheelSpeed?: number;
+  wrapItems?: boolean;
 }
 
 const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) => {
@@ -58,6 +59,7 @@ export const ClientLogos = ({
   overlap = true,
   speed = 2.5,
   wheelSpeed = 0.05,
+  wrapItems = false,
 }: ClientLogosProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -76,6 +78,30 @@ export const ClientLogos = ({
   const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
   const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
   const marqueeStyle = useMemo(() => ({ x }), [x]);
+
+  if (wrapItems) {
+    return (
+      <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
+        {heading && (
+          <Heading as="h2" className="pt-10 pb-6 text-center">
+            {heading}
+          </Heading>
+        )}
+        <div className="container mx-auto flex flex-wrap justify-center gap-4 px-8 pb-10">
+          {logos.map((logo) => (
+            <div className="flex shrink-0 items-center" key={logo.id}>
+              <img
+                alt={logo.alt}
+                className="h-12 w-auto max-w-[160px] object-contain grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
+                draggable={false}
+                src={logo.src}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`pointer-events-none relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`} ref={containerRef}>

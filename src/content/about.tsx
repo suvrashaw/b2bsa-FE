@@ -183,17 +183,13 @@ export const ABOUT_RECENT_EVENTS = {
       title: "Hannover Messe 2026",
     },
     {
-      date: "2026",
       id: "itw-2026",
       image: "/images/recent-events/event_other_3.avif",
-      location: "Details TBA",
       title: "ITW 2026",
     },
     {
-      date: "2026",
       id: "sap-sapphire-2026",
       image: "/images/case-studies/sap.jpg",
-      location: "Details TBA",
       title: "SAP Sapphire 2026",
     },
   ],

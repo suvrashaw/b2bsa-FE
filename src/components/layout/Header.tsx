@@ -237,13 +237,15 @@ const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
 export const Header = ({
   darkBackground = false,
   forceLightMode = false,
-}: { darkBackground?: boolean; forceLightMode?: boolean } = {}) => {
+  lightHeaderText = false,
+}: { darkBackground?: boolean; forceLightMode?: boolean; lightHeaderText?: boolean } = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<"services" | null>(null);
 
   const solidHeader = forceLightMode || scrolled;
   const lightText = darkBackground && !solidHeader;
+  const headerLightText = (darkBackground || lightHeaderText) && !solidHeader;
   const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
   const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
 
@@ -314,7 +316,7 @@ export const Header = ({
           <DesktopNavLink
             activeDropdown={activeDropdown}
             key={link.name}
-            lightText={lightText}
+            lightText={headerLightText}
             link={link}
             onMouseEnter={handleMouseEnterLink}
           />
@@ -322,7 +324,7 @@ export const Header = ({
       </nav>
 
       <div className="flex items-center gap-6">
-        <LanguageSelector lightText={lightText} />
+        <LanguageSelector lightText={headerLightText} />
 
         <Link href="/contact">
           <Button size="sm" variant="primary">

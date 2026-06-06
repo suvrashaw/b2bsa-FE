@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
@@ -8,12 +8,6 @@ import { SWRegistrar } from "@/app/providers/SWRegistrar";
 import { buildOrganizationJsonLd } from "@/lib";
 
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
 
 const inter = Inter({
   display: "swap",
@@ -49,7 +43,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
       lang="en"
       suppressHydrationWarning
     >
