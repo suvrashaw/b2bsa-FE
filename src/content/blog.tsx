@@ -9,22 +9,16 @@ import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation
 import { SHARED_BLOG_POSTS } from "./blogs";
 
 export const BLOG_HERO = {
+  className: "bg-brand-gray",
   description:
     "Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
   eyebrow: "B2B GROWTH INSIGHTS",
-  image: {
-    alt: "Content and insights hub",
-    loaderAlt: "Loading",
-    src: "/images/blog/hero.avif",
-  },
+  headingClassName: "lg:text-5xl xl:text-5xl",
+  image: null,
   primaryCtaLabel: "Read the Latest Insights",
   secondaryCtaLabel: "Subscribe for Growth Intelligence",
   showPreloader: false,
-  stat: {
-    icon: "BookOpen",
-    label: "Articles Published",
-    value: "120+",
-  },
+  stat: null,
   title: (
     <>
       Thought Leadership for <br />
@@ -52,7 +46,7 @@ export const BLOG_LOGOS: ClientLogoItem[] = [
 export const BLOG_POSTS = {
   blogs: SHARED_BLOG_POSTS,
   ctaLabel: "Browse All Articles",
-  eyebrow: "INSIGHTS & INTELLIGENCE",
+  eyebrow: "",
   heading: (
     <>
       Expert Strategies to Maximize <br />
@@ -120,7 +114,6 @@ const SERVICE_FALLBACK_HREFS: Record<string, string> = {
 };
 
 export const BLOG_SERVICE_CAROUSEL = {
-  eyebrow: "WHAT WE DO",
   heading: "Explore Our Services",
   items: (
     [

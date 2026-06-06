@@ -11,11 +11,11 @@ export const EVENT_PHYSICAL_VIDEO_IMAGE_HERO = {
   description:
     "Capture the most impactful moments of your event with high-quality on-site video production - from interviews and client testimonials to thought leadership bytes, speaker highlights, and branded event coverage.",
   images: [
-    "/images/recent-events/frame-222.png",
-    "/images/recent-events/frame-223.png",
-    "/images/recent-events/frame-224.png",
+    "/images/recent-events/event_other_2.avif",
+    "/images/recent-events/event_other_3.avif",
+    "/images/recent-events/event_other_4.avif",
   ],
-  poster: "/images/recent-events/frame-222.png",
+  poster: "/images/recent-events/event_other_2.avif",
   primaryCta: { href: "/contact", label: "Book a Video Shoot" },
   title: "Professional On-Site Video Shoots for Events That Deserve to Be Remembered",
   videoSrc: "/videos/hero-gtc-2026.mp4",

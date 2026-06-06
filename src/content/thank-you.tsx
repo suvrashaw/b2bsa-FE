@@ -5,7 +5,7 @@ export const THANK_YOU_HERO = {
   image: {
     alt: "Partnership and success",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/about/hero.avif",
   },
   primaryCtaLabel: "Explore Services",
   secondaryCtaLabel: "Read Our Blog",
@@ -44,8 +44,7 @@ export const THANK_YOU_SERVICES = {
         "End-to-end exhibition management across 40+ countries — from booth design to on-floor lead capture.",
       icon: "Globe",
       id: "global-events",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/hero/home_hero_bg.avif",
       title: "Global Event Solutions",
     },
     {
@@ -54,8 +53,7 @@ export const THANK_YOU_SERVICES = {
         "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
       icon: "MonitorPlay",
       id: "media",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/media-production-2.avif",
       title: "Media Production",
     },
     {
@@ -64,8 +62,7 @@ export const THANK_YOU_SERVICES = {
         "Data-driven SEO, paid advertising, and LinkedIn campaigns engineered to scale enterprise pipeline.",
       icon: "Rocket",
       id: "performance",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Performance Marketing",
     },
     {
@@ -74,8 +71,7 @@ export const THANK_YOU_SERVICES = {
         "Precision-targeted acquisition strategies for high-value B2B accounts ready to buy.",
       icon: "Users",
       id: "lead-gen",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "Sales Qualified Lead Generation",
     },
     {
@@ -84,8 +80,7 @@ export const THANK_YOU_SERVICES = {
         "Human-powered intelligence, data augmentation, and validation to fuel confident decisions.",
       icon: "Lightbulb",
       id: "market-research",
-      image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/database-research-revised.avif",
       title: "Market Research",
     },
   ],
@@ -97,24 +92,21 @@ export const THANK_YOU_BLOGS = {
       category: "Strategy",
       date: "Oct 12, 2025",
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800",
+      image: "/images/blog/trade-show-booth-trends-2026.avif",
       title: "The Future of Experiential B2B Marketing",
     },
     {
       category: "Design",
       date: "Sep 28, 2025",
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+      image: "/images/blog/hiring-trade-show-booth-company.avif",
       title: "Why Standard Trade Show Booths Are Failing",
     },
     {
       category: "Media",
       date: "Sep 15, 2025",
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=800",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Architecting a High-Converting Media Strategy",
     },
   ],

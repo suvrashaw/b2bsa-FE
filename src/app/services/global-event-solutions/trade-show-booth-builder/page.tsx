@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { BoothScrollShowcase } from "@/components/sections/BoothScrollShowcase";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
@@ -23,7 +23,6 @@ import {
   BOOTH_BUILDER_RELATED_SERVICES,
 } from "@/content/services/detail/trade-show-booth-builder";
 import {
-  BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
@@ -59,7 +58,7 @@ const Page = () => {
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <BoothScrollShowcase heading="What We Do in Exhibition Stand Builder" items={BOOTH_DESIGN_SHOWCASE_ITEMS} />
+        <WhyChooseUs />
       }
       process={BOOTH_BUILDER_PROCESS}
       proofBar={BOOTH_BUILDER_PROOF_BAR}

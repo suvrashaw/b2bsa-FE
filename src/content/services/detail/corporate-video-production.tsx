@@ -42,8 +42,7 @@ export const CORPORATE_VIDEO_INTRO = {
 export const CORPORATE_VIDEO_WHY = {
   description:
     "Research shows 87% of video marketers report video has directly increased sales. For enterprise B2B, corporate video shortens the time buyers need to understand your value, builds decision-maker confidence before the first meeting, and creates consistent messaging that scales across every channel.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/media-production-1.avif",
   titleLine1: "How Corporate Video",
   titleLine2: "Accelerates Your Sales Cycle",
 };
@@ -95,8 +94,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Who you are, what you stand for, and why buyers should trust you — for websites, investor comms, and enterprise credibility.",
       icon: "Star",
       id: "brand",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Brand and Culture Films",
     },
     {
@@ -105,8 +103,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes — eliminating friction from every sales qualification call.",
       icon: "Cpu",
       id: "product",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Product and Solution Explainer Videos",
     },
     {
@@ -115,8 +112,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
       icon: "Users",
       id: "thought",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-1.avif",
       title: "Executive Interview and Thought Leadership Series",
     },
     {
@@ -125,8 +121,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       icon: "TrendingUp",
       id: "investor",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Investor and Board Presentation Videos",
     },
     {
@@ -135,8 +130,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
       icon: "Zap",
       id: "sales",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Sales Enablement Video Content",
     },
     {
@@ -145,8 +139,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Real outcomes from real customers — the most trusted content format in B2B purchasing decisions.",
       icon: "MessageSquare",
       id: "testimonial",
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-2.avif",
       title: "Customer Testimonial and Case Study Films",
     },
   ],

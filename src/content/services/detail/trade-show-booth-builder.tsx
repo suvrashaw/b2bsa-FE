@@ -15,7 +15,7 @@ export const BOOTH_BUILDER_INTRO = {
   description:
     "Global exhibitors need more than a booth fabricator. They need a partner who can translate brand requirements into a buildable exhibition stand, coordinate remotely with internal teams, manage fabrication quality, and deliver the finished environment on-site without vendor gaps. B2B Sales Arrow provides exhibition stand design, turnkey booth construction, logistics, installation, and post-show support for enterprise teams exhibiting across international markets.",
   imageAlt: "Enterprise exhibition stand built for a global trade show",
-  imageUrl: "/images/booth/30x40.png",
+  imageUrl: "/images/home/services/booth/booth-10.avif",
   label: "Introduction",
   titleLine1: "Remote Coordination",
   titleLine2: "On-Site Delivery",
@@ -30,7 +30,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
         "Bespoke exhibition structures engineered for premium finish, structural integrity, and brand impact across compact booths and large-format stands.",
       icon: "Hammer",
       id: "timber-steel",
-      image: "/images/booth/40x40.jpg",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Custom Timber and Steel Structures",
     },
     {
@@ -39,7 +39,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
         "Reusable booth systems configured for different event footprints while keeping the same brand language, visitor journey, and commercial intent.",
       icon: "Layers",
       id: "modular",
-      image: "/images/booth/20x30.jpg",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Modular System Builds",
     },
     {
@@ -48,7 +48,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
         "Multi-level exhibition stands that combine executive meeting suites, demo zones, and public engagement areas in one high-value footprint.",
       icon: "Building2",
       id: "double-deck",
-      image: "/images/booth/30x40.png",
+      image: "/images/home/services/booth/booth-7.avif",
       title: "Double-Deck and Multi-Level Booths",
     },
     {
@@ -57,7 +57,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
         "LED walls, display screens, demo stations, and interactive technology integrated directly into the stand architecture.",
       icon: "Monitor",
       id: "digital-led",
-      image: "/images/booth/20x40.jpg",
+      image: "/images/home/services/booth/booth-8.avif",
       title: "Digital and LED Integration",
     },
     {
@@ -66,7 +66,7 @@ export const BOOTH_BUILDER_DELIVERABLES = {
         "Lower-waste fabrication choices, reusable components, and recyclable graphic options for brands with sustainability commitments.",
       icon: "Leaf",
       id: "sustainable",
-      image: "/images/booth/10x30.png",
+      image: "/images/home/services/booth/booth-9.avif",
       title: "Sustainable Builds",
     },
   ],

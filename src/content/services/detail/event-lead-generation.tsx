@@ -14,8 +14,7 @@ export { GLOBAL_PROOF_STATS as ELG_PROOF_BAR } from "../../shared";
 export const ELG_WHY = {
   description:
     "We use two structured qualification frameworks, agreed with your sales team before the event begins:\n\nBANT — Budget (is there budget available?), Authority (is this the decision-maker?), Need (is there a verified business problem?), Timeline (when are they solving it?). Ideal for enterprise sales with clear procurement cycles.\n\nCHAMP — Challenges (what is the core problem?), Authority (who owns the decision?), Money (is budget allocated?), Prioritisation (how urgent is this?). Ideal for consultative, complex sales where the challenge comes first.\n\nBoth frameworks ensure qualification happens during the live booth conversation — not retrospectively from a contact list.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/performance-marketing.avif",
   titleLine1: "How We Qualify Leads",
   titleLine2: "BANT and CHAMP",
 };
@@ -29,8 +28,7 @@ export const ELG_DELIVERABLES = {
         "Defining your ideal attendee by role, company, and intent before the show opens.",
       icon: "Target",
       id: "icp-mapping",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Pre-Event ICP Mapping and Targeting",
     },
     {
@@ -39,8 +37,7 @@ export const ELG_DELIVERABLES = {
         "NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo).",
       icon: "Scan",
       id: "capture-tech",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-1.avif",
       title: "On-Site Lead Capture Technology",
     },
     {
@@ -48,8 +45,7 @@ export const ELG_DELIVERABLES = {
       description: "BANT or CHAMP qualification during live conversations.",
       icon: "Filter",
       id: "lead-scoring",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-2.avif",
       title: "Real-Time Lead Scoring",
     },
     {
@@ -57,8 +53,7 @@ export const ELG_DELIVERABLES = {
       description: "Proactive floor outreach to target accounts beyond booth traffic.",
       icon: "Users",
       id: "active-prospecting",
-      image:
-        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Active Prospecting",
     },
     {
@@ -66,8 +61,7 @@ export const ELG_DELIVERABLES = {
       description: "Hot leads flagged and delivered to the right sales owner same-day.",
       icon: "Zap",
       id: "crm-routing",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-1.avif",
       title: "Instant CRM Routing",
     },
     {
@@ -75,8 +69,7 @@ export const ELG_DELIVERABLES = {
       description: "Personalised follow-up by lead quality tier and conversation context.",
       icon: "Mail",
       id: "nurture",
-      image:
-        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Post-Event Nurture Sequences",
     },
     {
@@ -85,8 +78,7 @@ export const ELG_DELIVERABLES = {
         "Lead volume, qualification rate, meeting conversion, and event ROI vs. pre-event forecast.",
       icon: "BarChart3",
       id: "attribution",
-      image:
-        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "Pipeline Attribution Reporting",
     },
   ],

@@ -14,8 +14,7 @@ export { GLOBAL_PROOF_STATS as SEO_PROOF_BAR } from "../../shared";
 export const SEO_WHY = {
   description:
     "B2B buyers operate in buying committees of 3–7 decision-makers. They research for months using lower-volume but highly specific search terms. They need content at every stage of a long evaluation cycle. Ranking for high-volume consumer keywords is a poor strategic objective for an enterprise brand. The goal is to rank for terms your actual buyers use when they are actively evaluating — and to be credible and authoritative throughout the entire research process.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/database-research-revised.avif",
   titleLine1: "B2B SEO Is Fundamentally",
   titleLine2: "Different From B2C",
 };
@@ -29,8 +28,7 @@ export const SEO_DELIVERABLES = {
         "Crawlability, Core Web Vitals, broken links, redirects, schema markup, sitemaps, and page speed — identifying and fixing technical issues that prevent proper indexing.",
       icon: "Settings",
       id: "technical",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-1.avif",
       title: "Technical SEO Audit and Remediation",
     },
     {
@@ -39,8 +37,7 @@ export const SEO_DELIVERABLES = {
         "Identifying terms enterprise buyers use across awareness, consideration, comparison, and purchase stages — mapped to intent, page type, funnel stage, and commercial value.",
       icon: "Search",
       id: "keyword",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Keyword Research and Search Intent Mapping",
     },
     {
@@ -49,8 +46,7 @@ export const SEO_DELIVERABLES = {
         "Titles, meta descriptions, headings, URLs, internal linking, schema markup, and body copy — optimised for both search engines and buyers.",
       icon: "FileText",
       id: "on-page",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "On-Page SEO Optimisation",
     },
     {
@@ -59,8 +55,7 @@ export const SEO_DELIVERABLES = {
         "Pillar pages, service pages, cluster articles, FAQs, and conversion-focused copy — building topical authority and converting qualified visitors.",
       icon: "PenLine",
       id: "content",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-1.avif",
       title: "Content Strategy and SEO Copywriting",
     },
     {
@@ -69,8 +64,7 @@ export const SEO_DELIVERABLES = {
         "Ethical link acquisition through digital PR, content partnerships, and industry mentions — quality, relevance, and long-term domain credibility.",
       icon: "Link",
       id: "links",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-revised.avif",
       title: "Authority Link Building",
     },
     {
@@ -79,8 +73,7 @@ export const SEO_DELIVERABLES = {
         "Hreflang implementation, regional landing pages, and market-specific keyword strategy for brands operating across multiple geographies.",
       icon: "Globe",
       id: "international",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/global_reach.avif",
       title: "International and Local SEO",
     },
     {
@@ -89,8 +82,7 @@ export const SEO_DELIVERABLES = {
         "Rankings, organic traffic, conversions, qualified leads, and pipeline influence — reported with clear commercial context.",
       icon: "BarChart3",
       id: "reporting",
-      image:
-        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "SEO Reporting and KPI Dashboards",
     },
   ],

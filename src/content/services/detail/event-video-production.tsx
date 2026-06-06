@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as EVENT_VIDEO_PROOF_BAR } from "../../shared";
 export const EVENT_VIDEO_WHY = {
   description:
     "A major trade show investment often runs to six figures. Without event video, its commercial value ends when the booth is packed away. With it, every keynote, customer story, and product demo becomes a reusable revenue asset across campaigns, sales decks, investor communications, and future event promotion.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/recent-events/adobe_summit_2026.avif",
   titleLine1: "Your Event Lasts 3 Days.",
   titleLine2: "Your Video Lasts 3 Years.",
 };
@@ -26,8 +25,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Full production for both in-person events and remote/virtual formats.",
       icon: "Video",
       id: "virtual-physical",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/adobe_summit_2026.avif",
       title: "Virtual and Physical Video Shoots",
     },
     {
@@ -37,8 +35,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Editing, colour grading, sound design, and final delivery for all video assets.",
       icon: "Film",
       id: "post-production",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Video Post-Production",
     },
     {
@@ -48,8 +45,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Filmed product demonstrations for SaaS, technology, equipment, and enterprise solutions.",
       icon: "Play",
       id: "demo-videos",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Production Demo Videos",
     },
     {
@@ -58,8 +54,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Animated explainers, product walkthroughs, and branded visual storytelling.",
       icon: "Sparkles",
       id: "animation",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/servicenow_2026.avif",
       title: "2D and 3D Animation Videos",
     },
     {
@@ -69,8 +64,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Shooting and post-production for executive conversations and thought leadership sessions.",
       icon: "Users",
       id: "fireside",
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-1.avif",
       title: "Virtual and Physical Fireside Chats",
     },
     {
@@ -79,8 +73,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Speaker video bytes captured live during events.",
       icon: "Mic",
       id: "experience-videos",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Event-Based Experience Videos",
     },
     {
@@ -89,8 +82,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Dedicated service and solution demonstration films.",
       icon: "Briefcase",
       id: "service-videos",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Service-Based Videos",
     },
     {
@@ -99,8 +91,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Fully scripted and produced content from brief to final cut.",
       icon: "FileText",
       id: "script-videos",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-2.avif",
       title: "Script-Based Videos",
     },
     {
@@ -110,8 +101,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Professional voiceover production for explainers, demos, and corporate content.",
       icon: "Headphones",
       id: "voiceover",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-3.avif",
       title: "Voice Over Videos",
     },
     {
@@ -120,8 +110,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Pre-event promotional content for registration drives and audience build.",
       icon: "Megaphone",
       id: "promo",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/inma_2026.avif",
       title: "Event Promo Videos",
     },
     {
@@ -130,8 +119,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Complex solutions simplified into clear, buyer-friendly video stories.",
       icon: "Lightbulb",
       id: "explanatory",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-2.avif",
       title: "Explanatory Videos",
     },
     {
@@ -141,8 +129,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Training, onboarding, and educational content for internal and external audiences.",
       icon: "GraduationCap",
       id: "learning",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-4.avif",
       title: "Learning Videos",
     },
     {
@@ -151,8 +138,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Multi-speaker sessions captured and edited for content distribution.",
       icon: "Users",
       id: "panel",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/cs-4.avif",
       title: "Panel Discussion Videos",
     },
     {
@@ -161,8 +147,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Authentic customer proof captured on-site or in studio.",
       icon: "MessageSquare",
       id: "testimonial",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-5.avif",
       title: "Client Testimonial Videos",
     },
     {
@@ -171,8 +156,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Curated event recap films for internal celebration and external social proof.",
       icon: "BookOpen",
       id: "throwback",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
+      image: "/images/recent-events/event_other_4.avif",
       title: "Event Memory Book / Throwback Videos",
     },
     {
@@ -182,8 +166,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Professional multi-camera broadcast from trade shows, conferences, and launches.",
       icon: "Radio",
       id: "live-streaming",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Live Event Streaming",
     },
     {
@@ -192,8 +175,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Ambient or supplementary content streamed alongside main event programming.",
       icon: "Wifi",
       id: "passive-streaming",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Passive Video Streaming",
     },
     {
@@ -202,8 +184,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Full broadcast production for fully virtual audiences.",
       icon: "Globe",
       id: "virtual-streaming",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/global_reach.avif",
       title: "Virtual Event Streaming",
     },
     {
@@ -212,8 +193,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Digital and print banners for events, social, and campaigns.",
       icon: "Image",
       id: "banners",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Banners",
     },
     {
@@ -222,8 +202,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Branded print and digital poster design for event marketing.",
       icon: "Layout",
       id: "posters",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Posters",
     },
     {
@@ -232,8 +211,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Animated social content for campaigns and event promotion.",
       icon: "Zap",
       id: "gifs",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "GIFs",
     },
     {
@@ -242,8 +220,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Multi-slide social media content for LinkedIn and Instagram.",
       icon: "Layers",
       id: "carousel",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/cs-5.avif",
       title: "Carousel",
     },
     {
@@ -252,8 +229,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Event invitation and follow-up postcard design.",
       icon: "Mail",
       id: "postcards",
-      image:
-        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-6.avif",
       title: "Postcards",
     },
   ],

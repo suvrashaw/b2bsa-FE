@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as CUSTOM_EVENTS_PROOF_BAR } from "../../shared";
 export const CUSTOM_EVENTS_WHY = {
   description:
     "In a crowded industry calendar, shared space has limitations. When you own the event, you own the environment, the audience, and the narrative. Custom events allow for deep relationship building with C-suite decision-makers that is rarely possible on a trade show floor. Whether it's a private executive dinner or a large-scale user conference, we ensure every detail — from the venue to the menu to the messaging — is engineered to advance your commercial objectives.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/recent-events/event_other_1.avif",
   titleLine1: "Why Proprietary Events",
   titleLine2: "Outperform Generic Sponsorships",
 };
@@ -26,8 +25,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Matching the format, audience, and brand positioning.",
       icon: "MapPin",
       id: "venue",
-      image:
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Venue Strategy and Sourcing",
     },
     {
@@ -36,8 +34,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Invitations, signage, stage graphics, and all branded touchpoints.",
       icon: "Palette",
       id: "identity",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/strategic_creativity.avif",
       title: "Event Identity Design",
     },
     {
@@ -46,8 +43,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Content sequencing, panel formats, and executive moments.",
       icon: "Mic",
       id: "agenda",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Speaker and Agenda Curation",
     },
     {
@@ -56,8 +52,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Sound, lighting, screens, live feeds, recording.",
       icon: "Clapperboard",
       id: "av",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "AV, Stage, and Technology Production",
     },
     {
@@ -66,8 +61,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Registration flow, seating, hospitality, and follow-up.",
       icon: "Users",
       id: "experience",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_3.avif",
       title: "Attendee Experience Design",
     },
     {
@@ -76,8 +70,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "For hybrid events and post-event asset creation.",
       icon: "Video",
       id: "streaming",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Live Streaming and Content Capture",
     },
     {
@@ -86,8 +79,7 @@ export const CUSTOM_EVENTS_DELIVERABLES = {
         "Email sequences, recap content, and next-step recommendations for priority accounts.",
       icon: "Mail",
       id: "follow-up",
-      image:
-        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Post-Event Follow-Up",
     },
   ],
@@ -103,8 +95,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Intimate formats for 8–20 senior decision-makers designed for focused, high-trust conversation that public trade shows cannot deliver.",
       icon: "Users",
       id: "custom-roundtables",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/testimonials/testimonial-1.avif",
       title: "Executive Roundtables and C-Suite Dinners",
     },
     {
@@ -113,8 +104,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Premium waterfront or on-board experiences combining fine dining, entertainment, and exclusive networking for VIP clients, partners, and senior prospects.",
       icon: "Sparkles",
       id: "custom-cruise",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_4.avif",
       title: "Gala Cruise Dinners",
     },
     {
@@ -123,8 +113,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Structured facilitated sessions built around a specific industry challenge, market trend, or strategic theme to position your brand as a category thought leader.",
       icon: "Mic",
       id: "custom-conferences",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-3.avif",
       title: "Round Table Conferences",
     },
     {
@@ -133,8 +122,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Sequential multi-city event tours bringing your brand and message to buyers in their own markets for coordinated pipeline generation.",
       icon: "MapPin",
       id: "custom-roadshows",
-      image:
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Roadshows",
     },
     {
@@ -143,8 +131,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Curated hosted buyer programs where selected buyers, partners, and stakeholders engage with your brand in a structured, relationship-first setting.",
       icon: "Target",
       id: "custom-hosted-buyer",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-4.avif",
       title: "Hosted Buyer and VIP Networking Events",
     },
     {
@@ -153,8 +140,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Cricket hospitality, box events, and premium sporting packages that create informal, high-trust access to senior decision-makers.",
       icon: "Users",
       id: "custom-sporting",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-7.avif",
       title: "Cricket Matches and Premium Sporting Experiences",
     },
     {
@@ -163,8 +149,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Exclusive private tours, curator-led museum experiences, and cultural programs for executive-level clients who value substance and sophistication.",
       icon: "Sparkles",
       id: "custom-cultural",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-5.avif",
       title: "Museum Visits and Cultural Experiences",
     },
     {
@@ -173,8 +158,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Track days, brand-led automotive experiences, and prestige vehicle test drives for senior prospects and VIP clients.",
       icon: "Target",
       id: "custom-automotive",
-      image:
-        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-8.avif",
       title: "Premium Automotive Experiences",
     },
     {
@@ -183,8 +167,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Events that create genuine market attention and communicate your value clearly for B2B audiences who evaluate with precision.",
       icon: "Clapperboard",
       id: "custom-launches",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/adobe_summit_2026.avif",
       title: "Product Launches and Brand Reveals",
     },
     {
@@ -193,8 +176,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "Structured agenda events that bring customers, users, and partners together through branded environments, content sessions, and meaningful networking.",
       icon: "Users",
       id: "custom-summits",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-9.avif",
       title: "Client Summits and User Conferences",
     },
     {
@@ -203,8 +185,7 @@ export const CUSTOM_EVENTS_FORMATS_SECTION = {
         "In-person events extended to global virtual audiences through broadcast-quality live streaming, engagement tools, and post-event content distribution.",
       icon: "Video",
       id: "custom-hybrid",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Hybrid Events (Physical + Digital)",
     },
   ],

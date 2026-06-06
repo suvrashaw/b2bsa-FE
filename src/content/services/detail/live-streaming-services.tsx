@@ -16,8 +16,7 @@ export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
 export const LIVE_STREAMING_WHY = {
   description:
     "As a hybrid event solutions company, we combine the credibility of in-person presence with the reach of digital access — connecting in-room and remote audiences simultaneously. Your content reaches more stakeholders without increasing venue footprint, travel cost, or logistical complexity.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/media-production-1.avif",
   titleLine1: "Hybrid Event",
   titleLine2: "Solutions",
 };
@@ -31,8 +30,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       icon: "Video",
       id: "multi-camera",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Multi-Camera Live Production",
     },
     {
@@ -41,8 +39,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals — multi-platform simultaneous streaming available.",
       icon: "Globe",
       id: "platform",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Platform Management",
     },
     {
@@ -50,8 +47,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
       description: "Speaker names, session titles, sponsor overlays, and live branded transitions.",
       icon: "Layers",
       id: "graphics",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/servicenow_2026.avif",
       title: "Real-Time Graphics and Lower Thirds",
     },
     {
@@ -59,8 +55,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
       description: "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
       icon: "MessageSquare",
       id: "engagement",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Live Audience Engagement",
     },
     {
@@ -69,8 +64,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       icon: "Archive",
       id: "archive",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Recording and Archive Delivery",
     },
     {
@@ -79,8 +73,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
       icon: "ShieldCheck",
       id: "support",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/global_reach.avif",
       title: "Global Technical Support",
     },
   ],
@@ -162,24 +155,21 @@ export const LIVE_STREAMING_WHY_CHOOSE_US = {
       description:
         "Today's events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.",
       id: "global-reach",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/global_reach.avif",
       title: "Break Geographic Limits",
     },
     {
       description:
         "We deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events — managing every aspect of event streaming setup, camera operations, audio, branded visuals, platform integration, and live technical support.",
       id: "end-to-end",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "End-to-End Production Management",
     },
     {
       description:
         "Whether you are hosting an in-person, hybrid, or fully virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.",
       id: "broadcast-quality",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/technology_led_delivery.avif",
       title: "Any Format. Broadcast Quality.",
     },
   ],

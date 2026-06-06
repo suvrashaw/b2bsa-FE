@@ -5,7 +5,7 @@
 export const CINEMATIC_CTA_SHARED = {
   backgroundImage: {
     alt: "Enterprise trade show event backdrop",
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920",
+    src: "/images/home/hero/home_hero_bg.avif",
   },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [

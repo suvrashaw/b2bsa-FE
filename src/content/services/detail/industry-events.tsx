@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as INDUSTRY_EVENTS_PROOF_BAR } from "../../shared";
 export const INDUSTRY_EVENTS_WHY = {
   description:
     "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.\n\nExperiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/recent-events/event_other_1.avif",
   titleLine1: "B2B Sales Arrow as Your",
   titleLine2: "Experiential Marketing Agency",
 };
@@ -26,8 +25,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
         "Our event ROI forecasting framework evaluates five criteria before committing budget: audience quality and buyer intent density, ICP attendance patterns, competitive presence, sponsorship opportunity value, and historical pipeline impact for brands in your category.",
       icon: "Map",
       id: "selection",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Event Selection and ROI Forecasting",
     },
     {
@@ -36,8 +34,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
         "Full booth design, fabrication coordination, and logistics management for every event in your calendar.",
       icon: "Layers",
       id: "booth-design",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Booth Design, Fabrication, and Logistics",
     },
     {
@@ -46,8 +43,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
         "Pre-event targeting and meeting generation with priority accounts before the floor opens.",
       icon: "Target",
       id: "lead-targeting",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Pre-Show Lead Targeting and Meeting Generation",
     },
     {
@@ -56,8 +52,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
         "Booth operations, staff briefing, real-time lead capture, and hot-lead routing on the ground.",
       icon: "Users",
       id: "on-site",
-      image:
-        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
+      image: "/images/recent-events/event_other_2.avif",
       title: "On-Site Execution, Staff Management, and Lead Capture",
     },
     {
@@ -66,8 +61,7 @@ export const INDUSTRY_EVENTS_DELIVERABLES = {
         "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast — delivered within 72 hours of event close.",
       icon: "BarChart3",
       id: "post-show",
-      image:
-        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "Post-Show Analytics and Pipeline Report",
     },
   ],
@@ -83,8 +77,7 @@ export const INDUSTRY_EVENTS_MARKETS_SECTION = {
         "GITEX (Dubai), CES (Las Vegas), Web Summit (Lisbon), AWS re:Invent, Salesforce Dreamforce.",
       icon: "Target",
       id: "industry-tech",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Technology and SaaS",
     },
     {
@@ -92,8 +85,7 @@ export const INDUSTRY_EVENTS_MARKETS_SECTION = {
       description: "Sibos, Money20/20 (Las Vegas and Amsterdam), Finovate.",
       icon: "BarChart3",
       id: "industry-fintech",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/sibos.avif",
       title: "Financial Services and Fintech",
     },
     {
@@ -101,8 +93,7 @@ export const INDUSTRY_EVENTS_MARKETS_SECTION = {
       description: "BIO International Convention, Arab Health (Dubai), HIMSS.",
       icon: "Users",
       id: "industry-healthcare",
-      image:
-        "https://images.unsplash.com/photo-1540339832862-47452993c66b?q=80&w=2574&auto=format&fit=crop",
+      image: "/images/recent-events/event_other_3.avif",
       title: "Healthcare and Life Sciences",
     },
     {
@@ -110,8 +101,7 @@ export const INDUSTRY_EVENTS_MARKETS_SECTION = {
       description: "ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe.",
       icon: "Layers",
       id: "industry-energy",
-      image:
-        "https://images.unsplash.com/photo-1460925833468-af0464ee2d58?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_4.avif",
       title: "Energy and Infrastructure",
     },
     {
@@ -119,8 +109,7 @@ export const INDUSTRY_EVENTS_MARKETS_SECTION = {
       description: "Mobile World Congress (Barcelona).",
       icon: "Map",
       id: "industry-telecom",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-7.avif",
       title: "Telecom and Connectivity",
     },
   ],

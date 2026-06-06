@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
 export const LINKEDIN_ADS_WHY = {
   description:
     "LinkedIn targeting gives enterprise marketers verified professional attributes — job title, company size, industry, seniority, department, geography, and named account lists — available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality — measured by ICP fit and conversion to sales opportunity — is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/performance-marketing.avif",
   titleLine1: "The Most Precise",
   titleLine2: "B2B Targeting Channel",
 };
@@ -26,8 +25,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
         "The highest-reach LinkedIn format for brand awareness, content promotion, and lead generation at scale in the LinkedIn feed.",
       icon: "FileText",
       id: "sponsored",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Sponsored Content — Single Image, Carousel, Video",
     },
     {
@@ -36,8 +34,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
         "Capturing prospect details within LinkedIn without requiring a landing page click — effective for webinar registrations, content downloads, and B2B lead generation where reducing friction improves conversion.",
       icon: "ClipboardList",
       id: "lead-gen",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "LinkedIn Lead Gen Forms",
     },
     {
@@ -46,8 +43,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
         "Promoting reports, playbooks, and thought leadership assets directly in the LinkedIn feed — ideal for enterprise buyers who need substance before engaging with sales.",
       icon: "File",
       id: "document",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Document Ads",
     },
     {
@@ -56,8 +52,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
         "Webinars, roundtables, product launches promoted to precisely targeted professional audiences — connecting event marketing with qualified lead generation.",
       icon: "Calendar",
       id: "event",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2612&auto=format&fit=crop",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Event Ads",
     },
     {
@@ -66,8 +61,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
         "Direct-message campaigns for high-relevance personalised outreach tied to a specific action or offer.",
       icon: "Mail",
       id: "message",
-      image:
-        "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Message Ads and Sponsored InMail",
     },
   ],

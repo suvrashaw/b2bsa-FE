@@ -4,9 +4,9 @@ export const BOOTH_HOSTESS_IMAGE_HERO = {
   description:
     "Enhance guest experience at conferences, exhibitions, trade shows, and corporate events with trained event hostesses for registration, audience engagement, and booth support.",
   images: [
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
-    "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1600",
+    "/images/home/testimonials/testimonial-1.avif",
+    "/images/recent-events/event_other_1.avif",
+    "/images/home/services/booth/booth-5.avif",
   ],
   primaryCta: { href: "/contact", label: "Request A Quote" },
   title: "Professional Event Hostess Services for Corporate Events & Trade Shows",
@@ -19,8 +19,7 @@ export const BOOTH_HOSTESS_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Successful events are built on strong audience experiences and seamless guest interactions. Professional event hostess services help brands create organized, welcoming, and engaging event environments that improve attendee satisfaction and strengthen brand presence.\n\nAt B2B Sales Arrow, we provide trained event hostesses for conferences, trade shows, exhibitions, corporate networking events, product launches, and executive gatherings. Our event support professionals assist with attendee registration, visitor guidance, lead collection, booth engagement, VIP coordination, and guest communication to ensure smooth event operations.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/testimonials/testimonial-1.avif",
   label: "Event Hostess",
   titleLine1: "Professional Event Hostess",
   titleLine2: "Services for Corporate Events",
@@ -35,8 +34,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Our event hostesses assist with attendee check-ins, badge distribution, visitor guidance, and registration support for smooth event entry experiences.",
       icon: "Users",
       id: "registration",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Registration Desk Management",
     },
     {
@@ -45,8 +43,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Increase booth interactions with professional hostesses who welcome visitors, engage attendees, support lead generation, and represent your brand professionally.",
       icon: "Target",
       id: "booth-engagement",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Trade Show Booth Engagement",
     },
     {
@@ -55,8 +52,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Provide premium experiences for executives, speakers, sponsors, and VIP guests with dedicated event hostess support.",
       icon: "Sparkles",
       id: "vip-coordination",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-2.avif",
       title: "VIP Guest Coordination",
     },
     {
@@ -65,8 +61,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Manage audience flow, session coordination, guest assistance, and attendee communication during conferences and networking events.",
       icon: "Mic",
       id: "conference-support",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Conference & Networking Support",
     },
     {
@@ -75,8 +70,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Enhance customer interaction and event engagement during product launches, brand activations, and experiential marketing events.",
       icon: "Zap",
       id: "product-launch",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_3.avif",
       title: "Product Launch Event Support",
     },
     {
@@ -85,8 +79,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Support international audiences with multilingual event hostesses for global trade shows and corporate events.",
       icon: "Globe2",
       id: "multilingual",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/global_reach.avif",
       title: "Multilingual Event Staffing",
     },
   ],
@@ -124,32 +117,28 @@ export const BOOTH_HOSTESS_WHY_CHOOSE_US = {
       description:
         "Our event hostesses are trained to represent brands professionally while managing guest interactions with confidence.",
       icon: "Award",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-3.avif",
       title: "Professional & Trained Staff",
     },
     {
       description:
         "We understand the operational requirements of conferences, exhibitions, networking events, and executive corporate experiences.",
       icon: "Globe2",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_4.avif",
       title: "Corporate Event Expertise",
     },
     {
       description:
         "We provide scalable staffing support for trade shows, conferences, product launches, and corporate networking events.",
       icon: "TrendingUp",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Flexible Event Staffing Solutions",
     },
     {
       description:
         "From registration management to VIP coordination, we provide complete event hostess support for successful event execution.",
       icon: "Users2",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/proven_execution.avif",
       title: "End-to-End Event Support",
     },
   ],
@@ -204,7 +193,7 @@ export const BOOTH_HOSTESS_RELATED_SERVICES = [
 export const BOOTH_HOSTESS_CONTACT_CTA = {
   backgroundImage: {
     alt: "Event Hostess Services",
-    src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
+    src: "/images/home/hero/home_hero_bg.avif",
   },
   badge: "Event Hostess",
   description:

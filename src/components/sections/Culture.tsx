@@ -6,35 +6,15 @@ import { cn } from "@/lib";
 
 const CULTURE_WHISPER_HIGHLIGHTS = ["Believe"];
 
+// Indices 0–3 fill slots taken by data.reasons (4 items); indices 4–6 are the actual parallax extras.
 const PARALLAX_IMAGES = [
-  {
-    alt: "Team collaboration",
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1280&h=720&fit=crop&q=80",
-  },
-  {
-    alt: "Office culture",
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1280&h=720&fit=crop&q=80",
-  },
-  {
-    alt: "Strategy meeting",
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=800&fit=crop&q=80",
-  },
-  {
-    alt: "Team discussion",
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1280&h=720&fit=crop&q=80",
-  },
-  {
-    alt: "Working together",
-    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop&q=80",
-  },
-  {
-    alt: "Diverse team",
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1280&h=720&fit=crop&q=80",
-  },
-  {
-    alt: "Success celebration",
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1280&h=720&fit=crop&q=80",
-  },
+  { alt: "Global reach", src: "/images/home/why-choose-us/global_reach.avif" },
+  { alt: "Proven execution", src: "/images/home/why-choose-us/proven_execution.avif" },
+  { alt: "Strategic creativity", src: "/images/home/why-choose-us/strategic_creativity.avif" },
+  { alt: "Technology-led delivery", src: "/images/home/why-choose-us/technology_led_delivery.avif" },
+  { alt: "B2B Sales Arrow culture", src: "/images/about/culture/culture-1.avif" },
+  { alt: "B2B Sales Arrow team", src: "/images/about/culture/culture-4.avif" },
+  { alt: "B2B Sales Arrow office", src: "/images/about/culture/culture-5.avif" },
 ];
 
 export interface CultureData {

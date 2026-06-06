@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -24,7 +24,14 @@ export interface ServiceCarouselSectionProps {
 }
 
 const GAP = 24;
+const TRACK_STYLE = { gap: GAP };
 const TRANSITION = { damping: 30, stiffness: 300, type: "spring" } as const;
+
+const getSlidesPerView = (): number => {
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+};
 
 export const ServiceCarouselSection = ({
   eyebrow,
@@ -42,11 +49,11 @@ export const ServiceCarouselSection = ({
 
   const goTo = useCallback(
     (index: number) => setActiveIndex(Math.max(0, Math.min(index, maxIndex))),
-    [maxIndex],
+    [maxIndex]
   );
 
   const updateLayout = useCallback(() => {
-    const spv = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+    const spv = getSlidesPerView();
     const containerWidth = containerRef.current?.clientWidth ?? 0;
     setSlidesPerView(spv);
     setSlideWidth((containerWidth - GAP * (spv - 1)) / spv);
@@ -54,26 +61,54 @@ export const ServiceCarouselSection = ({
   }, [items.length]);
 
   useEffect(() => {
-    updateLayout();
+    const id = requestAnimationFrame(() => updateLayout());
     window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("resize", updateLayout);
+    };
   }, [updateLayout]);
 
   useEffect(() => {
     if (isPaused || items.length <= slidesPerView) return;
-    const id = setInterval(
-      () => setActiveIndex((i) => (i >= maxIndex ? 0 : i + 1)),
-      4000,
-    );
+    const id = setInterval(() => setActiveIndex((i) => (i >= maxIndex ? 0 : i + 1)), 4000);
     return () => clearInterval(id);
   }, [isPaused, items.length, maxIndex, slidesPerView]);
 
+  const handleMouseEnter = useCallback(() => setIsPaused(true), []);
+  const handleMouseLeave = useCallback(() => setIsPaused(false), []);
+
+  const handlePrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
+  const handleNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
+
+  const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    pointerStartX.current = e.clientX;
+  }, []);
+
+  const handleDotClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      goTo(Number(e.currentTarget.dataset.index));
+    },
+    [goTo]
+  );
+
+  const handlePointerUp = useCallback(
+    (e: React.PointerEvent<HTMLDivElement>) => {
+      const diff = e.clientX - pointerStartX.current;
+      if (diff < -50) goTo(activeIndex + 1);
+      else if (diff > 50) goTo(activeIndex - 1);
+    },
+    [activeIndex, goTo]
+  );
+
   const trackX = slideWidth > 0 ? -(activeIndex * (slideWidth + GAP)) : 0;
+  const trackAnimate = useMemo(() => ({ x: trackX }), [trackX]);
 
   const cardWidth =
     slideWidth > 0
       ? slideWidth
       : `calc((100% - ${GAP * (slidesPerView - 1)}px) / ${slidesPerView})`;
+  const cardStyle = useMemo<React.CSSProperties>(() => ({ width: cardWidth }), [cardWidth]);
 
   return (
     <section className="bg-brand-gray py-16">
@@ -85,17 +120,13 @@ export const ServiceCarouselSection = ({
           </div>
         ) : null}
 
-        <div
-          className="relative"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
+        <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {/* Prev button */}
           <button
             aria-label="Previous services"
             className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
             disabled={activeIndex === 0}
-            onClick={() => goTo(activeIndex - 1)}
+            onClick={handlePrev}
             type="button"
           >
             <ArrowLeft className="h-5 w-5" />
@@ -106,7 +137,7 @@ export const ServiceCarouselSection = ({
             aria-label="Next services"
             className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
             disabled={activeIndex >= maxIndex}
-            onClick={() => goTo(activeIndex + 1)}
+            onClick={handleNext}
             type="button"
           >
             <ArrowRight className="h-5 w-5" />
@@ -115,27 +146,21 @@ export const ServiceCarouselSection = ({
           {/* Carousel track */}
           <div
             className="overflow-hidden"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
             ref={containerRef}
-            onPointerDown={(e) => {
-              pointerStartX.current = e.clientX;
-            }}
-            onPointerUp={(e) => {
-              const diff = e.clientX - pointerStartX.current;
-              if (diff < -50) goTo(activeIndex + 1);
-              else if (diff > 50) goTo(activeIndex - 1);
-            }}
           >
             <motion.div
-              animate={{ x: trackX }}
+              animate={trackAnimate}
               className="flex"
-              style={{ gap: GAP }}
+              style={TRACK_STYLE}
               transition={TRANSITION}
             >
               {items.map((item) => (
                 <div
-                  key={item.id}
                   className="relative h-72 shrink-0 overflow-hidden rounded-2xl md:h-80"
-                  style={{ width: cardWidth }}
+                  key={item.id}
+                  style={cardStyle}
                 >
                   <Image
                     alt={item.title}
@@ -166,14 +191,13 @@ export const ServiceCarouselSection = ({
           <div className="mt-6 flex justify-center gap-2">
             {Array.from({ length: maxIndex + 1 }).map((_, i) => (
               <button
-                key={i}
                 aria-label={`Go to slide group ${i + 1}`}
-                className={`h-2 rounded-full transition-all ${
-                  i === activeIndex
-                    ? "w-6 bg-brand-blue"
-                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                className={`h-2 w-2 rounded-full transition-all ${
+                  i === activeIndex ? "w-6 bg-brand-blue" : "bg-gray-300 hover:bg-gray-400"
                 }`}
-                onClick={() => goTo(i)}
+                data-index={i}
+                key={i}
+                onClick={handleDotClick}
                 type="button"
               />
             ))}

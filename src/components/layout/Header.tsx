@@ -54,7 +54,7 @@ const DesktopNavLink = ({
     <div className="group/nav-item relative flex items-center py-4">
       <Link
         className={cn(
-          "group relative whitespace-nowrap text-sm font-medium transition-colors flex items-center gap-0.5",
+          "group relative whitespace-nowrap text-base lg:max-xl:text-sm font-semibold [text-shadow:0_1px_4px_rgba(0,0,0,0.12)] transition-colors flex items-center gap-1.5 lg:max-xl:gap-0.5",
           lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
         )}
         href={link.href}
@@ -286,7 +286,7 @@ export const Header = ({
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:max-xl:px-4 py-4 transition-all duration-300",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
@@ -295,7 +295,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-10 w-40 transition-all duration-300 hover:opacity-80"
+          className="relative block h-14 w-52 lg:max-xl:h-8 lg:max-xl:w-28 transition-all duration-300 hover:opacity-80"
           href="/"
         >
           <Image
@@ -309,7 +309,7 @@ export const Header = ({
         </Link>
       </div>
 
-      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 lg:flex">
+      <nav className="absolute left-1/2 lg:max-xl:left-[46%] hidden -translate-x-1/2 items-center gap-8 lg:max-xl:gap-4 lg:flex">
         {topNavigation.map((link) => (
           <DesktopNavLink
             activeDropdown={activeDropdown}

@@ -4,9 +4,9 @@ export const CORP_NETWORKING_IMAGE_HERO = {
   description:
     "Create meaningful business connections with professional networking event solutions for conferences, networking receptions and corporate hospitality events. We help brands deliver engaging networking experiences with seamless event coordination and audience engagement support.",
   images: [
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
-    "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1600",
+    "/images/recent-events/event_other_2.avif",
+    "/images/home/testimonials/testimonial-2.avif",
+    "/images/recent-events/event_other_3.avif",
   ],
   primaryCta: { href: "/contact", label: "Talk to Our Event Team" },
   title: "Corporate Networking Event Solutions",
@@ -19,8 +19,7 @@ export const CORP_NETWORKING_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Business networking events play an important role in building relationships, strengthening partnerships, and creating new growth opportunities. Professional networking event solutions help brands organize engaging experiences that encourage meaningful conversations and business interactions.\n\nAt B2B Sales Arrow, we provide end-to-end corporate networking event services for executive gatherings, networking receptions, VIP dinners, business meetups, partner events, and corporate hospitality experiences. Our team manages event coordination, guest engagement, venue planning, attendee flow, branding support, and onsite execution to ensure successful networking experiences.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/recent-events/event_other_2.avif",
   label: "Networking Events",
   titleLine1: "Professional Networking Event",
   titleLine2: "Solutions for Corporate Brands",
@@ -35,8 +34,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
       icon: "Users",
       id: "networking-events",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Corporate Networking Events",
     },
     {
@@ -45,8 +43,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
       icon: "Sparkles",
       id: "networking-receptions",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_3.avif",
       title: "Networking Reception Solutions",
     },
     {
@@ -55,8 +52,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Deliver premium executive networking experiences for leadership summits, investor meetings, and C-level business gatherings.",
       icon: "Target",
       id: "executive-networking",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-4.avif",
       title: "Executive Networking Events",
     },
     {
@@ -65,8 +61,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Manage VIP guest experiences with personalized hospitality, attendee coordination, and premium networking environments.",
       icon: "Zap",
       id: "vip-networking",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-5.avif",
       title: "VIP Networking Event Solutions",
     },
     {
@@ -75,8 +70,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
       icon: "MapPin",
       id: "networking-dinners",
-      image:
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_4.avif",
       title: "Networking Dinner Event Solutions",
     },
     {
@@ -85,8 +79,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
       icon: "Globe2",
       id: "b2b-networking",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "B2B Networking Event Services",
     },
   ],
@@ -137,32 +130,28 @@ export const CORP_NETWORKING_WHY_CHOOSE_US = {
       description:
         "We manage planning, guest experience, venue coordination, hospitality, and onsite event execution.",
       icon: "Globe2",
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/proven_execution.avif",
       title: "End-to-End Event Coordination",
     },
     {
       description:
         "Our team understands the requirements of executive networking events, VIP receptions, and business relationship-building experiences.",
       icon: "Users2",
-      image:
-        "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/technology_led_delivery.avif",
       title: "Corporate Networking Expertise",
     },
     {
       description:
         "Our team delivers premium hospitality experiences for high-value business events and executive gatherings.",
       icon: "Award",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/testimonials/testimonial-6.avif",
       title: "VIP & Hospitality Management",
     },
     {
       description:
         "Our networking event solutions are designed to encourage meaningful conversations, partnerships, and business opportunities.",
       icon: "TrendingUp",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/why-choose-us/strategic_creativity.avif",
       title: "Business-Focused Event Strategy",
     },
   ],
@@ -217,7 +206,7 @@ export const CORP_NETWORKING_RELATED_SERVICES = [
 export const CORP_NETWORKING_CONTACT_CTA = {
   backgroundImage: {
     alt: "Corporate Networking Event",
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600",
+    src: "/images/home/hero/home_hero_bg.avif",
   },
   badge: "Networking Events",
   description:

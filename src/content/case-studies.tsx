@@ -31,7 +31,7 @@ export const CASE_STUDIES_PAGE_CONTENT = {
       "Results matter more than promises. Documented outcomes from real enterprise B2B programs — trade show lead generation, booth design, video production, performance marketing, and market research.",
     image: {
       alt: "Enterprise growth results dashboard",
-      src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000",
+      src: "/images/home/hero/home_hero_bg.avif",
     },
     proofBarStats: [
       "250+ events",
@@ -75,8 +75,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#adobe-summit-2025",
       icon: "BarChart3",
       id: "adobe-summit-2025",
-      image:
-        "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/adobe_summit_2026.avif",
       inactiveLabel: "Adobe Summit 2025",
       metric: "87",
       metricLabel: "BANT-Qualified Leads",
@@ -115,8 +114,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#money-20-20-europe-2025",
       icon: "Target",
       id: "money-20-20-europe-2025",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_2.avif",
       inactiveLabel: "Money 20/20 Europe 2025",
       metric: "54",
       metricLabel: "CHAMP-Qualified Leads",
@@ -161,8 +159,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#world-aviation-festival-2025",
       icon: "Plane",
       id: "world-aviation-festival-2025",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/waf.avif",
       inactiveLabel: "World Aviation Festival 2025",
       metric: "110+",
       metricLabel: "Qualified Conversations",
@@ -210,8 +207,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#sibos-2023",
       icon: "Landmark",
       id: "sibos-2023",
-      image:
-        "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/sibos.avif",
       inactiveLabel: "SIBOS 2023",
       metric: "47",
       metricLabel: "SQLs Delivered",
@@ -258,8 +254,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#money-20-20-2023-pricing-billing",
       icon: "Coins",
       id: "money-20-20-2023-pricing-billing",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_3.avif",
       inactiveLabel: "Money 20/20 2023",
       metric: "35+",
       metricLabel: "SQL Meetings",
@@ -306,8 +301,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#sap-sapphire-2023",
       icon: "Sparkles",
       id: "sap-sapphire-2023",
-      image:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/sap.jpg",
       inactiveLabel: "SAP Sapphire 2023",
       metric: "31",
       metricLabel: "SQLs Delivered",
@@ -349,8 +343,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#distributech-2023",
       icon: "Zap",
       id: "distributech-2023",
-      image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/DistribuTECH.jpg",
       inactiveLabel: "DistribuTECH 2023",
       metric: "42",
       metricLabel: "SQLs Delivered",
@@ -397,8 +390,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#nrf-2023",
       icon: "ShoppingBag",
       id: "nrf-2023",
-      image:
-        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/nrf.jpg",
       inactiveLabel: "NRF 2023",
       metric: "60",
       metricLabel: "SQLs Delivered",
@@ -440,8 +432,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#itc-2022",
       icon: "Shield",
       id: "itc-2022",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/cs-7.avif",
       inactiveLabel: "ITC 2022",
       metric: "34",
       metricLabel: "Results Delivered",
@@ -483,8 +474,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#world-aviation-festival-2022",
       icon: "Plane",
       id: "world-aviation-festival-2022",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/waf.avif",
       inactiveLabel: "World Aviation Festival 2022",
       metric: "62",
       metricLabel: "Meetings Delivered",
@@ -531,8 +521,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
       href: "#annual-sales-connect-manufacturing-insurance",
       icon: "Users",
       id: "annual-sales-connect-manufacturing-insurance",
-      image:
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/cs-8.avif",
       inactiveLabel: "Annual Sales Connect",
       metric: "150+",
       metricLabel: "Attendees Hosted",

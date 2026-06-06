@@ -19,8 +19,7 @@ export const SQL_SERVICES = {
         "Target companies and roles by industry, size, geography, tech stack, seniority, and buying committee structure.",
       icon: "Users",
       id: "prospecting",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/sql-generation-1.avif",
       title: "ICP Definition and Firmographic Targeting",
     },
     {
@@ -29,8 +28,7 @@ export const SQL_SERVICES = {
         "LinkedIn outbound, paid campaigns, content-led inbound, event capture, cold email simultaneously.",
       icon: "CalendarCheck",
       id: "appointment",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/sql-generation-2.avif",
       title: "Multi-Channel Demand Generation",
     },
     {
@@ -39,8 +37,7 @@ export const SQL_SERVICES = {
         "Content engagement, ad responses, website behaviour, and buying signals tracked across channels.",
       icon: "Database",
       id: "database",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "Intent Signal Scoring",
     },
     {
@@ -48,8 +45,7 @@ export const SQL_SERVICES = {
       description: "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
       icon: "Target",
       id: "icp",
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Human-Verified Qualification",
     },
   ],
@@ -58,8 +54,7 @@ export const SQL_SERVICES = {
 export const SQL_WHY = {
   description:
     "Generic lists create activity, not revenue. MQLs often lack the intent, context, or urgency that makes them actionable for a sales team. Cold data delivers names without conversations. The result: SDRs spend most of their time chasing the wrong people, conversion rates stay low, and leadership loses confidence in the pipeline.\n\nWe solve this by defining qualification standards with your sales team first, tracking intent signals across multiple channels, applying BANT or CHAMP qualification frameworks, and routing only prospects meeting agreed criteria — with full conversation context.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/database-research-revised.avif",
   titleLine1: "Why Most Lead Generation",
   titleLine2: "Programs Fail Sales Teams",
 };

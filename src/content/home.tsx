@@ -434,8 +434,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We source and deliver premium branded giveaways that keep your company top-of-mind long after the event floor closes.",
       icon: "Gift",
       id: "giveaways",
-      image:
-        "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/case-studies/cs-6.avif",
       title: "Giveaways",
     },
     {
@@ -444,8 +443,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design and manage exclusive networking experiences — VIP dinners, roundtables, and hosted meetings — that connect your team directly with key enterprise decision-makers.",
       icon: "Coffee",
       id: "networking",
-      image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Networking",
     },
     {
@@ -454,8 +452,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We create cohesive event branding — from booth graphics and signage to digital displays — so your enterprise presence commands attention across the entire venue.",
       icon: "Palette",
       id: "branding",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/why-choose-us/strategic_creativity.avif",
       title: "Branding",
     },
     {
@@ -464,8 +461,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design immersive booth experiences — interactive demos, live activations, and engagement zones — that turn passive visitors into active pipeline opportunities.",
       icon: "Lightbulb",
       id: "experience-creation",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Experience Creation",
     },
     {
@@ -646,6 +642,26 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       name: "[Client Name]",
       quote:
         '"They curated an exclusive networking experiences and provided premium custom giveaways that kept our attendees fully engaged."',
+      rating: 5,
+    },
+    {
+      company: "[Enterprise Brand]",
+      designation: "[Job Title]",
+      id: 4,
+      image: "/images/home/testimonials/testimonial-4.avif",
+      name: "[Client Name]",
+      quote:
+        '"The media production team captured every key moment with broadcast-quality precision — the final content exceeded our expectations."',
+      rating: 5,
+    },
+    {
+      company: "[Enterprise Brand]",
+      designation: "[Job Title]",
+      id: 5,
+      image: "/images/home/testimonials/testimonial-5.avif",
+      name: "[Client Name]",
+      quote:
+        '"From strategy to execution, the entire program ran seamlessly across three countries — a truly end-to-end global event partner."',
       rating: 5,
     },
   ],

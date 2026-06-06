@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { BoothScrollShowcase } from "@/components/sections/BoothScrollShowcase";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
@@ -21,7 +21,6 @@ import {
   BOOTH_RENTAL_PROOF_BAR,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
-  BOOTH_RENTAL_SHOWCASE_ITEMS,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/detail/event-booth-rental";
 import {
@@ -61,7 +60,7 @@ const Page = () => {
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
             reasons={BOOTH_RENTAL_RENT_VS_BUY.reasons}
           />
-          <BoothScrollShowcase heading="Our Rental Booth Range" items={BOOTH_RENTAL_SHOWCASE_ITEMS} />
+          <WhyChooseUs />
         </>
       }
       process={BOOTH_RENTAL_PROCESS}

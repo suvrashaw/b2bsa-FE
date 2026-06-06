@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as PAID_ADS_PROOF_BAR } from "../../shared";
 export const PAID_ADS_WHY = {
   description:
     "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/market-intelligence.avif",
   titleLine1: "Every Action",
   titleLine2: "Has a Number",
 };
@@ -26,8 +25,7 @@ export const PAID_ADS_DELIVERABLES = {
         "High-intent campaigns around the terms enterprise buyers use when actively comparing vendors — structured for lead quality and cost per qualified opportunity.",
       icon: "Search",
       id: "google-search",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Google Search — PPC",
     },
     {
@@ -36,8 +34,7 @@ export const PAID_ADS_DELIVERABLES = {
         "Awareness and retargeting campaigns keeping your brand visible across relevant digital environments.",
       icon: "Monitor",
       id: "display",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Google Display and Programmatic",
     },
     {
@@ -46,8 +43,7 @@ export const PAID_ADS_DELIVERABLES = {
         "Video campaigns for awareness, education, product storytelling, and demand generation.",
       icon: "Play",
       id: "youtube",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "YouTube Advertising",
     },
     {
@@ -56,8 +52,7 @@ export const PAID_ADS_DELIVERABLES = {
         "Keeping your brand in front of target accounts and decision-makers who have already shown interest — moving prospects from first touch to deeper consideration.",
       icon: "Target",
       id: "retargeting",
-      image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing.avif",
       title: "Retargeting and Account-Based Advertising",
     },
     {
@@ -66,8 +61,7 @@ export const PAID_ADS_DELIVERABLES = {
         "Supplementary paid search for desktop-heavy B2B buyer segments where Microsoft's search share is meaningful.",
       icon: "Globe",
       id: "microsoft",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-1.avif",
       title: "Microsoft Ads",
     },
   ],

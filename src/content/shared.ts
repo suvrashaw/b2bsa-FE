@@ -22,7 +22,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     href: "/case-studies",
     icon: "Plane",
     id: "world-aviation-festival-2023",
-    image: "/images/case-studies/waf.jpg",
+    image: "/images/case-studies/waf.avif",
     metric: "70% Hot Leads",
     metricLabel: "Warm and hot lead share",
     solution:
@@ -35,7 +35,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     href: "/case-studies",
     icon: "Building2",
     id: "sibos-2023",
-    image: "/images/case-studies/sibos.jpg",
+    image: "/images/case-studies/sibos.avif",
     metric: "40% Above Target",
     metricLabel: "Lead goal exceeded",
     solution:
@@ -91,7 +91,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
     icon: "Cpu",
     id: "technology-saas",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/recent-events/event_other_1.avif",
     title: "Technology & SaaS",
   },
   {
@@ -99,7 +99,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Financial technology, payments, banking innovation, and investment platforms.",
     icon: "Coins",
     id: "fintech",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/recent-events/event_other_2.avif",
     title: "FinTech",
   },
   {
@@ -107,7 +107,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
     icon: "Activity",
     id: "healthcare-pharma",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/recent-events/event_other_3.avif",
     title: "Healthcare & Pharma",
   },
   {
@@ -115,7 +115,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
     icon: "Settings",
     id: "manufacturing",
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/recent-events/event_other_4.avif",
     title: "Manufacturing",
   },
   {
@@ -123,7 +123,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Airlines, airports, MRO providers, and aviation technology companies at major industry shows.",
     icon: "Plane",
     id: "aviation",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/case-studies/waf.avif",
     title: "Aviation",
   },
   {
@@ -131,7 +131,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "TV broadcasters, streaming platforms, content producers, and media technology companies.",
     icon: "Radio",
     id: "media-broadcasting",
-    image: "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/home/services/media-production-2.avif",
     title: "Media & Broadcasting",
   },
   {
@@ -139,7 +139,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Mobile operators, network equipment vendors, and telecom technology innovators.",
     icon: "Wifi",
     id: "telecommunications",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/recent-events/inma_2026.avif",
     title: "Telecommunications",
   },
   {
@@ -147,7 +147,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
     icon: "Wrench",
     id: "automotive",
-    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/case-studies/cs-3.avif",
     title: "Automotive",
   },
   {
@@ -155,7 +155,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
     icon: "ShoppingBag",
     id: "retail-ecommerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/case-studies/cs-4.avif",
     title: "Retail & E-commerce",
   },
   {
@@ -163,7 +163,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
     icon: "Zap",
     id: "energy-utilities",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/case-studies/cs-5.avif",
     title: "Energy & Utilities",
   },
 ];

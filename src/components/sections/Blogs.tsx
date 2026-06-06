@@ -44,9 +44,9 @@ export const Blogs = ({
   return (
     <section className="relative overflow-hidden bg-brand-gray py-20" id="blogs" ref={containerRef}>
       <div className="container mx-auto px-8">
-        <div className="mb-4 flex flex-col items-start text-left lg:mb-8">
-          <Eyebrow variant="primary">{eyebrow}</Eyebrow>
-          <Heading as="h2" className="text-center">{heading}</Heading>
+        <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
+          {eyebrow ? <Eyebrow variant="primary">{eyebrow}</Eyebrow> : null}
+          <Heading as="h2">{heading}</Heading>
         </div>
 
         {layout === "grid" ? (

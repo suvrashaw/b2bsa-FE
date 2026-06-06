@@ -46,7 +46,7 @@ export const BOOTH_RENTAL_WHY = {
   description:
     "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.",
   imageAlt: "B2B Sales Arrow trade show booth rental",
-  imageUrl: "/images/booth/30x40.png",
+  imageUrl: "/images/home/services/booth/booth-9.avif",
   label: "Our Services",
   titleLine1: "Introduction to Our",
   titleLine2: "Services",
@@ -61,8 +61,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
         "High-quality modular systems that can be configured into any size or shape — providing a structural look identical to custom fabrication at a fraction of the lead time.",
       icon: "Layers",
       id: "modular",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Modular Exhibition System Rental",
     },
     {
@@ -71,8 +70,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
         "Even though the structure is rented, the branding is entirely yours. High-fidelity tension fabric graphics and surface treatments for every rental build.",
       icon: "Palette",
       id: "graphics",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Custom Branded Graphic Packages",
     },
     {
@@ -81,8 +79,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
         "Access to our global catalog of designer exhibition furniture, flooring, and decorative elements to elevate your rental booth to a premium environment.",
       icon: "Armchair",
       id: "furniture",
-      image:
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-7.avif",
       title: "Premium Furniture and Decor Hire",
     },
     {
@@ -91,8 +88,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
         "We handle the full lifecycle — venue delivery, professional assembly, on-site technical support, and deconstruction — anywhere in the world.",
       icon: "Key",
       id: "logistics",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-8.avif",
       title: "Full Turnkey Installation and Support",
     },
   ],

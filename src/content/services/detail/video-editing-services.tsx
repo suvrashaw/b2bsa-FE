@@ -11,8 +11,7 @@ export { GLOBAL_PROOF_STATS as VIDEO_EDITING_PROOF_BAR } from "../../shared";
 export const VIDEO_EDITING_WHY = {
   description:
     "Great footage without great editing is invisible. The edit is where pacing, emotion, and commercial intent are built into the final asset. Our post-production team works from a clear brief — what should the viewer feel, understand, and do after watching — and structures every cut around that outcome.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/services/media-production-2.avif",
   titleLine1: "The Edit is Where",
   titleLine2: "the Story Happens",
 };
@@ -26,8 +25,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
         "Selecting the strongest material, structuring the narrative, and shaping a complete video with clear intent and pacing.",
       icon: "Scissors",
       id: "edit",
-      image:
-        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-1.avif",
       title: "Full Edit and Assembly",
     },
     {
@@ -36,8 +34,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
         "Technical consistency plus professional colour grading for a polished, premium visual look.",
       icon: "Palette",
       id: "colour",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/media-production-2.avif",
       title: "Colour Correction and Grading",
     },
     {
@@ -45,8 +42,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
       description: "Branded titles, lower thirds, animated text, and data callouts.",
       icon: "Sparkles",
       id: "motion",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/servicenow_2026.avif",
       title: "Motion Graphics and Title Design",
     },
     {
@@ -55,8 +51,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
         "Accurate subtitles improving accessibility, LinkedIn performance, and viewer retention.",
       icon: "Type",
       id: "subtitles",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_3.avif",
       title: "Subtitles and Captions",
     },
     {
@@ -65,8 +60,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
         "15s, 30s, 60s, vertical, square, and widescreen versions for LinkedIn, YouTube, Instagram, paid campaigns, and sales outreach.",
       icon: "Share2",
       id: "social",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Social Cut-Downs and Format Adaptation",
     },
     {
@@ -74,8 +68,7 @@ export const VIDEO_EDITING_DELIVERABLES = {
       description: "Audio clean-up, voice balancing, licensed music, and sound effects.",
       icon: "Music",
       id: "sound",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/inma_2026.avif",
       title: "Sound Design and Music",
     },
   ],

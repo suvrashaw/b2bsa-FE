@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { BoothScrollShowcase } from "@/components/sections/BoothScrollShowcase";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
@@ -21,7 +21,6 @@ import {
   BOOTH_DESIGN_PROCESS,
   BOOTH_DESIGN_PROOF_BAR,
   BOOTH_DESIGN_RELATED_SERVICES,
-  BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_SPOTLIGHT,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/detail/trade-show-booth-design";
@@ -52,7 +51,7 @@ const Page = () => {
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
-      preProcessSections={<BoothScrollShowcase heading="Booth Sizes and Formats We Design" items={BOOTH_DESIGN_SHOWCASE_ITEMS} />}
+      preProcessSections={<WhyChooseUs />}
       process={BOOTH_DESIGN_PROCESS}
       proofBar={BOOTH_DESIGN_PROOF_BAR}
       proofBarDescription={<>At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We&apos;ve delivered exceptional experiences across industries, from tech giants to global brands, creating <strong>tradeshow booth design</strong> that aren&apos;t just seen—they&apos;re remembered.<br /><br />India is one of the fastest-growing exhibition markets, hosting major trade shows across industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in India offers access to a large and diverse business audience, making it a key destination for global brands. B2B Sales Arrow is an experienced trade show booth builder in India, helping international exhibitors design and build impactful <strong>exhibition stands</strong> across major Indian exhibition cities. We specialize in delivering high-quality booth design and fabrication services while ensuring smooth coordination for clients managing projects remotely.</>}

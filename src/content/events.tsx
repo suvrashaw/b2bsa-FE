@@ -7,7 +7,7 @@ export const EVENTS_HERO = {
   image: {
     alt: "Enterprise trade show floor",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/home/hero/home_hero_bg.avif",
   },
   primaryCtaLabel: "Build Your Event Strategy",
   secondaryCtaLabel: "Get a Free Event ROI Assessment",
@@ -40,16 +40,14 @@ export const EVENTS_POSITIONING = {
       description:
         "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.",
       id: "agency",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "B2B Sales Arrow as Your Experiential Marketing Agency",
     },
     {
       description:
         "Experiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
       id: "why",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Why Experiential Works for B2B",
     },
   ],
@@ -128,7 +126,7 @@ export const EVENTS_CASE_STUDIES = {
       client: "Global digital services and AI transformation leader",
       icon: "Target",
       id: "waf-2025",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/waf.avif",
       metric: "60",
       metricLabel: "Qualified Meetings",
       solution: "Delivered active prospecting and meeting coordination to secure 60 qualified meetings",
@@ -139,7 +137,7 @@ export const EVENTS_CASE_STUDIES = {
       client: "Enterprise digital experience and cloud transformation brand",
       icon: "BarChart3",
       id: "adobe-2025",
-      image: "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/recent-events/adobe_summit_2026.avif",
       metric: "70+",
       metricLabel: "Qualified Leads",
       solution: "Delivered booth engagement and prospecting support to generate 70+ qualified leads",
@@ -150,7 +148,7 @@ export const EVENTS_CASE_STUDIES = {
       client: "Core banking and revenue management technology brands",
       icon: "TrendingUp",
       id: "sibos-2025",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/case-studies/sibos.avif",
       metric: "ROI",
       metricLabel: "Pipeline Growth",
       solution: "Delivered active prospecting, meeting coordination, and booth engagement support",

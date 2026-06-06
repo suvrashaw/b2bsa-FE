@@ -18,8 +18,7 @@ export const PERF_SERVICES = {
       href: "/services/seo-services",
       icon: "Search",
       id: "seo",
-      image:
-        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/performance-marketing.avif",
       title: "B2B SEO Services",
     },
     {
@@ -29,8 +28,7 @@ export const PERF_SERVICES = {
       href: "/services/paid-advertising",
       icon: "Zap",
       id: "paid",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/performance-marketing-1.avif",
       title: "Paid Advertising",
     },
     {
@@ -40,8 +38,7 @@ export const PERF_SERVICES = {
       href: "/services/linkedin-ads",
       icon: "ExternalLink",
       id: "linkedin",
-      image:
-        "https://images.unsplash.com/photo-1611944212129-29977ae1398c?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/market-intelligence.avif",
       title: "LinkedIn Ads for B2B",
     },
   ],
@@ -50,8 +47,7 @@ export const PERF_SERVICES = {
 export const PERF_WHY = {
   description:
     "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/why-choose-us/strategic_creativity.avif",
   titleLine1: "Every Action",
   titleLine2: "Has a Number",
 };

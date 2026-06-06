@@ -73,13 +73,13 @@ const CARD_CTA_LABEL = "View Event";
 const CARD_SHELL_CLASS =
   "group relative h-[220px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[260px]";
 const DEFAULT_EVENT_IMAGES = [
-  "/images/recent-events/frame-219.png",
-  "/images/recent-events/frame-220.png",
-  "/images/recent-events/frame-221.png",
-  "/images/recent-events/frame-222.png",
-  "/images/recent-events/frame-223.png",
-  "/images/recent-events/frame-224.png",
-  "/images/recent-events/frame-225.png",
+  "/images/recent-events/adobe_summit_2026.avif",
+  "/images/recent-events/inma_2026.avif",
+  "/images/recent-events/servicenow_2026.avif",
+  "/images/recent-events/event_other_1.avif",
+  "/images/recent-events/event_other_2.avif",
+  "/images/recent-events/event_other_3.avif",
+  "/images/recent-events/event_other_4.avif",
 ];
 const EVENT_CARD_FLIP_STYLE: FlipStyle = "diagonalWipe";
 

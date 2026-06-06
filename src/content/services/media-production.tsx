@@ -18,8 +18,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/event-video-production",
       icon: "Camera",
       id: "event-video",
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Event Video Production",
     },
     {
@@ -29,8 +28,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/corporate-video-production",
       icon: "Clapperboard",
       id: "corporate-video",
-      image:
-        "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/media-production-1.avif",
       title: "Corporate Video Production",
     },
     {
@@ -40,8 +38,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/video-editing-services",
       icon: "MonitorPlay",
       id: "video-editing",
-      image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/media-production-2.avif",
       title: "Video Editing Services",
     },
     {
@@ -51,8 +48,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/live-streaming-services",
       icon: "Radio",
       id: "live-streaming",
-      image:
-        "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Live Streaming",
     },
   ],
@@ -61,8 +57,7 @@ export const MEDIA_SERVICES = {
 export const MEDIA_WHY = {
   description:
     "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means — commercial impact is the objective.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/recent-events/event_other_3.avif",
   titleLine1: "We Don't Just Film —",
   titleLine2: "We Tell Stories That Sell",
 };

@@ -72,8 +72,8 @@ export const OurServices = ({
                   </div>
 
                   <Button
-                    className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-brand-blue md:group-has-[.image-pane:hover]/card:bg-brand-blue md:group-has-[.image-pane:hover]/card:text-white"
-                    variant="secondary"
+                    className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
+                    variant="primary"
                   >
                     <span className="mr-4">{ctaLabel}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

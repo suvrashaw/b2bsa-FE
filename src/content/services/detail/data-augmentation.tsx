@@ -17,8 +17,7 @@ export const DATA_AUGMENTATION_DELIVERABLES = {
         "Verified job title, direct business email, LinkedIn profile URL, direct phone number where available, department, seniority level, and buying committee relevance.",
       icon: "UserPlus",
       id: "contact-level",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-1.avif",
       title: "Contact-Level Enrichment",
     },
     {
@@ -27,8 +26,7 @@ export const DATA_AUGMENTATION_DELIVERABLES = {
         "Revenue range, employee count, industry classification, headquarters location, technology stack, funding signals, expansion indicators, and hiring activity.",
       icon: "Building",
       id: "account-level",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/database-research-revised.avif",
       title: "Account-Level Enrichment",
     },
     {
@@ -37,8 +35,7 @@ export const DATA_AUGMENTATION_DELIVERABLES = {
         "Content engagement signals, solution research activity, competitor comparison behaviour, event participation data, and category interest indicators.",
       icon: "Activity",
       id: "intent",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/market-intelligence.avif",
       title: "Intent Data",
     },
     {
@@ -47,8 +44,7 @@ export const DATA_AUGMENTATION_DELIVERABLES = {
         "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.",
       icon: "Settings",
       id: "custom-fields",
-      image:
-        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200",
+      image: "/images/home/services/sql-generation-1.avif",
       title: "Custom Fields",
     },
   ],

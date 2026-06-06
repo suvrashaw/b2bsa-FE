@@ -5,7 +5,7 @@ export const TERMS_HERO = {
   image: {
     alt: "Legal documentation",
     loaderAlt: "Loading",
-    src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000",
+    src: "/images/contact/hero.avif",
   },
   primaryCtaLabel: null,
   secondaryCtaLabel: null,

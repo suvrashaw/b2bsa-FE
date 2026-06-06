@@ -19,8 +19,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/trade-show-booth-design",
       icon: "Presentation",
       id: "booth-design",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-5.avif",
       title: "Trade Show Booth Design",
     },
     {
@@ -29,8 +28,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/event-lead-generation",
       icon: "Target",
       id: "event-lead-gen",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/sql-generation-revised.avif",
       title: "Event Lead Generation",
     },
     {
@@ -39,8 +37,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/industry-events",
       icon: "MapPin",
       id: "industry-events",
-      image:
-        "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_1.avif",
       title: "Industry Events",
     },
     {
@@ -49,8 +46,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/custom-events",
       icon: "Zap",
       id: "custom-events",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/recent-events/event_other_2.avif",
       title: "Custom Events",
     },
     {
@@ -59,8 +55,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/event-booth-rental",
       icon: "Layers",
       id: "booth-rental",
-      image:
-        "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-6.avif",
       title: "Event Booth Rental",
     },
     {
@@ -69,8 +64,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/trade-show-booth-builder",
       icon: "Globe2",
       id: "booth-builder",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600",
+      image: "/images/home/services/booth/booth-7.avif",
       title: "Trade Show Booth Builder",
     },
   ],
@@ -79,8 +73,7 @@ export const GES_SERVICES = {
 export const GES_WHY = {
   description:
     "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.\n\nCEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
-  imageUrl:
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+  imageUrl: "/images/home/hero/home_hero_bg.avif",
   titleLine1: "The Business Case for Live Events",
   titleLine2: "in Enterprise B2B",
 };
