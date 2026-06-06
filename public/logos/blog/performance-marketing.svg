@@ -1,7 +1,1 @@
-<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="220" height="64" rx="20" fill="#F0FDF4" />
-  <rect x="8" y="8" width="204" height="48" rx="16" fill="white" stroke="#BBF7D0" />
-  <circle cx="34" cy="32" r="12" fill="#16A34A" />
-  <path d="M29 36L32.5 32.5L35 35L39 29" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
-  <text x="56" y="38" fill="#0F172A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">GROWTH</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" fill="none" viewBox="0 0 220 64"><rect width="220" height="64" fill="#F0FDF4" rx="20"/><rect width="204" height="48" x="8" y="8" fill="#fff" stroke="#BBF7D0" rx="16"/><circle cx="34" cy="32" r="12" fill="#16A34A"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M29 36L32.5 32.5L35 35L39 29"/><text x="56" y="38" fill="#0F172A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing=".08em">GROWTH</text></svg>
