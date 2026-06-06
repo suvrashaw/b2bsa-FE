@@ -2,12 +2,25 @@ import type { BlogItem } from "./home";
 
 import rawBlogPosts from "./blogs.json";
 
+export type ContentBlock =
+  | { alt: string; caption?: string; src: string; type: "image" }
+  | { items: string[]; ordered?: boolean; type: "list" }
+  | { level: 2 | 3; text: string; type: "heading" }
+  | { text: string; type: "paragraph" }
+  | { text: string; type: "quote" }
+  | { type: "divider" };
+
 export interface SharedBlogPost extends BlogItem {
+  body?: ContentBlock[];
+  externalUrl: string;
   href: string;
 }
 
 type ImportedBlogPost = {
+  body?: ContentBlock[];
+  category?: string;
   date: string;
+  excerpt?: string;
   image: string;
   title: string;
   url: string;
@@ -37,14 +50,22 @@ const parseBlogDate = (value: string) => {
 };
 
 export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlogPost[])
-  .map((post, index) => ({
-    date: post.date,
-    href: post.url,
-    id: createBlogId(post.url, index),
-    image: post.image,
-    sortIndex: index,
-    title: post.title,
-  }))
+  .map((post, index) => {
+    const id = createBlogId(post.url, index);
+
+    return {
+      body: post.body,
+      category: post.category,
+      date: post.date,
+      excerpt: post.excerpt,
+      externalUrl: post.url,
+      href: `/blogs/${id}`,
+      id,
+      image: post.image,
+      sortIndex: index,
+      title: post.title,
+    };
+  })
   .toSorted((left, right) => {
     const leftTimestamp = parseBlogDate(left.date ?? "");
     const rightTimestamp = parseBlogDate(right.date ?? "");
