@@ -116,7 +116,7 @@ export const CinematicSequence = ({
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/[0.56]" />
 
-        {/* Persistent hero content — visible throughout the scroll */}
+        {/* Persistent hero content, visible throughout the scroll */}
         {heroOverlay && (
           <div className="absolute bottom-0 left-0 z-20 max-w-3xl px-8 pb-16 md:px-16 md:pb-20">
             {heroOverlay.eyebrow && (

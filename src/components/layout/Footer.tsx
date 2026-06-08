@@ -144,7 +144,7 @@ export const Footer = () => {
           className="pointer-events-none absolute inset-x-0 top-[7vh] z-0 flex origin-center justify-center"
           style={mapStyle}
         >
-          <div className="h-[min(68vh,760px)] w-[min(156vw,1560px)] max-w-none">
+          <div className="h-[min(95vh,1080px)] w-[min(195vw,2100px)] max-w-none">
             {footerInView && <FooterCommandMap />}
           </div>
         </motion.div>

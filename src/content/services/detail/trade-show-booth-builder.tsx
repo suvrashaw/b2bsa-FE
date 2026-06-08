@@ -3,7 +3,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_BUILDER_HERO = {
   description:
-    "As your enterprise trade show booth builder and exhibition stand builder, we manage every dimension of the build — from fabrication brief to on-site installation — with full accountability for the outcome.",
+    "As your enterprise trade show booth builder and exhibition stand builder, we manage every dimension of the build, from fabrication brief to on-site installation, with full accountability for the outcome.",
   title: "Trade Show Booth Builders Who Engineer for Conversion, Not Just Aesthetics",
 };
 
@@ -218,13 +218,13 @@ export const BOOTH_BUILDER_FAQ = {
   faqs: [
     {
       answer:
-        "A turnkey exhibition booth is an all-inclusive service — design, fabrication, logistics, installation, and breakdown — managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
+        "A turnkey exhibition booth is an all-inclusive service, design, fabrication, logistics, installation, and breakdown, managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
       id: "turnkey",
       question: "What is a turnkey trade show booth?",
     },
     {
       answer:
-        "Yes — exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
+        "Yes, exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
       id: "design-build",
       question: "Do you also do exhibition stand design and building?",
     },
@@ -236,19 +236,19 @@ export const BOOTH_BUILDER_FAQ = {
     },
     {
       answer:
-        "Yes — included in our turnkey booth service. We have managed deliveries across 40+ countries.",
+        "Yes, included in our turnkey booth service. We have managed deliveries across 40+ countries.",
       id: "shipping-customs",
       question: "Do you handle international shipping and customs?",
     },
     {
       answer:
-        "Yes — reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
+        "Yes, reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
       id: "reuse",
       question: "Can the booth be reused?",
     },
     {
       answer:
-        "Yes — our team manages assembly, alignment, quality review, and on-site support throughout the event.",
+        "Yes, our team manages assembly, alignment, quality review, and on-site support throughout the event.",
       id: "installation",
       question: "Do you manage on-site installation?",
     },

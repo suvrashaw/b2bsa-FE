@@ -369,7 +369,7 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
   mission:
     "To transform your global event presence into measurable, high-impact commercial outcomes.",
   quote:
-    "We don't just design exhibition booths — we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.",
+    "We don't just design exhibition booths, we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.",
   stats: [
     {
       bg: "bg-gradient-to-br from-[#1E6091] to-[#184E77]",
@@ -423,7 +423,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       color: "bg-brand-primary",
       description:
-        "We capture broadcast-quality video, interviews, and 3D animations at your event — turning a single day on the floor into 12 months of high-impact digital content.",
+        "We capture broadcast-quality video, interviews, and 3D animations at your event, turning a single day on the floor into 12 months of high-impact digital content.",
       icon: "MonitorPlay",
       id: "media",
       image: "/images/home/services/media-production-2.avif",
@@ -441,7 +441,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       color: "bg-brand-cyan",
       description:
-        "We design and manage exclusive networking experiences — VIP dinners, roundtables, and hosted meetings — that connect your team directly with key enterprise decision-makers.",
+        "We design and manage exclusive networking experiences, VIP dinners, roundtables, and hosted meetings, that connect your team directly with key enterprise decision-makers.",
       icon: "Coffee",
       id: "networking",
       image: "/images/recent-events/event_other_1.avif",
@@ -450,7 +450,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       color: "bg-brand-primary",
       description:
-        "We create cohesive event branding — from booth graphics and signage to digital displays — so your enterprise presence commands attention across the entire venue.",
+        "We create cohesive event branding, from booth graphics and signage to digital displays, so your enterprise presence commands attention across the entire venue.",
       icon: "Palette",
       id: "branding",
       image: "/images/home/why-choose-us/strategic_creativity.avif",
@@ -459,7 +459,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
     {
       color: "bg-brand-blue",
       description:
-        "We design immersive booth experiences — interactive demos, live activations, and engagement zones — that turn passive visitors into active pipeline opportunities.",
+        "We design immersive booth experiences, interactive demos, live activations, and engagement zones, that turn passive visitors into active pipeline opportunities.",
       icon: "Lightbulb",
       id: "experience-creation",
       image: "/images/recent-events/event_other_2.avif",
@@ -652,7 +652,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       image: "/images/home/testimonials/testimonial-4.avif",
       name: "[Client Name]",
       quote:
-        '"The media production team captured every key moment with broadcast-quality precision — the final content exceeded our expectations."',
+        '"The media production team captured every key moment with broadcast-quality precision, the final content exceeded our expectations."',
       rating: 5,
     },
     {
@@ -662,7 +662,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       image: "/images/home/testimonials/testimonial-5.avif",
       name: "[Client Name]",
       quote:
-        '"From strategy to execution, the entire program ran seamlessly across three countries — a truly end-to-end global event partner."',
+        '"From strategy to execution, the entire program ran seamlessly across three countries, a truly end-to-end global event partner."',
       rating: 5,
     },
   ],

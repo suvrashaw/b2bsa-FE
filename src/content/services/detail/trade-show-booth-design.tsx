@@ -4,7 +4,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_DESIGN_HERO = {
   description:
-    "We design custom trade show booths that buyers stop at deliberately — because the space, the story, and the sales system inside it were built together from day one.",
+    "We design custom trade show booths that buyers stop at deliberately, because the space, the story, and the sales system inside it were built together from day one.",
   title: (
     <>
       <strong className="font-bold">Trade Show Booth Design</strong> That Converts Foot Traffic Into Pipeline
@@ -38,7 +38,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 20×20 Booth Quote" },
     descriptions: [
-      "Premium four-sided visibility — demos, meetings, AV zones",
+      "Premium four-sided visibility, demos, meetings, AV zones",
     ],
     eyebrow: "400 sq ft",
     heading: "20x20 Island",
@@ -69,7 +69,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
 
 export const BOOTH_DESIGN_STATS = {
   description:
-    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.",
+    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen, they're remembered.",
   items: [
     { label: "Countries Served", value: "30+" },
     { label: "Global Events Handled", value: "300+" },
@@ -83,7 +83,7 @@ export const BOOTH_DESIGN_WHY = {
   ctaHref: "/contact",
   ctaLabel: "Request a Design Quote",
   description:
-    "At B2B Sales Arrow, we design custom trade show booths that stop the right buyers deliberately — because the space, the story, and the sales system inside it were built together from day one. Every square foot is engineered around buyer psychology and commercial conversion, not aesthetics alone.",
+    "At B2B Sales Arrow, we design custom trade show booths that stop the right buyers deliberately, because the space, the story, and the sales system inside it were built together from day one. Every square foot is engineered around buyer psychology and commercial conversion, not aesthetics alone.",
   imageAlt: "Custom trade show booth design by B2B Sales Arrow",
   imageUrl: "/images/home/services/booth/booth-5.avif",
   label: "Our Services",
@@ -106,7 +106,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "We design booth layouts around how attendees actually move through a crowded exhibition floor — entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
+        "We design booth layouts around how attendees actually move through a crowded exhibition floor, entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
       icon: "box",
       id: "architecture",
       image: "/images/home/services/booth/booth-5.avif",
@@ -115,7 +115,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "Your exhibition booth design should be unmistakably yours from 30 feet away — translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
+        "Your exhibition booth design should be unmistakably yours from 30 feet away, translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
       icon: "palette",
       id: "branding",
       image: "/images/home/services/booth/booth-6.avif",
@@ -133,7 +133,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "For complex products that cannot be shown on a trade show floor — immersive technology that lets buyers explore what they cannot see.",
+        "For complex products that cannot be shown on a trade show floor, immersive technology that lets buyers explore what they cannot see.",
       icon: "monitor",
       id: "ar-vr",
       image: "/images/home/services/booth/booth-8.avif",
@@ -142,7 +142,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "Private meeting rooms, semi-private discussion areas, and live demo zones — planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
+        "Private meeting rooms, semi-private discussion areas, and live demo zones, planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
       icon: "users",
       id: "planning",
       image: "/images/home/services/booth/booth-9.avif",
@@ -151,7 +151,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "The most underused commercial tool in exhibition stand design — accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
+        "The most underused commercial tool in exhibition stand design, accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
       icon: "sun",
       id: "lighting",
       image: "/images/home/services/booth/booth-10.avif",
@@ -174,7 +174,7 @@ export const BOOTH_DESIGN_PROCESS = {
     },
     {
       description:
-        "3D rendering and iterative feedback. Full visualisation of the space — structure, graphics, lighting, and interaction zones reviewed with your team.",
+        "3D rendering and iterative feedback. Full visualisation of the space, structure, graphics, lighting, and interaction zones reviewed with your team.",
       title: "Phase 3: Visual Prototyping",
     },
     {
@@ -203,7 +203,7 @@ export const BOOTH_DESIGN_PROCESS = {
       title: "Phase 8: Post-Event Recovery",
     },
   ],
-  title: "From Brief to Build — Our 8-Phase Booth Design Process",
+  title: "From Brief to Build, Our 8-Phase Booth Design Process",
 };
 
 export const BOOTH_DESIGN_CASE_STUDIES = {
@@ -221,7 +221,7 @@ export const BOOTH_DESIGN_FAQ = {
     {
       answer: (
         <>
-          A <strong className="font-bold">custom trade show booth</strong> is designed and built specifically for your brand. A <strong className="font-bold">modular booth</strong> uses a reusable system with updated graphics between events — faster and more cost-efficient for multi-event programs. We design and build both.
+          A <strong className="font-bold">custom trade show booth</strong> is designed and built specifically for your brand. A <strong className="font-bold">modular booth</strong> uses a reusable system with updated graphics between events, faster and more cost-efficient for multi-event programs. We design and build both.
         </>
       ),
       id: "modular-vs-custom",
@@ -235,7 +235,7 @@ export const BOOTH_DESIGN_FAQ = {
     },
     {
       answer:
-        "Yes. We extend your brand system — typefaces, colour palette, photography style — into a physical exhibition environment without losing consistency.",
+        "Yes. We extend your brand system, typefaces, colour palette, photography style, into a physical exhibition environment without losing consistency.",
       id: "brand-guidelines",
       question: "Can you work with our existing brand guidelines?",
     },
@@ -247,7 +247,7 @@ export const BOOTH_DESIGN_FAQ = {
     },
     {
       answer:
-        "Yes — full design-to-build service or design-only with production-ready files for your fabrication partner. You choose the scope.",
+        "Yes, full design-to-build service or design-only with production-ready files for your fabrication partner. You choose the scope.",
       id: "fabrication",
       question: "Do you handle fabrication and build as well?",
     },

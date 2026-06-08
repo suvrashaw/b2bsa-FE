@@ -2,8 +2,8 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const DATA_AUGMENTATION_HERO = {
   description:
-    "Blank job titles, missing emails, outdated company names — incomplete data creates misdirected outreach and wasted SDR time. Our data augmentation services turn what your CRM has into what your sales team actually needs.",
-  title: "B2B Data Augmentation Services — Transform Incomplete CRM Data Into Sales Intelligence",
+    "Blank job titles, missing emails, outdated company names, incomplete data creates misdirected outreach and wasted SDR time. Our data augmentation services turn what your CRM has into what your sales team actually needs.",
+  title: "B2B Data Augmentation Services, Transform Incomplete CRM Data Into Sales Intelligence",
 };
 
 export { GLOBAL_PROOF_STATS as DATA_AUGMENTATION_PROOF_BAR } from "../../shared";
@@ -41,7 +41,7 @@ export const DATA_AUGMENTATION_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.",
+        "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning, enriched to match how your team actually sells.",
       icon: "Settings",
       id: "custom-fields",
       image: "/images/home/services/sql-generation-1.avif",
@@ -99,7 +99,7 @@ export const DATA_AUGMENTATION_FAQ = {
     },
     {
       answer:
-        "Augmentation adds new information to existing records. Validation checks and corrects accuracy of what already exists. The two are complementary — validate first to clean, then augment to complete.",
+        "Augmentation adds new information to existing records. Validation checks and corrects accuracy of what already exists. The two are complementary, validate first to clean, then augment to complete.",
       id: "augmentation-vs-validation",
       question: "What is the difference between augmentation and validation?",
     },
@@ -114,7 +114,7 @@ export const DATA_AUGMENTATION_PAGE = {
   seo: {
     canonicalPath: "/services/data-augmentation",
     description:
-      "B2B data augmentation services — verified firmographic, technographic, contact, and intent data enrichment. Transform your CRM from an incomplete database into a precision sales intelligence asset.",
+      "B2B data augmentation services, verified firmographic, technographic, contact, and intent data enrichment. Transform your CRM from an incomplete database into a precision sales intelligence asset.",
     focusKeyphrase: "data augmentation services",
     secondaryKeywords: [
       "CRM data enrichment",

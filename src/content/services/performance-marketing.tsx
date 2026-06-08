@@ -46,7 +46,7 @@ export const PERF_SERVICES = {
 
 export const PERF_WHY = {
   description:
-    "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.",
+    "The right B2B digital marketing agency tracks what happens after the first interaction: conversion quality, lead source, SQL movement, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity, not commercial performance.",
   imageUrl: "/images/home/why-choose-us/strategic_creativity.avif",
   titleLine1: "Every Action",
   titleLine2: "Has a Number",
@@ -57,7 +57,7 @@ export const PERF_PROCESS = {
   phases: [
     {
       description:
-        "We define who your campaigns should actually reach — by ideal customer profile, buying role, pain point, intent signal, and deal-stage context. Campaigns aimed at the wrong audience produce the wrong leads at any budget level.",
+        "We define who your campaigns should actually reach, by ideal customer profile, buying role, pain point, intent signal, and deal-stage context. Campaigns aimed at the wrong audience produce the wrong leads at any budget level.",
       title: "Audience Intelligence and ICP Definition",
     },
     {
@@ -67,7 +67,7 @@ export const PERF_PROCESS = {
     },
     {
       description:
-        "Campaigns structured around buyer intent, offer clarity, funnel stage, and commercial objectives — with testing frameworks built in from launch.",
+        "Campaigns structured around buyer intent, offer clarity, funnel stage, and commercial objectives, with testing frameworks built in from launch.",
       title: "Campaign Architecture and Messaging",
     },
     {
@@ -77,7 +77,7 @@ export const PERF_PROCESS = {
     },
     {
       description:
-        "Connecting campaign activity to qualified leads, SQL movement, pipeline influenced, and revenue outcomes — not platform dashboards.",
+        "Connecting campaign activity to qualified leads, SQL movement, pipeline influenced, and revenue outcomes, not platform dashboards.",
       title: "Attribution and Revenue Reporting",
     },
   ],
@@ -91,7 +91,7 @@ export const PERF_FAQ = {
   faqs: [
     {
       answer:
-        "B2B performance marketing optimises every campaign for measurable revenue outcomes — qualified leads, pipeline influence, and closed revenue — not vanity metrics like impressions or engagement.",
+        "B2B performance marketing optimises every campaign for measurable revenue outcomes, qualified leads, pipeline influence, and closed revenue, not vanity metrics like impressions or engagement.",
       id: "what-is",
       question: "What is B2B performance marketing?",
     },
@@ -109,7 +109,7 @@ export const PERF_FAQ = {
     },
     {
       answer:
-        "Technology, SaaS, financial services, healthcare, energy, telecom, and professional services — all with enterprise buyer focus.",
+        "Technology, SaaS, financial services, healthcare, energy, telecom, and professional services, all with enterprise buyer focus.",
       id: "industries",
       question: "Do you work with specific industries?",
     },
@@ -124,7 +124,7 @@ export const PERF_PAGE = {
   seo: {
     canonicalPath: "/services/performance-marketing",
     description:
-      "Specialist B2B digital marketing agency — SEO, paid advertising, and LinkedIn Ads managed around qualified pipeline and revenue attribution. Every campaign decision tracked to commercial outcomes.",
+      "Specialist B2B digital marketing agency, SEO, paid advertising, and LinkedIn Ads managed around qualified pipeline and revenue attribution. Every campaign decision tracked to commercial outcomes.",
     focusKeyphrase: "B2B digital marketing agency",
     secondaryKeywords: [
       "digital marketing agency",

@@ -2,15 +2,15 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const SQL_HERO = {
   description:
-    "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action — not a badge scan CSV.",
-  title: "Sales Qualified Lead Generation — Decision-Makers, Not Data",
+    "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action, not a badge scan CSV.",
+  title: "Sales Qualified Lead Generation, Decision-Makers, Not Data",
 };
 
 export { GLOBAL_PROOF_STATS as SQL_PROOF_BAR } from "../shared";
 
 export const SQL_SERVICES = {
   description:
-    "In the enterprise world, quantity is the enemy of quality. Your sales team doesn't need more 'leads' — they need more 'qualified conversations.' We specialize in human-powered prospecting that cuts through the noise of automated spam. Our specialists act as a seamless extension of your brand, engaging decision-makers at your most valuable target accounts and qualifying them against strict BANT criteria before they ever reach your sales team's calendar.",
+    "In the enterprise world, quantity is the enemy of quality. Your sales team doesn't need more 'leads', they need more 'qualified conversations.' We specialize in human-powered prospecting that cuts through the noise of automated spam. Our specialists act as a seamless extension of your brand, engaging decision-makers at your most valuable target accounts and qualifying them against strict BANT criteria before they ever reach your sales team's calendar.",
   heading: "How We Generate Sales Qualified Leads",
   services: [
     {
@@ -53,7 +53,7 @@ export const SQL_SERVICES = {
 
 export const SQL_WHY = {
   description:
-    "Generic lists create activity, not revenue. MQLs often lack the intent, context, or urgency that makes them actionable for a sales team. Cold data delivers names without conversations. The result: SDRs spend most of their time chasing the wrong people, conversion rates stay low, and leadership loses confidence in the pipeline.\n\nWe solve this by defining qualification standards with your sales team first, tracking intent signals across multiple channels, applying BANT or CHAMP qualification frameworks, and routing only prospects meeting agreed criteria — with full conversation context.",
+    "Generic lists create activity, not revenue. MQLs often lack the intent, context, or urgency that makes them actionable for a sales team. Cold data delivers names without conversations. The result: SDRs spend most of their time chasing the wrong people, conversion rates stay low, and leadership loses confidence in the pipeline.\n\nWe solve this by defining qualification standards with your sales team first, tracking intent signals across multiple channels, applying BANT or CHAMP qualification frameworks, and routing only prospects meeting agreed criteria, with full conversation context.",
   imageUrl: "/images/home/services/database-research-revised.avif",
   titleLine1: "Why Most Lead Generation",
   titleLine2: "Programs Fail Sales Teams",
@@ -105,13 +105,13 @@ export const SQL_FAQ = {
     },
     {
       answer:
-        "BANT or CHAMP depending on your sales motion — agreed with your sales leadership before the program begins. Qualification happens in real conversations, not retrospectively from lists.",
+        "BANT or CHAMP depending on your sales motion, agreed with your sales leadership before the program begins. Qualification happens in real conversations, not retrospectively from lists.",
       id: "framework",
       question: "What qualification framework do you use?",
     },
     {
       answer:
-        "Yes — LinkedIn outbound, paid campaigns, content-led inbound, cold email, and event capture running concurrently for consistent qualified lead volume.",
+        "Yes, LinkedIn outbound, paid campaigns, content-led inbound, cold email, and event capture running concurrently for consistent qualified lead volume.",
       id: "multi-channel",
       question: "Can you run multi-channel SQL programs simultaneously?",
     },
@@ -126,7 +126,7 @@ export const SQL_PAGE = {
   seo: {
     canonicalPath: "/services/sales-qualified-lead-generation",
     description:
-      "Enterprise sales qualified lead generation — verified decision-makers, BANT/CHAMP qualification, intent signals, and CRM-ready prospect profiles. Leads your sales team can act on immediately.",
+      "Enterprise sales qualified lead generation, verified decision-makers, BANT/CHAMP qualification, intent signals, and CRM-ready prospect profiles. Leads your sales team can act on immediately.",
     focusKeyphrase: "sales qualified lead generation",
     secondaryKeywords: [
       "B2B SQL generation",

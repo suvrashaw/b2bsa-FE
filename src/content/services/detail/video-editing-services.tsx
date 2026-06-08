@@ -10,7 +10,7 @@ export { GLOBAL_PROOF_STATS as VIDEO_EDITING_PROOF_BAR } from "../../shared";
 
 export const VIDEO_EDITING_WHY = {
   description:
-    "Great footage without great editing is invisible. The edit is where pacing, emotion, and commercial intent are built into the final asset. Our post-production team works from a clear brief — what should the viewer feel, understand, and do after watching — and structures every cut around that outcome.",
+    "Great footage without great editing is invisible. The edit is where pacing, emotion, and commercial intent are built into the final asset. Our post-production team works from a clear brief, what should the viewer feel, understand, and do after watching, and structures every cut around that outcome.",
   imageUrl: "/images/home/services/media-production-2.avif",
   titleLine1: "The Edit is Where",
   titleLine2: "the Story Happens",
@@ -108,7 +108,7 @@ export const VIDEO_EDITING_FAQ = {
   faqs: [
     {
       answer:
-        "Yes — we edit footage from any source. We advise honestly on what quality output is achievable from the material provided.",
+        "Yes, we edit footage from any source. We advise honestly on what quality output is achievable from the material provided.",
       id: "external-footage",
       question: "Can you edit footage shot by someone else?",
     },
@@ -120,7 +120,7 @@ export const VIDEO_EDITING_FAQ = {
     },
     {
       answer:
-        "Frame-accurate review platform — you comment directly on the video at specific timecodes. Standard projects include two revision rounds.",
+        "Frame-accurate review platform, you comment directly on the video at specific timecodes. Standard projects include two revision rounds.",
       id: "feedback",
       question: "How do we give feedback?",
     },
@@ -135,7 +135,7 @@ export const VIDEO_EDITING_PAGE = {
   seo: {
     canonicalPath: "/services/media-production/video-editing-services",
     description:
-      "B2B professional video editing — colour grading, motion graphics, social cut-downs, subtitles, and post-production. Fast turnaround. Enterprise-scale volume.",
+      "B2B professional video editing, colour grading, motion graphics, social cut-downs, subtitles, and post-production. Fast turnaround. Enterprise-scale volume.",
     focusKeyphrase: "video editing services",
     secondaryKeywords: [
       "professional video editing",

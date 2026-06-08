@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const CORPORATE_VIDEO_HERO = {
   description:
-    "Your corporate video should make your market believe you are the right partner — before a sales conversation begins.",
+    "Your corporate video should make your market believe you are the right partner, before a sales conversation begins.",
   title: "Corporate Video Production Solutions That Command Enterprise Attention",
 };
 
@@ -91,7 +91,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Who you are, what you stand for, and why buyers should trust you — for websites, investor comms, and enterprise credibility.",
+        "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
       icon: "Star",
       id: "brand",
       image: "/images/home/services/media-production-2.avif",
@@ -100,7 +100,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
     {
       color: "bg-brand-cyan",
       description:
-        "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes — eliminating friction from every sales qualification call.",
+        "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
       icon: "Cpu",
       id: "product",
       image: "/images/home/services/media-production-1.avif",
@@ -136,7 +136,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "Real outcomes from real customers — the most trusted content format in B2B purchasing decisions.",
+        "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
       icon: "MessageSquare",
       id: "testimonial",
       image: "/images/home/testimonials/testimonial-2.avif",
@@ -182,7 +182,7 @@ export const CORPORATE_VIDEO_FAQ = {
     },
     {
       answer:
-        "Yes — script development and messaging strategy are included in our full corporate video production service.",
+        "Yes, script development and messaging strategy are included in our full corporate video production service.",
       id: "script",
       question: "Do you write the script?",
     },
@@ -194,7 +194,7 @@ export const CORPORATE_VIDEO_FAQ = {
     },
     {
       answer:
-        "Yes — client offices, conference venues, studios, product facilities, and trade show events.",
+        "Yes, client offices, conference venues, studios, product facilities, and trade show events.",
       id: "location",
       question: "Can we film on location?",
     },
@@ -209,7 +209,7 @@ export const CORPORATE_VIDEO_PAGE = {
   seo: {
     canonicalPath: "/services/media-production/corporate-video-production",
     description:
-      "Enterprise corporate video production — brand films, product explainers, executive interviews, investor content and sales enablement videos that build authority and shorten sales cycles.",
+      "Enterprise corporate video production, brand films, product explainers, executive interviews, investor content and sales enablement videos that build authority and shorten sales cycles.",
     focusKeyphrase: "corporate video production solutions",
     secondaryKeywords: [
       "video production company",

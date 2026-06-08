@@ -1,6 +1,6 @@
 export const ABOUT_HERO = {
   description:
-    "B2B Sales Arrow is not a vendor. We are a strategic growth partner — bringing event solutions, video production, performance marketing, and market research under one team with one commercial brief and clear accountability to outcomes.",
+    "B2B Sales Arrow is not a vendor. We are a strategic growth partner, bringing event solutions, video production, performance marketing, and market research under one team with one commercial brief and clear accountability to outcomes.",
   eyebrow: "WHO WE ARE",
   image: {
     alt: "B2B Sales Arrow team and office",
@@ -30,7 +30,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
           <p>
             B2B Sales Arrow was founded to solve a problem we encountered repeatedly across
             enterprise marketing engagements: significant investment in events, campaigns, and
-            market presence — but fragmented execution, poor measurement, and a persistent
+            market presence, but fragmented execution, poor measurement, and a persistent
             disconnect between marketing activity and sales outcomes.
           </p>
         </div>
@@ -42,7 +42,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
         <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
           <p>
             We built a model where event solutions, video production, performance marketing, and
-            market research work together under one accountable team — and where every program is
+            market research work together under one accountable team, and where every program is
             designed from the brief stage with commercial outcomes as the primary objective. The
             numbers below reflect what that model produces.
           </p>
@@ -113,15 +113,15 @@ export const ABOUT_PRESENCE = {
     { color: "cyan", lat: 43.651_07, lng: -79.347_015, name: "Toronto", size: 0.1 },
   ],
   description:
-    "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto — supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
+    "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
   title: "Where We Operate",
 };
 
 export const ABOUT_STATS = {
-  attribution: "— B2B Sales Arrow Mission",
+  attribution: "B2B Sales Arrow Mission",
   heading: <>Our Mission</>,
   quote:
-    "To transform how B2B enterprise brands connect with their buyers — through innovative event experiences, high-quality media, precision digital marketing, and intelligent market intelligence — delivering measurable commercial outcomes that justify every investment and advance our clients' growth objectives.",
+    "To transform how B2B enterprise brands connect with their buyers, through innovative event experiences, high-quality media, precision digital marketing, and intelligent market intelligence, delivering measurable commercial outcomes that justify every investment and advance our clients' growth objectives.",
   stats: [
     {
       bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
@@ -268,14 +268,14 @@ export const ABOUT_VALUES = {
   reasons: [
     {
       description:
-        "We measure success by commercial outcomes — qualified conversations, measurable pipeline, and revenue impact. Not campaign volume or impression counts.",
+        "We measure success by commercial outcomes, qualified conversations, measurable pipeline, and revenue impact. Not campaign volume or impression counts.",
       id: "accountability",
       image: "/images/about/values/accountability.avif",
       title: "Accountability Over Activity",
     },
     {
       description:
-        "Quality, relevance, and conversion — not vanity numbers that look impressive on a report but do not move a sales team forward.",
+        "Quality, relevance, and conversion, not vanity numbers that look impressive on a report but do not move a sales team forward.",
       id: "precision",
       image: "/images/about/values/precision.avif",
       title: "Precision Over Volume",
@@ -301,7 +301,7 @@ export const ABOUT_CTA = {
   ctaHref: "/contact",
   ctaLabel: "Request a Strategy Consultation",
   title:
-    "If you need event presence, media content, performance marketing, or market intelligence connected to measurable commercial outcomes — start with one conversation.",
+    "If you need event presence, media content, performance marketing, or market intelligence connected to measurable commercial outcomes, start with one conversation.",
 };
 
 export const ABOUT_INQUIRY = {

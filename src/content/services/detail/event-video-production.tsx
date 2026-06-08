@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const EVENT_VIDEO_HERO = {
   description:
-    "Your event lasts three days. The right event video production gives your marketing team assets they use for months — and gives your sales team proof points that close deals.",
+    "Your event lasts three days. The right event video production gives your marketing team assets they use for months, and gives your sales team proof points that close deals.",
   title: "Event Video Production That Turns Live Moments Into Lasting Revenue Assets",
 };
 
@@ -279,7 +279,7 @@ export const EVENT_VIDEO_PRICING = {
       service: "Full Event Video Package (multi-format)",
     },
   ],
-  title: "Event Video Production — Approximate Price Guide",
+  title: "Event Video Production, Approximate Price Guide",
 };
 
 export const EVENT_VIDEO_CASE_STUDIES = {
@@ -302,7 +302,7 @@ export const EVENT_VIDEO_FAQ = {
     },
     {
       answer:
-        "Yes — across 40+ countries. GITEX, CES, MWC, AWS re:Invent, Web Summit, ADIPEC, and major regional trade shows covered.",
+        "Yes, across 40+ countries. GITEX, CES, MWC, AWS re:Invent, Web Summit, ADIPEC, and major regional trade shows covered.",
       id: "international",
       question: "Do you cover international events?",
     },
@@ -317,7 +317,7 @@ export const EVENT_VIDEO_PAGE = {
   seo: {
     canonicalPath: "/services/media-production/event-video-production",
     description:
-      "Specialist event video production — highlight reels, booth walkthroughs, speaker coverage, on-site testimonials, and social cut-downs that work for months after the show.",
+      "Specialist event video production, highlight reels, booth walkthroughs, speaker coverage, on-site testimonials, and social cut-downs that work for months after the show.",
     focusKeyphrase: "event video production company",
     secondaryKeywords: [
       "trade show video production",

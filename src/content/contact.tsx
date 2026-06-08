@@ -1,6 +1,6 @@
 export const CONTACT_HERO = {
   description:
-    "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence — one conversation is enough to define the right path.",
+    "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence, one conversation is enough to define the right path.",
   eyebrow: "CONTACT US",
   image: {
     alt: "Team collaboration",
@@ -29,7 +29,7 @@ export const CONTACT_HERO = {
 
 export const CONTACT_FORM = {
   description:
-    "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence — one conversation is enough to define the right path.",
+    "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence, one conversation is enough to define the right path.",
   eyebrow: "INQUIRY",
   form: {
     companyLabel: "Company Name",

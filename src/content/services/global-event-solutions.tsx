@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const GES_HERO = {
   description:
-    "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting — all under one team, one brief, one outcome.",
+    "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
   title: "Global Event Solutions That Turn Trade Show Floors Into Revenue Pipelines",
 };
 
@@ -10,7 +10,7 @@ export { GLOBAL_PROOF_STATS as GES_PROOF_BAR } from "../shared";
 
 export const GES_SERVICES = {
   description:
-    "Running a major trade show program through five separate vendors creates fragmentation — no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution — all under one team.\n\nWhen the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
+    "Running a major trade show program through five separate vendors creates fragmentation, no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution, all under one team.\n\nWhen the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
   heading: "End-to-End Corporate Event Solutions Under One Roof",
   services: [
     {
@@ -72,7 +72,7 @@ export const GES_SERVICES = {
 
 export const GES_WHY = {
   description:
-    "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days — and brands that show up with a structured presence consistently outperform those treating events as awareness activities.\n\nCEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity — or simply occupy floor space.",
+    "Enterprise buyers do not commit from a single email or ad. They need trust, context, and conversation. Live events compress months of relationship-building into focused, high-intent days, and brands that show up with a structured presence consistently outperform those treating events as awareness activities.\n\nCEIR research shows 81% of trade show attendees hold buying authority. The question is whether your B2B event solutions are built to capture that opportunity, or simply occupy floor space.",
   imageUrl: "/images/home/hero/home_hero_bg.avif",
   titleLine1: "The Business Case for Live Events",
   titleLine2: "in Enterprise B2B",
@@ -126,25 +126,25 @@ export const GES_FAQ = {
     },
     {
       answer:
-        "Through qualified lead volume, meeting conversion rate, cost per qualified opportunity, and CRM pipeline movement within 90 days — benchmarked against pre-event commercial targets.",
+        "Through qualified lead volume, meeting conversion rate, cost per qualified opportunity, and CRM pipeline movement within 90 days, benchmarked against pre-event commercial targets.",
       id: "roi",
       question: "How do you measure event ROI?",
     },
     {
       answer:
-        "Yes — and this integration is where the greatest commercial gains are made. The physical environment, lead capture workflow, and CRM routing are designed as one system from the first brief.",
+        "Yes, and this integration is where the greatest commercial gains are made. The physical environment, lead capture workflow, and CRM routing are designed as one system from the first brief.",
       id: "integration",
       question: "Can you manage booth design and lead generation together?",
     },
     {
       answer:
-        "Technology, SaaS, financial services, fintech, healthcare, energy, telecom, and professional services — across events including GITEX, CES, MWC, ADIPEC, Arab Health, Money20/20, and Hannover Messe.",
+        "Technology, SaaS, financial services, fintech, healthcare, energy, telecom, and professional services, across events including GITEX, CES, MWC, ADIPEC, Arab Health, Money20/20, and Hannover Messe.",
       id: "industries",
       question: "Which industries do you serve?",
     },
     {
       answer:
-        "Yes — Southeast Asia, Africa, Latin America, and Eastern Europe, with local logistics partners and compliance knowledge in each region.",
+        "Yes, Southeast Asia, Africa, Latin America, and Eastern Europe, with local logistics partners and compliance knowledge in each region.",
       id: "markets",
       question: "Do you support emerging markets?",
     },
@@ -159,7 +159,7 @@ export const GES_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions",
     description:
-      "End-to-end global event solutions — strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced.",
+      "End-to-end global event solutions, strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced.",
     focusKeyphrase: "global event solutions",
     secondaryKeywords: [
       "B2B event solutions",

@@ -3,14 +3,14 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 export const LINKEDIN_ADS_HERO = {
   description:
     "LinkedIn is where enterprise buyers reveal their role, their company, and their commercial intent. Our LinkedIn Ads for B2B programs reach your exact ICP and convert professional attention into qualified meetings and pipeline.",
-  title: "LinkedIn Ads for B2B — The Highest-Intent Enterprise Pipeline Channel",
+  title: "LinkedIn Ads for B2B, The Highest-Intent Enterprise Pipeline Channel",
 };
 
 export { GLOBAL_PROOF_STATS as LINKEDIN_ADS_PROOF_BAR } from "../../shared";
 
 export const LINKEDIN_ADS_WHY = {
   description:
-    "LinkedIn targeting gives enterprise marketers verified professional attributes — job title, company size, industry, seniority, department, geography, and named account lists — available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality — measured by ICP fit and conversion to sales opportunity — is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.",
+    "LinkedIn targeting gives enterprise marketers verified professional attributes, job title, company size, industry, seniority, department, geography, and named account lists, available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality, measured by ICP fit and conversion to sales opportunity, is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.",
   imageUrl: "/images/home/services/performance-marketing.avif",
   titleLine1: "The Most Precise",
   titleLine2: "B2B Targeting Channel",
@@ -26,12 +26,12 @@ export const LINKEDIN_ADS_DELIVERABLES = {
       icon: "FileText",
       id: "sponsored",
       image: "/images/home/services/media-production-1.avif",
-      title: "Sponsored Content — Single Image, Carousel, Video",
+      title: "Sponsored Content, Single Image, Carousel, Video",
     },
     {
       color: "bg-brand-cyan",
       description:
-        "Capturing prospect details within LinkedIn without requiring a landing page click — effective for webinar registrations, content downloads, and B2B lead generation where reducing friction improves conversion.",
+        "Capturing prospect details within LinkedIn without requiring a landing page click, effective for webinar registrations, content downloads, and B2B lead generation where reducing friction improves conversion.",
       icon: "ClipboardList",
       id: "lead-gen",
       image: "/images/home/services/performance-marketing-1.avif",
@@ -40,7 +40,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
     {
       color: "bg-brand-primary",
       description:
-        "Promoting reports, playbooks, and thought leadership assets directly in the LinkedIn feed — ideal for enterprise buyers who need substance before engaging with sales.",
+        "Promoting reports, playbooks, and thought leadership assets directly in the LinkedIn feed, ideal for enterprise buyers who need substance before engaging with sales.",
       icon: "File",
       id: "document",
       image: "/images/home/services/market-intelligence.avif",
@@ -49,7 +49,7 @@ export const LINKEDIN_ADS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "Webinars, roundtables, product launches promoted to precisely targeted professional audiences — connecting event marketing with qualified lead generation.",
+        "Webinars, roundtables, product launches promoted to precisely targeted professional audiences, connecting event marketing with qualified lead generation.",
       icon: "Calendar",
       id: "event",
       image: "/images/recent-events/event_other_1.avif",
@@ -81,7 +81,7 @@ export const LINKEDIN_ADS_FAQ = {
     },
     {
       answer:
-        "LinkedIn CPL is typically 2–5x higher than Google Search CPL. However, lead quality — ICP fit and conversion to pipeline — is frequently higher, making cost per qualified opportunity competitive for enterprise B2B.",
+        "LinkedIn CPL is typically 2–5x higher than Google Search CPL. However, lead quality, ICP fit and conversion to pipeline, is frequently higher, making cost per qualified opportunity competitive for enterprise B2B.",
       id: "vs-google",
       question: "Is LinkedIn Ads more expensive than Google Ads?",
     },
@@ -114,7 +114,7 @@ export const LINKEDIN_ADS_PAGE = {
   seo: {
     canonicalPath: "/services/linkedin-ads",
     description:
-      "Enterprise LinkedIn Ads for B2B — Sponsored Content, Lead Gen Forms, ABM targeting, and pipeline attribution. Reach decision-makers by title, company, and intent.",
+      "Enterprise LinkedIn Ads for B2B, Sponsored Content, Lead Gen Forms, ABM targeting, and pipeline attribution. Reach decision-makers by title, company, and intent.",
     focusKeyphrase: "LinkedIn Ads for B2B",
     secondaryKeywords: [
       "B2B LinkedIn advertising",

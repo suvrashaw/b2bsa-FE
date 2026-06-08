@@ -23,7 +23,7 @@ const customEventsContactCta = {
   ...CINEMATIC_CTA_SHARED,
   badge: "Design Your Event",
   description:
-    "Senior buyers protect their time. The event that earns it must justify every element — the invitation, the room, the agenda, and the follow-up.",
+    "Senior buyers protect their time. The event that earns it must justify every element, the invitation, the room, the agenda, and the follow-up.",
   headingLines: ["Senior Buyers", "Protect Their Time."] as [string, string],
   primaryCta: { href: "/contact", label: "Plan Your Custom Event" },
 };

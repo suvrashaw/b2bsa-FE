@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const MEDIA_HERO = {
   description:
-    "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust — and keeps earning it long after the shoot.",
+    "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust, and keeps earning it long after the shoot.",
   title: "B2B Media Production That Builds Enterprise Authority Before the First Sales Call",
 };
 
@@ -14,7 +14,7 @@ export const MEDIA_SERVICES = {
     {
       color: "bg-brand-blue",
       description:
-        "Highlight reels, testimonial clips, speaker coverage, and post-event recap content — extending the ROI of your event investment beyond the show floor.",
+        "Highlight reels, testimonial clips, speaker coverage, and post-event recap content, extending the ROI of your event investment beyond the show floor.",
       href: "/services/media-production/event-video-production",
       icon: "Camera",
       id: "event-video",
@@ -56,9 +56,9 @@ export const MEDIA_SERVICES = {
 
 export const MEDIA_WHY = {
   description:
-    "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means — commercial impact is the objective.",
+    "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means, commercial impact is the objective.",
   imageUrl: "/images/recent-events/event_other_3.avif",
-  titleLine1: "We Don't Just Film —",
+  titleLine1: "We Don't Just Film , ",
   titleLine2: "We Tell Stories That Sell",
 };
 
@@ -96,18 +96,18 @@ export const MEDIA_FAQ = {
   faqs: [
     {
       answer:
-        "B2B media production covers all video and content production services created for business-to-business brands — corporate films, event video, demos, live streaming, and post-production designed for enterprise marketing and sales enablement.",
+        "B2B media production covers all video and content production services created for business-to-business brands, corporate films, event video, demos, live streaming, and post-production designed for enterprise marketing and sales enablement.",
       id: "what-is",
       question: "What is B2B media production?",
     },
     {
-      answer: "Yes — combining shoots reduces cost and logistical complexity significantly.",
+      answer: "Yes, combining shoots reduces cost and logistical complexity significantly.",
       id: "combined",
       question: "Can you handle event and corporate video in the same project?",
     },
     {
       answer:
-        "Yes — 15-second, 30-second, and 60-second cuts for LinkedIn, YouTube, Instagram, and paid campaigns. Vertical and square formats on request.",
+        "Yes, 15-second, 30-second, and 60-second cuts for LinkedIn, YouTube, Instagram, and paid campaigns. Vertical and square formats on request.",
       id: "social",
       question: "Do you deliver social media formats?",
     },
@@ -122,7 +122,7 @@ export const MEDIA_PAGE = {
   seo: {
     canonicalPath: "/services/media-production",
     description:
-      "Enterprise B2B media production — event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using.",
+      "Enterprise B2B media production, event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using.",
     focusKeyphrase: "video production company",
     secondaryKeywords: [
       "video production services",

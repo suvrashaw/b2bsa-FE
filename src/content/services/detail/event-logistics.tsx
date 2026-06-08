@@ -226,7 +226,7 @@ export const EVENT_LOGISTICS_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/event-logistics",
     description:
-      "End-to-end event logistics management — international freight, customs compliance, on-site installation, and return logistics for trade shows and corporate events in 40+ countries.",
+      "End-to-end event logistics management, international freight, customs compliance, on-site installation, and return logistics for trade shows and corporate events in 40+ countries.",
     focusKeyphrase: "event logistics management",
     secondaryKeywords: [
       "trade show logistics",

@@ -228,7 +228,7 @@ export const CORP_EVENT_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/corporate-event-solutions",
     description:
-      "End-to-end corporate event solutions — strategy, venue management, full production, logistics, and post-event reporting. B2B events built around commercial outcomes.",
+      "End-to-end corporate event solutions, strategy, venue management, full production, logistics, and post-event reporting. B2B events built around commercial outcomes.",
     focusKeyphrase: "corporate event solutions",
     secondaryKeywords: [
       "corporate event management company",

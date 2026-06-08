@@ -38,14 +38,14 @@ export const EVENTS_POSITIONING = {
   items: [
     {
       description:
-        "Beyond logistics, we are an experiential marketing agency — designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.",
+        "Beyond logistics, we are an experiential marketing agency, designing event presences that create a genuine brand experience buyers remember. Every touchpoint is intentional: the moment of arrival, the sensory environment, the conversation flow, the demo sequence, and the follow-up that lands when the impression is still fresh.",
       id: "agency",
       image: "/images/home/services/booth/booth-5.avif",
       title: "B2B Sales Arrow as Your Experiential Marketing Agency",
     },
     {
       description:
-        "Experiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
+        "Experiential B2B marketing works because enterprise buyers make complex purchasing decisions through trust and context, not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.",
       id: "why",
       image: "/images/recent-events/event_other_1.avif",
       title: "Why Experiential Works for B2B",
@@ -163,43 +163,43 @@ export const EVENTS_FAQ = {
   faqs: [
     {
       answer:
-        "A B2B experiential marketing agency designs event presences that create memorable, trust-building experiences for enterprise buyers — going beyond booth logistics to engineer the full brand encounter from arrival to follow-up.",
+        "A B2B experiential marketing agency designs event presences that create memorable, trust-building experiences for enterprise buyers, going beyond booth logistics to engineer the full brand encounter from arrival to follow-up.",
       id: "experiential-marketing",
       question: "What is an experiential marketing agency for B2B?",
     },
     {
       answer:
-        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact — recommending only events where the return justifies the investment.",
+        "We evaluate audience quality, buyer intent density, ICP attendance patterns, competitive presence, sponsorship value, and historical pipeline impact, recommending only events where the return justifies the investment.",
       id: "selection",
       question: "How do you select the right industry events?",
     },
     {
       answer:
-        "Before committing budget, we estimate the commercial return: expected meeting volume, qualified lead rate, cost per qualified opportunity, and pipeline influenced — benchmarked against your pre-event commercial targets.",
+        "Before committing budget, we estimate the commercial return: expected meeting volume, qualified lead rate, cost per qualified opportunity, and pipeline influenced, benchmarked against your pre-event commercial targets.",
       id: "roi",
       question: "What is event ROI forecasting?",
     },
     {
       answer:
-        "Yes — concurrent multi-event programs are a standard delivery mode for our enterprise clients. Our logistics and project management networks are designed for parallel deployment.",
+        "Yes, concurrent multi-event programs are a standard delivery mode for our enterprise clients. Our logistics and project management networks are designed for parallel deployment.",
       id: "multiple",
       question: "Can you support multiple events in the same quarter?",
     },
     {
       answer:
-        "Yes — briefed event staff for booth management, visitor engagement, lead capture, and meeting coordination.",
+        "Yes, briefed event staff for booth management, visitor engagement, lead capture, and meeting coordination.",
       id: "staff",
       question: "Do you provide on-site staff?",
     },
     {
       answer:
-        "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast — delivered within 72 hours of event close.",
+        "Qualified lead volume by tier, meeting conversion rate, cost per qualified opportunity, CRM pipeline movement, and event ROI vs. forecast, delivered within 72 hours of event close.",
       id: "reporting",
       question: "How do you report post-event outcomes?",
     },
     {
       answer:
-        "A B2B events agency measures success by pipeline and revenue. An event management company measures success by logistics execution. We do both — but commercial outcome is always the primary brief.",
+        "A B2B events agency measures success by pipeline and revenue. An event management company measures success by logistics execution. We do both, but commercial outcome is always the primary brief.",
       id: "difference",
       question: "What makes a B2B events agency different from an event management company?",
     },
@@ -209,7 +209,7 @@ export const EVENTS_FAQ = {
 
 export const EVENTS_CONTACT = {
   description:
-    "The strongest strategy is not about showing up everywhere — it is about choosing the rooms where your buyers already gather.",
+    "The strongest strategy is not about showing up everywhere, it is about choosing the rooms where your buyers already gather.",
   eyebrow: "PLAN YOUR PRESENCE",
   form: {
     ctaLabel: "Get Event Strategy",
@@ -251,7 +251,7 @@ export const EVENTS_PAGE = {
   seo: {
     canonicalPath: "/events",
     description:
-      "Full-service corporate event management for enterprise brands — event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries.",
+      "Full-service corporate event management for enterprise brands, event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries.",
     focusKeyphrase: "B2B events agency",
     title: "Industry Events Strategy and Execution | B2B Sales Arrow",
   },

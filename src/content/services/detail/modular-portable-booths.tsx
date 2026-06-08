@@ -2,8 +2,8 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const MODULAR_BOOTHS_HERO = {
   description:
-    "The same modular booth system — New York, Dubai, Singapore, London — one quarter. Our systems give enterprise teams consistent brand presence across every event without rebuilding from scratch each time.",
-  title: "Modular and Portable Trade Show Booths — Engineered for Enterprise Efficiency",
+    "The same modular booth system, New York, Dubai, Singapore, London, one quarter. Our systems give enterprise teams consistent brand presence across every event without rebuilding from scratch each time.",
+  title: "Modular and Portable Trade Show Booths, Engineered for Enterprise Efficiency",
 };
 
 export { GLOBAL_PROOF_STATS as MODULAR_BOOTHS_PROOF_BAR } from "../../shared";
@@ -22,7 +22,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "We architect modular environments — designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
+        "We architect modular environments, designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
       icon: "Layers",
       id: "design",
       image: "/images/home/services/booth/booth-5.avif",
@@ -127,7 +127,7 @@ export const MODULAR_BOOTHS_FAQ = {
   faqs: [
     {
       answer:
-        "A modular trade show booth is a reusable exhibition structure built from interchangeable components that reconfigure for different booth sizes, formats, and events. Graphics update between shows while the structure is reused — reducing cost and logistics complexity across multi-event programs.",
+        "A modular trade show booth is a reusable exhibition structure built from interchangeable components that reconfigure for different booth sizes, formats, and events. Graphics update between shows while the structure is reused, reducing cost and logistics complexity across multi-event programs.",
       id: "what-is",
       question: "What is a modular trade show booth?",
     },
@@ -139,7 +139,7 @@ export const MODULAR_BOOTHS_FAQ = {
     },
     {
       answer:
-        "Yes — engineered for international shipping in hard-shell cases. Deployed across 40+ countries.",
+        "Yes, engineered for international shipping in hard-shell cases. Deployed across 40+ countries.",
       id: "international",
       question: "Can modular booths ship internationally?",
     },
@@ -159,7 +159,7 @@ export const MODULAR_BOOTHS_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/modular-portable-booths",
     description:
-      "Reusable modular booth systems and portable trade show displays — consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.",
+      "Reusable modular booth systems and portable trade show displays, consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.",
     focusKeyphrase: "modular booth",
     secondaryKeywords: [
       "portable trade show booth displays",

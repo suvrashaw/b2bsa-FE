@@ -41,7 +41,7 @@ export const THANK_YOU_SERVICES = {
     {
       color: "bg-brand-blue",
       description:
-        "End-to-end exhibition management across 40+ countries — from booth design to on-floor lead capture.",
+        "End-to-end exhibition management across 40+ countries, from booth design to on-floor lead capture.",
       icon: "Globe",
       id: "global-events",
       image: "/images/home/hero/home_hero_bg.avif",

@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const RESEARCH_HERO = {
   description:
-    "Better strategy starts with better intelligence. Our B2B market research agency helps enterprise teams understand their markets more clearly than the competition — and move on that advantage faster.",
+    "Better strategy starts with better intelligence. Our B2B market research agency helps enterprise teams understand their markets more clearly than the competition, and move on that advantage faster.",
   title: "B2B Market Research That Gives Your Enterprise an Unfair Competitive Advantage",
 };
 
@@ -90,19 +90,19 @@ export const RESEARCH_FAQ = {
   faqs: [
     {
       answer:
-        "B2B market research is the structured process of gathering, analysing, and interpreting market, competitor, and buyer information specifically to support B2B commercial decisions — including market entry, product-market fit, campaign planning, and sales strategy.",
+        "B2B market research is the structured process of gathering, analysing, and interpreting market, competitor, and buyer information specifically to support B2B commercial decisions, including market entry, product-market fit, campaign planning, and sales strategy.",
       id: "what-is",
       question: "What is B2B market research?",
     },
     {
       answer:
-        "Primary: new information gathered directly from sources — interviews, surveys, panels. Secondary: analysis of existing information — reports, competitor websites, public data. Best programs combine both.",
+        "Primary: new information gathered directly from sources, interviews, surveys, panels. Secondary: analysis of existing information, reports, competitor websites, public data. Best programs combine both.",
       id: "primary-secondary",
       question: "What is the difference between primary and secondary research?",
     },
     {
       answer:
-        "Executive briefing decks, detailed research reports, live analyst briefings, ongoing subscriptions, or custom dashboards — format agreed at brief stage based on how your team uses the intelligence.",
+        "Executive briefing decks, detailed research reports, live analyst briefings, ongoing subscriptions, or custom dashboards, format agreed at brief stage based on how your team uses the intelligence.",
       id: "delivery",
       question: "How do you deliver findings?",
     },
@@ -117,7 +117,7 @@ export const RESEARCH_PAGE = {
   seo: {
     canonicalPath: "/services/market-research",
     description:
-      "Enterprise B2B market research agency — data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves.",
+      "Enterprise B2B market research agency, data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves.",
     focusKeyphrase: "B2B market research agency",
     secondaryKeywords: [
       "market research",

@@ -215,7 +215,7 @@ export const BOOTH_HOSTESS_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/booth-hostess",
     description:
-      "Professional booth hostess and brand ambassador services for trade shows and corporate events — briefed, multilingual staff who qualify visitors and drive meeting conversion.",
+      "Professional booth hostess and brand ambassador services for trade shows and corporate events, briefed, multilingual staff who qualify visitors and drive meeting conversion.",
     focusKeyphrase: "booth hostess services",
     secondaryKeywords: [
       "trade show hostess",

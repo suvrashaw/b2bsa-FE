@@ -24,7 +24,7 @@ const industryEventsContactCta = {
   ...CINEMATIC_CTA_SHARED,
   badge: "Plan Your Presence",
   description:
-    "The strongest strategy is not about showing up everywhere — it is about choosing the rooms where your buyers already gather.",
+    "The strongest strategy is not about showing up everywhere, it is about choosing the rooms where your buyers already gather.",
   headingLines: ["The Strongest Strategy", "Chooses the Right Rooms."] as [string, string],
   primaryCta: { href: "/contact", label: "Get a Free Event ROI Assessment" },
 };

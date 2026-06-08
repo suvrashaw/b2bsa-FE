@@ -27,7 +27,7 @@ const corporateVideoContactCta = {
   ...CINEMATIC_CTA_SHARED,
   badge: "Build Authority",
   description:
-    "When your offering is complex, corporate video makes it clear — with the production quality enterprise buyers expect.",
+    "When your offering is complex, corporate video makes it clear, with the production quality enterprise buyers expect.",
   headingLines: ["Complex Offerings", "Made Crystal Clear."] as [string, string],
   primaryCta: { href: "/contact", label: "Start Your Corporate Video Project" },
 };

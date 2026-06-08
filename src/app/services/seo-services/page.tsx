@@ -23,7 +23,7 @@ export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 const seoContactCta = {
   ...CINEMATIC_CTA_SHARED,
   badge: "Own Your Organic Pipeline",
-  description: "Your buyers are searching. Will they find you — or your competitor?",
+  description: "Your buyers are searching. Will they find you, or your competitor?",
   headingLines: ["Your Buyers Are Searching.", "Will They Find You?"] as [string, string],
   primaryCta: { href: "/contact", label: "Get a Free SEO Audit" },
 };

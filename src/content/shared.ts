@@ -66,7 +66,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     metric: "31 SQLs",
     metricLabel: "Against 30-lead target",
     solution:
-      "Active prospecting, international QR-code sourcing, brand wearables, and premium experience touches delivered 31 SQLs — exceeding target with 80% hot and warm leads.",
+      "Active prospecting, international QR-code sourcing, brand wearables, and premium experience touches delivered 31 SQLs, exceeding target with 80% hot and warm leads.",
     title: "SAP Sapphire 2023",
   },
   {

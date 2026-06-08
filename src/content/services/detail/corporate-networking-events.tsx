@@ -228,7 +228,7 @@ export const CORP_NETWORKING_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/corporate-networking-events",
     description:
-      "Corporate networking event solutions for B2B brands — executive gatherings, VIP receptions, networking dinners, and business meetups with seamless coordination globally.",
+      "Corporate networking event solutions for B2B brands, executive gatherings, VIP receptions, networking dinners, and business meetups with seamless coordination globally.",
     focusKeyphrase: "corporate networking events",
     secondaryKeywords: [
       "B2B networking events",

@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const CUSTOM_EVENTS_HERO = {
   description:
-    "When your brand controls the room, the agenda, and the guest list, the event becomes a precision sales instrument. Our custom event solutions are built around one question: what commercial relationship do you need to create — and what kind of experience earns that outcome?",
+    "When your brand controls the room, the agenda, and the guest list, the event becomes a precision sales instrument. Our custom event solutions are built around one question: what commercial relationship do you need to create, and what kind of experience earns that outcome?",
   title: "Custom Event Solutions That Position Your Brand as the Market Authority",
 };
 
@@ -10,7 +10,7 @@ export { GLOBAL_PROOF_STATS as CUSTOM_EVENTS_PROOF_BAR } from "../../shared";
 
 export const CUSTOM_EVENTS_WHY = {
   description:
-    "In a crowded industry calendar, shared space has limitations. When you own the event, you own the environment, the audience, and the narrative. Custom events allow for deep relationship building with C-suite decision-makers that is rarely possible on a trade show floor. Whether it's a private executive dinner or a large-scale user conference, we ensure every detail — from the venue to the menu to the messaging — is engineered to advance your commercial objectives.",
+    "In a crowded industry calendar, shared space has limitations. When you own the event, you own the environment, the audience, and the narrative. Custom events allow for deep relationship building with C-suite decision-makers that is rarely possible on a trade show floor. Whether it's a private executive dinner or a large-scale user conference, we ensure every detail, from the venue to the menu to the messaging, is engineered to advance your commercial objectives.",
   imageUrl: "/images/recent-events/event_other_1.avif",
   titleLine1: "Why Proprietary Events",
   titleLine2: "Outperform Generic Sponsorships",
@@ -205,7 +205,7 @@ export const CUSTOM_EVENTS_FAQ = {
     },
     {
       answer:
-        "A hosted buyer program funds selected buyers' attendance — travel, accommodation, and event access — in exchange for guaranteed time with your sales and leadership team. Most effective for high-value solutions where getting the right buyer in the right room justifies the cost.",
+        "A hosted buyer program funds selected buyers' attendance, travel, accommodation, and event access, in exchange for guaranteed time with your sales and leadership team. Most effective for high-value solutions where getting the right buyer in the right room justifies the cost.",
       id: "hosted-buyer",
       question: "What is a hosted buyer program?",
     },
@@ -217,7 +217,7 @@ export const CUSTOM_EVENTS_FAQ = {
     },
     {
       answer:
-        "Yes — custom events across all major B2B markets including the USA, UAE, UK, Germany, Singapore, and Australia.",
+        "Yes, custom events across all major B2B markets including the USA, UAE, UK, Germany, Singapore, and Australia.",
       id: "international",
       question: "Can you produce events internationally?",
     },
@@ -232,7 +232,7 @@ export const CUSTOM_EVENTS_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/custom-events",
     description:
-      "Custom event solutions for B2B brands — executive roundtables, gala cruise dinners, hosted buyer programs, roadshows, client summits, and premium brand experiences from brief to follow-up.",
+      "Custom event solutions for B2B brands, executive roundtables, gala cruise dinners, hosted buyer programs, roadshows, client summits, and premium brand experiences from brief to follow-up.",
     focusKeyphrase: "custom event solutions",
     secondaryKeywords: [
       "corporate event solutions company",

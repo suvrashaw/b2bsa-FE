@@ -9,9 +9,9 @@ import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation
 import { SHARED_BLOG_POSTS } from "./blogs";
 
 export const BLOG_HERO = {
-  className: "bg-brand-blue",
+  className: "bg-brand-blue pb-16",
   description:
-    "Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
+    "Ideas should help you make better decisions, not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
   eyebrow: "B2B GROWTH INSIGHTS",
   headingClassName: "lg:text-5xl xl:text-5xl",
   image: null,
@@ -63,7 +63,7 @@ export const BLOG_POSTS = {
 
 export const BLOG_CONTACT = {
   description:
-    "Monthly growth intelligence on event strategy, performance marketing, pipeline generation, and market intelligence — delivered to 4,000+ enterprise marketers.",
+    "Monthly growth intelligence on event strategy, performance marketing, pipeline generation, and market intelligence, delivered to 4,000+ enterprise marketers.",
   eyebrow: "",
   form: {
     ctaLabel: "Subscribe to Growth Intelligence",
@@ -90,7 +90,7 @@ export const BLOG_PAGE = {
   seo: {
     canonicalPath: "/blogs",
     description:
-      "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research — written for enterprise marketers and sales leaders.",
+      "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research, written for enterprise marketers and sales leaders.",
     focusKeyphrase: "B2B marketing blog",
     secondaryKeywords: [
       "enterprise marketing insights",

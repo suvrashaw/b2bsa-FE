@@ -4,7 +4,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_RENTAL_RENT_VS_BUY = {
   description:
-    "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics — making it the strategically smarter choice for most programs.",
+    "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics, making it the strategically smarter choice for most programs.",
   heading: "TOP 3 REASONS TO RENT VS. BUY",
   reasons: [
     {
@@ -30,10 +30,10 @@ export const BOOTH_RENTAL_RENT_VS_BUY = {
 
 export const BOOTH_RENTAL_HERO = {
   description:
-    "When speed matters or you're testing a new market, trade show booth rental gives your brand a polished, fully branded exhibition presence — without the fabrication lead time or capital commitment.",
+    "When speed matters or you're testing a new market, trade show booth rental gives your brand a polished, fully branded exhibition presence, without the fabrication lead time or capital commitment.",
   title: (
     <strong className="font-bold">
-      Trade Show Booth Rental — Enterprise Presence Without the Build Timeline
+      Trade Show Booth Rental, Enterprise Presence Without the Build Timeline
     </strong>
   ),
 };
@@ -44,7 +44,7 @@ export const BOOTH_RENTAL_WHY = {
   ctaHref: "/contact",
   ctaLabel: "Let's Connect",
   description:
-    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen—they're remembered.",
+    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen, they're remembered.",
   imageAlt: "B2B Sales Arrow trade show booth rental",
   imageUrl: "/images/home/services/booth/booth-9.avif",
   label: "Our Services",
@@ -58,7 +58,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "High-quality modular systems that can be configured into any size or shape — providing a structural look identical to custom fabrication at a fraction of the lead time.",
+        "High-quality modular systems that can be configured into any size or shape, providing a structural look identical to custom fabrication at a fraction of the lead time.",
       icon: "Layers",
       id: "modular",
       image: "/images/home/services/booth/booth-5.avif",
@@ -85,7 +85,7 @@ export const BOOTH_RENTAL_DELIVERABLES = {
     {
       color: "bg-brand-blue",
       description:
-        "We handle the full lifecycle — venue delivery, professional assembly, on-site technical support, and deconstruction — anywhere in the world.",
+        "We handle the full lifecycle, venue delivery, professional assembly, on-site technical support, and deconstruction, anywhere in the world.",
       icon: "Key",
       id: "logistics",
       image: "/images/home/services/booth/booth-8.avif",
@@ -191,13 +191,13 @@ export const BOOTH_RENTAL_FAQ = {
     },
     {
       answer:
-        "Yes — graphics, messaging, colour system, and engagement setup. A well-executed branded rental is indistinguishable from a custom build to visitors.",
+        "Yes, graphics, messaging, colour system, and engagement setup. A well-executed branded rental is indistinguishable from a custom build to visitors.",
       id: "branded",
       question: "Can the rental be fully branded?",
     },
     {
       answer:
-        "Yes — inter-event storage, graphic refresh between shows, and logistics coordination available.",
+        "Yes, inter-event storage, graphic refresh between shows, and logistics coordination available.",
       id: "multiple-events",
       question: "Can we use the same rental at multiple events?",
     },
@@ -212,7 +212,7 @@ export const BOOTH_RENTAL_FAQ = {
     },
     {
       answer:
-        "Yes — installation, quality review, and post-event breakdown included in all rental packages.",
+        "Yes, installation, quality review, and post-event breakdown included in all rental packages.",
       id: "installation",
       question: "Is installation included?",
     },
@@ -273,7 +273,7 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
   },
   badge: "Ready to Rent?",
   description:
-    "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly — at a fraction of the custom build timeline.",
+    "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly, at a fraction of the custom build timeline.",
   headingLines: ["Fast Does Not Have To", "Feel Temporary"] as [string, string],
   primaryCta: {
     href: "/contact",
@@ -311,7 +311,7 @@ export const BOOTH_RENTAL_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/event-booth-rental",
     description:
-      "Enterprise trade show booth rental — modular, fully branded, globally deployable. From 10x10 to double-deck. Professional presence without the custom build timeline.",
+      "Enterprise trade show booth rental, modular, fully branded, globally deployable. From 10x10 to double-deck. Professional presence without the custom build timeline.",
     focusKeyphrase: "trade show booth rental",
     secondaryKeywords: [
       "trade show booth rentals",

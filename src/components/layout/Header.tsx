@@ -523,7 +523,7 @@ export const Header = ({
           >
             <div className="mx-auto max-w-7xl px-8">
               <div className="grid grid-cols-5 gap-6">
-                {/* Global Event Solutions — spans 2 columns, internally 2-column sub-groups */}
+                {/* Global Event Solutions, spans 2 columns, internally 2-column sub-groups */}
                 <div className="col-span-2">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
@@ -540,7 +540,7 @@ export const Header = ({
                   group={serviceNavigationGroups[3]}
                   onClose={handleCloseMegamenu}
                 />
-                {/* Sales Qualified Lead Generation + Market Research + HPMI — stacked */}
+                {/* Sales Qualified Lead Generation + Market Research + HPMI, stacked */}
                 <div>
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[2]}

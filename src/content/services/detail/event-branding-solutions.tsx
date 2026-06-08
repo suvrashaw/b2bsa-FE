@@ -229,7 +229,7 @@ export const EVENT_BRANDING_PAGE = {
   seo: {
     canonicalPath: "/services/global-event-solutions/event-branding-solutions",
     description:
-      "Event branding solutions for B2B companies — booth signage, event identity design, merchandise, digital assets, and printed collateral that project authority at every show.",
+      "Event branding solutions for B2B companies, booth signage, event identity design, merchandise, digital assets, and printed collateral that project authority at every show.",
     focusKeyphrase: "event branding solutions",
     secondaryKeywords: [
       "event branding agency",

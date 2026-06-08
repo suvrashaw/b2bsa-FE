@@ -128,7 +128,7 @@ export const FAQ = ({
 
   return (
     <section className="relative bg-brand-gray py-20" id="faq">
-      {/* Decorative Gradients — isolated so they don't create a clip context for cards */}
+      {/* Decorative Gradients, isolated so they don't create a clip context for cards */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
         <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
