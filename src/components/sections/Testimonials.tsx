@@ -115,8 +115,17 @@ const TestimonialCard = ({
         </p>
 
         <div className="border-t border-gray-100 pt-5">
-          <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
-          <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
+          <div className="flex items-start justify-between gap-2">
+            <div>
+              <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
+              <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
+            </div>
+            {testimonial.serviceTag && (
+              <span className="shrink-0 rounded-full bg-[#1E6091]/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-[#1E6091] uppercase">
+                {testimonial.serviceTag}
+              </span>
+            )}
+          </div>
         </div>
 
         {!isCenter && (

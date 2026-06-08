@@ -56,9 +56,9 @@ export const Blogs = ({
         </div>
 
         {layout === "grid" ? (
-          <div className="mt-8 mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mb-8 lg:grid-cols-3">
+          <div className="mt-8 mb-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-8 lg:grid-cols-3">
             {blogs.map((blog) => (
-              <Link href={getBlogHref(blog.id, blog.href)} key={blog.id}>
+              <Link className="block h-full" href={getBlogHref(blog.id, blog.href)} key={blog.id}>
                 <BlogCardGrid blog={blog} />
               </Link>
             ))}

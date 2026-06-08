@@ -17,10 +17,12 @@ export interface WhyChooseUsProps {
   showImagePanel?: boolean;
 }
 
-const WHYCHOOSEUS_ANIMATE = { opacity: 1, y: 0 };
-const WHYCHOOSEUS_EXIT = { opacity: 0, y: -20 };
-const WHYCHOOSEUS_INITIAL = { opacity: 0, y: 20 };
-const WHYCHOOSEUS_TRANSITION = { duration: 0.5, ease: "easeOut" } as const;
+const TEXT_ANIMATE = { opacity: 1, scale: 1, y: 0 };
+const TEXT_EXIT = { opacity: 0, scale: 1.02, y: -20 };
+const TEXT_INITIAL = { opacity: 0, scale: 0.97, y: 20 };
+const TEXT_TRANSITION = { duration: 0.25, ease: "easeOut" } as const;
+const IMAGE_SLIDE_TRANSITION = { type: "spring", stiffness: 80, damping: 28, mass: 0.8 } as const;
+const IMAGE_SCALE_TRANSITION = { type: "spring", stiffness: 60, damping: 25, mass: 1 } as const;
 
 export const WhyChooseUs = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
@@ -31,39 +33,17 @@ export const WhyChooseUs = ({
 }: WhyChooseUsProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
   const resolvedActiveIndex = Math.min(activeIndex, Math.max(reasons.length - 1, 0));
   const activeReason = reasons[resolvedActiveIndex];
+
   const updateActiveIndex = useCallback(
     (latest: number) => {
       if (reasons.length === 0) return;
-
-      let nextIndex = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
-
-      if (showImagePanel) {
-        const imageBlocks = containerRef.current?.querySelectorAll<HTMLElement>(
-          "[data-why-choose-us-image]"
-        );
-
-        if (imageBlocks?.length) {
-          const viewportCenter = globalThis.innerHeight / 2;
-          let closestDistance = Number.POSITIVE_INFINITY;
-
-          for (const [index, block] of imageBlocks.entries()) {
-            const rect = block.getBoundingClientRect();
-            const blockCenter = rect.top + rect.height / 2;
-            const distance = Math.abs(blockCenter - viewportCenter);
-
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              nextIndex = index;
-            }
-          }
-        }
-      }
-
-      setActiveIndex((currentIndex) => (nextIndex === currentIndex ? currentIndex : nextIndex));
+      const nextIndex = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
+      setActiveIndex((current) => (nextIndex === current ? current : nextIndex));
     },
-    [reasons.length, showImagePanel]
+    [reasons.length]
   );
 
   const { scrollYProgress } = useScroll({
@@ -71,39 +51,38 @@ export const WhyChooseUs = ({
     target: containerRef,
   });
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    updateActiveIndex(latest);
-  });
+  useMotionValueEvent(scrollYProgress, "change", updateActiveIndex);
 
   return (
-    <section className="relative bg-brand-gray" ref={containerRef}>
-      <div className="pointer-events-none absolute inset-0">
-        <div className="sticky top-0 z-0 h-screen w-full bg-brand-gray" />
-      </div>
-
+    <section
+      className="relative bg-brand-gray"
+      ref={containerRef}
+      style={{ minHeight: `${(reasons.length + 1) * 100}vh` }}
+    >
       <div
-        className={`container mx-auto flex flex-col px-8 ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}
+        className={`container sticky top-0 mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
       >
+        {/* Left text panel */}
         <div
-          className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "max-w-4xl items-center text-center md:w-3/4"} flex h-auto flex-col items-start justify-center py-20 md:sticky md:top-0 md:h-screen md:py-0`}
+          className={`flex h-screen flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
           {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="mb-14 w-full text-left">
             {heading}
           </Heading>
 
-          <div className="relative mt-4 flex min-h-[200px] w-full justify-center">
+          <div className="relative mt-4 flex min-h-[200px] w-full">
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div
-                  animate={WHYCHOOSEUS_ANIMATE}
+                  animate={TEXT_ANIMATE}
                   className="absolute inset-0 flex flex-col items-start justify-center text-left"
-                  exit={WHYCHOOSEUS_EXIT}
-                  initial={WHYCHOOSEUS_INITIAL}
+                  exit={TEXT_EXIT}
+                  initial={TEXT_INITIAL}
                   key={resolvedActiveIndex}
-                  transition={WHYCHOOSEUS_TRANSITION}
+                  transition={TEXT_TRANSITION}
                 >
-                  <div className="mb-4 flex items-center gap-3 text-left">
+                  <div className="mb-4 flex items-center gap-3">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <Heading as="h3">{activeReason.title}</Heading>
                   </div>
@@ -116,35 +95,39 @@ export const WhyChooseUs = ({
           </div>
         </div>
 
+        {/* Right image reel — slides vertically inside overflow-hidden container */}
         {showImagePanel && (
-          <div className="flex w-full flex-col pb-[20vh] md:w-1/2">
-            {reasons.map((reason, index) => (
-              <div
-                aria-hidden={index !== resolvedActiveIndex}
-                className="flex h-[80vh] w-full items-center justify-center p-10 md:h-screen md:p-16"
-                data-why-choose-us-image
-                key={reason.id}
-              >
-                <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
-                  <Image
-                    alt={reason.title}
-                    className="object-cover"
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    src={reason.image}
-                  />
-                  <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                  <div className="absolute right-8 bottom-8 left-8 md:hidden">
-                    <Heading as="h3" className="mb-2 text-white">
-                      {reason.title}
-                    </Heading>
-                    <p className="text-sm text-gray-200">{reason.description}</p>
+          <div className="relative hidden h-screen w-1/2 overflow-hidden md:block">
+            <motion.div
+              animate={{ y: `${-resolvedActiveIndex * 100}vh` }}
+              className="absolute left-0 right-0 top-0 flex flex-col"
+              transition={IMAGE_SLIDE_TRANSITION}
+            >
+              {reasons.map((reason, index) => (
+                <div
+                  className="flex h-screen w-full shrink-0 items-center justify-center p-16"
+                  key={reason.id}
+                >
+                  <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
+                    <motion.div
+                      animate={{ scale: index === resolvedActiveIndex ? 1 : 1.06 }}
+                      className="absolute inset-0"
+                      transition={IMAGE_SCALE_TRANSITION}
+                    >
+                      <Image
+                        alt={reason.title}
+                        className="object-cover"
+                        fill
+                        sizes="50vw"
+                        src={reason.image}
+                      />
+                    </motion.div>
+                    <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </motion.div>
           </div>
         )}
       </div>

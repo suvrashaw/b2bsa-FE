@@ -97,9 +97,9 @@ export const BlogCard = ({
         {blog.date && (
           <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-4 font-heading text-xl leading-tight font-bold md:text-2xl">{blog.title}</h3>
+        <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-xl leading-tight font-bold md:text-2xl">{blog.title}</h3>
         {blog.excerpt && (
-          <p className="mb-6 line-clamp-3 text-sm leading-relaxed text-gray-600">
+          <p className="mb-6 line-clamp-3 min-h-[3.75rem] text-sm leading-relaxed text-gray-600">
             {blog.excerpt}
           </p>
         )}
@@ -113,8 +113,8 @@ export const BlogCard = ({
 
 export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
   return (
-    <div className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
-      <div className="relative h-52 w-full overflow-hidden">
+    <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+      <div className="relative h-52 w-full shrink-0 overflow-hidden">
         <Image
           alt={blog.title}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -130,13 +130,13 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
           </div>
         )}
       </div>
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         {blog.date && (
           <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
         <h3 className="mb-3 font-heading text-xl leading-snug font-bold md:text-2xl">{blog.title}</h3>
         {blog.excerpt && (
-          <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-gray-600">
+          <p className="mb-4 flex-1 line-clamp-3 text-sm leading-relaxed text-gray-600">
             {blog.excerpt}
           </p>
         )}

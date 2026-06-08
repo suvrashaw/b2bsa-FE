@@ -5,7 +5,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
@@ -23,14 +24,17 @@ const socialLinks = [
     href: "https://www.linkedin.com/company/b2b-sales-arrow/",
     icon: FaLinkedinIn,
     name: "LinkedIn",
+    colorClass: "text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2]",
   },
   {
-    icon: FaTwitter,
-    name: "Twitter",
+    icon: FaXTwitter,
+    name: "X",
+    colorClass: "text-[#000000] hover:border-[#000000] hover:bg-[#000000]",
   },
   {
     icon: FaInstagram,
     name: "Instagram",
+    colorClass: "text-[#E1306C] hover:border-[#E1306C] hover:bg-[#E1306C]",
   },
 ];
 
@@ -200,14 +204,14 @@ export const Footer = () => {
                 <div className="flex items-center gap-3">
                   {socialLinks.map((item) => {
                     const Icon = item.icon;
-                    const className =
-                      "flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-brand-gray text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white";
+                    const baseClass =
+                      "flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-brand-gray transition-all duration-300";
 
                     if (item.href) {
                       return (
                         <a
                           aria-label={`Visit B2B Sales Arrow on ${item.name}`}
-                          className={className}
+                          className={cn(baseClass, "hover:text-white", item.colorClass)}
                           href={item.href}
                           key={item.name}
                           rel="noreferrer"
@@ -223,8 +227,9 @@ export const Footer = () => {
                         aria-disabled="true"
                         aria-label={`${item.name} profile coming soon`}
                         className={cn(
-                          className,
-                          "cursor-not-allowed opacity-60 hover:bg-brand-gray hover:text-brand-blue"
+                          baseClass,
+                          item.colorClass.split(' ')[0], // only apply text color, not hover effects
+                          "cursor-not-allowed opacity-60 hover:bg-brand-gray"
                         )}
                         key={item.name}
                       >

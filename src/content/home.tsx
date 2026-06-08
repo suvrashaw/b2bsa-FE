@@ -190,6 +190,7 @@ export interface TestimonialItem {
   name: string;
   quote: string;
   rating: number;
+  serviceTag?: string;
 }
 
 export interface TestimonialsContent {
@@ -582,30 +583,37 @@ export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
     {
       description:
         "We deliberately engineer every event strategy directly from your commercial goals to drive measurable pipeline outcomes.",
-      id: "proven-execution",
+      id: "revenue-driven-execution",
       image: "/images/home/why-choose-us/proven_execution.avif",
-      title: "Proven Execution",
+      title: "Revenue-Driven Execution",
     },
     {
       description:
         "We consolidate booth design, media production, and marketing under one accountable roof to eliminate vendor gaps.",
-      id: "strategic-creativity",
+      id: "zero-coordination-tax",
       image: "/images/home/why-choose-us/strategic_creativity.avif",
-      title: "Strategic Creativity",
+      title: "Zero Coordination Tax",
     },
     {
       description:
         "We leverage deep regional intelligence across three continents to ensure flawless corporate experiences around the globe.",
-      id: "global-reach",
+      id: "seamless-worldwide-delivery",
       image: "/images/home/why-choose-us/global_reach.avif",
-      title: "Global Reach",
+      title: "Seamless Worldwide Delivery",
     },
     {
       description:
-        "We deploy cutting-edge technology and tools across every stage of event execution to deliver consistently superior outcomes.",
-      id: "technology-led-delivery",
+        "We deploy trained sales specialists directly onto the active event floor to hunt high-value enterprise decision-makers.",
+      id: "proprietary-active-prospecting",
       image: "/images/home/why-choose-us/technology_led_delivery.avif",
-      title: "Technology-Led Delivery",
+      title: "Proprietary Active Prospecting",
+    },
+    {
+      description:
+        "We possess extensive domain expertise across major global sectors so we already understand your specific language.",
+      id: "deep-industry-expertise",
+      image: "/images/home/why-choose-us/proven_execution.avif",
+      title: "Deep Industry Expertise",
     },
   ],
 };
@@ -624,6 +632,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       quote:
         '"Their team built an incredible sustainable booth that perfectly captured our global brand identity this year."',
       rating: 5,
+      serviceTag: "Trade Show Booth Design",
     },
     {
       company: "[Enterprise Brand]",
@@ -634,6 +643,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       quote:
         '"Their active prospecting team navigated the event floor and delivered fifty highly qualified sales leads daily."',
       rating: 5,
+      serviceTag: "Active Prospecting",
     },
     {
       company: "[Enterprise Brand]",
@@ -644,6 +654,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       quote:
         '"They curated an exclusive networking experiences and provided premium custom giveaways that kept our attendees fully engaged."',
       rating: 5,
+      serviceTag: "Event Audience Generation",
     },
     {
       company: "[Enterprise Brand]",
@@ -654,6 +665,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       quote:
         '"The media production team captured every key moment with broadcast-quality precision, the final content exceeded our expectations."',
       rating: 5,
+      serviceTag: "Media Production",
     },
     {
       company: "[Enterprise Brand]",
@@ -664,6 +676,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
       quote:
         '"From strategy to execution, the entire program ran seamlessly across three countries, a truly end-to-end global event partner."',
       rating: 5,
+      serviceTag: "Global Event Solutions",
     },
   ],
 };

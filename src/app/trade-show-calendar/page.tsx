@@ -18,7 +18,7 @@ export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_P
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header />
+      <Header forceLightMode={true} />
       <ImageHero
         description={TRADE_SHOW_CALENDAR_HERO.description}
         images={TRADE_SHOW_CALENDAR_HERO_IMAGES}

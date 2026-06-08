@@ -463,7 +463,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-9 w-32 transition-all duration-300 hover:opacity-80 lg:max-xl:h-8 lg:max-xl:w-28 xl:h-14 xl:w-52"
+          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 lg:h-12 lg:w-44"
           href="/"
         >
           <Image
