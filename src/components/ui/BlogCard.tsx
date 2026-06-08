@@ -53,8 +53,8 @@ export const BlogCard = ({
   const x = useTransform(spread, (s) => s * xOffset);
   const y = useTransform(spread, (s) => s * yOffset);
 
-  const hoverX = relativeIndex * 410;
-  const hoverY = relativeIndex * 300;
+  const hoverX = relativeIndex * 460;
+  const hoverY = relativeIndex * 340;
 
   const activeX = isMobile ? 0 : hoverX;
   const activeY = isMobile ? hoverY : 0;
