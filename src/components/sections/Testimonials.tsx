@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -39,21 +39,21 @@ const stripOuterQuoteMarks = (quote: string) => {
 };
 
 const TestimonialCard = ({
-  activeIndex: _activeIndex,
   index,
   isCenter,
   isVisible,
+  position,
   setActiveIndex,
   testimonial,
 }: {
-  activeIndex: number;
   index: number;
   isCenter: boolean;
   isVisible: boolean;
+  position: number;
   setActiveIndex: (i: number) => void;
   testimonial: TestimonialItem;
 }) => {
-  const pos = index - _activeIndex;
+  const pos = position;
   const absPos = Math.abs(pos);
   const sideRotateY = pos > 0 ? -25 : 25;
   const rotateY = isCenter ? 0 : sideRotateY;
@@ -61,7 +61,12 @@ const TestimonialCard = ({
   const x = isCenter ? 0 : sideX;
   const z = isCenter ? 100 : -100 * absPos;
   const scale = isCenter ? 1 : 1 - 0.1 * absPos;
-  const opacity = isCenter ? 1 : Math.max(0, 0.5 - 0.3 * (absPos - 1));
+  let opacity = 0;
+  if (isCenter) {
+    opacity = 1;
+  } else if (absPos === 1) {
+    opacity = 0.5;
+  }
   const blur = isCenter ? 0 : 3 * absPos;
   const zIndex = 50 - absPos * 10;
   const cardAnimate = useMemo(
@@ -167,7 +172,7 @@ export const Testimonials = ({
     return () => observer.disconnect();
   }, []);
 
-  const { activeIndex, getRelativePosition, handleNext, handlePrev, setActiveIndex } =
+  const { activeIndex, getRelativePosition, setActiveIndex } =
     useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval, isVisible);
 
   return (
@@ -176,9 +181,9 @@ export const Testimonials = ({
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
       <div className="relative z-10 container mx-auto px-8">
-        <div className="mb-12 flex flex-col items-start text-left">
+        <div className="mb-12 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-6 text-left">
+          <Heading as="h2" className="mb-6 text-center">
             {heading}
           </Heading>
         </div>
@@ -192,14 +197,14 @@ export const Testimonials = ({
             const pos = getRelativePosition(index);
             const isCenter = pos === 0;
             const absPos = Math.abs(pos);
-            const isVisible = absPos <= 2;
+            const isVisible = absPos <= 1;
             return (
               <TestimonialCard
-                activeIndex={activeIndex}
                 index={index}
                 isCenter={isCenter}
                 isVisible={isVisible}
                 key={testimonial.id}
+                position={pos}
                 setActiveIndex={setActiveIndex}
                 testimonial={testimonial}
               />
@@ -207,16 +212,8 @@ export const Testimonials = ({
           })}
         </div>
 
-        {/* Custom Pagination & Navigation */}
-        <div className="relative z-50 mt-16 flex items-center justify-center gap-12">
-          <button
-            aria-label="Previous testimonial"
-            className="hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 text-gray-600 shadow-sm transition-all duration-300 hover:bg-[#1E6091] hover:text-white"
-            onClick={handlePrev}
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-
+        {/* Custom Pagination */}
+        <div className="relative z-50 mt-16 flex items-center justify-center">
           <div className="flex gap-3">
             {testimonials.map((_, idx) => (
               <DotButton
@@ -227,14 +224,6 @@ export const Testimonials = ({
               />
             ))}
           </div>
-
-          <button
-            aria-label="Next testimonial"
-            className="hover:border-[#1E6091]:bg-[#4BC0D9]:text-[#1a1c1e] flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 text-gray-600 shadow-sm transition-all duration-300 hover:bg-[#1E6091] hover:text-white"
-            onClick={handleNext}
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
         </div>
       </div>
     </section>

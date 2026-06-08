@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -33,6 +33,38 @@ export const WhyChooseUs = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const resolvedActiveIndex = Math.min(activeIndex, Math.max(reasons.length - 1, 0));
   const activeReason = reasons[resolvedActiveIndex];
+  const updateActiveIndex = useCallback(
+    (latest: number) => {
+      if (reasons.length === 0) return;
+
+      let nextIndex = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
+
+      if (showImagePanel) {
+        const imageBlocks = containerRef.current?.querySelectorAll<HTMLElement>(
+          "[data-why-choose-us-image]"
+        );
+
+        if (imageBlocks?.length) {
+          const viewportCenter = globalThis.innerHeight / 2;
+          let closestDistance = Number.POSITIVE_INFINITY;
+
+          for (const [index, block] of imageBlocks.entries()) {
+            const rect = block.getBoundingClientRect();
+            const blockCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(blockCenter - viewportCenter);
+
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              nextIndex = index;
+            }
+          }
+        }
+      }
+
+      setActiveIndex((currentIndex) => (nextIndex === currentIndex ? currentIndex : nextIndex));
+    },
+    [reasons.length, showImagePanel]
+  );
 
   const { scrollYProgress } = useScroll({
     offset: ["start center", "end center"],
@@ -40,20 +72,11 @@ export const WhyChooseUs = ({
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (reasons.length === 0) return;
-
-    // Determine which item is active based on scroll progress
-    const index = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
-    if (index !== activeIndex) {
-      setActiveIndex(index);
-    }
+    updateActiveIndex(latest);
   });
 
   return (
     <section className="relative bg-brand-gray" ref={containerRef}>
-      {/* 
-        The container needs to be tall enough to allow scrolling.
-      */}
       <div className="pointer-events-none absolute inset-0">
         <div className="sticky top-0 z-0 h-screen w-full bg-brand-gray" />
       </div>
@@ -61,7 +84,6 @@ export const WhyChooseUs = ({
       <div
         className={`container mx-auto flex flex-col px-8 ${showImagePanel ? "md:flex-row" : "items-center"} relative z-10`}
       >
-        {/* Left Side: Sticky Content */}
         <div
           className={`w-full ${showImagePanel ? "md:w-1/2 md:pr-20" : "max-w-4xl items-center text-center md:w-3/4"} flex h-auto flex-col items-start justify-center py-20 md:sticky md:top-0 md:h-screen md:py-0`}
         >
@@ -94,20 +116,26 @@ export const WhyChooseUs = ({
           </div>
         </div>
 
-        {/* Right Side: Scrolling Images */}
         {showImagePanel && (
           <div className="flex w-full flex-col pb-[20vh] md:w-1/2">
-            {reasons.map((reason) => (
+            {reasons.map((reason, index) => (
               <div
-                className="flex h-[80vh] w-full items-center justify-center p-8 md:h-screen"
+                aria-hidden={index !== resolvedActiveIndex}
+                className="flex h-[80vh] w-full items-center justify-center p-10 md:h-screen md:p-16"
+                data-why-choose-us-image
                 key={reason.id}
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
-                  <Image alt={reason.title} className="object-cover" fill src={reason.image} />
+                <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-gray-200 shadow-2xl md:aspect-square">
+                  <Image
+                    alt={reason.title}
+                    className="object-cover"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    src={reason.image}
+                  />
                   <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
-                  {/* Mobile text fallback since sticky scroll might be weird on mobile */}
                   <div className="absolute right-8 bottom-8 left-8 md:hidden">
                     <Heading as="h3" className="mb-2 text-white">
                       {reason.title}

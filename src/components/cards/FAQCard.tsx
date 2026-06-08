@@ -2,27 +2,45 @@
 
 import type { ReactNode } from "react";
 
-import { HelpCircle } from "lucide-react";
+import Image from "next/image";
 
 export interface FAQCardProps {
   answer: React.ReactNode | string;
   icon?: ReactNode;
+  image?: string;
   layoutMode?: "carousel" | "fit";
   question: string;
 }
 
-export const FAQCard = ({ answer, icon, layoutMode = "carousel", question }: FAQCardProps) => {
+export const FAQCard = ({ answer, icon, image, layoutMode = "carousel", question }: FAQCardProps) => {
   return (
     <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">
       <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
-        {/* Front: Question */}
-        <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-center rounded-2xl border border-gray-100 bg-[#F8F9FA] p-8 text-left [backface-visibility:hidden]">
-          <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue transition-transform group-hover:scale-110">
-            {icon ?? <HelpCircle className="h-6 w-6" />}
+
+        {/* Front: Image + overlay + question */}
+        <div className="absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]">
+          {image ? (
+            <>
+              <Image
+                alt={question}
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                sizes="320px"
+                src={image}
+              />
+              {/* Dark gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/25" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-[#F8F9FA]" />
+          )}
+
+          {/* Content on top of overlay */}
+          <div className="absolute inset-0 flex flex-col items-start justify-end p-8">
+            <h3 className={`font-heading text-lg md:text-2xl leading-snug font-semibold ${image ? "text-white" : "text-brand-charcoal"}`}>
+              {question}
+            </h3>
           </div>
-          <h3 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
-            {question}
-          </h3>
         </div>
 
         {/* Back: Answer */}

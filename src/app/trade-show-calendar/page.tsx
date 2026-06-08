@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ImageHero } from "@/components/sections/ImageHero";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -15,7 +16,12 @@ export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_P
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header forceLightMode />
+      <Header />
+      <ImageHero
+        description={TRADE_SHOW_CALENDAR_HERO.description}
+        images={["/images/blog/trade-show-booth-trends-2026.avif"]}
+        title={TRADE_SHOW_CALENDAR_HERO.title}
+      />
       <TradeShowCalendarDirectory
         description={TRADE_SHOW_CALENDAR_HERO.description}
         events={TRADE_SHOW_CALENDAR_EVENTS}

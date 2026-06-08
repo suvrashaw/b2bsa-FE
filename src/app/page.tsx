@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CinematicSequence } from "@/components/sections/CinematicSequence";
+import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
@@ -14,7 +14,7 @@ import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
+import { HOME_CINEMATIC_SEQUENCE_CONTENT, HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import { buildFaqJsonLd } from "@/lib";
@@ -25,9 +25,14 @@ const Home = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
-      <Header darkBackground />
+      <Header forceLightMode />
       <div id="home">
-        <CinematicSequence />
+        <ServiceHero
+          description={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.description}
+          primaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.primaryCta}
+          secondaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.secondaryCta}
+          title={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.title}
+        />
       </div>
 
       <ClientLogos />
@@ -41,11 +46,11 @@ const Home = () => {
       </div>
 
       <div id="work">
-        <CaseStudies items={GLOBAL_CASE_STUDIES} />
+        <CaseStudies items={GLOBAL_CASE_STUDIES} viewAllLabel="View All Case Studies" />
       </div>
 
       <div id="events">
-        <UpcomingEvents />
+        <UpcomingEvents viewAllHref="/events" />
       </div>
 
       <WhyChooseUs />
@@ -53,7 +58,7 @@ const Home = () => {
       <Testimonials />
 
       <div id="blogs">
-        <Blogs />
+        <Blogs viewAllHref="/blogs" />
       </div>
 
       <div id="faq">

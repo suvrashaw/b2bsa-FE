@@ -4,7 +4,6 @@ import {
   ArrowUpDown,
   Building2,
   CalendarDays,
-  ExternalLink,
   Grid2X2,
   List,
   MapPin,
@@ -299,14 +298,12 @@ const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
           {show.name}
         </h3>
       </div>
-      <div className="rounded-lg bg-brand-blue/10 px-3 py-2 text-right text-xs font-bold text-brand-blue">
-        {formatDateRange(show.startDate, show.endDate)}
-      </div>
     </div>
 
     <p className="mb-5 flex-1 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
 
     <div className="space-y-3 border-y border-gray-100 py-4">
+      <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
       <EventMeta icon={MapPin} label={`${show.venue}, ${formatLocation(show)}`} />
       <EventMeta
         icon={Users}
@@ -318,17 +315,9 @@ const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
       />
     </div>
 
-    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <a
-        className="inline-flex items-center gap-2 text-sm font-bold text-brand-blue transition hover:text-brand-cyan"
-        href={show.sourceUrl}
-        rel="noreferrer"
-        target="_blank"
-      >
-        Official site <ExternalLink className="h-4 w-4" />
-      </a>
-      <Button asChild size="sm" variant="primary">
-        <Link href="/contact">Plan Strategy</Link>
+    <div className="mt-5 flex w-full">
+      <Button asChild className="w-full" size="sm" variant="secondary">
+        <Link href="/contact">Let&apos;s Talk</Link>
       </Button>
     </div>
   </article>
@@ -366,14 +355,9 @@ const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap gap-3 lg:justify-end">
-        <Button asChild size="sm" variant="secondary">
-          <a href={show.sourceUrl} rel="noreferrer" target="_blank">
-            Official site
-          </a>
-        </Button>
-        <Button asChild size="sm" variant="primary">
-          <Link href="/contact">Plan Strategy</Link>
+      <div className="flex w-full mt-2 lg:mt-0 lg:justify-end">
+        <Button asChild className="w-full lg:w-auto" size="sm" variant="secondary">
+          <Link href="/contact">Let&apos;s Talk</Link>
         </Button>
       </div>
     </div>
@@ -576,7 +560,7 @@ export const TradeShowCalendarDirectory = ({
     );
   } else if (viewMode === "cards") {
     resultsContent = (
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid auto-rows-fr gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {filteredEvents.map((show) => (
           <TradeShowCard key={show.id} show={show} />
         ))}
@@ -594,17 +578,8 @@ export const TradeShowCalendarDirectory = ({
 
   return (
     <>
-      <section className="bg-white pt-36 pb-16 lg:pt-44 lg:pb-20">
-        <div className="container mx-auto px-8 text-center">
-          <Eyebrow className="justify-center" variant="blue">
-            {eyebrow}
-          </Eyebrow>
-          <h1 className="mx-auto mt-5 max-w-5xl font-heading text-5xl leading-tight font-black text-brand-charcoal md:text-7xl">
-            {title}
-          </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed font-medium text-brand-charcoal/70">
-            {description}
-          </p>
+      <section className="bg-brand-gray pt-16 pb-8">
+        <div className="container mx-auto px-8">
           <div className="relative mx-auto mt-10 max-w-3xl">
             <Search className="absolute top-1/2 left-5 h-5 w-5 -translate-y-1/2 text-brand-charcoal/40" />
             <input

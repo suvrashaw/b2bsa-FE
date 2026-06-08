@@ -132,7 +132,7 @@ export const CaseStudies = ({
         {viewAllLabel && (
           <div className="mt-12 text-center">
             <Link href={viewAllHref}>
-              <Button className="hidden md:inline-flex" variant="tertiary">
+              <Button variant="secondary">
                 {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
               </Button>
             </Link>

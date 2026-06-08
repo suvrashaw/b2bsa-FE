@@ -34,12 +34,14 @@ const FAQ_VIEWPORT = { once: true };
 const FAQMotionCard = ({
   answer,
   icon,
+  image,
   index,
   layoutMode,
   question,
 }: {
   answer: ReactNode;
   icon?: ReactNode;
+  image?: string;
   index: number;
   layoutMode: "carousel" | "fit";
   question: string;
@@ -53,7 +55,7 @@ const FAQMotionCard = ({
       viewport={FAQ_VIEWPORT}
       whileInView={FAQ_ITEM_WHILEINVIEW}
     >
-      <FAQCard answer={answer} icon={icon} layoutMode={layoutMode} question={question} />
+      <FAQCard answer={answer} icon={icon} image={image} layoutMode={layoutMode} question={question} />
     </motion.div>
   );
 };
@@ -167,6 +169,7 @@ export const FAQ = ({
             <FAQMotionCard
               answer={faq.answer}
               icon={faq.icon}
+              image={faq.image}
               index={index}
               key={faq.id}
               layoutMode={resolvedLayoutMode}

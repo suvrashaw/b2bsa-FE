@@ -1,10 +1,12 @@
 "use client";
 
 import { useScroll, useTransform } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
 
 import { BlogCard, BlogCardGrid } from "@/components/ui/BlogCard";
+import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home";
@@ -16,6 +18,8 @@ export interface BlogsProps {
   eyebrow?: BlogsContent["eyebrow"];
   heading?: BlogsContent["heading"];
   layout?: "deck" | "grid";
+  viewAllHref?: string;
+  viewAllLabel?: string;
 }
 
 const getBlogHref = (id: number | string, href?: string) => href ?? `/blogs/${id}`;
@@ -27,6 +31,8 @@ export const Blogs = ({
   eyebrow = content.eyebrow,
   heading = content.heading,
   layout = "deck",
+  viewAllHref,
+  viewAllLabel = "View All Blogs",
 }: BlogsProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -50,7 +56,7 @@ export const Blogs = ({
         </div>
 
         {layout === "grid" ? (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mb-8 lg:grid-cols-3">
             {blogs.map((blog) => (
               <Link href={getBlogHref(blog.id, blog.href)} key={blog.id}>
                 <BlogCardGrid blog={blog} />
@@ -59,7 +65,7 @@ export const Blogs = ({
           </div>
         ) : (
           <div
-            className="perspective-1000 relative mx-auto flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:h-[450px]"
+            className="perspective-1000 relative mx-auto mt-8 mb-6 flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:mt-10 lg:mb-10 lg:h-[580px]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -75,6 +81,16 @@ export const Blogs = ({
                 />
               </Link>
             ))}
+          </div>
+        )}
+
+        {viewAllHref && (
+          <div className="mt-12 text-center">
+            <Button asChild variant="secondary">
+              <Link href={viewAllHref}>
+                {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         )}
       </div>

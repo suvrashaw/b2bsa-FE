@@ -139,6 +139,7 @@ export interface FAQItem {
   answer: ReactNode | string;
   icon?: ReactNode;
   id: number | string;
+  image?: string;
   question: string;
 }
 
@@ -685,6 +686,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 1,
+      image: "/images/home/services/booth/booth-5.avif",
       question: "What services do you offer as an event partner?",
     },
     {
@@ -696,6 +698,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 2,
+      image: "/images/home/why-choose-us/global_reach.avif",
       question: "Do you manage exhibitions outside of the United States?",
     },
     {
@@ -707,6 +710,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 3,
+      image: "/images/home/services/booth/booth-7.avif",
       question: "Can you build custom exhibits for our specific industry?",
     },
     {
@@ -718,6 +722,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 4,
+      image: "/images/home/services/sql-generation-revised.avif",
       question: "How do you guarantee high-quality leads from an exhibition?",
     },
     {
@@ -729,6 +734,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 5,
+      image: "/images/recent-events/event_other_1.avif",
       question: "Do you help with attendee engagement and networking?",
     },
     {
@@ -740,6 +746,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 6,
+      image: "/images/home/why-choose-us/proven_execution.avif",
       question: "Do you handle both strategic planning and physical build?",
     },
     {
@@ -751,6 +758,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 7,
+      image: "/images/home/services/performance-marketing-1.avif",
       question: "How do you drive traffic to our booth before events?",
     },
     {
@@ -762,6 +770,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 8,
+      image: "/images/home/services/media-production-2.avif",
       question: "Can you help us repurpose the event for digital marketing?",
     },
   ],
@@ -780,26 +789,12 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
     ctaLabel: "Get Your Custom Proposal",
     emailLabel: "Work Email",
     emailPlaceholder: "john@company.com",
-    eventLabel: "Upcoming Event Name & Date (Optional)",
-    eventPlaceholder: "e.g. GITEX 2026, October 2026",
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
+    firstNameLabel: "Name",
+    firstNamePlaceholder: "Your Name",
     messageLabel: "Tell us about your event goals and requirements:",
     messagePlaceholder: "Enter your requirements here...",
-    phoneLabel: "Phone Number",
+    phoneLabel: "Phone Number (Optional)",
     phonePlaceholder: "+1 (000) 000-0000",
-    serviceLabel: "Select the services you need",
-    serviceOptions: [
-      { label: "End-to-End Global Event Solutions", value: "end-to-end" },
-      { label: "Trade Show Booth Design & Production", value: "booth-design" },
-      { label: "On-Ground Active Prospecting", value: "on-ground" },
-      { label: "Corporate Media Production", value: "media" },
-      { label: "Database & Market Research", value: "research" },
-      { label: "Performance Marketing", value: "marketing" },
-    ],
-    servicePlaceholder: "Select a service...",
   },
   heading: <>Ready to Build Your Global Event Strategy?</>,
   illustration: {

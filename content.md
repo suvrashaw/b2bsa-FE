@@ -80,17 +80,17 @@ H2: Our B2B Event Services & Trade Show Solutions 
 
 H2: Proven Global Event Solutions: Enterprise Success Stories 
 
-**H3: Adobe Summit: Sustainable Design & Lead Generation** 
+**H3: World Aviation Festival 2023** 
 
-We delivered a custom eco-friendly island booth and active on-site prospecting to secure 70+ SQLs and engage 60 unique billion-dollar enterprise accounts. \[→\] 
+Fueling global brand recognition and lead generation success with 70% hot and warm leads from 80% of $1B+ organisations. \[→\] 
 
-**H3: World Aviation Festival: Doubling Executive Pipeline** 
+**H3: SIBOS 2023** 
 
-Through rapid pre-event outreach and on-ground prospecting, we secured 60 executive meetings—doubling the initial target within a high-speed, 10-day campaign. \[→\] 
+Boosting on-ground lead generation 40% beyond target with 85%+ hot and warm leads and 75%+ director-level prospects. \[→\] 
 
-**H3: SIBOS: High-Impact Outreach & Interactive Exhibits** 
+**H3: SAP Sapphire 2023** 
 
-We created hyper-personalized global outreach and interactive booth design for two financial leaders, capturing 270+ leads and 64 strategic executive meetings. \[→\] 
+Empowering global branding and on-ground lead generation success, delivering 80% hot and warm leads and 100% unique accounts. \[→\] 
 
 **Upcoming Events** 
 

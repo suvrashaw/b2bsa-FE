@@ -94,21 +94,23 @@ export const ProofBar = ({ className, description, heading, stats }: ProofBarPro
             >
               {group.map((item) => (
                 <motion.div
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-8 md:gap-12"
                   initial={PROOFBAR_INITIAL}
                   key={item.key}
                   transition={item.transition}
                   viewport={PROOFBAR_VIEWPORT}
                   whileInView={PROOFBAR_WHILE_IN_VIEW}
                 >
-                  <span className="font-heading text-2xl font-bold text-brand-blue md:text-3xl">
-                    <CountUpValue value={item.value} />
-                  </span>
-                  <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase md:text-xs">
-                    {item.label}
-                  </span>
+                  <div className="flex flex-col items-center gap-1.5 text-center">
+                    <span className="font-heading text-3xl font-bold text-brand-blue md:text-4xl">
+                      <CountUpValue value={item.value} />
+                    </span>
+                    <span className="text-xs font-bold tracking-widest text-gray-500 uppercase">
+                      {item.label}
+                    </span>
+                  </div>
                   {!item.lastInGroup && (
-                    <div className="ml-8 hidden h-8 w-px bg-brand-blue/20 md:block" />
+                    <div className="hidden h-12 w-px bg-brand-blue/20 md:block" />
                   )}
                 </motion.div>
               ))}

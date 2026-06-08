@@ -22,18 +22,19 @@
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
     "@radix-ui/react-slot": "^1.2.4",
-    "lenis": "^1.2.3",
     "@vercel/og": "^0.11.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "gsap": "^3.15.0",
+    "lenis": "^1.2.3",
     "lucide-react": "^1.12.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-globe.gl": "^2.37.1",
     "react-icons": "^5.6.0",
+    "react-simple-maps": "^3.0.0",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
@@ -43,6 +44,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-simple-maps": "^3.0.6",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "^10.1.8",

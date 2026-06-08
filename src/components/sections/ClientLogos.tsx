@@ -35,7 +35,15 @@ const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) =
   return { handleWheel, setIsHovered, x };
 };
 
-const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
+const LogosRow = ({
+  logos,
+  onLogoMouseEnter,
+  onLogoMouseLeave,
+}: {
+  logos: ClientLogoItem[];
+  onLogoMouseEnter?: React.MouseEventHandler<HTMLImageElement>;
+  onLogoMouseLeave?: React.MouseEventHandler<HTMLImageElement>;
+}) => (
   <>
     {logos.map((logo) => (
       <div
@@ -44,8 +52,10 @@ const LogosRow = ({ logos }: { logos: ClientLogoItem[] }) => (
       >
         <img
           alt={logo.alt}
-          className="h-8 w-auto max-w-[140px] object-contain grayscale transition-all duration-300 hover:scale-110 hover:grayscale-0"
+          className="h-8 w-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
           draggable={false}
+          onMouseEnter={onLogoMouseEnter}
+          onMouseLeave={onLogoMouseLeave}
           src={logo.src}
         />
       </div>
@@ -92,7 +102,7 @@ export const ClientLogos = ({
             <div className="flex shrink-0 items-center" key={logo.id}>
               <img
                 alt={logo.alt}
-                className="h-12 w-auto max-w-[160px] object-contain grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
+                className="h-12 w-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
                 draggable={false}
                 src={logo.src}
               />
@@ -112,8 +122,6 @@ export const ClientLogos = ({
       )}
       <div
         className="pointer-events-auto relative overflow-hidden py-6 pb-10"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         onWheel={handleWheel}
       >
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-48 bg-linear-to-r from-brand-gray to-transparent" />
@@ -121,10 +129,10 @@ export const ClientLogos = ({
 
         <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
-            <LogosRow logos={logos} />
+            <LogosRow logos={logos} onLogoMouseEnter={handleMouseEnter} onLogoMouseLeave={handleMouseLeave} />
           </div>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
-            <LogosRow logos={logos} />
+            <LogosRow logos={logos} onLogoMouseEnter={handleMouseEnter} onLogoMouseLeave={handleMouseLeave} />
           </div>
         </motion.div>
       </div>
