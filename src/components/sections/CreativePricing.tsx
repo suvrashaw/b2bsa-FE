@@ -117,11 +117,7 @@ export const CreativePricing = ({
 
         {/* Pricing Tiers Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {tiers.map((tier, index) => {
-            const isFirst = index === 0;
-            const isSecond = index === 1;
-
-            return (
+          {tiers.map((tier) => (
               <div
                 className={cn(
                   "group relative transition-all duration-500"
@@ -207,8 +203,7 @@ export const CreativePricing = ({
                   </Button>
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
       </div>
 

@@ -127,7 +127,7 @@ export const ServiceHub = ({
         title={hero.title}
       />
 
-      {proofBar && <ProofBar stats={proofBar} />}
+      {proofBar && <ProofBar heading={`About ${page.pageName}`} stats={proofBar} />}
 
       <OurServices {...services} />
 

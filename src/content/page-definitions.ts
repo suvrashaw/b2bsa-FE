@@ -7,16 +7,6 @@ export interface CmsSeo {
   title: string;
 }
 
-export type PageType =
-  | "company"
-  | "contact"
-  | "home"
-  | "legal"
-  | "resourceIndex"
-  | "serviceDetail"
-  | "serviceHub"
-  | "system";
-
 export interface MarketingPageDefinition {
   pageId: string;
   pageName: string;
@@ -27,3 +17,13 @@ export interface MarketingPageDefinition {
 export type MarketingPageIdentity = Pick<MarketingPageDefinition, "pageName" | "seo">;
 
 export type MarketingPageType = Exclude<PageType, "legal" | "system">;
+
+export type PageType =
+  | "company"
+  | "contact"
+  | "home"
+  | "legal"
+  | "resourceIndex"
+  | "serviceDetail"
+  | "serviceHub"
+  | "system";

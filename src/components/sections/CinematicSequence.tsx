@@ -184,59 +184,93 @@ const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: numb
 
 const LOAD_CONCURRENCY = 8;
 
+const createEmptyFrames = (frameCount: number) =>
+  Array.from({ length: frameCount }, (): HTMLImageElement | null => null);
+
+const getCinematicFrameUrl = (
+  index: number,
+  frameUrlTemplate?: string,
+  frameUrls?: string[]
+) => {
+  if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
+  if (frameUrlTemplate) return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
+  return "";
+};
+
+const loadCinematicFrame = (
+  frameNumber: number,
+  getFrameUrl: (index: number) => string,
+  onFrameLoad: (frameNumber: number, image: HTMLImageElement) => void
+): Promise<void> =>
+  new Promise((resolve) => {
+    const image = new globalThis.Image();
+    const handleLoad = () => {
+      onFrameLoad(frameNumber, image);
+      resolve();
+    };
+    const handleError = () => resolve();
+
+    image.addEventListener("load", handleLoad, { once: true });
+    image.addEventListener("error", handleError, { once: true });
+    image.src = getFrameUrl(frameNumber);
+  });
+
+const loadCinematicFrames = async (
+  frameCount: number,
+  loadFrame: (frameNumber: number) => Promise<void>
+) => {
+  let nextFrameNumber = 1;
+
+  const loadNextFrame = async () => {
+    while (nextFrameNumber <= frameCount) {
+      const frameNumber = nextFrameNumber;
+      nextFrameNumber++;
+      await loadFrame(frameNumber);
+    }
+  };
+
+  await Promise.all(
+    Array.from({ length: Math.min(LOAD_CONCURRENCY, frameCount) }, () => loadNextFrame())
+  );
+};
+
 const useCinematicFrameImages = (
   frameCount: number,
   frameUrlTemplate?: string,
   frameUrls?: string[]
 ) => {
-  const imagesRef = useRef<(HTMLImageElement | null)[]>(Array(frameCount).fill(null));
+  const imagesRef = useRef<(HTMLImageElement | null)[]>(createEmptyFrames(frameCount));
   const [firstFrameLoaded, setFirstFrameLoaded] = useState(false);
   const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
 
   useEffect(() => {
     let cancelled = false;
-    imagesRef.current = Array(frameCount).fill(null);
-    setFirstFrameLoaded(false);
+    imagesRef.current = createEmptyFrames(frameCount);
 
     const getFrameUrl = (index: number) => {
-      if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
-      if (frameUrlTemplate) return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
-      return "";
+      return getCinematicFrameUrl(index, frameUrlTemplate, frameUrls);
     };
 
-    const loadFrame = (i: number): Promise<void> =>
-      new Promise((resolve) => {
-        const img = new globalThis.Image();
-        img.onload = () => {
-          if (!cancelled) {
-            imagesRef.current[i - 1] = img;
-            if (i === 1) setFirstFrameLoaded(true);
-          }
-          resolve();
-        };
-        img.onerror = () => resolve();
-        img.src = getFrameUrl(i);
-      });
+    const handleFrameLoad = (frameNumber: number, image: HTMLImageElement) => {
+      if (cancelled) return;
 
-    // Batched loader with LOAD_CONCURRENCY concurrent slots
-    let queueIndex = 0;
-    let active = 0;
-
-    const pump = () => {
-      while (active < LOAD_CONCURRENCY && queueIndex < frameCount) {
-        const frameNum = queueIndex + 1;
-        queueIndex++;
-        active++;
-        loadFrame(frameNum).then(() => {
-          active--;
-          if (!cancelled) pump();
-        });
+      imagesRef.current[frameNumber - 1] = image;
+      if (frameNumber === 1) {
+        setFirstFrameLoaded(true);
       }
     };
 
-    pump();
+    queueMicrotask(() => {
+      if (!cancelled) setFirstFrameLoaded(false);
+    });
 
-    return () => { cancelled = true; };
+    loadCinematicFrames(frameCount, (frameNumber) =>
+      loadCinematicFrame(frameNumber, getFrameUrl, handleFrameLoad)
+    ).catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadSignature]);
 

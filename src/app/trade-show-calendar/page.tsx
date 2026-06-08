@@ -11,6 +11,8 @@ import {
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/trade-show-calendar";
 
+const TRADE_SHOW_CALENDAR_HERO_IMAGES = ["/images/blog/trade-show-booth-trends-2026.avif"];
+
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
 
 const Page = () => {
@@ -19,7 +21,7 @@ const Page = () => {
       <Header />
       <ImageHero
         description={TRADE_SHOW_CALENDAR_HERO.description}
-        images={["/images/blog/trade-show-booth-trends-2026.avif"]}
+        images={TRADE_SHOW_CALENDAR_HERO_IMAGES}
         title={TRADE_SHOW_CALENDAR_HERO.title}
       />
       <TradeShowCalendarDirectory

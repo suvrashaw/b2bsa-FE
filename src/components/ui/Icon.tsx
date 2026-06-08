@@ -1,4 +1,6 @@
 import type { LucideProps } from "lucide-react";
+import type { ComponentType } from "react";
+
 import {
   Activity,
   Archive,
@@ -82,7 +84,6 @@ import {
   Wrench,
   Zap,
 } from "lucide-react";
-import type { ComponentType } from "react";
 
 interface IconProps extends LucideProps {
   name: string;
@@ -90,41 +91,41 @@ interface IconProps extends LucideProps {
 
 const ICONS: Record<string, ComponentType<LucideProps>> = {
   // PascalCase (used by sections directly)
-  Activity, Archive, Armchair, Award, BarChart3, BookOpen, Box, Briefcase,
-  Building, Building2, Calendar, CalendarCheck, Camera, CheckCircle,
-  Clapperboard, ClipboardList, Coffee, Coins, Cpu, Database, DollarSign,
-  ExternalLink, File, FileText, Film, Filter, Gift, Globe, Globe2,
-  GraduationCap, Hammer, Headphones, Image, Key, Landmark, Layers, Layout,
-  Leaf, Lightbulb, Link, Mail, Map, MapPin, Maximize2, Megaphone,
-  MessageSquare, Mic, Monitor, MonitorPlay, Music, Palette, PenLine, Plane,
-  Play, PlusCircle, Presentation, Radio, Rocket, Scan, Scissors, Search,
-  Settings, Share2, Shield, ShieldCheck, ShoppingBag, Sparkles, Star, Sun,
-  Target, TrendingUp, Truck, Type, UserPlus, Users, Users2, Video, Wifi,
-  Wrench, Zap,
-  // kebab-case (used by FeatureCarousel after camelToKebab conversion)
-  "activity": Activity, "archive": Archive, "armchair": Armchair,
-  "award": Award, "bar-chart-3": BarChart3, "book-open": BookOpen,
-  "box": Box, "briefcase": Briefcase, "building": Building,
-  "building-2": Building2, "calendar": Calendar, "calendar-check": CalendarCheck,
-  "camera": Camera, "check-circle": CheckCircle, "clapperboard": Clapperboard,
-  "clipboard-list": ClipboardList, "coffee": Coffee, "coins": Coins,
-  "cpu": Cpu, "database": Database, "dollar-sign": DollarSign,
-  "external-link": ExternalLink, "file": File, "file-text": FileText,
-  "film": Film, "filter": Filter, "gift": Gift, "globe": Globe,
-  "globe-2": Globe2, "graduation-cap": GraduationCap, "hammer": Hammer,
-  "headphones": Headphones, "image": Image, "key": Key, "landmark": Landmark,
-  "layers": Layers, "layout": Layout, "leaf": Leaf, "lightbulb": Lightbulb,
-  "link": Link, "mail": Mail, "map": Map, "map-pin": MapPin,
-  "maximize-2": Maximize2, "megaphone": Megaphone, "message-square": MessageSquare,
-  "mic": Mic, "monitor": Monitor, "monitor-play": MonitorPlay, "music": Music,
-  "palette": Palette, "pen-line": PenLine, "plane": Plane, "play": Play,
-  "plus-circle": PlusCircle, "presentation": Presentation, "radio": Radio,
-  "rocket": Rocket, "scan": Scan, "scissors": Scissors, "search": Search,
-  "settings": Settings, "share-2": Share2, "shield": Shield,
-  "shield-check": ShieldCheck, "shopping-bag": ShoppingBag, "sparkles": Sparkles,
-  "star": Star, "sun": Sun, "target": Target, "trending-up": TrendingUp,
-  "truck": Truck, "type": Type, "user-plus": UserPlus, "users": Users,
-  "users-2": Users2, "video": Video, "wifi": Wifi, "wrench": Wrench, "zap": Zap,
+  Activity, // kebab-case (used by FeatureCarousel after camelToKebab conversion)
+  "activity": Activity, Archive, "archive": Archive, Armchair, "armchair": Armchair, Award, "award": Award,
+  "bar-chart-3": BarChart3, BarChart3, "book-open": BookOpen, BookOpen, Box, "box": Box,
+  Briefcase, "briefcase": Briefcase, Building, "building": Building, "building-2": Building2, Building2, Calendar,
+  "calendar": Calendar, "calendar-check": CalendarCheck, CalendarCheck, Camera, "camera": Camera, "check-circle": CheckCircle, CheckCircle, Clapperboard,
+  "clapperboard": Clapperboard, "clipboard-list": ClipboardList, ClipboardList, Coffee, "coffee": Coffee, Coins, "coins": Coins, Cpu,
+  "cpu": Cpu, Database, "database": Database, "dollar-sign": DollarSign, DollarSign, "external-link": ExternalLink, ExternalLink, File,
+  "file": File, "file-text": FileText, FileText, Film, "film": Film, Filter, "filter": Filter, Gift,
+  "gift": Gift, Globe, "globe": Globe, "globe-2": Globe2, Globe2, "graduation-cap": GraduationCap, GraduationCap, Hammer,
+  "hammer": Hammer, Headphones, "headphones": Headphones, Image, "image": Image, Key, "key": Key, Landmark,
+  "landmark": Landmark, Layers, "layers": Layers, Layout, "layout": Layout, Leaf, "leaf": Leaf, Lightbulb, "lightbulb": Lightbulb,
+  Link, "link": Link,
+  Mail, "mail": Mail, Map,
+  "map": Map, "map-pin": MapPin, MapPin,
+  "maximize-2": Maximize2, Maximize2, Megaphone,
+  "megaphone": Megaphone, "message-square": MessageSquare, MessageSquare,
+  Mic, "mic": Mic, Monitor,
+  "monitor": Monitor, "monitor-play": MonitorPlay, MonitorPlay,
+  Music, "music": Music, Palette,
+  "palette": Palette, "pen-line": PenLine, PenLine,
+  Plane, "plane": Plane, Play, "play": Play,
+  "plus-circle": PlusCircle, PlusCircle, Presentation,
+  "presentation": Presentation, Radio, "radio": Radio, Rocket,
+  "rocket": Rocket, Scan, "scan": Scan, Scissors,
+  "scissors": Scissors, Search, "search": Search, Settings,
+  "settings": Settings, "share-2": Share2, Share2,
+  Shield, "shield": Shield, "shield-check": ShieldCheck, ShieldCheck,
+  "shopping-bag": ShoppingBag, ShoppingBag, Sparkles, "sparkles": Sparkles,
+  Star, "star": Star, Sun,
+  "sun": Sun, Target, "target": Target, "trending-up": TrendingUp,
+  TrendingUp, Truck, "truck": Truck,
+  Type, "type": Type, "user-plus": UserPlus,
+  UserPlus, Users, "users": Users, "users-2": Users2,
+  Users2, Video, "video": Video, Wifi,
+  "wifi": Wifi, Wrench, "wrench": Wrench, Zap, "zap": Zap,
 };
 
 const Icon = ({ name, ...props }: IconProps) => {

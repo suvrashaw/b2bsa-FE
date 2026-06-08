@@ -13,15 +13,34 @@ interface ProofBarProps {
   stats: string[];
 }
 
-const VALUE_RE = /^([^0-9]*)([0-9][0-9,.]*)(.*)$/;
+const isAsciiDigit = (char: string) => char >= "0" && char <= "9";
+const isNumericDisplayChar = (char: string) =>
+  isAsciiDigit(char) || char === "," || char === ".";
 
 const parseValue = (raw: string) => {
-  const m = raw.match(VALUE_RE);
-  if (!m) return null;
-  const [, prefix, numStr, suffix] = m;
+  let numberStart = -1;
+  let index = 0;
+  for (const char of raw) {
+    if (isAsciiDigit(char)) {
+      numberStart = index;
+      break;
+    }
+    index += char.length;
+  }
+
+  if (numberStart === -1) return null;
+
+  let numberEnd = numberStart;
+  while (numberEnd < raw.length && isNumericDisplayChar(raw[numberEnd] ?? "")) {
+    numberEnd++;
+  }
+
+  const prefix = raw.slice(0, numberStart);
+  const numStr = raw.slice(numberStart, numberEnd);
+  const suffix = raw.slice(numberEnd);
   const isDecimal = numStr.includes(".");
   const hasComma = numStr.includes(",");
-  const target = parseFloat(numStr.replace(/,/g, ""));
+  const target = Number.parseFloat(numStr.replaceAll(",", ""));
   return { hasComma, isDecimal, prefix, suffix, target };
 };
 

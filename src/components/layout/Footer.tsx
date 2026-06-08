@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -269,7 +268,7 @@ export const Footer = () => {
                   />
                   <Button
                     aria-label="Subscribe"
-                    className="h-10 border-white/30 text-white hover:bg-white/10 hover:border-white"
+                    className="h-10 border-white/30 text-white hover:border-white hover:bg-white/10"
                     size="sm"
                     variant="secondary"
                   >

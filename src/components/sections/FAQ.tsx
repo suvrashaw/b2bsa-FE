@@ -49,7 +49,7 @@ const FAQMotionCard = ({
   const faqTransition = useMemo(() => ({ delay: index * 0.1 }), [index]);
   return (
     <motion.div
-      className={layoutMode === "carousel" ? "w-[300px] shrink-0 snap-center md:w-[320px]" : "w-full sm:max-w-[320px] shrink-0"}
+      className={layoutMode === "carousel" ? "w-[300px] shrink-0 snap-center md:w-[320px]" : "w-full shrink-0 sm:max-w-[320px]"}
       initial={FAQ_ITEM_INITIAL}
       transition={faqTransition}
       viewport={FAQ_VIEWPORT}

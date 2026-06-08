@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
+import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
@@ -50,13 +51,15 @@ const LogosRow = ({
         className="flex shrink-0 items-center"
         key={logo.id}
       >
-        <img
+        <Image
           alt={logo.alt}
           className="h-8 w-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
           draggable={false}
+          height={32}
           onMouseEnter={onLogoMouseEnter}
           onMouseLeave={onLogoMouseLeave}
           src={logo.src}
+          width={140}
         />
       </div>
     ))}
@@ -100,11 +103,13 @@ export const ClientLogos = ({
         <div className="container mx-auto flex flex-wrap justify-center gap-4 px-8 pb-10">
           {logos.map((logo) => (
             <div className="flex shrink-0 items-center" key={logo.id}>
-              <img
+              <Image
                 alt={logo.alt}
                 className="h-12 w-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
                 draggable={false}
+                height={48}
                 src={logo.src}
+                width={160}
               />
             </div>
           ))}

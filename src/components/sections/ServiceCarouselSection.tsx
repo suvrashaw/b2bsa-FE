@@ -124,7 +124,7 @@ export const ServiceCarouselSection = ({
           {/* Prev button */}
           <button
             aria-label="Previous services"
-            className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
+            className="absolute top-1/2 -left-4 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
             disabled={activeIndex === 0}
             onClick={handlePrev}
             type="button"
@@ -135,7 +135,7 @@ export const ServiceCarouselSection = ({
           {/* Next button */}
           <button
             aria-label="Next services"
-            className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
+            className="absolute top-1/2 -right-4 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
             disabled={activeIndex >= maxIndex}
             onClick={handleNext}
             type="button"

@@ -5,7 +5,7 @@ import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 
 import type { BlogItem } from "@/content/home";
 
@@ -19,6 +19,20 @@ export interface BlogCardProps {
 }
 
 const BLOG_CARD_TRANSITION = { damping: 30, stiffness: 300, type: "spring" } as const;
+const BLOG_CARD_MOBILE_QUERY = "(max-width: 1023px)";
+
+const getMobileSnapshot = () =>
+  typeof globalThis.matchMedia === "function"
+    ? globalThis.matchMedia(BLOG_CARD_MOBILE_QUERY).matches
+    : false;
+
+const subscribeToMobileQuery = (onStoreChange: () => void) => {
+  if (typeof globalThis.matchMedia !== "function") return () => {};
+
+  const query = globalThis.matchMedia(BLOG_CARD_MOBILE_QUERY);
+  query.addEventListener("change", onStoreChange);
+  return () => query.removeEventListener("change", onStoreChange);
+};
 
 export const BlogCard = ({
   blog,
@@ -28,15 +42,7 @@ export const BlogCard = ({
   spread,
   total,
 }: BlogCardProps) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 1023px)");
-    setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  const isMobile = useSyncExternalStore(subscribeToMobileQuery, getMobileSnapshot, () => false);
 
   const relativeIndex = index - (total - 1) / 2;
   const rotationOffset = relativeIndex * 8;

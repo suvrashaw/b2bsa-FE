@@ -17,7 +17,6 @@ import { type ChangeEvent, type ReactNode, useCallback, useMemo, useState } from
 import type { CalendarTradeShow } from "@/content/trade-show-calendar";
 
 import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { cn } from "@/lib";
 
 const VIEW_MODES = [
@@ -355,7 +354,7 @@ const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
           </p>
         </div>
       </div>
-      <div className="flex w-full mt-2 lg:mt-0 lg:justify-end">
+      <div className="mt-2 flex w-full lg:mt-0 lg:justify-end">
         <Button asChild className="w-full lg:w-auto" size="sm" variant="secondary">
           <Link href="/contact">Let&apos;s Talk</Link>
         </Button>
@@ -365,11 +364,11 @@ const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
 );
 
 export const TradeShowCalendarDirectory = ({
-  description,
+  description: _description,
   events,
-  eyebrow,
+  eyebrow: _eyebrow,
   searchPlaceholder,
-  title,
+  title: _title,
 }: TradeShowCalendarDirectoryProps) => {
   const [attendeeOperator, setAttendeeOperator] = useState<NumberOperator>("gte");
   const [attendeeValue, setAttendeeValue] = useState("");

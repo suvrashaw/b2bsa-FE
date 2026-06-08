@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import { buildPageMetadata } from "@/lib/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Heading } from "@/components/ui/Heading";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   canonicalPath: "/privacy-policy",

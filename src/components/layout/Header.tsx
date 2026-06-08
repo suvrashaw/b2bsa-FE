@@ -16,6 +16,10 @@ const HEADER_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 const MOBILE_MENU_ANIMATE = { opacity: 1, y: 0 };
 const MOBILE_MENU_INITIAL = { opacity: 0, y: -20 };
 const MOBILE_MENU_EXIT = { opacity: 0, y: -20 };
+const MOBILE_SUBMENU_ANIMATE = { height: "auto", opacity: 1 };
+const MOBILE_SUBMENU_COLLAPSED = { height: 0, opacity: 0 };
+const MOBILE_NAV_TRANSITION = { duration: 0.3, ease: [0.16, 1, 0.3, 1] as const };
+const MOBILE_GROUP_TRANSITION = { duration: 0.25, ease: [0.16, 1, 0.3, 1] as const };
 
 const LANG_DROPDOWN_ANIMATE = { opacity: 1, y: 0 };
 const LANG_DROPDOWN_EXIT = { opacity: 0, y: 8 };
@@ -82,6 +86,7 @@ const DesktopNavLink = ({
 
 // Pure sub-components for Megamenu and Mobile menu to satisfy react-perf / sonarjs rules
 const NOWRAP_NAMES = new Set(["Event Experience Video Production", "Event Live Streaming Services"]);
+type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
 
 const MobileSubGroupLinks = ({
   links,
@@ -103,6 +108,154 @@ const MobileSubGroupLinks = ({
     ))}
   </>
 );
+
+const MobileNestedServiceGroup = ({
+  onClose,
+  subGroup,
+}: {
+  onClose: () => void;
+  subGroup: ServiceNavSubGroup;
+}) => (
+  <div>
+    <p className="px-4 pt-2 pb-1 text-xs font-semibold tracking-wide text-gray-400 uppercase">
+      {subGroup.name}
+    </p>
+    <MobileSubGroupLinks links={subGroup.links} onClose={onClose} />
+  </div>
+);
+
+const MobileServiceGroup = ({
+  group,
+  isOpen,
+  onClose,
+  onToggle,
+}: {
+  group: ServiceNavGroup;
+  isOpen: boolean;
+  onClose: () => void;
+  onToggle: (name: string) => void;
+}) => {
+  const handleToggle = useCallback(() => {
+    onToggle(group.name);
+  }, [group.name, onToggle]);
+  const hasSubContent = (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
+
+  return (
+    <div>
+      <button
+        className="flex w-full items-center justify-between px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
+        onClick={handleToggle}
+        type="button"
+      >
+        <span>{group.name}</span>
+        {hasSubContent && (
+          <ChevronDown
+            className={cn(
+              "h-4 w-4 shrink-0 text-gray-400 transition-transform duration-300",
+              isOpen && "rotate-180"
+            )}
+          />
+        )}
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            animate={MOBILE_SUBMENU_ANIMATE}
+            className="overflow-hidden"
+            exit={MOBILE_SUBMENU_COLLAPSED}
+            initial={MOBILE_SUBMENU_COLLAPSED}
+            transition={MOBILE_GROUP_TRANSITION}
+          >
+            <div className="pb-3 pl-4">
+              {group.groups?.map((subGroup) => (
+                <MobileNestedServiceGroup
+                  key={subGroup.name}
+                  onClose={onClose}
+                  subGroup={subGroup}
+                />
+              ))}
+              {group.links && <MobileSubGroupLinks links={group.links} onClose={onClose} />}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const MobileNavItem = ({
+  isOpen,
+  link,
+  onClose,
+  onServiceGroupToggle,
+  onToggle,
+  openServiceGroup,
+}: {
+  isOpen: boolean;
+  link: (typeof topNavigation)[number];
+  onClose: () => void;
+  onServiceGroupToggle: (name: string) => void;
+  onToggle: (name: string) => void;
+  openServiceGroup: null | string;
+}) => {
+  const hasChildren = link.name === "Services";
+  const handleToggle = useCallback(() => {
+    onToggle(link.name);
+  }, [link.name, onToggle]);
+
+  return (
+    <div className="border-b border-gray-50 last:border-0">
+      {hasChildren ? (
+        <button
+          className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+          onClick={handleToggle}
+          type="button"
+        >
+          <span>{link.name}</span>
+          <ChevronDown
+            className={cn(
+              "h-5 w-5 text-gray-400 transition-transform duration-300",
+              isOpen && "rotate-180"
+            )}
+          />
+        </button>
+      ) : (
+        <Link
+          className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+          href={link.href}
+          onClick={onClose}
+        >
+          {link.name}
+        </Link>
+      )}
+
+      <AnimatePresence>
+        {hasChildren && isOpen && (
+          <motion.div
+            animate={MOBILE_SUBMENU_ANIMATE}
+            className="overflow-hidden"
+            exit={MOBILE_SUBMENU_COLLAPSED}
+            initial={MOBILE_SUBMENU_COLLAPSED}
+            transition={MOBILE_NAV_TRANSITION}
+          >
+            <div className="pb-4">
+              {serviceNavigationGroups.map((group) => (
+                <MobileServiceGroup
+                  group={group}
+                  isOpen={openServiceGroup === group.name}
+                  key={group.name}
+                  onClose={onClose}
+                  onToggle={onServiceGroupToggle}
+                />
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 const MegamenuSubLink = ({
   onClose,
@@ -310,7 +463,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-9 w-32 lg:max-xl:h-8 lg:max-xl:w-28 xl:h-14 xl:w-52 transition-all duration-300 hover:opacity-80"
+          className="relative block h-9 w-32 transition-all duration-300 hover:opacity-80 lg:max-xl:h-8 lg:max-xl:w-28 xl:h-14 xl:w-52"
           href="/"
         >
           <Image
@@ -324,7 +477,7 @@ export const Header = ({
         </Link>
       </div>
 
-      <nav className="absolute left-1/2 lg:max-xl:left-[46%] hidden -translate-x-1/2 items-center gap-8 lg:max-xl:gap-4 lg:flex">
+      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex lg:max-xl:left-[46%] lg:max-xl:gap-4">
         {topNavigation.map((link) => (
           <DesktopNavLink
             activeDropdown={activeDropdown}
@@ -421,118 +574,17 @@ export const Header = ({
             exit={MOBILE_MENU_EXIT}
             initial={MOBILE_MENU_INITIAL}
           >
-            {topNavigation.map((link) => {
-              const hasChildren = link.name === "Services";
-              const isNavOpen = openMobileNav === link.name;
-              return (
-                <div className="border-b border-gray-50 last:border-0" key={link.name}>
-                  {hasChildren ? (
-                    <button
-                      className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-                      onClick={() => toggleMobileNav(link.name)}
-                      type="button"
-                    >
-                      <span>{link.name}</span>
-                      <ChevronDown
-                        className={cn(
-                          "h-5 w-5 text-gray-400 transition-transform duration-300",
-                          isNavOpen && "rotate-180"
-                        )}
-                      />
-                    </button>
-                  ) : (
-                    <Link
-                      className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-                      href={link.href}
-                      onClick={closeMobileMenu}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-
-                  <AnimatePresence>
-                    {hasChildren && isNavOpen && (
-                      <motion.div
-                        animate={{ height: "auto", opacity: 1 }}
-                        className="overflow-hidden"
-                        exit={{ height: 0, opacity: 0 }}
-                        initial={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
-                      >
-                        <div className="pb-4">
-                          {serviceNavigationGroups.map((group) => {
-                            const isGroupOpen = openMobileServiceGroup === group.name;
-                            const hasSubContent =
-                              (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
-                            return (
-                              <div key={group.name}>
-                                <button
-                                  className="flex w-full items-center justify-between px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
-                                  onClick={() => toggleMobileServiceGroup(group.name)}
-                                  type="button"
-                                >
-                                  <span>{group.name}</span>
-                                  {hasSubContent && (
-                                    <ChevronDown
-                                      className={cn(
-                                        "h-4 w-4 shrink-0 text-gray-400 transition-transform duration-300",
-                                        isGroupOpen && "rotate-180"
-                                      )}
-                                    />
-                                  )}
-                                </button>
-
-                                <AnimatePresence>
-                                  {isGroupOpen && (
-                                    <motion.div
-                                      animate={{ height: "auto", opacity: 1 }}
-                                      className="overflow-hidden"
-                                      exit={{ height: 0, opacity: 0 }}
-                                      initial={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
-                                    >
-                                      <div className="pb-3 pl-4">
-                                        {group.groups?.map((sg) => (
-                                          <div key={sg.name}>
-                                            <p className="px-4 pt-2 pb-1 text-xs font-semibold tracking-wide text-gray-400 uppercase">
-                                              {sg.name}
-                                            </p>
-                                            {sg.links.map((sub) => (
-                                              <Link
-                                                className="block px-4 py-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-brand-blue"
-                                                href={sub.href}
-                                                key={sub.name}
-                                                onClick={closeMobileMenu}
-                                              >
-                                                {sub.name}
-                                              </Link>
-                                            ))}
-                                          </div>
-                                        ))}
-                                        {group.links?.map((sub) => (
-                                          <Link
-                                            className="block px-4 py-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-brand-blue"
-                                            href={sub.href}
-                                            key={sub.name}
-                                            onClick={closeMobileMenu}
-                                          >
-                                            {sub.name}
-                                          </Link>
-                                        ))}
-                                      </div>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
+            {topNavigation.map((link) => (
+              <MobileNavItem
+                isOpen={openMobileNav === link.name}
+                key={link.name}
+                link={link}
+                onClose={closeMobileMenu}
+                onServiceGroupToggle={toggleMobileServiceGroup}
+                onToggle={toggleMobileNav}
+                openServiceGroup={openMobileServiceGroup}
+              />
+            ))}
 
             <div className="p-6">
               <Link href="/contact" onClick={closeMobileMenu}>

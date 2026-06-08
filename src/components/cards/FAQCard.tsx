@@ -12,7 +12,13 @@ export interface FAQCardProps {
   question: string;
 }
 
-export const FAQCard = ({ answer, icon, image, layoutMode = "carousel", question }: FAQCardProps) => {
+export const FAQCard = ({
+  answer,
+  icon: _icon,
+  image,
+  layoutMode: _layoutMode = "carousel",
+  question,
+}: FAQCardProps) => {
   return (
     <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">
       <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
@@ -37,7 +43,7 @@ export const FAQCard = ({ answer, icon, image, layoutMode = "carousel", question
 
           {/* Content on top of overlay */}
           <div className="absolute inset-0 flex flex-col items-start justify-end p-8">
-            <h3 className={`font-heading text-lg md:text-2xl leading-snug font-semibold ${image ? "text-white" : "text-brand-charcoal"}`}>
+            <h3 className={`font-heading text-lg leading-snug font-semibold md:text-2xl ${image ? "text-white" : "text-brand-charcoal"}`}>
               {question}
             </h3>
           </div>

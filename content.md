@@ -246,31 +246,13 @@ Partner with B2B Sales Arrow to design high-impact trade show booths and execute
 
 **\[Contact Form Layout\]** 
 
-* First Name \[Text Field\] 
-
-* Last Name \[Text Field\] 
+* Name \[Text Field\] 
 
 * Work Email \[Text Field\] 
 
 * Company Name \[Text Field\] 
 
-* Phone Number \[Text Field\] 
-
-Select the services you need \[Dropdown Menu\] 
-
-* End-to-End Global Event Solutions 
-
-* Trade Show Booth Design & Production 
-
-* On-Ground Active Prospecting 
-
-* Corporate Media Production 
-
-* Database & Market Research 
-
-* Performance Marketing 
-
-Upcoming Event Name & Date (Optional) \[Text Field\] 
+* Phone Number (Optional) \[Text Field\] 
 
 Tell us about your event goals and requirements: \[Text Area\] 
 

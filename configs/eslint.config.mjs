@@ -67,33 +67,41 @@ const eslintConfig = defineConfig([
         {
           default: "disallow",
           rules: [
-            { allow: [], from: { type: "types" } },
-            { allow: ["types"], from: { type: "lib" } },
-            { allow: ["types", "lib"], from: { type: "content" } },
-            { allow: ["types", "lib", "content"], from: { type: "ui" } },
-            { allow: ["types", "lib", "ui"], from: { type: "cards" } },
-            { allow: ["types", "lib", "content", "ui"], from: { type: "forms" } },
-            { allow: ["types", "lib", "content", "ui"], from: { type: "layout" } },
+            { disallow: { to: { type: "*" } }, from: { type: "types" } },
+            { allow: { to: { type: ["types"] } }, from: { type: "lib" } },
+            { allow: { to: { type: ["types", "lib"] } }, from: { type: "content" } },
+            { allow: { to: { type: ["types", "lib", "content"] } }, from: { type: "ui" } },
+            { allow: { to: { type: ["types", "lib", "ui"] } }, from: { type: "cards" } },
+            { allow: { to: { type: ["types", "lib", "content", "ui"] } }, from: { type: "forms" } },
+            { allow: { to: { type: ["types", "lib", "content", "ui"] } }, from: { type: "layout" } },
             {
-              allow: ["types", "lib", "content", "ui", "cards", "forms"],
+              allow: { to: { type: ["types", "lib", "content", "ui", "cards", "forms"] } },
               from: { type: "sections" },
             },
             {
-              allow: ["types", "lib", "content", "ui", "cards", "forms", "sections", "layout"],
+              allow: {
+                to: {
+                  type: ["types", "lib", "content", "ui", "cards", "forms", "sections", "layout"],
+                },
+              },
               from: { type: "templates" },
             },
             {
-              allow: [
-                "types",
-                "lib",
-                "content",
-                "ui",
-                "cards",
-                "forms",
-                "layout",
-                "sections",
-                "templates",
-              ],
+              allow: {
+                to: {
+                  type: [
+                    "types",
+                    "lib",
+                    "content",
+                    "ui",
+                    "cards",
+                    "forms",
+                    "layout",
+                    "sections",
+                    "templates",
+                  ],
+                },
+              },
               from: { type: "app" },
             },
           ],

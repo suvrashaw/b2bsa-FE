@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import { buildPageMetadata } from "@/lib/seo";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
 import { Hero } from "@/components/sections/Hero";
 import { OurServices } from "@/components/sections/OurServices";
 import { THANK_YOU_BLOGS, THANK_YOU_HERO, THANK_YOU_SERVICES } from "@/content/thank-you";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   canonicalPath: "/thank-you",

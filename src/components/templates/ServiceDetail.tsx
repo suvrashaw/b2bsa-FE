@@ -263,7 +263,7 @@ export const ServiceDetail = ({
         <ProofBar
           className={proofBarClassName}
           description={proofBarDescription}
-          heading={proofBarHeading}
+          heading={proofBarHeading ?? `About ${page.pageName}`}
           stats={proofBar}
         />
       )}

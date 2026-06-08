@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
 import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
