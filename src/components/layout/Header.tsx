@@ -58,7 +58,7 @@ const DesktopNavLink = ({
     <div className="group/nav-item relative flex items-center py-4">
       <Link
         className={cn(
-          "group relative whitespace-nowrap text-base lg:max-xl:text-sm font-semibold [text-shadow:0_1px_4px_rgba(0,0,0,0.12)] transition-colors flex items-center gap-1.5 lg:max-xl:gap-0.5",
+          "group relative whitespace-nowrap text-base lg:max-xl:text-sm font-semibold transition-colors flex items-center gap-1.5 lg:max-xl:gap-0.5",
           lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
         )}
         href={link.href}
