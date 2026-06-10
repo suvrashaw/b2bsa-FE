@@ -6,9 +6,9 @@ import { useCallback, useState } from "react";
 
 import type { ContactContent } from "@/content/home";
 
+import { FormInput } from "@/components/forms/FormInput";
 import { FormSelect } from "@/components/forms/FormSelect";
 import { FormTextarea } from "@/components/forms/FormTextarea";
-import { FormInput } from "@/components/forms/FormInput";
 import { Button } from "@/components/ui/Button";
 
 export interface ContactFormProps {

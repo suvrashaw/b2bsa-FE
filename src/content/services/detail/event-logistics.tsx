@@ -124,19 +124,6 @@ export const EVENT_LOGISTICS_CAPABILITIES = {
   title: "Event Logistics Capabilities & Operational Expertise",
 };
 
-export const EVENT_LOGISTICS_INDUSTRIES = [
-  "Technology & SaaS",
-  "FinTech",
-  "Healthcare & Pharma",
-  "Manufacturing",
-  "Aviation",
-  "Retail & E-commerce",
-  "Media & Broadcasting",
-  "Telecommunications",
-  "Automotive",
-  "Energy & Utilities",
-];
-
 export const EVENT_LOGISTICS_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };

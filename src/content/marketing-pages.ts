@@ -9,7 +9,6 @@ import { BLOG_PAGE } from "./blog";
 import { CASE_STUDIES_PAGE } from "./case-studies";
 import { CONTACT_PAGE } from "./contact";
 import { HOME_PAGE } from "./home";
-
 import { BOOTH_HOSTESS_PAGE } from "./services/detail/booth-hostess";
 import { CORP_EVENT_PAGE } from "./services/detail/corporate-event-solutions";
 import { CORP_NETWORKING_PAGE } from "./services/detail/corporate-networking-events";
@@ -27,7 +26,6 @@ import { SEO_PAGE } from "./services/detail/seo-services";
 import { BOOTH_BUILDER_PAGE } from "./services/detail/trade-show-booth-builder";
 import { BOOTH_DESIGN_PAGE } from "./services/detail/trade-show-booth-design";
 import { VIRTUAL_VIDEO_PAGE } from "./services/detail/virtual-video-production";
-
 import { GES_PAGE } from "./services/global-event-solutions";
 import { RESEARCH_PAGE } from "./services/market-research";
 import { MEDIA_PAGE } from "./services/media-production";

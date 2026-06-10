@@ -132,19 +132,6 @@ export const CORP_NETWORKING_CAPABILITIES = {
   title: "Networking Event Planning & Guest Engagement Capabilities",
 };
 
-export const CORP_NETWORKING_INDUSTRIES = [
-  "Technology & SaaS",
-  "FinTech",
-  "Healthcare & Pharma",
-  "Manufacturing",
-  "Aviation",
-  "Media & Broadcasting",
-  "Telecommunications",
-  "Automotive",
-  "Retail & E-commerce",
-  "Energy & Utilities",
-];
-
 export const CORP_NETWORKING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };

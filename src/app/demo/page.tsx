@@ -630,10 +630,6 @@ const DemoLabel = ({ name }: { name: string }) => {
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
-const noop = () => {
-  return;
-};
-
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function DemoPage() {
   const [activeFilter, setActiveFilter] = useState("All");

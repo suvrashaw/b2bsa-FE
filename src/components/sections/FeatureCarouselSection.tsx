@@ -78,10 +78,15 @@ const getShowcaseMotion = (status: CardStatus) => {
   return { opacity: 0, rotate: 0, scale: 0.7, y: 0 };
 };
 
+const getDepthClassName = (status: CardStatus) => {
+  if (status === "active") return "z-20";
+  if (status === "prev" || status === "next") return "z-10";
+  return "z-0";
+};
+
 const getShowcaseCardClassName = (status: CardStatus) => {
   const isActive = status === "active";
-  const isAdjacent = status === "prev" || status === "next";
-  const depthClassName = isActive ? "z-20" : isAdjacent ? "z-10" : "z-0";
+  const depthClassName = getDepthClassName(status);
   return cn(
     "absolute inset-0 origin-center overflow-hidden rounded-[2rem] bg-white shadow-2xl",
     depthClassName,

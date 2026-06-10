@@ -1,8 +1,3 @@
-export interface CaseStudyCardSummary {
-  label: string;
-  text: string;
-}
-
 export interface CaseStudyCardData {
   badge?: string;
   client: string;
@@ -16,6 +11,11 @@ export interface CaseStudyCardData {
   primarySummary: CaseStudyCardSummary;
   secondarySummary: CaseStudyCardSummary;
   title: string;
+}
+
+export interface CaseStudyCardSummary {
+  label: string;
+  text: string;
 }
 
 export interface CaseStudyIndexEntry {

@@ -132,19 +132,6 @@ export const CORP_EVENT_CAPABILITIES = {
   title: "Corporate Event Planning & Operational Capabilities",
 };
 
-export const CORP_EVENT_INDUSTRIES = [
-  "Technology & SaaS",
-  "FinTech",
-  "Healthcare & Pharma",
-  "Manufacturing",
-  "Media & Broadcasting",
-  "Telecommunications",
-  "Automotive",
-  "Retail & E-commerce",
-  "Energy & Utilities",
-  "Aviation",
-];
-
 export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };

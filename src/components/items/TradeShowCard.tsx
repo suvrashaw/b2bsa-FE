@@ -16,7 +16,7 @@ const NUMBER_FORMAT = new Intl.NumberFormat("en-US");
 
 const toDate = (value: string) => new Date(`${value}T00:00:00.000Z`);
 
-export const formatDateRange = (startDate: string, endDate: string) => {
+const formatDateRange = (startDate: string, endDate: string) => {
   const start = toDate(startDate);
   const end = toDate(endDate);
 

@@ -149,33 +149,6 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
   ],
 };
 
-export const CORPORATE_VIDEO_STRATEGY = {
-  headers: ["Content Type", "Purpose"],
-  rows: [
-    {
-      "content type": "Brand Anthem",
-      purpose: "Building high-level emotional trust and brand mission",
-    },
-    {
-      "content type": "Product Explainer",
-      purpose: "Detailed feature walk-throughs and value proof",
-    },
-    {
-      "content type": "Client Success Story",
-      purpose: "Social proof and real-world results validation",
-    },
-    {
-      "content type": "Executive Insight",
-      purpose: "Thought leadership and market authority positioning",
-    },
-  ],
-  title: "Video Content Strategy",
-};
-
-export const CORPORATE_VIDEO_CASE_STUDIES = {
-  items: GLOBAL_CASE_STUDIES,
-};
-
 export const CORPORATE_VIDEO_FAQ = {
   faqs: [
     {

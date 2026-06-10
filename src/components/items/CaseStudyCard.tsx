@@ -21,7 +21,7 @@ interface CaseStudyCardProps {
 
 export const CaseStudyCard = ({
   colSpan,
-  format,
+  format: _format,
   iconName,
   image,
   metric,

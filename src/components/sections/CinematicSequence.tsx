@@ -2,7 +2,7 @@
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 import { type CinematicSequenceContent, HOME_CINEMATIC_SEQUENCE_CONTENT } from "@/content/home";
@@ -55,15 +55,18 @@ export const CinematicSequence = ({
     target: containerRef,
   });
 
-  const getNearestFrame = (index: number) => {
-    const images = imagesRef.current;
-    if (images[index]) return images[index];
-    for (let offset = 1; offset < frameCount; offset++) {
-      if (index - offset >= 0 && images[index - offset]) return images[index - offset];
-      if (index + offset < frameCount && images[index + offset]) return images[index + offset];
-    }
-    return null;
-  };
+  const getNearestFrame = useCallback(
+    (index: number) => {
+      const images = imagesRef.current;
+      if (images[index]) return images[index];
+      for (let offset = 1; offset < frameCount; offset++) {
+        if (index - offset >= 0 && images[index - offset]) return images[index - offset];
+        if (index + offset < frameCount && images[index + offset]) return images[index + offset];
+      }
+      return null;
+    },
+    [frameCount, imagesRef]
+  );
 
   // Track progress and draw the corresponding frame
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -99,8 +102,7 @@ export const CinematicSequence = ({
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [frameCount, firstFrameLoaded, scrollYProgress]);
+  }, [frameCount, firstFrameLoaded, getNearestFrame, scrollYProgress]);
 
   return (
     <section className="relative h-[400vh] bg-black" ref={containerRef}>
@@ -227,7 +229,6 @@ const useCinematicFrameImages = (
 ) => {
   const imagesRef = useRef<(HTMLImageElement | null)[]>(createEmptyFrames(frameCount));
   const [firstFrameLoaded, setFirstFrameLoaded] = useState(false);
-  const loadSignature = `${frameCount}:${frameUrlTemplate || ""}:${(frameUrls || []).join(",")}`;
 
   useEffect(() => {
     let cancelled = false;
@@ -257,8 +258,7 @@ const useCinematicFrameImages = (
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loadSignature]);
+  }, [frameCount, frameUrlTemplate, frameUrls]);
 
   return { firstFrameLoaded, imagesRef };
 };

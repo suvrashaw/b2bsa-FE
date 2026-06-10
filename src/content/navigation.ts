@@ -156,13 +156,6 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
   },
 ];
 
-export const footerServiceGroups: { href: string; links: NavLink[]; name: string }[] =
-  serviceNavigationGroups.map((group) => ({
-    href: group.href,
-    links: group.links ? [...group.links] : (group.groups?.flatMap((sg) => sg.links) ?? []),
-    name: group.name,
-  }));
-
 export const footerNavigation: NavLink[] = [
   { href: "/blogs", name: "Blogs" },
   { href: "/case-studies", name: "Case Studies" },

@@ -80,18 +80,6 @@ export const LIVE_STREAMING_DELIVERABLES = {
   ],
 };
 
-export const LIVE_STREAMING_EVENTS = {
-  items: [
-    "Trade shows and exhibition presentations",
-    "Corporate town halls and all-hands",
-    "Product launches and announcements",
-    "Conferences and panel discussions",
-    "Investor relations events",
-    "Hybrid internal events, in-room and remote audiences combined",
-  ],
-  title: "Events We Stream",
-};
-
 export const LIVE_STREAMING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };

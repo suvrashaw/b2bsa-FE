@@ -133,19 +133,6 @@ export const EVENT_BRANDING_CAPABILITIES = {
   title: "Event Branding Capabilities & Creative Execution",
 };
 
-export const EVENT_BRANDING_INDUSTRIES = [
-  "Technology & SaaS",
-  "FinTech",
-  "Healthcare & Pharma",
-  "Manufacturing",
-  "Media & Broadcasting",
-  "Telecommunications",
-  "Automotive",
-  "Retail & E-commerce",
-  "Energy & Utilities",
-  "Aviation",
-];
-
 export const EVENT_BRANDING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
