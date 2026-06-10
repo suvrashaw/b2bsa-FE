@@ -59,6 +59,7 @@ export interface CaseStudiesProps {
   heading?: ReactNode;
   headingHighlight?: string;
   items?: CaseStudyEntry[];
+  maxItems?: number;
   viewAllHref?: string;
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
 }
@@ -73,14 +74,18 @@ export const CaseStudies = ({
   heading = content.heading,
   headingHighlight = content.headingHighlight,
   items,
+  maxItems = 5,
   viewAllHref = "/case-studies",
   viewAllLabel = content.viewAllLabel,
 }: CaseStudiesProps = {}) => {
-  const resolvedCaseStudies = (items ?? caseStudies ?? content.items).map((study, index) => ({
-    ...study,
-    icon: study.icon ?? FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
-    id: study.id ?? createCaseStudyId(study, index),
-  }));
+  const initialItems = items ?? caseStudies ?? content.items;
+  const resolvedCaseStudies = (maxItems ? initialItems.slice(0, maxItems) : initialItems).map(
+    (study, index) => ({
+      ...study,
+      icon: study.icon ?? FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
+      id: study.id ?? createCaseStudyId(study, index),
+    }),
+  );
 
   const cards: CaseStudyCardData[] = resolvedCaseStudies.map((study) => ({
     client: study.client ?? study.title,
