@@ -1,59 +1,7 @@
-import type { Metadata } from "next";
-
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
-import { RelatedServices } from "@/components/sections/RelatedServices";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
-import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import {
-  SEO_CASE_STUDIES,
-  SEO_DELIVERABLES,
-  SEO_FAQ,
-  SEO_HERO,
-  SEO_PAGE,
-  SEO_PROCESS,
-  SEO_PROOF_BAR,
-  SEO_WHY,
-} from "@/content/services/detail/seo-services";
-import { PERF_PAGE } from "@/content/services/performance-marketing";
-
-export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
-
-const seoContactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  badge: "Own Your Organic Pipeline",
-  description: "Your buyers are searching. Will they find you, or your competitor?",
-  headingLines: ["Your Buyers Are Searching.", "Will They Find You?"] as [string, string],
-  primaryCta: { href: "/contact", label: "Get a Free SEO Audit" },
-};
-
-const seoServicesRelatedServices = [
-  { href: "/services/paid-advertising", title: "Paid Advertising" },
-  { href: "/services/performance-marketing", title: "Performance Marketing" },
-];
+import { redirect } from "next/navigation";
 
 const Page = () => {
-  return (
-    <ServiceDetail
-      caseStudies={SEO_CASE_STUDIES}
-      closingSections={
-        <>
-          <FAQ {...SEO_FAQ} />
-          <RelatedServices services={seoServicesRelatedServices} />
-          <ContactCinematicCTA {...seoContactCta} />
-        </>
-      }
-      deliverables={SEO_DELIVERABLES}
-      faq={SEO_FAQ}
-      hero={SEO_HERO}
-      page={SEO_PAGE}
-      parentPage={PERF_PAGE}
-      process={SEO_PROCESS}
-      proofBar={SEO_PROOF_BAR}
-      why={SEO_WHY}
-    />
-  );
+  redirect("/services/performance-marketing/seo-services");
 };
 
 export default Page;

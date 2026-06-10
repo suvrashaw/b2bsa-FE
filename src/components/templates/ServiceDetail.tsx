@@ -4,8 +4,8 @@ import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
 import type { PricingProps } from "@/components/sections/Pricing";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
+import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
-import type { FeatureCarouselItem } from "@/components/ui/FeatureCarousel";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { Footer } from "@/components/layout/Footer";
