@@ -56,14 +56,14 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
       id="core-values"
       ref={targetRef}
     >
-      <div className="sticky top-0 flex h-screen w-full items-stretch overflow-hidden">
+      <div className="sticky top-0 flex h-[80vh] min-h-[500px] w-full items-stretch overflow-hidden">
         <motion.div 
           className="flex h-full items-stretch will-change-transform"
           ref={trackRef}
           style={{ x }}
         >
           {/* Intro Slide */}
-          <div className="flex w-screen shrink-0 flex-col justify-center px-8 py-20 md:px-[clamp(24px,6vw,120px)]">
+          <div className="flex w-screen shrink-0 flex-col justify-center px-8 py-20 md:w-[60vw] md:pl-[clamp(24px,6vw,120px)] md:pr-12 lg:w-[50vw]">
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px w-8 bg-brand-cyan" />
               <p className="font-accent text-[11px] font-bold uppercase tracking-[0.16em] text-brand-charcoal/60">
@@ -98,12 +98,12 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
             
             return (
               <div 
-                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-[clamp(20px,4vw,60px)] py-20"
+                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-[clamp(20px,4vw,60px)] py-20 md:py-28 lg:py-32"
                 key={index} 
               >
-                <div className="relative overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-8 py-9 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)]">
+                <div className="relative flex aspect-square flex-col justify-center overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-8 py-9 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)]">
                   {/* Top Gradient Border */}
-                  <div className="absolute inset-x-0 top-0 h-[2px] bg-linear-to-r from-brand-cyan/20 via-brand-cyan to-brand-blue/20" />
+                  <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent" />
                   
                   {/* Big Number Background */}
                   <div className="absolute -top-4 right-4 select-none font-display text-[80px] font-black leading-none text-brand-charcoal/5">
@@ -114,10 +114,6 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded border border-brand-cyan/20 bg-brand-cyan/10">
                     <div className="h-4 w-4 rounded-sm bg-brand-cyan" />
                   </div>
-                  
-                  <p className="mb-3.5 font-accent text-[11px] font-bold uppercase tracking-[0.16em] text-brand-cyan">
-                    Core Value
-                  </p>
                   
                   <h3 className="mb-3 font-display text-[clamp(20px,2.2vw,28px)] font-bold leading-[1.2] text-brand-charcoal">
                     {value}
