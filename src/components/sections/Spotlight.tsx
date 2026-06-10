@@ -11,20 +11,36 @@ import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 export interface SpotlightProps {
-  align?: "left" | "center" | "right";
+  align?: SpotlightAlignment;
   className?: string;
   ctaHref?: string;
   ctaLabel?: string;
   description: string;
+  descriptionItems?: readonly string[];
   imageAlt?: string;
   imageUrl?: string;
   index?: string;
   label?: string;
   onClick?: () => void;
+  secondarySpotlight?: SpotlightSecondaryBlock;
+  showCta?: boolean;
   titleLine1: string;
   titleLine2: string;
   triggerContactModal?: boolean;
   videoUrl?: string;
+}
+
+type SpotlightAlignment = "center" | "left" | "right";
+
+interface SpotlightSecondaryBlock {
+  align?: SpotlightAlignment;
+  ctaHref?: string;
+  ctaLabel?: string;
+  description: string;
+  descriptionItems?: readonly string[];
+  label?: string;
+  titleLine1: string;
+  titleLine2: string;
 }
 
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
@@ -34,16 +50,18 @@ const SpotlightTextBlock = ({
   ctaHref,
   ctaLabel,
   description,
+  descriptionItems,
   isHovered,
   label,
   onClick,
   titleLine1,
   titleLine2,
 }: {
-  align?: "left" | "center" | "right";
+  align?: SpotlightAlignment;
   ctaHref?: string;
-  ctaLabel: string;
+  ctaLabel?: string;
   description: string;
+  descriptionItems?: readonly string[];
   isHovered: boolean;
   label?: string;
   onClick?: () => void;
@@ -117,46 +135,76 @@ const SpotlightTextBlock = ({
         </span>
       </Heading>
 
-      <p
-        className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
-        style={descStyle}
-      >
-        {description}
-      </p>
+      {descriptionItems ? (
+        <div
+          className="mt-6 max-w-[580px] space-y-3 text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+          style={descStyle}
+        >
+          {description && <p>{description}</p>}
+          <ul className="space-y-3">
+            {descriptionItems.map((item) => (
+              <li
+                className={cn(
+                  "flex gap-3",
+                  align === "right" && "flex-row-reverse",
+                  align === "center" && "justify-center"
+                )}
+                key={item}
+              >
+                <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p
+          className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+          style={descStyle}
+        >
+          {description}
+        </p>
+      )}
 
-      <div className="mt-6 md:mt-8 lg:mt-10">
-        {ctaHref ? (
-          <Button
-            asChild
-            className={cn(
-              "gap-2 transition-all duration-500",
-              isHovered && "border-brand-blue bg-brand-blue/5"
-            )}
-            variant="secondary"
-          >
-            <Link href={ctaHref}>
+      {ctaLabel && (
+        <div className="mt-6 md:mt-8 lg:mt-10">
+          {ctaHref ? (
+            <Button
+              asChild
+              className={cn(
+                "gap-2 transition-all duration-500",
+                isHovered && "border-brand-blue bg-brand-blue/5"
+              )}
+              variant="secondary"
+            >
+              <Link href={ctaHref}>
+                {ctaLabel}
+                {isHovered ? (
+                  <ArrowUpRight className="h-4 w-4" />
+                ) : (
+                  <ArrowRight className="h-4 w-4" />
+                )}
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              className={cn(
+                "gap-2 transition-all duration-500",
+                isHovered && "border-brand-blue bg-brand-blue/5"
+              )}
+              onClick={onClick}
+              variant="secondary"
+            >
               {ctaLabel}
               {isHovered ? (
                 <ArrowUpRight className="h-4 w-4" />
               ) : (
                 <ArrowRight className="h-4 w-4" />
               )}
-            </Link>
-          </Button>
-        ) : (
-          <Button
-            className={cn(
-              "gap-2 transition-all duration-500",
-              isHovered && "border-brand-blue bg-brand-blue/5"
-            )}
-            onClick={onClick}
-            variant="secondary"
-          >
-            {ctaLabel}
-            {isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
-          </Button>
-        )}
-      </div>
+            </Button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -298,11 +346,14 @@ export const Spotlight = ({
   ctaHref,
   ctaLabel = "Explore",
   description,
+  descriptionItems,
   imageAlt = "Feature image",
   imageUrl,
   index: _index = "01",
   label,
   onClick,
+  secondarySpotlight,
+  showCta = true,
   titleLine1,
   titleLine2,
   triggerContactModal = false,
@@ -340,20 +391,35 @@ export const Spotlight = ({
         <SpotlightTextBlock
           align={align}
           ctaHref={ctaHref}
-          ctaLabel={ctaLabel}
+          ctaLabel={showCta ? ctaLabel : undefined}
           description={description}
+          descriptionItems={descriptionItems}
           isHovered={isHovered}
           label={label}
           onClick={handleCtaClick}
           titleLine1={titleLine1}
           titleLine2={titleLine2}
         />
-        <SpotlightImageBlock
-          imageAlt={imageAlt}
-          imageUrl={imageUrl}
-          isHovered={isHovered}
-          videoUrl={videoUrl}
-        />
+        {secondarySpotlight ? (
+          <SpotlightTextBlock
+            align={secondarySpotlight.align ?? "right"}
+            ctaHref={secondarySpotlight.ctaHref}
+            ctaLabel={secondarySpotlight.ctaLabel}
+            description={secondarySpotlight.description}
+            descriptionItems={secondarySpotlight.descriptionItems}
+            isHovered={isHovered}
+            label={secondarySpotlight.label}
+            titleLine1={secondarySpotlight.titleLine1}
+            titleLine2={secondarySpotlight.titleLine2}
+          />
+        ) : (
+          <SpotlightImageBlock
+            imageAlt={imageAlt}
+            imageUrl={imageUrl}
+            isHovered={isHovered}
+            videoUrl={videoUrl}
+          />
+        )}
       </div>
       {triggerContactModal && <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />}
     </>

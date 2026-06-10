@@ -21,6 +21,7 @@ export const ABOUT_HERO = {
 };
 
 export const ABOUT_ORIGIN_TIMELINE = {
+  description: "The problem, the model, and the operating standard behind B2B Sales Arrow.",
   heading: "How B2B Sales Arrow was Built",
   phases: [
     {
@@ -34,7 +35,6 @@ export const ABOUT_ORIGIN_TIMELINE = {
       title: "One Accountable Model",
     },
   ],
-  subtitle: "The problem, the model, and the operating standard behind B2B Sales Arrow.",
 };
 
 export const ABOUT_VISION_MISSION = {
@@ -154,6 +154,54 @@ export const ABOUT_SIGNATURE_SERVICES = {
   ],
 };
 
+export const ABOUT_SIGNATURE_SERVICES_STACK = [
+  {
+    color: "bg-brand-blue",
+    description:
+      "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
+    icon: "Presentation",
+    id: "trade-show-booth-design",
+    image: "/images/services/booth/booth-5.avif",
+    title: "Trade show booth design",
+  },
+  {
+    color: "bg-brand-cyan",
+    description:
+      "From strategy and logistics to end-to-end execution, our global event solutions ensure your enterprise events run seamlessly and deliver pipeline across any market worldwide.",
+    icon: "Globe",
+    id: "global-event-solutions",
+    image: "/images/services/booth/booth-7.avif",
+    title: "Global event solutions",
+  },
+  {
+    color: "bg-brand-primary",
+    description:
+      "We capture broadcast-quality video, interviews, and 3D animations at your event, turning a single day on the floor into 12 months of high-impact digital content.",
+    icon: "MonitorPlay",
+    id: "media-production-services",
+    image: "/images/services/media-production-2.avif",
+    title: "Media production services",
+  },
+  {
+    color: "bg-brand-blue",
+    description:
+      "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
+    icon: "Users",
+    id: "active-prospecting",
+    image: "/images/services/market-intelligence.avif",
+    title: "Active Prospecting",
+  },
+  {
+    color: "bg-brand-cyan",
+    description:
+      "We create cohesive event branding, from booth graphics and signage to digital displays, so your enterprise presence commands attention across the entire venue.",
+    icon: "Palette",
+    id: "event-branding",
+    image: "/images/events/event_other_4.avif",
+    title: "Event Branding",
+  },
+];
+
 export const ABOUT_FOUNDER_STORY = {
   image: {
     alt: "Paras Lohani",
@@ -165,6 +213,8 @@ export const ABOUT_FOUNDER_STORY = {
 };
 
 export const ABOUT_VALUES = {
+  centerImage: "/images/about/values/partnership.avif",
+  centerText: ABOUT_FOUNDER_STORY.story,
   description:
     "Commercial outcomes, quality, genuine partnership, and local execution discipline guide every program.",
   eyebrow: "OUR PRINCIPLES",

@@ -513,6 +513,7 @@ export const Header = ({
         </Link>
         <div className="lg:hidden">
           <button
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
               "rounded-full p-2 transition-colors hover:bg-brand-gray/5",
               lightText ? "text-white" : ""

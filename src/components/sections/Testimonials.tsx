@@ -90,12 +90,14 @@ export const Testimonials = ({
         {/* Navigation Arrows */}
         <div className="relative z-50 mt-16 flex items-center justify-center gap-8">
           <button
+            aria-label="Previous testimonial"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
+            aria-label="Next testimonial"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}
           >

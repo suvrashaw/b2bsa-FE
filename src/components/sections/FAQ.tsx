@@ -190,12 +190,14 @@ export const FAQ = ({
         {showArrows && (
           <div className="container mx-auto mt-12 flex items-center justify-center gap-8 px-8">
             <button
+              aria-label="Previous question"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
               onClick={scrollLeft}
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
             <button
+              aria-label="Next question"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
               onClick={scrollRight}
             >

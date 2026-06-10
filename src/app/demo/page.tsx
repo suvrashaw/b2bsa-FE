@@ -5,9 +5,7 @@ import { useState } from "react";
 import type { SharedBlogPost } from "@/content/blogs";
 
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
-import { AboutFounderStory } from "@/components/sections/AboutFounderStory";
-import { AboutSignatureServices } from "@/components/sections/AboutSignatureServices";
-import { AboutVisionMission } from "@/components/sections/AboutVisionMission";
+
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
@@ -381,41 +379,7 @@ const ABOUT_CORE_VALUES_DATA = {
   ],
 };
 
-// ─── AboutFounderStory ───────────────────────────────────────────────────────
 
-const ABOUT_FOUNDER_DATA = {
-  image: { alt: "Founder", src: IMG_EV1 },
-  name: "The Founder",
-  story:
-    "After a decade running enterprise event teams at Fortune 500 companies, I saw the same problem everywhere: brands investing millions in trade shows with no systematic way to convert booth traffic into pipeline. B2B Sales Arrow was built to solve that — combining event production craft with a revenue-first methodology that has now delivered $1.2B+ in influenced pipeline across 250+ events.",
-};
-
-// ─── AboutSignatureServices ──────────────────────────────────────────────────
-
-const ABOUT_SIG_SERVICES_DATA = {
-  heading: "Our Signature Services",
-  services: [
-    { href: "/services", id: "prospecting", image: IMG_WAF, title: "Active Prospecting" },
-    { href: "/services", id: "booth", image: IMG_EV1, title: "Booth Design" },
-    { href: "/services", id: "media", image: IMG_EV2, title: "Media Production" },
-    { href: "/services", id: "meetings", image: IMG_EV3, title: "Meeting Coordination" },
-  ],
-};
-
-// ─── AboutVisionMission ──────────────────────────────────────────────────────
-
-const ABOUT_VISION_MISSION_DATA = {
-  heading: "Vision & Mission",
-  missionItems: [
-    "Turn every trade show into a measurable revenue moment",
-    "Deliver world-class event experiences at enterprise scale",
-    "Build long-term partnerships grounded in accountability",
-  ],
-  missionTitle: "Our Mission",
-  vision:
-    "To be the global standard for enterprise event-driven pipeline generation — the team every B2B brand calls before they book a booth.",
-  visionTitle: "Our Vision",
-};
 
 // ─── ContactCinematicCTA ─────────────────────────────────────────────────────
 
@@ -464,9 +428,7 @@ type PageLink = { href: string; label: string };
 
 const COMPONENT_PAGES: Record<string, PageLink[]> = {
   AboutCoreValues: [{ href: "/about", label: "About" }],
-  AboutFounderStory: [{ href: "/about", label: "About" }],
-  AboutSignatureServices: [{ href: "/about", label: "About" }],
-  AboutVisionMission: [{ href: "/about", label: "About" }],
+
   Blogs: [
     { href: "/", label: "Home" },
     { href: "/blogs", label: "Blogs" },
@@ -703,17 +665,7 @@ export default function DemoPage() {
       <DemoLabel name="AboutCoreValues" />
       <AboutCoreValues data={ABOUT_CORE_VALUES_DATA} />
 
-      {/* 09 – AboutVisionMission */}
-      <DemoLabel name="AboutVisionMission" />
-      <AboutVisionMission data={ABOUT_VISION_MISSION_DATA} />
 
-      {/* 10 – AboutFounderStory */}
-      <DemoLabel name="AboutFounderStory" />
-      <AboutFounderStory data={ABOUT_FOUNDER_DATA} />
-
-      {/* 11 – AboutSignatureServices */}
-      <DemoLabel name="AboutSignatureServices" />
-      <AboutSignatureServices data={ABOUT_SIG_SERVICES_DATA} />
 
       {/* 12 – Culture */}
       <DemoLabel name="Culture" />

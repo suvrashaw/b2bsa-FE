@@ -185,12 +185,14 @@ export const BoothWhyChooseUs = ({
 
             <div className="mt-12 flex items-center justify-center gap-8">
               <button
+                aria-label="Previous slide"
                 className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
                 onClick={() => goTo(activeIndex - 1)}
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
+                aria-label="Next slide"
                 className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
                 onClick={() => goTo(activeIndex + 1)}
               >

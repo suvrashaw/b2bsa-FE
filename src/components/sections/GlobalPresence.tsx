@@ -64,7 +64,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
 
   return (
     <section
-      className="relative overflow-hidden bg-brand-white py-12 transition-colors duration-500"
+      className="relative overflow-hidden bg-brand-gray py-12 transition-colors duration-500"
       ref={containerRef}
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
@@ -96,10 +96,9 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           transition={RIGHT_TRANSITION}
         >
           <div className="absolute inset-0 h-full w-full">
-            {isInView && (
               <Globe
                 backgroundColor="rgba(0,0,0,0)"
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
                 htmlElement={getHtmlElement}
                 htmlElementsData={data.cities}
                 onGlobeReady={handleGlobeReady}
@@ -112,7 +111,6 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
                 pointsMerge={true}
                 ref={globeRef}
               />
-            )}
           </div>
         </motion.div>
       </div>

@@ -130,12 +130,14 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
 
         <div className="mt-10 flex items-center justify-center gap-8">
           <button
+            aria-label="Previous post"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={() => slideTo(offsetRef.current - 1)}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
+            aria-label="Next post"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={() => slideTo(offsetRef.current + 1)}
           >

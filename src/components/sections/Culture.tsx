@@ -66,7 +66,7 @@ const ParallaxItem = ({ alt, index, scale, src }: ParallaxItemProps) => {
   );
 };
 
-const ZoomParallax = ({ images }: { images: ParallaxImage[] }) => {
+const ZoomParallax = ({ centerText, images }: { centerText?: string; images: ParallaxImage[] }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end end"],
@@ -79,6 +79,8 @@ const ZoomParallax = ({ images }: { images: ParallaxImage[] }) => {
   const scale8 = useTransform(scrollYProgress, [0, 0.8, 1], [1, 8, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 0.8, 1], [1, 9, 9]);
 
+  const textOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
+
   const scales = [scale5_center, scale5, scale6, scale5, scale6, scale8, scale9];
 
   return (
@@ -89,6 +91,16 @@ const ZoomParallax = ({ images }: { images: ParallaxImage[] }) => {
 
           return <ParallaxItem alt={alt} index={index} key={index} scale={scale} src={src} />;
         })}
+        {centerText && (
+          <motion.div
+            className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/70 px-4 md:px-12 lg:px-24"
+            style={{ opacity: textOpacity }}
+          >
+            <p className="max-w-4xl text-center text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
+              {centerText}
+            </p>
+          </motion.div>
+        )}
       </div>
     </div>
   );
@@ -110,6 +122,8 @@ const PARALLAX_IMAGES = [
 ];
 
 export interface CultureData {
+  centerImage?: string;
+  centerText?: string;
   description: string;
   eyebrow: string;
   heading: ReactNode | string;
@@ -119,8 +133,11 @@ export interface CultureData {
 
 export const Culture = ({ data }: { data: CultureData }) => {
   const parallaxImages = [
-    ...data.reasons.map((r) => ({ alt: r.title, src: r.image })),
-    ...PARALLAX_IMAGES.slice(data.reasons.length),
+    ...(data.centerImage ? [{ alt: "Center Image", src: data.centerImage }] : []),
+    ...data.reasons
+      .map((r) => ({ alt: r.title, src: r.image }))
+      .filter((img) => img.src !== data.centerImage),
+    ...PARALLAX_IMAGES,
   ].slice(0, 7);
 
   return (
@@ -151,9 +168,9 @@ export const Culture = ({ data }: { data: CultureData }) => {
         </div>
       </div>
 
-      <ZoomParallax images={parallaxImages} />
+      <ZoomParallax centerText={data.centerText} images={parallaxImages} />
 
-      <div className="h-[20vh]" />
+
     </section>
   );
 };

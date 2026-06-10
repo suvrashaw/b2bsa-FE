@@ -8,6 +8,7 @@ import { cn } from "@/lib";
 
 interface ProcessTimelineProps {
   className?: string;
+  description?: ReactNode;
   heading?: ReactNode;
   headingHighlight?: string;
   phases?: Step[];
@@ -28,6 +29,7 @@ const PROCESSTIMELINE_VIEWPORT = { once: true };
 
 export const ProcessTimeline = ({
   className,
+  description,
   heading,
   headingHighlight,
   phases,
@@ -38,6 +40,7 @@ export const ProcessTimeline = ({
 }: ProcessTimelineProps) => {
   const resolvedSteps = steps ?? phases ?? [];
   const resolvedTitle = title ?? heading;
+  const resolvedDescription = description ?? subtitle;
   const stepTransitions = useMemo(
     () => (steps ?? phases ?? []).map((_, index) => ({ delay: index * 0.1, duration: 0.6 })),
     [steps, phases]
@@ -46,17 +49,17 @@ export const ProcessTimeline = ({
   return (
     <section className={cn("py-20 bg-brand-gray", className)}>
       <div className="container mx-auto px-8">
-        {(resolvedTitle || subtitle) && (
+        {(resolvedTitle || resolvedDescription) && (
           <div className="mb-20 text-center">
-            {subtitle && (
-              <div className="mb-4  text-sm font-bold tracking-widest text-brand-blue uppercase">
-                {subtitle}
-              </div>
-            )}
             {resolvedTitle && (
               <Heading as="h2" highlight={headingHighlight}>
                 {resolvedTitle}
               </Heading>
+            )}
+            {resolvedDescription && (
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+                {resolvedDescription}
+              </p>
             )}
           </div>
         )}
