@@ -138,7 +138,7 @@ export const ImageHero = ({
                 alt=""
                 className="object-cover"
                 fill
-                priority={currentIndex === 0}
+                priority
                 src={images[currentIndex]}
               />
             </motion.div>

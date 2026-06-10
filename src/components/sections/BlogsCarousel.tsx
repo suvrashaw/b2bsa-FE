@@ -38,13 +38,17 @@ const DotButton = ({ active, index, onDotClick }: DotButtonProps) => {
   return (
     <button
       aria-label={`Go to slide ${index + 1}`}
-      className={cn(
-        "h-2 rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2",
-        active ? "w-10 bg-brand-blue" : "w-2 bg-gray-300"
-      )}
+      className="group flex h-12 min-w-[32px] items-center justify-center p-1 focus:outline-none"
       onClick={handleClick}
       type="button"
-    />
+    >
+      <span
+        className={cn(
+          "block h-2 rounded-full transition-all duration-500 ease-out group-focus-visible:ring-2 group-focus-visible:ring-brand-blue group-focus-visible:ring-offset-2",
+          active ? "w-10 bg-brand-blue" : "w-2 bg-gray-300 group-hover:bg-gray-400"
+        )}
+      />
+    </button>
   );
 };
 
@@ -158,7 +162,7 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
           </motion.div>
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-2.5">
+        <div className="mt-10 flex items-center justify-center">
           {posts.map((post, i) => (
             <DotButton active={i === dotIndex} index={i} key={post.id} onDotClick={goToDot} />
           ))}

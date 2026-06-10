@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_RENTAL_RENT_VS_BUY = {
@@ -53,108 +51,6 @@ export const BOOTH_RENTAL_WHY = {
   titleLine2: "Services",
 };
 
-export const BOOTH_RENTAL_DELIVERABLES = {
-  heading: "Our Event Booth Rental Services",
-  headingHighlight: "Booth Rental Services",
-  services: [
-    {
-      color: "bg-brand-blue",
-      description:
-        "High-quality modular systems that can be configured into any size or shape, providing a structural look identical to custom fabrication at a fraction of the lead time.",
-      icon: "Layers",
-      id: "modular",
-      image: "/images/home/services/booth/booth-5.avif",
-      title: "Modular Exhibition System Rental",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "Even though the structure is rented, the branding is entirely yours. High-fidelity tension fabric graphics and surface treatments for every rental build.",
-      icon: "Palette",
-      id: "graphics",
-      image: "/images/home/services/booth/booth-6.avif",
-      title: "Custom Branded Graphic Packages",
-    },
-    {
-      color: "bg-brand-primary",
-      description:
-        "Access to our global catalog of designer exhibition furniture, flooring, and decorative elements to elevate your rental booth to a premium environment.",
-      icon: "Armchair",
-      id: "furniture",
-      image: "/images/home/services/booth/booth-7.avif",
-      title: "Premium Furniture and Decor Hire",
-    },
-    {
-      color: "bg-brand-blue",
-      description:
-        "We handle the full lifecycle, venue delivery, professional assembly, on-site technical support, and deconstruction, anywhere in the world.",
-      icon: "Key",
-      id: "logistics",
-      image: "/images/home/services/booth/booth-8.avif",
-      title: "Full Turnkey Installation and Support",
-    },
-  ],
-};
-
-export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
-  {
-    cta: { href: "/contact", label: "Get 10×10 Rental Quote" },
-    descriptions: [
-      <Fragment key="focused-presence">
-        Branded back wall, counter, lighting, screen option, and{" "}
-        <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.
-      </Fragment>,
-    ],
-    eyebrow: "Focused Presence",
-    heading: "10x10 Standard",
-    id: "rental-10x10",
-    image: "/images/booth/10x10.jpg",
-  },
-  {
-    cta: { href: "/contact", label: "Get 10×20 Rental Quote" },
-    descriptions: ["Room for product-led demos, a defined visitor journey, and a meeting zone."],
-    eyebrow: "Extended Format",
-    heading: "10x20 Inline",
-    id: "rental-10x20",
-    image: "/images/booth/10x20.jpg",
-  },
-  {
-    cta: { href: "/contact", label: "Get 20×20 Rental Quote" },
-    descriptions: [
-      <Fragment key="exhibition-visibility">
-        Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas,
-        meeting space, and AV support.
-      </Fragment>,
-    ],
-    eyebrow: "High Visibility",
-    heading: "20x20 Island",
-    id: "rental-20x20",
-    image: "/images/booth/20x20.jpg",
-  },
-  {
-    cta: { href: "/contact", label: "Get Double-Deck Quote" },
-    descriptions: [
-      "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
-    ],
-    eyebrow: "Premium Floor Presence",
-    heading: "Double-Deck",
-    id: "rental-double-deck",
-    image: "/images/booth/30x30.png",
-  },
-  {
-    cta: { href: "/contact", label: "Get Custom Rental Quote" },
-    descriptions: [
-      <Fragment key="rental-structures">
-        Existing <strong className="font-bold">rental structures</strong> adapted with your full
-        brand identity, messaging, and engagement zones.
-      </Fragment>,
-    ],
-    eyebrow: "Bespoke",
-    heading: "Custom-Branded Rentals",
-    id: "rental-custom",
-    image: "/images/booth/40x40.jpg",
-  },
-];
 
 export const BOOTH_RENTAL_PROCESS = {
   phases: [
@@ -249,32 +145,6 @@ export const BOOTH_RENTAL_RELATED_SERVICES = [
   },
 ];
 
-export const BOOTH_RENTAL_WHY_CHOOSE_US = {
-  heading: "Why Choose B2B Sales Arrow for Booth Rental?",
-  headingHighlight: "B2B Sales Arrow",
-  items: [
-    {
-      description: "Recognized by industry leaders for creative excellence and innovation",
-      icon: "Award" as const,
-      title: "Award-Winning",
-    },
-    {
-      description: "150+ experienced professionals in design, production, and strategy",
-      icon: "Users2" as const,
-      title: "Expert Team",
-    },
-    {
-      description: "Delivering experiences across 30+ countries worldwide",
-      icon: "Globe2" as const,
-      title: "Global Reach",
-    },
-    {
-      description: "Consistently exceeding client KPIs and ROI expectations",
-      icon: "TrendingUp" as const,
-      title: "Proven Results",
-    },
-  ],
-};
 
 export const BOOTH_RENTAL_BLOGS_SECTION = {
   heading: "Blogs",

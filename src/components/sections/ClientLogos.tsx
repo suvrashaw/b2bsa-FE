@@ -37,6 +37,8 @@ const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) =
   return { handleWheel, setIsHovered, x };
 };
 
+const IMG_SIZE_STYLE = { height: "auto", width: "auto" } as const;
+
 const LogosRow = ({
   logos,
   onLogoMouseEnter,
@@ -57,6 +59,7 @@ const LogosRow = ({
           onMouseEnter={onLogoMouseEnter}
           onMouseLeave={onLogoMouseLeave}
           src={logo.src}
+          style={IMG_SIZE_STYLE}
           width={140}
         />
       </div>
@@ -108,6 +111,7 @@ export const ClientLogos = ({
                 draggable={false}
                 height={48}
                 src={logo.src}
+                style={IMG_SIZE_STYLE}
                 width={160}
               />
             </div>

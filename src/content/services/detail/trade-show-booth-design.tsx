@@ -1,5 +1,3 @@
-import { Layers, Layout, Maximize } from "lucide-react";
-
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_DESIGN_HERO = {
@@ -259,56 +257,6 @@ export const BOOTH_DESIGN_PAGE = {
   },
 } as const;
 
-export const BOOTH_DESIGN_CREATIVE_PRICING = {
-  description: "Custom exhibition stands built for buyer psychology and pipeline conversion",
-  tag: "Design Pricing Guide",
-  tiers: [
-    {
-      color: "blue",
-      description: "Ideal for custom 10x10 spaces and compact satellite booths",
-      features: [
-        "10x10 Custom Architecture Design",
-        "Spatial Layout & Traffic Flow Planning",
-        "Premium Large-Format Graphics Vetting",
-        "Fabricator Selection & Vetting Support",
-        "Typical Turnaround: 2–3 Weeks",
-      ],
-      icon: <Layout className="h-5 w-5" />,
-      name: "Compact Custom",
-      price: 3000,
-    },
-    {
-      color: "primary",
-      description: "Perfect for high-impact 20x20 islands or modular systems",
-      features: [
-        "20x20 Island or Modular Design",
-        "Semi-Private Discussion & Keynote Zones",
-        "Interactive Digital Display Vetting",
-        "Full 3D Visual Walkthrough Prototypes",
-        "Fabrication Liaison & On-site Vetting",
-      ],
-      icon: <Maximize className="h-5 w-5" />,
-      name: "Flagship Island",
-      popular: true,
-      price: 10_000,
-    },
-    {
-      color: "cyan",
-      description: "Fully bespoke multi-tier builds and flagship custom stands",
-      features: [
-        "Double-Deck or Elite Custom Layouts",
-        "Integrated Private Executive Suites & VIP Lounge",
-        "AR/VR Experience & Spatial Audio Design",
-        "Dedicated Lead Architect Allocation",
-        "Structural Compliance & Geographic Vetting",
-      ],
-      icon: <Layers className="h-5 w-5" />,
-      name: "Elite Double-Deck",
-      price: 20_000,
-    },
-  ],
-  title: "Booth Design Investment Guide",
-};
 
 export const BOOTH_DESIGN_RELATED_SERVICES = [
   {

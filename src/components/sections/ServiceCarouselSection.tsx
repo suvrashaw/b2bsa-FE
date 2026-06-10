@@ -136,20 +136,21 @@ export const ServiceCarouselSection = ({
             </motion.div>
           </div>
 
-          {/* Pagination dots */}
-          <div className="mt-6 flex justify-center gap-2">
-            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <div className="mt-6 flex justify-center">
               <button
                 aria-label={`Go to slide group ${i + 1}`}
-                className={`h-2 w-2 rounded-full transition-all ${
-                  i === activeIndex ? "w-6 bg-brand-blue" : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                className="group flex h-12 min-w-[32px] items-center justify-center p-1 focus:outline-none"
                 data-index={i}
                 key={i}
                 onClick={handleDotClick}
                 type="button"
-              />
-            ))}
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${
+                    i === activeIndex ? "w-6 bg-brand-blue" : "w-2 bg-gray-300 group-hover:bg-gray-400"
+                  }`}
+                />
+              </button>
           </div>
         </div>
       </div>

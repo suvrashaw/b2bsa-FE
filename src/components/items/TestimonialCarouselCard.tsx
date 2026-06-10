@@ -13,7 +13,7 @@ const CARD_STYLE_BASE = { transformOrigin: "center", transformStyle: "preserve-3
 const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
 const isOuterQuoteMark = (char: string) =>
-  ['"', "'", "\u201C", "\u201D"].includes(char);
+  ["'", '"', "\u201C", "\u201D"].includes(char);
 
 const stripOuterQuoteMarks = (quote: string) => {
   let start = 0;

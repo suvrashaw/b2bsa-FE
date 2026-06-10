@@ -202,12 +202,6 @@ export const ABOUT_VALUES = {
   ],
 };
 
-export const ABOUT_CTA = {
-  ctaHref: "/contact",
-  ctaLabel: "Request a Strategy Consultation",
-  title:
-    "If you need event presence, media content, performance marketing, or market intelligence connected to measurable commercial outcomes, start with one conversation.",
-};
 
 export const ABOUT_INQUIRY = {
   description: "B2B Sales Arrow | Premium Experiential Marketing",

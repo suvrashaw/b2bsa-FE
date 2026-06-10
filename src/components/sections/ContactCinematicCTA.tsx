@@ -145,6 +145,7 @@ export const ContactCinematicCTA = ({
             alt={backgroundImage.alt}
             className="object-cover"
             fill
+            priority
             sizes="100vw"
             src={backgroundImage.src}
           />

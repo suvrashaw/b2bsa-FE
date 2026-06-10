@@ -598,18 +598,19 @@ export const Footer = () => {
                     }
 
                     return (
-                      <span
-                        aria-disabled="true"
+                      <button
                         aria-label={`${item.name} profile coming soon`}
                         className={cn(
                           baseClass,
                           item.colorClass.split(" ", 1)[0],
                           "cursor-not-allowed opacity-60 hover:bg-brand-gray"
                         )}
+                        disabled
                         key={item.name}
+                        type="button"
                       >
                         <Icon className="h-4 w-4" />
-                      </span>
+                      </button>
                     );
                   })}
                 </div>
