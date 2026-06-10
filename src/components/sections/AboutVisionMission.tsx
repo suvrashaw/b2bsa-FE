@@ -4,6 +4,7 @@ import { Heading } from "@/components/ui/Heading";
 
 export interface AboutVisionMissionData {
   heading: string;
+  headingHighlight?: string;
   missionItems: string[];
   missionTitle: string;
   vision: string;
@@ -15,7 +16,7 @@ export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) =
     <section className="scroll-mt-28 bg-brand-white py-20" id="vision-mission">
       <div className="container mx-auto px-8">
         <div className="mb-12 max-w-3xl">
-          <Heading as="h2">{data.heading}</Heading>
+          <Heading as="h2" highlight={data.headingHighlight}>{data.heading}</Heading>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
@@ -35,7 +36,7 @@ export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) =
             <ul className="space-y-5">
               {data.missionItems.map((item) => (
                 <li
-                  className="flex gap-4 text-base leading-relaxed text-brand-charcoal/80"
+                  className="flex gap-4 text-base md:text-lg leading-relaxed text-brand-charcoal/80"
                   key={item}
                 >
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-cyan" />

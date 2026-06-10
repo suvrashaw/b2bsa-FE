@@ -40,6 +40,7 @@ export interface WhyChooseUsProps {
   content?: WhyChooseUsContent;
   eyebrow?: WhyChooseUsContent["eyebrow"];
   heading?: WhyChooseUsContent["heading"];
+  headingHighlight?: string;
   reasons?: WhyChooseUsContent["reasons"];
   showImagePanel?: boolean;
 }
@@ -55,6 +56,7 @@ export const WhyChooseUs = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   reasons = content.reasons,
   showImagePanel = true,
 }: WhyChooseUsProps = {}) => {
@@ -96,14 +98,14 @@ export const WhyChooseUs = ({
       style={sectionStyle}
     >
       <div
-        className={`container sticky top-0 mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
+        className={`sticky top-0 container mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
       >
         {/* Left text panel */}
         <div
           className={`flex h-screen flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
           {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-14 w-full text-left">
+          <Heading as="h2" className="mb-14 w-full text-left" highlight={headingHighlight}>
             {heading}
           </Heading>
 
@@ -122,7 +124,7 @@ export const WhyChooseUs = ({
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <Heading as="h3">{activeReason.title}</Heading>
                   </div>
-                  <p className="max-w-md text-xl leading-relaxed text-gray-600">
+                  <p className="max-w-md text-base md:text-lg leading-relaxed text-gray-600">
                     {activeReason.description}
                   </p>
                 </motion.div>
@@ -136,7 +138,7 @@ export const WhyChooseUs = ({
           <div className="relative hidden h-screen w-1/2 overflow-hidden md:block">
             <motion.div
               animate={slideAnimate}
-              className="absolute left-0 right-0 top-0 flex flex-col"
+              className="absolute top-0 right-0 left-0 flex flex-col"
               transition={IMAGE_SLIDE_TRANSITION}
             >
               {reasons.map((reason, index) => (

@@ -5,6 +5,7 @@ import { Heading } from "@/components/ui/Heading";
 export interface AboutCoreValuesData {
   description: string;
   heading: string;
+  headingHighlight?: string;
   values: string[];
 }
 
@@ -14,7 +15,7 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
       <div className="container mx-auto px-8">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <Heading as="h2" className="mb-6">
+            <Heading as="h2" className="mb-6" highlight={data.headingHighlight}>
               {data.heading}
             </Heading>
             <p className="max-w-xl text-base leading-relaxed text-brand-charcoal/75">

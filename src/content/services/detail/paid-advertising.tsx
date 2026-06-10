@@ -18,6 +18,7 @@ export const PAID_ADS_WHY = {
 
 export const PAID_ADS_DELIVERABLES = {
   heading: "Channels We Manage",
+  headingHighlight: "We Manage",
   services: [
     {
       color: "bg-brand-blue",
@@ -135,6 +136,7 @@ export const PAID_ADS_FAQ = {
     },
   ],
   heading: "Paid Advertising FAQs",
+  headingHighlight: "Advertising FAQs",
 };
 
 export const PAID_ADS_PAGE = {

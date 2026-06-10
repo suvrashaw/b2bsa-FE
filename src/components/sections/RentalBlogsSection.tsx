@@ -13,6 +13,7 @@ import { cn } from "@/lib";
 
 export interface RentalBlogsSectionProps {
   heading: string;
+  headingHighlight?: string;
   posts: SharedBlogPost[];
 }
 
@@ -54,7 +55,7 @@ const getPerView = () => {
   return 1;
 };
 
-export const RentalBlogsSection = ({ heading, posts }: RentalBlogsSectionProps) => {
+export const RentalBlogsSection = ({ heading, headingHighlight, posts }: RentalBlogsSectionProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimationControls();
   const [cardStep, setCardStep] = useState(0);
@@ -132,7 +133,7 @@ export const RentalBlogsSection = ({ heading, posts }: RentalBlogsSectionProps) 
             viewport={HEADING_VIEWPORT}
             whileInView={HEADING_ANIMATE}
           >
-            <Heading as="h2" className="text-xl text-brand-charcoal lg:text-2xl">
+            <Heading as="h2" highlight={headingHighlight}>
               {heading}
             </Heading>
           </motion.div>

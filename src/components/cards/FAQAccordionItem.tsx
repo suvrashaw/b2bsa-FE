@@ -56,7 +56,7 @@ export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: 
             transition={ANSWER_TRANSITION}
           >
             <div className="px-6 pt-1 pb-6">
-              <p className="text-[15px] leading-relaxed text-brand-charcoal/60">{answer}</p>
+              <p className="text-sm md:text-base leading-relaxed text-brand-charcoal/60">{answer}</p>
             </div>
           </motion.div>
         )}

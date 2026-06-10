@@ -1,10 +1,8 @@
 "use client";
 
-import { WhisperText } from "@/components/ui/WhisperText";
+import { Heading } from "@/components/ui/Heading";
 import { ZoomParallax } from "@/components/ui/ZoomParallax";
 import { cn } from "@/lib";
-
-const CULTURE_WHISPER_HIGHLIGHTS = ["Believe"];
 
 // Indices 0–3 fill slots taken by data.reasons (4 items); indices 4–6 are the actual parallax extras.
 const PARALLAX_IMAGES = [
@@ -21,6 +19,7 @@ export interface CultureData {
   description: string;
   eyebrow: string;
   heading: React.ReactNode | string;
+  headingHighlight?: string;
   reasons: { description: string; id: string; image: string; title: string }[];
 }
 
@@ -45,13 +44,10 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <div className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-charcoal uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
-        <WhisperText
-          className="mb-6 text-center font-heading text-2xl font-bold text-brand-charcoal transition-colors duration-500 md:text-3xl lg:text-2xl"
-          highlightColor="blue"
-          highlights={CULTURE_WHISPER_HIGHLIGHTS}
-          text={typeof data.heading === "string" ? data.heading : "What We Believe In"}
-        />
-        <p className="mx-auto max-w-2xl text-center text-base leading-relaxed font-bold tracking-widest text-brand-charcoal/70 uppercase transition-colors duration-500">
+        <Heading as="h2" className="mb-6" highlight={data.headingHighlight}>
+          {typeof data.heading === "string" ? data.heading : "What We Believe In"}
+        </Heading>
+        <p className="mx-auto max-w-2xl text-center text-base md:text-lg leading-relaxed text-brand-charcoal/70 transition-colors duration-500">
           {data.description}
         </p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
@@ -60,7 +56,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
               <h3 className="mb-3 font-heading text-xl font-bold text-brand-charcoal">
                 {reason.title}
               </h3>
-              <p className="text-sm leading-relaxed text-brand-charcoal/70">
+              <p className="text-sm md:text-base leading-relaxed text-brand-charcoal/70">
                 {reason.description}
               </p>
             </div>

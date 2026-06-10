@@ -17,12 +17,14 @@ export interface BlogsContent {
   ctaLabel: string;
   eyebrow: string;
   heading: ReactNode;
+  headingHighlight?: string;
 }
 
 export interface CaseStudiesContent {
   ctaLabel: string;
   eyebrow?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   items: CaseStudyItem[];
   viewAllLabel?: string;
 }
@@ -115,6 +117,7 @@ export interface ContactContent {
     trustNote?: string;
   };
   heading: ReactNode;
+  headingHighlight?: string;
   illustration: {
     alt: string;
     src: string;
@@ -131,6 +134,7 @@ export interface FAQContent {
   eyebrow?: string;
   faqs: FAQItem[];
   heading: ReactNode;
+  headingHighlight?: string;
   layoutMode?: "auto" | "carousel" | "fit";
   scrollAmount: number;
 }
@@ -178,6 +182,7 @@ export interface HomeServicesContent {
   ctaLabel: string;
   eyebrow?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   serviceLabel?: string;
   services: HomeServiceItem[];
 }
@@ -197,6 +202,7 @@ export interface TestimonialsContent {
   autoplayInterval: number;
   eyebrow?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   initialIndex: number;
   testimonials: TestimonialItem[];
 }
@@ -216,12 +222,14 @@ export interface UpcomingEventsContent {
   events: UpcomingEventItem[];
   eyebrow?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   viewAllLabel?: string;
 }
 
 export interface WhoWeAreContent {
   attribution?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   mission?: string;
   quote: string;
   stats: WhoWeAreStat[];
@@ -237,6 +245,7 @@ export interface WhoWeAreStat {
 export interface WhyChooseUsContent {
   eyebrow?: string;
   heading: ReactNode;
+  headingHighlight?: string;
   reasons: WhyChooseUsReason[];
 }
 
@@ -366,7 +375,8 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
-  heading: <>Your Trusted Global B2B Event Partner</>,
+  heading: "Your Trusted Global B2B Event Partner",
+  headingHighlight: "Global B2B Event Partner",
   mission:
     "To transform your global event presence into measurable, high-impact commercial outcomes.",
   quote:
@@ -401,7 +411,8 @@ export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
 
 export const HOME_SERVICES_CONTENT: HomeServicesContent = {
   ctaLabel: "Learn More",
-  heading: <>Our B2B Event Services & Trade Show Solutions</>,
+  heading: "Our B2B Event Services & Trade Show Solutions",
+  headingHighlight: "Trade Show Solutions",
   services: [
     {
       color: "bg-brand-blue",
@@ -489,7 +500,8 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
 
 export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ctaLabel: "Full Study",
-  heading: <>Proven Global Event Solutions: Enterprise Success Stories</>,
+  heading: "Proven Global Event Solutions: Enterprise Success Stories",
+  headingHighlight: "Success Stories",
   items: [
     {
       icon: "Plane",
@@ -573,12 +585,14 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
       title: "Constellate 2025",
     },
   ],
-  heading: <>Upcoming Trade Shows & Global Industry Events</>,
+  heading: "Upcoming Trade Shows & Global Industry Events",
+  headingHighlight: "Global Industry Events",
   viewAllLabel: "Explore All Upcoming Events",
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
-  heading: <>Why Enterprise Brands Trust Our Global Event Solutions?</>,
+  heading: "Why Enterprise Brands Trust Our Global Event Solutions?",
+  headingHighlight: "Enterprise Brands Trust",
   reasons: [
     {
       description:
@@ -620,7 +634,8 @@ export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
 
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = {
   autoplayInterval: 3000,
-  heading: <>What Our Clients Say?</>,
+  heading: "What Our Clients Say?",
+  headingHighlight: "Clients Say",
   initialIndex: 2,
   testimonials: [
     {
@@ -685,7 +700,8 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
   blogs: HOME_BLOG_POSTS,
   ctaLabel: "Read the complete blog",
   eyebrow: "BLOGS",
-  heading: <>Expert Strategies to Maximize Your Global Event Solutions</>,
+  heading: "Expert Strategies to Maximize Your Global Event Solutions",
+  headingHighlight: "Global Event Solutions",
 };
 
 export const HOME_FAQ_CONTENT: FAQContent = {
@@ -787,7 +803,8 @@ export const HOME_FAQ_CONTENT: FAQContent = {
       question: "Can you help us repurpose the event for digital marketing?",
     },
   ],
-  heading: <>Frequently Asked Questions</>,
+  heading: "Frequently Asked Questions",
+  headingHighlight: "Asked Questions",
   scrollAmount: 340,
 };
 
@@ -809,7 +826,8 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
     phoneLabel: "Phone Number (Optional)",
     phonePlaceholder: "+1 (000) 000-0000",
   },
-  heading: <>Ready to Build Your Global Event Strategy?</>,
+  heading: "Ready to Build Your Global Event Strategy?",
+  headingHighlight: "Global Event Strategy",
   illustration: {
     alt: "Contact Us",
     src: "/contact_illu.svg",

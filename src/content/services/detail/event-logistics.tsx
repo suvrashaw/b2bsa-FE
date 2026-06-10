@@ -27,6 +27,7 @@ export const EVENT_LOGISTICS_INTRO = {
 
 export const EVENT_LOGISTICS_DELIVERABLES = {
   heading: "What's Included in Our Event Logistics Services",
+  headingHighlight: "Event Logistics Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -118,11 +119,13 @@ export const EVENT_LOGISTICS_CASE_STUDIES = {
 
 export const EVENT_LOGISTICS_INDUSTRIES_SECTION = {
   heading: "Industries We Support with Event Logistics Services",
+  headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_LOGISTICS_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Event Logistics Services",
+  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -157,6 +160,7 @@ export const EVENT_LOGISTICS_WHY_CHOOSE_US = {
 
 export const EVENT_LOGISTICS_BLOGS_SECTION = {
   heading: "Latest Insights on Event Logistics & Event Operations",
+  headingHighlight: "Latest Insights",
 };
 
 export const EVENT_LOGISTICS_FAQ = {
@@ -193,6 +197,7 @@ export const EVENT_LOGISTICS_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Event Logistics Services",
+  headingHighlight: "Asked Questions",
 };
 
 export const EVENT_LOGISTICS_RELATED_SERVICES = [

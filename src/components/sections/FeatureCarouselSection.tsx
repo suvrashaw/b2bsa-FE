@@ -11,6 +11,7 @@ interface FeatureCarouselSectionProps {
   eyebrow?: string;
   features: FeatureCarouselItem[];
   heading: ReactNode;
+  headingHighlight?: string;
 }
 
 export const FeatureCarouselSection = ({
@@ -18,6 +19,7 @@ export const FeatureCarouselSection = ({
   eyebrow = "Capabilities",
   features,
   heading,
+  headingHighlight,
 }: FeatureCarouselSectionProps) => {
   return (
     <section className="relative overflow-hidden bg-brand-gray py-20">
@@ -31,11 +33,11 @@ export const FeatureCarouselSection = ({
           <Eyebrow className="justify-center" variant="blue">
             {eyebrow}
           </Eyebrow>
-          <Heading as="h2" className="mb-6">
+          <Heading as="h2" className="mb-6" highlight={headingHighlight}>
             {heading}
           </Heading>
           {description ? (
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-brand-charcoal/70">
+            <p className="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-brand-charcoal/70">
               {description}
             </p>
           ) : null}

@@ -16,6 +16,7 @@ export interface FAQProps {
   eyebrow?: FAQContent["eyebrow"];
   faqs?: FAQContent["faqs"];
   heading?: FAQContent["heading"];
+  headingHighlight?: string;
   layoutMode?: FAQContent["layoutMode"];
   scrollAmount?: FAQContent["scrollAmount"];
 }
@@ -66,6 +67,7 @@ export const FAQ = ({
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   layoutMode = content.layoutMode ?? "carousel",
   scrollAmount = content.scrollAmount,
 }: FAQProps = {}) => {
@@ -143,7 +145,7 @@ export const FAQ = ({
                 {eyebrow}
               </Eyebrow>
             )}
-            <Heading as="h2" className="mb-4">
+            <Heading as="h2" className="mb-4" highlight={headingHighlight}>
               {heading}
             </Heading>
             {description && (

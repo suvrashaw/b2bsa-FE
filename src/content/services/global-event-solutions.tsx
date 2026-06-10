@@ -12,6 +12,7 @@ export const GES_SERVICES = {
   description:
     "Running a major trade show program through five separate vendors creates fragmentation, no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution, all under one team.\n\nWhen the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
   heading: "End-to-End Corporate Event Solutions Under One Roof",
+  headingHighlight: "Under One Roof",
   services: [
     {
       color: "bg-brand-blue",
@@ -123,6 +124,7 @@ export const GES_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions",
+  headingHighlight: "Asked Questions",
 };
 
 export const GES_PAGE = {

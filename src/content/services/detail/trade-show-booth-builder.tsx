@@ -23,6 +23,7 @@ export const BOOTH_BUILDER_INTRO = {
 
 export const BOOTH_BUILDER_DELIVERABLES = {
   heading: "What We Do in Exhibition Stand Builder",
+  headingHighlight: "Exhibition Stand Builder",
   services: [
     {
       color: "bg-brand-blue",
@@ -76,6 +77,7 @@ export const BOOTH_BUILDER_FORMATS_SECTION = {
   ctaLabel: "Learn More",
   eyebrow: "Formats",
   heading: "Booth Sizes and Formats We Design",
+  headingHighlight: "Booth Sizes",
   serviceLabel: "Booth Size",
   services: [
     {
@@ -170,6 +172,7 @@ export const BOOTH_BUILDER_PROCESS = {
 
 export const BOOTH_BUILDER_FUTURE_READY = {
   heading: "Future-Ready Stands for Exhibitions & Trade Shows",
+  headingHighlight: "Future-Ready Stands",
   items: [
     {
       bullets: [
@@ -254,6 +257,7 @@ export const BOOTH_BUILDER_FAQ = {
     },
   ],
   heading: "Trade Show Booth Builder FAQs",
+  headingHighlight: "Builder FAQs",
   layoutMode: "fit" as const,
 };
 
@@ -274,6 +278,7 @@ export const BOOTH_BUILDER_RELATED_SERVICES = [
 
 export const BOOTH_BUILDER_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Exhibition Stand Building?",
+  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description: "Recognized by industry leaders for creative excellence and innovation",

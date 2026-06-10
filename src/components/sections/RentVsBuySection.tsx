@@ -15,6 +15,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 export interface RentVsBuySectionProps {
   description: string;
   heading: string;
+  headingHighlight?: string;
   reasons: readonly RentVsBuyReason[];
 }
 
@@ -27,6 +28,7 @@ interface RentVsBuyReason {
 export const RentVsBuySection = ({
   description,
   heading,
+  headingHighlight,
   reasons,
 }: RentVsBuySectionProps) => {
   return (
@@ -34,14 +36,8 @@ export const RentVsBuySection = ({
       <div className="container mx-auto px-8">
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
-          <Heading as="h2" className="inline tracking-tight text-brand-charcoal">
-            <span className="relative inline-block px-3">
-              <span className="relative z-10">{heading}</span>
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-[30%] bottom-0 bg-brand-blue/20"
-              />
-            </span>
+          <Heading as="h2" highlight={headingHighlight}>
+            {heading}
           </Heading>
         </div>
 
@@ -52,10 +48,10 @@ export const RentVsBuySection = ({
 
         {/* 3 reasons grid with vertical dividers */}
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 divide-y divide-brand-charcoal/15 justify-items-center md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="flex flex-wrap justify-center">
             {reasons.map((reason) => (
               <div
-                className="flex flex-col items-center px-10 py-12 text-center md:py-8"
+                className="flex w-full flex-col items-center border-b border-brand-charcoal/15 px-10 py-12 text-center last:border-b-0 md:w-1/3 md:border-r md:border-b-0 md:py-8 md:last:border-r-0 md:[&:nth-child(3n)]:border-r-0"
                 key={reason.title}
               >
                 {/* Icon container */}

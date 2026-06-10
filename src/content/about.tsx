@@ -55,6 +55,7 @@ export const ABOUT_ORIGIN_TIMELINE = {
 
 export const ABOUT_VISION_MISSION = {
   heading: "Our Vision & Mission",
+  headingHighlight: "Vision & Mission",
   missionItems: [
     "Cultivate a work culture of Continuous Learning, Individual Growth, Team Synergy, and Creative Problem-Solving to achieve our goals.",
     "Enhance our Competitiveness and drive Profitable Growth.",
@@ -114,12 +115,14 @@ export const ABOUT_PRESENCE = {
   ],
   description:
     "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
+  headingHighlight: "We Operate",
   title: "Where We Operate",
 };
 
 export const ABOUT_STATS = {
   attribution: "B2B Sales Arrow Mission",
-  heading: <>Our Mission</>,
+  heading: "Our Mission",
+  headingHighlight: "Our Mission",
   quote:
     "To transform how B2B enterprise brands connect with their buyers, through innovative event experiences, high-quality media, precision digital marketing, and intelligent market intelligence, delivering measurable commercial outcomes that justify every investment and advance our clients' growth objectives.",
   stats: [
@@ -193,13 +196,15 @@ export const ABOUT_RECENT_EVENTS = {
       title: "SAP Sapphire 2026",
     },
   ],
-  heading: <>Where We Have Been Delivering This Year</>,
+  heading: "Where We Have Been Delivering This Year",
+  headingHighlight: "Delivering This Year",
 };
 
 export const ABOUT_CORE_VALUES = {
   description:
     "Shaping B2B Sales Arrow’s DNA since inception, the core values are our most treasured assets, defining work ethic, culture, and character. These guiding principles are a beacon of light, guiding our decisions in adversity and triumph.",
   heading: "Our Core Values",
+  headingHighlight: "Core Values",
   values: [
     "Trust our capabilities and company policies",
     "Be passionate & determined",
@@ -216,6 +221,7 @@ export const ABOUT_CORE_VALUES = {
 
 export const ABOUT_SIGNATURE_SERVICES = {
   heading: "Our Signature Service",
+  headingHighlight: "Signature Service",
   services: [
     {
       href: "/services/global-event-solutions/trade-show-booth-design",
@@ -259,6 +265,7 @@ export const ABOUT_VALUES = {
     "Commercial outcomes, quality, genuine partnership, and local execution discipline guide every program.",
   eyebrow: "OUR PRINCIPLES",
   heading: "What We Believe In",
+  headingHighlight: "Believe In",
   reasons: [
     {
       description:
@@ -310,7 +317,8 @@ export const ABOUT_INQUIRY = {
     messageLabel: "Message / Project Brief",
     messagePlaceholder: "Tell us about your goals, event, timeline, or project requirements.",
   },
-  heading: <>Ready to Stream Your Next Corporate Event Live?</>,
+  heading: "Ready to Stream Your Next Corporate Event Live?",
+  headingHighlight: "Corporate Event Live",
   illustration: null,
 };
 

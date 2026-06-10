@@ -8,7 +8,6 @@ import { ABOUT_PAGE } from "./about";
 import { BLOG_PAGE } from "./blog";
 import { CASE_STUDIES_PAGE } from "./case-studies";
 import { CONTACT_PAGE } from "./contact";
-import { EVENTS_PAGE } from "./events";
 import { HOME_PAGE } from "./home";
 import { CORPORATE_VIDEO_PAGE } from "./services/detail/corporate-video-production";
 import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
@@ -33,7 +32,6 @@ export const marketingPages = [
   BLOG_PAGE,
   CASE_STUDIES_PAGE,
   CONTACT_PAGE,
-  EVENTS_PAGE,
   TRADE_SHOW_CALENDAR_PAGE,
   GES_PAGE,
   BOOTH_DESIGN_PAGE,

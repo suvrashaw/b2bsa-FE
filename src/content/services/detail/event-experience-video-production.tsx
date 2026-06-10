@@ -41,6 +41,7 @@ export const EVENT_EXPERIENCE_VIDEO_INTRO = {
 export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
   ctaLabel: "Contact Our Team",
   heading: "What's Included in Our Event Experience Video Production Services",
+  headingHighlight: "Event Experience Video Production Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -205,6 +206,7 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
 
 export const EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Event Experience Video Production",
+  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -253,6 +255,7 @@ export const EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US = {
 
 export const EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION = {
   heading: "Latest Insights on Event Video Production & Event Marketing",
+  headingHighlight: "Latest Insights",
 };
 
 export const EVENT_EXPERIENCE_VIDEO_FAQ = {
@@ -289,6 +292,7 @@ export const EVENT_EXPERIENCE_VIDEO_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Event Experience Video Production",
+  headingHighlight: "Asked Questions",
 };
 
 export const EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES = [

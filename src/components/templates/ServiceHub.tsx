@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
@@ -9,7 +9,7 @@ import type { MarketingPageIdentity } from "@/content/page-definitions";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CTABanner } from "@/components/sections/CTABanner";
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { OurServices } from "@/components/sections/OurServices";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
@@ -90,6 +90,9 @@ const serviceHeroCtasByPath: Record<
   },
 };
 
+const CINEMATIC_BG = { alt: "Event", src: "/images/case-studies/waf.avif" } as const;
+const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
+
 export const ServiceHub = ({
   caseStudies,
   closingSections,
@@ -111,6 +114,15 @@ export const ServiceHub = ({
     url: page.seo.canonicalPath,
   });
   const heroCtas = serviceHeroCtasByPath[normalizePath(page.seo.canonicalPath)];
+
+  const cinematicHeadingLines = useMemo(
+    () => [ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"] as [string],
+    [ctaBanner?.title]
+  );
+  const cinematicPrimaryCta = useMemo(
+    () => ({ href: ctaBanner?.ctaHref ?? "/contact", label: ctaBanner?.ctaLabel ?? "Book a Strategy Session" }),
+    [ctaBanner?.ctaHref, ctaBanner?.ctaLabel]
+  );
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -159,13 +171,12 @@ export const ServiceHub = ({
       {relatedServices && <RelatedServices services={relatedServices} />}
 
       {closingSections ?? (
-        <CTABanner
-          ctaHref={ctaBanner?.ctaHref ?? "/contact"}
-          ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
-          description={
-            ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
-          }
-          title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
+        <ContactCinematicCTA
+          backgroundImage={CINEMATIC_BG}
+          description={ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."}
+          headingLines={cinematicHeadingLines}
+          primaryCta={cinematicPrimaryCta}
+          secondaryCta={CINEMATIC_SECONDARY}
         />
       )}
 

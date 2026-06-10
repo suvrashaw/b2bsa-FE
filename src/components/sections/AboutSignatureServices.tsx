@@ -13,6 +13,7 @@ export interface AboutSignatureServiceItem {
 
 export interface AboutSignatureServicesData {
   heading: string;
+  headingHighlight?: string;
   services: AboutSignatureServiceItem[];
 }
 
@@ -22,7 +23,7 @@ export const AboutSignatureServices = ({ data }: { data: AboutSignatureServicesD
       <div className="container mx-auto px-8">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <Heading as="h2">{data.heading}</Heading>
+            <Heading as="h2" highlight={data.headingHighlight}>{data.heading}</Heading>
           </div>
         </div>
 

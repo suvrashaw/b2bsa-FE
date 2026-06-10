@@ -59,12 +59,13 @@ interface GridStudyCardProps {
   study: CaseStudyIndexEntry;
 }
 
-const isPageHref = (href: string) => href.startsWith("/");
+const isPageHref = (href?: string): href is string => href?.startsWith("/") ?? false;
 
 const GridStudyCard = ({ colSpan, onSelectStudy, study }: GridStudyCardProps) => {
   const handleSelect = useCallback(() => {
     onSelectStudy(study);
   }, [onSelectStudy, study]);
+  const href = study.card.href;
 
   const card = (
     <CaseStudyGridCard
@@ -74,13 +75,13 @@ const GridStudyCard = ({ colSpan, onSelectStudy, study }: GridStudyCardProps) =>
       image={study.card.image}
       metric={study.card.metric}
       metricLabel={study.card.metricLabel}
-      onClick={isPageHref(study.card.href) ? undefined : handleSelect}
+      onClick={isPageHref(href) ? undefined : handleSelect}
       title={study.card.client}
     />
   );
 
-  if (isPageHref(study.card.href)) {
-    return <Link className="contents" href={study.card.href}>{card}</Link>;
+  if (isPageHref(href)) {
+    return <Link className="contents" href={href}>{card}</Link>;
   }
 
   return card;

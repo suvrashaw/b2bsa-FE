@@ -19,6 +19,7 @@ export interface OurServicesProps {
   ctaLabel?: HomeServicesContent["ctaLabel"];
   eyebrow?: HomeServicesContent["eyebrow"];
   heading?: HomeServicesContent["heading"];
+  headingHighlight?: string;
   serviceLabel?: HomeServicesContent["serviceLabel"];
   services?: HomeServiceItem[];
 }
@@ -28,6 +29,7 @@ export const OurServices = ({
   ctaLabel = content.ctaLabel,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   serviceLabel = content.serviceLabel,
   services = content.services,
 }: OurServicesProps = {}) => {
@@ -41,7 +43,7 @@ export const OurServices = ({
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center">{heading}</Heading>
+          <Heading as="h2" className="text-center" highlight={headingHighlight}>{heading}</Heading>
         </div>
 
         <div className="relative flex flex-col gap-12">
@@ -66,7 +68,7 @@ export const OurServices = ({
                       {service.title}
                     </h3>
 
-                    <p className="leading-relaxed font-medium text-gray-600 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200">
+                    <p className="text-base md:text-lg leading-relaxed font-medium text-gray-600 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200">
                       {service.description}
                     </p>
                   </div>

@@ -10,6 +10,7 @@ export interface WhoWeAreProps {
   content?: WhoWeAreContent;
   description?: ReactNode | string;
   heading?: WhoWeAreContent["heading"];
+  headingHighlight?: string;
   items?: Array<{
     bg?: string;
     icon?: string;
@@ -32,6 +33,7 @@ export const WhoWeAre = ({
   attribution = content.attribution,
   description,
   heading,
+  headingHighlight = content.headingHighlight,
   items,
   mission = content.mission,
   quote = content.quote,
@@ -55,11 +57,11 @@ export const WhoWeAre = ({
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <Heading as="h2" className="mb-6">
+            <Heading as="h2" className="mb-6" highlight={headingHighlight}>
               {resolvedHeading}
             </Heading>
             {description && (
-              <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80">
+              <div className="space-y-6 text-base md:text-lg leading-relaxed text-brand-charcoal/80">
                 {description}
               </div>
             )}

@@ -2,11 +2,10 @@
 
 import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-import { WhisperText } from "@/components/ui/WhisperText";
+import { Heading } from "@/components/ui/Heading";
 
-// Dynamically import Globe to avoid SSR issues
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
 const LEFT_INITIAL = { opacity: 0, x: -30 };
@@ -20,6 +19,7 @@ const ANIMATE_EMPTY = {};
 export interface GlobalPresenceData {
   cities: LocationItem[];
   description: string;
+  headingHighlight?: string;
   title: string;
 }
 
@@ -58,18 +58,18 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
     `;
     return el;
   }, []);
-  const titleHighlights = useMemo(() => [data.title.split(" ")[0] || ""], [data.title]);
+
   const leftAnimate = isInView ? LEFT_ANIMATE_IN : ANIMATE_EMPTY;
   const rightAnimate = isInView ? RIGHT_ANIMATE_IN : ANIMATE_EMPTY;
 
   return (
     <section
-      className="relative overflow-hidden  bg-brand-white py-12 transition-colors duration-500"
+      className="relative overflow-hidden bg-brand-white py-12 transition-colors duration-500"
       ref={containerRef}
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
 
-      <div className="relative z-10 container mx-auto grid grid-cols-1 gap-16 px-8 lg:grid-cols-2">
+      <div className="relative z-10 container mx-auto grid grid-cols-1 gap-16 px-8 lg:grid-cols-2 lg:items-center">
         <motion.div
           animate={leftAnimate}
           className="flex max-w-2xl flex-col items-center text-center"
@@ -80,14 +80,11 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             Global Presence
           </div>
 
-          <WhisperText
-            className="mb-8 font-heading text-2xl leading-[1.1] font-bold transition-colors duration-500  md:text-3xl lg:text-3xl"
-            highlightColor="blue"
-            highlights={titleHighlights}
-            text={data.title}
-          />
+          <Heading as="h2" className="mb-8" highlight={data.headingHighlight}>
+            {data.title}
+          </Heading>
 
-          <p className="/70 mb-10 text-base leading-relaxed font-bold tracking-widest uppercase transition-colors duration-500 md:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed transition-colors duration-500">
             {data.description}
           </p>
         </motion.div>

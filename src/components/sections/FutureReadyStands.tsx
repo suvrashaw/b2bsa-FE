@@ -14,15 +14,16 @@ export interface FutureReadyStandItem {
 
 export interface FutureReadyStandsProps {
   heading: string;
+  headingHighlight?: string;
   items: FutureReadyStandItem[];
 }
 
-export const FutureReadyStands = ({ heading, items }: FutureReadyStandsProps) => {
+export const FutureReadyStands = ({ heading, headingHighlight, items }: FutureReadyStandsProps) => {
   return (
     <section className="bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-14 text-center">
-          <Heading as="h2" className="text-center text-brand-charcoal">
+          <Heading as="h2" className="text-center text-brand-charcoal" highlight={headingHighlight}>
             {heading}
           </Heading>
         </div>
@@ -51,7 +52,7 @@ export const FutureReadyStands = ({ heading, items }: FutureReadyStandsProps) =>
 
                 <ul className="mt-7 space-y-4">
                   {item.bullets.map((bullet) => (
-                    <li className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/72" key={bullet}>
+                    <li className="flex gap-3 text-sm md:text-base leading-relaxed text-brand-charcoal/72" key={bullet}>
                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                       <span>{bullet}</span>
                     </li>

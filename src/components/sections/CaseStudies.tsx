@@ -56,6 +56,7 @@ export interface CaseStudiesProps {
   eyebrow?: CaseStudiesContent["eyebrow"];
   getStudyHref?: (study: CaseStudyItem) => string;
   heading?: ReactNode;
+  headingHighlight?: string;
   items?: CaseStudyItem[];
   viewAllHref?: string;
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
@@ -69,6 +70,7 @@ export const CaseStudies = ({
   eyebrow = content.eyebrow,
   getStudyHref = (study) => study.href ?? viewAllHref,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   items,
   viewAllHref = "/case-studies",
   viewAllLabel = content.viewAllLabel,
@@ -109,7 +111,7 @@ export const CaseStudies = ({
       <div className="container mx-auto max-w-6xl px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center">{heading}</Heading>
+          <Heading as="h2" className="text-center" highlight={headingHighlight}>{heading}</Heading>
           {description && (
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
               {description}

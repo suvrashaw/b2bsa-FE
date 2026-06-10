@@ -10,6 +10,7 @@ export { GLOBAL_PROOF_STATS as DATA_AUGMENTATION_PROOF_BAR } from "../../shared"
 
 export const DATA_AUGMENTATION_DELIVERABLES = {
   heading: "Data Fields We Enrich",
+  headingHighlight: "We Enrich",
   services: [
     {
       color: "bg-brand-blue",
@@ -105,6 +106,7 @@ export const DATA_AUGMENTATION_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions",
+  headingHighlight: "Asked Questions",
 };
 
 export const DATA_AUGMENTATION_PAGE = {

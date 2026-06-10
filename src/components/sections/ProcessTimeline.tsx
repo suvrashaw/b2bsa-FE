@@ -9,6 +9,7 @@ import { cn } from "@/lib";
 interface ProcessTimelineProps {
   className?: string;
   heading?: ReactNode;
+  headingHighlight?: string;
   phases?: Step[];
   showPhaseNumbers?: boolean;
   steps?: Step[];
@@ -28,6 +29,7 @@ const PROCESSTIMELINE_VIEWPORT = { once: true };
 export const ProcessTimeline = ({
   className,
   heading,
+  headingHighlight,
   phases,
   showPhaseNumbers = true,
   steps,
@@ -52,7 +54,7 @@ export const ProcessTimeline = ({
               </div>
             )}
             {resolvedTitle && (
-              <Heading as="h2">
+              <Heading as="h2" highlight={headingHighlight}>
                 {resolvedTitle}
               </Heading>
             )}

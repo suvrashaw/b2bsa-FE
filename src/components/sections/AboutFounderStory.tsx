@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Heading } from "@/components/ui/Heading";
 
 export interface AboutFounderStoryData {
+  headingHighlight?: string;
   image: {
     alt: string;
     src: string;
@@ -26,10 +27,10 @@ export const AboutFounderStory = ({ data }: { data: AboutFounderStoryData }) => 
         </div>
 
         <div>
-          <Heading as="h2" className="mb-8">
+          <Heading as="h2" className="mb-8" highlight={data.headingHighlight}>
             {data.name}
           </Heading>
-          <p className="text-xl leading-relaxed text-brand-charcoal/80 md:text-2xl">{data.story}</p>
+          <p className="text-base md:text-lg leading-relaxed text-brand-charcoal/80">{data.story}</p>
         </div>
       </div>
     </section>

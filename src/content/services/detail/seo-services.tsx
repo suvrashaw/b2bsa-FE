@@ -21,6 +21,7 @@ export const SEO_WHY = {
 
 export const SEO_DELIVERABLES = {
   heading: "Our B2B SEO Services",
+  headingHighlight: "B2B SEO Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -152,6 +153,7 @@ export const SEO_FAQ = {
     },
   ],
   heading: "B2B SEO FAQs",
+  headingHighlight: "SEO FAQs",
 };
 
 export const SEO_PAGE = {

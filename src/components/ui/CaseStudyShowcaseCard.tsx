@@ -101,7 +101,7 @@ export const CaseStudyShowcaseCard = ({
                 <h3 className="mb-4 line-clamp-2 font-heading text-xl font-bold !text-white md:text-2xl">
                   {item.title}
                 </h3>
-                <p className="line-clamp-4 max-w-xl text-sm leading-relaxed text-gray-200">
+                <p className="line-clamp-4 max-w-xl text-sm md:text-base leading-relaxed text-gray-200">
                   {item.secondarySummary.text}
                 </p>
               </motion.div>

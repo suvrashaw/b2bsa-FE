@@ -23,6 +23,7 @@ export const LIVE_STREAMING_WHY = {
 
 export const LIVE_STREAMING_DELIVERABLES = {
   heading: "Live Streaming Services",
+  headingHighlight: "Live Streaming",
   services: [
     {
       color: "bg-brand-blue",
@@ -117,6 +118,7 @@ export const LIVE_STREAMING_FAQ = {
     },
   ],
   heading: "Live Streaming FAQs",
+  headingHighlight: "Streaming FAQs",
 };
 
 export const LIVE_STREAMING_PAGE = {
@@ -150,6 +152,7 @@ export const LIVE_STREAMING_SPOTLIGHT = {
 export const LIVE_STREAMING_WHY_CHOOSE_US = {
   eyebrow: "Why B2B Sales Arrow",
   heading: "Professional Event Live Streaming for Modern Corporate Events",
+  headingHighlight: "Live Streaming",
   reasons: [
     {
       description:
@@ -191,6 +194,7 @@ export const LIVE_STREAMING_INTRODUCTION = {
     </>
   ),
   heading: "Professional Event Live Streaming Services for Modern Corporate Events",
+  headingHighlight: "Live Streaming",
   mission: "To deliver broadcast-grade reliability and immersive hybrid engagement for enterprise events worldwide.",
   quote: "Live streaming doesn't just broadcast your event, it breaks physical boundaries to unite your global audience in real-time.",
   stats: [

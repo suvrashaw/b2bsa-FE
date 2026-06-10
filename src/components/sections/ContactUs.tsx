@@ -14,6 +14,7 @@ export interface ContactUsProps {
   eyebrow?: ContactContent["eyebrow"];
   form?: ContactContent["form"];
   heading?: ContactContent["heading"];
+  headingHighlight?: string;
   illustration?: ContactContent["illustration"] | null;
 }
 
@@ -26,6 +27,7 @@ export const ContactUs = ({
   eyebrow = content.eyebrow,
   form = content.form,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   illustration = content.illustration,
 }: ContactUsProps = {}) => {
   return (
@@ -40,11 +42,11 @@ export const ContactUs = ({
           <div className="flex flex-col items-start text-left">
             {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
             <div className="w-full text-left">
-              <Heading as="h2" className="mb-8">
+              <Heading as="h2" className="mb-8" highlight={headingHighlight}>
                 {heading}
               </Heading>
             </div>
-            <p className="mb-12 max-w-md text-left text-base text-gray-600">{description}</p>
+            <p className="mb-12 max-w-md text-left text-base md:text-lg leading-relaxed text-gray-600">{description}</p>
 
             {illustration && (
               <motion.div

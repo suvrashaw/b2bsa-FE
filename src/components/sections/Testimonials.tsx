@@ -15,6 +15,7 @@ export interface TestimonialsProps {
   content?: TestimonialsContent;
   eyebrow?: TestimonialsContent["eyebrow"];
   heading?: TestimonialsContent["heading"];
+  headingHighlight?: string;
   initialIndex?: TestimonialsContent["initialIndex"];
   testimonials?: TestimonialsContent["testimonials"];
 }
@@ -164,6 +165,7 @@ export const Testimonials = ({
   autoplayInterval = content.autoplayInterval,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   initialIndex = content.initialIndex,
   testimonials = content.testimonials,
 }: TestimonialsProps = {}) => {
@@ -192,7 +194,7 @@ export const Testimonials = ({
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-6 text-center">
+          <Heading as="h2" className="mb-6 text-center" highlight={headingHighlight}>
             {heading}
           </Heading>
         </div>

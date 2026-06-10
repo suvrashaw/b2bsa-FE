@@ -55,6 +55,7 @@ export const FAQAccordion = ({
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
 }: FAQProps = {}) => {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
@@ -83,7 +84,7 @@ export const FAQAccordion = ({
               {eyebrow}
             </Eyebrow>
           )}
-          <Heading as="h2" className="mb-4">
+          <Heading as="h2" className="mb-4" highlight={headingHighlight}>
             {heading}
           </Heading>
           {description && (

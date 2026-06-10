@@ -9,6 +9,7 @@ import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home";
 
 export interface ClientLogosProps {
   heading?: string;
+  headingHighlight?: string;
   logos?: ClientLogoItem[];
   overlap?: boolean;
   speed?: number;
@@ -68,6 +69,7 @@ const LogosRow = ({
 
 export const ClientLogos = ({
   heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
+  headingHighlight,
   logos = HOME_CLIENT_LOGOS,
   overlap = true,
   speed = 2.5,
@@ -96,7 +98,7 @@ export const ClientLogos = ({
     return (
       <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <Heading as="h2" className="pt-10 pb-6 text-center">
+          <Heading as="h2" className="pt-10 pb-6 text-center" highlight={headingHighlight}>
             {heading}
           </Heading>
         )}

@@ -10,6 +10,7 @@ interface ProofBarProps {
   className?: string;
   description?: ReactNode;
   heading?: string;
+  headingHighlight?: string;
   stats: string[];
 }
 
@@ -75,7 +76,7 @@ const PROOFBAR_INITIAL = { opacity: 0, y: 10 };
 const PROOFBAR_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const PROOFBAR_VIEWPORT = { once: true };
 
-export const ProofBar = ({ className, description, heading, stats }: ProofBarProps) => {
+export const ProofBar = ({ className, description, heading, headingHighlight, stats }: ProofBarProps) => {
   const statGroups = useMemo(
     () =>
       stats.map((stat, index) => {
@@ -100,10 +101,10 @@ export const ProofBar = ({ className, description, heading, stats }: ProofBarPro
     <div className={cn("bg-brand-gray py-6", className)}>
       <div className="container mx-auto px-8">
         {heading && (
-          <Heading as="h2" className="mb-4 text-center">{heading}</Heading>
+          <Heading as="h2" className="mb-4 text-center" highlight={headingHighlight}>{heading}</Heading>
         )}
         {description && (
-          <p className="mx-auto mb-8 max-w-4xl text-center text-base leading-relaxed text-brand-charcoal/70">{description}</p>
+          <p className="mx-auto mb-8 max-w-4xl text-center text-base md:text-lg leading-relaxed text-brand-charcoal/70">{description}</p>
         )}
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
           {statGroups.map((group, index) => (

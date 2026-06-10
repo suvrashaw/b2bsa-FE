@@ -21,6 +21,7 @@ export interface UpcomingEventsProps {
   events?: UpcomingEventsContent["events"];
   eyebrow?: UpcomingEventsContent["eyebrow"];
   heading?: UpcomingEventsContent["heading"];
+  headingHighlight?: string;
   viewAllHref?: string;
   viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
 }
@@ -622,6 +623,7 @@ export const UpcomingEvents = ({
   events,
   eyebrow = content.eyebrow,
   heading = content.heading,
+  headingHighlight = content.headingHighlight,
   viewAllHref = "/trade-show-calendar",
   viewAllLabel = content.viewAllLabel,
 }: UpcomingEventsProps = {}) => {
@@ -646,7 +648,7 @@ export const UpcomingEvents = ({
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center">
+          <Heading as="h2" className="text-center" highlight={headingHighlight}>
             {heading}
           </Heading>
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}

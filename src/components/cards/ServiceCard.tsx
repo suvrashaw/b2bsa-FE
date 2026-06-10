@@ -65,7 +65,7 @@ export const ServiceCard = ({
             <Icon className={cn("h-5 w-5", color.replace("bg-", "text-"))} name={icon} />
           </div>
           <h3 className="mb-3 font-heading text-xl leading-tight font-bold">{title}</h3>
-          <p className="text-sm leading-relaxed text-gray-600">{description}</p>
+          <p className="text-sm md:text-base leading-relaxed text-gray-600">{description}</p>
         </div>
 
         <div className="mt-6 flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-blue uppercase">

@@ -12,8 +12,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { CreativePricing } from "@/components/sections/CreativePricing";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { CreativePricing } from "@/components/sections/CreativePricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ImageHero, type ImageHeroProps } from "@/components/sections/ImageHero";
@@ -137,6 +137,9 @@ const serviceHeroCtasByPath: Record<
   },
 };
 
+const CINEMATIC_BG = { alt: "Event", src: "/images/case-studies/waf.avif" } as const;
+const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
+
 export const ServiceDetail = ({
   afterSpotlightSections,
   caseStudies,
@@ -182,6 +185,15 @@ export const ServiceDetail = ({
     if (hero.primaryCta === null) return;
     return hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta;
   }, [hero, heroCtas]);
+
+  const cinematicHeadingLines = useMemo(
+    () => [ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"] as [string],
+    [ctaBanner?.title]
+  );
+  const cinematicPrimaryCta = useMemo(
+    () => ({ href: ctaBanner?.ctaHref ?? "/contact", label: ctaBanner?.ctaLabel ?? "Book a Strategy Session" }),
+    [ctaBanner?.ctaHref, ctaBanner?.ctaLabel]
+  );
 
   const finalSecondaryCta = useMemo(() => {
     if (!hero) return;
@@ -306,13 +318,12 @@ export const ServiceDetail = ({
 
           {relatedServices && <RelatedServices services={relatedServices} />}
 
-          <CTABanner
-            ctaHref={ctaBanner?.ctaHref ?? "/contact"}
-            ctaLabel={ctaBanner?.ctaLabel ?? "Book a Strategy Session"}
-            description={
-              ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
-            }
-            title={ctaBanner?.title ?? "Ready to Build Your Enterprise Growth Engine?"}
+          <ContactCinematicCTA
+            backgroundImage={CINEMATIC_BG}
+            description={ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."}
+            headingLines={cinematicHeadingLines}
+            primaryCta={cinematicPrimaryCta}
+            secondaryCta={CINEMATIC_SECONDARY}
           />
         </>
       )}

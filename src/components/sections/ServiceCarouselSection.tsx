@@ -19,6 +19,7 @@ export interface ServiceCarouselItem {
 export interface ServiceCarouselSectionProps {
   eyebrow?: string;
   heading?: string;
+  headingHighlight?: string;
   items: ServiceCarouselItem[];
 }
 
@@ -35,6 +36,7 @@ const getSlidesPerView = (): number => {
 export const ServiceCarouselSection = ({
   eyebrow,
   heading,
+  headingHighlight,
   items,
 }: ServiceCarouselSectionProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -112,7 +114,7 @@ export const ServiceCarouselSection = ({
         {(eyebrow ?? heading) ? (
           <div className="mb-12 text-center">
             {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-            {heading ? <Heading as="h2">{heading}</Heading> : null}
+            {heading ? <Heading as="h2" highlight={headingHighlight}>{heading}</Heading> : null}
           </div>
         ) : null}
 

@@ -6,8 +6,8 @@ import type { CaseStudyDetail } from "@/content/case-study-detail";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { ImageHero } from "@/components/sections/ImageHero";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -16,6 +16,9 @@ import { Heading } from "@/components/ui/Heading";
 
 const HERO_PRIMARY_CTA = { href: "/contact", label: "Get a Custom Proposal" } as const;
 const METADATA_LABELS = ["Client", "Event", "Location"] as const;
+const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event program?"];
+const CINEMATIC_PRIMARY = { href: "/contact", label: "Start a Conversation" } as const;
+const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
 
 interface CaseStudyPageProps {
   study: CaseStudyDetail;
@@ -36,6 +39,11 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
   const serviceLinks = useMemo(
     () => study.services.map((s) => ({ href: "/services", title: s })),
     [study.services]
+  );
+
+  const cinematicBg = useMemo(
+    () => ({ alt: study.title, src: study.image }),
+    [study.title, study.image]
   );
 
   return (
@@ -119,11 +127,11 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       />
 
       <ContactCinematicCTA
-        backgroundImage={{ alt: study.title, src: study.image }}
+        backgroundImage={cinematicBg}
         description="Tell us about your next event program and we'll outline an approach."
-        headingLines={["Ready to build", "your next event program?"]}
-        primaryCta={{ href: "/contact", label: "Start a Conversation" }}
-        secondaryCta={{ href: "/case-studies", label: "View Case Studies" }}
+        headingLines={CINEMATIC_HEADING}
+        primaryCta={CINEMATIC_PRIMARY}
+        secondaryCta={CINEMATIC_SECONDARY}
       />
 
       <ContactUs />

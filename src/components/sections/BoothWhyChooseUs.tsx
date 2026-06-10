@@ -19,6 +19,7 @@ export interface BoothWhyChooseUsItem {
 
 export interface BoothWhyChooseUsProps {
   heading: string;
+  headingHighlight?: string;
   items: BoothWhyChooseUsItem[];
 }
 
@@ -91,7 +92,7 @@ const BoothWhyChooseUsCard = ({
           {item.title}
         </h3>
         <p
-          className={`text-sm leading-relaxed transition-all duration-300 ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
+          className={`text-sm md:text-base leading-relaxed transition-all duration-300 ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
         >
           {item.description}
         </p>
@@ -104,7 +105,7 @@ const BoothWhyChooseUsCard = ({
   );
 };
 
-export const BoothWhyChooseUs = ({ heading, items }: BoothWhyChooseUsProps) => {
+export const BoothWhyChooseUs = ({ heading, headingHighlight, items }: BoothWhyChooseUsProps) => {
   return (
     <section className="bg-brand-gray py-20" id="why-choose-us">
       <div className="container mx-auto px-8">
@@ -115,8 +116,8 @@ export const BoothWhyChooseUs = ({ heading, items }: BoothWhyChooseUsProps) => {
           viewport={viewport}
           whileInView="visible"
         >
-          <Heading as="h2" className="inline text-brand-charcoal">
-            <span className="bg-brand-blue/10 box-decoration-clone px-3 py-1">{heading}</span>
+          <Heading as="h2" className="inline text-brand-charcoal" highlight={headingHighlight}>
+            {heading}
           </Heading>
           <div className="mt-8 flex justify-center">
             <svg

@@ -13,17 +13,19 @@ export interface CorporateVideoPortfolioItem {
 
 export interface CorporateVideoPortfolioSectionProps {
   heading: string;
+  headingHighlight?: string;
   items: CorporateVideoPortfolioItem[];
 }
 
 export const CorporateVideoPortfolioSection = ({
   heading,
+  headingHighlight,
   items,
 }: CorporateVideoPortfolioSectionProps) => {
   return (
     <section className="bg-[#111111] py-20 text-white md:py-24">
       <div className="container mx-auto px-8">
-        <Heading as="h2" className="mb-12 max-w-4xl text-white md:mb-14 lg:text-5xl">
+        <Heading as="h2" className="mb-12 max-w-4xl text-white md:mb-14 lg:text-5xl" highlight={headingHighlight}>
           {heading}
         </Heading>
 

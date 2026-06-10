@@ -6,6 +6,7 @@ export const BOOTH_RENTAL_RENT_VS_BUY = {
   description:
     "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics, making it the strategically smarter choice for most programs.",
   heading: "TOP 3 REASONS TO RENT VS. BUY",
+  headingHighlight: "RENT VS. BUY",
   reasons: [
     {
       description:
@@ -54,6 +55,7 @@ export const BOOTH_RENTAL_WHY = {
 
 export const BOOTH_RENTAL_DELIVERABLES = {
   heading: "Our Event Booth Rental Services",
+  headingHighlight: "Booth Rental Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -218,6 +220,7 @@ export const BOOTH_RENTAL_FAQ = {
     },
   ],
   heading: "Event Booth Rental FAQs",
+  headingHighlight: "Rental FAQs",
   layoutMode: "fit" as const,
 };
 
@@ -238,6 +241,7 @@ export const BOOTH_RENTAL_RELATED_SERVICES = [
 
 export const BOOTH_RENTAL_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Booth Rental?",
+  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description: "Recognized by industry leaders for creative excellence and innovation",

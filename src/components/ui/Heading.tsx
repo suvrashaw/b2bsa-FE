@@ -2,7 +2,6 @@ import type { HTMLAttributes, ReactNode } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { PointerHighlight } from "@/components/ui/PointerHighlight";
 import { cn } from "@/lib";
 
 const headingVariants = cva("", {
@@ -16,17 +15,22 @@ const headingVariants = cva("", {
   },
 });
 
+const highlightVariants = {
+  blue: "bg-brand-blue/20",
+  cyan: "bg-brand-cyan/20",
+} as const;
+
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as: "h1" | "h2" | "h3" | "h4";
   highlight?: string;
-  highlightVariant?: "blue" | "cyan";
+  highlightVariant?: keyof typeof highlightVariants;
   preserveClassName?: boolean;
 }
 
 const renderHighlightedText = (
   children: ReactNode,
   highlight?: string,
-  highlightVariant: "blue" | "cyan" = "blue"
+  highlightVariant: keyof typeof highlightVariants = "blue",
 ) => {
   if (typeof children !== "string" || !highlight?.trim()) return children;
 
@@ -40,9 +44,13 @@ const renderHighlightedText = (
   return (
     <>
       {children.slice(0, startIndex)}
-      <PointerHighlight color={highlightVariant}>
-        {children.slice(startIndex, endIndex)}
-      </PointerHighlight>
+      <span className="relative inline-block px-1">
+        <span className="relative z-10">{children.slice(startIndex, endIndex)}</span>
+        <span
+          aria-hidden="true"
+          className={cn("absolute inset-x-0 top-[30%] bottom-0", highlightVariants[highlightVariant])}
+        />
+      </span>
       {children.slice(endIndex)}
     </>
   );

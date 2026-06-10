@@ -19,7 +19,6 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { CorporateVideoPortfolioSection } from "@/components/sections/CorporateVideoPortfolioSection";
 import { CreativePricing } from "@/components/sections/CreativePricing";
-import { CTABanner } from "@/components/sections/CTABanner";
 import { Culture } from "@/components/sections/Culture";
 import { FAQ } from "@/components/sections/FAQ";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
@@ -75,10 +74,6 @@ const IMAGE_HERO_CTA = { href: "/demo", label: "View Case Study" };
 
 const SERVICE_HERO_PRIMARY = { href: "/demo", label: "Get a Proposal" };
 const SERVICE_HERO_SECONDARY = { href: "/demo", label: "See Our Work" };
-
-// ─── CTABanner ──────────────────────────────────────────────────────────────
-
-const CTA_BANNER_SUBTITLE = "Tell us about your next event. We respond in 24 hours.";
 
 // ─── ProofBar ───────────────────────────────────────────────────────────────
 
@@ -340,7 +335,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   CorporateVideoIndustriesSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
   CorporateVideoPortfolioSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
   CreativePricing: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  CTABanner: [{ href: "/contact", label: "Contact" }, { href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   Culture: [{ href: "/about", label: "About" }],
   FAQ: [{ href: "/", label: "Home" }, { href: "/terms-and-conditions", label: "Terms" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   FAQAccordion: [
@@ -397,7 +391,7 @@ const DemoLabel = ({ name }: { name: string }) => {
       )}
       {pages.length === 0 && (
         <div className="px-6 pb-2">
-          <span className="font-mono text-[10px] italic text-white/25">demo only</span>
+          <span className="font-mono text-[10px] text-white/25 italic">demo only</span>
         </div>
       )}
     </div>
@@ -625,16 +619,7 @@ export default function DemoPage() {
       <DemoLabel name="FAQAccordion" />
       <FAQAccordion />
 
-      {/* 35 – CTABanner */}
-      <DemoLabel name="CTABanner" />
-      <CTABanner
-        ctaHref="/contact"
-        ctaLabel="Get a Custom Proposal"
-        subtitle={CTA_BANNER_SUBTITLE}
-        title="Ready to Build Your Next Event Program?"
-      />
-
-      {/* 36 – ContactCinematicCTA */}
+      {/* 35 – ContactCinematicCTA */}
       <DemoLabel name="ContactCinematicCTA" />
       <ContactCinematicCTA
         backgroundImage={CONTACT_CINEMATIC_PROPS.backgroundImage}
@@ -647,7 +632,7 @@ export default function DemoPage() {
         secondaryCta={CONTACT_CINEMATIC_PROPS.secondaryCta}
       />
 
-      {/* 37 – ContactUs */}
+      {/* 36 – ContactUs */}
       <DemoLabel name="ContactUs" />
       <ContactUs />
     </main>

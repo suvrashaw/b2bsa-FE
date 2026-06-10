@@ -37,6 +37,7 @@ export const CORPORATE_VIDEO_INTRO = {
     </>
   ),
   heading: "What Is Corporate Video Production?",
+  headingHighlight: "Corporate Video Production",
 };
 
 export const CORPORATE_VIDEO_WHY = {
@@ -51,6 +52,7 @@ export const CORPORATE_VIDEO_INDUSTRIES = {
   description:
     "We’re all about crafting standout video content across a range of industries. From finance to tech and energy, we've got you covered!",
   heading: "Video production tailored to your industry.",
+  headingHighlight: "your industry",
   industries: [
     {
       description:
@@ -82,11 +84,13 @@ export const CORPORATE_VIDEO_INDUSTRIES = {
 
 export const CORPORATE_VIDEO_PORTFOLIO = {
   heading: "Check out our video production portfolio.",
+  headingHighlight: "video production portfolio",
   items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 
 export const CORPORATE_VIDEO_DELIVERABLES = {
   heading: "What We Produce in Our Corporate Video Production Services",
+  headingHighlight: "We Produce",
   services: [
     {
       color: "bg-brand-blue",
@@ -200,6 +204,7 @@ export const CORPORATE_VIDEO_FAQ = {
     },
   ],
   heading: "Corporate Video FAQs",
+  headingHighlight: "Video FAQs",
 };
 
 export const CORPORATE_VIDEO_PAGE = {

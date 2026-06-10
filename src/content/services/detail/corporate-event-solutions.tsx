@@ -27,6 +27,7 @@ export const CORP_EVENT_INTRO = {
 
 export const CORP_EVENT_DELIVERABLES = {
   heading: "What's Included in Our Corporate Event Services",
+  headingHighlight: "Corporate Event Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -120,11 +121,13 @@ export const CORP_EVENT_CASE_STUDIES = {
 
 export const CORP_EVENT_INDUSTRIES_SECTION = {
   heading: "Industries We Support with Corporate Event Solutions",
+  headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const CORP_EVENT_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Corporate Event Solutions",
+  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -159,6 +162,7 @@ export const CORP_EVENT_WHY_CHOOSE_US = {
 
 export const CORP_EVENT_BLOGS_SECTION = {
   heading: "Latest Insights on Corporate Event Planning & Event Management",
+  headingHighlight: "Latest Insights",
 };
 
 export const CORP_EVENT_FAQ = {
@@ -195,6 +199,7 @@ export const CORP_EVENT_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Corporate Event Solutions",
+  headingHighlight: "Asked Questions",
 };
 
 export const CORP_EVENT_RELATED_SERVICES = [
