@@ -37,21 +37,31 @@ const useStatsMarquee = (isVisible: boolean) => {
   return useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
 };
 
-const StatChip = ({ item }: { item: StatItem }) => (
-  <div className="flex shrink-0 flex-col items-center gap-1.5 px-8">
-    <span className="font-heading text-3xl font-bold text-brand-blue md:text-4xl">
-      {item.value}
-    </span>
-    <span className="text-xs font-bold tracking-widest text-gray-500 uppercase">{item.label}</span>
-  </div>
-);
+const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
+  const bg = ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3];
+  return (
+    <div
+      className={cn(
+        "mx-3 flex min-w-[180px] shrink-0 flex-col items-center gap-1.5 rounded-xl px-8 py-6 shadow-lg",
+        bg,
+        "text-white"
+      )}
+    >
+      <span className="font-heading text-3xl font-bold md:text-4xl">
+        {item.value}
+      </span>
+      <span className="text-xs font-bold tracking-widest uppercase opacity-80">
+        {item.label}
+      </span>
+    </div>
+  );
+};
 
 const StatRow = ({ items }: { items: StatItem[] }) => (
   <>
     {items.map((item, i) => (
       <div className="flex shrink-0 items-center" key={item.key}>
-        {i > 0 && <div className="h-12 w-px shrink-0 bg-brand-blue/20" />}
-        <StatChip item={item} />
+        <StatChip index={i} item={item} />
       </div>
     ))}
   </>
