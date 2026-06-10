@@ -220,12 +220,11 @@ export const ContactCinematicCTA = ({
             viewport={ctaViewport}
             whileInView="visible"
           >
-            <Heading
-              as="h2"
-              className="mt-8 text-white"
-            >
+            <Heading as="h2" className="mt-8 text-white">
               <span className="block text-white/80">{headingLines[0]}</span>
-              {headingLines[1] ? <span className="mt-2 block text-white">{headingLines[1]}</span> : null}
+              {headingLines[1] ? (
+                <span className="mt-2 block text-white">{headingLines[1]}</span>
+              ) : null}
             </Heading>
           </motion.div>
 
@@ -289,14 +288,21 @@ export const ContactCinematicCTA = ({
                     className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
                     key={logo.alt}
                   >
-                    <Image alt={logo.alt} className="object-cover" height={40} src={logo.src} width={40} />
+                    <Image
+                      alt={logo.alt}
+                      className="object-cover"
+                      height={40}
+                      src={logo.src}
+                      width={40}
+                    />
                   </div>
                 ))}
               </div>
-              {proofLabel ? <p className="text-sm font-medium text-white/80">{proofLabel}</p> : null}
+              {proofLabel ? (
+                <p className="text-sm font-medium text-white/80">{proofLabel}</p>
+              ) : null}
             </motion.div>
           ) : null}
-
         </div>
       </div>
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />

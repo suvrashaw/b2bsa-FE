@@ -48,10 +48,7 @@ const LogosRow = ({
 }) => (
   <>
     {logos.map((logo) => (
-      <div
-        className="flex shrink-0 items-center"
-        key={logo.id}
-      >
+      <div className="flex shrink-0 items-center" key={logo.id}>
         <Image
           alt={logo.alt}
           className="h-8 w-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
@@ -121,7 +118,10 @@ export const ClientLogos = ({
   }
 
   return (
-    <div className={`pointer-events-none relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`} ref={containerRef}>
+    <div
+      className={`pointer-events-none relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}
+      ref={containerRef}
+    >
       {heading && (
         <Heading as="h2" className="pt-10 pb-3 text-center">
           {heading}
@@ -136,10 +136,18 @@ export const ClientLogos = ({
 
         <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
-            <LogosRow logos={logos} onLogoMouseEnter={handleMouseEnter} onLogoMouseLeave={handleMouseLeave} />
+            <LogosRow
+              logos={logos}
+              onLogoMouseEnter={handleMouseEnter}
+              onLogoMouseLeave={handleMouseLeave}
+            />
           </div>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
-            <LogosRow logos={logos} onLogoMouseEnter={handleMouseEnter} onLogoMouseLeave={handleMouseLeave} />
+            <LogosRow
+              logos={logos}
+              onLogoMouseEnter={handleMouseEnter}
+              onLogoMouseLeave={handleMouseLeave}
+            />
           </div>
         </motion.div>
       </div>

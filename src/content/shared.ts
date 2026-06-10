@@ -17,7 +17,8 @@ export const GLOBAL_PROOF_STATS = [
 
 export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
   {
-    challenge: "Building enterprise visibility and qualified conversations in a high-speed aviation event window",
+    challenge:
+      "Building enterprise visibility and qualified conversations in a high-speed aviation event window",
     client: "Global aviation technology and transformation brand",
     href: "/case-studies/waf-2025",
     icon: "Plane",
@@ -30,7 +31,8 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     title: "World Aviation Festival 2023",
   },
   {
-    challenge: "Exceeding aggressive on-ground lead targets in a crowded financial services environment",
+    challenge:
+      "Exceeding aggressive on-ground lead targets in a crowded financial services environment",
     client: "Enterprise banking and payments technology brands",
     href: "/case-studies/sibos-2025",
     icon: "Building2",
@@ -88,7 +90,8 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
 export const GLOBAL_INDUSTRY_SERVICES = [
   {
     color: "bg-brand-blue",
-    description: "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
+    description:
+      "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
     icon: "Cpu",
     id: "technology-saas",
     image: "/images/recent-events/event_other_1.avif",
@@ -104,7 +107,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-primary",
-    description: "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
+    description:
+      "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
     icon: "Activity",
     id: "healthcare-pharma",
     image: "/images/recent-events/event_other_3.avif",
@@ -112,7 +116,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-blue",
-    description: "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
+    description:
+      "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
     icon: "Settings",
     id: "manufacturing",
     image: "/images/recent-events/event_other_4.avif",
@@ -120,7 +125,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-cyan",
-    description: "Airlines, airports, MRO providers, and aviation technology companies at major industry shows.",
+    description:
+      "Airlines, airports, MRO providers, and aviation technology companies at major industry shows.",
     icon: "Plane",
     id: "aviation",
     image: "/images/case-studies/waf.avif",
@@ -128,7 +134,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-primary",
-    description: "TV broadcasters, streaming platforms, content producers, and media technology companies.",
+    description:
+      "TV broadcasters, streaming platforms, content producers, and media technology companies.",
     icon: "Radio",
     id: "media-broadcasting",
     image: "/images/home/services/media-production-2.avif",
@@ -144,7 +151,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-cyan",
-    description: "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
+    description:
+      "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
     icon: "Wrench",
     id: "automotive",
     image: "/images/case-studies/cs-3.avif",
@@ -152,7 +160,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-primary",
-    description: "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
+    description:
+      "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
     icon: "ShoppingBag",
     id: "retail-ecommerce",
     image: "/images/case-studies/cs-4.avif",
@@ -160,7 +169,8 @@ export const GLOBAL_INDUSTRY_SERVICES = [
   },
   {
     color: "bg-brand-blue",
-    description: "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
+    description:
+      "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
     icon: "Zap",
     id: "energy-utilities",
     image: "/images/case-studies/cs-5.avif",

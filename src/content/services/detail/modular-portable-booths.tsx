@@ -111,8 +111,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
     },
     {
       color: "bg-brand-primary",
-      description:
-        "Fast-deploy setups for roadshows, sales activations, and internal events.",
+      description: "Fast-deploy setups for roadshows, sales activations, and internal events.",
       icon: "Wrench",
       id: "modular-portable",
       image: "/images/home/services/booth/booth-10.avif",
@@ -160,7 +159,7 @@ export const MODULAR_BOOTHS_PAGE = {
   pageName: "Modular & Portable Booths",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/modular-portable-booths",
+    canonicalPath: "/services/global-event-solutions/modular-booth-solutions",
     description:
       "Reusable modular booth systems and portable trade show displays, consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.",
     focusKeyphrase: "modular booth",

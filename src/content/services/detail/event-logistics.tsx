@@ -88,14 +88,38 @@ export const EVENT_LOGISTICS_DELIVERABLES = {
 
 export const EVENT_LOGISTICS_CAPABILITIES = {
   phases: [
-    { description: "End-to-end logistics for exhibition stand delivery and removal.", title: "Trade show logistics management" },
-    { description: "Operational planning and execution for conference environments.", title: "Conference operational support" },
-    { description: "Assembly, installation, and dismantling coordination for trade shows.", title: "Booth setup coordination" },
-    { description: "Day-of oversight for all event operational activities.", title: "Onsite event supervision" },
-    { description: "AV, furniture, display, and technical equipment management.", title: "Equipment coordination" },
-    { description: "Timeline planning and schedule management across all event phases.", title: "Event scheduling management" },
-    { description: "Cross-border freight, customs clearance, and ATA carnet management.", title: "International event logistics support" },
-    { description: "Full event lifecycle operational planning and delivery.", title: "Corporate event operations planning" },
+    {
+      description: "End-to-end logistics for exhibition stand delivery and removal.",
+      title: "Trade show logistics management",
+    },
+    {
+      description: "Operational planning and execution for conference environments.",
+      title: "Conference operational support",
+    },
+    {
+      description: "Assembly, installation, and dismantling coordination for trade shows.",
+      title: "Booth setup coordination",
+    },
+    {
+      description: "Day-of oversight for all event operational activities.",
+      title: "Onsite event supervision",
+    },
+    {
+      description: "AV, furniture, display, and technical equipment management.",
+      title: "Equipment coordination",
+    },
+    {
+      description: "Timeline planning and schedule management across all event phases.",
+      title: "Event scheduling management",
+    },
+    {
+      description: "Cross-border freight, customs clearance, and ATA carnet management.",
+      title: "International event logistics support",
+    },
+    {
+      description: "Full event lifecycle operational planning and delivery.",
+      title: "Corporate event operations planning",
+    },
   ],
   title: "Event Logistics Capabilities & Operational Expertise",
 };
@@ -201,9 +225,15 @@ export const EVENT_LOGISTICS_FAQ = {
 };
 
 export const EVENT_LOGISTICS_RELATED_SERVICES = [
-  { href: "/services/global-event-solutions/booth-hostess", title: "Event Hostess Services" },
-  { href: "/services/global-event-solutions/corporate-event-solutions", title: "Corporate Event Solutions" },
-  { href: "/services/global-event-solutions/event-branding-solutions", title: "Event Branding" },
+  {
+    href: "/services/global-event-solutions/booth-hostess-services",
+    title: "Event Hostess Services",
+  },
+  {
+    href: "/services/global-event-solutions/corporate-event-solutions",
+    title: "Corporate Event Solutions",
+  },
+  { href: "/services/global-event-solutions/event-branding-services", title: "Event Branding" },
 ];
 
 export const EVENT_LOGISTICS_CONTACT_CTA = {
@@ -214,10 +244,7 @@ export const EVENT_LOGISTICS_CONTACT_CTA = {
   badge: "Event Logistics",
   description:
     "Partner with B2B Sales Arrow for professional event logistics services that help your brand deliver smooth, organized, and successful corporate event experiences.",
-  headingLines: [
-    "Looking for Reliable",
-    "Event Logistics Services?",
-  ] as [string, string],
+  headingLines: ["Looking for Reliable", "Event Logistics Services?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],
@@ -229,7 +256,7 @@ export const EVENT_LOGISTICS_PAGE = {
   pageName: "Event Logistics",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/event-logistics",
+    canonicalPath: "/services/global-event-solutions/booth-logistics-services",
     description:
       "End-to-end event logistics management, international freight, customs compliance, on-site installation, and return logistics for trade shows and corporate events in 40+ countries.",
     focusKeyphrase: "event logistics management",

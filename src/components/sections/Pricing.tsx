@@ -81,10 +81,7 @@ export const Pricing = ({
           </Eyebrow>
 
           <div className="relative mb-6">
-            <Heading
-              as="h2"
-              className="relative"
-            >
+            <Heading as="h2" className="relative">
               {title}
               <span className="absolute top-0 -right-12 rotate-12 text-brand-primary max-sm:hidden">
                 <Sparkles className="h-6 w-6 animate-bounce fill-brand-cyan/20 text-brand-cyan" />

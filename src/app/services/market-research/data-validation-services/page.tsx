@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: "Rigorous data validation services to ensure accuracy and reliability of your data assets.",
+  description:
+    "Rigorous data validation services to ensure accuracy and reliability of your data assets.",
   title: "Data Validation Services | B2B Sales Arrow",
 };
 

@@ -56,11 +56,17 @@ const SpotlightTextBlock = ({
     [isHovered]
   );
   const title1Style = useMemo(
-    () => ({ transform: isHovered ? "translateY(-2px)" : "translateY(0)", transitionTimingFunction: EASE }),
+    () => ({
+      transform: isHovered ? "translateY(-2px)" : "translateY(0)",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
   const title2Style = useMemo(
-    () => ({ transform: isHovered ? "translateX(12px)" : "translateX(0)", transitionTimingFunction: EASE }),
+    () => ({
+      transform: isHovered ? "translateX(12px)" : "translateX(0)",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
   const descStyle = useMemo(
@@ -77,22 +83,34 @@ const SpotlightTextBlock = ({
       {label && (
         <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
           <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
-          <span className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs" style={labelStyle}>
+          <span
+            className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs"
+            style={labelStyle}
+          >
             {label}
           </span>
         </div>
       )}
 
       <Heading as="h2" className="relative">
-        <span className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-charcoal transition-all duration-700 lg:text-4xl" style={title1Style}>
+        <span
+          className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-charcoal transition-all duration-700 lg:text-4xl"
+          style={title1Style}
+        >
           {titleLine1}
         </span>
-        <span className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-blue transition-all duration-700 lg:text-4xl" style={title2Style}>
+        <span
+          className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-blue transition-all duration-700 lg:text-4xl"
+          style={title2Style}
+        >
           {titleLine2}
         </span>
       </Heading>
 
-      <p className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]" style={descStyle}>
+      <p
+        className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+        style={descStyle}
+      >
         {description}
       </p>
 
@@ -108,7 +126,11 @@ const SpotlightTextBlock = ({
           >
             <Link href={ctaHref}>
               {ctaLabel}
-              {isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
+              {isHovered ? (
+                <ArrowUpRight className="h-4 w-4" />
+              ) : (
+                <ArrowRight className="h-4 w-4" />
+              )}
             </Link>
           </Button>
         ) : (
@@ -159,19 +181,43 @@ const SpotlightImageBlock = ({
     [isHovered]
   );
   const cornerTLV = useMemo(
-    () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleY(1)" : "scaleY(0)", transformOrigin: "top" as const, transitionDelay: "50ms", transitionTimingFunction: EASE }),
+    () => ({
+      opacity: isHovered ? 1 : 0,
+      transform: isHovered ? "scaleY(1)" : "scaleY(0)",
+      transformOrigin: "top" as const,
+      transitionDelay: "50ms",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
   const cornerTLH = useMemo(
-    () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left" as const, transitionDelay: "100ms", transitionTimingFunction: EASE }),
+    () => ({
+      opacity: isHovered ? 1 : 0,
+      transform: isHovered ? "scaleX(1)" : "scaleX(0)",
+      transformOrigin: "left" as const,
+      transitionDelay: "100ms",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
   const cornerBRV = useMemo(
-    () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleY(1)" : "scaleY(0)", transformOrigin: "bottom" as const, transitionDelay: "150ms", transitionTimingFunction: EASE }),
+    () => ({
+      opacity: isHovered ? 1 : 0,
+      transform: isHovered ? "scaleY(1)" : "scaleY(0)",
+      transformOrigin: "bottom" as const,
+      transitionDelay: "150ms",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
   const cornerBRH = useMemo(
-    () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleX(1)" : "scaleX(0)", transformOrigin: "right" as const, transitionDelay: "200ms", transitionTimingFunction: EASE }),
+    () => ({
+      opacity: isHovered ? 1 : 0,
+      transform: isHovered ? "scaleX(1)" : "scaleX(0)",
+      transformOrigin: "right" as const,
+      transitionDelay: "200ms",
+      transitionTimingFunction: EASE,
+    }),
     [isHovered]
   );
 
@@ -211,11 +257,26 @@ const SpotlightImageBlock = ({
       />
       <div className="relative h-[300px] w-[280px] overflow-hidden rounded-2xl sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
         {mediaElement}
-        <div className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700" style={overlayStyle} />
-        <div className="absolute top-2 left-2 h-5 w-px bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:h-6" style={cornerTLV} />
-        <div className="absolute top-2 left-2 h-px w-5 bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:w-6" style={cornerTLH} />
-        <div className="absolute right-2 bottom-2 h-5 w-px bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:h-6" style={cornerBRV} />
-        <div className="absolute right-2 bottom-2 h-px w-5 bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:w-6" style={cornerBRH} />
+        <div
+          className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700"
+          style={overlayStyle}
+        />
+        <div
+          className="absolute top-2 left-2 h-5 w-px bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:h-6"
+          style={cornerTLV}
+        />
+        <div
+          className="absolute top-2 left-2 h-px w-5 bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:w-6"
+          style={cornerTLH}
+        />
+        <div
+          className="absolute right-2 bottom-2 h-5 w-px bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:h-6"
+          style={cornerBRV}
+        />
+        <div
+          className="absolute right-2 bottom-2 h-px w-5 bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:w-6"
+          style={cornerBRH}
+        />
       </div>
     </div>
   );
@@ -282,9 +343,7 @@ export const Spotlight = ({
           videoUrl={videoUrl}
         />
       </div>
-      {triggerContactModal && (
-        <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
-      )}
+      {triggerContactModal && <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />}
     </>
   );
 };

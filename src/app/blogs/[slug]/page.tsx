@@ -3,11 +3,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
 import { BlogPage } from "@/components/templates/BlogPage";
-import {
-  DEFAULT_BLOG_POST_HREF,
-  DEFAULT_BLOG_POST_ID,
-  SHARED_BLOG_POSTS,
-} from "@/content/blogs";
+import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -15,8 +11,7 @@ type BlogPostPageProps = {
   }>;
 };
 
-const findPostBySlug = (slug: string) =>
-  SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
+const findPostBySlug = (slug: string) => SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
 
 const getDefaultPost = () => findPostBySlug(DEFAULT_BLOG_POST_ID);
 
@@ -26,9 +21,7 @@ export const generateStaticParams = () => {
   }));
 };
 
-export const generateMetadata = async ({
-  params,
-}: BlogPostPageProps): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<Metadata> => {
   const { slug } = await params;
   const post = findPostBySlug(slug);
   const metadataPost = post?.body ? post : getDefaultPost();

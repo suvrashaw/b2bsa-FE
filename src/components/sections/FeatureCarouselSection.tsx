@@ -196,9 +196,7 @@ const FeatureShowcaseCard = ({
           isActive ? "opacity-100" : "opacity-0"
         )}
       >
-        <p className="text-base leading-relaxed text-gray-200 md:text-lg">
-          {feature.description}
-        </p>
+        <p className="text-base leading-relaxed text-gray-200 md:text-lg">{feature.description}</p>
       </div>
     </motion.div>
   );
@@ -222,10 +220,9 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    );
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
+      threshold: 0.1,
+    });
     observer.observe(el);
     return () => observer.disconnect();
   }, []);

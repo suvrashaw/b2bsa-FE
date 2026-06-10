@@ -18,7 +18,10 @@ interface BlogSidebarTrendingProps {
 }
 
 const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
-  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(0, 4);
+  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(
+    0,
+    4
+  );
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
@@ -33,13 +36,7 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
             key={post.id}
           >
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-100">
-              <Image
-                alt={post.title}
-                className="object-cover"
-                fill
-                sizes="64px"
-                src={post.image}
-              />
+              <Image alt={post.title} className="object-cover" fill sizes="64px" src={post.image} />
             </div>
             <div className="min-w-0">
               <h3 className="line-clamp-2 text-sm leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">

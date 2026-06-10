@@ -186,7 +186,6 @@ const getOgContent = (searchParams: URLSearchParams) => {
         title: resolvedTitle.replace(" | B2B Sales Arrow", ""),
       };
     }
-
   }
 
   if (!path) {

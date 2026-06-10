@@ -88,7 +88,7 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
       if (isAnimatingRef.current || cardStep === 0) return;
       isAnimatingRef.current = true;
       offsetRef.current = newOffset;
-      setDotIndex(((newOffset - posts.length) % posts.length + posts.length) % posts.length);
+      setDotIndex((((newOffset - posts.length) % posts.length) + posts.length) % posts.length);
 
       await controls.start({ x: -(newOffset * cardStep) }, SLIDE_TRANSITION);
 
@@ -160,12 +160,7 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
 
         <div className="mt-10 flex items-center justify-center gap-2.5">
           {posts.map((post, i) => (
-            <DotButton
-              active={i === dotIndex}
-              index={i}
-              key={post.id}
-              onDotClick={goToDot}
-            />
+            <DotButton active={i === dotIndex} index={i} key={post.id} onDotClick={goToDot} />
           ))}
         </div>
       </div>

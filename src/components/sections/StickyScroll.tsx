@@ -69,7 +69,10 @@ export const StickyScroll = ({
   const updateActiveIndex = useCallback(
     (latest: number) => {
       if (reasons.length === 0) return;
-      const nextIndex = Math.min(reasons.length - 1, Math.max(0, Math.floor(latest * reasons.length)));
+      const nextIndex = Math.min(
+        reasons.length - 1,
+        Math.max(0, Math.floor(latest * reasons.length))
+      );
       setActiveIndex((current) => (nextIndex === current ? current : nextIndex));
     },
     [reasons.length]
@@ -92,11 +95,7 @@ export const StickyScroll = ({
   );
 
   return (
-    <section
-      className="relative bg-brand-gray"
-      ref={containerRef}
-      style={sectionStyle}
-    >
+    <section className="relative bg-brand-gray" ref={containerRef} style={sectionStyle}>
       <div
         className={`sticky top-0 container mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
       >

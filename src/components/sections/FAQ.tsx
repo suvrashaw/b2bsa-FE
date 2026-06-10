@@ -50,13 +50,23 @@ const FAQMotionCard = ({
   const faqTransition = useMemo(() => ({ delay: index * 0.1 }), [index]);
   return (
     <motion.div
-      className={layoutMode === "carousel" ? "w-[300px] shrink-0 snap-center md:w-[320px]" : "w-full shrink-0 sm:max-w-[320px]"}
+      className={
+        layoutMode === "carousel"
+          ? "w-[300px] shrink-0 snap-center md:w-[320px]"
+          : "w-full shrink-0 sm:max-w-[320px]"
+      }
       initial={FAQ_ITEM_INITIAL}
       transition={faqTransition}
       viewport={FAQ_VIEWPORT}
       whileInView={FAQ_ITEM_WHILEINVIEW}
     >
-      <FAQCard answer={answer} icon={icon} image={image} layoutMode={layoutMode} question={question} />
+      <FAQCard
+        answer={answer}
+        icon={icon}
+        image={image}
+        layoutMode={layoutMode}
+        question={question}
+      />
     </motion.div>
   );
 };
@@ -148,11 +158,7 @@ export const FAQ = ({
             <Heading as="h2" className="mb-4" highlight={headingHighlight}>
               {heading}
             </Heading>
-            {description && (
-              <p className="max-w-xl text-base text-gray-600">
-                {description}
-              </p>
-            )}
+            {description && <p className="max-w-xl text-base text-gray-600">{description}</p>}
           </div>
         </div>
 

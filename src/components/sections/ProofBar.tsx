@@ -39,7 +39,9 @@ const useStatsMarquee = (isVisible: boolean) => {
 
 const StatChip = ({ item }: { item: StatItem }) => (
   <div className="flex shrink-0 flex-col items-center gap-1.5 px-8">
-    <span className="font-heading text-3xl font-bold text-brand-blue md:text-4xl">{item.value}</span>
+    <span className="font-heading text-3xl font-bold text-brand-blue md:text-4xl">
+      {item.value}
+    </span>
     <span className="text-xs font-bold tracking-widest text-gray-500 uppercase">{item.label}</span>
   </div>
 );
@@ -64,9 +66,12 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry?.isIntersecting ?? false), {
-      threshold: 0.1,
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry?.isIntersecting ?? false),
+      {
+        threshold: 0.1,
+      }
+    );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);

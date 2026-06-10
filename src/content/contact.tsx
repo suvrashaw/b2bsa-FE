@@ -95,11 +95,13 @@ export const CONTACT_NEXT_STEPS = {
       title: "Inquiry Review",
     },
     {
-      description: "A growth architect contacts you to schedule a discovery call at your preferred time.",
+      description:
+        "A growth architect contacts you to schedule a discovery call at your preferred time.",
       title: "Discovery Call",
     },
     {
-      description: "We prepare a customised strategy proposal aligned to your objectives, timeline, and budget.",
+      description:
+        "We prepare a customised strategy proposal aligned to your objectives, timeline, and budget.",
       title: "Strategy Proposal",
     },
     {

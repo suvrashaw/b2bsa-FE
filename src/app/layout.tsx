@@ -42,11 +42,7 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html
-      className={`${inter.variable} h-full antialiased`}
-      lang="en"
-      suppressHydrationWarning
-    >
+    <html className={`${inter.variable} h-full antialiased`} lang="en" suppressHydrationWarning>
       <head>
         <PartytownScripts />
       </head>

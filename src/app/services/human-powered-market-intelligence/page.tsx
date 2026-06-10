@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: "Human-driven market intelligence services that deliver nuanced insights no algorithm can replicate.",
+  description:
+    "Human-driven market intelligence services that deliver nuanced insights no algorithm can replicate.",
   title: "Human Powered Market Intelligence | B2B Sales Arrow",
 };
 

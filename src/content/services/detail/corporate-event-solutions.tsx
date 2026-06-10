@@ -88,16 +88,46 @@ export const CORP_EVENT_DELIVERABLES = {
 
 export const CORP_EVENT_CAPABILITIES = {
   phases: [
-    { description: "Full lifecycle event management from brief to post-event reporting.", title: "End-to-end event management" },
-    { description: "Structured planning for conference and executive summit programmes.", title: "Conference and summit planning" },
-    { description: "Booth management, branding, and attendee engagement at trade shows.", title: "Trade show operational support" },
-    { description: "Organizing structured networking experiences for business audiences.", title: "Networking event coordination" },
-    { description: "Event identity, signage, stage graphics, and visual production.", title: "Event branding and production" },
-    { description: "Attendee check-in, badge management, and registration communication.", title: "Guest registration management" },
-    { description: "Managing suppliers, production teams, and venue partners.", title: "Vendor coordination support" },
-    { description: "Day-of supervision, operational oversight, and troubleshooting.", title: "Onsite event management" },
-    { description: "VIP hospitality, executive guest programmes, and premium experiences.", title: "Executive hospitality services" },
-    { description: "Freight, customs, installation, and logistics for global events.", title: "Global event logistics coordination" },
+    {
+      description: "Full lifecycle event management from brief to post-event reporting.",
+      title: "End-to-end event management",
+    },
+    {
+      description: "Structured planning for conference and executive summit programmes.",
+      title: "Conference and summit planning",
+    },
+    {
+      description: "Booth management, branding, and attendee engagement at trade shows.",
+      title: "Trade show operational support",
+    },
+    {
+      description: "Organizing structured networking experiences for business audiences.",
+      title: "Networking event coordination",
+    },
+    {
+      description: "Event identity, signage, stage graphics, and visual production.",
+      title: "Event branding and production",
+    },
+    {
+      description: "Attendee check-in, badge management, and registration communication.",
+      title: "Guest registration management",
+    },
+    {
+      description: "Managing suppliers, production teams, and venue partners.",
+      title: "Vendor coordination support",
+    },
+    {
+      description: "Day-of supervision, operational oversight, and troubleshooting.",
+      title: "Onsite event management",
+    },
+    {
+      description: "VIP hospitality, executive guest programmes, and premium experiences.",
+      title: "Executive hospitality services",
+    },
+    {
+      description: "Freight, customs, installation, and logistics for global events.",
+      title: "Global event logistics coordination",
+    },
   ],
   title: "Corporate Event Planning & Operational Capabilities",
 };
@@ -203,9 +233,18 @@ export const CORP_EVENT_FAQ = {
 };
 
 export const CORP_EVENT_RELATED_SERVICES = [
-  { href: "/services/global-event-solutions/event-logistics", title: "Event Logistics Services" },
-  { href: "/services/global-event-solutions/corporate-networking-events", title: "Networking Event Solutions" },
-  { href: "/services/global-event-solutions/booth-hostess", title: "Event Hostess Services" },
+  {
+    href: "/services/global-event-solutions/booth-logistics-services",
+    title: "Event Logistics Services",
+  },
+  {
+    href: "/services/global-event-solutions/corporate-networking-events",
+    title: "Networking Event Solutions",
+  },
+  {
+    href: "/services/global-event-solutions/booth-hostess-services",
+    title: "Event Hostess Services",
+  },
 ];
 
 export const CORP_EVENT_CONTACT_CTA = {
@@ -216,10 +255,7 @@ export const CORP_EVENT_CONTACT_CTA = {
   badge: "Corporate Events",
   description:
     "Partner with B2B Sales Arrow for professional corporate event solutions that help your brand deliver engaging, organized, and impactful business experiences worldwide.",
-  headingLines: [
-    "Looking for End-to-End",
-    "Corporate Event Solutions?",
-  ] as [string, string],
+  headingLines: ["Looking for End-to-End", "Corporate Event Solutions?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],

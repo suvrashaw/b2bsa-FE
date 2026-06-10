@@ -9,16 +9,25 @@ import { BLOG_PAGE } from "./blog";
 import { CASE_STUDIES_PAGE } from "./case-studies";
 import { CONTACT_PAGE } from "./contact";
 import { HOME_PAGE } from "./home";
+
+import { BOOTH_HOSTESS_PAGE } from "./services/detail/booth-hostess";
+import { CORP_EVENT_PAGE } from "./services/detail/corporate-event-solutions";
+import { CORP_NETWORKING_PAGE } from "./services/detail/corporate-networking-events";
 import { CORPORATE_VIDEO_PAGE } from "./services/detail/corporate-video-production";
 import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
 import { BOOTH_RENTAL_PAGE } from "./services/detail/event-booth-rental";
+import { EVENT_BRANDING_PAGE } from "./services/detail/event-branding-solutions";
+import { EVENT_EXPERIENCE_VIDEO_PAGE } from "./services/detail/event-experience-video-production";
+import { EVENT_LOGISTICS_PAGE } from "./services/detail/event-logistics";
+import { EVENT_PHYSICAL_VIDEO_PAGE } from "./services/detail/event-physical-video-shoot";
 import { EVENT_VIDEO_PAGE } from "./services/detail/event-video-production";
 import { LIVE_STREAMING_PAGE } from "./services/detail/live-streaming-services";
 import { MODULAR_BOOTHS_PAGE } from "./services/detail/modular-portable-booths";
-import { PAID_ADS_PAGE } from "./services/detail/paid-advertising";
 import { SEO_PAGE } from "./services/detail/seo-services";
 import { BOOTH_BUILDER_PAGE } from "./services/detail/trade-show-booth-builder";
 import { BOOTH_DESIGN_PAGE } from "./services/detail/trade-show-booth-design";
+import { VIRTUAL_VIDEO_PAGE } from "./services/detail/virtual-video-production";
+
 import { GES_PAGE } from "./services/global-event-solutions";
 import { RESEARCH_PAGE } from "./services/market-research";
 import { MEDIA_PAGE } from "./services/media-production";
@@ -44,10 +53,17 @@ export const marketingPages = [
   LIVE_STREAMING_PAGE,
   PERF_PAGE,
   SEO_PAGE,
-  PAID_ADS_PAGE,
   SQL_PAGE,
   RESEARCH_PAGE,
   DATA_AUGMENTATION_PAGE,
+  BOOTH_HOSTESS_PAGE,
+  CORP_EVENT_PAGE,
+  CORP_NETWORKING_PAGE,
+  EVENT_BRANDING_PAGE,
+  EVENT_EXPERIENCE_VIDEO_PAGE,
+  EVENT_LOGISTICS_PAGE,
+  EVENT_PHYSICAL_VIDEO_PAGE,
+  VIRTUAL_VIDEO_PAGE,
 ] satisfies MarketingPageDefinition[];
 
 const normalizeLookupPath = (path: string) => {

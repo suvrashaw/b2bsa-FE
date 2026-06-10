@@ -78,10 +78,7 @@ const getCountryFromLocation = (location?: string) => {
   return locationParts.at(-1) ?? location;
 };
 
-const mapCalendarEventToEvent = (
-  event: CalendarTradeShow,
-  index: number
-): EventCardItem => ({
+const mapCalendarEventToEvent = (event: CalendarTradeShow, index: number): EventCardItem => ({
   country: event.country,
   ctaHref: "/trade-show-calendar",
   date: formatCalendarDateRange(event.startDate, event.endDate),
@@ -125,14 +122,12 @@ export const Events = ({
   const [activeEventId, setActiveEventId] = useState<null | string>(null);
   const resolvedEvents = useMemo(() => {
     const sourceEvents =
-      events ??
-      (content === HOME_EVENTS_CONTENT ? getDefaultEvents() : content.events);
+      events ?? (content === HOME_EVENTS_CONTENT ? getDefaultEvents() : content.events);
 
     return sourceEvents.map((event, index) => normalizeEvent(event, index));
   }, [content, events]);
   const resolvedCtaLabel =
-    ctaLabel ??
-    (events || content !== HOME_EVENTS_CONTENT ? content.ctaLabel : CARD_CTA_LABEL);
+    ctaLabel ?? (events || content !== HOME_EVENTS_CONTENT ? content.ctaLabel : CARD_CTA_LABEL);
   const handleCardToggle = useCallback((eventId: string) => {
     setActiveEventId((currentEventId) => (currentEventId === eventId ? null : eventId));
   }, []);

@@ -103,19 +103,23 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
 export const EVENT_EXPERIENCE_VIDEO_CAPABILITIES = {
   phases: [
     {
-      description: "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions.",
+      description:
+        "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions.",
       title: "Multi-Camera Event Coverage",
     },
     {
-      description: "Professional camera workflows for sharp, polished event footage and final delivery.",
+      description:
+        "Professional camera workflows for sharp, polished event footage and final delivery.",
       title: "4K Video Production Capabilities",
     },
     {
-      description: "Clean speaker, panel, interview, and ambient audio captured for usable event storytelling.",
+      description:
+        "Clean speaker, panel, interview, and ambient audio captured for usable event storytelling.",
       title: "Professional Audio Recording",
     },
     {
-      description: "Aerial venue footage where location, permissions, and event format make it appropriate.",
+      description:
+        "Aerial venue footage where location, permissions, and event format make it appropriate.",
       title: "Drone Event Videography",
     },
     {
@@ -123,23 +127,28 @@ export const EVENT_EXPERIENCE_VIDEO_CAPABILITIES = {
       title: "Gimbal and Cinematic Motion Shots",
     },
     {
-      description: "Photo capture can be integrated alongside video to support post-event marketing needs.",
+      description:
+        "Photo capture can be integrated alongside video to support post-event marketing needs.",
       title: "Event Photography Integration",
     },
     {
-      description: "Onsite editing support for urgent social media clips, recaps, or same-day campaign assets.",
+      description:
+        "Onsite editing support for urgent social media clips, recaps, or same-day campaign assets.",
       title: "Onsite Video Editing Support",
     },
     {
-      description: "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics.",
+      description:
+        "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics.",
       title: "Branded Motion Graphics",
     },
     {
-      description: "Fast post-event editing support for immediate publishing and internal communication needs.",
+      description:
+        "Fast post-event editing support for immediate publishing and internal communication needs.",
       title: "Fast Turnaround Post-Production",
     },
     {
-      description: "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more.",
+      description:
+        "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more.",
       title: "Social Media Optimized Video Formats",
     },
   ],
@@ -155,7 +164,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
   services: [
     {
       color: "bg-brand-blue",
-      description: "Multi-camera keynote filming, speaker coverage, and session capture at conferences.",
+      description:
+        "Multi-camera keynote filming, speaker coverage, and session capture at conferences.",
       icon: "Mic",
       id: "conference-highlight-video-production",
       image: "/images/case-studies/cs-3.avif",
@@ -163,7 +173,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
     },
     {
       color: "bg-brand-cyan",
-      description: "Booth coverage, audience interactions, live demos, and trade show recap videos.",
+      description:
+        "Booth coverage, audience interactions, live demos, and trade show recap videos.",
       icon: "Presentation",
       id: "trade-show-recap-videos",
       image: "/images/home/services/booth/booth-6.avif",
@@ -171,7 +182,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
     },
     {
       color: "bg-brand-primary",
-      description: "Atmosphere footage, attendee conversations, and engagement capture at networking receptions.",
+      description:
+        "Atmosphere footage, attendee conversations, and engagement capture at networking receptions.",
       icon: "Users",
       id: "networking-reception-coverage",
       image: "/images/recent-events/event_other_3.avif",
@@ -179,7 +191,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
     },
     {
       color: "bg-brand-blue",
-      description: "Teaser videos, launch-day filming, and post-event recap content for product launches.",
+      description:
+        "Teaser videos, launch-day filming, and post-event recap content for product launches.",
       icon: "Rocket",
       id: "product-launch-event-videos",
       image: "/images/recent-events/event_other_4.avif",
@@ -187,7 +200,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
     },
     {
       color: "bg-brand-cyan",
-      description: "Corporate after movies that capture the energy, audience response, and key brand moments.",
+      description:
+        "Corporate after movies that capture the energy, audience response, and key brand moments.",
       icon: "Film",
       id: "corporate-event-after-movies",
       image: "/images/home/testimonials/testimonial-5.avif",
@@ -195,7 +209,8 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
     },
     {
       color: "bg-brand-primary",
-      description: "Pre-event teaser campaigns and post-event marketing videos for campaign distribution.",
+      description:
+        "Pre-event teaser campaigns and post-event marketing videos for campaign distribution.",
       icon: "Megaphone",
       id: "event-teaser-video-campaigns",
       image: "/images/home/services/performance-marketing.avif",

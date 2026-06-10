@@ -45,8 +45,7 @@ export const CASE_STUDIES_PAGE_CONTENT = {
       "Enterprise results are not accidental. They are engineered through strategy, creative execution, data quality, and disciplined follow-up. Could your next program become our next case study?",
   },
   emptyState: {
-    description:
-      "Try a different service lens to browse the current case study portfolio.",
+    description: "Try a different service lens to browse the current case study portfolio.",
     title: "No case studies match this filter yet.",
   },
   filters: [
@@ -251,8 +250,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
         label: "What We Did",
         text: "Delivered an eco-conscious booth design, two private meeting spaces, bilingual on-ground sales support, and active prospecting aligned to the client's ICP.",
       },
-      title:
-        "Case Study 4: SIBOS 2023, Sustainable Banking Event Lead Generation, Ontario, Canada",
+      title: "Case Study 4: SIBOS 2023, Sustainable Banking Event Lead Generation, Ontario, Canada",
     },
     challenge:
       "Build a sustainable, high-visibility booth for a niche banking audience while still generating senior pipeline from a tightly defined target account list.",
@@ -273,8 +271,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     ],
     servicesText:
       "Event Lead Generation, Eco-Conscious Booth Design, Active Prospecting, Sales Support.",
-    title:
-      "Case Study 4: SIBOS 2023, Sustainable Banking Event Lead Generation, Ontario, Canada",
+    title: "Case Study 4: SIBOS 2023, Sustainable Banking Event Lead Generation, Ontario, Canada",
     whatWeDid:
       "B2B Sales Arrow designed a booth built around sustainability principles using crushed wood, added two closed meeting spaces, deployed a bilingual sales specialist, and ran active prospecting to outperform the client's SQL target.",
   },
@@ -320,8 +317,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     ],
     servicesText:
       "End-to-End Event Program, Booth Design, Attendee Experience, Active Prospecting, Database Development.",
-    title:
-      "Case Study 5: Money 20/20 2023, Pricing and Billing Leader Expands Pipeline, Amsterdam",
+    title: "Case Study 5: Money 20/20 2023, Pricing and Billing Leader Expands Pipeline, Amsterdam",
     whatWeDid:
       "The team launched highly targeted email and call outreach, produced a booth with smart LED screens and meeting spaces, created giveaway and hospitality activations, documented detailed meeting intelligence, and deployed a senior European technical sales professional fluent in five languages.",
   },
@@ -345,8 +341,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
         label: "What We Did",
         text: "Ran active prospecting, sourced QR-code standees internationally, equipped the sales team with brand wearables, and layered in premium attendee experience touches.",
       },
-      title:
-        "Case Study 6: SAP Sapphire 2023, High-Intent Enterprise Pipeline in Orlando",
+      title: "Case Study 6: SAP Sapphire 2023, High-Intent Enterprise Pipeline in Orlando",
     },
     challenge:
       "The client needed qualified enterprise leads and a memorable brand presence despite opt-in attendee restrictions and a near-impossible three-day delivery window for event assets.",
@@ -362,8 +357,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     serviceCategories: ["Event Lead Generation", "Full Event Program", "Active Prospecting"],
     servicesText:
       "Event Lead Generation, Active Prospecting, Attendee Experience, Event Stationery, Brand Merchandise.",
-    title:
-      "Case Study 6: SAP Sapphire 2023, High-Intent Enterprise Pipeline in Orlando",
+    title: "Case Study 6: SAP Sapphire 2023, High-Intent Enterprise Pipeline in Orlando",
     whatWeDid:
       "B2B Sales Arrow executed active prospecting for ideal-customer SQLs, solved QR-code standee constraints through international sourcing, added a live mentalist performance for the cocktail night, and strengthened visual branding through coordinated merchandise.",
   },
@@ -387,8 +381,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
         label: "What We Did",
         text: "Built a 500+ prospect database, drove outreach across email, calls, and app messaging, ran active prospecting, and paired the program with booth execution and meeting analytics.",
       },
-      title:
-        "Case Study 7: DistribuTECH 2023, Energy Event Lead Generation at Scale, San Diego",
+      title: "Case Study 7: DistribuTECH 2023, Energy Event Lead Generation at Scale, San Diego",
     },
     challenge:
       "Attendee list unavailability delayed database development and pre-event outreach for a high-value energy-sector lead generation program.",
@@ -409,8 +402,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     ],
     servicesText:
       "Database Development, Pre-Event Outreach, Active Prospecting, Booth Design & Production, Event Lead Analysis.",
-    title:
-      "Case Study 7: DistribuTECH 2023, Energy Event Lead Generation at Scale, San Diego",
+    title: "Case Study 7: DistribuTECH 2023, Energy Event Lead Generation at Scale, San Diego",
     whatWeDid:
       "The team developed a 500+ ICP-matched prospect database, secured pre-event meetings through multi-channel outreach, captured executive and company intelligence in a delivery matrix, documented meeting notes for nurturing, and elevated event positioning with booth execution and multilingual sales support.",
   },
@@ -434,8 +426,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
         label: "What We Did",
         text: "Used active prospecting, senior-level meeting qualification, multilingual sales support, and a full meeting-intelligence package to double the program target.",
       },
-      title:
-        "Case Study 8: NRF 2023, Retail Pipeline Growth Through Active Prospecting, New York",
+      title: "Case Study 8: NRF 2023, Retail Pipeline Growth Through Active Prospecting, New York",
     },
     challenge:
       "The team had limited preparation time ahead of the holiday season and no attendee contact access, while still needing to build a retail-focused senior pipeline.",
@@ -451,8 +442,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     serviceCategories: ["Event Lead Generation", "Full Event Program", "Active Prospecting"],
     servicesText:
       "Active Prospecting, Meeting Qualification, Executive Profiling, Event Lead Analysis, Multilingual Sales Support.",
-    title:
-      "Case Study 8: NRF 2023, Retail Pipeline Growth Through Active Prospecting, New York",
+    title: "Case Study 8: NRF 2023, Retail Pipeline Growth Through Active Prospecting, New York",
     whatWeDid:
       "B2B Sales Arrow ran focused on-ground active prospecting, guided pre-scheduled prospects to the booth, captured meeting schedules plus executive and company profiling, and documented notes for tailored lead nurturing after the event.",
   },

@@ -26,9 +26,7 @@ const Page = () => {
   const filteredStudies =
     activeFilter === ALL_FILTER
       ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((study) =>
-          study.serviceCategories.includes(activeFilter)
-        );
+      : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.serviceCategories.includes(activeFilter));
 
   const handleFilterChange = useCallback((filter: string) => {
     setActiveFilter(filter);

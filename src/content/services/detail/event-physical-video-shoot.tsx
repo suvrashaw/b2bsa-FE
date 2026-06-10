@@ -178,23 +178,28 @@ export const EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN = {
 export const EVENT_PHYSICAL_VIDEO_PROCESS = {
   phases: [
     {
-      description: "Professional lighting and audio planning for each interview, session, and event environment.",
+      description:
+        "Professional lighting and audio planning for each interview, session, and event environment.",
       title: "4K Cinema Camera Capture",
     },
     {
-      description: "Multi-camera coverage for larger events, keynotes, panel discussions, and brand activations.",
+      description:
+        "Multi-camera coverage for larger events, keynotes, panel discussions, and brand activations.",
       title: "Multi-Camera Event Production",
     },
     {
-      description: "On-location crew planning across major event cities and international conference venues.",
+      description:
+        "On-location crew planning across major event cities and international conference venues.",
       title: "Studio and On-Location Crews",
     },
     {
-      description: "Motion graphics, color grading, sound design, captions, and social formats after the shoot.",
+      description:
+        "Motion graphics, color grading, sound design, captions, and social formats after the shoot.",
       title: "Post-Production Delivery",
     },
     {
-      description: "Aerial footage for venues, outdoor experiences, and campus environments where approved.",
+      description:
+        "Aerial footage for venues, outdoor experiences, and campus environments where approved.",
       title: "Drone Footage",
     },
   ],

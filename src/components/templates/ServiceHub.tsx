@@ -122,7 +122,10 @@ export const ServiceHub = ({
     [ctaBanner?.title]
   );
   const cinematicPrimaryCta = useMemo(
-    () => ({ href: ctaBanner?.ctaHref ?? "/contact", label: ctaBanner?.ctaLabel ?? "Book a Strategy Session" }),
+    () => ({
+      href: ctaBanner?.ctaHref ?? "/contact",
+      label: ctaBanner?.ctaLabel ?? "Book a Strategy Session",
+    }),
     [ctaBanner?.ctaHref, ctaBanner?.ctaLabel]
   );
 
@@ -141,7 +144,9 @@ export const ServiceHub = ({
         title={hero.title}
       />
 
-      {proofBar && <ProofBar heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />}
+      {proofBar && (
+        <ProofBar heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />
+      )}
 
       <ServicesStack {...services} />
 
@@ -175,7 +180,9 @@ export const ServiceHub = ({
       {closingSections ?? (
         <ContactCinematicCTA
           backgroundImage={CINEMATIC_BG}
-          description={ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."}
+          description={
+            ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+          }
           headingLines={cinematicHeadingLines}
           primaryCta={cinematicPrimaryCta}
           secondaryCta={CINEMATIC_SECONDARY}

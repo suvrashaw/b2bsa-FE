@@ -19,7 +19,13 @@ const ANSWER_EXIT = { height: 0, opacity: 0 } as const;
 const ANSWER_INITIAL = { height: 0, opacity: 0 } as const;
 const ANSWER_TRANSITION = { duration: 0.3, ease: [0.4, 0, 0.2, 1] } as const;
 
-export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: FAQAccordionItemProps) => {
+export const FAQAccordionItem = ({
+  answer,
+  index,
+  isOpen,
+  onToggle,
+  question,
+}: FAQAccordionItemProps) => {
   const handleClick = useCallback(() => onToggle(index), [index, onToggle]);
   const num = String(index + 1).padStart(2, "0");
 
@@ -35,9 +41,7 @@ export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: 
         onClick={handleClick}
         type="button"
       >
-        <span className="w-9 shrink-0 text-base font-bold text-brand-blue">
-          {num}.
-        </span>
+        <span className="w-9 shrink-0 text-base font-bold text-brand-blue">{num}.</span>
         <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-lg">
           {question}
         </span>
@@ -56,7 +60,9 @@ export const FAQAccordionItem = ({ answer, index, isOpen, onToggle, question }: 
             transition={ANSWER_TRANSITION}
           >
             <div className="px-6 pt-1 pb-6">
-              <p className="text-sm leading-relaxed text-brand-charcoal/60 md:text-base">{answer}</p>
+              <p className="text-sm leading-relaxed text-brand-charcoal/60 md:text-base">
+                {answer}
+              </p>
             </div>
           </motion.div>
         )}

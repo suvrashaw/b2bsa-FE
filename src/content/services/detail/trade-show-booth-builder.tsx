@@ -271,7 +271,7 @@ export const BOOTH_BUILDER_RELATED_SERVICES = [
     title: "Event Booth Rental",
   },
   {
-    href: "/services/global-event-solutions/modular-portable-booths",
+    href: "/services/global-event-solutions/modular-booth-solutions",
     title: "Modular and Portable Booths",
   },
 ];

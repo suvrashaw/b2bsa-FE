@@ -25,8 +25,8 @@ export const CORPORATE_VIDEO_INTRO = {
       <br />
       <br />
       The process typically involves multiple stages: planning, scripting, production, and
-      distribution. The aim is to ensure that videos are aligned with brand messaging and tailored to
-      their target audiences. These videos can take many forms, from short promotional clips and
+      distribution. The aim is to ensure that videos are aligned with brand messaging and tailored
+      to their target audiences. These videos can take many forms, from short promotional clips and
       product explainers to long-form training modules or event documentation.
       <br />
       <br />

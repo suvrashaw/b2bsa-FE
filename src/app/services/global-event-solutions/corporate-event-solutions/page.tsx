@@ -36,10 +36,7 @@ const Page = () => {
       closingSections={
         <>
           <BoothWhyChooseUs {...CORP_EVENT_WHY_CHOOSE_US} />
-          <BlogsCarousel
-            heading={CORP_EVENT_BLOGS_SECTION.heading}
-            posts={RENTAL_BLOG_POSTS}
-          />
+          <BlogsCarousel heading={CORP_EVENT_BLOGS_SECTION.heading} posts={RENTAL_BLOG_POSTS} />
           <FAQAccordion {...CORP_EVENT_FAQ} />
           <RelatedServices services={CORP_EVENT_RELATED_SERVICES} />
           <ContactCinematicCTA {...CORP_EVENT_CONTACT_CTA} />

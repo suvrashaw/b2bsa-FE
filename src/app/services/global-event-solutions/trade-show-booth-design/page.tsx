@@ -37,10 +37,7 @@ const Page = () => {
         <>
           <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
           <Events />
-          <BlogsCarousel
-            heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
-            posts={RENTAL_BLOG_POSTS}
-          />
+          <BlogsCarousel heading={BOOTH_DESIGN_BLOGS_SECTION.heading} posts={RENTAL_BLOG_POSTS} />
           <FAQAccordion {...BOOTH_DESIGN_FAQ} />
           <RelatedServices services={BOOTH_DESIGN_RELATED_SERVICES} />
           <ContactCinematicCTA {...BOOTH_DESIGN_CONTACT_CTA} />
@@ -66,7 +63,26 @@ const Page = () => {
       }
       process={BOOTH_DESIGN_PROCESS}
       proofBar={BOOTH_DESIGN_PROOF_BAR}
-      proofBarDescription={<>At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We&apos;ve delivered exceptional experiences across industries, from tech giants to global brands, creating <strong>tradeshow booth design</strong> that aren&apos;t just seen, they&apos;re remembered.<br /><br />India is one of the fastest-growing exhibition markets, hosting major trade shows across industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in India offers access to a large and diverse business audience, making it a key destination for global brands. B2B Sales Arrow is an experienced trade show booth builder in India, helping international exhibitors design and build impactful <strong>exhibition stands</strong> across major Indian exhibition cities. We specialize in delivering high-quality booth design and fabrication services while ensuring smooth coordination for clients managing projects remotely.</>}
+      proofBarDescription={
+        <>
+          At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage,
+          and drive meaningful conversations. With our expertise in AI-VR integration, we bring your
+          brand to life in ways that leave a lasting impression. We&apos;ve delivered exceptional
+          experiences across industries, from tech giants to global brands, creating{" "}
+          <strong>tradeshow booth design</strong> that aren&apos;t just seen, they&apos;re
+          remembered.
+          <br />
+          <br />
+          India is one of the fastest-growing exhibition markets, hosting major trade shows across
+          industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in
+          India offers access to a large and diverse business audience, making it a key destination
+          for global brands. B2B Sales Arrow is an experienced trade show booth builder in India,
+          helping international exhibitors design and build impactful{" "}
+          <strong>exhibition stands</strong> across major Indian exhibition cities. We specialize in
+          delivering high-quality booth design and fabrication services while ensuring smooth
+          coordination for clients managing projects remotely.
+        </>
+      }
       proofBarHeading="Introduction to Our Services"
       showPhaseNumbers={false}
       spotlight={BOOTH_DESIGN_SPOTLIGHT}

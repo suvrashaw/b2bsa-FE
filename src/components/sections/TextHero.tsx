@@ -36,7 +36,13 @@ const SECONDARY_CTA_STYLE = {
   borderRadius: "4px",
 };
 
-export const TextHero = ({ description, eyebrow, primaryCta, secondaryCta, title }: TextHeroProps) => {
+export const TextHero = ({
+  description,
+  eyebrow,
+  primaryCta,
+  secondaryCta,
+  title,
+}: TextHeroProps) => {
   return (
     <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-brand-blue pt-24 pb-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(116,219,243,0.15)_0%,transparent_70%)]" />
@@ -51,11 +57,7 @@ export const TextHero = ({ description, eyebrow, primaryCta, secondaryCta, title
             {eyebrow}
           </motion.p>
         )}
-        <motion.div
-          animate={ANIMATE_IN}
-          initial={INITIAL}
-          transition={T_HEADING}
-        >
+        <motion.div animate={ANIMATE_IN} initial={INITIAL} transition={T_HEADING}>
           <Heading as="h1" className="mb-8" style={H1_STYLE}>
             {title}
           </Heading>

@@ -154,11 +154,7 @@ export const ServiceHero = ({
       {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
-          <Heading
-            as="h1"
-            className="mb-8"
-            style={H1_STYLE}
-          >
+          <Heading as="h1" className="mb-8" style={H1_STYLE}>
             {isStringTitle
               ? (titleLines as string[]).map((_, index) => (
                   <TypewriterLine

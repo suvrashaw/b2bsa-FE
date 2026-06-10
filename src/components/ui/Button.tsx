@@ -19,20 +19,17 @@ const buttonVariants = cva(
         sm: "px-6 py-2.5 text-sm",
       },
       variant: {
-        default:
-          "bg-brand-blue text-white", // Fallback
+        default: "bg-brand-blue text-white", // Fallback
         ghost: "hover:bg-brand-blue/5 hover:text-brand-blue",
         link: "text-brand-blue underline-offset-4 hover:underline",
         outline:
           "border border-gray-200 bg-transparent hover:border-brand-blue hover:text-brand-blue",
-        primary:
-          "bg-brand-blue text-white",
+        primary: "bg-brand-blue text-white",
         secondary:
           "border-2 border-brand-blue/20 bg-transparent text-brand-blue hover:border-brand-blue hover:bg-brand-blue/5",
         tertiary:
           "gap-2 bg-transparent font-semibold text-brand-blue hover:gap-4 hover:text-brand-blue/80",
-        white:
-          "bg-white text-brand-blue hover:bg-white/95",
+        white: "bg-white text-brand-blue hover:bg-white/95",
         "white-outline":
           "border-2 border-white/60 bg-transparent text-white hover:border-white hover:bg-white/10",
       },

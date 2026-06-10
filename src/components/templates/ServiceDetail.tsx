@@ -2,9 +2,9 @@ import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
+import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
 import type { PricingProps } from "@/components/sections/Pricing";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
-import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
@@ -109,7 +109,7 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Check Rental Availability" },
     secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
   },
-  "/services/global-event-solutions/modular-portable-booths": {
+  "/services/global-event-solutions/modular-booth-solutions": {
     primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
   },
   "/services/global-event-solutions/trade-show-booth-builder": {
@@ -193,7 +193,10 @@ export const ServiceDetail = ({
     [ctaBanner?.title]
   );
   const cinematicPrimaryCta = useMemo(
-    () => ({ href: ctaBanner?.ctaHref ?? "/contact", label: ctaBanner?.ctaLabel ?? "Book a Strategy Session" }),
+    () => ({
+      href: ctaBanner?.ctaHref ?? "/contact",
+      label: ctaBanner?.ctaLabel ?? "Book a Strategy Session",
+    }),
     [ctaBanner?.ctaHref, ctaBanner?.ctaLabel]
   );
 
@@ -323,7 +326,9 @@ export const ServiceDetail = ({
 
           <ContactCinematicCTA
             backgroundImage={CINEMATIC_BG}
-            description={ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."}
+            description={
+              ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."
+            }
             headingLines={cinematicHeadingLines}
             primaryCta={cinematicPrimaryCta}
             secondaryCta={CINEMATIC_SECONDARY}

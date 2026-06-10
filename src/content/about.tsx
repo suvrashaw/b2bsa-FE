@@ -226,7 +226,7 @@ export const ABOUT_SIGNATURE_SERVICES = {
       title: "Media production services",
     },
     {
-      href: "/services/global-event-solutions/event-branding-solutions",
+      href: "/services/global-event-solutions/event-branding-services",
       id: "event-branding",
       image: "/images/recent-events/event_other_4.avif",
       title: "Event Branding",

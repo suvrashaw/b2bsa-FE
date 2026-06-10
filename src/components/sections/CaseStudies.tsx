@@ -39,12 +39,7 @@ const CaseStudyCard = ({
 }) => {
   const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
   return (
-    <CaseStudyItem
-      active={active}
-      ctaLabel={ctaLabel}
-      item={item}
-      onActivate={handleActivate}
-    />
+    <CaseStudyItem active={active} ctaLabel={ctaLabel} item={item} onActivate={handleActivate} />
   );
 };
 
@@ -111,11 +106,11 @@ export const CaseStudies = ({
       <div className="container mx-auto max-w-6xl px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center" highlight={headingHighlight}>{heading}</Heading>
+          <Heading as="h2" className="text-center" highlight={headingHighlight}>
+            {heading}
+          </Heading>
           {description && (
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
-              {description}
-            </p>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">{description}</p>
           )}
         </div>
 

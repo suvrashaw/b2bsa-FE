@@ -11,11 +11,9 @@ type CaseStudyPageProps = {
   }>;
 };
 
-const findStudyBySlug = (slug: string) =>
-  CASE_STUDY_DETAILS.find((study) => study.slug === slug);
+const findStudyBySlug = (slug: string) => CASE_STUDY_DETAILS.find((study) => study.slug === slug);
 
-export const generateStaticParams = () =>
-  CASE_STUDY_DETAILS.map((study) => ({ slug: study.slug }));
+export const generateStaticParams = () => CASE_STUDY_DETAILS.map((study) => ({ slug: study.slug }));
 
 export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<Metadata> => {
   const { slug } = await params;

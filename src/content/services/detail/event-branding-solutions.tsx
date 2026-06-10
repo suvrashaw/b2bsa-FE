@@ -89,16 +89,46 @@ export const EVENT_BRANDING_DELIVERABLES = {
 
 export const EVENT_BRANDING_CAPABILITIES = {
   phases: [
-    { description: "Trade show booth graphics, fascia, and visual display systems.", title: "Trade show booth branding" },
-    { description: "Pull-ups, banners, directional boards, and large-format graphics.", title: "Event signage production" },
-    { description: "Backdrop systems, stage dressing, and presenter environments.", title: "Stage and backdrop branding" },
-    { description: "Immersive branded environments and brand activation experiences.", title: "Experiential event branding" },
-    { description: "Branded activations and interactive experiences for corporate audiences.", title: "Corporate brand activation support" },
-    { description: "Large-format prints for exhibition halls and outdoor spaces.", title: "Large-format event graphics" },
-    { description: "Visual identity and branding for networking receptions.", title: "Networking event branding" },
-    { description: "Photography, video, and digital display content for events.", title: "Exhibition visual production" },
-    { description: "Entrance boards, floor graphics, and navigation signage.", title: "Directional and wayfinding signage" },
-    { description: "Design, production, installation, and onsite branding management.", title: "End-to-end branding execution" },
+    {
+      description: "Trade show booth graphics, fascia, and visual display systems.",
+      title: "Trade show booth branding",
+    },
+    {
+      description: "Pull-ups, banners, directional boards, and large-format graphics.",
+      title: "Event signage production",
+    },
+    {
+      description: "Backdrop systems, stage dressing, and presenter environments.",
+      title: "Stage and backdrop branding",
+    },
+    {
+      description: "Immersive branded environments and brand activation experiences.",
+      title: "Experiential event branding",
+    },
+    {
+      description: "Branded activations and interactive experiences for corporate audiences.",
+      title: "Corporate brand activation support",
+    },
+    {
+      description: "Large-format prints for exhibition halls and outdoor spaces.",
+      title: "Large-format event graphics",
+    },
+    {
+      description: "Visual identity and branding for networking receptions.",
+      title: "Networking event branding",
+    },
+    {
+      description: "Photography, video, and digital display content for events.",
+      title: "Exhibition visual production",
+    },
+    {
+      description: "Entrance boards, floor graphics, and navigation signage.",
+      title: "Directional and wayfinding signage",
+    },
+    {
+      description: "Design, production, installation, and onsite branding management.",
+      title: "End-to-end branding execution",
+    },
   ],
   title: "Event Branding Capabilities & Creative Execution",
 };
@@ -204,9 +234,15 @@ export const EVENT_BRANDING_FAQ = {
 };
 
 export const EVENT_BRANDING_RELATED_SERVICES = [
-  { href: "/services/global-event-solutions/corporate-event-solutions", title: "Corporate Event Solutions" },
-  { href: "/services/global-event-solutions/event-logistics", title: "Event Logistics Services" },
-  { href: "/services/global-event-solutions/booth-hostess", title: "Booth Hostess" },
+  {
+    href: "/services/global-event-solutions/corporate-event-solutions",
+    title: "Corporate Event Solutions",
+  },
+  {
+    href: "/services/global-event-solutions/booth-logistics-services",
+    title: "Event Logistics Services",
+  },
+  { href: "/services/global-event-solutions/booth-hostess-services", title: "Booth Hostess" },
 ];
 
 export const EVENT_BRANDING_CONTACT_CTA = {
@@ -217,10 +253,7 @@ export const EVENT_BRANDING_CONTACT_CTA = {
   badge: "Event Branding",
   description:
     "Partner with B2B Sales Arrow for event branding solutions that help your brand create memorable, engaging, and visually impactful corporate event experiences.",
-  headingLines: [
-    "Looking for Professional",
-    "Event Branding Solutions?",
-  ] as [string, string],
+  headingLines: ["Looking for Professional", "Event Branding Solutions?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],
@@ -232,7 +265,7 @@ export const EVENT_BRANDING_PAGE = {
   pageName: "Event Branding Solutions",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/event-branding-solutions",
+    canonicalPath: "/services/global-event-solutions/event-branding-services",
     description:
       "Event branding solutions for B2B companies, booth signage, event identity design, merchandise, digital assets, and printed collateral that project authority at every show.",
     focusKeyphrase: "event branding solutions",

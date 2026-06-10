@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: "Strategic social media marketing services that build your brand and generate B2B leads.",
+  description:
+    "Strategic social media marketing services that build your brand and generate B2B leads.",
   title: "Social Media Marketing Services | B2B Sales Arrow",
 };
 

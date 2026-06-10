@@ -44,7 +44,10 @@ import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { BLOG_HERO } from "@/content/blog";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
-import { TRADE_SHOW_CALENDAR_EVENTS, TRADE_SHOW_CALENDAR_HERO } from "@/content/trade-show-calendar";
+import {
+  TRADE_SHOW_CALENDAR_EVENTS,
+  TRADE_SHOW_CALENDAR_HERO,
+} from "@/content/trade-show-calendar";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
@@ -93,11 +96,13 @@ const RELATED_SERVICES = [
 
 const CORP_VIDEO_INDUSTRIES = [
   {
-    description: "SaaS platforms, cloud infrastructure, and enterprise software vendors driving pipeline at major tech events.",
+    description:
+      "SaaS platforms, cloud infrastructure, and enterprise software vendors driving pipeline at major tech events.",
     title: "Technology & SaaS",
   },
   {
-    description: "Payments, banking innovation, and financial technology brands at Money20/20 and SIBOS.",
+    description:
+      "Payments, banking innovation, and financial technology brands at Money20/20 and SIBOS.",
     title: "FinTech",
   },
 ];
@@ -105,41 +110,120 @@ const CORP_VIDEO_INDUSTRIES = [
 // ─── CorporateVideoPortfolioSection ─────────────────────────────────────────
 
 const CORP_VIDEO_PORTFOLIO_ITEMS = [
-  { client: "Global FinTech Brand", href: "/case-studies", image: IMG_MONEY, title: "Money 20/20 2023" },
-  { client: "Aviation Leader", href: "/case-studies", image: IMG_WAF, title: "World Aviation Festival" },
-  { client: "Energy & Utilities", href: "/case-studies", image: IMG_DISTRIBUTECH, title: "DistribuTECH 2023" },
+  {
+    client: "Global FinTech Brand",
+    href: "/case-studies",
+    image: IMG_MONEY,
+    title: "Money 20/20 2023",
+  },
+  {
+    client: "Aviation Leader",
+    href: "/case-studies",
+    image: IMG_WAF,
+    title: "World Aviation Festival",
+  },
+  {
+    client: "Energy & Utilities",
+    href: "/case-studies",
+    image: IMG_DISTRIBUTECH,
+    title: "DistribuTECH 2023",
+  },
   { client: "Enterprise SaaS", href: "/case-studies", image: IMG_SAP, title: "SAP Sapphire 2023" },
 ];
 
 // ─── BoothWhyChooseUs ────────────────────────────────────────────────────────
 
 const BOOTH_WHY_ITEMS = [
-  { description: "Every booth is engineered to flat-pack, ship, and re-assemble across multiple events without damage.", icon: "Truck", image: IMG_EV1, title: "Reusable & Travel-Ready" },
-  { description: "In-house graphic design and production means faster turnaround and tighter brand control.", icon: "Sparkles", image: IMG_EV2, title: "In-House Production" },
-  { description: "Our team handles on-site build, breakdown, and logistics so your team can focus on selling.", icon: "Users", image: IMG_EV3, title: "Full Service On-Site" },
+  {
+    description:
+      "Every booth is engineered to flat-pack, ship, and re-assemble across multiple events without damage.",
+    icon: "Truck",
+    image: IMG_EV1,
+    title: "Reusable & Travel-Ready",
+  },
+  {
+    description:
+      "In-house graphic design and production means faster turnaround and tighter brand control.",
+    icon: "Sparkles",
+    image: IMG_EV2,
+    title: "In-House Production",
+  },
+  {
+    description:
+      "Our team handles on-site build, breakdown, and logistics so your team can focus on selling.",
+    icon: "Users",
+    image: IMG_EV3,
+    title: "Full Service On-Site",
+  },
 ];
 
 // ─── Culture ─────────────────────────────────────────────────────────────────
 
 const CULTURE_DATA = {
-  description: "We are a team of event strategists, designers, and pipeline hunters who believe that every trade show is a revenue opportunity.",
+  description:
+    "We are a team of event strategists, designers, and pipeline hunters who believe that every trade show is a revenue opportunity.",
   eyebrow: "Our Culture",
   heading: "Built by People Who Live on the Show Floor",
   reasons: [
-    { description: "We show up early, stay late, and treat every client goal as our own.", id: "ownership", image: IMG_EV1, title: "Radical Ownership" },
-    { description: "Every KPI we set is tied back to pipeline, SQLs, or revenue outcomes.", id: "outcomes", image: IMG_EV2, title: "Outcome Obsession" },
-    { description: "We adapt to new shows, new markets, and new client challenges without missing a beat.", id: "agility", image: IMG_EV3, title: "Event Agility" },
-    { description: "Our global team brings on-the-ground knowledge in 40+ countries.", id: "global", image: IMG_EV4, title: "Global Perspective" },
+    {
+      description: "We show up early, stay late, and treat every client goal as our own.",
+      id: "ownership",
+      image: IMG_EV1,
+      title: "Radical Ownership",
+    },
+    {
+      description: "Every KPI we set is tied back to pipeline, SQLs, or revenue outcomes.",
+      id: "outcomes",
+      image: IMG_EV2,
+      title: "Outcome Obsession",
+    },
+    {
+      description:
+        "We adapt to new shows, new markets, and new client challenges without missing a beat.",
+      id: "agility",
+      image: IMG_EV3,
+      title: "Event Agility",
+    },
+    {
+      description: "Our global team brings on-the-ground knowledge in 40+ countries.",
+      id: "global",
+      image: IMG_EV4,
+      title: "Global Perspective",
+    },
   ],
 };
 
 // ─── FeatureCarouselSection ──────────────────────────────────────────────────
 
 const FEATURE_CAROUSEL_ITEMS = [
-  { description: "On-floor teams that engage, qualify, and book meetings with your ideal accounts.", icon: "Users", id: "prospecting", image: IMG_WAF, label: "Active Prospecting" },
-  { description: "Custom booth structures engineered for brand impact, logistics, and reuse.", icon: "Box", id: "booth", image: IMG_EV1, label: "Booth Design" },
-  { description: "Cinematic event video, testimonial shoots, and same-day social content.", icon: "Video", id: "media", image: IMG_EV2, label: "Media Production" },
-  { description: "Pre-event outreach, scheduling, and CRM-connected meeting tracking.", icon: "CalendarDays", id: "meetings", image: IMG_EV3, label: "Meeting Coordination" },
+  {
+    description: "On-floor teams that engage, qualify, and book meetings with your ideal accounts.",
+    icon: "Users",
+    id: "prospecting",
+    image: IMG_WAF,
+    label: "Active Prospecting",
+  },
+  {
+    description: "Custom booth structures engineered for brand impact, logistics, and reuse.",
+    icon: "Box",
+    id: "booth",
+    image: IMG_EV1,
+    label: "Booth Design",
+  },
+  {
+    description: "Cinematic event video, testimonial shoots, and same-day social content.",
+    icon: "Video",
+    id: "media",
+    image: IMG_EV2,
+    label: "Media Production",
+  },
+  {
+    description: "Pre-event outreach, scheduling, and CRM-connected meeting tracking.",
+    icon: "CalendarDays",
+    id: "meetings",
+    image: IMG_EV3,
+    label: "Meeting Coordination",
+  },
 ];
 
 // ─── CardsSection ───────────────────────────────────────────────────────
@@ -151,12 +235,20 @@ const BASIC_CARD_ITEMS = [
     title: "Technology Integration",
   },
   {
-    bullets: ["FSC-certified materials", "Modular reuse across 5+ events", "Carbon-offset logistics"],
+    bullets: [
+      "FSC-certified materials",
+      "Modular reuse across 5+ events",
+      "Carbon-offset logistics",
+    ],
     image: { alt: "Sustainable booth design", src: IMG_EV2 },
     title: "Sustainable Design",
   },
   {
-    bullets: ["Real-time badge scan capture", "CRM push on conversation", "Analytics dashboard post-show"],
+    bullets: [
+      "Real-time badge scan capture",
+      "CRM push on conversation",
+      "Analytics dashboard post-show",
+    ],
     image: { alt: "Data capture booth", src: IMG_EV3 },
     title: "Data-First Lead Capture",
   },
@@ -175,26 +267,73 @@ const GLOBAL_PRESENCE_DATA = {
     { color: "#4BC0D9", lat: 37.7749, lng: -122.4194, name: "San Francisco", size: 0.5 },
     { color: "#1E6091", lat: 35.6762, lng: 139.6503, name: "Tokyo", size: 0.4 },
   ],
-  description: "Our team has delivered enterprise event programs across 40+ countries, from Las Vegas to Singapore.",
+  description:
+    "Our team has delivered enterprise event programs across 40+ countries, from Las Vegas to Singapore.",
   title: "A Global Footprint",
 };
 
 // ─── RentVsBuySection ────────────────────────────────────────────────────────
 
 const RENT_VS_BUY_REASONS = [
-  { description: "No capex, no warehouse, no maintenance. Pay per show and scale with your calendar.", icon: "DollarSign", title: "Zero Capital Outlay" },
-  { description: "Access fresh, brand-aligned designs for every event without reusing stale assets.", icon: "Sparkles", title: "Always Fresh Creative" },
-  { description: "We ship, build, and break down — your team lands and starts selling.", icon: "Truck", title: "End-to-End Logistics" },
-  { description: "Need a 10×10 for a regional show and a 30×30 island for your flagship? We flex.", icon: "Maximize2", title: "Scalable Footprint" },
+  {
+    description:
+      "No capex, no warehouse, no maintenance. Pay per show and scale with your calendar.",
+    icon: "DollarSign",
+    title: "Zero Capital Outlay",
+  },
+  {
+    description:
+      "Access fresh, brand-aligned designs for every event without reusing stale assets.",
+    icon: "Sparkles",
+    title: "Always Fresh Creative",
+  },
+  {
+    description: "We ship, build, and break down — your team lands and starts selling.",
+    icon: "Truck",
+    title: "End-to-End Logistics",
+  },
+  {
+    description: "Need a 10×10 for a regional show and a 30×30 island for your flagship? We flex.",
+    icon: "Maximize2",
+    title: "Scalable Footprint",
+  },
 ];
 
 // ─── ServiceCarouselSection ──────────────────────────────────────────────────
 
 const SERVICE_CAROUSEL_ITEMS = [
-  { description: "On-floor teams that engage, qualify, and book meetings with your ideal enterprise accounts.", href: "/services", id: "prospecting", image: IMG_WAF, title: "Active Prospecting" },
-  { description: "Custom modular booth structures built for brand impact, logistics efficiency, and multi-show reuse.", href: "/services", id: "booth", image: IMG_EV1, title: "Booth Design & Production" },
-  { description: "Pre-event scheduling, diary management, and on-site CRM-connected meeting coordination.", href: "/services", id: "meetings", image: IMG_EV2, title: "Meeting Coordination" },
-  { description: "Cinematic event video, on-site testimonial capture, and post-event case study production.", href: "/services", id: "media", image: IMG_EV3, title: "Media Production" },
+  {
+    description:
+      "On-floor teams that engage, qualify, and book meetings with your ideal enterprise accounts.",
+    href: "/services",
+    id: "prospecting",
+    image: IMG_WAF,
+    title: "Active Prospecting",
+  },
+  {
+    description:
+      "Custom modular booth structures built for brand impact, logistics efficiency, and multi-show reuse.",
+    href: "/services",
+    id: "booth",
+    image: IMG_EV1,
+    title: "Booth Design & Production",
+  },
+  {
+    description:
+      "Pre-event scheduling, diary management, and on-site CRM-connected meeting coordination.",
+    href: "/services",
+    id: "meetings",
+    image: IMG_EV2,
+    title: "Meeting Coordination",
+  },
+  {
+    description:
+      "Cinematic event video, on-site testimonial capture, and post-event case study production.",
+    href: "/services",
+    id: "media",
+    image: IMG_EV3,
+    title: "Media Production",
+  },
 ];
 
 // ─── ProcessTimeline ─────────────────────────────────────────────────────────
@@ -230,7 +369,8 @@ const PROCESS_TIMELINE_PHASES = [
 // ─── AboutCoreValues ─────────────────────────────────────────────────────────
 
 const ABOUT_CORE_VALUES_DATA = {
-  description: "These are the principles that guide every client engagement, every hire, and every event we run.",
+  description:
+    "These are the principles that guide every client engagement, every hire, and every event we run.",
   heading: "What We Stand For",
   values: [
     "Pipeline over presence — every show must drive revenue",
@@ -247,7 +387,8 @@ const ABOUT_CORE_VALUES_DATA = {
 const ABOUT_FOUNDER_DATA = {
   image: { alt: "Founder", src: IMG_EV1 },
   name: "The Founder",
-  story: "After a decade running enterprise event teams at Fortune 500 companies, I saw the same problem everywhere: brands investing millions in trade shows with no systematic way to convert booth traffic into pipeline. B2B Sales Arrow was built to solve that — combining event production craft with a revenue-first methodology that has now delivered $1.2B+ in influenced pipeline across 250+ events.",
+  story:
+    "After a decade running enterprise event teams at Fortune 500 companies, I saw the same problem everywhere: brands investing millions in trade shows with no systematic way to convert booth traffic into pipeline. B2B Sales Arrow was built to solve that — combining event production craft with a revenue-first methodology that has now delivered $1.2B+ in influenced pipeline across 250+ events.",
 };
 
 // ─── AboutSignatureServices ──────────────────────────────────────────────────
@@ -272,7 +413,8 @@ const ABOUT_VISION_MISSION_DATA = {
     "Build long-term partnerships grounded in accountability",
   ],
   missionTitle: "Our Mission",
-  vision: "To be the global standard for enterprise event-driven pipeline generation — the team every B2B brand calls before they book a booth.",
+  vision:
+    "To be the global standard for enterprise event-driven pipeline generation — the team every B2B brand calls before they book a booth.",
   visionTitle: "Our Vision",
 };
 
@@ -281,7 +423,8 @@ const ABOUT_VISION_MISSION_DATA = {
 const CONTACT_CINEMATIC_PROPS = {
   backgroundImage: { alt: "Event floor", src: IMG_SIBOS },
   badge: "Limited Availability — Book Early",
-  description: "Tell us about your next event. We'll map out a custom engagement strategy within 24 hours.",
+  description:
+    "Tell us about your next event. We'll map out a custom engagement strategy within 24 hours.",
   headingLines: ["Ready to Turn Your", "Next Event Into Pipeline?"] as [string, string],
   primaryCta: { href: "/contact", label: "Get a Custom Proposal", opensModal: false },
   proofLabel: "Trusted by global brands",
@@ -298,7 +441,8 @@ const CONTACT_CINEMATIC_PROPS = {
 const SPOTLIGHT_DEMO_PROPS = {
   ctaHref: "/case-studies",
   ctaLabel: "See Case Studies",
-  description: "Most exhibitors measure success by business cards collected. We measure it by qualified pipeline generated within 30 days of event close.",
+  description:
+    "Most exhibitors measure success by business cards collected. We measure it by qualified pipeline generated within 30 days of event close.",
   imageUrl: IMG_EV1,
   label: "Our Approach",
   titleLine1: "Event ROI That",
@@ -324,55 +468,130 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   AboutFounderStory: [{ href: "/about", label: "About" }],
   AboutSignatureServices: [{ href: "/about", label: "About" }],
   AboutVisionMission: [{ href: "/about", label: "About" }],
-  Blogs: [{ href: "/", label: "Home" }, { href: "/blogs", label: "Blogs" }, { href: "/thank-you", label: "Thank You" }],
+  Blogs: [
+    { href: "/", label: "Home" },
+    { href: "/blogs", label: "Blogs" },
+    { href: "/thank-you", label: "Thank You" },
+  ],
   BlogsCarousel: [
-    { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
+    { href: "/services/global-event-solutions/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
   BoothWhyChooseUs: [
-    { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
+    { href: "/services/global-event-solutions/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
-    { href: "/services/global-event-solutions/corporate-networking-events", label: "Corp Networking" },
+    {
+      href: "/services/global-event-solutions/corporate-networking-events",
+      label: "Corp Networking",
+    },
   ],
-  CardsSection: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
-  CaseStudies: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  CardsSection: [
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
+  ],
+  CaseStudies: [
+    { href: "/", label: "Home" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
   CaseStudiesGrid: [{ href: "/case-studies", label: "Case Studies" }],
   CinematicSequence: [],
-  ClientLogos: [{ href: "/", label: "Home" }, { href: "/blogs", label: "Blogs" }, { href: "/contact", label: "Contact" }],
+  ClientLogos: [
+    { href: "/", label: "Home" },
+    { href: "/blogs", label: "Blogs" },
+    { href: "/contact", label: "Contact" },
+  ],
   ContactCinematicCTA: [
     { href: "/services/data-augmentation", label: "Data Augmentation" },
     { href: "/services/global-event-solutions", label: "Global ES" },
     { href: "/services/market-research", label: "Market Research" },
   ],
-  ContactUs: [{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/contact", label: "Contact" }],
-  CorporateVideoIndustriesSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
-  CorporateVideoPortfolioSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
+  ContactUs: [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ],
+  CorporateVideoIndustriesSection: [
+    { href: "/services/media-production/corporate-video-production", label: "Corporate Video" },
+  ],
+  CorporateVideoPortfolioSection: [
+    { href: "/services/media-production/corporate-video-production", label: "Corporate Video" },
+  ],
   Culture: [{ href: "/about", label: "About" }],
-  Events: [{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/services/global-event-solutions/trade-show-booth-design", label: "Booth Design" }],
-  FAQ: [{ href: "/", label: "Home" }, { href: "/terms-and-conditions", label: "Terms" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  Events: [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services/global-event-solutions/trade-show-booth-design", label: "Booth Design" },
+  ],
+  FAQ: [
+    { href: "/", label: "Home" },
+    { href: "/terms-and-conditions", label: "Terms" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
   FAQAccordion: [
-    { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
+    { href: "/services/global-event-solutions/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
-  FeatureCarouselSection: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  FeatureCarouselSection: [
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
   GlobalPresence: [{ href: "/about", label: "About" }],
-  ImageHero: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }, { href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  Pricing: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  ProcessTimeline: [{ href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" }, { href: "/services/global-event-solutions/event-logistics", label: "Event Logistics" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  ProofBar: [{ href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }, { href: "/services/global-event-solutions", label: "Service Hub" }],
-  RelatedServices: [{ href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/data-augmentation", label: "Data Augmentation" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  RentVsBuySection: [{ href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }],
+  ImageHero: [
+    { href: "/trade-show-calendar", label: "Trade Show Cal." },
+    { href: "/case-studies/waf-2025", label: "Case Study" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  Pricing: [
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  ProcessTimeline: [
+    { href: "/services/global-event-solutions/booth-hostess-services", label: "Booth Hostess" },
+    { href: "/services/global-event-solutions/booth-logistics-services", label: "Event Logistics" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  ProofBar: [
+    { href: "/case-studies/waf-2025", label: "Case Study" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+  ],
+  RelatedServices: [
+    { href: "/case-studies/waf-2025", label: "Case Study" },
+    { href: "/services/data-augmentation", label: "Data Augmentation" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  RentVsBuySection: [
+    { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
+  ],
   ServiceCarouselSection: [{ href: "/blogs", label: "Blogs" }],
-  ServiceHero: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  ServicesStack: [{ href: "/", label: "Home" }, { href: "/thank-you", label: "Thank You" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  Spotlight: [{ href: "/case-studies", label: "Case Studies" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  StickyScroll: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
+  ServiceHero: [
+    { href: "/", label: "Home" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  ServicesStack: [
+    { href: "/", label: "Home" },
+    { href: "/thank-you", label: "Thank You" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  Spotlight: [
+    { href: "/case-studies", label: "Case Studies" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
+  StickyScroll: [
+    { href: "/", label: "Home" },
+    { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
+  ],
   Testimonials: [{ href: "/", label: "Home" }],
   TextHero: [{ href: "/blogs", label: "Blogs" }],
   TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
-  WhoWeAre: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }, { href: "/services/global-event-solutions", label: "Service Hub" }],
+  WhoWeAre: [
+    { href: "/", label: "Home" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+  ],
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
@@ -380,7 +599,9 @@ const DemoLabel = ({ name }: { name: string }) => {
   return (
     <div className="sticky top-12 z-40 border-b border-white/10 bg-brand-charcoal/98 backdrop-blur-sm">
       <div className="flex items-center gap-3 px-6 pt-2 pb-1">
-        <span className="font-mono text-[10px] font-medium tracking-[0.25em] text-white/40 uppercase">section</span>
+        <span className="font-mono text-[10px] font-medium tracking-[0.25em] text-white/40 uppercase">
+          section
+        </span>
         <span className="font-mono text-xs font-bold tracking-wide text-brand-cyan">{name}</span>
       </div>
       {pages.length > 0 && (
@@ -409,7 +630,9 @@ const DemoLabel = ({ name }: { name: string }) => {
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
-const noop = () => { return; };
+const noop = () => {
+  return;
+};
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function DemoPage() {
@@ -418,9 +641,7 @@ export default function DemoPage() {
   const filteredStudies =
     activeFilter === "All"
       ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((s) =>
-          s.serviceCategories.includes(activeFilter)
-        );
+      : CASE_STUDIES_PAGE_STUDIES.filter((s) => s.serviceCategories.includes(activeFilter));
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -580,7 +801,6 @@ export default function DemoPage() {
         emptyStateTitle={GRID_EMPTY_TITLE}
         filters={GRID_FILTERS}
         onFilterChange={setActiveFilter}
-        onSelectStudy={noop}
         studies={filteredStudies}
       />
 

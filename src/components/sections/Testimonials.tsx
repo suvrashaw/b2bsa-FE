@@ -58,16 +58,19 @@ export const Testimonials = ({
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    );
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
+      threshold: 0.1,
+    });
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const { activeIndex, getRelativePosition, setActiveIndex } =
-    useCoverflowCarousel(testimonials.length, initialIndex, autoplayInterval, isVisible);
+  const { activeIndex, getRelativePosition, setActiveIndex } = useCoverflowCarousel(
+    testimonials.length,
+    initialIndex,
+    autoplayInterval,
+    isVisible
+  );
 
   return (
     <section className="relative overflow-hidden bg-brand-gray py-20" ref={sectionRef}>
@@ -124,7 +127,12 @@ export const Testimonials = ({
   );
 };
 
-const useCoverflowCarousel = (total: number, initialIndex: number, autoplayInterval: number, isVisible: boolean) => {
+const useCoverflowCarousel = (
+  total: number,
+  initialIndex: number,
+  autoplayInterval: number,
+  isVisible: boolean
+) => {
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.min(initialIndex, Math.max(total - 1, 0))
   );

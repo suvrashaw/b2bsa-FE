@@ -1,21 +1,11 @@
 "use client";
 
-import {
-  ArrowUpDown,
-  Grid2X2,
-  List,
-  RotateCcw,
-  Search,
-} from "lucide-react";
+import { ArrowUpDown, Grid2X2, List, RotateCcw, Search } from "lucide-react";
 import { type ChangeEvent, type ReactNode, useCallback, useMemo, useState } from "react";
 
 import type { CalendarTradeShow } from "@/content/trade-show-calendar";
 
-import {
-  formatLocation,
-  TradeShowCard,
-  TradeShowListItem,
-} from "@/components/items/TradeShowCard";
+import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib";
 
@@ -151,13 +141,7 @@ const ViewModeButton = ({
   );
 };
 
-const FilterPanel = ({
-  children,
-  title,
-}: {
-  children: ReactNode;
-  title: string;
-}) => (
+const FilterPanel = ({ children, title }: { children: ReactNode; title: string }) => (
   <section className={CONTROL_PANEL_CLASS}>
     <h2 className="mb-3 text-sm font-bold text-brand-charcoal">{title}</h2>
     {children}
@@ -280,22 +264,18 @@ export const TradeShowCalendarDirectory = ({
   );
 
   const industryOptions = useMemo(
-    () =>
-      [
-        "All Industries",
-        ...sortItems([...new Set(events.map((event) => event.industry))], (first, second) =>
-          first.localeCompare(second)
-        ),
-      ],
+    () => [
+      "All Industries",
+      ...sortItems([...new Set(events.map((event) => event.industry))], (first, second) =>
+        first.localeCompare(second)
+      ),
+    ],
     [events]
   );
 
-  const handleAttendeeOperatorChange = useCallback(
-    (event: ChangeEvent<HTMLSelectElement>) => {
-      setAttendeeOperator(event.currentTarget.value as NumberOperator);
-    },
-    []
-  );
+  const handleAttendeeOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    setAttendeeOperator(event.currentTarget.value as NumberOperator);
+  }, []);
 
   const handleAttendeeValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setAttendeeValue(event.currentTarget.value);
@@ -319,12 +299,9 @@ export const TradeShowCalendarDirectory = ({
     setDateRange(event.currentTarget.value as DateRange);
   }, []);
 
-  const handleExhibitorOperatorChange = useCallback(
-    (event: ChangeEvent<HTMLSelectElement>) => {
-      setExhibitorOperator(event.currentTarget.value as NumberOperator);
-    },
-    []
-  );
+  const handleExhibitorOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
+    setExhibitorOperator(event.currentTarget.value as NumberOperator);
+  }, []);
 
   const handleExhibitorValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setExhibitorValue(event.currentTarget.value);
@@ -404,9 +381,7 @@ export const TradeShowCalendarDirectory = ({
         return (first.exhibitorCount - second.exhibitorCount) * direction;
       }
 
-      return (
-        (toDate(first.startDate).getTime() - toDate(second.startDate).getTime()) * direction
-      );
+      return (toDate(first.startDate).getTime() - toDate(second.startDate).getTime()) * direction;
     });
   }, [
     attendeeOperator,
@@ -494,7 +469,11 @@ export const TradeShowCalendarDirectory = ({
 
             <FilterPanel title="Sort By">
               <div className="space-y-3">
-                <select className={FORM_CONTROL_CLASS} onChange={handleSortFieldChange} value={sortField}>
+                <select
+                  className={FORM_CONTROL_CLASS}
+                  onChange={handleSortFieldChange}
+                  value={sortField}
+                >
                   {SORT_OPTIONS.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -564,7 +543,11 @@ export const TradeShowCalendarDirectory = ({
             </FilterPanel>
 
             <FilterPanel title="Date Range">
-              <select className={FORM_CONTROL_CLASS} onChange={handleDateRangeChange} value={dateRange}>
+              <select
+                className={FORM_CONTROL_CLASS}
+                onChange={handleDateRangeChange}
+                value={dateRange}
+              >
                 {DATE_RANGE_OPTIONS.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}

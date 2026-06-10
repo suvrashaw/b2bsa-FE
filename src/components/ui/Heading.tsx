@@ -20,7 +20,8 @@ const highlightVariants = {
   cyan: "bg-brand-cyan/20",
 } as const;
 
-interface HeadingProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
+interface HeadingProps
+  extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as: "h1" | "h2" | "h3" | "h4";
   highlight?: string;
   highlightVariant?: keyof typeof highlightVariants;
@@ -30,7 +31,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<
 const renderHighlightedText = (
   children: ReactNode,
   highlight?: string,
-  highlightVariant: keyof typeof highlightVariants = "blue",
+  highlightVariant: keyof typeof highlightVariants = "blue"
 ) => {
   if (typeof children !== "string" || !highlight?.trim()) return children;
 
@@ -48,7 +49,10 @@ const renderHighlightedText = (
         <span className="relative z-10">{children.slice(startIndex, endIndex)}</span>
         <span
           aria-hidden="true"
-          className={cn("absolute inset-x-0 top-[30%] bottom-0", highlightVariants[highlightVariant])}
+          className={cn(
+            "absolute inset-x-0 top-[30%] bottom-0",
+            highlightVariants[highlightVariant]
+          )}
         />
       </span>
       {children.slice(endIndex)}

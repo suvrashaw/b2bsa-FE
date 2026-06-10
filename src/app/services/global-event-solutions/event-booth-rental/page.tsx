@@ -23,9 +23,7 @@ import {
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/detail/event-booth-rental";
-import {
-  BOOTH_DESIGN_WHY_CHOOSE_US,
-} from "@/content/services/detail/trade-show-booth-design";
+import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/detail/trade-show-booth-design";
 import { GES_PAGE } from "@/content/services/global-event-solutions";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
@@ -77,10 +75,7 @@ const Page = () => {
             heading="Why Choose B2B Sales Arrow for Booth Rental?"
             items={BOOTH_DESIGN_WHY_CHOOSE_US.items}
           />
-          <BlogsCarousel
-            heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
-            posts={RENTAL_BLOG_POSTS}
-          />
+          <BlogsCarousel heading={BOOTH_RENTAL_BLOGS_SECTION.heading} posts={RENTAL_BLOG_POSTS} />
           <FAQAccordion {...BOOTH_RENTAL_FAQ} />
           <ContactCinematicCTA {...BOOTH_RENTAL_CONTACT_CTA} />
         </>

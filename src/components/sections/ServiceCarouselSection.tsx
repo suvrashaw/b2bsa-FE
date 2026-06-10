@@ -108,7 +108,11 @@ export const ServiceCarouselSection = ({
         {(eyebrow ?? heading) ? (
           <div className="mb-12 text-center">
             {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-            {heading ? <Heading as="h2" highlight={headingHighlight}>{heading}</Heading> : null}
+            {heading ? (
+              <Heading as="h2" highlight={headingHighlight}>
+                {heading}
+              </Heading>
+            ) : null}
           </div>
         ) : null}
 

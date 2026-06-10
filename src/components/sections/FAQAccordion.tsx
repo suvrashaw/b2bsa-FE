@@ -27,7 +27,14 @@ interface FAQAccordionRowProps {
   question: string;
 }
 
-const FAQAccordionRow = ({ answer, id, index, isOpen, onToggle, question }: FAQAccordionRowProps) => {
+const FAQAccordionRow = ({
+  answer,
+  id,
+  index,
+  isOpen,
+  onToggle,
+  question,
+}: FAQAccordionRowProps) => {
   const transition = useMemo(() => ({ delay: index * 0.07, duration: 0.4 }), [index]);
   return (
     <motion.div
@@ -87,9 +94,7 @@ export const FAQAccordion = ({
           <Heading as="h2" className="mb-4" highlight={headingHighlight}>
             {heading}
           </Heading>
-          {description && (
-            <p className="mx-auto max-w-xl text-base text-gray-600">{description}</p>
-          )}
+          {description && <p className="mx-auto max-w-xl text-base text-gray-600">{description}</p>}
         </motion.div>
 
         <div className="mx-auto flex max-w-[860px] flex-col gap-4">

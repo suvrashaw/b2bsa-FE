@@ -16,7 +16,9 @@ export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) =
     <section className="scroll-mt-28 bg-brand-white py-20" id="vision-mission">
       <div className="container mx-auto px-8">
         <div className="mb-12 max-w-3xl">
-          <Heading as="h2" highlight={data.headingHighlight}>{data.heading}</Heading>
+          <Heading as="h2" highlight={data.headingHighlight}>
+            {data.heading}
+          </Heading>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

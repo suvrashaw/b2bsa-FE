@@ -22,7 +22,6 @@ export const FAQCard = ({
   return (
     <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">
       <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
-
         {/* Front: Image + overlay + question */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]">
           {image ? (
@@ -43,7 +42,9 @@ export const FAQCard = ({
 
           {/* Content on top of overlay */}
           <div className="absolute inset-0 flex flex-col items-start justify-end p-8">
-            <h3 className={`font-heading text-lg leading-snug font-semibold md:text-2xl ${image ? "text-white" : "text-brand-charcoal"}`}>
+            <h3
+              className={`font-heading text-lg leading-snug font-semibold md:text-2xl ${image ? "text-white" : "text-brand-charcoal"}`}
+            >
               {question}
             </h3>
           </div>

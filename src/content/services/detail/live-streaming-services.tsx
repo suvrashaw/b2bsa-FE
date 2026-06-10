@@ -183,20 +183,30 @@ export const LIVE_STREAMING_INTRODUCTION = {
   description: (
     <>
       <p>
-        Today’s events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.
+        Today’s events are no longer limited by venue capacity or geography. With professional event
+        live streaming services, businesses can connect with remote audiences, increase event
+        participation, and maximize engagement across multiple digital platforms.
       </p>
       <p>
-        At B2B Sales Arrow, we deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events. Our team manages every aspect of the production process, including event streaming setup, camera operations, audio management, branded visuals, streaming platform integration, and live technical support.
+        At B2B Sales Arrow, we deliver end-to-end live streaming solutions for corporate
+        conferences, trade shows, product launches, webinars, networking sessions, and executive
+        events. Our team manages every aspect of the production process, including event streaming
+        setup, camera operations, audio management, branded visuals, streaming platform integration,
+        and live technical support.
       </p>
       <p>
-        Whether you are hosting an in-person, hybrid, or virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.
+        Whether you are hosting an in-person, hybrid, or virtual event, our corporate live streaming
+        services ensure a smooth viewing experience with broadcast-level quality and reliable event
+        delivery.
       </p>
     </>
   ),
   heading: "Professional Event Live Streaming Services for Modern Corporate Events",
   headingHighlight: "Live Streaming",
-  mission: "To deliver broadcast-grade reliability and immersive hybrid engagement for enterprise events worldwide.",
-  quote: "Live streaming doesn't just broadcast your event, it breaks physical boundaries to unite your global audience in real-time.",
+  mission:
+    "To deliver broadcast-grade reliability and immersive hybrid engagement for enterprise events worldwide.",
+  quote:
+    "Live streaming doesn't just broadcast your event, it breaks physical boundaries to unite your global audience in real-time.",
   stats: [
     { label: "Uptime Reliability", value: "99.9%" },
     { label: "Successful Streams", value: "500+" },

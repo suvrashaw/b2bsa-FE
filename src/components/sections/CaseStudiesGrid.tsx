@@ -75,7 +75,11 @@ const GridStudyCard = ({ colSpan, study }: GridStudyCardProps) => {
   );
 
   if (isPageHref(href)) {
-    return <Link className="contents" href={href}>{card}</Link>;
+    return (
+      <Link className="contents" href={href}>
+        {card}
+      </Link>
+    );
   }
 
   return card;

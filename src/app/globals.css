@@ -410,11 +410,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 4px !important;
 
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.3) 100%
-  ) !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);

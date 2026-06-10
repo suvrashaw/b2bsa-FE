@@ -119,8 +119,12 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
   );
 
   const activeRoute = routes[activeRouteIndex % Math.max(routes.length, 1)];
-  const focusX = activeRoute ? (activeRoute.from.point[0] + activeRoute.to.point[0]) / 2 : MAP_WIDTH / 2;
-  const focusY = activeRoute ? Math.min(activeRoute.from.point[1], activeRoute.to.point[1]) - 40 : MAP_HEIGHT / 3;
+  const focusX = activeRoute
+    ? (activeRoute.from.point[0] + activeRoute.to.point[0]) / 2
+    : MAP_WIDTH / 2;
+  const focusY = activeRoute
+    ? Math.min(activeRoute.from.point[1], activeRoute.to.point[1]) - 40
+    : MAP_HEIGHT / 3;
 
   return (
     <g pointerEvents="none">
@@ -174,7 +178,9 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
               strokeWidth={isActive ? 8 : 2.5}
             />
             <path
-              className={isActive ? "footer-command-map-route-active" : "footer-command-map-route-idle"}
+              className={
+                isActive ? "footer-command-map-route-active" : "footer-command-map-route-idle"
+              }
               d={route.d}
               fill="none"
               stroke={isActive ? "url(#footer-map-route)" : "rgba(143, 232, 255, 0.28)"}
@@ -241,7 +247,10 @@ const FooterCommandMap = () => {
   }, [routeCount]);
 
   return (
-    <div aria-hidden="true" className="footer-command-map-root pointer-events-none relative h-full w-full">
+    <div
+      aria-hidden="true"
+      className="footer-command-map-root pointer-events-none relative h-full w-full"
+    >
       <div className="footer-command-map-scan" />
       <ComposableMap
         height={MAP_HEIGHT}
@@ -282,7 +291,13 @@ const FooterCommandMap = () => {
           content: "";
           background:
             radial-gradient(ellipse 56% 42% at 51% 43%, rgba(155, 243, 255, 0.07), transparent 70%),
-            linear-gradient(90deg, rgba(30, 96, 145, 0.1), transparent 22%, transparent 78%, rgba(30, 96, 145, 0.1));
+            linear-gradient(
+              90deg,
+              rgba(30, 96, 145, 0.1),
+              transparent 22%,
+              transparent 78%,
+              rgba(30, 96, 145, 0.1)
+            );
           mix-blend-mode: screen;
         }
 
@@ -293,7 +308,13 @@ const FooterCommandMap = () => {
           pointer-events: none;
           content: "";
           background:
-            linear-gradient(180deg, rgba(30, 96, 145, 0.18), transparent 22%, transparent 76%, rgba(30, 96, 145, 0.3)),
+            linear-gradient(
+              180deg,
+              rgba(30, 96, 145, 0.18),
+              transparent 22%,
+              transparent 76%,
+              rgba(30, 96, 145, 0.3)
+            ),
             radial-gradient(ellipse at center, transparent 46%, rgba(30, 96, 145, 0.24) 100%);
         }
 
@@ -302,7 +323,12 @@ const FooterCommandMap = () => {
           inset: 0;
           z-index: 3;
           pointer-events: none;
-          background: linear-gradient(180deg, transparent, rgba(198, 250, 255, 0.04) 50%, transparent);
+          background: linear-gradient(
+            180deg,
+            transparent,
+            rgba(198, 250, 255, 0.04) 50%,
+            transparent
+          );
           mix-blend-mode: screen;
           animation: footerCommandMapSweep 12s linear infinite;
         }
@@ -321,18 +347,35 @@ const FooterCommandMap = () => {
         }
 
         @keyframes footerCommandMapSweep {
-          0% { transform: translateY(-100%); opacity: 0; }
-          14% { opacity: 0.36; }
-          100% { transform: translateY(100%); opacity: 0; }
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          14% {
+            opacity: 0.36;
+          }
+          100% {
+            transform: translateY(100%);
+            opacity: 0;
+          }
         }
 
         @keyframes footerCommandMapDrift {
-          to { stroke-dashoffset: -56; }
+          to {
+            stroke-dashoffset: -56;
+          }
         }
 
         @keyframes footerCommandMapPulse {
-          0%, 100% { transform: scale(1); opacity: 0.34; }
-          50% { transform: scale(1.08); opacity: 0.76; }
+          0%,
+          100% {
+            transform: scale(1);
+            opacity: 0.34;
+          }
+          50% {
+            transform: scale(1.08);
+            opacity: 0.76;
+          }
         }
 
         @media (prefers-reduced-motion: reduce) {

@@ -88,16 +88,46 @@ export const CORP_NETWORKING_DELIVERABLES = {
 
 export const CORP_NETWORKING_CAPABILITIES = {
   phases: [
-    { description: "Planning and management for C-suite and investor gatherings.", title: "Executive networking event planning" },
-    { description: "Dedicated coordination for senior guests and sponsors.", title: "VIP guest management" },
-    { description: "Smooth guest flow, branding, and hospitality management.", title: "Networking reception coordination" },
-    { description: "Premium experiences for clients, executives, and partners.", title: "Corporate hospitality support" },
-    { description: "Venue selection, floor planning, and operational setup.", title: "Venue coordination and setup" },
-    { description: "Check-in, badging, and attendee communication management.", title: "Guest registration management" },
-    { description: "Facilitating meaningful business conversations and interactions.", title: "Audience engagement support" },
-    { description: "Professional networking dinner and hospitality event execution.", title: "Networking dinner coordination" },
-    { description: "Visual identity and branding for networking environments.", title: "Event branding assistance" },
-    { description: "On-the-day supervision and coordination across all event activities.", title: "Onsite event management" },
+    {
+      description: "Planning and management for C-suite and investor gatherings.",
+      title: "Executive networking event planning",
+    },
+    {
+      description: "Dedicated coordination for senior guests and sponsors.",
+      title: "VIP guest management",
+    },
+    {
+      description: "Smooth guest flow, branding, and hospitality management.",
+      title: "Networking reception coordination",
+    },
+    {
+      description: "Premium experiences for clients, executives, and partners.",
+      title: "Corporate hospitality support",
+    },
+    {
+      description: "Venue selection, floor planning, and operational setup.",
+      title: "Venue coordination and setup",
+    },
+    {
+      description: "Check-in, badging, and attendee communication management.",
+      title: "Guest registration management",
+    },
+    {
+      description: "Facilitating meaningful business conversations and interactions.",
+      title: "Audience engagement support",
+    },
+    {
+      description: "Professional networking dinner and hospitality event execution.",
+      title: "Networking dinner coordination",
+    },
+    {
+      description: "Visual identity and branding for networking environments.",
+      title: "Event branding assistance",
+    },
+    {
+      description: "On-the-day supervision and coordination across all event activities.",
+      title: "Onsite event management",
+    },
   ],
   title: "Networking Event Planning & Guest Engagement Capabilities",
 };
@@ -203,9 +233,18 @@ export const CORP_NETWORKING_FAQ = {
 };
 
 export const CORP_NETWORKING_RELATED_SERVICES = [
-  { href: "/services/global-event-solutions/booth-hostess", title: "Event Hostess Services" },
-  { href: "/services/global-event-solutions/event-logistics", title: "Event Logistics Services" },
-  { href: "/services/global-event-solutions/event-branding-solutions", title: "Corporate Branding Services" },
+  {
+    href: "/services/global-event-solutions/booth-hostess-services",
+    title: "Event Hostess Services",
+  },
+  {
+    href: "/services/global-event-solutions/booth-logistics-services",
+    title: "Event Logistics Services",
+  },
+  {
+    href: "/services/global-event-solutions/event-branding-services",
+    title: "Corporate Branding Services",
+  },
 ];
 
 export const CORP_NETWORKING_CONTACT_CTA = {
@@ -216,10 +255,7 @@ export const CORP_NETWORKING_CONTACT_CTA = {
   badge: "Networking Events",
   description:
     "Partner with B2B Sales Arrow for networking event solutions that help your brand create meaningful business connections, engaging guest experiences, and successful corporate networking events.",
-  headingLines: [
-    "Looking to Organize a Professional",
-    "Networking Event?",
-  ] as [string, string],
+  headingLines: ["Looking to Organize a Professional", "Networking Event?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],

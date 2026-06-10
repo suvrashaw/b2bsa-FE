@@ -88,16 +88,46 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
 
 export const BOOTH_HOSTESS_CAPABILITIES = {
   phases: [
-    { description: "Professional booth hostesses for visitor engagement and lead capture.", title: "Trade show booth staffing" },
-    { description: "Check-in, badging, and attendee guidance for conference environments.", title: "Conference registration support" },
-    { description: "Dedicated hosting for executives, speakers, and key stakeholders.", title: "VIP guest management" },
-    { description: "Proactive visitor interaction and audience engagement support.", title: "Audience engagement assistance" },
-    { description: "On-floor lead qualification and CRM-ready capture support.", title: "Lead collection support" },
-    { description: "Fluent hostesses in Arabic, French, German, Mandarin, Spanish, and more.", title: "Multilingual hostess services" },
-    { description: "Full coordination support for corporate events and summits.", title: "Corporate event coordination" },
-    { description: "Uniformed brand ambassadors aligned to your event identity.", title: "Brand representation support" },
-    { description: "Guest facilitation and engagement at networking receptions.", title: "Networking event assistance" },
-    { description: "Experienced product launch event hostess and staffing support.", title: "Product launch event staffing" },
+    {
+      description: "Professional booth hostesses for visitor engagement and lead capture.",
+      title: "Trade show booth staffing",
+    },
+    {
+      description: "Check-in, badging, and attendee guidance for conference environments.",
+      title: "Conference registration support",
+    },
+    {
+      description: "Dedicated hosting for executives, speakers, and key stakeholders.",
+      title: "VIP guest management",
+    },
+    {
+      description: "Proactive visitor interaction and audience engagement support.",
+      title: "Audience engagement assistance",
+    },
+    {
+      description: "On-floor lead qualification and CRM-ready capture support.",
+      title: "Lead collection support",
+    },
+    {
+      description: "Fluent hostesses in Arabic, French, German, Mandarin, Spanish, and more.",
+      title: "Multilingual hostess services",
+    },
+    {
+      description: "Full coordination support for corporate events and summits.",
+      title: "Corporate event coordination",
+    },
+    {
+      description: "Uniformed brand ambassadors aligned to your event identity.",
+      title: "Brand representation support",
+    },
+    {
+      description: "Guest facilitation and engagement at networking receptions.",
+      title: "Networking event assistance",
+    },
+    {
+      description: "Experienced product launch event hostess and staffing support.",
+      title: "Product launch event staffing",
+    },
   ],
   title: "Event Staffing Capabilities & Guest Engagement Support",
 };
@@ -191,8 +221,14 @@ export const BOOTH_HOSTESS_FAQ = {
 
 export const BOOTH_HOSTESS_RELATED_SERVICES = [
   { href: "/services/global-event-solutions/event-booth-rental", title: "Trade Show Booth Rental" },
-  { href: "/services/global-event-solutions/trade-show-booth-design", title: "Trade Show Booth Design" },
-  { href: "/services/global-event-solutions/trade-show-booth-builder", title: "Trade Show Booth Builder" },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-design",
+    title: "Trade Show Booth Design",
+  },
+  {
+    href: "/services/global-event-solutions/trade-show-booth-builder",
+    title: "Trade Show Booth Builder",
+  },
 ];
 
 export const BOOTH_HOSTESS_CONTACT_CTA = {
@@ -203,10 +239,7 @@ export const BOOTH_HOSTESS_CONTACT_CTA = {
   badge: "Event Hostess",
   description:
     "Partner with B2B Sales Arrow for professional event hostess services that help your brand deliver smooth guest experiences, stronger audience engagement, and successful corporate event execution.",
-  headingLines: [
-    "Looking for Professional",
-    "Event Hostess Services?",
-  ] as [string, string],
+  headingLines: ["Looking for Professional", "Event Hostess Services?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],
@@ -218,7 +251,7 @@ export const BOOTH_HOSTESS_PAGE = {
   pageName: "Booth Hostess",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/booth-hostess",
+    canonicalPath: "/services/global-event-solutions/booth-hostess-services",
     description:
       "Professional booth hostess and brand ambassador services for trade shows and corporate events, briefed, multilingual staff who qualify visitors and drive meeting conversion.",
     focusKeyphrase: "booth hostess services",

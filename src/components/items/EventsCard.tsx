@@ -17,13 +17,7 @@ export type EventCardItem = {
   ctaHref?: string;
 } & EventsContent["events"][number];
 
-export type FlipStyle =
-  | "diagonal"
-  | "diagonalWipe"
-  | "hinge"
-  | "horizontal"
-  | "split"
-  | "vertical";
+export type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" | "vertical";
 
 interface EventDetailsPanelProps {
   ctaLabel: string;

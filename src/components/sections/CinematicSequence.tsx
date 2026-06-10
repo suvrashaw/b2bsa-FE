@@ -5,10 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import {
-  type CinematicSequenceContent,
-  HOME_CINEMATIC_SEQUENCE_CONTENT,
-} from "@/content/home";
+import { type CinematicSequenceContent, HOME_CINEMATIC_SEQUENCE_CONTENT } from "@/content/home";
 
 export interface CinematicSequenceProps {
   content?: CinematicSequenceContent;
@@ -22,8 +19,7 @@ const HERO_PRIMARY_CTA_STYLE = {
   background:
     "linear-gradient(135deg, rgba(116,219,243,0.96) 0%, rgba(52,144,181,0.98) 38%, rgba(30,96,145,1) 100%)",
   borderRadius: "4px",
-  boxShadow:
-    "0 22px 44px rgba(8,26,41,0.28), 0 8px 18px rgba(52,144,181,0.26)",
+  boxShadow: "0 22px 44px rgba(8,26,41,0.28), 0 8px 18px rgba(52,144,181,0.26)",
 };
 const HERO_SECONDARY_CTA_STYLE = {
   backdropFilter: "blur(12px)",
@@ -123,11 +119,7 @@ export const CinematicSequence = ({
                 {heroOverlay.eyebrow}
               </p>
             )}
-            <Heading
-              as="h1"
-              className="mb-6"
-              style={HERO_H1_STYLE}
-            >
+            <Heading as="h1" className="mb-6" style={HERO_H1_STYLE}>
               {heroOverlay.title}
             </Heading>
             <p
@@ -154,7 +146,6 @@ export const CinematicSequence = ({
             </div>
           </div>
         )}
-
       </div>
     </section>
   );
@@ -186,11 +177,7 @@ const LOAD_CONCURRENCY = 8;
 const createEmptyFrames = (frameCount: number) =>
   Array.from({ length: frameCount }, (): HTMLImageElement | null => null);
 
-const getCinematicFrameUrl = (
-  index: number,
-  frameUrlTemplate?: string,
-  frameUrls?: string[]
-) => {
+const getCinematicFrameUrl = (index: number, frameUrlTemplate?: string, frameUrls?: string[]) => {
   if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
   if (frameUrlTemplate) return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
   return "";

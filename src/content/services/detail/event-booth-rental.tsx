@@ -100,7 +100,10 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 10×10 Rental Quote" },
     descriptions: [
-      <Fragment key="focused-presence">Branded back wall, counter, lighting, screen option, and <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.</Fragment>
+      <Fragment key="focused-presence">
+        Branded back wall, counter, lighting, screen option, and{" "}
+        <strong className="font-bold">lead capture setup</strong>. Fast to configure and deploy.
+      </Fragment>,
     ],
     eyebrow: "Focused Presence",
     heading: "10x10 Standard",
@@ -109,9 +112,7 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   },
   {
     cta: { href: "/contact", label: "Get 10×20 Rental Quote" },
-    descriptions: [
-      "Room for product-led demos, a defined visitor journey, and a meeting zone."
-    ],
+    descriptions: ["Room for product-led demos, a defined visitor journey, and a meeting zone."],
     eyebrow: "Extended Format",
     heading: "10x20 Inline",
     id: "rental-10x20",
@@ -120,7 +121,10 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 20×20 Rental Quote" },
     descriptions: [
-      <Fragment key="exhibition-visibility">Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas, meeting space, and AV support.</Fragment>
+      <Fragment key="exhibition-visibility">
+        Four-sided <strong className="font-bold">exhibition visibility</strong> with demo areas,
+        meeting space, and AV support.
+      </Fragment>,
     ],
     eyebrow: "High Visibility",
     heading: "20x20 Island",
@@ -130,7 +134,7 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get Double-Deck Quote" },
     descriptions: [
-      "Upper-level executive meeting suite + lower-level engagement zone for major global events."
+      "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
     ],
     eyebrow: "Premium Floor Presence",
     heading: "Double-Deck",
@@ -140,7 +144,10 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get Custom Rental Quote" },
     descriptions: [
-      <Fragment key="rental-structures">Existing <strong className="font-bold">rental structures</strong> adapted with your full brand identity, messaging, and engagement zones.</Fragment>
+      <Fragment key="rental-structures">
+        Existing <strong className="font-bold">rental structures</strong> adapted with your full
+        brand identity, messaging, and engagement zones.
+      </Fragment>,
     ],
     eyebrow: "Bespoke",
     heading: "Custom-Branded Rentals",
@@ -148,7 +155,6 @@ export const BOOTH_RENTAL_SHOWCASE_ITEMS = [
     image: "/images/booth/40x40.jpg",
   },
 ];
-
 
 export const BOOTH_RENTAL_PROCESS = {
   phases: [
@@ -185,7 +191,8 @@ export const BOOTH_RENTAL_FAQ = {
     {
       answer: (
         <>
-          For major global events, <strong className="font-bold">rental booths</strong> book 6–10 weeks in advance. Enquire as soon as participation is confirmed.
+          For major global events, <strong className="font-bold">rental booths</strong> book 6–10
+          weeks in advance. Enquire as soon as participation is confirmed.
         </>
       ),
       id: "booking",
@@ -206,7 +213,10 @@ export const BOOTH_RENTAL_FAQ = {
     {
       answer: (
         <>
-          A <strong className="font-bold">rental booth</strong> uses a pre-existing structural system with custom branding. A custom booth is designed and built specifically for your brand. Rental suits speed and budget flexibility; custom delivers maximum creative and commercial impact for flagship events.
+          A <strong className="font-bold">rental booth</strong> uses a pre-existing structural
+          system with custom branding. A custom booth is designed and built specifically for your
+          brand. Rental suits speed and budget flexibility; custom delivers maximum creative and
+          commercial impact for flagship events.
         </>
       ),
       id: "vs-custom",
@@ -234,7 +244,7 @@ export const BOOTH_RENTAL_RELATED_SERVICES = [
     title: "Trade Show Booth Builder",
   },
   {
-    href: "/services/global-event-solutions/modular-portable-booths",
+    href: "/services/global-event-solutions/modular-booth-solutions",
     title: "Modular and Portable Booths",
   },
 ];
