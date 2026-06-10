@@ -235,28 +235,27 @@ export interface WhoWeAreStat {
   value: string;
 }
 
-export const HOME_HERO_CONTENT: HomeHeroContent = {
-  description:
-    "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
-  eyebrow: "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
+export interface HomeHeroContent {
+  description: string;
+  eyebrow: string;
   image: {
-    alt: "Global B2B enterprise growth strategy",
-    loaderAlt: "Loader",
-    src: "/images/home/hero/home_hero_bg.avif",
-  },
-  primaryCtaLabel: "Get a Custom Proposal",
-  secondaryCtaLabel: "See Our Work",
+    alt: string;
+    loaderAlt: string;
+    src: string;
+  };
+  primaryCtaLabel: string;
+  secondaryCtaLabel: string;
   stat: {
-    icon: "Globe",
-    label: "Countries Served",
-    value: "30+",
-  },
+    icon: string;
+    label: string;
+    value: string;
+  };
   timing: {
-    doneDelay: 2800,
-    expandDelay: 2000,
-  },
-  title: <>B2B Global Event Solutions & Trade Show Booth Design s</>,
-};
+    doneDelay: number;
+    expandDelay: number;
+  };
+  title: ReactNode;
+}
 
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
   beats: [

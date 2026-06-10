@@ -1,3 +1,5 @@
+import { Layers, Layout, Maximize } from "lucide-react";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_DESIGN_HERO = {
@@ -56,29 +58,6 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
 ];
 
-export const BOOTH_DESIGN_STATS = {
-  description:
-    "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen, they're remembered.",
-  items: [
-    { label: "Countries Served", value: "30+" },
-    { label: "Global Events Handled", value: "300+" },
-    { label: "SQLs Delivered", value: "2,500+" },
-    { label: "Years of B2B Experience", value: "10+" },
-  ],
-  title: "Introduction to Our Services",
-};
-
-export const BOOTH_DESIGN_WHY = {
-  ctaHref: "/contact",
-  ctaLabel: "Request a Design Quote",
-  description:
-    "At B2B Sales Arrow, we design custom trade show booths that stop the right buyers deliberately, because the space, the story, and the sales system inside it were built together from day one. Every square foot is engineered around buyer psychology and commercial conversion, not aesthetics alone.",
-  imageAlt: "Custom trade show booth design by B2B Sales Arrow",
-  imageUrl: "/images/home/services/booth/booth-5.avif",
-  label: "Our Services",
-  titleLine1: "Introduction to Our",
-  titleLine2: "Design Services",
-};
 
 export const BOOTH_DESIGN_SPOTLIGHT = {
   description:

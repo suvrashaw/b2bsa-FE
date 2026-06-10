@@ -68,51 +68,6 @@ export const ABOUT_PRESENCE = {
   title: "Where We Operate",
 };
 
-export const ABOUT_STATS = {
-  attribution: "B2B Sales Arrow Mission",
-  heading: "Our Mission",
-  headingHighlight: "Our Mission",
-  quote:
-    "To transform how B2B enterprise brands connect with their buyers, through innovative event experiences, high-quality media, precision digital marketing, and intelligent market intelligence, delivering measurable commercial outcomes that justify every investment and advance our clients' growth objectives.",
-  stats: [
-    {
-      bg: "bg-linear-to-br from-[#1E6091] to-[#184E77]",
-      icon: "TrendingUp",
-      label: "Enterprise Events",
-      value: "250+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#2A9D8F] to-[#21867A]",
-      icon: "Globe2",
-      label: "Countries Covered",
-      value: "40+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#023E8A] to-[#03045E]",
-      icon: "BarChart3",
-      label: "Influenced Pipeline",
-      value: "$1.2B+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#1b5e82] to-[#164e6b]",
-      icon: "Users",
-      label: "Enterprise Leads",
-      value: "15,000+",
-    },
-    {
-      bg: "bg-linear-to-br from-[#306f75] to-[#255c61]",
-      icon: "Target",
-      label: "Client Retention",
-      value: "98%",
-    },
-    {
-      bg: "bg-linear-to-br from-[#0077B6] to-[#0096C7]",
-      icon: "Target",
-      label: "Booth Designs",
-      value: "500+",
-    },
-  ],
-};
 
 export const ABOUT_RECENT_EVENTS = {
   badgeLabel: "RECENT",

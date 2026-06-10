@@ -158,32 +158,6 @@ export const BOOTH_BUILDER_RELATED_SERVICES = [
   },
 ];
 
-export const BOOTH_BUILDER_WHY_CHOOSE_US = {
-  heading: "Why Choose B2B Sales Arrow for Exhibition Stand Building?",
-  headingHighlight: "B2B Sales Arrow",
-  items: [
-    {
-      description: "Recognized by industry leaders for creative excellence and innovation",
-      icon: "Award" as const,
-      title: "Award-Winning",
-    },
-    {
-      description: "150+ experienced professionals across design, production, and strategy",
-      icon: "Users2" as const,
-      title: "Expert Team",
-    },
-    {
-      description: "Delivering exhibition experiences across 30+ countries worldwide",
-      icon: "Globe2" as const,
-      title: "Global Reach",
-    },
-    {
-      description: "Consistently exceeding client KPIs and ROI expectations",
-      icon: "TrendingUp" as const,
-      title: "Proven Results",
-    },
-  ],
-};
 
 export const BOOTH_BUILDER_BLOGS_SECTION = {
   heading: "Blogs",

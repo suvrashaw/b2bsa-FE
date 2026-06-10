@@ -139,7 +139,8 @@ const getBlockWordCount = (block: ContentBlock) => {
     return 0;
   }
 
-  if (["heading", "paragraph", "quote"].includes(block.type)) {
+  // eslint-disable-next-line unicorn/prefer-includes-over-repeated-comparisons
+  if (block.type === "heading" || block.type === "paragraph" || block.type === "quote") {
     return countWords(block.text);
   }
 

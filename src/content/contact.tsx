@@ -83,12 +83,6 @@ export const CONTACT_NEXT_STEPS = {
   ],
 };
 
-export const CONTACT_CTA = {
-  ctaHref: "/contact",
-  ctaLabel: "Book a Strategy Consultation",
-  description: "Tell us what you are trying to achieve. We will define the right path.",
-  title: "One conversation can clarify your entire growth strategy.",
-};
 
 export const CONTACT_PAGE = {
   pageId: "contact",
