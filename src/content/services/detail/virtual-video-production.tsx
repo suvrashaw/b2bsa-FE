@@ -253,8 +253,8 @@ export const VIRTUAL_VIDEO_FAQ = {
 
 export const VIRTUAL_VIDEO_RELATED_SERVICES = [
   {
-    href: "/services/media-production/live-streaming-services",
-    title: "Live Streaming Services",
+    href: "/services/media-production/event-live-streaming-services",
+    title: "Event Live Streaming Services",
   },
   {
     href: "/services/media-production/corporate-video-production",

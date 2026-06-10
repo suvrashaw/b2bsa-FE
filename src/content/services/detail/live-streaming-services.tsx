@@ -111,10 +111,10 @@ export const LIVE_STREAMING_FAQ = {
 
 export const LIVE_STREAMING_PAGE = {
   pageId: "service.live-streaming-services",
-  pageName: "Live Streaming Services",
+  pageName: "Event Live Streaming Services",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/media-production/live-streaming-services",
+    canonicalPath: "/services/media-production/event-live-streaming-services",
     description:
       "Professional corporate live streaming and hybrid event production, multi-camera broadcasts for conferences, launches, town halls, and investor events. Global reach. Broadcast quality.",
     focusKeyphrase: "hybrid event solutions company",

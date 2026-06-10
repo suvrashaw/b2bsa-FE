@@ -101,10 +101,6 @@ const serviceHeroCtasByPath: Record<
     secondaryCta?: { href: string; label: string };
   }
 > = {
-  "/services/data-augmentation": {
-    primaryCta: { href: "/contact", label: "Request a Data Augmentation Demo" },
-    secondaryCta: { href: "/contact", label: "Upload a Sample List" },
-  },
   "/services/global-event-solutions/event-booth-rental": {
     primaryCta: { href: "/contact", label: "Check Rental Availability" },
     secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
@@ -119,20 +115,20 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Request a Design Quote" },
     secondaryCta: { href: "/case-studies", label: "View Booth Portfolio" },
   },
+  "/services/market-research/data-augmentation-services": {
+    primaryCta: { href: "/contact", label: "Request a Data Augmentation Demo" },
+    secondaryCta: { href: "/contact", label: "Upload a Sample List" },
+  },
   "/services/media-production/corporate-video-production": {
     primaryCta: { href: "/contact", label: "Request a Corporate Video Quote" },
+  },
+  "/services/media-production/event-live-streaming-services": {
+    primaryCta: { href: "/contact", label: "Get a Live Stream Quote" },
   },
   "/services/media-production/event-video-production": {
     primaryCta: { href: "/contact", label: "Get a Production Quote" },
   },
-  "/services/media-production/live-streaming-services": {
-    primaryCta: { href: "/contact", label: "Get a Live Stream Quote" },
-  },
-  "/services/paid-advertising": {
-    primaryCta: { href: "/contact", label: "Request a Paid Media Audit" },
-    secondaryCta: { href: "/contact", label: "Request a Campaign Proposal" },
-  },
-  "/services/seo-services": {
+  "/services/performance-marketing/seo-services": {
     primaryCta: { href: "/contact", label: "Request a Free SEO Audit" },
     secondaryCta: { href: "/contact", label: "Download Our B2B SEO Playbook" },
   },

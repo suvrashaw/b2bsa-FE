@@ -3,7 +3,7 @@ export const SEO_PAGE = {
   pageName: "SEO Services",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/seo-services",
+    canonicalPath: "/services/performance-marketing/seo-services",
     description:
       "Enterprise B2B SEO services, technical SEO audits, keyword strategy, content architecture, and authority building. Organic pipeline for enterprise buyers at every stage of a complex sales cycle.",
     focusKeyphrase: "B2B SEO services",

@@ -9,7 +9,7 @@ export const EVENT_LOGISTICS_IMAGE_HERO = {
     "/images/recent-events/event_other_4.avif",
   ],
   primaryCta: { href: "/contact", label: "Talk to Our Event Team" },
-  title: "Corporate Event Logistics Services",
+  title: "Corporate Booth Logistics Services",
 };
 
 export { GLOBAL_PROOF_STATS as EVENT_LOGISTICS_PROOF_BAR } from "../../shared";
@@ -20,14 +20,14 @@ export const EVENT_LOGISTICS_INTRO = {
   description:
     "Successful events require precise coordination, smooth operations, and reliable execution. Professional event logistics services help businesses manage venue coordination, transportation, installation, vendor communication, material handling, and onsite event operations efficiently.\n\nAt B2B Sales Arrow, we provide end-to-end corporate event logistics services for conferences, trade shows, exhibitions, networking events, product launches, and executive gatherings. Our team ensures seamless coordination across every stage of the event to help brands deliver organized and stress-free event experiences.",
   imageUrl: "/images/home/services/booth/booth-7.avif",
-  label: "Event Logistics",
-  titleLine1: "Professional Event Logistics",
+  label: "Booth Logistics Services",
+  titleLine1: "Professional Booth Logistics Services",
   titleLine2: "Services for Corporate Events",
 };
 
 export const EVENT_LOGISTICS_DELIVERABLES = {
-  heading: "What's Included in Our Event Logistics Services",
-  headingHighlight: "Event Logistics Services",
+  heading: "What's Included in Our Booth Logistics Services",
+  headingHighlight: "Booth Logistics Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -121,7 +121,7 @@ export const EVENT_LOGISTICS_CAPABILITIES = {
       title: "Corporate event operations planning",
     },
   ],
-  title: "Event Logistics Capabilities & Operational Expertise",
+  title: "Booth Logistics Services Capabilities & Operational Expertise",
 };
 
 export const EVENT_LOGISTICS_CASE_STUDIES = {
@@ -129,13 +129,13 @@ export const EVENT_LOGISTICS_CASE_STUDIES = {
 };
 
 export const EVENT_LOGISTICS_INDUSTRIES_SECTION = {
-  heading: "Industries We Support with Event Logistics Services",
+  heading: "Industries We Support with Booth Logistics Services",
   headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_LOGISTICS_WHY_CHOOSE_US = {
-  heading: "Why Choose B2B Sales Arrow for Event Logistics Services",
+  heading: "Why Choose B2B Sales Arrow for Booth Logistics Services",
   headingHighlight: "B2B Sales Arrow",
   items: [
     {
@@ -170,7 +170,7 @@ export const EVENT_LOGISTICS_WHY_CHOOSE_US = {
 };
 
 export const EVENT_LOGISTICS_BLOGS_SECTION = {
-  heading: "Latest Insights on Event Logistics & Event Operations",
+  heading: "Latest Insights on Booth Logistics Services & Event Operations",
   headingHighlight: "Latest Insights",
 };
 
@@ -207,7 +207,7 @@ export const EVENT_LOGISTICS_FAQ = {
       question: "What types of events do you support?",
     },
   ],
-  heading: "Frequently Asked Questions About Event Logistics Services",
+  heading: "Frequently Asked Questions About Booth Logistics Services",
   headingHighlight: "Asked Questions",
 };
 
@@ -225,13 +225,13 @@ export const EVENT_LOGISTICS_RELATED_SERVICES = [
 
 export const EVENT_LOGISTICS_CONTACT_CTA = {
   backgroundImage: {
-    alt: "Event Logistics Services",
+    alt: "Booth Logistics Services",
     src: "/images/home/hero/home_hero_bg.avif",
   },
-  badge: "Event Logistics",
+  badge: "Booth Logistics Services",
   description:
     "Partner with B2B Sales Arrow for professional event logistics services that help your brand deliver smooth, organized, and successful corporate event experiences.",
-  headingLines: ["Looking for Reliable", "Event Logistics Services?"] as [string, string],
+  headingLines: ["Looking for Reliable", "Booth Logistics Services?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],
@@ -240,7 +240,7 @@ export const EVENT_LOGISTICS_CONTACT_CTA = {
 
 export const EVENT_LOGISTICS_PAGE = {
   pageId: "service.event-logistics",
-  pageName: "Event Logistics",
+  pageName: "Booth Logistics Services",
   pageType: "serviceDetail",
   seo: {
     canonicalPath: "/services/global-event-solutions/booth-logistics-services",
@@ -253,6 +253,6 @@ export const EVENT_LOGISTICS_PAGE = {
       "event freight management",
       "ATA carnet services",
     ],
-    title: "Event Logistics and Trade Show Freight Management | B2B Sales Arrow",
+    title: "Booth Logistics Services and Trade Show Freight Management | B2B Sales Arrow",
   },
 } as const;

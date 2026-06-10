@@ -10,7 +10,7 @@ export const EVENT_BRANDING_IMAGE_HERO = {
   ],
   primaryCta: { href: "/contact", label: "Plan Your Event Branding" },
   secondaryCta: { href: "/contact", label: "Talk to Branding Experts" },
-  title: "Event Branding Solutions for Corporate Events & Trade Shows",
+  title: "Event Branding Services for Corporate Events & Trade Shows",
 };
 
 export { GLOBAL_PROOF_STATS as EVENT_BRANDING_PROOF_BAR } from "../../shared";
@@ -138,13 +138,13 @@ export const EVENT_BRANDING_CASE_STUDIES = {
 };
 
 export const EVENT_BRANDING_INDUSTRIES_SECTION = {
-  heading: "Industries We Support with Event Branding Solutions",
+  heading: "Industries We Support with Event Branding Services",
   headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_BRANDING_WHY_CHOOSE_US = {
-  heading: "Why Choose B2B Sales Arrow for Event Branding Solutions",
+  heading: "Why Choose B2B Sales Arrow for Event Branding Services",
   headingHighlight: "B2B Sales Arrow",
   items: [
     {
@@ -216,7 +216,7 @@ export const EVENT_BRANDING_FAQ = {
       question: "What types of events do you support?",
     },
   ],
-  heading: "Frequently Asked Questions About Event Branding Solutions",
+  heading: "Frequently Asked Questions About Event Branding Services",
   headingHighlight: "Asked Questions",
 };
 
@@ -234,13 +234,13 @@ export const EVENT_BRANDING_RELATED_SERVICES = [
 
 export const EVENT_BRANDING_CONTACT_CTA = {
   backgroundImage: {
-    alt: "Event Branding Solutions",
+    alt: "Event Branding Services",
     src: "/images/home/hero/home_hero_bg.avif",
   },
   badge: "Event Branding",
   description:
     "Partner with B2B Sales Arrow for event branding solutions that help your brand create memorable, engaging, and visually impactful corporate event experiences.",
-  headingLines: ["Looking for Professional", "Event Branding Solutions?"] as [string, string],
+  headingLines: ["Looking for Professional", "Event Branding Services?"] as [string, string],
   primaryCta: { href: "/contact", label: "Schedule a Consultation" },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [],
@@ -249,7 +249,7 @@ export const EVENT_BRANDING_CONTACT_CTA = {
 
 export const EVENT_BRANDING_PAGE = {
   pageId: "service.event-branding-solutions",
-  pageName: "Event Branding Solutions",
+  pageName: "Event Branding Services",
   pageType: "serviceDetail",
   seo: {
     canonicalPath: "/services/global-event-solutions/event-branding-services",
@@ -262,6 +262,6 @@ export const EVENT_BRANDING_PAGE = {
       "corporate event branding",
       "event identity design",
     ],
-    title: "Event Branding Solutions for Trade Shows and Corporate Events | B2B Sales Arrow",
+    title: "Event Branding Services for Trade Shows and Corporate Events | B2B Sales Arrow",
   },
 } as const;

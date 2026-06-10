@@ -248,7 +248,7 @@ export const BOOTH_HOSTESS_CONTACT_CTA = {
 
 export const BOOTH_HOSTESS_PAGE = {
   pageId: "service.booth-hostess",
-  pageName: "Booth Hostess",
+  pageName: "Booth Hostess Services",
   pageType: "serviceDetail",
   seo: {
     canonicalPath: "/services/global-event-solutions/booth-hostess-services",

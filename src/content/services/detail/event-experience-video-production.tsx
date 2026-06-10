@@ -320,8 +320,8 @@ export const EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES = [
     title: "Corporate Video Production Services",
   },
   {
-    href: "/services/media-production/live-streaming-services",
-    title: "Live Streaming Services",
+    href: "/services/media-production/event-live-streaming-services",
+    title: "Event Live Streaming Services",
   },
   {
     href: "/services/media-production/virtual-video-production",

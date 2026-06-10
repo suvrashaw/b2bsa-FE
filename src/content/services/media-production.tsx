@@ -36,11 +36,11 @@ export const MEDIA_SERVICES = {
       color: "bg-brand-blue",
       description:
         "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",
-      href: "/services/media-production/live-streaming-services",
+      href: "/services/media-production/event-live-streaming-services",
       icon: "Radio",
       id: "live-streaming",
       image: "/images/recent-events/event_other_2.avif",
-      title: "Live Streaming",
+      title: "Event Live Streaming Services",
     },
   ],
 };

@@ -68,7 +68,7 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       title: post.title,
     };
   })
-  .sort((left, right) => {
+  .toSorted((left, right) => {
     const leftTimestamp = parseBlogDate(left.date ?? "");
     const rightTimestamp = parseBlogDate(right.date ?? "");
 

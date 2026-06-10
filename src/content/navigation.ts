@@ -95,7 +95,7 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
         name: "Corporate Video Production",
       },
       {
-        href: "/services/media-production/live-streaming-services",
+        href: "/services/media-production/event-live-streaming-services",
         name: "Event Live Streaming Services",
       },
       {

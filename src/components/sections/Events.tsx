@@ -92,7 +92,7 @@ const getDefaultEvents = () => {
   const today = getTodayUtc();
 
   return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= today)
-    .sort((firstEvent, secondEvent) =>
+    .toSorted((firstEvent, secondEvent) =>
       firstEvent.startDate.localeCompare(secondEvent.startDate)
     )
     .slice(0, 8)

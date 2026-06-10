@@ -156,7 +156,7 @@ export const MODULAR_BOOTHS_FAQ = {
 
 export const MODULAR_BOOTHS_PAGE = {
   pageId: "service.modular-portable-booths",
-  pageName: "Modular & Portable Booths",
+  pageName: "Modular Booth Solutions",
   pageType: "serviceDetail",
   seo: {
     canonicalPath: "/services/global-event-solutions/modular-booth-solutions",

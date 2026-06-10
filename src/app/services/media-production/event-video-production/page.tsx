@@ -34,8 +34,8 @@ const eventVideoProductionRelatedServices = [
     title: "Corporate Video Production",
   },
   {
-    href: "/services/media-production/live-streaming-services",
-    title: "Live Streaming Services",
+    href: "/services/media-production/event-live-streaming-services",
+    title: "Event Live Streaming Services",
   },
 ];
 
