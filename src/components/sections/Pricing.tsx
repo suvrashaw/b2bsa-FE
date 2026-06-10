@@ -2,11 +2,11 @@
 
 import { Pencil, Sparkles, Star } from "lucide-react";
 
-import { type PricingTier, PricingTierCard } from "@/components/items/PricingTierCard";
+import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 
-export interface CreativePricingProps {
+export interface PricingProps {
   description?: string;
   tag?: string;
   tiers?: PricingTier[];
@@ -59,12 +59,12 @@ const DEFAULT_TIERS: PricingTier[] = [
   },
 ];
 
-export const CreativePricing = ({
+export const Pricing = ({
   description = "High-end post-production packages tailored to B2B teams",
   tag = "Video Editing Plans",
   tiers = DEFAULT_TIERS,
   title = "Creative Video Editing Pricing",
-}: CreativePricingProps) => {
+}: PricingProps) => {
   return (
     <section className="relative overflow-hidden bg-brand-gray py-24">
       {/* Dynamic Background Gradients */}
@@ -103,7 +103,7 @@ export const CreativePricing = ({
         {/* Pricing Tiers Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {tiers.map((tier) => (
-            <PricingTierCard key={tier.name} tier={tier} />
+            <PricingCard key={tier.name} tier={tier} />
           ))}
         </div>
       </div>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
+import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import { CardsSection } from "@/components/sections/CardsSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { FutureReadyStands } from "@/components/sections/FutureReadyStands";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -44,7 +44,7 @@ const Page = () => {
       closingSections={
         <>
           <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
-          <RentalBlogsSection
+          <BlogsCarousel
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
             posts={BOOTH_BUILDER_BLOG_POSTS}
           />
@@ -55,11 +55,11 @@ const Page = () => {
       }
       faq={BOOTH_BUILDER_FAQ}
       hero={BOOTH_BUILDER_HERO}
-      middleSections={<FutureReadyStands {...BOOTH_BUILDER_FUTURE_READY} />}
+      middleSections={<CardsSection {...BOOTH_BUILDER_FUTURE_READY} />}
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <WhyChooseUs
+        <StickyScroll
           heading="What We Do in Exhibition Stand Builder"
           reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
             description: item.descriptions.join(" "),

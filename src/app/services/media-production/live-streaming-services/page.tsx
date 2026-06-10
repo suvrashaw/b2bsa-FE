@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -44,7 +44,7 @@ const liveStreamingServicesRelatedServices = [
 const Page = () => {
   return (
     <ServiceDetail
-      afterSpotlightSections={<WhyChooseUs {...LIVE_STREAMING_WHY_CHOOSE_US} />}
+      afterSpotlightSections={<StickyScroll {...LIVE_STREAMING_WHY_CHOOSE_US} />}
       caseStudies={LIVE_STREAMING_CASE_STUDIES}
       clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       closingSections={

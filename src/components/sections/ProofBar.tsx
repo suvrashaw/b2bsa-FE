@@ -23,7 +23,7 @@ interface StatItem {
   value: string;
 }
 
-const MARQUEE_SPEED = 40;
+const MARQUEE_SPEED = 18;
 
 const useStatsMarquee = (isVisible: boolean) => {
   const baseX = useMotionValue(0);

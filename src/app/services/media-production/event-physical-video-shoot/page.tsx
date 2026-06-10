@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
+import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { ContactModalTrigger } from "@/components/ui/ContactModalTrigger";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
@@ -37,7 +37,7 @@ const Page = () => {
       closingSections={
         <>
           <BoothWhyChooseUs {...EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US} />
-          <RentalBlogsSection
+          <BlogsCarousel
             heading={EVENT_PHYSICAL_VIDEO_BLOGS_SECTION.heading}
             posts={RENTAL_BLOG_POSTS}
           />

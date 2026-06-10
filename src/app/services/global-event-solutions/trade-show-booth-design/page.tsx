@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
+import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { Events } from "@/components/sections/Events";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -36,8 +36,8 @@ const Page = () => {
       closingSections={
         <>
           <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
-          <UpcomingEvents />
-          <RentalBlogsSection
+          <Events />
+          <BlogsCarousel
             heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
             posts={RENTAL_BLOG_POSTS}
           />
@@ -53,7 +53,7 @@ const Page = () => {
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <WhyChooseUs
+        <StickyScroll
           heading="Booth Sizes and Formats We Design"
           reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
             description: item.descriptions.join(" "),

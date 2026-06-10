@@ -11,7 +11,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { ImageHero } from "@/components/sections/ImageHero";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
+import { Spotlight } from "@/components/sections/Spotlight";
 import { Heading } from "@/components/ui/Heading";
 
 const HERO_PRIMARY_CTA = { href: "/contact", label: "Get a Custom Proposal" } as const;
@@ -90,10 +90,10 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         </div>
       </section>
 
-      {/* Challenges — FeaturedSpotlight, image left */}
+      {/* Challenges — Spotlight, image left */}
       <section className="bg-brand-gray py-20">
         <div className="container mx-auto px-8">
-          <FeaturedSpotlight
+          <Spotlight
             className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
             description={study.challenges}
             imageAlt={study.title}
@@ -104,10 +104,10 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         </div>
       </section>
 
-      {/* Our Solution — FeaturedSpotlight, image right */}
+      {/* Our Solution — Spotlight, image right */}
       <section className="bg-brand-gray py-20">
         <div className="container mx-auto px-8">
-          <FeaturedSpotlight
+          <Spotlight
             className="[&_p]:text-lg"
             description={study.solution}
             imageAlt={study.title}

@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 
-import { HomeServiceCard } from "@/components/items/HomeServiceCard";
+import { ServicesCard } from "@/components/items/ServicesCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import {
@@ -11,7 +11,7 @@ import {
   type HomeServicesContent,
 } from "@/content/home";
 
-export interface OurServicesProps {
+export interface ServicesStackProps {
   content?: HomeServicesContent;
   ctaLabel?: HomeServicesContent["ctaLabel"];
   eyebrow?: HomeServicesContent["eyebrow"];
@@ -21,7 +21,7 @@ export interface OurServicesProps {
   services?: HomeServiceItem[];
 }
 
-export const OurServices = ({
+export const ServicesStack = ({
   content = HOME_SERVICES_CONTENT,
   ctaLabel = content.ctaLabel,
   eyebrow = content.eyebrow,
@@ -29,7 +29,7 @@ export const OurServices = ({
   headingHighlight = content.headingHighlight,
   serviceLabel = content.serviceLabel,
   services = content.services,
-}: OurServicesProps = {}) => {
+}: ServicesStackProps = {}) => {
   const stickyStyles = useMemo(
     () => services.map((_, index) => ({ top: `calc(100px + ${index * 20}px)`, zIndex: index })),
     [services]
@@ -46,7 +46,7 @@ export const OurServices = ({
         <div className="relative flex flex-col gap-12">
           {services.map((service, index) => (
             <div className="sticky" key={service.id} style={stickyStyles[index]}>
-              <HomeServiceCard
+              <ServicesCard
                 ctaLabel={ctaLabel}
                 service={service}
                 serviceLabel={serviceLabel}

@@ -6,28 +6,28 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import {
+  type EventCardItem,
+  EventsCard,
   type FlipStyle,
   getFallbackImage,
-  type UpcomingEventCard,
-  UpcomingEventFlipCard,
-} from "@/components/items/UpcomingEventFlipCard";
+} from "@/components/items/EventsCard";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_UPCOMING_EVENTS_CONTENT, type UpcomingEventsContent } from "@/content/home";
+import { type EventsContent, HOME_EVENTS_CONTENT } from "@/content/home";
 import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/trade-show-calendar";
 
-export interface UpcomingEventsProps {
-  badgeLabel?: UpcomingEventsContent["badgeLabel"];
-  content?: UpcomingEventsContent;
-  ctaLabel?: UpcomingEventsContent["ctaLabel"];
-  description?: UpcomingEventsContent["description"];
-  events?: UpcomingEventsContent["events"];
-  eyebrow?: UpcomingEventsContent["eyebrow"];
-  heading?: UpcomingEventsContent["heading"];
+export interface EventsProps {
+  badgeLabel?: EventsContent["badgeLabel"];
+  content?: EventsContent;
+  ctaLabel?: EventsContent["ctaLabel"];
+  description?: EventsContent["description"];
+  events?: EventsContent["events"];
+  eyebrow?: EventsContent["eyebrow"];
+  heading?: EventsContent["heading"];
   headingHighlight?: string;
   viewAllHref?: string;
-  viewAllLabel?: UpcomingEventsContent["viewAllLabel"];
+  viewAllLabel?: EventsContent["viewAllLabel"];
 }
 
 const CARD_CTA_LABEL = "View Event";
@@ -78,10 +78,10 @@ const getCountryFromLocation = (location?: string) => {
   return locationParts.at(-1) ?? location;
 };
 
-const mapCalendarEventToUpcomingEvent = (
+const mapCalendarEventToEvent = (
   event: CalendarTradeShow,
   index: number
-): UpcomingEventCard => ({
+): EventCardItem => ({
   country: event.country,
   ctaHref: "/trade-show-calendar",
   date: formatCalendarDateRange(event.startDate, event.endDate),
@@ -91,7 +91,7 @@ const mapCalendarEventToUpcomingEvent = (
   title: event.name,
 });
 
-const getDefaultUpcomingEvents = () => {
+const getDefaultEvents = () => {
   const today = getTodayUtc();
 
   return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= today)
@@ -99,18 +99,18 @@ const getDefaultUpcomingEvents = () => {
       firstEvent.startDate.localeCompare(secondEvent.startDate)
     )
     .slice(0, 8)
-    .map((event, index) => mapCalendarEventToUpcomingEvent(event, index));
+    .map((event, index) => mapCalendarEventToEvent(event, index));
 };
 
-const normalizeEvent = (event: UpcomingEventCard, index: number): UpcomingEventCard => ({
+const normalizeEvent = (event: EventCardItem, index: number): EventCardItem => ({
   ...event,
   country: event.country ?? getCountryFromLocation(event.location),
   ctaHref: event.ctaHref ?? "/trade-show-calendar",
   image: event.image ?? getFallbackImage(index),
 });
 
-export const UpcomingEvents = ({
-  content = HOME_UPCOMING_EVENTS_CONTENT,
+export const Events = ({
+  content = HOME_EVENTS_CONTENT,
   badgeLabel = content.badgeLabel,
   ctaLabel,
   description = content.description,
@@ -120,19 +120,19 @@ export const UpcomingEvents = ({
   headingHighlight = content.headingHighlight,
   viewAllHref = "/trade-show-calendar",
   viewAllLabel = content.viewAllLabel,
-}: UpcomingEventsProps = {}) => {
+}: EventsProps = {}) => {
   const shouldReduceMotion = Boolean(useReducedMotion());
   const [activeEventId, setActiveEventId] = useState<null | string>(null);
   const resolvedEvents = useMemo(() => {
     const sourceEvents =
       events ??
-      (content === HOME_UPCOMING_EVENTS_CONTENT ? getDefaultUpcomingEvents() : content.events);
+      (content === HOME_EVENTS_CONTENT ? getDefaultEvents() : content.events);
 
     return sourceEvents.map((event, index) => normalizeEvent(event, index));
   }, [content, events]);
   const resolvedCtaLabel =
     ctaLabel ??
-    (events || content !== HOME_UPCOMING_EVENTS_CONTENT ? content.ctaLabel : CARD_CTA_LABEL);
+    (events || content !== HOME_EVENTS_CONTENT ? content.ctaLabel : CARD_CTA_LABEL);
   const handleCardToggle = useCallback((eventId: string) => {
     setActiveEventId((currentEventId) => (currentEventId === eventId ? null : eventId));
   }, []);
@@ -150,7 +150,7 @@ export const UpcomingEvents = ({
 
         <div className="mx-auto grid max-w-[1050px] gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
           {resolvedEvents.map((event, index) => (
-            <UpcomingEventFlipCard
+            <EventsCard
               badgeLabel={badgeLabel}
               ctaLabel={resolvedCtaLabel}
               event={event}

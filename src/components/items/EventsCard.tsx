@@ -7,10 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback } from "react";
 
-import type { UpcomingEventsContent } from "@/content/home";
+import type { EventsContent } from "@/content/home";
 
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib";
+
+export type EventCardItem = {
+  country?: string;
+  ctaHref?: string;
+} & EventsContent["events"][number];
 
 export type FlipStyle =
   | "diagonal"
@@ -20,18 +25,25 @@ export type FlipStyle =
   | "split"
   | "vertical";
 
-export type UpcomingEventCard = {
-  country?: string;
-  ctaHref?: string;
-} & UpcomingEventsContent["events"][number];
-
 interface EventDetailsPanelProps {
   ctaLabel: string;
-  event: UpcomingEventCard;
+  event: EventCardItem;
   eventCountry?: string;
   eventCtaHref: string;
   eventDate?: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
+}
+
+interface EventsCardProps {
+  badgeLabel?: string;
+  ctaLabel: string;
+  event: EventCardItem;
+  flipStyle: FlipStyle;
+  index: number;
+  isFlipped: boolean;
+  onToggle: (eventId: string) => void;
+  shouldReduceMotion: boolean;
+  viewAllHref: string;
 }
 
 interface FlipCardProps extends EventDetailsPanelProps {
@@ -39,18 +51,6 @@ interface FlipCardProps extends EventDetailsPanelProps {
   eventImage: string;
   isFlipped: boolean;
   shouldReduceMotion: boolean;
-}
-
-interface UpcomingEventFlipCardProps {
-  badgeLabel?: string;
-  ctaLabel: string;
-  event: UpcomingEventCard;
-  flipStyle: FlipStyle;
-  index: number;
-  isFlipped: boolean;
-  onToggle: (eventId: string) => void;
-  shouldReduceMotion: boolean;
-  viewAllHref: string;
 }
 
 const CARD_SHELL_CLASS =
@@ -77,7 +77,7 @@ const CardFront = ({
   eventImage,
 }: {
   badgeLabel?: string;
-  event: UpcomingEventCard;
+  event: EventCardItem;
   eventImage: string;
 }) => (
   <>
@@ -111,7 +111,7 @@ const EventDetails = ({
   handleLinkClick,
 }: {
   ctaLabel: string;
-  event: UpcomingEventCard;
+  event: EventCardItem;
   eventCountry?: string;
   eventCtaHref: string;
   eventDate?: string;
@@ -462,7 +462,7 @@ const FLIP_CARD_COMPONENTS: Record<FlipStyle, (props: FlipCardProps) => ReactNod
   vertical: VerticalFlipCard,
 };
 
-export const UpcomingEventFlipCard = ({
+export const EventsCard = ({
   badgeLabel,
   ctaLabel,
   event,
@@ -472,7 +472,7 @@ export const UpcomingEventFlipCard = ({
   onToggle,
   shouldReduceMotion,
   viewAllHref,
-}: UpcomingEventFlipCardProps) => {
+}: EventsCardProps) => {
   const eventCountry = event.country ?? event.location;
   const eventDate = event.date;
   const eventCtaHref = event.ctaHref ?? viewAllHref;

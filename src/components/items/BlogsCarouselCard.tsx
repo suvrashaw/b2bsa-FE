@@ -3,11 +3,11 @@ import Link from "next/link";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
-export interface RentalBlogCardProps {
+export interface BlogsCarouselCardProps {
   post: SharedBlogPost;
 }
 
-export const RentalBlogCard = ({ post }: RentalBlogCardProps) => {
+export const BlogsCarouselCard = ({ post }: BlogsCarouselCardProps) => {
   return (
     <Link className="group flex h-full flex-col" href={post.href ?? "/blogs"}>
       <article className="flex h-full flex-col">

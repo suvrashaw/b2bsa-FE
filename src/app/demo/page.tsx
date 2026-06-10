@@ -9,7 +9,9 @@ import { AboutFounderStory } from "@/components/sections/AboutFounderStory";
 import { AboutSignatureServices } from "@/components/sections/AboutSignatureServices";
 import { AboutVisionMission } from "@/components/sections/AboutVisionMission";
 import { Blogs } from "@/components/sections/Blogs";
+import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import { CardsSection } from "@/components/sections/CardsSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -18,27 +20,25 @@ import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { CorporateVideoPortfolioSection } from "@/components/sections/CorporateVideoPortfolioSection";
-import { CreativePricing } from "@/components/sections/CreativePricing";
 import { Culture } from "@/components/sections/Culture";
+import { Events } from "@/components/sections/Events";
 import { FAQ } from "@/components/sections/FAQ";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
-import { FutureReadyStands } from "@/components/sections/FutureReadyStands";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { ImageHero } from "@/components/sections/ImageHero";
-import { OurServices } from "@/components/sections/OurServices";
+import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentalBlogsSection } from "@/components/sections/RentalBlogsSection";
 import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
 import { ServiceCarouselSection } from "@/components/sections/ServiceCarouselSection";
 import { ServiceHero } from "@/components/sections/ServiceHero";
+import { ServicesStack } from "@/components/sections/ServicesStack";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 import { TRADE_SHOW_CALENDAR_EVENTS, TRADE_SHOW_CALENDAR_HERO } from "@/content/trade-show-calendar";
@@ -139,9 +139,9 @@ const FEATURE_CAROUSEL_ITEMS = [
   { description: "Pre-event outreach, scheduling, and CRM-connected meeting tracking.", icon: "CalendarDays", id: "meetings", image: IMG_EV3, label: "Meeting Coordination" },
 ];
 
-// ─── FutureReadyStands ───────────────────────────────────────────────────────
+// ─── CardsSection ───────────────────────────────────────────────────────
 
-const FUTURE_READY_ITEMS = [
+const BASIC_CARD_ITEMS = [
   {
     bullets: ["LED video walls", "Interactive touch displays", "Live social feed integration"],
     image: { alt: "Tech-integrated booth", src: IMG_EV1 },
@@ -290,7 +290,7 @@ const CONTACT_CINEMATIC_PROPS = {
   secondaryCta: { href: "/case-studies", label: "See Case Studies" },
 };
 
-// ─── RentalBlogsSection ──────────────────────────────────────────────────────
+// ─── BlogsCarousel ──────────────────────────────────────────────────────
 
 const DEMO_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 4) as SharedBlogPost[];
 
@@ -310,11 +310,17 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   AboutSignatureServices: [{ href: "/about", label: "About" }],
   AboutVisionMission: [{ href: "/about", label: "About" }],
   Blogs: [{ href: "/", label: "Home" }, { href: "/blogs", label: "Blogs" }, { href: "/thank-you", label: "Thank You" }],
+  BlogsCarousel: [
+    { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
+    { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
+    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
+  ],
   BoothWhyChooseUs: [
     { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
     { href: "/services/global-event-solutions/corporate-networking-events", label: "Corp Networking" },
   ],
+  CardsSection: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
   CaseStudies: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   CaseStudiesGrid: [{ href: "/case-studies", label: "Case Studies" }],
   CinematicSequence: [],
@@ -327,8 +333,8 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ContactUs: [{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/contact", label: "Contact" }],
   CorporateVideoIndustriesSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
   CorporateVideoPortfolioSection: [{ href: "/services/media-production/corporate-video-production", label: "Corporate Video" }],
-  CreativePricing: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   Culture: [{ href: "/about", label: "About" }],
+  Events: [{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/services/global-event-solutions/trade-show-booth-design", label: "Booth Design" }],
   FAQ: [{ href: "/", label: "Home" }, { href: "/terms-and-conditions", label: "Terms" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   FAQAccordion: [
     { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
@@ -336,26 +342,20 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
   FeatureCarouselSection: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  FutureReadyStands: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
   GlobalPresence: [{ href: "/about", label: "About" }],
   ImageHero: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }, { href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  OurServices: [{ href: "/", label: "Home" }, { href: "/thank-you", label: "Thank You" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  Pricing: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   ProcessTimeline: [{ href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" }, { href: "/services/global-event-solutions/event-logistics", label: "Event Logistics" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   ProofBar: [{ href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }, { href: "/services/global-event-solutions", label: "Service Hub" }],
   RelatedServices: [{ href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/data-augmentation", label: "Data Augmentation" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
-  RentalBlogsSection: [
-    { href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" },
-    { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
-    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
-  ],
   RentVsBuySection: [{ href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }],
   ServiceCarouselSection: [{ href: "/blogs", label: "Blogs" }],
   ServiceHero: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  ServicesStack: [{ href: "/", label: "Home" }, { href: "/thank-you", label: "Thank You" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  StickyScroll: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
   Testimonials: [{ href: "/", label: "Home" }],
   TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
-  UpcomingEvents: [{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/services/global-event-solutions/trade-show-booth-design", label: "Booth Design" }],
   WhoWeAre: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }, { href: "/services/global-event-solutions", label: "Service Hub" }],
-  WhyChooseUs: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
@@ -477,9 +477,9 @@ export default function DemoPage() {
       <DemoLabel name="Culture" />
       <Culture data={CULTURE_DATA} />
 
-      {/* 13 – OurServices */}
-      <DemoLabel name="OurServices" />
-      <OurServices />
+      {/* 13 – ServicesStack */}
+      <DemoLabel name="ServicesStack" />
+      <ServicesStack />
 
       {/* 14 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
@@ -502,17 +502,17 @@ export default function DemoPage() {
       <DemoLabel name="RelatedServices" />
       <RelatedServices services={RELATED_SERVICES} title="Services Delivered" />
 
-      {/* 17 – WhyChooseUs */}
-      <DemoLabel name="WhyChooseUs" />
-      <WhyChooseUs />
+      {/* 17 – StickyScroll */}
+      <DemoLabel name="StickyScroll" />
+      <StickyScroll />
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
       <BoothWhyChooseUs heading="Why Clients Choose Our Booths" items={BOOTH_WHY_ITEMS} />
 
-      {/* 19 – FutureReadyStands */}
-      <DemoLabel name="FutureReadyStands" />
-      <FutureReadyStands heading="Future-Ready Stands" items={FUTURE_READY_ITEMS} />
+      {/* 19 – CardsSection */}
+      <DemoLabel name="CardsSection" />
+      <CardsSection heading="Future-Ready Stands" items={BASIC_CARD_ITEMS} />
 
       {/* 20 – RentVsBuySection */}
       <DemoLabel name="RentVsBuySection" />
@@ -561,9 +561,9 @@ export default function DemoPage() {
       <DemoLabel name="Testimonials" />
       <Testimonials />
 
-      {/* 27 – UpcomingEvents */}
-      <DemoLabel name="UpcomingEvents" />
-      <UpcomingEvents />
+      {/* 27 – Events */}
+      <DemoLabel name="Events" />
+      <Events />
 
       {/* 28 – TradeShowCalendarDirectory */}
       <DemoLabel name="TradeShowCalendarDirectory" />
@@ -583,13 +583,13 @@ export default function DemoPage() {
       <DemoLabel name="Blogs" />
       <Blogs />
 
-      {/* 31 – RentalBlogsSection */}
-      <DemoLabel name="RentalBlogsSection" />
-      <RentalBlogsSection heading="From the Blog" posts={DEMO_BLOG_POSTS} />
+      {/* 31 – BlogsCarousel */}
+      <DemoLabel name="BlogsCarousel" />
+      <BlogsCarousel heading="From the Blog" posts={DEMO_BLOG_POSTS} />
 
-      {/* 32 – CreativePricing */}
-      <DemoLabel name="CreativePricing" />
-      <CreativePricing />
+      {/* 32 – Pricing */}
+      <DemoLabel name="Pricing" />
+      <Pricing />
 
       {/* 33 – FAQ */}
       <DemoLabel name="FAQ" />

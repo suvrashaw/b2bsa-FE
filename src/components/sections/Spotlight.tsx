@@ -10,7 +10,7 @@ import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-export interface FeaturedSpotlightProps {
+export interface SpotlightProps {
   className?: string;
   ctaHref?: string;
   ctaLabel?: string;
@@ -221,7 +221,7 @@ const SpotlightImageBlock = ({
   );
 };
 
-export const FeaturedSpotlight = ({
+export const Spotlight = ({
   className,
   ctaHref,
   ctaLabel = "Explore",
@@ -235,7 +235,7 @@ export const FeaturedSpotlight = ({
   titleLine2,
   triggerContactModal = false,
   videoUrl,
-}: FeaturedSpotlightProps) => {
+}: SpotlightProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 

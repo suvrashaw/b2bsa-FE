@@ -1,11 +1,11 @@
 import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import type { CreativePricingProps } from "@/components/sections/CreativePricing";
 import type { FAQProps } from "@/components/sections/FAQ";
-import type { OurServicesProps } from "@/components/sections/OurServices";
+import type { PricingProps } from "@/components/sections/Pricing";
+import type { ServicesStackProps } from "@/components/sections/ServicesStack";
+import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { FeatureCarouselItem } from "@/components/ui/FeatureCarousel";
-import type { FeaturedSpotlightProps } from "@/components/ui/FeaturedSpotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { Footer } from "@/components/layout/Footer";
@@ -13,17 +13,17 @@ import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { CreativePricing } from "@/components/sections/CreativePricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ImageHero, type ImageHeroProps } from "@/components/sections/ImageHero";
-import { OurServices } from "@/components/sections/OurServices";
+import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
+import { ServicesStack } from "@/components/sections/ServicesStack";
+import { Spotlight } from "@/components/sections/Spotlight";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceDetailProps {
@@ -33,14 +33,14 @@ export interface ServiceDetailProps {
   caseStudiesHeading?: ReactNode;
   clientLogosHeading?: string;
   closingSections?: ReactNode;
-  creativePricing?: CreativePricingProps;
+  creativePricing?: PricingProps;
   ctaBanner?: {
     ctaHref?: string;
     ctaLabel: string;
     description?: string;
     title: string;
   };
-  deliverables?: OurServicesProps;
+  deliverables?: ServicesStackProps;
   deliverablesSectionType?: "carousel" | "grid";
   faq: FAQProps;
   hero?: {
@@ -70,16 +70,16 @@ export interface ServiceDetailProps {
   proofBarHeading?: string;
   proofBarImageUrl?: string;
   relatedServices?: { href: string; title: string }[];
-  secondaryServices?: OurServicesProps;
+  secondaryServices?: ServicesStackProps;
   secondaryServicesSectionType?: "carousel" | "grid";
   showPhaseNumbers?: boolean;
-  spotlight?: FeaturedSpotlightProps;
+  spotlight?: SpotlightProps;
   stats?: {
     description?: string;
     items: { label: string; value: string }[];
     title: string;
   };
-  why?: FeaturedSpotlightProps;
+  why?: SpotlightProps;
 }
 
 const createJsonLdMarkup = (data: object) => ({
@@ -203,7 +203,7 @@ export const ServiceDetail = ({
     return hero.secondaryCta ?? heroCtas?.secondaryCta ?? secondaryServiceHeroCta;
   }, [hero, heroCtas]);
   const renderServiceSection = (
-    section: OurServicesProps | undefined,
+    section: ServicesStackProps | undefined,
     sectionType: "carousel" | "grid"
   ) => {
     if (!section) {
@@ -229,7 +229,7 @@ export const ServiceDetail = ({
       );
     }
 
-    return <OurServices {...section} />;
+    return <ServicesStack {...section} />;
   };
 
   const deliverablesSection = renderServiceSection(deliverables, deliverablesSectionType);
@@ -270,7 +270,7 @@ export const ServiceDetail = ({
       {spotlight && (
         <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
-            <FeaturedSpotlight {...spotlight} />
+            <Spotlight {...spotlight} />
           </div>
         </section>
       )}
@@ -282,7 +282,7 @@ export const ServiceDetail = ({
       {why && (
         <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
-            <FeaturedSpotlight {...why} />
+            <Spotlight {...why} />
           </div>
         </section>
       )}
@@ -301,7 +301,7 @@ export const ServiceDetail = ({
 
       {secondaryServicesSection}
 
-      {creativePricing && <CreativePricing {...creativePricing} />}
+      {creativePricing && <Pricing {...creativePricing} />}
 
       {caseStudies && (
         <CaseStudies

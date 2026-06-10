@@ -7,7 +7,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_WHY_CHOOSE_US_CONTENT, type WhyChooseUsContent } from "@/content/home";
+import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home";
 
 const SCALE_ACTIVE = { scale: 1 };
 const SCALE_INACTIVE = { scale: 1.06 };
@@ -36,12 +36,12 @@ const ReasonImage = ({
   </div>
 );
 
-export interface WhyChooseUsProps {
-  content?: WhyChooseUsContent;
-  eyebrow?: WhyChooseUsContent["eyebrow"];
-  heading?: WhyChooseUsContent["heading"];
+export interface StickyScrollProps {
+  content?: StickyScrollContent;
+  eyebrow?: StickyScrollContent["eyebrow"];
+  heading?: StickyScrollContent["heading"];
   headingHighlight?: string;
-  reasons?: WhyChooseUsContent["reasons"];
+  reasons?: StickyScrollContent["reasons"];
   showImagePanel?: boolean;
 }
 
@@ -52,14 +52,14 @@ const TEXT_TRANSITION = { duration: 0.25, ease: "easeOut" } as const;
 const IMAGE_SLIDE_TRANSITION = { damping: 28, mass: 0.8, stiffness: 80, type: "spring" } as const;
 const IMAGE_SCALE_TRANSITION = { damping: 25, mass: 1, stiffness: 60, type: "spring" } as const;
 
-export const WhyChooseUs = ({
+export const StickyScroll = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
   eyebrow = content.eyebrow,
   heading = content.heading,
   headingHighlight = content.headingHighlight,
   reasons = content.reasons,
   showImagePanel = true,
-}: WhyChooseUsProps = {}) => {
+}: StickyScrollProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 

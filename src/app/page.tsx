@@ -6,13 +6,13 @@ import { Blogs } from "@/components/sections/Blogs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
+import { Events } from "@/components/sections/Events";
 import { FAQ } from "@/components/sections/FAQ";
-import { OurServices } from "@/components/sections/OurServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
+import { ServicesStack } from "@/components/sections/ServicesStack";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_CINEMATIC_SEQUENCE_CONTENT, HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
 
       <div id="services">
-        <OurServices />
+        <ServicesStack />
       </div>
 
       <div id="work">
@@ -50,10 +50,10 @@ const Home = () => {
       </div>
 
       <div id="events">
-        <UpcomingEvents />
+        <Events />
       </div>
 
-      <WhyChooseUs />
+      <StickyScroll />
 
       <Testimonials />
 

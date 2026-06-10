@@ -8,9 +8,9 @@ import { AboutSignatureServices } from "@/components/sections/AboutSignatureServ
 import { AboutVisionMission } from "@/components/sections/AboutVisionMission";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
+import { Events } from "@/components/sections/Events";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { ImageHero } from "@/components/sections/ImageHero";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
 import { Timeline } from "@/components/ui/Timeline";
 import {
   ABOUT_CORE_VALUES,
@@ -53,7 +53,7 @@ const Page = () => {
       />
       <AboutCoreValues data={ABOUT_CORE_VALUES} />
       <AboutSignatureServices data={ABOUT_SIGNATURE_SERVICES} />
-      <UpcomingEvents {...ABOUT_RECENT_EVENTS} />
+      <Events {...ABOUT_RECENT_EVENTS} />
       <AboutFounderStory data={ABOUT_FOUNDER_STORY} />
       <Culture data={ABOUT_VALUES} />
       <GlobalPresence data={ABOUT_PRESENCE} />

@@ -1,6 +1,6 @@
 "use client";
 
-import { type RelatedService, RelatedServiceLink } from "@/components/items/RelatedServiceLink";
+import { type RelatedService, RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
@@ -28,7 +28,7 @@ export const RelatedServices = ({
 
         <div className="flex flex-wrap justify-center gap-6">
           {services.map((service, index) => (
-            <RelatedServiceLink index={index} key={index} service={service} />
+            <RelatedServicesCard index={index} key={index} service={service} />
           ))}
         </div>
       </div>

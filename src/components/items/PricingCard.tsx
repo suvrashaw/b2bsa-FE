@@ -18,11 +18,11 @@ export interface PricingTier {
   price: number;
 }
 
-interface PricingTierCardProps {
+interface PricingCardProps {
   tier: PricingTier;
 }
 
-export const PricingTierCard = ({ tier }: PricingTierCardProps) => {
+export const PricingCard = ({ tier }: PricingCardProps) => {
   return (
     <div className={cn("group relative transition-all duration-500")}>
       {/* Neo-brutalist premium background card shadow */}

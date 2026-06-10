@@ -2,8 +2,8 @@ import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { FAQProps } from "@/components/sections/FAQ";
-import type { OurServicesProps } from "@/components/sections/OurServices";
-import type { FeaturedSpotlightProps } from "@/components/ui/FeaturedSpotlight";
+import type { ServicesStackProps } from "@/components/sections/ServicesStack";
+import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { Footer } from "@/components/layout/Footer";
@@ -11,14 +11,14 @@ import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
-import { OurServices } from "@/components/sections/OurServices";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceHero } from "@/components/sections/ServiceHero";
+import { ServicesStack } from "@/components/sections/ServicesStack";
+import { Spotlight } from "@/components/sections/Spotlight";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { JsonLd } from "@/components/templates/ServiceDetail";
-import { FeaturedSpotlight } from "@/components/ui/FeaturedSpotlight";
 import { buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceHubProps {
@@ -53,12 +53,12 @@ export interface ServiceHubProps {
   proofBar?: string[];
   proofBarImageUrl?: string;
   relatedServices?: { href: string; title: string }[];
-  services: OurServicesProps;
+  services: ServicesStackProps;
   stats?: {
     items: { label: string; value: string }[];
     title: string;
   };
-  why: FeaturedSpotlightProps;
+  why: SpotlightProps;
 }
 
 const primaryServiceHeroCta = { href: "/contact", label: "Book a Strategy Session" };
@@ -143,11 +143,11 @@ export const ServiceHub = ({
 
       {proofBar && <ProofBar heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />}
 
-      <OurServices {...services} />
+      <ServicesStack {...services} />
 
       <section className="bg-brand-gray py-24">
         <div className="container mx-auto px-8">
-          <FeaturedSpotlight {...why} />
+          <Spotlight {...why} />
         </div>
       </section>
 

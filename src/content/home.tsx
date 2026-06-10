@@ -129,6 +129,17 @@ export interface ContactServiceOption {
   value: string;
 }
 
+export interface EventsContent {
+  badgeLabel?: string;
+  ctaLabel: string;
+  description?: string;
+  events: UpcomingEventItem[];
+  eyebrow?: string;
+  heading: ReactNode;
+  headingHighlight?: string;
+  viewAllLabel?: string;
+}
+
 export interface FAQContent {
   description?: string;
   eyebrow?: string;
@@ -187,6 +198,20 @@ export interface HomeServicesContent {
   services: HomeServiceItem[];
 }
 
+export interface StickyScrollContent {
+  eyebrow?: string;
+  heading: ReactNode;
+  headingHighlight?: string;
+  reasons: StickyScrollReason[];
+}
+
+export interface StickyScrollReason {
+  description: string;
+  id: string;
+  image: string;
+  title: string;
+}
+
 export interface TestimonialItem {
   company: string;
   designation: string;
@@ -215,17 +240,6 @@ export interface UpcomingEventItem {
   title: string;
 }
 
-export interface UpcomingEventsContent {
-  badgeLabel?: string;
-  ctaLabel: string;
-  description?: string;
-  events: UpcomingEventItem[];
-  eyebrow?: string;
-  heading: ReactNode;
-  headingHighlight?: string;
-  viewAllLabel?: string;
-}
-
 export interface WhoWeAreContent {
   attribution?: string;
   heading: ReactNode;
@@ -240,20 +254,6 @@ export interface WhoWeAreStat {
   icon: string;
   label: string;
   value: string;
-}
-
-export interface WhyChooseUsContent {
-  eyebrow?: string;
-  heading: ReactNode;
-  headingHighlight?: string;
-  reasons: WhyChooseUsReason[];
-}
-
-export interface WhyChooseUsReason {
-  description: string;
-  id: string;
-  image: string;
-  title: string;
 }
 
 export const HOME_HERO_CONTENT: HomeHeroContent = {
@@ -530,7 +530,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ],
 };
 
-export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
+export const HOME_EVENTS_CONTENT: EventsContent = {
   ctaLabel: "Meet Us There",
   description:
     "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
@@ -590,7 +590,7 @@ export const HOME_UPCOMING_EVENTS_CONTENT: UpcomingEventsContent = {
   viewAllLabel: "Explore All Upcoming Events",
 };
 
-export const HOME_WHY_CHOOSE_US_CONTENT: WhyChooseUsContent = {
+export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = {
   heading: "Why Enterprise Brands Trust Our Global Event Solutions?",
   headingHighlight: "Enterprise Brands Trust",
   reasons: [

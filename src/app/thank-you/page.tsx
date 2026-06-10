@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
 import { ImageHero } from "@/components/sections/ImageHero";
-import { OurServices } from "@/components/sections/OurServices";
+import { ServicesStack } from "@/components/sections/ServicesStack";
 import { THANK_YOU_BLOGS, THANK_YOU_HERO, THANK_YOU_SERVICES } from "@/content/thank-you";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -32,7 +32,7 @@ const Page = () => {
         secondaryCta={THANK_YOU_SECONDARY_CTA}
         title={"Thank You for\nReaching Out"}
       />
-      <OurServices {...THANK_YOU_SERVICES} />
+      <ServicesStack {...THANK_YOU_SERVICES} />
       <Blogs {...THANK_YOU_BLOGS} />
       <Footer />
     </main>

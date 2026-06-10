@@ -6,12 +6,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
-import { RentalBlogCard } from "@/components/items/RentalBlogCard";
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-export interface RentalBlogsSectionProps {
+export interface BlogsCarouselProps {
   heading: string;
   headingHighlight?: string;
   posts: SharedBlogPost[];
@@ -55,7 +55,7 @@ const getPerView = () => {
   return 1;
 };
 
-export const RentalBlogsSection = ({ heading, headingHighlight, posts }: RentalBlogsSectionProps) => {
+export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouselProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimationControls();
   const [cardStep, setCardStep] = useState(0);
@@ -152,7 +152,7 @@ export const RentalBlogsSection = ({ heading, headingHighlight, posts }: RentalB
           >
             {extended.map((post, i) => (
               <div key={`${post.id}-${i}`} style={cardStyle}>
-                <RentalBlogCard post={post} />
+                <BlogsCarouselCard post={post} />
               </div>
             ))}
           </motion.div>

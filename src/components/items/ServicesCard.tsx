@@ -8,13 +8,13 @@ import type { HomeServiceItem } from "@/content/home";
 import { Button } from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 
-interface HomeServiceCardProps {
+interface ServicesCardProps {
   ctaLabel: string;
   service: HomeServiceItem;
   serviceLabel?: string;
 }
 
-export const HomeServiceCard = ({ ctaLabel, service, serviceLabel }: HomeServiceCardProps) => {
+export const ServicesCard = ({ ctaLabel, service, serviceLabel }: ServicesCardProps) => {
   return (
     <div className="group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
       {/* Content Area */}
