@@ -40,6 +40,7 @@ const SpotlightTextBlock = ({
   titleLine1,
   titleLine2,
 }: {
+  align?: "left" | "center" | "right";
   ctaHref?: string;
   ctaLabel: string;
   description: string;
