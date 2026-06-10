@@ -1,3 +1,8 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 import { Heading } from "@/components/ui/Heading";
 
 export interface AboutCoreValuesData {
@@ -5,12 +10,6 @@ export interface AboutCoreValuesData {
   heading: string;
   headingHighlight?: string;
   values: string[];
-}
-
-interface CoreValueFlipCardProps {
-  detail: string;
-  index: number;
-  value: string;
 }
 
 const CORE_VALUE_DETAILS = [
@@ -24,81 +23,117 @@ const CORE_VALUE_DETAILS = [
   "Clear communication keeps relationships open, honest, and commercially useful.",
   "We protect team harmony while building the emotional connection great work needs.",
   "We prove commitment through follow-through, quality, and measurable outcomes.",
-] as const;
-
-const CoreValueFlipCard = ({ detail, index, value }: CoreValueFlipCardProps) => {
-  const number = String(index + 1).padStart(2, "0");
-
-  return (
-    <button
-      aria-label={`Explore core value ${number}: ${value}`}
-      className="group h-full min-h-48 w-full cursor-pointer text-left [perspective:1200px] sm:min-h-52 lg:min-h-60"
-      type="button"
-    >
-      <span className="relative block h-full min-h-48 w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-visible:[transform:rotateY(180deg)] sm:min-h-52 lg:min-h-60">
-        <span className="absolute inset-0 flex flex-col overflow-hidden border border-brand-charcoal/10 bg-brand-white shadow-[0_18px_50px_rgba(14,22,31,0.08)] [backface-visibility:hidden]">
-          <span className="flex h-9 shrink-0 items-center gap-1.5 border-b border-brand-charcoal/10 bg-brand-gray px-3">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-blue/25" />
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-charcoal/15" />
-            <span className="ml-auto text-[10px] leading-none font-bold tracking-[0.16em] text-brand-charcoal/35 uppercase">
-              {number}
-            </span>
-          </span>
-          <span className="flex flex-1 items-center justify-center p-4 text-center lg:p-5">
-            <span className="text-sm leading-snug font-black break-words text-brand-charcoal lg:text-base">
-              {value}
-            </span>
-          </span>
-        </span>
-
-        <span className="absolute inset-0 flex [transform:rotateY(180deg)] flex-col overflow-hidden border border-brand-cyan/25 bg-brand-blue text-brand-white shadow-[0_22px_60px_rgba(30,96,145,0.2)] [backface-visibility:hidden]">
-          <span className="flex h-9 shrink-0 items-center border-b border-brand-white/15 px-3">
-            <span className="text-[10px] leading-none font-bold tracking-[0.16em] text-brand-cyan uppercase">
-              In Practice
-            </span>
-            <span className="ml-auto text-[10px] leading-none font-bold tracking-[0.16em] text-brand-white/45 uppercase">
-              {number}
-            </span>
-          </span>
-          <span className="flex flex-1 items-center p-4 lg:p-5">
-            <span className="text-xs leading-relaxed font-semibold text-brand-white/85 sm:text-sm">
-              {detail}
-            </span>
-          </span>
-        </span>
-      </span>
-    </button>
-  );
-};
+];
 
 export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
-  return (
-    <section className="relative scroll-mt-28 overflow-hidden bg-brand-gray py-20" id="core-values">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-brand-cyan/40 to-transparent"
-      />
-      <div className="container mx-auto px-8">
-        <div className="mb-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <Heading as="h2" highlight={data.headingHighlight}>
-            {data.heading}
-          </Heading>
-          <p className="max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
-            {data.description}
-          </p>
-        </div>
+  const targetRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [scrollRange, setScrollRange] = useState(0);
+  
+  useEffect(() => {
+    const updateScrollRange = () => {
+      if (trackRef.current) {
+        setScrollRange(trackRef.current.scrollWidth - window.innerWidth);
+      }
+    };
+    
+    updateScrollRange();
+    window.addEventListener("resize", updateScrollRange);
+    return () => window.removeEventListener("resize", updateScrollRange);
+  }, []);
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
-          {data.values.map((value, index) => (
-            <CoreValueFlipCard
-              detail={CORE_VALUE_DETAILS[index] ?? data.description}
-              index={index}
-              key={value}
-              value={value}
-            />
-          ))}
-        </div>
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end end"],
+  });
+
+  // Interpolate from 0 to negative scrollRange
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+
+  return (
+    <section 
+      className="relative h-[400vh] bg-brand-gray" 
+      id="core-values"
+      ref={targetRef}
+    >
+      <div className="sticky top-0 flex h-screen w-full items-stretch overflow-hidden">
+        <motion.div 
+          className="flex h-full items-stretch will-change-transform"
+          ref={trackRef}
+          style={{ x }}
+        >
+          {/* Intro Slide */}
+          <div className="flex w-screen shrink-0 flex-col justify-center px-8 py-20 md:px-[clamp(24px,6vw,120px)]">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="h-px w-8 bg-brand-cyan" />
+              <p className="font-accent text-[11px] font-bold uppercase tracking-[0.16em] text-brand-charcoal/60">
+                Our Core
+              </p>
+            </div>
+            
+            <Heading 
+              as="h2" 
+              className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] font-black leading-[1.1] text-brand-charcoal" 
+              highlight={data.headingHighlight}
+            >
+              {data.heading}
+            </Heading>
+            
+            <p className="mb-10 max-w-[560px] text-[18px] leading-[1.65] text-brand-charcoal/60">
+              {data.description}
+            </p>
+            
+            <div className="flex items-center gap-2.5">
+              <div className="h-px w-12 bg-linear-to-r from-brand-cyan to-transparent" />
+              <p className="font-accent text-[10px] font-bold uppercase tracking-[0.1em] text-brand-charcoal/40">
+                Scroll to explore
+              </p>
+            </div>
+          </div>
+
+          {/* Cards */}
+          {data.values.map((value, index) => {
+            const num = String(index + 1).padStart(2, "0");
+            const detail = CORE_VALUE_DETAILS[index];
+            
+            return (
+              <div 
+                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-[clamp(20px,4vw,60px)] py-20"
+                key={index} 
+              >
+                <div className="relative overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-8 py-9 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)]">
+                  {/* Top Gradient Border */}
+                  <div className="absolute inset-x-0 top-0 h-[2px] bg-linear-to-r from-brand-cyan/20 via-brand-cyan to-brand-blue/20" />
+                  
+                  {/* Big Number Background */}
+                  <div className="absolute -top-4 right-4 select-none font-display text-[80px] font-black leading-none text-brand-charcoal/5">
+                    {num}
+                  </div>
+                  
+                  {/* Icon Block */}
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded border border-brand-cyan/20 bg-brand-cyan/10">
+                    <div className="h-4 w-4 rounded-sm bg-brand-cyan" />
+                  </div>
+                  
+                  <p className="mb-3.5 font-accent text-[11px] font-bold uppercase tracking-[0.16em] text-brand-cyan">
+                    Core Value
+                  </p>
+                  
+                  <h3 className="mb-3 font-display text-[clamp(20px,2.2vw,28px)] font-bold leading-[1.2] text-brand-charcoal">
+                    {value}
+                  </h3>
+                  
+                  <p className="font-editorial text-[15px] leading-[1.65] text-brand-charcoal/60">
+                    {detail}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+          
+          {/* Spacer to give a little padding at the end of the scroll track */}
+          <div className="w-[10vw] shrink-0" />
+        </motion.div>
       </div>
     </section>
   );
