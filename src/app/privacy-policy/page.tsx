@@ -14,7 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 const Page = () => {
   return (
-    <main className="min-h-screen bg-white ">
+    <main className="min-h-screen bg-brand-gray">
       <Header />
       <div className="pt-40 pb-24">
         <div className="container mx-auto max-w-4xl px-8">

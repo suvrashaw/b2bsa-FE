@@ -19,7 +19,7 @@ export const EventCard = ({
   badgeLabel = "UPCOMING",
   ctaLabel = "View Event",
   date,
-  href = "/events",
+  href = "/trade-show-calendar",
   image,
   location,
   title,

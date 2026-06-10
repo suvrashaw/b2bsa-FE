@@ -31,7 +31,7 @@ export const Blogs = ({
   eyebrow = content.eyebrow,
   heading = content.heading,
   layout = "deck",
-  viewAllHref,
+  viewAllHref = "/blogs",
   viewAllLabel = "View All Blogs",
 }: BlogsProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);

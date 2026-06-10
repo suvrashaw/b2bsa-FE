@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback } from "react";
 
 import type { CaseStudyIndexEntry } from "@/types/case-studies";
@@ -58,12 +59,14 @@ interface GridStudyCardProps {
   study: CaseStudyIndexEntry;
 }
 
+const isPageHref = (href: string) => href.startsWith("/");
+
 const GridStudyCard = ({ colSpan, onSelectStudy, study }: GridStudyCardProps) => {
   const handleSelect = useCallback(() => {
     onSelectStudy(study);
   }, [onSelectStudy, study]);
 
-  return (
+  const card = (
     <CaseStudyGridCard
       colSpan={colSpan}
       format={study.format}
@@ -71,10 +74,16 @@ const GridStudyCard = ({ colSpan, onSelectStudy, study }: GridStudyCardProps) =>
       image={study.card.image}
       metric={study.card.metric}
       metricLabel={study.card.metricLabel}
-      onClick={handleSelect}
+      onClick={isPageHref(study.card.href) ? undefined : handleSelect}
       title={study.card.client}
     />
   );
+
+  if (isPageHref(study.card.href)) {
+    return <Link className="contents" href={study.card.href}>{card}</Link>;
+  }
+
+  return card;
 };
 
 const getGridSpan = (index: number, total: number) => {
@@ -99,7 +108,7 @@ export const CaseStudiesGrid = ({
   studies,
 }: CaseStudiesGridProps) => {
   return (
-    <section className="w-full bg-white pb-20 md:pb-24">
+    <section className="w-full bg-brand-gray pb-20 md:pb-24">
       <div className="bg-brand-gray/30 py-8">
         <div className="container mx-auto flex flex-wrap justify-center gap-3 px-8">
           {filters.map((filter) => (

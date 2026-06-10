@@ -21,20 +21,20 @@ import { cn } from "@/lib";
 
 const socialLinks = [
   {
+    colorClass: "text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2]",
     href: "https://www.linkedin.com/company/b2b-sales-arrow/",
     icon: FaLinkedinIn,
     name: "LinkedIn",
-    colorClass: "text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2]",
   },
   {
+    colorClass: "text-[#000000] hover:border-[#000000] hover:bg-[#000000]",
     icon: FaXTwitter,
     name: "X",
-    colorClass: "text-[#000000] hover:border-[#000000] hover:bg-[#000000]",
   },
   {
+    colorClass: "text-[#E1306C] hover:border-[#E1306C] hover:bg-[#E1306C]",
     icon: FaInstagram,
     name: "Instagram",
-    colorClass: "text-[#E1306C] hover:border-[#E1306C] hover:bg-[#E1306C]",
   },
 ];
 
@@ -76,28 +76,37 @@ const FooterServiceGroup = ({
 }: {
   group: ServiceNavGroup;
   noWrapTitle?: boolean;
-}) => (
-  <div>
-    <Link
-      className={cn(
-        "mb-3 block text-sm font-semibold text-white transition-colors hover:text-white hover:underline",
-        noWrapTitle ? "whitespace-nowrap" : ""
-      )}
-      href={group.href}
-    >
-      {group.name}
-    </Link>
-    {group.groups ? (
+}) => {
+  let childLinks = null;
+  const flatLinks = group.links ?? EMPTY_NAV_LINKS;
+
+  if (group.groups) {
+    childLinks = (
       <div className="grid gap-5 sm:grid-cols-2">
         {group.groups.map((subGroup) => (
           <FooterServiceSubGroup group={subGroup} key={subGroup.name} />
         ))}
       </div>
-    ) : (
-      <FooterSitemapLinks links={group.links ?? EMPTY_NAV_LINKS} />
-    )}
-  </div>
-);
+    );
+  } else if (flatLinks.length > 0) {
+    childLinks = <FooterSitemapLinks links={flatLinks} />;
+  }
+
+  return (
+    <div>
+      <Link
+        className={cn(
+          "mb-3 block text-sm font-semibold text-white transition-colors hover:text-white hover:underline",
+          noWrapTitle ? "whitespace-nowrap" : ""
+        )}
+        href={group.href}
+      >
+        {group.name}
+      </Link>
+      {childLinks}
+    </div>
+  );
+};
 
 export const Footer = () => {
   const containerRef = useRef<HTMLElement>(null);
@@ -228,7 +237,7 @@ export const Footer = () => {
                         aria-label={`${item.name} profile coming soon`}
                         className={cn(
                           baseClass,
-                          item.colorClass.split(' ')[0], // only apply text color, not hover effects
+                          item.colorClass.split(" ")[0], // only apply text color, not hover effects
                           "cursor-not-allowed opacity-60 hover:bg-brand-gray"
                         )}
                         key={item.name}
@@ -302,7 +311,10 @@ export const Footer = () => {
                 © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
               </p>
               <div className="flex gap-6 text-xs text-white/80">
-                <Link className="transition-colors hover:text-white hover:underline" href="/privacy-policy">
+                <Link
+                  className="transition-colors hover:text-white hover:underline"
+                  href="/privacy-policy"
+                >
                   Privacy Policy
                 </Link>
                 <Link
@@ -311,7 +323,10 @@ export const Footer = () => {
                 >
                   Terms of Service
                 </Link>
-                <Link className="transition-colors hover:text-white hover:underline" href="/cookie-policy">
+                <Link
+                  className="transition-colors hover:text-white hover:underline"
+                  href="/cookie-policy"
+                >
                   Cookie Policy
                 </Link>
               </div>

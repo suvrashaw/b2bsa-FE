@@ -32,16 +32,6 @@ export const MEDIA_SERVICES = {
       title: "Corporate Video Production",
     },
     {
-      color: "bg-brand-primary",
-      description:
-        "Raw footage transformed into polished assets with colour grading, captions, motion graphics, and multi-format delivery.",
-      href: "/services/media-production/video-editing-services",
-      icon: "MonitorPlay",
-      id: "video-editing",
-      image: "/images/home/services/media-production-2.avif",
-      title: "Video Editing Services",
-    },
-    {
       color: "bg-brand-blue",
       description:
         "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",

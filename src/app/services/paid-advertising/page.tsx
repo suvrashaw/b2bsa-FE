@@ -31,7 +31,6 @@ const paidAdsContactCta = {
 
 const paidAdvertisingRelatedServices = [
   { href: "/services/seo-services", title: "SEO Services" },
-  { href: "/services/linkedin-ads", title: "LinkedIn Ads for B2B" },
   { href: "/services/performance-marketing", title: "Performance Marketing" },
 ];
 

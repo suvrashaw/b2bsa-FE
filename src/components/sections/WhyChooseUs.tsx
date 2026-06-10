@@ -3,11 +3,38 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_WHY_CHOOSE_US_CONTENT, type WhyChooseUsContent } from "@/content/home";
+
+const SCALE_ACTIVE = { scale: 1 };
+const SCALE_INACTIVE = { scale: 1.06 };
+
+const ReasonImage = ({
+  activeIndex,
+  index,
+  reason,
+}: {
+  activeIndex: number;
+  index: number;
+  reason: { id: string; image: string; title: string };
+}) => (
+  <div className="flex h-screen w-full shrink-0 items-center justify-center p-16" key={reason.id}>
+    <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
+      <motion.div
+        animate={index === activeIndex ? SCALE_ACTIVE : SCALE_INACTIVE}
+        className="absolute inset-0"
+        transition={IMAGE_SCALE_TRANSITION}
+      >
+        <Image alt={reason.title} className="object-cover" fill sizes="50vw" src={reason.image} />
+      </motion.div>
+      <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+    </div>
+  </div>
+);
 
 export interface WhyChooseUsProps {
   content?: WhyChooseUsContent;
@@ -21,8 +48,8 @@ const TEXT_ANIMATE = { opacity: 1, scale: 1, y: 0 };
 const TEXT_EXIT = { opacity: 0, scale: 1.02, y: -20 };
 const TEXT_INITIAL = { opacity: 0, scale: 0.97, y: 20 };
 const TEXT_TRANSITION = { duration: 0.25, ease: "easeOut" } as const;
-const IMAGE_SLIDE_TRANSITION = { type: "spring", stiffness: 80, damping: 28, mass: 0.8 } as const;
-const IMAGE_SCALE_TRANSITION = { type: "spring", stiffness: 60, damping: 25, mass: 1 } as const;
+const IMAGE_SLIDE_TRANSITION = { damping: 28, mass: 0.8, stiffness: 80, type: "spring" } as const;
+const IMAGE_SCALE_TRANSITION = { damping: 25, mass: 1, stiffness: 60, type: "spring" } as const;
 
 export const WhyChooseUs = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
@@ -53,11 +80,20 @@ export const WhyChooseUs = ({
 
   useMotionValueEvent(scrollYProgress, "change", updateActiveIndex);
 
+  const sectionStyle = useMemo(
+    () => ({ minHeight: `${(reasons.length + 1) * 100}vh` }),
+    [reasons.length]
+  );
+  const slideAnimate = useMemo(
+    () => ({ y: `${-resolvedActiveIndex * 100}vh` }),
+    [resolvedActiveIndex]
+  );
+
   return (
     <section
       className="relative bg-brand-gray"
       ref={containerRef}
-      style={{ minHeight: `${(reasons.length + 1) * 100}vh` }}
+      style={sectionStyle}
     >
       <div
         className={`container sticky top-0 mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
@@ -99,33 +135,17 @@ export const WhyChooseUs = ({
         {showImagePanel && (
           <div className="relative hidden h-screen w-1/2 overflow-hidden md:block">
             <motion.div
-              animate={{ y: `${-resolvedActiveIndex * 100}vh` }}
+              animate={slideAnimate}
               className="absolute left-0 right-0 top-0 flex flex-col"
               transition={IMAGE_SLIDE_TRANSITION}
             >
               {reasons.map((reason, index) => (
-                <div
-                  className="flex h-screen w-full shrink-0 items-center justify-center p-16"
+                <ReasonImage
+                  activeIndex={resolvedActiveIndex}
+                  index={index}
                   key={reason.id}
-                >
-                  <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
-                    <motion.div
-                      animate={{ scale: index === resolvedActiveIndex ? 1 : 1.06 }}
-                      className="absolute inset-0"
-                      transition={IMAGE_SCALE_TRANSITION}
-                    >
-                      <Image
-                        alt={reason.title}
-                        className="object-cover"
-                        fill
-                        sizes="50vw"
-                        src={reason.image}
-                      />
-                    </motion.div>
-                    <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-                </div>
+                  reason={reason}
+                />
               ))}
             </motion.div>
           </div>

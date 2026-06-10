@@ -52,7 +52,7 @@ export const RentVsBuySection = ({
 
         {/* 3 reasons grid with vertical dividers */}
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 divide-y divide-brand-charcoal/15 md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="grid grid-cols-1 divide-y divide-brand-charcoal/15 justify-items-center md:grid-cols-3 md:divide-x md:divide-y-0">
             {reasons.map((reason) => (
               <div
                 className="flex flex-col items-center px-10 py-12 text-center md:py-8"

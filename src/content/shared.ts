@@ -19,7 +19,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
   {
     challenge: "Building enterprise visibility and qualified conversations in a high-speed aviation event window",
     client: "Global aviation technology and transformation brand",
-    href: "/case-studies",
+    href: "/case-studies/waf-2025",
     icon: "Plane",
     id: "world-aviation-festival-2023",
     image: "/images/case-studies/waf.avif",
@@ -32,7 +32,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
   {
     challenge: "Exceeding aggressive on-ground lead targets in a crowded financial services environment",
     client: "Enterprise banking and payments technology brands",
-    href: "/case-studies",
+    href: "/case-studies/sibos-2025",
     icon: "Building2",
     id: "sibos-2023",
     image: "/images/case-studies/sibos.avif",
@@ -45,7 +45,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
   {
     challenge: "Standing out at a competitive infrastructure event while keeping lead quality high",
     client: "Global utilities and infrastructure technology brand",
-    href: "/case-studies",
+    href: "/case-studies/distributech-2023",
     icon: "Sparkles",
     id: "distributech-international-2023",
     image: "/images/case-studies/DistribuTECH.jpg",
@@ -59,7 +59,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     challenge:
       "Qualified enterprise leads and a memorable brand presence despite opt-in attendee restrictions and a near-impossible 3-day asset delivery window.",
     client: "Enterprise payments and technology brand",
-    href: "/case-studies",
+    href: "/case-studies/sap-sapphire-2023",
     icon: "Sparkles",
     id: "sap-sapphire-2023",
     image: "/images/case-studies/sap.jpg",
@@ -73,7 +73,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     challenge:
       "Secure C-level fintech meetings from a 1,000-account universe in one week, without delegate contact data and within a tight booth budget.",
     client: "Enterprise fintech pricing and billing brand",
-    href: "/case-studies",
+    href: "/case-studies/money-2020-2023",
     icon: "Coins",
     id: "money-20-20-2023",
     image: "/images/case-studies/money.jpg",

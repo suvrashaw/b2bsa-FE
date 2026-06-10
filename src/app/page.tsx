@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       <div id="events">
-        <UpcomingEvents viewAllHref="/events" />
+        <UpcomingEvents />
       </div>
 
       <WhyChooseUs />
@@ -58,7 +58,7 @@ const Home = () => {
       <Testimonials />
 
       <div id="blogs">
-        <Blogs viewAllHref="/blogs" />
+        <Blogs />
       </div>
 
       <div id="faq">

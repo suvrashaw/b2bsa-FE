@@ -38,10 +38,6 @@ const corporateVideoProductionRelatedServices = [
     title: "Event Video Production",
   },
   {
-    href: "/services/media-production/video-editing-services",
-    title: "Video Editing Services",
-  },
-  {
     href: "/services/media-production/live-streaming-services",
     title: "Live Streaming Services",
   },

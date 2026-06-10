@@ -7,7 +7,8 @@ export const BOOTH_DESIGN_HERO = {
     "We design custom trade show booths that buyers stop at deliberately, because the space, the story, and the sales system inside it were built together from day one.",
   title: (
     <>
-      <strong className="font-bold">Trade Show Booth Design</strong> That Converts Foot Traffic Into Pipeline
+      <strong className="font-bold">Trade Show Booth Design</strong> That Converts Foot Traffic Into
+      Pipeline
     </>
   ),
 };
@@ -17,9 +18,7 @@ export { GLOBAL_PROOF_STATS as BOOTH_DESIGN_PROOF_BAR } from "../../shared";
 export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   {
     cta: { href: "/contact", label: "Get 10×10 Booth Quote" },
-    descriptions: [
-      "Regional shows, first-time exhibitors, satellite presences",
-    ],
+    descriptions: ["Regional shows, first-time exhibitors, satellite presences"],
     eyebrow: "100 sq ft",
     heading: "10x10 Booth",
     id: "showcase-10x10",
@@ -27,9 +26,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
   {
     cta: { href: "/contact", label: "Get 10×20 Booth Quote" },
-    descriptions: [
-      "Product demos with visitor journey and conversation zone",
-    ],
+    descriptions: ["Product demos with visitor journey and conversation zone"],
     eyebrow: "200 sq ft",
     heading: "10x20 Inline",
     id: "showcase-10x20",
@@ -37,9 +34,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
   {
     cta: { href: "/contact", label: "Get 20×20 Booth Quote" },
-    descriptions: [
-      "Premium four-sided visibility, demos, meetings, AV zones",
-    ],
+    descriptions: ["Premium four-sided visibility, demos, meetings, AV zones"],
     eyebrow: "400 sq ft",
     heading: "20x20 Island",
     id: "showcase-20x20",
@@ -47,9 +42,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
   {
     cta: { href: "/contact", label: "Get Double-Deck Quote" },
-    descriptions: [
-      "Executive meeting suite + lower engagement zone. Major global shows",
-    ],
+    descriptions: ["Executive meeting suite + lower engagement zone. Major global shows"],
     eyebrow: "Premium",
     heading: "Double-Deck Structure",
     id: "showcase-double-deck",
@@ -57,9 +50,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
   {
     cta: { href: "/contact", label: "Get Custom Booth Quote" },
-    descriptions: [
-      "Fully bespoke flagship builds for maximum commercial impact",
-    ],
+    descriptions: ["Fully bespoke flagship builds for maximum commercial impact"],
     eyebrow: "Bespoke",
     heading: "Custom Environments",
     id: "showcase-custom",
@@ -221,7 +212,10 @@ export const BOOTH_DESIGN_FAQ = {
     {
       answer: (
         <>
-          A <strong className="font-bold">custom trade show booth</strong> is designed and built specifically for your brand. A <strong className="font-bold">modular booth</strong> uses a reusable system with updated graphics between events, faster and more cost-efficient for multi-event programs. We design and build both.
+          A <strong className="font-bold">custom trade show booth</strong> is designed and built
+          specifically for your brand. A <strong className="font-bold">modular booth</strong> uses a
+          reusable system with updated graphics between events, faster and more cost-efficient for
+          multi-event programs. We design and build both.
         </>
       ),
       id: "modular-vs-custom",
@@ -254,7 +248,9 @@ export const BOOTH_DESIGN_FAQ = {
     {
       answer: (
         <>
-          GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and major regional <strong className="font-bold">industry trade shows</strong> across all sectors and markets.
+          GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover
+          Messe, and major regional <strong className="font-bold">industry trade shows</strong>{" "}
+          across all sectors and markets.
         </>
       ),
       id: "events",
@@ -337,11 +333,6 @@ export const BOOTH_DESIGN_CREATIVE_PRICING = {
 
 export const BOOTH_DESIGN_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/event-lead-generation",
-    title: "Event Lead Generation",
-  },
-  { href: "/services/global-event-solutions/custom-events", title: "Custom Events" },
-  {
     href: "/services/global-event-solutions/event-booth-rental",
     title: "Event Booth Rental",
   },
@@ -354,28 +345,32 @@ export const BOOTH_DESIGN_WHY_CHOOSE_US = {
       description:
         "We manage every detail, from design to execution, ensuring a seamless and impactful booth experience.",
       icon: "Award" as const,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=400&h=300",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=400&h=300",
       title: "360-Degree Booth Solutions",
     },
     {
       description:
         "We've showcased at top international events in Dubai, Beijing, Toronto, the USA, and Australia, including Money20/20, Adobe Summit, Sibos, WAF, ONS, and more.",
       icon: "Globe2" as const,
-      image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=400&h=300",
+      image:
+        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Global Reach & Premier Events",
     },
     {
       description:
         "Our booths incorporate the latest technology to boost engagement and enhance brand visibility.",
       icon: "TrendingUp" as const,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=300",
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Tech-Integrated Booths",
     },
     {
       description:
         "With experience across IT, finance, healthcare, BFSI, and more, we deliver customized solutions for every sector.",
       icon: "Users2" as const,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400&h=300",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400&h=300",
       title: "Industry Expertise",
     },
   ],

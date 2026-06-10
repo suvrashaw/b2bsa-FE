@@ -58,7 +58,7 @@ const BoothWhyChooseUsCard = ({
 
   return (
     <motion.article
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-brand-blue/8 bg-white transition-all duration-500 hover:border-brand-blue/30 hover:shadow-2xl"
+      className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border border-brand-blue/8 bg-white transition-all duration-500 hover:border-brand-blue/30 hover:shadow-2xl sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
       custom={index}
       initial="hidden"
       onMouseEnter={handleMouseEnter}
@@ -84,7 +84,7 @@ const BoothWhyChooseUsCard = ({
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="flex flex-col items-center p-6 text-center">
         <h3
           className={`mb-2 text-lg font-semibold transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
         >
@@ -136,7 +136,7 @@ export const BoothWhyChooseUs = ({ heading, items }: BoothWhyChooseUsProps) => {
           </div>
         </motion.div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 flex flex-wrap justify-center gap-6">
           {items.map((item, index) => (
             <BoothWhyChooseUsCard index={index} item={item} key={item.title} />
           ))}

@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
-      <Hero {...BLOG_HERO} compact />
+      <Hero {...BLOG_HERO} className="bg-brand-gray" compact />
       <ClientLogos heading="Content Categories" logos={BLOG_LOGOS} overlap={false} wrapItems />
       <ServiceCarouselSection {...BLOG_SERVICE_CAROUSEL} />
       <Blogs {...BLOG_POSTS} layout="grid" />

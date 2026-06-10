@@ -31,16 +31,6 @@ export const PERF_SERVICES = {
       image: "/images/home/services/performance-marketing-1.avif",
       title: "Paid Advertising",
     },
-    {
-      color: "bg-brand-primary",
-      description:
-        "Sponsored Content, Lead Gen Forms, Document Ads, and ABM targeting reaching decision-makers by role, company, and intent.",
-      href: "/services/linkedin-ads",
-      icon: "ExternalLink",
-      id: "linkedin",
-      image: "/images/home/services/market-intelligence.avif",
-      title: "LinkedIn Ads for B2B",
-    },
   ],
 };
 

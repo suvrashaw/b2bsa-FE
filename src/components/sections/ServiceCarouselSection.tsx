@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -78,9 +77,6 @@ export const ServiceCarouselSection = ({
   const handleMouseEnter = useCallback(() => setIsPaused(true), []);
   const handleMouseLeave = useCallback(() => setIsPaused(false), []);
 
-  const handlePrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
-  const handleNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
-
   const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
     pointerStartX.current = e.clientX;
   }, []);
@@ -121,28 +117,6 @@ export const ServiceCarouselSection = ({
         ) : null}
 
         <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          {/* Prev button */}
-          <button
-            aria-label="Previous services"
-            className="absolute top-1/2 -left-4 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
-            disabled={activeIndex === 0}
-            onClick={handlePrev}
-            type="button"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-
-          {/* Next button */}
-          <button
-            aria-label="Next services"
-            className="absolute top-1/2 -right-4 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md transition hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-30 lg:flex"
-            disabled={activeIndex >= maxIndex}
-            onClick={handleNext}
-            type="button"
-          >
-            <ArrowRight className="h-5 w-5" />
-          </button>
-
           {/* Carousel track */}
           <div
             className="overflow-hidden"

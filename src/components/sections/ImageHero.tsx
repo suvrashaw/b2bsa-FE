@@ -9,7 +9,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Heading } from "@/components/ui/Heading";
 
 export interface ImageHeroProps {
-  description: string;
+  description?: string;
+  eyebrow?: string;
   images: string[];
   poster?: string;
   primaryCta?: { href: string; label: string };
@@ -41,7 +42,14 @@ const SECONDARY_CTA_STYLE = {
   boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
   WebkitBackdropFilter: "blur(12px)",
 };
+const EYEBROW_STYLE = {
+  backdropFilter: "blur(10px)",
+  background: "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 100%)",
+  border: "1px solid rgba(255,255,255,0.22)",
+  WebkitBackdropFilter: "blur(10px)",
+};
 
+const EYEBROW_TRANSITION = { delay: 0.3, duration: 0.7 };
 const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
 const DESCRIPTION_INITIAL = { opacity: 0, y: 20 };
 const DESCRIPTION_TRANSITION = { delay: 0.7, duration: 0.8 };
@@ -76,6 +84,7 @@ const TitleLine = ({ index, line }: { index: number; line: string }) => {
 
 export const ImageHero = ({
   description,
+  eyebrow,
   images,
   poster,
   primaryCta,
@@ -140,21 +149,34 @@ export const ImageHero = ({
 
       <div className="relative z-20 container mx-auto px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
+          {eyebrow && (
+            <motion.div
+              animate={DESCRIPTION_ANIMATE}
+              className="mb-6 inline-flex items-center rounded-full px-5 py-2 text-base font-semibold text-white/90"
+              initial={DESCRIPTION_INITIAL}
+              style={EYEBROW_STYLE}
+              transition={EYEBROW_TRANSITION}
+            >
+              {eyebrow}
+            </motion.div>
+          )}
           <Heading as="h1" className="mb-8" style={H1_STYLE}>
             {titleLines.map((line, index) => (
               <TitleLine index={index} key={index} line={line} />
             ))}
           </Heading>
 
-          <motion.p
-            animate={DESCRIPTION_ANIMATE}
-            className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
-            initial={DESCRIPTION_INITIAL}
-            style={DESCRIPTION_STYLE}
-            transition={DESCRIPTION_TRANSITION}
-          >
-            {description}
-          </motion.p>
+          {description && (
+            <motion.p
+              animate={DESCRIPTION_ANIMATE}
+              className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
+              initial={DESCRIPTION_INITIAL}
+              style={DESCRIPTION_STYLE}
+              transition={DESCRIPTION_TRANSITION}
+            >
+              {description}
+            </motion.p>
+          )}
 
           <motion.div
             animate={CTA_ANIMATE}

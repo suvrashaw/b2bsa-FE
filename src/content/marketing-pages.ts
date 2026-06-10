@@ -11,20 +11,15 @@ import { CONTACT_PAGE } from "./contact";
 import { EVENTS_PAGE } from "./events";
 import { HOME_PAGE } from "./home";
 import { CORPORATE_VIDEO_PAGE } from "./services/detail/corporate-video-production";
-import { CUSTOM_EVENTS_PAGE } from "./services/detail/custom-events";
 import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
 import { BOOTH_RENTAL_PAGE } from "./services/detail/event-booth-rental";
-import { ELG_PAGE } from "./services/detail/event-lead-generation";
 import { EVENT_VIDEO_PAGE } from "./services/detail/event-video-production";
-import { INDUSTRY_EVENTS_PAGE } from "./services/detail/industry-events";
-import { LINKEDIN_ADS_PAGE } from "./services/detail/linkedin-ads-b2b";
 import { LIVE_STREAMING_PAGE } from "./services/detail/live-streaming-services";
 import { MODULAR_BOOTHS_PAGE } from "./services/detail/modular-portable-booths";
 import { PAID_ADS_PAGE } from "./services/detail/paid-advertising";
 import { SEO_PAGE } from "./services/detail/seo-services";
 import { BOOTH_BUILDER_PAGE } from "./services/detail/trade-show-booth-builder";
 import { BOOTH_DESIGN_PAGE } from "./services/detail/trade-show-booth-design";
-import { VIDEO_EDITING_PAGE } from "./services/detail/video-editing-services";
 import { GES_PAGE } from "./services/global-event-solutions";
 import { RESEARCH_PAGE } from "./services/market-research";
 import { MEDIA_PAGE } from "./services/media-production";
@@ -42,21 +37,16 @@ export const marketingPages = [
   TRADE_SHOW_CALENDAR_PAGE,
   GES_PAGE,
   BOOTH_DESIGN_PAGE,
-  ELG_PAGE,
-  INDUSTRY_EVENTS_PAGE,
-  CUSTOM_EVENTS_PAGE,
   BOOTH_RENTAL_PAGE,
   BOOTH_BUILDER_PAGE,
   MODULAR_BOOTHS_PAGE,
   MEDIA_PAGE,
   EVENT_VIDEO_PAGE,
   CORPORATE_VIDEO_PAGE,
-  VIDEO_EDITING_PAGE,
   LIVE_STREAMING_PAGE,
   PERF_PAGE,
   SEO_PAGE,
   PAID_ADS_PAGE,
-  LINKEDIN_ADS_PAGE,
   SQL_PAGE,
   RESEARCH_PAGE,
   DATA_AUGMENTATION_PAGE,

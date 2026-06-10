@@ -42,9 +42,10 @@ export const RelatedServices = ({
           {title}
         </Heading>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-6">
           {services.map((service, index) => (
             <motion.div
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               initial={RELATEDSERVICES_INITIAL}
               key={index}
               transition={serviceTransitions[index]}

@@ -39,10 +39,6 @@ const liveStreamingServicesRelatedServices = [
     href: "/services/media-production/corporate-video-production",
     title: "Corporate Video Production",
   },
-  {
-    href: "/services/media-production/video-editing-services",
-    title: "Video Editing Services",
-  },
 ];
 
 const Page = () => {

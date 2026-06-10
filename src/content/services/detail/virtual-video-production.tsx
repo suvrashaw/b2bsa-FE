@@ -102,43 +102,53 @@ export const VIRTUAL_VIDEO_DELIVERABLES = {
 export const VIRTUAL_VIDEO_CAPABILITIES = {
   phases: [
     {
-      description: "Speaker scheduling, virtual green rooms, session flow, and show timing for multi-speaker events.",
+      description:
+        "Speaker scheduling, virtual green rooms, session flow, and show timing for multi-speaker events.",
       title: "Multi-Speaker Virtual Event Management",
     },
     {
-      description: "Professional video workflows for crisp virtual sessions, recordings, and post-event distribution.",
+      description:
+        "Professional video workflows for crisp virtual sessions, recordings, and post-event distribution.",
       title: "HD and 4K Virtual Video Production",
     },
     {
-      description: "Live moderation support for intros, transitions, audience prompts, and session continuity.",
+      description:
+        "Live moderation support for intros, transitions, audience prompts, and session continuity.",
       title: "Live Event Moderation Support",
     },
     {
-      description: "Q&A, polls, chat, surveys, virtual networking, and audience participation workflows.",
+      description:
+        "Q&A, polls, chat, surveys, virtual networking, and audience participation workflows.",
       title: "Virtual Audience Engagement Tools",
     },
     {
-      description: "Custom overlays, lower thirds, title cards, branded backgrounds, and visual event identity.",
+      description:
+        "Custom overlays, lower thirds, title cards, branded backgrounds, and visual event identity.",
       title: "Branded Event Graphics and Overlays",
     },
     {
-      description: "Production support for speaker issues, streaming checks, platform disruptions, and live fixes.",
+      description:
+        "Production support for speaker issues, streaming checks, platform disruptions, and live fixes.",
       title: "Real-Time Technical Troubleshooting",
     },
     {
-      description: "Streaming support across Zoom, Microsoft Teams, LinkedIn Live, YouTube Live, Vimeo, and custom platforms.",
+      description:
+        "Streaming support across Zoom, Microsoft Teams, LinkedIn Live, YouTube Live, Vimeo, and custom platforms.",
       title: "Platform Integration and Streaming Support",
     },
     {
-      description: "Recorded sessions prepared into recaps, clips, full-session archives, and marketing assets.",
+      description:
+        "Recorded sessions prepared into recaps, clips, full-session archives, and marketing assets.",
       title: "Recording and Post-Event Editing",
     },
     {
-      description: "Production support for webinars, virtual conferences, executive sessions, and online launches.",
+      description:
+        "Production support for webinars, virtual conferences, executive sessions, and online launches.",
       title: "Webinar and Conference Production Support",
     },
     {
-      description: "Hybrid workflows that connect onsite speakers, remote speakers, and distributed audiences.",
+      description:
+        "Hybrid workflows that connect onsite speakers, remote speakers, and distributed audiences.",
       title: "Hybrid Event Production Capabilities",
     },
   ],
@@ -257,10 +267,6 @@ export const VIRTUAL_VIDEO_RELATED_SERVICES = [
   {
     href: "/services/media-production/event-physical-video-shoot",
     title: "Event Physical Video Shoot",
-  },
-  {
-    href: "/services/media-production/video-editing-services",
-    title: "Video Editing Services",
   },
 ];
 

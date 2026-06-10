@@ -72,7 +72,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "Adobe Summit 2025",
-      href: "#adobe-summit-2025",
+      href: "/case-studies/adobe-summit-2025",
       icon: "BarChart3",
       id: "adobe-summit-2025",
       image: "/images/recent-events/adobe_summit_2026.avif",
@@ -111,7 +111,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Custom Booth Design",
       client: "Money 20/20 Europe 2025",
-      href: "#money-20-20-europe-2025",
+      href: "/case-studies/money-2020-2023",
       icon: "Target",
       id: "money-20-20-europe-2025",
       image: "/images/recent-events/event_other_2.avif",
@@ -156,7 +156,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Full Event Program",
       client: "World Aviation Festival 2025",
-      href: "#world-aviation-festival-2025",
+      href: "/case-studies/waf-2025",
       icon: "Plane",
       id: "world-aviation-festival-2025",
       image: "/images/case-studies/waf.avif",
@@ -204,7 +204,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "SIBOS 2023",
-      href: "#sibos-2023",
+      href: "/case-studies/sibos-2025",
       icon: "Landmark",
       id: "sibos-2023",
       image: "/images/case-studies/sibos.avif",
@@ -251,7 +251,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Full Event Program",
       client: "Money 20/20 2023",
-      href: "#money-20-20-2023-pricing-billing",
+      href: "/case-studies/money-2020-2023",
       icon: "Coins",
       id: "money-20-20-2023-pricing-billing",
       image: "/images/recent-events/event_other_3.avif",
@@ -298,7 +298,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "SAP Sapphire 2023",
-      href: "#sap-sapphire-2023",
+      href: "/case-studies/sap-sapphire-2023",
       icon: "Sparkles",
       id: "sap-sapphire-2023",
       image: "/images/case-studies/sap.jpg",
@@ -340,7 +340,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "DistribuTECH 2023",
-      href: "#distributech-2023",
+      href: "/case-studies/distributech-2023",
       icon: "Zap",
       id: "distributech-2023",
       image: "/images/case-studies/DistribuTECH.jpg",
@@ -387,7 +387,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "NRF 2023",
-      href: "#nrf-2023",
+      href: "/case-studies/nrf-2023",
       icon: "ShoppingBag",
       id: "nrf-2023",
       image: "/images/case-studies/nrf.jpg",
@@ -429,7 +429,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Event Lead Generation",
       client: "ITC 2022",
-      href: "#itc-2022",
+      href: "/case-studies",
       icon: "Shield",
       id: "itc-2022",
       image: "/images/case-studies/cs-7.avif",
@@ -471,7 +471,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Full Event Program",
       client: "World Aviation Festival 2022",
-      href: "#world-aviation-festival-2022",
+      href: "/case-studies/waf-2025",
       icon: "Plane",
       id: "world-aviation-festival-2022",
       image: "/images/case-studies/waf.avif",
@@ -518,7 +518,7 @@ export const CASE_STUDIES_PAGE_STUDIES: CaseStudyIndexEntry[] = [
     card: {
       badge: "Full Event Program",
       client: "Annual Sales Connect",
-      href: "#annual-sales-connect-manufacturing-insurance",
+      href: "/case-studies/annual-sales-connect",
       icon: "Users",
       id: "annual-sales-connect-manufacturing-insurance",
       image: "/images/case-studies/cs-8.avif",

@@ -16,7 +16,7 @@ interface CaseStudyGridCardProps {
   image: string;
   metric: string;
   metricLabel: string;
-  onClick: () => void;
+  onClick?: () => void;
   title: string;
 }
 
@@ -30,19 +30,13 @@ export const CaseStudyGridCard = ({
   onClick,
   title,
 }: CaseStudyGridCardProps) => {
-  return (
-    <motion.button
-      aria-haspopup="dialog"
-      aria-label={`Open ${title} ${format} case study`}
-      className={cn(
-        "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-xl border-none bg-brand-charcoal text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white lg:h-[437px]",
-        colSpan
-      )}
-      onClick={onClick}
-      transition={CARD_TRANSITION}
-      type="button"
-      whileHover={CARD_WHILE_HOVER}
-    >
+  const sharedClassName = cn(
+    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-xl bg-brand-charcoal text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white lg:h-[437px]",
+    colSpan
+  );
+
+  const inner = (
+    <>
       <div className="absolute inset-0 z-0">
         <Image
           alt={title}
@@ -79,6 +73,32 @@ export const CaseStudyGridCard = ({
           </span>
         </div>
       </div>
-    </motion.button>
+    </>
+  );
+
+  if (onClick) {
+    return (
+      <motion.button
+        aria-haspopup="dialog"
+        aria-label={`Open ${title} ${format} case study`}
+        className={cn(sharedClassName, "border-none")}
+        onClick={onClick}
+        transition={CARD_TRANSITION}
+        type="button"
+        whileHover={CARD_WHILE_HOVER}
+      >
+        {inner}
+      </motion.button>
+    );
+  }
+
+  return (
+    <motion.div
+      className={sharedClassName}
+      transition={CARD_TRANSITION}
+      whileHover={CARD_WHILE_HOVER}
+    >
+      {inner}
+    </motion.div>
   );
 };

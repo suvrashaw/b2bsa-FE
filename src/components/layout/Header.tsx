@@ -7,7 +7,12 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { type NavLink, type ServiceNavGroup, serviceNavigationGroups, topNavigation } from "@/content/navigation";
+import {
+  type NavLink,
+  type ServiceNavGroup,
+  serviceNavigationGroups,
+  topNavigation,
+} from "@/content/navigation";
 import { cn } from "@/lib";
 
 const HEADER_ANIMATE = { y: 0 };
@@ -44,57 +49,65 @@ const DesktopNavLink = ({
   lightText,
   link,
   onMouseEnter,
+  onServicesClick,
 }: {
   activeDropdown: "services" | null;
   lightText: boolean;
   link: (typeof topNavigation)[number];
   onMouseEnter: (name: string) => void;
+  onServicesClick: () => void;
 }) => {
+  const isServices = link.name === "Services";
   const handleMouseEnter = useCallback(() => {
     onMouseEnter(link.name);
   }, [link.name, onMouseEnter]);
+  const handleServicesClick = useCallback(() => {
+    onServicesClick();
+  }, [onServicesClick]);
+
+  const linkClassName = cn(
+    "group relative flex items-center gap-1.5 whitespace-nowrap text-base font-semibold transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
+    lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
+  );
+  const underlineClassName = cn(
+    "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
+    isServices && activeDropdown === "services" ? "w-full" : ""
+  );
 
   return (
     <div className="group/nav-item relative flex items-center py-4">
-      <Link
-        className={cn(
-          "group relative whitespace-nowrap text-base lg:max-xl:text-sm font-semibold transition-colors flex items-center gap-1.5 lg:max-xl:gap-0.5",
-          lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
-        )}
-        href={link.href}
-        onMouseEnter={handleMouseEnter}
-      >
-        {link.name}
-        {link.name === "Services" && (
+      {isServices ? (
+        <button
+          aria-expanded={activeDropdown === "services"}
+          aria-haspopup="true"
+          className={cn(linkClassName, "appearance-none bg-transparent p-0")}
+          onClick={handleServicesClick}
+          onMouseEnter={handleMouseEnter}
+          type="button"
+        >
+          {link.name}
           <ChevronDown
             className={cn(
               "h-3.5 w-3.5 opacity-70 transition-transform duration-300",
               activeDropdown === "services" ? "rotate-180" : ""
             )}
           />
-        )}
-        <span
-          className={cn(
-            "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
-            link.name === "Services" && activeDropdown === "services" ? "w-full" : ""
-          )}
-        />
-      </Link>
+          <span className={underlineClassName} />
+        </button>
+      ) : (
+        <Link className={linkClassName} href={link.href} onMouseEnter={handleMouseEnter}>
+          {link.name}
+          <span className={underlineClassName} />
+        </Link>
+      )}
     </div>
   );
 };
 
 // Pure sub-components for Megamenu and Mobile menu to satisfy react-perf / sonarjs rules
-const NOWRAP_NAMES = new Set(["Event Experience Video Production", "Event Live Streaming Services"]);
 type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
 
-const MobileSubGroupLinks = ({
-  links,
-  onClose,
-}: {
-  links: NavLink[];
-  onClose: () => void;
-}) => (
+const MobileSubGroupLinks = ({ links, onClose }: { links: NavLink[]; onClose: () => void }) => (
   <>
     {links.map((sub) => (
       <Link
@@ -139,6 +152,18 @@ const MobileServiceGroup = ({
     onToggle(group.name);
   }, [group.name, onToggle]);
   const hasSubContent = (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
+
+  if (!hasSubContent) {
+    return (
+      <Link
+        className="flex w-full items-center px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
+        href={group.href}
+        onClick={onClose}
+      >
+        {group.name}
+      </Link>
+    );
+  }
 
   return (
     <div>
@@ -257,19 +282,10 @@ const MobileNavItem = ({
   );
 };
 
-const MegamenuSubLink = ({
-  onClose,
-  sub,
-}: {
-  onClose: () => void;
-  sub: NavLink;
-}) => {
+const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
   return (
     <Link
-      className={cn(
-        "block text-xs font-semibold text-gray-500 transition-colors hover:text-gray-900",
-        NOWRAP_NAMES.has(sub.name) && "whitespace-nowrap"
-      )}
+      className="block min-w-0 text-xs leading-snug font-semibold break-words text-gray-500 transition-colors hover:text-gray-900"
       href={sub.href}
       onClick={onClose}
     >
@@ -291,10 +307,10 @@ const MegamenuServiceGroup = ({
   const subGroups = group.groups ?? [];
 
   return (
-    <div className="p-5">
+    <div className="min-w-0 p-3 xl:p-5">
       <Link
         className={cn(
-          "mb-4 block text-sm font-black text-brand-charcoal transition-colors hover:text-brand-blue",
+          "mb-4 block text-sm font-black break-words text-brand-charcoal transition-colors hover:text-brand-blue",
           noWrapTitle && "whitespace-nowrap"
         )}
         href={group.href}
@@ -318,11 +334,13 @@ const MegamenuServiceGroup = ({
           ))}
         </div>
       ) : (
-        <div className="space-y-3">
-          {flatLinks.map((sub) => (
-            <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
-          ))}
-        </div>
+        flatLinks.length > 0 && (
+          <div className="space-y-3">
+            {flatLinks.map((sub) => (
+              <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
+            ))}
+          </div>
+        )
       )}
     </div>
   );
@@ -334,11 +352,7 @@ const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
   const handleMouseLeave = useCallback(() => setIsOpen(false), []);
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <button
         className={cn(
           "flex items-center gap-1.5 text-sm font-medium transition-colors",
@@ -349,10 +363,7 @@ const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
         <Globe className="h-4 w-4" />
         <span>EN</span>
         <ChevronDown
-          className={cn(
-            "h-3 w-3 transition-transform duration-200",
-            isOpen ? "rotate-180" : ""
-          )}
+          className={cn("h-3 w-3 transition-transform duration-200", isOpen ? "rotate-180" : "")}
         />
       </button>
 
@@ -369,9 +380,7 @@ const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
               <button
                 className={cn(
                   "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue",
-                  lang.code === "EN"
-                    ? "font-semibold text-brand-blue"
-                    : "text-brand-charcoal"
+                  lang.code === "EN" ? "font-semibold text-brand-blue" : "text-brand-charcoal"
                 )}
                 key={lang.code}
                 type="button"
@@ -427,6 +436,10 @@ export const Header = ({
     setActiveDropdown(null);
   }, []);
 
+  const handleServicesClick = useCallback(() => {
+    setActiveDropdown("services");
+  }, []);
+
   const handleMouseEnterServicesMegamenu = useCallback(() => {
     setActiveDropdown("services");
   }, []);
@@ -463,7 +476,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 lg:h-12 lg:w-44"
+          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 lg:h-[37px] lg:w-[134px]"
           href="/"
         >
           <Image
@@ -485,6 +498,7 @@ export const Header = ({
             lightText={headerLightText}
             link={link}
             onMouseEnter={handleMouseEnterLink}
+            onServicesClick={handleServicesClick}
           />
         ))}
       </nav>
@@ -510,41 +524,36 @@ export const Header = ({
         </div>
       </div>
 
-      {/* Desktop Full-Bleed Megamenus */}
+      {/* Desktop Megamenus */}
       <AnimatePresence>
         {activeDropdown === "services" && (
           <motion.div
             animate={MEGAMENU_ANIMATE}
-            className="absolute top-full right-0 left-0 z-[100] w-full bg-white/95 p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md"
+            className="absolute inset-x-0 top-full z-[100] bg-white/95 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md xl:py-8"
             exit={MEGAMENU_EXIT}
             initial={MEGAMENU_INITIAL}
             onMouseEnter={handleMouseEnterServicesMegamenu}
             transition={MEGAMENU_TRANSITION}
           >
-            <div className="mx-auto max-w-7xl px-8">
-              <div className="grid grid-cols-5 gap-6">
-                {/* Global Event Solutions, spans 2 columns, internally 2-column sub-groups */}
-                <div className="col-span-2">
+            <div className="mx-auto w-full max-w-7xl px-8 lg:max-xl:px-10 xl:px-12">
+              <div className="grid grid-cols-[minmax(0,2.25fr)_minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,1.25fr)] gap-4 xl:gap-8">
+                <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
                     onClose={handleCloseMegamenu}
                   />
                 </div>
-                {/* Media Production */}
                 <MegamenuServiceGroup
                   group={serviceNavigationGroups[1]}
                   onClose={handleCloseMegamenu}
                 />
-                {/* Performance Marketing */}
                 <MegamenuServiceGroup
                   group={serviceNavigationGroups[3]}
                   onClose={handleCloseMegamenu}
                 />
-                {/* Sales Qualified Lead Generation + Market Research + HPMI, stacked */}
-                <div>
+                <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[2]}
-                    noWrapTitle
                     onClose={handleCloseMegamenu}
                   />
                   <div className="mt-1">

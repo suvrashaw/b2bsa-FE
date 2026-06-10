@@ -97,7 +97,7 @@ export const Hero = ({
   const lightText = textColor === "white";
 
   return (
-    <section className={`relative flex ${compact ? "min-h-[50vh]" : "min-h-[90vh]"} items-center overflow-hidden pt-24 ${className ?? "bg-white"}`}>
+    <section className={`relative flex ${compact ? "min-h-[50vh]" : "min-h-[90vh]"} items-center overflow-hidden pt-24 ${className ?? "bg-brand-gray"}`}>
       {/* Background gradient only shown when image is present */}
       {hasImage ? <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-brand-gray/20" /> : null}
 

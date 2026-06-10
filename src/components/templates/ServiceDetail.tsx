@@ -13,7 +13,7 @@ import { Header } from "@/components/layout/Header";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { CreativePricing } from "@/components/sections/CreativePricing";
-import { CTABanner } from "@/components/sections/CTABanner";
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ImageHero, type ImageHeroProps } from "@/components/sections/ImageHero";
@@ -104,18 +104,9 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Request a Data Augmentation Demo" },
     secondaryCta: { href: "/contact", label: "Upload a Sample List" },
   },
-  "/services/global-event-solutions/custom-events": {
-    primaryCta: { href: "/contact", label: "Design Your Custom Event" },
-  },
   "/services/global-event-solutions/event-booth-rental": {
     primaryCta: { href: "/contact", label: "Check Rental Availability" },
     secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
-  },
-  "/services/global-event-solutions/event-lead-generation": {
-    primaryCta: { href: "/contact", label: "Build Your Lead Generation System" },
-  },
-  "/services/global-event-solutions/industry-events": {
-    primaryCta: { href: "/contact", label: "Build Your Industry Event Strategy" },
   },
   "/services/global-event-solutions/modular-portable-booths": {
     primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
@@ -127,10 +118,6 @@ const serviceHeroCtasByPath: Record<
     primaryCta: { href: "/contact", label: "Request a Design Quote" },
     secondaryCta: { href: "/case-studies", label: "View Booth Portfolio" },
   },
-  "/services/linkedin-ads": {
-    primaryCta: { href: "/contact", label: "Request a LinkedIn Ads Audit" },
-    secondaryCta: { href: "/contact", label: "Request a Campaign Strategy" },
-  },
   "/services/media-production/corporate-video-production": {
     primaryCta: { href: "/contact", label: "Request a Corporate Video Quote" },
   },
@@ -139,9 +126,6 @@ const serviceHeroCtasByPath: Record<
   },
   "/services/media-production/live-streaming-services": {
     primaryCta: { href: "/contact", label: "Get a Live Stream Quote" },
-  },
-  "/services/media-production/video-editing-services": {
-    primaryCta: { href: "/contact", label: "Send Us Your Footage" },
   },
   "/services/paid-advertising": {
     primaryCta: { href: "/contact", label: "Request a Paid Media Audit" },
@@ -312,7 +296,9 @@ export const ServiceDetail = ({
         />
       )}
 
-      {stats && <WhoWeAre description={stats.description} items={stats.items} title={stats.title} />}
+      {stats && (
+        <WhoWeAre description={stats.description} items={stats.items} title={stats.title} />
+      )}
 
       {closingSections ?? (
         <>

@@ -30,8 +30,8 @@ export const ABOUT_ORIGIN_TIMELINE = {
           <p>
             B2B Sales Arrow was founded to solve a problem we encountered repeatedly across
             enterprise marketing engagements: significant investment in events, campaigns, and
-            market presence, but fragmented execution, poor measurement, and a persistent
-            disconnect between marketing activity and sales outcomes.
+            market presence, but fragmented execution, poor measurement, and a persistent disconnect
+            between marketing activity and sales outcomes.
           </p>
         </div>
       ),
@@ -234,12 +234,6 @@ export const ABOUT_SIGNATURE_SERVICES = {
       id: "media-production-services",
       image: "/images/home/services/media-production-1.avif",
       title: "Media production services",
-    },
-    {
-      href: "/services/sales-qualified-lead-generation/active-prospecting-services",
-      id: "active-prospecting",
-      image: "/images/home/services/sql-generation-revised.avif",
-      title: "Active Prospecting",
     },
     {
       href: "/services/global-event-solutions/event-branding-solutions",

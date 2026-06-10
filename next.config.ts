@@ -33,12 +33,12 @@ const nextConfig: NextConfig = {
         source: "/services/performance-marketing/paid-advertising",
       },
       {
-        destination: "/services/linkedin-ads",
+        destination: "/services/performance-marketing",
         permanent: true,
         source: "/services/performance-marketing/linkedin-ads",
       },
       {
-        destination: "/services/linkedin-ads",
+        destination: "/services/performance-marketing",
         permanent: true,
         source: "/services/performance-marketing/linkedin-ads-b2b",
       },

@@ -12,24 +12,24 @@ import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 export interface ContactCinematicCTAProps {
-  backgroundImage: {
+  backgroundImage?: {
     alt: string;
     src: string;
   };
-  badge: string;
+  badge?: string;
   description: string;
-  headingLines: [string, string];
+  headingLines: [string, string?];
   primaryCta: {
     href: string;
     label: string;
     opensModal?: boolean;
   };
-  proofLabel: string;
-  proofLogos: readonly {
+  proofLabel?: string;
+  proofLogos?: readonly {
     alt: string;
     src: string;
   }[];
-  secondaryCta: {
+  secondaryCta?: {
     href: string;
     label: string;
   };
@@ -140,13 +140,15 @@ export const ContactCinematicCTA = ({
       onMouseMove={handlePointerMove}
     >
       <div className="absolute inset-0">
-        <Image
-          alt={backgroundImage.alt}
-          className="object-cover"
-          fill
-          sizes="100vw"
-          src={backgroundImage.src}
-        />
+        {backgroundImage ? (
+          <Image
+            alt={backgroundImage.alt}
+            className="object-cover"
+            fill
+            sizes="100vw"
+            src={backgroundImage.src}
+          />
+        ) : null}
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(18,38,54,0.94),rgba(20,96,145,0.9),rgba(75,192,217,0.78))]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_40%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.08),transparent_45%)]" />
       </div>
@@ -196,18 +198,20 @@ export const ContactCinematicCTA = ({
 
       <div className="relative z-10 container mx-auto px-8">
         <div className="mx-auto max-w-5xl text-center">
-          <motion.div
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-sm font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md"
-            initial="hidden"
-            variants={ctaBadgeVariants}
-            viewport={ctaViewport}
-            whileInView="visible"
-          >
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white">
-              <span className="absolute inset-0 animate-ping rounded-full bg-white/80" />
-            </span>
-            {badge}
-          </motion.div>
+          {badge ? (
+            <motion.div
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-sm font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md"
+              initial="hidden"
+              variants={ctaBadgeVariants}
+              viewport={ctaViewport}
+              whileInView="visible"
+            >
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white">
+                <span className="absolute inset-0 animate-ping rounded-full bg-white/80" />
+              </span>
+              {badge}
+            </motion.div>
+          ) : null}
 
           <motion.div
             custom={0.08}
@@ -221,7 +225,7 @@ export const ContactCinematicCTA = ({
               className="mt-8 text-white"
             >
               <span className="block text-white/80">{headingLines[0]}</span>
-              <span className="mt-2 block text-white">{headingLines[1]}</span>
+              {headingLines[1] ? <span className="mt-2 block text-white">{headingLines[1]}</span> : null}
             </Heading>
           </motion.div>
 
@@ -260,36 +264,38 @@ export const ContactCinematicCTA = ({
               </Button>
             )}
 
-            <Button asChild size="lg" variant="white-outline">
-              <Link href={secondaryCta.href}>
-                <Mail className="mr-2 h-5 w-5" />
-                {secondaryCta.label}
-              </Link>
-            </Button>
+            {secondaryCta ? (
+              <Button asChild size="lg" variant="white-outline">
+                <Link href={secondaryCta.href}>
+                  <Mail className="mr-2 h-5 w-5" />
+                  {secondaryCta.label}
+                </Link>
+              </Button>
+            ) : null}
           </motion.div>
 
-          <motion.div
-            className="mt-12 flex items-center justify-center gap-4"
-            custom={0.32}
-            initial="hidden"
-            variants={ctaRevealVariants}
-            viewport={ctaViewport}
-            whileInView="visible"
-          >
-            <div className="flex -space-x-3">
-              {proofLogos.map((logo) => (
-                <div
-                  className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
-                  key={logo.alt}
-                >
-                  <Image alt={logo.alt} className="object-cover" height={40} src={logo.src} width={40} />
-                </div>
-              ))}
-            </div>
-            <p className="text-sm font-medium text-white/80">
-              {proofLabel}
-            </p>
-          </motion.div>
+          {proofLogos && proofLogos.length > 0 ? (
+            <motion.div
+              className="mt-12 flex items-center justify-center gap-4"
+              custom={0.32}
+              initial="hidden"
+              variants={ctaRevealVariants}
+              viewport={ctaViewport}
+              whileInView="visible"
+            >
+              <div className="flex -space-x-3">
+                {proofLogos.map((logo) => (
+                  <div
+                    className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
+                    key={logo.alt}
+                  >
+                    <Image alt={logo.alt} className="object-cover" height={40} src={logo.src} width={40} />
+                  </div>
+                ))}
+              </div>
+              {proofLabel ? <p className="text-sm font-medium text-white/80">{proofLabel}</p> : null}
+            </motion.div>
+          ) : null}
 
         </div>
       </div>
