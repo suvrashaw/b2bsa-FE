@@ -1,5 +1,6 @@
 "use client";
 
+import { CultureReasonCard } from "@/components/items/CultureReasonCard";
 import { Heading } from "@/components/ui/Heading";
 import { ZoomParallax } from "@/components/ui/ZoomParallax";
 import { cn } from "@/lib";
@@ -52,14 +53,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
         </p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
           {data.reasons.map((reason) => (
-            <div className="border-l border-brand-blue/30 pl-5" key={reason.id}>
-              <h3 className="mb-3 font-heading text-xl font-bold text-brand-charcoal">
-                {reason.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
-                {reason.description}
-              </p>
-            </div>
+            <CultureReasonCard key={reason.id} reason={reason} />
           ))}
         </div>
       </div>

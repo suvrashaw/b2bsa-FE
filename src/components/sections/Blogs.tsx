@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
 
-import { BlogCard, BlogCardGrid } from "@/components/ui/BlogCard";
+import { BlogCard, BlogCardGrid } from "@/components/items/BlogCard";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";

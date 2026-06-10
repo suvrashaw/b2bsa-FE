@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { BlogCardGrid } from "@/components/ui/BlogCard";
 import { BlogSidebarSubscribe } from "@/components/ui/BlogSidebarSubscribe";
 import { BlogSidebarTrending } from "@/components/ui/BlogSidebarTrending";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";

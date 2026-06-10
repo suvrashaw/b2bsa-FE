@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { FAQCard } from "@/components/cards/FAQCard";
+import { FAQCard } from "@/components/items/FAQCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home";

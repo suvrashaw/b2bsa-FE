@@ -6,9 +6,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
+import { RentalBlogCard } from "@/components/items/RentalBlogCard";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
-import { RentalBlogCard } from "@/components/ui/RentalBlogCard";
 import { cn } from "@/lib";
 
 export interface RentalBlogsSectionProps {

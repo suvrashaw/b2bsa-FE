@@ -2,20 +2,20 @@
 
 import {
   ArrowUpDown,
-  Building2,
-  CalendarDays,
   Grid2X2,
   List,
-  MapPin,
   RotateCcw,
   Search,
-  Users,
 } from "lucide-react";
-import Link from "next/link";
 import { type ChangeEvent, type ReactNode, useCallback, useMemo, useState } from "react";
 
 import type { CalendarTradeShow } from "@/content/trade-show-calendar";
 
+import {
+  formatLocation,
+  TradeShowCard,
+  TradeShowListItem,
+} from "@/components/items/TradeShowCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib";
 
@@ -59,15 +59,6 @@ type SortDirection = "asc" | "desc";
 type SortField = (typeof SORT_OPTIONS)[number]["value"];
 type ViewMode = (typeof VIEW_MODES)[number]["value"];
 
-const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
-  day: "numeric",
-  month: "short",
-  timeZone: "UTC",
-  year: "numeric",
-});
-
-const NUMBER_FORMAT = new Intl.NumberFormat("en-US");
-
 const CONTROL_PANEL_CLASS =
   "rounded-lg border border-gray-200 bg-white p-4 shadow-sm shadow-gray-200/40";
 
@@ -81,23 +72,6 @@ const addMonths = (date: Date, months: number) => {
   nextDate.setUTCMonth(nextDate.getUTCMonth() + months);
   return nextDate;
 };
-
-const formatDateRange = (startDate: string, endDate: string) => {
-  const start = toDate(startDate);
-  const end = toDate(endDate);
-
-  if (startDate === endDate) {
-    return DATE_FORMAT.format(start);
-  }
-
-  return `${DATE_FORMAT.format(start)} - ${DATE_FORMAT.format(end)}`;
-};
-
-const formatLocation = ({ city, country, region }: CalendarTradeShow) =>
-  [city, region, country].filter(Boolean).join(", ");
-
-const formatCompactLocation = ({ city, country, region }: CalendarTradeShow) =>
-  [city, region].filter(Boolean).join(", ") || country;
 
 const sortItems = <T,>(items: T[], compare: (first: T, second: T) => number) => {
   const sortedItems = [...items];
@@ -271,96 +245,6 @@ const NumberFilter = ({
       value={value}
     />
   </div>
-);
-
-const EventMeta = ({
-  icon: Icon,
-  label,
-}: {
-  icon: typeof CalendarDays;
-  label: string;
-}) => (
-  <div className="flex items-start gap-2 text-sm font-medium text-brand-charcoal/75">
-    <Icon className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-    <span>{label}</span>
-  </div>
-);
-
-const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
-  <article className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
-    <div className="mb-5 flex items-start justify-between gap-4">
-      <div>
-        <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
-          {show.industry}
-        </p>
-        <h3 className="mt-2 font-heading text-2xl leading-tight font-bold text-brand-charcoal">
-          {show.name}
-        </h3>
-      </div>
-    </div>
-
-    <p className="mb-5 flex-1 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
-
-    <div className="space-y-3 border-y border-gray-100 py-4">
-      <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
-      <EventMeta icon={MapPin} label={`${show.venue}, ${formatLocation(show)}`} />
-      <EventMeta
-        icon={Users}
-        label={`${NUMBER_FORMAT.format(show.attendeeCount)} attendees`}
-      />
-      <EventMeta
-        icon={Building2}
-        label={`${NUMBER_FORMAT.format(show.exhibitorCount)} exhibitors`}
-      />
-    </div>
-
-    <div className="mt-5 flex w-full">
-      <Button asChild className="w-full" size="sm" variant="secondary">
-        <Link href="/contact">Let&apos;s Talk</Link>
-      </Button>
-    </div>
-  </article>
-);
-
-const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
-  <article className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
-    <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr_0.8fr_auto] lg:items-center">
-      <div>
-        <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
-          {show.industry}
-        </p>
-        <h3 className="mt-2 font-heading text-2xl font-bold text-brand-charcoal">{show.name}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
-      </div>
-      <div className="space-y-2">
-        <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
-        <EventMeta icon={MapPin} label={`${show.venue}, ${formatCompactLocation(show)}`} />
-      </div>
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
-        <div>
-          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
-            Attendees
-          </p>
-          <p className="font-bold text-brand-charcoal">
-            {NUMBER_FORMAT.format(show.attendeeCount)}
-          </p>
-        </div>
-        <div>
-          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
-            Exhibitors
-          </p>
-          <p className="font-bold text-brand-charcoal">
-            {NUMBER_FORMAT.format(show.exhibitorCount)}
-          </p>
-        </div>
-      </div>
-      <div className="mt-2 flex w-full lg:mt-0 lg:justify-end">
-        <Button asChild className="w-full lg:w-auto" size="sm" variant="secondary">
-          <Link href="/contact">Let&apos;s Talk</Link>
-        </Button>
-      </div>
-    </div>
-  </article>
 );
 
 export const TradeShowCalendarDirectory = ({

@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 import type { CaseStudyIndexEntry } from "@/types/case-studies";
 
-import { CaseStudyGridCard } from "@/components/cards/CaseStudyGridCard";
+import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
 import { Heading } from "@/components/ui/Heading";
 
 const DEFAULT_GRID_SPANS = [

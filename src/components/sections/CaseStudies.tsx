@@ -8,8 +8,8 @@ import { useCallback, useState } from "react";
 
 import type { CaseStudyCardData } from "@/types/case-studies";
 
+import { CaseStudyShowcaseCard } from "@/components/items/CaseStudyShowcaseCard";
 import { Button } from "@/components/ui/Button";
-import { CaseStudyShowcaseCard } from "@/components/ui/CaseStudyShowcaseCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import {

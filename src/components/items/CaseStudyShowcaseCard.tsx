@@ -8,10 +8,9 @@ import { useMemo } from "react";
 
 import type { CaseStudyCardData } from "@/types/case-studies";
 
+import { Button } from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
-
-import { Button } from "./Button";
-import Icon from "./Icon";
 
 interface CaseStudyShowcaseCardProps {
   active: boolean;
