@@ -2,20 +2,20 @@ import type { TextareaHTMLAttributes } from "react";
 
 import { cn } from "@/lib";
 
-export interface TextareaInputProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface FormTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: string;
   id: string;
   label: string;
 }
 
-export const TextareaInput = ({
+export const FormTextarea = ({
   className,
   error,
   id,
   label,
   rows = 4,
   ...props
-}: TextareaInputProps) => {
+}: FormTextareaProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>

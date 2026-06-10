@@ -21,36 +21,20 @@ export const ABOUT_HERO = {
 };
 
 export const ABOUT_ORIGIN_TIMELINE = {
-  description: "The problem, the model, and the operating standard behind B2B Sales Arrow.",
   heading: "How B2B Sales Arrow was Built",
-  items: [
+  phases: [
     {
-      content: (
-        <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
-          <p>
-            B2B Sales Arrow was founded to solve a problem we encountered repeatedly across
-            enterprise marketing engagements: significant investment in events, campaigns, and
-            market presence, but fragmented execution, poor measurement, and a persistent disconnect
-            between marketing activity and sales outcomes.
-          </p>
-        </div>
-      ),
+      description:
+        "B2B Sales Arrow was founded to solve a problem we encountered repeatedly across enterprise marketing engagements: significant investment in events, campaigns, and market presence, but fragmented execution, poor measurement, and a persistent disconnect between marketing activity and sales outcomes.",
       title: "Fragmented Execution",
     },
     {
-      content: (
-        <div className="prose prose-sm md:prose-base max-w-none text-brand-charcoal/80">
-          <p>
-            We built a model where event solutions, video production, performance marketing, and
-            market research work together under one accountable team, and where every program is
-            designed from the brief stage with commercial outcomes as the primary objective. The
-            numbers below reflect what that model produces.
-          </p>
-        </div>
-      ),
+      description:
+        "We built a model where event solutions, video production, performance marketing, and market research work together under one accountable team, and where every program is designed from the brief stage with commercial outcomes as the primary objective. The numbers below reflect what that model produces.",
       title: "One Accountable Model",
     },
   ],
+  subtitle: "The problem, the model, and the operating standard behind B2B Sales Arrow.",
 };
 
 export const ABOUT_VISION_MISSION = {

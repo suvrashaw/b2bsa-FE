@@ -6,7 +6,7 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { Timeline } from "@/components/ui/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   CONTACT_FORM,
   CONTACT_NEXT_STEPS,
@@ -28,10 +28,9 @@ const Page = () => {
       <CinematicSequence />
       <ClientLogos />
       <ContactUs {...CONTACT_FORM} />
-      <Timeline
-        data={CONTACT_NEXT_STEPS.items}
-        description={CONTACT_NEXT_STEPS.description}
+      <ProcessTimeline
         heading={CONTACT_NEXT_STEPS.heading}
+        phases={CONTACT_NEXT_STEPS.phases}
       />
       <ContactCinematicCTA
         backgroundImage={CINEMATIC_BG}

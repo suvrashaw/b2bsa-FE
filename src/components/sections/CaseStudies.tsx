@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
-import type { CaseStudyCardData } from "@/types/case-studies";
+import type { CaseStudyCardData } from "@/content/case-studies";
 
-import { CaseStudyShowcaseCard } from "@/components/items/CaseStudyShowcaseCard";
+import { CaseStudyItem } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
@@ -18,7 +18,7 @@ import {
   type CaseStudyItem as HomeCaseStudyItem,
 } from "@/content/home";
 
-export type CaseStudyItem = {
+export type CaseStudyEntry = {
   href?: string;
   icon?: string;
   id?: string;
@@ -39,7 +39,7 @@ const CaseStudyCard = ({
 }) => {
   const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
   return (
-    <CaseStudyShowcaseCard
+    <CaseStudyItem
       active={active}
       ctaLabel={ctaLabel}
       item={item}
@@ -49,15 +49,15 @@ const CaseStudyCard = ({
 };
 
 export interface CaseStudiesProps {
-  caseStudies?: CaseStudyItem[];
+  caseStudies?: CaseStudyEntry[];
   content?: CaseStudiesContent;
   ctaLabel?: CaseStudiesContent["ctaLabel"];
   description?: string;
   eyebrow?: CaseStudiesContent["eyebrow"];
-  getStudyHref?: (study: CaseStudyItem) => string;
+  getStudyHref?: (study: CaseStudyEntry) => string;
   heading?: ReactNode;
   headingHighlight?: string;
-  items?: CaseStudyItem[];
+  items?: CaseStudyEntry[];
   viewAllHref?: string;
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
 }
@@ -145,7 +145,7 @@ export const CaseStudies = ({
   );
 };
 
-const createCaseStudyId = (study: CaseStudyItem, index: number) => {
+const createCaseStudyId = (study: CaseStudyEntry, index: number) => {
   return `${study.client ?? study.title}-${study.title}-${index}`
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")

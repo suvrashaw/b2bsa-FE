@@ -6,9 +6,9 @@ import { useCallback, useState } from "react";
 
 import type { ContactContent } from "@/content/home";
 
-import { SelectInput } from "@/components/forms/SelectInput";
-import { TextareaInput } from "@/components/forms/TextareaInput";
-import { TextInput } from "@/components/forms/TextInput";
+import { FormSelect } from "@/components/forms/FormSelect";
+import { FormTextarea } from "@/components/forms/FormTextarea";
+import { FormInput } from "@/components/forms/FormInput";
 import { Button } from "@/components/ui/Button";
 
 export interface ContactFormProps {
@@ -35,7 +35,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
     <form className={className} onSubmit={handleSubmit}>
       <div className="space-y-6">
         <div className={`grid gap-6 ${form.lastNameLabel ? "grid-cols-2" : "grid-cols-1"}`}>
-          <TextInput
+          <FormInput
             id="contact-first-name"
             label={form.firstNameLabel}
             placeholder={form.firstNamePlaceholder}
@@ -43,7 +43,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
             type="text"
           />
           {form.lastNameLabel && (
-            <TextInput
+            <FormInput
               id="contact-last-name"
               label={form.lastNameLabel}
               placeholder={form.lastNamePlaceholder}
@@ -55,7 +55,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         {(form.companyLabel || form.jobTitleLabel) && (
           <div className="grid grid-cols-2 gap-6">
             {form.companyLabel && (
-              <TextInput
+              <FormInput
                 id="contact-company"
                 label={form.companyLabel}
                 placeholder={form.companyPlaceholder}
@@ -63,7 +63,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
               />
             )}
             {form.jobTitleLabel && (
-              <TextInput
+              <FormInput
                 id="contact-job-title"
                 label={form.jobTitleLabel}
                 placeholder={form.jobTitlePlaceholder}
@@ -74,7 +74,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
 
         <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-2" : "grid-cols-1"}`}>
-          <TextInput
+          <FormInput
             id="contact-email"
             label={form.emailLabel}
             placeholder={form.emailPlaceholder}
@@ -83,7 +83,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           />
 
           {form.phoneLabel && (
-            <TextInput
+            <FormInput
               id="contact-phone"
               label={form.phoneLabel}
               placeholder={form.phonePlaceholder}
@@ -95,7 +95,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         {(form.countryLabel || form.timelineLabel) && (
           <div className="grid grid-cols-2 gap-6">
             {form.countryLabel && (
-              <TextInput
+              <FormInput
                 id="contact-country"
                 label={form.countryLabel}
                 placeholder={form.countryPlaceholder}
@@ -103,7 +103,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
               />
             )}
             {form.timelineLabel && (
-              <TextInput
+              <FormInput
                 id="contact-timeline"
                 label={form.timelineLabel}
                 placeholder={form.timelinePlaceholder}
@@ -114,7 +114,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
 
         {form.serviceLabel && form.serviceOptions && (
-          <SelectInput
+          <FormSelect
             id="contact-service"
             label={form.serviceLabel}
             options={form.serviceOptions}
@@ -123,7 +123,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
 
         {form.eventLabel && (
-          <TextInput
+          <FormInput
             id="contact-event"
             label={form.eventLabel}
             placeholder={form.eventPlaceholder}
@@ -132,7 +132,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
 
         {form.messageLabel && (
-          <TextareaInput
+          <FormTextarea
             id="contact-message"
             label={form.messageLabel}
             placeholder={form.messagePlaceholder}

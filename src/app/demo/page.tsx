@@ -35,10 +35,13 @@ import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
 import { ServiceCarouselSection } from "@/components/sections/ServiceCarouselSection";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
+import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { TextHero } from "@/components/sections/TextHero";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { BLOG_HERO } from "@/content/blog";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 import { TRADE_SHOW_CALENDAR_EVENTS, TRADE_SHOW_CALENDAR_HERO } from "@/content/trade-show-calendar";
@@ -290,6 +293,18 @@ const CONTACT_CINEMATIC_PROPS = {
   secondaryCta: { href: "/case-studies", label: "See Case Studies" },
 };
 
+// ─── Spotlight ───────────────────────────────────────────────────────────────
+
+const SPOTLIGHT_DEMO_PROPS = {
+  ctaHref: "/case-studies",
+  ctaLabel: "See Case Studies",
+  description: "Most exhibitors measure success by business cards collected. We measure it by qualified pipeline generated within 30 days of event close.",
+  imageUrl: IMG_EV1,
+  label: "Our Approach",
+  titleLine1: "Event ROI That",
+  titleLine2: "You Can Measure",
+};
+
 // ─── BlogsCarousel ──────────────────────────────────────────────────────
 
 const DEMO_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 4) as SharedBlogPost[];
@@ -352,8 +367,10 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ServiceCarouselSection: [{ href: "/blogs", label: "Blogs" }],
   ServiceHero: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   ServicesStack: [{ href: "/", label: "Home" }, { href: "/thank-you", label: "Thank You" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
+  Spotlight: [{ href: "/case-studies", label: "Case Studies" }, { href: "/services/global-event-solutions", label: "Service Hub" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   StickyScroll: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
   Testimonials: [{ href: "/", label: "Home" }],
+  TextHero: [{ href: "/blogs", label: "Blogs" }],
   TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
   WhoWeAre: [{ href: "/", label: "Home" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }, { href: "/services/global-event-solutions", label: "Service Hub" }],
 };
@@ -427,6 +444,10 @@ export default function DemoPage() {
         title="World Aviation Festival 2025"
       />
 
+      {/* 02 – TextHero */}
+      <DemoLabel name="TextHero" />
+      <TextHero {...BLOG_HERO} />
+
       {/* 03 – ServiceHero */}
       <DemoLabel name="ServiceHero" />
       <ServiceHero
@@ -436,7 +457,13 @@ export default function DemoPage() {
         title="Active Prospecting"
       />
 
-      {/* 04 – CinematicSequence */}
+      {/* 04 – Spotlight */}
+      <DemoLabel name="Spotlight" />
+      <div className="px-8 py-20">
+        <Spotlight {...SPOTLIGHT_DEMO_PROPS} />
+      </div>
+
+      {/* 05 – CinematicSequence */}
       <DemoLabel name="CinematicSequence" />
       <CinematicSequence />
 

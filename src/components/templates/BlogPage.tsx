@@ -1,14 +1,137 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
 
 import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { BlogSidebarSubscribe } from "@/components/ui/BlogSidebarSubscribe";
-import { BlogSidebarTrending } from "@/components/ui/BlogSidebarTrending";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
+import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
-export interface BlogPostProps {
+// ─── BlogSidebarTrending ─────────────────────────────────────────────────────
+
+interface BlogSidebarTrendingProps {
+  currentId: string;
+}
+
+const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
+  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(0, 4);
+
+  return (
+    <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+      <div className="bg-brand-blue px-4 py-3">
+        <h2 className="text-sm font-bold tracking-widest text-white uppercase">Trending Posts</h2>
+      </div>
+      <div className="divide-y divide-gray-100">
+        {trendingPosts.map((post) => (
+          <Link
+            className="group flex gap-3 p-4 transition-colors hover:bg-brand-gray"
+            href={post.href}
+            key={post.id}
+          >
+            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-100">
+              <Image
+                alt={post.title}
+                className="object-cover"
+                fill
+                sizes="64px"
+                src={post.image}
+              />
+            </div>
+            <div className="min-w-0">
+              <h3 className="line-clamp-2 text-sm leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">
+                {post.title}
+              </h3>
+              {post.date && <p className="mt-2 text-xs font-medium text-gray-500">{post.date}</p>}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+// ─── BlogSidebarSubscribe ────────────────────────────────────────────────────
+
+const BlogSidebarSubscribe = () => {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = useCallback(
+    async (event: { preventDefault: () => void }) => {
+      event.preventDefault();
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      setLoading(false);
+      router.push("/thank-you");
+    },
+    [router]
+  );
+
+  return (
+    <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+      <div className="bg-gradient-to-r from-brand-blue to-brand-cyan px-4 py-4">
+        <p className="text-sm font-bold tracking-widest text-white uppercase">
+          Stay Ahead of the Market
+        </p>
+      </div>
+      <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
+        <div>
+          <h2 className="font-heading text-2xl leading-tight font-bold text-brand-charcoal">
+            Don&apos;t Just Scroll!
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-gray-600">
+            <span className="font-bold text-brand-blue">Subscribe Now</span> to Stay in the Loop!
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          <label className="sr-only" htmlFor="blog-subscribe-email">
+            Work Email
+          </label>
+          <input
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+            id="blog-subscribe-email"
+            placeholder="Work email"
+            required
+            type="email"
+          />
+
+          <label className="sr-only" htmlFor="blog-subscribe-industry">
+            Industry
+          </label>
+          <select
+            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
+            id="blog-subscribe-industry"
+            required
+          >
+            <option value="">Select industry</option>
+            {GLOBAL_INDUSTRY_SERVICES.map((service) => (
+              <option key={service.id} value={service.id}>
+                {service.title}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <button
+          className="w-full rounded-[4px] bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
+          disabled={loading}
+          type="submit"
+        >
+          {loading ? "Subscribing..." : "Subscribe"}
+        </button>
+      </form>
+    </section>
+  );
+};
+
+// ─── Blog helpers ────────────────────────────────────────────────────────────
+
+export interface BlogPageProps {
   post: SharedBlogPost;
 }
 
@@ -117,7 +240,9 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
   }
 };
 
-export const BlogPost = ({ post }: BlogPostProps) => {
+// ─── BlogPage ────────────────────────────────────────────────────────────────
+
+export const BlogPage = ({ post }: BlogPageProps) => {
   const blocks = post.body ?? [];
   const relatedPosts = SHARED_BLOG_POSTS.filter((blog) => blog.id !== post.id).slice(0, 3);
   const readTime = getReadTime(blocks);

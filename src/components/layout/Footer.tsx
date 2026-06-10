@@ -42,7 +42,7 @@ const FOOTER_SCROLL_OFFSET: ["start start", "end end"] = ["start start", "end en
 const EMPTY_NAV_LINKS: NavLink[] = [];
 
 const FooterCommandMap = dynamic(
-  () => import("@/components/layout/FooterCommandMap").then((module) => module.FooterCommandMap),
+  () => import("@/components/ui/FooterCommandMap").then((module) => module.FooterCommandMap),
   { ssr: false }
 );
 

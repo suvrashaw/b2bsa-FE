@@ -11,7 +11,7 @@ import { Culture } from "@/components/sections/Culture";
 import { Events } from "@/components/sections/Events";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { ImageHero } from "@/components/sections/ImageHero";
-import { Timeline } from "@/components/ui/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   ABOUT_CORE_VALUES,
   ABOUT_FOUNDER_STORY,
@@ -46,10 +46,10 @@ const Page = () => {
         title={"We Are the Growth Partner\nYour Enterprise Deserves"}
       />
       <AboutVisionMission data={ABOUT_VISION_MISSION} />
-      <Timeline
-        data={ABOUT_ORIGIN_TIMELINE.items}
-        description={ABOUT_ORIGIN_TIMELINE.description}
+      <ProcessTimeline
         heading={ABOUT_ORIGIN_TIMELINE.heading}
+        phases={ABOUT_ORIGIN_TIMELINE.phases}
+        subtitle={ABOUT_ORIGIN_TIMELINE.subtitle}
       />
       <AboutCoreValues data={ABOUT_CORE_VALUES} />
       <AboutSignatureServices data={ABOUT_SIGNATURE_SERVICES} />

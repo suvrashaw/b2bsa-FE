@@ -2,13 +2,13 @@ import type { InputHTMLAttributes } from "react";
 
 import { cn } from "@/lib";
 
-export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string;
   id: string;
   label: string;
 }
 
-export const TextInput = ({ className, error, id, label, ...props }: TextInputProps) => {
+export const FormInput = ({ className, error, id, label, ...props }: FormInputProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>

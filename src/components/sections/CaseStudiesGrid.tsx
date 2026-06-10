@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useCallback } from "react";
 
-import type { CaseStudyIndexEntry } from "@/types/case-studies";
+import type { CaseStudyIndexEntry } from "@/content/case-studies";
 
-import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
+import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Heading } from "@/components/ui/Heading";
 
 const DEFAULT_GRID_SPANS = [
@@ -23,7 +23,6 @@ interface CaseStudiesGridProps {
   emptyStateTitle: string;
   filters: readonly string[];
   onFilterChange: (filter: string) => void;
-  onSelectStudy: (study: CaseStudyIndexEntry) => void;
   studies: CaseStudyIndexEntry[];
 }
 
@@ -55,27 +54,22 @@ const FilterPill = ({ filter, isActive, onFilterChange }: FilterPillProps) => {
 
 interface GridStudyCardProps {
   colSpan: string;
-  onSelectStudy: (study: CaseStudyIndexEntry) => void;
   study: CaseStudyIndexEntry;
 }
 
 const isPageHref = (href?: string): href is string => href?.startsWith("/") ?? false;
 
-const GridStudyCard = ({ colSpan, onSelectStudy, study }: GridStudyCardProps) => {
-  const handleSelect = useCallback(() => {
-    onSelectStudy(study);
-  }, [onSelectStudy, study]);
+const GridStudyCard = ({ colSpan, study }: GridStudyCardProps) => {
   const href = study.card.href;
 
   const card = (
-    <CaseStudyGridCard
+    <CaseStudyCard
       colSpan={colSpan}
       format={study.format}
       iconName={study.formatIcon}
       image={study.card.image}
       metric={study.card.metric}
       metricLabel={study.card.metricLabel}
-      onClick={isPageHref(href) ? undefined : handleSelect}
       title={study.card.client}
     />
   );
@@ -105,7 +99,6 @@ export const CaseStudiesGrid = ({
   emptyStateTitle,
   filters,
   onFilterChange,
-  onSelectStudy,
   studies,
 }: CaseStudiesGridProps) => {
   return (
@@ -131,7 +124,6 @@ export const CaseStudiesGrid = ({
                 <GridStudyCard
                   colSpan={getGridSpan(index, studies.length)}
                   key={study.id}
-                  onSelectStudy={onSelectStudy}
                   study={study}
                 />
               ))}

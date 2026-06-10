@@ -1,9 +1,10 @@
 "use client";
 
 import { X } from "lucide-react";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { ContactForm } from "@/components/forms/ContactForm";
+import { Button } from "@/components/ui/Button";
 
 const MODAL_FORM = {
   companyLabel: "Company Name",
@@ -86,5 +87,43 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         <ContactForm form={MODAL_FORM} />
       </div>
     </div>
+  );
+};
+
+// ─── ContactModalTrigger ─────────────────────────────────────────────────────
+
+export interface ContactModalTriggerProps {
+  label?: string;
+  size?: "default" | "icon" | "lg" | "sm";
+  variant?:
+    | "default"
+    | "ghost"
+    | "link"
+    | "outline"
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "white-outline"
+    | "white";
+}
+
+export const ContactModalTrigger = ({
+  label = "Get in Touch",
+  size = "lg",
+  variant = "primary",
+}: ContactModalTriggerProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const open = useCallback(() => setIsOpen(true), []);
+  const close = useCallback(() => setIsOpen(false), []);
+
+  return (
+    <>
+      <div className="flex justify-center py-10">
+        <Button onClick={open} size={size} variant={variant}>
+          {label}
+        </Button>
+      </div>
+      <ContactModal isOpen={isOpen} onClose={close} />
+    </>
   );
 };

@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import type { CaseStudyCardData } from "@/types/case-studies";
+import type { CaseStudyCardData } from "@/content/case-studies";
 
 import { Button } from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
-interface CaseStudyShowcaseCardProps {
+interface CaseStudyItemProps {
   active: boolean;
   className?: string;
   ctaLabel: string;
@@ -30,13 +30,13 @@ const CTA_INITIAL = { opacity: 0, y: 20 };
 const CTA_EXIT = { opacity: 0, y: 20 };
 const CTA_TRANSITION = { delay: 0.2, duration: 0.3 };
 
-export const CaseStudyShowcaseCard = ({
+export const CaseStudyItem = ({
   active,
   className,
   ctaLabel,
   item,
   onActivate,
-}: CaseStudyShowcaseCardProps) => {
+}: CaseStudyItemProps) => {
   const cardStyle = useMemo(
     () => ({ height: active ? "100%" : "auto", minHeight: "100px" }),
     [active]

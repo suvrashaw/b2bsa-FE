@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 
-import type { CaseStudyDetail } from "@/content/case-study-detail";
+import type { CaseStudyDetail } from "@/content/IndividualCaseStudy";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";

@@ -2,7 +2,7 @@ import type { SelectHTMLAttributes } from "react";
 
 import { cn } from "@/lib";
 
-export interface SelectInputProps extends SelectHTMLAttributes<HTMLSelectElement> {
+export interface FormSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   error?: string;
   id: string;
   label: string;
@@ -15,7 +15,7 @@ export interface SelectOption {
   value: string;
 }
 
-export const SelectInput = ({
+export const FormSelect = ({
   className,
   error,
   id,
@@ -23,7 +23,7 @@ export const SelectInput = ({
   options,
   placeholder,
   ...props
-}: SelectInputProps) => {
+}: FormSelectProps) => {
   return (
     <div className="space-y-2">
       <label className="text-sm font-bold text-gray-600" htmlFor={id}>

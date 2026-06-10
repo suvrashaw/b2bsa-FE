@@ -47,9 +47,11 @@ const RootLayout = ({
       lang="en"
       suppressHydrationWarning
     >
+      <head>
+        <PartytownScripts />
+      </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <script dangerouslySetInnerHTML={JSON_LD_SCRIPT} type="application/ld+json" />
-        <PartytownScripts />
         <SWRegistrar />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>

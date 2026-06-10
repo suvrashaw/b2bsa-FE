@@ -88,31 +88,23 @@ export const CONTACT_FORM = {
 };
 
 export const CONTACT_NEXT_STEPS = {
-  description: "",
   heading: "What Happens Next",
-  items: [
+  phases: [
     {
-      content: <p>We review your inquiry within one business day and confirm receipt.</p>,
-      title: "Step 1",
+      description: "We review your inquiry within one business day and confirm receipt.",
+      title: "Inquiry Review",
     },
     {
-      content: (
-        <p>A growth architect contacts you to schedule a discovery call at your preferred time.</p>
-      ),
-      title: "Step 2",
+      description: "A growth architect contacts you to schedule a discovery call at your preferred time.",
+      title: "Discovery Call",
     },
     {
-      content: (
-        <p>
-          We prepare a customised strategy proposal aligned to your objectives, timeline, and
-          budget.
-        </p>
-      ),
-      title: "Step 3",
+      description: "We prepare a customised strategy proposal aligned to your objectives, timeline, and budget.",
+      title: "Strategy Proposal",
     },
     {
-      content: <p>Programme kickoff once scope and approach are agreed.</p>,
-      title: "Step 4",
+      description: "Programme kickoff once scope and approach are agreed.",
+      title: "Programme Kickoff",
     },
   ],
 };

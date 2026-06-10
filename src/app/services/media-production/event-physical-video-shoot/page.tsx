@@ -7,7 +7,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { ContactModalTrigger } from "@/components/ui/ContactModalTrigger";
+import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {

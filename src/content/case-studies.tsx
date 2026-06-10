@@ -1,4 +1,40 @@
-import type { CaseStudyIndexEntry } from "@/types/case-studies";
+export interface CaseStudyCardSummary {
+  label: string;
+  text: string;
+}
+
+export interface CaseStudyCardData {
+  badge?: string;
+  client: string;
+  href?: string;
+  icon: string;
+  id: string;
+  image: string;
+  inactiveLabel?: string;
+  metric: string;
+  metricLabel: string;
+  primarySummary: CaseStudyCardSummary;
+  secondarySummary: CaseStudyCardSummary;
+  title: string;
+}
+
+export interface CaseStudyIndexEntry {
+  anchorId: string;
+  card: CaseStudyCardData;
+  challenge: string;
+  companySize: string;
+  event: string;
+  format: "gallery" | "text" | "video";
+  formatIcon: string;
+  geography: string;
+  id: string;
+  industry: string;
+  results: string;
+  serviceCategories: string[];
+  servicesText: string;
+  title: string;
+  whatWeDid: string;
+}
 
 export const CASE_STUDIES_PAGE_CONTENT = {
   cardCtaLabel: "Read Full Study",
@@ -47,10 +83,6 @@ export const CASE_STUDIES_PAGE_CONTENT = {
     description:
       "Our results are not accidental. They are engineered through strategic rigor, creative stand design, clean data quality, and disciplined CRM integration. Take a look at our visual case study portfolio.",
     title: "DISCOVER HOW LEADING BRANDS TACKLE CHALLENGES AND ACHIEVE SCALE WITH OUR SOLUTIONS",
-  },
-  modal: {
-    ctaHref: "/contact",
-    ctaLabel: "Book a Strategy Session",
   },
   resultsHeading: "Recent Program Results",
   template: {

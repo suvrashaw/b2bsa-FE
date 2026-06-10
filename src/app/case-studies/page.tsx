@@ -1,15 +1,12 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useState } from "react";
-
-import type { CaseStudyIndexEntry } from "@/types/case-studies";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
-import { CaseStudyModal } from "@/components/sections/CaseStudyModal";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { Heading } from "@/components/ui/Heading";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
@@ -25,7 +22,6 @@ const HERO_RIGHT_TRANSITION = { duration: 1, ease: [0.16, 1, 0.3, 1] as const };
 
 const Page = () => {
   const [activeFilter, setActiveFilter] = useState<string>(ALL_FILTER);
-  const [selectedStudy, setSelectedStudy] = useState<CaseStudyIndexEntry | null>(null);
 
   const filteredStudies =
     activeFilter === ALL_FILTER
@@ -34,17 +30,8 @@ const Page = () => {
           study.serviceCategories.includes(activeFilter)
         );
 
-  const handleCloseModal = useCallback(() => {
-    setSelectedStudy(null);
-  }, []);
-
   const handleFilterChange = useCallback((filter: string) => {
     setActiveFilter(filter);
-    setSelectedStudy(null);
-  }, []);
-
-  const handleSelectStudy = useCallback((study: CaseStudyIndexEntry) => {
-    setSelectedStudy(study);
   }, []);
 
   return (
@@ -99,22 +86,8 @@ const Page = () => {
         emptyStateTitle={CASE_STUDIES_PAGE_CONTENT.emptyState.title}
         filters={CASE_STUDIES_PAGE_CONTENT.gridFilters}
         onFilterChange={handleFilterChange}
-        onSelectStudy={handleSelectStudy}
         studies={filteredStudies}
       />
-
-      <AnimatePresence>
-        {selectedStudy ? (
-          <CaseStudyModal
-            ctaHref={CASE_STUDIES_PAGE_CONTENT.modal.ctaHref}
-            ctaLabel={CASE_STUDIES_PAGE_CONTENT.modal.ctaLabel}
-            isOpen={Boolean(selectedStudy)}
-            key={selectedStudy.id}
-            onClose={handleCloseModal}
-            study={selectedStudy}
-          />
-        ) : null}
-      </AnimatePresence>
 
       <Footer />
     </main>
