@@ -25,7 +25,6 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { FutureReadyStands } from "@/components/sections/FutureReadyStands";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { Hero } from "@/components/sections/Hero";
 import { ImageHero } from "@/components/sections/ImageHero";
 import { OurServices } from "@/components/sections/OurServices";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
@@ -58,12 +57,6 @@ const IMG_EV1 = "/images/recent-events/event_other_1.avif";
 const IMG_EV2 = "/images/recent-events/event_other_2.avif";
 const IMG_EV3 = "/images/recent-events/event_other_3.avif";
 const IMG_EV4 = "/images/recent-events/event_other_4.avif";
-
-// ─── Hero ───────────────────────────────────────────────────────────────────
-
-const _HERO_PRIMARY_CTA = { href: "/demo", label: "Get Started" };
-const _HERO_SECONDARY_CTA = { href: "/demo", label: "Learn More" };
-const HERO_STAT = { label: "Enterprise clients", value: "250+" };
 
 // ─── ImageHero ──────────────────────────────────────────────────────────────
 
@@ -345,7 +338,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   FeatureCarouselSection: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   FutureReadyStands: [{ href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" }],
   GlobalPresence: [{ href: "/about", label: "About" }],
-  Hero: [{ href: "/about", label: "About" }, { href: "/blogs", label: "Blogs" }, { href: "/contact", label: "Contact" }],
   ImageHero: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }, { href: "/case-studies/waf-2025", label: "Case Study" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   OurServices: [{ href: "/", label: "Home" }, { href: "/thank-you", label: "Thank You" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
   ProcessTimeline: [{ href: "/services/global-event-solutions/booth-hostess", label: "Booth Hostess" }, { href: "/services/global-event-solutions/event-logistics", label: "Event Logistics" }, { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" }],
@@ -426,20 +418,7 @@ export default function DemoPage() {
         </span>
       </div>
 
-      {/* 01 – Hero */}
-      <DemoLabel name="Hero" />
-      <Hero
-        description="Intelligent event sales programs for enterprise B2B brands. From booth design to active prospecting — we convert trade show traffic into qualified pipeline."
-        highlight="enterprise B2B brands"
-        primaryCtaHref="/contact"
-        primaryCtaLabel="Get a Proposal"
-        secondaryCtaHref="/case-studies"
-        secondaryCtaLabel="See Case Studies"
-        stat={HERO_STAT}
-        title="Turn Trade Shows Into Pipeline"
-      />
-
-      {/* 02 – ImageHero */}
+      {/* 01 – ImageHero */}
       <DemoLabel name="ImageHero" />
       <ImageHero
         eyebrow="World Aviation Festival 2025 · London, UK"
@@ -470,6 +449,7 @@ export default function DemoPage() {
       <ProofBar
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
+        imageUrl="/Frames/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
 

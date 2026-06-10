@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
-import { Hero } from "@/components/sections/Hero";
+import { ImageHero } from "@/components/sections/ImageHero";
 import { OurServices } from "@/components/sections/OurServices";
 import { THANK_YOU_BLOGS, THANK_YOU_HERO, THANK_YOU_SERVICES } from "@/content/thank-you";
 import { buildPageMetadata } from "@/lib/seo";
@@ -16,11 +16,22 @@ export const metadata: Metadata = buildPageMetadata({
   title: "Thank You | B2B Sales Arrow",
 });
 
+const THANK_YOU_IMAGES = [THANK_YOU_HERO.image.src];
+const THANK_YOU_PRIMARY_CTA = { href: "/services", label: THANK_YOU_HERO.primaryCtaLabel };
+const THANK_YOU_SECONDARY_CTA = { href: "/blogs", label: THANK_YOU_HERO.secondaryCtaLabel };
+
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
-      <Hero {...THANK_YOU_HERO} />
+      <ImageHero
+        description={THANK_YOU_HERO.description}
+        eyebrow={THANK_YOU_HERO.eyebrow}
+        images={THANK_YOU_IMAGES}
+        primaryCta={THANK_YOU_PRIMARY_CTA}
+        secondaryCta={THANK_YOU_SECONDARY_CTA}
+        title={"Thank You for\nReaching Out"}
+      />
       <OurServices {...THANK_YOU_SERVICES} />
       <Blogs {...THANK_YOU_BLOGS} />
       <Footer />

@@ -51,6 +51,7 @@ export interface ServiceHubProps {
     title?: string;
   };
   proofBar?: string[];
+  proofBarImageUrl?: string;
   relatedServices?: { href: string; title: string }[];
   services: OurServicesProps;
   stats?: {
@@ -102,6 +103,7 @@ export const ServiceHub = ({
   page,
   process,
   proofBar,
+  proofBarImageUrl = "/Frames/ezgif-frame-017.jpg",
   relatedServices,
   services,
   stats,
@@ -139,7 +141,7 @@ export const ServiceHub = ({
         title={hero.title}
       />
 
-      {proofBar && <ProofBar heading={`About ${page.pageName}`} stats={proofBar} />}
+      {proofBar && <ProofBar heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />}
 
       <OurServices {...services} />
 

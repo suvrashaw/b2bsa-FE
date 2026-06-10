@@ -21,10 +21,9 @@ export interface CinematicSequenceProps {
 const HERO_PRIMARY_CTA_STYLE = {
   background:
     "linear-gradient(135deg, rgba(116,219,243,0.96) 0%, rgba(52,144,181,0.98) 38%, rgba(30,96,145,1) 100%)",
-  border: "1px solid rgba(201,244,255,0.68)",
   borderRadius: "4px",
   boxShadow:
-    "0 22px 44px rgba(8,26,41,0.28), 0 8px 18px rgba(52,144,181,0.26), inset 0 1px 0 rgba(255,255,255,0.34)",
+    "0 22px 44px rgba(8,26,41,0.28), 0 8px 18px rgba(52,144,181,0.26)",
 };
 const HERO_SECONDARY_CTA_STYLE = {
   backdropFilter: "blur(12px)",

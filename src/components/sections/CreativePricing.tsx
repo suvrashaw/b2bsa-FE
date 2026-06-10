@@ -107,7 +107,6 @@ export const CreativePricing = ({
                 <Star className="h-6 w-6 animate-pulse fill-brand-blue/20 text-brand-blue" />
               </span>
             </Heading>
-            <div className="absolute -bottom-2 left-1/2 h-3 w-44 -translate-x-1/2 rounded-full bg-brand-blue/15 blur-xs" />
           </div>
 
           <p className="max-w-xl font-sans text-base font-medium text-gray-600 lg:text-xl">

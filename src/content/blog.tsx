@@ -9,23 +9,15 @@ import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation
 import { SHARED_BLOG_POSTS } from "./blogs";
 
 export const BLOG_HERO = {
-  className: "bg-brand-blue pb-16",
   description:
     "Ideas should help you make better decisions, not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
   eyebrow: "B2B GROWTH INSIGHTS",
-  headingClassName: "lg:text-5xl xl:text-5xl",
-  image: null,
-  primaryCtaLabel: "Read the Latest Insights",
-  primaryCtaVariant: "white" as const,
-  secondaryCtaLabel: "Subscribe for Growth Intelligence",
-  secondaryCtaVariant: "white-outline" as const,
-  showPreloader: false,
-  stat: null,
-  textColor: "white" as const,
+  primaryCta: { href: "#posts", label: "Read the Latest Insights" },
+  secondaryCta: { href: "/contact", label: "Subscribe for Growth Intelligence" },
   title: (
     <>
       Thought Leadership for <br />
-      <span className="text-white">Enterprise Growth Teams</span>
+      <span className="text-white/80">Enterprise Growth Teams</span>
     </>
   ),
 };

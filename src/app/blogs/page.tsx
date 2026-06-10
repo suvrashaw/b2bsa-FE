@@ -5,8 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { Hero } from "@/components/sections/Hero";
 import { ServiceCarouselSection } from "@/components/sections/ServiceCarouselSection";
+import { TextHero } from "@/components/sections/TextHero";
 import {
   BLOG_CONTACT,
   BLOG_HERO,
@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
-      <Hero {...BLOG_HERO} className="bg-brand-gray" compact />
+      <TextHero {...BLOG_HERO} />
       <ClientLogos heading="Content Categories" logos={BLOG_LOGOS} overlap={false} wrapItems />
       <ServiceCarouselSection {...BLOG_SERVICE_CAROUSEL} />
       <Blogs {...BLOG_POSTS} layout="grid" />

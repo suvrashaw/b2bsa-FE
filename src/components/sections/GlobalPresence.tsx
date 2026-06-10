@@ -72,7 +72,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
       <div className="relative z-10 container mx-auto grid grid-cols-1 gap-16 px-8 lg:grid-cols-2 lg:items-center">
         <motion.div
           animate={leftAnimate}
-          className="flex max-w-2xl flex-col items-center text-center"
+          className="flex max-w-2xl flex-col items-start text-left"
           initial={LEFT_INITIAL}
           transition={LEFT_TRANSITION}
         >

@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { Hero } from "@/components/sections/Hero";
 import { Timeline } from "@/components/ui/Timeline";
 import {
   CONTACT_FORM,
-  CONTACT_HERO,
   CONTACT_NEXT_STEPS,
   CONTACT_PAGE,
 } from "@/content/contact";
@@ -25,8 +24,8 @@ const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" 
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header />
-      <Hero {...CONTACT_HERO} />
+      <Header lightHeaderText />
+      <CinematicSequence />
       <ClientLogos />
       <ContactUs {...CONTACT_FORM} />
       <Timeline

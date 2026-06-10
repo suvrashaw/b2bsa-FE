@@ -123,6 +123,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         className="[&_p]:text-lg"
         description={study.outcome}
         heading="Outcome"
+        imageUrl={study.image}
         stats={study.outcomeStats}
       />
 

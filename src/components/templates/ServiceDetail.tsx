@@ -68,6 +68,7 @@ export interface ServiceDetailProps {
   proofBarClassName?: string;
   proofBarDescription?: React.ReactNode;
   proofBarHeading?: string;
+  proofBarImageUrl?: string;
   relatedServices?: { href: string; title: string }[];
   secondaryServices?: OurServicesProps;
   secondaryServicesSectionType?: "carousel" | "grid";
@@ -163,6 +164,7 @@ export const ServiceDetail = ({
   proofBarClassName,
   proofBarDescription,
   proofBarHeading,
+  proofBarImageUrl = "/Frames/ezgif-frame-017.jpg",
   relatedServices,
   secondaryServices,
   secondaryServicesSectionType = "grid",
@@ -260,6 +262,7 @@ export const ServiceDetail = ({
           className={proofBarClassName}
           description={proofBarDescription}
           heading={proofBarHeading ?? `About ${page.pageName}`}
+          imageUrl={proofBarImageUrl}
           stats={proofBar}
         />
       )}

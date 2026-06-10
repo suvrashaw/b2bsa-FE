@@ -140,24 +140,12 @@ const SpotlightImageBlock = ({
   isHovered: boolean;
   videoUrl?: string;
 }) => {
-  const wrapStyle = useMemo(
+  const backingStyle = useMemo(
     () => ({
-      transform: isHovered ? "translateX(4px) translateY(-4px)" : "translateX(0) translateY(0)",
-      transitionTimingFunction: EASE,
-    }),
-    [isHovered]
-  );
-  const frameStyle = useMemo(
-    () => ({
-      borderColor: isHovered ? "rgb(30 96 145 / 0.2)" : "transparent",
-      transform: isHovered ? "scale(1.01)" : "scale(1)",
-      transitionTimingFunction: EASE,
-    }),
-    [isHovered]
-  );
-  const shadowStyle = useMemo(
-    () => ({
-      boxShadow: isHovered ? "0 24px 64px rgb(30 96 145 / 0.12)" : "0 0 0 transparent",
+      boxShadow: isHovered
+        ? "12px 12px 0px 0px rgba(30, 96, 145, 0.15)"
+        : "6px 6px 0px 0px rgba(30, 96, 145, 0.10)",
+      transform: isHovered ? "translate(-4px, -4px)" : "translate(0, 0)",
       transitionTimingFunction: EASE,
     }),
     [isHovered]
@@ -186,6 +174,7 @@ const SpotlightImageBlock = ({
     () => ({ opacity: isHovered ? 1 : 0, transform: isHovered ? "scaleX(1)" : "scaleX(0)", transformOrigin: "right" as const, transitionDelay: "200ms", transitionTimingFunction: EASE }),
     [isHovered]
   );
+
   let mediaElement: React.ReactNode = null;
   if (videoUrl) {
     mediaElement = (
@@ -215,10 +204,12 @@ const SpotlightImageBlock = ({
   }
 
   return (
-    <div className="relative w-fit transition-all duration-700" style={wrapStyle}>
-      <div className="absolute -inset-3 border transition-all duration-700 md:-inset-4" style={frameStyle} />
-      <div className="relative h-[300px] w-[280px] overflow-hidden sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
-        <div className="absolute -inset-1 transition-all duration-700" style={shadowStyle} />
+    <div className="relative w-fit">
+      <div
+        className="absolute inset-0 rounded-2xl border border-brand-blue/10 transition-all duration-500"
+        style={backingStyle}
+      />
+      <div className="relative h-[300px] w-[280px] overflow-hidden rounded-2xl sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
         {mediaElement}
         <div className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700" style={overlayStyle} />
         <div className="absolute top-2 left-2 h-5 w-px bg-white/80 transition-all duration-500 md:top-3 md:left-3 md:h-6" style={cornerTLV} />
@@ -226,7 +217,6 @@ const SpotlightImageBlock = ({
         <div className="absolute right-2 bottom-2 h-5 w-px bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:h-6" style={cornerBRV} />
         <div className="absolute right-2 bottom-2 h-px w-5 bg-white/80 transition-all duration-500 md:right-3 md:bottom-3 md:w-6" style={cornerBRH} />
       </div>
-
     </div>
   );
 };
