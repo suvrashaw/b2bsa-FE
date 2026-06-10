@@ -158,27 +158,6 @@ export interface FAQItem {
   question: string;
 }
 
-export interface HomeHeroContent {
-  description: string;
-  eyebrow: string;
-  image: {
-    alt: string;
-    loaderAlt: string;
-    src: string;
-  };
-  primaryCtaLabel: string;
-  secondaryCtaLabel: string;
-  stat: {
-    icon: string;
-    label: string;
-    value: string;
-  };
-  timing: {
-    doneDelay: number;
-    expandDelay: number;
-  };
-  title: ReactNode;
-}
 
 export interface HomeServiceItem {
   color: string;

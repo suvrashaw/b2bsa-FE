@@ -52,41 +52,6 @@ export const ABOUT_VISION_MISSION = {
   visionTitle: "Our Vision",
 };
 
-const ABOUT_LINKEDIN_URL = "https://www.linkedin.com/company/b2b-sales-arrow/";
-
-export const ABOUT_TEAM = {
-  heading: "The Leadership Behind the Results",
-  members: [
-    {
-      bio: "Suvra shapes B2B Sales Arrow's unified growth model across event solutions, media, performance marketing, and market intelligence. He works with enterprise teams to connect event investment with measurable pipeline outcomes from the first brief. His focus is accountability: every program should clarify audience, execution, data, and commercial impact.",
-      image: "/images/about/leadership/paras-sir.avif",
-      linkedin: ABOUT_LINKEDIN_URL,
-      name: "Suvra Shaw",
-      role: "Founder & CEO",
-    },
-    {
-      bio: "Sumant leads operations across booth builds, on-ground execution, and multi-market delivery. He coordinates production, logistics, media teams, and delivery partners so enterprise programs move cleanly from plan to show floor. His role keeps complex international work practical, documented, and accountable.",
-      image: "/images/about/leadership/paras-sir-02.avif",
-      linkedin: ABOUT_LINKEDIN_URL,
-      name: "Sumant Shaw",
-      role: "Co-Founder & COO",
-    },
-    {
-      bio: "Elena leads performance marketing strategy for enterprise campaigns that support events, lead generation, and pipeline acceleration. She builds funnel plans around ICP clarity, conversion quality, and attribution rather than vanity metrics. Her work connects digital demand with sales follow-up and measurable opportunity creation.",
-      image: "/images/about/leadership/paras-sir.avif",
-      linkedin: ABOUT_LINKEDIN_URL,
-      name: "Elena Rodriguez",
-      role: "VP of Digital Marketing",
-    },
-    {
-      bio: "David leads market intelligence and research programs that help clients understand accounts, sectors, and buying committees before outreach begins. He focuses on human-verified data quality, contact discovery, and market context across global regions. His team gives event and sales programs a cleaner target list and stronger commercial starting point.",
-      image: "/images/about/leadership/paras-sir-02.avif",
-      linkedin: ABOUT_LINKEDIN_URL,
-      name: "David Chen",
-      role: "Director of Market Intelligence",
-    },
-  ],
-};
 
 export const ABOUT_PRESENCE = {
   cities: [
@@ -95,7 +60,7 @@ export const ABOUT_PRESENCE = {
     { color: "cyan", lat: 25.2048, lng: 55.2708, name: "Dubai", size: 0.1 },
     { color: "cyan", lat: 1.3521, lng: 103.8198, name: "Singapore", size: 0.1 },
     { color: "cyan", lat: -33.8688, lng: 151.2093, name: "Sydney", size: 0.1 },
-    { color: "cyan", lat: 43.651_07, lng: -79.347_015, name: "Toronto", size: 0.1 },
+    { color: "cyan", lat: 43.65107, lng: -79.347015, name: "Toronto", size: 0.1 },
   ],
   description:
     "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",

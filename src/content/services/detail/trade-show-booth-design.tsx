@@ -1,5 +1,3 @@
-import { Layers, Layout, Maximize } from "lucide-react";
-
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 export const BOOTH_DESIGN_HERO = {

@@ -23,7 +23,7 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
     return { title: "Case Study Not Found" };
   }
 
-  const description = study.outcome.split(".")[0] + ".";
+  const description = study.outcome.split(".", 1)[0] + ".";
 
   return {
     alternates: {

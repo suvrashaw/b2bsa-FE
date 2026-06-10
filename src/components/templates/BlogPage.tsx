@@ -139,7 +139,7 @@ const getBlockWordCount = (block: ContentBlock) => {
     return 0;
   }
 
-  if (block.type === "heading" || block.type === "paragraph" || block.type === "quote") {
+  if (["heading", "paragraph", "quote"].includes(block.type)) {
     return countWords(block.text);
   }
 

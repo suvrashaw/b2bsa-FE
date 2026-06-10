@@ -603,7 +603,7 @@ export const Footer = () => {
                         aria-label={`${item.name} profile coming soon`}
                         className={cn(
                           baseClass,
-                          item.colorClass.split(" ")[0],
+                          item.colorClass.split(" ", 1)[0],
                           "cursor-not-allowed opacity-60 hover:bg-brand-gray"
                         )}
                         key={item.name}

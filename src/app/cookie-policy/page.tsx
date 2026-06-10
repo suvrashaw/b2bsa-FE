@@ -50,7 +50,7 @@ const Page = () => {
                 <Heading
                   as="h2"
                   className="mb-4 text-2xl lg:text-3xl"
-                  highlight={section.title.split(" ")[0]}
+                  highlight={section.title.split(" ", 1)[0]}
                   highlightVariant={index % 2 === 0 ? "blue" : "cyan"}
                 >
                   {section.title}

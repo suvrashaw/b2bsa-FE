@@ -236,52 +236,6 @@ export const EVENT_VIDEO_DELIVERABLES = {
   ],
 };
 
-export const EVENT_VIDEO_PRICING = {
-  description:
-    "Investment varies by format, duration, crew size, and post-production scope. Use these as orientation ranges:",
-  footer:
-    "Contact us for a project-specific estimate. All packages include delivery in required formats for web, social, and sales use.",
-  headers: ["Service", "Approximate Range"],
-  rows: [
-    {
-      "approximate range": "$1,500 – $4,000",
-      service: "Event Highlight Reel (1–2 min, single camera)",
-    },
-    {
-      "approximate range": "$4,000 – $10,000",
-      service: "Event Highlight Reel (multi-camera, full production)",
-    },
-    {
-      "approximate range": "$1,200 – $3,500",
-      service: "On-Site Testimonial Capture (3–5 subjects)",
-    },
-    {
-      "approximate range": "$2,000 – $5,000",
-      service: "Speaker / Keynote Coverage (single day)",
-    },
-    {
-      "approximate range": "$500 – $1,500 per set",
-      service: "Social Cut-Downs (from existing footage)",
-    },
-    {
-      "approximate range": "$3,000 – $8,000",
-      service: "2D Animation Explainer (60–90 sec)",
-    },
-    {
-      "approximate range": "$8,000 – $20,000",
-      service: "3D Animation (60 sec)",
-    },
-    {
-      "approximate range": "$2,500 – $6,000",
-      service: "Live Event Streaming (half-day, multi-camera)",
-    },
-    {
-      "approximate range": "$8,000 – $25,000+",
-      service: "Full Event Video Package (multi-format)",
-    },
-  ],
-  title: "Event Video Production, Approximate Price Guide",
-};
 
 export const EVENT_VIDEO_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,

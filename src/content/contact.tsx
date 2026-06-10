@@ -1,31 +1,3 @@
-export const CONTACT_HERO = {
-  description:
-    "Whether you need a booth for next quarter, a sharper lead generation system, enterprise video, a full digital marketing program, or market intelligence, one conversation is enough to define the right path.",
-  eyebrow: "CONTACT US",
-  image: {
-    alt: "Team collaboration",
-    loaderAlt: "Loading",
-    src: "/images/contact/hero.avif",
-  },
-  primaryCtaHref: "#contact",
-  primaryCtaLabel: "Submit Inquiry",
-  secondaryCtaHref: "#contact",
-  secondaryCtaLabel: "Book a Meeting",
-  showPreloader: false,
-  stat: {
-    icon: "Star",
-    label: "Client Satisfaction",
-    value: "98%",
-  },
-  title: (
-    <>
-      Let&apos;s Build Your Enterprise <br />
-      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Growth Strategy
-      </span>
-    </>
-  ),
-};
 
 export const CONTACT_FORM = {
   description:
