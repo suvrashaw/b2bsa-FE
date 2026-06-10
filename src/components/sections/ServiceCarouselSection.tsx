@@ -137,6 +137,7 @@ export const ServiceCarouselSection = ({
           </div>
 
           <div className="mt-6 flex justify-center">
+            {Array.from({ length: maxIndex + 1 }, (_, i) => (
               <button
                 aria-label={`Go to slide group ${i + 1}`}
                 className="group flex h-12 min-w-[32px] items-center justify-center p-1 focus:outline-none"
@@ -151,6 +152,7 @@ export const ServiceCarouselSection = ({
                   }`}
                 />
               </button>
+            ))}
           </div>
         </div>
       </div>
