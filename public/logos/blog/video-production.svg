@@ -1,7 +1,0 @@
-<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="220" height="64" rx="20" fill="#EEF2FF" />
-  <rect x="8" y="8" width="204" height="48" rx="16" fill="white" stroke="#C7D2FE" />
-  <rect x="23" y="23" width="22" height="18" rx="5" fill="#4F46E5" />
-  <path d="M31 28V36L38 32L31 28Z" fill="white" />
-  <text x="56" y="38" fill="#0F172A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">VIDEO</text>
-</svg>

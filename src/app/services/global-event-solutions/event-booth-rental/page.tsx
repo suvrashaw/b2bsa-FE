@@ -50,7 +50,7 @@ const BOOTH_RENTAL_RANGE_REASONS = [
     description:
       "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
     id: "rental-double-deck",
-    image: "/images/booth/30x30.png",
+    image: "/images/booth/30x30.avif",
     title: "Double-Deck",
   },
   {

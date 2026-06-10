@@ -76,7 +76,7 @@ export const BOOTH_BUILDER_FUTURE_READY = {
       ],
       image: {
         alt: "3D exhibition stand design and project planning",
-        src: "/images/booth/30x40.png",
+        src: "/images/booth/30x40.avif",
       },
       title: "3D Design & Project Management Services",
     },
@@ -194,19 +194,19 @@ export const BOOTH_BUILDER_CONTACT_CTA = {
   proofLogos: [
     {
       alt: "Airtel",
-      src: "/logos/circle-airtel.svg",
+      src: "/client-logos/circle-airtel.svg",
     },
     {
       alt: "SingleStore",
-      src: "/logos/circle-singlestore.svg",
+      src: "/client-logos/circle-singlestore.svg",
     },
     {
       alt: "CSC",
-      src: "/logos/circle-csc.svg",
+      src: "/client-logos/circle-csc.svg",
     },
     {
       alt: "United Payments",
-      src: "/logos/circle-united-payments.svg",
+      src: "/client-logos/circle-united-payments.svg",
     },
   ],
   secondaryCta: {

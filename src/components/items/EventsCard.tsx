@@ -50,13 +50,13 @@ interface FlipCardProps extends EventDetailsPanelProps {
 const CARD_SHELL_CLASS =
   "group relative h-[220px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[260px]";
 const DEFAULT_EVENT_IMAGES = [
-  "/images/recent-events/adobe_summit_2026.avif",
-  "/images/recent-events/inma_2026.avif",
-  "/images/recent-events/servicenow_2026.avif",
-  "/images/recent-events/event_other_1.avif",
-  "/images/recent-events/event_other_2.avif",
-  "/images/recent-events/event_other_3.avif",
-  "/images/recent-events/event_other_4.avif",
+  "/images/events/adobe_summit_2026.avif",
+  "/images/events/inma_2026.avif",
+  "/images/events/servicenow_2026.avif",
+  "/images/events/event_other_1.avif",
+  "/images/events/event_other_2.avif",
+  "/images/events/event_other_3.avif",
+  "/images/events/event_other_4.avif",
 ];
 
 export const getFallbackImage = (index: number) =>

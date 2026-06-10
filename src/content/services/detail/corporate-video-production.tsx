@@ -43,7 +43,7 @@ export const CORPORATE_VIDEO_INTRO = {
 export const CORPORATE_VIDEO_WHY = {
   description:
     "Research shows 87% of video marketers report video has directly increased sales. For enterprise B2B, corporate video shortens the time buyers need to understand your value, builds decision-maker confidence before the first meeting, and creates consistent messaging that scales across every channel.",
-  imageUrl: "/images/home/services/media-production-1.avif",
+  imageUrl: "/images/services/media-production-1.avif",
   titleLine1: "How Corporate Video",
   titleLine2: "Accelerates Your Sales Cycle",
 };
@@ -98,7 +98,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
       icon: "Star",
       id: "brand",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Brand and Culture Films",
     },
     {
@@ -107,7 +107,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
       icon: "Cpu",
       id: "product",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Product and Solution Explainer Videos",
     },
     {
@@ -125,7 +125,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       icon: "TrendingUp",
       id: "investor",
-      image: "/images/home/services/performance-marketing.avif",
+      image: "/images/services/performance-marketing.avif",
       title: "Investor and Board Presentation Videos",
     },
     {
@@ -134,7 +134,7 @@ export const CORPORATE_VIDEO_DELIVERABLES = {
         "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
       icon: "Zap",
       id: "sales",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Sales Enablement Video Content",
     },
     {

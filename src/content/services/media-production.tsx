@@ -19,7 +19,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/event-video-production",
       icon: "Camera",
       id: "event-video",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Event Video Production",
     },
     {
@@ -29,7 +29,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/corporate-video-production",
       icon: "Clapperboard",
       id: "corporate-video",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Corporate Video Production",
     },
     {
@@ -39,7 +39,7 @@ export const MEDIA_SERVICES = {
       href: "/services/media-production/event-live-streaming-services",
       icon: "Radio",
       id: "live-streaming",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Event Live Streaming Services",
     },
   ],
@@ -48,7 +48,7 @@ export const MEDIA_SERVICES = {
 export const MEDIA_WHY = {
   description:
     "Strategy decides why footage matters. We shape every video around the buyer's pain point, the product's core value, and the action your audience should take after watching. Beautiful footage is a means, commercial impact is the objective.",
-  imageUrl: "/images/recent-events/event_other_3.avif",
+  imageUrl: "/images/events/event_other_3.avif",
   titleLine1: "We Don't Just Film , ",
   titleLine2: "We Tell Stories That Sell",
 };

@@ -4,9 +4,9 @@ export const EVENT_LOGISTICS_IMAGE_HERO = {
   description:
     "Ensure smooth event execution with professional event logistics services for trade shows and corporate experiences. We manage coordination, vendor handling, and onsite logistics support for seamless event operations.",
   images: [
-    "/images/home/services/booth/booth-7.avif",
-    "/images/home/services/booth/booth-8.avif",
-    "/images/recent-events/event_other_4.avif",
+    "/images/services/booth/booth-7.avif",
+    "/images/services/booth/booth-8.avif",
+    "/images/events/event_other_4.avif",
   ],
   primaryCta: { href: "/contact", label: "Talk to Our Event Team" },
   title: "Corporate Booth Logistics Services",
@@ -19,7 +19,7 @@ export const EVENT_LOGISTICS_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Successful events require precise coordination, smooth operations, and reliable execution. Professional event logistics services help businesses manage venue coordination, transportation, installation, vendor communication, material handling, and onsite event operations efficiently.\n\nAt B2B Sales Arrow, we provide end-to-end corporate event logistics services for conferences, trade shows, exhibitions, networking events, product launches, and executive gatherings. Our team ensures seamless coordination across every stage of the event to help brands deliver organized and stress-free event experiences.",
-  imageUrl: "/images/home/services/booth/booth-7.avif",
+  imageUrl: "/images/services/booth/booth-7.avif",
   label: "Booth Logistics Services",
   titleLine1: "Professional Booth Logistics Services",
   titleLine2: "Services for Corporate Events",
@@ -35,7 +35,7 @@ export const EVENT_LOGISTICS_DELIVERABLES = {
         "Manage venue communication, floor planning, setup schedules, and operational coordination for smooth event execution.",
       icon: "MapPin",
       id: "venue-coordination",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Venue Coordination",
     },
     {
@@ -44,7 +44,7 @@ export const EVENT_LOGISTICS_DELIVERABLES = {
         "Coordinate booth installation, branding materials, equipment delivery, and onsite setup support for exhibitions and trade shows.",
       icon: "Layers",
       id: "booth-setup",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Booth Setup & Material Handling",
     },
     {
@@ -62,7 +62,7 @@ export const EVENT_LOGISTICS_DELIVERABLES = {
         "Work closely with production teams, suppliers, venue partners, and event vendors to ensure seamless event operations.",
       icon: "Users",
       id: "vendor-coordination",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Vendor Coordination",
     },
     {
@@ -71,7 +71,7 @@ export const EVENT_LOGISTICS_DELIVERABLES = {
         "Provide onsite logistics management for attendee flow, equipment handling, setup supervision, and operational assistance.",
       icon: "Target",
       id: "onsite-support",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Onsite Event Support",
     },
     {
@@ -149,14 +149,14 @@ export const EVENT_LOGISTICS_WHY_CHOOSE_US = {
       description:
         "Our team understands the operational requirements of conferences, exhibitions, trade shows, and executive corporate events.",
       icon: "Award",
-      image: "/images/recent-events/adobe_summit_2026.avif",
+      image: "/images/events/adobe_summit_2026.avif",
       title: "Corporate Event Expertise",
     },
     {
       description:
         "We provide flexible event logistics support for both small corporate gatherings and large-scale international exhibitions.",
       icon: "TrendingUp",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Scalable Logistics Solutions",
     },
     {

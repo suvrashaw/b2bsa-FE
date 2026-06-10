@@ -16,7 +16,7 @@ export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
 export const LIVE_STREAMING_WHY = {
   description:
     "As a hybrid event solutions company, we combine the credibility of in-person presence with the reach of digital access, connecting in-room and remote audiences simultaneously. Your content reaches more stakeholders without increasing venue footprint, travel cost, or logistical complexity.",
-  imageUrl: "/images/home/services/media-production-1.avif",
+  imageUrl: "/images/services/media-production-1.avif",
   titleLine1: "Hybrid Event",
   titleLine2: "Solutions",
 };
@@ -31,7 +31,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       icon: "Video",
       id: "multi-camera",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Multi-Camera Live Production",
     },
     {
@@ -40,7 +40,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
       icon: "Globe",
       id: "platform",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Platform Management",
     },
     {
@@ -48,7 +48,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
       description: "Speaker names, session titles, sponsor overlays, and live branded transitions.",
       icon: "Layers",
       id: "graphics",
-      image: "/images/recent-events/servicenow_2026.avif",
+      image: "/images/events/servicenow_2026.avif",
       title: "Real-Time Graphics and Lower Thirds",
     },
     {
@@ -56,7 +56,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
       description: "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
       icon: "MessageSquare",
       id: "engagement",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Live Audience Engagement",
     },
     {
@@ -65,7 +65,7 @@ export const LIVE_STREAMING_DELIVERABLES = {
         "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       icon: "Archive",
       id: "archive",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Recording and Archive Delivery",
     },
     {
@@ -153,7 +153,7 @@ export const LIVE_STREAMING_WHY_CHOOSE_US = {
       description:
         "We deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events, managing every aspect of event streaming setup, camera operations, audio, branded visuals, platform integration, and live technical support.",
       id: "end-to-end",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "End-to-End Production Management",
     },
     {

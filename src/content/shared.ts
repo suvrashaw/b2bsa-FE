@@ -50,7 +50,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     href: "/case-studies/distributech-2023",
     icon: "Sparkles",
     id: "distributech-international-2023",
-    image: "/images/case-studies/DistribuTECH.jpg",
+    image: "/images/case-studies/cs-9.avif",
     metric: "80% Warm Leads",
     metricLabel: "Hot and warm lead mix",
     solution:
@@ -64,7 +64,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     href: "/case-studies/sap-sapphire-2023",
     icon: "Sparkles",
     id: "sap-sapphire-2023",
-    image: "/images/case-studies/sap.jpg",
+    image: "/images/case-studies/cs-10.avif",
     metric: "31 SQLs",
     metricLabel: "Against 30-lead target",
     solution:
@@ -78,7 +78,7 @@ export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
     href: "/case-studies/money-2020-2023",
     icon: "Coins",
     id: "money-20-20-2023",
-    image: "/images/case-studies/money.jpg",
+    image: "/images/case-studies/cs-new-1.avif",
     metric: "35+ SQLs",
     metricLabel: "Meetings delivered",
     solution:
@@ -94,7 +94,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
       "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
     icon: "Cpu",
     id: "technology-saas",
-    image: "/images/recent-events/event_other_1.avif",
+    image: "/images/events/event_other_1.avif",
     title: "Technology & SaaS",
   },
   {
@@ -102,7 +102,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Financial technology, payments, banking innovation, and investment platforms.",
     icon: "Coins",
     id: "fintech",
-    image: "/images/recent-events/event_other_2.avif",
+    image: "/images/events/event_other_2.avif",
     title: "FinTech",
   },
   {
@@ -111,7 +111,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
       "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
     icon: "Activity",
     id: "healthcare-pharma",
-    image: "/images/recent-events/event_other_3.avif",
+    image: "/images/events/event_other_3.avif",
     title: "Healthcare & Pharma",
   },
   {
@@ -120,7 +120,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
       "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
     icon: "Settings",
     id: "manufacturing",
-    image: "/images/recent-events/event_other_4.avif",
+    image: "/images/events/event_other_4.avif",
     title: "Manufacturing",
   },
   {
@@ -138,7 +138,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
       "TV broadcasters, streaming platforms, content producers, and media technology companies.",
     icon: "Radio",
     id: "media-broadcasting",
-    image: "/images/home/services/media-production-2.avif",
+    image: "/images/services/media-production-2.avif",
     title: "Media & Broadcasting",
   },
   {
@@ -146,7 +146,7 @@ export const GLOBAL_INDUSTRY_SERVICES = [
     description: "Mobile operators, network equipment vendors, and telecom technology innovators.",
     icon: "Wifi",
     id: "telecommunications",
-    image: "/images/recent-events/inma_2026.avif",
+    image: "/images/events/inma_2026.avif",
     title: "Telecommunications",
   },
   {

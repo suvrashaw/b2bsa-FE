@@ -5,8 +5,8 @@ export const BOOTH_HOSTESS_IMAGE_HERO = {
     "Enhance guest experience at conferences, exhibitions, trade shows, and corporate events with trained event hostesses for registration, audience engagement, and booth support.",
   images: [
     "/images/home/testimonials/testimonial-1.avif",
-    "/images/recent-events/event_other_1.avif",
-    "/images/home/services/booth/booth-5.avif",
+    "/images/events/event_other_1.avif",
+    "/images/services/booth/booth-5.avif",
   ],
   primaryCta: { href: "/contact", label: "Request A Quote" },
   title: "Professional Event Hostess Services for Corporate Events & Trade Shows",
@@ -35,7 +35,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Our event hostesses assist with attendee check-ins, badge distribution, visitor guidance, and registration support for smooth event entry experiences.",
       icon: "Users",
       id: "registration",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Registration Desk Management",
     },
     {
@@ -44,7 +44,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Increase booth interactions with professional hostesses who welcome visitors, engage attendees, support lead generation, and represent your brand professionally.",
       icon: "Target",
       id: "booth-engagement",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Trade Show Booth Engagement",
     },
     {
@@ -62,7 +62,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Manage audience flow, session coordination, guest assistance, and attendee communication during conferences and networking events.",
       icon: "Mic",
       id: "conference-support",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Conference & Networking Support",
     },
     {
@@ -71,7 +71,7 @@ export const BOOTH_HOSTESS_DELIVERABLES = {
         "Enhance customer interaction and event engagement during product launches, brand activations, and experiential marketing events.",
       icon: "Zap",
       id: "product-launch",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Product Launch Event Support",
     },
     {
@@ -157,14 +157,14 @@ export const BOOTH_HOSTESS_WHY_CHOOSE_US = {
       description:
         "We understand the operational requirements of conferences, exhibitions, networking events, and executive corporate experiences.",
       icon: "Globe2",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Corporate Event Expertise",
     },
     {
       description:
         "We provide scalable staffing support for trade shows, conferences, product launches, and corporate networking events.",
       icon: "TrendingUp",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Flexible Event Staffing Solutions",
     },
     {

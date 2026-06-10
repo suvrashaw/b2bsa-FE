@@ -1,19 +1,19 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 const mediaProofLogos = [
-  { alt: "Airtel", src: "/logos/circle-airtel.svg" },
-  { alt: "SingleStore", src: "/logos/circle-singlestore.svg" },
-  { alt: "CSC", src: "/logos/circle-csc.svg" },
-  { alt: "United Payments", src: "/logos/circle-united-payments.svg" },
+  { alt: "Airtel", src: "/client-logos/circle-airtel.svg" },
+  { alt: "SingleStore", src: "/client-logos/circle-singlestore.svg" },
+  { alt: "CSC", src: "/client-logos/circle-csc.svg" },
+  { alt: "United Payments", src: "/client-logos/circle-united-payments.svg" },
 ] as const;
 
 export const EVENT_EXPERIENCE_VIDEO_IMAGE_HERO = {
   description:
     "Capture conferences, trade shows, and corporate events with high-quality pre-event, highlight, and post-event videos designed to extend audience engagement and brand visibility.",
   images: [
-    "/images/recent-events/adobe_summit_2026.avif",
-    "/images/recent-events/servicenow_2026.avif",
-    "/images/recent-events/inma_2026.avif",
+    "/images/events/adobe_summit_2026.avif",
+    "/images/events/servicenow_2026.avif",
+    "/images/events/inma_2026.avif",
   ],
   primaryCta: { href: "/contact", label: "Create Event Videos" },
   title: "Event Video Production Services",
@@ -32,7 +32,7 @@ export const EVENT_EXPERIENCE_VIDEO_INTRO = {
   description:
     "Modern corporate events are more than physical experiences; they are powerful brand storytelling opportunities. Professional event experience video production helps businesses capture audience engagement, showcase event success, and extend event visibility across digital marketing channels.\n\nAt B2B Sales Arrow, we provide end-to-end event video production services for conferences, trade shows, product launches, networking receptions, corporate events, and executive gatherings. From pre-event promotional videos to post-event highlight reels, our team captures every important interaction, keynote moment, booth engagement, and audience experience with cinematic-quality production.",
   imageAlt: "Corporate event video production crew capturing an audience experience",
-  imageUrl: "/images/recent-events/adobe_summit_2026.avif",
+  imageUrl: "/images/events/adobe_summit_2026.avif",
   label: "Event Video",
   titleLine1: "Professional Event Experience",
   titleLine2: "Video Production Services",
@@ -49,7 +49,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Build excitement and increase event attendance with professionally produced teaser videos, invitation videos, countdown videos, and event marketing campaigns.",
       icon: "Video",
       id: "pre-event-promotional-videos",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Pre-Event Promotional Videos",
     },
     {
@@ -58,7 +58,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Capture the best moments from conferences, exhibitions, networking sessions, keynote speeches, and trade show activities with engaging highlight reels.",
       icon: "Clapperboard",
       id: "event-highlight-videos",
-      image: "/images/recent-events/adobe_summit_2026.avif",
+      image: "/images/events/adobe_summit_2026.avif",
       title: "Event Highlight Videos",
     },
     {
@@ -67,7 +67,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Extend your event impact with post-event recap videos designed for social media, internal communication, audience engagement, and future event promotion.",
       icon: "MonitorPlay",
       id: "post-event-recap-videos",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Post-Event Recap Videos",
     },
     {
@@ -76,7 +76,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Showcase booth engagement, customer interactions, live demonstrations, and brand experiences with professional trade show video production.",
       icon: "Presentation",
       id: "trade-show-booth-coverage",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Trade Show Booth Coverage",
     },
     {
@@ -85,7 +85,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Capture executive presentations, networking experiences, fireside chats, award ceremonies, and audience interactions with high-quality event videography services.",
       icon: "Mic",
       id: "corporate-event-videography",
-      image: "/images/recent-events/servicenow_2026.avif",
+      image: "/images/events/servicenow_2026.avif",
       title: "Corporate Event Videography",
     },
     {
@@ -94,7 +94,7 @@ export const EVENT_EXPERIENCE_VIDEO_DELIVERABLES = {
         "Create short-form event videos optimized for LinkedIn, Instagram, YouTube, and other digital marketing channels.",
       icon: "Share2",
       id: "social-media-event-content",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Social Media Event Content",
     },
   ],
@@ -177,7 +177,7 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
         "Booth coverage, audience interactions, live demos, and trade show recap videos.",
       icon: "Presentation",
       id: "trade-show-recap-videos",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Trade Show Recap Videos",
     },
     {
@@ -186,7 +186,7 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
         "Atmosphere footage, attendee conversations, and engagement capture at networking receptions.",
       icon: "Users",
       id: "networking-reception-coverage",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Networking Reception Coverage",
     },
     {
@@ -195,7 +195,7 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
         "Teaser videos, launch-day filming, and post-event recap content for product launches.",
       icon: "Rocket",
       id: "product-launch-event-videos",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Product Launch Event Videos",
     },
     {
@@ -213,7 +213,7 @@ export const EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION = {
         "Pre-event teaser campaigns and post-event marketing videos for campaign distribution.",
       icon: "Megaphone",
       id: "event-teaser-video-campaigns",
-      image: "/images/home/services/performance-marketing.avif",
+      image: "/images/services/performance-marketing.avif",
       title: "Event Teaser Video Campaigns",
     },
   ],
@@ -241,14 +241,14 @@ export const EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US = {
       description:
         "We deliver visually engaging event videos with professional filming, dynamic editing, and branded storytelling.",
       icon: "TrendingUp",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Cinematic-Quality Production",
     },
     {
       description:
         "We provide quick post-event editing support for social media publishing and immediate marketing use.",
       icon: "Users2",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Fast Turnaround Delivery",
     },
     {
@@ -262,7 +262,7 @@ export const EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US = {
       description:
         "Our event videos are designed to support brand visibility, audience engagement, event promotion, and digital marketing campaigns.",
       icon: "TrendingUp",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Marketing-Focused Content",
     },
   ],

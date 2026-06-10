@@ -22,35 +22,34 @@ export const BLOG_HERO = {
   ),
 };
 
-export const BLOG_LOGOS: ClientLogoItem[] = [
-  { alt: "Event strategy category", id: "event-strategy", src: "/logos/blog/event-strategy.svg" },
-  { alt: "Booth design category", id: "booth-design", src: "/logos/blog/booth-design.svg" },
-  {
-    alt: "Performance marketing category",
-    id: "performance-marketing",
-    src: "/logos/blog/performance-marketing.svg",
-  },
-  {
-    alt: "Video production category",
-    id: "video-production",
-    src: "/logos/blog/video-production.svg",
-  },
-  {
-    alt: "Market research category",
-    id: "market-research",
-    src: "/logos/blog/market-research.svg",
-  },
-  {
-    alt: "Lead generation category",
-    id: "lead-generation",
-    src: "/logos/blog/lead-generation.svg",
-  },
-  { alt: "Case studies category", id: "case-studies", src: "/logos/blog/case-studies.svg" },
-  { alt: "Trade shows category", id: "trade-shows", src: "/logos/blog/trade-shows.svg" },
-  { alt: "B2B sales category", id: "b2b-sales", src: "/logos/blog/b2b-sales.svg" },
-  { alt: "Exhibition category", id: "exhibition", src: "/logos/blog/exhibition.svg" },
-  { alt: "Digital ads category", id: "digital-ads", src: "/logos/blog/digital-ads.svg" },
-  { alt: "SQLs category", id: "sqls", src: "/logos/blog/sqls.svg" },
+import {
+  Briefcase,
+  Building,
+  CalendarDays,
+  FileText,
+  Layout,
+  MousePointerClick,
+  PieChart,
+  Presentation,
+  TrendingUp,
+  UserCheck,
+  Users,
+  Video,
+} from "lucide-react";
+
+export const BLOG_CATEGORIES = [
+  { icon: CalendarDays, id: "event-strategy", name: "Event Strategy" },
+  { icon: Layout, id: "booth-design", name: "Booth Design" },
+  { icon: TrendingUp, id: "performance-marketing", name: "Performance Marketing" },
+  { icon: Video, id: "video-production", name: "Video Production" },
+  { icon: PieChart, id: "market-research", name: "Market Research" },
+  { icon: Users, id: "lead-generation", name: "Lead Generation" },
+  { icon: FileText, id: "case-studies", name: "Case Studies" },
+  { icon: Building, id: "trade-shows", name: "Trade Shows" },
+  { icon: Briefcase, id: "b2b-sales", name: "B2B Sales" },
+  { icon: Presentation, id: "exhibition", name: "Exhibition" },
+  { icon: MousePointerClick, id: "digital-ads", name: "Digital Ads" },
+  { icon: UserCheck, id: "sqls", name: "SQLs" },
 ];
 
 export const BLOG_POSTS = {

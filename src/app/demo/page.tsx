@@ -53,16 +53,16 @@ import {
 
 const IMG_WAF = "/images/case-studies/waf.avif";
 const IMG_SIBOS = "/images/case-studies/sibos.avif";
-const IMG_SAP = "/images/case-studies/sap.jpg";
-const IMG_DISTRIBUTECH = "/images/case-studies/DistribuTECH.jpg";
-const IMG_MONEY = "/images/case-studies/money.jpg";
-const _IMG_NRF = "/images/case-studies/nrf.jpg";
+const IMG_SAP = "/images/case-studies/cs-10.avif";
+const IMG_DISTRIBUTECH = "/images/case-studies/cs-9.avif";
+const IMG_MONEY = "/images/case-studies/cs-new-1.avif";
+const _IMG_NRF = "/images/case-studies/cs-new-10.avif";
 const _IMG_CS2 = "/images/case-studies/cs-new-2.avif";
 const _IMG_CS3 = "/images/case-studies/cs-new-3.avif";
-const IMG_EV1 = "/images/recent-events/event_other_1.avif";
-const IMG_EV2 = "/images/recent-events/event_other_2.avif";
-const IMG_EV3 = "/images/recent-events/event_other_3.avif";
-const IMG_EV4 = "/images/recent-events/event_other_4.avif";
+const IMG_EV1 = "/images/events/event_other_1.avif";
+const IMG_EV2 = "/images/events/event_other_2.avif";
+const IMG_EV3 = "/images/events/event_other_3.avif";
+const IMG_EV4 = "/images/events/event_other_4.avif";
 
 // ─── ImageHero ──────────────────────────────────────────────────────────────
 

@@ -11,7 +11,7 @@ export { GLOBAL_PROOF_STATS as MODULAR_BOOTHS_PROOF_BAR } from "../../shared";
 export const MODULAR_BOOTHS_WHY = {
   description:
     "A reusable modular booth amortised across five or more events per year typically delivers 30–50% lower cost per deployment than commissioning a new custom build each time. Beyond cost: faster deployment timelines, simplified international logistics, and consistent brand presentation across markets.\n\nModular is especially valuable for multi-city event tours, emerging market activations, roadshow programs, and satellite presences alongside a flagship custom booth.",
-  imageUrl: "/images/home/services/booth/booth-7.avif",
+  imageUrl: "/images/services/booth/booth-7.avif",
   titleLine1: "The Commercial Case",
   titleLine2: "for Modular Systems",
 };
@@ -26,7 +26,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
         "We architect modular environments, designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
       icon: "Layers",
       id: "design",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Modular System Design",
     },
     {
@@ -35,7 +35,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
         "Access to the world's most reliable modular systems known for structural integrity and tool-free assembly.",
       icon: "Wrench",
       id: "hardware",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Premium Hardware Sourcing",
     },
     {
@@ -44,7 +44,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
         "High-definition tension fabric and magnetic graphic panels that can be swapped in minutes, allowing you to update messaging for different audiences without new hardware.",
       icon: "Palette",
       id: "graphics",
-      image: "/images/home/services/booth/booth-8.avif",
+      image: "/images/services/booth/booth-8.avif",
       title: "Interchangeable Graphic Systems",
     },
     {
@@ -53,7 +53,7 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
         "For teams that want to manage their own small-scale setups, we provide custom training and video guides for zero-error installation.",
       icon: "Video",
       id: "training",
-      image: "/images/home/services/booth/booth-9.avif",
+      image: "/images/services/booth/booth-9.avif",
       title: "Staff Training and Assembly Guides",
     },
   ],
@@ -70,7 +70,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
         "Compact, tool-free assembly for regional shows and satellite presences. Trade show booth 10x10 format ready in under 4 hours.",
       icon: "Layers",
       id: "modular-10x10",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "10x10 Modular Kits",
     },
     {
@@ -79,7 +79,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
         "Mid-format portable trade show booth displays with room for demos, meetings, and brand storytelling.",
       icon: "Monitor",
       id: "modular-inline",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "10x20 and 20x20 Inline Configurations",
     },
     {
@@ -88,7 +88,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
         "Multi-sided open systems for higher-traffic exhibition floors with stronger visibility and multiple engagement zones.",
       icon: "Target",
       id: "modular-island",
-      image: "/images/home/services/booth/booth-7.avif",
+      image: "/images/services/booth/booth-7.avif",
       title: "Island Modular Systems",
     },
     {
@@ -97,7 +97,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
         "Reusable modular structure with custom branded finishes, feature walls, and premium lighting for custom-booth impact.",
       icon: "Palette",
       id: "modular-hybrid",
-      image: "/images/home/services/booth/booth-8.avif",
+      image: "/images/services/booth/booth-8.avif",
       title: "Hybrid Modular + Custom Accent Builds",
     },
     {
@@ -106,7 +106,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
         "Lightweight, high-impact backlit fabric displays with maximum visual presence and minimum shipping weight.",
       icon: "Sparkles",
       id: "modular-fabric",
-      image: "/images/home/services/booth/booth-9.avif",
+      image: "/images/services/booth/booth-9.avif",
       title: "Branded Tensile Fabric Displays",
     },
     {
@@ -114,7 +114,7 @@ export const MODULAR_BOOTHS_RANGE_SECTION = {
       description: "Fast-deploy setups for roadshows, sales activations, and internal events.",
       icon: "Wrench",
       id: "modular-portable",
-      image: "/images/home/services/booth/booth-10.avif",
+      image: "/images/services/booth/booth-10.avif",
       title: "Portable Pop-Up and Tabletop",
     },
   ],

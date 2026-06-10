@@ -43,7 +43,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Full booth construction in just 30 hours, last-minute graphic changes one week out, zero pre-event attendee list, and a tight budget for an ambitious, complex 40x40 ft build.",
     client: "Multi-Billion-Dollar Global IT",
     event: "Adobe Summit 2025",
-    image: "/images/recent-events/adobe_summit_2026.avif",
+    image: "/images/events/adobe_summit_2026.avif",
     location: "The Venetian Convention and Expo Center, Las Vegas",
     outcome:
       "70+ SQLs generated. 48+ hot and warm leads secured. 65+ decision-makers engaged. 60+ unique billion-dollar accounts captured - the booth became a live, high-converting revenue engine.",
@@ -89,7 +89,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Outreach was restricted to opt-in attendees only, significantly limiting the prospect pool for pre-event meetings. QR Code standees also had to be sourced internationally within a near-impossible three-day window.",
     client: "Multi-Billion-Dollar Global IT and Consulting Leader",
     event: "SAP Sapphire 2023",
-    image: "/images/case-studies/sap.jpg",
+    image: "/images/case-studies/cs-10.avif",
     location: "Orlando, US",
     outcome:
       "31 Sales-Qualified Leads delivered, including decision-makers. 80% were hot and warm leads. 45% came from accounts with revenue exceeding $10 billion. Every single account was unique.",
@@ -139,7 +139,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Attendee lists were unavailable on the event portal, causing database development delays and significantly compressing the window for pre-event outreach campaigns.",
     client: "Global IT and Consulting Leader",
     event: "DistribuTECH 2023",
-    image: "/images/case-studies/DistribuTECH.jpg",
+    image: "/images/case-studies/cs-9.avif",
     location: "San Diego, US",
     outcome:
       "42 SQLs delivered against a target of 30, a 40% over achievement. 32 hot and warm leads secured. 39 accounts with annual revenue exceeding $1 billion captured directly into the sales pipeline.",
@@ -165,7 +165,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Just one week to execute outreach from a TAL of 1,000 prospects, Amsterdam public holidays compressing timelines further, no access to delegate contact data, and an immersive booth to deliver within tight budget.",
     client: "World's #1 Pricing & Billing Organization ($450M+)",
     event: "Money 20/20 Europe",
-    image: "/images/case-studies/money.jpg",
+    image: "/images/case-studies/cs-new-1.avif",
     location: "Amsterdam",
     outcome:
       "37 high-quality SQLs delivered against a target of 30 - from Fortune 500 accounts including Bank of America, Barclays, American Express, AWS, and Lloyds Bank. Plus 1,000+ prospects captured for future pipeline.",
@@ -190,7 +190,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Just one week to execute outreach from a TAL of 1,000 prospects, Amsterdam public holidays compressing timelines further, no access to delegate contact data, and an immersive booth to deliver within tight budget.",
     client: "World's No. 1 Pricing and Billing Organization",
     event: "Money 20/20 Europe",
-    image: "/images/case-studies/money.jpg",
+    image: "/images/case-studies/cs-new-1.avif",
     location: "Amsterdam",
     outcome:
       "37 high-quality SQLs delivered against a target of 30, from Fortune 500 accounts. Plus 1,000+ prospects captured for future pipeline.",
@@ -215,7 +215,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Event fell right before the new year holiday season, leaving minimal preparation time. Zero access to attendee contact data made pre-fixed meeting setup significantly harder to execute.",
     client: "Global IT & Consulting Leader ($16B+ Revenue)",
     event: "NRF 2023 - Retail's Big Show",
-    image: "/images/case-studies/nrf.jpg",
+    image: "/images/case-studies/cs-new-10.avif",
     location: "Javits Center, New York",
     outcome:
       "60 SQLs delivered against a target of 30 - a clean 100% over delivery. 50 hot and warm leads secured. 46 meetings with decision-makers. 29 accounts with revenue exceeding $10 billion.",

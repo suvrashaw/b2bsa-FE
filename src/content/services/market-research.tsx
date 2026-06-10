@@ -21,7 +21,7 @@ export const RESEARCH_SERVICES = {
       href: "/services/data-augmentation",
       icon: "PlusCircle",
       id: "augmentation",
-      image: "/images/home/services/database-research-1.avif",
+      image: "/images/services/database-research-1.avif",
       title: "Data Augmentation",
     },
     {
@@ -30,7 +30,7 @@ export const RESEARCH_SERVICES = {
         "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
       icon: "CheckCircle",
       id: "validation",
-      image: "/images/home/services/database-research-revised.avif",
+      image: "/images/services/database-research-revised.avif",
       title: "Data Validation",
     },
     {
@@ -39,7 +39,7 @@ export const RESEARCH_SERVICES = {
         "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
       icon: "Search",
       id: "intelligence",
-      image: "/images/home/services/market-intelligence.avif",
+      image: "/images/services/market-intelligence.avif",
       title: "Human-Powered Market Intelligence",
     },
   ],
@@ -48,7 +48,7 @@ export const RESEARCH_SERVICES = {
 export const RESEARCH_WHY = {
   description:
     "Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through high bounce rates, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions. Clean, validated, enriched data is the foundation that makes every B2B marketing and sales motion more effective.",
-  imageUrl: "/images/home/services/database-research-revised.avif",
+  imageUrl: "/images/services/database-research-revised.avif",
   titleLine1: "Bad Data Costs",
   titleLine2: "Enterprise Sales Teams Millions",
 };

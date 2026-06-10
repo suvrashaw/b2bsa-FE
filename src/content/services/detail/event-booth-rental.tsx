@@ -45,7 +45,7 @@ export const BOOTH_RENTAL_WHY = {
   description:
     "At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage, and drive meaningful conversations. With our expertise in AI-VR integration, we bring your brand to life in ways that leave a lasting impression. We've delivered exceptional experiences across industries, from tech giants to global brands, creating tradeshow booth design that aren't just seen, they're remembered.",
   imageAlt: "B2B Sales Arrow trade show booth rental",
-  imageUrl: "/images/home/services/booth/booth-9.avif",
+  imageUrl: "/images/services/booth/booth-9.avif",
   label: "Our Services",
   titleLine1: "Introduction to Our",
   titleLine2: "Services",
@@ -167,19 +167,19 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
   proofLogos: [
     {
       alt: "Airtel",
-      src: "/logos/circle-airtel.svg",
+      src: "/client-logos/circle-airtel.svg",
     },
     {
       alt: "SingleStore",
-      src: "/logos/circle-singlestore.svg",
+      src: "/client-logos/circle-singlestore.svg",
     },
     {
       alt: "CSC",
-      src: "/logos/circle-csc.svg",
+      src: "/client-logos/circle-csc.svg",
     },
     {
       alt: "United Payments",
-      src: "/logos/circle-united-payments.svg",
+      src: "/client-logos/circle-united-payments.svg",
     },
   ],
   secondaryCta: {

@@ -1,7 +1,0 @@
-<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="220" height="64" rx="20" fill="#FEFCE8" />
-  <rect x="8" y="8" width="204" height="48" rx="16" fill="white" stroke="#FDE68A" />
-  <rect x="24" y="21" width="20" height="22" rx="4" fill="#CA8A04" />
-  <path d="M29 27H39M29 32H39M29 37H35" stroke="white" stroke-linecap="round" stroke-width="2.5" />
-  <text x="56" y="38" fill="#0F172A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">PROOF</text>
-</svg>

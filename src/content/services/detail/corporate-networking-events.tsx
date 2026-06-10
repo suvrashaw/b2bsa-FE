@@ -4,9 +4,9 @@ export const CORP_NETWORKING_IMAGE_HERO = {
   description:
     "Create meaningful business connections with professional networking event solutions for conferences, networking receptions and corporate hospitality events. We help brands deliver engaging networking experiences with seamless event coordination and audience engagement support.",
   images: [
-    "/images/recent-events/event_other_2.avif",
+    "/images/events/event_other_2.avif",
     "/images/home/testimonials/testimonial-2.avif",
-    "/images/recent-events/event_other_3.avif",
+    "/images/events/event_other_3.avif",
   ],
   primaryCta: { href: "/contact", label: "Talk to Our Event Team" },
   title: "Corporate Networking Event Solutions",
@@ -19,7 +19,7 @@ export const CORP_NETWORKING_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Business networking events play an important role in building relationships, strengthening partnerships, and creating new growth opportunities. Professional networking event solutions help brands organize engaging experiences that encourage meaningful conversations and business interactions.\n\nAt B2B Sales Arrow, we provide end-to-end corporate networking event services for executive gatherings, networking receptions, VIP dinners, business meetups, partner events, and corporate hospitality experiences. Our team manages event coordination, guest engagement, venue planning, attendee flow, branding support, and onsite execution to ensure successful networking experiences.",
-  imageUrl: "/images/recent-events/event_other_2.avif",
+  imageUrl: "/images/events/event_other_2.avif",
   label: "Networking Events",
   titleLine1: "Professional Networking Event",
   titleLine2: "Solutions for Corporate Brands",
@@ -35,7 +35,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
       icon: "Users",
       id: "networking-events",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Corporate Networking Events",
     },
     {
@@ -44,7 +44,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
       icon: "Sparkles",
       id: "networking-receptions",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Networking Reception Solutions",
     },
     {
@@ -71,7 +71,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
       icon: "MapPin",
       id: "networking-dinners",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Networking Dinner Event Solutions",
     },
     {
@@ -80,7 +80,7 @@ export const CORP_NETWORKING_DELIVERABLES = {
         "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
       icon: "Globe2",
       id: "b2b-networking",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "B2B Networking Event Services",
     },
   ],

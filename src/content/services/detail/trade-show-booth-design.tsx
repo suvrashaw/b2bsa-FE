@@ -44,7 +44,7 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
     eyebrow: "Premium",
     heading: "Double-Deck Structure",
     id: "showcase-double-deck",
-    image: "/images/booth/30x40.png",
+    image: "/images/booth/30x40.avif",
   },
   {
     cta: { href: "/contact", label: "Get Custom Booth Quote" },
@@ -61,7 +61,7 @@ export const BOOTH_DESIGN_SPOTLIGHT = {
   description:
     "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible.\n\nThe gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?",
   imageAlt: "Empty trade show booth without footfall",
-  imageUrl: "/images/home/services/booth/booth-6.avif",
+  imageUrl: "/images/services/booth/booth-6.avif",
   titleLine1: "Why Generic Exhibition Booth Design",
   titleLine2: "Costs You Qualified Leads",
 };
@@ -76,7 +76,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "We design booth layouts around how attendees actually move through a crowded exhibition floor, entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
       icon: "box",
       id: "architecture",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Spatial Architecture and Traffic Flow",
     },
     {
@@ -85,7 +85,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "Your exhibition booth design should be unmistakably yours from 30 feet away, translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
       icon: "palette",
       id: "branding",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Graphic Design and Brand Integration",
     },
     {
@@ -94,7 +94,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "Touchscreens, live product demos, and digital storytelling that turn passive floor visits into active brand engagement.",
       icon: "cpu",
       id: "digital",
-      image: "/images/home/services/booth/booth-7.avif",
+      image: "/images/services/booth/booth-7.avif",
       title: "Interactive and Digital Display Integration",
     },
     {
@@ -103,7 +103,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "For complex products that cannot be shown on a trade show floor, immersive technology that lets buyers explore what they cannot see.",
       icon: "monitor",
       id: "ar-vr",
-      image: "/images/home/services/booth/booth-8.avif",
+      image: "/images/services/booth/booth-8.avif",
       title: "AR/VR Experience Design",
     },
     {
@@ -112,7 +112,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "Private meeting rooms, semi-private discussion areas, and live demo zones, planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
       icon: "users",
       id: "planning",
-      image: "/images/home/services/booth/booth-9.avif",
+      image: "/images/services/booth/booth-9.avif",
       title: "Meeting Room and Demo Zone Planning",
     },
     {
@@ -121,7 +121,7 @@ export const BOOTH_DESIGN_DELIVERABLES = {
         "The most underused commercial tool in exhibition stand design, accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
       icon: "sun",
       id: "lighting",
-      image: "/images/home/services/booth/booth-10.avif",
+      image: "/images/services/booth/booth-10.avif",
       title: "Lighting and Atmosphere Engineering",
     },
   ],
@@ -325,19 +325,19 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
   proofLogos: [
     {
       alt: "Airtel",
-      src: "/logos/circle-airtel.svg",
+      src: "/client-logos/circle-airtel.svg",
     },
     {
       alt: "SingleStore",
-      src: "/logos/circle-singlestore.svg",
+      src: "/client-logos/circle-singlestore.svg",
     },
     {
       alt: "CSC",
-      src: "/logos/circle-csc.svg",
+      src: "/client-logos/circle-csc.svg",
     },
     {
       alt: "United Payments",
-      src: "/logos/circle-united-payments.svg",
+      src: "/client-logos/circle-united-payments.svg",
     },
   ],
   secondaryCta: {

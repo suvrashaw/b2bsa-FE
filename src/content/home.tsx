@@ -320,15 +320,15 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
 };
 
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
-  { alt: "Airtel", id: "airtel", src: "/logos/Airtel.svg" },
-  { alt: "BOSCH", id: "bosch", src: "/logos/BOSCH.svg" },
-  { alt: "CSC", id: "csc", src: "/logos/CSC.svg" },
-  { alt: "Infosys", id: "infosys", src: "/logos/Infosys.svg" },
-  { alt: "SingleStore", id: "singlestore", src: "/logos/SingleStore.svg" },
-  { alt: "Syngene", id: "syngene", src: "/logos/Syngene.svg" },
-  { alt: "Temenos", id: "temenos", src: "/logos/Temenos.svg" },
-  { alt: "United Payment", id: "unitedpayment", src: "/logos/UnitedPayment.svg" },
-  { alt: "Worldpay", id: "worldpay", src: "/logos/Worldpay.svg" },
+  { alt: "Airtel", id: "airtel", src: "/client-logos/Airtel.svg" },
+  { alt: "BOSCH", id: "bosch", src: "/client-logos/BOSCH.svg" },
+  { alt: "CSC", id: "csc", src: "/client-logos/CSC.svg" },
+  { alt: "Infosys", id: "infosys", src: "/client-logos/Infosys.svg" },
+  { alt: "SingleStore", id: "singlestore", src: "/client-logos/SingleStore.svg" },
+  { alt: "Syngene", id: "syngene", src: "/client-logos/Syngene.svg" },
+  { alt: "Temenos", id: "temenos", src: "/client-logos/Temenos.svg" },
+  { alt: "United Payment", id: "unitedpayment", src: "/client-logos/UnitedPayment.svg" },
+  { alt: "Worldpay", id: "worldpay", src: "/client-logos/Worldpay.svg" },
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
@@ -377,7 +377,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
       icon: "Presentation",
       id: "booth-design",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Booth Design & Production",
     },
     {
@@ -386,7 +386,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
       icon: "Users",
       id: "active-prospecting",
-      image: "/images/home/services/market-intelligence.avif",
+      image: "/images/services/market-intelligence.avif",
       title: "Active Prospecting",
     },
     {
@@ -395,7 +395,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We capture broadcast-quality video, interviews, and 3D animations at your event, turning a single day on the floor into 12 months of high-impact digital content.",
       icon: "MonitorPlay",
       id: "media",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Corporate Media Production",
     },
     {
@@ -413,7 +413,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design and manage exclusive networking experiences, VIP dinners, roundtables, and hosted meetings, that connect your team directly with key enterprise decision-makers.",
       icon: "Coffee",
       id: "networking",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Networking",
     },
     {
@@ -431,7 +431,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We design immersive booth experiences, interactive demos, live activations, and engagement zones, that turn passive visitors into active pipeline opportunities.",
       icon: "Lightbulb",
       id: "experience-creation",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Experience Creation",
     },
     {
@@ -440,7 +440,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We build verified, account-level prospect databases and deploy our proprietary HPMI methodology to uncover deep target market intelligence before your event begins.",
       icon: "Database",
       id: "market-research",
-      image: "/images/home/services/database-research-revised.avif",
+      image: "/images/services/database-research-revised.avif",
       title: "Database & Market Research",
     },
     {
@@ -449,7 +449,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = {
         "We run targeted pre-event marketing campaigns across email and social to drive qualified attendee traffic to your booth and fill your team's calendar with high-intent meetings before day one.",
       icon: "Rocket",
       id: "performance-marketing",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Performance Marketing",
     },
   ],
@@ -479,7 +479,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
     {
       icon: "Sparkles",
       id: "sap-sapphire-2023",
-      image: "/images/case-studies/sap.jpg",
+      image: "/images/case-studies/cs-10.avif",
       solution:
         "Empowering global branding and on-ground lead generation success, delivering 80% hot and warm leads and 100% unique accounts.",
       title: "SAP Sapphire 2023",
@@ -495,49 +495,49 @@ export const HOME_EVENTS_CONTENT: EventsContent = {
     {
       date: "Mar 2026",
       id: "adobe-summit-2026",
-      image: "/images/recent-events/adobe_summit_2026.avif",
+      image: "/images/events/adobe_summit_2026.avif",
       location: "Las Vegas, USA",
       title: "Adobe Summit 2026",
     },
     {
       date: "2026",
       id: "inma-2026",
-      image: "/images/recent-events/inma_2026.avif",
+      image: "/images/events/inma_2026.avif",
       location: "Global",
       title: "INMA World Congress 2026",
     },
     {
       date: "2026",
       id: "servicenow-2026",
-      image: "/images/recent-events/servicenow_2026.avif",
+      image: "/images/events/servicenow_2026.avif",
       location: "Las Vegas, USA",
       title: "ServiceNow Knowledge 2026",
     },
     {
       date: "Oct 2025",
       id: "sibos-amsterdam",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       location: "Amsterdam, Netherlands",
       title: "SIBOS 2025",
     },
     {
       date: "Oct 2025",
       id: "money-20-20-amsterdam",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       location: "Amsterdam, Netherlands",
       title: "Money 20/20",
     },
     {
       date: "Oct 2025",
       id: "gitex-global",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       location: "Dubai, UAE",
       title: "GITEX Global 2025",
     },
     {
       date: "Dec 2025",
       id: "constellate",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       location: "New York, USA",
       title: "Constellate 2025",
     },
@@ -678,7 +678,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 1,
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       question: "What services do you offer as an event partner?",
     },
     {
@@ -714,7 +714,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 3,
-      image: "/images/home/services/booth/booth-7.avif",
+      image: "/images/services/booth/booth-7.avif",
       question: "Can you build custom exhibits for our specific industry?",
     },
     {
@@ -732,7 +732,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 4,
-      image: "/images/home/services/sql-generation-revised.avif",
+      image: "/images/services/sql-generation-revised.avif",
       question: "How do you guarantee high-quality leads from an exhibition?",
     },
     {
@@ -750,7 +750,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 5,
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       question: "Do you help with attendee engagement and networking?",
     },
     {
@@ -786,7 +786,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 7,
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       question: "How do you drive traffic to our booth before events?",
     },
     {
@@ -804,7 +804,7 @@ export const HOME_FAQ_CONTENT: FAQContent = {
         </svg>
       ),
       id: 8,
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       question: "Can you help us repurpose the event for digital marketing?",
     },
   ],
@@ -835,7 +835,7 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
   headingHighlight: "Global Event Strategy",
   illustration: {
     alt: "Contact Us",
-    src: "/contact_illu.svg",
+    src: "/contact/image.svg",
   },
 };
 

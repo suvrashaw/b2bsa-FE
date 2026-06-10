@@ -1,21 +1,21 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 const mediaProofLogos = [
-  { alt: "Airtel", src: "/logos/circle-airtel.svg" },
-  { alt: "SingleStore", src: "/logos/circle-singlestore.svg" },
-  { alt: "CSC", src: "/logos/circle-csc.svg" },
-  { alt: "United Payments", src: "/logos/circle-united-payments.svg" },
+  { alt: "Airtel", src: "/client-logos/circle-airtel.svg" },
+  { alt: "SingleStore", src: "/client-logos/circle-singlestore.svg" },
+  { alt: "CSC", src: "/client-logos/circle-csc.svg" },
+  { alt: "United Payments", src: "/client-logos/circle-united-payments.svg" },
 ] as const;
 
 export const EVENT_PHYSICAL_VIDEO_IMAGE_HERO = {
   description:
     "Capture the most impactful moments of your event with high-quality on-site video production - from interviews and client testimonials to thought leadership bytes, speaker highlights, and branded event coverage.",
   images: [
-    "/images/recent-events/event_other_2.avif",
-    "/images/recent-events/event_other_3.avif",
-    "/images/recent-events/event_other_4.avif",
+    "/images/events/event_other_2.avif",
+    "/images/events/event_other_3.avif",
+    "/images/events/event_other_4.avif",
   ],
-  poster: "/images/recent-events/event_other_2.avif",
+  poster: "/images/events/event_other_2.avif",
   primaryCta: { href: "/contact", label: "Book a Video Shoot" },
   title: "Professional On-Site Video Shoots for Events That Deserve to Be Remembered",
   videoSrc: "/videos/hero-gtc-2026.mp4",

@@ -1,19 +1,19 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 const mediaProofLogos = [
-  { alt: "Airtel", src: "/logos/circle-airtel.svg" },
-  { alt: "SingleStore", src: "/logos/circle-singlestore.svg" },
-  { alt: "CSC", src: "/logos/circle-csc.svg" },
-  { alt: "United Payments", src: "/logos/circle-united-payments.svg" },
+  { alt: "Airtel", src: "/client-logos/circle-airtel.svg" },
+  { alt: "SingleStore", src: "/client-logos/circle-singlestore.svg" },
+  { alt: "CSC", src: "/client-logos/circle-csc.svg" },
+  { alt: "United Payments", src: "/client-logos/circle-united-payments.svg" },
 ] as const;
 
 export const VIRTUAL_VIDEO_IMAGE_HERO = {
   description:
     "Produce engaging virtual events, fireside chats, webinars, and panel discussions with professional production, branded visuals, and seamless audience experiences.",
   images: [
-    "/images/home/services/media-production-1.avif",
-    "/images/home/services/media-production-2.avif",
-    "/images/recent-events/adobe_summit_2026.avif",
+    "/images/services/media-production-1.avif",
+    "/images/services/media-production-2.avif",
+    "/images/events/adobe_summit_2026.avif",
   ],
   primaryCta: { href: "/contact", label: "Plan Virtual Event" },
   title: "Virtual Video Event Production Services",
@@ -32,7 +32,7 @@ export const VIRTUAL_VIDEO_INTRO = {
   description:
     "Virtual events have become an essential part of modern business communication, helping organizations connect with global audiences through interactive digital experiences. Professional virtual video event production ensures smooth event delivery, high-quality visuals, audience engagement, and reliable technical execution.\n\nAt B2B Sales Arrow, we provide end-to-end virtual video production services for fireside chats, panel discussions, webinars, executive interviews, virtual conferences, and hybrid corporate events. Our production team manages speaker coordination, branded visuals, live streaming support, audience interaction tools, technical management, and post-production editing.\n\nWhether you are hosting a virtual leadership session, product launch, customer webinar, or online networking event, we help create professional and engaging virtual event experiences that strengthen brand visibility and audience participation.",
   imageAlt: "Virtual video event production control room",
-  imageUrl: "/images/home/services/media-production-1.avif",
+  imageUrl: "/images/services/media-production-1.avif",
   label: "Virtual Events",
   titleLine1: "Professional Virtual Video",
   titleLine2: "Event Production Services",
@@ -67,7 +67,7 @@ export const VIRTUAL_VIDEO_DELIVERABLES = {
         "Deliver professional webinars with branded presentations, audience engagement tools, speaker coordination, and reliable event streaming.",
       icon: "MonitorPlay",
       id: "webinar-production-services",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Webinar Production Services",
     },
     {
@@ -85,7 +85,7 @@ export const VIRTUAL_VIDEO_DELIVERABLES = {
         "Connect physical and virtual audiences through hybrid event video production solutions designed for maximum audience engagement.",
       icon: "Radio",
       id: "hybrid-event-production",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Hybrid Event Production",
     },
     {
@@ -94,7 +94,7 @@ export const VIRTUAL_VIDEO_DELIVERABLES = {
         "Enhance online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
       icon: "Palette",
       id: "virtual-event-branding",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Virtual Event Branding",
     },
   ],
@@ -182,7 +182,7 @@ export const VIRTUAL_VIDEO_WHY_CHOOSE_US = {
       description:
         "We deliver broadcast-quality virtual experiences with polished visuals, branded graphics, and seamless technical execution.",
       icon: "TrendingUp",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Professional Production Quality",
     },
     {
@@ -196,7 +196,7 @@ export const VIRTUAL_VIDEO_WHY_CHOOSE_US = {
       description:
         "We help brands improve audience participation through interactive engagement tools, Q&A management, and virtual networking features.",
       icon: "TrendingUp",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Interactive Audience Experiences",
     },
     {

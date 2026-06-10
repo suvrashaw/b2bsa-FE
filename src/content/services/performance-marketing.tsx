@@ -19,7 +19,7 @@ export const PERF_SERVICES = {
       href: "/services/seo-services",
       icon: "Search",
       id: "seo",
-      image: "/images/home/services/performance-marketing.avif",
+      image: "/images/services/performance-marketing.avif",
       title: "B2B SEO Services",
     },
     {
@@ -29,7 +29,7 @@ export const PERF_SERVICES = {
       href: "/services/paid-advertising",
       icon: "Zap",
       id: "paid",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Paid Advertising",
     },
   ],

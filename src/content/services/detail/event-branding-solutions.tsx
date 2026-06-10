@@ -5,8 +5,8 @@ export const EVENT_BRANDING_IMAGE_HERO = {
     "Create impactful brand experiences with professional event branding solutions for conferences, exhibitions, trade shows, networking events, and product launches.",
   images: [
     "/images/home/why-choose-us/strategic_creativity.avif",
-    "/images/home/services/booth/booth-5.avif",
-    "/images/recent-events/event_other_1.avif",
+    "/images/services/booth/booth-5.avif",
+    "/images/events/event_other_1.avif",
   ],
   primaryCta: { href: "/contact", label: "Plan Your Event Branding" },
   secondaryCta: { href: "/contact", label: "Talk to Branding Experts" },
@@ -20,7 +20,7 @@ export const EVENT_BRANDING_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Strong event branding plays a critical role in creating memorable audience experiences and increasing brand visibility during corporate events. Professional event branding solutions help businesses build consistent visual experiences that attract attention, improve engagement, and strengthen brand positioning.\n\nAt B2B Sales Arrow, we provide end-to-end corporate event branding services for conferences, exhibitions, trade shows, networking events, and product launches. Our team manages booth branding, onsite branding, stage visuals, signage production, experiential branding, and branded event environments designed to create impactful audience experiences.",
-  imageUrl: "/images/home/services/booth/booth-5.avif",
+  imageUrl: "/images/services/booth/booth-5.avif",
   label: "Event Branding",
   titleLine1: "Professional Event Branding",
   titleLine2: "Solutions for Corporate Events",
@@ -45,7 +45,7 @@ export const EVENT_BRANDING_DELIVERABLES = {
         "Design and execute impactful trade show booth branding that increases visibility and audience engagement.",
       icon: "Presentation",
       id: "booth-branding",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Booth Branding Services",
     },
     {
@@ -54,7 +54,7 @@ export const EVENT_BRANDING_DELIVERABLES = {
         "Enhance exhibition spaces with branded backdrops, banners, graphics, signage, and experiential visual elements.",
       icon: "Layers",
       id: "exhibition-branding",
-      image: "/images/home/services/booth/booth-7.avif",
+      image: "/images/services/booth/booth-7.avif",
       title: "Exhibition Branding Solutions",
     },
     {
@@ -63,7 +63,7 @@ export const EVENT_BRANDING_DELIVERABLES = {
         "Deliver complete onsite event branding including entrance branding, directional signage, stage visuals, and event graphics.",
       icon: "MapPin",
       id: "onsite-branding",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Onsite Branding Solutions",
     },
     {
@@ -72,7 +72,7 @@ export const EVENT_BRANDING_DELIVERABLES = {
         "Support experiential marketing campaigns and branded activations that encourage audience interaction and engagement.",
       icon: "Sparkles",
       id: "brand-activation",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Corporate Brand Activation",
     },
     {
@@ -81,7 +81,7 @@ export const EVENT_BRANDING_DELIVERABLES = {
         "Create immersive and visually engaging event environments that strengthen brand recall and customer experiences.",
       icon: "Zap",
       id: "branded-experiences",
-      image: "/images/home/services/booth/booth-8.avif",
+      image: "/images/services/booth/booth-8.avif",
       title: "Branded Event Experiences",
     },
   ],
@@ -165,14 +165,14 @@ export const EVENT_BRANDING_WHY_CHOOSE_US = {
       description:
         "Our branding solutions focus on audience engagement, interaction, and immersive brand storytelling.",
       icon: "Users2",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Experiential Brand Activation",
     },
     {
       description:
         "Every event is unique, and we tailor branding concepts based on your audience, event objectives, and brand identity.",
       icon: "TrendingUp",
-      image: "/images/home/services/booth/booth-9.avif",
+      image: "/images/services/booth/booth-9.avif",
       title: "Customized Branding Solutions",
     },
   ],

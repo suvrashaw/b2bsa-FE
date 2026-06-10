@@ -547,7 +547,7 @@ export const Footer = () => {
                     className="rounded-md bg-transparent object-contain object-left"
                     fill
                     sizes="192px"
-                    src="/logos/logo_white.svg"
+                    src="/logo_white.svg"
                   />
                 </Link>
                 <Heading as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>

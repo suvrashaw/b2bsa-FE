@@ -20,7 +20,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/trade-show-booth-design",
       icon: "Presentation",
       id: "booth-design",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Trade Show Booth Design",
     },
     {
@@ -29,7 +29,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/event-booth-rental",
       icon: "Layers",
       id: "booth-rental",
-      image: "/images/home/services/booth/booth-6.avif",
+      image: "/images/services/booth/booth-6.avif",
       title: "Event Booth Rental",
     },
     {
@@ -38,7 +38,7 @@ export const GES_SERVICES = {
       href: "/services/global-event-solutions/trade-show-booth-builder",
       icon: "Globe2",
       id: "booth-builder",
-      image: "/images/home/services/booth/booth-7.avif",
+      image: "/images/services/booth/booth-7.avif",
       title: "Trade Show Booth Builder",
     },
   ],

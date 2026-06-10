@@ -4,9 +4,9 @@ export const CORP_EVENT_IMAGE_HERO = {
   description:
     "Deliver impactful business experiences with professional corporate event solutions for conferences, trade shows and networking events. We provide end-to-end event planning, coordination, branding, logistics, and onsite event support.",
   images: [
-    "/images/recent-events/event_other_1.avif",
-    "/images/recent-events/adobe_summit_2026.avif",
-    "/images/home/services/booth/booth-6.avif",
+    "/images/events/event_other_1.avif",
+    "/images/events/adobe_summit_2026.avif",
+    "/images/services/booth/booth-6.avif",
   ],
   primaryCta: { href: "/contact", label: "Plan Your Corporate Event" },
   title: "Corporate Event Solutions for Global Brands",
@@ -19,7 +19,7 @@ export const CORP_EVENT_INTRO = {
   ctaLabel: "Let's Connect",
   description:
     "Corporate events play an important role in strengthening business relationships, increasing brand visibility, and creating meaningful audience engagement. Professional corporate event solutions help businesses deliver organized, impactful, and results-driven event experiences.\n\nAt B2B Sales Arrow, we provide end-to-end corporate event solutions for conferences, trade shows, exhibitions, executive summits, networking receptions, product launches, and enterprise events. Our team manages planning, branding, logistics, guest engagement, onsite coordination, and operational execution to ensure smooth event delivery.",
-  imageUrl: "/images/recent-events/event_other_1.avif",
+  imageUrl: "/images/events/event_other_1.avif",
   label: "Corporate Events",
   titleLine1: "Professional Corporate Event",
   titleLine2: "Solutions for Enterprises",
@@ -35,7 +35,7 @@ export const CORP_EVENT_DELIVERABLES = {
         "Manage event strategy, scheduling, venue coordination, audience experience, and operational planning for successful business events.",
       icon: "Target",
       id: "event-planning",
-      image: "/images/recent-events/adobe_summit_2026.avif",
+      image: "/images/events/adobe_summit_2026.avif",
       title: "Corporate Event Planning",
     },
     {
@@ -44,7 +44,7 @@ export const CORP_EVENT_DELIVERABLES = {
         "Deliver professional conference and executive summit experiences with seamless event coordination and onsite support.",
       icon: "Mic",
       id: "conference-summit",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Conference & Summit Management",
     },
     {
@@ -53,7 +53,7 @@ export const CORP_EVENT_DELIVERABLES = {
         "Support trade shows and exhibitions with booth management, branding, logistics, staffing, and attendee engagement solutions.",
       icon: "Presentation",
       id: "trade-show",
-      image: "/images/home/services/booth/booth-5.avif",
+      image: "/images/services/booth/booth-5.avif",
       title: "Trade Show & Exhibition Support",
     },
     {
@@ -62,7 +62,7 @@ export const CORP_EVENT_DELIVERABLES = {
         "Organize business networking events, VIP receptions, hospitality experiences, and executive meetups.",
       icon: "Users",
       id: "networking",
-      image: "/images/recent-events/event_other_3.avif",
+      image: "/images/events/event_other_3.avif",
       title: "Networking Event Solutions",
     },
     {
@@ -157,7 +157,7 @@ export const CORP_EVENT_WHY_CHOOSE_US = {
       description:
         "Our team understands the operational and branding requirements of enterprise conferences, exhibitions, and executive events.",
       icon: "Award",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Enterprise Event Experience",
     },
     {
@@ -171,7 +171,7 @@ export const CORP_EVENT_WHY_CHOOSE_US = {
       description:
         "We tailor our corporate event services based on your audience, business objectives, and event goals.",
       icon: "TrendingUp",
-      image: "/images/home/services/booth/booth-9.avif",
+      image: "/images/services/booth/booth-9.avif",
       title: "Customized Event Solutions",
     },
   ],

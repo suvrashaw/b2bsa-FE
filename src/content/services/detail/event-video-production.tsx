@@ -11,7 +11,7 @@ export { GLOBAL_PROOF_STATS as EVENT_VIDEO_PROOF_BAR } from "../../shared";
 export const EVENT_VIDEO_WHY = {
   description:
     "A major trade show investment often runs to six figures. Without event video, its commercial value ends when the booth is packed away. With it, every keynote, customer story, and product demo becomes a reusable revenue asset across campaigns, sales decks, investor communications, and future event promotion.",
-  imageUrl: "/images/recent-events/adobe_summit_2026.avif",
+  imageUrl: "/images/events/adobe_summit_2026.avif",
   titleLine1: "Your Event Lasts 3 Days.",
   titleLine2: "Your Video Lasts 3 Years.",
 };
@@ -26,7 +26,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Full production for both in-person events and remote/virtual formats.",
       icon: "Video",
       id: "virtual-physical",
-      image: "/images/recent-events/adobe_summit_2026.avif",
+      image: "/images/events/adobe_summit_2026.avif",
       title: "Virtual and Physical Video Shoots",
     },
     {
@@ -36,7 +36,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Editing, colour grading, sound design, and final delivery for all video assets.",
       icon: "Film",
       id: "post-production",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Video Post-Production",
     },
     {
@@ -46,7 +46,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Filmed product demonstrations for SaaS, technology, equipment, and enterprise solutions.",
       icon: "Play",
       id: "demo-videos",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Production Demo Videos",
     },
     {
@@ -55,7 +55,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Animated explainers, product walkthroughs, and branded visual storytelling.",
       icon: "Sparkles",
       id: "animation",
-      image: "/images/recent-events/servicenow_2026.avif",
+      image: "/images/events/servicenow_2026.avif",
       title: "2D and 3D Animation Videos",
     },
     {
@@ -74,7 +74,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Speaker video bytes captured live during events.",
       icon: "Mic",
       id: "experience-videos",
-      image: "/images/recent-events/event_other_1.avif",
+      image: "/images/events/event_other_1.avif",
       title: "Event-Based Experience Videos",
     },
     {
@@ -83,7 +83,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Dedicated service and solution demonstration films.",
       icon: "Briefcase",
       id: "service-videos",
-      image: "/images/recent-events/event_other_2.avif",
+      image: "/images/events/event_other_2.avif",
       title: "Service-Based Videos",
     },
     {
@@ -111,7 +111,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Pre-event promotional content for registration drives and audience build.",
       icon: "Megaphone",
       id: "promo",
-      image: "/images/recent-events/inma_2026.avif",
+      image: "/images/events/inma_2026.avif",
       title: "Event Promo Videos",
     },
     {
@@ -120,7 +120,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Complex solutions simplified into clear, buyer-friendly video stories.",
       icon: "Lightbulb",
       id: "explanatory",
-      image: "/images/home/services/sql-generation-2.avif",
+      image: "/images/services/sql-generation-2.avif",
       title: "Explanatory Videos",
     },
     {
@@ -157,7 +157,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Curated event recap films for internal celebration and external social proof.",
       icon: "BookOpen",
       id: "throwback",
-      image: "/images/recent-events/event_other_4.avif",
+      image: "/images/events/event_other_4.avif",
       title: "Event Memory Book / Throwback Videos",
     },
     {
@@ -167,7 +167,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
         "Professional multi-camera broadcast from trade shows, conferences, and launches.",
       icon: "Radio",
       id: "live-streaming",
-      image: "/images/home/services/media-production-1.avif",
+      image: "/images/services/media-production-1.avif",
       title: "Live Event Streaming",
     },
     {
@@ -176,7 +176,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Ambient or supplementary content streamed alongside main event programming.",
       icon: "Wifi",
       id: "passive-streaming",
-      image: "/images/home/services/media-production-2.avif",
+      image: "/images/services/media-production-2.avif",
       title: "Passive Video Streaming",
     },
     {
@@ -194,7 +194,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Digital and print banners for events, social, and campaigns.",
       icon: "Image",
       id: "banners",
-      image: "/images/home/services/performance-marketing.avif",
+      image: "/images/services/performance-marketing.avif",
       title: "Banners",
     },
     {
@@ -203,7 +203,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Branded print and digital poster design for event marketing.",
       icon: "Layout",
       id: "posters",
-      image: "/images/home/services/performance-marketing-1.avif",
+      image: "/images/services/performance-marketing-1.avif",
       title: "Posters",
     },
     {
@@ -212,7 +212,7 @@ export const EVENT_VIDEO_DELIVERABLES = {
       description: "Animated social content for campaigns and event promotion.",
       icon: "Zap",
       id: "gifs",
-      image: "/images/home/services/sql-generation-revised.avif",
+      image: "/images/services/sql-generation-revised.avif",
       title: "GIFs",
     },
     {
