@@ -104,7 +104,7 @@ export const ProofBar = ({ className, description, heading, headingHighlight, st
           <Heading as="h2" className="mb-4 text-center" highlight={headingHighlight}>{heading}</Heading>
         )}
         {description && (
-          <p className="mx-auto mb-8 max-w-4xl text-center text-base md:text-lg leading-relaxed text-brand-charcoal/70">{description}</p>
+          <p className="mx-auto mb-8 max-w-4xl text-center text-base leading-relaxed text-brand-charcoal/70 md:text-lg">{description}</p>
         )}
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
           {statGroups.map((group, index) => (

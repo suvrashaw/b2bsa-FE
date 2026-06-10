@@ -84,7 +84,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             {data.title}
           </Heading>
 
-          <p className="mb-10 text-base md:text-lg leading-relaxed transition-colors duration-500">
+          <p className="mb-10 text-base leading-relaxed transition-colors duration-500 md:text-lg">
             {data.description}
           </p>
         </motion.div>

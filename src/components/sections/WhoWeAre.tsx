@@ -61,7 +61,7 @@ export const WhoWeAre = ({
               {resolvedHeading}
             </Heading>
             {description && (
-              <div className="space-y-6 text-base md:text-lg leading-relaxed text-brand-charcoal/80">
+              <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80 md:text-lg">
                 {description}
               </div>
             )}

@@ -124,7 +124,7 @@ export const WhyChooseUs = ({
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <Heading as="h3">{activeReason.title}</Heading>
                   </div>
-                  <p className="max-w-md text-base md:text-lg leading-relaxed text-gray-600">
+                  <p className="max-w-md text-base leading-relaxed text-gray-600 md:text-lg">
                     {activeReason.description}
                   </p>
                 </motion.div>

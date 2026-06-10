@@ -67,7 +67,7 @@ export const CaseStudyCard = ({
           </div>
           <h3 className="mb-3 font-heading text-lg leading-tight font-bold">{title}</h3>
           {challenge && (
-            <p className="line-clamp-2 text-sm md:text-base leading-relaxed text-gray-500">{challenge}</p>
+            <p className="line-clamp-2 text-sm leading-relaxed text-gray-500 md:text-base">{challenge}</p>
           )}
         </div>
 

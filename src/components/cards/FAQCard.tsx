@@ -51,7 +51,7 @@ export const FAQCard = ({
 
         {/* Back: Answer */}
         <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-8 text-left shadow-inner [backface-visibility:hidden]">
-          <p className="text-sm md:text-base leading-relaxed text-white">{answer}</p>
+          <p className="text-sm leading-relaxed text-white md:text-base">{answer}</p>
         </div>
       </div>
     </div>

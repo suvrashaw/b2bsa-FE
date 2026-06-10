@@ -46,7 +46,7 @@ export const ContactUs = ({
                 {heading}
               </Heading>
             </div>
-            <p className="mb-12 max-w-md text-left text-base md:text-lg leading-relaxed text-gray-600">{description}</p>
+            <p className="mb-12 max-w-md text-left text-base leading-relaxed text-gray-600 md:text-lg">{description}</p>
 
             {illustration && (
               <motion.div

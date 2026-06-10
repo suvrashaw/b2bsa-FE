@@ -32,7 +32,7 @@ export const CorporateVideoIndustriesSection = ({
           >
             {heading}
           </Heading>
-          <p className="mt-7 max-w-4xl text-base md:text-lg leading-relaxed text-white/86">
+          <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/86 md:text-lg">
             {description}
           </p>
 

@@ -36,7 +36,7 @@ export const AboutVisionMission = ({ data }: { data: AboutVisionMissionData }) =
             <ul className="space-y-5">
               {data.missionItems.map((item) => (
                 <li
-                  className="flex gap-4 text-base md:text-lg leading-relaxed text-brand-charcoal/80"
+                  className="flex gap-4 text-base leading-relaxed text-brand-charcoal/80 md:text-lg"
                   key={item}
                 >
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-cyan" />

@@ -68,7 +68,7 @@ export const OurServices = ({
                       {service.title}
                     </h3>
 
-                    <p className="text-base md:text-lg leading-relaxed font-medium text-gray-600 transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-gray-200">
+                    <p className="text-base leading-relaxed font-medium text-gray-600 transition-colors duration-700 md:text-lg md:group-has-[.image-pane:hover]/card:text-gray-200">
                       {service.description}
                     </p>
                   </div>

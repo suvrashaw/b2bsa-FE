@@ -43,7 +43,7 @@ export const TestimonialCard = ({
         </div>
       </div>
 
-      <p className="text-sm md:text-base leading-relaxed text-gray-600">&quot;{quote}&quot;</p>
+      <p className="text-sm leading-relaxed text-gray-600 md:text-base">&quot;{quote}&quot;</p>
 
       <div className="border-t border-gray-100 pt-4">
         <p className="text-sm font-semibold text-brand-blue">{designation}</p>

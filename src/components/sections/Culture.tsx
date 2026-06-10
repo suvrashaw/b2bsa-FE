@@ -47,7 +47,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <Heading as="h2" className="mb-6" highlight={data.headingHighlight}>
           {typeof data.heading === "string" ? data.heading : "What We Believe In"}
         </Heading>
-        <p className="mx-auto max-w-2xl text-center text-base md:text-lg leading-relaxed text-brand-charcoal/70 transition-colors duration-500">
+        <p className="mx-auto max-w-2xl text-center text-base leading-relaxed text-brand-charcoal/70 transition-colors duration-500 md:text-lg">
           {data.description}
         </p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
@@ -56,7 +56,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
               <h3 className="mb-3 font-heading text-xl font-bold text-brand-charcoal">
                 {reason.title}
               </h3>
-              <p className="text-sm md:text-base leading-relaxed text-brand-charcoal/70">
+              <p className="text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
                 {reason.description}
               </p>
             </div>

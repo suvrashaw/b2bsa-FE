@@ -30,7 +30,7 @@ export const AboutFounderStory = ({ data }: { data: AboutFounderStoryData }) => 
           <Heading as="h2" className="mb-8" highlight={data.headingHighlight}>
             {data.name}
           </Heading>
-          <p className="text-base md:text-lg leading-relaxed text-brand-charcoal/80">{data.story}</p>
+          <p className="text-base leading-relaxed text-brand-charcoal/80 md:text-lg">{data.story}</p>
         </div>
       </div>
     </section>

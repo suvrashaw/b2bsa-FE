@@ -92,7 +92,7 @@ const BoothWhyChooseUsCard = ({
           {item.title}
         </h3>
         <p
-          className={`text-sm md:text-base leading-relaxed transition-all duration-300 ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
+          className={`text-sm leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
         >
           {item.description}
         </p>
@@ -116,7 +116,7 @@ export const BoothWhyChooseUs = ({ heading, headingHighlight, items }: BoothWhyC
           viewport={viewport}
           whileInView="visible"
         >
-          <Heading as="h2" className="inline text-brand-charcoal" highlight={headingHighlight}>
+          <Heading as="h2" className="inline" highlight={headingHighlight}>
             {heading}
           </Heading>
           <div className="mt-8 flex justify-center">

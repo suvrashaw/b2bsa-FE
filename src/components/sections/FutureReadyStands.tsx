@@ -23,7 +23,7 @@ export const FutureReadyStands = ({ heading, headingHighlight, items }: FutureRe
     <section className="bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-14 text-center">
-          <Heading as="h2" className="text-center text-brand-charcoal" highlight={headingHighlight}>
+          <Heading as="h2" className="text-center" highlight={headingHighlight}>
             {heading}
           </Heading>
         </div>
@@ -52,7 +52,7 @@ export const FutureReadyStands = ({ heading, headingHighlight, items }: FutureRe
 
                 <ul className="mt-7 space-y-4">
                   {item.bullets.map((bullet) => (
-                    <li className="flex gap-3 text-sm md:text-base leading-relaxed text-brand-charcoal/72" key={bullet}>
+                    <li className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/72 md:text-base" key={bullet}>
                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                       <span>{bullet}</span>
                     </li>
