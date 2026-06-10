@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo } from "react";
 
 import type { CaseStudyCardData } from "@/content/case-studies";
 
@@ -37,11 +36,6 @@ export const CaseStudyItem = ({
   item,
   onActivate,
 }: CaseStudyItemProps) => {
-  const cardStyle = useMemo(
-    () => ({ height: active ? "100%" : "auto", minHeight: "100px" }),
-    [active]
-  );
-
   return (
     <motion.div
       className={cn(
@@ -53,7 +47,6 @@ export const CaseStudyItem = ({
       onClick={onActivate}
       onFocusCapture={onActivate}
       onHoverStart={onActivate}
-      style={cardStyle}
       transition={CARD_TRANSITION}
     >
       <div className="absolute inset-0 h-full w-full">
@@ -64,6 +57,7 @@ export const CaseStudyItem = ({
             active ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
           )}
           fill
+          priority={active}
           sizes="(max-width: 1024px) 100vw, 40vw"
           src={item.image}
         />

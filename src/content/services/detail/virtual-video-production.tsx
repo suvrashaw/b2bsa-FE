@@ -1,10 +1,10 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 const mediaProofLogos = [
-  { alt: "Airtel", src: "/client-logos/circle-airtel.svg" },
-  { alt: "SingleStore", src: "/client-logos/circle-singlestore.svg" },
-  { alt: "CSC", src: "/client-logos/circle-csc.svg" },
-  { alt: "United Payments", src: "/client-logos/circle-united-payments.svg" },
+  { alt: "Airtel", src: "/images/client-logos/circle-airtel.svg" },
+  { alt: "SingleStore", src: "/images/client-logos/circle-singlestore.svg" },
+  { alt: "CSC", src: "/images/client-logos/circle-csc.svg" },
+  { alt: "United Payments", src: "/images/client-logos/circle-united-payments.svg" },
 ] as const;
 
 export const VIRTUAL_VIDEO_IMAGE_HERO = {

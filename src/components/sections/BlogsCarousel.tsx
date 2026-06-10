@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimationControls } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -26,31 +27,6 @@ const HEADING_ANIMATE = { opacity: 1, y: 0 } as const;
 const HEADING_TRANSITION = { duration: 0.5 } as const;
 const HEADING_VIEWPORT = { once: true } as const;
 const TRACK_INITIAL = { x: 0 } as const;
-
-interface DotButtonProps {
-  active: boolean;
-  index: number;
-  onDotClick: (i: number) => void;
-}
-
-const DotButton = ({ active, index, onDotClick }: DotButtonProps) => {
-  const handleClick = useCallback(() => onDotClick(index), [index, onDotClick]);
-  return (
-    <button
-      aria-label={`Go to slide ${index + 1}`}
-      className="group flex h-12 min-w-[32px] items-center justify-center p-1 focus:outline-none"
-      onClick={handleClick}
-      type="button"
-    >
-      <span
-        className={cn(
-          "block h-2 rounded-full transition-all duration-500 ease-out group-focus-visible:ring-2 group-focus-visible:ring-brand-blue group-focus-visible:ring-offset-2",
-          active ? "w-10 bg-brand-blue" : "w-2 bg-gray-300 group-hover:bg-gray-400"
-        )}
-      />
-    </button>
-  );
-};
 
 const getPerView = () => {
   if (globalThis.window === undefined) return 4;
@@ -110,16 +86,6 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
     [cardStep, controls, posts.length]
   );
 
-  const goToDot = useCallback(
-    (i: number) => {
-      if (i === dotIndex || isAnimatingRef.current) return;
-      const forward = (i - dotIndex + posts.length) % posts.length;
-      const steps = forward > posts.length / 2 ? forward - posts.length : forward;
-      slideTo(offsetRef.current + steps);
-    },
-    [dotIndex, posts.length, slideTo]
-  );
-
   const cardStyle = useMemo(() => {
     const width = cardStep > 0 ? cardStep - GAP : "calc((100% - 96px) / 4)";
     return { flexShrink: 0 as const, width };
@@ -147,7 +113,7 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
           </Button>
         </div>
 
-        <div className="overflow-hidden" ref={containerRef}>
+        <div className="overflow-visible" ref={containerRef}>
           <motion.div
             animate={controls}
             className="flex"
@@ -162,10 +128,19 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
           </motion.div>
         </div>
 
-        <div className="mt-10 flex items-center justify-center">
-          {posts.map((post, i) => (
-            <DotButton active={i === dotIndex} index={i} key={post.id} onDotClick={goToDot} />
-          ))}
+        <div className="mt-10 flex items-center justify-center gap-8">
+          <button
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            onClick={() => slideTo(offsetRef.current - 1)}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            onClick={() => slideTo(offsetRef.current + 1)}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
         </div>
       </div>
     </section>

@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
   icons: {
     icon: [
-      { sizes: "16x16", type: "image/png", url: "/favicon/16x16.png" },
-      { sizes: "32x32", type: "image/png", url: "/favicon/32x32.png" },
-      { sizes: "64x64", type: "image/png", url: "/favicon/64x64.png" },
-      { sizes: "512x512", type: "image/png", url: "/favicon/512x512.png" },
+      { sizes: "16x16", type: "image/png", url: "/images/favicon/16x16.png" },
+      { sizes: "32x32", type: "image/png", url: "/images/favicon/32x32.png" },
+      { sizes: "64x64", type: "image/png", url: "/images/favicon/64x64.png" },
+      { sizes: "512x512", type: "image/png", url: "/images/favicon/512x512.png" },
     ],
   },
   metadataBase: new URL("https://b2bsalesarrow.com"),

@@ -39,7 +39,7 @@ const ABOUT_SECONDARY_CTA = {
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header />
+      <Header darkBackground />
       <ImageHero
         description={ABOUT_HERO.description}
         eyebrow={ABOUT_HERO.eyebrow}

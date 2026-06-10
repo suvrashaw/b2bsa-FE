@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { TestimonialCarouselCard } from "@/components/items/TestimonialCarouselCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -19,33 +20,6 @@ export interface TestimonialsProps {
 }
 
 const CAROUSEL_PERSPECTIVE_STYLE = { perspective: "1000px" };
-
-const DotButton = ({
-  activeIndex,
-  idx,
-  setActiveIndex,
-}: {
-  activeIndex: number;
-  idx: number;
-  setActiveIndex: (i: number) => void;
-}) => {
-  const handleClick = useCallback(() => setActiveIndex(idx), [idx, setActiveIndex]);
-  return (
-    <button
-      aria-label={`Go to slide ${idx + 1}`}
-      className="group flex h-12 min-w-[32px] items-center justify-center p-1 focus:outline-none"
-      onClick={handleClick}
-      type="button"
-    >
-      <span
-        className={cn(
-          "block h-2 rounded-full transition-all duration-500 ease-out group-focus-visible:ring-2 group-focus-visible:ring-brand-blue group-focus-visible:ring-offset-2",
-          activeIndex === idx ? "w-10 bg-brand-blue" : "w-2 bg-gray-300 group-hover:bg-gray-400"
-        )}
-      />
-    </button>
-  );
-};
 
 export const Testimonials = ({
   content = HOME_TESTIMONIALS_CONTENT,
@@ -113,18 +87,20 @@ export const Testimonials = ({
           })}
         </div>
 
-        {/* Custom Pagination */}
-        <div className="relative z-50 mt-16 flex items-center justify-center">
-          <div className="flex">
-            {testimonials.map((_, idx) => (
-              <DotButton
-                activeIndex={activeIndex}
-                idx={idx}
-                key={idx}
-                setActiveIndex={setActiveIndex}
-              />
-            ))}
-          </div>
+        {/* Navigation Arrows */}
+        <div className="relative z-50 mt-16 flex items-center justify-center gap-8">
+          <button
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
         </div>
       </div>
     </section>

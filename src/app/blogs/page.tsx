@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { BlogCategories } from "@/components/sections/BlogCategories";
 import { Blogs } from "@/components/sections/Blogs";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { ServiceCarouselSection } from "@/components/sections/ServiceCarouselSection";
+import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { TextHero } from "@/components/sections/TextHero";
 import {
   BLOG_CATEGORIES,
@@ -24,8 +24,8 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
       <TextHero {...BLOG_HERO} />
-      <BlogCategories categories={BLOG_CATEGORIES} />
-      <ServiceCarouselSection {...BLOG_SERVICE_CAROUSEL} />
+      <BlogCategories />
+      <BoothWhyChooseUs {...BLOG_SERVICE_CAROUSEL as any} layout="carousel" />
       <Blogs {...BLOG_POSTS} layout="grid" />
       <ContactUs {...BLOG_CONTACT} />
       <Footer />

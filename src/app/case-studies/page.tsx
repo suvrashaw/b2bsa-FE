@@ -71,11 +71,6 @@ const Page = () => {
           </motion.div>
         </div>
 
-        <ProofBar
-          className="!border-0 bg-brand-gray/40"
-          imageUrl="/Frames/ezgif-frame-017.jpg"
-          stats={CASE_STUDIES_PAGE_CONTENT.hero.proofBarStats}
-        />
       </section>
 
       <CaseStudiesGrid

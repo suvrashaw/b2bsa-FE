@@ -39,7 +39,13 @@ const CaseStudyCard = ({
 }) => {
   const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
   return (
-    <CaseStudyItem active={active} ctaLabel={ctaLabel} item={item} onActivate={handleActivate} />
+    <CaseStudyItem
+      active={active}
+      className={active ? "min-h-[360px] lg:min-h-0" : "min-h-[112px] lg:min-h-0"}
+      ctaLabel={ctaLabel}
+      item={item}
+      onActivate={handleActivate}
+    />
   );
 };
 
@@ -114,7 +120,7 @@ export const CaseStudies = ({
           )}
         </div>
 
-        <div className="flex h-[600px] w-full flex-col gap-4 lg:flex-row">
+        <div className="flex w-full flex-col gap-4 lg:h-[600px] lg:flex-row">
           {cards.map((study) => (
             <CaseStudyCard
               active={activeCaseStudyId === study.id}

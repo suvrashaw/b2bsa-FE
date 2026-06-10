@@ -32,7 +32,6 @@ import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
-import { ServiceCarouselSection } from "@/components/sections/ServiceCarouselSection";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -563,8 +562,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   RentVsBuySection: [
     { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
   ],
-  ServiceCarouselSection: [{ href: "/blogs", label: "Blogs" }],
-  ServiceHero: [
+    ServiceHero: [
     { href: "/", label: "Home" },
     { href: "/services/global-event-solutions", label: "Service Hub" },
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
@@ -693,7 +691,7 @@ export default function DemoPage() {
       <ProofBar
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
-        imageUrl="/Frames/ezgif-frame-017.jpg"
+        imageUrl="/images/Frames/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
 
@@ -724,14 +722,6 @@ export default function DemoPage() {
       {/* 13 – ServicesStack */}
       <DemoLabel name="ServicesStack" />
       <ServicesStack />
-
-      {/* 14 – ServiceCarouselSection */}
-      <DemoLabel name="ServiceCarouselSection" />
-      <ServiceCarouselSection
-        eyebrow="What We Deliver"
-        heading="End-to-End Event Services"
-        items={SERVICE_CAROUSEL_ITEMS}
-      />
 
       {/* 15 – FeatureCarouselSection */}
       <DemoLabel name="FeatureCarouselSection" />

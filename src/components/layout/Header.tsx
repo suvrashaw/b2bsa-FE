@@ -485,7 +485,7 @@ export const Header = ({
             fill
             priority
             sizes="160px"
-            src="/logo_primary.svg"
+            src="/images/logo_primary.svg"
           />
         </Link>
       </div>

@@ -18,72 +18,115 @@ export const GLOBAL_PROOF_STATS = [
 export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = [
   {
     challenge:
-      "Building enterprise visibility and qualified conversations in a high-speed aviation event window",
-    client: "Global aviation technology and transformation brand",
+      "Securing qualified aviation executive meetings in an ultra-compressed 10-day campaign window.",
+    client: "Global Leader in Digital Services",
     href: "/case-studies/waf-2025",
     icon: "Plane",
-    id: "world-aviation-festival-2023",
-    image: "/images/case-studies/waf.avif",
-    metric: "70% Hot Leads",
-    metricLabel: "Warm and hot lead share",
+    id: "waf-2025",
+    image: "/images/case-studies/cs-new-2.avif",
+    metric: "60",
+    metricLabel: "Qualified Meetings",
     solution:
-      "Delivered booth engagement, prospecting support, and meeting coordination that turned heavy event traffic into qualified executive conversations.",
-    title: "World Aviation Festival 2023",
+      "AI-supported prospecting, account-tier segmentation, VIP audience acquisition, and on-ground meeting coordination converted a tight event window into confirmed executive conversations.",
+    title: "World Aviation Festival 2025",
   },
   {
     challenge:
-      "Exceeding aggressive on-ground lead targets in a crowded financial services environment",
-    client: "Enterprise banking and payments technology brands",
+      "Driving dual-client success at a complex banking event with compressed outreach timelines and high-value meeting targets.",
+    client:
+      "Client A: Global Revenue Management & Pricing Leader | Client B: Europe's #1 Core Banking Platform",
     href: "/case-studies/sibos-2025",
-    icon: "Building2",
-    id: "sibos-2023",
-    image: "/images/case-studies/sibos.avif",
-    metric: "40% Above Target",
-    metricLabel: "Lead goal exceeded",
+    icon: "Landmark",
+    id: "sibos-2025",
+    image: "/images/case-studies/cs-new-1.avif",
+    metric: "200+",
+    metricLabel: "Badge Scans",
     solution:
-      "Combined active prospecting, meeting coordination, and booth engagement to outperform the target and deliver director-level conversations at scale.",
-    title: "SIBOS 2023",
-  },
-  {
-    challenge: "Standing out at a competitive infrastructure event while keeping lead quality high",
-    client: "Global utilities and infrastructure technology brand",
-    href: "/case-studies/distributech-2023",
-    icon: "Sparkles",
-    id: "distributech-international-2023",
-    image: "/images/case-studies/cs-9.avif",
-    metric: "80% Warm Leads",
-    metricLabel: "Hot and warm lead mix",
-    solution:
-      "Delivered a high-visibility event presence with focused lead generation support that pushed results well past the original target.",
-    title: "DistribuTECH International 2023",
+      "Multi-touch TAL outreach, global-region personalization, live meeting tracking, and on-ground support kept both programs moving across booth engagement and executive meeting coordination.",
+    title: "SIBOS 2025",
   },
   {
     challenge:
       "Qualified enterprise leads and a memorable brand presence despite opt-in attendee restrictions and a near-impossible 3-day asset delivery window.",
-    client: "Enterprise payments and technology brand",
+    client: "Multi-Billion-Dollar Global IT and Consulting Leader",
     href: "/case-studies/sap-sapphire-2023",
     icon: "Sparkles",
     id: "sap-sapphire-2023",
     image: "/images/case-studies/cs-10.avif",
-    metric: "31 SQLs",
-    metricLabel: "Against 30-lead target",
+    metric: "31",
+    metricLabel: "SQLs Delivered",
     solution:
       "Active prospecting, international QR-code sourcing, brand wearables, and premium experience touches delivered 31 SQLs, exceeding target with 80% hot and warm leads.",
     title: "SAP Sapphire 2023",
   },
   {
+    challenge: "Building a qualified energy-sector pipeline despite delayed attendee data.",
+    client: "Global IT and Consulting Leader",
+    href: "/case-studies/distributech-2023",
+    icon: "Zap",
+    id: "distributech-2023",
+    image: "/images/case-studies/cs-9.avif",
+    metric: "42",
+    metricLabel: "SQLs Delivered",
+    solution:
+      "A 500+ prospect database, multi-channel outreach, booth execution, and rigorous on-floor qualification generated 42 SQLs against a 30-lead target.",
+    title: "DistribuTECH 2023",
+  },
+  {
     challenge:
       "Secure C-level fintech meetings from a 1,000-account universe in one week, without delegate contact data and within a tight booth budget.",
-    client: "Enterprise fintech pricing and billing brand",
+    client: "World's #1 Pricing & Billing Organization ($450M+)",
     href: "/case-studies/money-2020-2023",
     icon: "Coins",
-    id: "money-20-20-2023",
-    image: "/images/case-studies/cs-new-1.avif",
-    metric: "35+ SQLs",
-    metricLabel: "Meetings delivered",
+    id: "money-2020-2023",
+    image: "/images/case-studies/cs-4.avif",
+    metric: "37",
+    metricLabel: "SQLs Delivered",
     solution:
       "Combined pre-event outreach, LED-led booth design, attendee engagement activations, and multilingual active prospecting delivered 37 results against a 30-result target.",
     title: "Money 20/20 2023",
+  },
+  {
+    challenge:
+      "Delivering C-level fintech meetings during a compressed Amsterdam event window with limited delegate data.",
+    client: "World's No. 1 Pricing and Billing Organization",
+    href: "/case-studies/money-2020-2022",
+    icon: "Coins",
+    id: "money-2020-2022",
+    image: "/images/case-studies/cs-3.avif",
+    metric: "37",
+    metricLabel: "SQLs Delivered",
+    solution:
+      "Targeted outreach, database development, meeting coordination, and a striking booth experience helped capture Fortune 500 pipeline and 1,000+ future prospects.",
+    title: "Money 20/20 2022",
+  },
+  {
+    challenge:
+      "Building a retail-focused senior pipeline with minimal preparation time and no attendee contact access.",
+    client: "Global IT & Consulting Leader ($16B+ Revenue)",
+    href: "/case-studies/nrf-2023",
+    icon: "ShoppingBag",
+    id: "nrf-2023",
+    image: "/images/case-studies/cs-7.avif",
+    metric: "60",
+    metricLabel: "SQLs Delivered",
+    solution:
+      "Focused on-ground active prospecting, multilingual sales support, meeting qualification, and detailed lead intelligence doubled the client target.",
+    title: "NRF 2023",
+  },
+  {
+    challenge:
+      "Delivering a multi-division executive conference while handling tight timelines, vendor issues, and a last-minute cruise permit failure.",
+    client: "Global IT & Consulting Leader (Infosys)",
+    href: "/case-studies/annual-sales-connect",
+    icon: "Users",
+    id: "annual-sales-connect",
+    image: "/images/case-studies/cs-5.avif",
+    metric: "150+",
+    metricLabel: "Attendees Hosted",
+    solution:
+      "End-to-end event production, AV, F&B, giveaways, vendor negotiation, and guest experience recovery turned a complex program into a seamless executive event.",
+    title: "Annual Sales Connect",
   },
 ];
 

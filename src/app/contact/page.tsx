@@ -23,7 +23,7 @@ const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" 
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header lightHeaderText />
+      <Header darkBackground />
       <CinematicSequence />
       <ClientLogos />
       <ContactUs {...CONTACT_FORM} />

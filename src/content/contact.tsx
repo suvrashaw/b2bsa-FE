@@ -54,7 +54,7 @@ export const CONTACT_FORM = {
   ),
   illustration: {
     alt: "Contact Us",
-    src: "/contact/image.svg",
+    src: "/images/contact/image.svg",
   },
 };
 

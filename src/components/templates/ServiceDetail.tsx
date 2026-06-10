@@ -160,7 +160,7 @@ export const ServiceDetail = ({
   proofBarClassName,
   proofBarDescription,
   proofBarHeading,
-  proofBarImageUrl = "/Frames/ezgif-frame-017.jpg",
+  proofBarImageUrl = "/images/Frames/ezgif-frame-017.jpg",
   relatedServices,
   secondaryServices,
   secondaryServicesSectionType = "grid",

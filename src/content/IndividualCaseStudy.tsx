@@ -19,7 +19,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "An ultra-compressed 10-day campaign cycle left almost no margin for error. Working solely from the client's internal database in a heavily contested sponsorship landscape, the team had to cut through intense competitive noise, surpass the previous year's benchmark of 40 meetings, and curate a premium VIP guest list - all simultaneously.",
     client: "Global Leader in Digital Services",
     event: "World Aviation Festival (WAF) 2025",
-    image: "/images/case-studies/waf.avif",
+    image: "/images/case-studies/cs-new-2.avif",
     location: "Lisbon, Portugal",
     outcome:
       "The campaign delivered 60 qualified meetings, including 34 engagements with $1B+ enterprises and direct conversations with C-suite leaders. The client praised the team's active prospecting capabilities, and the partnership has since been extended across key 2026 aviation and digital innovation summits.",
@@ -62,7 +62,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
     client:
       "Client A: Global Revenue Management & Pricing Leader | Client B: Europe's #1 Core Banking Platform",
     event: "SIBOS 2025",
-    image: "/images/case-studies/sibos.avif",
+    image: "/images/case-studies/cs-new-1.avif",
     location: "Messe Frankfurt, Germany",
     outcome:
       "Client A: 200+ badge scans, 34 qualified leads, 3 hot leads, 17 pre-scheduled meetings, 22 leads from $1B+ organizations.\n\nClient B: 125 badge scans, 64 qualified leads - high-value conversations across five global regions, exceeding strategic expectations.",
@@ -165,7 +165,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Just one week to execute outreach from a TAL of 1,000 prospects, Amsterdam public holidays compressing timelines further, no access to delegate contact data, and an immersive booth to deliver within tight budget.",
     client: "World's #1 Pricing & Billing Organization ($450M+)",
     event: "Money 20/20 Europe",
-    image: "/images/case-studies/cs-new-1.avif",
+    image: "/images/case-studies/cs-4.avif",
     location: "Amsterdam",
     outcome:
       "37 high-quality SQLs delivered against a target of 30 - from Fortune 500 accounts including Bank of America, Barclays, American Express, AWS, and Lloyds Bank. Plus 1,000+ prospects captured for future pipeline.",
@@ -190,7 +190,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Just one week to execute outreach from a TAL of 1,000 prospects, Amsterdam public holidays compressing timelines further, no access to delegate contact data, and an immersive booth to deliver within tight budget.",
     client: "World's No. 1 Pricing and Billing Organization",
     event: "Money 20/20 Europe",
-    image: "/images/case-studies/cs-new-1.avif",
+    image: "/images/case-studies/cs-3.avif",
     location: "Amsterdam",
     outcome:
       "37 high-quality SQLs delivered against a target of 30, from Fortune 500 accounts. Plus 1,000+ prospects captured for future pipeline.",
@@ -215,7 +215,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "Event fell right before the new year holiday season, leaving minimal preparation time. Zero access to attendee contact data made pre-fixed meeting setup significantly harder to execute.",
     client: "Global IT & Consulting Leader ($16B+ Revenue)",
     event: "NRF 2023 - Retail's Big Show",
-    image: "/images/case-studies/cs-new-10.avif",
+    image: "/images/case-studies/cs-7.avif",
     location: "Javits Center, New York",
     outcome:
       "60 SQLs delivered against a target of 30 - a clean 100% over delivery. 50 hot and warm leads secured. 46 meetings with decision-makers. 29 accounts with revenue exceeding $10 billion.",
@@ -240,7 +240,7 @@ export const CASE_STUDY_DETAILS: CaseStudyDetail[] = [
       "At the eleventh hour, the cruise operator could not proceed due to a missing Coast Guard permit. Simultaneously, tight timelines made bulk giveaway procurement a race against the clock, while hotel billing discrepancies demanded careful resolution.",
     client: "Global IT & Consulting Leader (Infosys)",
     event: "Sales ConnectMI Conference (Manufacturing & Insurance Divisions)",
-    image: "/images/case-studies/cs-new-3.avif",
+    image: "/images/case-studies/cs-5.avif",
     location: "Washington, D.C.",
     outcome:
       "The client praised the event as seamless, with zero technical or logistical hitches. The B2B Sales Arrow team earned glowing testimonials for their agility, professionalism, and ability to engineer a genuine “wow” factor under pressure.",

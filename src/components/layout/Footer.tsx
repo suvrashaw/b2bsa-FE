@@ -508,7 +508,7 @@ export const Footer = () => {
   const mapOpacity = useTransform(scrollYProgress, [0, 0.25, 1], [0.78, 0.94, 0.82]);
   const mapScale = useTransform(scrollYProgress, [0, 1], [1.14, 1.02]);
   const mapY = useTransform(scrollYProgress, [0, 1], ["1%", "-13%"]);
-  const contentY = useTransform(scrollYProgress, [0, 0.6, 1], ["8%", "-10%", "-10%"]);
+  const contentY = useTransform(scrollYProgress, [0, 0.6, 1], ["8%", "-18%", "-18%"]);
   const contentBgOpacity = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
 
   const mapStyle = useMemo(
@@ -522,7 +522,7 @@ export const Footer = () => {
     <footer className="relative z-0 h-[180vh] bg-brand-blue" ref={containerRef}>
       <div className="sticky top-0 flex h-screen w-full flex-col justify-between overflow-hidden">
         <motion.div
-          className="pointer-events-none absolute inset-x-0 top-[7vh] z-0 flex origin-center justify-center"
+          className="pointer-events-none absolute inset-x-0 top-[-5vh] z-0 flex origin-center justify-center"
           style={mapStyle}
         >
           <div className="h-[min(95vh,1080px)] w-[min(195vw,2100px)] max-w-none">
@@ -535,7 +535,7 @@ export const Footer = () => {
             className="absolute inset-0 -z-10 bg-linear-to-t from-brand-blue via-brand-blue/90 to-brand-blue/25 backdrop-blur-[2px]"
             style={contentBgStyle}
           />
-          <div className="relative container mx-auto px-8 pt-16 pb-6">
+          <div className="relative container mx-auto px-8 pt-8 pb-6">
             <div className="mb-6 grid gap-8 md:grid-cols-2 lg:grid-cols-[1.35fr_0.9fr_0.7fr_1.25fr] lg:gap-10">
               <div>
                 <Link
@@ -547,7 +547,7 @@ export const Footer = () => {
                     className="rounded-md bg-transparent object-contain object-left"
                     fill
                     sizes="192px"
-                    src="/logo_white.svg"
+                    src="/images/logo_white.svg"
                   />
                 </Link>
                 <Heading as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>

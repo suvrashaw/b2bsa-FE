@@ -138,5 +138,6 @@ export const BLOG_SERVICE_CAROUSEL = {
     id: s.id,
     image: s.image,
     title: s.title,
-  })),
+  }))
+  .sort((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };

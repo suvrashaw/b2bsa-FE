@@ -167,19 +167,19 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
   proofLogos: [
     {
       alt: "Airtel",
-      src: "/client-logos/circle-airtel.svg",
+      src: "/images/client-logos/circle-airtel.svg",
     },
     {
       alt: "SingleStore",
-      src: "/client-logos/circle-singlestore.svg",
+      src: "/images/client-logos/circle-singlestore.svg",
     },
     {
       alt: "CSC",
-      src: "/client-logos/circle-csc.svg",
+      src: "/images/client-logos/circle-csc.svg",
     },
     {
       alt: "United Payments",
-      src: "/client-logos/circle-united-payments.svg",
+      src: "/images/client-logos/circle-united-payments.svg",
     },
   ],
   secondaryCta: {

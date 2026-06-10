@@ -9,10 +9,10 @@ export const CINEMATIC_CTA_SHARED = {
   },
   proofLabel: "Trusted by 500+ companies",
   proofLogos: [
-    { alt: "Airtel", src: "/client-logos/circle-airtel.svg" },
-    { alt: "SingleStore", src: "/client-logos/circle-singlestore.svg" },
-    { alt: "CSC", src: "/client-logos/circle-csc.svg" },
-    { alt: "United Payments", src: "/client-logos/circle-united-payments.svg" },
+    { alt: "Airtel", src: "/images/client-logos/circle-airtel.svg" },
+    { alt: "SingleStore", src: "/images/client-logos/circle-singlestore.svg" },
+    { alt: "CSC", src: "/images/client-logos/circle-csc.svg" },
+    { alt: "United Payments", src: "/images/client-logos/circle-united-payments.svg" },
   ],
   secondaryCta: {
     href: "mailto:info@b2bsalesarrow.com",

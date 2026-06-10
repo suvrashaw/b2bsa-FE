@@ -11,6 +11,7 @@ import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
 export interface SpotlightProps {
+  align?: "left" | "center" | "right";
   className?: string;
   ctaHref?: string;
   ctaLabel?: string;
@@ -29,6 +30,7 @@ export interface SpotlightProps {
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
 const SpotlightTextBlock = ({
+  align = "center",
   ctaHref,
   ctaLabel,
   description,
@@ -79,7 +81,14 @@ const SpotlightTextBlock = ({
   );
 
   return (
-    <div className="relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center md:w-full md:max-w-[480px] lg:max-w-[560px] lg:pt-4">
+    <div
+      className={cn(
+        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col md:w-full md:max-w-[480px] lg:max-w-[560px] lg:pt-4",
+        align === "left" && "items-start text-left",
+        align === "right" && "items-end text-right",
+        align === "center" && "items-center text-center"
+      )}
+    >
       {label && (
         <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
           <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
@@ -283,6 +292,7 @@ const SpotlightImageBlock = ({
 };
 
 export const Spotlight = ({
+  align = "center",
   className,
   ctaHref,
   ctaLabel = "Explore",
@@ -327,6 +337,7 @@ export const Spotlight = ({
         onMouseLeave={handleMouseLeave}
       >
         <SpotlightTextBlock
+          align={align}
           ctaHref={ctaHref}
           ctaLabel={ctaLabel}
           description={description}

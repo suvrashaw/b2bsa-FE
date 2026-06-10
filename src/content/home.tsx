@@ -307,7 +307,7 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
     },
   ],
   frameCount: 60,
-  frameUrlTemplate: "/Frames/ezgif-frame-%d.jpg",
+  frameUrlTemplate: "/images/Frames/ezgif-frame-%d.jpg",
   heroOverlay: {
     description:
       "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
@@ -320,15 +320,15 @@ export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
 };
 
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
-  { alt: "Airtel", id: "airtel", src: "/client-logos/Airtel.svg" },
-  { alt: "BOSCH", id: "bosch", src: "/client-logos/BOSCH.svg" },
-  { alt: "CSC", id: "csc", src: "/client-logos/CSC.svg" },
-  { alt: "Infosys", id: "infosys", src: "/client-logos/Infosys.svg" },
-  { alt: "SingleStore", id: "singlestore", src: "/client-logos/SingleStore.svg" },
-  { alt: "Syngene", id: "syngene", src: "/client-logos/Syngene.svg" },
-  { alt: "Temenos", id: "temenos", src: "/client-logos/Temenos.svg" },
-  { alt: "United Payment", id: "unitedpayment", src: "/client-logos/UnitedPayment.svg" },
-  { alt: "Worldpay", id: "worldpay", src: "/client-logos/Worldpay.svg" },
+  { alt: "Airtel", id: "airtel", src: "/images/client-logos/Airtel.svg" },
+  { alt: "BOSCH", id: "bosch", src: "/images/client-logos/BOSCH.svg" },
+  { alt: "CSC", id: "csc", src: "/images/client-logos/CSC.svg" },
+  { alt: "Infosys", id: "infosys", src: "/images/client-logos/Infosys.svg" },
+  { alt: "SingleStore", id: "singlestore", src: "/images/client-logos/SingleStore.svg" },
+  { alt: "Syngene", id: "syngene", src: "/images/client-logos/Syngene.svg" },
+  { alt: "Temenos", id: "temenos", src: "/images/client-logos/Temenos.svg" },
+  { alt: "United Payment", id: "unitedpayment", src: "/images/client-logos/UnitedPayment.svg" },
+  { alt: "Worldpay", id: "worldpay", src: "/images/client-logos/Worldpay.svg" },
 ];
 
 export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
@@ -462,19 +462,19 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   items: [
     {
       icon: "Plane",
-      id: "world-aviation-festival-2023",
-      image: "/images/case-studies/waf.avif",
+      id: "waf-2025",
+      image: "/images/case-studies/cs-new-2.avif",
       solution:
-        "Fueling global brand recognition and lead generation success with 70% hot and warm leads from 80% of $1B+ organisations.",
-      title: "World Aviation Festival 2023",
+        "AI-supported prospecting, account-tier segmentation, VIP audience acquisition, and on-ground meeting coordination delivered 60 qualified aviation meetings.",
+      title: "World Aviation Festival 2025",
     },
     {
-      icon: "Building2",
-      id: "sibos-2023",
-      image: "/images/case-studies/sibos.avif",
+      icon: "Landmark",
+      id: "sibos-2025",
+      image: "/images/case-studies/cs-new-1.avif",
       solution:
-        "Boosting on-ground lead generation 40% beyond target with 85%+ hot and warm leads and 75%+ director-level prospects.",
-      title: "SIBOS 2023",
+        "Multi-touch TAL outreach, global-region personalization, live meeting tracking, and on-ground support drove dual-client success.",
+      title: "SIBOS 2025",
     },
     {
       icon: "Sparkles",
@@ -483,6 +483,46 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
       solution:
         "Empowering global branding and on-ground lead generation success, delivering 80% hot and warm leads and 100% unique accounts.",
       title: "SAP Sapphire 2023",
+    },
+    {
+      icon: "Zap",
+      id: "distributech-2023",
+      image: "/images/case-studies/cs-9.avif",
+      solution:
+        "A 500+ prospect database, multi-channel outreach, booth execution, and rigorous on-floor qualification generated 42 SQLs.",
+      title: "DistribuTECH 2023",
+    },
+    {
+      icon: "Coins",
+      id: "money-2020-2023",
+      image: "/images/case-studies/cs-4.avif",
+      solution:
+        "Pre-event outreach, booth design, attendee engagement, and multilingual active prospecting delivered 37 results against a 30-result target.",
+      title: "Money 20/20 2023",
+    },
+    {
+      icon: "Coins",
+      id: "money-2020-2022",
+      image: "/images/case-studies/cs-3.avif",
+      solution:
+        "Targeted outreach, database development, meeting coordination, and a strong booth experience captured Fortune 500 pipeline.",
+      title: "Money 20/20 2022",
+    },
+    {
+      icon: "ShoppingBag",
+      id: "nrf-2023",
+      image: "/images/case-studies/cs-7.avif",
+      solution:
+        "Focused on-ground active prospecting, multilingual sales support, and meeting intelligence doubled the retail pipeline target.",
+      title: "NRF 2023",
+    },
+    {
+      icon: "Users",
+      id: "annual-sales-connect",
+      image: "/images/case-studies/cs-5.avif",
+      solution:
+        "End-to-end event production, AV, F&B, giveaways, and vendor recovery planning delivered a seamless executive program.",
+      title: "Annual Sales Connect",
     },
   ],
 };
@@ -835,7 +875,7 @@ export const HOME_CONTACT_CONTENT: ContactContent = {
   headingHighlight: "Global Event Strategy",
   illustration: {
     alt: "Contact Us",
-    src: "/contact/image.svg",
+    src: "/images/contact/image.svg",
   },
 };
 

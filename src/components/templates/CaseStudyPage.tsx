@@ -12,6 +12,7 @@ import { ImageHero } from "@/components/sections/ImageHero";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 
 const HERO_PRIMARY_CTA = { href: "/contact", label: "Get a Custom Proposal" } as const;
@@ -60,14 +61,11 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       {/* Event metadata */}
       <section className="bg-brand-gray py-10">
         <div className="container mx-auto px-8">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             {metadata.map(({ label, value }) => (
-              <span
-                className="rounded-full border border-brand-blue/20 bg-brand-gray px-4 py-2 text-sm font-medium text-brand-blue"
-                key={label}
-              >
-                <span className="font-semibold">{label}:</span> {value}
-              </span>
+              <Eyebrow className="!mb-0 m-0" key={label} variant="blue">
+                <span className="font-bold">{label}:</span> {value}
+              </Eyebrow>
             ))}
           </div>
         </div>
@@ -94,7 +92,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       <section className="bg-brand-gray py-20">
         <div className="container mx-auto px-8">
           <Spotlight
-            className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
+            className="[&_p]:text-lg"
             description={study.challenges}
             imageAlt={study.title}
             imageUrl={study.image}
@@ -108,7 +106,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       <section className="bg-brand-gray py-20">
         <div className="container mx-auto px-8">
           <Spotlight
-            className="[&_p]:text-lg"
+            className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
             description={study.solution}
             imageAlt={study.title}
             imageUrl={study.image}
