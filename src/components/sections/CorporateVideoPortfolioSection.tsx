@@ -13,13 +13,11 @@ export interface CorporateVideoPortfolioItem {
 
 export interface CorporateVideoPortfolioSectionProps {
   heading: string;
-  headingHighlight?: string;
   items: CorporateVideoPortfolioItem[];
 }
 
 export const CorporateVideoPortfolioSection = ({
   heading,
-  headingHighlight,
   items,
 }: CorporateVideoPortfolioSectionProps) => {
   return (
@@ -28,7 +26,7 @@ export const CorporateVideoPortfolioSection = ({
         <Heading
           as="h2"
           className="mb-12 max-w-4xl text-white md:mb-14 lg:text-5xl"
-          highlight={headingHighlight}
+         
         >
           {heading}
         </Heading>

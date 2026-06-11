@@ -10,7 +10,6 @@ import { Heading } from "@/components/ui/Heading";
 
 export interface BoothWhyChooseUsProps {
   heading: string;
-  headingHighlight?: string;
   items: BoothWhyChooseUsItem[];
   layout?: "grid" | "carousel";
   showCta?: boolean;
@@ -42,7 +41,6 @@ const getSlidesPerView = (): number => {
 
 export const BoothWhyChooseUs = ({
   heading,
-  headingHighlight,
   items,
   layout = "grid",
   showCta = false,
@@ -123,7 +121,7 @@ export const BoothWhyChooseUs = ({
           viewport={viewport}
           whileInView="visible"
         >
-          <Heading as="h2" className="inline" highlight={headingHighlight}>
+          <Heading as="h2" className="inline">
             {heading}
           </Heading>
           {showUnderline && (

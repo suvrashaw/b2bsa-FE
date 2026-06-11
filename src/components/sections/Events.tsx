@@ -25,7 +25,6 @@ export interface EventsProps {
   events?: EventsContent["events"];
   eyebrow?: EventsContent["eyebrow"];
   heading?: EventsContent["heading"];
-  headingHighlight?: string;
   viewAllHref?: string;
   viewAllLabel?: EventsContent["viewAllLabel"];
 }
@@ -114,7 +113,6 @@ export const Events = ({
   events,
   eyebrow = content.eyebrow,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   viewAllHref = "/trade-show-calendar",
   viewAllLabel = content.viewAllLabel,
 }: EventsProps = {}) => {
@@ -133,11 +131,11 @@ export const Events = ({
   }, []);
 
   return (
-    <section className="relative bg-brand-gray py-20" id="events">
+    <section className="relative bg-brand-gray pt-20 pb-4" id="events">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center" highlight={headingHighlight}>
+          <Heading as="h2" className="text-center">
             {heading}
           </Heading>
           {description && <p className="mt-4 max-w-2xl text-base text-gray-600">{description}</p>}

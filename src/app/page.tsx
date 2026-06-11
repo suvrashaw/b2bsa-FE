@@ -8,10 +8,10 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Events } from "@/components/sections/Events";
 import { FAQ } from "@/components/sections/FAQ";
-import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { HOME_CINEMATIC_SEQUENCE_CONTENT, HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
@@ -27,7 +27,7 @@ const Home = () => {
       <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
       <Header forceLightMode />
       <div id="home">
-        <ServiceHero
+        <VideoHero
           description={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.description}
           primaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.primaryCta}
           secondaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.secondaryCta}

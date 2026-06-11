@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
+import { cn } from "@/lib";
 
 export interface ImageHeroProps {
   description?: string;
@@ -16,6 +17,7 @@ export interface ImageHeroProps {
   primaryCta?: { href: string; label: string };
   secondaryCta?: { href: string; label: string };
   title: string;
+  variant?: "compact" | "default";
   videoSrc?: string;
 }
 
@@ -69,7 +71,7 @@ const TitleLine = ({ index, line }: { index: number; line: string }) => {
     [index]
   );
   return (
-    <span className="block overflow-hidden">
+    <span className="block overflow-visible md:overflow-hidden">
       <motion.span
         animate={TITLE_LINE_ANIMATE}
         className="block"
@@ -90,6 +92,7 @@ export const ImageHero = ({
   primaryCta,
   secondaryCta,
   title,
+  variant = "default",
   videoSrc,
 }: ImageHeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -110,7 +113,12 @@ export const ImageHero = ({
 
   return (
     <section
-      className="relative flex min-h-svh items-end overflow-hidden bg-brand-charcoal pt-32 pb-20"
+      className={cn(
+        "relative flex items-center overflow-hidden bg-brand-charcoal md:items-end",
+        variant === "compact"
+          ? "min-h-[50vh] pt-24 pb-16"
+          : "min-h-[560px] pt-28 pb-16 md:min-h-svh md:pt-32 md:pb-20"
+      )}
       ref={containerRef}
     >
       <div className="absolute inset-0 z-0">
@@ -178,32 +186,34 @@ export const ImageHero = ({
             </motion.p>
           )}
 
-          <motion.div
-            animate={CTA_ANIMATE}
-            className="flex flex-wrap items-center gap-6"
-            initial={CTA_INITIAL}
-            transition={CTA_TRANSITION}
-          >
-            {primaryCta && (
-              <Link
-                className="group relative flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
-                href={primaryCta.href}
-                style={PRIMARY_CTA_STYLE}
-              >
-                {primaryCta.label}
-                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            )}
-            {secondaryCta && (
-              <Link
-                className="flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
-                href={secondaryCta.href}
-                style={SECONDARY_CTA_STYLE}
-              >
-                {secondaryCta.label}
-              </Link>
-            )}
-          </motion.div>
+          {(primaryCta ?? secondaryCta) && (
+            <motion.div
+              animate={CTA_ANIMATE}
+              className="flex flex-wrap items-center gap-6"
+              initial={CTA_INITIAL}
+              transition={CTA_TRANSITION}
+            >
+              {primaryCta && (
+                <Link
+                  className="group relative flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  href={primaryCta.href}
+                  style={PRIMARY_CTA_STYLE}
+                >
+                  {primaryCta.label}
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
+              {secondaryCta && (
+                <Link
+                  className="flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  href={secondaryCta.href}
+                  style={SECONDARY_CTA_STYLE}
+                >
+                  {secondaryCta.label}
+                </Link>
+              )}
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>

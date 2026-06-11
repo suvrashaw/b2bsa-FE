@@ -16,7 +16,6 @@ export interface ServicesStackProps {
   ctaLabel?: HomeServicesContent["ctaLabel"];
   eyebrow?: HomeServicesContent["eyebrow"];
   heading?: HomeServicesContent["heading"];
-  headingHighlight?: string;
   serviceLabel?: HomeServicesContent["serviceLabel"];
   services?: HomeServiceItem[];
 }
@@ -26,7 +25,6 @@ export const ServicesStack = ({
   ctaLabel = content.ctaLabel,
   eyebrow = content.eyebrow,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   serviceLabel = content.serviceLabel,
   services = content.services,
 }: ServicesStackProps = {}) => {
@@ -40,7 +38,7 @@ export const ServicesStack = ({
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="text-center" highlight={headingHighlight}>
+          <Heading as="h2" className="text-center">
             {heading}
           </Heading>
         </div>

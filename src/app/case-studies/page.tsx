@@ -2,14 +2,20 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
-import { ProofBar } from "@/components/sections/ProofBar";
 import { Heading } from "@/components/ui/Heading";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
+import {
+  clampPaginationPage,
+  DEFAULT_PAGE_SIZE,
+  getPaginationPageCount,
+  parsePaginationPage,
+} from "@/lib/pagination";
 
 const ALL_FILTER = CASE_STUDIES_PAGE_CONTENT.gridFilters[0];
 
@@ -21,16 +27,48 @@ const HERO_RIGHT_INITIAL = { opacity: 0, x: 30 };
 const HERO_RIGHT_TRANSITION = { duration: 1, ease: [0.16, 1, 0.3, 1] as const };
 
 const Page = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [activeFilter, setActiveFilter] = useState<string>(ALL_FILTER);
+  const requestedPage = parsePaginationPage(searchParams.get("page"));
 
   const filteredStudies =
     activeFilter === ALL_FILTER
       ? CASE_STUDIES_PAGE_STUDIES
       : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.serviceCategories.includes(activeFilter));
+  const totalPages = getPaginationPageCount(filteredStudies.length, DEFAULT_PAGE_SIZE);
+  const currentPage = clampPaginationPage(requestedPage, totalPages);
 
-  const handleFilterChange = useCallback((filter: string) => {
-    setActiveFilter(filter);
-  }, []);
+  const updatePage = useCallback(
+    (page: number) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (page <= 1) {
+        params.delete("page");
+      } else {
+        params.set("page", String(page));
+      }
+
+      const query = params.toString();
+      router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams]
+  );
+
+  const handleFilterChange = useCallback(
+    (filter: string) => {
+      setActiveFilter(filter);
+      updatePage(1);
+    },
+    [updatePage]
+  );
+
+  useEffect(() => {
+    if (requestedPage !== currentPage) {
+      updatePage(currentPage);
+    }
+  }, [currentPage, requestedPage, updatePage]);
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -79,6 +117,8 @@ const Page = () => {
         emptyStateTitle={CASE_STUDIES_PAGE_CONTENT.emptyState.title}
         filters={CASE_STUDIES_PAGE_CONTENT.gridFilters}
         onFilterChange={handleFilterChange}
+        onPageChange={updatePage}
+        page={currentPage}
         studies={filteredStudies}
       />
 

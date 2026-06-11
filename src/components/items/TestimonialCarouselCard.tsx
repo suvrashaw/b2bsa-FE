@@ -13,7 +13,7 @@ const CARD_STYLE_BASE = { transformOrigin: "center", transformStyle: "preserve-3
 const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
 const isOuterQuoteMark = (char: string) =>
-  ["'", '"', "\u201C", "\u201D"].includes(char);
+  ["'", '"', "“", "”"].includes(char);
 
 const stripOuterQuoteMarks = (quote: string) => {
   let start = 0;
@@ -67,7 +67,7 @@ export const TestimonialCarouselCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className={`shadow-[0_12px_40px_rgba(0,0,0,0.08)](0,0,0,0.4)] absolute w-full max-w-[320px] cursor-pointer rounded-3xl border border-gray-100 bg-white p-8 will-change-transform sm:max-w-[400px] sm:p-10 ${
+      className={`absolute w-full max-w-[280px] cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)] will-change-transform sm:max-w-[340px] ${
         isVisible ? "" : "pointer-events-none"
       }`}
       initial={false}
@@ -76,51 +76,53 @@ export const TestimonialCarouselCard = ({
       style={CARD_STYLE_BASE}
       transition={CARD_TRANSITION}
     >
-      <div className="relative flex h-full flex-col justify-between gap-6">
-        <div className="flex items-center gap-4">
-          <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-[#1E6091]">
-            <Image
-              alt={testimonial.name}
-              className="object-cover"
-              fill
-              sizes="56px"
-              src={testimonial.image}
-            />
-          </div>
-          <div>
-            <p className="font-heading text-base leading-tight font-bold text-gray-900">
-              {testimonial.name}
-            </p>
-            <div className="mt-1 flex gap-1">
-              {Array.from({ length: testimonial.rating }).map((_, i) => (
-                <Star className="h-3.5 w-3.5 fill-[#1E6091] text-[#1E6091]" key={i} />
-              ))}
-            </div>
+      {/* Portrait image — matches the aspect ratio of the testimonial photos */}
+      <div className="relative aspect-[3/4] w-full overflow-hidden">
+        <Image
+          alt={testimonial.name}
+          className="object-cover"
+          fill
+          sizes="(max-width: 640px) 280px, 340px"
+          src={testimonial.image}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+        {/* Name + stars overlay at bottom of image */}
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <p className="font-heading text-sm font-bold leading-tight text-white">
+            {testimonial.name}
+          </p>
+          <div className="mt-1 flex gap-1">
+            {Array.from({ length: testimonial.rating }).map((_, i) => (
+              <Star className="h-3 w-3 fill-[#74DBF3] text-[#74DBF3]" key={i} />
+            ))}
           </div>
         </div>
+      </div>
 
-        <p className="relative z-10 text-[15px] leading-relaxed text-gray-600">
+      {/* Text content below image */}
+      <div className="p-5">
+        <p className="text-[13px] leading-relaxed text-gray-600">
           &quot;{stripOuterQuoteMarks(testimonial.quote)}&quot;
         </p>
 
-        <div className="border-t border-gray-100 pt-5">
+        <div className="mt-4 border-t border-gray-100 pt-4">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <p className="text-sm font-semibold text-[#1E6091]">{testimonial.designation}</p>
-              <p className="text-xs font-medium text-gray-500">{testimonial.company}</p>
+              <p className="text-xs font-semibold text-[#1E6091]">{testimonial.designation}</p>
+              <p className="text-[11px] font-medium text-gray-500">{testimonial.company}</p>
             </div>
             {testimonial.serviceTag && (
-              <span className="shrink-0 rounded-full bg-[#1E6091]/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-[#1E6091] uppercase">
+              <span className="shrink-0 rounded-full bg-[#1E6091]/10 px-2 py-0.5 text-[9px] font-bold tracking-wide text-[#1E6091] uppercase">
                 {testimonial.serviceTag}
               </span>
             )}
           </div>
         </div>
-
-        {!isCenter && (
-          <div className="absolute inset-0 rounded-3xl bg-white/5 transition-colors duration-300 hover:bg-transparent" />
-        )}
       </div>
+
+      {!isCenter && (
+        <div className="absolute inset-0 rounded-2xl bg-white/5 transition-colors duration-300 hover:bg-transparent" />
+      )}
     </motion.div>
   );
 };

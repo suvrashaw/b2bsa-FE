@@ -10,11 +10,9 @@ import type { SharedBlogPost } from "@/content/blogs";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
-import { cn } from "@/lib";
 
 export interface BlogsCarouselProps {
   heading: string;
-  headingHighlight?: string;
   posts: SharedBlogPost[];
 }
 
@@ -35,12 +33,11 @@ const getPerView = () => {
   return 1;
 };
 
-export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouselProps) => {
+export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controls = useAnimationControls();
   const [cardStep, setCardStep] = useState(0);
   const offsetRef = useRef(posts.length); // start in middle of tripled array
-  const [dotIndex, setDotIndex] = useState(0);
   const isAnimatingRef = useRef(false);
 
   const extended = [...posts, ...posts, ...posts];
@@ -68,8 +65,6 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
       if (isAnimatingRef.current || cardStep === 0) return;
       isAnimatingRef.current = true;
       offsetRef.current = newOffset;
-      setDotIndex((((newOffset - posts.length) % posts.length) + posts.length) % posts.length);
-
       await controls.start({ x: -(newOffset * cardStep) }, SLIDE_TRANSITION);
 
       // Silently reset to middle section to keep infinite looping
@@ -103,7 +98,7 @@ export const BlogsCarousel = ({ heading, headingHighlight, posts }: BlogsCarouse
             viewport={HEADING_VIEWPORT}
             whileInView={HEADING_ANIMATE}
           >
-            <Heading as="h2" highlight={headingHighlight}>
+            <Heading as="h2">
               {heading}
             </Heading>
           </motion.div>

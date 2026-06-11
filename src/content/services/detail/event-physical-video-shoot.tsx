@@ -33,13 +33,11 @@ export const EVENT_PHYSICAL_VIDEO_INTRO = {
   description:
     "From keynote sessions and brand experiences to interviews, testimonials, and thought leadership bytes, on-site video shoots help you capture the most valuable moments of your event in a professional and engaging format. This service transforms live event interactions into high-quality video content that can be used for marketing, branding, internal communications, post-event promotions, and long-term business growth.\n\nAt B2B Sales Arrow, we provide end-to-end on-site video shoot coverage tailored to your event goals. Whether you want to showcase customer experiences, capture executive insights, highlight speaker sessions, or create memorable event recaps, our team ensures every important moment is filmed with clarity, creativity, and purpose.",
   heading: "Professional On-Site Video Shoot Coverage for Events",
-  headingHighlight: "On-Site Video Shoot",
 };
 
 export const EVENT_PHYSICAL_VIDEO_DELIVERABLES = {
   ctaLabel: "Plan Your Shoot",
   heading: "What We Deliver Through On-Site Video Shoot Coverage",
-  headingHighlight: "We Deliver",
   services: [
     {
       color: "bg-brand-blue",
@@ -212,7 +210,6 @@ export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
 
 export const EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for On-Site Video Shoot Coverage?",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -299,7 +296,6 @@ export const EVENT_PHYSICAL_VIDEO_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About On-Site Video Shoots",
-  headingHighlight: "Asked Questions",
 };
 
 export const EVENT_PHYSICAL_VIDEO_RELATED_SERVICES = [

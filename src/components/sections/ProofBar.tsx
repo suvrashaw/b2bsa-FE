@@ -11,7 +11,6 @@ interface ProofBarProps {
   className?: string;
   description?: ReactNode;
   heading?: string;
-  headingHighlight?: string;
   imageAlt?: string;
   imageUrl: string;
   stats: string[];
@@ -115,7 +114,6 @@ export const ProofBar = ({
   className,
   description,
   heading,
-  headingHighlight,
   imageAlt = "Statistics visual",
   imageUrl,
   stats,
@@ -140,7 +138,7 @@ export const ProofBar = ({
 
   return (
     <div className={cn("bg-brand-gray py-16 md:py-20", className)}>
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left column: heading, description, stats marquee */}
           <div className="flex flex-col">
@@ -151,7 +149,7 @@ export const ProofBar = ({
                 viewport={PROOF_VIEWPORT}
                 whileInView={PROOF_IN_VIEW}
               >
-                <Heading as="h2" className="mb-4" highlight={headingHighlight}>
+                <Heading as="h2" className="mb-4">
                   {heading}
                 </Heading>
               </motion.div>

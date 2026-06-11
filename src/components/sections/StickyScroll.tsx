@@ -5,6 +5,8 @@ import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useMemo, useRef, useState } from "react";
 
+import { Button } from "@/components/ui/Button";
+import { ContactModal } from "@/components/ui/ContactModal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home";
@@ -40,7 +42,6 @@ export interface StickyScrollProps {
   content?: StickyScrollContent;
   eyebrow?: StickyScrollContent["eyebrow"];
   heading?: StickyScrollContent["heading"];
-  headingHighlight?: string;
   reasons?: StickyScrollContent["reasons"];
   showImagePanel?: boolean;
 }
@@ -56,12 +57,14 @@ export const StickyScroll = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
   eyebrow = content.eyebrow,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   reasons = content.reasons,
   showImagePanel = true,
 }: StickyScrollProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = useCallback(() => setIsModalOpen(true), []);
+  const closeModal = useCallback(() => setIsModalOpen(false), []);
 
   const resolvedActiveIndex = Math.min(activeIndex, Math.max(reasons.length - 1, 0));
   const activeReason = reasons[resolvedActiveIndex];
@@ -104,7 +107,7 @@ export const StickyScroll = ({
           className={`flex h-screen flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
           {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-14 w-full text-left" highlight={headingHighlight}>
+          <Heading as="h2" className="mb-14 w-full text-left">
             {heading}
           </Heading>
 
@@ -130,6 +133,27 @@ export const StickyScroll = ({
               </AnimatePresence>
             )}
           </div>
+
+          {/* Mobile: active reason image */}
+          {showImagePanel && activeReason && (
+            <div className="mt-6 md:hidden relative aspect-square w-full max-w-sm overflow-hidden rounded-3xl border border-gray-200 shadow-xl">
+              <Image
+                alt={activeReason.title}
+                className="object-cover"
+                fill
+                sizes="100vw"
+                src={activeReason.image}
+              />
+              <div className="absolute inset-0 bg-brand-blue/20 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+          )}
+
+          <div className="mt-8">
+            <Button onClick={openModal} size="lg" variant="primary">
+              Let&apos;s Discuss
+            </Button>
+          </div>
         </div>
 
         {/* Right image reel — slides vertically inside overflow-hidden container */}
@@ -152,6 +176,8 @@ export const StickyScroll = ({
           </div>
         )}
       </div>
+
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

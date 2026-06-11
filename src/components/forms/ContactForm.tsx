@@ -52,25 +52,21 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           )}
         </div>
 
-        {(form.companyLabel || form.jobTitleLabel) && (
-          <div className="grid grid-cols-2 gap-6">
-            {form.companyLabel && (
-              <FormInput
-                id="contact-company"
-                label={form.companyLabel}
-                placeholder={form.companyPlaceholder}
-                type="text"
-              />
-            )}
-            {form.jobTitleLabel && (
-              <FormInput
-                id="contact-job-title"
-                label={form.jobTitleLabel}
-                placeholder={form.jobTitlePlaceholder}
-                type="text"
-              />
-            )}
-          </div>
+        {form.companyLabel && (
+          <FormInput
+            id="contact-company"
+            label={form.companyLabel}
+            placeholder={form.companyPlaceholder}
+            type="text"
+          />
+        )}
+        {form.jobTitleLabel && (
+          <FormInput
+            id="contact-job-title"
+            label={form.jobTitleLabel}
+            placeholder={form.jobTitlePlaceholder}
+            type="text"
+          />
         )}
 
         <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-2" : "grid-cols-1"}`}>

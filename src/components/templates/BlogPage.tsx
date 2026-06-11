@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
-import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
@@ -81,7 +81,8 @@ const BlogSidebarSubscribe = () => {
             Don&apos;t Just Scroll!
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
-            <span className="font-bold text-brand-blue">Subscribe Now</span> to Stay in the Loop!
+            <span className="font-bold text-brand-blue">Get it on email</span> and stay in the
+            loop.
           </p>
         </div>
 
@@ -119,9 +120,48 @@ const BlogSidebarSubscribe = () => {
           disabled={loading}
           type="submit"
         >
-          {loading ? "Subscribing..." : "Subscribe"}
+          {loading ? "Sending..." : "Get it on email"}
         </button>
       </form>
+    </section>
+  );
+};
+
+// ─── BlogSidebarLinkedIn ─────────────────────────────────────────────────────
+
+const BlogSidebarLinkedIn = ({ post }: { post: SharedBlogPost }) => {
+  if (!post.linkedinEmbedUrl && !post.linkedinUrl) {
+    return null;
+  }
+
+  return (
+    <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+      <div className="bg-brand-blue px-4 py-3">
+        <h2 className="text-sm font-bold tracking-widest text-white uppercase">LinkedIn</h2>
+      </div>
+      <div className="space-y-4 p-4">
+        {post.linkedinEmbedUrl && (
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-brand-gray">
+            <iframe
+              allowFullScreen
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              src={post.linkedinEmbedUrl}
+              title={`LinkedIn post for ${post.title}`}
+            />
+          </div>
+        )}
+        {post.linkedinUrl && (
+          <a
+            className="inline-flex text-sm font-bold text-brand-blue transition hover:text-brand-cyan"
+            href={post.linkedinUrl}
+            rel="noreferrer"
+            target="_blank"
+          >
+            View on LinkedIn
+          </a>
+        )}
+      </div>
     </section>
   );
 };
@@ -242,8 +282,12 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
 
 export const BlogPage = ({ post }: BlogPageProps) => {
   const blocks = post.body ?? [];
-  const relatedPosts = SHARED_BLOG_POSTS.filter((blog) => blog.id !== post.id).slice(0, 3);
   const readTime = getReadTime(blocks);
+  const faqItems = post.faqs?.map((faq, index) => ({
+    answer: faq.answer,
+    id: `${post.id}-faq-${index + 1}`,
+    question: faq.question,
+  }));
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -284,6 +328,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
           <div className="space-y-6 lg:sticky lg:top-24">
             <BlogSidebarTrending currentId={String(post.id)} />
             <BlogSidebarSubscribe />
+            <BlogSidebarLinkedIn post={post} />
           </div>
         </aside>
 
@@ -298,23 +343,17 @@ export const BlogPage = ({ post }: BlogPageProps) => {
             {blocks.map((block, index) => renderContentBlock(block, index))}
           </div>
 
-          <section className="mt-14 border-t border-gray-200 pt-10">
-            <div className="mb-6">
-              <p className="text-sm font-bold tracking-widest text-brand-blue uppercase">
-                Related Posts
-              </p>
-              <h2 className="mt-2 font-heading text-3xl font-bold text-[var(--heading-h2)]">
-                More event growth thinking
-              </h2>
+          {faqItems && faqItems.length > 0 && (
+            <div className="mt-14 border-t border-gray-200 pt-10">
+              <FAQAccordion
+                description=""
+                eyebrow=""
+                faqs={faqItems}
+                heading="Frequently Asked Questions"
+                variant="article"
+              />
             </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {relatedPosts.map((relatedPost) => (
-                <Link href={relatedPost.href} key={relatedPost.id}>
-                  <BlogCardGrid blog={relatedPost} />
-                </Link>
-              ))}
-            </div>
-          </section>
+          )}
         </article>
       </div>
 

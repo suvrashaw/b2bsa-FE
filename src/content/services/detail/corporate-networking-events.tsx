@@ -27,7 +27,6 @@ export const CORP_NETWORKING_INTRO = {
 
 export const CORP_NETWORKING_DELIVERABLES = {
   heading: "What's Included in Our Networking Event Services",
-  headingHighlight: "Networking Event Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -138,13 +137,11 @@ export const CORP_NETWORKING_CASE_STUDIES = {
 
 export const CORP_NETWORKING_INDUSTRIES_SECTION = {
   heading: "Industries We Support with Networking Event Solutions",
-  headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const CORP_NETWORKING_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Networking Event Solutions",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -179,7 +176,6 @@ export const CORP_NETWORKING_WHY_CHOOSE_US = {
 
 export const CORP_NETWORKING_BLOGS_SECTION = {
   heading: "Latest Insights on Networking Events & Corporate Hospitality",
-  headingHighlight: "Latest Insights",
 };
 
 export const CORP_NETWORKING_FAQ = {
@@ -216,7 +212,6 @@ export const CORP_NETWORKING_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Networking Event Solutions",
-  headingHighlight: "Asked Questions",
 };
 
 export const CORP_NETWORKING_RELATED_SERVICES = [

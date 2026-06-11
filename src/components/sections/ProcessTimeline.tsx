@@ -10,7 +10,6 @@ interface ProcessTimelineProps {
   className?: string;
   description?: ReactNode;
   heading?: ReactNode;
-  headingHighlight?: string;
   phases?: Step[];
   showPhaseNumbers?: boolean;
   steps?: Step[];
@@ -31,7 +30,6 @@ export const ProcessTimeline = ({
   className,
   description,
   heading,
-  headingHighlight,
   phases,
   showPhaseNumbers = true,
   steps,
@@ -52,7 +50,7 @@ export const ProcessTimeline = ({
         {(resolvedTitle || resolvedDescription) && (
           <div className="mb-20 text-center">
             {resolvedTitle && (
-              <Heading as="h2" highlight={headingHighlight}>
+              <Heading as="h2">
                 {resolvedTitle}
               </Heading>
             )}

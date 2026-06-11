@@ -12,7 +12,6 @@ export const SQL_SERVICES = {
   description:
     "In the enterprise world, quantity is the enemy of quality. Your sales team doesn't need more 'leads', they need more 'qualified conversations.' We specialize in human-powered prospecting that cuts through the noise of automated spam. Our specialists act as a seamless extension of your brand, engaging decision-makers at your most valuable target accounts and qualifying them against strict BANT criteria before they ever reach your sales team's calendar.",
   heading: "How We Generate Sales Qualified Leads",
-  headingHighlight: "Sales Qualified Leads",
   services: [
     {
       color: "bg-brand-blue",
@@ -62,7 +61,6 @@ export const SQL_WHY = {
 
 export const SQL_PROCESS = {
   heading: "Your Sales-Ready Prospect Profile Includes",
-  headingHighlight: "Sales-Ready Prospect",
   phases: [
     {
       description: "Name, direct email, LinkedIn URL, direct phone where available.",
@@ -119,7 +117,6 @@ export const SQL_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions",
-  headingHighlight: "Asked Questions",
 };
 
 export const SQL_PAGE = {

@@ -10,7 +10,6 @@ export { GLOBAL_PROOF_STATS as PERF_PROOF_BAR } from "../shared";
 
 export const PERF_SERVICES = {
   heading: "Our Performance Marketing Services",
-  headingHighlight: "Marketing Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -45,7 +44,6 @@ export const PERF_WHY = {
 
 export const PERF_PROCESS = {
   heading: "How We Build Your B2B Marketing Engine",
-  headingHighlight: "Marketing Engine",
   phases: [
     {
       description:
@@ -107,7 +105,6 @@ export const PERF_FAQ = {
     },
   ],
   heading: "Performance Marketing FAQs",
-  headingHighlight: "Marketing FAQs",
 };
 
 export const PERF_PAGE = {

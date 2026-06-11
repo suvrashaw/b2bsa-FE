@@ -12,7 +12,6 @@ export const RESEARCH_SERVICES = {
   description:
     "Data augmentation, data validation, and human-powered market intelligence for sharper B2B commercial decisions.",
   heading: "Our B2B Market Research Services",
-  headingHighlight: "Market Research Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -55,7 +54,6 @@ export const RESEARCH_WHY = {
 
 export const RESEARCH_PROCESS = {
   heading: "How We Deliver Market Intelligence",
-  headingHighlight: "Market Intelligence",
   phases: [
     {
       description:
@@ -110,7 +108,6 @@ export const RESEARCH_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions",
-  headingHighlight: "Asked Questions",
 };
 
 export const RESEARCH_PAGE = {

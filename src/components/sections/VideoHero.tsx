@@ -9,7 +9,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 
-export interface ServiceHeroProps {
+export interface VideoHeroProps {
   description: string;
   primaryCta?: {
     href: string;
@@ -111,18 +111,17 @@ const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string })
   </span>
 );
 
-export const ServiceHero = ({
+export const VideoHero = ({
   description,
   primaryCta,
   secondaryCta,
   title,
   videoUrl = "/videos/hero-gtc-2026.mp4",
-}: ServiceHeroProps) => {
+}: VideoHeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -100]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const contentStyle = useMemo(() => ({ opacity, y }), [y, opacity]);
+  const contentStyle = useMemo(() => ({ y }), [y]);
 
   const isStringTitle = typeof title === "string";
   const titleLines = isStringTitle ? (title as string).split("\n") : [title];
@@ -134,7 +133,7 @@ export const ServiceHero = ({
       className="relative flex min-h-svh items-end overflow-hidden bg-brand-charcoal pt-32 pb-20"
       ref={containerRef}
     >
-      {/* 1. Background Visuals (OG Blue Style) */}
+      {/* 1. Background Visuals */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -147,7 +146,6 @@ export const ServiceHero = ({
           <source src={videoUrl} type="video/mp4" />
         </video>
 
-        {/* Cinematic Blue Veil (From OG HeroSection) */}
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
@@ -230,3 +228,4 @@ export const ServiceHero = ({
     </section>
   );
 };
+

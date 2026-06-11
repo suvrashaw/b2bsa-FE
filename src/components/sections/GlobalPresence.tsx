@@ -19,7 +19,6 @@ const ANIMATE_EMPTY = {};
 export interface GlobalPresenceData {
   cities: LocationItem[];
   description: string;
-  headingHighlight?: string;
   title: string;
 }
 
@@ -80,7 +79,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
             Global Presence
           </div>
 
-          <Heading as="h2" className="mb-8" highlight={data.headingHighlight}>
+          <Heading as="h2" className="mb-8">
             {data.title}
           </Heading>
 

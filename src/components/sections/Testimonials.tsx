@@ -1,20 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCarouselCard } from "@/components/items/TestimonialCarouselCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
-import { cn } from "@/lib";
 
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];
   content?: TestimonialsContent;
   eyebrow?: TestimonialsContent["eyebrow"];
   heading?: TestimonialsContent["heading"];
-  headingHighlight?: string;
   initialIndex?: TestimonialsContent["initialIndex"];
   testimonials?: TestimonialsContent["testimonials"];
 }
@@ -26,7 +24,6 @@ export const Testimonials = ({
   autoplayInterval = content.autoplayInterval,
   eyebrow = content.eyebrow,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   initialIndex = content.initialIndex,
   testimonials = content.testimonials,
 }: TestimonialsProps = {}) => {
@@ -43,7 +40,7 @@ export const Testimonials = ({
     return () => observer.disconnect();
   }, []);
 
-  const { activeIndex, getRelativePosition, setActiveIndex } = useCoverflowCarousel(
+  const { getRelativePosition, handleNext, handlePrev, setActiveIndex } = useCoverflowCarousel(
     testimonials.length,
     initialIndex,
     autoplayInterval,
@@ -58,14 +55,14 @@ export const Testimonials = ({
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-12 flex flex-col items-center text-center">
           {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
-          <Heading as="h2" className="mb-6 text-center" highlight={headingHighlight}>
+          <Heading as="h2" className="mb-6 text-center">
             {heading}
           </Heading>
         </div>
 
         {/* 3D Coverflow Container */}
         <div
-          className="relative flex h-[450px] w-full items-center justify-center sm:h-[400px]"
+          className="relative flex h-[620px] w-full items-center justify-center sm:h-[660px]"
           style={CAROUSEL_PERSPECTIVE_STYLE}
         >
           {testimonials.map((testimonial, index) => {
@@ -92,14 +89,14 @@ export const Testimonials = ({
           <button
             aria-label="Previous testimonial"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}
+            onClick={handlePrev}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             aria-label="Next testimonial"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}
+            onClick={handleNext}
           >
             <ChevronRight className="h-6 w-6" />
           </button>

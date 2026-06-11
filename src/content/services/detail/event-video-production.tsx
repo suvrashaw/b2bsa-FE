@@ -18,7 +18,6 @@ export const EVENT_VIDEO_WHY = {
 
 export const EVENT_VIDEO_DELIVERABLES = {
   heading: "Event Video and Media Services",
-  headingHighlight: "Media Services",
   services: [
     {
       category: "Videos",
@@ -263,7 +262,6 @@ export const EVENT_VIDEO_FAQ = {
     },
   ],
   heading: "Event Video FAQs",
-  headingHighlight: "Video FAQs",
 };
 
 export const EVENT_VIDEO_PAGE = {

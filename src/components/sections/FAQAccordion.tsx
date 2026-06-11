@@ -9,6 +9,7 @@ import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_FAQ_CONTENT } from "@/content/home";
+import { cn } from "@/lib";
 
 const HEADING_INITIAL = { opacity: 0, y: 20 } as const;
 const HEADING_ANIMATE = { opacity: 1, y: 0 } as const;
@@ -56,31 +57,41 @@ const FAQAccordionRow = ({
   );
 };
 
+interface FAQAccordionProps extends FAQProps {
+  variant?: "article" | "default";
+}
+
 export const FAQAccordion = ({
   content = HOME_FAQ_CONTENT,
   description = content.description,
   eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
-}: FAQProps = {}) => {
+  variant = "default",
+}: FAQAccordionProps = {}) => {
   const [openIndex, setOpenIndex] = useState<number>(0);
+  const isArticle = variant === "article";
 
   const handleToggle = useCallback((index: number) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   }, []);
 
   return (
-    <section className="relative bg-brand-gray py-24" id="faq">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
-        <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
-      </div>
+    <section
+      className={cn("relative", isArticle ? "bg-transparent py-0" : "bg-brand-gray py-24")}
+      id="faq"
+    >
+      {!isArticle && (
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
+          <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
+        </div>
+      )}
 
-      <div className="relative z-10 container mx-auto px-8">
+      <div className={cn("relative z-10", isArticle ? "" : "container mx-auto px-8")}>
         <motion.div
           animate={HEADING_ANIMATE}
-          className="mb-16 text-center"
+          className={cn(isArticle ? "mb-8 text-left" : "mb-16 text-center")}
           initial={HEADING_INITIAL}
           transition={HEADING_TRANSITION}
           viewport={HEADING_VIEWPORT}
@@ -91,13 +102,17 @@ export const FAQAccordion = ({
               {eyebrow}
             </Eyebrow>
           )}
-          <Heading as="h2" className="mb-4" highlight={headingHighlight}>
+          <Heading as="h2" className="mb-4">
             {heading}
           </Heading>
-          {description && <p className="mx-auto max-w-xl text-base text-gray-600">{description}</p>}
+          {description && (
+            <p className={cn("max-w-xl text-base text-gray-600", !isArticle && "mx-auto")}>
+              {description}
+            </p>
+          )}
         </motion.div>
 
-        <div className="mx-auto flex max-w-[860px] flex-col gap-4">
+        <div className={cn("flex flex-col gap-4", isArticle ? "" : "mx-auto max-w-[860px]")}>
           {faqs.map((faq, i) => (
             <FAQAccordionRow
               answer={faq.answer}

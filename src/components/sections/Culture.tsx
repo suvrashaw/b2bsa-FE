@@ -127,7 +127,6 @@ export interface CultureData {
   description: string;
   eyebrow: string;
   heading: ReactNode | string;
-  headingHighlight?: string;
   reasons: { description: string; id: string; image: string; title: string }[];
 }
 
@@ -155,7 +154,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <div className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-charcoal uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
-        <Heading as="h2" className="mb-6" highlight={data.headingHighlight}>
+        <Heading as="h2" className="mb-6">
           {typeof data.heading === "string" ? data.heading : "What We Believe In"}
         </Heading>
         <p className="mx-auto max-w-2xl text-center text-base leading-relaxed text-brand-charcoal/70 transition-colors duration-500 md:text-lg">

@@ -3,7 +3,6 @@ import { Heading } from "@/components/ui/Heading";
 export interface CorporateVideoIndustriesSectionProps {
   description: string;
   heading: string;
-  headingHighlight?: string;
   industries: CorporateVideoIndustryItem[];
 }
 
@@ -15,7 +14,6 @@ export interface CorporateVideoIndustryItem {
 export const CorporateVideoIndustriesSection = ({
   description,
   heading,
-  headingHighlight,
   industries,
 }: CorporateVideoIndustriesSectionProps) => {
   return (
@@ -28,7 +26,7 @@ export const CorporateVideoIndustriesSection = ({
           <Heading
             as="h2"
             className="max-w-4xl text-5xl leading-none text-white md:text-6xl lg:text-7xl"
-            highlight={headingHighlight}
+           
           >
             {heading}
           </Heading>

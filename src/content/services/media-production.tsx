@@ -10,7 +10,6 @@ export { GLOBAL_PROOF_STATS as MEDIA_PROOF_BAR } from "../shared";
 
 export const MEDIA_SERVICES = {
   heading: "What We Produce",
-  headingHighlight: "We Produce",
   services: [
     {
       color: "bg-brand-blue",
@@ -55,7 +54,6 @@ export const MEDIA_WHY = {
 
 export const MEDIA_PROCESS = {
   heading: "Production Capabilities",
-  headingHighlight: "Production Capabilities",
   phases: [
     {
       description: "Professional lighting and audio on every shoot.",
@@ -105,7 +103,6 @@ export const MEDIA_FAQ = {
     },
   ],
   heading: "Media Production FAQs",
-  headingHighlight: "Production FAQs",
 };
 
 export const MEDIA_PAGE = {

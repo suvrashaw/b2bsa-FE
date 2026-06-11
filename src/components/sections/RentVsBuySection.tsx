@@ -17,7 +17,6 @@ const ICON_MAP: Record<string, ReactNode> = {
 export interface RentVsBuySectionProps {
   description?: string;
   heading: string;
-  headingHighlight?: string;
   layout?: "icon-grid" | "split" | "value-grid";
   reasons: readonly RentVsBuyReason[];
 }
@@ -32,7 +31,6 @@ interface RentVsBuyReason {
 export const RentVsBuySection = ({
   description,
   heading,
-  headingHighlight,
   layout = "icon-grid",
   reasons,
 }: RentVsBuySectionProps) => {
@@ -45,7 +43,7 @@ export const RentVsBuySection = ({
       <div className="container mx-auto px-8">
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
-          <Heading as="h2" highlight={headingHighlight}>
+          <Heading as="h2">
             {heading}
           </Heading>
         </div>

@@ -2,15 +2,33 @@
 
 import type { ReactNode } from "react";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import { Heading } from "@/components/ui/Heading";
 import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
+
+const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
+
+const useRotatingWord = (words: string[], interval = 2500) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
+    return () => clearInterval(id);
+  }, [words.length, interval]);
+  return { key: index, word: words[index] };
+};
+
+const WORD_ANIMATE = { opacity: 1, y: 0 };
+const WORD_EXIT = { opacity: 0, y: -14 };
+const WORD_INITIAL = { opacity: 0, y: 14 };
+const WORD_TRANSITION = { duration: 0.38 } as const;
 
 export interface WhoWeAreProps {
   attribution?: WhoWeAreContent["attribution"];
   content?: WhoWeAreContent;
   description?: ReactNode | string;
   heading?: WhoWeAreContent["heading"];
-  headingHighlight?: string;
   items?: Array<{
     bg?: string;
     icon?: string;
@@ -33,7 +51,6 @@ export const WhoWeAre = ({
   attribution = content.attribution,
   description,
   heading,
-  headingHighlight = content.headingHighlight,
   items,
   mission = content.mission,
   quote = content.quote,
@@ -51,14 +68,28 @@ export const WhoWeAre = ({
   const offsetStats = [...resolvedStats.slice(3), ...resolvedStats.slice(0, 3)];
   const col2Stats = [...offsetStats, ...offsetStats];
 
+  const { key: wordKey, word: rotatingWord } = useRotatingWord(ROTATING_WORDS);
+
   return (
     <section className="overflow-hidden bg-brand-gray py-20" id="about">
       <div className="container mx-auto grid items-center gap-16 px-8 lg:grid-cols-2">
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <Heading as="h2" className="mb-6" highlight={headingHighlight}>
-              {resolvedHeading}
+            <Heading as="h2" className="mb-6">
+              <span className="block">{resolvedHeading}</span>
+              <AnimatePresence mode="wait">
+                <motion.span
+                  animate={WORD_ANIMATE}
+                  className="block text-brand-blue"
+                  exit={WORD_EXIT}
+                  initial={WORD_INITIAL}
+                  key={wordKey}
+                  transition={WORD_TRANSITION}
+                >
+                  {rotatingWord}
+                </motion.span>
+              </AnimatePresence>
             </Heading>
             {description && (
               <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80 md:text-lg">

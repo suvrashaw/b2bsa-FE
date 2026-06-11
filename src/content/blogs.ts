@@ -2,6 +2,11 @@ import type { BlogItem } from "./home";
 
 import rawBlogPosts from "./blogs.json";
 
+export interface BlogFAQ {
+  answer: string;
+  question: string;
+}
+
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }
   | { items: string[]; ordered?: boolean; type: "list" }
@@ -13,7 +18,10 @@ export type ContentBlock =
 export interface SharedBlogPost extends BlogItem {
   body?: ContentBlock[];
   externalUrl: string;
+  faqs?: BlogFAQ[];
   href: string;
+  linkedinEmbedUrl?: string;
+  linkedinUrl?: string;
 }
 
 type ImportedBlogPost = {
@@ -21,7 +29,10 @@ type ImportedBlogPost = {
   category?: string;
   date: string;
   excerpt?: string;
+  faqs?: BlogFAQ[];
   image: string;
+  linkedinEmbedUrl?: string;
+  linkedinUrl?: string;
   title: string;
   url: string;
 };
@@ -61,9 +72,12 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       date: post.date,
       excerpt: post.excerpt,
       externalUrl: post.url,
+      faqs: post.faqs,
       href: DEFAULT_BLOG_POST_HREF,
       id,
       image: post.image,
+      linkedinEmbedUrl: post.linkedinEmbedUrl,
+      linkedinUrl: post.linkedinUrl,
       sortIndex: index,
       title: post.title,
     };

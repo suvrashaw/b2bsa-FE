@@ -3,16 +3,15 @@ import { Heading } from "@/components/ui/Heading";
 
 export interface CardsSectionProps {
   heading: string;
-  headingHighlight?: string;
   items: BasicCardItem[];
 }
 
-export const CardsSection = ({ heading, headingHighlight, items }: CardsSectionProps) => {
+export const CardsSection = ({ heading, items }: CardsSectionProps) => {
   return (
     <section className="bg-brand-gray py-20">
       <div className="container mx-auto px-8">
         <div className="mb-14 text-center">
-          <Heading as="h2" className="text-center" highlight={headingHighlight}>
+          <Heading as="h2" className="text-center">
             {heading}
           </Heading>
         </div>

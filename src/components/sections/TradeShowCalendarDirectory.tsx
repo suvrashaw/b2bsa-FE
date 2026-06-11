@@ -1,13 +1,22 @@
 "use client";
 
 import { ArrowUpDown, Grid2X2, List, RotateCcw, Search } from "lucide-react";
-import { type ChangeEvent, type ReactNode, useCallback, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 
 import type { CalendarTradeShow } from "@/content/trade-show-calendar";
 
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { Button } from "@/components/ui/Button";
+import { Pagination } from "@/components/ui/Pagination";
 import { cn } from "@/lib";
+import {
+  clampPaginationPage,
+  DEFAULT_PAGE_SIZE,
+  getPaginationItems,
+  getPaginationPageCount,
+  parsePaginationPage,
+} from "@/lib/pagination";
 
 const VIEW_MODES = [
   { icon: Grid2X2, label: "Cards", value: "cards" },
@@ -238,6 +247,9 @@ export const TradeShowCalendarDirectory = ({
   searchPlaceholder,
   title: _title,
 }: TradeShowCalendarDirectoryProps) => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [attendeeOperator, setAttendeeOperator] = useState<NumberOperator>("gte");
   const [attendeeValue, setAttendeeValue] = useState("");
   const [dateRange, setDateRange] = useState<DateRange>("all");
@@ -249,6 +261,23 @@ export const TradeShowCalendarDirectory = ({
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
   const [sortField, setSortField] = useState<SortField>("startDate");
   const [viewMode, setViewMode] = useState<ViewMode>("cards");
+  const requestedPage = parsePaginationPage(searchParams.get("page"));
+
+  const updatePage = useCallback(
+    (page: number) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (page <= 1) {
+        params.delete("page");
+      } else {
+        params.set("page", String(page));
+      }
+
+      const query = params.toString();
+      router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams]
+  );
 
   const today = useMemo(() => {
     const now = new Date();
@@ -275,11 +304,13 @@ export const TradeShowCalendarDirectory = ({
 
   const handleAttendeeOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setAttendeeOperator(event.currentTarget.value as NumberOperator);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleAttendeeValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setAttendeeValue(event.currentTarget.value);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleClearFilters = useCallback(() => {
     setAttendeeOperator("gte");
@@ -293,23 +324,28 @@ export const TradeShowCalendarDirectory = ({
     setSortDirection("asc");
     setSortField("startDate");
     setViewMode("cards");
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleDateRangeChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setDateRange(event.currentTarget.value as DateRange);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleExhibitorOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setExhibitorOperator(event.currentTarget.value as NumberOperator);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleExhibitorValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setExhibitorValue(event.currentTarget.value);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleIndustryChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedIndustry(event.currentTarget.value);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleLocationChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     const { checked, value } = event.currentTarget;
@@ -319,15 +355,26 @@ export const TradeShowCalendarDirectory = ({
         ? [...currentLocations, value]
         : currentLocations.filter((location) => location !== value)
     );
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.currentTarget.value);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
 
   const handleSortFieldChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setSortField(event.currentTarget.value as SortField);
-  }, []);
+    updatePage(1);
+  }, [updatePage]);
+
+  const handleSortDirectionChange = useCallback(
+    (direction: SortDirection) => {
+      setSortDirection(direction);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
   const filteredEvents = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -398,8 +445,17 @@ export const TradeShowCalendarDirectory = ({
     today,
   ]);
 
-  const resultLabel = filteredEvents.length === 1 ? "trade show" : "trade shows";
+  const totalPages = getPaginationPageCount(filteredEvents.length, DEFAULT_PAGE_SIZE);
+  const currentPage = clampPaginationPage(requestedPage, totalPages);
+  const paginatedEvents = getPaginationItems(filteredEvents, currentPage, DEFAULT_PAGE_SIZE);
+  const hasEmptyPage = filteredEvents.length > 0 && paginatedEvents.length === 0;
   let resultsContent: ReactNode;
+
+  useEffect(() => {
+    if (requestedPage !== currentPage) {
+      updatePage(currentPage);
+    }
+  }, [currentPage, requestedPage, updatePage]);
 
   if (filteredEvents.length === 0) {
     resultsContent = (
@@ -416,10 +472,21 @@ export const TradeShowCalendarDirectory = ({
         </Button>
       </div>
     );
+  } else if (hasEmptyPage) {
+    resultsContent = (
+      <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
+        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
+          No more trade shows on this page.
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
+          Use the pagination controls to return to the available calendar results.
+        </p>
+      </div>
+    );
   } else if (viewMode === "cards") {
     resultsContent = (
       <div className="grid auto-rows-fr gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        {filteredEvents.map((show) => (
+        {paginatedEvents.map((show) => (
           <TradeShowCard key={show.id} show={show} />
         ))}
       </div>
@@ -427,7 +494,7 @@ export const TradeShowCalendarDirectory = ({
   } else {
     resultsContent = (
       <div className="space-y-4">
-        {filteredEvents.map((show) => (
+        {paginatedEvents.map((show) => (
           <TradeShowListItem key={show.id} show={show} />
         ))}
       </div>
@@ -483,12 +550,12 @@ export const TradeShowCalendarDirectory = ({
                 <div className="flex gap-3">
                   <DirectionButton
                     direction="asc"
-                    onChange={setSortDirection}
+                    onChange={handleSortDirectionChange}
                     selectedDirection={sortDirection}
                   />
                   <DirectionButton
                     direction="desc"
-                    onChange={setSortDirection}
+                    onChange={handleSortDirectionChange}
                     selectedDirection={sortDirection}
                   />
                 </div>
@@ -563,10 +630,7 @@ export const TradeShowCalendarDirectory = ({
           </aside>
 
           <div>
-            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <p className="font-bold text-brand-charcoal">
-                Showing {filteredEvents.length} {resultLabel}
-              </p>
+            <div className="mb-5 flex justify-end">
               <div className="flex items-center gap-2 text-sm font-semibold text-brand-charcoal/60">
                 <ArrowUpDown className="h-4 w-4" />
                 {SORT_OPTIONS.find((option) => option.value === sortField)?.label},{" "}
@@ -575,6 +639,13 @@ export const TradeShowCalendarDirectory = ({
             </div>
 
             {resultsContent}
+
+            <Pagination
+              className="mt-10"
+              currentPage={currentPage}
+              onPageChange={updatePage}
+              totalPages={totalPages}
+            />
           </div>
         </div>
       </section>

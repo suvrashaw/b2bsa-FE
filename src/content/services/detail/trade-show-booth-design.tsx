@@ -68,7 +68,6 @@ export const BOOTH_DESIGN_SPOTLIGHT = {
 
 export const BOOTH_DESIGN_DELIVERABLES = {
   heading: "Our Trade Show Booth Design Services",
-  headingHighlight: "Booth Design Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -234,7 +233,6 @@ export const BOOTH_DESIGN_FAQ = {
     },
   ],
   heading: "Trade Show Booth Design FAQs",
-  headingHighlight: "Design FAQs",
 };
 
 export const BOOTH_DESIGN_PAGE = {
@@ -267,7 +265,6 @@ export const BOOTH_DESIGN_RELATED_SERVICES = [
 
 export const BOOTH_DESIGN_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Booth Designing?",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:

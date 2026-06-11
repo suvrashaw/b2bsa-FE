@@ -8,7 +8,6 @@ import { Heading } from "@/components/ui/Heading";
 export interface AboutCoreValuesData {
   description: string;
   heading: string;
-  headingHighlight?: string;
   values: string[];
 }
 
@@ -74,7 +73,7 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
             <Heading 
               as="h2" 
               className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] font-black leading-[1.1] text-brand-charcoal" 
-              highlight={data.headingHighlight}
+             
             >
               {data.heading}
             </Heading>

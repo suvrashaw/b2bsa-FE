@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -15,57 +15,16 @@ const headingVariants = cva("", {
   },
 });
 
-const highlightVariants = {
-  blue: "bg-brand-blue/20",
-  cyan: "bg-brand-cyan/20",
-} as const;
-
 interface HeadingProps
   extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as: "h1" | "h2" | "h3" | "h4";
-  highlight?: string;
-  highlightVariant?: keyof typeof highlightVariants;
   preserveClassName?: boolean;
 }
-
-const renderHighlightedText = (
-  children: ReactNode,
-  highlight?: string,
-  highlightVariant: keyof typeof highlightVariants = "blue"
-) => {
-  if (typeof children !== "string" || !highlight?.trim()) return children;
-
-  const target = highlight.trim();
-  const startIndex = children.toLowerCase().indexOf(target.toLowerCase());
-
-  if (startIndex === -1) return children;
-
-  const endIndex = startIndex + target.length;
-
-  return (
-    <>
-      {children.slice(0, startIndex)}
-      <span className="relative inline-block px-1">
-        <span className="relative z-10">{children.slice(startIndex, endIndex)}</span>
-        <span
-          aria-hidden="true"
-          className={cn(
-            "absolute inset-x-0 top-[30%] bottom-0",
-            highlightVariants[highlightVariant]
-          )}
-        />
-      </span>
-      {children.slice(endIndex)}
-    </>
-  );
-};
 
 export const Heading = ({
   as: Tag,
   children,
   className,
-  highlight,
-  highlightVariant = "blue",
   level,
   preserveClassName,
   style,
@@ -78,7 +37,7 @@ export const Heading = ({
 
   return (
     <Tag {...rest} className={classes} style={style}>
-      {renderHighlightedText(children, highlight, highlightVariant)}
+      {children}
     </Tag>
   );
 };

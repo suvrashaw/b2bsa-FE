@@ -14,9 +14,9 @@ import { FAQ } from "@/components/sections/FAQ";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
@@ -135,7 +135,7 @@ export const ServiceHub = ({
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header darkBackground />
 
-      <ServiceHero
+      <VideoHero
         description={hero.description}
         primaryCta={hero.primaryCta ?? heroCtas?.primaryCta ?? primaryServiceHeroCta}
         secondaryCta={

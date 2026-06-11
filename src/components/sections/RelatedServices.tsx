@@ -6,14 +6,12 @@ import { cn } from "@/lib";
 
 interface RelatedServicesProps {
   className?: string;
-  headingHighlight?: string;
   services: RelatedService[];
   title?: string;
 }
 
 export const RelatedServices = ({
   className,
-  headingHighlight,
   services,
   title = "Explore Related Solutions",
 }: RelatedServicesProps) => {
@@ -22,7 +20,7 @@ export const RelatedServices = ({
   return (
     <section className={cn("bg-brand-gray py-20", className)}>
       <div className="container mx-auto px-8">
-        <Heading as="h2" className="mb-12 text-center" highlight={headingHighlight}>
+        <Heading as="h2" className="mb-12 text-center">
           {title}
         </Heading>
 

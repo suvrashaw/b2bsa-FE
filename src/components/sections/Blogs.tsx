@@ -17,7 +17,6 @@ export interface BlogsProps {
   ctaLabel?: BlogsContent["ctaLabel"];
   eyebrow?: BlogsContent["eyebrow"];
   heading?: BlogsContent["heading"];
-  headingHighlight?: string;
   layout?: "deck" | "grid";
   viewAllHref?: string;
   viewAllLabel?: string;
@@ -31,7 +30,6 @@ export const Blogs = ({
   ctaLabel = content.ctaLabel,
   eyebrow = content.eyebrow,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   layout = "deck",
   viewAllHref = "/blogs",
   viewAllLabel = "View All Blogs",
@@ -54,7 +52,7 @@ export const Blogs = ({
       <div className="container mx-auto px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
           {eyebrow ? <Eyebrow variant="primary">{eyebrow}</Eyebrow> : null}
-          <Heading as="h2" highlight={headingHighlight}>
+          <Heading as="h2">
             {heading}
           </Heading>
         </div>

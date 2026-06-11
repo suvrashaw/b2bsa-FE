@@ -76,7 +76,6 @@ const Page = () => {
       <AboutCoreValues data={ABOUT_CORE_VALUES} />
       <ServicesStack
         heading={ABOUT_SIGNATURE_SERVICES.heading}
-        headingHighlight={ABOUT_SIGNATURE_SERVICES.headingHighlight}
         services={ABOUT_SIGNATURE_SERVICES_STACK}
       />
       <Events {...ABOUT_RECENT_EVENTS} />

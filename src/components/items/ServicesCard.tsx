@@ -58,7 +58,10 @@ export const ServicesCard = ({ ctaLabel, service, serviceLabel }: ServicesCardPr
           sizes="(max-width: 768px) 100vw, 60vw"
           src={service.image}
         />
-        <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-700 md:group-hover/image:opacity-100" />
+        {/* Mobile: always-on gradient for text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent md:hidden" />
+        {/* Desktop: hover gradient */}
+        <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-700 max-md:hidden md:group-hover/image:opacity-100" />
       </div>
     </div>
   );

@@ -20,9 +20,9 @@ import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
@@ -246,7 +246,7 @@ export const ServiceDetail = ({
 
       {imageHero && <ImageHero {...imageHero} />}
       {!imageHero && hero && (
-        <ServiceHero
+        <VideoHero
           description={hero.description}
           primaryCta={finalPrimaryCta}
           secondaryCta={finalSecondaryCta}

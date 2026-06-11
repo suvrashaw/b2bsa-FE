@@ -41,7 +41,6 @@ export const VIRTUAL_VIDEO_INTRO = {
 export const VIRTUAL_VIDEO_DELIVERABLES = {
   ctaLabel: "Contact Our Team",
   heading: "What's Included in Our Virtual Video Event Production Services",
-  headingHighlight: "Virtual Video Event Production Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -162,7 +161,6 @@ export const VIRTUAL_VIDEO_CASE_STUDIES = {
 
 export const VIRTUAL_VIDEO_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Virtual Video Event Production",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -211,7 +209,6 @@ export const VIRTUAL_VIDEO_WHY_CHOOSE_US = {
 
 export const VIRTUAL_VIDEO_BLOGS_SECTION = {
   heading: "Latest Insights on Virtual Event Production & Webinar Strategy",
-  headingHighlight: "Latest Insights",
 };
 
 export const VIRTUAL_VIDEO_FAQ = {
@@ -248,7 +245,6 @@ export const VIRTUAL_VIDEO_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Virtual Video Event Production",
-  headingHighlight: "Asked Questions",
 };
 
 export const VIRTUAL_VIDEO_RELATED_SERVICES = [

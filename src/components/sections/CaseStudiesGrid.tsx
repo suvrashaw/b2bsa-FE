@@ -1,12 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback } from "react";
+import { type MouseEvent, type ReactNode, useCallback, useState } from "react";
 
 import type { CaseStudyIndexEntry } from "@/content/case-studies";
 
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Heading } from "@/components/ui/Heading";
+import { Pagination } from "@/components/ui/Pagination";
+import {
+  clampPaginationPage,
+  DEFAULT_PAGE_SIZE,
+  getPaginationItems,
+  getPaginationPageCount,
+} from "@/lib/pagination";
 
 const DEFAULT_GRID_SPANS = [
   "md:col-span-1 lg:col-span-3",
@@ -23,6 +30,8 @@ interface CaseStudiesGridProps {
   emptyStateTitle: string;
   filters: readonly string[];
   onFilterChange: (filter: string) => void;
+  onPageChange: (page: number) => void;
+  page: number;
   studies: CaseStudyIndexEntry[];
 }
 
@@ -58,25 +67,44 @@ interface GridStudyCardProps {
 }
 
 const isPageHref = (href?: string): href is string => href?.startsWith("/") ?? false;
+const isTouchInteraction = () =>
+  globalThis.window !== undefined &&
+  globalThis.window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
 const GridStudyCard = ({ colSpan, study }: GridStudyCardProps) => {
+  const [isRevealed, setIsRevealed] = useState(false);
   const href = study.card.href;
+  const description = study.card.primarySummary.text || study.challenge;
+
+  const handleLinkClick = useCallback(
+    (event: MouseEvent<HTMLAnchorElement>) => {
+      if (!isTouchInteraction() || isRevealed) {
+        return;
+      }
+
+      event.preventDefault();
+      setIsRevealed(true);
+    },
+    [isRevealed]
+  );
 
   const card = (
     <CaseStudyCard
       colSpan={colSpan}
+      ctaLabel="View Case Study"
+      description={description}
       format={study.format}
-      iconName={study.formatIcon}
       image={study.card.image}
       metric={study.card.metric}
       metricLabel={study.card.metricLabel}
+      revealed={isRevealed}
       title={study.card.client}
     />
   );
 
   if (isPageHref(href)) {
     return (
-      <Link className="contents" href={href}>
+      <Link className="contents" href={href} onClick={handleLinkClick}>
         {card}
       </Link>
     );
@@ -103,8 +131,52 @@ export const CaseStudiesGrid = ({
   emptyStateTitle,
   filters,
   onFilterChange,
+  onPageChange,
+  page,
   studies,
 }: CaseStudiesGridProps) => {
+  const totalPages = getPaginationPageCount(studies.length, DEFAULT_PAGE_SIZE);
+  const currentPage = clampPaginationPage(page, totalPages);
+  const paginatedStudies = getPaginationItems(studies, currentPage, DEFAULT_PAGE_SIZE);
+  const hasEmptyPage = studies.length > 0 && paginatedStudies.length === 0;
+  let gridContent: ReactNode;
+
+  if (paginatedStudies.length > 0) {
+    gridContent = (
+      <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2 lg:grid-cols-12">
+        {paginatedStudies.map((study, index) => (
+          <GridStudyCard
+            colSpan={getGridSpan(index, paginatedStudies.length)}
+            key={study.id}
+            study={study}
+          />
+        ))}
+      </div>
+    );
+  } else if (hasEmptyPage) {
+    gridContent = (
+      <div className="rounded-[2rem] border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
+        <Heading as="h2" className="text-center">
+          No more case studies on this page.
+        </Heading>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+          Use the pagination controls to return to the available case study results.
+        </p>
+      </div>
+    );
+  } else {
+    gridContent = (
+      <div className="rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
+        <Heading as="h2" className="text-center">
+          {emptyStateTitle}
+        </Heading>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+          {emptyStateDescription}
+        </p>
+      </div>
+    );
+  }
+
   return (
     <section className="w-full bg-brand-gray pb-20 md:pb-24">
       <div className="bg-brand-gray/30 py-8">
@@ -122,26 +194,14 @@ export const CaseStudiesGrid = ({
 
       <div className="py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-8">
-          {studies.length > 0 ? (
-            <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2 lg:grid-cols-12">
-              {studies.map((study, index) => (
-                <GridStudyCard
-                  colSpan={getGridSpan(index, studies.length)}
-                  key={study.id}
-                  study={study}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
-              <Heading as="h2" className="text-center">
-                {emptyStateTitle}
-              </Heading>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-                {emptyStateDescription}
-              </p>
-            </div>
-          )}
+          {gridContent}
+
+          <Pagination
+            className="mt-12"
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+            totalPages={totalPages}
+          />
         </div>
       </div>
     </section>

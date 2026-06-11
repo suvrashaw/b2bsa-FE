@@ -27,7 +27,6 @@ export const BOOTH_HOSTESS_INTRO = {
 
 export const BOOTH_HOSTESS_DELIVERABLES = {
   heading: "What's Included in Our Event Hostess Services",
-  headingHighlight: "Event Hostess Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -138,13 +137,11 @@ export const BOOTH_HOSTESS_CASE_STUDIES = {
 
 export const BOOTH_HOSTESS_INDUSTRIES_SECTION = {
   heading: "Industries We Support with Event Hostess Services",
-  headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const BOOTH_HOSTESS_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Event Hostess Services",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -179,7 +176,6 @@ export const BOOTH_HOSTESS_WHY_CHOOSE_US = {
 
 export const BOOTH_HOSTESS_BLOGS_SECTION = {
   heading: "Latest Insights on Event Staffing & Guest Engagement",
-  headingHighlight: "Latest Insights",
 };
 
 export const BOOTH_HOSTESS_FAQ = {
@@ -216,7 +212,6 @@ export const BOOTH_HOSTESS_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Event Hostess Services",
-  headingHighlight: "Asked Questions",
 };
 
 export const BOOTH_HOSTESS_RELATED_SERVICES = [

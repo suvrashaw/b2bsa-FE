@@ -28,7 +28,6 @@ export const EVENT_BRANDING_INTRO = {
 
 export const EVENT_BRANDING_DELIVERABLES = {
   heading: "What's Included in Our Event Branding Services",
-  headingHighlight: "Event Branding Services",
   services: [
     {
       color: "bg-brand-blue",
@@ -139,13 +138,11 @@ export const EVENT_BRANDING_CASE_STUDIES = {
 
 export const EVENT_BRANDING_INDUSTRIES_SECTION = {
   heading: "Industries We Support with Event Branding Services",
-  headingHighlight: "We Support",
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_BRANDING_WHY_CHOOSE_US = {
   heading: "Why Choose B2B Sales Arrow for Event Branding Services",
-  headingHighlight: "B2B Sales Arrow",
   items: [
     {
       description:
@@ -180,7 +177,6 @@ export const EVENT_BRANDING_WHY_CHOOSE_US = {
 
 export const EVENT_BRANDING_BLOGS_SECTION = {
   heading: "Latest Insights on Event Branding & Brand Activation",
-  headingHighlight: "Latest Insights",
 };
 
 export const EVENT_BRANDING_FAQ = {
@@ -217,7 +213,6 @@ export const EVENT_BRANDING_FAQ = {
     },
   ],
   heading: "Frequently Asked Questions About Event Branding Services",
-  headingHighlight: "Asked Questions",
 };
 
 export const EVENT_BRANDING_RELATED_SERVICES = [

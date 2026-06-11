@@ -14,7 +14,6 @@ export interface ContactUsProps {
   eyebrow?: ContactContent["eyebrow"];
   form?: ContactContent["form"];
   heading?: ContactContent["heading"];
-  headingHighlight?: string;
   illustration?: ContactContent["illustration"] | null;
 }
 
@@ -27,7 +26,6 @@ export const ContactUs = ({
   eyebrow = content.eyebrow,
   form = content.form,
   heading = content.heading,
-  headingHighlight = content.headingHighlight,
   illustration = content.illustration,
 }: ContactUsProps = {}) => {
   return (
@@ -42,7 +40,7 @@ export const ContactUs = ({
           <div className="flex flex-col items-start text-left">
             {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
             <div className="w-full text-left">
-              <Heading as="h2" className="mb-8" highlight={headingHighlight}>
+              <Heading as="h2" className="mb-8">
                 {heading}
               </Heading>
             </div>
@@ -68,7 +66,7 @@ export const ContactUs = ({
           </div>
 
           {/* Right Side: Contact Form */}
-          <div className="relative z-10 rounded-[2.5rem] border border-gray-200 bg-brand-gray/50 p-8 shadow-2xl backdrop-blur-xl lg:p-12">
+          <div className="relative z-10 rounded-2xl border border-gray-200 bg-brand-gray/50 p-8 shadow-2xl backdrop-blur-xl md:rounded-[2.5rem] lg:p-12">
             <ContactForm form={form} />
           </div>
         </div>

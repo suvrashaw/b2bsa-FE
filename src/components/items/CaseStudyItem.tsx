@@ -86,7 +86,7 @@ export const CaseStudyItem = ({
             {active ? (
               <motion.div
                 animate={ACTIVE_CONTENT_ANIMATE}
-                className="flex min-w-0 flex-1 flex-col pr-40"
+                className="flex min-w-0 flex-1 flex-col pr-0 lg:pr-40"
                 exit={ACTIVE_CONTENT_EXIT}
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}
@@ -106,7 +106,7 @@ export const CaseStudyItem = ({
           {active && item.href ? (
             <motion.div
               animate={CTA_ANIMATE}
-              className="absolute right-8 bottom-8"
+              className="mt-6 lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
               exit={CTA_EXIT}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}

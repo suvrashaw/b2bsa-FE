@@ -54,7 +54,6 @@ export const BOOTH_BUILDER_PROCESS = {
 
 export const BOOTH_BUILDER_FUTURE_READY = {
   heading: "Future-Ready Stands for Exhibitions & Trade Shows",
-  headingHighlight: "Future-Ready Stands",
   items: [
     {
       bullets: [
@@ -139,7 +138,6 @@ export const BOOTH_BUILDER_FAQ = {
     },
   ],
   heading: "Trade Show Booth Builder FAQs",
-  headingHighlight: "Builder FAQs",
   layoutMode: "fit" as const,
 };
 

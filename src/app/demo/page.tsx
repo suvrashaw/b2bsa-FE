@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
-
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
@@ -30,13 +29,13 @@ import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
-import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TextHero } from "@/components/sections/TextHero";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
+import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { BLOG_HERO } from "@/content/blog";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
@@ -298,7 +297,7 @@ const RENT_VS_BUY_REASONS = [
 
 // ─── ServiceCarouselSection ──────────────────────────────────────────────────
 
-const SERVICE_CAROUSEL_ITEMS = [
+const _SERVICE_CAROUSEL_ITEMS = [
   {
     description:
       "On-floor teams that engage, qualify, and book meetings with your ideal enterprise accounts.",
@@ -524,11 +523,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   RentVsBuySection: [
     { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
   ],
-    ServiceHero: [
-    { href: "/", label: "Home" },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
-    { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
-  ],
   ServicesStack: [
     { href: "/", label: "Home" },
     { href: "/thank-you", label: "Thank You" },
@@ -593,11 +587,16 @@ const DemoLabel = ({ name }: { name: string }) => {
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function DemoPage() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [caseStudiesGridPage, setCaseStudiesGridPage] = useState(1);
 
   const filteredStudies =
     activeFilter === "All"
       ? CASE_STUDIES_PAGE_STUDIES
       : CASE_STUDIES_PAGE_STUDIES.filter((s) => s.serviceCategories.includes(activeFilter));
+  const handleCaseStudiesGridFilterChange = useCallback((filter: string) => {
+    setActiveFilter(filter);
+    setCaseStudiesGridPage(1);
+  }, []);
 
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -625,9 +624,9 @@ export default function DemoPage() {
       <DemoLabel name="TextHero" />
       <TextHero {...BLOG_HERO} />
 
-      {/* 03 – ServiceHero */}
-      <DemoLabel name="ServiceHero" />
-      <ServiceHero
+      {/* 03 – VideoHero */}
+      <DemoLabel name="VideoHero" />
+      <VideoHero
         description="From initial brief to post-event debrief — our active prospecting teams deliver qualified conversations at the world's most competitive B2B events."
         primaryCta={SERVICE_HERO_PRIMARY}
         secondaryCta={SERVICE_HERO_SECONDARY}
@@ -738,7 +737,9 @@ export default function DemoPage() {
         emptyStateDescription={GRID_EMPTY_DESC}
         emptyStateTitle={GRID_EMPTY_TITLE}
         filters={GRID_FILTERS}
-        onFilterChange={setActiveFilter}
+        onFilterChange={handleCaseStudiesGridFilterChange}
+        onPageChange={setCaseStudiesGridPage}
+        page={caseStudiesGridPage}
         studies={filteredStudies}
       />
 

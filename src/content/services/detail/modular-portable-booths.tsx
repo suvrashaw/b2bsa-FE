@@ -18,7 +18,6 @@ export const MODULAR_BOOTHS_WHY = {
 
 export const MODULAR_BOOTHS_DELIVERABLES = {
   heading: "Our Modular and Portable Services",
-  headingHighlight: "Modular and Portable",
   services: [
     {
       color: "bg-brand-blue",
@@ -62,7 +61,6 @@ export const MODULAR_BOOTHS_DELIVERABLES = {
 export const MODULAR_BOOTHS_RANGE_SECTION = {
   eyebrow: "Formats",
   heading: "Our Modular Booth Range",
-  headingHighlight: "Modular Booth Range",
   services: [
     {
       color: "bg-brand-blue",
@@ -151,7 +149,6 @@ export const MODULAR_BOOTHS_FAQ = {
     },
   ],
   heading: "Modular Booth FAQs",
-  headingHighlight: "Booth FAQs",
 };
 
 export const MODULAR_BOOTHS_PAGE = {

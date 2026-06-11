@@ -281,7 +281,6 @@ interface FeatureCarouselSectionProps {
   eyebrow?: string;
   features: FeatureCarouselItem[];
   heading: ReactNode;
-  headingHighlight?: string;
 }
 
 export const FeatureCarouselSection = ({
@@ -289,7 +288,6 @@ export const FeatureCarouselSection = ({
   eyebrow = "Capabilities",
   features,
   heading,
-  headingHighlight,
 }: FeatureCarouselSectionProps) => {
   return (
     <section className="relative overflow-hidden bg-brand-gray py-20">
@@ -302,7 +300,7 @@ export const FeatureCarouselSection = ({
           <Eyebrow className="justify-center" variant="blue">
             {eyebrow}
           </Eyebrow>
-          <Heading as="h2" className="mb-6" highlight={headingHighlight}>
+          <Heading as="h2" className="mb-6">
             {heading}
           </Heading>
           {description ? (
