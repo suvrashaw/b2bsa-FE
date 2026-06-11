@@ -66,7 +66,7 @@ export const TestimonialCarouselCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className={`absolute w-full max-w-[340px] cursor-pointer rounded-b-[999px] border border-gray-100 bg-white pt-8 shadow-[0_12px_40px_rgba(0,0,0,0.08)] will-change-transform sm:max-w-[420px] ${
+      className={`absolute w-full max-w-[340px] cursor-pointer rounded-b-[999px] bg-sky-50 pt-8 shadow-lg will-change-transform sm:max-w-[420px] ${
         isVisible ? "" : "pointer-events-none"
       }`}
       initial={false}
