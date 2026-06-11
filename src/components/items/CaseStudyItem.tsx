@@ -40,7 +40,7 @@ export const CaseStudyItem = ({
     <motion.div
       className={cn(
         "group relative cursor-pointer overflow-hidden rounded-3xl",
-        active ? "lg:max-w-none lg:flex-[3]" : "lg:max-w-[120px] lg:flex-[1]",
+        active ? "lg:max-w-none lg:flex-[4]" : "lg:max-w-[120px] lg:flex-[1]",
         className
       )}
       layout

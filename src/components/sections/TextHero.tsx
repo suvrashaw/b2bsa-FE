@@ -44,9 +44,9 @@ export const TextHero = ({
   title,
 }: TextHeroProps) => {
   return (
-    <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-brand-blue pt-24 pb-16">
+    <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-brand-blue pt-16 pb-12 md:pt-24 md:pb-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(116,219,243,0.15)_0%,transparent_70%)]" />
-      <div className="relative z-10 container mx-auto px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 text-center">
         {eyebrow && (
           <motion.p
             animate={ANIMATE_IN}
@@ -75,13 +75,13 @@ export const TextHero = ({
         {(primaryCta ?? secondaryCta) && (
           <motion.div
             animate={ANIMATE_IN}
-            className="flex flex-wrap items-center justify-center gap-4"
+            className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-4"
             initial={INITIAL}
             transition={T_CTAS}
           >
             {primaryCta && (
               <Link
-                className="flex min-h-[52px] items-center justify-center rounded-[4px] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:scale-105"
+                className="flex w-full md:w-auto min-h-[52px] items-center justify-center rounded-[4px] px-6 md:px-8 py-3.5 font-bold text-white transition-all duration-300 hover:scale-105"
                 href={primaryCta.href}
                 style={PRIMARY_CTA_STYLE}
               >
@@ -90,7 +90,7 @@ export const TextHero = ({
             )}
             {secondaryCta && (
               <Link
-                className="flex min-h-[52px] items-center justify-center rounded-[4px] px-8 py-3.5 font-bold text-white/90 transition-all duration-300 hover:scale-105"
+                className="flex w-full md:w-auto min-h-[52px] items-center justify-center rounded-[4px] px-6 md:px-8 py-3.5 font-bold text-white/90 transition-all duration-300 hover:scale-105"
                 href={secondaryCta.href}
                 style={SECONDARY_CTA_STYLE}
               >

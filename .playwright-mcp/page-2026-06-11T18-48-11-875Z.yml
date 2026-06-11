@@ -1,0 +1,281 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - link "B2B Sales Arrow" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "B2B Sales Arrow" [ref=e6]
+      - navigation [ref=e7]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About Us" [ref=e11] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+        - button "Services" [ref=e13]:
+          - text: Services
+          - img [ref=e14]
+        - link "Tradeshow Calendar" [ref=e17] [cursor=pointer]:
+          - /url: /trade-show-calendar
+          - text: Tradeshow Calendar
+        - link "Blogs" [ref=e19] [cursor=pointer]:
+          - /url: /blogs
+          - text: Blogs
+        - link "Case Studies" [ref=e21] [cursor=pointer]:
+          - /url: /case-studies
+          - text: Case Studies
+        - link "Contact" [ref=e23] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - generic [ref=e24]:
+        - button "EN" [ref=e26]:
+          - img [ref=e27]
+          - generic [ref=e30]: EN
+          - img [ref=e31]
+        - link "Let's Talk" [ref=e33] [cursor=pointer]:
+          - /url: /contact
+          - button "Let's Talk" [ref=e34]
+    - generic [ref=e35]:
+      - img "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [ref=e36]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: Booth Design
+          - generic [ref=e43]: Mar 18, 2026
+          - generic [ref=e44]: 4 min read
+        - heading "8 Must-Ask Questions Before Hiring a Trade Show Booth Design Company" [level=1] [ref=e45]
+    - generic [ref=e46]:
+      - complementary [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - heading "Trending Posts" [level=2] [ref=e51]
+            - generic [ref=e52]:
+              - link "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026 5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026 Mar 10, 2026" [ref=e53] [cursor=pointer]:
+                - /url: /blogs/hiring-trade-show-booth-design-company
+                - img "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [ref=e55]
+                - generic [ref=e56]:
+                  - heading "5 Trade Show Booth Design Setup Trends Reshaping Exhibits in 2026" [level=3] [ref=e57]
+                  - paragraph [ref=e58]: Mar 10, 2026
+              - link "6 Must-Have Features for Effective B2B Booth Design 6 Must-Have Features for Effective B2B Booth Design Feb 9, 2026" [ref=e59] [cursor=pointer]:
+                - /url: /blogs/hiring-trade-show-booth-design-company
+                - img "6 Must-Have Features for Effective B2B Booth Design" [ref=e61]
+                - generic [ref=e62]:
+                  - heading "6 Must-Have Features for Effective B2B Booth Design" [level=3] [ref=e63]
+                  - paragraph [ref=e64]: Feb 9, 2026
+              - link "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results 4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results Jan 12, 2026" [ref=e65] [cursor=pointer]:
+                - /url: /blogs/hiring-trade-show-booth-design-company
+                - img "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [ref=e67]
+                - generic [ref=e68]:
+                  - heading "4 Secret Metrics Hidden Inside the Trade Show Booth ROI that Boosts Results" [level=3] [ref=e69]
+                  - paragraph [ref=e70]: Jan 12, 2026
+              - link "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event Dec 5, 2025" [ref=e71] [cursor=pointer]:
+                - /url: /blogs/hiring-trade-show-booth-design-company
+                - img "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [ref=e73]
+                - generic [ref=e74]:
+                  - heading "Want Non-Stop Booth Traffic? Try These 8 Trade Show Engagement Ideas Mid-Event" [level=3] [ref=e75]
+                  - paragraph [ref=e76]: Dec 5, 2025
+          - generic [ref=e77]:
+            - paragraph [ref=e79]: Stay Ahead of the Market
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - heading "Don't Just Scroll!" [level=2] [ref=e82]
+                - paragraph [ref=e83]: Get it on email and stay in the loop.
+              - generic [ref=e84]:
+                - generic [ref=e85]: Work Email
+                - textbox "Work Email" [ref=e86]:
+                  - /placeholder: Work email
+                - generic [ref=e87]: Industry
+                - combobox "Industry" [ref=e88]:
+                  - option "Select industry" [selected]
+                  - option "Technology & SaaS"
+                  - option "FinTech"
+                  - option "Healthcare & Pharma"
+                  - option "Manufacturing"
+                  - option "Aviation"
+                  - option "Media & Broadcasting"
+                  - option "Telecommunications"
+                  - option "Automotive"
+                  - option "Retail & E-commerce"
+                  - option "Energy & Utilities"
+              - button "Get it on email" [ref=e89]
+      - article [ref=e90]:
+        - paragraph [ref=e91]: A practical checklist for vetting booth design partners before your next major exhibition. Use these questions to compare process, production quality, timelines, and event-day support.
+        - generic [ref=e92]:
+          - paragraph [ref=e93]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a magna vitae nibh porttitor gravida. In a trade show environment, the right booth design partner can turn a brief into a high-performing brand experience.
+          - paragraph [ref=e94]: Praesent vitae justo vitae erat faucibus consequat. Sed at lorem eu lacus gravida aliquet, nec faucibus ipsum. The goal is not simply to build an attractive space, but to create a reliable system for attracting visitors, qualifying intent, and supporting sales conversations.
+          - heading "Start With Strategy, Not Structure" [level=2] [ref=e95]
+          - paragraph [ref=e96]: Mauris feugiat, massa id cursus vestibulum, erat mi aliquet lorem, non dictum risus sem at ipsum. A strong design company should ask about audience, pipeline goals, booth traffic, meeting flow, product demos, and post-event measurement before proposing materials or finishes.
+          - heading "Questions That Reveal Capability" [level=3] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]: How do you translate event goals into booth layout and visitor flow?
+            - listitem [ref=e100]: Which parts of production are handled in-house and which are outsourced?
+            - listitem [ref=e101]: How do you manage revisions, approvals, logistics, and on-site installation?
+            - listitem [ref=e102]: What measurement framework do you recommend for booth performance?
+          - blockquote [ref=e103]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. The best booth design partner makes the entire event system easier to execute, not just better to look at.
+          - heading "Evaluate the Full Event Workflow" [level=2] [ref=e104]
+          - paragraph [ref=e105]: Duis cursus, arcu et feugiat pulvinar, justo ex placerat nisi, sit amet dictum justo risus eget erat. Ask how the team handles timelines, compliance, shipping, labor, storage, reuse, lead capture, and contingency planning.
+          - list [ref=e106]:
+            - listitem [ref=e107]: Define your commercial goals and audience priorities.
+            - listitem [ref=e108]: Review the partner's event portfolio and production process.
+            - listitem [ref=e109]: Confirm ownership, communication cadence, and on-site escalation paths.
+          - figure "A booth partner should connect design decisions to audience movement, sales conversations, and event outcomes." [ref=e110]:
+            - img "Trade show booth design planning and execution" [ref=e112]
+            - generic [ref=e113]: A booth partner should connect design decisions to audience movement, sales conversations, and event outcomes.
+          - separator [ref=e114]
+          - heading "Make the Final Decision With Evidence" [level=2] [ref=e115]
+          - paragraph [ref=e116]: Nam vitae sem sed neque ultrices ultricies. Compare references, case studies, mockups, project plans, and measurement recommendations. A confident vendor can explain tradeoffs clearly and show how each design choice supports the business objective.
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e122]:
+          - link "Global Event Solutions" [ref=e123] [cursor=pointer]:
+            - /url: /services/global-event-solutions
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - generic [ref=e126]: Booth Services
+              - list [ref=e127]:
+                - listitem [ref=e128]:
+                  - link "Trade Show Booth Builder" [ref=e129] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/trade-show-booth-builder
+                - listitem [ref=e130]:
+                  - link "Trade Show Booth Design" [ref=e131] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/trade-show-booth-design
+                - listitem [ref=e132]:
+                  - link "Booth Hostess Services" [ref=e133] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/booth-hostess-services
+                - listitem [ref=e134]:
+                  - link "Booth Logistics Services" [ref=e135] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/booth-logistics-services
+                - listitem [ref=e136]:
+                  - link "Modular Booth Solutions" [ref=e137] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/modular-booth-solutions
+                - listitem [ref=e138]:
+                  - link "Event Booth Rental" [ref=e139] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/event-booth-rental
+            - generic [ref=e140]:
+              - generic [ref=e141]: Event Services
+              - list [ref=e142]:
+                - listitem [ref=e143]:
+                  - link "Event Experience Creation" [ref=e144] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/event-experience-creation
+                - listitem [ref=e145]:
+                  - link "Event Branding Services" [ref=e146] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/event-branding-services
+                - listitem [ref=e147]:
+                  - link "Corporate Event Solutions" [ref=e148] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/corporate-event-solutions
+                - listitem [ref=e149]:
+                  - link "Corporate Networking Events" [ref=e150] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/corporate-networking-events
+                - listitem [ref=e151]:
+                  - link "Event Experience Video Production" [ref=e152] [cursor=pointer]:
+                    - /url: /services/global-event-solutions/event-experience-video-production
+        - generic [ref=e153]:
+          - link "Media Production" [ref=e154] [cursor=pointer]:
+            - /url: /services/media-production
+          - list [ref=e155]:
+            - listitem [ref=e156]:
+              - link "Event Video Production" [ref=e157] [cursor=pointer]:
+                - /url: /services/media-production/event-video-production
+            - listitem [ref=e158]:
+              - link "Corporate Video Production" [ref=e159] [cursor=pointer]:
+                - /url: /services/media-production/corporate-video-production
+            - listitem [ref=e160]:
+              - link "Event Live Streaming Services" [ref=e161] [cursor=pointer]:
+                - /url: /services/media-production/event-live-streaming-services
+            - listitem [ref=e162]:
+              - link "Event Experience Video Production" [ref=e163] [cursor=pointer]:
+                - /url: /services/media-production/event-experience-video-production
+            - listitem [ref=e164]:
+              - link "Event Physical Video Shoot" [ref=e165] [cursor=pointer]:
+                - /url: /services/media-production/event-physical-video-shoot
+            - listitem [ref=e166]:
+              - link "Virtual Video Production" [ref=e167] [cursor=pointer]:
+                - /url: /services/media-production/virtual-video-production
+        - generic [ref=e168]:
+          - link "Performance Marketing" [ref=e169] [cursor=pointer]:
+            - /url: /services/performance-marketing
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - link "SEO Services" [ref=e172] [cursor=pointer]:
+                - /url: /services/performance-marketing/seo-services
+            - listitem [ref=e173]:
+              - link "PPC Services" [ref=e174] [cursor=pointer]:
+                - /url: /services/performance-marketing/ppc-services
+            - listitem [ref=e175]:
+              - link "Social Media Marketing Services" [ref=e176] [cursor=pointer]:
+                - /url: /services/performance-marketing/social-media-marketing-services
+        - generic [ref=e177]:
+          - link "Sales Qualified Lead Generation" [ref=e179] [cursor=pointer]:
+            - /url: /services/sales-qualified-lead-generation
+          - generic [ref=e180]:
+            - link "Market Research" [ref=e181] [cursor=pointer]:
+              - /url: /services/market-research
+            - list [ref=e182]:
+              - listitem [ref=e183]:
+                - link "Data Augmentation Services" [ref=e184] [cursor=pointer]:
+                  - /url: /services/market-research/data-augmentation-services
+              - listitem [ref=e185]:
+                - link "Data Validation Services" [ref=e186] [cursor=pointer]:
+                  - /url: /services/market-research/data-validation-services
+          - generic [ref=e187]:
+            - link "HPMI" [ref=e188] [cursor=pointer]:
+              - /url: /services/human-powered-market-intelligence
+            - list [ref=e189]:
+              - listitem [ref=e190]:
+                - link "Human Powered Market Intelligence" [ref=e191] [cursor=pointer]:
+                  - /url: /services/human-powered-market-intelligence
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - link "B2B Sales Arrow" [ref=e194] [cursor=pointer]:
+            - /url: /
+            - img "B2B Sales Arrow" [ref=e195]
+          - heading "Turn Your Next Trade Show into a Revenue Engine" [level=2] [ref=e196]
+          - paragraph [ref=e197]: We deliver premier global event solutions that turn your corporate presence into a measurable revenue engine. Let's build your pipeline together.
+          - paragraph [ref=e198]: "Mission: To transform your global event presence into measurable, high-impact commercial outcomes."
+        - generic [ref=e199]:
+          - generic [ref=e200]: Contact
+          - generic [ref=e201]:
+            - paragraph [ref=e202]:
+              - link "info@b2bsalesarrow.com" [ref=e203] [cursor=pointer]:
+                - /url: mailto:info@b2bsalesarrow.com
+            - paragraph [ref=e204]: New York, USA
+            - paragraph [ref=e205]: Bengaluru, India
+            - paragraph [ref=e206]: Serving 30+ Countries
+          - generic [ref=e207]:
+            - link "Visit B2B Sales Arrow on LinkedIn" [ref=e208] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/b2b-sales-arrow/
+              - img [ref=e209]
+            - button "X profile coming soon" [disabled] [ref=e211]:
+              - img [ref=e212]
+            - button "Instagram profile coming soon" [disabled] [ref=e214]:
+              - img [ref=e215]
+        - generic [ref=e217]:
+          - generic [ref=e218]: Navigation
+          - list [ref=e219]:
+            - listitem [ref=e220]:
+              - link "Blogs" [ref=e221] [cursor=pointer]:
+                - /url: /blogs
+            - listitem [ref=e222]:
+              - link "Case Studies" [ref=e223] [cursor=pointer]:
+                - /url: /case-studies
+            - listitem [ref=e224]:
+              - link "About Us" [ref=e225] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e226]:
+              - link "Contact" [ref=e227] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e228]:
+          - generic [ref=e229]: Stay Ahead
+          - paragraph [ref=e230]: Subscribe to our enterprise growth newsletter.
+          - generic [ref=e231]:
+            - textbox "Work Email" [ref=e232]
+            - button "Subscribe" [ref=e233]
+      - generic [ref=e234]:
+        - paragraph [ref=e235]: © 2026 B2B Sales Arrow. All Rights Reserved.
+        - generic [ref=e236]:
+          - link "Privacy Policy" [ref=e237] [cursor=pointer]:
+            - /url: /privacy-policy
+          - link "Terms of Service" [ref=e238] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - link "Cookie Policy" [ref=e239] [cursor=pointer]:
+            - /url: /cookie-policy
+  - button "Open Next.js Dev Tools" [ref=e245] [cursor=pointer]:
+    - img [ref=e246]

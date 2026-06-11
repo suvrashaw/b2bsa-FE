@@ -116,8 +116,8 @@ export const ImageHero = ({
       className={cn(
         "relative flex items-center overflow-hidden bg-brand-charcoal md:items-end",
         variant === "compact"
-          ? "min-h-[50vh] pt-24 pb-16"
-          : "min-h-[560px] pt-28 pb-16 md:min-h-svh md:pt-32 md:pb-20"
+          ? "min-h-[50vh] pt-16 pb-12 md:pt-24 md:pb-16"
+          : "min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20"
       )}
       ref={containerRef}
     >
@@ -155,7 +155,7 @@ export const ImageHero = ({
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
-      <div className="relative z-20 container mx-auto px-8">
+      <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
           {eyebrow && (
             <motion.div
@@ -189,13 +189,13 @@ export const ImageHero = ({
           {(primaryCta ?? secondaryCta) && (
             <motion.div
               animate={CTA_ANIMATE}
-              className="flex flex-wrap items-center gap-6"
+              className="flex flex-col md:flex-row flex-wrap md:items-center gap-4 md:gap-6"
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >
               {primaryCta && (
                 <Link
-                  className="group relative flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  className="group relative flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                   href={primaryCta.href}
                   style={PRIMARY_CTA_STYLE}
                 >
@@ -205,7 +205,7 @@ export const ImageHero = ({
               )}
               {secondaryCta && (
                 <Link
-                  className="flex min-h-[58px] items-center justify-center rounded-[4px] px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  className="flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
                   href={secondaryCta.href}
                   style={SECONDARY_CTA_STYLE}
                 >

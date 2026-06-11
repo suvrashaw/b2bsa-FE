@@ -71,12 +71,12 @@ export const WhoWeAre = ({
   const { key: wordKey, word: rotatingWord } = useRotatingWord(ROTATING_WORDS);
 
   return (
-    <section className="overflow-hidden bg-brand-gray py-20" id="about">
-      <div className="container mx-auto grid items-center gap-16 px-8 lg:grid-cols-2">
+    <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="about">
+      <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:px-8 lg:grid-cols-2">
         {/* Left Side: Content */}
         <div className="flex flex-col items-start space-y-12 text-left">
           <div className="w-full text-left">
-            <Heading as="h2" className="mb-6">
+            <Heading as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
               <span className="block">{resolvedHeading}</span>
               <AnimatePresence mode="wait">
                 <motion.span
@@ -99,11 +99,16 @@ export const WhoWeAre = ({
           </div>
 
           <div className="w-full">
-            <div className="group cursor-default rounded-3xl border border-transparent bg-brand-gray/50 p-8 transition-all duration-500 hover:border-brand-blue/20 hover:bg-brand-blue/5 hover:shadow-2xl lg:p-12">
+            <div className="group cursor-default rounded-2xl md:rounded-3xl border border-transparent bg-brand-gray/50 p-6 md:p-8 transition-all duration-500 hover:border-brand-blue/20 hover:bg-brand-blue/5 hover:shadow-2xl lg:p-12">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
                 <p className="group-hover:text-brand-blue:text-brand-cyan font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
                   {quote}
                 </p>
+                {mission && (
+                  <p className="group-hover:text-brand-blue:text-brand-cyan mt-6 font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
+                    Mission: {mission}
+                  </p>
+                )}
                 {attribution && (
                   <div className="mt-8 text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors group-hover:text-brand-blue/70">
                     {attribution}
@@ -111,21 +116,11 @@ export const WhoWeAre = ({
                 )}
               </div>
             </div>
-            {mission && (
-              <div className="mt-6 flex items-start gap-3">
-                <span className="mt-0.5 shrink-0 text-sm font-bold tracking-wider text-brand-blue uppercase">
-                  Our Mission:
-                </span>
-                <p className="text-sm leading-relaxed text-brand-charcoal/80 italic">
-                  &ldquo;{mission}&rdquo;
-                </p>
-              </div>
-            )}
           </div>
         </div>
 
         {/* Right Side: Scrolling Insights */}
-        <div className="group/scroller relative h-[600px] overflow-hidden p-4">
+        <div className="group/scroller relative h-[400px] md:h-[600px] overflow-hidden p-2 md:p-4">
           {/* Top/Bottom Fade Masks */}
           <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
           <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
@@ -154,7 +149,7 @@ export const WhoWeAre = ({
 const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
+      className={`relative overflow-hidden rounded-xl p-6 md:p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
     >
       <div className="relative z-10">
         <div className="text-sm font-medium opacity-80">{stat.label}</div>

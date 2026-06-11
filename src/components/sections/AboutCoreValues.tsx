@@ -62,7 +62,7 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
           style={{ x }}
         >
           {/* Intro Slide */}
-          <div className="flex w-screen shrink-0 flex-col justify-center px-8 py-20 md:w-[60vw] md:pl-[clamp(24px,6vw,120px)] md:pr-12 lg:w-[50vw]">
+          <div className="flex w-screen shrink-0 flex-col justify-center px-4 py-12 md:py-20 md:w-[60vw] md:pl-[clamp(24px,6vw,120px)] md:pr-12 lg:w-[50vw]">
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px w-8 bg-brand-cyan" />
               <p className="font-accent text-[11px] font-bold uppercase tracking-[0.16em] text-brand-charcoal/60">
@@ -97,10 +97,10 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
             
             return (
               <div 
-                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-[clamp(20px,4vw,60px)] py-20 md:py-28 lg:py-32"
+                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-4 md:px-[clamp(20px,4vw,60px)] py-16 md:py-28 lg:py-32"
                 key={index} 
               >
-                <div className="relative flex aspect-square flex-col justify-center overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-8 py-9 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)]">
+                <div className="relative flex aspect-square flex-col justify-center overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-6 py-8 md:px-8 md:py-9 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)]">
                   {/* Top Gradient Border */}
                   <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent" />
                   

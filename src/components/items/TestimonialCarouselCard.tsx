@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
-import Image from "next/image";
+import { Quote, Star } from "lucide-react";
 import { useCallback, useMemo } from "react";
 
 import type { TestimonialsContent } from "@/content/home";
@@ -67,7 +66,7 @@ export const TestimonialCarouselCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className={`absolute w-full max-w-[280px] cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)] will-change-transform sm:max-w-[340px] ${
+      className={`absolute w-full max-w-[340px] cursor-pointer rounded-b-[999px] border border-gray-100 bg-white pt-8 shadow-[0_12px_40px_rgba(0,0,0,0.08)] will-change-transform sm:max-w-[420px] ${
         isVisible ? "" : "pointer-events-none"
       }`}
       initial={false}
@@ -76,52 +75,32 @@ export const TestimonialCarouselCard = ({
       style={CARD_STYLE_BASE}
       transition={CARD_TRANSITION}
     >
-      {/* Portrait image — matches the aspect ratio of the testimonial photos */}
-      <div className="relative aspect-[3/4] w-full overflow-hidden">
-        <Image
-          alt={testimonial.name}
-          className="object-cover"
-          fill
-          sizes="(max-width: 640px) 280px, 340px"
-          src={testimonial.image}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-        {/* Name + stars overlay at bottom of image */}
-        <div className="absolute bottom-0 left-0 right-0 p-4">
-          <p className="font-heading text-sm font-bold leading-tight text-white">
-            {testimonial.name}
-          </p>
-          <div className="mt-1 flex gap-1">
-            {Array.from({ length: testimonial.rating }).map((_, i) => (
-              <Star className="h-3 w-3 fill-[#74DBF3] text-[#74DBF3]" key={i} />
-            ))}
-          </div>
+      {/* Quote icon — floats half above the card top edge */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue shadow-lg">
+          <Quote className="h-6 w-6 text-white" />
         </div>
       </div>
 
-      {/* Text content below image */}
-      <div className="p-5">
-        <p className="text-[13px] leading-relaxed text-gray-600">
-          &quot;{stripOuterQuoteMarks(testimonial.quote)}&quot;
+      {/* Content */}
+      <div className="px-8 pb-12 pt-3 text-center">
+        <p className="text-[15px] leading-relaxed text-gray-600">
+          &ldquo;{stripOuterQuoteMarks(testimonial.quote)}&rdquo;
         </p>
 
-        <div className="mt-4 border-t border-gray-100 pt-4">
-          <div className="flex items-start justify-between gap-2">
-            <div>
-              <p className="text-xs font-semibold text-[#1E6091]">{testimonial.designation}</p>
-              <p className="text-[11px] font-medium text-gray-500">{testimonial.company}</p>
-            </div>
-            {testimonial.serviceTag && (
-              <span className="shrink-0 rounded-full bg-[#1E6091]/10 px-2 py-0.5 text-[9px] font-bold tracking-wide text-[#1E6091] uppercase">
-                {testimonial.serviceTag}
-              </span>
-            )}
-          </div>
+        <div className="mt-5">
+          <p className="font-heading text-sm font-bold text-brand-blue">{testimonial.name}</p>
+        </div>
+
+        <div className="mt-3 flex justify-center gap-1">
+          {Array.from({ length: testimonial.rating }).map((_, i) => (
+            <Star className="h-3 w-3 fill-amber-400 text-amber-400" key={i} />
+          ))}
         </div>
       </div>
 
       {!isCenter && (
-        <div className="absolute inset-0 rounded-2xl bg-white/5 transition-colors duration-300 hover:bg-transparent" />
+        <div className="absolute inset-0 rounded-b-[999px] bg-white/5 transition-colors duration-300 hover:bg-transparent" />
       )}
     </motion.div>
   );

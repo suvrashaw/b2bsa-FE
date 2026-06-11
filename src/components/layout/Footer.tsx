@@ -501,13 +501,13 @@ export const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-brand-blue" ref={containerRef}>
       {/* Map as static background */}
-      <div className="pointer-events-none absolute inset-0 z-0 opacity-75">
+      <div className="pointer-events-none absolute inset-0 z-0 scale-[1.2] opacity-75">
         {footerInView && <FooterCommandMap />}
       </div>
       {/* Gradient overlay for content readability */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-brand-blue/95 via-brand-blue/75 to-brand-blue/40" />
 
-      <div className="relative z-10 container mx-auto px-8 pt-6 pb-4">
+      <div className="relative z-10 container mx-auto px-8 pt-12 pb-10">
         {/* Row 1: Services sitemap */}
         <div className="mb-6 grid gap-7 border-b border-white/10 pb-6 lg:grid-cols-5">
           <div className="lg:col-span-2">

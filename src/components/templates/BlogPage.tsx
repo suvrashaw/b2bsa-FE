@@ -308,11 +308,6 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         <div className="relative z-10 container mx-auto px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold tracking-widest uppercase">
-              {post.category && (
-                <span className="rounded-full bg-white/15 px-4 py-2 text-white backdrop-blur-md">
-                  {post.category}
-                </span>
-              )}
               {post.date && <span>{post.date}</span>}
               <span>{readTime}</span>
             </div>

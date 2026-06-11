@@ -1,5 +1,3 @@
-import type { ClientLogoItem } from "@/content/home";
-
 import { GES_SERVICES } from "@/content/services/global-event-solutions";
 import { RESEARCH_SERVICES } from "@/content/services/market-research";
 import { MEDIA_SERVICES } from "@/content/services/media-production";
@@ -11,7 +9,7 @@ import { SHARED_BLOG_POSTS } from "./blogs";
 export const BLOG_HERO = {
   description:
     "Ideas should help you make better decisions, not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
-  eyebrow: "B2B GROWTH INSIGHTS",
+  eyebrow: "",
   primaryCta: { href: "#posts", label: "Read the Latest Insights" },
   secondaryCta: { href: "/contact", label: "Subscribe for Growth Intelligence" },
   title: (
@@ -139,5 +137,5 @@ export const BLOG_SERVICE_CAROUSEL = {
     image: s.image,
     title: s.title,
   }))
-  .sort((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
+  .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };

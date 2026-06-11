@@ -62,7 +62,7 @@ export const Testimonials = ({
 
         {/* 3D Coverflow Container */}
         <div
-          className="relative flex h-[620px] w-full items-center justify-center sm:h-[660px]"
+          className="relative flex h-[460px] w-full items-center justify-center sm:h-[500px]"
           style={CAROUSEL_PERSPECTIVE_STYLE}
         >
           {testimonials.map((testimonial, index) => {
