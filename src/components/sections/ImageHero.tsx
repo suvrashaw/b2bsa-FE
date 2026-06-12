@@ -149,7 +149,7 @@ export const ImageHero = ({
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
-      <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
           {eyebrow && (
             <motion.div

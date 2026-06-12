@@ -64,14 +64,14 @@ export const Pricing = ({
   title = "Creative Video Editing Pricing",
 }: PricingProps) => {
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-24">
+    <section className="relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24">
       {/* Dynamic Background Gradients */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-brand-blue/5 blur-[100px]" />
         <div className="absolute right-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-brand-cyan/5 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-8">
+      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         {/* Header Block */}
         <div className="mb-20 flex flex-col items-center text-center">
           <div className="relative mb-6">
@@ -91,8 +91,17 @@ export const Pricing = ({
           </p>
         </div>
 
-        {/* Pricing Tiers Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {/* Mobile/Tablet: horizontal snap scroll */}
+        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 lg:hidden [&::-webkit-scrollbar]:hidden">
+          {tiers.map((tier) => (
+            <div className="w-[85%] shrink-0 snap-start sm:w-[72%] md:w-[46%]" key={tier.name}>
+              <PricingCard tier={tier} />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: 3-col grid */}
+        <div className="hidden grid-cols-3 gap-8 lg:grid">
           {tiers.map((tier) => (
             <PricingCard key={tier.name} tier={tier} />
           ))}

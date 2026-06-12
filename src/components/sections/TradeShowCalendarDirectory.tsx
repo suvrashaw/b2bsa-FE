@@ -531,7 +531,7 @@ export const TradeShowCalendarDirectory = ({
   return (
     <>
       <section className="bg-brand-gray pt-16 pb-8">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="relative mx-auto mt-10 max-w-3xl">
             <Search className="absolute top-1/2 left-5 h-5 w-5 -translate-y-1/2 text-brand-charcoal/40" />
             <input

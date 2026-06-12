@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  DATA_VALIDATION_CASE_STUDIES,
+  DATA_VALIDATION_CTA,
+  DATA_VALIDATION_DELIVERABLES,
+  DATA_VALIDATION_FAQ,
+  DATA_VALIDATION_HERO,
+  DATA_VALIDATION_PAGE,
+  DATA_VALIDATION_PROCESS,
+  DATA_VALIDATION_SPOTLIGHT,
+} from "@/content/services/detail/data-validation";
+
+export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
+
+const contactCta = {
+  ...CINEMATIC_CTA_SHARED,
+  ...DATA_VALIDATION_CTA,
+  badge: "Ready to Start",
+  headingLines: [DATA_VALIDATION_CTA.title] as [string],
+  primaryCta: {
+    href: DATA_VALIDATION_CTA.ctaHref,
+    label: DATA_VALIDATION_CTA.ctaLabel,
+  },
+};
+
+const Page = () => {
+  return (
+    <ServiceDetail
+      caseStudies={DATA_VALIDATION_CASE_STUDIES}
+      closingSections={<ContactCinematicCTA {...contactCta} />}
+      deliverables={DATA_VALIDATION_DELIVERABLES}
+      deliverablesSectionType="carousel"
+      faq={DATA_VALIDATION_FAQ}
+      hero={DATA_VALIDATION_HERO}
+      page={DATA_VALIDATION_PAGE}
+      process={DATA_VALIDATION_PROCESS}
+      spotlight={DATA_VALIDATION_SPOTLIGHT}
+    />
+  );
+};
+
+export default Page;

@@ -76,7 +76,10 @@ export const FAQAccordion = ({
 
   return (
     <section
-      className={cn("relative", isArticle ? "bg-transparent py-0" : "bg-brand-gray py-24")}
+      className={cn(
+        "relative",
+        isArticle ? "bg-transparent py-0" : "bg-brand-gray py-14 md:py-20 lg:py-24"
+      )}
       id="faq"
     >
       {!isArticle && (
@@ -86,7 +89,12 @@ export const FAQAccordion = ({
         </div>
       )}
 
-      <div className={cn("relative z-10", isArticle ? "" : "container mx-auto px-8")}>
+      <div
+        className={cn(
+          "relative z-10",
+          isArticle ? "" : "container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8"
+        )}
+      >
         <motion.div
           animate={HEADING_ANIMATE}
           className={cn(isArticle ? "mb-8 text-left" : "mb-16 text-center")}

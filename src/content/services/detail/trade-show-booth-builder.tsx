@@ -142,15 +142,15 @@ export const BOOTH_BUILDER_FAQ = {
 
 export const BOOTH_BUILDER_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/trade-show-booth-design",
+    href: "/services/booth-services/trade-show-booth-design",
     title: "Trade Show Booth Design",
   },
   {
-    href: "/services/global-event-solutions/event-booth-rental",
+    href: "/services/booth-services/event-booth-rental",
     title: "Event Booth Rental",
   },
   {
-    href: "/services/global-event-solutions/modular-booth-solutions",
+    href: "/services/booth-services/modular-booth-solutions",
     title: "Modular and Portable Booths",
   },
 ];
@@ -216,7 +216,7 @@ export const BOOTH_BUILDER_PAGE = {
   pageName: "Trade Show Booth Builder",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/trade-show-booth-builder",
+    canonicalPath: "/services/booth-services/trade-show-booth-builder",
     description:
       "Enterprise trade show booth builder delivering concept-to-installation fabrication across 40+ countries. Custom builds, modular systems, double-deck structures, and turnkey solutions.",
     focusKeyphrase: "trade show booth builder",

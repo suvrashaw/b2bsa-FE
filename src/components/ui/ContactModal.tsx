@@ -62,7 +62,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       role="dialog"
     >
       <div className="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
+      <div className="relative z-10 max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
         <div className="mb-6 flex items-start justify-between">
           <div>
             <h2 className="font-heading text-2xl font-black text-brand-charcoal">Get in Touch</h2>

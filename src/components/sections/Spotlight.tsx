@@ -122,13 +122,13 @@ const SpotlightTextBlock = ({
 
       <Heading as="h2" className="relative">
         <span
-          className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-charcoal transition-all duration-700 lg:text-4xl"
+          className="block font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:whitespace-nowrap lg:text-4xl"
           style={title1Style}
         >
           {titleLine1}
         </span>
         <span
-          className="block font-heading text-3xl font-bold tracking-tight whitespace-nowrap text-brand-blue transition-all duration-700 lg:text-4xl"
+          className="block font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 sm:whitespace-nowrap lg:text-4xl"
           style={title2Style}
         >
           {titleLine2}

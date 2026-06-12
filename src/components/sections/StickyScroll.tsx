@@ -22,7 +22,7 @@ const ReasonImage = ({
   index: number;
   reason: { id: string; image: string; title: string };
 }) => (
-  <div className="flex h-screen w-full shrink-0 items-center justify-center p-16" key={reason.id}>
+  <div className="flex h-dvh w-full shrink-0 items-center justify-center p-16" key={reason.id}>
     <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
       <motion.div
         animate={index === activeIndex ? SCALE_ACTIVE : SCALE_INACTIVE}
@@ -98,11 +98,11 @@ export const StickyScroll = ({
   return (
     <section className="relative bg-brand-gray" ref={containerRef} style={sectionStyle}>
       <div
-        className={`sticky top-0 container mx-auto flex h-screen px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
+        className={`sticky top-0 container mx-auto flex h-dvh max-w-screen-2xl px-4 sm:px-6 md:px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
       >
         {/* Left text panel */}
         <div
-          className={`flex h-screen flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
+          className={`flex h-dvh flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
           <Heading as="h2" className="mb-14 w-full text-left">
             {heading}
@@ -155,7 +155,7 @@ export const StickyScroll = ({
 
         {/* Right image reel — slides vertically inside overflow-hidden container */}
         {showImagePanel && (
-          <div className="relative hidden h-screen w-1/2 overflow-hidden md:block">
+          <div className="relative hidden h-dvh w-1/2 overflow-hidden md:block">
             <motion.div
               animate={slideAnimate}
               className="absolute top-0 right-0 left-0 flex flex-col"

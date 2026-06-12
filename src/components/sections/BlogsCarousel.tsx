@@ -92,9 +92,9 @@ export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
   if (posts.length === 0) return null;
 
   return (
-    <section className="bg-brand-gray py-20" id="blogs">
-      <div className="container mx-auto px-8">
-        <div className="mb-14 flex items-center justify-between gap-6">
+    <section className="bg-brand-gray py-12 md:py-16 lg:py-20" id="blogs">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+        <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <motion.div
             initial={HEADING_INITIAL}
             transition={HEADING_TRANSITION}
@@ -104,41 +104,53 @@ export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
             <Heading as="h2">{heading}</Heading>
           </motion.div>
 
-          <Button asChild className="shrink-0" variant="secondary">
+          <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         </div>
 
-        <div className="overflow-visible" ref={containerRef}>
-          <motion.div
-            animate={controls}
-            className="flex"
-            initial={TRACK_INITIAL}
-            style={TRACK_STYLE}
-          >
-            {extended.map((post, i) => (
-              <div key={`${post.id}-${i}`} style={cardStyle}>
-                <BlogsCarouselCard post={post} />
-              </div>
-            ))}
-          </motion.div>
+        {/* Mobile: CSS snap strip */}
+        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:hidden [&::-webkit-scrollbar]:hidden">
+          {posts.map((post) => (
+            <div className="w-[85%] shrink-0 snap-start sm:w-[72%]" key={post.id}>
+              <BlogsCarouselCard post={post} />
+            </div>
+          ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-8">
-          <button
-            aria-label="Previous post"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={handlePrev}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <button
-            aria-label="Next post"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={handleNext}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
+        {/* Desktop: JS infinite carousel */}
+        <div className="hidden md:block">
+          <div className="overflow-visible" ref={containerRef}>
+            <motion.div
+              animate={controls}
+              className="flex"
+              initial={TRACK_INITIAL}
+              style={TRACK_STYLE}
+            >
+              {extended.map((post, i) => (
+                <div key={`${post.id}-${i}`} style={cardStyle}>
+                  <BlogsCarouselCard post={post} />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-8">
+            <button
+              aria-label="Previous post"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+              onClick={handlePrev}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              aria-label="Next post"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+              onClick={handleNext}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

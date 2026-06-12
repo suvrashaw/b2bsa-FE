@@ -135,7 +135,7 @@ export const FAQ = ({
   const showArrows = resolvedLayoutMode === "carousel";
 
   return (
-    <section className="relative bg-brand-gray py-20" id="faq">
+    <section className="relative bg-brand-gray py-12 md:py-16 lg:py-20" id="faq">
       {/* Decorative Gradients, isolated so they don't create a clip context for cards */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
@@ -144,7 +144,7 @@ export const FAQ = ({
 
       <div className="relative z-10">
         {/* Centered Heading */}
-        <div className="container mx-auto mb-16 px-8 text-center">
+        <div className="container mx-auto mb-16 max-w-screen-2xl px-4 text-center sm:px-6 md:px-8">
           <div className="flex flex-col items-center justify-center text-center">
             <Heading as="h2" className="mb-4">
               {heading}
@@ -158,8 +158,8 @@ export const FAQ = ({
           className={cn(
             "gap-6 pb-8",
             resolvedLayoutMode === "carousel"
-              ? "scrollbar-hide faq-carousel-container flex snap-x snap-mandatory overflow-x-auto"
-              : "container mx-auto flex flex-wrap justify-center px-8"
+              ? "scrollbar-hide faq-carousel-container flex snap-x snap-mandatory overflow-x-auto px-4 sm:px-6 md:px-8"
+              : "container mx-auto max-w-screen-2xl flex flex-wrap justify-center px-4 sm:px-6 md:px-8"
           )}
           ref={scrollRef}
           style={showArrows ? FAQ_SCROLLBAR_STYLE : undefined}

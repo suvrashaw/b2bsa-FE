@@ -18,8 +18,8 @@ export const RelatedServices = ({
   if (!services || services.length === 0) return null;
 
   return (
-    <section className={cn("bg-brand-gray py-20", className)}>
-      <div className="container mx-auto px-8">
+    <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)}>
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <Heading as="h2" className="mb-12 text-center">
           {title}
         </Heading>

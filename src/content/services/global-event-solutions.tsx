@@ -16,7 +16,7 @@ export const GES_SERVICES = {
     {
       color: "bg-brand-blue",
       description: "exhibition environments engineered for visitor flow and lead conversion",
-      href: "/services/global-event-solutions/trade-show-booth-design",
+      href: "/services/booth-services/trade-show-booth-design",
       icon: "Presentation",
       id: "booth-design",
       image: "/images/services/booth/booth-5.avif",
@@ -25,7 +25,7 @@ export const GES_SERVICES = {
     {
       color: "bg-brand-cyan",
       description: "modular exhibition systems globally available",
-      href: "/services/global-event-solutions/event-booth-rental",
+      href: "/services/booth-services/event-booth-rental",
       icon: "Layers",
       id: "booth-rental",
       image: "/images/services/booth/booth-6.avif",
@@ -34,7 +34,7 @@ export const GES_SERVICES = {
     {
       color: "bg-brand-primary",
       description: "fabrication to on-site installation",
-      href: "/services/global-event-solutions/trade-show-booth-builder",
+      href: "/services/booth-services/trade-show-booth-builder",
       icon: "Globe2",
       id: "booth-builder",
       image: "/images/services/booth/booth-7.avif",

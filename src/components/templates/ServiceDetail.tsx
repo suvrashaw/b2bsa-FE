@@ -40,6 +40,7 @@ export interface ServiceDetailProps {
     description?: string;
     title: string;
   };
+  definitionBlock?: { body: ReactNode; heading?: ReactNode };
   deliverables?: ServicesStackProps;
   deliverablesSectionType?: "carousel" | "grid";
   faq: FAQProps;
@@ -101,17 +102,17 @@ const serviceHeroCtasByPath: Record<
     secondaryCta?: { href: string; label: string };
   }
 > = {
-  "/services/global-event-solutions/event-booth-rental": {
+  "/services/booth-services/event-booth-rental": {
     primaryCta: { href: "/contact", label: "Check Rental Availability" },
     secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
   },
-  "/services/global-event-solutions/modular-booth-solutions": {
+  "/services/booth-services/modular-booth-solutions": {
     primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
   },
-  "/services/global-event-solutions/trade-show-booth-builder": {
+  "/services/booth-services/trade-show-booth-builder": {
     primaryCta: { href: "/contact", label: "Get a Build Quote" },
   },
-  "/services/global-event-solutions/trade-show-booth-design": {
+  "/services/booth-services/trade-show-booth-design": {
     primaryCta: { href: "/contact", label: "Request a Design Quote" },
     secondaryCta: { href: "/case-studies", label: "View Booth Portfolio" },
   },
@@ -146,6 +147,7 @@ export const ServiceDetail = ({
   closingSections,
   creativePricing,
   ctaBanner,
+  definitionBlock,
   deliverables,
   deliverablesSectionType = "grid",
   faq,
@@ -252,6 +254,23 @@ export const ServiceDetail = ({
           secondaryCta={finalSecondaryCta}
           title={hero.title}
         />
+      )}
+
+      {definitionBlock && (
+        <section className="bg-brand-gray py-16 lg:py-24">
+          <div className="container mx-auto px-8">
+            <div className="mx-auto max-w-4xl space-y-6 text-center">
+              {definitionBlock.heading && (
+                <h2 className="font-heading text-3xl font-bold tracking-tight text-brand-charcoal lg:text-4xl">
+                  {definitionBlock.heading}
+                </h2>
+              )}
+              <div className="prose prose-lg mx-auto text-brand-charcoal/80">
+                {definitionBlock.body}
+              </div>
+            </div>
+          </div>
+        </section>
       )}
 
       <ClientLogos heading={clientLogosHeading} overlap={false} />

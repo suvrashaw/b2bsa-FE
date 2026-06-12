@@ -239,7 +239,7 @@ export const BOOTH_DESIGN_PAGE = {
   pageName: "Trade Show Booth Design",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/trade-show-booth-design",
+    canonicalPath: "/services/booth-services/trade-show-booth-design",
     description:
       "500+ custom trade show booth designs delivered globally. We design 10x10 to double-deck exhibition environments that stop foot traffic and convert floor visits into pipeline.",
     focusKeyphrase: "trade show booth design",
@@ -256,7 +256,7 @@ export const BOOTH_DESIGN_PAGE = {
 
 export const BOOTH_DESIGN_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/event-booth-rental",
+    href: "/services/booth-services/event-booth-rental",
     title: "Event Booth Rental",
   },
 ];

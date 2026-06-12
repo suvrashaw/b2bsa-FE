@@ -36,6 +36,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
       <div className="space-y-6">
         <div className={`grid gap-6 ${form.lastNameLabel ? "grid-cols-2" : "grid-cols-1"}`}>
           <FormInput
+            autoComplete="given-name"
             id="contact-first-name"
             label={form.firstNameLabel}
             placeholder={form.firstNamePlaceholder}
@@ -44,6 +45,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           />
           {form.lastNameLabel && (
             <FormInput
+              autoComplete="family-name"
               id="contact-last-name"
               label={form.lastNameLabel}
               placeholder={form.lastNamePlaceholder}
@@ -54,6 +56,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
 
         {form.companyLabel && (
           <FormInput
+            autoComplete="organization"
             id="contact-company"
             label={form.companyLabel}
             placeholder={form.companyPlaceholder}
@@ -62,6 +65,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
         {form.jobTitleLabel && (
           <FormInput
+            autoComplete="organization-title"
             id="contact-job-title"
             label={form.jobTitleLabel}
             placeholder={form.jobTitlePlaceholder}
@@ -71,6 +75,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
 
         <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-2" : "grid-cols-1"}`}>
           <FormInput
+            autoComplete="email"
             id="contact-email"
             label={form.emailLabel}
             placeholder={form.emailPlaceholder}
@@ -80,6 +85,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
 
           {form.phoneLabel && (
             <FormInput
+              autoComplete="tel"
               id="contact-phone"
               label={form.phoneLabel}
               placeholder={form.phonePlaceholder}
@@ -92,6 +98,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           <div className="grid grid-cols-2 gap-6">
             {form.countryLabel && (
               <FormInput
+                autoComplete="country-name"
                 id="contact-country"
                 label={form.countryLabel}
                 placeholder={form.countryPlaceholder}
@@ -100,6 +107,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
             )}
             {form.timelineLabel && (
               <FormInput
+                autoComplete="off"
                 id="contact-timeline"
                 label={form.timelineLabel}
                 placeholder={form.timelinePlaceholder}

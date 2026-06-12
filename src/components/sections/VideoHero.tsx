@@ -150,7 +150,7 @@ export const VideoHero = ({
       </div>
 
       {/* 2. Content Area */}
-      <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
           <Heading as="h1" className="mb-8" style={H1_STYLE}>
             {isStringTitle

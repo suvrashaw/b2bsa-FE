@@ -130,7 +130,7 @@ export const Events = ({
 
   return (
     <section className="relative bg-brand-gray pt-20 pb-4" id="events">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           <Heading as="h2" className="text-center">
             {heading}

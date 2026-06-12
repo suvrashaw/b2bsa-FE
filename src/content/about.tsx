@@ -121,7 +121,7 @@ export const ABOUT_SIGNATURE_SERVICES = {
   heading: "Our Signature Service",
   services: [
     {
-      href: "/services/global-event-solutions/trade-show-booth-design",
+      href: "/services/booth-services/trade-show-booth-design",
       id: "trade-show-booth-design",
       image: "/images/services/booth/booth-10.avif",
       title: "Trade show booth design",

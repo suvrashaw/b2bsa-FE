@@ -156,7 +156,7 @@ export const MODULAR_BOOTHS_PAGE = {
   pageName: "Modular Booth Solutions",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/modular-booth-solutions",
+    canonicalPath: "/services/booth-services/modular-booth-solutions",
     description:
       "Reusable modular booth systems and portable trade show displays, consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds.",
     focusKeyphrase: "modular booth",

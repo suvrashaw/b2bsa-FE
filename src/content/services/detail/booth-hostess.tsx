@@ -215,13 +215,13 @@ export const BOOTH_HOSTESS_FAQ = {
 };
 
 export const BOOTH_HOSTESS_RELATED_SERVICES = [
-  { href: "/services/global-event-solutions/event-booth-rental", title: "Trade Show Booth Rental" },
+  { href: "/services/booth-services/event-booth-rental", title: "Trade Show Booth Rental" },
   {
-    href: "/services/global-event-solutions/trade-show-booth-design",
+    href: "/services/booth-services/trade-show-booth-design",
     title: "Trade Show Booth Design",
   },
   {
-    href: "/services/global-event-solutions/trade-show-booth-builder",
+    href: "/services/booth-services/trade-show-booth-builder",
     title: "Trade Show Booth Builder",
   },
 ];
@@ -246,7 +246,7 @@ export const BOOTH_HOSTESS_PAGE = {
   pageName: "Booth Hostess Services",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/booth-hostess-services",
+    canonicalPath: "/services/booth-services/booth-hostess-services",
     description:
       "Professional booth hostess and brand ambassador services for trade shows and corporate events, briefed, multilingual staff who qualify visitors and drive meeting conversion.",
     focusKeyphrase: "booth hostess services",

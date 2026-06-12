@@ -27,64 +27,60 @@ export const topNavigation: NavLink[] = [
 
 export const serviceNavigationGroups: ServiceNavGroup[] = [
   {
-    groups: [
+    href: "/services/global-event-solutions",
+    links: [
       {
-        links: [
-          {
-            href: "/services/global-event-solutions/trade-show-booth-builder",
-            name: "Trade Show Booth Builder",
-          },
-          {
-            href: "/services/global-event-solutions/trade-show-booth-design",
-            name: "Trade Show Booth Design",
-          },
-          {
-            href: "/services/global-event-solutions/booth-hostess-services",
-            name: "Booth Hostess Services",
-          },
-          {
-            href: "/services/global-event-solutions/booth-logistics-services",
-            name: "Booth Logistics Services",
-          },
-          {
-            href: "/services/global-event-solutions/modular-booth-solutions",
-            name: "Modular Booth Solutions",
-          },
-          {
-            href: "/services/global-event-solutions/event-booth-rental",
-            name: "Event Booth Rental",
-          },
-        ],
-        name: "Booth Services",
+        href: "/services/global-event-solutions/event-experience-creation",
+        name: "Event Experience Creation",
       },
       {
-        links: [
-          {
-            href: "/services/global-event-solutions/event-experience-creation",
-            name: "Event Experience Creation",
-          },
-          {
-            href: "/services/global-event-solutions/event-branding-services",
-            name: "Event Branding Services",
-          },
-          {
-            href: "/services/global-event-solutions/corporate-event-solutions",
-            name: "Corporate Event Solutions",
-          },
-          {
-            href: "/services/global-event-solutions/corporate-networking-events",
-            name: "Corporate Networking Events",
-          },
-          {
-            href: "/services/global-event-solutions/event-experience-video-production",
-            name: "Event Experience Video Production",
-          },
-        ],
-        name: "Event Services",
+        href: "/services/global-event-solutions/event-branding-services",
+        name: "Event Branding Services",
+      },
+      {
+        href: "/services/global-event-solutions/corporate-event-solutions",
+        name: "Corporate Event Solutions",
+      },
+      {
+        href: "/services/global-event-solutions/corporate-networking-events",
+        name: "Corporate Networking Events",
+      },
+      {
+        href: "/services/global-event-solutions/event-experience-video-production",
+        name: "Event Experience Video Production",
       },
     ],
-    href: "/services/global-event-solutions",
     name: "Global Event Solutions",
+  },
+  {
+    href: "/services/booth-services",
+    links: [
+      {
+        href: "/services/booth-services/trade-show-booth-builder",
+        name: "Trade Show Booth Builder",
+      },
+      {
+        href: "/services/booth-services/trade-show-booth-design",
+        name: "Trade Show Booth Design",
+      },
+      {
+        href: "/services/booth-services/booth-hostess-services",
+        name: "Booth Hostess Services",
+      },
+      {
+        href: "/services/booth-services/booth-logistics-services",
+        name: "Booth Logistics Services",
+      },
+      {
+        href: "/services/booth-services/modular-booth-solutions",
+        name: "Modular Booth Solutions",
+      },
+      {
+        href: "/services/booth-services/event-booth-rental",
+        name: "Event Booth Rental",
+      },
+    ],
+    name: "Booth Services",
   },
   {
     href: "/services/media-production",
@@ -134,21 +130,21 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
     href: "/services/market-research",
     links: [
       {
-        href: "/services/market-research/data-augmentation-services",
+        href: "/services/data-augmentation",
         name: "Data Augmentation Services",
       },
       {
-        href: "/services/market-research/data-validation-services",
+        href: "/services/data-validation",
         name: "Data Validation Services",
       },
     ],
     name: "Market Research",
   },
   {
-    href: "/services/human-powered-market-intelligence",
+    href: "/services/market-intelligence",
     links: [
       {
-        href: "/services/human-powered-market-intelligence",
+        href: "/services/market-intelligence",
         name: "Human Powered Market Intelligence",
       },
     ],

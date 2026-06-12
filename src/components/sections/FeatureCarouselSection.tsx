@@ -289,12 +289,12 @@ export const FeatureCarouselSection = ({
   heading,
 }: FeatureCarouselSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-20">
+    <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-8 right-[8%] h-48 w-48 rounded-full bg-brand-cyan/12 blur-3xl" />
         <div className="absolute bottom-0 left-[6%] h-56 w-56 rounded-full bg-brand-blue/10 blur-3xl" />
       </div>
-      <div className="relative z-10 container mx-auto px-8">
+      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Heading as="h2" className="mb-6">
             {heading}

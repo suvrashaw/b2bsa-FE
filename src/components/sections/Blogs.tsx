@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll, useTransform } from "framer-motion";
+import { useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
@@ -34,6 +34,8 @@ export const Blogs = ({
 }: BlogsProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+  const resolvedLayout = prefersReducedMotion ? "grid" : layout;
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
@@ -46,13 +48,17 @@ export const Blogs = ({
   const spread = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-20" id="blogs" ref={containerRef}>
-      <div className="container mx-auto px-8">
+    <section
+      className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20"
+      id="blogs"
+      ref={containerRef}
+    >
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
           <Heading as="h2">{heading}</Heading>
         </div>
 
-        {layout === "grid" ? (
+        {resolvedLayout === "grid" ? (
           <div className="mt-8 mb-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-8 lg:grid-cols-3">
             {blogs.map((blog) => (
               <Link className="block h-full" href={getBlogHref(blog.id, blog.href)} key={blog.id}>
@@ -62,7 +68,7 @@ export const Blogs = ({
           </div>
         ) : (
           <div
-            className="perspective-1000 relative mx-auto mt-8 mb-6 flex h-[800px] w-full max-w-3xl cursor-pointer items-center justify-center lg:mt-10 lg:mb-10 lg:h-[580px]"
+            className="perspective-1000 relative mx-auto mt-8 mb-6 flex h-[580px] w-full max-w-3xl cursor-pointer items-center justify-center sm:h-[640px] lg:mt-10 lg:mb-10 lg:h-[580px]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >

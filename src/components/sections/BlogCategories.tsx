@@ -39,7 +39,7 @@ const CategoryButton = ({ category, index }: { category: BlogCategoryItem; index
 export const BlogCategories = ({ heading = "Content Categories" }: BlogCategoriesProps) => {
   return (
     <div className="relative z-30 w-full bg-brand-gray pt-10 pb-12">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         {heading && (
           <Heading as="h2" className="mb-10 text-center text-3xl font-bold">
             {heading}

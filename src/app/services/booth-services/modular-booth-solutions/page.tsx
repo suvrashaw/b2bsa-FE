@@ -30,15 +30,15 @@ const modularBoothsContactCta = {
 
 const modularPortableBoothsRelatedServices = [
   {
-    href: "/services/global-event-solutions/event-booth-rental",
+    href: "/services/booth-services/event-booth-rental",
     title: "Event Booth Rental",
   },
   {
-    href: "/services/global-event-solutions/trade-show-booth-design",
+    href: "/services/booth-services/trade-show-booth-design",
     title: "Trade Show Booth Design",
   },
   {
-    href: "/services/global-event-solutions/trade-show-booth-builder",
+    href: "/services/booth-services/trade-show-booth-builder",
     title: "Trade Show Booth Builder",
   },
 ];

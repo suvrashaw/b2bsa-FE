@@ -39,8 +39,8 @@ export const RentVsBuySection = ({
   const isValueGrid = layout === "value-grid";
 
   return (
-    <section className="bg-brand-gray py-20">
-      <div className="container mx-auto px-8">
+    <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
           <Heading as="h2">{heading}</Heading>
@@ -110,7 +110,7 @@ export const RentVsBuySection = ({
             <div className="flex flex-wrap justify-center">
               {reasons.map((reason) => (
                 <div
-                  className="flex w-full flex-col items-center border-b border-brand-charcoal/15 px-10 py-12 text-center last:border-b-0 md:w-1/3 md:border-r md:border-b-0 md:py-8 md:last:border-r-0 md:[&:nth-child(3n)]:border-r-0"
+                  className="flex w-full flex-col items-center border-b border-brand-charcoal/15 px-10 py-12 text-center last:border-b-0 sm:w-1/2 sm:border-r md:w-1/3 md:border-r md:border-b-0 md:py-8 md:last:border-r-0 sm:[&:last-child]:border-r-0 sm:[&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:[&:nth-child(3n)]:border-r-0"
                   key={reason.title}
                 >
                   {/* Icon container */}

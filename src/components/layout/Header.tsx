@@ -467,7 +467,7 @@ export const Header = ({
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 lg:max-xl:px-4 py-4 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 lg:max-xl:px-4 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
@@ -537,24 +537,28 @@ export const Header = ({
             transition={MEGAMENU_TRANSITION}
           >
             <div className="mx-auto w-full max-w-7xl px-8 lg:max-xl:px-10 xl:px-12">
-              <div className="grid grid-cols-[minmax(0,2.25fr)_minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,1.25fr)] gap-4 xl:gap-8">
+              <div className="grid grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] gap-4 xl:gap-8">
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
                     onClose={handleCloseMegamenu}
                   />
                 </div>
-                <MegamenuServiceGroup
-                  group={serviceNavigationGroups[1]}
-                  onClose={handleCloseMegamenu}
-                />
-                <MegamenuServiceGroup
-                  group={serviceNavigationGroups[3]}
-                  onClose={handleCloseMegamenu}
-                />
+                <div className="min-w-0">
+                  <MegamenuServiceGroup
+                    group={serviceNavigationGroups[1]}
+                    onClose={handleCloseMegamenu}
+                  />
+                </div>
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[2]}
+                    onClose={handleCloseMegamenu}
+                  />
+                </div>
+                <div className="min-w-0">
+                  <MegamenuServiceGroup
+                    group={serviceNavigationGroups[3]}
                     onClose={handleCloseMegamenu}
                   />
                   <div className="mt-1">
@@ -566,6 +570,12 @@ export const Header = ({
                   <div className="mt-1">
                     <MegamenuServiceGroup
                       group={serviceNavigationGroups[5]}
+                      onClose={handleCloseMegamenu}
+                    />
+                  </div>
+                  <div className="mt-1">
+                    <MegamenuServiceGroup
+                      group={serviceNavigationGroups[6]}
                       onClose={handleCloseMegamenu}
                     />
                   </div>

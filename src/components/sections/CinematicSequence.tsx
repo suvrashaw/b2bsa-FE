@@ -106,7 +106,7 @@ export const CinematicSequence = ({
 
   return (
     <section className="relative h-[400vh] bg-black" ref={containerRef}>
-      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
+      <div className="sticky top-0 flex h-dvh w-full items-center justify-center overflow-hidden">
         {/* Frame canvas */}
         <canvas className="absolute inset-0" ref={canvasRef} />
 

@@ -85,8 +85,8 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
   const scales = [scale5_center, scale5, scale6, scale5, scale6, scale8, scale9];
 
   return (
-    <div className="relative h-[300vh]" ref={container}>
-      <div className="sticky top-0 h-screen overflow-hidden">
+    <div className="relative h-[300vh] overflow-hidden" ref={container}>
+      <div className="sticky top-0 h-dvh overflow-hidden">
         {images.map(({ alt, src }, index) => {
           const scale = scales[index % scales.length];
 
@@ -142,7 +142,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
 
   return (
     <section className="relative w-full bg-brand-gray py-12 transition-colors duration-500">
-      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-8 text-center">
+      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-4 text-center sm:px-6 md:px-8">
         {/* Radial spotlight */}
         <div
           aria-hidden="true"

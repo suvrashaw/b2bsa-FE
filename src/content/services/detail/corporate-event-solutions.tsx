@@ -216,7 +216,7 @@ export const CORP_EVENT_FAQ = {
 
 export const CORP_EVENT_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/booth-logistics-services",
+    href: "/services/booth-services/booth-logistics-services",
     title: "Event Logistics Services",
   },
   {
@@ -224,7 +224,7 @@ export const CORP_EVENT_RELATED_SERVICES = [
     title: "Networking Event Solutions",
   },
   {
-    href: "/services/global-event-solutions/booth-hostess-services",
+    href: "/services/booth-services/booth-hostess-services",
     title: "Event Hostess Services",
   },
 ];

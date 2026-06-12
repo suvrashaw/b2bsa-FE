@@ -50,19 +50,34 @@ const nextConfig: NextConfig = {
         source: "/services/performance-marketing/linkedin-ads-b2b",
       },
       {
-        destination: "/services/market-research/data-augmentation-services",
+        destination: "/services/data-augmentation",
         permanent: true,
         source: "/services/market-research/data-augmentation",
       },
       {
-        destination: "/services/market-research/data-validation-services",
+        destination: "/services/data-augmentation",
+        permanent: true,
+        source: "/services/market-research/data-augmentation-services",
+      },
+      {
+        destination: "/services/data-validation",
         permanent: true,
         source: "/services/market-research/data-validation",
       },
       {
-        destination: "/services/human-powered-market-intelligence",
+        destination: "/services/data-validation",
+        permanent: true,
+        source: "/services/market-research/data-validation-services",
+      },
+      {
+        destination: "/services/market-intelligence",
         permanent: true,
         source: "/services/market-research/human-powered-market-intelligence",
+      },
+      {
+        destination: "/services/market-intelligence",
+        permanent: true,
+        source: "/services/human-powered-market-intelligence",
       },
       { destination: "/about", permanent: true, source: "/about-us" },
       { destination: "/contact", permanent: true, source: "/contact-us" },

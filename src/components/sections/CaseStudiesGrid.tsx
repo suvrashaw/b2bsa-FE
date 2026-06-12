@@ -180,7 +180,7 @@ export const CaseStudiesGrid = ({
   return (
     <section className="w-full bg-brand-gray pb-20 md:pb-24">
       <div className="bg-brand-gray/30 py-8">
-        <div className="container mx-auto flex flex-wrap justify-center gap-3 px-8">
+        <div className="container mx-auto flex max-w-screen-2xl flex-wrap justify-center gap-3 px-4 sm:px-6 md:px-8">
           {filters.map((filter) => (
             <FilterPill
               filter={filter}
@@ -193,7 +193,7 @@ export const CaseStudiesGrid = ({
       </div>
 
       <div className="py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-8">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           {gridContent}
 
           <Pagination

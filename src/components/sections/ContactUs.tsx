@@ -27,12 +27,15 @@ export const ContactUs = ({
   illustration = content.illustration,
 }: ContactUsProps = {}) => {
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-24" id="contact">
+    <section
+      className="relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24"
+      id="contact"
+    >
       {/* Decorative background flare */}
       <div className="pointer-events-none absolute top-0 right-0 h-[800px] w-[800px] rounded-full bg-brand-cyan/5 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[800px] w-[800px] rounded-full bg-brand-blue/5 blur-[120px]" />
 
-      <div className="relative z-20 container mx-auto px-8">
+      <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">

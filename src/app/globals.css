@@ -98,6 +98,50 @@ body {
   h4 {
     color: var(--heading-h4);
   }
+
+  /* ── Mobile / Touch globals ──────────────────────────────────── */
+  html {
+    /* Anchor links land below the fixed header (~64px) */
+    scroll-padding-top: 64px;
+    color-scheme: light;
+
+    /* Remove iOS grey tap flash on all interactive elements */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Horizontal snap containers: contain overscroll + align snap to padding */
+  .snap-x {
+    scroll-padding-inline: 16px; /* base: px-4 */
+    overscroll-behavior-x: contain;
+  }
+
+  /* Prevent accidental text selection on long-press of interactive cards */
+  [data-card-interactive] {
+    user-select: none;
+  }
+
+  @media (width >= 640px) {
+    .snap-x {
+      scroll-padding-inline: 24px; /* sm: px-6 */
+    }
+  }
+
+  @media (width >= 768px) {
+    .snap-x {
+      scroll-padding-inline: 32px; /* md: px-8 */
+    }
+  }
+
+  /* Respect reduced-motion OS preference */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation-play-state: paused !important;
+    }
+
+    .parallax-element {
+      transform: none !important;
+    }
+  }
 }
 
 /* Custom scrollbar for a premium feel */

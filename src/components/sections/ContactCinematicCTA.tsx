@@ -134,7 +134,7 @@ export const ContactCinematicCTA = ({
 
   return (
     <section
-      className="relative overflow-hidden bg-brand-charcoal py-20"
+      className="relative overflow-hidden bg-brand-charcoal py-12 md:py-16 lg:py-20"
       id="contact"
       onMouseLeave={resetPointer}
       onMouseMove={handlePointerMove}
@@ -197,7 +197,7 @@ export const ContactCinematicCTA = ({
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-8">
+      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mx-auto max-w-5xl text-center">
           {badge ? (
             <motion.div

@@ -115,8 +115,8 @@ export const BoothWhyChooseUs = ({
   const handleNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
 
   return (
-    <section className="overflow-hidden bg-brand-gray py-20" id="why-choose-us">
-      <div className="container mx-auto px-8">
+    <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="why-choose-us">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -159,50 +159,62 @@ export const BoothWhyChooseUs = ({
             ))}
           </div>
         ) : (
-          <div
-            className="relative mt-16"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div
-              className="overflow-visible"
-              onPointerDown={handlePointerDown}
-              onPointerUp={handlePointerUp}
-              ref={containerRef}
-            >
-              <motion.div
-                animate={trackAnimate}
-                className="flex"
-                style={TRACK_STYLE}
-                transition={TRANSITION}
-              >
-                {items.map((item, index) => (
-                  <BoothWhyCard
-                    className="shrink-0"
-                    index={index}
-                    item={item}
-                    key={item.title}
-                    style={carouselCardStyle}
-                  />
-                ))}
-              </motion.div>
+          <div className="relative mt-16">
+            {/* Mobile: CSS snap strip */}
+            <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:hidden [&::-webkit-scrollbar]:hidden">
+              {items.map((item, index) => (
+                <div className="w-[85%] shrink-0 snap-start sm:w-[72%]" key={item.title}>
+                  <BoothWhyCard className="w-full" index={index} item={item} />
+                </div>
+              ))}
             </div>
 
-            <div className="mt-12 flex items-center justify-center gap-8">
-              <button
-                aria-label="Previous slide"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-                onClick={handlePrev}
+            {/* Desktop: JS carousel */}
+            <div
+              className="hidden md:block"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div
+                className="overflow-visible"
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
+                ref={containerRef}
               >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                aria-label="Next slide"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-                onClick={handleNext}
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
+                <motion.div
+                  animate={trackAnimate}
+                  className="flex"
+                  style={TRACK_STYLE}
+                  transition={TRANSITION}
+                >
+                  {items.map((item, index) => (
+                    <BoothWhyCard
+                      className="shrink-0"
+                      index={index}
+                      item={item}
+                      key={item.title}
+                      style={carouselCardStyle}
+                    />
+                  ))}
+                </motion.div>
+              </div>
+
+              <div className="mt-12 flex items-center justify-center gap-8">
+                <button
+                  aria-label="Previous slide"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+                  onClick={handlePrev}
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  aria-label="Next slide"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+                  onClick={handleNext}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+              </div>
             </div>
           </div>
         )}

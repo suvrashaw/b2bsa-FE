@@ -42,10 +42,15 @@ export const FAQAccordionItem = ({
         type="button"
       >
         <span className="w-9 shrink-0 text-base font-bold text-brand-blue">{num}.</span>
+        {/* Mobile: icon on LEFT before question text */}
+        <span className="shrink-0 text-brand-cyan md:hidden">
+          {isOpen ? <X className="h-[18px] w-[18px]" /> : <Plus className="h-[18px] w-[18px]" />}
+        </span>
         <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-lg">
           {question}
         </span>
-        <span className="shrink-0 text-brand-cyan">
+        {/* Desktop: icon on RIGHT */}
+        <span className="hidden shrink-0 text-brand-cyan md:block">
           {isOpen ? <X className="h-[18px] w-[18px]" /> : <Plus className="h-[18px] w-[18px]" />}
         </span>
       </button>

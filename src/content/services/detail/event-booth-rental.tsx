@@ -129,15 +129,15 @@ export const BOOTH_RENTAL_FAQ = {
 
 export const BOOTH_RENTAL_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/trade-show-booth-design",
+    href: "/services/booth-services/trade-show-booth-design",
     title: "Trade Show Booth Design",
   },
   {
-    href: "/services/global-event-solutions/trade-show-booth-builder",
+    href: "/services/booth-services/trade-show-booth-builder",
     title: "Trade Show Booth Builder",
   },
   {
-    href: "/services/global-event-solutions/modular-booth-solutions",
+    href: "/services/booth-services/modular-booth-solutions",
     title: "Modular and Portable Booths",
   },
 ];
@@ -189,7 +189,7 @@ export const BOOTH_RENTAL_PAGE = {
   pageName: "Event Booth Rental",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/event-booth-rental",
+    canonicalPath: "/services/booth-services/event-booth-rental",
     description:
       "Enterprise trade show booth rental, modular, fully branded, globally deployable. From 10x10 to double-deck. Professional presence without the custom build timeline.",
     focusKeyphrase: "trade show booth rental",

@@ -24,11 +24,11 @@ interface StatItem {
 
 const MARQUEE_SPEED = 5;
 
-const useStatsMarquee = (isVisible: boolean) => {
+const useStatsMarquee = (isVisible: boolean, isPaused: boolean) => {
   const baseX = useMotionValue(0);
 
   useAnimationFrame((_, delta) => {
-    if (isVisible) {
+    if (isVisible && !isPaused) {
       baseX.set(baseX.get() - MARQUEE_SPEED * (delta / 1000));
     }
   });
@@ -65,7 +65,10 @@ const StatRow = ({ items }: { items: StatItem[] }) => (
 const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const x = useStatsMarquee(isVisible);
+  const prefersReduced =
+    globalThis.window !== undefined &&
+    globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const x = useStatsMarquee(isVisible, prefersReduced);
   const marqueeStyle = useMemo(() => ({ x }), [x]);
 
   useEffect(() => {
@@ -135,7 +138,7 @@ export const ProofBar = ({
 
   return (
     <div className={cn("bg-brand-gray py-16 md:py-20", className)}>
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left column: heading, description, stats marquee */}
           <div className="flex flex-col">

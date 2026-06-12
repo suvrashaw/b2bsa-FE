@@ -40,7 +40,11 @@ const CaseStudyCard = ({
   return (
     <CaseStudyItem
       active={active}
-      className={active ? "min-h-[360px] lg:min-h-0" : "min-h-[112px] lg:min-h-0"}
+      className={
+        active
+          ? "min-h-[280px] sm:min-h-[360px] lg:min-h-0"
+          : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"
+      }
       ctaLabel={ctaLabel}
       item={item}
       onActivate={handleActivate}
@@ -109,8 +113,8 @@ export const CaseStudies = ({
     : (cards[0]?.id ?? "");
 
   return (
-    <section className="relative bg-brand-gray py-20" id="work">
-      <div className="container mx-auto max-w-6xl px-8">
+    <section className="relative bg-brand-gray py-12 md:py-16 lg:py-20" id="work">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-16 flex flex-col items-center text-center">
           <Heading as="h2" className="text-center">
             {heading}
@@ -120,7 +124,7 @@ export const CaseStudies = ({
           )}
         </div>
 
-        <div className="flex w-full flex-col gap-4 lg:h-[600px] lg:flex-row">
+        <div className="flex h-auto w-full flex-col gap-4 lg:h-[600px] lg:flex-row">
           {cards.map((study) => (
             <CaseStudyCard
               active={activeCaseStudyId === study.id}

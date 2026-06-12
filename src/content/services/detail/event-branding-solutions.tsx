@@ -221,10 +221,10 @@ export const EVENT_BRANDING_RELATED_SERVICES = [
     title: "Corporate Event Solutions",
   },
   {
-    href: "/services/global-event-solutions/booth-logistics-services",
+    href: "/services/booth-services/booth-logistics-services",
     title: "Event Logistics Services",
   },
-  { href: "/services/global-event-solutions/booth-hostess-services", title: "Booth Hostess" },
+  { href: "/services/booth-services/booth-hostess-services", title: "Booth Hostess" },
 ];
 
 export const EVENT_BRANDING_CONTACT_CTA = {

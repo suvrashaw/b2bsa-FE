@@ -74,7 +74,7 @@ export const WhoWeAre = ({
     <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="about">
       <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:grid-cols-2 lg:px-8">
         {/* Left Side: Content */}
-        <div className="flex flex-col items-start space-y-6 text-left">
+        <div className="order-last flex flex-col items-start space-y-6 text-left lg:order-none">
           <div className="w-full text-left">
             <Heading as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
               <span className="block">{resolvedHeading}</span>
@@ -120,7 +120,7 @@ export const WhoWeAre = ({
         </div>
 
         {/* Right Side: Scrolling Insights */}
-        <div className="group/scroller relative h-[400px] overflow-hidden p-2 md:h-[600px] md:p-4">
+        <div className="group/scroller relative order-first h-[400px] overflow-hidden p-2 md:h-[600px] md:p-4 lg:order-none">
           {/* Top/Bottom Fade Masks */}
           <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
           <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />

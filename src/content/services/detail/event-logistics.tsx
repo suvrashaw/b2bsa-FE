@@ -208,7 +208,7 @@ export const EVENT_LOGISTICS_FAQ = {
 
 export const EVENT_LOGISTICS_RELATED_SERVICES = [
   {
-    href: "/services/global-event-solutions/booth-hostess-services",
+    href: "/services/booth-services/booth-hostess-services",
     title: "Event Hostess Services",
   },
   {
@@ -238,7 +238,7 @@ export const EVENT_LOGISTICS_PAGE = {
   pageName: "Booth Logistics Services",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/global-event-solutions/booth-logistics-services",
+    canonicalPath: "/services/booth-services/booth-logistics-services",
     description:
       "End-to-end event logistics management, international freight, customs compliance, on-site installation, and return logistics for trade shows and corporate events in 40+ countries.",
     focusKeyphrase: "event logistics management",

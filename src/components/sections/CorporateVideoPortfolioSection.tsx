@@ -21,13 +21,13 @@ export const CorporateVideoPortfolioSection = ({
   items,
 }: CorporateVideoPortfolioSectionProps) => {
   return (
-    <section className="bg-[#111111] py-20 text-white md:py-24">
-      <div className="container mx-auto px-8">
+    <section className="bg-[#111111] py-12 text-white md:py-16 lg:py-24">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <Heading as="h2" className="mb-12 max-w-4xl text-white md:mb-14 lg:text-5xl">
           {heading}
         </Heading>
 
-        <div className="grid gap-7 lg:grid-cols-3">
+        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
             <article
               className="group overflow-hidden rounded-lg bg-white text-[#222222] shadow-[0_26px_70px_rgba(0,0,0,0.24)]"

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Inter } from "next/font/google";
 
@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     default: "B2B Sales Arrow | Premium Growth Partner",
     template: "%s | B2B Sales Arrow",
   },
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  viewportFit: "cover",
+  width: "device-width",
 };
 
 const jsonLd = buildOrganizationJsonLd();

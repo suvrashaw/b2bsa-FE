@@ -68,8 +68,8 @@ const LinkedInCard = ({ index, post }: { index: number; post: LinkedInPost }) =>
 );
 
 export const LinkedInFeed = () => (
-  <section className="bg-brand-gray py-20">
-    <div className="container mx-auto px-8">
+  <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
+    <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
       <div className="mb-12 flex flex-col items-center text-center">
         <Heading as="h2" className="text-center">
           Follow Our Latest Event Executions on LinkedIn
