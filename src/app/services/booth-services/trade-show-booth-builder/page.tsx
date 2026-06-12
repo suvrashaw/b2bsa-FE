@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
+import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
-import { CardsSection } from "@/components/sections/CardsSection";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -55,7 +56,13 @@ const Page = () => {
       }
       faq={BOOTH_BUILDER_FAQ}
       hero={BOOTH_BUILDER_HERO}
-      middleSections={<CardsSection {...BOOTH_BUILDER_FUTURE_READY} />}
+      middleSections={
+        <CardSection heading={BOOTH_BUILDER_FUTURE_READY.heading} layout="grid">
+          {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
+            <BasicCards item={item} key={item.title} />
+          ))}
+        </CardSection>
+      }
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={

@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import { TERMS_CONTACT, TERMS_FAQ, TERMS_HERO } from "@/content/terms";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -21,9 +21,8 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
-      <ImageHero
+      <Hero
         description={TERMS_HERO.description}
-        eyebrow={TERMS_HERO.eyebrow}
         images={TERMS_IMAGES}
         title={"Terms &\nConditions"}
       />

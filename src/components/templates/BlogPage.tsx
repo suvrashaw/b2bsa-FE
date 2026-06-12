@@ -5,14 +5,16 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
+import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { LinkedInFeed } from "@/components/sections/LinkedInFeed";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
+import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
 // ─── BlogSidebarTrending ─────────────────────────────────────────────────────
@@ -374,7 +376,15 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         posts={SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id))}
       />
 
-      <LinkedInFeed />
+      <CardSection
+        description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
+        heading="Follow Our Latest Event Executions on LinkedIn"
+        layout="carousel"
+      >
+        {LINKEDIN_POSTS.map((post, i) => (
+          <LinkedInCard index={i} key={post.id} post={post} />
+        ))}
+      </CardSection>
 
       <Footer />
     </main>

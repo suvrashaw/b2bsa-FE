@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { THANK_YOU_BLOGS, THANK_YOU_HERO, THANK_YOU_SERVICES } from "@/content/thank-you";
 import { buildPageMetadata } from "@/lib/seo";
@@ -24,9 +24,8 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
-      <ImageHero
+      <Hero
         description={THANK_YOU_HERO.description}
-        eyebrow={THANK_YOU_HERO.eyebrow}
         images={THANK_YOU_IMAGES}
         primaryCta={THANK_YOU_PRIMARY_CTA}
         secondaryCta={THANK_YOU_SECONDARY_CTA}

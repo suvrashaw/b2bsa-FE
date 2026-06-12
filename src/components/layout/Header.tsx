@@ -295,10 +295,12 @@ const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }
 };
 
 const MegamenuServiceGroup = ({
+  className,
   group,
   noWrapTitle = false,
   onClose,
 }: {
+  className?: string;
   group: ServiceNavGroup;
   noWrapTitle?: boolean;
   onClose: () => void;
@@ -307,7 +309,7 @@ const MegamenuServiceGroup = ({
   const subGroups = group.groups ?? [];
 
   return (
-    <div className="min-w-0 p-3 xl:p-5">
+    <div className={cn("min-w-0 px-3 xl:px-5", className || "py-3 xl:py-5")}>
       <Link
         className={cn(
           "mb-4 block text-sm font-black break-words text-brand-charcoal transition-colors hover:text-brand-blue",
@@ -537,7 +539,7 @@ export const Header = ({
             transition={MEGAMENU_TRANSITION}
           >
             <div className="mx-auto w-full max-w-7xl px-8 lg:max-xl:px-10 xl:px-12">
-              <div className="grid grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] gap-4 xl:gap-8">
+              <div className="flex justify-between gap-4 xl:gap-8">
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
@@ -558,27 +560,25 @@ export const Header = ({
                 </div>
                 <div className="min-w-0">
                   <MegamenuServiceGroup
+                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
                     group={serviceNavigationGroups[3]}
                     onClose={handleCloseMegamenu}
                   />
-                  <div className="mt-1">
-                    <MegamenuServiceGroup
-                      group={serviceNavigationGroups[4]}
-                      onClose={handleCloseMegamenu}
-                    />
-                  </div>
-                  <div className="mt-1">
-                    <MegamenuServiceGroup
-                      group={serviceNavigationGroups[5]}
-                      onClose={handleCloseMegamenu}
-                    />
-                  </div>
-                  <div className="mt-1">
-                    <MegamenuServiceGroup
-                      group={serviceNavigationGroups[6]}
-                      onClose={handleCloseMegamenu}
-                    />
-                  </div>
+                  <MegamenuServiceGroup
+                    className="py-1 xl:py-2"
+                    group={serviceNavigationGroups[4]}
+                    onClose={handleCloseMegamenu}
+                  />
+                  <MegamenuServiceGroup
+                    className="py-1 xl:py-2"
+                    group={serviceNavigationGroups[5]}
+                    onClose={handleCloseMegamenu}
+                  />
+                  <MegamenuServiceGroup
+                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+                    group={serviceNavigationGroups[6]}
+                    onClose={handleCloseMegamenu}
+                  />
                 </div>
               </div>
             </div>

@@ -15,14 +15,13 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
-import { ImageHero, type ImageHeroProps } from "@/components/sections/ImageHero";
+import { Hero, type HeroProps } from "@/components/sections/Hero";
 import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
@@ -56,7 +55,7 @@ export interface ServiceDetailProps {
     } | null;
     title: ReactNode;
   };
-  imageHero?: ImageHeroProps;
+  imageHero?: HeroProps;
   middleSections?: ReactNode;
   page: MarketingPageIdentity;
   parentPage?: MarketingPageIdentity;
@@ -246,9 +245,9 @@ export const ServiceDetail = ({
       <JsonLd data={breadcrumbJsonLd} />
       <Header darkBackground />
 
-      {imageHero && <ImageHero {...imageHero} />}
+      {imageHero && <Hero {...imageHero} />}
       {!imageHero && hero && (
-        <VideoHero
+        <Hero
           description={hero.description}
           primaryCta={finalPrimaryCta}
           secondaryCta={finalSecondaryCta}

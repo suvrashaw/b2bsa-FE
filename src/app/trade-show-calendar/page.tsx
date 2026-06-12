@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header darkBackground />
-      <ImageHero
+      <Hero
         description={TRADE_SHOW_CALENDAR_HERO.description}
         images={TRADE_SHOW_CALENDAR_HERO_IMAGES}
         title={TRADE_SHOW_CALENDAR_HERO.title}

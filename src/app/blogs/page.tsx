@@ -7,7 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import {
   BLOG_CONTACT,
   BLOG_HERO,
@@ -25,7 +25,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
-      <ImageHero
+      <Hero
         description={BLOG_HERO.description}
         images={BLOG_HERO_IMAGES}
         title="Blogs and Articles"

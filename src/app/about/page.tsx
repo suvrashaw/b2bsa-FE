@@ -7,7 +7,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
 import { Events } from "@/components/sections/Events";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -46,7 +46,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header darkBackground />
-      <ImageHero
+      <Hero
         description={ABOUT_HERO.description}
         images={ABOUT_IMAGES}
         primaryCta={ABOUT_PRIMARY_CTA}

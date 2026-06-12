@@ -3,7 +3,7 @@
 import { Pencil, Sparkles, Star } from "lucide-react";
 
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
-import { Heading } from "@/components/ui/Heading";
+import { CardSection } from "@/components/sections/CardSection";
 
 export interface PricingProps {
   description?: string;
@@ -64,49 +64,34 @@ export const Pricing = ({
   title = "Creative Video Editing Pricing",
 }: PricingProps) => {
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24">
+    <div className="relative overflow-hidden bg-brand-gray">
       {/* Dynamic Background Gradients */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-brand-blue/5 blur-[100px]" />
         <div className="absolute right-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-brand-cyan/5 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-        {/* Header Block */}
-        <div className="mb-20 flex flex-col items-center text-center">
-          <div className="relative mb-6">
-            <Heading as="h2" className="relative">
-              {title}
-              <span className="absolute top-0 -right-12 rotate-12 text-brand-primary max-sm:hidden">
-                <Sparkles className="h-6 w-6 animate-bounce fill-brand-cyan/20 text-brand-cyan" />
-              </span>
-              <span className="absolute bottom-0 -left-10 -rotate-12 text-brand-blue max-sm:hidden">
-                <Star className="h-6 w-6 animate-pulse fill-brand-blue/20 text-brand-blue" />
-              </span>
-            </Heading>
-          </div>
-
-          <p className="max-w-xl font-sans text-base font-medium text-gray-600 lg:text-xl">
-            {description}
-          </p>
-        </div>
-
-        {/* Mobile/Tablet: horizontal snap scroll */}
-        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 lg:hidden [&::-webkit-scrollbar]:hidden">
-          {tiers.map((tier) => (
-            <div className="w-[85%] shrink-0 snap-start sm:w-[72%] md:w-[46%]" key={tier.name}>
-              <PricingCard tier={tier} />
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop: 3-col grid */}
-        <div className="hidden grid-cols-3 gap-8 lg:grid">
-          {tiers.map((tier) => (
-            <PricingCard key={tier.name} tier={tier} />
-          ))}
-        </div>
-      </div>
+      <CardSection
+        className="relative z-10 bg-transparent py-14 md:py-20 lg:py-24"
+        cols={3}
+        description={description}
+        heading={
+          <span className="relative inline-block">
+            {title}
+            <span className="absolute top-0 -right-12 rotate-12 text-brand-primary max-sm:hidden">
+              <Sparkles className="h-6 w-6 animate-bounce fill-brand-cyan/20 text-brand-cyan" />
+            </span>
+            <span className="absolute bottom-0 -left-10 -rotate-12 text-brand-blue max-sm:hidden">
+              <Star className="h-6 w-6 animate-pulse fill-brand-blue/20 text-brand-blue" />
+            </span>
+          </span>
+        }
+        layout="carousel"
+      >
+        {tiers.map((tier) => (
+          <PricingCard key={tier.name} tier={tier} />
+        ))}
+      </CardSection>
 
       {/* Stylized background illustrations */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-5 select-none">
@@ -117,6 +102,6 @@ export const Pricing = ({
           ✏️
         </div>
       </div>
-    </section>
+    </div>
   );
 };

@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { ImageHero } from "@/components/sections/ImageHero";
+import { Hero } from "@/components/sections/Hero";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -51,12 +51,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     <main className="min-h-screen bg-brand-gray">
       <Header forceLightMode />
 
-      <ImageHero
-        eyebrow={`${study.event} · ${study.location}`}
-        images={heroImages}
-        primaryCta={HERO_PRIMARY_CTA}
-        title={study.title}
-      />
+      <Hero images={heroImages} primaryCta={HERO_PRIMARY_CTA} title={study.title} />
 
       {/* Event metadata */}
       <section className="bg-brand-gray py-10">

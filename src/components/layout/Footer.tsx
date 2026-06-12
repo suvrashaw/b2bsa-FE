@@ -517,16 +517,21 @@ export const Footer = () => {
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 pt-12 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:px-6 md:px-8">
         {/* Row 1: Services sitemap */}
-        <div className="mb-6 grid gap-7 border-b border-white/10 pb-6 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+        <div className="mb-6 flex flex-col gap-7 border-b border-white/10 pb-6 lg:flex-row lg:justify-between lg:gap-4 xl:gap-8">
+          <div className="min-w-0">
             <FooterServiceGroup group={serviceNavigationGroups[0]} />
           </div>
-          <FooterServiceGroup group={serviceNavigationGroups[1]} />
-          <FooterServiceGroup group={serviceNavigationGroups[3]} />
-          <div className="space-y-6">
+          <div className="min-w-0">
+            <FooterServiceGroup group={serviceNavigationGroups[1]} />
+          </div>
+          <div className="min-w-0">
             <FooterServiceGroup group={serviceNavigationGroups[2]} noWrapTitle />
+          </div>
+          <div className="min-w-0 space-y-6">
+            <FooterServiceGroup group={serviceNavigationGroups[3]} />
             <FooterServiceGroup group={serviceNavigationGroups[4]} />
             <FooterServiceGroup group={serviceNavigationGroups[5]} />
+            <FooterServiceGroup group={serviceNavigationGroups[6]} />
           </div>
         </div>
 

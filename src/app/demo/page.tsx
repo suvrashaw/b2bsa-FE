@@ -4,13 +4,15 @@ import { Suspense, useCallback, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
+import { BasicCards } from "@/components/items/BasicCards";
+import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { BlogCategories } from "@/components/sections/BlogCategories";
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
-import { CardsSection } from "@/components/sections/CardsSection";
+import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -25,22 +27,20 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { ImageHero } from "@/components/sections/ImageHero";
-import { LinkedInFeed } from "@/components/sections/LinkedInFeed";
+import { Hero } from "@/components/sections/Hero";
 import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
-import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
+import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import {
   TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
@@ -61,7 +61,7 @@ const IMG_EV2 = "/images/events/event_other_2.avif";
 const IMG_EV3 = "/images/events/event_other_3.avif";
 const IMG_EV4 = "/images/events/event_other_4.avif";
 
-// ─── ImageHero ──────────────────────────────────────────────────────────────
+// ─── Hero ────────────────────────────────────────────────────────────────────
 
 const IMAGE_HERO_IMAGES = [IMG_WAF, IMG_SIBOS, IMG_SAP];
 const IMAGE_HERO_CTA = { href: "/demo", label: "View Case Study" };
@@ -269,33 +269,6 @@ const GLOBAL_PRESENCE_DATA = {
   title: "A Global Footprint",
 };
 
-// ─── RentVsBuySection ────────────────────────────────────────────────────────
-
-const RENT_VS_BUY_REASONS = [
-  {
-    description:
-      "No capex, no warehouse, no maintenance. Pay per show and scale with your calendar.",
-    icon: "DollarSign",
-    title: "Zero Capital Outlay",
-  },
-  {
-    description:
-      "Access fresh, brand-aligned designs for every event without reusing stale assets.",
-    icon: "Sparkles",
-    title: "Always Fresh Creative",
-  },
-  {
-    description: "We ship, build, and break down — your team lands and starts selling.",
-    icon: "Truck",
-    title: "End-to-End Logistics",
-  },
-  {
-    description: "Need a 10×10 for a regional show and a 30×30 island for your flagship? We flex.",
-    icon: "Maximize2",
-    title: "Scalable Footprint",
-  },
-];
-
 // ─── ServiceCarouselSection ──────────────────────────────────────────────────
 
 const _SERVICE_CAROUSEL_ITEMS = [
@@ -498,7 +471,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
   GlobalPresence: [{ href: "/about", label: "About" }],
-  ImageHero: [
+  Hero: [
     { href: "/trade-show-calendar", label: "Trade Show Cal." },
     { href: "/case-studies/waf-2025", label: "Case Study" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
@@ -569,7 +542,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
   FeatureCarouselSection: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   GlobalPresence: { items: [], ui: ["Heading"] },
-  ImageHero: { items: [], ui: ["Heading"] },
+  Hero: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
   ProcessTimeline: { items: [], ui: ["Heading"] },
@@ -584,7 +557,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
     items: ["TradeShowCard", "TradeShowListItem"],
     ui: ["Button", "Pagination"],
   },
-  VideoHero: { items: [], ui: ["Heading"] },
   WhoWeAre: { items: [], ui: ["Heading"] },
 };
 
@@ -689,18 +661,17 @@ export default function DemoPage() {
         </span>
       </div>
 
-      {/* 01 – ImageHero */}
-      <DemoLabel name="ImageHero" />
-      <ImageHero
-        eyebrow="World Aviation Festival 2025 · London, UK"
+      {/* 01 – Hero (image cycling) */}
+      <DemoLabel name="Hero" />
+      <Hero
         images={IMAGE_HERO_IMAGES}
         primaryCta={IMAGE_HERO_CTA}
         title="World Aviation Festival 2025"
       />
 
-      {/* 03 – VideoHero */}
-      <DemoLabel name="VideoHero" />
-      <VideoHero
+      {/* 03 – Hero (video) */}
+      <DemoLabel name="Hero (video)" />
+      <Hero
         description="From initial brief to post-event debrief — our active prospecting teams deliver qualified conversations at the world's most competitive B2B events."
         primaryCta={SERVICE_HERO_PRIMARY}
         secondaryCta={SERVICE_HERO_SECONDARY}
@@ -769,15 +740,11 @@ export default function DemoPage() {
 
       {/* 19 – CardsSection */}
       <DemoLabel name="CardsSection" />
-      <CardsSection heading="Future-Ready Stands" items={BASIC_CARD_ITEMS} />
-
-      {/* 20 – RentVsBuySection */}
-      <DemoLabel name="RentVsBuySection" />
-      <RentVsBuySection
-        description="For most enterprise exhibitors, renting outperforms buying on every dimension that matters."
-        heading="Why Renting Beats Buying"
-        reasons={RENT_VS_BUY_REASONS}
-      />
+      <CardSection heading="Future-Ready Stands" layout="grid">
+        {BASIC_CARD_ITEMS.map((item) => (
+          <BasicCards item={item} key={item.title} />
+        ))}
+      </CardSection>
 
       {/* 21 – CorporateVideoIndustriesSection */}
       <DemoLabel name="CorporateVideoIndustriesSection" />
@@ -888,7 +855,15 @@ export default function DemoPage() {
 
       {/* 39 – LinkedInFeed */}
       <DemoLabel name="LinkedInFeed" />
-      <LinkedInFeed />
+      <CardSection
+        description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
+        heading="Follow Our Latest Event Executions on LinkedIn"
+        layout="carousel"
+      >
+        {LINKEDIN_POSTS.map((post, i) => (
+          <LinkedInCard index={i} key={post.id} post={post} />
+        ))}
+      </CardSection>
     </main>
   );
 }

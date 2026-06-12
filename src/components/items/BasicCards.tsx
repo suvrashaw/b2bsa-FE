@@ -1,7 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
-export interface BasicCardItem {
+interface BasicCardItem {
   bullets: string[];
   image: {
     alt: string;

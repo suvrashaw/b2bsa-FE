@@ -2,24 +2,24 @@
 
 import type { ReactNode } from "react";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
+import { cn } from "@/lib";
 
-export interface VideoHeroProps {
-  description: string;
-  primaryCta?: {
-    href: string;
-    label: string;
-  };
-  secondaryCta?: {
-    href: string;
-    label: string;
-  };
+export interface HeroProps {
+  description?: string;
+  images?: string[];
+  poster?: string;
+  primaryCta?: { href: string; label: string };
+  secondaryCta?: { href: string; label: string };
   title: ReactNode | string;
+  variant?: "compact" | "default";
+  videoSrc?: string;
   videoUrl?: string;
 }
 
@@ -46,6 +46,7 @@ const SECONDARY_CTA_STYLE = {
   boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
   WebkitBackdropFilter: "blur(12px)",
 };
+
 const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
 const DESCRIPTION_INITIAL = { opacity: 0, y: 20 };
 const DESCRIPTION_TRANSITION = { delay: 0.7, duration: 0.8 };
@@ -54,6 +55,10 @@ const CTA_INITIAL = { opacity: 0, y: 20 };
 const CTA_TRANSITION = { delay: 0.9, duration: 0.6 };
 const TITLE_LINE_ANIMATE = { opacity: 1, y: 0 };
 const TITLE_LINE_INITIAL = { opacity: 0, y: "110%" };
+const IMAGE_ANIMATE = { opacity: 1 };
+const IMAGE_INITIAL = { opacity: 0 };
+const IMAGE_EXIT = { opacity: 0 };
+const IMAGE_TRANSITION = { duration: 1.2 };
 
 const TitleLine = ({ index, line }: { index: number; line: ReactNode }) => {
   const lineTransition = useMemo(
@@ -85,13 +90,10 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
   }, [charCount, totalChars, charDelay]);
 
   const done = charCount >= totalChars;
-
   const visibleLines = lines.map((line, idx) => {
     const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
-    const show = Math.min(line.length, Math.max(0, charCount - charsBeforeThis));
-    return line.slice(0, show);
+    return line.slice(0, Math.min(line.length, Math.max(0, charCount - charsBeforeThis)));
   });
-
   const activeLineIdx = done
     ? -1
     : lines.findIndex((line, idx) => {
@@ -99,7 +101,7 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
         return charCount < charsBeforeThis + line.length;
       });
 
-  return { activeLineIdx, done, visibleLines };
+  return { activeLineIdx, visibleLines };
 };
 
 const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string }) => (
@@ -111,45 +113,101 @@ const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string })
   </span>
 );
 
-export const VideoHero = ({
+export const Hero = ({
   description,
+  images,
+  poster,
   primaryCta,
   secondaryCta,
   title,
-  videoUrl = "/videos/hero-gtc-2026.mp4",
-}: VideoHeroProps) => {
+  variant = "default",
+  videoSrc,
+  videoUrl,
+}: HeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const isVideoMode = !images?.length;
+  const effectiveVideoUrl = videoUrl ?? "/videos/hero-gtc-2026.mp4";
+  const isStringTitle = typeof title === "string";
+  const titleLines = isStringTitle ? (title as string).split("\n") : [title as ReactNode];
+  const stringLines = isStringTitle ? (title as string).split("\n") : [];
+  const { activeLineIdx, visibleLines } = useTypewriter(stringLines, 30);
+
+  const imagesLength = images?.length ?? 0;
+  useEffect(() => {
+    if (imagesLength <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % imagesLength);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [imagesLength]);
+
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -100]);
   const contentStyle = useMemo(() => ({ y }), [y]);
 
-  const isStringTitle = typeof title === "string";
-  const titleLines = isStringTitle ? (title as string).split("\n") : [title];
-  const stringLines = isStringTitle ? (title as string).split("\n") : [];
-  const { activeLineIdx, visibleLines } = useTypewriter(stringLines, 30);
+  const imageModeClass =
+    variant === "compact"
+      ? "items-center md:items-end min-h-[50vh] pt-16 pb-12 md:pt-24 md:pb-16"
+      : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
+  const sectionClass = isVideoMode
+    ? "min-h-svh items-end pt-24 pb-16 md:pt-32 md:pb-20"
+    : imageModeClass;
+
+  let background: React.ReactNode;
+  if (isVideoMode) {
+    background = (
+      <video
+        autoPlay
+        className="hero-bg-video absolute inset-0 h-full w-full object-cover"
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      >
+        <source src={effectiveVideoUrl} type="video/mp4" />
+      </video>
+    );
+  } else if (videoSrc) {
+    background = (
+      <video
+        autoPlay
+        className="absolute inset-0 h-full w-full object-cover"
+        loop
+        muted
+        playsInline
+        poster={poster ?? images?.[0]}
+        src={videoSrc}
+      />
+    );
+  } else {
+    background = (
+      <AnimatePresence>
+        <motion.div
+          animate={IMAGE_ANIMATE}
+          className="absolute inset-0"
+          exit={IMAGE_EXIT}
+          initial={IMAGE_INITIAL}
+          key={currentIndex}
+          transition={IMAGE_TRANSITION}
+        >
+          <Image alt="" className="object-cover" fill priority src={images?.[currentIndex] ?? ""} />
+        </motion.div>
+      </AnimatePresence>
+    );
+  }
 
   return (
     <section
-      className="relative flex min-h-svh items-end overflow-hidden bg-brand-charcoal pt-24 pb-16 md:pt-32 md:pb-20"
+      className={cn("relative flex overflow-hidden bg-brand-charcoal", sectionClass)}
       ref={containerRef}
     >
-      {/* 1. Background Visuals */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          className="hero-bg-video absolute inset-0 h-full w-full object-cover"
-          loop
-          muted
-          playsInline
-          preload="metadata"
-        >
-          <source src={videoUrl} type="video/mp4" />
-        </video>
-
+        {background}
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
-      {/* 2. Content Area */}
       <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
           <Heading as="h1" className="mb-8" style={H1_STYLE}>
@@ -166,45 +224,49 @@ export const VideoHero = ({
                 ))}
           </Heading>
 
-          {/* Description */}
-          <motion.p
-            animate={DESCRIPTION_ANIMATE}
-            className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
-            initial={DESCRIPTION_INITIAL}
-            style={DESCRIPTION_STYLE}
-            transition={DESCRIPTION_TRANSITION}
-          >
-            {description}
-          </motion.p>
+          {description && (
+            <motion.p
+              animate={DESCRIPTION_ANIMATE}
+              className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
+              initial={DESCRIPTION_INITIAL}
+              style={DESCRIPTION_STYLE}
+              transition={DESCRIPTION_TRANSITION}
+            >
+              {description}
+            </motion.p>
+          )}
 
-          {/* Glossy CTAs */}
-          <motion.div
-            animate={CTA_ANIMATE}
-            className="mb-12 flex flex-col flex-wrap gap-4 md:mb-20 md:flex-row md:items-center md:gap-6"
-            initial={CTA_INITIAL}
-            transition={CTA_TRANSITION}
-          >
-            {primaryCta && (
-              <Link
-                className="hero-primary-cta group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
-                href={primaryCta.href}
-                style={PRIMARY_CTA_STYLE}
-              >
-                {primaryCta.label}
-                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            )}
-
-            {secondaryCta && (
-              <Link
-                className="hero-secondary-cta flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
-                href={secondaryCta.href}
-                style={SECONDARY_CTA_STYLE}
-              >
-                {secondaryCta.label}
-              </Link>
-            )}
-          </motion.div>
+          {(primaryCta ?? secondaryCta) && (
+            <motion.div
+              animate={CTA_ANIMATE}
+              className={cn(
+                "flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6",
+                isVideoMode && "mb-12 md:mb-20"
+              )}
+              initial={CTA_INITIAL}
+              transition={CTA_TRANSITION}
+            >
+              {primaryCta && (
+                <Link
+                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  href={primaryCta.href}
+                  style={PRIMARY_CTA_STYLE}
+                >
+                  {primaryCta.label}
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
+              {secondaryCta && (
+                <Link
+                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  href={secondaryCta.href}
+                  style={SECONDARY_CTA_STYLE}
+                >
+                  {secondaryCta.label}
+                </Link>
+              )}
+            </motion.div>
+          )}
         </motion.div>
       </div>
 

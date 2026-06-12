@@ -142,13 +142,8 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
   },
   {
     href: "/services/market-intelligence",
-    links: [
-      {
-        href: "/services/market-intelligence",
-        name: "Human Powered Market Intelligence",
-      },
-    ],
-    name: "HPMI",
+    links: [],
+    name: "Human Powered Market Intelligence",
   },
 ];
 

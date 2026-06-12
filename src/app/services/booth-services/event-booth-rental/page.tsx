@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
+import { Coins, Move, Truck } from "lucide-react";
+
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { RentVsBuySection } from "@/components/sections/RentVsBuySection";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
@@ -86,11 +88,30 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <RentVsBuySection
+          <CardSection
+            cols={3}
             description={BOOTH_RENTAL_RENT_VS_BUY.description}
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
-            reasons={BOOTH_RENTAL_RENT_VS_BUY.reasons}
-          />
+          >
+            {BOOTH_RENTAL_RENT_VS_BUY.reasons.map((reason) => (
+              <div
+                className="flex w-full flex-col items-center border-b border-brand-charcoal/15 px-10 py-12 text-center last:border-b-0 sm:border-r md:border-b-0 md:py-8 sm:[&:last-child]:border-r-0 sm:[&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:[&:nth-child(3n)]:border-r-0"
+                key={reason.title}
+              >
+                <div className="mb-6 flex items-center justify-center text-brand-blue">
+                  {reason.icon === "Coins" && <Coins className="h-20 w-20" strokeWidth={1.5} />}
+                  {reason.icon === "Move" && <Move className="h-20 w-20" strokeWidth={1.5} />}
+                  {reason.icon === "Truck" && <Truck className="h-20 w-20" strokeWidth={1.5} />}
+                </div>
+                <h3 className="mb-4 font-heading text-xl font-bold text-brand-charcoal">
+                  {reason.title}
+                </h3>
+                <p className="text-base leading-relaxed text-brand-charcoal/65">
+                  {reason.description}
+                </p>
+              </div>
+            ))}
+          </CardSection>
           <StickyScroll
             heading="Our Rental Booth Range"
             reasons={BOOTH_RENTAL_RANGE_REASONS}

@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
 
-import { Heading } from "@/components/ui/Heading";
-import { LINKEDIN_POSTS, type LinkedInPost } from "@/content/linkedinPosts";
+import type { LinkedInPost } from "@/content/linkedinPosts";
 
 const cardViewport = { once: true } as const;
 
@@ -18,9 +17,14 @@ const cardVariants = {
   }),
 };
 
-const LinkedInCard = ({ index, post }: { index: number; post: LinkedInPost }) => (
+export interface LinkedInCardProps {
+  index: number;
+  post: LinkedInPost;
+}
+
+export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
   <motion.a
-    className="group flex w-[80vw] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md sm:w-[44vw] lg:w-auto"
+    className="group flex w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md"
     custom={index}
     href={post.url}
     initial="hidden"
@@ -65,34 +69,4 @@ const LinkedInCard = ({ index, post }: { index: number; post: LinkedInPost }) =>
       </span>
     </div>
   </motion.a>
-);
-
-export const LinkedInFeed = () => (
-  <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
-    <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-      <div className="mb-12 flex flex-col items-center text-center">
-        <Heading as="h2" className="text-center">
-          Follow Our Latest Event Executions on LinkedIn
-        </Heading>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-          Get real-time updates on booth builds, exhibition projects, event staffing, Event lead
-          generation campaigns, and global trade show experiences from our team worldwide.
-        </p>
-      </div>
-
-      {/* Mobile/tablet: horizontal scroll slider */}
-      <div className="flex [scroll-snap-type:x_mandatory] [scrollbar-width:none] gap-5 overflow-x-auto pb-4 [-ms-overflow-style:none] lg:hidden [&::-webkit-scrollbar]:hidden">
-        {LINKEDIN_POSTS.map((post, i) => (
-          <LinkedInCard index={i} key={post.id} post={post} />
-        ))}
-      </div>
-
-      {/* Desktop: 3-column grid */}
-      <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
-        {LINKEDIN_POSTS.map((post, i) => (
-          <LinkedInCard index={i} key={post.id} post={post} />
-        ))}
-      </div>
-    </div>
-  </section>
 );
