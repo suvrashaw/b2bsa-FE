@@ -5,8 +5,7 @@ import type { CSSProperties, ReactElement, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { ComposableMap, Geographies, Geography, useMapContext } from "react-simple-maps";
 
 import { Button } from "@/components/ui/Button";
@@ -397,20 +396,28 @@ const FooterCommandMap = () => {
 
 const socialLinks = [
   {
+    colorClass: "text-[#1877F2] hover:border-[#1877F2] hover:bg-[#1877F2]",
+    href: "https://www.facebook.com/b2bsalesarrow",
+    icon: FaFacebookF,
+    name: "Facebook",
+  },
+  {
     colorClass: "text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2]",
-    href: "https://www.linkedin.com/company/b2b-sales-arrow/",
+    href: "https://www.linkedin.com/company/b2b-sales-arrow-llc/",
     icon: FaLinkedinIn,
     name: "LinkedIn",
   },
   {
-    colorClass: "text-[#000000] hover:border-[#000000] hover:bg-[#000000]",
-    icon: FaXTwitter,
-    name: "X",
-  },
-  {
     colorClass: "text-[#E1306C] hover:border-[#E1306C] hover:bg-[#E1306C]",
+    href: "https://www.instagram.com/b2b_sales_arrow/",
     icon: FaInstagram,
     name: "Instagram",
+  },
+  {
+    colorClass: "text-[#FF0000] hover:border-[#FF0000] hover:bg-[#FF0000]",
+    href: "https://www.youtube.com/@b2bsalesarrow167",
+    icon: FaYoutube,
+    name: "YouTube",
   },
 ];
 

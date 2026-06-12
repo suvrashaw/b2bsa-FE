@@ -7,7 +7,11 @@ import { useCallback, useState } from "react";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
+import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { LinkedInFeed } from "@/components/sections/LinkedInFeed";
+import { ServicesStack } from "@/components/sections/ServicesStack";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
@@ -280,6 +284,10 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
 
 // ─── BlogPage ────────────────────────────────────────────────────────────────
 
+const CTA_HEADING_LINES: [string, string] = ["Ready to Make Your", "Next Event Unforgettable?"];
+const CTA_PRIMARY = { href: "/contact", label: "Book a Consultation", opensModal: true };
+const CTA_SECONDARY = { href: "/case-studies", label: "See Our Work" };
+
 export const BlogPage = ({ post }: BlogPageProps) => {
   const blocks = post.body ?? [];
   const readTime = getReadTime(blocks);
@@ -319,14 +327,6 @@ export const BlogPage = ({ post }: BlogPageProps) => {
       </section>
 
       <div className="container mx-auto px-6 py-12 lg:grid lg:grid-cols-3 lg:gap-10 lg:py-16">
-        <aside className="mb-10 lg:col-span-1 lg:mb-0">
-          <div className="space-y-6 lg:sticky lg:top-24">
-            <BlogSidebarTrending currentId={String(post.id)} />
-            <BlogSidebarSubscribe />
-            <BlogSidebarLinkedIn post={post} />
-          </div>
-        </aside>
-
         <article className="min-w-0 lg:col-span-2">
           {post.excerpt && (
             <p className="mb-8 text-xl leading-relaxed font-medium text-brand-charcoal">
@@ -350,7 +350,32 @@ export const BlogPage = ({ post }: BlogPageProps) => {
             </div>
           )}
         </article>
+
+        <aside className="mt-10 lg:col-span-1 lg:mt-0">
+          <div className="space-y-6 lg:sticky lg:top-24">
+            <BlogSidebarTrending currentId={String(post.id)} />
+            <BlogSidebarSubscribe />
+            <BlogSidebarLinkedIn post={post} />
+          </div>
+        </aside>
       </div>
+
+      <ServicesStack />
+
+      <ContactCinematicCTA
+        badge="Talk to an Expert"
+        description="Whether you're planning your next trade show appearance or need event staffing worldwide, our team is ready to help you execute flawlessly."
+        headingLines={CTA_HEADING_LINES}
+        primaryCta={CTA_PRIMARY}
+        secondaryCta={CTA_SECONDARY}
+      />
+
+      <BlogsCarousel
+        heading="Related Articles"
+        posts={SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id))}
+      />
+
+      <LinkedInFeed />
 
       <Footer />
     </main>
