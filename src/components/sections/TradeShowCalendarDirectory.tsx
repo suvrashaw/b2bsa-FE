@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpDown, Grid2X2, List, RotateCcw, Search } from "lucide-react";
+import { Grid2X2, List, RotateCcw, Search } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 
@@ -630,14 +630,6 @@ export const TradeShowCalendarDirectory = ({
           </aside>
 
           <div>
-            <div className="mb-5 flex justify-end">
-              <div className="flex items-center gap-2 text-sm font-semibold text-brand-charcoal/60">
-                <ArrowUpDown className="h-4 w-4" />
-                {SORT_OPTIONS.find((option) => option.value === sortField)?.label},{" "}
-                {getSortText(sortDirection).toLowerCase()}
-              </div>
-            </div>
-
             {resultsContent}
 
             <Pagination

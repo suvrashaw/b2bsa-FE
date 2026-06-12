@@ -5,8 +5,10 @@ import { Suspense, useCallback, useState } from "react";
 import type { SharedBlogPost } from "@/content/blogs";
 
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
+import { BlogCategories } from "@/components/sections/BlogCategories";
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
+import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { CardsSection } from "@/components/sections/CardsSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -24,6 +26,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { ImageHero } from "@/components/sections/ImageHero";
+import { LinkedInFeed } from "@/components/sections/LinkedInFeed";
 import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
@@ -33,11 +36,9 @@ import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { TextHero } from "@/components/sections/TextHero";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { VideoHero } from "@/components/sections/VideoHero";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { BLOG_HERO } from "@/content/blog";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 import {
@@ -427,6 +428,7 @@ type PageLink = { href: string; label: string };
 
 const COMPONENT_PAGES: Record<string, PageLink[]> = {
   AboutCoreValues: [{ href: "/about", label: "About" }],
+  BlogCategories: [{ href: "/blogs", label: "Blogs" }],
 
   Blogs: [
     { href: "/", label: "Home" },
@@ -438,6 +440,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions/event-booth-rental", label: "Event Booth Rental" },
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
+  BlogsDirectory: [{ href: "/blogs", label: "Blogs" }],
   BoothWhyChooseUs: [
     { href: "/services/global-event-solutions/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
@@ -502,6 +505,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/case-studies/waf-2025", label: "Case Study" },
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
   ],
+  LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Service Detail" },
   ],
@@ -539,7 +543,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
   Testimonials: [{ href: "/", label: "Home" }],
-  TextHero: [{ href: "/blogs", label: "Blogs" }],
   TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
   WhoWeAre: [
     { href: "/", label: "Home" },
@@ -548,8 +551,48 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
 };
 
+const COMPONENT_DEPENDENCIES: Record<string, { ui: string[]; items: string[] }> = {
+  AboutCoreValues: { ui: ["Heading"], items: [] },
+  BlogCategories: { ui: ["Heading"], items: [] },
+  Blogs: { ui: ["Button", "Eyebrow", "Heading"], items: ["BlogCard", "BlogCardGrid"] },
+  BlogsCarousel: { ui: ["Button", "Heading"], items: ["BlogsCarouselCard"] },
+  BlogsDirectory: { ui: ["Pagination"], items: ["BlogCardGrid"] },
+  BoothWhyChooseUs: { ui: ["Button", "Heading"], items: ["BoothWhyCard"] },
+  CardsSection: { ui: ["Heading"], items: ["BasicCards"] },
+  CaseStudies: { ui: ["Button", "Eyebrow", "Heading"], items: ["CaseStudyItem"] },
+  CaseStudiesGrid: { ui: ["Heading", "Pagination"], items: ["CaseStudyCard"] },
+  CinematicSequence: { ui: ["Heading"], items: [] },
+  ClientLogos: { ui: ["Heading"], items: [] },
+  ContactCinematicCTA: { ui: ["Button", "ContactModal", "Heading"], items: [] },
+  ContactUs: { ui: ["Eyebrow", "Heading"], items: [] },
+  CorporateVideoIndustriesSection: { ui: ["Heading"], items: [] },
+  CorporateVideoPortfolioSection: { ui: ["Heading"], items: [] },
+  Culture: { ui: ["Heading"], items: ["CultureReasonCard"] },
+  Events: { ui: ["Button", "Eyebrow", "Heading"], items: [] },
+  FAQ: { ui: ["Eyebrow", "Heading"], items: ["FAQCard"] },
+  FAQAccordion: { ui: ["Eyebrow", "Heading"], items: ["FAQAccordionItem"] },
+  FeatureCarouselSection: { ui: ["Eyebrow", "Heading", "Icon"], items: [] },
+  GlobalPresence: { ui: ["Heading"], items: [] },
+  ImageHero: { ui: ["Heading"], items: [] },
+  LinkedInFeed: { ui: ["Heading"], items: [] },
+  Pricing: { ui: ["Eyebrow", "Heading"], items: ["PricingCard"] },
+  ProcessTimeline: { ui: ["Heading"], items: [] },
+  ProofBar: { ui: ["Heading"], items: [] },
+  RelatedServices: { ui: ["Heading"], items: ["RelatedServicesCard"] },
+  RentVsBuySection: { ui: ["Heading"], items: [] },
+  ServicesStack: { ui: ["Eyebrow", "Heading"], items: ["ServicesCard"] },
+  Spotlight: { ui: ["Button", "ContactModal", "Heading"], items: [] },
+  StickyScroll: { ui: ["Button", "ContactModal", "Eyebrow", "Heading"], items: [] },
+  Testimonials: { ui: ["Eyebrow", "Heading"], items: ["TestimonialCarouselCard"] },
+  TradeShowCalendarDirectory: { ui: ["Button", "Pagination"], items: ["TradeShowCard", "TradeShowListItem"] },
+  VideoHero: { ui: ["Heading"], items: [] },
+  WhoWeAre: { ui: ["Heading"], items: [] },
+};
+
 const DemoLabel = ({ name }: { name: string }) => {
   const pages = COMPONENT_PAGES[name] ?? [];
+  const deps = COMPONENT_DEPENDENCIES[name] ?? { ui: [], items: [] };
+
   return (
     <div className="sticky top-12 z-40 border-b border-white/10 bg-brand-charcoal/98 backdrop-blur-sm">
       <div className="flex items-center gap-3 px-6 pt-2 pb-1">
@@ -576,6 +619,32 @@ const DemoLabel = ({ name }: { name: string }) => {
       {pages.length === 0 && (
         <div className="px-6 pb-2">
           <span className="font-mono text-[10px] text-white/25 italic">demo only</span>
+        </div>
+      )}
+
+      {/* Dependencies */}
+      {(deps.ui.length > 0 || deps.items.length > 0) && (
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-6 pb-2">
+          {deps.ui.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">UI:</span>
+              {deps.ui.map((uiName) => (
+                <span key={uiName} className="rounded border border-brand-blue/30 bg-brand-blue/10 px-1.5 py-0.5 font-mono text-[9px] text-brand-blue/80">
+                  {uiName}
+                </span>
+              ))}
+            </div>
+          )}
+          {deps.items.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Items:</span>
+              {deps.items.map((itemName) => (
+                <span key={itemName} className="rounded border border-purple-500/30 bg-purple-500/10 px-1.5 py-0.5 font-mono text-[9px] text-purple-400">
+                  {itemName}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -619,10 +688,6 @@ export default function DemoPage() {
         primaryCta={IMAGE_HERO_CTA}
         title="World Aviation Festival 2025"
       />
-
-      {/* 02 – TextHero */}
-      <DemoLabel name="TextHero" />
-      <TextHero {...BLOG_HERO} />
 
       {/* 03 – VideoHero */}
       <DemoLabel name="VideoHero" />
@@ -803,6 +868,20 @@ export default function DemoPage() {
       {/* 36 – ContactUs */}
       <DemoLabel name="ContactUs" />
       <ContactUs />
+
+      {/* 37 – BlogCategories */}
+      <DemoLabel name="BlogCategories" />
+      <BlogCategories />
+
+      {/* 38 – BlogsDirectory */}
+      <DemoLabel name="BlogsDirectory" />
+      <Suspense>
+        <BlogsDirectory blogs={DEMO_BLOG_POSTS} />
+      </Suspense>
+
+      {/* 39 – LinkedInFeed */}
+      <DemoLabel name="LinkedInFeed" />
+      <LinkedInFeed />
     </main>
   );
 }

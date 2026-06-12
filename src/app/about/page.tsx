@@ -48,7 +48,6 @@ const Page = () => {
       <Header darkBackground />
       <ImageHero
         description={ABOUT_HERO.description}
-        eyebrow={ABOUT_HERO.eyebrow}
         images={ABOUT_IMAGES}
         primaryCta={ABOUT_PRIMARY_CTA}
         secondaryCta={ABOUT_SECONDARY_CTA}

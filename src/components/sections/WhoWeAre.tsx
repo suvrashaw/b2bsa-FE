@@ -72,9 +72,9 @@ export const WhoWeAre = ({
 
   return (
     <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="about">
-      <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:px-8 lg:grid-cols-2">
+      <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:grid-cols-2 lg:px-8">
         {/* Left Side: Content */}
-        <div className="flex flex-col items-start space-y-12 text-left">
+        <div className="flex flex-col items-start space-y-6 text-left">
           <div className="w-full text-left">
             <Heading as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
               <span className="block">{resolvedHeading}</span>
@@ -99,14 +99,15 @@ export const WhoWeAre = ({
           </div>
 
           <div className="w-full">
-            <div className="group cursor-default rounded-2xl md:rounded-3xl border border-transparent bg-brand-gray/50 p-6 md:p-8 transition-all duration-500 hover:border-brand-blue/20 hover:bg-brand-blue/5 hover:shadow-2xl lg:p-12">
+            <div className="group cursor-default rounded-2xl border border-transparent bg-brand-gray/50 p-6 transition-all duration-500 hover:border-brand-blue/20 hover:bg-brand-blue/5 hover:shadow-2xl md:rounded-3xl md:p-8 lg:p-12">
               <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                <p className="group-hover:text-brand-blue:text-brand-cyan font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
+                <p className="group-hover:text-brand-blue:text-brand-cyan font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-2xl">
                   {quote}
                 </p>
                 {mission && (
-                  <p className="group-hover:text-brand-blue:text-brand-cyan mt-6 font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-3xl">
-                    Mission: {mission}
+                  <p className="group-hover:text-brand-blue:text-brand-cyan mt-6 font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-2xl">
+                    <span className="font-bold text-brand-blue not-italic">Mission:</span>{" "}
+                    {mission}
                   </p>
                 )}
                 {attribution && (
@@ -120,7 +121,7 @@ export const WhoWeAre = ({
         </div>
 
         {/* Right Side: Scrolling Insights */}
-        <div className="group/scroller relative h-[400px] md:h-[600px] overflow-hidden p-2 md:p-4">
+        <div className="group/scroller relative h-[400px] overflow-hidden p-2 md:h-[600px] md:p-4">
           {/* Top/Bottom Fade Masks */}
           <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
           <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
@@ -149,7 +150,7 @@ export const WhoWeAre = ({
 const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl p-6 md:p-8 shadow-lg ${stat.bg} border border-transparent text-white`}
+      className={`relative overflow-hidden rounded-xl p-6 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
     >
       <div className="relative z-10">
         <div className="text-sm font-medium opacity-80">{stat.label}</div>

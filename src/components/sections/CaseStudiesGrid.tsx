@@ -155,7 +155,7 @@ export const CaseStudiesGrid = ({
     );
   } else if (hasEmptyPage) {
     gridContent = (
-      <div className="rounded-[2rem] border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
+      <div className="flex min-h-[480px] flex-col items-center justify-center rounded-[2rem] border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
         <Heading as="h2" className="text-center">
           No more case studies on this page.
         </Heading>
@@ -166,7 +166,7 @@ export const CaseStudiesGrid = ({
     );
   } else {
     gridContent = (
-      <div className="rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
+      <div className="flex min-h-[480px] flex-col items-center justify-center rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
         <Heading as="h2" className="text-center">
           {emptyStateTitle}
         </Heading>

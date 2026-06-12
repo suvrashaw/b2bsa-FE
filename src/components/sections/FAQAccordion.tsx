@@ -6,7 +6,6 @@ import { type ReactNode, useCallback, useMemo, useState } from "react";
 import type { FAQProps } from "@/components/sections/FAQ";
 
 import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_FAQ_CONTENT } from "@/content/home";
 import { cn } from "@/lib";

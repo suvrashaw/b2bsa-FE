@@ -508,7 +508,7 @@ export const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-brand-blue" ref={containerRef}>
       {/* Map as static background */}
-      <div className="pointer-events-none absolute inset-0 z-0 scale-[1.2] opacity-75">
+      <div className="pointer-events-none absolute inset-0 z-0 translate-y-[10%] scale-[1.65] opacity-75">
         {footerInView && <FooterCommandMap />}
       </div>
       {/* Gradient overlay for content readability */}

@@ -3,7 +3,6 @@
 import { useMemo } from "react";
 
 import { ServicesCard } from "@/components/items/ServicesCard";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import {
   HOME_SERVICES_CONTENT,
