@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { Suspense, useCallback, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
@@ -753,13 +753,15 @@ export default function DemoPage() {
 
       {/* 28 – TradeShowCalendarDirectory */}
       <DemoLabel name="TradeShowCalendarDirectory" />
-      <TradeShowCalendarDirectory
-        description={TRADE_SHOW_CALENDAR_HERO.description}
-        events={TRADE_SHOW_CALENDAR_EVENTS}
-        eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
-        searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
-        title={TRADE_SHOW_CALENDAR_HERO.title}
-      />
+      <Suspense>
+        <TradeShowCalendarDirectory
+          description={TRADE_SHOW_CALENDAR_HERO.description}
+          events={TRADE_SHOW_CALENDAR_EVENTS}
+          eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
+          searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
+          title={TRADE_SHOW_CALENDAR_HERO.title}
+        />
+      </Suspense>
 
       {/* 29 – GlobalPresence */}
       <DemoLabel name="GlobalPresence" />

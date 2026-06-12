@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { Suspense } from "react";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ImageHero } from "@/components/sections/ImageHero";
@@ -24,13 +26,15 @@ const Page = () => {
         images={TRADE_SHOW_CALENDAR_HERO_IMAGES}
         title={TRADE_SHOW_CALENDAR_HERO.title}
       />
-      <TradeShowCalendarDirectory
-        description={TRADE_SHOW_CALENDAR_HERO.description}
-        events={TRADE_SHOW_CALENDAR_EVENTS}
-        eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
-        searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
-        title={TRADE_SHOW_CALENDAR_HERO.title}
-      />
+      <Suspense>
+        <TradeShowCalendarDirectory
+          description={TRADE_SHOW_CALENDAR_HERO.description}
+          events={TRADE_SHOW_CALENDAR_EVENTS}
+          eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
+          searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
+          title={TRADE_SHOW_CALENDAR_HERO.title}
+        />
+      </Suspense>
       <Footer />
     </main>
   );

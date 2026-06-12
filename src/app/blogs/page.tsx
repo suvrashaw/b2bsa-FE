@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { Suspense } from "react";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
@@ -34,7 +36,9 @@ const Page = () => {
         items={BLOG_SERVICE_CAROUSEL.items}
         layout="carousel"
       />
-      <BlogsDirectory blogs={BLOG_POSTS.blogs} />
+      <Suspense>
+        <BlogsDirectory blogs={BLOG_POSTS.blogs} />
+      </Suspense>
       <ContactUs {...BLOG_CONTACT} />
       <Footer />
     </main>
