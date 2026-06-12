@@ -50,7 +50,6 @@ export const BOOTH_RENTAL_WHY = {
   titleLine2: "Services",
 };
 
-
 export const BOOTH_RENTAL_PROCESS = {
   phases: [
     {
@@ -142,7 +141,6 @@ export const BOOTH_RENTAL_RELATED_SERVICES = [
     title: "Modular and Portable Booths",
   },
 ];
-
 
 export const BOOTH_RENTAL_BLOGS_SECTION = {
   heading: "Blogs",

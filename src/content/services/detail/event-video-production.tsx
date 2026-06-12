@@ -235,7 +235,6 @@ export const EVENT_VIDEO_DELIVERABLES = {
   ],
 };
 
-
 export const EVENT_VIDEO_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };

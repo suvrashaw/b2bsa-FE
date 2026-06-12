@@ -492,6 +492,7 @@ export const Footer = () => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

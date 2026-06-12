@@ -63,7 +63,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         <div className="container mx-auto px-8">
           <div className="flex flex-wrap justify-center gap-3">
             {metadata.map(({ label, value }) => (
-              <Eyebrow className="!mb-0 m-0" key={label} variant="blue">
+              <Eyebrow className="m-0 !mb-0" key={label} variant="blue">
                 <span className="font-bold">{label}:</span> {value}
               </Eyebrow>
             ))}

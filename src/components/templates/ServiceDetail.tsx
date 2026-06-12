@@ -269,10 +269,14 @@ export const ServiceDetail = ({
       {spotlight && (
         <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
-            <Spotlight 
-              {...spotlight} 
+            <Spotlight
+              {...spotlight}
               ctaHref={undefined}
-              ctaLabel={!spotlight.ctaLabel || spotlight.ctaLabel === "Explore" ? "Let's Talk" : spotlight.ctaLabel}
+              ctaLabel={
+                !spotlight.ctaLabel || spotlight.ctaLabel === "Explore"
+                  ? "Let's Talk"
+                  : spotlight.ctaLabel
+              }
               triggerContactModal={true}
             />
           </div>
@@ -286,8 +290,8 @@ export const ServiceDetail = ({
       {why && (
         <section className="bg-brand-gray py-20">
           <div className="container mx-auto px-8">
-            <Spotlight 
-              {...why} 
+            <Spotlight
+              {...why}
               ctaHref={undefined}
               ctaLabel={!why.ctaLabel || why.ctaLabel === "Explore" ? "Let's Talk" : why.ctaLabel}
               triggerContactModal={true}

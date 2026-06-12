@@ -51,7 +51,6 @@ export const ABOUT_VISION_MISSION = {
   visionTitle: "Our Vision",
 };
 
-
 export const ABOUT_PRESENCE = {
   cities: [
     { color: "cyan", lat: 40.7128, lng: -74.006, name: "New York", size: 0.1 },
@@ -65,7 +64,6 @@ export const ABOUT_PRESENCE = {
     "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
   title: "Where We Operate",
 };
-
 
 export const ABOUT_RECENT_EVENTS = {
   badgeLabel: "RECENT",
@@ -245,7 +243,6 @@ export const ABOUT_VALUES = {
     },
   ],
 };
-
 
 export const ABOUT_INQUIRY = {
   description: "B2B Sales Arrow | Premium Experiential Marketing",

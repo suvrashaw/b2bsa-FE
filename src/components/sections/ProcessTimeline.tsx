@@ -49,11 +49,7 @@ export const ProcessTimeline = ({
       <div className="container mx-auto px-8">
         {(resolvedTitle || resolvedDescription) && (
           <div className="mb-20 text-center">
-            {resolvedTitle && (
-              <Heading as="h2">
-                {resolvedTitle}
-              </Heading>
-            )}
+            {resolvedTitle && <Heading as="h2">{resolvedTitle}</Heading>}
             {resolvedDescription && (
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
                 {resolvedDescription}

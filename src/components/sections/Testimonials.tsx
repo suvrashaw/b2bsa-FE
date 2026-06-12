@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCarouselCard } from "@/components/items/TestimonialCarouselCard";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
 
@@ -22,7 +21,6 @@ const CAROUSEL_PERSPECTIVE_STYLE = { perspective: "1000px" };
 export const Testimonials = ({
   content = HOME_TESTIMONIALS_CONTENT,
   autoplayInterval = content.autoplayInterval,
-  eyebrow = content.eyebrow,
   heading = content.heading,
   initialIndex = content.initialIndex,
   testimonials = content.testimonials,
@@ -33,6 +31,7 @@ export const Testimonials = ({
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
+    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
       threshold: 0.1,
     });
@@ -54,7 +53,6 @@ export const Testimonials = ({
 
       <div className="relative z-10 container mx-auto px-8">
         <div className="mb-8 flex flex-col items-center text-center">
-          {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="mb-3 text-center">
             {heading}
           </Heading>

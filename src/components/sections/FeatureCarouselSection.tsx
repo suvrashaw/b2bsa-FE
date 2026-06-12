@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import Icon from "@/components/ui/Icon";
 import { cn } from "@/lib";
@@ -225,6 +224,7 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
       threshold: 0.1,
     });
@@ -285,7 +285,6 @@ interface FeatureCarouselSectionProps {
 
 export const FeatureCarouselSection = ({
   description,
-  eyebrow = "Capabilities",
   features,
   heading,
 }: FeatureCarouselSectionProps) => {
@@ -297,9 +296,6 @@ export const FeatureCarouselSection = ({
       </div>
       <div className="relative z-10 container mx-auto px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <Eyebrow className="justify-center" variant="blue">
-            {eyebrow}
-          </Eyebrow>
           <Heading as="h2" className="mb-6">
             {heading}
           </Heading>

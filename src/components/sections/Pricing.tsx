@@ -3,7 +3,6 @@
 import { Pencil, Sparkles, Star } from "lucide-react";
 
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 
 export interface PricingProps {
@@ -61,7 +60,6 @@ const DEFAULT_TIERS: PricingTier[] = [
 
 export const Pricing = ({
   description = "High-end post-production packages tailored to B2B teams",
-  tag = "Video Editing Plans",
   tiers = DEFAULT_TIERS,
   title = "Creative Video Editing Pricing",
 }: PricingProps) => {
@@ -76,10 +74,6 @@ export const Pricing = ({
       <div className="relative z-10 container mx-auto px-8">
         {/* Header Block */}
         <div className="mb-20 flex flex-col items-center text-center">
-          <Eyebrow className="mb-4 font-sans" variant="primary">
-            {tag}
-          </Eyebrow>
-
           <div className="relative mb-6">
             <Heading as="h2" className="relative">
               {title}

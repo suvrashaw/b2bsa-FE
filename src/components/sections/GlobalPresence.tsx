@@ -22,7 +22,7 @@ export interface GlobalPresenceData {
   title: string;
 }
 
-export type LocationItem = {
+type LocationItem = {
   color: string;
   lat: number;
   lng: number;
@@ -95,21 +95,21 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           transition={RIGHT_TRANSITION}
         >
           <div className="absolute inset-0 h-full w-full">
-              <Globe
-                backgroundColor="rgba(0,0,0,0)"
-                globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
-                htmlElement={getHtmlElement}
-                htmlElementsData={data.cities}
-                onGlobeReady={handleGlobeReady}
-                pointAltitude="size"
-                pointColor="color"
-                pointLat="lat"
-                pointLng="lng"
-                pointRadius={0.5}
-                pointsData={data.cities}
-                pointsMerge={true}
-                ref={globeRef}
-              />
+            <Globe
+              backgroundColor="rgba(0,0,0,0)"
+              globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
+              htmlElement={getHtmlElement}
+              htmlElementsData={data.cities}
+              onGlobeReady={handleGlobeReady}
+              pointAltitude="size"
+              pointColor="color"
+              pointLat="lat"
+              pointLng="lng"
+              pointRadius={0.5}
+              pointsData={data.cities}
+              pointsMerge={true}
+              ref={globeRef}
+            />
           </div>
         </motion.div>
       </div>

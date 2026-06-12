@@ -81,6 +81,7 @@ export const ClientLogos = ({
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
       threshold: 0.1,
     });

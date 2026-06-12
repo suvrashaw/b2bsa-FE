@@ -379,8 +379,6 @@ const ABOUT_CORE_VALUES_DATA = {
   ],
 };
 
-
-
 // ─── ContactCinematicCTA ─────────────────────────────────────────────────────
 
 const CONTACT_CINEMATIC_PROPS = {
@@ -551,47 +549,50 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
 };
 
-const COMPONENT_DEPENDENCIES: Record<string, { ui: string[]; items: string[] }> = {
-  AboutCoreValues: { ui: ["Heading"], items: [] },
-  BlogCategories: { ui: ["Heading"], items: [] },
-  Blogs: { ui: ["Button", "Eyebrow", "Heading"], items: ["BlogCard", "BlogCardGrid"] },
-  BlogsCarousel: { ui: ["Button", "Heading"], items: ["BlogsCarouselCard"] },
-  BlogsDirectory: { ui: ["Pagination"], items: ["BlogCardGrid"] },
-  BoothWhyChooseUs: { ui: ["Button", "Heading"], items: ["BoothWhyCard"] },
-  CardsSection: { ui: ["Heading"], items: ["BasicCards"] },
-  CaseStudies: { ui: ["Button", "Eyebrow", "Heading"], items: ["CaseStudyItem"] },
-  CaseStudiesGrid: { ui: ["Heading", "Pagination"], items: ["CaseStudyCard"] },
-  CinematicSequence: { ui: ["Heading"], items: [] },
-  ClientLogos: { ui: ["Heading"], items: [] },
-  ContactCinematicCTA: { ui: ["Button", "ContactModal", "Heading"], items: [] },
-  ContactUs: { ui: ["Eyebrow", "Heading"], items: [] },
-  CorporateVideoIndustriesSection: { ui: ["Heading"], items: [] },
-  CorporateVideoPortfolioSection: { ui: ["Heading"], items: [] },
-  Culture: { ui: ["Heading"], items: ["CultureReasonCard"] },
-  Events: { ui: ["Button", "Eyebrow", "Heading"], items: [] },
-  FAQ: { ui: ["Eyebrow", "Heading"], items: ["FAQCard"] },
-  FAQAccordion: { ui: ["Eyebrow", "Heading"], items: ["FAQAccordionItem"] },
-  FeatureCarouselSection: { ui: ["Eyebrow", "Heading", "Icon"], items: [] },
-  GlobalPresence: { ui: ["Heading"], items: [] },
-  ImageHero: { ui: ["Heading"], items: [] },
-  LinkedInFeed: { ui: ["Heading"], items: [] },
-  Pricing: { ui: ["Eyebrow", "Heading"], items: ["PricingCard"] },
-  ProcessTimeline: { ui: ["Heading"], items: [] },
-  ProofBar: { ui: ["Heading"], items: [] },
-  RelatedServices: { ui: ["Heading"], items: ["RelatedServicesCard"] },
-  RentVsBuySection: { ui: ["Heading"], items: [] },
-  ServicesStack: { ui: ["Eyebrow", "Heading"], items: ["ServicesCard"] },
-  Spotlight: { ui: ["Button", "ContactModal", "Heading"], items: [] },
-  StickyScroll: { ui: ["Button", "ContactModal", "Eyebrow", "Heading"], items: [] },
-  Testimonials: { ui: ["Eyebrow", "Heading"], items: ["TestimonialCarouselCard"] },
-  TradeShowCalendarDirectory: { ui: ["Button", "Pagination"], items: ["TradeShowCard", "TradeShowListItem"] },
-  VideoHero: { ui: ["Heading"], items: [] },
-  WhoWeAre: { ui: ["Heading"], items: [] },
+const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
+  AboutCoreValues: { items: [], ui: ["Heading"] },
+  BlogCategories: { items: [], ui: ["Heading"] },
+  Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
+  BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
+  BlogsDirectory: { items: ["BlogCardGrid"], ui: ["Pagination"] },
+  BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
+  CardsSection: { items: ["BasicCards"], ui: ["Heading"] },
+  CaseStudies: { items: ["CaseStudyItem"], ui: ["Button", "Eyebrow", "Heading"] },
+  CaseStudiesGrid: { items: ["CaseStudyCard"], ui: ["Heading", "Pagination"] },
+  CinematicSequence: { items: [], ui: ["Heading"] },
+  ClientLogos: { items: [], ui: ["Heading"] },
+  ContactCinematicCTA: { items: [], ui: ["Button", "ContactModal", "Heading"] },
+  ContactUs: { items: [], ui: ["Eyebrow", "Heading"] },
+  CorporateVideoIndustriesSection: { items: [], ui: ["Heading"] },
+  CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
+  Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
+  Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
+  FAQ: { items: ["FAQCard"], ui: ["Eyebrow", "Heading"] },
+  FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
+  FeatureCarouselSection: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
+  GlobalPresence: { items: [], ui: ["Heading"] },
+  ImageHero: { items: [], ui: ["Heading"] },
+  LinkedInFeed: { items: [], ui: ["Heading"] },
+  Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
+  ProcessTimeline: { items: [], ui: ["Heading"] },
+  ProofBar: { items: [], ui: ["Heading"] },
+  RelatedServices: { items: ["RelatedServicesCard"], ui: ["Heading"] },
+  RentVsBuySection: { items: [], ui: ["Heading"] },
+  ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
+  Spotlight: { items: [], ui: ["Button", "ContactModal", "Heading"] },
+  StickyScroll: { items: [], ui: ["Button", "ContactModal", "Eyebrow", "Heading"] },
+  Testimonials: { items: ["TestimonialCarouselCard"], ui: ["Eyebrow", "Heading"] },
+  TradeShowCalendarDirectory: {
+    items: ["TradeShowCard", "TradeShowListItem"],
+    ui: ["Button", "Pagination"],
+  },
+  VideoHero: { items: [], ui: ["Heading"] },
+  WhoWeAre: { items: [], ui: ["Heading"] },
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
   const pages = COMPONENT_PAGES[name] ?? [];
-  const deps = COMPONENT_DEPENDENCIES[name] ?? { ui: [], items: [] };
+  const deps = COMPONENT_DEPENDENCIES[name] ?? { items: [], ui: [] };
 
   return (
     <div className="sticky top-12 z-40 border-b border-white/10 bg-brand-charcoal/98 backdrop-blur-sm">
@@ -627,9 +628,14 @@ const DemoLabel = ({ name }: { name: string }) => {
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-6 pb-2">
           {deps.ui.length > 0 && (
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">UI:</span>
+              <span className="font-mono text-[10px] tracking-widest text-white/40 uppercase">
+                UI:
+              </span>
               {deps.ui.map((uiName) => (
-                <span key={uiName} className="rounded border border-brand-blue/30 bg-brand-blue/10 px-1.5 py-0.5 font-mono text-[9px] text-brand-blue/80">
+                <span
+                  className="rounded border border-brand-blue/30 bg-brand-blue/10 px-1.5 py-0.5 font-mono text-[9px] text-brand-blue/80"
+                  key={uiName}
+                >
                   {uiName}
                 </span>
               ))}
@@ -637,9 +643,14 @@ const DemoLabel = ({ name }: { name: string }) => {
           )}
           {deps.items.length > 0 && (
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Items:</span>
+              <span className="font-mono text-[10px] tracking-widest text-white/40 uppercase">
+                Items:
+              </span>
               {deps.items.map((itemName) => (
-                <span key={itemName} className="rounded border border-purple-500/30 bg-purple-500/10 px-1.5 py-0.5 font-mono text-[9px] text-purple-400">
+                <span
+                  className="rounded border border-purple-500/30 bg-purple-500/10 px-1.5 py-0.5 font-mono text-[9px] text-purple-400"
+                  key={itemName}
+                >
                   {itemName}
                 </span>
               ))}
@@ -728,8 +739,6 @@ export default function DemoPage() {
       {/* 08 – AboutCoreValues */}
       <DemoLabel name="AboutCoreValues" />
       <AboutCoreValues data={ABOUT_CORE_VALUES_DATA} />
-
-
 
       {/* 12 – Culture */}
       <DemoLabel name="Culture" />

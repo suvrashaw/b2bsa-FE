@@ -10,7 +10,7 @@ export interface FormSelectProps extends SelectHTMLAttributes<HTMLSelectElement>
   placeholder?: string;
 }
 
-export interface SelectOption {
+interface SelectOption {
   label: string;
   value: string;
 }

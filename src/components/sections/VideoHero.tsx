@@ -95,9 +95,9 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
   const activeLineIdx = done
     ? -1
     : lines.findIndex((line, idx) => {
-      const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
-      return charCount < charsBeforeThis + line.length;
-    });
+        const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
+        return charCount < charsBeforeThis + line.length;
+      });
 
   return { activeLineIdx, done, visibleLines };
 };
@@ -155,15 +155,15 @@ export const VideoHero = ({
           <Heading as="h1" className="mb-8" style={H1_STYLE}>
             {isStringTitle
               ? (titleLines as string[]).map((_, index) => (
-                <TypewriterLine
-                  isActive={activeLineIdx === index}
-                  key={index}
-                  text={visibleLines[index] ?? ""}
-                />
-              ))
+                  <TypewriterLine
+                    isActive={activeLineIdx === index}
+                    key={index}
+                    text={visibleLines[index] ?? ""}
+                  />
+                ))
               : (titleLines as ReactNode[]).map((line, index) => (
-                <TitleLine index={index} key={index} line={line} />
-              ))}
+                  <TitleLine index={index} key={index} line={line} />
+                ))}
           </Heading>
 
           {/* Description */}
@@ -180,13 +180,13 @@ export const VideoHero = ({
           {/* Glossy CTAs */}
           <motion.div
             animate={CTA_ANIMATE}
-            className="mb-12 md:mb-20 flex flex-col md:flex-row flex-wrap md:items-center gap-4 md:gap-6"
+            className="mb-12 flex flex-col flex-wrap gap-4 md:mb-20 md:flex-row md:items-center md:gap-6"
             initial={CTA_INITIAL}
             transition={CTA_TRANSITION}
           >
             {primaryCta && (
               <Link
-                className="hero-primary-cta group relative flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                className="hero-primary-cta group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                 href={primaryCta.href}
                 style={PRIMARY_CTA_STYLE}
               >
@@ -197,7 +197,7 @@ export const VideoHero = ({
 
             {secondaryCta && (
               <Link
-                className="hero-secondary-cta flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                className="hero-secondary-cta flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                 href={secondaryCta.href}
                 style={SECONDARY_CTA_STYLE}
               >
@@ -228,4 +228,3 @@ export const VideoHero = ({
     </section>
   );
 };
-

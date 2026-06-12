@@ -9,7 +9,6 @@ export const BOOTH_BUILDER_HERO = {
 
 export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
 
-
 export const BOOTH_BUILDER_PROCESS = {
   phases: [
     {
@@ -155,7 +154,6 @@ export const BOOTH_BUILDER_RELATED_SERVICES = [
     title: "Modular and Portable Booths",
   },
 ];
-
 
 export const BOOTH_BUILDER_BLOGS_SECTION = {
   heading: "Blogs",

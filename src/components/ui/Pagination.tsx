@@ -18,11 +18,7 @@ interface PaginationProps {
   totalPages: number;
 }
 
-const PaginationPageButton = ({
-  currentPage,
-  onPageChange,
-  page,
-}: PaginationPageButtonProps) => {
+const PaginationPageButton = ({ currentPage, onPageChange, page }: PaginationPageButtonProps) => {
   const isActive = page === currentPage;
   const handleClick = useCallback(() => {
     onPageChange(page);

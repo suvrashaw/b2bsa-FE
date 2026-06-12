@@ -63,7 +63,6 @@ interface FAQAccordionProps extends FAQProps {
 export const FAQAccordion = ({
   content = HOME_FAQ_CONTENT,
   description = content.description,
-  eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
   variant = "default",
@@ -96,11 +95,6 @@ export const FAQAccordion = ({
           viewport={HEADING_VIEWPORT}
           whileInView={HEADING_ANIMATE}
         >
-          {eyebrow && (
-            <Eyebrow className="mb-4 rotate-[-1deg]" variant="neutral">
-              {eyebrow}
-            </Eyebrow>
-          )}
           <Heading as="h2" className="mb-4">
             {heading}
           </Heading>

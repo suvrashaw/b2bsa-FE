@@ -142,13 +142,7 @@ export const ImageHero = ({
               key={currentIndex}
               transition={IMAGE_TRANSITION}
             >
-              <Image
-                alt=""
-                className="object-cover"
-                fill
-                priority
-                src={images[currentIndex]}
-              />
+              <Image alt="" className="object-cover" fill priority src={images[currentIndex]} />
             </motion.div>
           </AnimatePresence>
         )}
@@ -189,13 +183,13 @@ export const ImageHero = ({
           {(primaryCta ?? secondaryCta) && (
             <motion.div
               animate={CTA_ANIMATE}
-              className="flex flex-col md:flex-row flex-wrap md:items-center gap-4 md:gap-6"
+              className="flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6"
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >
               {primaryCta && (
                 <Link
-                  className="group relative flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={primaryCta.href}
                   style={PRIMARY_CTA_STYLE}
                 >
@@ -205,7 +199,7 @@ export const ImageHero = ({
               )}
               {secondaryCta && (
                 <Link
-                  className="flex w-full md:w-auto min-h-[58px] items-center justify-center rounded-[4px] px-6 md:px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105"
+                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={secondaryCta.href}
                   style={SECONDARY_CTA_STYLE}
                 >

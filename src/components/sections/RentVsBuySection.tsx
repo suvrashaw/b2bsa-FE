@@ -43,9 +43,7 @@ export const RentVsBuySection = ({
       <div className="container mx-auto px-8">
         {/* Heading with brand-blue highlight bar */}
         <div className="mb-6 text-center">
-          <Heading as="h2">
-            {heading}
-          </Heading>
+          <Heading as="h2">{heading}</Heading>
         </div>
 
         {/* Short description */}

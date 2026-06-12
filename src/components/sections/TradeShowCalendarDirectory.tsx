@@ -302,15 +302,21 @@ export const TradeShowCalendarDirectory = ({
     [events]
   );
 
-  const handleAttendeeOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
-    setAttendeeOperator(event.currentTarget.value as NumberOperator);
-    updatePage(1);
-  }, [updatePage]);
+  const handleAttendeeOperatorChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setAttendeeOperator(event.currentTarget.value as NumberOperator);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleAttendeeValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    setAttendeeValue(event.currentTarget.value);
-    updatePage(1);
-  }, [updatePage]);
+  const handleAttendeeValueChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setAttendeeValue(event.currentTarget.value);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
   const handleClearFilters = useCallback(() => {
     setAttendeeOperator("gte");
@@ -327,46 +333,67 @@ export const TradeShowCalendarDirectory = ({
     updatePage(1);
   }, [updatePage]);
 
-  const handleDateRangeChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
-    setDateRange(event.currentTarget.value as DateRange);
-    updatePage(1);
-  }, [updatePage]);
+  const handleDateRangeChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setDateRange(event.currentTarget.value as DateRange);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleExhibitorOperatorChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
-    setExhibitorOperator(event.currentTarget.value as NumberOperator);
-    updatePage(1);
-  }, [updatePage]);
+  const handleExhibitorOperatorChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setExhibitorOperator(event.currentTarget.value as NumberOperator);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleExhibitorValueChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    setExhibitorValue(event.currentTarget.value);
-    updatePage(1);
-  }, [updatePage]);
+  const handleExhibitorValueChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setExhibitorValue(event.currentTarget.value);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleIndustryChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedIndustry(event.currentTarget.value);
-    updatePage(1);
-  }, [updatePage]);
+  const handleIndustryChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setSelectedIndustry(event.currentTarget.value);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleLocationChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    const { checked, value } = event.currentTarget;
+  const handleLocationChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const { checked, value } = event.currentTarget;
 
-    setSelectedLocations((currentLocations) =>
-      checked
-        ? [...currentLocations, value]
-        : currentLocations.filter((location) => location !== value)
-    );
-    updatePage(1);
-  }, [updatePage]);
+      setSelectedLocations((currentLocations) =>
+        checked
+          ? [...currentLocations, value]
+          : currentLocations.filter((location) => location !== value)
+      );
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.currentTarget.value);
-    updatePage(1);
-  }, [updatePage]);
+  const handleSearchChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setSearchQuery(event.currentTarget.value);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
-  const handleSortFieldChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
-    setSortField(event.currentTarget.value as SortField);
-    updatePage(1);
-  }, [updatePage]);
+  const handleSortFieldChange = useCallback(
+    (event: ChangeEvent<HTMLSelectElement>) => {
+      setSortField(event.currentTarget.value as SortField);
+      updatePage(1);
+    },
+    [updatePage]
+  );
 
   const handleSortDirectionChange = useCallback(
     (direction: SortDirection) => {

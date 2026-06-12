@@ -80,6 +80,7 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
   const scale9 = useTransform(scrollYProgress, [0, 0.8, 1], [1, 9, 9]);
 
   const textOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
+  const textMotionStyle = useMemo(() => ({ opacity: textOpacity }), [textOpacity]);
 
   const scales = [scale5_center, scale5, scale6, scale5, scale6, scale8, scale9];
 
@@ -94,7 +95,7 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
         {centerText && (
           <motion.div
             className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/70 px-4 md:px-12 lg:px-24"
-            style={{ opacity: textOpacity }}
+            style={textMotionStyle}
           >
             <p className="max-w-4xl text-center text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
               {centerText}
@@ -168,8 +169,6 @@ export const Culture = ({ data }: { data: CultureData }) => {
       </div>
 
       <ZoomParallax centerText={data.centerText} images={parallaxImages} />
-
-
     </section>
   );
 };

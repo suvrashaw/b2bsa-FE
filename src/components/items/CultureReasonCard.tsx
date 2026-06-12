@@ -1,4 +1,4 @@
-export interface CultureReason {
+interface CultureReason {
   description: string;
   id: string;
   title: string;

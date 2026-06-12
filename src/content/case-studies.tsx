@@ -13,11 +13,6 @@ export interface CaseStudyCardData {
   title: string;
 }
 
-export interface CaseStudyCardSummary {
-  label: string;
-  text: string;
-}
-
 export interface CaseStudyIndexEntry {
   anchorId: string;
   card: CaseStudyCardData;
@@ -34,6 +29,11 @@ export interface CaseStudyIndexEntry {
   servicesText: string;
   title: string;
   whatWeDid: string;
+}
+
+interface CaseStudyCardSummary {
+  label: string;
+  text: string;
 }
 
 export const CASE_STUDIES_PAGE_CONTENT = {

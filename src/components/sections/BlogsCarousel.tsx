@@ -86,6 +86,9 @@ export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
     return { flexShrink: 0 as const, width };
   }, [cardStep]);
 
+  const handlePrev = useCallback(() => slideTo(offsetRef.current - 1), [slideTo]);
+  const handleNext = useCallback(() => slideTo(offsetRef.current + 1), [slideTo]);
+
   if (posts.length === 0) return null;
 
   return (
@@ -98,9 +101,7 @@ export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
             viewport={HEADING_VIEWPORT}
             whileInView={HEADING_ANIMATE}
           >
-            <Heading as="h2">
-              {heading}
-            </Heading>
+            <Heading as="h2">{heading}</Heading>
           </motion.div>
 
           <Button asChild className="shrink-0" variant="secondary">
@@ -127,14 +128,14 @@ export const BlogsCarousel = ({ heading, posts }: BlogsCarouselProps) => {
           <button
             aria-label="Previous post"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={() => slideTo(offsetRef.current - 1)}
+            onClick={handlePrev}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             aria-label="Next post"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-            onClick={() => slideTo(offsetRef.current + 1)}
+            onClick={handleNext}
           >
             <ChevronRight className="h-6 w-6" />
           </button>

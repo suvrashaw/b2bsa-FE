@@ -16,7 +16,7 @@ export const clampPaginationPage = (page: number, pageCount: number) => {
   return Math.min(Math.max(page, 1), pageCount);
 };
 
-export const getPaginationItems = <T,>(
+export const getPaginationItems = <T>(
   items: readonly T[],
   page: number,
   pageSize = DEFAULT_PAGE_SIZE

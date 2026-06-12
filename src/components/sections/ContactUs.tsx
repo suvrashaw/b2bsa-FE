@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home";
 
@@ -23,7 +22,6 @@ const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity 
 export const ContactUs = ({
   content = HOME_CONTACT_CONTENT,
   description = content.description,
-  eyebrow = content.eyebrow,
   form = content.form,
   heading = content.heading,
   illustration = content.illustration,
@@ -38,7 +36,6 @@ export const ContactUs = ({
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">
-            {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
             <div className="w-full text-left">
               <Heading as="h2" className="mb-8">
                 {heading}

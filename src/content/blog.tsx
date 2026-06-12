@@ -130,12 +130,13 @@ export const BLOG_SERVICE_CAROUSEL = {
       ...RESEARCH_SERVICES.services,
       ...SQL_SERVICES.services,
     ] as LooseService[]
-  ).map((s) => ({
-    description: s.description,
-    href: s.href ?? SERVICE_FALLBACK_HREFS[s.id] ?? "/services",
-    id: s.id,
-    image: s.image,
-    title: s.title,
-  }))
-  .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
+  )
+    .map((s) => ({
+      description: s.description,
+      href: s.href ?? SERVICE_FALLBACK_HREFS[s.id] ?? "/services",
+      id: s.id,
+      image: s.image,
+      title: s.title,
+    }))
+    .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };

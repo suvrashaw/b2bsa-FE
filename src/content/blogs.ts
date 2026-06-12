@@ -2,11 +2,6 @@ import type { BlogItem } from "./home";
 
 import rawBlogPosts from "./blogs.json";
 
-export interface BlogFAQ {
-  answer: string;
-  question: string;
-}
-
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }
   | { items: string[]; ordered?: boolean; type: "list" }
@@ -22,6 +17,11 @@ export interface SharedBlogPost extends BlogItem {
   href: string;
   linkedinEmbedUrl?: string;
   linkedinUrl?: string;
+}
+
+interface BlogFAQ {
+  answer: string;
+  question: string;
 }
 
 type ImportedBlogPost = {

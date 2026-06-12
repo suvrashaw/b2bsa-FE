@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { FAQCard } from "@/components/items/FAQCard";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home";
 import { cn } from "@/lib";
@@ -73,7 +72,6 @@ const FAQMotionCard = ({
 export const FAQ = ({
   content = HOME_FAQ_CONTENT,
   description = content.description,
-  eyebrow = content.eyebrow,
   faqs = content.faqs,
   heading = content.heading,
   layoutMode = content.layoutMode ?? "carousel",
@@ -148,11 +146,6 @@ export const FAQ = ({
         {/* Centered Heading */}
         <div className="container mx-auto mb-16 px-8 text-center">
           <div className="flex flex-col items-center justify-center text-center">
-            {eyebrow && (
-              <Eyebrow className="mb-4 rotate-[-1deg]" variant="neutral">
-                {eyebrow}
-              </Eyebrow>
-            )}
             <Heading as="h2" className="mb-4">
               {heading}
             </Heading>

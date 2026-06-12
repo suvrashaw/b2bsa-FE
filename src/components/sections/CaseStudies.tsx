@@ -10,7 +10,6 @@ import type { CaseStudyCardData } from "@/content/case-studies";
 
 import { CaseStudyItem } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import {
   type CaseStudiesContent,
@@ -68,7 +67,6 @@ export const CaseStudies = ({
   content = HOME_CASE_STUDIES_CONTENT,
   ctaLabel = content.ctaLabel,
   description,
-  eyebrow = content.eyebrow,
   getStudyHref = (study) => study.href ?? viewAllHref,
   heading = content.heading,
   items,
@@ -82,7 +80,7 @@ export const CaseStudies = ({
       ...study,
       icon: study.icon ?? FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
       id: study.id ?? createCaseStudyId(study, index),
-    }),
+    })
   );
 
   const cards: CaseStudyCardData[] = resolvedCaseStudies.map((study) => ({
@@ -114,7 +112,6 @@ export const CaseStudies = ({
     <section className="relative bg-brand-gray py-20" id="work">
       <div className="container mx-auto max-w-6xl px-8">
         <div className="mb-16 flex flex-col items-center text-center">
-          {eyebrow && <Eyebrow variant="blue">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="text-center">
             {heading}
           </Heading>

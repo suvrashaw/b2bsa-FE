@@ -54,29 +54,6 @@ export interface CinematicSequenceContent {
   loadingText: string;
 }
 
-export interface CinematicStoryBeat {
-  className: string;
-  cta?: {
-    className: string;
-    label: string;
-  };
-  description?: {
-    className: string;
-    text: string;
-  };
-  eyebrow?: {
-    className: string;
-    text: string;
-  };
-  id: string;
-  opacityInput: number[];
-  opacityOutput: number[];
-  title: ReactNode;
-  titleClassName: string;
-  yInput: number[];
-  yOutput: number[];
-}
-
 export interface ClientLogoItem {
   alt: string;
   id: string;
@@ -121,11 +98,6 @@ export interface ContactContent {
   };
 }
 
-export interface ContactServiceOption {
-  label: string;
-  value: string;
-}
-
 export interface EventsContent {
   badgeLabel?: string;
   ctaLabel: string;
@@ -144,15 +116,6 @@ export interface FAQContent {
   layoutMode?: "auto" | "carousel" | "fit";
   scrollAmount: number;
 }
-
-export interface FAQItem {
-  answer: ReactNode | string;
-  icon?: ReactNode;
-  id: number | string;
-  image?: string;
-  question: string;
-}
-
 
 export interface HomeServiceItem {
   color: string;
@@ -177,38 +140,12 @@ export interface StickyScrollContent {
   reasons: StickyScrollReason[];
 }
 
-export interface StickyScrollReason {
-  description: string;
-  id: string;
-  image: string;
-  title: string;
-}
-
-export interface TestimonialItem {
-  company: string;
-  designation: string;
-  id: number | string;
-  image: string;
-  name: string;
-  quote: string;
-  rating: number;
-  serviceTag?: string;
-}
-
 export interface TestimonialsContent {
   autoplayInterval: number;
   eyebrow?: string;
   heading: ReactNode;
   initialIndex: number;
   testimonials: TestimonialItem[];
-}
-
-export interface UpcomingEventItem {
-  date?: string;
-  id: string;
-  image?: string;
-  location?: string;
-  title: string;
 }
 
 export interface WhoWeAreContent {
@@ -226,6 +163,67 @@ export interface WhoWeAreStat {
   value: string;
 }
 
+interface CinematicStoryBeat {
+  className: string;
+  cta?: {
+    className: string;
+    label: string;
+  };
+  description?: {
+    className: string;
+    text: string;
+  };
+  eyebrow?: {
+    className: string;
+    text: string;
+  };
+  id: string;
+  opacityInput: number[];
+  opacityOutput: number[];
+  title: ReactNode;
+  titleClassName: string;
+  yInput: number[];
+  yOutput: number[];
+}
+
+interface ContactServiceOption {
+  label: string;
+  value: string;
+}
+
+interface FAQItem {
+  answer: ReactNode | string;
+  icon?: ReactNode;
+  id: number | string;
+  image?: string;
+  question: string;
+}
+
+interface StickyScrollReason {
+  description: string;
+  id: string;
+  image: string;
+  title: string;
+}
+
+interface TestimonialItem {
+  company: string;
+  designation: string;
+  id: number | string;
+  image: string;
+  name: string;
+  quote: string;
+  rating: number;
+  serviceTag?: string;
+}
+
+interface UpcomingEventItem {
+  date?: string;
+  id: string;
+  image?: string;
+  location?: string;
+  title: string;
+}
 
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = {
   beats: [

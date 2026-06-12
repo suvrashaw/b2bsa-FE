@@ -5,16 +5,17 @@ import { Award, Globe2, TrendingUp, Users2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useState } from "react";
+
 import { cn } from "@/lib";
 
 const icons = { Award, Globe2, TrendingUp, Users2 } as const;
 
 export interface BoothWhyChooseUsItem {
   description: string;
+  href?: string;
   icon?: string;
   image?: string;
   title: string;
-  href?: string;
 }
 
 const cardVariants = {
@@ -59,7 +60,7 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
       viewport={BOOTH_WHY_CARD_VIEWPORT}
       whileInView="visible"
     >
-      <CardWrapper href={item.href || "#"} className="block h-full w-full">
+      <CardWrapper className="block h-full w-full" href={item.href || "#"}>
         <div className="relative h-32 overflow-hidden bg-brand-gray/50">
           {item.image && (
             <Image

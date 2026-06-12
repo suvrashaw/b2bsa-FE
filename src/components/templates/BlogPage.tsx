@@ -85,8 +85,7 @@ const BlogSidebarSubscribe = () => {
             Don&apos;t Just Scroll!
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
-            <span className="font-bold text-brand-blue">Get it on email</span> and stay in the
-            loop.
+            <span className="font-bold text-brand-blue">Get it on email</span> and stay in the loop.
           </p>
         </div>
 

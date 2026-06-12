@@ -56,7 +56,6 @@ export const BOOTH_DESIGN_SHOWCASE_ITEMS = [
   },
 ];
 
-
 export const BOOTH_DESIGN_SPOTLIGHT = {
   description:
     "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible.\n\nThe gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?",
@@ -254,7 +253,6 @@ export const BOOTH_DESIGN_PAGE = {
     title: "Custom Trade Show Booth Design for Enterprise Brands | B2B Sales Arrow",
   },
 } as const;
-
 
 export const BOOTH_DESIGN_RELATED_SERVICES = [
   {

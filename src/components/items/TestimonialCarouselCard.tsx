@@ -11,8 +11,7 @@ type TestimonialItem = TestimonialsContent["testimonials"][number];
 const CARD_STYLE_BASE = { transformOrigin: "center", transformStyle: "preserve-3d" as const };
 const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
-const isOuterQuoteMark = (char: string) =>
-  ["'", '"', "“", "”"].includes(char);
+const isOuterQuoteMark = (char: string) => ["'", '"', "“", "”"].includes(char);
 
 const stripOuterQuoteMarks = (quote: string) => {
   let start = 0;
@@ -83,7 +82,7 @@ export const TestimonialCarouselCard = ({
       </div>
 
       {/* Content */}
-      <div className="px-8 pb-12 pt-3 text-center">
+      <div className="px-8 pt-3 pb-12 text-center">
         <p className="text-[15px] leading-relaxed text-gray-600">
           &ldquo;{stripOuterQuoteMarks(testimonial.quote)}&rdquo;
         </p>

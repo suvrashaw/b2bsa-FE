@@ -47,3 +47,4 @@ All rules in AGENTS.md apply here. Additional overrides:
 - Do not change package versions unless explicitly asked.
 - Do not commit secrets.
 - Run `npm run lint` before finalizing code changes when practical.
+- Always tell the user exactly what changes are planned and wait for their explicit approval before editing any code.

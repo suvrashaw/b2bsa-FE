@@ -6,7 +6,7 @@ export interface CorporateVideoIndustriesSectionProps {
   industries: CorporateVideoIndustryItem[];
 }
 
-export interface CorporateVideoIndustryItem {
+interface CorporateVideoIndustryItem {
   description: string;
   title: string;
 }
@@ -26,7 +26,6 @@ export const CorporateVideoIndustriesSection = ({
           <Heading
             as="h2"
             className="max-w-4xl text-5xl leading-none text-white md:text-6xl lg:text-7xl"
-           
           >
             {heading}
           </Heading>

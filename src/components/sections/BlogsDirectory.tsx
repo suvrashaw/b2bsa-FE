@@ -169,13 +169,7 @@ export const BlogsDirectory = ({ blogs }: BlogsDirectoryProps) => {
     if (requestedCategory !== activeCategory || requestedPage !== currentPage) {
       updateDirectoryParams(activeCategory, currentPage);
     }
-  }, [
-    activeCategory,
-    currentPage,
-    requestedCategory,
-    requestedPage,
-    updateDirectoryParams,
-  ]);
+  }, [activeCategory, currentPage, requestedCategory, requestedPage, updateDirectoryParams]);
 
   if (paginatedBlogs.length > 0) {
     blogsContent = (
@@ -201,9 +195,7 @@ export const BlogsDirectory = ({ blogs }: BlogsDirectoryProps) => {
   } else {
     blogsContent = (
       <div className="rounded-2xl border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
-        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
-          No articles found.
-        </h2>
+        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">No articles found.</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Choose a different category to browse the blog library.
         </p>
@@ -249,9 +241,7 @@ export const BlogsDirectory = ({ blogs }: BlogsDirectoryProps) => {
         <aside className="hidden lg:block">
           <div className="sticky top-28 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
             <div className="bg-brand-blue px-4 py-3">
-              <h2 className="text-sm font-bold tracking-widest text-white uppercase">
-                Categories
-              </h2>
+              <h2 className="text-sm font-bold tracking-widest text-white uppercase">Categories</h2>
             </div>
             <div className="space-y-2 p-4">
               {categories.map((category) => (

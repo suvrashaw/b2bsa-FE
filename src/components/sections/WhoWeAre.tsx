@@ -106,8 +106,7 @@ export const WhoWeAre = ({
                 </p>
                 {mission && (
                   <p className="group-hover:text-brand-blue:text-brand-cyan mt-6 font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-2xl">
-                    <span className="font-bold text-brand-blue not-italic">Mission:</span>{" "}
-                    {mission}
+                    <span className="font-bold text-brand-blue not-italic">Mission:</span> {mission}
                   </p>
                 )}
                 {attribution && (

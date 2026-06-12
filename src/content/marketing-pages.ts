@@ -69,8 +69,10 @@ const normalizeLookupPath = (path: string) => {
   return path.replace(/\/$/, "");
 };
 
+// eslint-disable-next-line compat/compat
 const marketingPagesById = Object.fromEntries(marketingPages.map((page) => [page.pageId, page]));
 
+// eslint-disable-next-line compat/compat
 const marketingPagesByPath = Object.fromEntries(
   marketingPages.map((page) => [normalizeLookupPath(page.seo.canonicalPath), page])
 );

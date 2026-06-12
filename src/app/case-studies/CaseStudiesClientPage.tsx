@@ -108,7 +108,6 @@ export const CaseStudiesClientPage = () => {
             <div className="absolute inset-0 bg-linear-to-t from-brand-charcoal/50 via-transparent to-transparent" />
           </motion.div>
         </div>
-
       </section>
 
       <CaseStudiesGrid
@@ -126,4 +125,3 @@ export const CaseStudiesClientPage = () => {
     </main>
   );
 };
-

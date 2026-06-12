@@ -62,22 +62,29 @@ export const CaseStudyCard = ({
           <h3 className="mx-auto max-w-xs text-center font-sans text-lg leading-snug font-bold !text-white drop-shadow-md md:text-xl">
             {title}
           </h3>
-          <p
+          <div
             className={cn(
-              "mx-auto mt-4 line-clamp-2 max-w-md text-sm leading-relaxed text-white/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-              revealed && "opacity-100"
+              "max-h-0 overflow-hidden transition-[max-height] duration-300 group-hover:max-h-40",
+              revealed && "max-h-40"
             )}
           >
-            {description}
-          </p>
-          <span
-            className={cn(
-              "mt-4 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-              revealed && "opacity-100"
-            )}
-          >
-            {ctaLabel}
-          </span>
+            <p
+              className={cn(
+                "mx-auto mt-4 line-clamp-2 max-w-md text-sm leading-relaxed text-white/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                revealed && "opacity-100"
+              )}
+            >
+              {description}
+            </p>
+            <span
+              className={cn(
+                "mt-4 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                revealed && "opacity-100"
+              )}
+            >
+              {ctaLabel}
+            </span>
+          </div>
         </div>
       </div>
     </>

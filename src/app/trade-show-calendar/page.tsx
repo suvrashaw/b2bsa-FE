@@ -13,7 +13,9 @@ import {
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/trade-show-calendar";
 
-const TRADE_SHOW_CALENDAR_HERO_IMAGES = ["/images/blog/thumbnails/trade-show-booth-trends-2026.avif"];
+const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
+  "/images/blog/thumbnails/trade-show-booth-trends-2026.avif",
+];
 
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
 

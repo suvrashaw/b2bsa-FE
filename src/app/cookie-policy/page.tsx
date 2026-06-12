@@ -47,10 +47,7 @@ const Page = () => {
                 className="rounded-2xl border border-gray-100 bg-brand-gray/40 p-8"
                 key={section.title}
               >
-                <Heading
-                  as="h2"
-                  className="mb-4 text-2xl lg:text-3xl"
-                >
+                <Heading as="h2" className="mb-4 text-2xl lg:text-3xl">
                   {section.title}
                 </Heading>
                 <p className="leading-relaxed text-gray-600">{section.body}</p>

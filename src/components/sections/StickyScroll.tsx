@@ -7,7 +7,6 @@ import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home";
 
@@ -55,7 +54,6 @@ const IMAGE_SCALE_TRANSITION = { damping: 25, mass: 1, stiffness: 60, type: "spr
 
 export const StickyScroll = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
-  eyebrow = content.eyebrow,
   heading = content.heading,
   reasons = content.reasons,
   showImagePanel = true,
@@ -106,7 +104,6 @@ export const StickyScroll = ({
         <div
           className={`flex h-screen flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
-          {eyebrow && <Eyebrow variant="neutral">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="mb-14 w-full text-left">
             {heading}
           </Heading>
@@ -136,7 +133,7 @@ export const StickyScroll = ({
 
           {/* Mobile: active reason image */}
           {showImagePanel && activeReason && (
-            <div className="mt-6 md:hidden relative aspect-square w-full max-w-sm overflow-hidden rounded-3xl border border-gray-200 shadow-xl">
+            <div className="relative mt-6 aspect-square w-full max-w-sm overflow-hidden rounded-3xl border border-gray-200 shadow-xl md:hidden">
               <Image
                 alt={activeReason.title}
                 className="object-cover"

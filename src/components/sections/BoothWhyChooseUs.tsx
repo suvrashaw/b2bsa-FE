@@ -11,7 +11,7 @@ import { Heading } from "@/components/ui/Heading";
 export interface BoothWhyChooseUsProps {
   heading: string;
   items: BoothWhyChooseUsItem[];
-  layout?: "grid" | "carousel";
+  layout?: "carousel" | "grid";
   showCta?: boolean;
   showUnderline?: boolean;
 }
@@ -33,7 +33,7 @@ const ctaVariants = {
 const viewport = { once: true } as const;
 
 const getSlidesPerView = (): number => {
-  if (typeof window === "undefined") return 3;
+  if (globalThis.window === undefined) return 3;
   if (window.innerWidth < 768) return 1;
   if (window.innerWidth < 1024) return 2;
   return 3;
@@ -111,8 +111,11 @@ export const BoothWhyChooseUs = ({
       : `calc((100% - ${GAP * (slidesPerView - 1)}px) / ${slidesPerView})`;
   const carouselCardStyle = useMemo<React.CSSProperties>(() => ({ width: cardWidth }), [cardWidth]);
 
+  const handlePrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
+  const handleNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
+
   return (
-    <section className="bg-brand-gray py-20 overflow-hidden" id="why-choose-us">
+    <section className="overflow-hidden bg-brand-gray py-20" id="why-choose-us">
       <div className="container mx-auto px-8">
         <motion.div
           className="mx-auto max-w-5xl text-center"
@@ -156,7 +159,11 @@ export const BoothWhyChooseUs = ({
             ))}
           </div>
         ) : (
-          <div className="mt-16 relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div
+            className="relative mt-16"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <div
               className="overflow-visible"
               onPointerDown={handlePointerDown}
@@ -172,10 +179,10 @@ export const BoothWhyChooseUs = ({
                 {items.map((item, index) => (
                   <BoothWhyCard
                     className="shrink-0"
-                    style={carouselCardStyle}
                     index={index}
                     item={item}
                     key={item.title}
+                    style={carouselCardStyle}
                   />
                 ))}
               </motion.div>
@@ -185,14 +192,14 @@ export const BoothWhyChooseUs = ({
               <button
                 aria-label="Previous slide"
                 className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-                onClick={() => goTo(activeIndex - 1)}
+                onClick={handlePrev}
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 aria-label="Next slide"
                 className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
-                onClick={() => goTo(activeIndex + 1)}
+                onClick={handleNext}
               >
                 <ChevronRight className="h-6 w-6" />
               </button>

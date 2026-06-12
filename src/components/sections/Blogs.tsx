@@ -7,7 +7,6 @@ import { useCallback, useRef, useState } from "react";
 
 import { BlogCard, BlogCardGrid } from "@/components/items/BlogCard";
 import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home";
 
@@ -28,7 +27,6 @@ export const Blogs = ({
   content = HOME_BLOGS_CONTENT,
   blogs = content.blogs,
   ctaLabel = content.ctaLabel,
-  eyebrow = content.eyebrow,
   heading = content.heading,
   layout = "deck",
   viewAllHref = "/blogs",
@@ -51,10 +49,7 @@ export const Blogs = ({
     <section className="relative overflow-hidden bg-brand-gray py-20" id="blogs" ref={containerRef}>
       <div className="container mx-auto px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
-          {eyebrow ? <Eyebrow variant="primary">{eyebrow}</Eyebrow> : null}
-          <Heading as="h2">
-            {heading}
-          </Heading>
+          <Heading as="h2">{heading}</Heading>
         </div>
 
         {layout === "grid" ? (

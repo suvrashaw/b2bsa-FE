@@ -46,12 +46,8 @@ const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
         "text-white"
       )}
     >
-      <span className="font-heading text-3xl font-bold md:text-4xl">
-        {item.value}
-      </span>
-      <span className="text-xs font-bold tracking-widest uppercase opacity-80">
-        {item.label}
-      </span>
+      <span className="font-heading text-3xl font-bold md:text-4xl">{item.value}</span>
+      <span className="text-xs font-bold tracking-widest uppercase opacity-80">{item.label}</span>
     </div>
   );
 };
@@ -75,6 +71,7 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry?.isIntersecting ?? false),
       {

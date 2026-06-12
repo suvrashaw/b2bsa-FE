@@ -12,7 +12,6 @@ import {
   getFallbackImage,
 } from "@/components/items/EventsCard";
 import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 import { type EventsContent, HOME_EVENTS_CONTENT } from "@/content/home";
 import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/trade-show-calendar";
@@ -111,7 +110,6 @@ export const Events = ({
   ctaLabel,
   description = content.description,
   events,
-  eyebrow = content.eyebrow,
   heading = content.heading,
   viewAllHref = "/trade-show-calendar",
   viewAllLabel = content.viewAllLabel,
@@ -134,7 +132,6 @@ export const Events = ({
     <section className="relative bg-brand-gray pt-20 pb-4" id="events">
       <div className="container mx-auto px-8">
         <div className="mb-16 flex flex-col items-center text-center">
-          {eyebrow && <Eyebrow variant="cyan">{eyebrow}</Eyebrow>}
           <Heading as="h2" className="text-center">
             {heading}
           </Heading>
