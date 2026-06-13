@@ -6,7 +6,7 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
-import { CardSection } from "@/components/sections/CardSection";
+import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
@@ -32,7 +32,7 @@ const Page = () => {
         title="Blogs and Articles"
         variant="compact"
       />
-      <CardSection
+      <Carousel
         autoplayInterval={4000}
         heading={BLOG_SERVICE_CAROUSEL.heading}
         id="why-choose-us"
@@ -41,7 +41,7 @@ const Page = () => {
         {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
-      </CardSection>
+      </Carousel>
       <Suspense>
         <BlogsDirectory blogs={BLOG_POSTS.blogs} />
       </Suspense>

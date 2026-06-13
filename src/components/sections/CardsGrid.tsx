@@ -14,7 +14,7 @@ const FLEX_WIDTHS: Record<ColsValue, string> = {
   4: "w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]",
 };
 
-export interface GridSectionProps {
+export interface CardsGridProps {
   children: ReactNode;
   className?: string;
   cols?: ColsValue;
@@ -28,7 +28,7 @@ export interface GridSectionProps {
   id?: string;
 }
 
-export const GridSection = ({
+export const CardsGrid = ({
   children,
   className,
   cols = 3,
@@ -40,7 +40,7 @@ export const GridSection = ({
   headingAction,
   headingAlign = "center",
   id,
-}: GridSectionProps) => {
+}: CardsGridProps) => {
   const flexWidthClass = FLEX_WIDTHS[cols];
 
   return (

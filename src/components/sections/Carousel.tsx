@@ -17,7 +17,7 @@ const CAROUSEL_WIDTHS: Record<ColsValue, string> = {
   4: "w-[85%] sm:w-[72%] md:w-[46%] lg:w-[calc(25%-15px)]",
 };
 
-export interface CardSectionProps {
+export interface CarouselProps {
   autoplayInterval?: number;
   children: ReactNode;
   className?: string;
@@ -32,7 +32,7 @@ export interface CardSectionProps {
   layout?: "carousel" | "grid";
 }
 
-export const CardSection = ({
+export const Carousel = ({
   autoplayInterval,
   children,
   className,
@@ -44,7 +44,7 @@ export const CardSection = ({
   headingAction,
   headingAlign = "center",
   id,
-}: CardSectionProps) => {
+}: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const pointerStartX = useRef(0);
   const [isPaused, setIsPaused] = useState(false);

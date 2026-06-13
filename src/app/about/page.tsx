@@ -7,7 +7,7 @@ import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { GridSection } from "@/components/sections/GridSection";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -78,7 +78,7 @@ const Page = () => {
         heading={ABOUT_SIGNATURE_SERVICES.heading}
         services={ABOUT_SIGNATURE_SERVICES_STACK}
       />
-      <GridSection
+      <CardsGrid
         cols={3}
         description={ABOUT_RECENT_EVENTS.description}
         heading={ABOUT_RECENT_EVENTS.heading}
@@ -94,7 +94,7 @@ const Page = () => {
             key={event.id}
           />
         ))}
-      </GridSection>
+      </CardsGrid>
       <Spotlight
         align="left"
         className="[&>div:first-child]:md:order-last"

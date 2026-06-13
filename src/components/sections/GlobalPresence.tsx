@@ -61,6 +61,8 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
   const leftAnimate = isInView ? LEFT_ANIMATE_IN : ANIMATE_EMPTY;
   const rightAnimate = isInView ? RIGHT_ANIMATE_IN : ANIMATE_EMPTY;
 
+  const validCities = data.cities.filter((c) => c.lat != null && c.lng != null);
+
   return (
     <section
       className="relative overflow-hidden bg-brand-gray py-12 transition-colors duration-500"
@@ -95,14 +97,14 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
               backgroundColor="rgba(0,0,0,0)"
               globeImageUrl="/images/globe-earth-night.jpg"
               htmlElement={getHtmlElement}
-              htmlElementsData={data.cities}
+              htmlElementsData={validCities}
               onGlobeReady={handleGlobeReady}
               pointAltitude="size"
               pointColor="color"
               pointLat="lat"
               pointLng="lng"
               pointRadius={0.5}
-              pointsData={data.cities}
+              pointsData={validCities}
               pointsMerge={true}
               ref={globeRef}
             />

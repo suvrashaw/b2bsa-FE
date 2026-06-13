@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardSection } from "@/components/sections/CardSection";
-import { GridSection } from "@/components/sections/GridSection";
+import { Carousel } from "@/components/sections/Carousel";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -38,12 +38,12 @@ const Page = () => {
       contactUs={EVENT_LOGISTICS_CONTACT_CTA}
       customSections={
         <>
-          <GridSection cols={4} heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid cols={4} heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading} id="why-choose-us">
             {EVENT_LOGISTICS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </GridSection>
-          <CardSection
+          </CardsGrid>
+          <Carousel
             cols={4}
             heading={EVENT_LOGISTICS_BLOGS_SECTION.heading}
             headingAction={
@@ -58,7 +58,7 @@ const Page = () => {
             {RENTAL_BLOG_POSTS.map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
-          </CardSection>
+          </Carousel>
         </>
       }
       faq={EVENT_LOGISTICS_FAQ}

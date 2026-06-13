@@ -8,7 +8,7 @@
     "eyebrow": "100 sq ft",
     "heading": "10x10 Booth",
     "id": "showcase-10x10",
-    "image": "/images/booth/10x10.jpg"
+    "image": "/images/booth/10x10.avif"
   },
   {
     "cta": {
@@ -19,7 +19,7 @@
     "eyebrow": "200 sq ft",
     "heading": "10x20 Inline",
     "id": "showcase-10x20",
-    "image": "/images/booth/10x20.jpg"
+    "image": "/images/booth/10x20.avif"
   },
   {
     "cta": {
@@ -30,7 +30,7 @@
     "eyebrow": "400 sq ft",
     "heading": "20x20 Island",
     "id": "showcase-20x20",
-    "image": "/images/booth/20x20.jpg"
+    "image": "/images/booth/20x20.avif"
   },
   {
     "cta": {
@@ -52,6 +52,6 @@
     "eyebrow": "Bespoke",
     "heading": "Custom Environments",
     "id": "showcase-custom",
-    "image": "/images/booth/40x40.jpg"
+    "image": "/images/booth/40x40.avif"
   }
 ]

@@ -9,7 +9,8 @@ import { Header } from "@/components/layout/Header";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import { RelatedServices } from "@/components/sections/RelatedServices";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -67,7 +68,13 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       </section>
 
       {/* Services Delivered */}
-      <RelatedServices services={serviceLinks} title="Services Delivered" />
+      {serviceLinks.length > 0 && (
+        <CardsGrid cols={3} heading="Services Delivered">
+          {serviceLinks.map((service, index) => (
+            <ServicesLinkCard index={index} key={service.href} service={service} />
+          ))}
+        </CardsGrid>
+      )}
 
       {/* Client Requirements — dark editorial section, centered */}
       <section className="relative overflow-hidden bg-[#111518] py-24 text-white">

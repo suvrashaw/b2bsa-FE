@@ -20,7 +20,7 @@ import { BlogCategories } from "@/components/sections/BlogCategories";
 import { BlogDeckLayout } from "@/components/sections/BlogDeckLayout";
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
-import { CardSection } from "@/components/sections/CardSection";
+import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -32,11 +32,10 @@ import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { GridSection } from "@/components/sections/GridSection";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { HorizontalScrollTrack } from "@/components/sections/HorizontalScrollTrack";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { RotatingWordBadge } from "@/components/sections/RotatingWordBadge";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -63,8 +62,8 @@ import {
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
-const IMG_WAF = "/images/case-studies/waf.avif";
-const IMG_SIBOS = "/images/case-studies/sibos.avif";
+const IMG_WAF = "/images/case-studies/cs-new-2.avif";
+const IMG_SIBOS = "/images/case-studies/cs-new-1.avif";
 const IMG_SAP = "/images/case-studies/cs-10.avif";
 const IMG_DISTRIBUTECH = "/images/case-studies/cs-9.avif";
 const IMG_MONEY = "/images/case-studies/cs-new-1.avif";
@@ -140,14 +139,6 @@ const PROOF_STATS = [
   "40+ Countries",
 ];
 
-// ─── RelatedServices ────────────────────────────────────────────────────────
-
-const RELATED_SERVICES = [
-  { href: "/services", title: "Active Prospecting" },
-  { href: "/services", title: "Booth Design & Production" },
-  { href: "/services", title: "Meeting Coordination" },
-  { href: "/services", title: "Media Production" },
-];
 
 // ─── CorporateVideoIndustriesSection ────────────────────────────────────────
 
@@ -545,11 +536,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   HorizontalScrollTrack: [],
   LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [{ href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" }],
-  RelatedServices: [
-    { href: "/case-studies/waf-2025", label: "Case Study" },
-    { href: "/services/market-research/data-augmentation", label: "Data Augmentation" },
-    { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
-  ],
   RentVsBuySection: [
     { href: "/services/booth-services/event-booth-rental", label: "Event Booth Rental" },
   ],
@@ -612,7 +598,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   HorizontalScrollTrack: { items: [], ui: [] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
-  RelatedServices: { items: ["RelatedServicesCard"], ui: ["Heading"] },
   RentVsBuySection: { items: [], ui: ["Heading"] },
   RotatingWordBadge: { items: [], ui: [] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
@@ -700,6 +685,16 @@ const DemoLabel = ({ name }: { name: string }) => {
   );
 };
 
+const ROTATING_BADGE_WORDS = ["Experiences", "Pipeline", "Booths", "Relationships"];
+
+const STATS_MARQUEE_ITEMS = [
+  { key: "1", label: "Countries", value: "40+" },
+  { key: "2", label: "Events", value: "250+" },
+  { key: "3", label: "Pipeline", value: "$1.2B" },
+  { key: "4", label: "Retention", value: "98%" },
+  { key: "5", label: "ROI", value: "3x" },
+];
+
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 const DemoPage = () => {
@@ -751,8 +746,12 @@ const DemoPage = () => {
 
       {/* 04b - RotatingWordBadge */}
       <DemoLabel name="RotatingWordBadge" />
-      <div className="flex justify-center py-20 bg-brand-charcoal text-white text-4xl font-heading">
-        We build <RotatingWordBadge className="text-brand-cyan ml-3 inline-block" words={["Experiences", "Pipeline", "Booths", "Relationships"]} />
+      <div className="flex justify-center bg-brand-charcoal py-20 font-heading text-4xl text-white">
+        We build{" "}
+        <RotatingWordBadge
+          className="ml-3 inline-block text-brand-cyan"
+          words={ROTATING_BADGE_WORDS}
+        />
       </div>
 
       {/* 05 – CinematicSequence */}
@@ -775,15 +774,7 @@ const DemoPage = () => {
       {/* 06b - StatsMarquee */}
       <DemoLabel name="StatsMarquee" />
       <div className="bg-brand-gray py-12">
-        <StatsMarquee
-          items={[
-            { key: "1", label: "Countries", value: "40+" },
-            { key: "2", label: "Events", value: "250+" },
-            { key: "3", label: "Pipeline", value: "$1.2B" },
-            { key: "4", label: "Retention", value: "98%" },
-            { key: "5", label: "ROI", value: "3x" },
-          ]}
-        />
+        <StatsMarquee items={STATS_MARQUEE_ITEMS} />
       </div>
 
       {/* 07 – HomeStats */}
@@ -811,14 +802,10 @@ const DemoPage = () => {
         heading="How We Drive Results"
       />
 
-      {/* 16 – RelatedServices */}
-      <DemoLabel name="RelatedServices" />
-      <RelatedServices services={RELATED_SERVICES} title="Services Delivered" />
-
       {/* 16b - HorizontalScrollTrack */}
       <DemoLabel name="HorizontalScrollTrack" />
       <HorizontalScrollTrack>
-        <div className="flex h-[80vh] w-[200vw] items-center justify-around bg-brand-charcoal px-20 text-white text-5xl md:text-7xl font-black">
+        <div className="flex h-[80vh] w-[200vw] items-center justify-around bg-brand-charcoal px-20 text-5xl font-black text-white md:text-7xl">
           <span>Scroll</span>
           <span className="text-brand-cyan">To</span>
           <span>Reveal</span>
@@ -831,23 +818,23 @@ const DemoPage = () => {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <GridSection cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us">
+      <CardsGrid cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us">
         {BOOTH_WHY_ITEMS.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
-      </GridSection>
+      </CardsGrid>
 
       {/* 19 – CardsSection */}
       <DemoLabel name="CardsSection" />
-      <GridSection heading="Future-Ready Stands">
+      <CardsGrid heading="Future-Ready Stands">
         {BASIC_CARD_ITEMS.map((item) => (
           <BasicCards item={item} key={item.title} />
         ))}
-      </GridSection>
+      </CardsGrid>
 
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
-      <CardSection cols={4} heading="Active Prospecting & Events" layout="carousel">
+      <Carousel cols={4} heading="Active Prospecting & Events" layout="carousel">
         {_SERVICE_CAROUSEL_ITEMS.map((item) => (
           <ServicesCard
             ctaLabel="Get Started"
@@ -856,7 +843,7 @@ const DemoPage = () => {
             service={{ ...item, icon: "ArrowRight" } as any}
           />
         ))}
-      </CardSection>
+      </Carousel>
 
       {/* 21 – CorporateVideoIndustriesSection */}
       <DemoLabel name="CorporateVideoIndustriesSection" />
@@ -868,7 +855,7 @@ const DemoPage = () => {
 
       {/* 22 – CorporateVideoPortfolioSection */}
       <DemoLabel name="CorporateVideoPortfolioSection" />
-      <GridSection
+      <CardsGrid
         className="bg-[#111111] text-white"
         heading={
           <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
@@ -880,7 +867,7 @@ const DemoPage = () => {
         {CORP_VIDEO_PORTFOLIO_ITEMS.map((item) => (
           <CorporateVideoCard item={item} key={item.title} />
         ))}
-      </GridSection>
+      </CardsGrid>
 
       {/* 23 – Timeline */}
       <DemoLabel name="Timeline" />
@@ -909,7 +896,7 @@ const DemoPage = () => {
 
       {/* 27 – Events */}
       <DemoLabel name="Events" />
-      <GridSection
+      <CardsGrid
         cols={3}
         description={HOME_EVENTS_CONTENT.description}
         heading={HOME_EVENTS_CONTENT.heading}
@@ -924,7 +911,7 @@ const DemoPage = () => {
             key={event.id}
           />
         ))}
-      </GridSection>
+      </CardsGrid>
 
       {/* 28 – TradeShowCalendarDirectory */}
       <DemoLabel name="TradeShowCalendarDirectory" />
@@ -952,7 +939,7 @@ const DemoPage = () => {
 
       {/* 31 – BlogsCarousel */}
       <DemoLabel name="BlogsCarousel" />
-      <CardSection
+      <Carousel
         cols={4}
         heading="From the Blog"
         headingAction={
@@ -967,11 +954,11 @@ const DemoPage = () => {
         {DEMO_BLOG_POSTS.map((post) => (
           <BlogsCarouselCard key={post.id} post={post} />
         ))}
-      </CardSection>
+      </Carousel>
 
       {/* 32 – Pricing */}
       <DemoLabel name="Pricing" />
-      <CardSection
+      <Carousel
         cols={3}
         description="High-end post-production packages tailored to B2B teams"
         heading="Creative Video Editing Pricing"
@@ -981,11 +968,11 @@ const DemoPage = () => {
         {DEMO_PRICING_TIERS.map((tier) => (
           <PricingCard key={tier.name} tier={tier} />
         ))}
-      </CardSection>
+      </Carousel>
 
       {/* 33 – FAQ */}
       <DemoLabel name="FAQ" />
-      <CardSection
+      <Carousel
         description={HOME_FAQ_CONTENT.description}
         heading={HOME_FAQ_CONTENT.heading}
         id="faq-demo"
@@ -994,7 +981,7 @@ const DemoPage = () => {
         {HOME_FAQ_CONTENT.faqs.map((f) => (
           <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
         ))}
-      </CardSection>
+      </Carousel>
 
       {/* 34 – FAQAccordion */}
       <DemoLabel name="FAQAccordion" />
@@ -1029,7 +1016,7 @@ const DemoPage = () => {
 
       {/* 39 – LinkedInFeed */}
       <DemoLabel name="LinkedInFeed" />
-      <CardSection
+      <Carousel
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
         heading="Follow Our Latest Event Executions on LinkedIn"
         layout="carousel"
@@ -1037,7 +1024,7 @@ const DemoPage = () => {
         {LINKEDIN_POSTS.map((post, i) => (
           <LinkedInCard index={i} key={post.id} post={post} />
         ))}
-      </CardSection>
+      </Carousel>
     </main>
   );
 };

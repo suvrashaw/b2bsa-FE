@@ -18,13 +18,7 @@ import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Pagination } from "@/components/ui/Pagination";
 import { BLOG_CATEGORIES } from "@/content/blogs/content";
 import { cn } from "@/lib";
-import {
-  clampPaginationPage,
-  DEFAULT_PAGE_SIZE,
-  getPaginationItems,
-  getPaginationPageCount,
-  parsePaginationPage,
-} from "@/lib/pagination";
+import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
 interface BlogsDirectoryProps {
   blogs: SharedBlogPost[];
@@ -117,9 +111,7 @@ export const BlogsDirectory = ({ blogs }: BlogsDirectoryProps) => {
     return blogs.filter((blog) => blog.category === activeCategoryName);
   }, [activeCategory, activeCategoryName, blogs]);
 
-  const totalPages = getPaginationPageCount(filteredBlogs.length, DEFAULT_PAGE_SIZE);
-  const currentPage = clampPaginationPage(requestedPage, totalPages);
-  const paginatedBlogs = getPaginationItems(filteredBlogs, currentPage, DEFAULT_PAGE_SIZE);
+  const { totalPages, currentPage, paginatedItems: paginatedBlogs } = applyPagination(filteredBlogs, requestedPage);
   const hasEmptyPage = filteredBlogs.length > 0 && paginatedBlogs.length === 0;
   let blogsContent: ReactNode;
 

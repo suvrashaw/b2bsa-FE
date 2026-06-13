@@ -12,13 +12,7 @@ import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
 import { cn, siteUrl } from "@/lib";
-import {
-  clampPaginationPage,
-  DEFAULT_PAGE_SIZE,
-  getPaginationItems,
-  getPaginationPageCount,
-  parsePaginationPage,
-} from "@/lib/pagination";
+import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
 const VIEW_MODES = [
   { icon: Grid2X2, label: "Cards", value: "cards" },
@@ -474,9 +468,7 @@ export const TradeShowCalendarDirectory = ({
     today,
   ]);
 
-  const totalPages = getPaginationPageCount(filteredEvents.length, DEFAULT_PAGE_SIZE);
-  const currentPage = clampPaginationPage(requestedPage, totalPages);
-  const paginatedEvents = getPaginationItems(filteredEvents, currentPage, DEFAULT_PAGE_SIZE);
+  const { totalPages, currentPage, paginatedItems: paginatedEvents } = applyPagination(filteredEvents, requestedPage);
   const hasEmptyPage = filteredEvents.length > 0 && paginatedEvents.length === 0;
   let resultsContent: ReactNode;
 

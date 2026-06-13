@@ -14,14 +14,15 @@ import { FAQCard } from "@/components/items/FAQCard";
 import { PricingCard } from "@/components/items/PricingCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CardSection } from "@/components/sections/CardSection";
+import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { Hero } from "@/components/sections/Hero";
-import { RelatedServices } from "@/components/sections/RelatedServices";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
@@ -207,7 +208,7 @@ export const ServicePage = ({
       {secondaryServices && renderServicesSection(secondaryServices, secondaryServicesSectionType)}
 
       {creativePricing && (
-        <CardSection
+        <Carousel
           cols={3}
           description={creativePricing.description}
           heading={creativePricing.title}
@@ -216,7 +217,7 @@ export const ServicePage = ({
           {(creativePricing.tiers ?? []).map((tier) => (
             <PricingCard key={tier.name} tier={tier} />
           ))}
-        </CardSection>
+        </Carousel>
       )}
 
       {caseStudies && <CaseStudies {...caseStudies} />}
@@ -226,7 +227,7 @@ export const ServicePage = ({
       {faqVariant === "accordion" ? (
         <FAQAccordion {...faq} />
       ) : (
-        <CardSection
+        <Carousel
           description={faq.description ?? faq.content?.description}
           heading={faq.heading ?? faq.content?.heading}
           id="faq"
@@ -235,10 +236,16 @@ export const ServicePage = ({
           {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
             <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
           ))}
-        </CardSection>
+        </Carousel>
       )}
 
-      {relatedServices && <RelatedServices services={relatedServices} />}
+      {relatedServices && relatedServices.length > 0 && (
+        <CardsGrid cols={3} heading="Explore Related Solutions">
+          {relatedServices.map((service, index) => (
+            <ServicesLinkCard index={index} key={service.href} service={service} />
+          ))}
+        </CardsGrid>
+      )}
 
       <ContactUs {...contactUs} />
 

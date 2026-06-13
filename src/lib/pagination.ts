@@ -25,6 +25,17 @@ export const getPaginationItems = <T>(
   return items.slice(startIndex, startIndex + pageSize);
 };
 
+export const applyPagination = <T>(
+  items: readonly T[],
+  requestedPage: number,
+  pageSize = DEFAULT_PAGE_SIZE
+) => {
+  const totalPages = getPaginationPageCount(items.length, pageSize);
+  const currentPage = clampPaginationPage(requestedPage, totalPages);
+  const paginatedItems = getPaginationItems(items, currentPage, pageSize);
+  return { currentPage, paginatedItems, totalPages };
+};
+
 export const parsePaginationPage = (value: null | string) => {
   const parsedPage = Number(value);
   return Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;

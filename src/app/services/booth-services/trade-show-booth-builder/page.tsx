@@ -5,8 +5,8 @@ import Link from "next/link";
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardSection } from "@/components/sections/CardSection";
-import { GridSection } from "@/components/sections/GridSection";
+import { Carousel } from "@/components/sections/Carousel";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -48,12 +48,12 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <GridSection cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </GridSection>
-          <CardSection
+          </CardsGrid>
+          <Carousel
             cols={4}
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
             headingAction={
@@ -68,7 +68,7 @@ const Page = () => {
             {BOOTH_BUILDER_BLOG_POSTS.map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
-          </CardSection>
+          </Carousel>
         </>
       }
       faq={BOOTH_BUILDER_FAQ}
@@ -88,11 +88,11 @@ const Page = () => {
             }))}
             showImagePanel
           />
-          <GridSection heading={BOOTH_BUILDER_FUTURE_READY.heading}>
+          <CardsGrid heading={BOOTH_BUILDER_FUTURE_READY.heading}>
             {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
               <BasicCards item={item} key={item.title} />
             ))}
-          </GridSection>
+          </CardsGrid>
         </>
       }
       process={BOOTH_BUILDER_PROCESS}

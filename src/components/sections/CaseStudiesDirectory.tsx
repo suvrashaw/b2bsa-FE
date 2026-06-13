@@ -8,12 +8,7 @@ import type { CaseStudyIndexEntry } from "@/content/case-studies/content";
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
-import {
-  clampPaginationPage,
-  DEFAULT_PAGE_SIZE,
-  getPaginationItems,
-  getPaginationPageCount,
-} from "@/lib/pagination";
+import { applyPagination } from "@/lib/pagination";
 
 const DEFAULT_GRID_SPANS = [
   "md:col-span-1 lg:col-span-3",
@@ -135,9 +130,7 @@ export const CaseStudiesDirectory = ({
   page,
   studies,
 }: CaseStudiesDirectoryProps) => {
-  const totalPages = getPaginationPageCount(studies.length, DEFAULT_PAGE_SIZE);
-  const currentPage = clampPaginationPage(page, totalPages);
-  const paginatedStudies = getPaginationItems(studies, currentPage, DEFAULT_PAGE_SIZE);
+  const { totalPages, currentPage, paginatedItems: paginatedStudies } = applyPagination(studies, page);
   const hasEmptyPage = studies.length > 0 && paginatedStudies.length === 0;
   let gridContent: ReactNode;
 

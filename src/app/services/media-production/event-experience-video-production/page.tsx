@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardSection } from "@/components/sections/CardSection";
-import { GridSection } from "@/components/sections/GridSection";
+import { Carousel } from "@/components/sections/Carousel";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -36,7 +36,7 @@ const Page = () => {
       contactUs={EVENT_EXPERIENCE_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <GridSection
+          <CardsGrid
             cols={4}
             heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading}
             id="why-choose-us"
@@ -44,8 +44,8 @@ const Page = () => {
             {EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </GridSection>
-          <CardSection
+          </CardsGrid>
+          <Carousel
             cols={4}
             heading={EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION.heading}
             headingAction={
@@ -60,7 +60,7 @@ const Page = () => {
             {RENTAL_BLOG_POSTS.map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
-          </CardSection>
+          </Carousel>
         </>
       }
       faq={EVENT_EXPERIENCE_VIDEO_FAQ}

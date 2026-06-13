@@ -9,7 +9,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CardSection } from "@/components/sections/CardSection";
+import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -372,7 +372,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         secondaryCta={CTA_SECONDARY}
       />
 
-      <CardSection
+      <Carousel
         cols={4}
         heading="Related Articles"
         headingAction={
@@ -387,9 +387,9 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         {SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((post) => (
           <BlogsCarouselCard key={post.id} post={post} />
         ))}
-      </CardSection>
+      </Carousel>
 
-      <CardSection
+      <Carousel
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
         heading="Follow Our Latest Event Executions on LinkedIn"
         layout="carousel"
@@ -397,7 +397,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         {LINKEDIN_POSTS.map((post, i) => (
           <LinkedInCard index={i} key={post.id} post={post} />
         ))}
-      </CardSection>
+      </Carousel>
 
       <Footer />
     </main>

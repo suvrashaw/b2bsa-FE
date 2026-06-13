@@ -5,9 +5,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardSection } from "@/components/sections/CardSection";
-import { GridSection } from "@/components/sections/GridSection";
-import { RelatedServices } from "@/components/sections/RelatedServices";
+import { Carousel } from "@/components/sections/Carousel";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -74,8 +74,12 @@ const Page = () => {
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
-          <RelatedServices services={BOOTH_RENTAL_RELATED_SERVICES} />
-          <GridSection
+          <CardsGrid cols={3} heading="Explore Related Solutions">
+            {BOOTH_RENTAL_RELATED_SERVICES.map((service, index) => (
+              <ServicesLinkCard index={index} key={service.href} service={service} />
+            ))}
+          </CardsGrid>
+          <CardsGrid
             cols={4}
             heading="Why Choose B2B Sales Arrow for Booth Rental?"
             id="why-choose-us"
@@ -83,8 +87,8 @@ const Page = () => {
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </GridSection>
-          <CardSection
+          </CardsGrid>
+          <Carousel
             cols={4}
             heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
             headingAction={
@@ -99,7 +103,7 @@ const Page = () => {
             {RENTAL_BLOG_POSTS.map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
-          </CardSection>
+          </Carousel>
         </>
       }
       faq={BOOTH_RENTAL_FAQ}
@@ -109,7 +113,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <GridSection
+          <CardsGrid
             cols={3}
             description={BOOTH_RENTAL_RENT_VS_BUY.description}
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
@@ -132,7 +136,7 @@ const Page = () => {
                 </p>
               </div>
             ))}
-          </GridSection>
+          </CardsGrid>
           <StickyScroll
             heading="Our Rental Booth Range"
             reasons={BOOTH_RENTAL_RANGE_REASONS}

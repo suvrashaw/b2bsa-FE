@@ -7,11 +7,11 @@ import { FAQCard } from "@/components/items/FAQCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Blogs } from "@/components/sections/Blogs";
-import { CardSection } from "@/components/sections/CardSection";
+import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { GridSection } from "@/components/sections/GridSection";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -60,7 +60,7 @@ const Home = () => {
         <CaseStudies items={GLOBAL_CASE_STUDIES} viewAllLabel="View All Case Studies" />
       </div>
 
-      <GridSection
+      <CardsGrid
         cols={3}
         cta={
           HOME_EVENTS_CONTENT.viewAllLabel ? (
@@ -82,7 +82,7 @@ const Home = () => {
             key={event.id}
           />
         ))}
-      </GridSection>
+      </CardsGrid>
 
       <StickyScroll />
 
@@ -92,7 +92,7 @@ const Home = () => {
         <Blogs />
       </div>
 
-      <CardSection
+      <Carousel
         description={HOME_FAQ_CONTENT.description}
         heading={HOME_FAQ_CONTENT.heading}
         id="faq"
@@ -101,7 +101,7 @@ const Home = () => {
         {HOME_FAQ_CONTENT.faqs.map((f) => (
           <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
         ))}
-      </CardSection>
+      </Carousel>
 
       <div id="contact">
         <ContactUsForm />

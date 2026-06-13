@@ -14,7 +14,7 @@ import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
 
-const CINEMATIC_BG = { alt: "Contact", src: "/images/case-studies/waf.avif" } as const;
+const CINEMATIC_BG = { alt: "Contact", src: "/images/case-studies/cs-new-2.avif" } as const;
 const CINEMATIC_HEADING: [string, string] = [
   "One conversation can clarify",
   "your entire growth strategy.",
