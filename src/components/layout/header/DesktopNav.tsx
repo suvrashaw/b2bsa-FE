@@ -62,3 +62,4 @@ export const DesktopNavLink = memo(
     );
   }
 );
+DesktopNavLink.displayName = "DesktopNavLink";

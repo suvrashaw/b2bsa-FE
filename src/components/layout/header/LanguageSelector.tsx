@@ -68,3 +68,4 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
     </div>
   );
 });
+LanguageSelector.displayName = "LanguageSelector";

@@ -71,3 +71,4 @@ export const MegamenuServiceGroup = memo(
     );
   }
 );
+MegamenuServiceGroup.displayName = "MegamenuServiceGroup";

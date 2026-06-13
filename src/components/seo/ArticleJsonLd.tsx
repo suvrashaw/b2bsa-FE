@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 import { JsonLd } from "./JsonLd";
 
 export interface ArticleJsonLdProps {
@@ -23,7 +25,7 @@ export const ArticleJsonLd = ({
   publisherName = "B2B Sales Arrow",
   url,
 }: ArticleJsonLdProps) => {
-  const data = {
+  const data = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Article",
     author: {
@@ -49,7 +51,7 @@ export const ArticleJsonLd = ({
       name: publisherName,
     },
     url,
-  };
+  }), [authorName, dateModified, datePublished, description, headline, images, publisherLogo, publisherName, url]);
 
   return <JsonLd data={data} />;
 };

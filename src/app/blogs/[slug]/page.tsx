@@ -63,6 +63,8 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
   };
 };
 
+import { useMemo } from "react";
+
 const Page = async ({ params }: BlogPostPageProps) => {
   const { slug } = await params;
   const post = findPostBySlug(slug);
@@ -75,13 +77,16 @@ const Page = async ({ params }: BlogPostPageProps) => {
     notFound();
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const images = useMemo(() => [post.image], [post.image]);
+
   return (
     <>
       <ArticleJsonLd
         datePublished={post.date || new Date().toISOString()}
         description={post.excerpt || post.title}
         headline={post.title}
-        images={[post.image]}
+        images={images}
         url={`https://b2bsalesarrow.com/blogs/${post.id}`}
       />
       <BlogPage post={post} />

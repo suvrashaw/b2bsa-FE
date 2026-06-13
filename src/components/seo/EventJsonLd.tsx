@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 import { JsonLd } from "./JsonLd";
 
 export interface EventJsonLdProps {
@@ -23,7 +25,7 @@ export const EventJsonLd = ({
   startDate,
   url,
 }: EventJsonLdProps) => {
-  const data = {
+  const data = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Event",
     description,
@@ -43,7 +45,7 @@ export const EventJsonLd = ({
     name,
     startDate,
     url,
-  };
+  }), [description, endDate, image, locationCity, locationCountry, locationName, name, startDate, url]);
 
   return <JsonLd data={data} />;
 };

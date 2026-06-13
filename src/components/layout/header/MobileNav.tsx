@@ -192,3 +192,4 @@ export const MobileNavItem = memo(
     );
   }
 );
+MobileNavItem.displayName = "MobileNavItem";
