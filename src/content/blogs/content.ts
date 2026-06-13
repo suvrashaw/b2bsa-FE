@@ -62,5 +62,5 @@ export const BLOG_SERVICE_CAROUSEL = {
     .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };
 
-export {default as BLOG_CATEGORIES} from "./categories.json";
-export {default as BLOG_HERO} from "./hero.json";
+export { default as BLOG_CATEGORIES } from "./categories.json";
+export { default as BLOG_HERO } from "./hero.json";

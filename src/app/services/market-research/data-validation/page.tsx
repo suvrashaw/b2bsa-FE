@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   DATA_VALIDATION_CASE_STUDIES,
@@ -14,6 +13,7 @@ import {
   DATA_VALIDATION_PROCESS,
   DATA_VALIDATION_SPOTLIGHT,
 } from "@/content/services/market-research/data-validation/content";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
 

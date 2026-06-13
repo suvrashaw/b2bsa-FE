@@ -10,16 +10,10 @@ export const BOOTH_BUILDER_PROOF_BAR = {
   stats: GLOBAL_PROOF_STATS,
 };
 
-
-
 export const BOOTH_BUILDER_CASE_STUDIES = {
   ...BOOTHBUILDERCASESTUDIESDATA,
   items: GLOBAL_CASE_STUDIES,
 };
-
-
-
-
 
 import BOOTH_BUILDER_BLOG_IDS from "./blog-ids.json";
 
@@ -32,9 +26,9 @@ export const BOOTH_BUILDER_CONTACT_CTA = {
   ...BUILDERCONTACTCTA_DATA,
 };
 
-export {default as BOOTH_BUILDER_BLOGS_SECTION} from "./builder-blogs-section.json";
-export {default as BOOTH_BUILDER_FUTURE_READY} from "./builder-future-ready.json";
-export {default as BOOTH_BUILDER_RELATED_SERVICES} from "./builder-related-services.json";
+export { default as BOOTH_BUILDER_BLOGS_SECTION } from "./builder-blogs-section.json";
+export { default as BOOTH_BUILDER_FUTURE_READY } from "./builder-future-ready.json";
+export { default as BOOTH_BUILDER_RELATED_SERVICES } from "./builder-related-services.json";
 export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
 
 export { default as BOOTH_BUILDER_HERO } from "./hero.json";

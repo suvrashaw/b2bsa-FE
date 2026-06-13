@@ -6,7 +6,6 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -20,6 +19,7 @@ import {
   LIVE_STREAMING_WHY,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/live-streaming-services/content";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 

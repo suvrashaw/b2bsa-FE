@@ -14,12 +14,6 @@ export const EVENT_LOGISTICS_PROOF_BAR = {
   stats: GLOBAL_PROOF_STATS,
 };
 
-
-
-
-
-
-
 export const EVENT_LOGISTICS_CASE_STUDIES = {
   ...EVENTLOGISTICSCASESTUDIESDATA,
   items: GLOBAL_CASE_STUDIES,
@@ -30,21 +24,17 @@ export const EVENT_LOGISTICS_INDUSTRIES_SECTION = {
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
-
-
-
-
 export const EVENT_LOGISTICS_CONTACT_CTA = {
   ...LOGISTICSCONTACTCTA_DATA,
 };
 
 export { default as EVENT_LOGISTICS_FAQ } from "./faq.json";
 export { default as EVENT_LOGISTICS_IMAGE_HERO } from "./hero.json";
-export {default as EVENT_LOGISTICS_BLOGS_SECTION} from "./logistics-blogs-section.json";
-export {default as EVENT_LOGISTICS_CAPABILITIES} from "./logistics-capabilities.json";
+export { default as EVENT_LOGISTICS_BLOGS_SECTION } from "./logistics-blogs-section.json";
+export { default as EVENT_LOGISTICS_CAPABILITIES } from "./logistics-capabilities.json";
 
-export {default as EVENT_LOGISTICS_DELIVERABLES} from "./logistics-deliverables.json";
-export {default as EVENT_LOGISTICS_INTRO} from "./logistics-intro.json";
-export {default as EVENT_LOGISTICS_RELATED_SERVICES} from "./logistics-related-services.json";
+export { default as EVENT_LOGISTICS_DELIVERABLES } from "./logistics-deliverables.json";
+export { default as EVENT_LOGISTICS_INTRO } from "./logistics-intro.json";
+export { default as EVENT_LOGISTICS_RELATED_SERVICES } from "./logistics-related-services.json";
 export { default as EVENT_LOGISTICS_PAGE } from "./page.json";
 export { default as EVENT_LOGISTICS_WHY_CHOOSE_US } from "./why-choose-us.json";

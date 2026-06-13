@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MARKET_INTELLIGENCE_CARDS,
@@ -14,6 +13,7 @@ import {
   MARKET_INTELLIGENCE_PAGE,
   MARKET_INTELLIGENCE_SPOTLIGHT,
 } from "@/content/services/market-research/market-intelligence/content";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 

@@ -1,42 +1,25 @@
+import mediaProofLogos from "@/content/services/media-production/media-proof-logos.json";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 import EXPERIENCEVIDEOCONTACTCTA_DATA from "./experience-video-contact-cta.json";
 
-
-
-import mediaProofLogos from "../media-proof-logos.json";
-
-
-
-
-
-
-
-
-
 export const EVENT_EXPERIENCE_VIDEO_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES.slice(0, 5),
 };
-
-
-
-
-
-
 
 export const EVENT_EXPERIENCE_VIDEO_CONTACT_CTA = {
   ...EXPERIENCEVIDEOCONTACTCTA_DATA,
   proofLogos: mediaProofLogos,
 };
 
-export {default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION} from "./experience-video-blogs-section.json";
-export {default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES} from "./experience-video-capabilities.json";
-export {default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES} from "./experience-video-deliverables.json";
-export {default as EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION} from "./experience-video-event-types-section.json";
+export { default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION } from "./experience-video-blogs-section.json";
+export { default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES } from "./experience-video-capabilities.json";
+export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./experience-video-deliverables.json";
+export { default as EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION } from "./experience-video-event-types-section.json";
 
-export {default as EVENT_EXPERIENCE_VIDEO_INTRO} from "./experience-video-intro.json";
-export {default as EVENT_EXPERIENCE_VIDEO_PROOF_BAR} from "./experience-video-proof-bar.json";
-export {default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES} from "./experience-video-related-services.json";
+export { default as EVENT_EXPERIENCE_VIDEO_INTRO } from "./experience-video-intro.json";
+export { default as EVENT_EXPERIENCE_VIDEO_PROOF_BAR } from "./experience-video-proof-bar.json";
+export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./experience-video-related-services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_EXPERIENCE_VIDEO_PAGE } from "./page.json";

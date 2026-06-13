@@ -16,9 +16,9 @@ export interface MarketingPageDefinition {
 
 export type MarketingPageIdentity = Pick<MarketingPageDefinition, "pageName" | "seo">;
 
-type MarketingPageType = Exclude<PageType, "legal" | "system">;
+export type MarketingPageType = Exclude<PageType, "legal" | "system">;
 
-type PageType =
+export type PageType =
   | "company"
   | "contact"
   | "home"

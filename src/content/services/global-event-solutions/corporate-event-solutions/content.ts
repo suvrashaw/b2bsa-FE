@@ -3,14 +3,7 @@ import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES } from "@/content/shared"
 import EVENTCONTACTCTA_DATA from "./event-contact-cta.json";
 import EVENTINDUSTRIESSECTION_DATA from "./event-industries-section.json";
 
-
-export {default as CORP_EVENT_BLOGS_SECTION} from "./event-blogs-section.json";
-
-
-
-
-
-
+export { default as CORP_EVENT_BLOGS_SECTION } from "./event-blogs-section.json";
 
 export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
@@ -21,18 +14,14 @@ export const CORP_EVENT_INDUSTRIES_SECTION = {
   services: GLOBAL_INDUSTRY_SERVICES,
 };
 
-
-
-
-
 export const CORP_EVENT_CONTACT_CTA = {
   ...EVENTCONTACTCTA_DATA,
 };
 
-export {default as CORP_EVENT_CAPABILITIES} from "./event-capabilities.json";
-export {default as CORP_EVENT_DELIVERABLES} from "./event-deliverables.json";
-export {default as CORP_EVENT_INTRO} from "./event-intro.json";
-export {default as CORP_EVENT_RELATED_SERVICES} from "./event-related-services.json";
+export { default as CORP_EVENT_CAPABILITIES } from "./event-capabilities.json";
+export { default as CORP_EVENT_DELIVERABLES } from "./event-deliverables.json";
+export { default as CORP_EVENT_INTRO } from "./event-intro.json";
+export { default as CORP_EVENT_RELATED_SERVICES } from "./event-related-services.json";
 
 export { default as CORP_EVENT_FAQ } from "./faq.json";
 export { default as CORP_EVENT_IMAGE_HERO } from "./hero.json";
