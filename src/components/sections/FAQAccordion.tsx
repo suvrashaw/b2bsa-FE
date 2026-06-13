@@ -3,12 +3,20 @@
 import { motion } from "framer-motion";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
 
-import type { FAQProps } from "@/components/sections/FAQ";
-
 import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_FAQ_CONTENT } from "@/content/home";
+import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home";
 import { cn } from "@/lib";
+
+export interface FAQProps {
+  content?: FAQContent;
+  description?: FAQContent["description"];
+  eyebrow?: FAQContent["eyebrow"];
+  faqs?: FAQContent["faqs"];
+  heading?: FAQContent["heading"];
+  layoutMode?: FAQContent["layoutMode"];
+  scrollAmount?: FAQContent["scrollAmount"];
+}
 
 const HEADING_INITIAL = { opacity: 0, y: 20 } as const;
 const HEADING_ANIMATE = { opacity: 1, y: 0 } as const;

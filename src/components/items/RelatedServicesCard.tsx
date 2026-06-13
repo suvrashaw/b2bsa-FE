@@ -24,7 +24,7 @@ export const RelatedServicesCard = ({ index, service }: RelatedServicesCardProps
 
   return (
     <motion.div
-      className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+      className="w-full"
       initial={RELATEDSERVICES_INITIAL}
       transition={transition}
       viewport={RELATEDSERVICES_VIEWPORT}

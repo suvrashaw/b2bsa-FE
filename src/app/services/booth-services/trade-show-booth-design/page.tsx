@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 
-import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
-import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { EventsCard } from "@/components/items/EventsCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { Events } from "@/components/sections/Events";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { getDefaultEvents } from "@/content/events-utils";
+import { HOME_EVENTS_CONTENT } from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_DESIGN_BLOGS_SECTION,
@@ -35,9 +41,43 @@ const Page = () => {
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
       closingSections={
         <>
-          <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
-          <Events />
-          <BlogsCarousel heading={BOOTH_DESIGN_BLOGS_SECTION.heading} posts={RENTAL_BLOG_POSTS} />
+          <CardSection cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardSection>
+          <CardSection
+            cols={3}
+            description={HOME_EVENTS_CONTENT.description}
+            heading={HOME_EVENTS_CONTENT.heading}
+            id="events"
+          >
+            {getDefaultEvents().map((event, i) => (
+              <EventsCard
+                ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+                event={event}
+                flipStyle="diagonalWipe"
+                index={i}
+                key={event.id}
+              />
+            ))}
+          </CardSection>
+          <CardSection
+            cols={4}
+            heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            headingAlign="left"
+            id="blogs"
+            layout="carousel"
+          >
+            {RENTAL_BLOG_POSTS.map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </CardSection>
           <FAQAccordion {...BOOTH_DESIGN_FAQ} />
           <RelatedServices services={BOOTH_DESIGN_RELATED_SERVICES} />
           <ContactCinematicCTA {...BOOTH_DESIGN_CONTACT_CTA} />

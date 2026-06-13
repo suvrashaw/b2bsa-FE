@@ -24,7 +24,7 @@ const DEFAULT_GRID_SPANS = [
   "md:col-span-1 lg:col-span-3",
 ] as const;
 
-interface CaseStudiesGridProps {
+interface CaseStudiesDirectoryProps {
   activeFilter: string;
   emptyStateDescription: string;
   emptyStateTitle: string;
@@ -125,7 +125,7 @@ const getGridSpan = (index: number, total: number) => {
   return DEFAULT_GRID_SPANS[index % DEFAULT_GRID_SPANS.length];
 };
 
-export const CaseStudiesGrid = ({
+export const CaseStudiesDirectory = ({
   activeFilter,
   emptyStateDescription,
   emptyStateTitle,
@@ -134,7 +134,7 @@ export const CaseStudiesGrid = ({
   onPageChange,
   page,
   studies,
-}: CaseStudiesGridProps) => {
+}: CaseStudiesDirectoryProps) => {
   const totalPages = getPaginationPageCount(studies.length, DEFAULT_PAGE_SIZE);
   const currentPage = clampPaginationPage(page, totalPages);
   const paginatedStudies = getPaginationItems(studies, currentPage, DEFAULT_PAGE_SIZE);

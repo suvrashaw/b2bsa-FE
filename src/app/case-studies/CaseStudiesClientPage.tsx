@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
+import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { Heading } from "@/components/ui/Heading";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
 import {
@@ -110,7 +110,7 @@ export const CaseStudiesClientPage = () => {
         </div>
       </section>
 
-      <CaseStudiesGrid
+      <CaseStudiesDirectory
         activeFilter={activeFilter}
         emptyStateDescription={CASE_STUDIES_PAGE_CONTENT.emptyState.description}
         emptyStateTitle={CASE_STUDIES_PAGE_CONTENT.emptyState.title}

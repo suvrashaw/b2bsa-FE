@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 
-import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
-import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -35,8 +39,27 @@ const Page = () => {
       caseStudies={CORP_EVENT_CASE_STUDIES}
       closingSections={
         <>
-          <BoothWhyChooseUs {...CORP_EVENT_WHY_CHOOSE_US} />
-          <BlogsCarousel heading={CORP_EVENT_BLOGS_SECTION.heading} posts={RENTAL_BLOG_POSTS} />
+          <CardSection cols={4} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+            {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardSection>
+          <CardSection
+            cols={4}
+            heading={CORP_EVENT_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            headingAlign="left"
+            id="blogs"
+            layout="carousel"
+          >
+            {RENTAL_BLOG_POSTS.map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </CardSection>
           <FAQAccordion {...CORP_EVENT_FAQ} />
           <RelatedServices services={CORP_EVENT_RELATED_SERVICES} />
           <ContactCinematicCTA {...CORP_EVENT_CONTACT_CTA} />

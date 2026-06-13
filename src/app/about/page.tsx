@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
+import { EventsCard } from "@/components/items/EventsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
-import { Events } from "@/components/sections/Events";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
@@ -25,6 +26,7 @@ import {
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
 } from "@/content/about";
+import { normalizeEvent } from "@/content/events-utils";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
@@ -77,7 +79,23 @@ const Page = () => {
         heading={ABOUT_SIGNATURE_SERVICES.heading}
         services={ABOUT_SIGNATURE_SERVICES_STACK}
       />
-      <Events {...ABOUT_RECENT_EVENTS} />
+      <CardSection
+        cols={3}
+        description={ABOUT_RECENT_EVENTS.description}
+        heading={ABOUT_RECENT_EVENTS.heading}
+        id="events"
+      >
+        {ABOUT_RECENT_EVENTS.events.map((event, i) => (
+          <EventsCard
+            badgeLabel={ABOUT_RECENT_EVENTS.badgeLabel}
+            ctaLabel={ABOUT_RECENT_EVENTS.ctaLabel ?? "View Event"}
+            event={normalizeEvent(event, i)}
+            flipStyle="diagonalWipe"
+            index={i}
+            key={event.id}
+          />
+        ))}
+      </CardSection>
       <section className="scroll-mt-28 bg-brand-gray px-8 py-20" id="founder">
         <Spotlight
           align="left"

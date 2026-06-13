@@ -75,10 +75,6 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           initial={LEFT_INITIAL}
           transition={LEFT_TRANSITION}
         >
-          <div className="mb-6 inline-block rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-cyan uppercase">
-            Global Presence
-          </div>
-
           <Heading as="h2" className="mb-8">
             {data.title}
           </Heading>

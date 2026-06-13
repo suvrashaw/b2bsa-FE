@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
+import { FAQCard } from "@/components/items/FAQCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
@@ -45,7 +46,11 @@ const Page = () => {
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
       closingSections={
         <>
-          <FAQ {...EVENT_VIDEO_FAQ} />
+          <CardSection description={EVENT_VIDEO_FAQ.description} heading={EVENT_VIDEO_FAQ.heading} id="faq" layout="carousel">
+            {EVENT_VIDEO_FAQ.faqs.map((f) => (
+              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+            ))}
+          </CardSection>
           <RelatedServices services={eventVideoProductionRelatedServices} />
           <ContactCinematicCTA {...eventVideoContactCta} />
         </>

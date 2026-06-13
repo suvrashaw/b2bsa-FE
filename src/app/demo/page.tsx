@@ -1,34 +1,36 @@
 "use client";
 
+import { Pencil, Sparkles, Star } from "lucide-react";
+import Link from "next/link";
 import { Suspense, useCallback, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
 import { BasicCards } from "@/components/items/BasicCards";
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
+import { EventsCard } from "@/components/items/EventsCard";
+import { FAQCard } from "@/components/items/FAQCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
+import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { BlogCategories } from "@/components/sections/BlogCategories";
 import { Blogs } from "@/components/sections/Blogs";
-import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
-import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
 import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
+import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
-import { CorporateVideoPortfolioSection } from "@/components/sections/CorporateVideoPortfolioSection";
 import { Culture } from "@/components/sections/Culture";
-import { Events } from "@/components/sections/Events";
-import { FAQ } from "@/components/sections/FAQ";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
-import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -38,8 +40,12 @@ import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { Button } from "@/components/ui/Button";
+import { Heading } from "@/components/ui/Heading";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
+import { getDefaultEvents } from "@/content/events-utils";
+import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import {
   TRADE_SHOW_CALENDAR_EVENTS,
@@ -60,6 +66,54 @@ const IMG_EV1 = "/images/events/event_other_1.avif";
 const IMG_EV2 = "/images/events/event_other_2.avif";
 const IMG_EV3 = "/images/events/event_other_3.avif";
 const IMG_EV4 = "/images/events/event_other_4.avif";
+
+// ─── Pricing ─────────────────────────────────────────────────────────────────
+
+const DEMO_PRICING_TIERS: PricingTier[] = [
+  {
+    color: "blue",
+    description: "Ideal for event highlight reels and single product updates",
+    features: [
+      "1 Fully Edited Video (up to 5 min)",
+      "Premium Color Grading & Correction",
+      "Professional Sound Design & Mix",
+      "2 Rounds of Revisions",
+      "3-5 Business Days Delivery",
+    ],
+    icon: <Pencil className="h-5 w-5" />,
+    name: "Starter Edit",
+    price: 499,
+  },
+  {
+    color: "primary",
+    description: "Perfect for high-engagement, active marketing campaigns",
+    features: [
+      "3 Edited Brand or Demo Videos",
+      "5 Social Media Cut-downs (9:16 / 1:1)",
+      "Motion Graphics & Lower Thirds",
+      "Subtitle & Caption Creation",
+      "48-Hour Priority Turnaround",
+    ],
+    icon: <Sparkles className="h-5 w-5" />,
+    name: "Growth Suite",
+    popular: true,
+    price: 1299,
+  },
+  {
+    color: "cyan",
+    description: "Scale your entire corporate media engine seamlessly",
+    features: [
+      "Dedicated Lead Post-Production Editor",
+      "Unlimited Monthly Editing Volume",
+      "Custom 3D Animations & Graphics",
+      "Direct Slack & Project Management Access",
+      "Priority Same-Day Delivery Support",
+    ],
+    icon: <Star className="h-5 w-5" />,
+    name: "Enterprise Engine",
+    price: 2999,
+  },
+];
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
@@ -387,7 +441,7 @@ const SPOTLIGHT_DEMO_PROPS = {
 
 const DEMO_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 4) as SharedBlogPost[];
 
-// ─── CaseStudiesGrid ─────────────────────────────────────────────────────────
+// ─── CaseStudiesDirectory ────────────────────────────────────────────────────
 
 const GRID_FILTERS = CASE_STUDIES_PAGE_CONTENT.gridFilters;
 const GRID_EMPTY_TITLE = "No case studies found";
@@ -428,7 +482,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions", label: "Service Hub" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
-  CaseStudiesGrid: [{ href: "/case-studies", label: "Case Studies" }],
+  CaseStudiesDirectory: [{ href: "/case-studies", label: "Case Studies" }],
   CinematicSequence: [],
   ClientLogos: [
     { href: "/", label: "Home" },
@@ -529,7 +583,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
   CardsSection: { items: ["BasicCards"], ui: ["Heading"] },
   CaseStudies: { items: ["CaseStudyItem"], ui: ["Button", "Eyebrow", "Heading"] },
-  CaseStudiesGrid: { items: ["CaseStudyCard"], ui: ["Heading", "Pagination"] },
+  CaseStudiesDirectory: { items: ["CaseStudyCard"], ui: ["Heading", "Pagination"] },
   CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactCinematicCTA: { items: [], ui: ["Button", "ContactModal", "Heading"] },
@@ -637,15 +691,15 @@ const DemoLabel = ({ name }: { name: string }) => {
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function DemoPage() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [caseStudiesGridPage, setCaseStudiesGridPage] = useState(1);
+  const [caseStudiesPage, setCaseStudiesPage] = useState(1);
 
   const filteredStudies =
     activeFilter === "All"
       ? CASE_STUDIES_PAGE_STUDIES
       : CASE_STUDIES_PAGE_STUDIES.filter((s) => s.serviceCategories.includes(activeFilter));
-  const handleCaseStudiesGridFilterChange = useCallback((filter: string) => {
+  const handleCaseStudiesFilterChange = useCallback((filter: string) => {
     setActiveFilter(filter);
-    setCaseStudiesGridPage(1);
+    setCaseStudiesPage(1);
   }, []);
 
   return (
@@ -736,7 +790,11 @@ export default function DemoPage() {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <BoothWhyChooseUs heading="Why Clients Choose Our Booths" items={BOOTH_WHY_ITEMS} />
+      <CardSection cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us" layout="grid">
+        {BOOTH_WHY_ITEMS.map((item, i) => (
+          <BoothWhyCard index={i} item={item} key={item.title} />
+        ))}
+      </CardSection>
 
       {/* 19 – CardsSection */}
       <DemoLabel name="CardsSection" />
@@ -756,10 +814,20 @@ export default function DemoPage() {
 
       {/* 22 – CorporateVideoPortfolioSection */}
       <DemoLabel name="CorporateVideoPortfolioSection" />
-      <CorporateVideoPortfolioSection
-        heading="Recent Event Programs"
-        items={CORP_VIDEO_PORTFOLIO_ITEMS}
-      />
+      <CardSection
+        className="bg-[#111111] text-white"
+        heading={
+          <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
+            Recent Event Programs
+          </Heading>
+        }
+        headingAlign="left"
+        layout="grid"
+      >
+        {CORP_VIDEO_PORTFOLIO_ITEMS.map((item) => (
+          <CorporateVideoCard item={item} key={item.title} />
+        ))}
+      </CardSection>
 
       {/* 23 – ProcessTimeline */}
       <DemoLabel name="ProcessTimeline" />
@@ -769,16 +837,16 @@ export default function DemoPage() {
       <DemoLabel name="CaseStudies" />
       <CaseStudies />
 
-      {/* 25 – CaseStudiesGrid */}
-      <DemoLabel name="CaseStudiesGrid" />
-      <CaseStudiesGrid
+      {/* 25 – CaseStudiesDirectory */}
+      <DemoLabel name="CaseStudiesDirectory" />
+      <CaseStudiesDirectory
         activeFilter={activeFilter}
         emptyStateDescription={GRID_EMPTY_DESC}
         emptyStateTitle={GRID_EMPTY_TITLE}
         filters={GRID_FILTERS}
-        onFilterChange={handleCaseStudiesGridFilterChange}
-        onPageChange={setCaseStudiesGridPage}
-        page={caseStudiesGridPage}
+        onFilterChange={handleCaseStudiesFilterChange}
+        onPageChange={setCaseStudiesPage}
+        page={caseStudiesPage}
         studies={filteredStudies}
       />
 
@@ -788,7 +856,22 @@ export default function DemoPage() {
 
       {/* 27 – Events */}
       <DemoLabel name="Events" />
-      <Events />
+      <CardSection
+        cols={3}
+        description={HOME_EVENTS_CONTENT.description}
+        heading={HOME_EVENTS_CONTENT.heading}
+        id="events-demo"
+      >
+        {getDefaultEvents().map((event, i) => (
+          <EventsCard
+            ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+            event={event}
+            flipStyle="diagonalWipe"
+            index={i}
+            key={event.id}
+          />
+        ))}
+      </CardSection>
 
       {/* 28 – TradeShowCalendarDirectory */}
       <DemoLabel name="TradeShowCalendarDirectory" />
@@ -812,15 +895,44 @@ export default function DemoPage() {
 
       {/* 31 – BlogsCarousel */}
       <DemoLabel name="BlogsCarousel" />
-      <BlogsCarousel heading="From the Blog" posts={DEMO_BLOG_POSTS} />
+      <CardSection
+        cols={4}
+        heading="From the Blog"
+        headingAction={
+          <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+            <Link href="/blogs">View All Blogs</Link>
+          </Button>
+        }
+        headingAlign="left"
+        id="blogs"
+        layout="carousel"
+      >
+        {DEMO_BLOG_POSTS.map((post) => (
+          <BlogsCarouselCard key={post.id} post={post} />
+        ))}
+      </CardSection>
 
       {/* 32 – Pricing */}
       <DemoLabel name="Pricing" />
-      <Pricing />
+      <CardSection
+        cols={3}
+        description="High-end post-production packages tailored to B2B teams"
+        heading="Creative Video Editing Pricing"
+        id="pricing-demo"
+        layout="carousel"
+      >
+        {DEMO_PRICING_TIERS.map((tier) => (
+          <PricingCard key={tier.name} tier={tier} />
+        ))}
+      </CardSection>
 
       {/* 33 – FAQ */}
       <DemoLabel name="FAQ" />
-      <FAQ />
+      <CardSection description={HOME_FAQ_CONTENT.description} heading={HOME_FAQ_CONTENT.heading} id="faq-demo" layout="carousel">
+        {HOME_FAQ_CONTENT.faqs.map((f) => (
+          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+        ))}
+      </CardSection>
 
       {/* 34 – FAQAccordion */}
       <DemoLabel name="FAQAccordion" />

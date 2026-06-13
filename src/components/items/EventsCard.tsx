@@ -2,10 +2,11 @@
 
 import type { KeyboardEvent, MouseEvent, ReactNode } from "react";
 
+import { useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 import type { EventsContent } from "@/content/home";
 
@@ -34,10 +35,7 @@ interface EventsCardProps {
   event: EventCardItem;
   flipStyle: FlipStyle;
   index: number;
-  isFlipped: boolean;
-  onToggle: (eventId: string) => void;
-  shouldReduceMotion: boolean;
-  viewAllHref: string;
+  viewAllHref?: string;
 }
 
 interface FlipCardProps extends EventDetailsPanelProps {
@@ -48,7 +46,7 @@ interface FlipCardProps extends EventDetailsPanelProps {
 }
 
 const CARD_SHELL_CLASS =
-  "group relative h-[220px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[260px]";
+  "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[220px]";
 const DEFAULT_EVENT_IMAGES = [
   "/images/events/adobe_summit_2026.avif",
   "/images/events/inma_2026.avif",
@@ -98,14 +96,12 @@ const CardFront = ({
 
 const EventDetails = ({
   ctaLabel,
-  event,
   eventCountry,
   eventCtaHref,
   eventDate,
   handleLinkClick,
 }: {
   ctaLabel: string;
-  event: EventCardItem;
   eventCountry?: string;
   eventCtaHref: string;
   eventDate?: string;
@@ -113,10 +109,7 @@ const EventDetails = ({
 }) => (
   <>
     <div>
-      <h3 className="line-clamp-2 font-heading text-xl leading-tight font-bold text-brand-charcoal md:text-2xl">
-        {event.title}
-      </h3>
-      <div className="mt-5 space-y-3">
+      <div className="mt-0 space-y-3">
         {eventDate ? (
           <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
@@ -151,7 +144,6 @@ const EventDetails = ({
 
 const EventDetailsPanel = ({
   ctaLabel,
-  event,
   eventCountry,
   eventCtaHref,
   eventDate,
@@ -160,7 +152,6 @@ const EventDetailsPanel = ({
   <div className="flex h-full flex-col justify-between rounded-[22px] bg-white p-5 md:p-6">
     <EventDetails
       ctaLabel={ctaLabel}
-      event={event}
       eventCountry={eventCountry}
       eventCtaHref={eventCtaHref}
       eventDate={eventDate}
@@ -462,11 +453,10 @@ export const EventsCard = ({
   event,
   flipStyle,
   index,
-  isFlipped,
-  onToggle,
-  shouldReduceMotion,
-  viewAllHref,
+  viewAllHref = "/trade-show-calendar",
 }: EventsCardProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const shouldReduceMotion = Boolean(useReducedMotion());
   const eventCountry = event.country ?? event.location;
   const eventDate = event.date;
   const eventCtaHref = event.ctaHref ?? viewAllHref;
@@ -476,9 +466,9 @@ export const EventsCard = ({
   const handleClick = useCallback(
     (clickEvent: MouseEvent<HTMLElement>) => {
       if (isInteractiveTarget(clickEvent.target)) return;
-      onToggle(event.id);
+      setIsFlipped((prev) => !prev);
     },
-    [event.id, onToggle]
+    []
   );
 
   const handleKeyDown = useCallback(
@@ -487,10 +477,10 @@ export const EventsCard = ({
 
       if (keyEvent.key === "Enter" || keyEvent.key === " ") {
         keyEvent.preventDefault();
-        onToggle(event.id);
+        setIsFlipped((prev) => !prev);
       }
     },
-    [event.id, onToggle]
+    []
   );
 
   const handleLinkClick = useCallback((linkEvent: MouseEvent<HTMLAnchorElement>) => {
@@ -498,7 +488,7 @@ export const EventsCard = ({
   }, []);
 
   return (
-    <div className="mx-auto w-full max-w-[500px]">
+    <div className="w-full">
       <article
         aria-label={`Show details for ${event.title}`}
         className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}

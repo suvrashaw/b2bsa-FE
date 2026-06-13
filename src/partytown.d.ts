@@ -9,3 +9,13 @@ declare module "@builder.io/partytown/react" {
 
   export const Partytown: ComponentType<PartytownProps>;
 }
+
+declare module "@builder.io/partytown/integration" {
+  export interface PartytownConfig {
+    debug?: boolean;
+    forward?: string[];
+    lib?: string;
+  }
+
+  export function partytownSnippet(config?: PartytownConfig): string;
+}

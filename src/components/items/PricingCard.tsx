@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
+export interface PricingProps {
+  description?: string;
+  tiers?: PricingTier[];
+  title?: string;
+}
+
 export interface PricingTier {
   color: string;
   description: string;

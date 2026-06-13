@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
+import { FAQCard } from "@/components/items/FAQCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
@@ -49,7 +50,11 @@ const Page = () => {
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
       closingSections={
         <>
-          <FAQ {...MODULAR_BOOTHS_FAQ} />
+          <CardSection description={MODULAR_BOOTHS_FAQ.description} heading={MODULAR_BOOTHS_FAQ.heading} id="faq" layout="carousel">
+            {MODULAR_BOOTHS_FAQ.faqs.map((f) => (
+              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+            ))}
+          </CardSection>
           <RelatedServices services={modularPortableBoothsRelatedServices} />
           <ContactCinematicCTA {...modularBoothsContactCta} />
         </>

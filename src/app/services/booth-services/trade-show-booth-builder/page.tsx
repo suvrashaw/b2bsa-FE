@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
 import { BasicCards } from "@/components/items/BasicCards";
-import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
-import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { Button } from "@/components/ui/Button";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_BUILDER_BLOG_POSTS,
@@ -44,11 +47,27 @@ const Page = () => {
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
       closingSections={
         <>
-          <BoothWhyChooseUs {...BOOTH_DESIGN_WHY_CHOOSE_US} />
-          <BlogsCarousel
+          <CardSection cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardSection>
+          <CardSection
+            cols={4}
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
-            posts={BOOTH_BUILDER_BLOG_POSTS}
-          />
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            headingAlign="left"
+            id="blogs"
+            layout="carousel"
+          >
+            {BOOTH_BUILDER_BLOG_POSTS.map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </CardSection>
           <FAQAccordion {...BOOTH_BUILDER_FAQ} />
           <RelatedServices className="py-12" services={BOOTH_BUILDER_RELATED_SERVICES} />
           <ContactCinematicCTA {...BOOTH_BUILDER_CONTACT_CTA} />

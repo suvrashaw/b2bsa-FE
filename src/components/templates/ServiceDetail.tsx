@@ -1,22 +1,22 @@
 import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import type { FAQProps } from "@/components/sections/FAQ";
+import type { FAQProps } from "@/components/sections/FAQAccordion";
 import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
-import type { PricingProps } from "@/components/sections/Pricing";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
+import { FAQCard } from "@/components/items/FAQCard";
+import { PricingCard, type PricingProps } from "@/components/items/PricingCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { Hero, type HeroProps } from "@/components/sections/Hero";
-import { Pricing } from "@/components/sections/Pricing";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -332,7 +332,18 @@ export const ServiceDetail = ({
 
       {secondaryServicesSection}
 
-      {creativePricing && <Pricing {...creativePricing} />}
+      {creativePricing && (
+        <CardSection
+          cols={3}
+          description={creativePricing.description}
+          heading={creativePricing.title}
+          layout="carousel"
+        >
+          {(creativePricing.tiers ?? []).map((tier) => (
+            <PricingCard key={tier.name} tier={tier} />
+          ))}
+        </CardSection>
+      )}
 
       {caseStudies && (
         <CaseStudies
@@ -348,7 +359,16 @@ export const ServiceDetail = ({
 
       {closingSections ?? (
         <>
-          <FAQ {...faq} />
+          <CardSection
+            description={faq.description ?? faq.content?.description}
+            heading={faq.heading ?? faq.content?.heading}
+            id="faq"
+            layout="carousel"
+          >
+            {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
+              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+            ))}
+          </CardSection>
 
           {relatedServices && <RelatedServices services={relatedServices} />}
 

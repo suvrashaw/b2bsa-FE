@@ -5,14 +5,15 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { BlogsCarousel } from "@/components/sections/BlogsCarousel";
 import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ServicesStack } from "@/components/sections/ServicesStack";
+import { Button } from "@/components/ui/Button";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
@@ -371,10 +372,22 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         secondaryCta={CTA_SECONDARY}
       />
 
-      <BlogsCarousel
+      <CardSection
+        cols={4}
         heading="Related Articles"
-        posts={SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id))}
-      />
+        headingAction={
+          <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+            <Link href="/blogs">View All Blogs</Link>
+          </Button>
+        }
+        headingAlign="left"
+        id="blogs"
+        layout="carousel"
+      >
+        {SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((post) => (
+          <BlogsCarouselCard key={post.id} post={post} />
+        ))}
+      </CardSection>
 
       <CardSection
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."

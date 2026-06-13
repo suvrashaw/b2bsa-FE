@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
+import { FAQCard } from "@/components/items/FAQCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
@@ -49,7 +50,11 @@ const Page = () => {
       clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       closingSections={
         <>
-          <FAQ {...LIVE_STREAMING_FAQ} />
+          <CardSection description={LIVE_STREAMING_FAQ.description} heading={LIVE_STREAMING_FAQ.heading} id="faq" layout="carousel">
+            {LIVE_STREAMING_FAQ.faqs.map((f) => (
+              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+            ))}
+          </CardSection>
           <RelatedServices services={liveStreamingServicesRelatedServices} />
           <ContactCinematicCTA {...liveStreamingContactCta} />
         </>

@@ -1,16 +1,17 @@
 import { type ReactNode, useMemo } from "react";
 
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
-import type { FAQProps } from "@/components/sections/FAQ";
+import type { FAQProps } from "@/components/sections/FAQAccordion";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
+import { FAQCard } from "@/components/items/FAQCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
-import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProofBar } from "@/components/sections/ProofBar";
@@ -173,7 +174,16 @@ export const ServiceHub = ({
 
       {stats && <WhoWeAre items={stats.items} title={stats.title} />}
 
-      <FAQ {...faq} />
+      <CardSection
+        description={faq.description ?? faq.content?.description}
+        heading={faq.heading ?? faq.content?.heading}
+        id="faq"
+        layout="carousel"
+      >
+        {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
+          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+        ))}
+      </CardSection>
 
       {relatedServices && <RelatedServices services={relatedServices} />}
 

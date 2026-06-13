@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
+import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
+import { FAQCard } from "@/components/items/FAQCard";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
-import { CorporateVideoPortfolioSection } from "@/components/sections/CorporateVideoPortfolioSection";
-import { FAQ } from "@/components/sections/FAQ";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { Heading } from "@/components/ui/Heading";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -49,12 +51,29 @@ const Page = () => {
       afterSpotlightSections={
         <>
           <CorporateVideoIndustriesSection {...CORPORATE_VIDEO_INDUSTRIES} />
-          <CorporateVideoPortfolioSection {...CORPORATE_VIDEO_PORTFOLIO} />
+          <CardSection
+            className="bg-[#111111] text-white"
+            heading={
+              <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
+                {CORPORATE_VIDEO_PORTFOLIO.heading}
+              </Heading>
+            }
+            headingAlign="left"
+            layout="grid"
+          >
+            {CORPORATE_VIDEO_PORTFOLIO.items.map((item) => (
+              <CorporateVideoCard item={item} key={item.title} />
+            ))}
+          </CardSection>
         </>
       }
       closingSections={
         <>
-          <FAQ {...CORPORATE_VIDEO_FAQ} />
+          <CardSection description={CORPORATE_VIDEO_FAQ.description} heading={CORPORATE_VIDEO_FAQ.heading} id="faq" layout="carousel">
+            {CORPORATE_VIDEO_FAQ.faqs.map((f) => (
+              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+            ))}
+          </CardSection>
           <RelatedServices services={corporateVideoProductionRelatedServices} />
           <ContactCinematicCTA {...corporateVideoContactCta} />
         </>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
@@ -53,7 +54,11 @@ const RootLayout = ({
         <PartytownScripts />
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
-        <script dangerouslySetInnerHTML={JSON_LD_SCRIPT} type="application/ld+json" />
+        <Script
+          dangerouslySetInnerHTML={JSON_LD_SCRIPT}
+          id="organization-json-ld"
+          type="application/ld+json"
+        />
         <SWRegistrar />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>

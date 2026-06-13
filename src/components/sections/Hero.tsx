@@ -152,7 +152,7 @@ export const Hero = ({
       ? "items-center md:items-end min-h-[50vh] pt-16 pb-12 md:pt-24 md:pb-16"
       : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
   const sectionClass = isVideoMode
-    ? "min-h-svh items-end pt-24 pb-16 md:pt-32 md:pb-20"
+    ? "min-h-[560px] md:min-h-svh items-end pt-24 pb-16 md:pt-32 md:pb-20"
     : imageModeClass;
 
   let background: React.ReactNode;
@@ -239,10 +239,7 @@ export const Hero = ({
           {(primaryCta ?? secondaryCta) && (
             <motion.div
               animate={CTA_ANIMATE}
-              className={cn(
-                "flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6",
-                isVideoMode && "mb-12 md:mb-20"
-              )}
+              className="flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6"
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >

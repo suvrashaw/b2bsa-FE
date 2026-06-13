@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 
 import { Suspense } from "react";
 
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
-import { BoothWhyChooseUs } from "@/components/sections/BoothWhyChooseUs";
+import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Hero } from "@/components/sections/Hero";
 import {
@@ -31,11 +32,11 @@ const Page = () => {
         title="Blogs and Articles"
         variant="compact"
       />
-      <BoothWhyChooseUs
-        heading={BLOG_SERVICE_CAROUSEL.heading}
-        items={BLOG_SERVICE_CAROUSEL.items}
-        layout="carousel"
-      />
+      <CardSection autoplayInterval={4000} heading={BLOG_SERVICE_CAROUSEL.heading} id="why-choose-us" layout="carousel">
+        {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (
+          <BoothWhyCard index={i} item={item} key={item.title} />
+        ))}
+      </CardSection>
       <Suspense>
         <BlogsDirectory blogs={BLOG_POSTS.blogs} />
       </Suspense>
