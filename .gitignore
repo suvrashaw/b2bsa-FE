@@ -69,3 +69,15 @@ scripts/*
 !scripts/mcp-tailwindcss.sh
 !scripts/mcp-chrome-devtools.sh
 !scripts/load-env-mcp.sh
+
+# env files (un-ignore examples)
+!.env.example
+!.env.local.example
+
+
+# project specific
+public/~partytown/
+.playwright-mcp/
+memory/
+public/sitemap*.xml
+public/robots.txt

@@ -65,7 +65,7 @@ const RootLayout = ({
           id="website-json-ld"
           type="application/ld+json"
         />
-<SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

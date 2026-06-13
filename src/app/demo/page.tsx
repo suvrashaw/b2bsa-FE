@@ -789,11 +789,7 @@ const DemoPage = () => {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <GridSection
-        cols={4}
-        heading="Why Clients Choose Our Booths"
-        id="why-choose-us"
-      >
+      <GridSection cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us">
         {BOOTH_WHY_ITEMS.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}

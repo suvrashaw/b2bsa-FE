@@ -48,11 +48,7 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <GridSection
-            cols={4}
-            heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <GridSection cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

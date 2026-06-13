@@ -109,7 +109,7 @@ const Page = () => {
         titleLine2="Lohani"
       />
       <Culture data={ABOUT_VALUES} />
-      { }
+      {}
       <GlobalPresence data={ABOUT_PRESENCE} />
       <ContactUsForm {...ABOUT_INQUIRY} />
       <Footer />

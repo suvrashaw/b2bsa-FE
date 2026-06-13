@@ -11,7 +11,6 @@ export interface BlogsProps {
   blogs?: BlogsContent["blogs"];
   content?: BlogsContent;
   ctaLabel?: BlogsContent["ctaLabel"];
-  eyebrow?: BlogsContent["eyebrow"];
   heading?: BlogsContent["heading"];
   layout?: "deck" | "grid";
   viewAllHref?: string;
@@ -28,10 +27,7 @@ export const Blogs = ({
   viewAllLabel = "View All Blogs",
 }: BlogsProps = {}) => {
   return (
-    <section
-      className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20"
-      id="blogs"
-    >
+    <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="blogs">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
           <Heading as="h2">{heading}</Heading>

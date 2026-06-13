@@ -38,11 +38,7 @@ const Page = () => {
       contactUs={CORP_EVENT_CONTACT_CTA}
       customSections={
         <>
-          <GridSection
-            cols={4}
-            heading={CORP_EVENT_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <GridSection cols={4} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
