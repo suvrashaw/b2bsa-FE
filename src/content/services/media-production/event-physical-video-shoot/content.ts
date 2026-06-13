@@ -1,9 +1,11 @@
 import mediaProofLogos from "@/content/services/media-production/media-proof-logos.json";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
+import CASE_STUDIES_DATA from "./case-studies.json";
 import PHYSICALVIDEOCONTACTCTA_DATA from "./physical-video-contact-cta.json";
 
 export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
+  ...CASE_STUDIES_DATA,
   items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 

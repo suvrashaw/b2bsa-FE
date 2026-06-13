@@ -5,13 +5,9 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
@@ -22,7 +18,6 @@ import {
   EVENT_PHYSICAL_VIDEO_DELIVERABLES,
   EVENT_PHYSICAL_VIDEO_FAQ,
   EVENT_PHYSICAL_VIDEO_IMAGE_HERO,
-  EVENT_PHYSICAL_VIDEO_INTRO,
   EVENT_PHYSICAL_VIDEO_PAGE,
   EVENT_PHYSICAL_VIDEO_PROCESS,
   EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN,
@@ -35,10 +30,10 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_PHYSICAL_VIDEO_
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={EVENT_PHYSICAL_VIDEO_CASE_STUDIES}
-      caseStudiesDescription="B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are three recent programs from 2025 & 2026."
-      closingSections={
+      contactUs={EVENT_PHYSICAL_VIDEO_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -66,30 +61,23 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...EVENT_PHYSICAL_VIDEO_FAQ} />
-          <RelatedServices services={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES} />
-          <ContactUs {...EVENT_PHYSICAL_VIDEO_CONTACT_CTA} />
         </>
       }
-      deliverables={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       faq={EVENT_PHYSICAL_VIDEO_FAQ}
-      imageHero={EVENT_PHYSICAL_VIDEO_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={EVENT_PHYSICAL_VIDEO_IMAGE_HERO}
       page={EVENT_PHYSICAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <>
-          <ContactModalTrigger label="Plan Your On-Site Video Shoot" />
-          <Timeline
-            phases={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.phases}
-            title={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.title}
-          />
-          <ContactModalTrigger label="Book Event Video Production" />
-        </>
+        <Timeline
+          phases={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.phases}
+          title={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.title}
+        />
       }
       process={EVENT_PHYSICAL_VIDEO_PROCESS}
       proofBar={EVENT_PHYSICAL_VIDEO_PROOF_BAR}
-      proofBarDescription={EVENT_PHYSICAL_VIDEO_INTRO.description}
-      proofBarHeading={EVENT_PHYSICAL_VIDEO_INTRO.heading}
+      relatedServices={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES}
+      services={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       showPhaseNumbers={false}
     />
   );

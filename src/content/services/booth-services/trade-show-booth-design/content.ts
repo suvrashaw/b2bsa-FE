@@ -1,6 +1,8 @@
 import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
+import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
 import DESIGNCONTACTCTA_DATA from "./design-contact-cta.json";
+import BOOTHDESIGNPROOFBARDATA from "./proof-bar.json";
 
 export const BOOTH_DESIGN_PROOF_BAR = {
   ...BOOTHDESIGNPROOFBARDATA,
@@ -11,9 +13,6 @@ export const BOOTH_DESIGN_CASE_STUDIES = {
   ...BOOTHDESIGNCASESTUDIESDATA,
   items: GLOBAL_CASE_STUDIES,
 };
-
-import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
-import BOOTHDESIGNPROOFBARDATA from "./proof-bar.json";
 
 export const BOOTH_DESIGN_CONTACT_CTA = {
   ...DESIGNCONTACTCTA_DATA,

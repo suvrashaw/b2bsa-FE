@@ -6,11 +6,9 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -27,7 +25,9 @@ import {
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/booth-services/event-booth-rental/content";
-import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/booth-services/trade-show-booth-design/content";
+import {
+  BOOTH_DESIGN_WHY_CHOOSE_US,
+} from "@/content/services/booth-services/trade-show-booth-design/content";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
@@ -70,9 +70,10 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
-      closingSections={
+      contactUs={BOOTH_RENTAL_CONTACT_CTA}
+      customSections={
         <>
           <RelatedServices services={BOOTH_RENTAL_RELATED_SERVICES} />
           <CardSection
@@ -101,11 +102,10 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...BOOTH_RENTAL_FAQ} />
-          <ContactUs {...BOOTH_RENTAL_CONTACT_CTA} />
         </>
       }
       faq={BOOTH_RENTAL_FAQ}
+      faqVariant="accordion"
       hero={BOOTH_RENTAL_HERO}
       page={BOOTH_RENTAL_PAGE}
       parentPage={GES_PAGE}
@@ -143,7 +143,7 @@ const Page = () => {
         </>
       }
       process={BOOTH_RENTAL_PROCESS}
-      proofBar={BOOTH_RENTAL_PROOF_BAR.stats}
+      proofBar={BOOTH_RENTAL_PROOF_BAR}
       why={BOOTH_RENTAL_WHY}
     />
   );

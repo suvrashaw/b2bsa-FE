@@ -5,11 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -35,9 +32,10 @@ export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={CORP_EVENT_CASE_STUDIES}
-      closingSections={
+      contactUs={CORP_EVENT_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -65,14 +63,11 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...CORP_EVENT_FAQ} />
-          <RelatedServices services={CORP_EVENT_RELATED_SERVICES} />
-          <ContactUs {...CORP_EVENT_CONTACT_CTA} />
         </>
       }
-      deliverables={CORP_EVENT_DELIVERABLES}
       faq={CORP_EVENT_FAQ}
-      imageHero={CORP_EVENT_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={CORP_EVENT_IMAGE_HERO}
       page={CORP_EVENT_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -87,8 +82,10 @@ const Page = () => {
         </>
       }
       proofBar={CORP_EVENT_PROOF_BAR}
+      relatedServices={CORP_EVENT_RELATED_SERVICES}
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
+      services={CORP_EVENT_DELIVERABLES}
       spotlight={CORP_EVENT_INTRO}
     />
   );

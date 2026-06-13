@@ -1,11 +1,19 @@
-import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 import BRANDINGCONTACTCTA_DATA from "./branding-contact-cta.json";
 import BRANDINGINDUSTRIESSECTION_DATA from "./branding-industries-section.json";
+import CASE_STUDIES_DATA from "./case-studies.json";
+import PROOF_BAR_DATA from "./proof-bar.json";
 
 export { default as EVENT_BRANDING_BLOGS_SECTION } from "./branding-blogs-section.json";
 
+export const EVENT_BRANDING_PROOF_BAR = {
+  ...PROOF_BAR_DATA,
+  stats: GLOBAL_PROOF_STATS,
+};
+
 export const EVENT_BRANDING_CASE_STUDIES = {
+  ...CASE_STUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,
 };
 
@@ -27,4 +35,3 @@ export { default as EVENT_BRANDING_FAQ } from "./faq.json";
 export { default as EVENT_BRANDING_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_BRANDING_PAGE } from "./page.json";
 export { default as EVENT_BRANDING_WHY_CHOOSE_US } from "./why-choose-us.json";
-export { GLOBAL_PROOF_STATS as EVENT_BRANDING_PROOF_BAR } from "@/content/shared";

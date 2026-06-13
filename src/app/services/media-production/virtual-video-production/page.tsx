@@ -5,13 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
-import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
@@ -34,10 +29,10 @@ export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={VIRTUAL_VIDEO_CASE_STUDIES}
-      caseStudiesDescription="Explore how B2B Sales Arrow has helped brands deliver successful virtual events, webinars, fireside chats, and executive discussions through professional production and audience engagement."
-      closingSections={
+      contactUs={VIRTUAL_VIDEO_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -65,28 +60,18 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...VIRTUAL_VIDEO_FAQ} />
-          <RelatedServices services={VIRTUAL_VIDEO_RELATED_SERVICES} />
-          <ContactUs {...VIRTUAL_VIDEO_CONTACT_CTA} />
         </>
       }
-      deliverables={VIRTUAL_VIDEO_DELIVERABLES}
       faq={VIRTUAL_VIDEO_FAQ}
-      imageHero={VIRTUAL_VIDEO_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={VIRTUAL_VIDEO_IMAGE_HERO}
       page={VIRTUAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      preProcessSections={
-        <>
-          <ContactModalTrigger label="Plan Virtual Event" />
-          <Timeline
-            phases={VIRTUAL_VIDEO_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={VIRTUAL_VIDEO_CAPABILITIES.title}
-          />
-          <ContactModalTrigger label="Talk to Virtual Production Experts" />
-        </>
-      }
+      process={VIRTUAL_VIDEO_CAPABILITIES}
       proofBar={VIRTUAL_VIDEO_PROOF_BAR}
+      relatedServices={VIRTUAL_VIDEO_RELATED_SERVICES}
+      services={VIRTUAL_VIDEO_DELIVERABLES}
+      showPhaseNumbers={false}
       spotlight={VIRTUAL_VIDEO_INTRO}
     />
   );

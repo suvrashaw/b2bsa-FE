@@ -1,0 +1,6 @@
+{
+  "badge": "Go Global",
+  "description": "Your event. Every screen. Everywhere.",
+  "headingLines": ["Your Event.", "Every Screen. Everywhere."],
+  "primaryCta": { "href": "/contact", "label": "Plan Your Live Stream" }
+}

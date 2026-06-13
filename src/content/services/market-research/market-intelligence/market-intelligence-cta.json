@@ -1,6 +1,6 @@
 {
-  "ctaHref": "/contact",
-  "ctaLabel": "Commission a Custom Research Report",
+  "badge": "Ready to Start",
   "description": "The most valuable strategic meetings start with the right intelligence. Human-powered market intelligence is the advantage that makes decisions faster and more grounded.",
-  "title": "Get The Right Intelligence"
+  "headingLines": ["Get The Right Intelligence"],
+  "primaryCta": { "href": "/contact", "label": "Commission a Custom Research Report" }
 }

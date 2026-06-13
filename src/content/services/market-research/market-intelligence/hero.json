@@ -1,4 +1,6 @@
 {
   "description": "AI tools scrape. Humans understand. Our human-powered market intelligence delivers the strategic context, competitive insight, and buyer intelligence that automated platforms consistently miss.",
+  "primaryCta": { "href": "/contact", "label": "Book a Strategy Session" },
+  "secondaryCta": { "href": "/case-studies", "label": "View Event Portfolio" },
   "title": "Human-Powered Market Intelligence — The Insight Automated Tools Cannot Deliver"
 }

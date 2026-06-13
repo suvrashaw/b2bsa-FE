@@ -5,13 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
-import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
@@ -35,10 +30,10 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_VIDE
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={EVENT_EXPERIENCE_VIDEO_CASE_STUDIES}
-      caseStudiesDescription="Discover how B2B Sales Arrow has helped global brands create engaging event experience videos for conferences, exhibitions, networking events, product launches, and corporate gatherings."
-      closingSections={
+      contactUs={EVENT_EXPERIENCE_VIDEO_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -66,30 +61,20 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...EVENT_EXPERIENCE_VIDEO_FAQ} />
-          <RelatedServices services={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES} />
-          <ContactUs {...EVENT_EXPERIENCE_VIDEO_CONTACT_CTA} />
         </>
       }
-      deliverables={EVENT_EXPERIENCE_VIDEO_DELIVERABLES}
       faq={EVENT_EXPERIENCE_VIDEO_FAQ}
-      imageHero={EVENT_EXPERIENCE_VIDEO_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={EVENT_EXPERIENCE_VIDEO_IMAGE_HERO}
       page={EVENT_EXPERIENCE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      preProcessSections={
-        <>
-          <ContactModalTrigger label="Create Event Videos" variant="secondary" />
-          <Timeline
-            phases={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.title}
-          />
-          <ContactModalTrigger label="Book Event Video Production" variant="secondary" />
-        </>
-      }
+      process={EVENT_EXPERIENCE_VIDEO_CAPABILITIES}
       proofBar={EVENT_EXPERIENCE_VIDEO_PROOF_BAR}
+      relatedServices={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES}
       secondaryServices={EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION}
       secondaryServicesSectionType="carousel"
+      services={EVENT_EXPERIENCE_VIDEO_DELIVERABLES}
+      showPhaseNumbers={false}
       spotlight={EVENT_EXPERIENCE_VIDEO_INTRO}
     />
   );

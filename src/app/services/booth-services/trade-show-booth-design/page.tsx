@@ -6,11 +6,8 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { EventsCard } from "@/components/items/EventsCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getDefaultEvents } from "@/content/events-utils";
@@ -37,9 +34,10 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
-      closingSections={
+      contactUs={BOOTH_DESIGN_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -83,14 +81,10 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...BOOTH_DESIGN_FAQ} />
-          <RelatedServices services={BOOTH_DESIGN_RELATED_SERVICES} />
-          <ContactUs {...BOOTH_DESIGN_CONTACT_CTA} />
         </>
       }
-      deliverables={BOOTH_DESIGN_DELIVERABLES}
-      deliverablesSectionType="carousel"
       faq={BOOTH_DESIGN_FAQ}
+      faqVariant="accordion"
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
@@ -107,28 +101,10 @@ const Page = () => {
         />
       }
       process={BOOTH_DESIGN_PROCESS}
-      proofBar={BOOTH_DESIGN_PROOF_BAR.stats}
-      proofBarDescription={
-        <>
-          At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage,
-          and drive meaningful conversations. With our expertise in AI-VR integration, we bring your
-          brand to life in ways that leave a lasting impression. We&apos;ve delivered exceptional
-          experiences across industries, from tech giants to global brands, creating{" "}
-          <strong>tradeshow booth design</strong> that aren&apos;t just seen, they&apos;re
-          remembered.
-          <br />
-          <br />
-          India is one of the fastest-growing exhibition markets, hosting major trade shows across
-          industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in
-          India offers access to a large and diverse business audience, making it a key destination
-          for global brands. B2B Sales Arrow is an experienced trade show booth builder in India,
-          helping international exhibitors design and build impactful{" "}
-          <strong>exhibition stands</strong> across major Indian exhibition cities. We specialize in
-          delivering high-quality booth design and fabrication services while ensuring smooth
-          coordination for clients managing projects remotely.
-        </>
-      }
-      proofBarHeading="Introduction to Our Services"
+      proofBar={BOOTH_DESIGN_PROOF_BAR}
+      relatedServices={BOOTH_DESIGN_RELATED_SERVICES}
+      services={BOOTH_DESIGN_DELIVERABLES}
+      servicesSectionType="carousel"
       showPhaseNumbers={false}
       spotlight={BOOTH_DESIGN_SPOTLIGHT}
     />

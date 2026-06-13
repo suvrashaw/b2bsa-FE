@@ -1,6 +1,6 @@
 {
-  "ctaHref": "/contact",
-  "ctaLabel": "Request a Data Audit",
+  "badge": "Ready to Start",
   "description": "Your CRM is leaking revenue. Better data enrichment improves segmentation, personalisation, deliverability, and sales productivity simultaneously.",
-  "title": "Stop Leaking Revenue"
+  "headingLines": ["Stop Leaking Revenue"],
+  "primaryCta": { "href": "/contact", "label": "Request a Data Audit" }
 }

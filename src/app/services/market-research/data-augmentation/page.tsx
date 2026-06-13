@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 
-import { ContactUs } from "@/components/sections/ContactUs";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   DATA_AUGMENTATION_CASE_STUDIES,
-  DATA_AUGMENTATION_CTA,
+  DATA_AUGMENTATION_CONTACT_CTA,
   DATA_AUGMENTATION_DEFINITION,
   DATA_AUGMENTATION_DELIVERABLES,
   DATA_AUGMENTATION_FAQ,
@@ -13,33 +12,31 @@ import {
   DATA_AUGMENTATION_PAGE,
   DATA_AUGMENTATION_PROCESS,
 } from "@/content/services/market-research/data-augmentation/content";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_AUGMENTATION_PAGE);
 
-const contactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  ...DATA_AUGMENTATION_CTA,
-  badge: "Ready to Start",
-  headingLines: [DATA_AUGMENTATION_CTA.title] as [string],
-  primaryCta: {
-    href: DATA_AUGMENTATION_CTA.ctaHref,
-    label: DATA_AUGMENTATION_CTA.ctaLabel,
-  },
-};
-
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={DATA_AUGMENTATION_CASE_STUDIES}
-      closingSections={<ContactUs {...contactCta} />}
-      definitionBlock={DATA_AUGMENTATION_DEFINITION}
-      deliverables={DATA_AUGMENTATION_DELIVERABLES}
-      deliverablesSectionType="carousel"
+      contactUs={DATA_AUGMENTATION_CONTACT_CTA}
       faq={DATA_AUGMENTATION_FAQ}
       hero={DATA_AUGMENTATION_HERO}
       page={DATA_AUGMENTATION_PAGE}
+      preProcessSections={
+        <section className="bg-brand-gray py-16 lg:py-24">
+          <div className="container mx-auto px-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="prose prose-lg mx-auto text-brand-charcoal/80">
+                {DATA_AUGMENTATION_DEFINITION.body}
+              </p>
+            </div>
+          </div>
+        </section>
+      }
       process={DATA_AUGMENTATION_PROCESS}
+      services={DATA_AUGMENTATION_DELIVERABLES}
+      servicesSectionType="carousel"
     />
   );
 };

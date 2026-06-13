@@ -5,11 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -35,9 +32,10 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={BOOTH_HOSTESS_CASE_STUDIES}
-      closingSections={
+      contactUs={BOOTH_HOSTESS_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -65,14 +63,11 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...BOOTH_HOSTESS_FAQ} />
-          <RelatedServices services={BOOTH_HOSTESS_RELATED_SERVICES} />
-          <ContactUs {...BOOTH_HOSTESS_CONTACT_CTA} />
         </>
       }
-      deliverables={BOOTH_HOSTESS_DELIVERABLES}
       faq={BOOTH_HOSTESS_FAQ}
-      imageHero={BOOTH_HOSTESS_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={BOOTH_HOSTESS_IMAGE_HERO}
       page={BOOTH_HOSTESS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -86,9 +81,11 @@ const Page = () => {
           <ContactModalTrigger label="Book Booth Staff" />
         </>
       }
-      proofBar={BOOTH_HOSTESS_PROOF_BAR.stats}
+      proofBar={BOOTH_HOSTESS_PROOF_BAR}
+      relatedServices={BOOTH_HOSTESS_RELATED_SERVICES}
       secondaryServices={BOOTH_HOSTESS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
+      services={BOOTH_HOSTESS_DELIVERABLES}
       spotlight={BOOTH_HOSTESS_INTRO}
     />
   );

@@ -1,6 +1,6 @@
 {
-  "ctaHref": "/contact",
-  "ctaLabel": "Validate My List",
+  "badge": "Ready to Start",
   "description": "Do not prospect with broken data. Before launching another campaign, make sure the list is worth using.",
-  "title": "Ready for Clean Data?"
+  "headingLines": ["Ready for Clean Data?"],
+  "primaryCta": { "href": "/contact", "label": "Validate My List" }
 }

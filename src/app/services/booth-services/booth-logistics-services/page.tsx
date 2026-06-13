@@ -5,11 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Timeline } from "@/components/sections/Timeline";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -35,9 +32,10 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE)
 
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={EVENT_LOGISTICS_CASE_STUDIES}
-      closingSections={
+      contactUs={EVENT_LOGISTICS_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -65,14 +63,11 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...EVENT_LOGISTICS_FAQ} />
-          <RelatedServices services={EVENT_LOGISTICS_RELATED_SERVICES} />
-          <ContactUs {...EVENT_LOGISTICS_CONTACT_CTA} />
         </>
       }
-      deliverables={EVENT_LOGISTICS_DELIVERABLES}
       faq={EVENT_LOGISTICS_FAQ}
-      imageHero={EVENT_LOGISTICS_IMAGE_HERO}
+      faqVariant="accordion"
+      hero={EVENT_LOGISTICS_IMAGE_HERO}
       page={EVENT_LOGISTICS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -86,9 +81,11 @@ const Page = () => {
           <ContactModalTrigger label="Plan Your Event Logistics" />
         </>
       }
-      proofBar={EVENT_LOGISTICS_PROOF_BAR.stats}
+      proofBar={EVENT_LOGISTICS_PROOF_BAR}
+      relatedServices={EVENT_LOGISTICS_RELATED_SERVICES}
       secondaryServices={EVENT_LOGISTICS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
+      services={EVENT_LOGISTICS_DELIVERABLES}
       spotlight={EVENT_LOGISTICS_INTRO}
     />
   );

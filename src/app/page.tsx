@@ -16,7 +16,6 @@ import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { JsonLd } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { getDefaultEvents } from "@/content/events-utils";
 import {
@@ -28,6 +27,7 @@ import {
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import { buildFaqJsonLd } from "@/lib";
+import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
 

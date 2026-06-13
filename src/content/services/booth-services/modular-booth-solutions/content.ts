@@ -21,4 +21,5 @@ export { default as MODULAR_BOOTHS_DELIVERABLES } from "./modular-booths-deliver
 export { default as MODULAR_BOOTHS_RANGE_SECTION } from "./modular-booths-range-section.json";
 
 export { default as MODULAR_BOOTHS_PAGE } from "./page.json";
+export { default as MODULAR_BOOTHS_RELATED_SERVICES } from "./related-services.json";
 export { default as MODULAR_BOOTHS_WHY } from "./why.json";

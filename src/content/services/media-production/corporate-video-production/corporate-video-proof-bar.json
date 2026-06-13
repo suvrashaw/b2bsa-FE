@@ -1,8 +1,13 @@
-[
-  "250+ events",
-  "$1.2B+ pipeline influenced",
-  "500+ corporate video production service",
-  "98% client retention",
-  "100+ live streaming services",
-  "40+ countries"
-]
+{
+  "heading": "What Is Corporate Video Production?",
+  "imageUrl": "/images/Frames/ezgif-frame-017.jpg",
+  "description": "Corporate video production is the process of creating video content specifically for business purposes. Unlike traditional advertising or entertainment media, corporate videos are designed to support organizational goals such as marketing, training, internal communication, or stakeholder engagement.\n\nThe process typically involves multiple stages: planning, scripting, production, and distribution. The aim is to ensure that videos are aligned with brand messaging and tailored to their target audiences. These videos can take many forms, from short promotional clips and product explainers to long-form training modules or event documentation.\n\nTheir purpose is both to inform and to influence behavior, whether that means motivating employees, attracting customers, or building trust with partners. By combining visuals, sound, and narrative, corporate video production provides companies with a versatile communication tool that is both scalable and impactful.",
+  "stats": [
+    "250+ events",
+    "$1.2B+ pipeline influenced",
+    "500+ corporate video production service",
+    "98% client retention",
+    "100+ live streaming services",
+    "40+ countries"
+  ]
+}

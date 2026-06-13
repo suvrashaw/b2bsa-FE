@@ -6,11 +6,8 @@ import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -41,11 +38,14 @@ export const metadata: Metadata = {
   },
 };
 
+const boothBuilderProofBar = { ...BOOTH_BUILDER_PROOF_BAR, className: "[&_p]:max-w-5xl" };
+
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
-      closingSections={
+      contactUs={BOOTH_BUILDER_CONTACT_CTA}
+      customSections={
         <>
           <CardSection
             cols={4}
@@ -73,52 +73,35 @@ const Page = () => {
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </CardSection>
-          <FAQAccordion {...BOOTH_BUILDER_FAQ} />
-          <RelatedServices className="py-12" services={BOOTH_BUILDER_RELATED_SERVICES} />
-          <ContactUs {...BOOTH_BUILDER_CONTACT_CTA} />
         </>
       }
       faq={BOOTH_BUILDER_FAQ}
+      faqVariant="accordion"
       hero={BOOTH_BUILDER_HERO}
-      middleSections={
-        <CardSection heading={BOOTH_BUILDER_FUTURE_READY.heading} layout="grid">
-          {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
-            <BasicCards item={item} key={item.title} />
-          ))}
-        </CardSection>
-      }
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <StickyScroll
-          heading="What We Do in Exhibition Stand Builder"
-          reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
-            description: item.descriptions.join(" "),
-            id: item.id,
-            image: item.image,
-            title: item.heading,
-          }))}
-          showImagePanel
-        />
-      }
-      process={BOOTH_BUILDER_PROCESS}
-      proofBar={BOOTH_BUILDER_PROOF_BAR.stats}
-      proofBarClassName="[&_p]:max-w-5xl"
-      proofBarDescription={
         <>
-          India is one of the fastest-growing exhibition markets, hosting major trade shows across
-          industries such as pharma, manufacturing, construction, and consumer goods. Exhibiting in
-          India offers access to a large and diverse business audience, making it a key destination
-          for global brands.
-          <br />
-          <br />
-          B2B Sales Arrow is an experienced trade show booth builder in India, helping international
-          exhibitors design and build impactful exhibition stands across major Indian exhibition
-          cities. We specialize in delivering high-quality booth design and fabrication services
-          while ensuring smooth coordination for clients managing projects remotely.
+          <StickyScroll
+            heading="What We Do in Exhibition Stand Builder"
+            reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+              description: item.descriptions.join(" "),
+              id: item.id,
+              image: item.image,
+              title: item.heading,
+            }))}
+            showImagePanel
+          />
+          <CardSection heading={BOOTH_BUILDER_FUTURE_READY.heading} layout="grid">
+            {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
+              <BasicCards item={item} key={item.title} />
+            ))}
+          </CardSection>
         </>
       }
-      proofBarHeading="Exhibition stand builder and Turnkey Solutions"
+      process={BOOTH_BUILDER_PROCESS}
+      proofBar={boothBuilderProofBar}
+      relatedServices={BOOTH_BUILDER_RELATED_SERVICES}
     />
   );
 };

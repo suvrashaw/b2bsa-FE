@@ -1,14 +1,13 @@
 import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
+import BOOTHRENTALCASESTUDIESDATA from "./case-studies.json";
+import BOOTHRENTALPROOFBARDATA from "./proof-bar.json";
 import RENTALCONTACTCTA_DATA from "./rental-contact-cta.json";
 
 export const BOOTH_RENTAL_PROOF_BAR = {
   ...BOOTHRENTALPROOFBARDATA,
   stats: GLOBAL_PROOF_STATS,
 };
-
-import BOOTHRENTALCASESTUDIESDATA from "./case-studies.json";
-import BOOTHRENTALPROOFBARDATA from "./proof-bar.json";
 
 export const BOOTH_RENTAL_CASE_STUDIES = {
   ...BOOTHRENTALCASESTUDIESDATA,

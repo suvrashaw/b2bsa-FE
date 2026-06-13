@@ -1,72 +1,37 @@
 import type { Metadata } from "next";
 
-import { FAQCard } from "@/components/items/FAQCard";
-import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
-import { RelatedServices } from "@/components/sections/RelatedServices";
-import { ServiceDetail } from "@/components/templates/ServiceDetail";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
+  MODULAR_BOOTHS_CONTACT_CTA,
   MODULAR_BOOTHS_DELIVERABLES,
   MODULAR_BOOTHS_FAQ,
   MODULAR_BOOTHS_HERO,
   MODULAR_BOOTHS_PAGE,
   MODULAR_BOOTHS_PROOF_BAR,
   MODULAR_BOOTHS_RANGE_SECTION,
+  MODULAR_BOOTHS_RELATED_SERVICES,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/booth-services/modular-booth-solutions/content";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 export const metadata: Metadata = getMarketingPageMetadata(MODULAR_BOOTHS_PAGE);
 
-const modularBoothsContactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  badge: "Flexible Presence",
-  description: "One booth system. Every event. Any market.",
-  headingLines: ["One Booth System.", "Every Event. Any Market."] as [string, string],
-  primaryCta: { href: "/contact", label: "Get a Modular Booth Quote" },
-};
-
-const modularPortableBoothsRelatedServices = [
-  {
-    href: "/services/booth-services/event-booth-rental",
-    title: "Event Booth Rental",
-  },
-  {
-    href: "/services/booth-services/trade-show-booth-design",
-    title: "Trade Show Booth Design",
-  },
-  {
-    href: "/services/booth-services/trade-show-booth-builder",
-    title: "Trade Show Booth Builder",
-  },
-];
-
 const Page = () => {
   return (
-    <ServiceDetail
+    <ServicePage
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
-      closingSections={
-        <>
-          <CardSection heading={MODULAR_BOOTHS_FAQ.heading} id="faq" layout="carousel">
-            {MODULAR_BOOTHS_FAQ.faqs.map((f) => (
-              <FAQCard answer={f.answer} key={f.id} question={f.question} />
-            ))}
-          </CardSection>
-          <RelatedServices services={modularPortableBoothsRelatedServices} />
-          <ContactUs {...modularBoothsContactCta} />
-        </>
-      }
-      deliverables={MODULAR_BOOTHS_DELIVERABLES}
+      contactUs={MODULAR_BOOTHS_CONTACT_CTA}
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
-      proofBar={MODULAR_BOOTHS_PROOF_BAR.stats}
+      proofBar={MODULAR_BOOTHS_PROOF_BAR}
+      relatedServices={MODULAR_BOOTHS_RELATED_SERVICES}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
+      services={MODULAR_BOOTHS_DELIVERABLES}
       why={MODULAR_BOOTHS_WHY}
     />
   );
