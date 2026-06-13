@@ -23,10 +23,9 @@ const GA_INLINE_SCRIPT_HTML = {
 export const PartytownScripts = () => {
   return (
     <>
-      <Script
+      <script
         dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML}
         id="partytown-snippet"
-        strategy="beforeInteractive"
       />
       {gaId ? (
         <>
@@ -36,10 +35,9 @@ export const PartytownScripts = () => {
             strategy="lazyOnload"
             type="text/partytown"
           />
-          <Script
+          <script
             dangerouslySetInnerHTML={GA_INLINE_SCRIPT_HTML}
             id="google-analytics-inline"
-            strategy="lazyOnload"
             type="text/partytown"
           />
         </>

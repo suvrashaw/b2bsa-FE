@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 
-import { ContactUs } from "@/components/sections/ContactUs";
-import { ServiceHub } from "@/components/templates/ServiceHub";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   RESEARCH_CASE_STUDIES,
+  RESEARCH_CONTACT_CTA,
   RESEARCH_FAQ,
   RESEARCH_HERO,
   RESEARCH_PAGE,
@@ -17,19 +16,11 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(RESEARCH_PAGE);
 
-const marketResearchContactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  badge: "Intelligence First",
-  description: "Own your competitive intelligence advantage.",
-  headingLines: ["Own Your Competitive", "Intelligence Advantage."] as [string, string],
-  primaryCta: { href: "/contact", label: "Start a Research Project" },
-};
-
 const Page = () => {
   return (
-    <ServiceHub
+    <ServicePage
       caseStudies={RESEARCH_CASE_STUDIES}
-      closingSections={<ContactUs {...marketResearchContactCta} />}
+      contactUs={RESEARCH_CONTACT_CTA}
       faq={RESEARCH_FAQ}
       hero={RESEARCH_HERO}
       page={RESEARCH_PAGE}

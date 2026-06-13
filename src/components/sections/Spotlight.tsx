@@ -17,12 +17,14 @@ export interface SpotlightProps {
   ctaLabel?: string;
   description: string;
   descriptionItems?: readonly string[];
+  id?: string;
   imageAlt?: string;
   imageUrl?: string;
   index?: string;
   label?: string;
   onClick?: () => void;
   secondarySpotlight?: SpotlightSecondaryBlock;
+  sectionClassName?: string;
   showCta?: boolean;
   titleLine1: string;
   titleLine2: string;
@@ -347,12 +349,14 @@ export const Spotlight = ({
   ctaLabel = "Explore",
   description,
   descriptionItems,
+  id,
   imageAlt = "Feature image",
   imageUrl,
   index: _index = "01",
   label,
   onClick,
   secondarySpotlight,
+  sectionClassName,
   showCta = true,
   titleLine1,
   titleLine2,
@@ -380,47 +384,49 @@ export const Spotlight = ({
 
   return (
     <>
-      <div
-        className={cn(
-          "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
-          className
-        )}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <SpotlightTextBlock
-          align={align}
-          ctaHref={ctaHref}
-          ctaLabel={showCta ? ctaLabel : undefined}
-          description={description}
-          descriptionItems={descriptionItems}
-          isHovered={isHovered}
-          label={label}
-          onClick={handleCtaClick}
-          titleLine1={titleLine1}
-          titleLine2={titleLine2}
-        />
-        {secondarySpotlight ? (
+      <section className={cn("bg-brand-gray py-20", sectionClassName)} id={id}>
+        <div
+          className={cn(
+            "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 px-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
+            className
+          )}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <SpotlightTextBlock
-            align={secondarySpotlight.align ?? "right"}
-            ctaHref={secondarySpotlight.ctaHref}
-            ctaLabel={secondarySpotlight.ctaLabel}
-            description={secondarySpotlight.description}
-            descriptionItems={secondarySpotlight.descriptionItems}
+            align={align}
+            ctaHref={ctaHref}
+            ctaLabel={showCta ? ctaLabel : undefined}
+            description={description}
+            descriptionItems={descriptionItems}
             isHovered={isHovered}
-            label={secondarySpotlight.label}
-            titleLine1={secondarySpotlight.titleLine1}
-            titleLine2={secondarySpotlight.titleLine2}
+            label={label}
+            onClick={handleCtaClick}
+            titleLine1={titleLine1}
+            titleLine2={titleLine2}
           />
-        ) : (
-          <SpotlightImageBlock
-            imageAlt={imageAlt}
-            imageUrl={imageUrl}
-            isHovered={isHovered}
-            videoUrl={videoUrl}
-          />
-        )}
-      </div>
+          {secondarySpotlight ? (
+            <SpotlightTextBlock
+              align={secondarySpotlight.align ?? "right"}
+              ctaHref={secondarySpotlight.ctaHref}
+              ctaLabel={secondarySpotlight.ctaLabel}
+              description={secondarySpotlight.description}
+              descriptionItems={secondarySpotlight.descriptionItems}
+              isHovered={isHovered}
+              label={secondarySpotlight.label}
+              titleLine1={secondarySpotlight.titleLine1}
+              titleLine2={secondarySpotlight.titleLine2}
+            />
+          ) : (
+            <SpotlightImageBlock
+              imageAlt={imageAlt}
+              imageUrl={imageUrl}
+              isHovered={isHovered}
+              videoUrl={videoUrl}
+            />
+          )}
+        </div>
+      </section>
       {triggerContactModal && <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />}
     </>
   );

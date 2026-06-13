@@ -570,13 +570,8 @@ export const Header = ({
                     onClose={handleCloseMegamenu}
                   />
                   <MegamenuServiceGroup
-                    className="py-1 xl:py-2"
-                    group={serviceNavigationGroups[5]}
-                    onClose={handleCloseMegamenu}
-                  />
-                  <MegamenuServiceGroup
                     className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[6]}
+                    group={serviceNavigationGroups[5]}
                     onClose={handleCloseMegamenu}
                   />
                 </div>

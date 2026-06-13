@@ -55,20 +55,16 @@ const Page = () => {
         secondaryCta={ABOUT_SECONDARY_CTA}
         title={"We Are the Growth Partner\nYour Enterprise Deserves"}
       />
-      <section className="bg-brand-gray py-20">
-        <div className="container mx-auto px-8">
-          <Spotlight
-            align="left"
-            description=""
-            descriptionItems={ABOUT_VISION_MISSION.missionItems}
-            label="Vision & Mission"
-            secondarySpotlight={ABOUT_VISION_SPOTLIGHT}
-            showCta={false}
-            titleLine1="Our"
-            titleLine2="Mission"
-          />
-        </div>
-      </section>
+      <Spotlight
+        align="left"
+        description=""
+        descriptionItems={ABOUT_VISION_MISSION.missionItems}
+        label="Vision & Mission"
+        secondarySpotlight={ABOUT_VISION_SPOTLIGHT}
+        showCta={false}
+        titleLine1="Our"
+        titleLine2="Mission"
+      />
       <Timeline
         description={ABOUT_ORIGIN_TIMELINE.description}
         heading={ABOUT_ORIGIN_TIMELINE.heading}
@@ -96,19 +92,19 @@ const Page = () => {
           />
         ))}
       </CardSection>
-      <section className="scroll-mt-28 bg-brand-gray px-8 py-20" id="founder">
-        <Spotlight
-          align="left"
-          className="[&>div:first-child]:md:order-last"
-          description={ABOUT_FOUNDER_STORY.story}
-          imageAlt={ABOUT_FOUNDER_STORY.image.alt}
-          imageUrl="/images/about/leadership/paras-sir-02.avif"
-          label="FOUNDER STORY"
-          showCta={false}
-          titleLine1="Paras"
-          titleLine2="Lohani"
-        />
-      </section>
+      <Spotlight
+        align="left"
+        className="[&>div:first-child]:md:order-last"
+        description={ABOUT_FOUNDER_STORY.story}
+        id="founder"
+        imageAlt={ABOUT_FOUNDER_STORY.image.alt}
+        imageUrl="/images/about/leadership/paras-sir-02.avif"
+        label="FOUNDER STORY"
+        sectionClassName="scroll-mt-28"
+        showCta={false}
+        titleLine1="Paras"
+        titleLine2="Lohani"
+      />
       <Culture data={ABOUT_VALUES} />
       <GlobalPresence data={ABOUT_PRESENCE} />
       <ContactUsForm {...ABOUT_INQUIRY} />

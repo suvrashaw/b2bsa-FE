@@ -162,7 +162,7 @@ export const MARKET_INTELLIGENCE_PAGE = {
   pageName: "Human-Powered Market Intelligence",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/market-intelligence",
+    canonicalPath: "/services/market-research/market-intelligence",
     description:
       "Human-powered market intelligence for B2B — competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports. The insight automated tools cannot deliver.",
     focusKeyphrase: "human-powered market intelligence",

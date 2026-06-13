@@ -1,12 +1,19 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 export const BS_HERO = {
   description:
     "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+  primaryCta: { href: "/contact", label: "Book a Strategy Session" },
+  secondaryCta: { href: "/case-studies", label: "View Event Portfolio" },
   title: "Booth Services That Turn Trade Show Floors Into Revenue Pipelines",
 };
 
-export { GLOBAL_PROOF_STATS as BS_PROOF_BAR } from "../shared";
+export const BS_PROOF_BAR = {
+  heading: "About Booth Services",
+  imageUrl: "/images/Frames/ezgif-frame-017.jpg",
+  stats: GLOBAL_PROOF_STATS,
+};
 
 export const BS_SERVICES = {
   description:
@@ -80,6 +87,9 @@ export const BS_PROCESS = {
 };
 
 export const BS_CASE_STUDIES = {
+  description:
+    "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  heading: "Real Events. Real Results.",
   items: GLOBAL_CASE_STUDIES,
 };
 
@@ -143,3 +153,12 @@ export const BS_PAGE = {
     title: "Booth Services for Enterprise B2B Brands | B2B Sales Arrow",
   },
 } as const;
+
+export const BS_CONTACT_CTA = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Ready to Build",
+  description:
+    "250+ events. $1.2B+ influenced. One team, one brief, one outcome. Let's build your event solutions strategy.",
+  headingLines: ["250+ Events.", "$1.2B+ Influenced."] as [string, string],
+  primaryCta: { href: "/contact", label: "Book a Free Strategy Session" },
+};

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 
-import { ContactUs } from "@/components/sections/ContactUs";
-import { ServiceHub } from "@/components/templates/ServiceHub";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   GES_CASE_STUDIES,
+  GES_CONTACT_CTA,
   GES_FAQ,
   GES_HERO,
   GES_PAGE,
@@ -17,20 +16,11 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(GES_PAGE);
 
-const gesContactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  badge: "Ready to Build",
-  description:
-    "250+ events. $1.2B+ influenced. One team, one brief, one outcome. Let's build your event solutions strategy.",
-  headingLines: ["250+ Events.", "$1.2B+ Influenced."] as [string, string],
-  primaryCta: { href: "/contact", label: "Book a Free Strategy Session" },
-};
-
 const Page = () => {
   return (
-    <ServiceHub
+    <ServicePage
       caseStudies={GES_CASE_STUDIES}
-      closingSections={<ContactUs {...gesContactCta} />}
+      contactUs={GES_CONTACT_CTA}
       faq={GES_FAQ}
       hero={GES_HERO}
       page={GES_PAGE}

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 
-import { ContactUs } from "@/components/sections/ContactUs";
-import { ServiceHub } from "@/components/templates/ServiceHub";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   PERF_CASE_STUDIES,
+  PERF_CONTACT_CTA,
   PERF_FAQ,
   PERF_HERO,
   PERF_PAGE,
@@ -17,20 +16,11 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(PERF_PAGE);
 
-const performanceMarketingContactCta = {
-  ...CINEMATIC_CTA_SHARED,
-  badge: "Audit Your Pipeline",
-  description:
-    "Stop guessing. Start knowing. A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
-  headingLines: ["Stop Guessing.", "Start Knowing."] as [string, string],
-  primaryCta: { href: "/contact", label: "Request a Free Performance Marketing Audit" },
-};
-
 const Page = () => {
   return (
-    <ServiceHub
+    <ServicePage
       caseStudies={PERF_CASE_STUDIES}
-      closingSections={<ContactUs {...performanceMarketingContactCta} />}
+      contactUs={PERF_CONTACT_CTA}
       faq={PERF_FAQ}
       hero={PERF_HERO}
       page={PERF_PAGE}

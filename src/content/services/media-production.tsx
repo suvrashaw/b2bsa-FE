@@ -1,12 +1,18 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 export const MEDIA_HERO = {
   description:
     "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust, and keeps earning it long after the shoot.",
+  primaryCta: { href: "/contact", label: "Start Your Media Project" },
   title: "B2B Media Production That Builds Enterprise Authority Before the First Sales Call",
 };
 
-export { GLOBAL_PROOF_STATS as MEDIA_PROOF_BAR } from "../shared";
+export const MEDIA_PROOF_BAR = {
+  heading: "About Media Production",
+  imageUrl: "/images/Frames/ezgif-frame-017.jpg",
+  stats: GLOBAL_PROOF_STATS,
+};
 
 export const MEDIA_SERVICES = {
   heading: "What We Produce",
@@ -79,6 +85,9 @@ export const MEDIA_PROCESS = {
 };
 
 export const MEDIA_CASE_STUDIES = {
+  description:
+    "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  heading: "Real Events. Real Results.",
   items: GLOBAL_CASE_STUDIES,
 };
 
@@ -123,3 +132,12 @@ export const MEDIA_PAGE = {
     title: "B2B Media Production and Video Production Company | B2B Sales Arrow",
   },
 } as const;
+
+export const MEDIA_CONTACT_CTA = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Build Your Asset Library",
+  description:
+    "Content should keep working long after the campaign ends. Build video assets your team can use for months.",
+  headingLines: ["Content Should", "Keep Working."] as [string, string],
+  primaryCta: { href: "/contact", label: "Start Your Media Project" },
+};

@@ -11,7 +11,7 @@ import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-interface ContactUsProps {
+export interface ContactUsProps {
   backgroundImage?: {
     alt: string;
     src: string;

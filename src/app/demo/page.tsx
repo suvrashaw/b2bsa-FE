@@ -14,6 +14,7 @@ import { EventsCard } from "@/components/items/EventsCard";
 import { FAQCard } from "@/components/items/FAQCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
+import { ServicesCard } from "@/components/items/ServicesCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { BlogCategories } from "@/components/sections/BlogCategories";
 import { Blogs } from "@/components/sections/Blogs";
@@ -490,7 +491,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/contact", label: "Contact" },
   ],
   ContactUs: [
-    { href: "/services/data-augmentation", label: "Data Augmentation" },
+    { href: "/services/market-research/data-augmentation", label: "Data Augmentation" },
     { href: "/services/global-event-solutions", label: "Global ES" },
     { href: "/services/market-research", label: "Market Research" },
   ],
@@ -539,7 +540,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   Pricing: [{ href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" }],
   RelatedServices: [
     { href: "/case-studies/waf-2025", label: "Case Study" },
-    { href: "/services/data-augmentation", label: "Data Augmentation" },
+    { href: "/services/market-research/data-augmentation", label: "Data Augmentation" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
   RentVsBuySection: [
@@ -734,9 +735,7 @@ export default function DemoPage() {
 
       {/* 04 – Spotlight */}
       <DemoLabel name="Spotlight" />
-      <div className="px-8 py-20">
-        <Spotlight {...SPOTLIGHT_DEMO_PROPS} />
-      </div>
+      <Spotlight {...SPOTLIGHT_DEMO_PROPS} />
 
       {/* 05 – CinematicSequence */}
       <DemoLabel name="CinematicSequence" />
@@ -806,6 +805,18 @@ export default function DemoPage() {
       <CardSection heading="Future-Ready Stands" layout="grid">
         {BASIC_CARD_ITEMS.map((item) => (
           <BasicCards item={item} key={item.title} />
+        ))}
+      </CardSection>
+
+      {/* 20 – ServiceCarouselSection */}
+      <DemoLabel name="ServiceCarouselSection" />
+      <CardSection heading="Active Prospecting & Events" layout="carousel" cols={4}>
+        {_SERVICE_CAROUSEL_ITEMS.map((item) => (
+          <ServicesCard
+            ctaLabel="Get Started"
+            key={item.id}
+            service={{ ...item, icon: "ArrowRight" } as any}
+          />
         ))}
       </CardSection>
 

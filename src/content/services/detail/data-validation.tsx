@@ -145,7 +145,7 @@ export const DATA_VALIDATION_PAGE = {
   pageName: "Data Validation Services",
   pageType: "serviceDetail",
   seo: {
-    canonicalPath: "/services/data-validation",
+    canonicalPath: "/services/market-research/data-validation",
     description:
       "B2B data validation services — email verification, phone validation, job title confirmation, duplicate detection, and CRM data cleansing. Clean data your sales team can trust.",
     focusKeyphrase: "data validation services",

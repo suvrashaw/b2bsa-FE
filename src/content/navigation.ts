@@ -130,20 +130,19 @@ export const serviceNavigationGroups: ServiceNavGroup[] = [
     href: "/services/market-research",
     links: [
       {
-        href: "/services/data-augmentation",
+        href: "/services/market-research/data-augmentation",
         name: "Data Augmentation Services",
       },
       {
-        href: "/services/data-validation",
+        href: "/services/market-research/data-validation",
         name: "Data Validation Services",
+      },
+      {
+        href: "/services/market-research/market-intelligence",
+        name: "Human Powered Market Intelligence",
       },
     ],
     name: "Market Research",
-  },
-  {
-    href: "/services/market-intelligence",
-    links: [],
-    name: "Human Powered Market Intelligence",
   },
 ];
 

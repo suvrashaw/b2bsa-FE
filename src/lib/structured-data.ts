@@ -73,6 +73,31 @@ export const buildOrganizationJsonLd = () => {
   };
 };
 
+export const buildHowToJsonLd = (
+  title: string,
+  steps: Array<{ description: string; title: string }>
+) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: title,
+  step: steps.map((step, index) => ({
+    "@type": "HowToStep",
+    name: step.title,
+    position: index + 1,
+    text: step.description,
+  })),
+});
+
+export const buildItemListJsonLd = (items: Array<{ title: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    name: item.title,
+    position: index + 1,
+  })),
+});
+
 export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInput) => {
   return {
     "@context": "https://schema.org",

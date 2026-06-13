@@ -531,7 +531,6 @@ export const Footer = () => {
             <FooterServiceGroup group={serviceNavigationGroups[3]} />
             <FooterServiceGroup group={serviceNavigationGroups[4]} />
             <FooterServiceGroup group={serviceNavigationGroups[5]} />
-            <FooterServiceGroup group={serviceNavigationGroups[6]} />
           </div>
         </div>
 

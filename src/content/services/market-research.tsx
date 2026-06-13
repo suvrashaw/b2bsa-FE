@@ -1,12 +1,19 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 export const RESEARCH_HERO = {
   description:
     "Better strategy starts with better intelligence. Our B2B market research agency helps enterprise teams understand their markets more clearly than the competition, and move on that advantage faster.",
+  primaryCta: { href: "/contact", label: "Request a Research Consultation" },
+  secondaryCta: { href: "/contact", label: "Download a Sample Report" },
   title: "B2B Market Research That Gives Your Enterprise an Unfair Competitive Advantage",
 };
 
-export { GLOBAL_PROOF_STATS as RESEARCH_PROOF_BAR } from "../shared";
+export const RESEARCH_PROOF_BAR = {
+  heading: "About Market Research",
+  imageUrl: "/images/Frames/ezgif-frame-017.jpg",
+  stats: GLOBAL_PROOF_STATS,
+};
 
 export const RESEARCH_SERVICES = {
   description:
@@ -17,7 +24,7 @@ export const RESEARCH_SERVICES = {
       color: "bg-brand-blue",
       description:
         "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
-      href: "/services/data-augmentation",
+      href: "/services/market-research/data-augmentation",
       icon: "PlusCircle",
       id: "augmentation",
       image: "/images/services/database-research-1.avif",
@@ -27,6 +34,7 @@ export const RESEARCH_SERVICES = {
       color: "bg-brand-cyan",
       description:
         "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
+      href: "/services/market-research/data-validation",
       icon: "CheckCircle",
       id: "validation",
       image: "/images/services/database-research-revised.avif",
@@ -36,6 +44,7 @@ export const RESEARCH_SERVICES = {
       color: "bg-brand-primary",
       description:
         "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
+      href: "/services/market-research/market-intelligence",
       icon: "Search",
       id: "intelligence",
       image: "/images/services/market-intelligence.avif",
@@ -83,6 +92,9 @@ export const RESEARCH_PROCESS = {
 };
 
 export const RESEARCH_CASE_STUDIES = {
+  description:
+    "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  heading: "Real Events. Real Results.",
   items: GLOBAL_CASE_STUDIES,
 };
 
@@ -128,3 +140,11 @@ export const RESEARCH_PAGE = {
     title: "B2B Market Research Agency and Intelligence Services | B2B Sales Arrow",
   },
 } as const;
+
+export const RESEARCH_CONTACT_CTA = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Intelligence First",
+  description: "Own your competitive intelligence advantage.",
+  headingLines: ["Own Your Competitive", "Intelligence Advantage."] as [string, string],
+  primaryCta: { href: "/contact", label: "Start a Research Project" },
+};

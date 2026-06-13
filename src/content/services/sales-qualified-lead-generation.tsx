@@ -1,12 +1,19 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 export const SQL_HERO = {
   description:
     "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action, not a badge scan CSV.",
+  primaryCta: { href: "/contact", label: "Request a SQL Strategy Session" },
+  secondaryCta: { href: "/contact", label: "Build Your SQL Program" },
   title: "Sales Qualified Lead Generation, Decision-Makers, Not Data",
 };
 
-export { GLOBAL_PROOF_STATS as SQL_PROOF_BAR } from "../shared";
+export const SQL_PROOF_BAR = {
+  heading: "About Sales Qualified Lead Generation",
+  imageUrl: "/images/Frames/ezgif-frame-017.jpg",
+  stats: GLOBAL_PROOF_STATS,
+};
 
 export const SQL_SERVICES = {
   description:
@@ -86,6 +93,9 @@ export const SQL_PROCESS = {
 };
 
 export const SQL_CASE_STUDIES = {
+  description:
+    "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  heading: "Real Events. Real Results.",
   items: GLOBAL_CASE_STUDIES,
 };
 
@@ -137,3 +147,12 @@ export const SQL_PAGE = {
     title: "Sales Qualified Lead Generation for Enterprise B2B | B2B Sales Arrow",
   },
 } as const;
+
+export const SQL_CONTACT_CTA = {
+  ...CINEMATIC_CTA_SHARED,
+  badge: "Pipeline-Ready Leads",
+  description:
+    "A lead is only valuable when your team can act on it with confidence. Give them prospects that are ready.",
+  headingLines: ["Give Your Team", "Leads That Are Ready."] as [string, string],
+  primaryCta: { href: "/contact", label: "Build Your SQL Generation Program" },
+};

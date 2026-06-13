@@ -84,32 +84,24 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       </section>
 
       {/* Challenges — Spotlight, image left */}
-      <section className="bg-brand-gray py-20">
-        <div className="container mx-auto px-8">
-          <Spotlight
-            className="[&_p]:text-lg"
-            description={study.challenges}
-            imageAlt={study.title}
-            imageUrl={study.image}
-            titleLine1="The"
-            titleLine2="Challenges"
-          />
-        </div>
-      </section>
+      <Spotlight
+        className="[&_p]:text-lg"
+        description={study.challenges}
+        imageAlt={study.title}
+        imageUrl={study.image}
+        titleLine1="The"
+        titleLine2="Challenges"
+      />
 
       {/* Our Solution — Spotlight, image right */}
-      <section className="bg-brand-gray py-20">
-        <div className="container mx-auto px-8">
-          <Spotlight
-            className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
-            description={study.solution}
-            imageAlt={study.title}
-            imageUrl={study.image}
-            titleLine1="Our"
-            titleLine2="Solution"
-          />
-        </div>
-      </section>
+      <Spotlight
+        className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
+        description={study.solution}
+        imageAlt={study.title}
+        imageUrl={study.image}
+        titleLine1="Our"
+        titleLine2="Solution"
+      />
 
       {/* Outcome — Stats with heading and description */}
       <Stats
