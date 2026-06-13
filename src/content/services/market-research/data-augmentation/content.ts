@@ -7,16 +7,7 @@ import DATA from "./data.json";
 
 export const DATA_AUGMENTATION_HERO = HERO_DATA;
 
-export const DATA_AUGMENTATION_DEFINITION = {
-  body: (
-    <p>
-      <strong>B2B data augmentation</strong> is the process of enriching existing contact or account
-      records with additional verified information — job titles, emails, company revenue,{" "}
-      <strong>technology stack</strong>, and buying intent signals — to make records more complete,
-      accurate, and useful for sales and marketing activities.
-    </p>
-  ),
-};
+export const DATA_AUGMENTATION_DEFINITION = DATA.augmentationDefinition;
 
 export const DATA_AUGMENTATION_DELIVERABLES = DATA.augmentationDeliverables;
 

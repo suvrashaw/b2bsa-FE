@@ -66,5 +66,8 @@
     "ctaLabel": "Request a Data Audit",
     "description": "Your CRM is leaking revenue. Better data enrichment improves segmentation, personalisation, deliverability, and sales productivity simultaneously.",
     "title": "Stop Leaking Revenue"
+  },
+  "augmentationDefinition": {
+    "body": "B2B data augmentation is the process of enriching existing contact or account records with additional verified information — job titles, emails, company revenue, technology stack, and buying intent signals — to make records more complete, accurate, and useful for sales and marketing activities."
   }
 }
