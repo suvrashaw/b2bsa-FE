@@ -7,7 +7,7 @@ import { useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface SpotlightProps {
@@ -121,7 +121,7 @@ const SpotlightTextBlock = ({
         </div>
       )}
 
-      <Heading as="h2" className="relative">
+      <SectionHeader as="h2" className="relative">
         <span
           className="block font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:whitespace-nowrap lg:text-4xl"
           style={title1Style}
@@ -134,7 +134,7 @@ const SpotlightTextBlock = ({
         >
           {titleLine2}
         </span>
-      </Heading>
+      </SectionHeader>
 
       {descriptionItems ? (
         <div

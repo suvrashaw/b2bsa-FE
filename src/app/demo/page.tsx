@@ -16,8 +16,6 @@ import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
-import { BlogCategories } from "@/components/sections/BlogCategories";
-import { BlogDeckLayout } from "@/components/sections/BlogDeckLayout";
 import { Blogs } from "@/components/sections/Blogs";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { Carousel } from "@/components/sections/Carousel";
@@ -35,18 +33,15 @@ import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
-import { HorizontalScrollTrack } from "@/components/sections/HorizontalScrollTrack";
-import { RotatingWordBadge } from "@/components/sections/RotatingWordBadge";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
-import { StatsMarquee } from "@/components/sections/StatsMarquee";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Timeline } from "@/components/sections/Timeline";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { Button } from "@/components/ui/Button";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
 import {
   CASE_STUDIES_PAGE_CONTENT,
@@ -450,9 +445,6 @@ type PageLink = { href: string; label: string };
 
 const COMPONENT_PAGES: Record<string, PageLink[]> = {
   AboutCoreValues: [{ href: "/about", label: "About" }],
-  BlogCategories: [{ href: "/blogs", label: "Blogs" }],
-  BlogDeckLayout: [{ href: "/blogs", label: "Blogs" }],
-
   Blogs: [
     { href: "/", label: "Home" },
     { href: "/blogs", label: "Blogs" },
@@ -533,13 +525,11 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
     { href: "/services/global-event-solutions", label: "Service Hub" },
   ],
-  HorizontalScrollTrack: [],
   LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [{ href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" }],
   RentVsBuySection: [
     { href: "/services/booth-services/event-booth-rental", label: "Event Booth Rental" },
   ],
-  RotatingWordBadge: [],
   ServicesStack: [
     { href: "/", label: "Home" },
     { href: "/thank-you", label: "Thank You" },
@@ -555,7 +545,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
     { href: "/services/global-event-solutions", label: "Service Hub" },
   ],
-  StatsMarquee: [],
   StickyScroll: [
     { href: "/", label: "Home" },
     { href: "/services/booth-services/event-booth-rental", label: "Event Booth Rental" },
@@ -572,8 +561,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
 
 const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
   AboutCoreValues: { items: [], ui: ["Heading"] },
-  BlogCategories: { items: [], ui: ["Heading"] },
-  BlogDeckLayout: { items: ["BlogCard", "BlogCardGrid"], ui: [] },
   Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
   BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
   BlogsDirectory: { items: ["BlogCardGrid"], ui: ["Pagination"] },
@@ -595,15 +582,12 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   GlobalPresence: { items: [], ui: ["Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
-  HorizontalScrollTrack: { items: [], ui: [] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
   RentVsBuySection: { items: [], ui: ["Heading"] },
-  RotatingWordBadge: { items: [], ui: [] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
   Spotlight: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   Stats: { items: [], ui: ["Heading"] },
-  StatsMarquee: { items: [], ui: [] },
   StickyScroll: { items: [], ui: ["Button", "ContactModal", "Eyebrow", "Heading"] },
   Testimonials: { items: ["TestimonialCarouselCard"], ui: ["Eyebrow", "Heading"] },
   Timeline: { items: [], ui: ["Heading"] },
@@ -685,16 +669,6 @@ const DemoLabel = ({ name }: { name: string }) => {
   );
 };
 
-const ROTATING_BADGE_WORDS = ["Experiences", "Pipeline", "Booths", "Relationships"];
-
-const STATS_MARQUEE_ITEMS = [
-  { key: "1", label: "Countries", value: "40+" },
-  { key: "2", label: "Events", value: "250+" },
-  { key: "3", label: "Pipeline", value: "$1.2B" },
-  { key: "4", label: "Retention", value: "98%" },
-  { key: "5", label: "ROI", value: "3x" },
-];
-
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 const DemoPage = () => {
@@ -744,16 +718,6 @@ const DemoPage = () => {
       <DemoLabel name="Spotlight" />
       <Spotlight {...SPOTLIGHT_DEMO_PROPS} />
 
-      {/* 04b - RotatingWordBadge */}
-      <DemoLabel name="RotatingWordBadge" />
-      <div className="flex justify-center bg-brand-charcoal py-20 font-heading text-4xl text-white">
-        We build{" "}
-        <RotatingWordBadge
-          className="ml-3 inline-block text-brand-cyan"
-          words={ROTATING_BADGE_WORDS}
-        />
-      </div>
-
       {/* 05 – CinematicSequence */}
       <DemoLabel name="CinematicSequence" />
       <CinematicSequence />
@@ -770,12 +734,6 @@ const DemoPage = () => {
         imageUrl="/images/Frames/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
-
-      {/* 06b - StatsMarquee */}
-      <DemoLabel name="StatsMarquee" />
-      <div className="bg-brand-gray py-12">
-        <StatsMarquee items={STATS_MARQUEE_ITEMS} />
-      </div>
 
       {/* 07 – HomeStats */}
       <DemoLabel name="HomeStats" />
@@ -801,16 +759,6 @@ const DemoPage = () => {
         features={FEATURE_CAROUSEL_ITEMS}
         heading="How We Drive Results"
       />
-
-      {/* 16b - HorizontalScrollTrack */}
-      <DemoLabel name="HorizontalScrollTrack" />
-      <HorizontalScrollTrack>
-        <div className="flex h-[80vh] w-[200vw] items-center justify-around bg-brand-charcoal px-20 text-5xl font-black text-white md:text-7xl">
-          <span>Scroll</span>
-          <span className="text-brand-cyan">To</span>
-          <span>Reveal</span>
-        </div>
-      </HorizontalScrollTrack>
 
       {/* 17 – StickyScroll */}
       <DemoLabel name="StickyScroll" />
@@ -858,9 +806,9 @@ const DemoPage = () => {
       <CardsGrid
         className="bg-[#111111] text-white"
         heading={
-          <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
+          <SectionHeader as="h2" className="max-w-4xl text-white lg:text-5xl">
             Recent Event Programs
-          </Heading>
+          </SectionHeader>
         }
         headingAlign="left"
       >
@@ -933,10 +881,6 @@ const DemoPage = () => {
       <DemoLabel name="Blogs" />
       <Blogs />
 
-      {/* 30b - BlogDeckLayout */}
-      <DemoLabel name="BlogDeckLayout" />
-      <BlogDeckLayout blogs={DEMO_BLOG_POSTS} />
-
       {/* 31 – BlogsCarousel */}
       <DemoLabel name="BlogsCarousel" />
       <Carousel
@@ -1003,10 +947,6 @@ const DemoPage = () => {
       {/* 36 – ContactUsForm */}
       <DemoLabel name="ContactUsForm" />
       <ContactUsForm />
-
-      {/* 37 – BlogCategories */}
-      <DemoLabel name="BlogCategories" />
-      <BlogCategories />
 
       {/* 38 – BlogsDirectory */}
       <DemoLabel name="BlogsDirectory" />

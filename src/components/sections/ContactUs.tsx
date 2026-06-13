@@ -8,7 +8,7 @@ import { useCallback, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface ContactUsProps {
@@ -222,12 +222,12 @@ export const ContactUs = ({
               viewport={ctaViewport}
               whileInView="visible"
             >
-              <Heading as="h2" className="mt-8 text-white">
+              <SectionHeader as="h2" className="mt-8 text-white">
                 <span className="block text-white/80">{headingLines[0]}</span>
                 {headingLines[1] ? (
                   <span className="mt-2 block text-white">{headingLines[1]}</span>
                 ) : null}
-              </Heading>
+              </SectionHeader>
             </motion.div>
           )}
 

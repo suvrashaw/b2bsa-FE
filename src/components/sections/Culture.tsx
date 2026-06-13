@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useMemo, useRef } from "react";
 
 import { CultureReasonCard } from "@/components/items/CultureReasonCard";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 // ─── ZoomParallax ────────────────────────────────────────────────────────────
@@ -155,9 +155,9 @@ export const Culture = ({ data }: { data: CultureData }) => {
         <div className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-charcoal uppercase transition-colors duration-500">
           {data.eyebrow}
         </div>
-        <Heading as="h2" className="mb-6">
+        <SectionHeader as="h2" className="mb-6">
           {typeof data.heading === "string" ? data.heading : "What We Believe In"}
-        </Heading>
+        </SectionHeader>
         <p className="mx-auto max-w-2xl text-center text-base leading-relaxed text-brand-charcoal/70 transition-colors duration-500 md:text-lg">
           {data.description}
         </p>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { type ReactNode, useMemo } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 interface Step {
@@ -49,7 +49,7 @@ export const Timeline = ({
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         {(resolvedTitle || resolvedDescription) && (
           <div className="mb-20 text-center">
-            {resolvedTitle && <Heading as="h2">{resolvedTitle}</Heading>}
+            {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}
             {resolvedDescription && (
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
                 {resolvedDescription}

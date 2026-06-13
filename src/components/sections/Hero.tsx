@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface HeroProps {
@@ -207,7 +207,7 @@ export const Hero = ({
 
       <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <motion.div className="max-w-4xl" style={contentStyle}>
-          <Heading as="h1" className="mb-8" style={H1_STYLE}>
+          <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
             {isStringTitle
               ? (titleLines as string[]).map((_, index) => (
                   <TypewriterLine
@@ -219,7 +219,7 @@ export const Hero = ({
               : (titleLines as ReactNode[]).map((line, index) => (
                   <TitleLine index={index} key={index} line={line} />
                 ))}
-          </Heading>
+          </SectionHeader>
 
           {description && (
             <motion.p

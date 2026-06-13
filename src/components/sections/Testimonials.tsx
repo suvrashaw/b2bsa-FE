@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCard } from "@/components/items/TestimonialCard";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home/content";
 
 export interface TestimonialsProps {
@@ -53,9 +53,9 @@ export const Testimonials = ({
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-8 flex flex-col items-center text-center">
-          <Heading as="h2" className="mb-3 text-center">
+          <SectionHeader as="h2" className="mb-3 text-center">
             {heading}
-          </Heading>
+          </SectionHeader>
         </div>
 
         {/* 3D Coverflow Container */}

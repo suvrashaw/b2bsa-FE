@@ -4,7 +4,7 @@ import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "f
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home/content";
 
 export interface ClientLogosProps {
@@ -97,9 +97,9 @@ export const ClientLogos = ({
     return (
       <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <Heading as="h2" className="pt-10 pb-6 text-center">
+          <SectionHeader as="h2" className="pt-10 pb-6 text-center">
             {heading}
-          </Heading>
+          </SectionHeader>
         )}
         <div className="container mx-auto flex flex-wrap justify-center gap-4 px-8 pb-10">
           {logos.map((logo) => (
@@ -126,9 +126,9 @@ export const ClientLogos = ({
       ref={containerRef}
     >
       {heading && (
-        <Heading as="h2" className="pt-10 pb-3 text-center">
+        <SectionHeader as="h2" className="pt-10 pb-3 text-center">
           {heading}
-        </Heading>
+        </SectionHeader>
       )}
       <div
         className="pointer-events-auto relative overflow-hidden py-6 pb-10"

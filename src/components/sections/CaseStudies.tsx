@@ -10,7 +10,7 @@ import type { CaseStudyCardData } from "@/content/case-studies/content";
 
 import { CaseStudyItem } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   type CaseStudiesContent,
   HOME_CASE_STUDIES_CONTENT,
@@ -116,9 +116,9 @@ export const CaseStudies = ({
     <section className="relative bg-brand-gray py-12 md:py-16 lg:py-20" id="work">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mb-16 flex flex-col items-center text-center">
-          <Heading as="h2" className="text-center">
+          <SectionHeader as="h2" className="text-center">
             {heading}
-          </Heading>
+          </SectionHeader>
           {description && (
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">{description}</p>
           )}

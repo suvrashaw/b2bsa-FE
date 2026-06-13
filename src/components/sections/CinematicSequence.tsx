@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   type CinematicSequenceContent,
   HOME_CINEMATIC_SEQUENCE_CONTENT,
@@ -124,9 +124,9 @@ export const CinematicSequence = ({
                 {heroOverlay.eyebrow}
               </p>
             )}
-            <Heading as="h1" className="mb-6" style={HERO_H1_STYLE}>
+            <SectionHeader as="h1" className="mb-6" style={HERO_H1_STYLE}>
               {heroOverlay.title}
-            </Heading>
+            </SectionHeader>
             <p
               className="mb-10 max-w-xl text-base leading-relaxed font-semibold"
               style={HERO_DESC_STYLE}

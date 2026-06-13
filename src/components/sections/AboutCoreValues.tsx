@@ -1,6 +1,11 @@
-import { Heading } from "@/components/ui/Heading";
+"use client";
 
-import { HorizontalScrollTrack } from "./HorizontalScrollTrack";
+import type { ReactNode } from "react";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
+
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export interface AboutCoreValuesData {
   description: string;
@@ -50,6 +55,45 @@ const CoreValueCard = ({
   );
 };
 
+const HorizontalScrollTrack = ({ children }: { children: ReactNode }) => {
+  const targetRef = useRef<HTMLElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [scrollRange, setScrollRange] = useState(0);
+
+  useEffect(() => {
+    const updateScrollRange = () => {
+      if (trackRef.current) {
+        setScrollRange(trackRef.current.scrollWidth - window.innerWidth);
+      }
+    };
+    updateScrollRange();
+    window.addEventListener("resize", updateScrollRange);
+    return () => window.removeEventListener("resize", updateScrollRange);
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    offset: ["start start", "end end"],
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+  const motionStyle = useMemo(() => ({ x }), [x]);
+
+  return (
+    <section className="relative hidden h-[400vh] bg-brand-gray md:block" ref={targetRef}>
+      <div className="sticky top-0 flex h-[80vh] min-h-[500px] w-full items-stretch overflow-hidden">
+        <motion.div
+          className="flex h-full items-stretch will-change-transform"
+          ref={trackRef}
+          style={motionStyle}
+        >
+          {children}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
   return (
     <div id="core-values">
@@ -62,9 +106,9 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
               Our Core
             </p>
           </div>
-          <Heading as="h2" className="mb-4 text-brand-charcoal">
+          <SectionHeader as="h2" className="mb-4 text-brand-charcoal">
             {data.heading}
-          </Heading>
+          </SectionHeader>
           <p className="text-sm leading-relaxed text-brand-charcoal/60">{data.description}</p>
         </div>
 
@@ -95,12 +139,12 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
             </p>
           </div>
 
-          <Heading
+          <SectionHeader
             as="h2"
             className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] leading-[1.1] font-black text-brand-charcoal"
           >
             {data.heading}
-          </Heading>
+          </SectionHeader>
 
           <p className="mb-10 max-w-[560px] text-[18px] leading-[1.65] text-brand-charcoal/60">
             {data.description}

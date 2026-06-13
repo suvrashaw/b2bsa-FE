@@ -1,4 +1,4 @@
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export interface CorporateVideoIndustriesSectionProps {
   description: string;
@@ -23,12 +23,12 @@ export const CorporateVideoIndustriesSection = ({
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="max-w-5xl">
-          <Heading
+          <SectionHeader
             as="h2"
             className="max-w-4xl text-5xl leading-none text-white md:text-6xl lg:text-7xl"
           >
             {heading}
-          </Heading>
+          </SectionHeader>
           <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/86 md:text-lg">
             {description}
           </p>

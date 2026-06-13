@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   CASE_STUDIES_PAGE_CONTENT,
   CASE_STUDIES_PAGE_STUDIES,
@@ -86,9 +86,9 @@ export const CaseStudiesClientPage = () => {
             initial={HERO_LEFT_INITIAL}
             transition={HERO_LEFT_TRANSITION}
           >
-            <Heading as="h1" className="leading-[1.05]">
+            <SectionHeader as="h1" className="leading-[1.05]">
               {CASE_STUDIES_PAGE_CONTENT.hero.title}
-            </Heading>
+            </SectionHeader>
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-700">
               {CASE_STUDIES_PAGE_CONTENT.hero.description}
             </p>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -18,19 +18,19 @@ const Page = () => {
       <Header />
       <div className="pt-40 pb-24">
         <div className="container mx-auto max-w-4xl px-8">
-          <Heading
+          <SectionHeader
             as="h1"
             className="mb-12 font-heading text-2xl font-bold md:text-2xl"
             preserveClassName
           >
             Privacy Policy
-          </Heading>
+          </SectionHeader>
           <div className="prose prose-lg prose-slate max-w-none">
             <p className="mb-12 text-xl text-gray-500">Last Updated: May 2024</p>
             <section className="mb-12">
-              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 1. Information We Collect
-              </Heading>
+              </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
                 We collect information that you provide directly to us when you fill out a form,
                 request a consultation, or contact us via email. This may include your name, email
@@ -38,9 +38,9 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 2. How We Use Your Information
-              </Heading>
+              </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
                 We use the information we collect to provide, maintain, and improve our services, to
                 communicate with you about your projects, and to send you insights and updates that
@@ -48,9 +48,9 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 3. Data Security
-              </Heading>
+              </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
                 We take reasonable measures to protect your personal information from loss, theft,
                 misuse, and unauthorized access. However, no internet transmission is ever
@@ -58,9 +58,9 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 4. Cookies
-              </Heading>
+              </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
                 Our website uses cookies to enhance your experience. You can choose to disable
                 cookies in your browser settings, although this may affect the functionality of some
@@ -68,9 +68,9 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <Heading as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
                 5. Contact Us
-              </Heading>
+              </SectionHeader>
               <p className="leading-relaxed text-gray-600">
                 If you have any questions about this Privacy Policy, please contact us at
                 info@b2bsalesarrow.com.

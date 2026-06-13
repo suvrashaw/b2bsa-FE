@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home/content";
 
 interface ContactUsFormProps {
@@ -40,9 +40,9 @@ export const ContactUsForm = ({
           {/* Left Side: Contact Info & Image */}
           <div className="flex flex-col items-start text-left">
             <div className="w-full text-left">
-              <Heading as="h2" className="mb-8">
+              <SectionHeader as="h2" className="mb-8">
                 {heading}
-              </Heading>
+              </SectionHeader>
             </div>
             <p className="mb-12 max-w-md text-left text-base leading-relaxed text-gray-600 md:text-lg">
               {description}

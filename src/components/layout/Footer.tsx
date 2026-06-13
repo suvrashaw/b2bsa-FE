@@ -26,7 +26,7 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
 );
 
 import { Button } from "@/components/ui/Button";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 import { cn } from "@/lib";
 
@@ -128,9 +128,9 @@ export const Footer = () => {
                 src="/images/logo_white.svg"
               />
             </Link>
-            <Heading as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>
+            <SectionHeader as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>
               Turn Your Next Trade Show into a Revenue Engine
-            </Heading>
+            </SectionHeader>
             <p className="max-w-sm text-sm leading-relaxed text-white/90">
               We deliver premier global event solutions that turn your corporate presence into a
               measurable revenue engine. Let&apos;s build your pipeline together.

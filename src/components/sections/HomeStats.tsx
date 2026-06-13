@@ -1,11 +1,52 @@
+"use client";
+
 import type { ReactNode } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home/content";
 
-import { RotatingWordBadge } from "./RotatingWordBadge";
-
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
+
+const ANIMATE = { opacity: 1, y: 0 };
+const EXIT = { opacity: 0, y: -14 };
+const INITIAL = { opacity: 0, y: 14 };
+const TRANSITION = { duration: 0.38 } as const;
+
+const useRotatingWord = (words: string[], interval = 2500) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
+    return () => clearInterval(id);
+  }, [words.length, interval]);
+  return { key: index, word: words[index] };
+};
+
+interface RotatingWordBadgeProps {
+  className?: string;
+  interval?: number;
+  words: string[];
+}
+
+const RotatingWordBadge = ({ className, interval, words }: RotatingWordBadgeProps) => {
+  const { key: wordKey, word } = useRotatingWord(words, interval);
+  return (
+    <AnimatePresence mode="wait">
+      <motion.span
+        animate={ANIMATE}
+        className={className}
+        exit={EXIT}
+        initial={INITIAL}
+        key={wordKey}
+        transition={TRANSITION}
+      >
+        {word}
+      </motion.span>
+    </AnimatePresence>
+  );
+};
 
 interface HomeStatsProps {
   attribution?: StatsContent["attribution"];
@@ -67,10 +108,10 @@ export const HomeStats = ({
       <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:grid-cols-2 lg:px-8">
         <div className="order-last flex flex-col items-start space-y-6 text-left lg:order-none">
           <div className="w-full text-left">
-            <Heading as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
+            <SectionHeader as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
               <span className="block">{resolvedHeading}</span>
               <RotatingWordBadge className="block text-brand-blue" words={ROTATING_WORDS} />
-            </Heading>
+            </SectionHeader>
             {description && (
               <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80 md:text-lg">
                 {description}

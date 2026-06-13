@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface PricingProps {
@@ -67,13 +67,13 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           >
             {tier.icon}
           </div>
-          <Heading
+          <SectionHeader
             as="h3"
             className="mb-2 font-sans text-2xl font-bold text-brand-charcoal"
             preserveClassName
           >
             {tier.name}
-          </Heading>
+          </SectionHeader>
           <p className="font-sans text-sm font-semibold text-gray-500">{tier.description}</p>
         </div>
 

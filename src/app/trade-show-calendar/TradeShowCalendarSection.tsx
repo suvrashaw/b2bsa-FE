@@ -9,8 +9,8 @@ import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { Button } from "@/components/ui/Button";
+import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn, siteUrl } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
@@ -34,14 +34,6 @@ const DATE_RANGE_OPTIONS = [
   { label: "This Year", value: "this-year" },
   { label: "Next Year", value: "next-year" },
 ] as const;
-
-export interface TradeShowCalendarDirectoryProps {
-  description: string;
-  events: CalendarTradeShow[];
-  eyebrow: string;
-  searchPlaceholder: string;
-  title: string;
-}
 
 const NUMBER_OPERATOR_OPTIONS = [
   { label: ">=", value: "gte" },
@@ -236,13 +228,13 @@ const NumberFilter = ({
   </div>
 );
 
-export const TradeShowCalendarDirectory = ({
-  description: _description,
+export const TradeShowCalendarSection = ({
   events,
-  eyebrow: _eyebrow,
   searchPlaceholder,
-  title: _title,
-}: TradeShowCalendarDirectoryProps) => {
+}: {
+  events: CalendarTradeShow[];
+  searchPlaceholder: string;
+}) => {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -481,9 +473,9 @@ export const TradeShowCalendarDirectory = ({
   if (filteredEvents.length === 0) {
     resultsContent = (
       <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
-        <SectionHeader as="h2" className="text-brand-charcoal">
+        <Heading as="h2" className="text-brand-charcoal">
           No trade shows found
-        </SectionHeader>
+        </Heading>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Adjust the search, filters, or date range to broaden the calendar results.
         </p>
@@ -496,9 +488,9 @@ export const TradeShowCalendarDirectory = ({
   } else if (hasEmptyPage) {
     resultsContent = (
       <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
-        <SectionHeader as="h2" className="text-brand-charcoal">
+        <Heading as="h2" className="text-brand-charcoal">
           No more trade shows on this page.
-        </SectionHeader>
+        </Heading>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Use the pagination controls to return to the available calendar results.
         </p>

@@ -4,7 +4,7 @@ import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ServicePage } from "@/components/templates/ServicePage";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -38,9 +38,9 @@ const Page = () => {
           <CardsGrid
             className="bg-[#111111] text-white"
             heading={
-              <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
+              <SectionHeader as="h2" className="max-w-4xl text-white lg:text-5xl">
                 {CORPORATE_VIDEO_PORTFOLIO.heading}
-              </Heading>
+              </SectionHeader>
             }
             headingAlign="left"
           >

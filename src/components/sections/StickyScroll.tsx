@@ -7,7 +7,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home/content";
 
 const SCALE_ACTIVE = { scale: 1 };
@@ -104,9 +104,9 @@ export const StickyScroll = ({
         <div
           className={`flex h-dvh flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
-          <Heading as="h2" className="mb-14 w-full text-left">
+          <SectionHeader as="h2" className="mb-14 w-full text-left">
             {heading}
-          </Heading>
+          </SectionHeader>
 
           <div className="relative mt-4 flex min-h-[200px] w-full">
             {activeReason && (
@@ -121,7 +121,7 @@ export const StickyScroll = ({
                 >
                   <div className="mb-4 flex items-center gap-3">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
-                    <Heading as="h3">{activeReason.title}</Heading>
+                    <SectionHeader as="h3">{activeReason.title}</SectionHeader>
                   </div>
                   <p className="max-w-md text-base leading-relaxed text-gray-600 md:text-lg">
                     {activeReason.description}

@@ -6,8 +6,8 @@ import { type MouseEvent, type ReactNode, useCallback, useState } from "react";
 import type { CaseStudyIndexEntry } from "@/content/case-studies/content";
 
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
-import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { applyPagination } from "@/lib/pagination";
 
 const DEFAULT_GRID_SPANS = [
@@ -149,9 +149,9 @@ export const CaseStudiesDirectory = ({
   } else if (hasEmptyPage) {
     gridContent = (
       <div className="flex min-h-[480px] flex-col items-center justify-center px-8 py-14 text-center">
-        <Heading as="h2" className="text-center">
+        <SectionHeader as="h2" className="text-center">
           No more case studies on this page.
-        </Heading>
+        </SectionHeader>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
           Use the pagination controls to return to the available case study results.
         </p>
@@ -160,9 +160,9 @@ export const CaseStudiesDirectory = ({
   } else {
     gridContent = (
       <div className="flex min-h-[480px] flex-col items-center justify-center rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
-        <Heading as="h2" className="text-center">
+        <SectionHeader as="h2" className="text-center">
           {emptyStateTitle}
-        </Heading>
+        </SectionHeader>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
           {emptyStateDescription}
         </p>

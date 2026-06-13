@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
 
 import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { cn } from "@/lib";
 
@@ -111,9 +111,9 @@ export const FAQAccordion = ({
           viewport={HEADING_VIEWPORT}
           whileInView={HEADING_ANIMATE}
         >
-          <Heading as="h2" className="mb-4">
+          <SectionHeader as="h2" className="mb-4">
             {heading}
-          </Heading>
+          </SectionHeader>
           {description && (
             <p className={cn("max-w-xl text-base text-gray-600", !isArticle && "mx-auto")}>
               {description}

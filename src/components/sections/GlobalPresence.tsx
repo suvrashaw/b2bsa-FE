@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { Heading } from "@/components/ui/Heading";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
@@ -77,9 +77,9 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           initial={LEFT_INITIAL}
           transition={LEFT_TRANSITION}
         >
-          <Heading as="h2" className="mb-8">
+          <SectionHeader as="h2" className="mb-8">
             {data.title}
-          </Heading>
+          </SectionHeader>
 
           <p className="mb-10 text-base leading-relaxed transition-colors duration-500 md:text-lg">
             {data.description}
