@@ -40,7 +40,12 @@ const Page = () => {
       caseStudiesDescription="B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are three recent programs from 2025 & 2026."
       closingSections={
         <>
-          <CardSection cols={4} heading={EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading={EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+            layout="grid"
+          >
             {EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

@@ -19,7 +19,12 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { getDefaultEvents } from "@/content/events-utils";
-import { HOME_CINEMATIC_SEQUENCE_CONTENT, HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT, HOME_PAGE } from "@/content/home";
+import {
+  HOME_CINEMATIC_SEQUENCE_CONTENT,
+  HOME_EVENTS_CONTENT,
+  HOME_FAQ_CONTENT,
+  HOME_PAGE,
+} from "@/content/home";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import { buildFaqJsonLd } from "@/lib";

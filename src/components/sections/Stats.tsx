@@ -110,7 +110,7 @@ const PROOF_IMG_INITIAL = { opacity: 0, x: 24 };
 const PROOF_IMG_IN_VIEW = { opacity: 1, x: 0 };
 const PROOF_IMG_TRANSITION = { delay: 0.15, duration: 0.6 } as const;
 
-export const ProofBar = ({
+export const Stats = ({
   className,
   description,
   heading,

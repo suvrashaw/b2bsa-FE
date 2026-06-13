@@ -790,7 +790,12 @@ export default function DemoPage() {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <CardSection cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us" layout="grid">
+      <CardSection
+        cols={4}
+        heading="Why Clients Choose Our Booths"
+        id="why-choose-us"
+        layout="grid"
+      >
         {BOOTH_WHY_ITEMS.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
@@ -928,7 +933,12 @@ export default function DemoPage() {
 
       {/* 33 – FAQ */}
       <DemoLabel name="FAQ" />
-      <CardSection description={HOME_FAQ_CONTENT.description} heading={HOME_FAQ_CONTENT.heading} id="faq-demo" layout="carousel">
+      <CardSection
+        description={HOME_FAQ_CONTENT.description}
+        heading={HOME_FAQ_CONTENT.heading}
+        id="faq-demo"
+        layout="carousel"
+      >
         {HOME_FAQ_CONTENT.faqs.map((f) => (
           <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
         ))}

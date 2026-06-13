@@ -41,7 +41,12 @@ const Page = () => {
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
       closingSections={
         <>
-          <CardSection cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+            layout="grid"
+          >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

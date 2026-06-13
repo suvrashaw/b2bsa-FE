@@ -39,7 +39,12 @@ const Page = () => {
       caseStudies={EVENT_LOGISTICS_CASE_STUDIES}
       closingSections={
         <>
-          <CardSection cols={4} heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+            layout="grid"
+          >
             {EVENT_LOGISTICS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

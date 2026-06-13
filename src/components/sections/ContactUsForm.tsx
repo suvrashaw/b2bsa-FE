@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { Heading } from "@/components/ui/Heading";
 import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home";
 
-export interface ContactUsFormProps {
+interface ContactUsFormProps {
   content?: ContactContent;
   description?: ContactContent["description"];
   eyebrow?: ContactContent["eyebrow"];
@@ -19,7 +19,7 @@ export interface ContactUsFormProps {
 const CONTACTUS_ANIMATE = { y: [0, -15, 0] };
 const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity } as const;
 
-export const ContactUs = ({
+export const ContactUsForm = ({
   content = HOME_CONTACT_CONTENT,
   description = content.description,
   form = content.form,

@@ -18,8 +18,6 @@ export type EventCardItem = {
   ctaHref?: string;
 } & EventsContent["events"][number];
 
-export type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" | "vertical";
-
 interface EventDetailsPanelProps {
   ctaLabel: string;
   event: EventCardItem;
@@ -45,6 +43,8 @@ interface FlipCardProps extends EventDetailsPanelProps {
   shouldReduceMotion: boolean;
 }
 
+type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" | "vertical";
+
 const CARD_SHELL_CLASS =
   "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[220px]";
 const DEFAULT_EVENT_IMAGES = [
@@ -57,7 +57,7 @@ const DEFAULT_EVENT_IMAGES = [
   "/images/events/event_other_4.avif",
 ];
 
-export const getFallbackImage = (index: number) =>
+const getFallbackImage = (index: number) =>
   DEFAULT_EVENT_IMAGES[index % DEFAULT_EVENT_IMAGES.length];
 
 const isInteractiveTarget = (target: EventTarget | null) =>
@@ -463,25 +463,19 @@ export const EventsCard = ({
   const eventImage = event.image ?? getFallbackImage(index);
   const FlipCard = FLIP_CARD_COMPONENTS[flipStyle];
 
-  const handleClick = useCallback(
-    (clickEvent: MouseEvent<HTMLElement>) => {
-      if (isInteractiveTarget(clickEvent.target)) return;
+  const handleClick = useCallback((clickEvent: MouseEvent<HTMLElement>) => {
+    if (isInteractiveTarget(clickEvent.target)) return;
+    setIsFlipped((prev) => !prev);
+  }, []);
+
+  const handleKeyDown = useCallback((keyEvent: KeyboardEvent<HTMLElement>) => {
+    if (isInteractiveTarget(keyEvent.target)) return;
+
+    if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+      keyEvent.preventDefault();
       setIsFlipped((prev) => !prev);
-    },
-    []
-  );
-
-  const handleKeyDown = useCallback(
-    (keyEvent: KeyboardEvent<HTMLElement>) => {
-      if (isInteractiveTarget(keyEvent.target)) return;
-
-      if (keyEvent.key === "Enter" || keyEvent.key === " ") {
-        keyEvent.preventDefault();
-        setIsFlipped((prev) => !prev);
-      }
-    },
-    []
-  );
+    }
+  }, []);
 
   const handleLinkClick = useCallback((linkEvent: MouseEvent<HTMLAnchorElement>) => {
     linkEvent.stopPropagation();

@@ -40,7 +40,12 @@ const Page = () => {
       caseStudiesDescription="Discover how B2B Sales Arrow has helped global brands create engaging event experience videos for conferences, exhibitions, networking events, product launches, and corporate gatherings."
       closingSections={
         <>
-          <CardSection cols={4} heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+            layout="grid"
+          >
             {EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

@@ -134,6 +134,21 @@ export interface HomeServicesContent {
   services: HomeServiceItem[];
 }
 
+export interface HomeStatItem {
+  bg: string;
+  icon: string;
+  label: string;
+  value: string;
+}
+
+export interface StatsContent {
+  attribution?: string;
+  heading: ReactNode;
+  mission?: string;
+  quote: string;
+  stats: HomeStatItem[];
+}
+
 export interface StickyScrollContent {
   eyebrow?: string;
   heading: ReactNode;
@@ -146,21 +161,6 @@ export interface TestimonialsContent {
   heading: ReactNode;
   initialIndex: number;
   testimonials: TestimonialItem[];
-}
-
-export interface WhoWeAreContent {
-  attribution?: string;
-  heading: ReactNode;
-  mission?: string;
-  quote: string;
-  stats: WhoWeAreStat[];
-}
-
-export interface WhoWeAreStat {
-  bg: string;
-  icon: string;
-  label: string;
-  value: string;
 }
 
 interface CinematicStoryBeat {
@@ -320,7 +320,7 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = [
   { alt: "Worldpay", id: "worldpay", src: "/images/client-logos/Worldpay.svg" },
 ];
 
-export const HOME_WHO_WE_ARE_CONTENT: WhoWeAreContent = {
+export const HOME_STATS_CONTENT: StatsContent = {
   heading: "We Help B2B Brands",
   mission:
     "To transform your global event presence into measurable, high-impact commercial outcomes.",

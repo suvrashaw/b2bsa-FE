@@ -46,9 +46,9 @@ const Page = () => {
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
       closingSections={
         <>
-          <CardSection description={EVENT_VIDEO_FAQ.description} heading={EVENT_VIDEO_FAQ.heading} id="faq" layout="carousel">
+          <CardSection heading={EVENT_VIDEO_FAQ.heading} id="faq" layout="carousel">
             {EVENT_VIDEO_FAQ.faqs.map((f) => (
-              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+              <FAQCard answer={f.answer} key={f.id} question={f.question} />
             ))}
           </CardSection>
           <RelatedServices services={eventVideoProductionRelatedServices} />

@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import { HOME_WHO_WE_ARE_CONTENT, type WhoWeAreContent, type WhoWeAreStat } from "@/content/home";
+import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home";
 
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
 
@@ -24,19 +24,19 @@ const WORD_EXIT = { opacity: 0, y: -14 };
 const WORD_INITIAL = { opacity: 0, y: 14 };
 const WORD_TRANSITION = { duration: 0.38 } as const;
 
-export interface HomeStatsProps {
-  attribution?: WhoWeAreContent["attribution"];
-  content?: WhoWeAreContent;
+interface HomeStatsProps {
+  attribution?: StatsContent["attribution"];
+  content?: StatsContent;
   description?: ReactNode | string;
-  heading?: WhoWeAreContent["heading"];
+  heading?: StatsContent["heading"];
   items?: Array<{
     bg?: string;
     icon?: string;
     label: string;
     value: string;
   }>;
-  mission?: WhoWeAreContent["mission"];
-  quote?: WhoWeAreContent["quote"];
+  mission?: StatsContent["mission"];
+  quote?: StatsContent["quote"];
   stats?: Array<{
     bg?: string;
     icon?: string;
@@ -46,8 +46,8 @@ export interface HomeStatsProps {
   title?: ReactNode;
 }
 
-export const WhoWeAre = ({
-  content = HOME_WHO_WE_ARE_CONTENT,
+export const HomeStats = ({
+  content = HOME_STATS_CONTENT,
   attribution = content.attribution,
   description,
   heading,
@@ -58,7 +58,7 @@ export const WhoWeAre = ({
   title,
 }: HomeStatsProps = {}) => {
   const resolvedHeading = title ?? heading ?? content.heading;
-  const resolvedStats: WhoWeAreStat[] = (items ?? stats ?? content.stats).map((stat, index) => ({
+  const resolvedStats: HomeStatItem[] = (items ?? stats ?? content.stats).map((stat, index) => ({
     ...stat,
     bg: stat.bg ?? ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3],
     icon: stat.icon ?? ["TrendingUp", "Globe", "Target"][index % 3],
@@ -146,7 +146,7 @@ export const WhoWeAre = ({
   );
 };
 
-const StatCard = ({ stat }: { stat: WhoWeAreStat }) => {
+const StatCard = ({ stat }: { stat: HomeStatItem }) => {
   return (
     <div
       className={`relative overflow-hidden rounded-xl p-6 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}

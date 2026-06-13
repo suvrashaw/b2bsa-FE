@@ -50,9 +50,9 @@ const Page = () => {
       clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       closingSections={
         <>
-          <CardSection description={LIVE_STREAMING_FAQ.description} heading={LIVE_STREAMING_FAQ.heading} id="faq" layout="carousel">
+          <CardSection heading={LIVE_STREAMING_FAQ.heading} id="faq" layout="carousel">
             {LIVE_STREAMING_FAQ.faqs.map((f) => (
-              <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+              <FAQCard answer={f.answer} key={f.id} question={f.question} />
             ))}
           </CardSection>
           <RelatedServices services={liveStreamingServicesRelatedServices} />

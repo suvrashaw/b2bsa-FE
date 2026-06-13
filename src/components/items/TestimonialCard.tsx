@@ -32,7 +32,7 @@ interface TestimonialCardProps {
   testimonial: TestimonialItem;
 }
 
-export const TestimonialCarouselCard = ({
+export const TestimonialCard = ({
   index,
   isCenter,
   isVisible,

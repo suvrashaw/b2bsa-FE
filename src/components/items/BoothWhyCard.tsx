@@ -10,7 +10,7 @@ import { cn } from "@/lib";
 
 const icons = { Award, Globe2, TrendingUp, Users2 } as const;
 
-export interface BoothWhyChooseUsItem {
+interface BoothWhyChooseUsItem {
   description: string;
   href?: string;
   icon?: string;

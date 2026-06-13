@@ -22,11 +22,11 @@ interface TimelineProps {
   title?: ReactNode;
 }
 
-const PROCESSTIMELINE_INITIAL = { opacity: 0, y: 30 };
-const PROCESSTIMELINE_WHILE_IN_VIEW = { opacity: 1, y: 0 };
-const PROCESSTIMELINE_VIEWPORT = { once: true };
+const TIMELINE_INITIAL = { opacity: 0, y: 30 };
+const TIMELINE_WHILE_IN_VIEW = { opacity: 1, y: 0 };
+const TIMELINE_VIEWPORT = { once: true };
 
-export const ProcessTimeline = ({
+export const Timeline = ({
   className,
   description,
   heading,
@@ -66,11 +66,11 @@ export const ProcessTimeline = ({
             {resolvedSteps.map((step, index) => (
               <motion.div
                 className="relative flex flex-col items-start"
-                initial={PROCESSTIMELINE_INITIAL}
+                initial={TIMELINE_INITIAL}
                 key={index}
                 transition={stepTransitions[index]}
-                viewport={PROCESSTIMELINE_VIEWPORT}
-                whileInView={PROCESSTIMELINE_WHILE_IN_VIEW}
+                viewport={TIMELINE_VIEWPORT}
+                whileInView={TIMELINE_WHILE_IN_VIEW}
               >
                 {/* Dot */}
                 <div className="absolute top-1/2 left-0 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)]" />

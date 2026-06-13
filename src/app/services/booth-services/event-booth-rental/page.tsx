@@ -75,7 +75,12 @@ const Page = () => {
       closingSections={
         <>
           <RelatedServices services={BOOTH_RENTAL_RELATED_SERVICES} />
-          <CardSection cols={4} heading="Why Choose B2B Sales Arrow for Booth Rental?" id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading="Why Choose B2B Sales Arrow for Booth Rental?"
+            id="why-choose-us"
+            layout="grid"
+          >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

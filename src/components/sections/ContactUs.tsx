@@ -11,7 +11,7 @@ import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-export interface ContactUsProps {
+interface ContactUsProps {
   backgroundImage?: {
     alt: string;
     src: string;
@@ -92,7 +92,7 @@ const ctaSparkleTransition = {
   repeat: Number.POSITIVE_INFINITY,
 } as const;
 
-export const ContactCinematicCTA = ({
+export const ContactUs = ({
   backgroundImage,
   badge,
   description,

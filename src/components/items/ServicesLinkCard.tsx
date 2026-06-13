@@ -19,7 +19,7 @@ interface ServicesLinkCardProps {
   service: RelatedService;
 }
 
-export const RelatedServicesCard = ({ index, service }: ServicesLinkCardProps) => {
+export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
   const transition = useMemo(() => ({ delay: index * 0.1, duration: 0.4 }), [index]);
 
   return (

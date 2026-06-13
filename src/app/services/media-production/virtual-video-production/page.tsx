@@ -39,7 +39,12 @@ const Page = () => {
       caseStudiesDescription="Explore how B2B Sales Arrow has helped brands deliver successful virtual events, webinars, fireside chats, and executive discussions through professional production and audience engagement."
       closingSections={
         <>
-          <CardSection cols={4} heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="grid">
+          <CardSection
+            cols={4}
+            heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+            layout="grid"
+          >
             {VIRTUAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

@@ -27,9 +27,9 @@ const Page = () => {
         images={TERMS_IMAGES}
         title={"Terms &\nConditions"}
       />
-      <CardSection description={TERMS_FAQ.description} heading={TERMS_FAQ.heading} id="faq" layout="carousel">
+      <CardSection heading={TERMS_FAQ.heading} id="faq" layout="carousel">
         {TERMS_FAQ.faqs.map((f) => (
-          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+          <FAQCard answer={f.answer} key={f.id} question={f.question} />
         ))}
       </CardSection>
       <ContactUsForm {...TERMS_CONTACT} />

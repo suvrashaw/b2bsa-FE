@@ -45,7 +45,10 @@ const formatCalendarDateRange = (startDate: string, endDate: string) => {
 
 const getCountryFromLocation = (location?: string) => {
   if (!location) return;
-  const parts = location.split(",").map((p) => p.trim()).filter(Boolean);
+  const parts = location
+    .split(",")
+    .map((p) => p.trim())
+    .filter(Boolean);
   return parts.at(-1) ?? location;
 };
 
@@ -68,7 +71,9 @@ export const normalizeEvent = (event: EventCardItem, index: number): EventCardIt
 
 export const getDefaultEvents = (): EventCardItem[] => {
   const today = new Date();
-  const todayUtc = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
+  const todayUtc = new Date(
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
+  );
 
   return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= todayUtc)
     .toSorted((a, b) => a.startDate.localeCompare(b.startDate))
