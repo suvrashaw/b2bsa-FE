@@ -1,4 +1,8 @@
-import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/shared";
+import {
+  GLOBAL_CASE_STUDIES,
+  GLOBAL_INDUSTRY_SERVICES,
+  GLOBAL_PROOF_STATS,
+} from "@/content/shared";
 
 import BRANDINGCONTACTCTA_DATA from "./branding-contact-cta.json";
 import BRANDINGINDUSTRIESSECTION_DATA from "./branding-industries-section.json";

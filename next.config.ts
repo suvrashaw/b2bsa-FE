@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
         {
           key: "Content-Security-Policy",
           value:
-            "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss:; media-src 'self' https:; object-src 'none';",
+            "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https: wss:; media-src 'self' https:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
         },
       ],
       source: "/(.*)",
@@ -48,36 +48,6 @@ const nextConfig: NextConfig = {
         destination: "/services/performance-marketing",
         permanent: true,
         source: "/services/performance-marketing/linkedin-ads-b2b",
-      },
-      {
-        destination: "/services/data-augmentation",
-        permanent: true,
-        source: "/services/market-research/data-augmentation",
-      },
-      {
-        destination: "/services/data-augmentation",
-        permanent: true,
-        source: "/services/market-research/data-augmentation-services",
-      },
-      {
-        destination: "/services/data-validation",
-        permanent: true,
-        source: "/services/market-research/data-validation",
-      },
-      {
-        destination: "/services/data-validation",
-        permanent: true,
-        source: "/services/market-research/data-validation-services",
-      },
-      {
-        destination: "/services/market-intelligence",
-        permanent: true,
-        source: "/services/market-research/human-powered-market-intelligence",
-      },
-      {
-        destination: "/services/market-intelligence",
-        permanent: true,
-        source: "/services/human-powered-market-intelligence",
       },
       { destination: "/about", permanent: true, source: "/about-us" },
       { destination: "/contact", permanent: true, source: "/contact-us" },

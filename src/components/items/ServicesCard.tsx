@@ -6,7 +6,7 @@ import Image from "next/image";
 import type { HomeServiceItem } from "@/content/home/content";
 
 import { Button } from "@/components/ui/Button";
-import Icon from "@/components/ui/Icon";
+import { Icon } from "@/components/ui/Icon";
 
 interface ServicesCardProps {
   ctaLabel: string;

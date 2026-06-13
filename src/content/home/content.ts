@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
 import { HOME_BLOG_POSTS } from "@/content/blogs/data";
-
 import SHARED_CASE_STUDIES_DATA from "@/content/shared/case-studies.json";
 import SHARED_EVENTS_DATA from "@/content/shared/events.json";
 

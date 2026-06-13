@@ -6,8 +6,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
-import Icon from "@/components/ui/Icon";
+import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
 // ─── FeatureCarousel ─────────────────────────────────────────────────────────
@@ -216,10 +217,13 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
 
   const nextStep = useCallback(() => setStep((prev) => prev + 1), []);
 
-  const handleChipClick = (index: number) => {
-    const diff = (index - currentIndex + features.length) % features.length;
-    if (diff > 0) setStep((cur) => cur + diff);
-  };
+  const handleChipClick = useCallback(
+    (index: number) => {
+      const diff = (index - currentIndex + features.length) % features.length;
+      if (diff > 0) setStep((cur) => cur + diff);
+    },
+    [currentIndex, features.length]
+  );
 
   useEffect(() => {
     const el = containerRef.current;
@@ -285,6 +289,7 @@ interface FeatureCarouselSectionProps {
 
 export const FeatureCarouselSection = ({
   description,
+  eyebrow,
   features,
   heading,
 }: FeatureCarouselSectionProps) => {
@@ -296,6 +301,7 @@ export const FeatureCarouselSection = ({
       </div>
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         <div className="mx-auto max-w-3xl text-center">
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <Heading as="h2" className="mb-6">
             {heading}
           </Heading>

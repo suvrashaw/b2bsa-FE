@@ -9,6 +9,7 @@ import {
   DEFAULT_BLOG_POST_ID,
   SHARED_BLOG_POSTS,
 } from "@/content/blogs/data";
+import { siteUrl } from "@/lib";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -37,6 +38,8 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const ogImages = [{ alt: metadataPost.title, height: 630, url: metadataPost.image, width: 1200 }];
+
   return {
     alternates: {
       canonical: `/blogs/${metadataPost.id}`,
@@ -44,12 +47,9 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     description: metadataPost.excerpt,
     openGraph: {
       description: metadataPost.excerpt,
-      images: [
-        {
-          alt: metadataPost.title,
-          url: metadataPost.image,
-        },
-      ],
+      images: ogImages,
+      modifiedTime: metadataPost.date,
+      publishedTime: metadataPost.date,
       title: metadataPost.title,
       type: "article",
     },
@@ -57,7 +57,7 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     twitter: {
       card: "summary_large_image",
       description: metadataPost.excerpt,
-      images: [metadataPost.image],
+      images: [{ alt: metadataPost.title, height: 630, url: metadataPost.image, width: 1200 }],
       title: metadataPost.title,
     },
   };
@@ -75,16 +75,14 @@ const Page = async ({ params }: BlogPostPageProps) => {
     notFound();
   }
 
-  const images = [post.image];
-
   return (
     <>
       <ArticleJsonLd
         datePublished={post.date || new Date().toISOString()}
         description={post.excerpt || post.title}
         headline={post.title}
-        images={images}
-        url={`https://b2bsalesarrow.com/blogs/${post.id}`}
+        image={post.image}
+        url={`${siteUrl}/blogs/${post.id}`}
       />
       <BlogPage post={post} />
     </>

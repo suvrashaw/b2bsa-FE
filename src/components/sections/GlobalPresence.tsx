@@ -24,8 +24,8 @@ export interface GlobalPresenceData {
 
 type LocationItem = {
   color: string;
-  lat: number;
-  lng: number;
+  lat?: number;
+  lng?: number;
   name: string;
   size: number;
 };
@@ -93,7 +93,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           <div className="absolute inset-0 h-full w-full">
             <Globe
               backgroundColor="rgba(0,0,0,0)"
-              globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
+              globeImageUrl="/images/globe-earth-night.jpg"
               htmlElement={getHtmlElement}
               htmlElementsData={data.cities}
               onGlobeReady={handleGlobeReady}

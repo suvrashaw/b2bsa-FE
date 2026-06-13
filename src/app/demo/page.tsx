@@ -31,6 +31,7 @@ import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
+import { GridSection } from "@/components/sections/GridSection";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -63,9 +64,6 @@ const IMG_SIBOS = "/images/case-studies/sibos.avif";
 const IMG_SAP = "/images/case-studies/cs-10.avif";
 const IMG_DISTRIBUTECH = "/images/case-studies/cs-9.avif";
 const IMG_MONEY = "/images/case-studies/cs-new-1.avif";
-const _IMG_NRF = "/images/case-studies/cs-new-10.avif";
-const _IMG_CS2 = "/images/case-studies/cs-new-2.avif";
-const _IMG_CS3 = "/images/case-studies/cs-new-3.avif";
 const IMG_EV1 = "/images/events/event_other_1.avif";
 const IMG_EV2 = "/images/events/event_other_2.avif";
 const IMG_EV3 = "/images/events/event_other_3.avif";
@@ -692,8 +690,7 @@ const DemoLabel = ({ name }: { name: string }) => {
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
-// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-export default function DemoPage() {
+const DemoPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [caseStudiesPage, setCaseStudiesPage] = useState(1);
 
@@ -792,24 +789,23 @@ export default function DemoPage() {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <CardSection
+      <GridSection
         cols={4}
         heading="Why Clients Choose Our Booths"
         id="why-choose-us"
-        layout="grid"
       >
         {BOOTH_WHY_ITEMS.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
-      </CardSection>
+      </GridSection>
 
       {/* 19 – CardsSection */}
       <DemoLabel name="CardsSection" />
-      <CardSection heading="Future-Ready Stands" layout="grid">
+      <GridSection heading="Future-Ready Stands">
         {BASIC_CARD_ITEMS.map((item) => (
           <BasicCards item={item} key={item.title} />
         ))}
-      </CardSection>
+      </GridSection>
 
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
@@ -834,7 +830,7 @@ export default function DemoPage() {
 
       {/* 22 – CorporateVideoPortfolioSection */}
       <DemoLabel name="CorporateVideoPortfolioSection" />
-      <CardSection
+      <GridSection
         className="bg-[#111111] text-white"
         heading={
           <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
@@ -842,12 +838,11 @@ export default function DemoPage() {
           </Heading>
         }
         headingAlign="left"
-        layout="grid"
       >
         {CORP_VIDEO_PORTFOLIO_ITEMS.map((item) => (
           <CorporateVideoCard item={item} key={item.title} />
         ))}
-      </CardSection>
+      </GridSection>
 
       {/* 23 – Timeline */}
       <DemoLabel name="Timeline" />
@@ -876,7 +871,7 @@ export default function DemoPage() {
 
       {/* 27 – Events */}
       <DemoLabel name="Events" />
-      <CardSection
+      <GridSection
         cols={3}
         description={HOME_EVENTS_CONTENT.description}
         heading={HOME_EVENTS_CONTENT.heading}
@@ -891,7 +886,7 @@ export default function DemoPage() {
             key={event.id}
           />
         ))}
-      </CardSection>
+      </GridSection>
 
       {/* 28 – TradeShowCalendarDirectory */}
       <DemoLabel name="TradeShowCalendarDirectory" />
@@ -1003,4 +998,6 @@ export default function DemoPage() {
       </CardSection>
     </main>
   );
-}
+};
+
+export default DemoPage;

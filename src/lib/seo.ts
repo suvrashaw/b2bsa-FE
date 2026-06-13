@@ -2,20 +2,25 @@ import type { Metadata } from "next";
 
 import type { CmsSeo } from "@/content/page-definitions";
 
-const BASE_URL = "https://b2bsalesarrow.com";
+import { siteUrl } from "@/lib/json-ld";
 
 export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
-  const canonicalUrl = `${BASE_URL}${seo.canonicalPath}`;
+  const canonicalUrl = `${siteUrl}${seo.canonicalPath}`;
   const ogImageUrl = pageId
-    ? `${BASE_URL}/og?pageId=${pageId}&title=${encodeURIComponent(seo.title)}`
-    : `${BASE_URL}/og-default.png`;
+    ? `${siteUrl}/og?pageId=${pageId}&title=${encodeURIComponent(seo.title)}`
+    : `${siteUrl}/og-default.png`;
 
   return {
     alternates: { canonical: canonicalUrl },
     description: seo.description,
+    ...(seo.focusKeyphrase && {
+      keywords: [seo.focusKeyphrase, ...(seo.secondaryKeywords ?? [])],
+    }),
     openGraph: {
       description: seo.description,
       images: [{ height: 630, url: ogImageUrl, width: 1200 }],
+      locale: "en_US",
+      siteName: "B2B Sales Arrow",
       title: seo.title,
       type: "website",
       url: canonicalUrl,

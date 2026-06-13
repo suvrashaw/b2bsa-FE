@@ -6,6 +6,7 @@ const manifest = (): MetadataRoute.Manifest => ({
   display: "standalone",
   icons: [
     {
+      purpose: "any",
       sizes: "512x512",
       src: "/images/favicon/512x512.png",
       type: "image/png",

@@ -20,7 +20,6 @@ export interface SpotlightProps {
   id?: string;
   imageAlt?: string;
   imageUrl?: string;
-  index?: string;
   label?: string;
   onClick?: () => void;
   secondarySpotlight?: SpotlightSecondaryBlock;
@@ -352,7 +351,6 @@ export const Spotlight = ({
   id,
   imageAlt = "Feature image",
   imageUrl,
-  index: _index = "01",
   label,
   onClick,
   secondarySpotlight,

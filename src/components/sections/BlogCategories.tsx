@@ -1,8 +1,6 @@
-"use client";
+import type { ElementType } from "react";
 
-import { motion } from "framer-motion";
 import { Hash } from "lucide-react";
-import { type ElementType, useMemo } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 import { BLOG_CATEGORIES } from "@/content/blogs/content";
@@ -17,15 +15,15 @@ interface BlogCategoryItem {
   name: string;
 }
 
-const ANIMATE = { opacity: 1, y: 0 };
-const INITIAL = { opacity: 0, y: 10 };
+const getCategoryStyle = (index: number) => ({
+  animationDelay: `${index * 0.05}s`,
+  animationFillMode: "both" as const,
+});
 
 const CategoryButton = ({ category, index }: { category: BlogCategoryItem; index: number }) => {
-  const Icon = category.icon || Hash;
-  const transition = useMemo(() => ({ delay: index * 0.05, duration: 0.4 }), [index]);
-
+  const Icon = category.icon ?? Hash;
   return (
-    <motion.div animate={ANIMATE} initial={INITIAL} transition={transition}>
+    <div className="animate-fade-up" style={getCategoryStyle(index)}>
       <button
         className="group flex cursor-pointer items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue/10 px-4 py-2 text-brand-blue transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:bg-brand-blue/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
         type="button"
@@ -33,7 +31,7 @@ const CategoryButton = ({ category, index }: { category: BlogCategoryItem; index
         <Icon className="h-4 w-4 transition-transform group-hover:scale-110" />
         <span className="text-sm font-semibold tracking-wide">{category.name}</span>
       </button>
-    </motion.div>
+    </div>
   );
 };
 

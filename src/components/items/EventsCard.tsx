@@ -11,6 +11,7 @@ import { useCallback, useState } from "react";
 import type { EventsContent } from "@/content/home/content";
 
 import { Button } from "@/components/ui/Button";
+import { getFallbackImage } from "@/content/events-utils";
 import { cn } from "@/lib";
 
 export type EventCardItem = {
@@ -47,18 +48,6 @@ type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" 
 
 const CARD_SHELL_CLASS =
   "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[220px]";
-const DEFAULT_EVENT_IMAGES = [
-  "/images/events/adobe_summit_2026.avif",
-  "/images/events/inma_2026.avif",
-  "/images/events/servicenow_2026.avif",
-  "/images/events/event_other_1.avif",
-  "/images/events/event_other_2.avif",
-  "/images/events/event_other_3.avif",
-  "/images/events/event_other_4.avif",
-];
-
-const getFallbackImage = (index: number) =>
-  DEFAULT_EVENT_IMAGES[index % DEFAULT_EVENT_IMAGES.length];
 
 const isInteractiveTarget = (target: EventTarget | null) =>
   target instanceof HTMLElement && Boolean(target.closest("a, button"));

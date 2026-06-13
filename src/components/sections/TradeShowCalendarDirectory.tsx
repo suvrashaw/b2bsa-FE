@@ -9,8 +9,9 @@ import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { Button } from "@/components/ui/Button";
+import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
-import { cn } from "@/lib";
+import { cn, siteUrl } from "@/lib";
 import {
   clampPaginationPage,
   DEFAULT_PAGE_SIZE,
@@ -488,9 +489,9 @@ export const TradeShowCalendarDirectory = ({
   if (filteredEvents.length === 0) {
     resultsContent = (
       <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
-        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
+        <Heading as="h2" className="text-brand-charcoal">
           No trade shows found
-        </h2>
+        </Heading>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Adjust the search, filters, or date range to broaden the calendar results.
         </p>
@@ -503,9 +504,9 @@ export const TradeShowCalendarDirectory = ({
   } else if (hasEmptyPage) {
     resultsContent = (
       <div className="rounded-lg border border-gray-200 bg-white p-10 text-center shadow-sm">
-        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
+        <Heading as="h2" className="text-brand-charcoal">
           No more trade shows on this page.
-        </h2>
+        </Heading>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Use the pagination controls to return to the available calendar results.
         </p>
@@ -682,7 +683,7 @@ export const TradeShowCalendarDirectory = ({
             locationName={show.venue || show.city || ""}
             name={show.name}
             startDate={show.startDate}
-            url={show.sourceUrl || `https://b2bsalesarrow.com/trade-show-calendar`}
+            url={show.sourceUrl || `${siteUrl}/trade-show-calendar`}
           />
         );
       })}

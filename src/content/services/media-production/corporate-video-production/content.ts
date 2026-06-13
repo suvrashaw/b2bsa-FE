@@ -25,7 +25,7 @@ export { default as CORPORATE_VIDEO_INDUSTRIES } from "./corporate-video-industr
 export { default as CORPORATE_VIDEO_PROOF_BAR } from "./corporate-video-proof-bar.json";
 
 export { default as CORPORATE_VIDEO_FAQ } from "./faq.json";
-export { default as CORPORATE_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
+export { default as CORPORATE_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as CORPORATE_VIDEO_WHY } from "./why.json";

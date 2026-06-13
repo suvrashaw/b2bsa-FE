@@ -5,7 +5,7 @@ import {
   TRADE_SHOW_CALENDAR_EVENTS,
 } from "@/content/trade-show-calendar/content";
 
-const getFallbackImage = (index: number) => {
+export const getFallbackImage = (index: number) => {
   const images = [
     "/images/events/adobe_summit_2026.avif",
     "/images/events/inma_2026.avif",

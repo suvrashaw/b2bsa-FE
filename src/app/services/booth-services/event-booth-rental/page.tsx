@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
+import { GridSection } from "@/components/sections/GridSection";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -25,9 +26,7 @@ import {
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/booth-services/event-booth-rental/content";
-import {
-  BOOTH_DESIGN_WHY_CHOOSE_US,
-} from "@/content/services/booth-services/trade-show-booth-design/content";
+import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/booth-services/trade-show-booth-design/content";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
@@ -76,16 +75,15 @@ const Page = () => {
       customSections={
         <>
           <RelatedServices services={BOOTH_RENTAL_RELATED_SERVICES} />
-          <CardSection
+          <GridSection
             cols={4}
             heading="Why Choose B2B Sales Arrow for Booth Rental?"
             id="why-choose-us"
-            layout="grid"
           >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardSection>
+          </GridSection>
           <CardSection
             cols={4}
             heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
@@ -111,7 +109,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <CardSection
+          <GridSection
             cols={3}
             description={BOOTH_RENTAL_RENT_VS_BUY.description}
             heading={BOOTH_RENTAL_RENT_VS_BUY.heading}
@@ -134,7 +132,7 @@ const Page = () => {
                 </p>
               </div>
             ))}
-          </CardSection>
+          </GridSection>
           <StickyScroll
             heading="Our Rental Booth Range"
             reasons={BOOTH_RENTAL_RANGE_REASONS}

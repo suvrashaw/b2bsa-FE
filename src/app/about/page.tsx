@@ -4,10 +4,10 @@ import { EventsCard } from "@/components/items/EventsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
-import { CardSection } from "@/components/sections/CardSection";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
+import { GridSection } from "@/components/sections/GridSection";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -28,6 +28,8 @@ import {
 } from "@/content/about/content";
 import { normalizeEvent } from "@/content/events-utils";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { buildLocalBusinessJsonLd } from "@/lib";
+import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
@@ -47,6 +49,7 @@ const ABOUT_VISION_SPOTLIGHT = {
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
+      <JsonLd data={buildLocalBusinessJsonLd()} />
       <Header darkBackground />
       <Hero
         description={ABOUT_HERO.description}
@@ -75,7 +78,7 @@ const Page = () => {
         heading={ABOUT_SIGNATURE_SERVICES.heading}
         services={ABOUT_SIGNATURE_SERVICES_STACK}
       />
-      <CardSection
+      <GridSection
         cols={3}
         description={ABOUT_RECENT_EVENTS.description}
         heading={ABOUT_RECENT_EVENTS.heading}
@@ -91,7 +94,7 @@ const Page = () => {
             key={event.id}
           />
         ))}
-      </CardSection>
+      </GridSection>
       <Spotlight
         align="left"
         className="[&>div:first-child]:md:order-last"
@@ -106,8 +109,8 @@ const Page = () => {
         titleLine2="Lohani"
       />
       <Culture data={ABOUT_VALUES} />
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <GlobalPresence data={ABOUT_PRESENCE as any} />
+      { }
+      <GlobalPresence data={ABOUT_PRESENCE} />
       <ContactUsForm {...ABOUT_INQUIRY} />
       <Footer />
     </main>

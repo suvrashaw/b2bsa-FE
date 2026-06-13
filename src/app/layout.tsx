@@ -5,8 +5,7 @@ import Script from "next/script";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
-import { SWRegistrar } from "@/app/providers/SWRegistrar";
-import { buildOrganizationJsonLd } from "@/lib";
+import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib";
 
 import "./globals.css";
 
@@ -40,8 +39,10 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-const jsonLd = buildOrganizationJsonLd();
-const JSON_LD_SCRIPT = { __html: JSON.stringify(jsonLd) };
+const organizationJsonLd = buildOrganizationJsonLd();
+const websiteJsonLd = buildWebsiteJsonLd();
+const ORG_JSON_LD_SCRIPT = { __html: JSON.stringify(organizationJsonLd) };
+const WEBSITE_JSON_LD_SCRIPT = { __html: JSON.stringify(websiteJsonLd) };
 
 const RootLayout = ({
   children,
@@ -51,17 +52,20 @@ const RootLayout = ({
   return (
     <html className={`${inter.variable} h-full antialiased`} lang="en" suppressHydrationWarning>
       <head>
-        <link crossOrigin="anonymous" href="https://cdn.jsdelivr.net" rel="preconnect" />
         <PartytownScripts />
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <Script
-          dangerouslySetInnerHTML={JSON_LD_SCRIPT}
+          dangerouslySetInnerHTML={ORG_JSON_LD_SCRIPT}
           id="organization-json-ld"
           type="application/ld+json"
         />
-        <SWRegistrar />
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <Script
+          dangerouslySetInnerHTML={WEBSITE_JSON_LD_SCRIPT}
+          id="website-json-ld"
+          type="application/ld+json"
+        />
+<SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

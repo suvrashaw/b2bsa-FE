@@ -5,10 +5,9 @@ import {
   getMarketingPageByPath,
   getMarketingPageGroup,
 } from "@/content/marketing-pages";
+import { siteUrl } from "@/lib/json-ld";
 
 export const runtime = "edge";
-
-const siteUrl = "https://b2bsalesarrow.com";
 const defaultOgContent = {
   description: "Premium growth partner for enterprise event and digital solutions.",
   group: "B2B Growth",

@@ -6,6 +6,7 @@ import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
+import { GridSection } from "@/components/sections/GridSection";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -47,16 +48,15 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <CardSection
+          <GridSection
             cols={4}
             heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="grid"
           >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardSection>
+          </GridSection>
           <CardSection
             cols={4}
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
@@ -92,11 +92,11 @@ const Page = () => {
             }))}
             showImagePanel
           />
-          <CardSection heading={BOOTH_BUILDER_FUTURE_READY.heading} layout="grid">
+          <GridSection heading={BOOTH_BUILDER_FUTURE_READY.heading}>
             {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
               <BasicCards item={item} key={item.title} />
             ))}
-          </CardSection>
+          </GridSection>
         </>
       }
       process={BOOTH_BUILDER_PROCESS}

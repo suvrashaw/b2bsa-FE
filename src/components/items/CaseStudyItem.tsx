@@ -8,7 +8,7 @@ import Link from "next/link";
 import type { CaseStudyCardData } from "@/content/case-studies/content";
 
 import { Button } from "@/components/ui/Button";
-import Icon from "@/components/ui/Icon";
+import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
 interface CaseStudyItemProps {

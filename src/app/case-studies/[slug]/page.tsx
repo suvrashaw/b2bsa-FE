@@ -32,7 +32,7 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
     description,
     openGraph: {
       description,
-      images: [{ alt: study.title, url: study.image }],
+      images: [{ alt: study.title, height: 630, url: study.image, width: 1200 }],
       title: study.title,
       type: "article",
     },
@@ -40,7 +40,7 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
     twitter: {
       card: "summary_large_image",
       description,
-      images: [study.image],
+      images: [{ alt: study.title, height: 630, url: study.image, width: 1200 }],
       title: study.title,
     },
   };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { normalizePath } from "@/lib";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { MarketingPageDefinition } from "./page-definitions";
@@ -76,23 +77,17 @@ const marketingPages = [
   VIRTUAL_VIDEO_PAGE,
 ] satisfies MarketingPageDefinition[];
 
-const normalizeLookupPath = (path: string) => {
-  if (path === "/") return "/";
-  return path.replace(/\/$/, "");
-};
-
 // eslint-disable-next-line compat/compat
 const marketingPagesById = Object.fromEntries(marketingPages.map((page) => [page.pageId, page]));
 
 // eslint-disable-next-line compat/compat
 const marketingPagesByPath = Object.fromEntries(
-  marketingPages.map((page) => [normalizeLookupPath(page.seo.canonicalPath), page])
+  marketingPages.map((page) => [normalizePath(page.seo.canonicalPath), page])
 );
 
 export const getMarketingPageById = (pageId: string) => marketingPagesById[pageId];
 
-export const getMarketingPageByPath = (path: string) =>
-  marketingPagesByPath[normalizeLookupPath(path)];
+export const getMarketingPageByPath = (path: string) => marketingPagesByPath[normalizePath(path)];
 
 import MARKETING_PAGES_CONFIG from "./marketing-pages-config.json";
 

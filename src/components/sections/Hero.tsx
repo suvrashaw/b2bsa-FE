@@ -151,10 +151,6 @@ export const Hero = ({
     variant === "compact"
       ? "items-center md:items-end min-h-[50vh] pt-16 pb-12 md:pt-24 md:pb-16"
       : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
-  const sectionClass = isVideoMode
-    ? "min-h-[560px] md:min-h-svh items-end pt-24 pb-16 md:pt-32 md:pb-20"
-    : imageModeClass;
-
   let background: React.ReactNode;
   if (isVideoMode) {
     background = (
@@ -200,7 +196,7 @@ export const Hero = ({
 
   return (
     <section
-      className={cn("relative flex overflow-hidden bg-brand-charcoal", sectionClass)}
+      className={cn("relative flex overflow-hidden bg-brand-charcoal", imageModeClass)}
       ref={containerRef}
     >
       {isVideoMode && <link as="video" href={effectiveVideoUrl} rel="preload" type="video/mp4" />}

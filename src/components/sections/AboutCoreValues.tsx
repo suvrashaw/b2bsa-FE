@@ -1,9 +1,6 @@
-"use client";
-
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useMemo, useRef, useState } from "react";
-
 import { Heading } from "@/components/ui/Heading";
+
+import { HorizontalScrollTrack } from "./HorizontalScrollTrack";
 
 export interface AboutCoreValuesData {
   description: string;
@@ -54,30 +51,6 @@ const CoreValueCard = ({
 };
 
 export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [scrollRange, setScrollRange] = useState(0);
-
-  useEffect(() => {
-    const updateScrollRange = () => {
-      if (trackRef.current) {
-        setScrollRange(trackRef.current.scrollWidth - window.innerWidth);
-      }
-    };
-
-    updateScrollRange();
-    window.addEventListener("resize", updateScrollRange);
-    return () => window.removeEventListener("resize", updateScrollRange);
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    offset: ["start start", "end end"],
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
-  const motionStyle = useMemo(() => ({ x }), [x]);
-
   return (
     <div id="core-values">
       {/* Mobile (<md): CSS horizontal snap scroll */}
@@ -112,56 +85,48 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
       </section>
 
       {/* Desktop (md+): JS sticky horizontal scroll */}
-      <section className="relative hidden h-[400vh] bg-brand-gray md:block" ref={targetRef}>
-        <div className="sticky top-0 flex h-[80vh] min-h-[500px] w-full items-stretch overflow-hidden">
-          <motion.div
-            className="flex h-full items-stretch will-change-transform"
-            ref={trackRef}
-            style={motionStyle}
+      <HorizontalScrollTrack>
+        {/* Intro Slide */}
+        <div className="flex w-screen shrink-0 flex-col justify-center px-4 py-12 md:w-[60vw] md:py-20 md:pr-12 md:pl-[clamp(24px,6vw,120px)] lg:w-[50vw]">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-px w-8 bg-brand-cyan" />
+            <p className="font-accent text-[11px] font-bold tracking-[0.16em] text-brand-charcoal/60 uppercase">
+              Our Core
+            </p>
+          </div>
+
+          <Heading
+            as="h2"
+            className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] leading-[1.1] font-black text-brand-charcoal"
           >
-            {/* Intro Slide */}
-            <div className="flex w-screen shrink-0 flex-col justify-center px-4 py-12 md:w-[60vw] md:py-20 md:pr-12 md:pl-[clamp(24px,6vw,120px)] lg:w-[50vw]">
-              <div className="mb-6 flex items-center gap-4">
-                <div className="h-px w-8 bg-brand-cyan" />
-                <p className="font-accent text-[11px] font-bold tracking-[0.16em] text-brand-charcoal/60 uppercase">
-                  Our Core
-                </p>
-              </div>
+            {data.heading}
+          </Heading>
 
-              <Heading
-                as="h2"
-                className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] leading-[1.1] font-black text-brand-charcoal"
-              >
-                {data.heading}
-              </Heading>
+          <p className="mb-10 max-w-[560px] text-[18px] leading-[1.65] text-brand-charcoal/60">
+            {data.description}
+          </p>
 
-              <p className="mb-10 max-w-[560px] text-[18px] leading-[1.65] text-brand-charcoal/60">
-                {data.description}
-              </p>
-
-              <div className="flex items-center gap-2.5">
-                <div className="h-px w-12 bg-linear-to-r from-brand-cyan to-transparent" />
-                <p className="font-accent text-[10px] font-bold tracking-[0.1em] text-brand-charcoal/40 uppercase">
-                  Scroll to explore
-                </p>
-              </div>
-            </div>
-
-            {/* Cards */}
-            {data.values.map((value, index) => (
-              <div
-                className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-4 py-16 md:px-[clamp(20px,4vw,60px)] md:py-28 lg:py-32"
-                key={index}
-              >
-                <CoreValueCard detail={CORE_VALUE_DETAILS[index]} index={index} value={value} />
-              </div>
-            ))}
-
-            {/* End spacer */}
-            <div className="w-[10vw] shrink-0" />
-          </motion.div>
+          <div className="flex items-center gap-2.5">
+            <div className="h-px w-12 bg-linear-to-r from-brand-cyan to-transparent" />
+            <p className="font-accent text-[10px] font-bold tracking-[0.1em] text-brand-charcoal/40 uppercase">
+              Scroll to explore
+            </p>
+          </div>
         </div>
-      </section>
+
+        {/* Cards */}
+        {data.values.map((value, index) => (
+          <div
+            className="flex w-[clamp(340px,38vw,500px)] shrink-0 flex-col justify-center border-l border-brand-charcoal/5 px-4 py-16 md:px-[clamp(20px,4vw,60px)] md:py-28 lg:py-32"
+            key={index}
+          >
+            <CoreValueCard detail={CORE_VALUE_DETAILS[index]} index={index} value={value} />
+          </div>
+        ))}
+
+        {/* End spacer */}
+        <div className="w-[10vw] shrink-0" />
+      </HorizontalScrollTrack>
     </div>
   );
 };

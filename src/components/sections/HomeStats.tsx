@@ -1,28 +1,11 @@
-"use client";
-
 import type { ReactNode } from "react";
-
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
 import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home/content";
 
+import { RotatingWordBadge } from "./RotatingWordBadge";
+
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
-
-const useRotatingWord = (words: string[], interval = 2500) => {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
-    return () => clearInterval(id);
-  }, [words.length, interval]);
-  return { key: index, word: words[index] };
-};
-
-const WORD_ANIMATE = { opacity: 1, y: 0 };
-const WORD_EXIT = { opacity: 0, y: -14 };
-const WORD_INITIAL = { opacity: 0, y: 14 };
-const WORD_TRANSITION = { duration: 0.38 } as const;
 
 interface HomeStatsProps {
   attribution?: StatsContent["attribution"];
@@ -46,6 +29,17 @@ interface HomeStatsProps {
   title?: ReactNode;
 }
 
+const StatCard = ({ stat }: { stat: HomeStatItem }) => (
+  <div
+    className={`relative overflow-hidden rounded-xl p-6 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
+  >
+    <div className="relative z-10">
+      <div className="text-sm font-medium opacity-80">{stat.label}</div>
+      <div className="mt-2 font-heading text-5xl font-bold">{stat.value}</div>
+    </div>
+  </div>
+);
+
 export const HomeStats = ({
   content = HOME_STATS_CONTENT,
   attribution = content.attribution,
@@ -68,28 +62,14 @@ export const HomeStats = ({
   const offsetStats = [...resolvedStats.slice(3), ...resolvedStats.slice(0, 3)];
   const col2Stats = [...offsetStats, ...offsetStats];
 
-  const { key: wordKey, word: rotatingWord } = useRotatingWord(ROTATING_WORDS);
-
   return (
     <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="about">
       <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:grid-cols-2 lg:px-8">
-        {/* Left Side: Content */}
         <div className="order-last flex flex-col items-start space-y-6 text-left lg:order-none">
           <div className="w-full text-left">
             <Heading as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
               <span className="block">{resolvedHeading}</span>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  animate={WORD_ANIMATE}
-                  className="block text-brand-blue"
-                  exit={WORD_EXIT}
-                  initial={WORD_INITIAL}
-                  key={wordKey}
-                  transition={WORD_TRANSITION}
-                >
-                  {rotatingWord}
-                </motion.span>
-              </AnimatePresence>
+              <RotatingWordBadge className="block text-brand-blue" words={ROTATING_WORDS} />
             </Heading>
             {description && (
               <div className="space-y-6 text-base leading-relaxed text-brand-charcoal/80 md:text-lg">
@@ -119,21 +99,16 @@ export const HomeStats = ({
           </div>
         </div>
 
-        {/* Right Side: Scrolling Insights */}
         <div className="group/scroller relative order-first h-[400px] overflow-hidden p-2 md:h-[600px] md:p-4 lg:order-none">
-          {/* Top/Bottom Fade Masks */}
           <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
           <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
 
           <div className="relative grid h-full grid-cols-2 gap-6">
-            {/* Column 1 - Scroll Up */}
             <div className="flex animate-scroll-up flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col1Stats.map((stat, i) => (
                 <StatCard key={i} stat={stat} />
               ))}
             </div>
-
-            {/* Column 2 - Scroll Down */}
             <div className="flex animate-scroll-down flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">
               {col2Stats.map((stat, i) => (
                 <StatCard key={i} stat={stat} />
@@ -143,18 +118,5 @@ export const HomeStats = ({
         </div>
       </div>
     </section>
-  );
-};
-
-const StatCard = ({ stat }: { stat: HomeStatItem }) => {
-  return (
-    <div
-      className={`relative overflow-hidden rounded-xl p-6 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
-    >
-      <div className="relative z-10">
-        <div className="text-sm font-medium opacity-80">{stat.label}</div>
-        <div className="mt-2 font-heading text-5xl font-bold">{stat.value}</div>
-      </div>
-    </div>
   );
 };

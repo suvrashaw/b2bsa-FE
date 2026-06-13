@@ -1,6 +1,6 @@
 import { isValidElement, type ReactNode } from "react";
 
-const BASE = "https://b2bsalesarrow.com";
+import { siteUrl as BASE } from "@/lib/json-ld";
 
 const ORGANIZATION = {
   "@type": "Organization" as const,
@@ -112,3 +112,30 @@ export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInpu
     url: `${BASE}${url}`,
   };
 };
+
+export const buildLocalBusinessJsonLd = () => ({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  areaServed: ["New York", "Bengaluru", "Global"],
+  description: ORGANIZATION.description,
+  email: "info@b2bsalesarrow.com",
+  logo: ORGANIZATION.logo,
+  name: ORGANIZATION.name,
+  sameAs: ORGANIZATION.sameAs,
+  url: BASE,
+});
+
+export const buildWebsiteJsonLd = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: ORGANIZATION.name,
+  potentialAction: {
+    "@type": "SearchAction",
+    "query-input": "required name=search_term_string",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE}/trade-show-calendar?q={search_term_string}`,
+    },
+  },
+  url: BASE,
+});

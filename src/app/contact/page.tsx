@@ -9,6 +9,8 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Timeline } from "@/components/sections/Timeline";
 import { CONTACT_FORM, CONTACT_NEXT_STEPS, CONTACT_PAGE } from "@/content/contact/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { buildLocalBusinessJsonLd } from "@/lib";
+import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
 
@@ -23,6 +25,7 @@ const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" 
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
+      <JsonLd data={buildLocalBusinessJsonLd()} />
       <Header darkBackground />
       <CinematicSequence />
       <ClientLogos />

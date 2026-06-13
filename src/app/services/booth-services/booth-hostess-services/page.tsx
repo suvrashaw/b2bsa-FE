@@ -5,6 +5,7 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
+import { GridSection } from "@/components/sections/GridSection";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -37,16 +38,15 @@ const Page = () => {
       contactUs={BOOTH_HOSTESS_CONTACT_CTA}
       customSections={
         <>
-          <CardSection
+          <GridSection
             cols={4}
             heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="grid"
           >
             {BOOTH_HOSTESS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardSection>
+          </GridSection>
           <CardSection
             cols={4}
             heading={BOOTH_HOSTESS_BLOGS_SECTION.heading}

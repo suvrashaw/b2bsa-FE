@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
-import { CardSection } from "@/components/sections/CardSection";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
+import { GridSection } from "@/components/sections/GridSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Heading } from "@/components/ui/Heading";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -35,7 +35,7 @@ const Page = () => {
       preProcessSections={
         <>
           <CorporateVideoIndustriesSection {...CORPORATE_VIDEO_INDUSTRIES} />
-          <CardSection
+          <GridSection
             className="bg-[#111111] text-white"
             heading={
               <Heading as="h2" className="max-w-4xl text-white lg:text-5xl">
@@ -43,12 +43,11 @@ const Page = () => {
               </Heading>
             }
             headingAlign="left"
-            layout="grid"
           >
             {CORPORATE_VIDEO_PORTFOLIO.items.map((item) => (
               <CorporateVideoCard item={item} key={item.title} />
             ))}
-          </CardSection>
+          </GridSection>
         </>
       }
       proofBar={CORPORATE_VIDEO_PROOF_BAR}

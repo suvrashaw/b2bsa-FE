@@ -11,6 +11,7 @@ import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
+import { GridSection } from "@/components/sections/GridSection";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -59,7 +60,7 @@ const Home = () => {
         <CaseStudies items={GLOBAL_CASE_STUDIES} viewAllLabel="View All Case Studies" />
       </div>
 
-      <CardSection
+      <GridSection
         cols={3}
         cta={
           HOME_EVENTS_CONTENT.viewAllLabel ? (
@@ -81,7 +82,7 @@ const Home = () => {
             key={event.id}
           />
         ))}
-      </CardSection>
+      </GridSection>
 
       <StickyScroll />
 

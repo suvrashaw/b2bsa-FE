@@ -1,6 +1,4 @@
-import { useMemo } from "react";
-
-import { JsonLd } from "./JsonLd";
+import { JsonLd } from "@/lib/json-ld";
 
 export interface EventJsonLdProps {
   description: string;
@@ -14,7 +12,7 @@ export interface EventJsonLdProps {
   url: string;
 }
 
-export const EventJsonLd = ({
+const buildEventData = ({
   description,
   endDate,
   image,
@@ -24,28 +22,26 @@ export const EventJsonLd = ({
   name,
   startDate,
   url,
-}: EventJsonLdProps) => {
-  const data = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    description,
-    endDate,
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    image,
-    location: {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: locationCountry,
-        addressLocality: locationCity,
-      },
-      name: locationName,
+}: EventJsonLdProps) => ({
+  "@context": "https://schema.org",
+  "@type": "Event",
+  description,
+  endDate,
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  image,
+  location: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: locationCountry,
+      addressLocality: locationCity,
     },
-    name,
-    startDate,
-    url,
-  }), [description, endDate, image, locationCity, locationCountry, locationName, name, startDate, url]);
+    name: locationName,
+  },
+  name,
+  startDate,
+  url,
+});
 
-  return <JsonLd data={data} />;
-};
+export const EventJsonLd = (props: EventJsonLdProps) => <JsonLd data={buildEventData(props)} />;

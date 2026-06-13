@@ -1,6 +1,4 @@
-import { useMemo } from "react";
-
-import { JsonLd } from "./JsonLd";
+import { JsonLd, siteUrl } from "@/lib/json-ld";
 
 export interface ArticleJsonLdProps {
   authorName?: string;
@@ -8,50 +6,50 @@ export interface ArticleJsonLdProps {
   datePublished: string;
   description: string;
   headline: string;
-  images: string[];
+  image: string;
   publisherLogo?: string;
   publisherName?: string;
   url: string;
 }
 
-export const ArticleJsonLd = ({
+const buildArticleData = ({
   authorName = "B2B Sales Arrow",
   dateModified,
   datePublished,
   description,
   headline,
-  images,
-  publisherLogo = "https://b2bsalesarrow.com/icon.png",
+  image,
+  publisherLogo = `${siteUrl}/icon.png`,
   publisherName = "B2B Sales Arrow",
   url,
-}: ArticleJsonLdProps) => {
-  const data = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    author: {
-      "@type": "Organization",
-      name: authorName,
-      url: "https://b2bsalesarrow.com",
+}: ArticleJsonLdProps) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  author: {
+    "@type": "Organization",
+    name: authorName,
+    url: siteUrl,
+  },
+  dateModified: dateModified || datePublished,
+  datePublished,
+  description,
+  headline,
+  image,
+  mainEntityOfPage: {
+    "@id": url,
+    "@type": "WebPage",
+  },
+  publisher: {
+    "@type": "Organization",
+    logo: {
+      "@type": "ImageObject",
+      url: publisherLogo,
     },
-    dateModified: dateModified || datePublished,
-    datePublished,
-    description,
-    headline,
-    image: images,
-    mainEntityOfPage: {
-      "@id": url,
-      "@type": "WebPage",
-    },
-    publisher: {
-      "@type": "Organization",
-      logo: {
-        "@type": "ImageObject",
-        url: publisherLogo,
-      },
-      name: publisherName,
-    },
-    url,
-  }), [authorName, dateModified, datePublished, description, headline, images, publisherLogo, publisherName, url]);
+    name: publisherName,
+  },
+  url,
+});
 
-  return <JsonLd data={data} />;
-};
+export const ArticleJsonLd = (props: ArticleJsonLdProps) => (
+  <JsonLd data={buildArticleData(props)} />
+);
