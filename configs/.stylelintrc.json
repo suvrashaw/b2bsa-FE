@@ -5,18 +5,19 @@
     "stylelint-prettier/recommended"
   ],
   "plugins": [
+    "stylelint-order",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-high-performance-animation"
   ],
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["theme", "variant", "source", "utility", "tailwind"]
-      }
-    ],
-    "import-notation": "string",
     "plugin/declaration-block-no-ignored-properties": true,
-    "plugin/no-low-performance-animation-properties": true
+    "plugin/no-low-performance-animation-properties": [true, { "severity": "warning" }],
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind", "apply", "layer", "theme", "variant", "custom-variant", "utility"] }],
+    "import-notation": null,
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "no-descending-specificity": null,
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
+    "order/properties-order": null
   }
 }

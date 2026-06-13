@@ -20,7 +20,6 @@
 /out/
 
 # production
-/build
 /reports/
 
 # misc
@@ -34,6 +33,8 @@ yarn-error.log*
 .pnpm-debug.log*
 .eslintcache
 .stylelintcache
+.prettier-cache
+.jscpd/
 
 
 # env files (can opt-in for committing if needed)
@@ -78,6 +79,7 @@ scripts/*
 # project specific
 public/~partytown/
 .playwright-mcp/
+playwright/.auth/
 memory/
 public/sitemap*.xml
 public/robots.txt
