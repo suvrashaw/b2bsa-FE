@@ -1,35 +1,46 @@
-import DATA from "./data.json";
-import HERO_DATA from "./hero.json";
+import type { MarketingPageDefinition } from "@/content/page-definitions";
+
+import FOUNDERSTORY_DATA from "./founder-story.json";
+import INQUIRY_DATA from "./inquiry.json";
 import PAGE_DATA from "./page.json";
-import EVENTS_DATA from "./events.json";
-import SERVICES_DATA from "./services.json";
+import VALUES_DATA from "./values.json";
 
-export const ABOUT_HERO = HERO_DATA;
 
-export const ABOUT_ORIGIN_TIMELINE = DATA.originTimeline;
 
-export const ABOUT_VISION_MISSION = DATA.visionMission;
 
-export const ABOUT_PRESENCE = DATA.presence;
 
-export const ABOUT_RECENT_EVENTS = EVENTS_DATA;
 
-export const ABOUT_CORE_VALUES = DATA.coreValues;
 
-export const ABOUT_SIGNATURE_SERVICES = SERVICES_DATA;
 
-export const ABOUT_SIGNATURE_SERVICES_STACK = DATA.signatureServicesStack;
 
-export const ABOUT_FOUNDER_STORY = DATA.founderStory;
+
+
+
+
+
+
+
+
+
+export const ABOUT_FOUNDER_STORY = FOUNDERSTORY_DATA;
 
 export const ABOUT_VALUES = {
-  ...DATA.values,
+  ...VALUES_DATA,
   centerText: ABOUT_FOUNDER_STORY.story,
 };
 
 export const ABOUT_INQUIRY = {
-  ...DATA.inquiry,
+  ...INQUIRY_DATA,
   illustration: null,
 };
 
-export const ABOUT_PAGE = PAGE_DATA;
+export const ABOUT_PAGE = PAGE_DATA as MarketingPageDefinition;
+
+export {default as ABOUT_CORE_VALUES} from "./core-values.json";
+export {default as ABOUT_RECENT_EVENTS} from "./events.json";
+export {default as ABOUT_HERO} from "./hero.json";
+export {default as ABOUT_ORIGIN_TIMELINE} from "./origin-timeline.json";
+export {default as ABOUT_PRESENCE} from "./presence.json";
+export {default as ABOUT_SIGNATURE_SERVICES} from "./services.json";
+export {default as ABOUT_SIGNATURE_SERVICES_STACK} from "./signature-services-stack.json";
+export {default as ABOUT_VISION_MISSION} from "./vision-mission.json";

@@ -1,0 +1,18 @@
+{
+  "backgroundImage": {
+    "alt": "Corporate Event Solutions",
+    "src": "/images/home/hero/home_hero_bg.avif"
+  },
+  "badge": "Corporate Events",
+  "description": "Partner with B2B Sales Arrow for professional corporate event solutions that help your brand deliver engaging, organized, and impactful business experiences worldwide.",
+  "primaryCta": {
+    "href": "/contact",
+    "label": "Schedule a Consultation"
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "proofLogos": [],
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Case Studies"
+  }
+}

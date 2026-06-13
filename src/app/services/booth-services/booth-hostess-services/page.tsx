@@ -86,7 +86,7 @@ const Page = () => {
           <ContactModalTrigger label="Book Booth Staff" />
         </>
       }
-      proofBar={BOOTH_HOSTESS_PROOF_BAR}
+      proofBar={BOOTH_HOSTESS_PROOF_BAR.stats}
       secondaryServices={BOOTH_HOSTESS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       spotlight={BOOTH_HOSTESS_INTRO}

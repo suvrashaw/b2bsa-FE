@@ -1,4 +1,4 @@
-import type { BlogItem } from "./home";
+import type { BlogItem } from "@/content/home/content";
 
 import rawBlogPosts from "./posts.json";
 
@@ -37,8 +37,10 @@ type ImportedBlogPost = {
   url: string;
 };
 
-const BLOG_HOST = "https://b2bsalesarrow.com";
-export const DEFAULT_BLOG_POST_ID = "hiring-trade-show-booth-design-company";
+import BLOGS_CONFIG from "./config.json";
+
+const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST;
+export const DEFAULT_BLOG_POST_ID = BLOGS_CONFIG.DEFAULT_BLOG_POST_ID;
 export const DEFAULT_BLOG_POST_HREF = `/blogs/${DEFAULT_BLOG_POST_ID}`;
 
 const createBlogId = (url: string, fallbackIndex: number) => {

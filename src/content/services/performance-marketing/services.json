@@ -1,0 +1,23 @@
+{
+  "heading": "Our Performance Marketing Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Organic visibility built through technical SEO, content architecture, and authority building that compounds over time.",
+      "href": "/services/seo-services",
+      "icon": "Search",
+      "id": "seo",
+      "image": "/images/services/performance-marketing.avif",
+      "title": "B2B SEO Services"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads managed around lead quality.",
+      "href": "/services/paid-advertising",
+      "icon": "Zap",
+      "id": "paid",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Paid Advertising"
+    }
+  ]
+}

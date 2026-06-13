@@ -1,0 +1,14 @@
+{
+  "description": "B2B Sales Arrow | Premium Experiential Marketing",
+  "eyebrow": "INQUIRY",
+  "form": {
+    "ctaLabel": "Submit Inquiry",
+    "emailLabel": "Work Email",
+    "emailPlaceholder": "john@company.com",
+    "firstNameLabel": "First Name",
+    "firstNamePlaceholder": "John",
+    "messageLabel": "Message / Project Brief",
+    "messagePlaceholder": "Tell us about your goals, event, timeline, or project requirements."
+  },
+  "heading": "Ready to Stream Your Next Corporate Event Live?"
+}

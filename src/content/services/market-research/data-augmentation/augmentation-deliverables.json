@@ -1,0 +1,37 @@
+{
+  "heading": "Data Fields We Enrich",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Verified job title, direct business email, LinkedIn profile URL, direct phone number where available, department, seniority level, and buying committee relevance.",
+      "icon": "UserCheck",
+      "id": "contact-level",
+      "image": "/images/services/data/data-1.avif",
+      "title": "Contact-Level Enrichment"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Revenue range, employee count, industry classification, headquarters location, technology stack, funding signals, expansion indicators, and hiring activity.",
+      "icon": "Building2",
+      "id": "account-level",
+      "image": "/images/services/data/data-2.avif",
+      "title": "Account-Level Enrichment"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Content engagement signals, solution research activity, competitor comparison behaviour, event participation data, and category interest indicators.",
+      "icon": "Target",
+      "id": "intent-data",
+      "image": "/images/services/data/data-1.avif",
+      "title": "Intent Data"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.",
+      "icon": "Settings",
+      "id": "custom-fields",
+      "image": "/images/services/data/data-2.avif",
+      "title": "Custom Fields"
+    }
+  ]
+}

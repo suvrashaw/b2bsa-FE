@@ -14,12 +14,15 @@ export interface CalendarTradeShow {
   venue: string;
 }
 
-import HERO_DATA from "./hero.json";
-import DATA from "./data.json";
+import type { MarketingPageDefinition } from "@/content/page-definitions";
+
+import EVENTS_DATA from "./events.json";
 import PAGE_DATA from "./page.json";
 
-export const TRADE_SHOW_CALENDAR_HERO = HERO_DATA;
 
-export const TRADE_SHOW_CALENDAR_EVENTS: CalendarTradeShow[] = DATA.events;
 
-export const TRADE_SHOW_CALENDAR_PAGE = PAGE_DATA;
+export const TRADE_SHOW_CALENDAR_EVENTS: CalendarTradeShow[] = EVENTS_DATA.events;
+
+export const TRADE_SHOW_CALENDAR_PAGE = PAGE_DATA as MarketingPageDefinition;
+
+export {default as TRADE_SHOW_CALENDAR_HERO} from "./hero.json";

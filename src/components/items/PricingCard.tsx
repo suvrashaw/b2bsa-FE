@@ -18,7 +18,7 @@ export interface PricingTier {
   color: string;
   description: string;
   features: string[];
-  icon: ReactNode;
+  icon?: ReactNode;
   name: string;
   popular?: boolean;
   price: number;

@@ -1,0 +1,22 @@
+{
+  "description": "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline. Share your requirements, and our team will create a tailored plan for your next exhibition.",
+  "form": {
+    "companyLabel": "Company Name",
+    "companyPlaceholder": "Your Company",
+    "consentLabel": "I agree to receive communications from B2B Sales Arrow regarding their services.",
+    "ctaLabel": "Get Your Custom Proposal",
+    "emailLabel": "Work Email",
+    "emailPlaceholder": "john@company.com",
+    "firstNameLabel": "Name",
+    "firstNamePlaceholder": "Your Name",
+    "messageLabel": "Tell us about your event goals and requirements:",
+    "messagePlaceholder": "Enter your requirements here...",
+    "phoneLabel": "Phone Number (Optional)",
+    "phonePlaceholder": "+1 (000) 000-0000"
+  },
+  "heading": "Ready to Build Your Global Event Strategy?",
+  "illustration": {
+    "alt": "Contact Us",
+    "src": "/images/contact/image.svg"
+  }
+}

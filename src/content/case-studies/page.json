@@ -1,17 +1,16 @@
 {
-  pageId: "case-studies",
-  pageName: "Case Studies",
-  pageType: "resourceIndex",
-  seo: {
-    canonicalPath: "/case-studies",
-    description:
-      "Enterprise B2B marketing case studies, documented results across trade show lead generation, booth design, video production, performance marketing, and market research. Real programs. Verified results.",
-    focusKeyphrase: "B2B marketing case studies",
-    secondaryKeywords: [
+  "pageId": "case-studies",
+  "pageName": "Case Studies",
+  "pageType": "resourceIndex",
+  "seo": {
+    "canonicalPath": "/case-studies",
+    "description": "Enterprise B2B marketing case studies, documented results across trade show lead generation, booth design, video production, performance marketing, and market research. Real programs. Verified results.",
+    "focusKeyphrase": "B2B marketing case studies",
+    "secondaryKeywords": [
       "event marketing results",
       "enterprise marketing success stories",
-      "trade show lead generation results",
+      "trade show lead generation results"
     ],
-    title: "B2B Marketing Case Studies and Event Results | B2B Sales Arrow",
-  },
+    "title": "B2B Marketing Case Studies and Event Results | B2B Sales Arrow"
+  }
 }

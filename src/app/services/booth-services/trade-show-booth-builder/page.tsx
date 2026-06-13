@@ -102,7 +102,7 @@ const Page = () => {
         />
       }
       process={BOOTH_BUILDER_PROCESS}
-      proofBar={BOOTH_BUILDER_PROOF_BAR}
+      proofBar={BOOTH_BUILDER_PROOF_BAR.stats}
       proofBarClassName="[&_p]:max-w-5xl"
       proofBarDescription={
         <>

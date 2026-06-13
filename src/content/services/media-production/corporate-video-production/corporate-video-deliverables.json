@@ -1,0 +1,53 @@
+{
+  "heading": "What We Produce in Our Corporate Video Production Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
+      "icon": "Star",
+      "id": "brand",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Brand and Culture Films"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
+      "icon": "Cpu",
+      "id": "product",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Product and Solution Explainer Videos"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
+      "icon": "Users",
+      "id": "thought",
+      "image": "/images/home/testimonials/testimonial-1.avif",
+      "title": "Executive Interview and Thought Leadership Series"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
+      "icon": "TrendingUp",
+      "id": "investor",
+      "image": "/images/services/performance-marketing.avif",
+      "title": "Investor and Board Presentation Videos"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
+      "icon": "Zap",
+      "id": "sales",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Sales Enablement Video Content"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
+      "icon": "MessageSquare",
+      "id": "testimonial",
+      "image": "/images/home/testimonials/testimonial-2.avif",
+      "title": "Customer Testimonial and Case Study Films"
+    }
+  ]
+}

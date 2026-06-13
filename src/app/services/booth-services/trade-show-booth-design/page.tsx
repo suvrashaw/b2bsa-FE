@@ -107,7 +107,7 @@ const Page = () => {
         />
       }
       process={BOOTH_DESIGN_PROCESS}
-      proofBar={BOOTH_DESIGN_PROOF_BAR}
+      proofBar={BOOTH_DESIGN_PROOF_BAR.stats}
       proofBarDescription={
         <>
           At B2B Sales Arrow, we specialize in designing exceptional booths that attract, engage,

@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "description": "you share your CRM export, prospect list, or target account database.",
+      "title": "Data Upload"
+    },
+    {
+      "description": "we identify missing, outdated, or low-value fields and map enrichment requirements.",
+      "title": "Gap Analysis"
+    },
+    {
+      "description": "our research team enriches using trusted sources plus manual verification for key fields.",
+      "title": "Human-Verified Research"
+    },
+    {
+      "description": "format correction, field verification, and consistency review throughout.",
+      "title": "QA and Deduplication"
+    },
+    {
+      "description": "structured, CRM-ready file in your required format and naming conventions within the agreed timeline.",
+      "title": "Clean Delivery"
+    }
+  ],
+  "title": "How Data Augmentation Works"
+}

@@ -106,7 +106,8 @@ const Page = () => {
         titleLine2="Lohani"
       />
       <Culture data={ABOUT_VALUES} />
-      <GlobalPresence data={ABOUT_PRESENCE} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <GlobalPresence data={ABOUT_PRESENCE as any} />
       <ContactUsForm {...ABOUT_INQUIRY} />
       <Footer />
     </main>

@@ -1,0 +1,9 @@
+{
+  "badge": "Ready to Build",
+  "description": "250+ events. $1.2B+ influenced. One team, one brief, one outcome. Let's build your event solutions strategy.",
+  "primaryCta": {
+    "href": "/contact",
+    "label": "Book a Free Strategy Session"
+  },
+  "headingLines": ["250+ Events.", "$1.2B+ Influenced."]
+}

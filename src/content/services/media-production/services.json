@@ -1,0 +1,32 @@
+{
+  "heading": "What We Produce",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Highlight reels, testimonial clips, speaker coverage, and post-event recap content, extending the ROI of your event investment beyond the show floor.",
+      "href": "/services/media-production/event-video-production",
+      "icon": "Camera",
+      "id": "event-video",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Event Video Production"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Brand films, product explainers, executive interviews, investor content, and sales enablement videos built for long B2B sales cycles.",
+      "href": "/services/media-production/corporate-video-production",
+      "icon": "Clapperboard",
+      "id": "corporate-video",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Corporate Video Production"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",
+      "href": "/services/media-production/event-live-streaming-services",
+      "icon": "Radio",
+      "id": "live-streaming",
+      "image": "/images/events/event_other_2.avif",
+      "title": "Event Live Streaming Services"
+    }
+  ]
+}

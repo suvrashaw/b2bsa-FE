@@ -1,0 +1,31 @@
+{
+  "heading": "We Help B2B Brands",
+  "mission": "To transform your global event presence into measurable, high-impact commercial outcomes.",
+  "quote": "We don't just design exhibition booths, we build sales pipelines. B2B Sales Arrow combines custom trade show booth design, on-ground lead generation, and performance-driven event marketing to turn floor traffic into qualified enterprise opportunities. One partner. One end-to-end B2B event solution built to drive measurable results.",
+  "stats": [
+    {
+      "bg": "bg-gradient-to-br from-[#1E6091] to-[#184E77]",
+      "icon": "Globe2",
+      "label": "Countries Served",
+      "value": "30+"
+    },
+    {
+      "bg": "bg-gradient-to-br from-[#2A9D8F] to-[#21867A]",
+      "icon": "TrendingUp",
+      "label": "Global Events Handled",
+      "value": "300+"
+    },
+    {
+      "bg": "bg-gradient-to-br from-[#023E8A] to-[#03045E]",
+      "icon": "Target",
+      "label": "SQLs Delivered",
+      "value": "2,500+"
+    },
+    {
+      "bg": "bg-gradient-to-br from-[#1b5e82] to-[#164e6b]",
+      "icon": "Users",
+      "label": "Years of B2B Experience",
+      "value": "10+"
+    }
+  ]
+}

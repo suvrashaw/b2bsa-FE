@@ -1,0 +1,41 @@
+{
+  "heading": "Future-Ready Stands for Exhibitions & Trade Shows",
+  "items": [
+    {
+      "bullets": [
+        "Flexible timelines for short-term builds, flagship exhibitions, and multi-market programs.",
+        "In-house fabrication planning with quality-checked components ready for on-site installation.",
+        "Global delivery support for international venues, shipping windows, and event deadlines."
+      ],
+      "image": {
+        "alt": "Custom modular exhibition stand",
+        "src": "/images/booth/20x40.jpg"
+      },
+      "title": "Custom Exhibition Stand Solutions - Modular & Bespoke"
+    },
+    {
+      "bullets": [
+        "End-to-end project management from concept alignment through production and final handover.",
+        "Virtual and on-site consultation to align booth architecture with brand and sales objectives.",
+        "Dedicated guidance across design approvals, materials, technical details, and venue coordination."
+      ],
+      "image": {
+        "alt": "3D exhibition stand design and project planning",
+        "src": "/images/booth/30x40.avif"
+      },
+      "title": "3D Design & Project Management Services"
+    },
+    {
+      "bullets": [
+        "Design and customization shaped around visitor flow, demo requirements, and meeting spaces.",
+        "Fabrication, construction, logistics, and installation managed as one connected delivery path.",
+        "On-site supervision and final quality checks before the show floor opens."
+      ],
+      "image": {
+        "alt": "Finished trade show stand ready for attendees",
+        "src": "/images/booth/40x40.jpg"
+      },
+      "title": "Our Process To Get Your Stand Ready"
+    }
+  ]
+}

@@ -1,34 +1,28 @@
+import type { MarketingPageDefinition } from "@/content/page-definitions";
+
 import { GES_SERVICES } from "@/content/services/global-event-solutions/content";
 import { RESEARCH_SERVICES } from "@/content/services/market-research/content";
 import { MEDIA_SERVICES } from "@/content/services/media-production/content";
 import { PERF_SERVICES } from "@/content/services/performance-marketing/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
+import BLOGS_SECTION_DATA from "./blogs-section.json";
+import CONTACT_DATA from "./contact.json";
 import { SHARED_BLOG_POSTS } from "./data";
-
-import HERO_DATA from "./hero.json";
-
-export const BLOG_HERO = HERO_DATA;
-
-
-
-
-import DATA from "./data.json";
 import PAGE_DATA from "./page.json";
-
-export const BLOG_CATEGORIES = DATA.categories;
+import SERVICECAROUSEL_DATA from "./service-carousel.json";
 
 export const BLOG_POSTS = {
-  ...DATA.posts,
+  ...BLOGS_SECTION_DATA,
   blogs: SHARED_BLOG_POSTS,
 };
 
 export const BLOG_CONTACT = {
-  ...DATA.contact,
+  ...CONTACT_DATA,
   illustration: null,
 };
 
-export const BLOG_PAGE = PAGE_DATA;
+export const BLOG_PAGE = PAGE_DATA as MarketingPageDefinition;
 
 type LooseService = {
   description: string;
@@ -48,7 +42,7 @@ const SERVICE_FALLBACK_HREFS: Record<string, string> = {
 };
 
 export const BLOG_SERVICE_CAROUSEL = {
-  ...DATA.serviceCarousel,
+  ...SERVICECAROUSEL_DATA,
   items: (
     [
       ...GES_SERVICES.services,
@@ -67,3 +61,6 @@ export const BLOG_SERVICE_CAROUSEL = {
     }))
     .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };
+
+export {default as BLOG_CATEGORIES} from "./categories.json";
+export {default as BLOG_HERO} from "./hero.json";

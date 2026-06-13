@@ -1,0 +1,26 @@
+{
+  "description": "We’re all about crafting standout video content across a range of industries. From finance to tech and energy, we've got you covered!",
+  "heading": "Video production tailored to your industry.",
+  "industries": [
+    {
+      "description": "Lead the market with a San Francisco video production company that transforms software into captivating stories. Drive user adoption faster.",
+      "title": "Tech Video Production"
+    },
+    {
+      "description": "Build credibility with a video production agency that simplifies complex offerings. Use recruiting videos to attract top talent and foster trust.",
+      "title": "Financial Services Video Production"
+    },
+    {
+      "description": "Inspire donors and volunteers with heartfelt recruiting videos. Our video production agency highlights your mission’s true impact.",
+      "title": "Nonprofit Video Production"
+    },
+    {
+      "description": "Showcase innovation with commercial video production that highlights sustainability. Let our production teams power your story for the future.",
+      "title": "Energy Company Video Production"
+    },
+    {
+      "description": "Elevate your products through commercial video production that boosts brand recognition. Our production teams spark customer engagement.",
+      "title": "CPG & Retail Video Production"
+    }
+  ]
+}

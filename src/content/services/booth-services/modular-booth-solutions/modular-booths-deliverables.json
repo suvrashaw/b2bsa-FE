@@ -1,0 +1,37 @@
+{
+  "heading": "Our Modular and Portable Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "We architect modular environments, designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
+      "icon": "Layers",
+      "id": "design",
+      "image": "/images/services/booth/booth-5.avif",
+      "title": "Modular System Design"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Access to the world's most reliable modular systems known for structural integrity and tool-free assembly.",
+      "icon": "Wrench",
+      "id": "hardware",
+      "image": "/images/services/booth/booth-6.avif",
+      "title": "Premium Hardware Sourcing"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "High-definition tension fabric and magnetic graphic panels that can be swapped in minutes, allowing you to update messaging for different audiences without new hardware.",
+      "icon": "Palette",
+      "id": "graphics",
+      "image": "/images/services/booth/booth-8.avif",
+      "title": "Interchangeable Graphic Systems"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "For teams that want to manage their own small-scale setups, we provide custom training and video guides for zero-error installation.",
+      "icon": "Video",
+      "id": "training",
+      "image": "/images/services/booth/booth-9.avif",
+      "title": "Staff Training and Assembly Guides"
+    }
+  ]
+}

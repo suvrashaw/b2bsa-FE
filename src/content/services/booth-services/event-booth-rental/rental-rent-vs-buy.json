@@ -1,0 +1,21 @@
+{
+  "description": "For enterprise brands exhibiting at multiple events or entering new markets, renting a trade show booth consistently delivers faster deployment, lower upfront commitment, and zero post-show logistics, making it the strategically smarter choice for most programs.",
+  "heading": "TOP 3 REASONS TO RENT VS. BUY",
+  "reasons": [
+    {
+      "description": "You can stretch your budget without sacrificing design with the right custom rental solutions.",
+      "icon": "Coins",
+      "title": "Save Money"
+    },
+    {
+      "description": "If your exhibit needs change from show to show or year to year, rentals can help you quickly scale.",
+      "icon": "Move",
+      "title": "Stay Flexible"
+    },
+    {
+      "description": "By renting, you avoid storage, booth maintenance, and crating hassles and costs.",
+      "icon": "Truck",
+      "title": "Make it Easy"
+    }
+  ]
+}

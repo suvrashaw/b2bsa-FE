@@ -1,0 +1,37 @@
+{
+  "phases": [
+    {
+      "description": "Budget and goal alignment. We understand your commercial objectives, event brief, audience, and success metrics before any design work begins.",
+      "title": "Phase 1: Deep-Dive Discovery"
+    },
+    {
+      "description": "Storyboarding the brand experience. We map how visitors move, feel, and think through every stage of the booth journey.",
+      "title": "Phase 2: Narrative Design"
+    },
+    {
+      "description": "3D rendering and iterative feedback. Full visualisation of the space, structure, graphics, lighting, and interaction zones reviewed with your team.",
+      "title": "Phase 3: Visual Prototyping"
+    },
+    {
+      "description": "Material sourcing and builder vetting. Materials, finishes, and fabrication partners selected for quality, durability, and logistics practicality.",
+      "title": "Phase 4: Expert Curation"
+    },
+    {
+      "description": "Pre-build validation for zero errors. Structural review, compliance check, and pre-assembly quality gate before production begins.",
+      "title": "Phase 5: Performance Testing"
+    },
+    {
+      "description": "Global shipping and on-site assembly. Packaging, customs, venue delivery, and installation managed end-to-end.",
+      "title": "Phase 6: Tactical Deployment"
+    },
+    {
+      "description": "Final 'white-glove' inspection and delivery. Every detail checked against the approved design before the show opens.",
+      "title": "Phase 7: Elite Handover"
+    },
+    {
+      "description": "Deconstruction and storage management. Breakdown, packing, return logistics, and reuse planning for future events.",
+      "title": "Phase 8: Post-Event Recovery"
+    }
+  ],
+  "title": "From Brief to Build, Our 8-Phase Booth Design Process"
+}

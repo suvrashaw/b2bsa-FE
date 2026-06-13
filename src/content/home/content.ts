@@ -1,13 +1,21 @@
 import type { ReactNode } from "react";
 
-import { HOME_BLOG_POSTS } from "./blogs";
-import DATA from "./data.json";
-import SERVICES_DATA from "./services.json";
-import CASE_STUDIES_DATA from "./case-studies.json";
-import EVENTS_DATA from "./events.json";
+import type { MarketingPageDefinition } from "@/content/page-definitions";
+
+import { HOME_BLOG_POSTS } from "@/content/blogs/data";
+
 import BLOGS_DATA from "./blogs.json";
+import CASE_STUDIES_DATA from "./case-studies.json";
+import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";
+import CLIENTLOGOS_DATA from "./client-logos.json";
+import CONTACTCONTENT_DATA from "./contact.json";
+import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
 import PAGE_DATA from "./page.json";
+import SERVICES_DATA from "./services.json";
+import STATSCONTENT_DATA from "./stats.json";
+import TESTIMONIALSCONTENT_DATA from "./testimonials.json";
+import WHYCHOOSEUSCONTENT_DATA from "./why-choose-us.json";
 
 export interface BlogItem {
   category?: string;
@@ -120,7 +128,7 @@ export interface FAQContent {
   eyebrow?: string;
   faqs: FAQItem[];
   heading: ReactNode;
-  layoutMode?: "auto" | "carousel" | "fit";
+  layoutMode?: string;
   scrollAmount: number;
 }
 
@@ -233,11 +241,11 @@ interface UpcomingEventItem {
 }
 
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
-  DATA.cinematicSequenceContent;
+  CINEMATICSEQUENCECONTENT_DATA;
 
-export const HOME_CLIENT_LOGOS: ClientLogoItem[] = DATA.clientLogos;
+export const HOME_CLIENT_LOGOS: ClientLogoItem[] = CLIENTLOGOS_DATA;
 
-export const HOME_STATS_CONTENT: StatsContent = DATA.statsContent;
+export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
 
 export const HOME_SERVICES_CONTENT: HomeServicesContent = SERVICES_DATA;
 
@@ -245,9 +253,9 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = CASE_STUDIES_DATA;
 
 export const HOME_EVENTS_CONTENT: EventsContent = EVENTS_DATA;
 
-export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = DATA.whyChooseUsContent;
+export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = WHYCHOOSEUSCONTENT_DATA;
 
-export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = DATA.testimonialsContent;
+export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = TESTIMONIALSCONTENT_DATA;
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
   ...BLOGS_DATA,
@@ -256,6 +264,6 @@ export const HOME_BLOGS_CONTENT: BlogsContent = {
 
 export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
 
-export const HOME_CONTACT_CONTENT: ContactContent = DATA.contactContent;
+export const HOME_CONTACT_CONTENT: ContactContent = CONTACTCONTENT_DATA;
 
-export const HOME_PAGE = PAGE_DATA;
+export const HOME_PAGE = PAGE_DATA as MarketingPageDefinition;

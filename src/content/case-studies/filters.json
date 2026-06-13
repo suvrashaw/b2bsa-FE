@@ -1,0 +1,18 @@
+[
+  {
+    "id": "serviceCategory",
+    "label": "Service Category"
+  },
+  {
+    "id": "industry",
+    "label": "Industry"
+  },
+  {
+    "id": "geography",
+    "label": "Geography"
+  },
+  {
+    "id": "companySize",
+    "label": "Company Size"
+  }
+]

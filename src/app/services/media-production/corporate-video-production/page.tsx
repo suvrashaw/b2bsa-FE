@@ -8,7 +8,7 @@ import { CorporateVideoIndustriesSection } from "@/components/sections/Corporate
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Heading } from "@/components/ui/Heading";
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {

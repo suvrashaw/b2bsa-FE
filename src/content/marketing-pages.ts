@@ -4,40 +4,40 @@ import { buildPageMetadata } from "@/lib/seo";
 
 import type { MarketingPageDefinition } from "./page-definitions";
 
-import { ABOUT_PAGE } from "./about";
-import { BLOG_PAGE } from "./blog";
-import { CASE_STUDIES_PAGE } from "./case-studies";
-import { CONTACT_PAGE } from "./contact";
-import { HOME_PAGE } from "./home";
-import { BS_PAGE } from "./services/booth-services";
-import { BOOTH_HOSTESS_PAGE } from "./services/detail/booth-hostess";
-import { CORP_EVENT_PAGE } from "./services/detail/corporate-event-solutions";
-import { CORP_NETWORKING_PAGE } from "./services/detail/corporate-networking-events";
-import { CORPORATE_VIDEO_PAGE } from "./services/detail/corporate-video-production";
-import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
-import { DATA_VALIDATION_PAGE } from "./services/detail/data-validation";
-import { BOOTH_RENTAL_PAGE } from "./services/detail/event-booth-rental";
-import { EVENT_BRANDING_PAGE } from "./services/detail/event-branding-solutions";
-import { EVENT_EXPERIENCE_PAGE } from "./services/detail/event-experience-creation";
-import { EVENT_EXPERIENCE_VIDEO_PAGE } from "./services/detail/event-experience-video-production";
-import { EVENT_LOGISTICS_PAGE } from "./services/detail/event-logistics";
-import { EVENT_PHYSICAL_VIDEO_PAGE } from "./services/detail/event-physical-video-shoot";
-import { EVENT_VIDEO_PAGE } from "./services/detail/event-video-production";
-import { LIVE_STREAMING_PAGE } from "./services/detail/live-streaming-services";
-import { MARKET_INTELLIGENCE_PAGE } from "./services/detail/market-intelligence";
-import { MODULAR_BOOTHS_PAGE } from "./services/detail/modular-portable-booths";
-import { PPC_PAGE } from "./services/detail/ppc-services";
-import { SEO_PAGE } from "./services/detail/seo-services";
-import { SMM_PAGE } from "./services/detail/social-media-marketing-services";
-import { BOOTH_BUILDER_PAGE } from "./services/detail/trade-show-booth-builder";
-import { BOOTH_DESIGN_PAGE } from "./services/detail/trade-show-booth-design";
-import { VIRTUAL_VIDEO_PAGE } from "./services/detail/virtual-video-production";
-import { GES_PAGE } from "./services/global-event-solutions";
-import { RESEARCH_PAGE } from "./services/market-research";
-import { MEDIA_PAGE } from "./services/media-production";
-import { PERF_PAGE } from "./services/performance-marketing";
-import { SQL_PAGE } from "./services/sales-qualified-lead-generation";
-import { TRADE_SHOW_CALENDAR_PAGE } from "./trade-show-calendar";
+import { ABOUT_PAGE } from "./about/content";
+import { BLOG_PAGE } from "./blogs/content";
+import { CASE_STUDIES_PAGE } from "./case-studies/content";
+import { CONTACT_PAGE } from "./contact/content";
+import { HOME_PAGE } from "./home/content";
+import { BOOTH_HOSTESS_PAGE } from "./services/booth-services/booth-hostess-services/content";
+import { EVENT_LOGISTICS_PAGE } from "./services/booth-services/booth-logistics-services/content";
+import { BS_PAGE } from "./services/booth-services/content";
+import { BOOTH_RENTAL_PAGE } from "./services/booth-services/event-booth-rental/content";
+import { MODULAR_BOOTHS_PAGE } from "./services/booth-services/modular-booth-solutions/content";
+import { BOOTH_BUILDER_PAGE } from "./services/booth-services/trade-show-booth-builder/content";
+import { BOOTH_DESIGN_PAGE } from "./services/booth-services/trade-show-booth-design/content";
+import { GES_PAGE } from "./services/global-event-solutions/content";
+import { CORP_EVENT_PAGE } from "./services/global-event-solutions/corporate-event-solutions/content";
+import { CORP_NETWORKING_PAGE } from "./services/global-event-solutions/corporate-networking-events/content";
+import { EVENT_BRANDING_PAGE } from "./services/global-event-solutions/event-branding-services/content";
+import { EVENT_EXPERIENCE_PAGE } from "./services/global-event-solutions/event-experience-creation/content";
+import { RESEARCH_PAGE } from "./services/market-research/content";
+import { DATA_AUGMENTATION_PAGE } from "./services/market-research/data-augmentation/content";
+import { DATA_VALIDATION_PAGE } from "./services/market-research/data-validation/content";
+import { MARKET_INTELLIGENCE_PAGE } from "./services/market-research/market-intelligence/content";
+import { MEDIA_PAGE } from "./services/media-production/content";
+import { CORPORATE_VIDEO_PAGE } from "./services/media-production/corporate-video-production/content";
+import { EVENT_EXPERIENCE_VIDEO_PAGE } from "./services/media-production/event-experience-video-production/content";
+import { EVENT_PHYSICAL_VIDEO_PAGE } from "./services/media-production/event-physical-video-shoot/content";
+import { EVENT_VIDEO_PAGE } from "./services/media-production/event-video-production/content";
+import { LIVE_STREAMING_PAGE } from "./services/media-production/live-streaming-services/content";
+import { VIRTUAL_VIDEO_PAGE } from "./services/media-production/virtual-video-production/content";
+import { PERF_PAGE } from "./services/performance-marketing/content";
+import { PPC_PAGE } from "./services/performance-marketing/ppc-services/content";
+import { SEO_PAGE } from "./services/performance-marketing/seo-services/content";
+import { SMM_PAGE } from "./services/performance-marketing/social-media-marketing-services/content";
+import { SQL_PAGE } from "./services/sales-qualified-lead-generation/content";
+import { TRADE_SHOW_CALENDAR_PAGE } from "./trade-show-calendar/content";
 
 const marketingPages = [
   HOME_PAGE,
@@ -94,20 +94,13 @@ export const getMarketingPageById = (pageId: string) => marketingPagesById[pageI
 export const getMarketingPageByPath = (path: string) =>
   marketingPagesByPath[normalizeLookupPath(path)];
 
+import MARKETING_PAGES_CONFIG from "./marketing-pages-config.json";
+
 export const getMarketingPageGroup = (page: MarketingPageDefinition) => {
-  if (page.pageType === "serviceHub" || page.pageType === "serviceDetail") {
-    return "Service";
-  }
-
-  if (page.pageType === "company") {
-    return "Company";
-  }
-
-  if (page.pageType === "resourceIndex") {
-    return "Resources";
-  }
-
-  return "B2B Growth";
+  return (
+    MARKETING_PAGES_CONFIG.groups[page.pageType as keyof typeof MARKETING_PAGES_CONFIG.groups] ||
+    MARKETING_PAGES_CONFIG.defaultGroup
+  );
 };
 
 export const getMarketingPageMetadata = (page: MarketingPageDefinition): Metadata =>

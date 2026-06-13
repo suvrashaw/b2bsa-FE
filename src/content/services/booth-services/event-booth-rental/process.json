@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "description": "Share event, location, dates, booth size, and timeline.",
+      "title": "Enquire"
+    },
+    {
+      "description": "Confirm inventory and venue compliance.",
+      "title": "Availability Check"
+    },
+    {
+      "description": "Graphics, furniture, AV, and meeting zones.",
+      "title": "Branding Configuration"
+    },
+    {
+      "description": "Installed and quality-checked before the show opens.",
+      "title": "Delivery and Setup"
+    },
+    {
+      "description": "Breakdown and storage managed after close.",
+      "title": "Post-Event Collection"
+    }
+  ],
+  "title": "Our Rental Process"
+}

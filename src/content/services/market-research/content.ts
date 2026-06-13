@@ -1,22 +1,23 @@
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
-import DATA from "./data.json";
+import RESEARCHCASESTUDIES_DATA from "./research-case-studies.json";
+import RESEARCHCONTACTCTA_DATA from "./research-contact-cta.json";
+import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
 
 export const RESEARCH_PROOF_BAR = {
-  ...DATA.researchProofBar,
+  ...RESEARCHPROOFBAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };
 
 export const RESEARCH_CASE_STUDIES = {
-  ...DATA.researchCaseStudies,
+  ...RESEARCHCASESTUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,
 };
 
 export const RESEARCH_CONTACT_CTA = {
-  ...DATA.researchContactCta,
+  ...RESEARCHCONTACTCTA_DATA,
   ...CINEMATIC_CTA_SHARED,
-  headingLines: ["Own Your Competitive", "Intelligence Advantage."] as [string, string],
 };
 
 export { default as RESEARCH_FAQ } from "./faq.json";

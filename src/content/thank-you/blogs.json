@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "category": "Strategy",
+      "date": "Oct 12, 2025",
+      "id": 1,
+      "image": "/images/blog/thumbnails/trade-show-booth-trends-2026.avif",
+      "title": "The Future of Experiential B2B Marketing"
+    },
+    {
+      "category": "Design",
+      "date": "Sep 28, 2025",
+      "id": 2,
+      "image": "/images/blog/thumbnails/hiring-trade-show-booth-company.avif",
+      "title": "Why Standard Trade Show Booths Are Failing"
+    },
+    {
+      "category": "Media",
+      "date": "Sep 15, 2025",
+      "id": 3,
+      "image": "/images/events/event_other_1.avif",
+      "title": "Architecting a High-Converting Media Strategy"
+    }
+  ],
+  "ctaLabel": "View All Articles",
+  "heading": "Intelligence to Read While You Wait",
+  "eyebrow": "STAY SHARP"
+}

@@ -5,7 +5,7 @@ import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
@@ -64,7 +64,7 @@ const Page = () => {
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
-      proofBar={MODULAR_BOOTHS_PROOF_BAR}
+      proofBar={MODULAR_BOOTHS_PROOF_BAR.stats}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       why={MODULAR_BOOTHS_WHY}

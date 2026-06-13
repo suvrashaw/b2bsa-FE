@@ -1,22 +1,23 @@
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
-import DATA from "./data.json";
+import CASESTUDIES_DATA from "./case-studies.json";
+import CONTACTCTA_DATA from "./contact-cta.json";
+import PROOFBAR_DATA from "./proof-bar.json";
 
 export const MEDIA_PROOF_BAR = {
-  ...DATA.proofBar,
+  ...PROOFBAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };
 
 export const MEDIA_CASE_STUDIES = {
-  ...DATA.caseStudies,
+  ...CASESTUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,
 };
 
 export const MEDIA_CONTACT_CTA = {
-  ...DATA.contactCta,
+  ...CONTACTCTA_DATA,
   ...CINEMATIC_CTA_SHARED,
-  headingLines: ["Content Should", "Keep Working."] as [string, string],
 };
 
 export { default as MEDIA_FAQ } from "./faq.json";

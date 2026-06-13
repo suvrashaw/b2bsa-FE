@@ -1,0 +1,19 @@
+{
+  "backgroundImage": {
+    "alt": "Virtual Event Production consultation",
+    "src": "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=1920"
+  },
+  "badge": "Virtual Production",
+  "description": "Produce virtual events that command attention and drive engagement. Let's discuss your next virtual event production.",
+  "headingLines": ["Ready to Produce Your", "Next Virtual Event?"],
+  "primaryCta": {
+    "href": "/contact",
+    "label": "Book a Consultation",
+    "opensModal": true
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "secondaryCta": {
+    "href": "mailto:info@b2bsalesarrow.com",
+    "label": "Contact Us"
+  }
+}

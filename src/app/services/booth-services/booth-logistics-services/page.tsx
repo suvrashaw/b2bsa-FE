@@ -86,7 +86,7 @@ const Page = () => {
           <ContactModalTrigger label="Plan Your Event Logistics" />
         </>
       }
-      proofBar={EVENT_LOGISTICS_PROOF_BAR}
+      proofBar={EVENT_LOGISTICS_PROOF_BAR.stats}
       secondaryServices={EVENT_LOGISTICS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       spotlight={EVENT_LOGISTICS_INTRO}

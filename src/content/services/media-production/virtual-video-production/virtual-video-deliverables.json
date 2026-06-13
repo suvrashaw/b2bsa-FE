@@ -1,0 +1,54 @@
+{
+  "ctaLabel": "Contact Our Team",
+  "heading": "What's Included in Our Virtual Video Event Production Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Produce engaging fireside chat sessions with professional speaker management, branded visuals, live moderation, and seamless virtual delivery.",
+      "icon": "MessageSquare",
+      "id": "fireside-chat-production",
+      "image": "/images/home/testimonials/testimonial-1.avif",
+      "title": "Fireside Chat Production"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Manage multi-speaker virtual panel discussions with audience interaction features, technical support, and smooth conversation flow.",
+      "icon": "Users",
+      "id": "panel-discussion-production",
+      "image": "/images/home/testimonials/testimonial-2.avif",
+      "title": "Panel Discussion Production"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Deliver professional webinars with branded presentations, audience engagement tools, speaker coordination, and reliable event streaming.",
+      "icon": "MonitorPlay",
+      "id": "webinar-production-services",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Webinar Production Services"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Create polished executive conversations and leadership discussions optimized for virtual audiences and digital platforms.",
+      "icon": "Mic",
+      "id": "executive-virtual-interviews",
+      "image": "/images/home/testimonials/testimonial-3.avif",
+      "title": "Executive Virtual Interviews"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Connect physical and virtual audiences through hybrid event video production solutions designed for maximum audience engagement.",
+      "icon": "Radio",
+      "id": "hybrid-event-production",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Hybrid Event Production"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Enhance online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
+      "icon": "Palette",
+      "id": "virtual-event-branding",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Virtual Event Branding"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Virtual Video Event Production",
+  "items": [
+    {
+      "description": "We manage planning, production, streaming, audience engagement, and technical support for smooth virtual event execution.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "title": "End-to-End Virtual Event Management"
+    },
+    {
+      "description": "Our team understands the requirements of executive webinars, leadership sessions, virtual conferences, and enterprise online events.",
+      "icon": "Award",
+      "image": "/images/home/testimonials/testimonial-4.avif",
+      "title": "Corporate Virtual Event Expertise"
+    },
+    {
+      "description": "We deliver broadcast-quality virtual experiences with polished visuals, branded graphics, and seamless technical execution.",
+      "icon": "TrendingUp",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Professional Production Quality"
+    },
+    {
+      "description": "From speaker onboarding to live troubleshooting, our team ensures uninterrupted virtual event delivery.",
+      "icon": "Users2",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "Reliable Technical Support"
+    },
+    {
+      "description": "We help brands improve audience participation through interactive engagement tools, Q&A management, and virtual networking features.",
+      "icon": "TrendingUp",
+      "image": "/images/events/event_other_2.avif",
+      "title": "Interactive Audience Experiences"
+    },
+    {
+      "description": "We provide scalable virtual event production services tailored to webinars, panel discussions, hybrid events, and executive sessions.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Flexible Virtual & Hybrid Solutions"
+    }
+  ]
+}

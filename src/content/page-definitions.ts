@@ -10,7 +10,7 @@ export interface CmsSeo {
 export interface MarketingPageDefinition {
   pageId: string;
   pageName: string;
-  pageType: MarketingPageType;
+  pageType: string;
   seo: CmsSeo;
 }
 

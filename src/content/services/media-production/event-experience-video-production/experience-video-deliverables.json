@@ -1,0 +1,54 @@
+{
+  "ctaLabel": "Contact Our Team",
+  "heading": "What's Included in Our Event Experience Video Production Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Build excitement and increase event attendance with professionally produced teaser videos, invitation videos, countdown videos, and event marketing campaigns.",
+      "icon": "Video",
+      "id": "pre-event-promotional-videos",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Pre-Event Promotional Videos"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Capture the best moments from conferences, exhibitions, networking sessions, keynote speeches, and trade show activities with engaging highlight reels.",
+      "icon": "Clapperboard",
+      "id": "event-highlight-videos",
+      "image": "/images/events/adobe_summit_2026.avif",
+      "title": "Event Highlight Videos"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Extend your event impact with post-event recap videos designed for social media, internal communication, audience engagement, and future event promotion.",
+      "icon": "MonitorPlay",
+      "id": "post-event-recap-videos",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Post-Event Recap Videos"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Showcase booth engagement, customer interactions, live demonstrations, and brand experiences with professional trade show video production.",
+      "icon": "Presentation",
+      "id": "trade-show-booth-coverage",
+      "image": "/images/services/booth/booth-5.avif",
+      "title": "Trade Show Booth Coverage"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Capture executive presentations, networking experiences, fireside chats, award ceremonies, and audience interactions with high-quality event videography services.",
+      "icon": "Mic",
+      "id": "corporate-event-videography",
+      "image": "/images/events/servicenow_2026.avif",
+      "title": "Corporate Event Videography"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Create short-form event videos optimized for LinkedIn, Instagram, YouTube, and other digital marketing channels.",
+      "icon": "Share2",
+      "id": "social-media-event-content",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Social Media Event Content"
+    }
+  ]
+}

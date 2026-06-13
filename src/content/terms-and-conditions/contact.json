@@ -1,0 +1,38 @@
+{
+  "heading": "Speak to Our Legal Team",
+  "description": "Have specific questions about our terms, privacy practices, or compliance standards? Our team is here to help.",
+  "email": "legal@b2bsalesarrow.com",
+  "buttonText": "Contact Legal",
+  "buttonHref": "/contact",
+  "form": {
+    "ctaLabel": "Send Query",
+    "emailLabel": "Work Email",
+    "emailPlaceholder": "john@company.com",
+    "firstNameLabel": "First Name",
+    "firstNamePlaceholder": "John",
+    "lastNameLabel": "Last Name",
+    "lastNamePlaceholder": "Doe",
+    "messageLabel": "Your Question",
+    "messagePlaceholder": "Which clause would you like clarified?",
+    "serviceLabel": "Subject",
+    "serviceOptions": [
+      {
+        "label": "Terms Clarification",
+        "value": "terms-clarification"
+      },
+      {
+        "label": "Contract Query",
+        "value": "contract-query"
+      },
+      {
+        "label": "Data & Privacy",
+        "value": "data-privacy"
+      },
+      {
+        "label": "Other Legal Matter",
+        "value": "other"
+      }
+    ],
+    "servicePlaceholder": "Select a topic..."
+  }
+}

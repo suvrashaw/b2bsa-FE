@@ -143,7 +143,7 @@ const Page = () => {
         </>
       }
       process={BOOTH_RENTAL_PROCESS}
-      proofBar={BOOTH_RENTAL_PROOF_BAR}
+      proofBar={BOOTH_RENTAL_PROOF_BAR.stats}
       why={BOOTH_RENTAL_WHY}
     />
   );

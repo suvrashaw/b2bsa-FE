@@ -818,6 +818,7 @@ export default function DemoPage() {
           <ServicesCard
             ctaLabel="Get Started"
             key={item.id}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             service={{ ...item, icon: "ArrowRight" } as any}
           />
         ))}

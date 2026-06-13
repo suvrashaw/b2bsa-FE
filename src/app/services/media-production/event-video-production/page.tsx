@@ -5,7 +5,7 @@ import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {

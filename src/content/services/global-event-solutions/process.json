@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "description": "ICP mapping, event selection, ROI forecasting, and commercial goal alignment.",
+      "title": "Strategic Planning"
+    },
+    {
+      "description": "Booth architecture, visitor journey, demo zones, and meeting area placement.",
+      "title": "Concept Design"
+    },
+    {
+      "description": "Production, shipping, customs, and venue scheduling managed in advance.",
+      "title": "Fabrication and Logistics"
+    },
+    {
+      "description": "Booth operations, staff briefing, real-time lead capture, and hot-lead routing.",
+      "title": "On-Ground Execution"
+    },
+    {
+      "description": "CRM-ready lead file, pipeline attribution, and ROI review delivered within 48 hours of event close.",
+      "title": "Post-Event Reporting"
+    }
+  ],
+  "title": "Our 5-Phase Global Event Execution Framework"
+}

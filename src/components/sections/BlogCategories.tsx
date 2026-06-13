@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Hash } from "lucide-react";
 import { type ElementType, useMemo } from "react";
 
 import { Heading } from "@/components/ui/Heading";
@@ -11,7 +12,7 @@ export interface BlogCategoriesProps {
 }
 
 interface BlogCategoryItem {
-  icon: ElementType;
+  icon?: ElementType;
   id: string;
   name: string;
 }
@@ -20,7 +21,7 @@ const ANIMATE = { opacity: 1, y: 0 };
 const INITIAL = { opacity: 0, y: 10 };
 
 const CategoryButton = ({ category, index }: { category: BlogCategoryItem; index: number }) => {
-  const Icon = category.icon;
+  const Icon = category.icon || Hash;
   const transition = useMemo(() => ({ delay: index * 0.05, duration: 0.4 }), [index]);
 
   return (

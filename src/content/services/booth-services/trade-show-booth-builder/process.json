@@ -1,0 +1,41 @@
+{
+  "phases": [
+    {
+      "description": "Event goals, booth size, brand requirements, demo needs, and timeline.",
+      "title": "Design Brief"
+    },
+    {
+      "description": "Full visualisation reviewed with your team before production begins.",
+      "title": "3D Render"
+    },
+    {
+      "description": "Structural, safety, and venue compliance review.",
+      "title": "Engineering Approval"
+    },
+    {
+      "description": "Quality, durability, and logistics-appropriate selections.",
+      "title": "Material Sourcing"
+    },
+    {
+      "description": "Production with quality control checkpoints throughout.",
+      "title": "Fabrication"
+    },
+    {
+      "description": "Quality and fit review before shipping.",
+      "title": "QC and Pre-Build"
+    },
+    {
+      "description": "Packaging, shipping, customs, and venue coordination.",
+      "title": "Event Delivery"
+    },
+    {
+      "description": "On-site assembly and final quality check before the show opens.",
+      "title": "Installation"
+    },
+    {
+      "description": "Post-event dismantling, packing, and reuse planning.",
+      "title": "Breakdown and Storage"
+    }
+  ],
+  "title": "Our Trade Show Booth Build Process"
+}

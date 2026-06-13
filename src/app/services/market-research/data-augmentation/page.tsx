@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
+import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   DATA_AUGMENTATION_CASE_STUDIES,

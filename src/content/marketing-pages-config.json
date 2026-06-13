@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "serviceHub": "Service",
+    "serviceDetail": "Service",
+    "company": "Company",
+    "resourceIndex": "Resources"
+  },
+  "defaultGroup": "B2B Growth"
+}

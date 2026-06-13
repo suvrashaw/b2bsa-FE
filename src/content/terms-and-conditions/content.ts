@@ -1,12 +1,14 @@
-import DATA from "./data.json";
-import HERO_DATA from "./hero.json";
-import FAQ_DATA from "./faq.json";
+import CONTACT_DATA from "./contact.json";
 
-export const TERMS_HERO = HERO_DATA;
 
-export const TERMS_FAQ = FAQ_DATA;
+
+
+
 
 export const TERMS_CONTACT = {
-  ...DATA.contact,
+  ...CONTACT_DATA,
   illustration: null,
 };
+
+export {default as TERMS_FAQ} from "./faq.json";
+export {default as TERMS_HERO} from "./hero.json";

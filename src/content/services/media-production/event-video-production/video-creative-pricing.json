@@ -1,0 +1,47 @@
+{
+  "description": "B2B event media production packages that extend your event ROI for years",
+  "tag": "Event Production Plans",
+  "tiers": [
+    {
+      "color": "blue",
+      "description": "Perfect for single keynotes, testimonials, or quick highlight reels",
+      "features": [
+        "Event Highlight Reel (1–2 min, single camera)",
+        "On-Site Testimonial Capture (3–5 subjects)",
+        "Standard Audio & Color Correction",
+        "Includes Web & Social Optimized Drafts",
+        "Typical Delivery: 5–8 Business Days"
+      ],
+      "name": "Essential Coverage",
+      "price": 1500
+    },
+    {
+      "color": "primary",
+      "description": "Best for comprehensive event recaps and multi-channel assets",
+      "features": [
+        "Multi-Camera Highlight Reel (Full Production)",
+        "Full-Day Keynote & Speaker Coverage",
+        "Social Cut-Downs (Set of 5 Custom Clips)",
+        "Branded Motion Graphics & 2D Explainer (60s)",
+        "Priority Post-Production Vetting"
+      ],
+      "name": "Premium Production",
+      "popular": true,
+      "price": 4000
+    },
+    {
+      "color": "cyan",
+      "description": "Flagship multi-format production for global B2B events",
+      "features": [
+        "Full Event Video Package (All Formats)",
+        "Live Event Streaming (Half-Day, Multi-Camera)",
+        "High-End 3D Animated Branding Elements",
+        "Dedicated Creative Director Allocation",
+        "Priority Same-Day Video Draft Delivery"
+      ],
+      "name": "Elite Experience",
+      "price": 8000
+    }
+  ],
+  "title": "Event Video Production Pricing Guide"
+}
