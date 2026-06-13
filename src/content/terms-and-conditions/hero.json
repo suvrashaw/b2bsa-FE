@@ -1,0 +1,14 @@
+{
+  "description": "Please read these terms carefully before using our services. Last updated: January 2025.",
+  "eyebrow": "LEGAL",
+  "image": {
+    "alt": "Legal documentation",
+    "loaderAlt": "Loading",
+    "src": "/images/contact/hero.avif"
+  },
+  "primaryCtaLabel": null,
+  "secondaryCtaLabel": null,
+  "showPreloader": false,
+  "stat": null,
+  "title": "Terms & Conditions"
+}

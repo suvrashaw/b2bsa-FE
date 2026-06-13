@@ -69,38 +69,6 @@
     "description": "Core offices in New York, London, Dubai, Singapore, Sydney, and Toronto, supported by a delivery and execution network spanning 40+ markets across North America, EMEA, APAC, the Middle East, and Latin America.",
     "title": "Where We Operate"
   },
-  "recentEvents": {
-    "badgeLabel": "RECENT",
-    "ctaLabel": "View Event",
-    "description": "Recent enterprise programs where our event, lead generation, and market execution teams delivered measurable commercial outcomes.",
-    "events": [
-      {
-        "date": "April 20 - 22",
-        "id": "adobe-summit-2026",
-        "image": "/images/events/adobe_summit_2026.avif",
-        "location": "Las vegas, USA",
-        "title": "Adobe summit 2026"
-      },
-      {
-        "date": "April 20 - 25",
-        "id": "hannover-messe-2026",
-        "image": "/images/events/event_other_1.avif",
-        "location": "Hannover, Germany",
-        "title": "Hannover Messe 2026"
-      },
-      {
-        "id": "itw-2026",
-        "image": "/images/events/event_other_3.avif",
-        "title": "ITW 2026"
-      },
-      {
-        "id": "sap-sapphire-2026",
-        "image": "/images/case-studies/cs-10.avif",
-        "title": "SAP Sapphire 2026"
-      }
-    ],
-    "heading": "Where We Have Been Delivering This Year"
-  },
   "coreValues": {
     "description": "Shaping B2B Sales Arrow’s DNA since inception, the core values are our most treasured assets, defining work ethic, culture, and character. These guiding principles are a beacon of light, guiding our decisions in adversity and triumph.",
     "heading": "Our Core Values",
@@ -115,35 +83,6 @@
       "Build an open and honest relationship with communication",
       "Build harmony and emotional connection – like family",
       "Our actions should speak louder than our words"
-    ]
-  },
-  "signatureServices": {
-    "heading": "Our Signature Service",
-    "services": [
-      {
-        "href": "/services/booth-services/trade-show-booth-design",
-        "id": "trade-show-booth-design",
-        "image": "/images/services/booth/booth-10.avif",
-        "title": "Trade show booth design"
-      },
-      {
-        "href": "/services/global-event-solutions",
-        "id": "global-event-solutions",
-        "image": "/images/services/booth/booth-7.avif",
-        "title": "Global event solutions"
-      },
-      {
-        "href": "/services/media-production",
-        "id": "media-production-services",
-        "image": "/images/services/media-production-1.avif",
-        "title": "Media production services"
-      },
-      {
-        "href": "/services/global-event-solutions/event-branding-services",
-        "id": "event-branding",
-        "image": "/images/events/event_other_4.avif",
-        "title": "Event Branding"
-      }
     ]
   },
   "signatureServicesStack": [

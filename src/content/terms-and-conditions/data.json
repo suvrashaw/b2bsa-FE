@@ -1,7 +1,10 @@
 {
   "contact": {
-    "description": "If you have questions about our terms or need clarification on any clause, our team is happy to assist.",
-    "eyebrow": "QUESTIONS ABOUT OUR TERMS?",
+    "heading": "Speak to Our Legal Team",
+    "description": "Have specific questions about our terms, privacy practices, or compliance standards? Our team is here to help.",
+    "email": "legal@b2bsalesarrow.com",
+    "buttonText": "Contact Legal",
+    "buttonHref": "/contact",
     "form": {
       "ctaLabel": "Send Query",
       "emailLabel": "Work Email",

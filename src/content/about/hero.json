@@ -1,0 +1,20 @@
+{
+  "description": "B2B Sales Arrow is not a vendor. We are a strategic growth partner, bringing event solutions, video production, performance marketing, and market research under one team with one commercial brief and clear accountability to outcomes.",
+  "eyebrow": "WHO WE ARE",
+  "image": {
+    "alt": "B2B Sales Arrow team and office",
+    "loaderAlt": "Loading",
+    "src": "/images/about/hero.avif"
+  },
+  "primaryCtaHref": "/contact",
+  "primaryCtaLabel": "Request a Strategy Consultation",
+  "secondaryCtaHref": "#founder",
+  "secondaryCtaLabel": "Meet Paras",
+  "showPreloader": false,
+  "stat": {
+    "icon": "Globe2",
+    "label": "Countries Served",
+    "value": "40+"
+  },
+  "title": "We Are the Growth Partner Your Enterprise Deserves"
+}

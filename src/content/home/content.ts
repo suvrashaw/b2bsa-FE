@@ -2,6 +2,12 @@ import type { ReactNode } from "react";
 
 import { HOME_BLOG_POSTS } from "./blogs";
 import DATA from "./data.json";
+import SERVICES_DATA from "./services.json";
+import CASE_STUDIES_DATA from "./case-studies.json";
+import EVENTS_DATA from "./events.json";
+import BLOGS_DATA from "./blogs.json";
+import FAQ_DATA from "./faq.json";
+import PAGE_DATA from "./page.json";
 
 export interface BlogItem {
   category?: string;
@@ -233,34 +239,23 @@ export const HOME_CLIENT_LOGOS: ClientLogoItem[] = DATA.clientLogos;
 
 export const HOME_STATS_CONTENT: StatsContent = DATA.statsContent;
 
-export const HOME_SERVICES_CONTENT: HomeServicesContent = DATA.servicesContent;
+export const HOME_SERVICES_CONTENT: HomeServicesContent = SERVICES_DATA;
 
-export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = DATA.caseStudiesContent;
+export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = CASE_STUDIES_DATA;
 
-export const HOME_EVENTS_CONTENT: EventsContent = DATA.eventsContent;
+export const HOME_EVENTS_CONTENT: EventsContent = EVENTS_DATA;
 
 export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = DATA.whyChooseUsContent;
 
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = DATA.testimonialsContent;
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
-  ...DATA.blogsContent,
+  ...BLOGS_DATA,
   blogs: HOME_BLOG_POSTS,
 };
 
-export const HOME_FAQ_CONTENT: FAQContent = DATA.faqContent;
+export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
 
 export const HOME_CONTACT_CONTENT: ContactContent = DATA.contactContent;
 
-export const HOME_PAGE = {
-  pageId: "home",
-  pageName: "Home",
-  pageType: "home",
-  seo: {
-    canonicalPath: "/",
-    description:
-      "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
-    focusKeyphrase: "B2B global event solutions",
-    title: "B2B Sales Arrow | Premium Growth Partner",
-  },
-} as const;
+export const HOME_PAGE = PAGE_DATA;

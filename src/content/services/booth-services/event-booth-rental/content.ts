@@ -1,4 +1,4 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 
 import DATA from "./data.json";
 
@@ -7,13 +7,19 @@ export const BOOTH_RENTAL_RENT_VS_BUY = DATA.rentalRentVsBuy;
 
 
 
-export { GLOBAL_PROOF_STATS as BOOTH_RENTAL_PROOF_BAR } from "../../shared";
+export const BOOTH_RENTAL_PROOF_BAR = {
+  heading: "About Event Booth Rental",
+  imageUrl: "/images/Frames/ezgif-frame-017.jpg",
+  stats: GLOBAL_PROOF_STATS,
+};
 
 
 
 export const BOOTH_RENTAL_PROCESS = DATA.rentalProcess;
 
 export const BOOTH_RENTAL_CASE_STUDIES = {
+  description: "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+  heading: "Real Events. Real Results.",
   items: GLOBAL_CASE_STUDIES,
 };
 

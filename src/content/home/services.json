@@ -1,0 +1,70 @@
+{
+  "ctaLabel": "Learn More",
+  "heading": "Our B2B Event Services & Trade Show Solutions",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
+      "icon": "Presentation",
+      "id": "booth-design",
+      "image": "/images/services/booth/booth-5.avif",
+      "title": "Booth Design & Production"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
+      "icon": "Users",
+      "id": "active-prospecting",
+      "image": "/images/services/market-intelligence.avif",
+      "title": "Active Prospecting"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "We capture broadcast-quality video, interviews, and 3D animations at your event, turning a single day on the floor into 12 months of high-impact digital content.",
+      "icon": "MonitorPlay",
+      "id": "media",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Corporate Media Production"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "We design and manage exclusive networking experiences, VIP dinners, roundtables, and hosted meetings, that connect your team directly with key enterprise decision-makers.",
+      "icon": "Coffee",
+      "id": "networking",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Networking"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "We create cohesive event branding, from booth graphics and signage to digital displays, so your enterprise presence commands attention across the entire venue.",
+      "icon": "Palette",
+      "id": "branding",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "Branding"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "We design immersive booth experiences, interactive demos, live activations, and engagement zones, that turn passive visitors into active pipeline opportunities.",
+      "icon": "Lightbulb",
+      "id": "experience-creation",
+      "image": "/images/events/event_other_2.avif",
+      "title": "Experience Creation"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "We build verified, account-level prospect databases and deploy our proprietary HPMI methodology to uncover deep target market intelligence before your event begins.",
+      "icon": "Database",
+      "id": "market-research",
+      "image": "/images/services/database-research-revised.avif",
+      "title": "Database & Market Research"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "We run targeted pre-event marketing campaigns across email and social to drive qualified attendee traffic to your booth and fill your team's calendar with high-intent meetings before day one.",
+      "icon": "Rocket",
+      "id": "performance-marketing",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Performance Marketing"
+    }
+  ]
+}

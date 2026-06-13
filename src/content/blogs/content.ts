@@ -6,69 +6,29 @@ import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation
 
 import { SHARED_BLOG_POSTS } from "./data";
 
-export const BLOG_HERO = {
-  description:
-    "Ideas should help you make better decisions, not fill a content calendar. Practical intelligence on trade show strategy, performance marketing, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.",
-  eyebrow: "",
-  primaryCta: { href: "#posts", label: "Read the Latest Insights" },
-  secondaryCta: { href: "/contact", label: "Subscribe for Growth Intelligence" },
-  title: (
-    <>
-      Thought Leadership for <br />
-      <span className="text-white/80">Enterprise Growth Teams</span>
-    </>
-  ),
-};
+import HERO_DATA from "./hero.json";
+
+export const BLOG_HERO = HERO_DATA;
 
 
 
 
 import DATA from "./data.json";
+import PAGE_DATA from "./page.json";
 
 export const BLOG_CATEGORIES = DATA.categories;
 
 export const BLOG_POSTS = {
   ...DATA.posts,
   blogs: SHARED_BLOG_POSTS,
-  heading: (
-    <>
-      Expert Strategies to Maximize <br />
-      <span className="text-brand-primary">Your Global Event Solutions</span>
-    </>
-  ),
 };
 
 export const BLOG_CONTACT = {
   ...DATA.contact,
-  heading: (
-    <>
-      Subscribe to <br />
-      <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
-        Growth Intelligence
-      </span>
-    </>
-  ),
   illustration: null,
 };
 
-export const BLOG_PAGE = {
-  pageId: "blog",
-  pageName: "Blogs",
-  pageType: "resourceIndex",
-  seo: {
-    canonicalPath: "/blogs",
-    description:
-      "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research, written for enterprise marketers and sales leaders.",
-    focusKeyphrase: "B2B marketing blog",
-    secondaryKeywords: [
-      "enterprise marketing insights",
-      "trade show strategy blog",
-      "market research",
-      "video production company",
-    ],
-    title: "B2B Growth Insights and Strategy Blog | B2B Sales Arrow",
-  },
-} as const;
+export const BLOG_PAGE = PAGE_DATA;
 
 type LooseService = {
   description: string;

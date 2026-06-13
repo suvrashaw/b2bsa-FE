@@ -4,11 +4,27 @@
       {
         "className": "absolute left-0 text-left max-w-lg pl-8 md:pl-16 pr-8 py-10 bg-black/40 backdrop-blur-md rounded-r-3xl border-y border-r border-white/10 shadow-2xl",
         "id": "intro",
-        "opacityInput": [0, 0.05, 0.18, 0.25],
-        "opacityOutput": [0, 1, 1, 0],
+        "opacityInput": [
+          0,
+          0.05,
+          0.18,
+          0.25
+        ],
+        "opacityOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
         "titleClassName": "font-heading text-3xl md:text-3xl font-bold !text-white leading-tight drop-shadow-lg",
-        "yInput": [0, 0.15],
-        "yOutput": [30, 0]
+        "yInput": [
+          0,
+          0.15
+        ],
+        "yOutput": [
+          30,
+          0
+        ]
       },
       {
         "className": "absolute right-8 lg:right-24 text-right max-w-xl px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
@@ -21,11 +37,27 @@
           "text": "Precision Engineered"
         },
         "id": "approach",
-        "opacityInput": [0.25, 0.35, 0.45, 0.5],
-        "opacityOutput": [0, 1, 1, 0],
+        "opacityInput": [
+          0.25,
+          0.35,
+          0.45,
+          0.5
+        ],
+        "opacityOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
         "titleClassName": "font-heading text-2xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg",
-        "yInput": [0.25, 0.35],
-        "yOutput": [30, 0]
+        "yInput": [
+          0.25,
+          0.35
+        ],
+        "yOutput": [
+          30,
+          0
+        ]
       },
       {
         "className": "absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
@@ -34,11 +66,27 @@
           "text": "End-to-End Execution"
         },
         "id": "services",
-        "opacityInput": [0.5, 0.6, 0.7, 0.75],
-        "opacityOutput": [0, 1, 1, 0],
+        "opacityInput": [
+          0.5,
+          0.6,
+          0.7,
+          0.75
+        ],
+        "opacityOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
         "titleClassName": "font-heading text-2xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg",
-        "yInput": [0.5, 0.6],
-        "yOutput": [30, 0]
+        "yInput": [
+          0.5,
+          0.6
+        ],
+        "yOutput": [
+          30,
+          0
+        ]
       },
       {
         "className": "absolute right-8 lg:right-24 text-right max-w-lg px-8 py-10 bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl flex flex-col items-end",
@@ -47,11 +95,25 @@
           "label": "Start Your Project"
         },
         "id": "cta",
-        "opacityInput": [0.75, 0.85, 1],
-        "opacityOutput": [0, 1, 1],
+        "opacityInput": [
+          0.75,
+          0.85,
+          1
+        ],
+        "opacityOutput": [
+          0,
+          1,
+          1
+        ],
         "titleClassName": "font-heading text-3xl md:text-3xl font-bold text-white leading-tight mb-8 drop-shadow-lg",
-        "yInput": [0.75, 0.85],
-        "yOutput": [30, 0]
+        "yInput": [
+          0.75,
+          0.85
+        ],
+        "yOutput": [
+          30,
+          0
+        ]
       }
     ],
     "frameCount": 60,
@@ -149,195 +211,6 @@
       }
     ]
   },
-  "servicesContent": {
-    "ctaLabel": "Learn More",
-    "heading": "Our B2B Event Services & Trade Show Solutions",
-    "services": [
-      {
-        "color": "bg-brand-blue",
-        "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
-        "icon": "Presentation",
-        "id": "booth-design",
-        "image": "/images/services/booth/booth-5.avif",
-        "title": "Booth Design & Production"
-      },
-      {
-        "color": "bg-brand-cyan",
-        "description": "We deploy trained multilingual sales specialists directly onto the event floor to engage senior decision-makers, qualify leads on the spot, and deliver verified SQLs to your team daily.",
-        "icon": "Users",
-        "id": "active-prospecting",
-        "image": "/images/services/market-intelligence.avif",
-        "title": "Active Prospecting"
-      },
-      {
-        "color": "bg-brand-primary",
-        "description": "We capture broadcast-quality video, interviews, and 3D animations at your event, turning a single day on the floor into 12 months of high-impact digital content.",
-        "icon": "MonitorPlay",
-        "id": "media",
-        "image": "/images/services/media-production-2.avif",
-        "title": "Corporate Media Production"
-      },
-      {
-        "color": "bg-brand-cyan",
-        "description": "We design and manage exclusive networking experiences, VIP dinners, roundtables, and hosted meetings, that connect your team directly with key enterprise decision-makers.",
-        "icon": "Coffee",
-        "id": "networking",
-        "image": "/images/events/event_other_1.avif",
-        "title": "Networking"
-      },
-      {
-        "color": "bg-brand-primary",
-        "description": "We create cohesive event branding, from booth graphics and signage to digital displays, so your enterprise presence commands attention across the entire venue.",
-        "icon": "Palette",
-        "id": "branding",
-        "image": "/images/home/why-choose-us/strategic_creativity.avif",
-        "title": "Branding"
-      },
-      {
-        "color": "bg-brand-blue",
-        "description": "We design immersive booth experiences, interactive demos, live activations, and engagement zones, that turn passive visitors into active pipeline opportunities.",
-        "icon": "Lightbulb",
-        "id": "experience-creation",
-        "image": "/images/events/event_other_2.avif",
-        "title": "Experience Creation"
-      },
-      {
-        "color": "bg-brand-cyan",
-        "description": "We build verified, account-level prospect databases and deploy our proprietary HPMI methodology to uncover deep target market intelligence before your event begins.",
-        "icon": "Database",
-        "id": "market-research",
-        "image": "/images/services/database-research-revised.avif",
-        "title": "Database & Market Research"
-      },
-      {
-        "color": "bg-brand-primary",
-        "description": "We run targeted pre-event marketing campaigns across email and social to drive qualified attendee traffic to your booth and fill your team's calendar with high-intent meetings before day one.",
-        "icon": "Rocket",
-        "id": "performance-marketing",
-        "image": "/images/services/performance-marketing-1.avif",
-        "title": "Performance Marketing"
-      }
-    ]
-  },
-  "caseStudiesContent": {
-    "ctaLabel": "Full Study",
-    "heading": "Proven Global Event Solutions: Enterprise Success Stories",
-    "items": [
-      {
-        "icon": "Plane",
-        "id": "waf-2025",
-        "image": "/images/case-studies/cs-new-2.avif",
-        "solution": "AI-supported prospecting, account-tier segmentation, VIP audience acquisition, and on-ground meeting coordination delivered 60 qualified aviation meetings.",
-        "title": "World Aviation Festival 2025"
-      },
-      {
-        "icon": "Landmark",
-        "id": "sibos-2025",
-        "image": "/images/case-studies/cs-new-1.avif",
-        "solution": "Multi-touch TAL outreach, global-region personalization, live meeting tracking, and on-ground support drove dual-client success.",
-        "title": "SIBOS 2025"
-      },
-      {
-        "icon": "Sparkles",
-        "id": "sap-sapphire-2023",
-        "image": "/images/case-studies/cs-10.avif",
-        "solution": "Empowering global branding and on-ground lead generation success, delivering 80% hot and warm leads and 100% unique accounts.",
-        "title": "SAP Sapphire 2023"
-      },
-      {
-        "icon": "Zap",
-        "id": "distributech-2023",
-        "image": "/images/case-studies/cs-9.avif",
-        "solution": "A 500+ prospect database, multi-channel outreach, booth execution, and rigorous on-floor qualification generated 42 SQLs.",
-        "title": "DistribuTECH 2023"
-      },
-      {
-        "icon": "Coins",
-        "id": "money-2020-2023",
-        "image": "/images/case-studies/cs-4.avif",
-        "solution": "Pre-event outreach, booth design, attendee engagement, and multilingual active prospecting delivered 37 results against a 30-result target.",
-        "title": "Money 20/20 2023"
-      },
-      {
-        "icon": "Coins",
-        "id": "money-2020-2022",
-        "image": "/images/case-studies/cs-3.avif",
-        "solution": "Targeted outreach, database development, meeting coordination, and a strong booth experience captured Fortune 500 pipeline.",
-        "title": "Money 20/20 2022"
-      },
-      {
-        "icon": "ShoppingBag",
-        "id": "nrf-2023",
-        "image": "/images/case-studies/cs-7.avif",
-        "solution": "Focused on-ground active prospecting, multilingual sales support, and meeting intelligence doubled the retail pipeline target.",
-        "title": "NRF 2023"
-      },
-      {
-        "icon": "Users",
-        "id": "annual-sales-connect",
-        "image": "/images/case-studies/cs-5.avif",
-        "solution": "End-to-end event production, AV, F&B, giveaways, and vendor recovery planning delivered a seamless executive program.",
-        "title": "Annual Sales Connect"
-      }
-    ]
-  },
-  "eventsContent": {
-    "ctaLabel": "Meet Us There",
-    "description": "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
-    "events": [
-      {
-        "date": "Mar 2026",
-        "id": "adobe-summit-2026",
-        "image": "/images/events/adobe_summit_2026.avif",
-        "location": "Las Vegas, USA",
-        "title": "Adobe Summit 2026"
-      },
-      {
-        "date": "2026",
-        "id": "inma-2026",
-        "image": "/images/events/inma_2026.avif",
-        "location": "Global",
-        "title": "INMA World Congress 2026"
-      },
-      {
-        "date": "2026",
-        "id": "servicenow-2026",
-        "image": "/images/events/servicenow_2026.avif",
-        "location": "Las Vegas, USA",
-        "title": "ServiceNow Knowledge 2026"
-      },
-      {
-        "date": "Oct 2025",
-        "id": "sibos-amsterdam",
-        "image": "/images/events/event_other_1.avif",
-        "location": "Amsterdam, Netherlands",
-        "title": "SIBOS 2025"
-      },
-      {
-        "date": "Oct 2025",
-        "id": "money-20-20-amsterdam",
-        "image": "/images/events/event_other_2.avif",
-        "location": "Amsterdam, Netherlands",
-        "title": "Money 20/20"
-      },
-      {
-        "date": "Oct 2025",
-        "id": "gitex-global",
-        "image": "/images/events/event_other_3.avif",
-        "location": "Dubai, UAE",
-        "title": "GITEX Global 2025"
-      },
-      {
-        "date": "Dec 2025",
-        "id": "constellate",
-        "image": "/images/events/event_other_4.avif",
-        "location": "New York, USA",
-        "title": "Constellate 2025"
-      }
-    ],
-    "heading": "Upcoming Trade Shows & Global Industry Events",
-    "viewAllLabel": "Explore All Upcoming Events"
-  },
   "whyChooseUsContent": {
     "heading": "Why Enterprise Brands Trust Our Global Event Solutions?",
     "reasons": [
@@ -429,65 +302,6 @@
         "serviceTag": "Global Event Solutions"
       }
     ]
-  },
-  "blogsContent": {
-    "ctaLabel": "Read the complete blog",
-    "eyebrow": "BLOGS",
-    "heading": "Expert Strategies to Maximize Your Global Event Solutions"
-  },
-  "faqContent": {
-    "faqs": [
-      {
-        "answer": "We provide end-to-end solutions, from custom booth design and floor prospecting to digital marketing and market research, all engineered to drive measurable pipeline growth.",
-        "id": 1,
-        "image": "/images/services/booth/booth-5.avif",
-        "question": "What services do you offer as an event partner?"
-      },
-      {
-        "answer": "Yes. We deliver global event solutions across 30+ countries, leveraging regional expertise to ensure a consistent, high-impact brand presence anywhere you exhibit.",
-        "id": 2,
-        "image": "/images/home/why-choose-us/global_reach.avif",
-        "question": "Do you manage exhibitions outside of the United States?"
-      },
-      {
-        "answer": "Our team crafts premium booth designs tailored to your industry, fusing architectural creativity with sales psychology to convert floor traffic into qualified enterprise leads.",
-        "id": 3,
-        "image": "/images/services/booth/booth-7.avif",
-        "question": "Can you build custom exhibits for our specific industry?"
-      },
-      {
-        "answer": "We deploy trained sales specialists to the floor to engage senior delegates, qualify them via BANT criteria, and deliver verified SQLs directly to your team.",
-        "id": 4,
-        "image": "/images/services/sql-generation-revised.avif",
-        "question": "How do you guarantee high-quality leads from an exhibition?"
-      },
-      {
-        "answer": "We elevate your brand through curated experiences, including exclusive VIP dinners, premium corporate giveaways, and interactive booth activities designed for deep engagement.",
-        "id": 5,
-        "image": "/images/events/event_other_1.avif",
-        "question": "Do you help with attendee engagement and networking?"
-      },
-      {
-        "answer": "We offer turnkey solutions that integrate commercial strategy with structural design and media production, managing all logistics so your team can focus on closing deals.",
-        "id": 6,
-        "image": "/images/home/why-choose-us/proven_execution.avif",
-        "question": "Do you handle both strategic planning and physical build?"
-      },
-      {
-        "answer": "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
-        "id": 7,
-        "image": "/images/services/performance-marketing-1.avif",
-        "question": "How do you drive traffic to our booth before events?"
-      },
-      {
-        "answer": "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year's worth of digital content to fuel your ongoing sales pipeline.",
-        "id": 8,
-        "image": "/images/services/media-production-2.avif",
-        "question": "Can you help us repurpose the event for digital marketing?"
-      }
-    ],
-    "heading": "Frequently Asked Questions",
-    "scrollAmount": 340
   },
   "contactContent": {
     "description": "Partner with B2B Sales Arrow to design high-impact trade show booths and execute data-driven event marketing strategies that generate qualified leads and pipeline. Share your requirements, and our team will create a tailored plan for your next exhibition.",
