@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MARKET_INTELLIGENCE_CARDS,
@@ -13,7 +13,7 @@ import {
   MARKET_INTELLIGENCE_HERO,
   MARKET_INTELLIGENCE_PAGE,
   MARKET_INTELLIGENCE_SPOTLIGHT,
-} from "@/content/services/detail/market-intelligence";
+} from "@/content/services/market-research/market-intelligence/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 

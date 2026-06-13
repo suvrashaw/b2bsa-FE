@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { SMM_PAGE } from "@/content/services/detail/social-media-marketing-services";
+import { SMM_PAGE } from "@/content/services/performance-marketing/social-media-marketing-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(SMM_PAGE);
 

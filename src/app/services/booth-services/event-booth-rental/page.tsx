@@ -12,7 +12,7 @@ import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_RENTAL_BLOGS_SECTION,
@@ -26,9 +26,9 @@ import {
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
-} from "@/content/services/detail/event-booth-rental";
-import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/detail/trade-show-booth-design";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/event-booth-rental/content";
+import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/booth-services/trade-show-booth-design/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
   {

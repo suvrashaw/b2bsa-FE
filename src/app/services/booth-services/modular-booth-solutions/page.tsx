@@ -5,7 +5,7 @@ import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
@@ -16,8 +16,8 @@ import {
   MODULAR_BOOTHS_PROOF_BAR,
   MODULAR_BOOTHS_RANGE_SECTION,
   MODULAR_BOOTHS_WHY,
-} from "@/content/services/detail/modular-portable-booths";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/modular-booth-solutions/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MODULAR_BOOTHS_PAGE);
 

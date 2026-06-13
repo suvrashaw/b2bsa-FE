@@ -1,0 +1,40 @@
+{
+  "faqs": [
+    {
+      "answer": "Yes. Interview footage, product demos, speaker clips, testimonials, and B-roll captured on location can feed directly into corporate films, social content, and post-event recap videos.",
+      "id": "combined-with-other-services",
+      "question": "Can this be combined with other video production services?"
+    },
+    {
+      "answer": "We support projects across major exhibition and conference markets, including Dubai, Las Vegas, London, Barcelona, Singapore, Frankfurt, and Sydney.",
+      "id": "crew-locations",
+      "question": "Where do you deploy crews?"
+    },
+    {
+      "answer": "Raw footage can usually be prepared within 24 to 48 hours. Edited selects, social clips, and full post-production timelines are confirmed during the brief.",
+      "id": "footage-turnaround",
+      "question": "How quickly do we receive the footage?"
+    },
+    {
+      "answer": "Yes. Drone operators and permissions are handled according to local regulations, venue policies, and airspace restrictions.",
+      "id": "drone-operators",
+      "question": "Are drone operators certified?"
+    },
+    {
+      "answer": "Yes. We capture client testimonials, speaker interviews, executive messages, and attendee conversations directly at the event venue.",
+      "id": "onsite-interviews-testimonials",
+      "question": "Can you film interviews and testimonials during the event?"
+    },
+    {
+      "answer": "Yes. We can deliver vertical, square, and landscape clips for LinkedIn, Instagram, YouTube, internal sharing, and paid campaigns.",
+      "id": "social-clips",
+      "question": "Do you create social media event clips?"
+    },
+    {
+      "answer": "We can cover keynote highlights, panel discussions, booth interactions, product demos, brand activations, leadership messages, and behind-the-scenes footage.",
+      "id": "event-moments",
+      "question": "What event moments should we capture?"
+    }
+  ],
+  "heading": "Frequently Asked Questions About On-Site Video Shoots"
+}

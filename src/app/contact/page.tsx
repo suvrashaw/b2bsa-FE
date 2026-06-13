@@ -7,7 +7,7 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Timeline } from "@/components/sections/Timeline";
-import { CONTACT_FORM, CONTACT_NEXT_STEPS, CONTACT_PAGE } from "@/content/contact";
+import { CONTACT_FORM, CONTACT_NEXT_STEPS, CONTACT_PAGE } from "@/content/contact/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);

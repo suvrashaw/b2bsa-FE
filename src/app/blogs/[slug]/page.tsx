@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 import { notFound, redirect } from "next/navigation";
 
-import { BlogPage } from "@/components/templates/BlogPage";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
-import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
+import { BlogPage } from "@/components/templates/BlogPage";
+import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs/data";
 
 type BlogPostPageProps = {
   params: Promise<{

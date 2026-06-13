@@ -25,12 +25,12 @@ import {
   BOOTH_BUILDER_PROCESS,
   BOOTH_BUILDER_PROOF_BAR,
   BOOTH_BUILDER_RELATED_SERVICES,
-} from "@/content/services/detail/trade-show-booth-builder";
+} from "@/content/services/booth-services/trade-show-booth-builder/content";
 import {
   BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
-} from "@/content/services/detail/trade-show-booth-design";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/trade-show-booth-design/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const pageMetadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
 

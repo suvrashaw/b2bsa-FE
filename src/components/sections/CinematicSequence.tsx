@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import { type CinematicSequenceContent, HOME_CINEMATIC_SEQUENCE_CONTENT } from "@/content/home";
+import { type CinematicSequenceContent, HOME_CINEMATIC_SEQUENCE_CONTENT } from "@/content/home/content";
 
 export interface CinematicSequenceProps {
   content?: CinematicSequenceContent;

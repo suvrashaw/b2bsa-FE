@@ -12,8 +12,9 @@ import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   CORP_EVENT_BLOGS_SECTION,
   CORP_EVENT_CAPABILITIES,
@@ -28,8 +29,7 @@ import {
   CORP_EVENT_PROOF_BAR,
   CORP_EVENT_RELATED_SERVICES,
   CORP_EVENT_WHY_CHOOSE_US,
-} from "@/content/services/detail/corporate-event-solutions";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/global-event-solutions/corporate-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 

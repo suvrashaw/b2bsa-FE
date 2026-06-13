@@ -12,7 +12,7 @@ import {
   BS_PROOF_BAR,
   BS_SERVICES,
   BS_WHY,
-} from "@/content/services/booth-services";
+} from "@/content/services/booth-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BS_PAGE);
 

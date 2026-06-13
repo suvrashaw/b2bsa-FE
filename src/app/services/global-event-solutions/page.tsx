@@ -12,7 +12,7 @@ import {
   GES_PROOF_BAR,
   GES_SERVICES,
   GES_WHY,
-} from "@/content/services/global-event-solutions";
+} from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(GES_PAGE);
 

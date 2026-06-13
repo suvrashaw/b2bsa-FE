@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { CaseStudyCardData } from "@/content/case-studies";
+import type { CaseStudyCardData } from "@/content/case-studies/content";
 
 import { Button } from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";

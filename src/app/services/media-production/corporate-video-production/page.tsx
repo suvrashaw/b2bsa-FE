@@ -8,8 +8,9 @@ import { CorporateVideoIndustriesSection } from "@/components/sections/Corporate
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Heading } from "@/components/ui/Heading";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   CORPORATE_VIDEO_DELIVERABLES,
   CORPORATE_VIDEO_FAQ,
@@ -20,8 +21,7 @@ import {
   CORPORATE_VIDEO_PORTFOLIO,
   CORPORATE_VIDEO_PROOF_BAR,
   CORPORATE_VIDEO_WHY,
-} from "@/content/services/detail/corporate-video-production";
-import { MEDIA_PAGE } from "@/content/services/media-production";
+} from "@/content/services/media-production/corporate-video-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE);
 

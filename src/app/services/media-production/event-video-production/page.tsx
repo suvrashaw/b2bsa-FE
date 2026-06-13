@@ -5,8 +5,9 @@ import { CardSection } from "@/components/sections/CardSection";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
-import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
+import CINEMATIC_CTA_SHARED from "@/content/cinematic-cta-shared.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   EVENT_VIDEO_CASE_STUDIES,
   EVENT_VIDEO_CREATIVE_PRICING,
@@ -16,8 +17,7 @@ import {
   EVENT_VIDEO_PAGE,
   EVENT_VIDEO_PROOF_BAR,
   EVENT_VIDEO_WHY,
-} from "@/content/services/detail/event-video-production";
-import { MEDIA_PAGE } from "@/content/services/media-production";
+} from "@/content/services/media-production/event-video-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_VIDEO_PAGE);
 

@@ -12,7 +12,7 @@ import {
   PERF_PROOF_BAR,
   PERF_SERVICES,
   PERF_WHY,
-} from "@/content/services/performance-marketing";
+} from "@/content/services/performance-marketing/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(PERF_PAGE);
 

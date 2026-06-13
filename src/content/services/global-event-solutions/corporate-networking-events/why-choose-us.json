@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Networking Event Solutions",
+  "items": [
+    {
+      "description": "We manage planning, guest experience, venue coordination, hospitality, and onsite event execution.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "title": "End-to-End Event Coordination"
+    },
+    {
+      "description": "Our team understands the requirements of executive networking events, VIP receptions, and business relationship-building experiences.",
+      "icon": "Users2",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "Corporate Networking Expertise"
+    },
+    {
+      "description": "Our team delivers premium hospitality experiences for high-value business events and executive gatherings.",
+      "icon": "Award",
+      "image": "/images/home/testimonials/testimonial-6.avif",
+      "title": "VIP & Hospitality Management"
+    },
+    {
+      "description": "Our networking event solutions are designed to encourage meaningful conversations, partnerships, and business opportunities.",
+      "icon": "TrendingUp",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "Business-Focused Event Strategy"
+    }
+  ]
+}

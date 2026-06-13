@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Event Hostess Services",
+  "items": [
+    {
+      "description": "Our event hostesses are trained to represent brands professionally while managing guest interactions with confidence.",
+      "icon": "Award",
+      "image": "/images/home/testimonials/testimonial-3.avif",
+      "title": "Professional & Trained Staff"
+    },
+    {
+      "description": "We understand the operational requirements of conferences, exhibitions, networking events, and executive corporate experiences.",
+      "icon": "Globe2",
+      "image": "/images/events/event_other_4.avif",
+      "title": "Corporate Event Expertise"
+    },
+    {
+      "description": "We provide scalable staffing support for trade shows, conferences, product launches, and corporate networking events.",
+      "icon": "TrendingUp",
+      "image": "/images/services/booth/booth-6.avif",
+      "title": "Flexible Event Staffing Solutions"
+    },
+    {
+      "description": "From registration management to VIP coordination, we provide complete event hostess support for successful event execution.",
+      "icon": "Users2",
+      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "title": "End-to-End Event Support"
+    }
+  ]
+}

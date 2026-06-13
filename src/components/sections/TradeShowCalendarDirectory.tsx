@@ -4,7 +4,7 @@ import { Grid2X2, List, RotateCcw, Search } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 
-import type { CalendarTradeShow } from "@/content/trade-show-calendar";
+import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
 
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { EventJsonLd } from "@/components/seo/EventJsonLd";

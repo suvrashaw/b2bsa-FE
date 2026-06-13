@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -9,8 +10,6 @@ import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 import { cn } from "@/lib";
-
-import dynamic from "next/dynamic";
 
 const FooterCommandMap = dynamic(
   () => import("./footer/FooterCommandMap").then((mod) => mod.FooterCommandMap),

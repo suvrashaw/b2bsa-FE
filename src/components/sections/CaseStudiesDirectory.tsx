@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { type MouseEvent, type ReactNode, useCallback, useState } from "react";
 
-import type { CaseStudyIndexEntry } from "@/content/case-studies";
+import type { CaseStudyIndexEntry } from "@/content/case-studies/content";
 
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Heading } from "@/components/ui/Heading";

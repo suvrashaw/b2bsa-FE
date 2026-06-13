@@ -1,0 +1,41 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Event Experience Video Production",
+  "items": [
+    {
+      "description": "We manage planning, filming, editing, post-production, and content delivery for seamless event video execution.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "title": "End-to-End Event Video Production"
+    },
+    {
+      "description": "Our team understands the fast-paced environment of conferences, exhibitions, networking events, and executive experiences.",
+      "icon": "Award",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "Corporate Event Expertise"
+    },
+    {
+      "description": "We deliver visually engaging event videos with professional filming, dynamic editing, and branded storytelling.",
+      "icon": "TrendingUp",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Cinematic-Quality Production"
+    },
+    {
+      "description": "We provide quick post-event editing support for social media publishing and immediate marketing use.",
+      "icon": "Users2",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Fast Turnaround Delivery"
+    },
+    {
+      "description": "We support event videography projects across international conferences, trade shows, and corporate events worldwide.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Global Event Coverage"
+    },
+    {
+      "description": "Our event videos are designed to support brand visibility, audience engagement, event promotion, and digital marketing campaigns.",
+      "icon": "TrendingUp",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Marketing-Focused Content"
+    }
+  ]
+}

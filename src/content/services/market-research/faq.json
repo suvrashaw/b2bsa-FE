@@ -1,0 +1,20 @@
+{
+  "faqs": [
+    {
+      "answer": "B2B market research is the structured process of gathering, analysing, and interpreting market, competitor, and buyer information specifically to support B2B commercial decisions, including market entry, product-market fit, campaign planning, and sales strategy.",
+      "id": "what-is",
+      "question": "What is B2B market research?"
+    },
+    {
+      "answer": "Primary: new information gathered directly from sources, interviews, surveys, panels. Secondary: analysis of existing information, reports, competitor websites, public data. Best programs combine both.",
+      "id": "primary-secondary",
+      "question": "What is the difference between primary and secondary research?"
+    },
+    {
+      "answer": "Executive briefing decks, detailed research reports, live analyst briefings, ongoing subscriptions, or custom dashboards, format agreed at brief stage based on how your team uses the intelligence.",
+      "id": "delivery",
+      "question": "How do you deliver findings?"
+    }
+  ],
+  "heading": "Frequently Asked Questions"
+}

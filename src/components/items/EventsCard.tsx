@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
-import type { EventsContent } from "@/content/home";
+import type { EventsContent } from "@/content/home/content";
 
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib";

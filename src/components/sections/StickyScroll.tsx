@@ -8,7 +8,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home";
+import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home/content";
 
 const SCALE_ACTIVE = { scale: 1 };
 const SCALE_INACTIVE = { scale: 1.06 };

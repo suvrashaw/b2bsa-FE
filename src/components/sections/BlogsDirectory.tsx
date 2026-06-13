@@ -12,11 +12,11 @@ import {
   useMemo,
 } from "react";
 
-import type { SharedBlogPost } from "@/content/blogs";
+import type { SharedBlogPost } from "@/content/blogs/data";
 
 import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Pagination } from "@/components/ui/Pagination";
-import { BLOG_CATEGORIES } from "@/content/blog";
+import { BLOG_CATEGORIES } from "@/content/blogs/content";
 import { cn } from "@/lib";
 import {
   clampPaginationPage,

@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Corporate Event Solutions",
+  "items": [
+    {
+      "description": "We manage planning, branding, logistics, guest experience, and onsite execution for successful corporate events.",
+      "icon": "Globe2",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "End-to-End Event Expertise"
+    },
+    {
+      "description": "Our team understands the operational and branding requirements of enterprise conferences, exhibitions, and executive events.",
+      "icon": "Award",
+      "image": "/images/events/event_other_4.avif",
+      "title": "Enterprise Event Experience"
+    },
+    {
+      "description": "We provide scalable event solutions for international conferences, trade shows, and business gatherings.",
+      "icon": "Users2",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Global Event Support"
+    },
+    {
+      "description": "We tailor our corporate event services based on your audience, business objectives, and event goals.",
+      "icon": "TrendingUp",
+      "image": "/images/services/booth/booth-9.avif",
+      "title": "Customized Event Solutions"
+    }
+  ]
+}

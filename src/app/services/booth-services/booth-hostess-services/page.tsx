@@ -12,7 +12,7 @@ import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
@@ -28,8 +28,8 @@ import {
   BOOTH_HOSTESS_PROOF_BAR,
   BOOTH_HOSTESS_RELATED_SERVICES,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
-} from "@/content/services/detail/booth-hostess";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/booth-hostess-services/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 

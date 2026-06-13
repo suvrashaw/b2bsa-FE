@@ -1,0 +1,30 @@
+{
+  "faqs": [
+    {
+      "answer": "Event experience video production services help businesses capture conferences, trade shows, networking events, and corporate experiences through professional video storytelling.",
+      "id": "what-are-event-experience-video-production-services",
+      "question": "What are event experience video production services?"
+    },
+    {
+      "answer": "Yes. We create teaser videos, invitation videos, event countdown videos, and promotional content to increase audience engagement before the event.",
+      "id": "pre-event-promotional-videos",
+      "question": "Do you provide pre-event promotional videos?"
+    },
+    {
+      "answer": "Yes. We produce post-event highlight reels and recap videos optimized for marketing, social media, and audience engagement.",
+      "id": "post-event-recap-videos",
+      "question": "Can you create post-event recap videos?"
+    },
+    {
+      "answer": "Yes. We provide trade show videography services including booth coverage, customer interaction filming, live demo coverage, and event highlights.",
+      "id": "trade-show-video-coverage",
+      "question": "Do you provide trade show video coverage?"
+    },
+    {
+      "answer": "Delivery timelines depend on project scope, but we also provide fast-turnaround editing support for urgent marketing requirements.",
+      "id": "event-video-delivery-speed",
+      "question": "How quickly can you deliver event videos?"
+    }
+  ],
+  "heading": "Frequently Asked Questions About Event Experience Video Production"
+}

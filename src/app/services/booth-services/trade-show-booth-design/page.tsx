@@ -12,9 +12,9 @@ import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getDefaultEvents } from "@/content/events-utils";
-import { HOME_EVENTS_CONTENT } from "@/content/home";
+import { HOME_EVENTS_CONTENT } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_DESIGN_BLOGS_SECTION,
@@ -30,8 +30,8 @@ import {
   BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_SPOTLIGHT,
   BOOTH_DESIGN_WHY_CHOOSE_US,
-} from "@/content/services/detail/trade-show-booth-design";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/trade-show-booth-design/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 

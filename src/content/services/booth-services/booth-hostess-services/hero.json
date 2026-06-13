@@ -1,0 +1,13 @@
+{
+  "description": "Enhance guest experience at conferences, exhibitions, trade shows, and corporate events with trained event hostesses for registration, audience engagement, and booth support.",
+  "images": [
+    "/images/home/testimonials/testimonial-1.avif",
+    "/images/events/event_other_1.avif",
+    "/images/services/booth/booth-5.avif"
+  ],
+  "primaryCta": {
+    "href": "/contact",
+    "label": "Request A Quote"
+  },
+  "title": "Professional Event Hostess Services for Corporate Events & Trade Shows"
+}

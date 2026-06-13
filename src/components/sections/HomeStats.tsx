@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home";
+import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home/content";
 
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
 

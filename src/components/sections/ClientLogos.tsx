@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home";
+import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home/content";
 
 export interface ClientLogosProps {
   heading?: string;

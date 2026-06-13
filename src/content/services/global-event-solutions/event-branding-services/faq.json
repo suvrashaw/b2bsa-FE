@@ -1,0 +1,30 @@
+{
+  "faqs": [
+    {
+      "answer": "Event branding solutions involve creating branded visual experiences for conferences, exhibitions, trade shows, and corporate events.",
+      "id": "what-are",
+      "question": "What are event branding solutions?"
+    },
+    {
+      "answer": "Yes, we provide trade show booth branding, exhibition graphics, signage production, and experiential branding support.",
+      "id": "booth-branding",
+      "question": "Do you provide booth branding services?"
+    },
+    {
+      "answer": "Yes, our team handles onsite branding production, installation, and event branding execution.",
+      "id": "onsite",
+      "question": "Can you manage onsite branding installation?"
+    },
+    {
+      "answer": "Yes, we provide experiential branding and corporate brand activation services designed to improve audience engagement.",
+      "id": "activation",
+      "question": "Do you support corporate brand activation campaigns?"
+    },
+    {
+      "answer": "We support conferences, exhibitions, trade shows, networking events, product launches, executive summits, and hospitality events.",
+      "id": "events",
+      "question": "What types of events do you support?"
+    }
+  ],
+  "heading": "Frequently Asked Questions About Event Branding Services"
+}

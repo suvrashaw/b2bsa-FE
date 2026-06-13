@@ -1,0 +1,178 @@
+import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
+
+
+
+
+
+export { GLOBAL_PROOF_STATS as CORP_EVENT_PROOF_BAR } from "../../shared";
+
+export const CORP_EVENT_INTRO = {
+  ctaHref: "/contact",
+  ctaLabel: "Let's Connect",
+  description:
+    "Corporate events play an important role in strengthening business relationships, increasing brand visibility, and creating meaningful audience engagement. Professional corporate event solutions help businesses deliver organized, impactful, and results-driven event experiences.\n\nAt B2B Sales Arrow, we provide end-to-end corporate event solutions for conferences, trade shows, exhibitions, executive summits, networking receptions, product launches, and enterprise events. Our team manages planning, branding, logistics, guest engagement, onsite coordination, and operational execution to ensure smooth event delivery.",
+  imageUrl: "/images/events/event_other_1.avif",
+  label: "Corporate Events",
+  titleLine1: "Professional Corporate Event",
+  titleLine2: "Solutions for Enterprises",
+};
+
+export const CORP_EVENT_DELIVERABLES = {
+  heading: "What's Included in Our Corporate Event Services",
+  services: [
+    {
+      color: "bg-brand-blue",
+      description:
+        "Manage event strategy, scheduling, venue coordination, audience experience, and operational planning for successful business events.",
+      icon: "Target",
+      id: "event-planning",
+      image: "/images/events/adobe_summit_2026.avif",
+      title: "Corporate Event Planning",
+    },
+    {
+      color: "bg-brand-cyan",
+      description:
+        "Deliver professional conference and executive summit experiences with seamless event coordination and onsite support.",
+      icon: "Mic",
+      id: "conference-summit",
+      image: "/images/events/event_other_2.avif",
+      title: "Conference & Summit Management",
+    },
+    {
+      color: "bg-brand-primary",
+      description:
+        "Support trade shows and exhibitions with booth management, branding, logistics, staffing, and attendee engagement solutions.",
+      icon: "Presentation",
+      id: "trade-show",
+      image: "/images/services/booth/booth-5.avif",
+      title: "Trade Show & Exhibition Support",
+    },
+    {
+      color: "bg-brand-blue",
+      description:
+        "Organize business networking events, VIP receptions, hospitality experiences, and executive meetups.",
+      icon: "Users",
+      id: "networking",
+      image: "/images/events/event_other_3.avif",
+      title: "Networking Event Solutions",
+    },
+    {
+      color: "bg-brand-cyan",
+      description:
+        "Enhance event experiences with professional branding, signage, stage setup, visual production, and media support.",
+      icon: "Palette",
+      id: "branding-production",
+      image: "/images/home/why-choose-us/strategic_creativity.avif",
+      title: "Event Branding & Production",
+    },
+    {
+      color: "bg-brand-primary",
+      description:
+        "Provide complete event management support from planning and coordination to onsite execution and post-event assistance.",
+      icon: "Zap",
+      id: "end-to-end",
+      image: "/images/home/why-choose-us/proven_execution.avif",
+      title: "End-to-End Event Execution",
+    },
+  ],
+};
+
+export const CORP_EVENT_CAPABILITIES = {
+  phases: [
+    {
+      description: "Full lifecycle event management from brief to post-event reporting.",
+      title: "End-to-end event management",
+    },
+    {
+      description: "Structured planning for conference and executive summit programmes.",
+      title: "Conference and summit planning",
+    },
+    {
+      description: "Booth management, branding, and attendee engagement at trade shows.",
+      title: "Trade show operational support",
+    },
+    {
+      description: "Organizing structured networking experiences for business audiences.",
+      title: "Networking event coordination",
+    },
+    {
+      description: "Event identity, signage, stage graphics, and visual production.",
+      title: "Event branding and production",
+    },
+    {
+      description: "Attendee check-in, badge management, and registration communication.",
+      title: "Guest registration management",
+    },
+    {
+      description: "Managing suppliers, production teams, and venue partners.",
+      title: "Vendor coordination support",
+    },
+    {
+      description: "Day-of supervision, operational oversight, and troubleshooting.",
+      title: "Onsite event management",
+    },
+    {
+      description: "VIP hospitality, executive guest programmes, and premium experiences.",
+      title: "Executive hospitality services",
+    },
+    {
+      description: "Freight, customs, installation, and logistics for global events.",
+      title: "Global event logistics coordination",
+    },
+  ],
+  title: "Corporate Event Planning & Operational Capabilities",
+};
+
+export const CORP_EVENT_CASE_STUDIES = {
+  items: GLOBAL_CASE_STUDIES,
+};
+
+export const CORP_EVENT_INDUSTRIES_SECTION = {
+  heading: "Industries We Support with Corporate Event Solutions",
+  services: GLOBAL_INDUSTRY_SERVICES,
+};
+
+
+
+export const CORP_EVENT_BLOGS_SECTION = {
+  heading: "Latest Insights on Corporate Event Planning & Event Management",
+};
+
+
+
+export const CORP_EVENT_RELATED_SERVICES = [
+  {
+    href: "/services/booth-services/booth-logistics-services",
+    title: "Event Logistics Services",
+  },
+  {
+    href: "/services/global-event-solutions/corporate-networking-events",
+    title: "Networking Event Solutions",
+  },
+  {
+    href: "/services/booth-services/booth-hostess-services",
+    title: "Event Hostess Services",
+  },
+];
+
+export const CORP_EVENT_CONTACT_CTA = {
+  backgroundImage: {
+    alt: "Corporate Event Solutions",
+    src: "/images/home/hero/home_hero_bg.avif",
+  },
+  badge: "Corporate Events",
+  description:
+    "Partner with B2B Sales Arrow for professional corporate event solutions that help your brand deliver engaging, organized, and impactful business experiences worldwide.",
+  headingLines: ["Looking for End-to-End", "Corporate Event Solutions?"] as [string, string],
+  primaryCta: { href: "/contact", label: "Schedule a Consultation" },
+  proofLabel: "Trusted by 500+ companies",
+  proofLogos: [],
+  secondaryCta: { href: "/case-studies", label: "View Case Studies" },
+};
+
+
+
+export {default as CORP_EVENT_FAQ} from "./faq.json";
+export {default as CORP_EVENT_IMAGE_HERO} from "./hero.json";
+export {default as CORP_EVENT_PAGE} from "./page.json";
+export {default as CORP_EVENT_WHY_CHOOSE_US} from "./why-choose-us.json";

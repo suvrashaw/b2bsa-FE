@@ -1,0 +1,20 @@
+{
+  "faqs": [
+    {
+      "answer": "Corporate live streaming is the professional broadcast of business events to remote audiences via digital platforms, using professional cameras, lighting, audio, graphics, and platform management.",
+      "id": "what-is",
+      "question": "What is corporate live streaming?"
+    },
+    {
+      "answer": "Redundancy at every level: backup internet, secondary encoding hardware, backup streaming pathways, and a live technical team monitoring throughout. Mission-critical events get a full technical rehearsal 24–48 hours before broadcast.",
+      "id": "reliability",
+      "question": "How do you ensure reliability?"
+    },
+    {
+      "answer": "A live stream broadcasts an in-person event to remote viewers. A hybrid event is designed for simultaneous in-person and virtual participation, with interactivity and programming planned for both groups equally.",
+      "id": "hybrid-vs-stream",
+      "question": "What is the difference between live stream and hybrid event?"
+    }
+  ],
+  "heading": "Live Streaming FAQs"
+}

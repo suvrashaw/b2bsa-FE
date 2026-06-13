@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { type ElementType, useMemo } from "react";
 
 import { Heading } from "@/components/ui/Heading";
-import { BLOG_CATEGORIES } from "@/content/blog";
+import { BLOG_CATEGORIES } from "@/content/blogs/content";
 
 export interface BlogCategoriesProps {
   heading?: string;

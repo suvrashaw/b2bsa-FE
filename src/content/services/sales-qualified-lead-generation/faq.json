@@ -1,0 +1,25 @@
+{
+  "faqs": [
+    {
+      "answer": "An MQL has engaged enough with marketing content to be considered a potential prospect. A Sales Qualified Lead has been evaluated against agreed criteria with the sales team and confirmed ready for a direct conversation. SQLs convert at significantly higher rates.",
+      "id": "mql-vs-sql",
+      "question": "What is the difference between MQL and SQL?"
+    },
+    {
+      "answer": "LinkedIn outbound and paid campaigns: 4–6 weeks. Event-driven capture: immediately post-event. SEO-led inbound: 4–9 months.",
+      "id": "timeline",
+      "question": "How long before the first qualified leads arrive?"
+    },
+    {
+      "answer": "BANT or CHAMP depending on your sales motion, agreed with your sales leadership before the program begins. Qualification happens in real conversations, not retrospectively from lists.",
+      "id": "framework",
+      "question": "What qualification framework do you use?"
+    },
+    {
+      "answer": "Yes, LinkedIn outbound, paid campaigns, content-led inbound, cold email, and event capture running concurrently for consistent qualified lead volume.",
+      "id": "multi-channel",
+      "question": "Can you run multi-channel SQL programs simultaneously?"
+    }
+  ],
+  "heading": "Frequently Asked Questions"
+}

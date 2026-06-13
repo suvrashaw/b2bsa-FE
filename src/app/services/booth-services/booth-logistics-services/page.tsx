@@ -12,7 +12,7 @@ import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   EVENT_LOGISTICS_BLOGS_SECTION,
@@ -28,8 +28,8 @@ import {
   EVENT_LOGISTICS_PROOF_BAR,
   EVENT_LOGISTICS_RELATED_SERVICES,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
-} from "@/content/services/detail/event-logistics";
-import { GES_PAGE } from "@/content/services/global-event-solutions";
+} from "@/content/services/booth-services/booth-logistics-services/content";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 

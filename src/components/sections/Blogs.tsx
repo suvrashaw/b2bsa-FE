@@ -8,7 +8,7 @@ import { useCallback, useRef, useState } from "react";
 import { BlogCard, BlogCardGrid } from "@/components/items/BlogCard";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
-import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home";
+import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home/content";
 
 export interface BlogsProps {
   blogs?: BlogsContent["blogs"];

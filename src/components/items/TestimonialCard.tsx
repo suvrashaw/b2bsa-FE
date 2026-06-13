@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 import { useCallback, useMemo } from "react";
 
-import type { TestimonialsContent } from "@/content/home";
+import type { TestimonialsContent } from "@/content/home/content";
 
 type TestimonialItem = TestimonialsContent["testimonials"][number];
 

@@ -12,7 +12,7 @@ import {
   MEDIA_PROOF_BAR,
   MEDIA_SERVICES,
   MEDIA_WHY,
-} from "@/content/services/media-production";
+} from "@/content/services/media-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MEDIA_PAGE);
 

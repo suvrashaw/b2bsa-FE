@@ -25,7 +25,7 @@ import {
   ABOUT_SIGNATURE_SERVICES_STACK,
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
-} from "@/content/about";
+} from "@/content/about/content";
 import { normalizeEvent } from "@/content/events-utils";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 

@@ -1,0 +1,24 @@
+{
+  "eyebrow": "Why B2B Sales Arrow",
+  "heading": "Professional Event Live Streaming for Modern Corporate Events",
+  "reasons": [
+    {
+      "description": "Today's events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.",
+      "id": "global-reach",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Break Geographic Limits"
+    },
+    {
+      "description": "We deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events, managing every aspect of event streaming setup, camera operations, audio, branded visuals, platform integration, and live technical support.",
+      "id": "end-to-end",
+      "image": "/images/services/media-production-1.avif",
+      "title": "End-to-End Production Management"
+    },
+    {
+      "description": "Whether you are hosting an in-person, hybrid, or fully virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.",
+      "id": "broadcast-quality",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "Any Format. Broadcast Quality."
+    }
+  ]
+}

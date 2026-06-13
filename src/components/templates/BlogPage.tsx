@@ -14,7 +14,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Button } from "@/components/ui/Button";
-import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
+import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs/data";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 

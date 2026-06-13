@@ -1,7 +1,7 @@
 import { Building2, CalendarDays, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 
-import type { CalendarTradeShow } from "@/content/trade-show-calendar";
+import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
 
 import { Button } from "@/components/ui/Button";
 

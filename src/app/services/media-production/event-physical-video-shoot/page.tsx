@@ -12,8 +12,9 @@ import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   EVENT_PHYSICAL_VIDEO_BLOGS_SECTION,
   EVENT_PHYSICAL_VIDEO_CASE_STUDIES,
@@ -28,8 +29,7 @@ import {
   EVENT_PHYSICAL_VIDEO_PROOF_BAR,
   EVENT_PHYSICAL_VIDEO_RELATED_SERVICES,
   EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US,
-} from "@/content/services/detail/event-physical-video-shoot";
-import { MEDIA_PAGE } from "@/content/services/media-production";
+} from "@/content/services/media-production/event-physical-video-shoot/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_PHYSICAL_VIDEO_PAGE);
 

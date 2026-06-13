@@ -11,7 +11,7 @@ import {
   TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
   TRADE_SHOW_CALENDAR_PAGE,
-} from "@/content/trade-show-calendar";
+} from "@/content/trade-show-calendar/content";
 
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
   "/images/blog/thumbnails/trade-show-booth-trends-2026.avif",

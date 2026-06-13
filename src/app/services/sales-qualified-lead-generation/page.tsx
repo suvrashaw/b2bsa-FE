@@ -12,7 +12,7 @@ import {
   SQL_PROOF_BAR,
   SQL_SERVICES,
   SQL_WHY,
-} from "@/content/services/sales-qualified-lead-generation";
+} from "@/content/services/sales-qualified-lead-generation/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(SQL_PAGE);
 

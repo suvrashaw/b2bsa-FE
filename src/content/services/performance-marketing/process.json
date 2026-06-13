@@ -1,0 +1,25 @@
+{
+  "heading": "How We Build Your B2B Marketing Engine",
+  "phases": [
+    {
+      "description": "We define who your campaigns should actually reach, by ideal customer profile, buying role, pain point, intent signal, and deal-stage context. Campaigns aimed at the wrong audience produce the wrong leads at any budget level.",
+      "title": "Audience Intelligence and ICP Definition"
+    },
+    {
+      "description": "Not every channel deserves equal budget. We evaluate search intent, audience behaviour, deal value, competition, and conversion potential before recommending where spend should go.",
+      "title": "Channel Selection and Budget Allocation"
+    },
+    {
+      "description": "Campaigns structured around buyer intent, offer clarity, funnel stage, and commercial objectives, with testing frameworks built in from launch.",
+      "title": "Campaign Architecture and Messaging"
+    },
+    {
+      "description": "Traffic only creates value when it converts. We improve landing pages, forms, CTAs, messaging, page speed, and trust signals so more qualified visitors become leads.",
+      "title": "Conversion Rate Optimisation"
+    },
+    {
+      "description": "Connecting campaign activity to qualified leads, SQL movement, pipeline influenced, and revenue outcomes, not platform dashboards.",
+      "title": "Attribution and Revenue Reporting"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
-import type { CaseStudyCardData } from "@/content/case-studies";
+import type { CaseStudyCardData } from "@/content/case-studies/content";
 
 import { CaseStudyItem } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
@@ -15,7 +15,7 @@ import {
   type CaseStudiesContent,
   HOME_CASE_STUDIES_CONTENT,
   type CaseStudyItem as HomeCaseStudyItem,
-} from "@/content/home";
+} from "@/content/home/content";
 
 export type CaseStudyEntry = {
   href?: string;

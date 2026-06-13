@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCard } from "@/components/items/TestimonialCard";
 import { Heading } from "@/components/ui/Heading";
-import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
+import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home/content";
 
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];

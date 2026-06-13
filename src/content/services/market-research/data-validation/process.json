@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "description": "reviewing your CRM export, contact list, or outreach dataset to understand structure, issues, and business purpose.",
+      "title": "Data Intake"
+    },
+    {
+      "description": "format checks, syntax validation, duplicate flagging, and missing field identification.",
+      "title": "Automated Layer"
+    },
+    {
+      "description": "manual review of contact status, job title, company association, and role relevance for critical records.",
+      "title": "Human Verification Layer"
+    },
+    {
+      "description": "clean records, invalid records, duplicates, missing fields, and recommended next actions.",
+      "title": "Validation Report"
+    },
+    {
+      "description": "structured, CRM-ready file in your required format.",
+      "title": "Clean Data Delivery"
+    }
+  ],
+  "title": "Our Validation Process"
+}

@@ -4,7 +4,7 @@ import { Pencil, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useCallback, useState } from "react";
 
-import type { SharedBlogPost } from "@/content/blogs";
+import type { SharedBlogPost } from "@/content/blogs/data";
 
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
@@ -43,15 +43,15 @@ import { Timeline } from "@/components/sections/Timeline";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
-import { SHARED_BLOG_POSTS } from "@/content/blogs";
-import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies";
+import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
+import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies/content";
 import { getDefaultEvents } from "@/content/events-utils";
-import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home";
+import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import {
   TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
-} from "@/content/trade-show-calendar";
+} from "@/content/trade-show-calendar/content";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 

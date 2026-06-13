@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for On-Site Video Shoot Coverage?",
+  "items": [
+    {
+      "description": "We manage pre-production, event-day filming, post-production, and content delivery so every stage stays coordinated.",
+      "icon": "Award",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      "title": "End-to-End Shoot Management"
+    },
+    {
+      "description": "Our crews understand live event constraints, speaker schedules, booth activity, audience movement, and venue rules.",
+      "icon": "Users2",
+      "image": "https://images.unsplash.com/photo-1598743400863-0201c7e1445b?auto=format&fit=crop&q=80&w=1200",
+      "title": "Live Event Expertise"
+    },
+    {
+      "description": "We combine professional cameras, audio, lighting, and direction to turn real event moments into polished business content.",
+      "icon": "TrendingUp",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1200",
+      "title": "Production-Ready Quality"
+    },
+    {
+      "description": "We support corporate and trade show video projects across major international event destinations.",
+      "icon": "Globe2",
+      "image": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200",
+      "title": "Global Event Coverage"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Heading } from "@/components/ui/Heading";
-import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home";
+import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home/content";
 
 interface ContactUsFormProps {
   content?: ContactContent;

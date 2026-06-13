@@ -12,7 +12,7 @@ import {
   RESEARCH_PROOF_BAR,
   RESEARCH_SERVICES,
   RESEARCH_WHY,
-} from "@/content/services/market-research";
+} from "@/content/services/market-research/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(RESEARCH_PAGE);
 

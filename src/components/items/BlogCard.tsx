@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useSyncExternalStore } from "react";
 
-import type { BlogItem } from "@/content/home";
+import type { BlogItem } from "@/content/home/content";
 
 export interface BlogCardProps {
   blog: BlogItem;

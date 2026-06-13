@@ -1,0 +1,13 @@
+{
+  "description": "Produce engaging virtual events, fireside chats, webinars, and panel discussions with professional production, branded visuals, and seamless audience experiences.",
+  "images": [
+    "/images/services/media-production-1.avif",
+    "/images/services/media-production-2.avif",
+    "/images/events/adobe_summit_2026.avif"
+  ],
+  "primaryCta": {
+    "href": "/contact",
+    "label": "Plan Virtual Event"
+  },
+  "title": "Virtual Video Event Production Services"
+}

@@ -10,7 +10,7 @@ module.exports = {
     let changefreq = config.changefreq || 'daily';
 
     if (path === '/') {
-      priority = 1.0;
+      priority = 1;
       changefreq = 'weekly';
     } else if (path.startsWith('/services') || path === '/trade-show-calendar') {
       priority = 0.9;
@@ -27,11 +27,11 @@ module.exports = {
     }
 
     return {
-      loc: path,
-      changefreq,
-      priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
       alternateRefs: config.alternateRefs ?? [],
+      changefreq,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      loc: path,
+      priority,
     };
   },
 }

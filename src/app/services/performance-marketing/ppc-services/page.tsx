@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { PPC_PAGE } from "@/content/services/detail/ppc-services";
+import { PPC_PAGE } from "@/content/services/performance-marketing/ppc-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(PPC_PAGE);
 

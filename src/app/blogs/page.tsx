@@ -15,7 +15,7 @@ import {
   BLOG_PAGE,
   BLOG_POSTS,
   BLOG_SERVICE_CAROUSEL,
-} from "@/content/blog";
+} from "@/content/blogs/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
 export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);

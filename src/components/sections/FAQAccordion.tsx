@@ -5,7 +5,7 @@ import { type ReactNode, useCallback, useMemo, useState } from "react";
 
 import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
 import { Heading } from "@/components/ui/Heading";
-import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home";
+import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { cn } from "@/lib";
 
 export interface FAQProps {
