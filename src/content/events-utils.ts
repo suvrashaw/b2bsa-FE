@@ -1,6 +1,9 @@
 import type { EventCardItem } from "@/components/items/EventsCard";
 
-import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/trade-show-calendar/content";
+import {
+  type CalendarTradeShow,
+  TRADE_SHOW_CALENDAR_EVENTS,
+} from "@/content/trade-show-calendar/content";
 
 const getFallbackImage = (index: number) => {
   const images = [

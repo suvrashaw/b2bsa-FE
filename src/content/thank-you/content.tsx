@@ -28,20 +28,20 @@ export const THANK_YOU_HERO = {
 } as const;
 
 export const THANK_YOU_SERVICES = {
-    ...DATA.youServices,
-    heading: (
+  ...DATA.youServices,
+  heading: (
     <>
       Explore What We <br />
       <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Do Best
       </span>
     </>
-  )
+  ),
 };
 
 export const THANK_YOU_BLOGS = {
-    ...DATA.youBlogs,
-    heading: (
+  ...DATA.youBlogs,
+  heading: (
     <>
       Intelligence to Read <br />
       <span className="text-brand-primary">While You Wait</span>

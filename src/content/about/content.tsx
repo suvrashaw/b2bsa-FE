@@ -39,13 +39,13 @@ export const ABOUT_SIGNATURE_SERVICES_STACK = DATA.signatureServicesStack;
 export const ABOUT_FOUNDER_STORY = DATA.founderStory;
 
 export const ABOUT_VALUES = {
-    ...DATA.values,
-    centerText: ABOUT_FOUNDER_STORY.story
+  ...DATA.values,
+  centerText: ABOUT_FOUNDER_STORY.story,
 };
 
 export const ABOUT_INQUIRY = {
-    ...DATA.inquiry,
-    illustration: null,
+  ...DATA.inquiry,
+  illustration: null,
 };
 
 export const ABOUT_PAGE = {

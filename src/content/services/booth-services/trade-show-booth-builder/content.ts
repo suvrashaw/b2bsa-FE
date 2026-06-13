@@ -1,18 +1,15 @@
 import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+
 import DATA from "./data.json";
 
 export { GLOBAL_PROOF_STATS as BOOTH_BUILDER_PROOF_BAR } from "../../shared";
-
-
 
 export const BOOTH_BUILDER_FUTURE_READY = DATA.builderFutureReady;
 
 export const BOOTH_BUILDER_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
-
-
 
 export const BOOTH_BUILDER_RELATED_SERVICES = DATA.builderRelatedServices;
 
@@ -33,13 +30,11 @@ export const BOOTH_BUILDER_BLOG_POSTS = BOOTH_BUILDER_BLOG_IDS.flatMap((id) => {
 });
 
 export const BOOTH_BUILDER_CONTACT_CTA = {
-    ...DATA.builderContactCta,
-    headingLines: ["Let's Build Your Next", "Exhibition Stand"] as [string, string]
+  ...DATA.builderContactCta,
+  headingLines: ["Let's Build Your Next", "Exhibition Stand"] as [string, string],
 };
 
-
-
-export {default as BOOTH_BUILDER_FAQ} from "./faq.json";
-export {default as BOOTH_BUILDER_HERO} from "./hero.json";
-export {default as BOOTH_BUILDER_PAGE} from "./page.json";
-export {default as BOOTH_BUILDER_PROCESS} from "./process.json";
+export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
+export { default as BOOTH_BUILDER_HERO } from "./hero.json";
+export { default as BOOTH_BUILDER_PAGE } from "./page.json";
+export { default as BOOTH_BUILDER_PROCESS } from "./process.json";

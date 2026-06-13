@@ -226,7 +226,8 @@ interface UpcomingEventItem {
   title: string;
 }
 
-export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent = DATA.cinematicSequenceContent;
+export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
+  DATA.cinematicSequenceContent;
 
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = DATA.clientLogos;
 
@@ -243,8 +244,8 @@ export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = DATA.whyChooseUsC
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = DATA.testimonialsContent;
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
-    ...DATA.blogsContent,
-    blogs: HOME_BLOG_POSTS
+  ...DATA.blogsContent,
+  blogs: HOME_BLOG_POSTS,
 };
 
 export const HOME_FAQ_CONTENT: FAQContent = DATA.faqContent;

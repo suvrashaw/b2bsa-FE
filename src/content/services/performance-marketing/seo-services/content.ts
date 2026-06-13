@@ -1,5 +1,1 @@
-
-
-
-
-export {default as SEO_PAGE} from "./page.json";
+export { default as SEO_PAGE } from "./page.json";

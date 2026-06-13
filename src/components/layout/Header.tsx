@@ -48,7 +48,7 @@ export const Header = ({
   }, []);
 
   const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
-  
+
   const toggleMobileNav = useCallback((name: string) => {
     setOpenMobileNav((prev) => (prev === name ? null : name));
     setOpenMobileServiceGroup(null);

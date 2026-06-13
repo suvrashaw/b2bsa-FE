@@ -203,9 +203,7 @@ export const Hero = ({
       className={cn("relative flex overflow-hidden bg-brand-charcoal", sectionClass)}
       ref={containerRef}
     >
-      {isVideoMode && (
-        <link as="video" href={effectiveVideoUrl} rel="preload" type="video/mp4" />
-      )}
+      {isVideoMode && <link as="video" href={effectiveVideoUrl} rel="preload" type="video/mp4" />}
       <div className="absolute inset-0 z-0">
         {background}
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />

@@ -44,7 +44,10 @@ import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalen
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
-import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies/content";
+import {
+  CASE_STUDIES_PAGE_CONTENT,
+  CASE_STUDIES_PAGE_STUDIES,
+} from "@/content/case-studies/content";
 import { getDefaultEvents } from "@/content/events-utils";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";

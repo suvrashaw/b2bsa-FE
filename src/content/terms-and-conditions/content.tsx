@@ -94,8 +94,8 @@ export const TERMS_FAQ = {
 };
 
 export const TERMS_CONTACT = {
-    ...DATA.contact,
-    heading: (
+  ...DATA.contact,
+  heading: (
     <>
       Speak to Our <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">

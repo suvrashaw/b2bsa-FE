@@ -20,27 +20,16 @@ export const BLOG_HERO = {
   ),
 };
 
-import {
-  Briefcase,
-  Building,
-  CalendarDays,
-  FileText,
-  Layout,
-  MousePointerClick,
-  PieChart,
-  Presentation,
-  TrendingUp,
-  UserCheck,
-  Users,
-  Video,
-} from "lucide-react";
+
+
+
 import DATA from "./data.json";
 
 export const BLOG_CATEGORIES = DATA.categories;
 
 export const BLOG_POSTS = {
-    ...DATA.posts,
-    blogs: SHARED_BLOG_POSTS,
+  ...DATA.posts,
+  blogs: SHARED_BLOG_POSTS,
   heading: (
     <>
       Expert Strategies to Maximize <br />
@@ -50,8 +39,8 @@ export const BLOG_POSTS = {
 };
 
 export const BLOG_CONTACT = {
-    ...DATA.contact,
-    heading: (
+  ...DATA.contact,
+  heading: (
     <>
       Subscribe to <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
@@ -99,8 +88,8 @@ const SERVICE_FALLBACK_HREFS: Record<string, string> = {
 };
 
 export const BLOG_SERVICE_CAROUSEL = {
-    ...DATA.serviceCarousel,
-    items: (
+  ...DATA.serviceCarousel,
+  items: (
     [
       ...GES_SERVICES.services,
       ...MEDIA_SERVICES.services,

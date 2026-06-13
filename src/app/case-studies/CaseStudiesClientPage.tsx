@@ -9,7 +9,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { Heading } from "@/components/ui/Heading";
-import { CASE_STUDIES_PAGE_CONTENT, CASE_STUDIES_PAGE_STUDIES } from "@/content/case-studies/content";
+import {
+  CASE_STUDIES_PAGE_CONTENT,
+  CASE_STUDIES_PAGE_STUDIES,
+} from "@/content/case-studies/content";
 import {
   clampPaginationPage,
   DEFAULT_PAGE_SIZE,

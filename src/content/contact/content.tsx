@@ -1,15 +1,15 @@
 import DATA from "./data.json";
 
 export const CONTACT_FORM = {
-    ...DATA.contactForm,
-    heading: (
+  ...DATA.contactForm,
+  heading: (
     <>
       Start the <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
         Conversation
       </span>
     </>
-  )
+  ),
 };
 
 export const CONTACT_NEXT_STEPS = DATA.contactNextSteps;

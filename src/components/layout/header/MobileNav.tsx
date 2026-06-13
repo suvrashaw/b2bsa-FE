@@ -20,13 +20,7 @@ const MOBILE_GROUP_TRANSITION = { duration: 0.25, ease: [0.16, 1, 0.3, 1] as con
 
 type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
 
-const MobileSubGroupLinks = ({
-  links,
-  onClose,
-}: {
-  links: NavLink[];
-  onClose: () => void;
-}) => (
+const MobileSubGroupLinks = ({ links, onClose }: { links: NavLink[]; onClose: () => void }) => (
   <>
     {links.map((sub) => (
       <Link
@@ -126,73 +120,75 @@ const MobileServiceGroup = ({
   );
 };
 
-export const MobileNavItem = memo(({
-  isOpen,
-  link,
-  onClose,
-  onServiceGroupToggle,
-  onToggle,
-  openServiceGroup,
-}: {
-  isOpen: boolean;
-  link: (typeof topNavigation)[number];
-  onClose: () => void;
-  onServiceGroupToggle: (name: string) => void;
-  onToggle: (name: string) => void;
-  openServiceGroup: null | string;
-}) => {
-  const hasChildren = link.name === "Services";
-  const handleToggle = useCallback(() => onToggle(link.name), [link.name, onToggle]);
+export const MobileNavItem = memo(
+  ({
+    isOpen,
+    link,
+    onClose,
+    onServiceGroupToggle,
+    onToggle,
+    openServiceGroup,
+  }: {
+    isOpen: boolean;
+    link: (typeof topNavigation)[number];
+    onClose: () => void;
+    onServiceGroupToggle: (name: string) => void;
+    onToggle: (name: string) => void;
+    openServiceGroup: null | string;
+  }) => {
+    const hasChildren = link.name === "Services";
+    const handleToggle = useCallback(() => onToggle(link.name), [link.name, onToggle]);
 
-  return (
-    <div className="border-b border-gray-50 last:border-0">
-      {hasChildren ? (
-        <button
-          className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-          onClick={handleToggle}
-          type="button"
-        >
-          <span>{link.name}</span>
-          <ChevronDown
-            className={cn(
-              "h-5 w-5 text-gray-400 transition-transform duration-300",
-              isOpen && "rotate-180"
-            )}
-          />
-        </button>
-      ) : (
-        <Link
-          className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-          href={link.href}
-          onClick={onClose}
-        >
-          {link.name}
-        </Link>
-      )}
-
-      <AnimatePresence>
-        {hasChildren && isOpen && (
-          <motion.div
-            animate={MOBILE_SUBMENU_ANIMATE}
-            className="overflow-hidden"
-            exit={MOBILE_SUBMENU_COLLAPSED}
-            initial={MOBILE_SUBMENU_COLLAPSED}
-            transition={MOBILE_NAV_TRANSITION}
+    return (
+      <div className="border-b border-gray-50 last:border-0">
+        {hasChildren ? (
+          <button
+            className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+            onClick={handleToggle}
+            type="button"
           >
-            <div className="pb-4">
-              {serviceNavigationGroups.map((group) => (
-                <MobileServiceGroup
-                  group={group}
-                  isOpen={openServiceGroup === group.name}
-                  key={group.name}
-                  onClose={onClose}
-                  onToggle={onServiceGroupToggle}
-                />
-              ))}
-            </div>
-          </motion.div>
+            <span>{link.name}</span>
+            <ChevronDown
+              className={cn(
+                "h-5 w-5 text-gray-400 transition-transform duration-300",
+                isOpen && "rotate-180"
+              )}
+            />
+          </button>
+        ) : (
+          <Link
+            className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+            href={link.href}
+            onClick={onClose}
+          >
+            {link.name}
+          </Link>
         )}
-      </AnimatePresence>
-    </div>
-  );
-});
+
+        <AnimatePresence>
+          {hasChildren && isOpen && (
+            <motion.div
+              animate={MOBILE_SUBMENU_ANIMATE}
+              className="overflow-hidden"
+              exit={MOBILE_SUBMENU_COLLAPSED}
+              initial={MOBILE_SUBMENU_COLLAPSED}
+              transition={MOBILE_NAV_TRANSITION}
+            >
+              <div className="pb-4">
+                {serviceNavigationGroups.map((group) => (
+                  <MobileServiceGroup
+                    group={group}
+                    isOpen={openServiceGroup === group.name}
+                    key={group.name}
+                    onClose={onClose}
+                    onToggle={onServiceGroupToggle}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  }
+);
