@@ -6,9 +6,13 @@ type SharedCaseStudyItem = {
   id?: string;
 } & Omit<HomeCaseStudyItem, "icon" | "id">;
 
+import GLOBAL_BLOGS_DATA from "./blogs.json";
 import GLOBAL_CASE_STUDIES_DATA from "./case-studies.json";
+import GLOBAL_EVENTS_DATA from "./events.json";
 
+export const GLOBAL_BLOGS = GLOBAL_BLOGS_DATA;
 export const GLOBAL_CASE_STUDIES: SharedCaseStudyItem[] = GLOBAL_CASE_STUDIES_DATA;
+export const GLOBAL_EVENTS = GLOBAL_EVENTS_DATA;
 
 export { default as GLOBAL_INDUSTRY_SERVICES } from "./industry-services.json";
 export { default as GLOBAL_PROOF_STATS } from "./proof-stats.json";

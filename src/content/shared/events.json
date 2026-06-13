@@ -1,0 +1,92 @@
+[
+  {
+    "date": "Mar 2026",
+    "id": "adobe-summit-2026",
+    "image": "/images/events/adobe_summit_2026.avif",
+    "location": "Las Vegas, USA",
+    "serviceIds": [],
+    "tags": [],
+    "title": "Adobe Summit 2026"
+  },
+  {
+    "date": "2026",
+    "id": "inma-2026",
+    "image": "/images/events/inma_2026.avif",
+    "location": "Global",
+    "serviceIds": [],
+    "tags": [],
+    "title": "INMA World Congress 2026"
+  },
+  {
+    "date": "2026",
+    "id": "servicenow-2026",
+    "image": "/images/events/servicenow_2026.avif",
+    "location": "Las Vegas, USA",
+    "serviceIds": [],
+    "tags": [],
+    "title": "ServiceNow Knowledge 2026"
+  },
+  {
+    "date": "Oct 2025",
+    "id": "sibos-amsterdam",
+    "image": "/images/events/event_other_1.avif",
+    "location": "Amsterdam, Netherlands",
+    "serviceIds": [],
+    "tags": [],
+    "title": "SIBOS 2025"
+  },
+  {
+    "date": "Oct 2025",
+    "id": "money-20-20-amsterdam",
+    "image": "/images/events/event_other_2.avif",
+    "location": "Amsterdam, Netherlands",
+    "serviceIds": [],
+    "tags": [],
+    "title": "Money 20/20"
+  },
+  {
+    "date": "Oct 2025",
+    "id": "gitex-global",
+    "image": "/images/events/event_other_3.avif",
+    "location": "Dubai, UAE",
+    "serviceIds": [],
+    "tags": [],
+    "title": "GITEX Global 2025"
+  },
+  {
+    "date": "Dec 2025",
+    "id": "constellate",
+    "image": "/images/events/event_other_4.avif",
+    "location": "New York, USA",
+    "serviceIds": [],
+    "tags": [],
+    "title": "Constellate 2025"
+  },
+  {
+    "date": "April 20 - 25",
+    "id": "hannover-messe-2026",
+    "image": "/images/events/event_other_1.avif",
+    "location": "Hannover, Germany",
+    "serviceIds": [],
+    "tags": [],
+    "title": "Hannover Messe 2026"
+  },
+  {
+    "date": "",
+    "id": "itw-2026",
+    "image": "/images/events/event_other_3.avif",
+    "location": "",
+    "serviceIds": [],
+    "tags": [],
+    "title": "ITW 2026"
+  },
+  {
+    "date": "",
+    "id": "sap-sapphire-2026",
+    "image": "/images/case-studies/cs-10.avif",
+    "location": "",
+    "serviceIds": [],
+    "tags": [],
+    "title": "SAP Sapphire 2026"
+  }
+]

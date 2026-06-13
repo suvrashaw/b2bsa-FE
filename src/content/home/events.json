@@ -1,57 +1,6 @@
 {
   "ctaLabel": "Meet Us There",
   "description": "Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year:",
-  "events": [
-    {
-      "date": "Mar 2026",
-      "id": "adobe-summit-2026",
-      "image": "/images/events/adobe_summit_2026.avif",
-      "location": "Las Vegas, USA",
-      "title": "Adobe Summit 2026"
-    },
-    {
-      "date": "2026",
-      "id": "inma-2026",
-      "image": "/images/events/inma_2026.avif",
-      "location": "Global",
-      "title": "INMA World Congress 2026"
-    },
-    {
-      "date": "2026",
-      "id": "servicenow-2026",
-      "image": "/images/events/servicenow_2026.avif",
-      "location": "Las Vegas, USA",
-      "title": "ServiceNow Knowledge 2026"
-    },
-    {
-      "date": "Oct 2025",
-      "id": "sibos-amsterdam",
-      "image": "/images/events/event_other_1.avif",
-      "location": "Amsterdam, Netherlands",
-      "title": "SIBOS 2025"
-    },
-    {
-      "date": "Oct 2025",
-      "id": "money-20-20-amsterdam",
-      "image": "/images/events/event_other_2.avif",
-      "location": "Amsterdam, Netherlands",
-      "title": "Money 20/20"
-    },
-    {
-      "date": "Oct 2025",
-      "id": "gitex-global",
-      "image": "/images/events/event_other_3.avif",
-      "location": "Dubai, UAE",
-      "title": "GITEX Global 2025"
-    },
-    {
-      "date": "Dec 2025",
-      "id": "constellate",
-      "image": "/images/events/event_other_4.avif",
-      "location": "New York, USA",
-      "title": "Constellate 2025"
-    }
-  ],
   "heading": "Upcoming Trade Shows & Global Industry Events",
   "viewAllLabel": "Explore All Upcoming Events"
 }

@@ -1,6 +1,6 @@
 import type { BlogItem } from "@/content/home/content";
 
-import rawBlogPosts from "./posts.json";
+import rawBlogPosts from "@/content/shared/blogs.json";
 
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }
@@ -33,6 +33,8 @@ type ImportedBlogPost = {
   image: string;
   linkedinEmbedUrl?: string;
   linkedinUrl?: string;
+  serviceIds?: string[];
+  tags?: string[];
   title: string;
   url: string;
 };
@@ -80,7 +82,9 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       image: post.image,
       linkedinEmbedUrl: post.linkedinEmbedUrl,
       linkedinUrl: post.linkedinUrl,
+      serviceIds: post.serviceIds,
       sortIndex: index,
+      tags: post.tags,
       title: post.title,
     };
   })

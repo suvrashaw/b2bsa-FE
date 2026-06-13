@@ -1,6 +1,7 @@
 export interface CaseStudyCardData {
   badge?: string;
   client: string;
+  date?: string;
   href?: string;
   icon: string;
   id: string;
@@ -10,6 +11,8 @@ export interface CaseStudyCardData {
   metricLabel: string;
   primarySummary: CaseStudyCardSummary;
   secondarySummary: CaseStudyCardSummary;
+  serviceIds?: string[];
+  tags?: string[];
   title: string;
 }
 
@@ -18,6 +21,7 @@ export interface CaseStudyIndexEntry {
   card: CaseStudyCardData;
   challenge: string;
   companySize: string;
+  date?: string;
   event: string;
   format: "gallery" | "text" | "video";
   formatIcon: string;
@@ -26,7 +30,9 @@ export interface CaseStudyIndexEntry {
   industry: string;
   results: string;
   serviceCategories: string[];
+  serviceIds?: string[];
   servicesText: string;
+  tags?: string[];
   title: string;
   whatWeDid: string;
 }

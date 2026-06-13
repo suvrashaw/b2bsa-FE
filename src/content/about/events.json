@@ -2,31 +2,5 @@
   "badgeLabel": "RECENT",
   "ctaLabel": "View Event",
   "description": "Recent enterprise programs where our event, lead generation, and market execution teams delivered measurable commercial outcomes.",
-  "events": [
-    {
-      "date": "April 20 - 22",
-      "id": "adobe-summit-2026",
-      "image": "/images/events/adobe_summit_2026.avif",
-      "location": "Las vegas, USA",
-      "title": "Adobe summit 2026"
-    },
-    {
-      "date": "April 20 - 25",
-      "id": "hannover-messe-2026",
-      "image": "/images/events/event_other_1.avif",
-      "location": "Hannover, Germany",
-      "title": "Hannover Messe 2026"
-    },
-    {
-      "id": "itw-2026",
-      "image": "/images/events/event_other_3.avif",
-      "title": "ITW 2026"
-    },
-    {
-      "id": "sap-sapphire-2026",
-      "image": "/images/case-studies/cs-10.avif",
-      "title": "SAP Sapphire 2026"
-    }
-  ],
   "heading": "Where We Have Been Delivering This Year"
 }
