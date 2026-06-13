@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  description:
-    "Data-driven SEO services that grow your organic visibility and drive qualified traffic.",
-  title: "SEO Services | B2B Sales Arrow",
-};
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { SEO_PAGE } from "@/content/services/detail/seo-services";
+
+export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 
 const Page = () => {
   return (

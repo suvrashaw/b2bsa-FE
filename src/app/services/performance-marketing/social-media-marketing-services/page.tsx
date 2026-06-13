@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  description:
-    "Strategic social media marketing services that build your brand and generate B2B leads.",
-  title: "Social Media Marketing Services | B2B Sales Arrow",
-};
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { SMM_PAGE } from "@/content/services/detail/social-media-marketing-services";
+
+export const metadata: Metadata = getMarketingPageMetadata(SMM_PAGE);
 
 const Page = () => {
   return (

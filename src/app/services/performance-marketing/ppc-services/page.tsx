@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  description:
-    "Performance-driven PPC services that maximize your ad spend and deliver measurable ROI.",
-  title: "PPC Services | B2B Sales Arrow",
-};
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { PPC_PAGE } from "@/content/services/detail/ppc-services";
+
+export const metadata: Metadata = getMarketingPageMetadata(PPC_PAGE);
 
 const Page = () => {
   return (

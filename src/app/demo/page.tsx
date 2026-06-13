@@ -810,7 +810,7 @@ export default function DemoPage() {
 
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
-      <CardSection heading="Active Prospecting & Events" layout="carousel" cols={4}>
+      <CardSection cols={4} heading="Active Prospecting & Events" layout="carousel">
         {_SERVICE_CAROUSEL_ITEMS.map((item) => (
           <ServicesCard
             ctaLabel="Get Started"

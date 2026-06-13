@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  description: "Create immersive event experiences that drive engagement and results.",
-  title: "Event Experience Creation | B2B Sales Arrow",
-};
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { EVENT_EXPERIENCE_PAGE } from "@/content/services/detail/event-experience-creation";
+
+export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE);
 
 const Page = () => {
   return (

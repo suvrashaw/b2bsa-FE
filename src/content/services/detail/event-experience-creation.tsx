@@ -1,0 +1,12 @@
+export const EVENT_EXPERIENCE_PAGE = {
+  pageId: "service.event-experience-creation",
+  pageName: "Event Experience Creation",
+  pageType: "serviceDetail",
+  seo: {
+    canonicalPath: "/services/global-event-solutions/event-experience-creation",
+    description: "Create immersive event experiences that captivate attendees and drive B2B pipeline.",
+    focusKeyphrase: "Event experience creation",
+    secondaryKeywords: ["B2B event experience", "Immersive events"],
+    title: "Event Experience Creation | B2B Sales Arrow",
+  },
+} as const;

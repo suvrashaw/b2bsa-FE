@@ -392,38 +392,7 @@ body {
     inset 0 1px 0 rgb(255 255 255 / 34%) !important;
 }
 
-.hero-primary-cta::after {
-  pointer-events: none;
-  content: "";
-
-  position: absolute;
-  top: -18%;
-  bottom: -18%;
-  left: -38%;
-  transform: translateX(-180%) skewX(-22deg);
-
-  width: 34%;
-
-  background: linear-gradient(
-    110deg,
-    rgb(255 255 255 / 0%) 0%,
-    rgb(255 255 255 / 14%) 30%,
-    rgb(255 255 255 / 62%) 50%,
-    rgb(255 255 255 / 12%) 72%,
-    rgb(255 255 255 / 0%) 100%
-  );
-}
-
-.hero-primary-cta:hover::after {
-  animation: hero-light-sweep 760ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* ── Universal button shimmer sweep ── */
-.btn-shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
+.hero-primary-cta::after,
 .btn-shimmer::before {
   pointer-events: none;
   content: "";
@@ -446,8 +415,15 @@ body {
   );
 }
 
+.hero-primary-cta:hover::after,
 .btn-shimmer:hover::before {
   animation: hero-light-sweep 760ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Universal button shimmer sweep ── */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-secondary-cta {

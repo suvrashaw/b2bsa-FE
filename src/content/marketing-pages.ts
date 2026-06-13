@@ -18,6 +18,7 @@ import { DATA_AUGMENTATION_PAGE } from "./services/detail/data-augmentation";
 import { DATA_VALIDATION_PAGE } from "./services/detail/data-validation";
 import { BOOTH_RENTAL_PAGE } from "./services/detail/event-booth-rental";
 import { EVENT_BRANDING_PAGE } from "./services/detail/event-branding-solutions";
+import { EVENT_EXPERIENCE_PAGE } from "./services/detail/event-experience-creation";
 import { EVENT_EXPERIENCE_VIDEO_PAGE } from "./services/detail/event-experience-video-production";
 import { EVENT_LOGISTICS_PAGE } from "./services/detail/event-logistics";
 import { EVENT_PHYSICAL_VIDEO_PAGE } from "./services/detail/event-physical-video-shoot";
@@ -25,7 +26,9 @@ import { EVENT_VIDEO_PAGE } from "./services/detail/event-video-production";
 import { LIVE_STREAMING_PAGE } from "./services/detail/live-streaming-services";
 import { MARKET_INTELLIGENCE_PAGE } from "./services/detail/market-intelligence";
 import { MODULAR_BOOTHS_PAGE } from "./services/detail/modular-portable-booths";
+import { PPC_PAGE } from "./services/detail/ppc-services";
 import { SEO_PAGE } from "./services/detail/seo-services";
+import { SMM_PAGE } from "./services/detail/social-media-marketing-services";
 import { BOOTH_BUILDER_PAGE } from "./services/detail/trade-show-booth-builder";
 import { BOOTH_DESIGN_PAGE } from "./services/detail/trade-show-booth-design";
 import { VIRTUAL_VIDEO_PAGE } from "./services/detail/virtual-video-production";
@@ -54,7 +57,9 @@ export const marketingPages = [
   CORPORATE_VIDEO_PAGE,
   LIVE_STREAMING_PAGE,
   PERF_PAGE,
+  PPC_PAGE,
   SEO_PAGE,
+  SMM_PAGE,
   SQL_PAGE,
   RESEARCH_PAGE,
   DATA_AUGMENTATION_PAGE,
@@ -64,6 +69,7 @@ export const marketingPages = [
   CORP_EVENT_PAGE,
   CORP_NETWORKING_PAGE,
   EVENT_BRANDING_PAGE,
+  EVENT_EXPERIENCE_PAGE,
   EVENT_EXPERIENCE_VIDEO_PAGE,
   EVENT_LOGISTICS_PAGE,
   EVENT_PHYSICAL_VIDEO_PAGE,

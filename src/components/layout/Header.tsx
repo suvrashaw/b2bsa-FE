@@ -1,19 +1,19 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import {
-  type NavLink,
-  type ServiceNavGroup,
-  serviceNavigationGroups,
-  topNavigation,
-} from "@/content/navigation";
+import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 import { cn } from "@/lib";
+
+import { DesktopNavLink } from "./header/DesktopNav";
+import { LanguageSelector } from "./header/LanguageSelector";
+import { MegamenuServiceGroup } from "./header/Megamenu";
+import { MobileNavItem } from "./header/MobileNav";
 
 const HEADER_ANIMATE = { y: 0 };
 const HEADER_INITIAL = { y: -100 };
@@ -21,382 +21,10 @@ const HEADER_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 const MOBILE_MENU_ANIMATE = { opacity: 1, y: 0 };
 const MOBILE_MENU_INITIAL = { opacity: 0, y: -20 };
 const MOBILE_MENU_EXIT = { opacity: 0, y: -20 };
-const MOBILE_SUBMENU_ANIMATE = { height: "auto", opacity: 1 };
-const MOBILE_SUBMENU_COLLAPSED = { height: 0, opacity: 0 };
-const MOBILE_NAV_TRANSITION = { duration: 0.3, ease: [0.16, 1, 0.3, 1] as const };
-const MOBILE_GROUP_TRANSITION = { duration: 0.25, ease: [0.16, 1, 0.3, 1] as const };
-
-const LANG_DROPDOWN_ANIMATE = { opacity: 1, y: 0 };
-const LANG_DROPDOWN_EXIT = { opacity: 0, y: 8 };
-const LANG_DROPDOWN_INITIAL = { opacity: 0, y: 8 };
-const LANG_DROPDOWN_TRANSITION = { duration: 0.18, ease: "easeOut" } as const;
-
-const LANGUAGES = [
-  { code: "EN", name: "English" },
-  { code: "HI", name: "हिंदी" },
-  { code: "AR", name: "العربية" },
-  { code: "ZH", name: "中文" },
-] as const;
-
 const MEGAMENU_ANIMATE = { opacity: 1, y: 0 };
 const MEGAMENU_INITIAL = { opacity: 0, y: 10 };
 const MEGAMENU_EXIT = { opacity: 0, y: 10 };
 const MEGAMENU_TRANSITION = { duration: 0.2, ease: "easeOut" } as const;
-
-// Pure sub-component for Desktop nav links to satisfy react-perf / no-new-function rules
-const DesktopNavLink = ({
-  activeDropdown,
-  lightText,
-  link,
-  onMouseEnter,
-  onServicesClick,
-}: {
-  activeDropdown: "services" | null;
-  lightText: boolean;
-  link: (typeof topNavigation)[number];
-  onMouseEnter: (name: string) => void;
-  onServicesClick: () => void;
-}) => {
-  const isServices = link.name === "Services";
-  const handleMouseEnter = useCallback(() => {
-    onMouseEnter(link.name);
-  }, [link.name, onMouseEnter]);
-  const handleServicesClick = useCallback(() => {
-    onServicesClick();
-  }, [onServicesClick]);
-
-  const linkClassName = cn(
-    "group relative flex items-center gap-1.5 whitespace-nowrap text-base font-semibold transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
-    lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
-  );
-  const underlineClassName = cn(
-    "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
-    isServices && activeDropdown === "services" ? "w-full" : ""
-  );
-
-  return (
-    <div className="group/nav-item relative flex items-center py-4">
-      {isServices ? (
-        <button
-          aria-expanded={activeDropdown === "services"}
-          aria-haspopup="true"
-          className={cn(linkClassName, "appearance-none bg-transparent p-0")}
-          onClick={handleServicesClick}
-          onMouseEnter={handleMouseEnter}
-          type="button"
-        >
-          {link.name}
-          <ChevronDown
-            className={cn(
-              "h-3.5 w-3.5 opacity-70 transition-transform duration-300",
-              activeDropdown === "services" ? "rotate-180" : ""
-            )}
-          />
-          <span className={underlineClassName} />
-        </button>
-      ) : (
-        <Link className={linkClassName} href={link.href} onMouseEnter={handleMouseEnter}>
-          {link.name}
-          <span className={underlineClassName} />
-        </Link>
-      )}
-    </div>
-  );
-};
-
-// Pure sub-components for Megamenu and Mobile menu to satisfy react-perf / sonarjs rules
-type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
-
-const MobileSubGroupLinks = ({ links, onClose }: { links: NavLink[]; onClose: () => void }) => (
-  <>
-    {links.map((sub) => (
-      <Link
-        className="block pl-8 text-base font-medium text-gray-500 transition-colors hover:text-brand-blue"
-        href={sub.href}
-        key={sub.name}
-        onClick={onClose}
-      >
-        {sub.name}
-      </Link>
-    ))}
-  </>
-);
-
-const MobileNestedServiceGroup = ({
-  onClose,
-  subGroup,
-}: {
-  onClose: () => void;
-  subGroup: ServiceNavSubGroup;
-}) => (
-  <div>
-    <p className="px-4 pt-2 pb-1 text-xs font-semibold tracking-wide text-gray-400 uppercase">
-      {subGroup.name}
-    </p>
-    <MobileSubGroupLinks links={subGroup.links} onClose={onClose} />
-  </div>
-);
-
-const MobileServiceGroup = ({
-  group,
-  isOpen,
-  onClose,
-  onToggle,
-}: {
-  group: ServiceNavGroup;
-  isOpen: boolean;
-  onClose: () => void;
-  onToggle: (name: string) => void;
-}) => {
-  const handleToggle = useCallback(() => {
-    onToggle(group.name);
-  }, [group.name, onToggle]);
-  const hasSubContent = (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
-
-  if (!hasSubContent) {
-    return (
-      <Link
-        className="flex w-full items-center px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
-        href={group.href}
-        onClick={onClose}
-      >
-        {group.name}
-      </Link>
-    );
-  }
-
-  return (
-    <div>
-      <button
-        className="flex w-full items-center justify-between px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
-        onClick={handleToggle}
-        type="button"
-      >
-        <span>{group.name}</span>
-        {hasSubContent && (
-          <ChevronDown
-            className={cn(
-              "h-4 w-4 shrink-0 text-gray-400 transition-transform duration-300",
-              isOpen && "rotate-180"
-            )}
-          />
-        )}
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            animate={MOBILE_SUBMENU_ANIMATE}
-            className="overflow-hidden"
-            exit={MOBILE_SUBMENU_COLLAPSED}
-            initial={MOBILE_SUBMENU_COLLAPSED}
-            transition={MOBILE_GROUP_TRANSITION}
-          >
-            <div className="pb-3 pl-4">
-              {group.groups?.map((subGroup) => (
-                <MobileNestedServiceGroup
-                  key={subGroup.name}
-                  onClose={onClose}
-                  subGroup={subGroup}
-                />
-              ))}
-              {group.links && <MobileSubGroupLinks links={group.links} onClose={onClose} />}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-const MobileNavItem = ({
-  isOpen,
-  link,
-  onClose,
-  onServiceGroupToggle,
-  onToggle,
-  openServiceGroup,
-}: {
-  isOpen: boolean;
-  link: (typeof topNavigation)[number];
-  onClose: () => void;
-  onServiceGroupToggle: (name: string) => void;
-  onToggle: (name: string) => void;
-  openServiceGroup: null | string;
-}) => {
-  const hasChildren = link.name === "Services";
-  const handleToggle = useCallback(() => {
-    onToggle(link.name);
-  }, [link.name, onToggle]);
-
-  return (
-    <div className="border-b border-gray-50 last:border-0">
-      {hasChildren ? (
-        <button
-          className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-          onClick={handleToggle}
-          type="button"
-        >
-          <span>{link.name}</span>
-          <ChevronDown
-            className={cn(
-              "h-5 w-5 text-gray-400 transition-transform duration-300",
-              isOpen && "rotate-180"
-            )}
-          />
-        </button>
-      ) : (
-        <Link
-          className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
-          href={link.href}
-          onClick={onClose}
-        >
-          {link.name}
-        </Link>
-      )}
-
-      <AnimatePresence>
-        {hasChildren && isOpen && (
-          <motion.div
-            animate={MOBILE_SUBMENU_ANIMATE}
-            className="overflow-hidden"
-            exit={MOBILE_SUBMENU_COLLAPSED}
-            initial={MOBILE_SUBMENU_COLLAPSED}
-            transition={MOBILE_NAV_TRANSITION}
-          >
-            <div className="pb-4">
-              {serviceNavigationGroups.map((group) => (
-                <MobileServiceGroup
-                  group={group}
-                  isOpen={openServiceGroup === group.name}
-                  key={group.name}
-                  onClose={onClose}
-                  onToggle={onServiceGroupToggle}
-                />
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
-  return (
-    <Link
-      className="block min-w-0 text-xs leading-snug font-semibold break-words text-gray-500 transition-colors hover:text-gray-900"
-      href={sub.href}
-      onClick={onClose}
-    >
-      {sub.name}
-    </Link>
-  );
-};
-
-const MegamenuServiceGroup = ({
-  className,
-  group,
-  noWrapTitle = false,
-  onClose,
-}: {
-  className?: string;
-  group: ServiceNavGroup;
-  noWrapTitle?: boolean;
-  onClose: () => void;
-}) => {
-  const flatLinks = group.links ?? [];
-  const subGroups = group.groups ?? [];
-
-  return (
-    <div className={cn("min-w-0 px-3 xl:px-5", className || "py-3 xl:py-5")}>
-      <Link
-        className={cn(
-          "mb-4 block text-sm font-black break-words text-brand-charcoal transition-colors hover:text-brand-blue",
-          noWrapTitle && "whitespace-nowrap"
-        )}
-        href={group.href}
-        onClick={onClose}
-      >
-        {group.name}
-      </Link>
-      {subGroups.length > 0 ? (
-        <div className="grid grid-cols-2 gap-x-4">
-          {subGroups.map((sg) => (
-            <div key={sg.name}>
-              <p className="mb-4 text-xs font-bold tracking-wide text-gray-400 uppercase">
-                {sg.name}
-              </p>
-              <div className="space-y-3">
-                {sg.links.map((sub) => (
-                  <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        flatLinks.length > 0 && (
-          <div className="space-y-3">
-            {flatLinks.map((sub) => (
-              <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
-            ))}
-          </div>
-        )
-      )}
-    </div>
-  );
-};
-
-const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleMouseEnter = useCallback(() => setIsOpen(true), []);
-  const handleMouseLeave = useCallback(() => setIsOpen(false), []);
-
-  return (
-    <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <button
-        className={cn(
-          "flex items-center gap-1.5 text-sm font-medium transition-colors",
-          lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
-        )}
-        type="button"
-      >
-        <Globe className="h-4 w-4" />
-        <span>EN</span>
-        <ChevronDown
-          className={cn("h-3 w-3 transition-transform duration-200", isOpen ? "rotate-180" : "")}
-        />
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            animate={LANG_DROPDOWN_ANIMATE}
-            className="absolute top-full right-0 mt-2 min-w-[148px] overflow-hidden rounded-xl border border-gray-100 bg-white py-1.5 shadow-xl"
-            exit={LANG_DROPDOWN_EXIT}
-            initial={LANG_DROPDOWN_INITIAL}
-            transition={LANG_DROPDOWN_TRANSITION}
-          >
-            {LANGUAGES.map((lang) => (
-              <button
-                className={cn(
-                  "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue",
-                  lang.code === "EN" ? "font-semibold text-brand-blue" : "text-brand-charcoal"
-                )}
-                key={lang.code}
-                type="button"
-              >
-                <span className="w-7 text-xs font-bold">{lang.code}</span>
-                <span>{lang.name}</span>
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
 
 export const Header = ({
   darkBackground = false,
@@ -412,16 +40,20 @@ export const Header = ({
   const solidHeader = forceLightMode || scrolled;
   const lightText = darkBackground && !solidHeader;
   const headerLightText = (darkBackground || lightHeaderText) && !solidHeader;
+
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
     setOpenMobileNav(null);
     setOpenMobileServiceGroup(null);
   }, []);
+
   const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
+  
   const toggleMobileNav = useCallback((name: string) => {
     setOpenMobileNav((prev) => (prev === name ? null : name));
     setOpenMobileServiceGroup(null);
   }, []);
+
   const toggleMobileServiceGroup = useCallback((name: string) => {
     setOpenMobileServiceGroup((prev) => (prev === name ? null : name));
   }, []);
@@ -434,17 +66,8 @@ export const Header = ({
     }
   }, []);
 
-  const handleCloseMegamenu = useCallback(() => {
-    setActiveDropdown(null);
-  }, []);
-
-  const handleServicesClick = useCallback(() => {
-    setActiveDropdown("services");
-  }, []);
-
-  const handleMouseEnterServicesMegamenu = useCallback(() => {
-    setActiveDropdown("services");
-  }, []);
+  const closeMegamenu = useCallback(() => setActiveDropdown(null), []);
+  const openServicesMegamenu = useCallback(() => setActiveDropdown("services"), []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -473,7 +96,7 @@ export const Header = ({
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
-      onMouseLeave={handleCloseMegamenu}
+      onMouseLeave={closeMegamenu}
       transition={HEADER_TRANSITION}
     >
       <div className="flex items-center gap-2">
@@ -500,7 +123,7 @@ export const Header = ({
             lightText={headerLightText}
             link={link}
             onMouseEnter={handleMouseEnterLink}
-            onServicesClick={handleServicesClick}
+            onServicesClick={openServicesMegamenu}
           />
         ))}
       </nav>
@@ -535,7 +158,7 @@ export const Header = ({
             className="absolute inset-x-0 top-full z-[100] bg-white/95 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md xl:py-8"
             exit={MEGAMENU_EXIT}
             initial={MEGAMENU_INITIAL}
-            onMouseEnter={handleMouseEnterServicesMegamenu}
+            onMouseEnter={openServicesMegamenu}
             transition={MEGAMENU_TRANSITION}
           >
             <div className="mx-auto w-full max-w-7xl px-8 lg:max-xl:px-10 xl:px-12">
@@ -543,36 +166,36 @@ export const Header = ({
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[0]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                 </div>
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[1]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                 </div>
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     group={serviceNavigationGroups[2]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                 </div>
                 <div className="min-w-0">
                   <MegamenuServiceGroup
                     className="pt-3 pb-1 xl:pt-5 xl:pb-2"
                     group={serviceNavigationGroups[3]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                   <MegamenuServiceGroup
                     className="py-1 xl:py-2"
                     group={serviceNavigationGroups[4]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                   <MegamenuServiceGroup
                     className="pt-1 pb-3 xl:pt-2 xl:pb-5"
                     group={serviceNavigationGroups[5]}
-                    onClose={handleCloseMegamenu}
+                    onClose={closeMegamenu}
                   />
                 </div>
               </div>

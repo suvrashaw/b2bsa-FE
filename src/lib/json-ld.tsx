@@ -6,7 +6,7 @@ export const normalizePath = (path: string) => {
 };
 
 const createJsonLdMarkup = (data: object) => ({
-  __html: JSON.stringify(data).replaceAll("<", "\\u003c"),
+  __html: JSON.stringify(data).replaceAll("<", String.raw`\u003c`),
 });
 
 export const JsonLd = ({ data }: { data: object }) => (

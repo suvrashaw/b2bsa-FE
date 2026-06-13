@@ -1,24 +1,24 @@
 import type { ReactNode } from "react";
 
+import type { PricingProps } from "@/components/items/PricingCard";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
+import type { ContactUsProps } from "@/components/sections/ContactUs";
 import type { FAQProps } from "@/components/sections/FAQAccordion";
 import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
+import type { HeroProps } from "@/components/sections/Hero";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
-import type { ContactUsProps } from "@/components/sections/ContactUs";
-import type { HeroProps } from "@/components/sections/Hero";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
-import type { PricingProps } from "@/components/items/PricingCard";
 
 import { FAQCard } from "@/components/items/FAQCard";
 import { PricingCard } from "@/components/items/PricingCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { Hero } from "@/components/sections/Hero";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -39,19 +39,37 @@ import {
 } from "@/lib";
 
 export interface ServicePageProps {
+  // ─── Lower funnel ───────────────────────────────
+  caseStudies?: CaseStudiesProps;
+  // ─── Trust band ─────────────────────────────────
+  clientLogosHeading?: string;
   // ─── Always required ────────────────────────────
   contactUs: ContactUsProps;
+
+  creativePricing?: PricingProps;
+
+  // ─── Custom content before FAQ ──────────────────
+  customSections?: ReactNode;
+
   faq: FAQProps;
-  page: MarketingPageIdentity;
+  // ─── Closing ────────────────────────────────────
+  faqVariant?: "accordion" | "cards";
 
   // ─── Hero ───────────────────────────────────────
   hero?: HeroProps;
+  page: MarketingPageIdentity;
 
   // ─── SEO ────────────────────────────────────────
   parentPage?: MarketingPageIdentity;
-
-  // ─── Trust band ─────────────────────────────────
-  clientLogosHeading?: string;
+  // ─── Escape hatch before Timeline ───────────────
+  preProcessSections?: ReactNode;
+  // ─── Process ────────────────────────────────────
+  process?: {
+    heading?: string;
+    phases?: { description: string; title: string }[];
+    steps?: { description: string; title: string }[];
+    title?: string;
+  };
   proofBar?: {
     className?: string;
     description?: ReactNode;
@@ -60,38 +78,20 @@ export interface ServicePageProps {
     stats: string[];
   };
 
-  // ─── Spotlight slots ────────────────────────────
-  spotlight?: SpotlightProps;
-  why?: SpotlightProps;
+  relatedServices?: { href: string; title: string }[];
+
+  secondaryServices?: ServicesStackProps;
+  secondaryServicesSectionType?: "carousel" | "grid";
 
   // ─── Services ───────────────────────────────────
   services?: ServicesStackProps;
   servicesSectionType?: "carousel" | "grid";
-  secondaryServices?: ServicesStackProps;
-  secondaryServicesSectionType?: "carousel" | "grid";
 
-  // ─── Escape hatch before Timeline ───────────────
-  preProcessSections?: ReactNode;
-
-  // ─── Process ────────────────────────────────────
-  process?: {
-    heading?: string;
-    phases?: { description: string; title: string }[];
-    steps?: { description: string; title: string }[];
-    title?: string;
-  };
   showPhaseNumbers?: boolean;
 
-  // ─── Lower funnel ───────────────────────────────
-  caseStudies?: CaseStudiesProps;
-  creativePricing?: PricingProps;
-
-  // ─── Custom content before FAQ ──────────────────
-  customSections?: ReactNode;
-
-  // ─── Closing ────────────────────────────────────
-  faqVariant?: "accordion" | "cards";
-  relatedServices?: { href: string; title: string }[];
+  // ─── Spotlight slots ────────────────────────────
+  spotlight?: SpotlightProps;
+  why?: SpotlightProps;
 }
 
 const getBreadcrumbs = (page: MarketingPageIdentity, parentPage?: MarketingPageIdentity) => {
@@ -168,7 +168,7 @@ export const ServicePage = ({
     buildBreadcrumbJsonLd(getBreadcrumbs(page, parentPage)),
     buildOrganizationJsonLd(),
     ...(faq.faqs?.length ? [buildFaqJsonLd(faq.faqs)] : []),
-    ...(steps.length ? [buildHowToJsonLd(processTitle, steps)] : []),
+    ...(steps.length > 0 ? [buildHowToJsonLd(processTitle, steps)] : []),
     ...(services
       ? [buildItemListJsonLd(services.services ?? services.content?.services ?? [])]
       : []),

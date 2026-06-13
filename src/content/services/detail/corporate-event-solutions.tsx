@@ -1,4 +1,4 @@
-import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES, GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
 export const CORP_EVENT_IMAGE_HERO = {
   description:

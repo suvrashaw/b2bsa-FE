@@ -5,6 +5,8 @@ export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 };
 
+export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
+
 export {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -13,5 +15,3 @@ export {
   buildOrganizationJsonLd,
   buildServiceJsonLd,
 } from "@/lib/structured-data";
-
-export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
