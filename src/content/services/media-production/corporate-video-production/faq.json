@@ -1,0 +1,25 @@
+{
+  "faqs": [
+    {
+      "answer": "Brief to delivery: 4–8 weeks for a standard project. Multi-video programs or executive series: 8–16 weeks.",
+      "id": "timeline",
+      "question": "How long does production take?"
+    },
+    {
+      "answer": "Yes, script development and messaging strategy are included in our full corporate video production service.",
+      "id": "script",
+      "question": "Do you write the script?"
+    },
+    {
+      "answer": "Master file, web-optimised version, social formats (16:9, 1:1, and 9:16 vertical). Subtitle files and thumbnails on request.",
+      "id": "formats",
+      "question": "What formats are included in delivery?"
+    },
+    {
+      "answer": "Yes, client offices, conference venues, studios, product facilities, and trade show events.",
+      "id": "location",
+      "question": "Can we film on location?"
+    }
+  ],
+  "heading": "Corporate Video FAQs"
+}

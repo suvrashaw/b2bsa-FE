@@ -1,0 +1,136 @@
+{
+  "process": {
+    "phases": [
+      {
+        "description": "Event goals, booth size, brand requirements, demo needs, and timeline.",
+        "title": "Design Brief"
+      },
+      {
+        "description": "Full visualisation reviewed with your team before production begins.",
+        "title": "3D Render"
+      },
+      {
+        "description": "Structural, safety, and venue compliance review.",
+        "title": "Engineering Approval"
+      },
+      {
+        "description": "Quality, durability, and logistics-appropriate selections.",
+        "title": "Material Sourcing"
+      },
+      {
+        "description": "Production with quality control checkpoints throughout.",
+        "title": "Fabrication"
+      },
+      {
+        "description": "Quality and fit review before shipping.",
+        "title": "QC and Pre-Build"
+      },
+      {
+        "description": "Packaging, shipping, customs, and venue coordination.",
+        "title": "Event Delivery"
+      },
+      {
+        "description": "On-site assembly and final quality check before the show opens.",
+        "title": "Installation"
+      },
+      {
+        "description": "Post-event dismantling, packing, and reuse planning.",
+        "title": "Breakdown and Storage"
+      }
+    ],
+    "title": "Our Trade Show Booth Build Process"
+  },
+  "builderFutureReady": {
+    "heading": "Future-Ready Stands for Exhibitions & Trade Shows",
+    "items": [
+      {
+        "bullets": [
+          "Flexible timelines for short-term builds, flagship exhibitions, and multi-market programs.",
+          "In-house fabrication planning with quality-checked components ready for on-site installation.",
+          "Global delivery support for international venues, shipping windows, and event deadlines."
+        ],
+        "image": {
+          "alt": "Custom modular exhibition stand",
+          "src": "/images/booth/20x40.jpg"
+        },
+        "title": "Custom Exhibition Stand Solutions - Modular & Bespoke"
+      },
+      {
+        "bullets": [
+          "End-to-end project management from concept alignment through production and final handover.",
+          "Virtual and on-site consultation to align booth architecture with brand and sales objectives.",
+          "Dedicated guidance across design approvals, materials, technical details, and venue coordination."
+        ],
+        "image": {
+          "alt": "3D exhibition stand design and project planning",
+          "src": "/images/booth/30x40.avif"
+        },
+        "title": "3D Design & Project Management Services"
+      },
+      {
+        "bullets": [
+          "Design and customization shaped around visitor flow, demo requirements, and meeting spaces.",
+          "Fabrication, construction, logistics, and installation managed as one connected delivery path.",
+          "On-site supervision and final quality checks before the show floor opens."
+        ],
+        "image": {
+          "alt": "Finished trade show stand ready for attendees",
+          "src": "/images/booth/40x40.jpg"
+        },
+        "title": "Our Process To Get Your Stand Ready"
+      }
+    ]
+  },
+  "builderRelatedServices": [
+    {
+      "href": "/services/booth-services/trade-show-booth-design",
+      "title": "Trade Show Booth Design"
+    },
+    {
+      "href": "/services/booth-services/event-booth-rental",
+      "title": "Event Booth Rental"
+    },
+    {
+      "href": "/services/booth-services/modular-booth-solutions",
+      "title": "Modular and Portable Booths"
+    }
+  ],
+  "builderBlogsSection": {
+    "heading": "Blogs"
+  },
+  "builderContactCta": {
+    "backgroundImage": {
+      "alt": "Exhibition stand build consultation backdrop",
+      "src": "/images/booth/40x40.jpg"
+    },
+    "badge": "Ready to Build?",
+    "description": "From first brief to final installation, your exhibition stand should move with the same discipline as your sales strategy. Share the event, footprint, timeline, and goals, and we will map the right build path.",
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Request a Build Quote"
+    },
+    "proofLabel": "Trusted by 500+ companies",
+    "proofLogos": [
+      {
+        "alt": "Airtel",
+        "src": "/images/client-logos/circle-airtel.svg"
+      },
+      {
+        "alt": "SingleStore",
+        "src": "/images/client-logos/circle-singlestore.svg"
+      },
+      {
+        "alt": "CSC",
+        "src": "/images/client-logos/circle-csc.svg"
+      },
+      {
+        "alt": "United Payments",
+        "src": "/images/client-logos/circle-united-payments.svg"
+      }
+    ],
+    "secondaryCta": {
+      "href": "mailto:info@b2bsalesarrow.com",
+      "label": "Contact Us"
+    }
+  }
+}

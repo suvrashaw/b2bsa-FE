@@ -1,0 +1,239 @@
+{
+  "process": {
+    "phases": [
+      {
+        "description": "Budget and goal alignment. We understand your commercial objectives, event brief, audience, and success metrics before any design work begins.",
+        "title": "Phase 1: Deep-Dive Discovery"
+      },
+      {
+        "description": "Storyboarding the brand experience. We map how visitors move, feel, and think through every stage of the booth journey.",
+        "title": "Phase 2: Narrative Design"
+      },
+      {
+        "description": "3D rendering and iterative feedback. Full visualisation of the space, structure, graphics, lighting, and interaction zones reviewed with your team.",
+        "title": "Phase 3: Visual Prototyping"
+      },
+      {
+        "description": "Material sourcing and builder vetting. Materials, finishes, and fabrication partners selected for quality, durability, and logistics practicality.",
+        "title": "Phase 4: Expert Curation"
+      },
+      {
+        "description": "Pre-build validation for zero errors. Structural review, compliance check, and pre-assembly quality gate before production begins.",
+        "title": "Phase 5: Performance Testing"
+      },
+      {
+        "description": "Global shipping and on-site assembly. Packaging, customs, venue delivery, and installation managed end-to-end.",
+        "title": "Phase 6: Tactical Deployment"
+      },
+      {
+        "description": "Final 'white-glove' inspection and delivery. Every detail checked against the approved design before the show opens.",
+        "title": "Phase 7: Elite Handover"
+      },
+      {
+        "description": "Deconstruction and storage management. Breakdown, packing, return logistics, and reuse planning for future events.",
+        "title": "Phase 8: Post-Event Recovery"
+      }
+    ],
+    "title": "From Brief to Build, Our 8-Phase Booth Design Process"
+  },
+  "whyChooseUs": {
+    "heading": "Why Choose B2B Sales Arrow for Booth Designing?",
+    "items": [
+      {
+        "description": "We manage every detail, from design to execution, ensuring a seamless and impactful booth experience.",
+        "icon": "Award",
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=400&h=300",
+        "title": "360-Degree Booth Solutions"
+      },
+      {
+        "description": "We've showcased at top international events in Dubai, Beijing, Toronto, the USA, and Australia, including Money20/20, Adobe Summit, Sibos, WAF, ONS, and more.",
+        "icon": "Globe2",
+        "image": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=400&h=300",
+        "title": "Global Reach & Premier Events"
+      },
+      {
+        "description": "Our booths incorporate the latest technology to boost engagement and enhance brand visibility.",
+        "icon": "TrendingUp",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=300",
+        "title": "Tech-Integrated Booths"
+      },
+      {
+        "description": "With experience across IT, finance, healthcare, BFSI, and more, we deliver customized solutions for every sector.",
+        "icon": "Users2",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400&h=300",
+        "title": "Industry Expertise"
+      }
+    ]
+  },
+  "designShowcaseItems": [
+    {
+      "cta": {
+        "href": "/contact",
+        "label": "Get 10×10 Booth Quote"
+      },
+      "descriptions": [
+        "Regional shows, first-time exhibitors, satellite presences"
+      ],
+      "eyebrow": "100 sq ft",
+      "heading": "10x10 Booth",
+      "id": "showcase-10x10",
+      "image": "/images/booth/10x10.jpg"
+    },
+    {
+      "cta": {
+        "href": "/contact",
+        "label": "Get 10×20 Booth Quote"
+      },
+      "descriptions": [
+        "Product demos with visitor journey and conversation zone"
+      ],
+      "eyebrow": "200 sq ft",
+      "heading": "10x20 Inline",
+      "id": "showcase-10x20",
+      "image": "/images/booth/10x20.jpg"
+    },
+    {
+      "cta": {
+        "href": "/contact",
+        "label": "Get 20×20 Booth Quote"
+      },
+      "descriptions": [
+        "Premium four-sided visibility, demos, meetings, AV zones"
+      ],
+      "eyebrow": "400 sq ft",
+      "heading": "20x20 Island",
+      "id": "showcase-20x20",
+      "image": "/images/booth/20x20.jpg"
+    },
+    {
+      "cta": {
+        "href": "/contact",
+        "label": "Get Double-Deck Quote"
+      },
+      "descriptions": [
+        "Executive meeting suite + lower engagement zone. Major global shows"
+      ],
+      "eyebrow": "Premium",
+      "heading": "Double-Deck Structure",
+      "id": "showcase-double-deck",
+      "image": "/images/booth/30x40.avif"
+    },
+    {
+      "cta": {
+        "href": "/contact",
+        "label": "Get Custom Booth Quote"
+      },
+      "descriptions": [
+        "Fully bespoke flagship builds for maximum commercial impact"
+      ],
+      "eyebrow": "Bespoke",
+      "heading": "Custom Environments",
+      "id": "showcase-custom",
+      "image": "/images/booth/40x40.jpg"
+    }
+  ],
+  "designSpotlight": {
+    "description": "A generic trade show display occupies floor space. It rarely creates a reason to stop. In a hall where 300 exhibitors compete for the same buyer attention, average design is effectively invisible.\n\nThe gap between a booth that generates badge scans and one that generates qualified meetings is almost entirely a design question: is the space engineered around buyer psychology and sales conversion, or around how it looks in a 3D render?",
+    "imageAlt": "Empty trade show booth without footfall",
+    "imageUrl": "/images/services/booth/booth-6.avif",
+    "titleLine1": "Why Generic Exhibition Booth Design",
+    "titleLine2": "Costs You Qualified Leads"
+  },
+  "designDeliverables": {
+    "heading": "Our Trade Show Booth Design Services",
+    "services": [
+      {
+        "color": "bg-brand-blue",
+        "description": "We design booth layouts around how attendees actually move through a crowded exhibition floor, entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
+        "icon": "box",
+        "id": "architecture",
+        "image": "/images/services/booth/booth-5.avif",
+        "title": "Spatial Architecture and Traffic Flow"
+      },
+      {
+        "color": "bg-brand-cyan",
+        "description": "Your exhibition booth design should be unmistakably yours from 30 feet away, translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
+        "icon": "palette",
+        "id": "branding",
+        "image": "/images/services/booth/booth-6.avif",
+        "title": "Graphic Design and Brand Integration"
+      },
+      {
+        "color": "bg-brand-primary",
+        "description": "Touchscreens, live product demos, and digital storytelling that turn passive floor visits into active brand engagement.",
+        "icon": "cpu",
+        "id": "digital",
+        "image": "/images/services/booth/booth-7.avif",
+        "title": "Interactive and Digital Display Integration"
+      },
+      {
+        "color": "bg-brand-blue",
+        "description": "For complex products that cannot be shown on a trade show floor, immersive technology that lets buyers explore what they cannot see.",
+        "icon": "monitor",
+        "id": "ar-vr",
+        "image": "/images/services/booth/booth-8.avif",
+        "title": "AR/VR Experience Design"
+      },
+      {
+        "color": "bg-brand-cyan",
+        "description": "Private meeting rooms, semi-private discussion areas, and live demo zones, planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
+        "icon": "users",
+        "id": "planning",
+        "image": "/images/services/booth/booth-9.avif",
+        "title": "Meeting Room and Demo Zone Planning"
+      },
+      {
+        "color": "bg-brand-primary",
+        "description": "The most underused commercial tool in exhibition stand design, accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
+        "icon": "sun",
+        "id": "lighting",
+        "image": "/images/services/booth/booth-10.avif",
+        "title": "Lighting and Atmosphere Engineering"
+      }
+    ]
+  },
+  "designRelatedServices": [
+    {
+      "href": "/services/booth-services/event-booth-rental",
+      "title": "Event Booth Rental"
+    }
+  ],
+  "designBlogsSection": {
+    "heading": "Blogs"
+  },
+  "designContactCta": {
+    "backgroundImage": {
+      "alt": "Trade show booth design consultation backdrop",
+      "src": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920"
+    },
+    "badge": "Ready to Design?",
+    "description": "Every square foot of your booth should earn its place. Build a custom trade show booth engineered for commercial momentum.",
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Start Your Design Project"
+    },
+    "proofLabel": "Trusted by 500+ companies",
+    "proofLogos": [
+      {
+        "alt": "Airtel",
+        "src": "/images/client-logos/circle-airtel.svg"
+      },
+      {
+        "alt": "SingleStore",
+        "src": "/images/client-logos/circle-singlestore.svg"
+      },
+      {
+        "alt": "CSC",
+        "src": "/images/client-logos/circle-csc.svg"
+      },
+      {
+        "alt": "United Payments",
+        "src": "/images/client-logos/circle-united-payments.svg"
+      }
+    ],
+    "secondaryCta": {
+      "href": "mailto:info@b2bsalesarrow.com",
+      "label": "Contact Us"
+    }
+  }
+}

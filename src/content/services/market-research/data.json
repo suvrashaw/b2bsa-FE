@@ -1,0 +1,76 @@
+{
+  "process": {
+    "heading": "How We Deliver Market Intelligence",
+    "phases": [
+      {
+        "description": "Direct interviews, surveys, and expert panels with buyers, users, partners, and industry stakeholders.",
+        "title": "Primary Research"
+      },
+      {
+        "description": "Industry reports, competitor positioning, public datasets, analyst commentary, and event activity analysis.",
+        "title": "Secondary Research"
+      },
+      {
+        "description": "Verified firmographic, technographic, role-based, and contextual information added to existing datasets.",
+        "title": "Data Enrichment and Augmentation"
+      },
+      {
+        "description": "Duplicate removal, field verification, and data consistency review.",
+        "title": "Validation and Quality Assurance"
+      },
+      {
+        "description": "Executive briefing decks, research reports, live analyst briefings, or ongoing intelligence subscriptions.",
+        "title": "Insight Delivery"
+      }
+    ]
+  },
+  "services": {
+    "description": "Data augmentation, data validation, and human-powered market intelligence for sharper B2B commercial decisions.",
+    "heading": "Our B2B Market Research Services",
+    "services": [
+      {
+        "color": "bg-brand-blue",
+        "description": "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
+        "href": "/services/market-research/data-augmentation",
+        "icon": "PlusCircle",
+        "id": "augmentation",
+        "image": "/images/services/database-research-1.avif",
+        "title": "Data Augmentation"
+      },
+      {
+        "color": "bg-brand-cyan",
+        "description": "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
+        "href": "/services/market-research/data-validation",
+        "icon": "CheckCircle",
+        "id": "validation",
+        "image": "/images/services/database-research-revised.avif",
+        "title": "Data Validation"
+      },
+      {
+        "color": "bg-brand-primary",
+        "description": "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
+        "href": "/services/market-research/market-intelligence",
+        "icon": "Search",
+        "id": "intelligence",
+        "image": "/images/services/market-intelligence.avif",
+        "title": "Human-Powered Market Intelligence"
+      }
+    ]
+  },
+  "researchProofBar": {
+    "heading": "About Market Research",
+    "imageUrl": "/images/Frames/ezgif-frame-017.jpg"
+  },
+  "researchCaseStudies": {
+    "description": "B2B Sales Arrow has delivered measurable commercial outcomes at some of the world's most competitive enterprise B2B events. Here are five recent programs from 2025 & 2026.",
+    "heading": "Real Events. Real Results."
+  },
+  "researchContactCta": {
+    "badge": "Intelligence First",
+    "description": "Own your competitive intelligence advantage.",
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Start a Research Project"
+    }
+  }
+}

@@ -1,71 +1,11 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
-
-
-
-
-
+import DATA from "./data.json";
 
 export { GLOBAL_PROOF_STATS as LIVE_STREAMING_PROOF_BAR } from "../../shared";
 
 
 
-export const LIVE_STREAMING_DELIVERABLES = {
-  heading: "Live Streaming Services",
-  services: [
-    {
-      color: "bg-brand-blue",
-      description:
-        "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
-      icon: "Video",
-      id: "multi-camera",
-      image: "/images/services/media-production-1.avif",
-      title: "Multi-Camera Live Production",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
-      icon: "Globe",
-      id: "platform",
-      image: "/images/services/media-production-2.avif",
-      title: "Platform Management",
-    },
-    {
-      color: "bg-brand-primary",
-      description: "Speaker names, session titles, sponsor overlays, and live branded transitions.",
-      icon: "Layers",
-      id: "graphics",
-      image: "/images/events/servicenow_2026.avif",
-      title: "Real-Time Graphics and Lower Thirds",
-    },
-    {
-      color: "bg-brand-blue",
-      description: "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
-      icon: "MessageSquare",
-      id: "engagement",
-      image: "/images/events/event_other_2.avif",
-      title: "Live Audience Engagement",
-    },
-    {
-      color: "bg-brand-cyan",
-      description:
-        "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
-      icon: "Archive",
-      id: "archive",
-      image: "/images/services/media-production-2.avif",
-      title: "Recording and Archive Delivery",
-    },
-    {
-      color: "bg-brand-primary",
-      description:
-        "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
-      icon: "ShieldCheck",
-      id: "support",
-      image: "/images/home/why-choose-us/global_reach.avif",
-      title: "Global Technical Support",
-    },
-  ],
-};
+export const LIVE_STREAMING_DELIVERABLES = DATA.streamingDeliverables;
 
 export const LIVE_STREAMING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
@@ -76,13 +16,8 @@ export const LIVE_STREAMING_CASE_STUDIES = {
 
 
 export const LIVE_STREAMING_SPOTLIGHT = {
-  ctaLabel: "Take Your Event Live",
-  description:
-    "Audiences have come to expect live event production services, so they can tune in from anywhere. Power Plus Productions has years of expertise in live event production. We provide scalable live event production solutions for corporate conferences, entertainment, and sporting events, using high-quality streaming, multiple camera angles, real-time interaction, and wide content distribution.",
-  titleLine1: "Virtual and Live",
-  titleLine2: "Streaming Event Services",
-  triggerContactModal: true,
-  videoUrl: "/videos/hero-gtc-2026.mp4",
+    ...DATA.streamingSpotlight,
+    triggerContactModal: true
 };
 
 

@@ -1,3 +1,5 @@
+import DATA from "./data.json";
+
 export const TERMS_HERO = {
   description:
     "Please read these terms carefully before using our services. Last updated: January 2025.",
@@ -92,29 +94,8 @@ export const TERMS_FAQ = {
 };
 
 export const TERMS_CONTACT = {
-  description:
-    "If you have questions about our terms or need clarification on any clause, our team is happy to assist.",
-  eyebrow: "QUESTIONS ABOUT OUR TERMS?",
-  form: {
-    ctaLabel: "Send Query",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-    lastNameLabel: "Last Name",
-    lastNamePlaceholder: "Doe",
-    messageLabel: "Your Question",
-    messagePlaceholder: "Which clause would you like clarified?",
-    serviceLabel: "Subject",
-    serviceOptions: [
-      { label: "Terms Clarification", value: "terms-clarification" },
-      { label: "Contract Query", value: "contract-query" },
-      { label: "Data & Privacy", value: "data-privacy" },
-      { label: "Other Legal Matter", value: "other" },
-    ],
-    servicePlaceholder: "Select a topic...",
-  },
-  heading: (
+    ...DATA.contact,
+    heading: (
     <>
       Speak to Our <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">

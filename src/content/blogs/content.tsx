@@ -34,26 +34,13 @@ import {
   Users,
   Video,
 } from "lucide-react";
+import DATA from "./data.json";
 
-export const BLOG_CATEGORIES = [
-  { icon: CalendarDays, id: "event-strategy", name: "Event Strategy" },
-  { icon: Layout, id: "booth-design", name: "Booth Design" },
-  { icon: TrendingUp, id: "performance-marketing", name: "Performance Marketing" },
-  { icon: Video, id: "video-production", name: "Video Production" },
-  { icon: PieChart, id: "market-research", name: "Market Research" },
-  { icon: Users, id: "lead-generation", name: "Lead Generation" },
-  { icon: FileText, id: "case-studies", name: "Case Studies" },
-  { icon: Building, id: "trade-shows", name: "Trade Shows" },
-  { icon: Briefcase, id: "b2b-sales", name: "B2B Sales" },
-  { icon: Presentation, id: "exhibition", name: "Exhibition" },
-  { icon: MousePointerClick, id: "digital-ads", name: "Digital Ads" },
-  { icon: UserCheck, id: "sqls", name: "SQLs" },
-];
+export const BLOG_CATEGORIES = DATA.categories;
 
 export const BLOG_POSTS = {
-  blogs: SHARED_BLOG_POSTS,
-  ctaLabel: "Browse All Articles",
-  eyebrow: "",
+    ...DATA.posts,
+    blogs: SHARED_BLOG_POSTS,
   heading: (
     <>
       Expert Strategies to Maximize <br />
@@ -63,17 +50,8 @@ export const BLOG_POSTS = {
 };
 
 export const BLOG_CONTACT = {
-  description:
-    "Monthly growth intelligence on event strategy, performance marketing, pipeline generation, and market intelligence, delivered to 4,000+ enterprise marketers.",
-  eyebrow: "",
-  form: {
-    ctaLabel: "Subscribe to Growth Intelligence",
-    emailLabel: "Work Email",
-    emailPlaceholder: "john@company.com",
-    firstNameLabel: "First Name",
-    firstNamePlaceholder: "John",
-  },
-  heading: (
+    ...DATA.contact,
+    heading: (
     <>
       Subscribe to <br />
       <span className="bg-linear-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">
@@ -121,8 +99,8 @@ const SERVICE_FALLBACK_HREFS: Record<string, string> = {
 };
 
 export const BLOG_SERVICE_CAROUSEL = {
-  heading: "Explore Our Services",
-  items: (
+    ...DATA.serviceCarousel,
+    items: (
     [
       ...GES_SERVICES.services,
       ...MEDIA_SERVICES.services,
