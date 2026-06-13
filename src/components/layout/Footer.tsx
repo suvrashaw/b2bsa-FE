@@ -10,7 +10,13 @@ import { Heading } from "@/components/ui/Heading";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 import { cn } from "@/lib";
 
-import { FooterCommandMap } from "./footer/FooterCommandMap";
+import dynamic from "next/dynamic";
+
+const FooterCommandMap = dynamic(
+  () => import("./footer/FooterCommandMap").then((mod) => mod.FooterCommandMap),
+  { ssr: false }
+);
+
 import { FooterServiceGroup } from "./footer/FooterServiceGroup";
 
 const socialLinks = [

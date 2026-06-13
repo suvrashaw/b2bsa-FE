@@ -5,7 +5,7 @@ import { cn } from "@/lib";
 
 const EMPTY_NAV_LINKS: NavLink[] = [];
 
-export const FooterSitemapLinks = ({ links }: { links: NavLink[] }) => (
+const FooterSitemapLinks = ({ links }: { links: NavLink[] }) => (
   <ul className="space-y-1.5 border-l border-white/30 pl-3">
     {links.map((item) => (
       <li key={item.name}>
@@ -20,7 +20,7 @@ export const FooterSitemapLinks = ({ links }: { links: NavLink[] }) => (
   </ul>
 );
 
-export const FooterServiceSubGroup = ({ group }: { group: ServiceSubGroup }) => (
+const FooterServiceSubGroup = ({ group }: { group: ServiceSubGroup }) => (
   <div>
     <span className="mb-2 block text-xs font-semibold tracking-wider text-white/60 uppercase">
       {group.name}
