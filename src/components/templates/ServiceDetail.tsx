@@ -14,15 +14,15 @@ import { Header } from "@/components/layout/Header";
 import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { Hero, type HeroProps } from "@/components/sections/Hero";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
-import { ProofBar } from "@/components/sections/ProofBar";
+import { HomeStats } from "@/components/sections/HomeStats";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { Stats } from "@/components/sections/Stats";
+import { Timeline } from "@/components/sections/Timeline";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
 export interface ServiceDetailProps {
@@ -275,7 +275,7 @@ export const ServiceDetail = ({
       <ClientLogos heading={clientLogosHeading} overlap={false} />
 
       {proofBar && (
-        <ProofBar
+        <Stats
           className={proofBarClassName}
           description={proofBarDescription}
           heading={proofBarHeading ?? `About ${page.pageName}`}
@@ -321,7 +321,7 @@ export const ServiceDetail = ({
       {preProcessSections}
 
       {process && (
-        <ProcessTimeline
+        <Timeline
           phases={process.phases}
           showPhaseNumbers={showPhaseNumbers}
           title={process.title}
@@ -354,7 +354,7 @@ export const ServiceDetail = ({
       )}
 
       {stats && (
-        <WhoWeAre description={stats.description} items={stats.items} title={stats.title} />
+        <HomeStats description={stats.description} items={stats.items} title={stats.title} />
       )}
 
       {closingSections ?? (
@@ -372,7 +372,7 @@ export const ServiceDetail = ({
 
           {relatedServices && <RelatedServices services={relatedServices} />}
 
-          <ContactCinematicCTA
+          <ContactUs
             backgroundImage={CINEMATIC_BG}
             description={
               ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."

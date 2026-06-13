@@ -23,7 +23,7 @@ const stripOuterQuoteMarks = (quote: string) => {
   return quote.slice(start, end);
 };
 
-interface TestimonialCarouselCardProps {
+interface TestimonialCardProps {
   index: number;
   isCenter: boolean;
   isVisible: boolean;
@@ -39,7 +39,7 @@ export const TestimonialCarouselCard = ({
   position,
   setActiveIndex,
   testimonial,
-}: TestimonialCarouselCardProps) => {
+}: TestimonialCardProps) => {
   const pos = position;
   const absPos = Math.abs(pos);
   const sideRotateY = pos > 0 ? -25 : 25;

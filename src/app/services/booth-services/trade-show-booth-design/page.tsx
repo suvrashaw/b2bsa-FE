@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { EventsCard } from "@/components/items/EventsCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -80,7 +80,7 @@ const Page = () => {
           </CardSection>
           <FAQAccordion {...BOOTH_DESIGN_FAQ} />
           <RelatedServices services={BOOTH_DESIGN_RELATED_SERVICES} />
-          <ContactCinematicCTA {...BOOTH_DESIGN_CONTACT_CTA} />
+          <ContactUs {...BOOTH_DESIGN_CONTACT_CTA} />
         </>
       }
       deliverables={BOOTH_DESIGN_DELIVERABLES}

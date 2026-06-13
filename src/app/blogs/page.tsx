@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
   BLOG_CONTACT,
@@ -40,7 +40,7 @@ const Page = () => {
       <Suspense>
         <BlogsDirectory blogs={BLOG_POSTS.blogs} />
       </Suspense>
-      <ContactUs {...BLOG_CONTACT} />
+      <ContactUsForm {...BLOG_CONTACT} />
       <Footer />
     </main>
   );

@@ -10,12 +10,12 @@ import { Blogs } from "@/components/sections/Blogs";
 import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
+import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { getDefaultEvents } from "@/content/events-utils";
@@ -43,7 +43,7 @@ const Home = () => {
       <ClientLogos />
 
       <div id="about">
-        <WhoWeAre />
+        <HomeStats />
       </div>
 
       <div id="services">
@@ -98,7 +98,7 @@ const Home = () => {
       </CardSection>
 
       <div id="contact">
-        <ContactUs />
+        <ContactUsForm />
       </div>
 
       <Footer />

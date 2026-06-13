@@ -6,7 +6,12 @@ import { type ReactNode, useMemo } from "react";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-interface ProcessTimelineProps {
+interface Step {
+  description: string;
+  title: string;
+}
+
+interface TimelineProps {
   className?: string;
   description?: ReactNode;
   heading?: ReactNode;
@@ -15,11 +20,6 @@ interface ProcessTimelineProps {
   steps?: Step[];
   subtitle?: ReactNode;
   title?: ReactNode;
-}
-
-interface Step {
-  description: string;
-  title: string;
 }
 
 const PROCESSTIMELINE_INITIAL = { opacity: 0, y: 30 };
@@ -35,7 +35,7 @@ export const ProcessTimeline = ({
   steps,
   subtitle,
   title,
-}: ProcessTimelineProps) => {
+}: TimelineProps) => {
   const resolvedSteps = steps ?? phases ?? [];
   const resolvedTitle = title ?? heading;
   const resolvedDescription = description ?? subtitle;

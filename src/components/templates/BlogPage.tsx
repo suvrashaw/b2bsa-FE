@@ -10,7 +10,7 @@ import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Button } from "@/components/ui/Button";
@@ -364,7 +364,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
       <ServicesStack />
 
-      <ContactCinematicCTA
+      <ContactUs
         badge="Talk to an Expert"
         description="Whether you're planning your next trade show appearance or need event staffing worldwide, our team is ready to help you execute flawlessly."
         headingLines={CTA_HEADING_LINES}

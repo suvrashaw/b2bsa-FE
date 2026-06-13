@@ -3,7 +3,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import { TestimonialCarouselCard } from "@/components/items/TestimonialCarouselCard";
+import { TestimonialCard } from "@/components/items/TestimonialCard";
 import { Heading } from "@/components/ui/Heading";
 import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home";
 
@@ -69,7 +69,7 @@ export const Testimonials = ({
             const absPos = Math.abs(pos);
             const isVisible = absPos <= 1;
             return (
-              <TestimonialCarouselCard
+              <TestimonialCard
                 index={index}
                 isCenter={isCenter}
                 isVisible={isVisible}

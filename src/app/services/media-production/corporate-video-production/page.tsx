@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
 import { FAQCard } from "@/components/items/FAQCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
@@ -75,7 +75,7 @@ const Page = () => {
             ))}
           </CardSection>
           <RelatedServices services={corporateVideoProductionRelatedServices} />
-          <ContactCinematicCTA {...corporateVideoContactCta} />
+          <ContactUs {...corporateVideoContactCta} />
         </>
       }
       deliverables={CORPORATE_VIDEO_DELIVERABLES}

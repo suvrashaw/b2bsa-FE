@@ -11,14 +11,14 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardSection } from "@/components/sections/CardSection";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { Hero } from "@/components/sections/Hero";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
-import { ProofBar } from "@/components/sections/ProofBar";
+import { HomeStats } from "@/components/sections/HomeStats";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
+import { Stats } from "@/components/sections/Stats";
+import { Timeline } from "@/components/sections/Timeline";
 import { JsonLd } from "@/components/templates/ServiceDetail";
 import { buildFaqJsonLd, buildServiceJsonLd } from "@/lib";
 
@@ -146,7 +146,7 @@ export const ServiceHub = ({
       />
 
       {proofBar && (
-        <ProofBar heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />
+        <Stats heading={`About ${page.pageName}`} imageUrl={proofBarImageUrl} stats={proofBar} />
       )}
 
       <ServicesStack {...services} />
@@ -158,7 +158,7 @@ export const ServiceHub = ({
       </section>
 
       {process && (
-        <ProcessTimeline
+        <Timeline
           steps={process.steps ?? process.phases}
           title={process.title ?? process.heading}
         />
@@ -172,7 +172,7 @@ export const ServiceHub = ({
         />
       )}
 
-      {stats && <WhoWeAre items={stats.items} title={stats.title} />}
+      {stats && <HomeStats items={stats.items} title={stats.title} />}
 
       <CardSection
         description={faq.description ?? faq.content?.description}
@@ -188,7 +188,7 @@ export const ServiceHub = ({
       {relatedServices && <RelatedServices services={relatedServices} />}
 
       {closingSections ?? (
-        <ContactCinematicCTA
+        <ContactUs
           backgroundImage={CINEMATIC_BG}
           description={
             ctaBanner?.description ?? "250+ events. $1.2B+ influenced. One conversation to start."

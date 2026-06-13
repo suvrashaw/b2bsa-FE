@@ -23,23 +23,23 @@ import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
-import { ProofBar } from "@/components/sections/ProofBar";
+import { HomeStats } from "@/components/sections/HomeStats";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { Stats } from "@/components/sections/Stats";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Timeline } from "@/components/sections/Timeline";
 import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { SHARED_BLOG_POSTS } from "@/content/blogs";
@@ -125,7 +125,7 @@ const IMAGE_HERO_CTA = { href: "/demo", label: "View Case Study" };
 const SERVICE_HERO_PRIMARY = { href: "/demo", label: "Get a Proposal" };
 const SERVICE_HERO_SECONDARY = { href: "/demo", label: "See Our Work" };
 
-// ─── ProofBar ───────────────────────────────────────────────────────────────
+// ─── Stats ───────────────────────────────────────────────────────────────
 
 const PROOF_STATS = [
   "250+ Events Delivered",
@@ -360,7 +360,7 @@ const _SERVICE_CAROUSEL_ITEMS = [
   },
 ];
 
-// ─── ProcessTimeline ─────────────────────────────────────────────────────────
+// ─── Timeline ─────────────────────────────────────────────────────────
 
 const PROCESS_TIMELINE_PHASES = [
   {
@@ -406,7 +406,7 @@ const ABOUT_CORE_VALUES_DATA = {
   ],
 };
 
-// ─── ContactCinematicCTA ─────────────────────────────────────────────────────
+// ─── ContactUs ─────────────────────────────────────────────────────
 
 const CONTACT_CINEMATIC_PROPS = {
   backgroundImage: { alt: "Event floor", src: IMG_SIBOS },
@@ -489,12 +489,12 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact" },
   ],
-  ContactCinematicCTA: [
+  ContactUs: [
     { href: "/services/data-augmentation", label: "Data Augmentation" },
     { href: "/services/global-event-solutions", label: "Global ES" },
     { href: "/services/market-research", label: "Market Research" },
   ],
-  ContactUs: [
+  ContactUsForm: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
@@ -530,18 +530,13 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/case-studies/waf-2025", label: "Case Study" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
-  LinkedInFeed: [{ href: "/", label: "Home" }],
-  Pricing: [{ href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" }],
-  ProcessTimeline: [
-    { href: "/services/booth-services/booth-hostess-services", label: "Booth Hostess" },
-    { href: "/services/booth-services/booth-logistics-services", label: "Event Logistics" },
-    { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
-  ],
-  ProofBar: [
-    { href: "/case-studies/waf-2025", label: "Case Study" },
+  HomeStats: [
+    { href: "/", label: "Home" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
     { href: "/services/global-event-solutions", label: "Service Hub" },
   ],
+  LinkedInFeed: [{ href: "/", label: "Home" }],
+  Pricing: [{ href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" }],
   RelatedServices: [
     { href: "/case-studies/waf-2025", label: "Case Study" },
     { href: "/services/data-augmentation", label: "Data Augmentation" },
@@ -560,18 +555,23 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions", label: "Service Hub" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
+  Stats: [
+    { href: "/case-studies/waf-2025", label: "Case Study" },
+    { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
+    { href: "/services/global-event-solutions", label: "Service Hub" },
+  ],
   StickyScroll: [
     { href: "/", label: "Home" },
     { href: "/services/booth-services/event-booth-rental", label: "Event Booth Rental" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Booth Builder" },
   ],
   Testimonials: [{ href: "/", label: "Home" }],
-  TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
-  WhoWeAre: [
-    { href: "/", label: "Home" },
+  Timeline: [
+    { href: "/services/booth-services/booth-hostess-services", label: "Booth Hostess" },
+    { href: "/services/booth-services/booth-logistics-services", label: "Event Logistics" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
   ],
+  TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
 };
 
 const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
@@ -586,8 +586,8 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   CaseStudiesDirectory: { items: ["CaseStudyCard"], ui: ["Heading", "Pagination"] },
   CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
-  ContactCinematicCTA: { items: [], ui: ["Button", "ContactModal", "Heading"] },
-  ContactUs: { items: [], ui: ["Eyebrow", "Heading"] },
+  ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
+  ContactUsForm: { items: [], ui: ["Eyebrow", "Heading"] },
   CorporateVideoIndustriesSection: { items: [], ui: ["Heading"] },
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
@@ -597,21 +597,21 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   FeatureCarouselSection: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   GlobalPresence: { items: [], ui: ["Heading"] },
   Hero: { items: [], ui: ["Heading"] },
+  HomeStats: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
-  ProcessTimeline: { items: [], ui: ["Heading"] },
-  ProofBar: { items: [], ui: ["Heading"] },
   RelatedServices: { items: ["RelatedServicesCard"], ui: ["Heading"] },
   RentVsBuySection: { items: [], ui: ["Heading"] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
   Spotlight: { items: [], ui: ["Button", "ContactModal", "Heading"] },
+  Stats: { items: [], ui: ["Heading"] },
   StickyScroll: { items: [], ui: ["Button", "ContactModal", "Eyebrow", "Heading"] },
   Testimonials: { items: ["TestimonialCarouselCard"], ui: ["Eyebrow", "Heading"] },
+  Timeline: { items: [], ui: ["Heading"] },
   TradeShowCalendarDirectory: {
     items: ["TradeShowCard", "TradeShowListItem"],
     ui: ["Button", "Pagination"],
   },
-  WhoWeAre: { items: [], ui: ["Heading"] },
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
@@ -746,18 +746,18 @@ export default function DemoPage() {
       <DemoLabel name="ClientLogos" />
       <ClientLogos />
 
-      {/* 06 – ProofBar */}
-      <DemoLabel name="ProofBar" />
-      <ProofBar
+      {/* 06 – Stats */}
+      <DemoLabel name="Stats" />
+      <Stats
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
         imageUrl="/images/Frames/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
 
-      {/* 07 – WhoWeAre */}
-      <DemoLabel name="WhoWeAre" />
-      <WhoWeAre />
+      {/* 07 – HomeStats */}
+      <DemoLabel name="HomeStats" />
+      <HomeStats />
 
       {/* 08 – AboutCoreValues */}
       <DemoLabel name="AboutCoreValues" />
@@ -829,9 +829,9 @@ export default function DemoPage() {
         ))}
       </CardSection>
 
-      {/* 23 – ProcessTimeline */}
-      <DemoLabel name="ProcessTimeline" />
-      <ProcessTimeline heading="What We Manage" phases={PROCESS_TIMELINE_PHASES} />
+      {/* 23 – Timeline */}
+      <DemoLabel name="Timeline" />
+      <Timeline heading="What We Manage" phases={PROCESS_TIMELINE_PHASES} />
 
       {/* 24 – CaseStudies */}
       <DemoLabel name="CaseStudies" />
@@ -938,9 +938,9 @@ export default function DemoPage() {
       <DemoLabel name="FAQAccordion" />
       <FAQAccordion />
 
-      {/* 35 – ContactCinematicCTA */}
-      <DemoLabel name="ContactCinematicCTA" />
-      <ContactCinematicCTA
+      {/* 35 – ContactUs */}
+      <DemoLabel name="ContactUs" />
+      <ContactUs
         backgroundImage={CONTACT_CINEMATIC_PROPS.backgroundImage}
         badge={CONTACT_CINEMATIC_PROPS.badge}
         description={CONTACT_CINEMATIC_PROPS.description}
@@ -951,9 +951,9 @@ export default function DemoPage() {
         secondaryCta={CONTACT_CINEMATIC_PROPS.secondaryCta}
       />
 
-      {/* 36 – ContactUs */}
-      <DemoLabel name="ContactUs" />
-      <ContactUs />
+      {/* 36 – ContactUsForm */}
+      <DemoLabel name="ContactUsForm" />
+      <ContactUsForm />
 
       {/* 37 – BlogCategories */}
       <DemoLabel name="BlogCategories" />

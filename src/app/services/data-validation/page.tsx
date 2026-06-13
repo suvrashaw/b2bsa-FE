@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -32,7 +32,7 @@ const Page = () => {
   return (
     <ServiceDetail
       caseStudies={DATA_VALIDATION_CASE_STUDIES}
-      closingSections={<ContactCinematicCTA {...contactCta} />}
+      closingSections={<ContactUs {...contactCta} />}
       deliverables={DATA_VALIDATION_DELIVERABLES}
       deliverablesSectionType="carousel"
       faq={DATA_VALIDATION_FAQ}

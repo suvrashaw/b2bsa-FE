@@ -7,19 +7,19 @@ import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Heading } from "@/components/ui/Heading";
 import { cn } from "@/lib";
 
-interface ProofBarProps {
+interface StatItem {
+  key: string;
+  label: string;
+  value: string;
+}
+
+interface StatsProps {
   className?: string;
   description?: ReactNode;
   heading?: string;
   imageAlt?: string;
   imageUrl: string;
   stats: string[];
-}
-
-interface StatItem {
-  key: string;
-  label: string;
-  value: string;
 }
 
 const MARQUEE_SPEED = 5;
@@ -117,7 +117,7 @@ export const ProofBar = ({
   imageAlt = "Statistics visual",
   imageUrl,
   stats,
-}: ProofBarProps) => {
+}: StatsProps) => {
   const flatItems = useMemo(
     () =>
       stats.flatMap((stat, index) =>

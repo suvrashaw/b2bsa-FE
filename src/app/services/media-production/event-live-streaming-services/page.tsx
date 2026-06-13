@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { FAQCard } from "@/components/items/FAQCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
@@ -56,7 +56,7 @@ const Page = () => {
             ))}
           </CardSection>
           <RelatedServices services={liveStreamingServicesRelatedServices} />
-          <ContactCinematicCTA {...liveStreamingContactCta} />
+          <ContactUs {...liveStreamingContactCta} />
         </>
       }
       deliverables={LIVE_STREAMING_DELIVERABLES}

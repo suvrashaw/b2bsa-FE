@@ -24,7 +24,7 @@ const WORD_EXIT = { opacity: 0, y: -14 };
 const WORD_INITIAL = { opacity: 0, y: 14 };
 const WORD_TRANSITION = { duration: 0.38 } as const;
 
-export interface WhoWeAreProps {
+export interface HomeStatsProps {
   attribution?: WhoWeAreContent["attribution"];
   content?: WhoWeAreContent;
   description?: ReactNode | string;
@@ -56,7 +56,7 @@ export const WhoWeAre = ({
   quote = content.quote,
   stats,
   title,
-}: WhoWeAreProps = {}) => {
+}: HomeStatsProps = {}) => {
   const resolvedHeading = title ?? heading ?? content.heading;
   const resolvedStats: WhoWeAreStat[] = (items ?? stats ?? content.stats).map((stat, index) => ({
     ...stat,

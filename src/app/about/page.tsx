@@ -5,13 +5,13 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { Timeline } from "@/components/sections/Timeline";
 import {
   ABOUT_CORE_VALUES,
   ABOUT_FOUNDER_STORY,
@@ -69,7 +69,7 @@ const Page = () => {
           />
         </div>
       </section>
-      <ProcessTimeline
+      <Timeline
         description={ABOUT_ORIGIN_TIMELINE.description}
         heading={ABOUT_ORIGIN_TIMELINE.heading}
         phases={ABOUT_ORIGIN_TIMELINE.phases}
@@ -111,7 +111,7 @@ const Page = () => {
       </section>
       <Culture data={ABOUT_VALUES} />
       <GlobalPresence data={ABOUT_PRESENCE} />
-      <ContactUs {...ABOUT_INQUIRY} />
+      <ContactUsForm {...ABOUT_INQUIRY} />
       <Footer />
     </main>
   );

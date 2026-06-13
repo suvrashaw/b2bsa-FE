@@ -1,6 +1,6 @@
 "use client";
 
-import { type RelatedService, RelatedServicesCard } from "@/components/items/RelatedServicesCard";
+import { type RelatedService, ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { CardSection } from "@/components/sections/CardSection";
 
 interface RelatedServicesProps {
@@ -19,7 +19,7 @@ export const RelatedServices = ({
   return (
     <CardSection className={className} cols={3} heading={title} layout="grid">
       {services.map((service, index) => (
-        <RelatedServicesCard index={index} key={service.href} service={service} />
+        <ServicesLinkCard index={index} key={service.href} service={service} />
       ))}
     </CardSection>
   );

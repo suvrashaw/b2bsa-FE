@@ -4,9 +4,9 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
+import { Timeline } from "@/components/sections/Timeline";
 import { CONTACT_FORM, CONTACT_NEXT_STEPS, CONTACT_PAGE } from "@/content/contact";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
@@ -26,9 +26,9 @@ const Page = () => {
       <Header darkBackground />
       <CinematicSequence />
       <ClientLogos />
-      <ContactUs {...CONTACT_FORM} />
-      <ProcessTimeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
-      <ContactCinematicCTA
+      <ContactUsForm {...CONTACT_FORM} />
+      <Timeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
+      <ContactUs
         backgroundImage={CINEMATIC_BG}
         description="Tell us what you are trying to achieve. We will define the right path."
         headingLines={CINEMATIC_HEADING}

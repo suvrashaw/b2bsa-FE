@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { ServiceHub } from "@/components/templates/ServiceHub";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -30,7 +30,7 @@ const Page = () => {
   return (
     <ServiceHub
       caseStudies={PERF_CASE_STUDIES}
-      closingSections={<ContactCinematicCTA {...performanceMarketingContactCta} />}
+      closingSections={<ContactUs {...performanceMarketingContactCta} />}
       faq={PERF_FAQ}
       hero={PERF_HERO}
       page={PERF_PAGE}

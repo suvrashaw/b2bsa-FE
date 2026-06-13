@@ -6,12 +6,12 @@ import type { CaseStudyDetail } from "@/content/IndividualCaseStudy";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
 import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import { ProofBar } from "@/components/sections/ProofBar";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { Stats } from "@/components/sections/Stats";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Heading } from "@/components/ui/Heading";
 
@@ -111,8 +111,8 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         </div>
       </section>
 
-      {/* Outcome — ProofBar with heading and description */}
-      <ProofBar
+      {/* Outcome — Stats with heading and description */}
+      <Stats
         className="[&_p]:text-lg"
         description={study.outcome}
         heading="Outcome"
@@ -120,7 +120,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         stats={study.outcomeStats}
       />
 
-      <ContactCinematicCTA
+      <ContactUs
         backgroundImage={cinematicBg}
         description="Tell us about your next event program and we'll outline an approach."
         headingLines={CINEMATIC_HEADING}
@@ -128,7 +128,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         secondaryCta={CINEMATIC_SECONDARY}
       />
 
-      <ContactUs />
+      <ContactUsForm />
 
       <Footer />
     </main>

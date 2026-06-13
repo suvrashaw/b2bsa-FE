@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { FAQCard } from "@/components/items/FAQCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { CINEMATIC_CTA_SHARED } from "@/content/cinematic-cta-shared";
@@ -52,7 +52,7 @@ const Page = () => {
             ))}
           </CardSection>
           <RelatedServices services={eventVideoProductionRelatedServices} />
-          <ContactCinematicCTA {...eventVideoContactCta} />
+          <ContactUs {...eventVideoContactCta} />
         </>
       }
       creativePricing={EVENT_VIDEO_CREATIVE_PRICING}

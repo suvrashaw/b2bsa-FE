@@ -5,10 +5,10 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedServices } from "@/components/sections/RelatedServices";
+import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -62,7 +62,7 @@ const Page = () => {
           </CardSection>
           <FAQAccordion {...BOOTH_HOSTESS_FAQ} />
           <RelatedServices services={BOOTH_HOSTESS_RELATED_SERVICES} />
-          <ContactCinematicCTA {...BOOTH_HOSTESS_CONTACT_CTA} />
+          <ContactUs {...BOOTH_HOSTESS_CONTACT_CTA} />
         </>
       }
       deliverables={BOOTH_HOSTESS_DELIVERABLES}
@@ -73,7 +73,7 @@ const Page = () => {
       preProcessSections={
         <>
           <ContactModalTrigger label="Request A Quote" />
-          <ProcessTimeline
+          <Timeline
             phases={BOOTH_HOSTESS_CAPABILITIES.phases}
             showPhaseNumbers={false}
             title={BOOTH_HOSTESS_CAPABILITIES.title}

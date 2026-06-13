@@ -5,10 +5,10 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedServices } from "@/components/sections/RelatedServices";
+import { Timeline } from "@/components/sections/Timeline";
 import { ServiceDetail } from "@/components/templates/ServiceDetail";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -63,7 +63,7 @@ const Page = () => {
           </CardSection>
           <FAQAccordion {...EVENT_PHYSICAL_VIDEO_FAQ} />
           <RelatedServices services={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES} />
-          <ContactCinematicCTA {...EVENT_PHYSICAL_VIDEO_CONTACT_CTA} />
+          <ContactUs {...EVENT_PHYSICAL_VIDEO_CONTACT_CTA} />
         </>
       }
       deliverables={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
@@ -74,7 +74,7 @@ const Page = () => {
       preProcessSections={
         <>
           <ContactModalTrigger label="Plan Your On-Site Video Shoot" />
-          <ProcessTimeline
+          <Timeline
             phases={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.phases}
             title={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.title}
           />

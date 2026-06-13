@@ -6,7 +6,7 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactCinematicCTA } from "@/components/sections/ContactCinematicCTA";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -97,7 +97,7 @@ const Page = () => {
             ))}
           </CardSection>
           <FAQAccordion {...BOOTH_RENTAL_FAQ} />
-          <ContactCinematicCTA {...BOOTH_RENTAL_CONTACT_CTA} />
+          <ContactUs {...BOOTH_RENTAL_CONTACT_CTA} />
         </>
       }
       faq={BOOTH_RENTAL_FAQ}

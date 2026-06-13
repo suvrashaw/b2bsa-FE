@@ -14,12 +14,12 @@ const RELATEDSERVICES_INITIAL = { opacity: 0, scale: 0.95 };
 const RELATEDSERVICES_WHILE_IN_VIEW = { opacity: 1, scale: 1 };
 const RELATEDSERVICES_VIEWPORT = { once: true };
 
-interface RelatedServicesCardProps {
+interface ServicesLinkCardProps {
   index: number;
   service: RelatedService;
 }
 
-export const RelatedServicesCard = ({ index, service }: RelatedServicesCardProps) => {
+export const RelatedServicesCard = ({ index, service }: ServicesLinkCardProps) => {
   const transition = useMemo(() => ({ delay: index * 0.1, duration: 0.4 }), [index]);
 
   return (

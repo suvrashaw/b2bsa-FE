@@ -4,7 +4,7 @@ import { FAQCard } from "@/components/items/FAQCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardSection } from "@/components/sections/CardSection";
-import { ContactUs } from "@/components/sections/ContactUs";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import { TERMS_CONTACT, TERMS_FAQ, TERMS_HERO } from "@/content/terms";
 import { buildPageMetadata } from "@/lib/seo";
@@ -32,7 +32,7 @@ const Page = () => {
           <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
         ))}
       </CardSection>
-      <ContactUs {...TERMS_CONTACT} />
+      <ContactUsForm {...TERMS_CONTACT} />
       <Footer />
     </main>
   );
