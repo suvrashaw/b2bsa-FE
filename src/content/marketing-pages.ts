@@ -39,7 +39,7 @@ import { PERF_PAGE } from "./services/performance-marketing";
 import { SQL_PAGE } from "./services/sales-qualified-lead-generation";
 import { TRADE_SHOW_CALENDAR_PAGE } from "./trade-show-calendar";
 
-export const marketingPages = [
+const marketingPages = [
   HOME_PAGE,
   ABOUT_PAGE,
   BLOG_PAGE,

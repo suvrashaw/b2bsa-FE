@@ -20,7 +20,7 @@ const MOBILE_GROUP_TRANSITION = { duration: 0.25, ease: [0.16, 1, 0.3, 1] as con
 
 type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
 
-export const MobileSubGroupLinks = ({
+const MobileSubGroupLinks = ({
   links,
   onClose,
 }: {
@@ -41,7 +41,7 @@ export const MobileSubGroupLinks = ({
   </>
 );
 
-export const MobileNestedServiceGroup = ({
+const MobileNestedServiceGroup = ({
   onClose,
   subGroup,
 }: {
@@ -56,7 +56,7 @@ export const MobileNestedServiceGroup = ({
   </div>
 );
 
-export const MobileServiceGroup = ({
+const MobileServiceGroup = ({
   group,
   isOpen,
   onClose,

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { type NavLink, type ServiceNavGroup } from "@/content/navigation";
 import { cn } from "@/lib";
 
-export const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
+const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
   return (
     <Link
       className="block min-w-0 text-xs leading-snug font-semibold break-words text-gray-500 transition-colors hover:text-gray-900"
