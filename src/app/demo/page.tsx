@@ -437,7 +437,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/booth-services/event-booth-rental", label: "Event Booth Rental" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Booth Builder" },
   ],
-  BlogsDirectory: [{ href: "/blogs", label: "Blogs" }],
   BoothWhyChooseUs: [
     { href: "/services/booth-services/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
@@ -454,7 +453,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions", label: "Service Hub" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
-  CaseStudiesDirectory: [{ href: "/case-studies", label: "Case Studies" }],
   CinematicSequence: [],
   ClientLogos: [
     { href: "/", label: "Home" },
@@ -538,18 +536,15 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/booth-services/booth-logistics-services", label: "Event Logistics" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
-  TradeShowCalendarDirectory: [{ href: "/trade-show-calendar", label: "Trade Show Cal." }],
 };
 
 const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
   AboutCoreValues: { items: [], ui: ["Heading"] },
   Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
   BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
-  BlogsDirectory: { items: ["BlogCardGrid"], ui: ["Pagination"] },
   BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
   CardsSection: { items: ["BasicCards"], ui: ["Heading"] },
   CaseStudies: { items: ["CaseStudyItem"], ui: ["Button", "Eyebrow", "Heading"] },
-  CaseStudiesDirectory: { items: ["CaseStudyCard"], ui: ["Heading", "Pagination"] },
   CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
@@ -573,10 +568,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   StickyScroll: { items: [], ui: ["Button", "ContactModal", "Eyebrow", "Heading"] },
   Testimonials: { items: ["TestimonialCarouselCard"], ui: ["Eyebrow", "Heading"] },
   Timeline: { items: [], ui: ["Heading"] },
-  TradeShowCalendarDirectory: {
-    items: ["TradeShowCard", "TradeShowListItem"],
-    ui: ["Button", "Pagination"],
-  },
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
@@ -654,18 +645,6 @@ const DemoLabel = ({ name }: { name: string }) => {
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 const DemoPage = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [caseStudiesPage, setCaseStudiesPage] = useState(1);
-
-  const filteredStudies =
-    activeFilter === "All"
-      ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((s) => s.serviceCategories.includes(activeFilter));
-  const handleCaseStudiesFilterChange = useCallback((filter: string) => {
-    setActiveFilter(filter);
-    setCaseStudiesPage(1);
-  }, []);
-
   return (
     <main className="min-h-screen bg-brand-gray">
       {/* Sticky demo banner */}
