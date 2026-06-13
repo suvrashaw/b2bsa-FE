@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
@@ -13,9 +12,9 @@ import {
   BLOG_CONTACT,
   BLOG_HERO,
   BLOG_PAGE,
-  BLOG_POSTS,
   BLOG_SERVICE_CAROUSEL,
 } from "@/content/blogs/content";
+import { BlogsSection } from "./BlogsSection";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
 export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
@@ -43,7 +42,7 @@ const Page = () => {
         ))}
       </Carousel>
       <Suspense>
-        <BlogsDirectory blogs={BLOG_POSTS.blogs} />
+        <BlogsSection />
       </Suspense>
       <ContactUsForm {...BLOG_CONTACT} />
       <Footer />

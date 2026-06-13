@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -27,28 +27,28 @@ export interface SectionHeaderProps
 }
 
 type BlockProps = {
-  Tag: "h1" | "h2" | "h3" | "h4";
   className?: string;
   description?: string;
   heading: ReactNode;
   headingAction?: ReactNode;
   headingAlign: "center" | "left";
   resolvedLevel: "h1" | "h2" | "h3" | "h4";
-  style?: React.CSSProperties;
   rest: HTMLAttributes<HTMLHeadingElement>;
+  style?: CSSProperties;
+  Tag: "h1" | "h2" | "h3" | "h4";
 };
 
-function BlockLayout({
-  Tag,
+const BlockLayout = ({
   className,
   description,
   heading,
   headingAction,
   headingAlign,
   resolvedLevel,
-  style,
   rest,
-}: BlockProps) {
+  style,
+  Tag,
+}: BlockProps) => {
   const isCenter = headingAlign === "center";
 
   const headingEl =
@@ -89,7 +89,7 @@ function BlockLayout({
       )}
     </>
   );
-}
+};
 
 export const SectionHeader = ({
   as: Tag = "h2",
@@ -110,15 +110,15 @@ export const SectionHeader = ({
     if (!heading && !description) return null;
     return (
       <BlockLayout
-        Tag={Tag}
         className={className}
         description={description}
         heading={heading}
         headingAction={headingAction}
         headingAlign={headingAlign}
         resolvedLevel={resolvedLevel}
-        style={style}
         rest={rest}
+        style={style}
+        Tag={Tag}
       />
     );
   }

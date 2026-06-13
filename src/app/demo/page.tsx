@@ -2,7 +2,6 @@
 
 import { Pencil, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
-import { Suspense, useCallback, useState } from "react";
 
 import type { SharedBlogPost } from "@/content/blogs/data";
 
@@ -17,10 +16,8 @@ import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { Blogs } from "@/components/sections/Blogs";
-import { BlogsDirectory } from "@/components/sections/BlogsDirectory";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CaseStudiesDirectory } from "@/components/sections/CaseStudiesDirectory";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
@@ -39,21 +36,12 @@ import { Stats } from "@/components/sections/Stats";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Timeline } from "@/components/sections/Timeline";
-import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
-import {
-  CASE_STUDIES_PAGE_CONTENT,
-  CASE_STUDIES_PAGE_STUDIES,
-} from "@/content/case-studies/content";
 import { getDefaultEvents } from "@/content/events-utils";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
-import {
-  TRADE_SHOW_CALENDAR_EVENTS,
-  TRADE_SHOW_CALENDAR_HERO,
-} from "@/content/trade-show-calendar/content";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
@@ -432,12 +420,6 @@ const SPOTLIGHT_DEMO_PROPS = {
 // ─── BlogsCarousel ──────────────────────────────────────────────────────
 
 const DEMO_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 4) as SharedBlogPost[];
-
-// ─── CaseStudiesDirectory ────────────────────────────────────────────────────
-
-const GRID_FILTERS = CASE_STUDIES_PAGE_CONTENT.gridFilters;
-const GRID_EMPTY_TITLE = "No case studies found";
-const GRID_EMPTY_DESC = "Try a different filter to find relevant case studies.";
 
 // ─── DemoLabel ───────────────────────────────────────────────────────────────
 
@@ -825,19 +807,6 @@ const DemoPage = () => {
       <DemoLabel name="CaseStudies" />
       <CaseStudies />
 
-      {/* 25 – CaseStudiesDirectory */}
-      <DemoLabel name="CaseStudiesDirectory" />
-      <CaseStudiesDirectory
-        activeFilter={activeFilter}
-        emptyStateDescription={GRID_EMPTY_DESC}
-        emptyStateTitle={GRID_EMPTY_TITLE}
-        filters={GRID_FILTERS}
-        onFilterChange={handleCaseStudiesFilterChange}
-        onPageChange={setCaseStudiesPage}
-        page={caseStudiesPage}
-        studies={filteredStudies}
-      />
-
       {/* 26 – Testimonials */}
       <DemoLabel name="Testimonials" />
       <Testimonials />
@@ -860,18 +829,6 @@ const DemoPage = () => {
           />
         ))}
       </CardsGrid>
-
-      {/* 28 – TradeShowCalendarDirectory */}
-      <DemoLabel name="TradeShowCalendarDirectory" />
-      <Suspense>
-        <TradeShowCalendarDirectory
-          description={TRADE_SHOW_CALENDAR_HERO.description}
-          events={TRADE_SHOW_CALENDAR_EVENTS}
-          eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
-          searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
-          title={TRADE_SHOW_CALENDAR_HERO.title}
-        />
-      </Suspense>
 
       {/* 29 – GlobalPresence */}
       <DemoLabel name="GlobalPresence" />
@@ -947,12 +904,6 @@ const DemoPage = () => {
       {/* 36 – ContactUsForm */}
       <DemoLabel name="ContactUsForm" />
       <ContactUsForm />
-
-      {/* 38 – BlogsDirectory */}
-      <DemoLabel name="BlogsDirectory" />
-      <Suspense>
-        <BlogsDirectory blogs={DEMO_BLOG_POSTS} />
-      </Suspense>
 
       {/* 39 – LinkedInFeed */}
       <DemoLabel name="LinkedInFeed" />

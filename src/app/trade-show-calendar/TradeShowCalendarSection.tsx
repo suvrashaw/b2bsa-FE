@@ -4,13 +4,16 @@ import { Grid2X2, List, RotateCcw, Search } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 
-import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
-
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { Pagination } from "@/components/ui/Pagination";
+import {
+  TRADE_SHOW_CALENDAR_EVENTS,
+  TRADE_SHOW_CALENDAR_HERO,
+  type CalendarTradeShow,
+} from "@/content/trade-show-calendar/content";
 import { cn, siteUrl } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
@@ -228,13 +231,10 @@ const NumberFilter = ({
   </div>
 );
 
-export const TradeShowCalendarSection = ({
-  events,
-  searchPlaceholder,
-}: {
-  events: CalendarTradeShow[];
-  searchPlaceholder: string;
-}) => {
+export const TradeShowCalendarSection = () => {
+  const events = TRADE_SHOW_CALENDAR_EVENTS;
+  const searchPlaceholder = TRADE_SHOW_CALENDAR_HERO.searchPlaceholder;
+
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -655,7 +655,6 @@ export const TradeShowCalendarSection = ({
         </div>
       </section>
 
-      {/* JSON-LD Schemas for Visible Events */}
       {paginatedEvents.map((show) => {
         return (
           <EventJsonLd

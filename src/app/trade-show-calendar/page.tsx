@@ -5,13 +5,12 @@ import { Suspense } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
-import { TradeShowCalendarDirectory } from "@/components/sections/TradeShowCalendarDirectory";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
-  TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/trade-show-calendar/content";
+import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
   "/images/blog/thumbnails/trade-show-booth-trends-2026.avif",
@@ -29,13 +28,7 @@ const Page = () => {
         title={TRADE_SHOW_CALENDAR_HERO.title}
       />
       <Suspense>
-        <TradeShowCalendarDirectory
-          description={TRADE_SHOW_CALENDAR_HERO.description}
-          events={TRADE_SHOW_CALENDAR_EVENTS}
-          eyebrow={TRADE_SHOW_CALENDAR_HERO.eyebrow}
-          searchPlaceholder={TRADE_SHOW_CALENDAR_HERO.searchPlaceholder}
-          title={TRADE_SHOW_CALENDAR_HERO.title}
-        />
+        <TradeShowCalendarSection />
       </Suspense>
       <Footer />
     </main>
