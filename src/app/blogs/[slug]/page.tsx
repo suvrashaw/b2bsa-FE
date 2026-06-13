@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
 import { BlogPage } from "@/components/templates/BlogPage";
+import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
 
 type BlogPostPageProps = {
@@ -70,7 +71,18 @@ const Page = async ({ params }: BlogPostPageProps) => {
     notFound();
   }
 
-  return <BlogPage post={post} />;
+  return (
+    <>
+      <ArticleJsonLd
+        datePublished={post.date || new Date().toISOString()}
+        description={post.excerpt || post.title}
+        headline={post.title}
+        images={[post.image]}
+        url={`https://b2bsalesarrow.com/blogs/${post.id}`}
+      />
+      <BlogPage post={post} />
+    </>
+  );
 };
 
 export default Page;

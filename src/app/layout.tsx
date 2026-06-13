@@ -51,6 +51,7 @@ const RootLayout = ({
   return (
     <html className={`${inter.variable} h-full antialiased`} lang="en" suppressHydrationWarning>
       <head>
+        <link crossOrigin="anonymous" href="https://cdn.jsdelivr.net" rel="preconnect" />
         <PartytownScripts />
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>

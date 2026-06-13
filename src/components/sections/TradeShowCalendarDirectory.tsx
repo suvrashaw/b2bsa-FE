@@ -7,6 +7,7 @@ import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useS
 import type { CalendarTradeShow } from "@/content/trade-show-calendar";
 
 import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
+import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { Button } from "@/components/ui/Button";
 import { Pagination } from "@/components/ui/Pagination";
 import { cn } from "@/lib";
@@ -668,6 +669,23 @@ export const TradeShowCalendarDirectory = ({
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Schemas for Visible Events */}
+      {paginatedEvents.map((show) => {
+        return (
+          <EventJsonLd
+            description={show.summary || `${show.name} Trade Show`}
+            endDate={show.endDate}
+            key={show.id}
+            locationCity={show.city || ""}
+            locationCountry={show.country || "USA"}
+            locationName={show.venue || show.city || ""}
+            name={show.name}
+            startDate={show.startDate}
+            url={show.sourceUrl || `https://b2bsalesarrow.com/trade-show-calendar`}
+          />
+        );
+      })}
     </>
   );
 };
