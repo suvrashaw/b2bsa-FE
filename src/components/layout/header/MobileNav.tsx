@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { useCallback } from "react";
+import { memo, useCallback } from "react";
 
 import {
   type NavLink,
@@ -126,7 +126,7 @@ const MobileServiceGroup = ({
   );
 };
 
-export const MobileNavItem = ({
+export const MobileNavItem = memo(({
   isOpen,
   link,
   onClose,
@@ -195,4 +195,4 @@ export const MobileNavItem = ({
       </AnimatePresence>
     </div>
   );
-};
+});

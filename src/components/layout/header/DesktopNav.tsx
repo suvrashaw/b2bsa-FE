@@ -1,11 +1,11 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { useCallback } from "react";
+import { memo, useCallback } from "react";
 
 import { type topNavigation } from "@/content/navigation";
 import { cn } from "@/lib";
 
-export const DesktopNavLink = ({
+export const DesktopNavLink = memo(({
   activeDropdown,
   lightText,
   link,
@@ -59,4 +59,4 @@ export const DesktopNavLink = ({
       )}
     </div>
   );
-};
+});

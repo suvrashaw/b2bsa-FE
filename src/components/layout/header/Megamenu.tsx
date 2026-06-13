@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { memo } from "react";
 
 import { type NavLink, type ServiceNavGroup } from "@/content/navigation";
 import { cn } from "@/lib";
@@ -15,7 +16,7 @@ const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }
   );
 };
 
-export const MegamenuServiceGroup = ({
+export const MegamenuServiceGroup = memo(({
   className,
   group,
   noWrapTitle = false,
@@ -67,4 +68,4 @@ export const MegamenuServiceGroup = ({
       )}
     </div>
   );
-};
+});

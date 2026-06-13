@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Globe } from "lucide-react";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 
 import { cn } from "@/lib";
 
@@ -18,7 +18,7 @@ const LANGUAGES = [
   { code: "ZH", name: "中文" },
 ] as const;
 
-export const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
+export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsOpen(true), []);
@@ -67,4 +67,4 @@ export const LanguageSelector = ({ lightText }: { lightText: boolean }) => {
       </AnimatePresence>
     </div>
   );
-};
+});
