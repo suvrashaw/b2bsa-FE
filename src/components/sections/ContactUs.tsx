@@ -17,7 +17,7 @@ export interface ContactUsProps {
     src: string;
   };
   badge?: string;
-  description: string;
+  description?: string;
   headingLines?: string[];
   primaryCta: {
     href: string;
@@ -231,16 +231,18 @@ export const ContactUs = ({
             </motion.div>
           )}
 
-          <motion.p
-            className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-xl"
-            custom={0.16}
-            initial="hidden"
-            variants={ctaRevealVariants}
-            viewport={ctaViewport}
-            whileInView="visible"
-          >
-            {description}
-          </motion.p>
+          {description && (
+            <motion.p
+              className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-xl"
+              custom={0.16}
+              initial="hidden"
+              variants={ctaRevealVariants}
+              viewport={ctaViewport}
+              whileInView="visible"
+            >
+              {description}
+            </motion.p>
+          )}
 
           <motion.div
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"

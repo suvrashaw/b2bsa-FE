@@ -12,8 +12,10 @@ import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { FAQCard } from "@/components/items/FAQCard";
 import { PricingCard } from "@/components/items/PricingCard";
+import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
@@ -21,8 +23,6 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { Hero } from "@/components/sections/Hero";
-import { CardsGrid } from "@/components/sections/CardsGrid";
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
@@ -80,6 +80,7 @@ export interface ServicePageProps {
   };
 
   relatedServices?: { href: string; title: string }[];
+  relatedServicesHeading?: ReactNode;
 
   secondaryServices?: ServicesStackProps;
   secondaryServicesSectionType?: "carousel" | "grid";
@@ -149,6 +150,7 @@ export const ServicePage = ({
   process,
   proofBar,
   relatedServices,
+  relatedServicesHeading,
   secondaryServices,
   secondaryServicesSectionType = "grid",
   services,
@@ -240,7 +242,7 @@ export const ServicePage = ({
       )}
 
       {relatedServices && relatedServices.length > 0 && (
-        <CardsGrid cols={3} heading="Explore Related Solutions">
+        <CardsGrid cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"}>
           {relatedServices.map((service, index) => (
             <ServicesLinkCard index={index} key={service.href} service={service} />
           ))}

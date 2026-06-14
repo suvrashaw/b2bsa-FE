@@ -4,7 +4,7 @@ import { EventsCard } from "@/components/items/EventsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
-import { ContactUsForm } from "@/components/sections/ContactUsForm";
+import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -25,7 +25,9 @@ import {
   ABOUT_SIGNATURE_SERVICES_STACK,
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
+  ABOUT_VISION_SPOTLIGHT,
 } from "@/content/about/content";
+import CLIENT_LOGOS from "@/content/home/client-logos.json";
 import { normalizeEvent } from "@/content/events-utils";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildLocalBusinessJsonLd } from "@/lib";
@@ -35,16 +37,6 @@ export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
 const ABOUT_IMAGES = ["/images/about/culture/culture-5.avif"];
 const ABOUT_PRIMARY_CTA = { href: ABOUT_HERO.primaryCtaHref, label: ABOUT_HERO.primaryCtaLabel };
-const ABOUT_SECONDARY_CTA = {
-  href: ABOUT_HERO.secondaryCtaHref,
-  label: ABOUT_HERO.secondaryCtaLabel,
-};
-const ABOUT_VISION_SPOTLIGHT = {
-  align: "right" as const,
-  description: ABOUT_VISION_MISSION.vision,
-  titleLine1: "Our",
-  titleLine2: "Vision",
-};
 
 const Page = () => {
   return (
@@ -55,18 +47,17 @@ const Page = () => {
         description={ABOUT_HERO.description}
         images={ABOUT_IMAGES}
         primaryCta={ABOUT_PRIMARY_CTA}
-        secondaryCta={ABOUT_SECONDARY_CTA}
-        title={"We Are the Growth Partner\nYour Enterprise Deserves"}
+        title={ABOUT_HERO.title}
       />
       <Spotlight
         align="left"
         description=""
         descriptionItems={ABOUT_VISION_MISSION.missionItems}
-        label="Vision & Mission"
+        label={ABOUT_VISION_MISSION.sectionLabel}
         secondarySpotlight={ABOUT_VISION_SPOTLIGHT}
         showCta={false}
-        titleLine1="Our"
-        titleLine2="Mission"
+        titleLine1={ABOUT_VISION_MISSION.missionTitleLine1}
+        titleLine2={ABOUT_VISION_MISSION.missionTitleLine2}
       />
       <Timeline
         description={ABOUT_ORIGIN_TIMELINE.description}
@@ -86,7 +77,6 @@ const Page = () => {
       >
         {ABOUT_RECENT_EVENTS.events.map((event, i) => (
           <EventsCard
-            badgeLabel={ABOUT_RECENT_EVENTS.badgeLabel}
             ctaLabel={ABOUT_RECENT_EVENTS.ctaLabel ?? "View Event"}
             event={normalizeEvent(event, i)}
             flipStyle="diagonalWipe"
@@ -101,17 +91,22 @@ const Page = () => {
         description={ABOUT_FOUNDER_STORY.story}
         id="founder"
         imageAlt={ABOUT_FOUNDER_STORY.image.alt}
-        imageUrl="/images/about/leadership/paras-sir-02.avif"
-        label="FOUNDER STORY"
+        imageUrl={ABOUT_FOUNDER_STORY.imageUrl}
+        label={ABOUT_FOUNDER_STORY.sectionLabel}
         sectionClassName="scroll-mt-28"
         showCta={false}
-        titleLine1="Paras"
-        titleLine2="Lohani"
+        titleLine1={ABOUT_FOUNDER_STORY.nameLine1}
+        titleLine2={ABOUT_FOUNDER_STORY.nameLine2}
       />
       <Culture data={ABOUT_VALUES} />
       {}
       <GlobalPresence data={ABOUT_PRESENCE} />
-      <ContactUsForm {...ABOUT_INQUIRY} />
+      <ContactUs
+        headingLines={[ABOUT_INQUIRY.heading]}
+        primaryCta={{ href: "/contact", label: ABOUT_INQUIRY.form.ctaLabel }}
+        proofLabel={ABOUT_INQUIRY.proofLabel}
+        proofLogos={CLIENT_LOGOS.slice(0, 5)}
+      />
       <Footer />
     </main>
   );

@@ -12,7 +12,7 @@ interface CaseStudyCardProps {
   colSpan: string;
   ctaLabel?: string;
   description: string;
-  format: "gallery" | "text" | "video";
+  format?: "gallery" | "text" | "video";
   image: string;
   metric: string;
   metricLabel: string;

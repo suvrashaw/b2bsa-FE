@@ -1,24 +1,35 @@
 {
-  "eyebrow": "Why B2B Sales Arrow",
-  "heading": "Professional Event Live Streaming for Modern Corporate Events",
-  "reasons": [
+  "heading": "Why Choose B2B Sales Arrow for Event Live Streaming Services",
+  "items": [
     {
-      "description": "Today's events are no longer limited by venue capacity or geography. With professional event live streaming services, businesses can connect with remote audiences, increase event participation, and maximize engagement across multiple digital platforms.",
-      "id": "global-reach",
-      "image": "/images/home/why-choose-us/global_reach.avif",
-      "title": "Break Geographic Limits"
-    },
-    {
-      "description": "We deliver end-to-end live streaming solutions for corporate conferences, trade shows, product launches, webinars, networking sessions, and executive events, managing every aspect of event streaming setup, camera operations, audio, branded visuals, platform integration, and live technical support.",
-      "id": "end-to-end",
+      "description": "We manage planning, setup, production, streaming, and post-event technical support.",
       "image": "/images/services/media-production-1.avif",
-      "title": "End-to-End Production Management"
+      "title": "End-to-End Live Streaming Support"
     },
     {
-      "description": "Whether you are hosting an in-person, hybrid, or fully virtual event, our corporate live streaming services ensure a smooth viewing experience with broadcast-level quality and reliable event delivery.",
-      "id": "broadcast-quality",
+      "description": "Our team understands the fast-paced requirements of enterprise conferences, exhibitions, and executive events.",
+      "image": "/images/events/servicenow_2026.avif",
+      "title": "Corporate Event Expertise"
+    },
+    {
+      "description": "We deliver professional-grade event streaming with high-quality visuals, stable connectivity, and crystal-clear audio.",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Broadcast-Quality Production"
+    },
+    {
+      "description": "We support live streaming production across international trade shows and corporate events worldwide.",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Global Event Experience"
+    },
+    {
+      "description": "From backup streaming systems to live troubleshooting, we ensure uninterrupted event delivery.",
       "image": "/images/home/why-choose-us/technology_led_delivery.avif",
-      "title": "Any Format. Broadcast Quality."
+      "title": "Reliable Technical Execution"
+    },
+    {
+      "description": "Every event is different, and we tailor our event live streaming services to match your audience, objectives, and platform requirements.",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "Customized Streaming Solutions"
     }
   ]
 }

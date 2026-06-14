@@ -7,6 +7,7 @@ import FOUNDERSTORY_DATA from "./founder-story.json";
 import INQUIRY_DATA from "./inquiry.json";
 import PAGE_DATA from "./page.json";
 import VALUES_DATA from "./values.json";
+import VISION_MISSION_DATA from "./vision-mission.json";
 
 const ABOUT_EVENT_IDS = new Set([
   "adobe-summit-2026",
@@ -28,6 +29,13 @@ export const ABOUT_INQUIRY = {
 };
 
 export const ABOUT_PAGE = PAGE_DATA as MarketingPageDefinition;
+
+export const ABOUT_VISION_SPOTLIGHT = {
+  align: VISION_MISSION_DATA.visionAlign as "right" | "left",
+  description: VISION_MISSION_DATA.vision,
+  titleLine1: VISION_MISSION_DATA.visionTitleLine1,
+  titleLine2: VISION_MISSION_DATA.visionTitleLine2,
+};
 
 export { default as ABOUT_CORE_VALUES } from "./core-values.json";
 export const ABOUT_RECENT_EVENTS = {

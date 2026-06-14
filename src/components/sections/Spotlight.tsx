@@ -160,7 +160,7 @@ const SpotlightTextBlock = ({
         </div>
       ) : (
         <p
-          className="mt-6 max-w-[580px] text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+          className="mt-6 max-w-[580px] text-sm leading-relaxed whitespace-pre-line transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
           style={descStyle}
         >
           {description}

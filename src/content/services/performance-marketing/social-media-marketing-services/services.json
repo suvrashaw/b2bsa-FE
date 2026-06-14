@@ -1,0 +1,54 @@
+{
+  "ctaLabel": "Let's Connect",
+  "heading": "What's Included in Our Social Media Marketing Services",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "Build platform-specific social media strategies aligned with brand goals, audience targeting, and business objectives.",
+      "icon": "Target",
+      "id": "social-media-strategy-development",
+      "image": "/images/services/performance-marketing.avif",
+      "title": "Social Media Strategy Development"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Create engaging social media content including graphics, videos, carousels, thought leadership posts, and campaign creatives.",
+      "icon": "Palette",
+      "id": "content-creation-design",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Content Creation & Design"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Strengthen B2B brand visibility and professional engagement through strategic LinkedIn marketing campaigns.",
+      "icon": "Briefcase",
+      "id": "linkedin-marketing-services",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "LinkedIn Marketing Services"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Manage organic and paid social media campaigns designed to improve reach, engagement, and lead generation.",
+      "icon": "Megaphone",
+      "id": "social-media-campaign-management",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "Social Media Campaign Management"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Improve audience interaction through consistent communication, engagement management, and social listening support.",
+      "icon": "MessageSquare",
+      "id": "community-engagement-support",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Community Engagement Support"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Promote conferences, exhibitions, webinars, and corporate events with event-focused social media campaigns.",
+      "icon": "Calendar",
+      "id": "event-trade-show-promotion",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Event & Trade Show Promotion"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import type { HomeServiceItem } from "@/content/home/content";
 
@@ -10,11 +11,19 @@ import { Icon } from "@/components/ui/Icon";
 
 interface ServicesCardProps {
   ctaLabel: string;
+  onCtaClick?: () => void;
   service: HomeServiceItem;
   serviceLabel?: string;
+  showCta?: boolean;
 }
 
-export const ServicesCard = ({ ctaLabel, service, serviceLabel }: ServicesCardProps) => {
+export const ServicesCard = ({
+  ctaLabel,
+  onCtaClick,
+  service,
+  serviceLabel,
+  showCta = true,
+}: ServicesCardProps) => {
   return (
     <div className="group/card relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
       {/* Content Area */}
@@ -40,13 +49,30 @@ export const ServicesCard = ({ ctaLabel, service, serviceLabel }: ServicesCardPr
           </p>
         </div>
 
-        <Button
-          className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
-          variant="primary"
-        >
-          <span className="mr-4">{ctaLabel}</span>
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </Button>
+        {showCta && (
+          service.href ? (
+            <Button
+              asChild
+              className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
+              variant="primary"
+            >
+              <Link href={service.href}>
+                <span className="mr-4">{ctaLabel}</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
+              onClick={onCtaClick}
+              type="button"
+              variant="primary"
+            >
+              <span className="mr-4">{ctaLabel}</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          )
+        )}
       </div>
 
       {/* Image Area */}

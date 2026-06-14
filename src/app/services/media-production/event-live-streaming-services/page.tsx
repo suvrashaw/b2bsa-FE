@@ -1,20 +1,31 @@
 import type { Metadata } from "next";
 
-import { StickyScroll } from "@/components/sections/StickyScroll";
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
+import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
+  LIVE_STREAMING_AREAS_SERVED,
+  LIVE_STREAMING_BLOGS_SECTION,
+  LIVE_STREAMING_CAPABILITIES,
+  LIVE_STREAMING_CAPABILITIES_FEATURES,
   LIVE_STREAMING_CASE_STUDIES,
   LIVE_STREAMING_CONTACT_CTA,
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_FAQ,
   LIVE_STREAMING_HERO,
   LIVE_STREAMING_PAGE,
-  LIVE_STREAMING_PROOF_BAR,
   LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_SPOTLIGHT,
-  LIVE_STREAMING_WHY,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/live-streaming-services/content";
 
@@ -26,16 +37,51 @@ const Page = () => {
       caseStudies={LIVE_STREAMING_CASE_STUDIES}
       clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       contactUs={LIVE_STREAMING_CONTACT_CTA}
+      customSections={
+        <>
+          <CardsGrid cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading}>
+            {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardsGrid>
+
+          <Carousel
+            cols={4}
+            heading={LIVE_STREAMING_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            headingAlign="left"
+            id="blogs"
+          >
+            {RENTAL_BLOG_POSTS.map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
+        </>
+      }
       faq={LIVE_STREAMING_FAQ}
       hero={LIVE_STREAMING_HERO}
       page={LIVE_STREAMING_PAGE}
       parentPage={MEDIA_PAGE}
-      preProcessSections={<StickyScroll {...LIVE_STREAMING_WHY_CHOOSE_US} />}
-      proofBar={LIVE_STREAMING_PROOF_BAR}
+      preProcessSections={
+        <>
+          <FeatureCarouselSection
+            description={LIVE_STREAMING_CAPABILITIES.description}
+            features={LIVE_STREAMING_CAPABILITIES_FEATURES}
+            heading={LIVE_STREAMING_CAPABILITIES.heading}
+            showFeatureDescriptions={false}
+          />
+
+          <Spotlight {...LIVE_STREAMING_AREAS_SERVED} />
+        </>
+      }
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       services={LIVE_STREAMING_DELIVERABLES}
       spotlight={LIVE_STREAMING_SPOTLIGHT}
-      why={LIVE_STREAMING_WHY}
     />
   );
 };

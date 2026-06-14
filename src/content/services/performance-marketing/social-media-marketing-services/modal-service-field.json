@@ -1,0 +1,14 @@
+{
+  "label": "Select the service you need",
+  "options": [
+    {
+      "label": "Performance Marketing",
+      "value": "performance-marketing"
+    },
+    {
+      "label": "Social Media Marketing Services",
+      "value": "social-media-marketing-services"
+    }
+  ],
+  "placeholder": "Select a service..."
+}

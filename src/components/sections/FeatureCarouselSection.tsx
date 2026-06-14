@@ -14,7 +14,7 @@ import { cn } from "@/lib";
 // ─── FeatureCarousel ─────────────────────────────────────────────────────────
 
 export interface FeatureCarouselItem {
-  description: string;
+  description?: string;
   icon: string;
   id: string;
   image: string;
@@ -23,6 +23,7 @@ export interface FeatureCarouselItem {
 
 interface FeatureCarouselProps {
   features?: FeatureCarouselItem[];
+  mediaPosition?: "left" | "right";
 }
 
 const AUTO_PLAY_INTERVAL = 3000;
@@ -170,6 +171,7 @@ interface FeatureShowcaseCardProps {
   feature: FeatureCarouselItem;
   index: number;
   itemCount: number;
+  showFeatureDescription: boolean;
 }
 
 const FeatureShowcaseCard = ({
@@ -177,6 +179,7 @@ const FeatureShowcaseCard = ({
   feature,
   index,
   itemCount,
+  showFeatureDescription,
 }: FeatureShowcaseCardProps) => {
   const status = getCardStatus(currentIndex, index, itemCount);
   const isActive = status === "active";
@@ -195,19 +198,27 @@ const FeatureShowcaseCard = ({
         sizes="(max-width: 1024px) 80vw, 420px"
         src={feature.image}
       />
-      <div
-        className={cn(
-          "pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 transition-opacity duration-500",
-          isActive ? "opacity-100" : "opacity-0"
-        )}
-      >
-        <p className="text-base leading-relaxed text-gray-200 md:text-lg">{feature.description}</p>
-      </div>
+      {showFeatureDescription && feature.description ? (
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 transition-opacity duration-500",
+            isActive ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <p className="text-base leading-relaxed text-gray-200 md:text-lg">
+            {feature.description}
+          </p>
+        </div>
+      ) : null}
     </motion.div>
   );
 };
 
-const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
+const FeatureCarousel = ({
+  features = [],
+  mediaPosition = "right",
+  showFeatureDescriptions = true,
+}: { showFeatureDescriptions?: boolean } & FeatureCarouselProps) => {
   const [step, setStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -244,9 +255,24 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
 
   return (
     <div className="mx-auto w-full max-w-7xl" ref={containerRef}>
-      <div className="relative flex min-h-[600px] flex-col overflow-hidden lg:min-h-[640px] lg:flex-row">
-        <div className="relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 lg:w-[55%] lg:pl-16">
-          <div className="relative z-20 flex h-[300px] w-full items-center justify-center lg:justify-start">
+      <div
+        className={cn(
+          "relative flex min-h-[600px] flex-col overflow-hidden lg:min-h-[640px] lg:flex-row",
+          mediaPosition === "left" && "lg:flex-row-reverse"
+        )}
+      >
+        <div
+          className={cn(
+            "relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 lg:w-[55%]",
+            mediaPosition === "left" ? "lg:pr-16 lg:pl-0" : "lg:pl-16"
+          )}
+        >
+          <div
+            className={cn(
+              "relative z-20 flex h-[300px] w-full items-center justify-center",
+              mediaPosition === "left" ? "lg:justify-end" : "lg:justify-start"
+            )}
+          >
             {features.map((feature, index) => (
               <FeatureNavItem
                 currentIndex={currentIndex}
@@ -260,7 +286,12 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:py-16 lg:pr-14 lg:pl-0">
+        <div
+          className={cn(
+            "relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:py-16",
+            mediaPosition === "left" ? "lg:pl-14 lg:pr-0" : "lg:pr-14 lg:pl-0"
+          )}
+        >
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">
             {features.map((feature, index) => (
               <FeatureShowcaseCard
@@ -269,6 +300,7 @@ const FeatureCarousel = ({ features = [] }: FeatureCarouselProps) => {
                 index={index}
                 itemCount={features.length}
                 key={feature.id}
+                showFeatureDescription={showFeatureDescriptions}
               />
             ))}
           </div>
@@ -285,6 +317,8 @@ interface FeatureCarouselSectionProps {
   eyebrow?: string;
   features: FeatureCarouselItem[];
   heading: ReactNode;
+  mediaPosition?: "left" | "right";
+  showFeatureDescriptions?: boolean;
 }
 
 export const FeatureCarouselSection = ({
@@ -292,6 +326,8 @@ export const FeatureCarouselSection = ({
   eyebrow,
   features,
   heading,
+  mediaPosition = "right",
+  showFeatureDescriptions = true,
 }: FeatureCarouselSectionProps) => {
   return (
     <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20">
@@ -311,7 +347,11 @@ export const FeatureCarouselSection = ({
             </p>
           ) : null}
         </div>
-        <FeatureCarousel features={features} />
+        <FeatureCarousel
+          features={features}
+          mediaPosition={mediaPosition}
+          showFeatureDescriptions={showFeatureDescriptions}
+        />
       </div>
     </section>
   );

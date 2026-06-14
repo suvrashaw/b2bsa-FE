@@ -96,6 +96,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         description={study.challenges}
         imageAlt={study.title}
         imageUrl={study.image}
+        showCta={false}
         titleLine1="The"
         titleLine2="Challenges"
       />
@@ -106,6 +107,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         description={study.solution}
         imageAlt={study.title}
         imageUrl={study.image}
+        showCta={false}
         titleLine1="Our"
         titleLine2="Solution"
       />

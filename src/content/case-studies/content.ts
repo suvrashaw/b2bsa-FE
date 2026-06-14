@@ -1,45 +1,18 @@
-export interface CaseStudyCardData {
-  badge?: string;
-  client: string;
-  date?: string;
-  href?: string;
-  icon: string;
+export interface CaseStudyEntry {
   id: string;
-  image: string;
-  inactiveLabel?: string;
+  title: string;
+  event: string;
+  location: string;
+  client: string;
+  services: string[];
+  requirements: string;
+  challenge: string;
+  solution: string;
+  outcome: string;
   metric: string;
   metricLabel: string;
-  primarySummary: CaseStudyCardSummary;
-  secondarySummary: CaseStudyCardSummary;
-  serviceIds?: string[];
-  tags?: string[];
-  title: string;
-}
-
-export interface CaseStudyIndexEntry {
-  anchorId: string;
-  card: CaseStudyCardData;
-  challenge: string;
-  companySize: string;
-  date?: string;
-  event: string;
-  format: "gallery" | "text" | "video";
-  formatIcon: string;
-  geography: string;
-  id: string;
-  industry: string;
-  results: string;
-  serviceCategories: string[];
-  serviceIds?: string[];
-  servicesText: string;
-  tags?: string[];
-  title: string;
-  whatWeDid: string;
-}
-
-interface CaseStudyCardSummary {
-  label: string;
-  text: string;
+  image: string;
+  href: string;
 }
 
 import type { MarketingPageDefinition } from "@/content/page-definitions";
@@ -54,7 +27,7 @@ import HERO_DATA from "./hero.json";
 import INTRO_DATA from "./intro.json";
 import PAGE_DATA from "./page.json";
 import RESULTS_HEADING_DATA from "./results-heading.json";
-import STUDIES_DATA from "./studies.json";
+import STUDIES_DATA from "@/content/shared/case-studies.json";
 import TEMPLATE_DATA from "./template.json";
 
 export const CASE_STUDIES_PAGE_CONTENT = {
@@ -69,6 +42,6 @@ export const CASE_STUDIES_PAGE_CONTENT = {
   resultsHeading: RESULTS_HEADING_DATA,
   template: TEMPLATE_DATA,
 };
-export const CASE_STUDIES_PAGE_STUDIES = STUDIES_DATA as unknown as CaseStudyIndexEntry[];
+export const CASE_STUDIES_PAGE_STUDIES = STUDIES_DATA as unknown as CaseStudyEntry[];
 
 export const CASE_STUDIES_PAGE = PAGE_DATA as MarketingPageDefinition;

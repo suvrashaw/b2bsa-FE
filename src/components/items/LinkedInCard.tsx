@@ -59,7 +59,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
       <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">{post.caption}</p>
 
       <span className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-brand-blue transition-colors group-hover:text-brand-cyan">
-        View Post
+        Open actual LinkedIn post in NEW TAB
         <svg
           aria-hidden="true"
           className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"

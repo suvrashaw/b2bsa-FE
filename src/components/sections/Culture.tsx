@@ -152,9 +152,6 @@ export const Culture = ({ data }: { data: CultureData }) => {
             "blur-[30px]"
           )}
         />
-        <div className="mb-6 inline-block rounded-full border border-brand-charcoal/10 bg-brand-charcoal/5 px-4 py-1.5 text-sm font-semibold tracking-wide text-brand-charcoal uppercase transition-colors duration-500">
-          {data.eyebrow}
-        </div>
         <SectionHeader as="h2" className="mb-6">
           {typeof data.heading === "string" ? data.heading : "What We Believe In"}
         </SectionHeader>

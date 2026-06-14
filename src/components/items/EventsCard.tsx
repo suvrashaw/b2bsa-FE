@@ -29,7 +29,6 @@ interface EventDetailsPanelProps {
 }
 
 interface EventsCardProps {
-  badgeLabel?: string;
   ctaLabel: string;
   event: EventCardItem;
   flipStyle: FlipStyle;
@@ -38,7 +37,6 @@ interface EventsCardProps {
 }
 
 interface FlipCardProps extends EventDetailsPanelProps {
-  badgeLabel?: string;
   eventImage: string;
   isFlipped: boolean;
   shouldReduceMotion: boolean;
@@ -53,11 +51,9 @@ const isInteractiveTarget = (target: EventTarget | null) =>
   target instanceof HTMLElement && Boolean(target.closest("a, button"));
 
 const CardFront = ({
-  badgeLabel,
   event,
   eventImage,
 }: {
-  badgeLabel?: string;
   event: EventCardItem;
   eventImage: string;
 }) => (
@@ -71,11 +67,6 @@ const CardFront = ({
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
     <div className="absolute right-5 bottom-5 left-5 z-10">
-      {badgeLabel && (
-        <span className="mb-3 inline-block rounded-full bg-[#1E6091] px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-white uppercase">
-          {badgeLabel}
-        </span>
-      )}
       <h3 className="line-clamp-2 font-heading text-lg leading-tight font-bold !text-white md:text-xl">
         {event.title}
       </h3>
@@ -150,7 +141,6 @@ const EventDetailsPanel = ({
 );
 
 const HorizontalFlipCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -170,7 +160,7 @@ const HorizontalFlipCard = ({
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
-        <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+        <CardFront event={event} eventImage={eventImage} />
       </div>
       <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
@@ -187,7 +177,6 @@ const HorizontalFlipCard = ({
 );
 
 const VerticalFlipCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -207,7 +196,7 @@ const VerticalFlipCard = ({
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
-        <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+        <CardFront event={event} eventImage={eventImage} />
       </div>
       <div className="absolute inset-0 [transform:rotateX(180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
@@ -224,7 +213,6 @@ const VerticalFlipCard = ({
 );
 
 const HingeFlipCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -251,13 +239,12 @@ const HingeFlipCard = ({
         isFlipped && "[transform:rotateY(-112deg)]"
       )}
     >
-      <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+      <CardFront event={event} eventImage={eventImage} />
     </div>
   </div>
 );
 
 const DiagonalFlipCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -277,7 +264,7 @@ const DiagonalFlipCard = ({
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
-        <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+        <CardFront event={event} eventImage={eventImage} />
       </div>
       <div className="absolute inset-0 [transform:rotate3d(1,1,0,180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
@@ -294,7 +281,6 @@ const DiagonalFlipCard = ({
 );
 
 const DiagonalWipeRevealCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -329,7 +315,7 @@ const DiagonalWipeRevealCard = ({
         isFlipped && "opacity-0 delay-0"
       )}
     >
-      <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+      <CardFront event={event} eventImage={eventImage} />
     </div>
     <div
       className={cn(
@@ -342,7 +328,6 @@ const DiagonalWipeRevealCard = ({
 );
 
 const SplitFlipCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   eventCountry,
@@ -368,7 +353,7 @@ const SplitFlipCard = ({
         isFlipped && "opacity-0"
       )}
     >
-      <CardFront badgeLabel={badgeLabel} event={event} eventImage={eventImage} />
+      <CardFront event={event} eventImage={eventImage} />
     </div>
     <div
       className={cn(
@@ -414,11 +399,6 @@ const SplitFlipCard = ({
           isFlipped && "opacity-0"
         )}
       >
-        {badgeLabel && (
-          <span className="mb-3 inline-block rounded-full bg-[#1E6091] px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-white uppercase">
-            {badgeLabel}
-          </span>
-        )}
         <h3 className="line-clamp-2 font-heading text-lg leading-tight font-bold !text-white md:text-xl">
           {event.title}
         </h3>
@@ -437,7 +417,6 @@ const FLIP_CARD_COMPONENTS: Record<FlipStyle, (props: FlipCardProps) => ReactNod
 };
 
 export const EventsCard = ({
-  badgeLabel,
   ctaLabel,
   event,
   flipStyle,
@@ -480,7 +459,6 @@ export const EventsCard = ({
         tabIndex={0}
       >
         <FlipCard
-          badgeLabel={badgeLabel}
           ctaLabel={ctaLabel}
           event={event}
           eventCountry={eventCountry}

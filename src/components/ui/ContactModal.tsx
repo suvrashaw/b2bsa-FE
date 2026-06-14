@@ -1,12 +1,14 @@
 "use client";
 
 import { X } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+
+import type { ContactContent } from "@/content/home/content";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Button } from "@/components/ui/Button";
 
-const MODAL_FORM = {
+const BASE_MODAL_FORM = {
   companyLabel: "Company Name",
   companyPlaceholder: "Your Company",
   consentLabel: "I agree to receive communications from B2B Sales Arrow regarding their services.",
@@ -21,25 +23,35 @@ const MODAL_FORM = {
   messagePlaceholder: "Enter your requirements here...",
   phoneLabel: "Phone Number",
   phonePlaceholder: "+1 (000) 000-0000",
-  serviceLabel: "Select the service you need",
-  serviceOptions: [
-    { label: "Global Event Solutions", value: "global-event" },
-    { label: "Trade Show Booth Design & Build", value: "booth-design" },
-    { label: "Event Hostess & Staffing", value: "hostess" },
-    { label: "Event Logistics", value: "logistics" },
-    { label: "Event Branding", value: "branding" },
-    { label: "Media & Video Production", value: "media" },
-    { label: "Other", value: "other" },
-  ],
-  servicePlaceholder: "Select a service...",
 };
 
 export interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
+  serviceField?: ContactModalServiceField;
 }
 
-export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
+export interface ContactModalServiceField {
+  label?: string;
+  options: NonNullable<ContactContent["form"]["serviceOptions"]>;
+  placeholder?: string;
+}
+
+export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProps) => {
+  const form = useMemo(
+    () => ({
+      ...BASE_MODAL_FORM,
+      ...(serviceField
+        ? {
+            serviceLabel: serviceField.label ?? "Select the service you need",
+            serviceOptions: serviceField.options,
+            servicePlaceholder: serviceField.placeholder ?? "Select a service...",
+          }
+        : {}),
+    }),
+    [serviceField]
+  );
+
   useEffect(() => {
     if (!isOpen) return;
     const handleKey = (e: KeyboardEvent) => {
@@ -77,7 +89,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <X className="h-5 w-5" />
           </button>
         </div>
-        <ContactForm form={MODAL_FORM} />
+        <ContactForm form={form} />
       </div>
     </div>
   );
@@ -87,6 +99,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
 export interface ContactModalTriggerProps {
   label?: string;
+  serviceField?: ContactModalServiceField;
   size?: "default" | "icon" | "lg" | "sm";
   variant?:
     | "default"
@@ -102,6 +115,7 @@ export interface ContactModalTriggerProps {
 
 export const ContactModalTrigger = ({
   label = "Get in Touch",
+  serviceField,
   size = "lg",
   variant = "primary",
 }: ContactModalTriggerProps) => {
@@ -116,7 +130,7 @@ export const ContactModalTrigger = ({
           {label}
         </Button>
       </div>
-      <ContactModal isOpen={isOpen} onClose={close} />
+      <ContactModal isOpen={isOpen} onClose={close} serviceField={serviceField} />
     </>
   );
 };

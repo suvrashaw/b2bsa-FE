@@ -42,6 +42,7 @@ export interface StickyScrollProps {
   eyebrow?: StickyScrollContent["eyebrow"];
   heading?: StickyScrollContent["heading"];
   reasons?: StickyScrollContent["reasons"];
+  showCta?: boolean;
   showImagePanel?: boolean;
 }
 
@@ -56,6 +57,7 @@ export const StickyScroll = ({
   content = HOME_WHY_CHOOSE_US_CONTENT,
   heading = content.heading,
   reasons = content.reasons,
+  showCta = true,
   showImagePanel = true,
 }: StickyScrollProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -146,11 +148,13 @@ export const StickyScroll = ({
             </div>
           )}
 
-          <div className="mt-8">
-            <Button onClick={openModal} size="lg" variant="secondary">
-              Let&apos;s Discuss
-            </Button>
-          </div>
+          {showCta && (
+            <div className="mt-8">
+              <Button onClick={openModal} size="lg" variant="secondary">
+                Let&apos;s Discuss
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Right image reel — slides vertically inside overflow-hidden container */}
@@ -174,7 +178,7 @@ export const StickyScroll = ({
         )}
       </div>
 
-      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
+      {showCta && <ContactModal isOpen={isModalOpen} onClose={closeModal} />}
     </section>
   );
 };

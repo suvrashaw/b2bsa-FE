@@ -31,7 +31,6 @@ export const Timeline = ({
   description,
   heading,
   phases,
-  showPhaseNumbers = true,
   steps,
   subtitle,
   title,
@@ -78,11 +77,6 @@ export const Timeline = ({
                 {/* Content */}
                 <div className="w-full pl-8">
                   <div className="[#212529] rounded-xl border border-gray-100 bg-white p-8 text-left shadow-xl transition-all duration-300 hover:border-brand-blue/30">
-                    {showPhaseNumbers && (
-                      <div className="mb-2 text-base font-bold text-brand-blue">
-                        Phase 0{index + 1}
-                      </div>
-                    )}
                     <h3 className="mb-4 text-xl font-bold md:text-2xl">{step.title}</h3>
                     <p className="text-sm  leading-relaxed text-gray-600 md:text-base">
                       {step.description}

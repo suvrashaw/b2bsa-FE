@@ -6,8 +6,6 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
-import type { CaseStudyCardData } from "@/content/case-studies/content";
-
 import { CaseStudyItem } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -24,6 +22,9 @@ export type CaseStudyEntry = {
 } & Omit<HomeCaseStudyItem, "icon" | "id">;
 
 const FALLBACK_CASE_STUDY_ICONS = ["Target", "Sparkles", "Building2"];
+const DEFAULT_CASE_STUDIES_HEADING = "Real Events. Real Results.";
+const DEFAULT_CASE_STUDIES_DESCRIPTION =
+  "Explore how we have helped B2B brands improve audience engagement, event visibility, thought leadership, and lead generation through strategic social media marketing campaigns.";
 
 const CaseStudyCard = ({
   active,
@@ -33,7 +34,7 @@ const CaseStudyCard = ({
 }: {
   active: boolean;
   ctaLabel: string;
-  item: CaseStudyCardData;
+  item: { href?: string; icon: string; id: string; image: string; secondarySummary: { text: string }; title: string };
   setActiveId: (id: string) => void;
 }) => {
   const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
@@ -70,9 +71,9 @@ export const CaseStudies = ({
   caseStudies,
   content = HOME_CASE_STUDIES_CONTENT,
   ctaLabel = content.ctaLabel,
-  description,
+  description = DEFAULT_CASE_STUDIES_DESCRIPTION,
   getStudyHref = (study) => study.href ?? viewAllHref,
-  heading = content.heading,
+  heading = DEFAULT_CASE_STUDIES_HEADING,
   items,
   maxItems = 5,
   viewAllHref = "/case-studies",
@@ -87,7 +88,7 @@ export const CaseStudies = ({
     })
   );
 
-  const cards: CaseStudyCardData[] = resolvedCaseStudies.map((study) => ({
+  const cards = resolvedCaseStudies.map((study) => ({
     client: study.client ?? study.title,
     href: getStudyHref(study),
     icon: study.icon,

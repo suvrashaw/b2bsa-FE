@@ -4,54 +4,46 @@
   "initialIndex": 2,
   "testimonials": [
     {
-      "company": "[Enterprise Brand]",
-      "designation": "[Job Title]",
       "id": 1,
-      "image": "/images/home/testimonials/testimonial-1.avif",
-      "name": "[Client Name]",
-      "quote": "\"Their team built an incredible sustainable booth that perfectly captured our global brand identity this year.\"",
+      "author": "A Swiss Technology Company",
+      "quote": "You were a fantastic partner for Sibos 2025. Great execution, quality audience outreach, and excellent on-site support. Your flexibility, professionalism, and ability to adapt really stood out.",
       "rating": 5,
-      "serviceTag": "Trade Show Booth Design"
+      "serviceTag": "Global Event Solutions"
     },
     {
-      "company": "[Enterprise Brand]",
-      "designation": "[Job Title]",
       "id": 2,
-      "image": "/images/home/testimonials/testimonial-2.avif",
-      "name": "[Client Name]",
-      "quote": "\"Their active prospecting team navigated the event floor and delivered fifty highly qualified sales leads daily.\"",
-      "rating": 5,
-      "serviceTag": "Active Prospecting"
-    },
-    {
-      "company": "[Enterprise Brand]",
-      "designation": "[Job Title]",
-      "id": 3,
-      "image": "/images/home/testimonials/testimonial-3.avif",
-      "name": "[Client Name]",
-      "quote": "\"They curated an exclusive networking experiences and provided premium custom giveaways that kept our attendees fully engaged.\"",
+      "author": "A Global Digital Leader",
+      "quote": "Working with B2B Sales Arrow at WAF 2025 was a great experience. The team was proactive, flexible, and made sure everything ran smoothly while helping us reach the right audience.",
       "rating": 5,
       "serviceTag": "Event Audience Generation"
     },
     {
-      "company": "[Enterprise Brand]",
-      "designation": "[Job Title]",
-      "id": 4,
-      "image": "/images/home/testimonials/testimonial-4.avif",
-      "name": "[Client Name]",
-      "quote": "\"The media production team captured every key moment with broadcast-quality precision, the final content exceeded our expectations.\"",
+      "id": 3,
+      "author": "A Global Revenue Management Provider",
+      "quote": "The team did a great job driving targeted outreach and setting up valuable meetings at SIBOS. We were happy to see several conversations turn into real opportunities for us.",
       "rating": 5,
-      "serviceTag": "Media Production"
+      "serviceTag": "Active Prospecting"
     },
     {
-      "company": "[Enterprise Brand]",
-      "designation": "[Job Title]",
-      "id": 5,
-      "image": "/images/home/testimonials/testimonial-5.avif",
-      "name": "[Client Name]",
-      "quote": "\"From strategy to execution, the entire program ran seamlessly across three countries, a truly end-to-end global event partner.\"",
+      "id": 4,
+      "author": "A Global Digital Powerhouse",
+      "quote": "Thank you team for delivering a sustainable and seamlessly executed booth experience at ITC 2025. Your smart digital-first approach helped us connect with the right audience while reducing printed collateral.",
       "rating": 5,
-      "serviceTag": "Global Event Solutions"
+      "serviceTag": "Trade Show Booth Design"
+    },
+    {
+      "id": 5,
+      "author": "IT and Digital Leader",
+      "quote": "Team B2B SA played a key role in making our ADIPEC presence a success through strong execution and meaningful audience engagement. Your ability to connect us with the right industry leaders created valuable business opportunities for our team.",
+      "rating": 5,
+      "serviceTag": "Audience Engagement"
+    },
+    {
+      "id": 6,
+      "author": "Global Digital Leader",
+      "quote": "Your crew brought incredible energy and dedication to our active prospecting efforts at Adobe Summit. Their proactive approach contributed in making a meaningful impact throughout the event.",
+      "rating": 5,
+      "serviceTag": "Active Prospecting"
     }
   ]
 }

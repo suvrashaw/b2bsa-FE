@@ -5,17 +5,24 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { CaseStudyCardData } from "@/content/case-studies/content";
-
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
+
+interface CaseStudyItemData {
+  href?: string;
+  icon: string;
+  id: string;
+  image: string;
+  secondarySummary: { text: string };
+  title: string;
+}
 
 interface CaseStudyItemProps {
   active: boolean;
   className?: string;
   ctaLabel: string;
-  item: CaseStudyCardData;
+  item: CaseStudyItemData;
   onActivate?: () => void;
 }
 

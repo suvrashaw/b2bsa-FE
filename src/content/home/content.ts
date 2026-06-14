@@ -141,6 +141,7 @@ export interface FAQContent {
 export interface HomeServiceItem {
   color: string;
   description: string;
+  href?: string;
   icon: string;
   id: string;
   image: string;
@@ -228,11 +229,8 @@ interface StickyScrollReason {
 }
 
 interface TestimonialItem {
-  company: string;
-  designation: string;
+  author: string;
   id: number | string;
-  image: string;
-  name: string;
   quote: string;
   rating: number;
   serviceTag?: string;
@@ -260,7 +258,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = SERVICES_DATA;
 export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ctaLabel: "Full Study",
   heading: "Proven Global Event Solutions: Enterprise Success Stories",
-  items: SHARED_CASE_STUDIES_DATA as CaseStudyItem[],
+  items: SHARED_CASE_STUDIES_DATA as unknown as CaseStudyItem[],
 };
 
 export const HOME_EVENTS_CONTENT: EventsContent = {

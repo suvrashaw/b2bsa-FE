@@ -14,7 +14,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   CASE_STUDIES_PAGE_CONTENT,
   CASE_STUDIES_PAGE_STUDIES,
-  type CaseStudyIndexEntry,
+  type CaseStudyEntry,
 } from "@/content/case-studies/content";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
@@ -75,10 +75,10 @@ const FilterPill = ({
   );
 };
 
-const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyIndexEntry }) => {
+const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEntry }) => {
   const [isRevealed, setIsRevealed] = useState(false);
-  const href = study.card.href;
-  const description = study.card.primarySummary.text || study.challenge;
+  const href = study.href;
+  const description = study.title;
 
   const handleLinkClick = useCallback(
     (event: MouseEvent<HTMLAnchorElement>) => {
@@ -94,12 +94,11 @@ const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyIn
       colSpan={colSpan}
       ctaLabel="View Case Study"
       description={description}
-      format={study.format}
-      image={study.card.image}
-      metric={study.card.metric}
-      metricLabel={study.card.metricLabel}
+      image={study.image}
+      metric={study.metric}
+      metricLabel={study.metricLabel}
       revealed={isRevealed}
-      title={study.card.client}
+      title={study.event}
     />
   );
 
@@ -124,7 +123,7 @@ export const CaseStudiesClientPage = () => {
   const filteredStudies =
     activeFilter === ALL_FILTER
       ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.serviceCategories.includes(activeFilter));
+      : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.services.includes(activeFilter));
 
   const { totalPages, currentPage, paginatedItems: paginatedStudies } = applyPagination(
     filteredStudies,
