@@ -4,7 +4,7 @@ import { Children } from "react";
 
 import { cn } from "@/lib";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 type ColsValue = 2 | 3 | 4;
 
