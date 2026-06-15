@@ -19,6 +19,21 @@
       "answer": "Yes, client offices, conference venues, studios, product facilities, and trade show events.",
       "id": "location",
       "question": "Can we film on location?"
+    },
+    {
+      "answer": "The cost varies depending on project scope, duration, and production requirements. Please contact us for a customized quote based on your specific needs.",
+      "id": "cost",
+      "question": "What is the cost of corporate video production?"
+    },
+    {
+      "answer": "Yes, we have extensive capabilities for remote and virtual video production, allowing us to capture high-quality content from subject matter experts worldwide without the need for travel.",
+      "id": "remote",
+      "question": "Can you produce videos remotely or virtually?"
+    },
+    {
+      "answer": "Yes, we offer localization services including multi-language subtitles and professional voiceovers to ensure your corporate video effectively reaches global audiences.",
+      "id": "language",
+      "question": "Do you offer multi-language or subtitled versions?"
     }
   ],
   "heading": "Corporate Video FAQs"

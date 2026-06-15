@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
 import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
+import { Blogs } from "@/components/sections/Blogs";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { HOME_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -28,7 +30,9 @@ const Page = () => {
     <ServicePage
       caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
       contactUs={CORPORATE_VIDEO_CONTACT_CTA}
+      customSections={<Blogs blogs={HOME_BLOG_POSTS} />}
       faq={CORPORATE_VIDEO_FAQ}
+      faqVariant="accordion"
       hero={CORPORATE_VIDEO_HERO}
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
@@ -38,7 +42,7 @@ const Page = () => {
           <CardsGrid
             className="bg-[#111111] text-white"
             heading={
-              <SectionHeader as="h2" className="max-w-4xl text-white lg:text-5xl">
+              <SectionHeader as="h2" className="max-w-4xl text-white lg:text-4xl">
                 {CORPORATE_VIDEO_PORTFOLIO.heading}
               </SectionHeader>
             }

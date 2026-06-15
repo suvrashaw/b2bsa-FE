@@ -28,7 +28,7 @@ const Page = () => {
           <div className="prose prose-lg prose-slate max-w-none">
             <p className="mb-12 text-xl text-gray-500">Last Updated: May 2024</p>
             <section className="mb-12">
-              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-xl font-bold" preserveClassName>
                 1. Information We Collect
               </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -38,7 +38,7 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-xl font-bold" preserveClassName>
                 2. How We Use Your Information
               </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -48,7 +48,7 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-xl font-bold" preserveClassName>
                 3. Data Security
               </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -58,7 +58,7 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-xl font-bold" preserveClassName>
                 4. Cookies
               </SectionHeader>
               <p className="mb-4 leading-relaxed text-gray-600">
@@ -68,7 +68,7 @@ const Page = () => {
               </p>
             </section>
             <section className="mb-12">
-              <SectionHeader as="h2" className="mb-6 text-2xl font-bold" preserveClassName>
+              <SectionHeader as="h2" className="mb-6 text-xl font-bold" preserveClassName>
                 5. Contact Us
               </SectionHeader>
               <p className="leading-relaxed text-gray-600">

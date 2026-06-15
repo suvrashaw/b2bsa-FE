@@ -13,6 +13,7 @@ import {
 } from "@/content/home/content";
 
 export interface ServicesStackProps {
+  cardCtaMode?: "all" | "linked" | "none";
   commonCtaLabel?: string;
   contactModal?: {
     serviceField?: ContactModalServiceField;
@@ -28,6 +29,7 @@ export interface ServicesStackProps {
 }
 
 export const ServicesStack = ({
+  cardCtaMode,
   commonCtaLabel,
   contactModal,
   content = HOME_SERVICES_CONTENT,
@@ -39,6 +41,7 @@ export const ServicesStack = ({
   showCommonCta = false,
 }: ServicesStackProps = {}) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const resolvedCardCtaMode = cardCtaMode ?? (showCardCtas ? "all" : "none");
   const stickyStyles = useMemo(
     () => services.map((_, index) => ({ top: `calc(100px + ${index * 20}px)`, zIndex: index })),
     [services]
@@ -64,7 +67,10 @@ export const ServicesStack = ({
                   onCtaClick={contactModal ? openContactModal : undefined}
                   service={service}
                   serviceLabel={serviceLabel}
-                  showCta={showCardCtas}
+                  showCta={
+                    resolvedCardCtaMode === "all" ||
+                    (resolvedCardCtaMode === "linked" && Boolean(service.href))
+                  }
                 />
               </div>
             ))}

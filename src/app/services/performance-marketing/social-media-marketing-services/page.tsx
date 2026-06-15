@@ -82,9 +82,9 @@ const Page = () => {
         <>
           <ServicesStack
             {...SMM_SERVICES}
-            commonCtaLabel={SMM_SERVICES.ctaLabel}
+            cardCtaMode="linked"
+            commonCtaLabel="Contact Our Team"
             contactModal={servicesContactModal}
-            showCardCtas={false}
             showCommonCta
           />
 

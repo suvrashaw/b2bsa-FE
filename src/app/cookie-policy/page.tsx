@@ -47,7 +47,7 @@ const Page = () => {
                 className="rounded-2xl border border-gray-100 bg-brand-gray/40 p-8"
                 key={section.title}
               >
-                <SectionHeader as="h2" className="mb-4 text-2xl lg:text-3xl">
+                <SectionHeader as="h2" className="mb-4 text-xl lg:text-2xl">
                   {section.title}
                 </SectionHeader>
                 <p className="leading-relaxed text-gray-600">{section.body}</p>
@@ -58,7 +58,7 @@ const Page = () => {
           <section className="mt-12 rounded-2xl bg-brand-blue p-8 text-white">
             <SectionHeader
               as="h2"
-              className="mb-4 font-heading text-2xl leading-tight font-bold text-white lg:text-3xl"
+              className="mb-4 font-heading text-xl leading-tight font-bold text-white lg:text-2xl"
               preserveClassName
             >
               Managing Your Cookie Preferences

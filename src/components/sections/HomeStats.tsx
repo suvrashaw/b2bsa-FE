@@ -108,7 +108,7 @@ export const HomeStats = ({
       <div className="container mx-auto grid items-center gap-16 px-4 md:px-6 lg:grid-cols-2 lg:px-8">
         <div className="order-last flex flex-col items-start space-y-6 text-left lg:order-none">
           <div className="w-full text-left">
-            <SectionHeader as="h2" className="mb-6 lg:text-5xl xl:text-6xl">
+            <SectionHeader as="h2" className="mb-6 lg:text-4xl xl:text-5xl">
               <span className="block">{resolvedHeading}</span>
               <RotatingWordBadge className="block text-brand-blue" words={ROTATING_WORDS} />
             </SectionHeader>

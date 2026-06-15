@@ -30,7 +30,7 @@ const CoreValueCard = ({
       <div className="mb-5 flex h-10 w-10 items-center justify-center rounded border border-brand-cyan/20 bg-brand-cyan/10">
         <div className="h-4 w-4 rounded-sm bg-brand-cyan" />
       </div>
-      <h3 className="font-display mb-3 text-xl leading-[1.2] font-bold text-brand-charcoal md:text-[clamp(20px,2.2vw,28px)]">
+      <h3 className="font-display mb-3 text-lg leading-[1.2] font-bold text-brand-charcoal md:text-[clamp(18px,2vw,24px)]">
         {value}
       </h3>
     </div>
@@ -110,7 +110,7 @@ export const AboutCoreValues = ({ data }: { data: AboutCoreValuesData }) => {
         <div className="flex w-screen shrink-0 flex-col justify-center px-4 py-12 md:w-[60vw] md:py-20 md:pr-12 md:pl-[clamp(24px,6vw,120px)] lg:w-[50vw]">
           <SectionHeader
             as="h2"
-            className="mb-5 max-w-[700px] text-[clamp(32px,5vw,64px)] leading-[1.1] font-black text-brand-charcoal"
+            className="mb-5 max-w-[700px] text-[clamp(28px,4vw,56px)] leading-[1.1] font-black text-brand-charcoal"
           >
             {data.heading}
           </SectionHeader>

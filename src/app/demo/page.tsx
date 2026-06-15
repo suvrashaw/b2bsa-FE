@@ -16,6 +16,7 @@ import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { Blogs } from "@/components/sections/Blogs";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -27,7 +28,6 @@ import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -716,7 +716,6 @@ const DemoPage = () => {
       <DemoLabel name="FeatureCarouselSection" />
       <FeatureCarouselSection
         description="Four core capabilities that turn trade show investment into enterprise pipeline."
-        eyebrow="Capabilities"
         features={FEATURE_CAROUSEL_ITEMS}
         heading="How We Drive Results"
       />
@@ -767,7 +766,7 @@ const DemoPage = () => {
       <CardsGrid
         className="bg-[#111111] text-white"
         heading={
-          <SectionHeader as="h2" className="max-w-4xl text-white lg:text-5xl">
+          <SectionHeader as="h2" className="max-w-4xl text-white lg:text-4xl">
             Recent Event Programs
           </SectionHeader>
         }

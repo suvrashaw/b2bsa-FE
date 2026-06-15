@@ -131,14 +131,23 @@ const renderServicesSection = (
     }));
     return (
       <FeatureCarouselSection
-        eyebrow={section.eyebrow ?? section.content?.eyebrow}
         features={features}
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
       />
     );
   }
-  return <ServicesStack {...section} />;
+  return (
+    <ServicesStack
+      {...section}
+      cardCtaMode={section.cardCtaMode ?? "linked"}
+      commonCtaLabel="Contact Our Team"
+      contactModal={section.contactModal ?? SERVICE_PAGE_CONTACT_MODAL}
+      showCommonCta
+    />
+  );
 };
+
+const SERVICE_PAGE_CONTACT_MODAL = {};
 
 export const ServicePage = ({
   caseStudies,

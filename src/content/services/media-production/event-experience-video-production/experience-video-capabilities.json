@@ -1,47 +1,76 @@
 {
-  "cta": { "label": "Contact Our Team", "opensModal": true },
+  "heading": "Professional Event Video Production Equipment & Capabilities",
   "description": "Our event experience video production services are powered by professional-grade filming equipment and experienced production teams to ensure high-quality visual storytelling for every corporate event.",
-  "phases": [
+  "features": [
     {
-      "description": "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions.",
-      "title": "Multi-Camera Event Coverage"
+      "id": "multi-camera-event-coverage",
+      "icon": "Camera",
+      "image": "/images/events/adobe_summit_2026.avif",
+      "label": "Multi-Camera Event Coverage",
+      "description": "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions."
     },
     {
-      "description": "Professional camera workflows for sharp, polished event footage and final delivery.",
-      "title": "4K Video Production Capabilities"
+      "id": "4k-video-production",
+      "icon": "Video",
+      "image": "/images/events/servicenow_2026.avif",
+      "label": "4K Video Production",
+      "description": "Professional camera workflows for sharp, polished event footage and final delivery."
     },
     {
-      "description": "Clean speaker, panel, interview, and ambient audio captured for usable event storytelling.",
-      "title": "Professional Audio Recording"
+      "id": "professional-audio-recording",
+      "icon": "Mic",
+      "image": "/images/events/inma_2026.avif",
+      "label": "Professional Audio Recording",
+      "description": "Clean speaker, panel, interview, and ambient audio captured for usable event storytelling."
     },
     {
-      "description": "Aerial venue footage where location, permissions, and event format make it appropriate.",
-      "title": "Drone Event Videography"
+      "id": "drone-event-videography",
+      "icon": "Navigation",
+      "image": "/images/events/event_other_1.avif",
+      "label": "Drone Event Videography",
+      "description": "Aerial venue footage where location, permissions, and event format make it appropriate."
     },
     {
-      "description": "Gimbal and motion shots that give event videos a more cinematic, dynamic feel.",
-      "title": "Gimbal and Cinematic Motion Shots"
+      "id": "gimbal-cinematic-shots",
+      "icon": "Film",
+      "image": "/images/events/event_other_2.avif",
+      "label": "Gimbal & Cinematic Shots",
+      "description": "Gimbal and motion shots that give event videos a more cinematic, dynamic feel."
     },
     {
-      "description": "Photo capture can be integrated alongside video to support post-event marketing needs.",
-      "title": "Event Photography Integration"
+      "id": "event-photography-integration",
+      "icon": "Aperture",
+      "image": "/images/events/event_other_3.avif",
+      "label": "Photography Integration",
+      "description": "Photo capture can be integrated alongside video to support post-event marketing needs."
     },
     {
-      "description": "Onsite editing support for urgent social media clips, recaps, or same-day campaign assets.",
-      "title": "Onsite Video Editing Support"
+      "id": "onsite-video-editing",
+      "icon": "MonitorPlay",
+      "image": "/images/events/event_other_4.avif",
+      "label": "Onsite Video Editing",
+      "description": "Onsite editing support for urgent social media clips, recaps, or same-day campaign assets."
     },
     {
-      "description": "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics.",
-      "title": "Branded Motion Graphics"
+      "id": "branded-motion-graphics",
+      "icon": "Layers",
+      "image": "/images/services/media-production-1.avif",
+      "label": "Branded Motion Graphics",
+      "description": "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics."
     },
     {
-      "description": "Fast post-event editing support for immediate publishing and internal communication needs.",
-      "title": "Fast Turnaround Post-Production"
+      "id": "fast-turnaround-post-production",
+      "icon": "Zap",
+      "image": "/images/services/media-production-2.avif",
+      "label": "Fast Turnaround Post-Production",
+      "description": "Fast post-event editing support for immediate publishing and internal communication needs."
     },
     {
-      "description": "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more.",
-      "title": "Social Media Optimized Video Formats"
+      "id": "social-media-optimized-formats",
+      "icon": "Share2",
+      "image": "/images/services/performance-marketing-1.avif",
+      "label": "Social Media Optimized Formats",
+      "description": "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more."
     }
-  ],
-  "title": "Professional Event Video Production Equipment & Capabilities"
+  ]
 }

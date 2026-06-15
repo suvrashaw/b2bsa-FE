@@ -174,7 +174,7 @@ export const BlogsSection = () => {
   } else if (hasEmptyPage) {
     blogsContent = (
       <div className="rounded-2xl border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
-        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">
+        <h2 className="font-heading text-2xl font-bold text-brand-charcoal">
           No more articles on this page.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
@@ -185,7 +185,7 @@ export const BlogsSection = () => {
   } else {
     blogsContent = (
       <div className="rounded-2xl border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
-        <h2 className="font-heading text-3xl font-bold text-brand-charcoal">No articles found.</h2>
+        <h2 className="font-heading text-2xl font-bold text-brand-charcoal">No articles found.</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Choose a different category to browse the blog library.
         </p>

@@ -84,7 +84,7 @@ const BlogSidebarSubscribe = () => {
       </div>
       <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
         <div>
-          <h2 className="font-heading text-2xl leading-tight font-bold text-brand-charcoal">
+          <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
             Don&apos;t Just Scroll!
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -211,7 +211,7 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
       if (block.level === 2) {
         return (
           <h2
-            className="mt-10 mb-4 font-heading text-2xl font-bold text-[var(--heading-h2)]"
+            className="mt-10 mb-4 font-heading text-xl font-bold text-[var(--heading-h2)]"
             key={index}
           >
             {block.text}
@@ -321,7 +321,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
               {post.date && <span>{post.date}</span>}
               <span>{readTime}</span>
             </div>
-            <h1 className="mx-auto max-w-4xl font-heading text-4xl leading-tight font-bold text-white md:text-5xl lg:text-5xl">
+            <h1 className="mx-auto max-w-4xl font-heading text-3xl leading-tight font-bold text-white md:text-4xl lg:text-4xl">
               {post.title}
             </h1>
           </div>

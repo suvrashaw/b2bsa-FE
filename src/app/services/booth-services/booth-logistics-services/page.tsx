@@ -24,7 +24,6 @@ import {
   EVENT_LOGISTICS_INDUSTRIES_SECTION,
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
-  EVENT_LOGISTICS_PROOF_BAR,
   EVENT_LOGISTICS_RELATED_SERVICES,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/booth-services/booth-logistics-services/content";
@@ -70,7 +69,6 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <ContactModalTrigger label="Talk to Our Event Team" />
           <Timeline
             description={EVENT_LOGISTICS_CAPABILITIES.description}
             phases={EVENT_LOGISTICS_CAPABILITIES.phases}
@@ -87,7 +85,6 @@ const Page = () => {
           ))}
         </CardsGrid>
       }
-      proofBar={EVENT_LOGISTICS_PROOF_BAR}
       relatedServices={EVENT_LOGISTICS_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={EVENT_LOGISTICS_INDUSTRIES_SECTION}

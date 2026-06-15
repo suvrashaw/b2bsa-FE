@@ -98,7 +98,6 @@ export const Carousel = ({
         <SectionHeader
           description={description}
           heading={heading}
-          headingAction={headingAction}
           headingAlign={headingAlign}
         />
 
@@ -137,7 +136,12 @@ export const Carousel = ({
           </button>
         </div>
 
-        {cta && <div className="mt-10 flex justify-center">{cta}</div>}
+        {(cta || headingAction) && (
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            {headingAction}
+            {cta}
+          </div>
+        )}
       </div>
     </section>
   );

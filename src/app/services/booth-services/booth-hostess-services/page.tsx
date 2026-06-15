@@ -6,10 +6,9 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Timeline } from "@/components/sections/Timeline";
+import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -20,16 +19,42 @@ import {
   BOOTH_HOSTESS_DELIVERABLES,
   BOOTH_HOSTESS_FAQ,
   BOOTH_HOSTESS_IMAGE_HERO,
-  BOOTH_HOSTESS_INDUSTRIES_SECTION,
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
-  BOOTH_HOSTESS_PROOF_BAR,
   BOOTH_HOSTESS_RELATED_SERVICES,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/booth-services/booth-hostess-services/content";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
+
+const servicesContactModal = {};
+const deliverableProps = {
+  ...BOOTH_HOSTESS_DELIVERABLES,
+  commonCtaLabel: "Contact Our Team",
+  contactModal: servicesContactModal,
+  showCardCtas: false,
+  showCommonCta: true,
+};
+const capabilityAssets = [
+  { icon: "Users", image: "/images/services/booth/booth-5.avif" },
+  { icon: "CalendarCheck", image: "/images/events/event_other_1.avif" },
+  { icon: "Sparkles", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "MessageSquare", image: "/images/events/event_other_2.avif" },
+  { icon: "ClipboardList", image: "/images/home/testimonials/testimonial-1.avif" },
+  { icon: "Globe2", image: "/images/home/why-choose-us/global_reach.avif" },
+  { icon: "Presentation", image: "/images/events/event_other_3.avif" },
+  { icon: "Award", image: "/images/events/event_other_4.avif" },
+  { icon: "Users2", image: "/images/services/booth/booth-5.avif" },
+  { icon: "Rocket", image: "/images/events/event_other_1.avif" },
+];
+const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Users",
+  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/images/home/testimonials/testimonial-1.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -68,23 +93,15 @@ const Page = () => {
       page={BOOTH_HOSTESS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <>
-          <ContactModalTrigger label="Request A Quote" />
-          <Timeline
-            description={BOOTH_HOSTESS_CAPABILITIES.description}
-            phases={BOOTH_HOSTESS_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={BOOTH_HOSTESS_CAPABILITIES.title}
-          />
-          <ContactModalTrigger label="Book Booth Staff" />
-        </>
+        <FeatureCarouselSection
+          description={BOOTH_HOSTESS_CAPABILITIES.description}
+          features={capabilityFeatures}
+          heading={BOOTH_HOSTESS_CAPABILITIES.title}
+        />
       }
-      proofBar={BOOTH_HOSTESS_PROOF_BAR}
       relatedServices={BOOTH_HOSTESS_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
-      secondaryServices={BOOTH_HOSTESS_INDUSTRIES_SECTION}
-      secondaryServicesSectionType="carousel"
-      services={BOOTH_HOSTESS_DELIVERABLES}
+      services={deliverableProps}
       spotlight={BOOTH_HOSTESS_INTRO}
     />
   );

@@ -6,10 +6,11 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { LiveStreamProjects } from "@/components/sections/LiveStreamProjects";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
+import { Icon } from "@/components/ui/Icon";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
@@ -18,12 +19,12 @@ import {
   LIVE_STREAMING_BLOGS_SECTION,
   LIVE_STREAMING_CAPABILITIES,
   LIVE_STREAMING_CAPABILITIES_FEATURES,
-  LIVE_STREAMING_CASE_STUDIES,
   LIVE_STREAMING_CONTACT_CTA,
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_FAQ,
   LIVE_STREAMING_HERO,
   LIVE_STREAMING_PAGE,
+  LIVE_STREAMING_PROJECTS,
   LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_SPOTLIGHT,
   LIVE_STREAMING_WHY_CHOOSE_US,
@@ -31,14 +32,21 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 
+const LIVE_STREAMING_LOCATION_BADGES = ["New York", "Dubai", "Singapore", "London"];
+const LIVE_STREAMING_AREAS_SPOTLIGHT = {
+  ...LIVE_STREAMING_AREAS_SERVED,
+  imagePosition: "left" as const,
+};
+
 const Page = () => {
   return (
     <ServicePage
-      caseStudies={LIVE_STREAMING_CASE_STUDIES}
       clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
       contactUs={LIVE_STREAMING_CONTACT_CTA}
       customSections={
         <>
+          <LiveStreamProjects {...LIVE_STREAMING_PROJECTS} />
+
           <CardsGrid cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading}>
             {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -68,14 +76,33 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <FeatureCarouselSection
+          <CardsGrid
+            cols={4}
             description={LIVE_STREAMING_CAPABILITIES.description}
-            features={LIVE_STREAMING_CAPABILITIES_FEATURES}
+            gap="gap-5"
+            gridClassName="items-stretch"
             heading={LIVE_STREAMING_CAPABILITIES.heading}
-            showFeatureDescriptions={false}
-          />
+          >
+            {LIVE_STREAMING_CAPABILITIES_FEATURES.map((feature) => (
+              <div
+                className="flex h-full w-full flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-sm"
+                key={feature.id}
+              >
+                <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue text-white">
+                  <Icon className="h-7 w-7" name={feature.icon} strokeWidth={2} />
+                </div>
+                <h3 className="font-heading text-sm font-bold text-brand-charcoal md:text-base">
+                  {feature.label}
+                </h3>
+              </div>
+            ))}
+          </CardsGrid>
 
-          <Spotlight {...LIVE_STREAMING_AREAS_SERVED} />
+          <Spotlight
+            {...LIVE_STREAMING_AREAS_SPOTLIGHT}
+            locationBadges={LIVE_STREAMING_LOCATION_BADGES}
+            showCta={false}
+          />
         </>
       }
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}

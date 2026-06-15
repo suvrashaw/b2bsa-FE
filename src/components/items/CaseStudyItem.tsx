@@ -98,7 +98,7 @@ export const CaseStudyItem = ({
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}
               >
-                <h3 className="mb-4 line-clamp-2 font-heading text-xl font-bold !text-white md:text-2xl">
+                <h3 className="mb-4 line-clamp-2 font-heading text-lg font-bold !text-white md:text-xl">
                   {item.title}
                 </h3>
                 <p className="line-clamp-4 max-w-xl text-sm leading-relaxed text-gray-200 md:text-base">

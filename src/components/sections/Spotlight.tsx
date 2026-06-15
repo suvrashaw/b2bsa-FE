@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
@@ -19,8 +19,10 @@ export interface SpotlightProps {
   descriptionItems?: readonly string[];
   id?: string;
   imageAlt?: string;
+  imagePosition?: "left" | "right";
   imageUrl?: string;
   label?: string;
+  locationBadges?: readonly string[];
   onClick?: () => void;
   secondarySpotlight?: SpotlightSecondaryBlock;
   sectionClassName?: string;
@@ -46,29 +48,76 @@ interface SpotlightSecondaryBlock {
 
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
+const SpotlightCta = ({
+  ctaHref,
+  ctaLabel,
+  isHovered,
+  onClick,
+}: {
+  ctaHref?: string;
+  ctaLabel?: string;
+  isHovered: boolean;
+  onClick?: () => void;
+}) => {
+  if (!ctaLabel) return null;
+
+  const ctaClassName = cn(
+    "gap-2 transition-all duration-500",
+    isHovered && "border-brand-blue bg-brand-blue/5"
+  );
+  const icon = isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />;
+
+  return (
+    <div className="mt-6 md:mt-8 lg:mt-10">
+      {ctaHref ? (
+        <Button asChild className={ctaClassName} variant="secondary">
+          <Link href={ctaHref}>
+            {ctaLabel}
+            {icon}
+          </Link>
+        </Button>
+      ) : (
+        <Button className={ctaClassName} onClick={onClick} variant="secondary">
+          {ctaLabel}
+          {icon}
+        </Button>
+      )}
+    </div>
+  );
+};
+
 const SpotlightTextBlock = ({
   align = "center",
+  className,
   ctaHref,
   ctaLabel,
   description,
   descriptionItems,
   isHovered,
   label,
+  locationBadges,
   onClick,
+  onLocationBadgeClick,
+  pairedWithMedia = false,
   titleLine1,
   titleLine2,
 }: {
   align?: SpotlightAlignment;
+  className?: string;
   ctaHref?: string;
   ctaLabel?: string;
   description: string;
   descriptionItems?: readonly string[];
   isHovered: boolean;
   label?: string;
+  locationBadges?: readonly string[];
   onClick?: () => void;
+  onLocationBadgeClick?: () => void;
+  pairedWithMedia?: boolean;
   titleLine1: string;
   titleLine2: string;
 }) => {
+  const hasDescriptionItems = Boolean(descriptionItems);
   const lineStyle = useMemo(
     () => ({ transitionTimingFunction: EASE, width: isHovered ? 48 : 32 }),
     [isHovered]
@@ -103,10 +152,13 @@ const SpotlightTextBlock = ({
   return (
     <div
       className={cn(
-        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col md:w-full md:max-w-[480px] lg:max-w-[560px] lg:pt-4",
+        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col lg:pt-4",
+        pairedWithMedia && "md:min-w-0 md:w-full md:max-w-[640px] lg:max-w-[720px]",
+        !pairedWithMedia && "md:w-full md:max-w-[480px] lg:max-w-[560px]",
         align === "left" && "items-start text-left",
         align === "right" && "items-end text-right",
-        align === "center" && "items-center text-center"
+        align === "center" && "items-center text-center",
+        className
       )}
     >
       {label && (
@@ -123,27 +175,31 @@ const SpotlightTextBlock = ({
 
       <SectionHeader as="h2" className="relative">
         <span
-          className="block font-heading text-3xl font-bold tracking-tight text-brand-charcoal transition-all duration-700 sm:whitespace-nowrap lg:text-4xl"
+          className="block text-balance text-brand-charcoal transition-all duration-700"
           style={title1Style}
         >
           {titleLine1}
         </span>
         <span
-          className="block font-heading text-3xl font-bold tracking-tight text-brand-blue transition-all duration-700 sm:whitespace-nowrap lg:text-4xl"
+          className="block text-balance text-[var(--heading-h2)] transition-all duration-700"
           style={title2Style}
         >
           {titleLine2}
         </span>
       </SectionHeader>
 
-      {descriptionItems ? (
+      {hasDescriptionItems ? (
         <div
-          className="mt-6 max-w-[580px] space-y-3 text-sm leading-relaxed transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+          className={cn(
+            "mt-6 max-w-[580px] space-y-3 text-sm leading-relaxed transition-all duration-700 md:mt-8 md:text-base lg:mt-10",
+            pairedWithMedia && "md:max-w-none",
+            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]"
+          )}
           style={descStyle}
         >
           {description && <p>{description}</p>}
           <ul className="space-y-3">
-            {descriptionItems.map((item) => (
+            {descriptionItems?.map((item) => (
               <li
                 className={cn(
                   "flex gap-3",
@@ -160,62 +216,46 @@ const SpotlightTextBlock = ({
         </div>
       ) : (
         <p
-          className="mt-6 max-w-[580px] text-sm leading-relaxed whitespace-pre-line transition-all duration-700 md:mt-8 md:max-w-[440px] md:text-base lg:mt-10 lg:max-w-[520px]"
+          className={cn(
+            "mt-6 max-w-[580px] text-sm leading-relaxed whitespace-pre-line transition-all duration-700 md:mt-8 md:text-base lg:mt-10",
+            pairedWithMedia && "md:max-w-none",
+            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]"
+          )}
           style={descStyle}
         >
           {description}
         </p>
       )}
 
-      {ctaLabel && (
-        <div className="mt-6 md:mt-8 lg:mt-10">
-          {ctaHref ? (
+      {locationBadges && locationBadges.length > 0 && (
+        <div className="mt-6 grid grid-cols-2 gap-3 md:mt-8">
+          {locationBadges.map((city) => (
             <Button
-              asChild
-              className={cn(
-                "gap-2 transition-all duration-500",
-                isHovered && "border-brand-blue bg-brand-blue/5"
-              )}
+              className="gap-1.5"
+              key={city}
+              onClick={onLocationBadgeClick}
               variant="secondary"
             >
-              <Link href={ctaHref}>
-                {ctaLabel}
-                {isHovered ? (
-                  <ArrowUpRight className="h-4 w-4" />
-                ) : (
-                  <ArrowRight className="h-4 w-4" />
-                )}
-              </Link>
+              <MapPin className="h-3.5 w-3.5 shrink-0" />
+              {city}
             </Button>
-          ) : (
-            <Button
-              className={cn(
-                "gap-2 transition-all duration-500",
-                isHovered && "border-brand-blue bg-brand-blue/5"
-              )}
-              onClick={onClick}
-              variant="secondary"
-            >
-              {ctaLabel}
-              {isHovered ? (
-                <ArrowUpRight className="h-4 w-4" />
-              ) : (
-                <ArrowRight className="h-4 w-4" />
-              )}
-            </Button>
-          )}
+          ))}
         </div>
       )}
+
+      <SpotlightCta ctaHref={ctaHref} ctaLabel={ctaLabel} isHovered={isHovered} onClick={onClick} />
     </div>
   );
 };
 
 const SpotlightImageBlock = ({
+  className,
   imageAlt,
   imageUrl,
   isHovered,
   videoUrl,
 }: {
+  className?: string;
   imageAlt: string;
   imageUrl?: string;
   isHovered: boolean;
@@ -309,12 +349,12 @@ const SpotlightImageBlock = ({
   }
 
   return (
-    <div className="relative w-fit">
+    <div className={cn("relative w-[280px] sm:w-[340px] md:w-full md:max-w-[440px] md:min-w-0 lg:max-w-[560px]", className)}>
       <div
         className="absolute inset-0 rounded-2xl border border-brand-blue/10 transition-all duration-500"
         style={backingStyle}
       />
-      <div className="relative h-[300px] w-[280px] overflow-hidden rounded-2xl sm:h-[360px] sm:w-[340px] md:h-[420px] md:w-[440px] lg:h-[520px] lg:w-[560px]">
+      <div className="relative aspect-[14/15] w-full overflow-hidden rounded-2xl sm:aspect-[17/18] md:aspect-[22/21] lg:aspect-[14/13]">
         {mediaElement}
         <div
           className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent transition-opacity duration-700"
@@ -350,8 +390,10 @@ export const Spotlight = ({
   descriptionItems,
   id,
   imageAlt = "Feature image",
+  imagePosition = "right",
   imageUrl,
   label,
+  locationBadges,
   onClick,
   secondarySpotlight,
   sectionClassName,
@@ -363,6 +405,23 @@ export const Spotlight = ({
 }: SpotlightProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const usesMediaSplitLayout = !secondarySpotlight;
+  const mediaGridClassName =
+    imagePosition === "left"
+      ? "md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-start"
+      : "md:grid md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-start";
+  let textBlockClassName: string | undefined;
+  let imageBlockClassName: string | undefined;
+
+  if (usesMediaSplitLayout) {
+    textBlockClassName = imagePosition === "left" ? "md:justify-self-start" : "md:justify-self-end";
+    imageBlockClassName = cn(
+      imagePosition === "left" && "md:order-first md:justify-self-start",
+      imagePosition === "right" && "md:justify-self-end"
+    );
+  } else if (imagePosition === "left") {
+    imageBlockClassName = "md:order-first";
+  }
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
@@ -376,6 +435,10 @@ export const Spotlight = ({
     }
   }, [onClick, triggerContactModal]);
 
+  const handleBadgeClick = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
   }, []);
@@ -385,7 +448,9 @@ export const Spotlight = ({
       <section className={cn("bg-brand-gray py-20", sectionClassName)} id={id}>
         <div
           className={cn(
-            "group relative mx-auto flex w-full max-w-6xl cursor-pointer flex-col items-center justify-center gap-8 px-8 md:grid md:grid-cols-2 md:gap-14 lg:max-w-6xl lg:gap-20",
+            "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-8 md:gap-14 lg:gap-20",
+            usesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
+            usesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
             className
           )}
           onMouseEnter={handleMouseEnter}
@@ -393,13 +458,17 @@ export const Spotlight = ({
         >
           <SpotlightTextBlock
             align={align}
+            className={textBlockClassName}
             ctaHref={ctaHref}
             ctaLabel={showCta ? ctaLabel : undefined}
             description={description}
             descriptionItems={descriptionItems}
             isHovered={isHovered}
             label={label}
+            locationBadges={locationBadges}
             onClick={handleCtaClick}
+            onLocationBadgeClick={handleBadgeClick}
+            pairedWithMedia={usesMediaSplitLayout}
             titleLine1={titleLine1}
             titleLine2={titleLine2}
           />
@@ -417,6 +486,7 @@ export const Spotlight = ({
             />
           ) : (
             <SpotlightImageBlock
+              className={imageBlockClassName}
               imageAlt={imageAlt}
               imageUrl={imageUrl}
               isHovered={isHovered}
@@ -425,7 +495,9 @@ export const Spotlight = ({
           )}
         </div>
       </section>
-      {triggerContactModal && <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />}
+      {(triggerContactModal || (locationBadges && locationBadges.length > 0)) && (
+        <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      )}
     </>
   );
 };

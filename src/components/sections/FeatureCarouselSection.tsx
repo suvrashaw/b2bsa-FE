@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon } from "@/components/ui/Icon";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
@@ -314,7 +313,6 @@ const FeatureCarousel = ({
 
 interface FeatureCarouselSectionProps {
   description?: ReactNode;
-  eyebrow?: string;
   features: FeatureCarouselItem[];
   heading: ReactNode;
   mediaPosition?: "left" | "right";
@@ -323,7 +321,6 @@ interface FeatureCarouselSectionProps {
 
 export const FeatureCarouselSection = ({
   description,
-  eyebrow,
   features,
   heading,
   mediaPosition = "right",
@@ -336,8 +333,7 @@ export const FeatureCarouselSection = ({
         <div className="absolute bottom-0 left-[6%] h-56 w-56 rounded-full bg-brand-blue/10 blur-3xl" />
       </div>
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        <div className="mx-auto max-w-4xl text-center">
           <SectionHeader as="h2" className="mb-6">
             {heading}
           </SectionHeader>

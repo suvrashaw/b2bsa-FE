@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <main className="min-h-screen px-8 pt-32">
       <div className="mx-auto max-w-4xl">
-        <h1 className="font-heading text-4xl font-black text-brand-charcoal">
+        <h1 className="font-heading text-3xl font-black text-brand-charcoal">
           Event Experience Creation
         </h1>
       </div>

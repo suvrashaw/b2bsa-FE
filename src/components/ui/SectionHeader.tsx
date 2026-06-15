@@ -7,10 +7,10 @@ import { cn } from "@/lib";
 const headingVariants = cva("", {
   variants: {
     level: {
-      h1: "font-heading [font-size:clamp(28px,8vw,36px)] leading-[1.02] font-black text-[var(--heading-h1)] md:text-5xl lg:text-6xl xl:text-7xl",
-      h2: "font-heading [font-size:clamp(22px,6vw,30px)] leading-tight font-bold text-[var(--heading-h2)] md:text-4xl lg:text-5xl",
-      h3: "font-heading [font-size:clamp(18px,5vw,24px)] leading-tight font-bold text-[var(--heading-h3)] md:text-3xl",
-      h4: "text-[11px] font-bold tracking-wider text-[var(--heading-h4)] uppercase md:text-sm",
+      h1: "font-heading [font-size:clamp(24px,6vw,32px)] leading-[1.02] font-black text-[var(--heading-h1)] md:text-4xl lg:text-5xl xl:text-6xl",
+      h2: "font-heading [font-size:clamp(20px,5vw,26px)] leading-tight font-bold text-[var(--heading-h2)] md:text-3xl lg:text-4xl",
+      h3: "font-heading [font-size:clamp(16px,4vw,20px)] leading-tight font-bold text-[var(--heading-h3)] md:text-2xl",
+      h4: "text-[10px] font-bold tracking-wider text-[var(--heading-h4)] uppercase md:text-xs",
     },
   },
 });

@@ -97,7 +97,7 @@ export const BlogCard = ({
         {blog.date && (
           <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-xl leading-tight font-bold md:text-2xl">
+        <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-lg leading-tight font-bold md:text-xl">
           {blog.title}
         </h3>
         {blog.excerpt && (
@@ -136,7 +136,7 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
         {blog.date && (
           <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-3 font-heading text-xl leading-snug font-bold md:text-2xl">
+        <h3 className="mb-3 font-heading text-lg leading-snug font-bold md:text-xl">
           {blog.title}
         </h3>
         {blog.excerpt && (

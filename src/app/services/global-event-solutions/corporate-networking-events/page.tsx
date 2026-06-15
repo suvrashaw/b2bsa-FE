@@ -31,6 +31,8 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
 
+const servicesContactModal = {};
+
 const Page = () => {
   return (
     <ServicePage
@@ -76,7 +78,15 @@ const Page = () => {
           title={CORP_NETWORKING_CAPABILITIES.title}
         />
       }
-      preStudiesSections={<ServicesStack {...CORP_NETWORKING_EVENT_TYPES} />}
+      preStudiesSections={
+        <ServicesStack
+          {...CORP_NETWORKING_EVENT_TYPES}
+          cardCtaMode="linked"
+          commonCtaLabel="Contact Our Team"
+          contactModal={servicesContactModal}
+          showCommonCta
+        />
+      }
       relatedServices={CORP_NETWORKING_RELATED_SERVICES}
       relatedServicesHeading="Related Event Services"
       secondaryServices={CORP_NETWORKING_INDUSTRIES_SECTION}

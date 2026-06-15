@@ -40,7 +40,7 @@ export const ServicesCard = ({
               </span>
             </div>
           )}
-          <h3 className="mb-6 font-heading text-3xl leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:!text-white">
+          <h3 className="mb-6 font-heading text-2xl leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:!text-white">
             {service.title}
           </h3>
 

@@ -86,7 +86,7 @@ export const Timeline = ({
                 {/* Content */}
                 <div className="w-full pl-8">
                   <div className="[#212529] rounded-xl border border-gray-100 bg-white p-8 text-left shadow-xl transition-all duration-300 hover:border-brand-blue/30">
-                    <h3 className="mb-4 text-xl font-bold md:text-2xl">{step.title}</h3>
+                    <h3 className="mb-4 text-lg font-bold md:text-xl">{step.title}</h3>
                     <p className="text-sm  leading-relaxed text-gray-600 md:text-base">
                       {step.description}
                     </p>

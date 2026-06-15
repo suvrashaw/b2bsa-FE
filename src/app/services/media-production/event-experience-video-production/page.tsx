@@ -4,8 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
+import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -17,7 +18,6 @@ import {
   EVENT_EXPERIENCE_VIDEO_CASE_STUDIES,
   EVENT_EXPERIENCE_VIDEO_CONTACT_CTA,
   EVENT_EXPERIENCE_VIDEO_DELIVERABLES,
-  EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION,
   EVENT_EXPERIENCE_VIDEO_FAQ,
   EVENT_EXPERIENCE_VIDEO_IMAGE_HERO,
   EVENT_EXPERIENCE_VIDEO_INTRO,
@@ -27,6 +27,9 @@ import {
 } from "@/content/services/media-production/event-experience-video-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_VIDEO_PAGE);
+
+const spotlightProps = { ...EVENT_EXPERIENCE_VIDEO_INTRO, showCta: false };
+const deliverableProps = { ...EVENT_EXPERIENCE_VIDEO_DELIVERABLES, showCardCtas: false };
 
 const Page = () => {
   return (
@@ -68,14 +71,18 @@ const Page = () => {
       hero={EVENT_EXPERIENCE_VIDEO_IMAGE_HERO}
       page={EVENT_EXPERIENCE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      process={EVENT_EXPERIENCE_VIDEO_CAPABILITIES}
+      preProcessSections={
+        <FeatureCarouselSection
+          description={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.description}
+          features={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
+          heading={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.heading}
+        />
+      }
       relatedServices={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
-      secondaryServices={EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION}
-      secondaryServicesSectionType="carousel"
-      services={EVENT_EXPERIENCE_VIDEO_DELIVERABLES}
+      services={deliverableProps}
       showPhaseNumbers={false}
-      spotlight={EVENT_EXPERIENCE_VIDEO_INTRO}
+      spotlight={spotlightProps}
     />
   );
 };

@@ -3,7 +3,6 @@
     "alt": "Event Hostess Services",
     "src": "/images/home/hero/home_hero_bg.avif"
   },
-  "badge": "Event Hostess",
   "description": "Partner with B2B Sales Arrow for professional event hostess services that help your brand deliver smooth guest experiences, stronger audience engagement, and successful corporate event execution.",
   "headingLines": ["Looking for Professional", "Event Hostess Services?"],
   "primaryCta": {
@@ -11,9 +10,5 @@
     "label": "Schedule a Consultation"
   },
   "proofLabel": "Trusted by 500+ companies",
-  "proofLogos": [],
-  "secondaryCta": {
-    "href": "/case-studies",
-    "label": "View Case Studies"
-  }
+  "proofLogos": []
 }
