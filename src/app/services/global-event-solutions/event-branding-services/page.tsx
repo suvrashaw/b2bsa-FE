@@ -35,6 +35,8 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_BRANDING_CASE_STUDIES}
+      clientLogosDescription="Leading enterprises trust our corporate event branding services to create visually engaging and memorable event experiences across conferences, exhibitions, and trade shows."
+      clientLogosHeading="Trusted by Global Brands for Event Branding Solutions"
       contactUs={EVENT_BRANDING_CONTACT_CTA}
       customSections={
         <>
@@ -70,6 +72,7 @@ const Page = () => {
         <>
           <ContactModalTrigger label="Plan Your Event Branding" />
           <Timeline
+            description={EVENT_BRANDING_CAPABILITIES.description}
             phases={EVENT_BRANDING_CAPABILITIES.phases}
             showPhaseNumbers={false}
             title={EVENT_BRANDING_CAPABILITIES.title}
@@ -79,6 +82,7 @@ const Page = () => {
       }
       proofBar={EVENT_BRANDING_PROOF_BAR}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={EVENT_BRANDING_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}

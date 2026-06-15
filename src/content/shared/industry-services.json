@@ -41,30 +41,6 @@
   },
   {
     "color": "bg-brand-primary",
-    "description": "TV broadcasters, streaming platforms, content producers, and media technology companies.",
-    "icon": "Radio",
-    "id": "media-broadcasting",
-    "image": "/images/services/media-production-2.avif",
-    "title": "Media & Broadcasting"
-  },
-  {
-    "color": "bg-brand-blue",
-    "description": "Mobile operators, network equipment vendors, and telecom technology innovators.",
-    "icon": "Wifi",
-    "id": "telecommunications",
-    "image": "/images/events/inma_2026.avif",
-    "title": "Telecommunications"
-  },
-  {
-    "color": "bg-brand-cyan",
-    "description": "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
-    "icon": "Wrench",
-    "id": "automotive",
-    "image": "/images/case-studies/cs-3.avif",
-    "title": "Automotive"
-  },
-  {
-    "color": "bg-brand-primary",
     "description": "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
     "icon": "ShoppingBag",
     "id": "retail-ecommerce",
@@ -73,6 +49,30 @@
   },
   {
     "color": "bg-brand-blue",
+    "description": "TV broadcasters, streaming platforms, content producers, and media technology companies.",
+    "icon": "Radio",
+    "id": "media-broadcasting",
+    "image": "/images/services/media-production-2.avif",
+    "title": "Media & Broadcasting"
+  },
+  {
+    "color": "bg-brand-cyan",
+    "description": "Mobile operators, network equipment vendors, and telecom technology innovators.",
+    "icon": "Wifi",
+    "id": "telecommunications",
+    "image": "/images/events/inma_2026.avif",
+    "title": "Telecommunications"
+  },
+  {
+    "color": "bg-brand-blue",
+    "description": "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
+    "icon": "Wrench",
+    "id": "automotive",
+    "image": "/images/case-studies/cs-3.avif",
+    "title": "Automotive"
+  },
+  {
+    "color": "bg-brand-primary",
     "description": "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
     "icon": "Zap",
     "id": "energy-utilities",

@@ -1,4 +1,5 @@
 {
+  "description": "Our event logistics services are designed to support high-impact corporate events with reliable coordination, operational planning, and onsite management support.",
   "phases": [
     {
       "description": "End-to-end logistics for exhibition stand delivery and removal.",
@@ -33,5 +34,5 @@
       "title": "Corporate event operations planning"
     }
   ],
-  "title": "Booth Logistics Services Capabilities & Operational Expertise"
+  "title": "Event Logistics Capabilities & Operational Expertise"
 }

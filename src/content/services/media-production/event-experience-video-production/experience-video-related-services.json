@@ -1,18 +1,14 @@
 [
   {
-    "href": "/services/media-production/event-physical-video-shoot",
-    "title": "Event Physical Video Shoot"
-  },
-  {
     "href": "/services/media-production/corporate-video-production",
     "title": "Corporate Video Production Services"
   },
   {
     "href": "/services/media-production/event-live-streaming-services",
-    "title": "Event Live Streaming Services"
+    "title": "Live Streaming Services"
   },
   {
     "href": "/services/media-production/virtual-video-production",
-    "title": "Virtual Video Production Services"
+    "title": "Virtual Event Production Services"
   }
 ]

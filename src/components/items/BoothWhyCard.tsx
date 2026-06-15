@@ -1,14 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Globe2, TrendingUp, Users2 } from "lucide-react";
+import {
+  Award,
+  CheckCircle,
+  Clock,
+  Globe2,
+  Network,
+  Package,
+  Shield,
+  Target,
+  TrendingDown,
+  TrendingUp,
+  Users2,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
 import { cn } from "@/lib";
 
-const icons = { Award, Globe2, TrendingUp, Users2 } as const;
+const icons = {
+  Award,
+  CheckCircle,
+  Clock,
+  Globe2,
+  Network,
+  Package,
+  Shield,
+  Target,
+  TrendingDown,
+  TrendingUp,
+  Users2,
+} as const;
 
 interface BoothWhyChooseUsItem {
   description: string;

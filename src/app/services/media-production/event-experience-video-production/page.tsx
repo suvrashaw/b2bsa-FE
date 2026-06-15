@@ -22,7 +22,6 @@ import {
   EVENT_EXPERIENCE_VIDEO_IMAGE_HERO,
   EVENT_EXPERIENCE_VIDEO_INTRO,
   EVENT_EXPERIENCE_VIDEO_PAGE,
-  EVENT_EXPERIENCE_VIDEO_PROOF_BAR,
   EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES,
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
@@ -33,6 +32,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_EXPERIENCE_VIDEO_CASE_STUDIES}
+      clientLogosHeading="Trusted by Global Brands for Event Experience Video Production"
       contactUs={EVENT_EXPERIENCE_VIDEO_CONTACT_CTA}
       customSections={
         <>
@@ -69,8 +69,8 @@ const Page = () => {
       page={EVENT_EXPERIENCE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       process={EVENT_EXPERIENCE_VIDEO_CAPABILITIES}
-      proofBar={EVENT_EXPERIENCE_VIDEO_PROOF_BAR}
       relatedServices={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION}
       secondaryServicesSectionType="carousel"
       services={EVENT_EXPERIENCE_VIDEO_DELIVERABLES}

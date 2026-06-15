@@ -5,6 +5,7 @@ import {
 } from "@/content/shared";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
+import CONTACTCTA_DATA from "./contact-cta.json";
 import EVENTCONTACTCTA_DATA from "./event-contact-cta.json";
 import EVENTINDUSTRIESSECTION_DATA from "./event-industries-section.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
@@ -21,13 +22,17 @@ export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
+const aviationIndustry = GLOBAL_INDUSTRY_SERVICES.find((s) => s.id === "aviation");
+const otherIndustries = GLOBAL_INDUSTRY_SERVICES.filter((s) => s.id !== "aviation");
+
 export const CORP_EVENT_INDUSTRIES_SECTION = {
   ...EVENTINDUSTRIESSECTION_DATA,
-  services: GLOBAL_INDUSTRY_SERVICES,
+  services: aviationIndustry ? [...otherIndustries, aviationIndustry] : GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const CORP_EVENT_CONTACT_CTA = {
   ...EVENTCONTACTCTA_DATA,
+  headingLines: CONTACTCTA_DATA.headingLines,
 };
 
 export { default as CORP_EVENT_CAPABILITIES } from "./event-capabilities.json";

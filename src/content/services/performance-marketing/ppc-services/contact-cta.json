@@ -4,7 +4,6 @@
     "src": "/images/home/hero/home_hero_bg.avif"
   },
   "description": "A paid media audit reveals wasted spend, low-intent keywords, poor conversion paths, and attribution blind spots. Fixing these is faster than increasing budget.",
-  "headingLines": ["Stop Guessing.", "Start Building Pipeline with Precision."],
   "primaryCta": {
     "href": "/contact",
     "label": "Request a Paid Media Audit"

@@ -63,6 +63,8 @@ export interface CaseStudiesProps {
   heading?: ReactNode;
   items?: CaseStudyEntry[];
   maxItems?: number;
+  sectionDescription?: string;
+  sectionHeading?: ReactNode;
   viewAllHref?: string;
   viewAllLabel?: CaseStudiesContent["viewAllLabel"];
 }
@@ -76,6 +78,8 @@ export const CaseStudies = ({
   heading = DEFAULT_CASE_STUDIES_HEADING,
   items,
   maxItems = 5,
+  sectionDescription,
+  sectionHeading,
   viewAllHref = "/case-studies",
   viewAllLabel = content.viewAllLabel,
 }: CaseStudiesProps = {}) => {
@@ -116,6 +120,18 @@ export const CaseStudies = ({
   return (
     <section className="relative bg-brand-gray py-12 md:py-16 lg:py-20" id="work">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+        {sectionHeading && (
+          <div className="mb-10 flex flex-col items-center text-center">
+            <SectionHeader as="h2" className="text-center">
+              {sectionHeading}
+            </SectionHeader>
+            {sectionDescription && (
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
+                {sectionDescription}
+              </p>
+            )}
+          </div>
+        )}
         <div className="mb-16 flex flex-col items-center text-center">
           <SectionHeader as="h2" className="text-center">
             {heading}

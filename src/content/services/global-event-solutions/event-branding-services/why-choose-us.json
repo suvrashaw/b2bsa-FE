@@ -1,5 +1,5 @@
 {
-  "heading": "Why Choose B2B Sales Arrow for Event Branding Services",
+  "heading": "Why Choose B2B Sales Arrow for Event Branding Solutions",
   "items": [
     {
       "description": "We manage design, production, installation, and onsite branding support for seamless event branding experiences.",
@@ -14,10 +14,22 @@
       "title": "Creative Corporate Branding Expertise"
     },
     {
+      "description": "We provide branding support for exhibitions, conferences, trade shows, and large-scale corporate events worldwide.",
+      "icon": "Trophy",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Exhibition & Trade Show Experience"
+    },
+    {
       "description": "Our branding solutions focus on audience engagement, interaction, and immersive brand storytelling.",
       "icon": "Users2",
       "image": "/images/events/event_other_4.avif",
       "title": "Experiential Brand Activation"
+    },
+    {
+      "description": "We deliver professional event graphics, signage, and branded materials with premium production quality.",
+      "icon": "Shield",
+      "image": "/images/events/event_other_2.avif",
+      "title": "High-Quality Production Standards"
     },
     {
       "description": "Every event is unique, and we tailor branding concepts based on your audience, event objectives, and brand identity.",

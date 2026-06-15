@@ -1,4 +1,6 @@
 {
+  "cta": { "label": "Contact Our Team", "opensModal": true },
+  "description": "Our event experience video production services are powered by professional-grade filming equipment and experienced production teams to ensure high-quality visual storytelling for every corporate event.",
   "phases": [
     {
       "description": "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions.",

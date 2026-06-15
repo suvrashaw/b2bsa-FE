@@ -20,7 +20,6 @@ export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./experience-vid
 export { default as EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION } from "./experience-video-event-types-section.json";
 
 export { default as EVENT_EXPERIENCE_VIDEO_INTRO } from "./experience-video-intro.json";
-export { default as EVENT_EXPERIENCE_VIDEO_PROOF_BAR } from "./experience-video-proof-bar.json";
 export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./experience-video-related-services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_VIDEO_IMAGE_HERO } from "./hero.json";

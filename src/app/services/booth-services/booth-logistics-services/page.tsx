@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -13,6 +13,7 @@ import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
+  EVENT_LOGISTICS_BENEFITS,
   EVENT_LOGISTICS_BLOGS_SECTION,
   EVENT_LOGISTICS_CAPABILITIES,
   EVENT_LOGISTICS_CASE_STUDIES,
@@ -35,6 +36,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_LOGISTICS_CASE_STUDIES}
+      clientLogosHeading="Trusted by Global Brands for Event Logistics Support"
       contactUs={EVENT_LOGISTICS_CONTACT_CTA}
       customSections={
         <>
@@ -70,6 +72,7 @@ const Page = () => {
         <>
           <ContactModalTrigger label="Talk to Our Event Team" />
           <Timeline
+            description={EVENT_LOGISTICS_CAPABILITIES.description}
             phases={EVENT_LOGISTICS_CAPABILITIES.phases}
             showPhaseNumbers={false}
             title={EVENT_LOGISTICS_CAPABILITIES.title}
@@ -77,8 +80,16 @@ const Page = () => {
           <ContactModalTrigger label="Plan Your Event Logistics" />
         </>
       }
+      preStudiesSections={
+        <CardsGrid cols={3} heading={EVENT_LOGISTICS_BENEFITS.heading} id="benefits">
+          {EVENT_LOGISTICS_BENEFITS.items.map((item, i) => (
+            <BoothWhyCard index={i} item={item} key={item.title} />
+          ))}
+        </CardsGrid>
+      }
       proofBar={EVENT_LOGISTICS_PROOF_BAR}
       relatedServices={EVENT_LOGISTICS_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={EVENT_LOGISTICS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={EVENT_LOGISTICS_DELIVERABLES}

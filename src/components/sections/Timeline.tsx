@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { type ReactNode, useMemo } from "react";
+import Link from "next/link";
+import { type ReactNode, useCallback, useMemo, useState } from "react";
 
+import { Button } from "@/components/ui/Button";
+import { ContactModal } from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
@@ -13,6 +16,7 @@ interface Step {
 
 interface TimelineProps {
   className?: string;
+  cta?: { href?: string; label: string; opensModal?: boolean };
   description?: ReactNode;
   heading?: ReactNode;
   phases?: Step[];
@@ -28,6 +32,7 @@ const TIMELINE_VIEWPORT = { once: true };
 
 export const Timeline = ({
   className,
+  cta,
   description,
   heading,
   phases,
@@ -35,6 +40,10 @@ export const Timeline = ({
   subtitle,
   title,
 }: TimelineProps) => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
+  const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
+
   const resolvedSteps = steps ?? phases ?? [];
   const resolvedTitle = title ?? heading;
   const resolvedDescription = description ?? subtitle;
@@ -87,7 +96,25 @@ export const Timeline = ({
             ))}
           </div>
         </div>
+
+        {cta && (
+          <div className="mt-14 flex justify-center">
+            {cta.opensModal ? (
+              <Button onClick={openContactModal} type="button" variant="primary">
+                {cta.label}
+              </Button>
+            ) : (
+              <Button asChild variant="primary">
+                <Link href={cta.href ?? "/contact"}>{cta.label}</Link>
+              </Button>
+            )}
+          </div>
+        )}
       </div>
+
+      {cta?.opensModal && (
+        <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
+      )}
     </section>
   );
 };

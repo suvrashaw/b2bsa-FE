@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -35,6 +35,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BOOTH_HOSTESS_CASE_STUDIES}
+      clientLogosHeading="Trusted by Global Brands for Event Hostess Services"
       contactUs={BOOTH_HOSTESS_CONTACT_CTA}
       customSections={
         <>
@@ -70,6 +71,7 @@ const Page = () => {
         <>
           <ContactModalTrigger label="Request A Quote" />
           <Timeline
+            description={BOOTH_HOSTESS_CAPABILITIES.description}
             phases={BOOTH_HOSTESS_CAPABILITIES.phases}
             showPhaseNumbers={false}
             title={BOOTH_HOSTESS_CAPABILITIES.title}
@@ -79,6 +81,7 @@ const Page = () => {
       }
       proofBar={BOOTH_HOSTESS_PROOF_BAR}
       relatedServices={BOOTH_HOSTESS_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={BOOTH_HOSTESS_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={BOOTH_HOSTESS_DELIVERABLES}

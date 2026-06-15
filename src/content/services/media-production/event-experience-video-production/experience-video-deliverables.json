@@ -1,6 +1,8 @@
 {
+  "contactModal": {},
   "ctaLabel": "Contact Our Team",
   "heading": "What's Included in Our Event Experience Video Production Services",
+  "showCommonCta": true,
   "services": [
     {
       "color": "bg-brand-blue",

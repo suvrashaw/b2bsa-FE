@@ -8,6 +8,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { type ClientLogoItem, HOME_CLIENT_LOGOS } from "@/content/home/content";
 
 export interface ClientLogosProps {
+  description?: string;
   heading?: string;
   logos?: ClientLogoItem[];
   overlap?: boolean;
@@ -67,6 +68,7 @@ const LogosRow = ({
 );
 
 export const ClientLogos = ({
+  description,
   heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
   logos = HOME_CLIENT_LOGOS,
   overlap = true,
@@ -97,9 +99,14 @@ export const ClientLogos = ({
     return (
       <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <SectionHeader as="h2" className="pt-10 pb-6 text-center">
+          <SectionHeader as="h2" className="pt-10 pb-3 text-center">
             {heading}
           </SectionHeader>
+        )}
+        {description && (
+          <p className="mx-auto max-w-3xl px-4 pb-4 text-center text-base leading-relaxed text-brand-charcoal/70">
+            {description}
+          </p>
         )}
         <div className="container mx-auto flex flex-wrap justify-center gap-4 px-8 pb-10">
           {logos.map((logo) => (
@@ -129,6 +136,11 @@ export const ClientLogos = ({
         <SectionHeader as="h2" className="pt-10 pb-3 text-center">
           {heading}
         </SectionHeader>
+      )}
+      {description && (
+        <p className="mx-auto max-w-3xl px-4 pb-4 text-center text-base leading-relaxed text-brand-charcoal/70">
+          {description}
+        </p>
       )}
       <div
         className="pointer-events-auto relative overflow-hidden py-6 pb-10"

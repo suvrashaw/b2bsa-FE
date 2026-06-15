@@ -5,6 +5,7 @@ import {
 } from "@/content/shared";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
+import CONTACT_CTA_DATA from "./contact-cta.json";
 import NETWORKINGCONTACTCTA_DATA from "./networking-contact-cta.json";
 import NETWORKINGINDUSTRIESSECTION_DATA from "./networking-industries-section.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
@@ -28,13 +29,14 @@ export const CORP_NETWORKING_INDUSTRIES_SECTION = {
 
 export const CORP_NETWORKING_CONTACT_CTA = {
   ...NETWORKINGCONTACTCTA_DATA,
+  ...CONTACT_CTA_DATA,
 };
 
 export { default as CORP_NETWORKING_IMAGE_HERO } from "./hero.json";
 export { default as CORP_NETWORKING_BLOGS_SECTION } from "./networking-blogs-section.json";
 export { default as CORP_NETWORKING_CAPABILITIES } from "./networking-capabilities.json";
 export { default as CORP_NETWORKING_DELIVERABLES } from "./networking-deliverables.json";
-
+export { default as CORP_NETWORKING_EVENT_TYPES } from "./networking-event-types.json";
 export { default as CORP_NETWORKING_INTRO } from "./networking-intro.json";
 export { default as CORP_NETWORKING_RELATED_SERVICES } from "./networking-related-services.json";
 export { default as CORP_NETWORKING_PAGE } from "./page.json";

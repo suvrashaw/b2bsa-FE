@@ -14,10 +14,22 @@
       "title": "Corporate Networking Expertise"
     },
     {
+      "description": "We help brands create welcoming and engaging networking environments for attendees, executives, and partners.",
+      "icon": "Handshake",
+      "image": "/images/home/testimonials/testimonial-5.avif",
+      "title": "Professional Guest Experience"
+    },
+    {
       "description": "Our team delivers premium hospitality experiences for high-value business events and executive gatherings.",
       "icon": "Award",
       "image": "/images/home/testimonials/testimonial-6.avif",
       "title": "VIP & Hospitality Management"
+    },
+    {
+      "description": "We provide scalable networking event planning support for conferences, trade shows, receptions, and business dinners.",
+      "icon": "Scale",
+      "image": "/images/events/event_other_1.avif",
+      "title": "Flexible Networking Solutions"
     },
     {
       "description": "Our networking event solutions are designed to encourage meaningful conversations, partnerships, and business opportunities.",

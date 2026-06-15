@@ -48,6 +48,22 @@
       "id": "event-teaser-video-campaigns",
       "image": "/images/services/performance-marketing.avif",
       "title": "Event Teaser Video Campaigns"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Recap and highlight videos edited for post-event social media campaigns, email marketing, and brand promotion.",
+      "icon": "Share2",
+      "id": "post-event-marketing-videos",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Post-Event Marketing Videos"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "On-floor booth footage capturing visitor interactions, product demonstrations, and brand engagement moments.",
+      "icon": "Camera",
+      "id": "booth-engagement-video-coverage",
+      "image": "/images/services/booth/booth-5.avif",
+      "title": "Booth Engagement Video Coverage"
     }
   ]
 }

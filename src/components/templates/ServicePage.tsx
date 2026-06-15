@@ -43,6 +43,7 @@ export interface ServicePageProps {
   // ─── Lower funnel ───────────────────────────────
   caseStudies?: CaseStudiesProps;
   // ─── Trust band ─────────────────────────────────
+  clientLogosDescription?: string;
   clientLogosHeading?: string;
   // ─── Always required ────────────────────────────
   contactUs: ContactUsProps;
@@ -64,8 +65,12 @@ export interface ServicePageProps {
   parentPage?: MarketingPageIdentity;
   // ─── Escape hatch before Timeline ───────────────
   preProcessSections?: ReactNode;
+  // ─── Extra sections between industries and case studies ─
+  preStudiesSections?: ReactNode;
   // ─── Process ────────────────────────────────────
   process?: {
+    cta?: { href?: string; label: string; opensModal?: boolean };
+    description?: string;
     heading?: string;
     phases?: { description: string; title: string }[];
     steps?: { description: string; title: string }[];
@@ -137,6 +142,7 @@ const renderServicesSection = (
 
 export const ServicePage = ({
   caseStudies,
+  clientLogosDescription,
   clientLogosHeading,
   contactUs,
   creativePricing,
@@ -147,6 +153,7 @@ export const ServicePage = ({
   page,
   parentPage,
   preProcessSections,
+  preStudiesSections,
   process,
   proofBar,
   relatedServices,
@@ -186,7 +193,7 @@ export const ServicePage = ({
 
       {hero && <Hero {...hero} />}
 
-      <ClientLogos heading={clientLogosHeading} overlap={false} />
+      <ClientLogos description={clientLogosDescription} heading={clientLogosHeading} overlap={false} />
 
       {proofBar && <Stats {...proofBar} />}
 
@@ -200,6 +207,8 @@ export const ServicePage = ({
 
       {process && (
         <Timeline
+          cta={process.cta}
+          description={process.description}
           phases={process.phases}
           showPhaseNumbers={showPhaseNumbers}
           steps={process.steps}
@@ -208,6 +217,8 @@ export const ServicePage = ({
       )}
 
       {secondaryServices && renderServicesSection(secondaryServices, secondaryServicesSectionType)}
+
+      {preStudiesSections}
 
       {creativePricing && (
         <Carousel

@@ -1,5 +1,5 @@
 {
-  "heading": "Why Choose B2B Sales Arrow for Booth Logistics Services",
+  "heading": "Why Choose B2B Sales Arrow for Event Logistics Services",
   "items": [
     {
       "description": "We manage planning, coordination, transportation, setup, and onsite operational support for smooth event execution.",
@@ -14,10 +14,22 @@
       "title": "Corporate Event Expertise"
     },
     {
+      "description": "We ensure timely communication, vendor management, and operational efficiency across all event activities.",
+      "icon": "CheckCircle",
+      "image": "/images/events/event_other_4.avif",
+      "title": "Reliable Event Coordination"
+    },
+    {
       "description": "We provide flexible event logistics support for both small corporate gatherings and large-scale international exhibitions.",
       "icon": "TrendingUp",
       "image": "/images/events/event_other_3.avif",
       "title": "Scalable Logistics Solutions"
+    },
+    {
+      "description": "Our onsite teams help manage setup supervision, attendee coordination, and event execution support efficiently.",
+      "icon": "Target",
+      "image": "/images/services/booth/booth-6.avif",
+      "title": "Onsite Operational Management"
     },
     {
       "description": "We support event logistics operations across major global conferences, trade shows, and business events.",

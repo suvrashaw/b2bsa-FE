@@ -4,12 +4,12 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
+import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
@@ -19,12 +19,12 @@ import {
   CORP_NETWORKING_CASE_STUDIES,
   CORP_NETWORKING_CONTACT_CTA,
   CORP_NETWORKING_DELIVERABLES,
+  CORP_NETWORKING_EVENT_TYPES,
   CORP_NETWORKING_FAQ,
   CORP_NETWORKING_IMAGE_HERO,
   CORP_NETWORKING_INDUSTRIES_SECTION,
   CORP_NETWORKING_INTRO,
   CORP_NETWORKING_PAGE,
-  CORP_NETWORKING_PROOF_BAR,
   CORP_NETWORKING_RELATED_SERVICES,
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
@@ -35,6 +35,8 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={CORP_NETWORKING_CASE_STUDIES}
+      clientLogosDescription="Leading enterprises trust our corporate networking event services to deliver impactful networking experiences for executives, clients, partners, and business communities."
+      clientLogosHeading="Trusted by Global Brands for Networking Event Solutions"
       contactUs={CORP_NETWORKING_CONTACT_CTA}
       customSections={
         <>
@@ -67,18 +69,16 @@ const Page = () => {
       page={CORP_NETWORKING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <>
-          <ContactModalTrigger label="Get in Touch" />
-          <Timeline
-            phases={CORP_NETWORKING_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={CORP_NETWORKING_CAPABILITIES.title}
-          />
-          <ContactModalTrigger label="Talk to Our Event Team" />
-        </>
+        <Timeline
+          description={CORP_NETWORKING_CAPABILITIES.description}
+          phases={CORP_NETWORKING_CAPABILITIES.phases}
+          showPhaseNumbers={false}
+          title={CORP_NETWORKING_CAPABILITIES.title}
+        />
       }
-      proofBar={CORP_NETWORKING_PROOF_BAR}
+      preStudiesSections={<ServicesStack {...CORP_NETWORKING_EVENT_TYPES} />}
       relatedServices={CORP_NETWORKING_RELATED_SERVICES}
+      relatedServicesHeading="Related Event Services"
       secondaryServices={CORP_NETWORKING_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_NETWORKING_DELIVERABLES}
