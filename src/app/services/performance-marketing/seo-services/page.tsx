@@ -1,17 +1,112 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
+import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { ServicesStack } from "@/components/sections/ServicesStack";
+import { StickyScroll } from "@/components/sections/StickyScroll";
+import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
+import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { SEO_PAGE } from "@/content/services/performance-marketing/seo-services/content";
+import { PERF_PAGE } from "@/content/services/performance-marketing/content";
+import {
+  SEO_BLOGS_SECTION,
+  SEO_CAMPAIGNS,
+  SEO_CAPABILITIES,
+  SEO_CAPABILITIES_FEATURES,
+  SEO_CASE_STUDIES,
+  SEO_CLIENT_LOGOS_HEADING,
+  SEO_CONTACT_CTA,
+  SEO_FAQ,
+  SEO_HERO,
+  SEO_INDUSTRIES,
+  SEO_INDUSTRIES_FEATURES,
+  SEO_INTRO,
+  SEO_MODAL_SERVICE_FIELD,
+  SEO_PAGE,
+  SEO_RELATED_SERVICES,
+  SEO_SERVICES,
+  SEO_WHY_CHOOSE_US,
+} from "@/content/services/performance-marketing/seo-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(SEO_PAGE);
 
+const servicesContactModal = {
+  serviceField: SEO_MODAL_SERVICE_FIELD,
+};
+
 const Page = () => {
   return (
-    <main className="min-h-screen px-8 pt-32">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="font-heading text-4xl font-black text-brand-charcoal">SEO Services</h1>
-      </div>
-    </main>
+    <ServicePage
+      caseStudies={SEO_CASE_STUDIES}
+      clientLogosHeading={SEO_CLIENT_LOGOS_HEADING}
+      contactUs={SEO_CONTACT_CTA}
+      customSections={
+        <>
+          <StickyScroll heading={SEO_CAMPAIGNS.heading} reasons={SEO_CAMPAIGNS.reasons} showCta={false} />
+
+          <CardsGrid cols={3} heading={SEO_WHY_CHOOSE_US.heading}>
+            {SEO_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardsGrid>
+
+          <Carousel
+            cols={4}
+            heading={SEO_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            headingAlign="left"
+            id="blogs"
+          >
+            {RENTAL_BLOG_POSTS.map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
+        </>
+      }
+      faq={SEO_FAQ}
+      faqVariant="accordion"
+      hero={SEO_HERO}
+      page={SEO_PAGE}
+      parentPage={PERF_PAGE}
+      preProcessSections={
+        <>
+          <ServicesStack
+            {...SEO_SERVICES}
+            commonCtaLabel={SEO_SERVICES.ctaLabel}
+            contactModal={servicesContactModal}
+            showCardCtas={false}
+            showCommonCta
+          />
+
+          <FeatureCarouselSection
+            description={SEO_CAPABILITIES.description}
+            features={SEO_CAPABILITIES_FEATURES}
+            heading={SEO_CAPABILITIES.heading}
+            showFeatureDescriptions={false}
+          />
+
+          <FeatureCarouselSection
+            features={SEO_INDUSTRIES_FEATURES}
+            heading={SEO_INDUSTRIES.heading}
+            mediaPosition="left"
+            showFeatureDescriptions={false}
+          />
+        </>
+      }
+      relatedServices={SEO_RELATED_SERVICES}
+      relatedServicesHeading="Related Performance Marketing Services"
+      spotlight={SEO_INTRO}
+    />
   );
 };
 

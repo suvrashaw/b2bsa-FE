@@ -4,9 +4,15 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/services/performance-marketing/ppc-services",
-    "description": "Performance-driven PPC services that maximize your ad spend and deliver measurable ROI.",
-    "focusKeyphrase": "PPC services",
-    "secondaryKeywords": ["B2B PPC", "Paid search"],
-    "title": "PPC Services | B2B Sales Arrow"
+    "description": "Specialist B2B PPC agency — Google Search, Display, YouTube, programmatic, and retargeting managed around qualified pipeline and cost per qualified opportunity. Not just clicks.",
+    "focusKeyphrase": "B2B paid advertising",
+    "secondaryKeywords": [
+      "PPC agency",
+      "paid search B2B",
+      "B2B PPC management",
+      "digital advertising",
+      "Google Ads B2B"
+    ],
+    "title": "B2B Paid Advertising and PPC Agency for Enterprise | B2B Sales Arrow"
   }
 }

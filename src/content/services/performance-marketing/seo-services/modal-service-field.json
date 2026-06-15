@@ -1,0 +1,14 @@
+{
+  "label": "Select the service you need",
+  "options": [
+    {
+      "label": "Performance Marketing",
+      "value": "performance-marketing"
+    },
+    {
+      "label": "SEO Services",
+      "value": "seo-services"
+    }
+  ],
+  "placeholder": "Select a service..."
+}

@@ -1,0 +1,46 @@
+{
+  "ctaLabel": "Let's Connect",
+  "heading": "Paid Advertising Channels We Manage",
+  "services": [
+    {
+      "color": "bg-brand-blue",
+      "description": "High-intent campaigns around the terms enterprise buyers use when actively comparing vendors — structured for lead quality and cost per qualified opportunity.",
+      "icon": "Search",
+      "id": "google-search-ppc",
+      "image": "/images/services/performance-marketing.avif",
+      "title": "Google Search — PPC"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Awareness and retargeting campaigns keeping your brand visible across relevant digital environments.",
+      "icon": "Monitor",
+      "id": "google-display-programmatic",
+      "image": "/images/services/performance-marketing-1.avif",
+      "title": "Google Display & Programmatic"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "Video campaigns for awareness, education, product storytelling, and demand generation targeting enterprise decision-makers.",
+      "icon": "Video",
+      "id": "youtube-advertising",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "title": "YouTube Advertising"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "Keeping your brand in front of target accounts and decision-makers who have already shown interest — moving prospects from first touch to deeper consideration.",
+      "icon": "Target",
+      "id": "retargeting-abm",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "title": "Retargeting & Account-Based Advertising"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Supplementary paid search for desktop-heavy B2B buyer segments where Microsoft's search share is meaningful.",
+      "icon": "BarChart3",
+      "id": "microsoft-ads",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "title": "Microsoft Ads"
+    }
+  ]
+}

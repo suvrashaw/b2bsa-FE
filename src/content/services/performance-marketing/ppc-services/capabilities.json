@@ -1,0 +1,54 @@
+{
+  "description": "Our B2B paid advertising services cover every major paid channel — from search to programmatic — all structured around qualified pipeline.",
+  "features": [
+    {
+      "icon": "Search",
+      "id": "google-search",
+      "image": "/images/services/performance-marketing.avif",
+      "label": "Google Search PPC"
+    },
+    {
+      "icon": "Monitor",
+      "id": "display-programmatic",
+      "image": "/images/services/performance-marketing-1.avif",
+      "label": "Display & programmatic advertising"
+    },
+    {
+      "icon": "Video",
+      "id": "youtube-advertising",
+      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "label": "YouTube advertising"
+    },
+    {
+      "icon": "Target",
+      "id": "retargeting",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "label": "Retargeting campaigns"
+    },
+    {
+      "icon": "Users",
+      "id": "account-based-advertising",
+      "image": "/images/home/why-choose-us/global_reach.avif",
+      "label": "Account-based advertising"
+    },
+    {
+      "icon": "BarChart3",
+      "id": "microsoft-ads",
+      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "label": "Microsoft Ads"
+    },
+    {
+      "icon": "PieChart",
+      "id": "landing-page-cro",
+      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "label": "Landing page CRO"
+    },
+    {
+      "icon": "LineChart",
+      "id": "pipeline-attribution",
+      "image": "/images/services/performance-marketing.avif",
+      "label": "Pipeline attribution reporting"
+    }
+  ],
+  "heading": "B2B PPC Capabilities"
+}
