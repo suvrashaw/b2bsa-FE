@@ -1,17 +1,17 @@
 {
   "faqs": [
     {
-      "answer": "Technical improvements show results in 4–8 weeks. Organic traffic from content takes 4–9 months. Consistent organic pipeline typically develops over 12–24 months in competitive markets. SEO is the most durable and cost-efficient long-term B2B channel — but it requires patience and consistency.",
+      "answer": "Technical improvements: 4–8 weeks. Organic traffic from content: 4–9 months. Consistent organic pipeline: 12–24 months in competitive markets. SEO is the most durable and cost-efficient long-term B2B channel — but it requires patience and consistency.",
       "id": "how-long-does-seo-take",
       "question": "How long does B2B SEO take to produce results?"
     },
     {
-      "answer": "Yes — SEO copywriting and content architecture are included in the full service. We write service pages, pillar articles, blog posts, FAQs, and conversion-focused copy aligned to your buyer journey.",
+      "answer": "Yes — SEO copywriting and content architecture are included in the full service. We write service pages, pillar articles, blog posts, FAQs, and conversion-focused copy.",
       "id": "do-you-write-content",
       "question": "Do you write the content as well?"
     },
     {
-      "answer": "Technical SEO covers infrastructure — crawlability, Core Web Vitals, site speed, schema. On-page SEO covers visible content — titles, headings, body copy, internal links. Both are required for sustained organic performance.",
+      "answer": "Technical SEO: infrastructure — crawlability, Core Web Vitals, site speed, schema. On-page SEO: visible content — titles, headings, body copy, internal links. Both are required.",
       "id": "technical-vs-on-page-seo",
       "question": "What is the difference between technical and on-page SEO?"
     },
@@ -21,7 +21,7 @@
       "question": "Do you provide a technical audit before starting?"
     },
     {
-      "answer": "We track ranking movement, organic traffic quality, conversion rate, qualified leads generated, and pipeline influenced — connected to actual commercial outcomes, not just search metrics.",
+      "answer": "Ranking movement, organic traffic quality, conversion rate, qualified leads generated, and pipeline influenced — connected to actual commercial outcomes, not just search metrics.",
       "id": "how-do-you-measure-seo-roi",
       "question": "How do you measure SEO ROI?"
     }

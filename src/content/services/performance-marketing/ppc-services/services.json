@@ -1,6 +1,6 @@
 {
   "ctaLabel": "Let's Connect",
-  "heading": "Paid Advertising Channels We Manage",
+  "heading": "Channels We Manage",
   "services": [
     {
       "color": "bg-brand-blue",
@@ -20,7 +20,7 @@
     },
     {
       "color": "bg-brand-primary",
-      "description": "Video campaigns for awareness, education, product storytelling, and demand generation targeting enterprise decision-makers.",
+      "description": "Video campaigns for awareness, education, product storytelling, and demand generation.",
       "icon": "Video",
       "id": "youtube-advertising",
       "image": "/images/home/why-choose-us/strategic_creativity.avif",
