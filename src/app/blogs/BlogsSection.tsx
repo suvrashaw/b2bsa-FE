@@ -12,10 +12,11 @@ import {
   useMemo,
 } from "react";
 
+import type { SharedBlogPost } from "@/content/blogs/data";
+
 import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Pagination } from "@/components/ui/Pagination";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "@/content/blogs/content";
-import type { SharedBlogPost } from "@/content/blogs/data";
 import { cn } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
@@ -108,7 +109,7 @@ export const BlogsSection = () => {
     return blogs.filter((blog) => blog.category === activeCategoryName);
   }, [activeCategory, activeCategoryName, blogs]);
 
-  const { totalPages, currentPage, paginatedItems: paginatedBlogs } = applyPagination(filteredBlogs, requestedPage);
+  const { currentPage, paginatedItems: paginatedBlogs, totalPages } = applyPagination(filteredBlogs, requestedPage);
   const hasEmptyPage = filteredBlogs.length > 0 && paginatedBlogs.length === 0;
   let blogsContent: ReactNode;
 

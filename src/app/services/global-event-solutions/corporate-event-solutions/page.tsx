@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Timeline } from "@/components/sections/Timeline";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -30,6 +30,27 @@ import {
 } from "@/content/services/global-event-solutions/corporate-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
+
+const capabilityAssets = [
+  { icon: "CalendarCheck", image: "/images/events/event_other_1.avif" },
+  { icon: "Building", image: "/images/events/event_other_2.avif" },
+  { icon: "Wrench", image: "/images/events/event_other_3.avif" },
+  { icon: "Users", image: "/images/events/event_other_4.avif" },
+  { icon: "Palette", image: "/images/services/booth/booth-5.avif" },
+  { icon: "UserPlus", image: "/images/home/testimonials/testimonial-1.avif" },
+  { icon: "Truck", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "ClipboardCheck", image: "/images/home/why-choose-us/global_reach.avif" },
+  { icon: "Star", image: "/images/home/why-choose-us/proven_execution.avif" },
+  { icon: "Globe2", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+];
+
+const capabilityFeatures = CORP_EVENT_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "CalendarCheck",
+  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -70,11 +91,11 @@ const Page = () => {
       preProcessSections={
         <>
           <ContactModalTrigger label="Plan Your Corporate Event" />
-          <Timeline
+          <Capabilities
+            capabilities={capabilityFeatures}
             description={CORP_EVENT_CAPABILITIES.description}
-            phases={CORP_EVENT_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={CORP_EVENT_CAPABILITIES.title}
+            heading={CORP_EVENT_CAPABILITIES.title}
+            mediaPosition="right"
           />
           <ContactModalTrigger label="Talk to Our Event Team" />
         </>

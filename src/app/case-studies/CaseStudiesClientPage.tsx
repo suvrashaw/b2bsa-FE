@@ -125,7 +125,7 @@ export const CaseStudiesClientPage = () => {
       ? CASE_STUDIES_PAGE_STUDIES
       : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.services.includes(activeFilter));
 
-  const { totalPages, currentPage, paginatedItems: paginatedStudies } = applyPagination(
+  const { currentPage, paginatedItems: paginatedStudies, totalPages } = applyPagination(
     filteredStudies,
     requestedPage
   );

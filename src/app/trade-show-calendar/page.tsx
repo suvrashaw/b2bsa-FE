@@ -10,6 +10,7 @@ import {
   TRADE_SHOW_CALENDAR_HERO,
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/trade-show-calendar/content";
+
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [

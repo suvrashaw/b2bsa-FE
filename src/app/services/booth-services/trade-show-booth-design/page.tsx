@@ -5,8 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { EventsCard } from "@/components/items/EventsCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -40,13 +40,13 @@ const Page = () => {
       contactUs={BOOTH_DESIGN_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
-            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
-            ))}
-          </CardsGrid>
           <CardsGrid
             cols={3}
+            cta={
+              <Button asChild variant="secondary">
+                <Link href="/trade-show-calendar">Explore All Upcoming Events</Link>
+              </Button>
+            }
             description={HOME_EVENTS_CONTENT.description}
             heading={HOME_EVENTS_CONTENT.heading}
             id="events"
@@ -59,6 +59,11 @@ const Page = () => {
                 index={i}
                 key={event.id}
               />
+            ))}
+          </CardsGrid>
+          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
+            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </CardsGrid>
           <Carousel
@@ -84,6 +89,15 @@ const Page = () => {
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
+      preContactSections={
+        <section className="bg-brand-gray py-12 md:py-16">
+          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8 text-center">
+            <Button asChild size="lg" variant="primary">
+              <Link href="/contact">Get a Free Consultation</Link>
+            </Button>
+          </div>
+        </section>
+      }
       preProcessSections={
         <StickyScroll
           heading="Booth Sizes and Formats We Design"

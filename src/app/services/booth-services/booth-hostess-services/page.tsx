@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -93,9 +93,9 @@ const Page = () => {
       page={BOOTH_HOSTESS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <FeatureCarouselSection
+        <Capabilities
+          capabilities={capabilityFeatures}
           description={BOOTH_HOSTESS_CAPABILITIES.description}
-          features={capabilityFeatures}
           heading={BOOTH_HOSTESS_CAPABILITIES.title}
         />
       }

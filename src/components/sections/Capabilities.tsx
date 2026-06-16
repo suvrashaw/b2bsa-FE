@@ -10,9 +10,9 @@ import { Icon } from "@/components/ui/Icon";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
-// ─── FeatureCarousel ─────────────────────────────────────────────────────────
+// ─── CapabilitiesCarousel ────────────────────────────────────────────────────
 
-export interface FeatureCarouselItem {
+export interface CapabilitiesItem {
   description?: string;
   icon: string;
   id: string;
@@ -20,8 +20,8 @@ export interface FeatureCarouselItem {
   label: string;
 }
 
-interface FeatureCarouselProps {
-  features?: FeatureCarouselItem[];
+interface CapabilitiesCarouselProps {
+  capabilities?: CapabilitiesItem[];
   mediaPosition?: "left" | "right";
 }
 
@@ -94,41 +94,41 @@ const getShowcaseCardClassName = (status: CardStatus) => {
   );
 };
 
-const getFeatureImageClassName = (isActive: boolean) =>
+const getCapabilitiesImageClassName = (isActive: boolean) =>
   cn(
     "h-full w-full object-cover transition-all duration-700",
     isActive ? "grayscale-0 blur-0" : "grayscale blur-[2px] brightness-75"
   );
 
-const getFeatureIconClassName = (isActive: boolean) =>
+const getCapabilitiesIconClassName = (isActive: boolean) =>
   cn(
     "flex items-center justify-center transition-colors duration-500",
     isActive ? "text-white" : "text-brand-charcoal/40"
   );
 
-const renderFeatureIcon = (icon: FeatureCarouselItem["icon"], isActive: boolean) => (
-  <div className={getFeatureIconClassName(isActive)}>
+const renderCapabilitiesIcon = (icon: CapabilitiesItem["icon"], isActive: boolean) => (
+  <div className={getCapabilitiesIconClassName(isActive)}>
     <Icon className="h-[18px] w-[18px]" name={camelToKebab(icon)} strokeWidth={2} />
   </div>
 );
 
-interface FeatureNavItemProps {
+interface CapabilitiesNavItemProps {
+  capability: CapabilitiesItem;
   currentIndex: number;
-  feature: FeatureCarouselItem;
   index: number;
   itemCount: number;
   onChipClick: (index: number) => void;
   onPauseChange: (value: boolean) => void;
 }
 
-const FeatureNavItem = ({
+const CapabilitiesNavItem = ({
+  capability,
   currentIndex,
-  feature,
   index,
   itemCount,
   onChipClick,
   onPauseChange,
-}: FeatureNavItemProps) => {
+}: CapabilitiesNavItemProps) => {
   const isActive = index === currentIndex;
   const distance = index - currentIndex;
   const wrappedDistance = wrap(-(itemCount / 2), itemCount / 2, distance);
@@ -156,30 +156,30 @@ const FeatureNavItem = ({
         onMouseLeave={handleMouseLeave}
         type="button"
       >
-        {renderFeatureIcon(feature.icon, isActive)}
+        {renderCapabilitiesIcon(capability.icon, isActive)}
         <span className="text-xs font-semibold tracking-wider uppercase md:text-[13px]">
-          {feature.label}
+          {capability.label}
         </span>
       </button>
     </motion.div>
   );
 };
 
-interface FeatureShowcaseCardProps {
+interface CapabilitiesShowcaseCardProps {
+  capability: CapabilitiesItem;
   currentIndex: number;
-  feature: FeatureCarouselItem;
   index: number;
   itemCount: number;
-  showFeatureDescription: boolean;
+  showCapabilityDescription: boolean;
 }
 
-const FeatureShowcaseCard = ({
+const CapabilitiesShowcaseCard = ({
+  capability,
   currentIndex,
-  feature,
   index,
   itemCount,
-  showFeatureDescription,
-}: FeatureShowcaseCardProps) => {
+  showCapabilityDescription,
+}: CapabilitiesShowcaseCardProps) => {
   const status = getCardStatus(currentIndex, index, itemCount);
   const isActive = status === "active";
 
@@ -191,13 +191,13 @@ const FeatureShowcaseCard = ({
       transition={SHOWCASE_CARD_TRANSITION}
     >
       <Image
-        alt={feature.label}
-        className={getFeatureImageClassName(isActive)}
+        alt={capability.label}
+        className={getCapabilitiesImageClassName(isActive)}
         fill
         sizes="(max-width: 1024px) 80vw, 420px"
-        src={feature.image}
+        src={capability.image}
       />
-      {showFeatureDescription && feature.description ? (
+      {showCapabilityDescription && capability.description ? (
         <div
           className={cn(
             "pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 transition-opacity duration-500",
@@ -205,7 +205,7 @@ const FeatureShowcaseCard = ({
           )}
         >
           <p className="text-base leading-relaxed text-gray-200 md:text-lg">
-            {feature.description}
+            {capability.description}
           </p>
         </div>
       ) : null}
@@ -213,26 +213,26 @@ const FeatureShowcaseCard = ({
   );
 };
 
-const FeatureCarousel = ({
-  features = [],
+const CapabilitiesCarousel = ({
+  capabilities = [],
   mediaPosition = "right",
-  showFeatureDescriptions = true,
-}: { showFeatureDescriptions?: boolean } & FeatureCarouselProps) => {
+  showCapabilityDescriptions = true,
+}: { showCapabilityDescriptions?: boolean } & CapabilitiesCarouselProps) => {
   const [step, setStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const currentIndex = ((step % features.length) + features.length) % features.length;
+  const currentIndex = ((step % capabilities.length) + capabilities.length) % capabilities.length;
 
   const nextStep = useCallback(() => setStep((prev) => prev + 1), []);
 
   const handleChipClick = useCallback(
     (index: number) => {
-      const diff = (index - currentIndex + features.length) % features.length;
+      const diff = (index - currentIndex + capabilities.length) % capabilities.length;
       if (diff > 0) setStep((cur) => cur + diff);
     },
-    [currentIndex, features.length]
+    [currentIndex, capabilities.length]
   );
 
   useEffect(() => {
@@ -247,10 +247,10 @@ const FeatureCarousel = ({
   }, []);
 
   useEffect(() => {
-    if (isPaused || !isVisible || features.length < 2) return;
+    if (isPaused || !isVisible || capabilities.length < 2) return;
     const interval = setInterval(nextStep, AUTO_PLAY_INTERVAL);
     return () => clearInterval(interval);
-  }, [isPaused, isVisible, nextStep, features.length]);
+  }, [isPaused, isVisible, nextStep, capabilities.length]);
 
   return (
     <div className="mx-auto w-full max-w-7xl" ref={containerRef}>
@@ -272,13 +272,13 @@ const FeatureCarousel = ({
               mediaPosition === "left" ? "lg:justify-end" : "lg:justify-start"
             )}
           >
-            {features.map((feature, index) => (
-              <FeatureNavItem
+            {capabilities.map((capability, index) => (
+              <CapabilitiesNavItem
+                capability={capability}
                 currentIndex={currentIndex}
-                feature={feature}
                 index={index}
-                itemCount={features.length}
-                key={feature.id}
+                itemCount={capabilities.length}
+                key={capability.id}
                 onChipClick={handleChipClick}
                 onPauseChange={setIsPaused}
               />
@@ -292,14 +292,14 @@ const FeatureCarousel = ({
           )}
         >
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">
-            {features.map((feature, index) => (
-              <FeatureShowcaseCard
+            {capabilities.map((capability, index) => (
+              <CapabilitiesShowcaseCard
+                capability={capability}
                 currentIndex={currentIndex}
-                feature={feature}
                 index={index}
-                itemCount={features.length}
-                key={feature.id}
-                showFeatureDescription={showFeatureDescriptions}
+                itemCount={capabilities.length}
+                key={capability.id}
+                showCapabilityDescription={showCapabilityDescriptions}
               />
             ))}
           </div>
@@ -309,23 +309,23 @@ const FeatureCarousel = ({
   );
 };
 
-// ─── FeatureCarouselSection ──────────────────────────────────────────────────
+// ─── Capabilities ────────────────────────────────────────────────────────────
 
-interface FeatureCarouselSectionProps {
+interface CapabilitiesProps {
+  capabilities: CapabilitiesItem[];
   description?: ReactNode;
-  features: FeatureCarouselItem[];
   heading: ReactNode;
   mediaPosition?: "left" | "right";
-  showFeatureDescriptions?: boolean;
+  showCapabilityDescriptions?: boolean;
 }
 
-export const FeatureCarouselSection = ({
+export const Capabilities = ({
+  capabilities,
   description,
-  features,
   heading,
   mediaPosition = "right",
-  showFeatureDescriptions = true,
-}: FeatureCarouselSectionProps) => {
+  showCapabilityDescriptions = true,
+}: CapabilitiesProps) => {
   return (
     <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20">
       <div className="pointer-events-none absolute inset-0">
@@ -343,10 +343,10 @@ export const FeatureCarouselSection = ({
             </p>
           ) : null}
         </div>
-        <FeatureCarousel
-          features={features}
+        <CapabilitiesCarousel
+          capabilities={capabilities}
           mediaPosition={mediaPosition}
-          showFeatureDescriptions={showFeatureDescriptions}
+          showCapabilityDescriptions={showCapabilityDescriptions}
         />
       </div>
     </section>

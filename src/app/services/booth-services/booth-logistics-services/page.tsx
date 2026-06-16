@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Timeline } from "@/components/sections/Timeline";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -30,6 +30,25 @@ import {
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
+
+const capabilityAssets = [
+  { icon: "Truck", image: "/images/services/booth/booth-5.avif" },
+  { icon: "Building2", image: "/images/events/event_other_1.avif" },
+  { icon: "Wrench", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "ClipboardCheck", image: "/images/events/event_other_2.avif" },
+  { icon: "Package", image: "/images/home/testimonials/testimonial-1.avif" },
+  { icon: "CalendarDays", image: "/images/home/why-choose-us/global_reach.avif" },
+  { icon: "Globe2", image: "/images/events/event_other_3.avif" },
+  { icon: "Settings", image: "/images/events/event_other_4.avif" },
+];
+
+const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Truck",
+  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/images/home/testimonials/testimonial-1.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -69,11 +88,10 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <Timeline
+          <Capabilities
+            capabilities={capabilityFeatures}
             description={EVENT_LOGISTICS_CAPABILITIES.description}
-            phases={EVENT_LOGISTICS_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={EVENT_LOGISTICS_CAPABILITIES.title}
+            heading={EVENT_LOGISTICS_CAPABILITIES.title}
           />
           <ContactModalTrigger label="Plan Your Event Logistics" />
         </>

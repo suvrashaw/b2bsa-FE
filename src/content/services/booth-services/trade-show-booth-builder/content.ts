@@ -12,7 +12,7 @@ export const BOOTH_BUILDER_PROOF_BAR = {
 
 export const BOOTH_BUILDER_CASE_STUDIES = {
   ...BOOTHBUILDERCASESTUDIESDATA,
-  items: GLOBAL_CASE_STUDIES,
+  items: GLOBAL_CASE_STUDIES.slice(0, 5),
 };
 
 import BOOTH_BUILDER_BLOG_IDS from "./blog-ids.json";
@@ -28,6 +28,7 @@ export const BOOTH_BUILDER_CONTACT_CTA = {
 
 export { default as BOOTH_BUILDER_BLOGS_SECTION } from "./builder-blogs-section.json";
 export { default as BOOTH_BUILDER_FUTURE_READY } from "./builder-future-ready.json";
+export { default as BOOTH_BUILDER_PRICING } from "./builder-pricing.json";
 export { default as BOOTH_BUILDER_RELATED_SERVICES } from "./builder-related-services.json";
 export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
 

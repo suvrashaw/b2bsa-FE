@@ -62,6 +62,14 @@ const FAQ_IMAGES: string[] = [
   "/images/services/sql-generation-revised.avif",
 ];
 
+export interface FAQCardProps {
+  answer: React.ReactNode | string;
+  icon?: ReactNode;
+  image?: string;
+  layoutMode?: "carousel" | "fit";
+  question: string;
+}
+
 /**
  * Returns a stable index into FAQ_IMAGES derived from the question text,
  * so the same card always gets the same image regardless of render order.
@@ -72,14 +80,6 @@ function seedIndexFromQuestion(question: string): number {
     sum += question.charCodeAt(i);
   }
   return sum % FAQ_IMAGES.length;
-}
-
-export interface FAQCardProps {
-  answer: React.ReactNode | string;
-  icon?: ReactNode;
-  image?: string;
-  layoutMode?: "carousel" | "fit";
-  question: string;
 }
 
 export const FAQCard = ({

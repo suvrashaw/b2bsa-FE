@@ -10,9 +10,9 @@ import { Button } from "@/components/ui/Button";
 import { Pagination } from "@/components/ui/Pagination";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
+  type CalendarTradeShow,
   TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
-  type CalendarTradeShow,
 } from "@/content/trade-show-calendar/content";
 import { cn, siteUrl } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
@@ -460,7 +460,7 @@ export const TradeShowCalendarSection = () => {
     today,
   ]);
 
-  const { totalPages, currentPage, paginatedItems: paginatedEvents } = applyPagination(filteredEvents, requestedPage);
+  const { currentPage, paginatedItems: paginatedEvents, totalPages } = applyPagination(filteredEvents, requestedPage);
   const hasEmptyPage = filteredEvents.length > 0 && paginatedEvents.length === 0;
   let resultsContent: ReactNode;
 

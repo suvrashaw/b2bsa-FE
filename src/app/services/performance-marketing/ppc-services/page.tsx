@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
-import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -13,7 +14,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { PERF_PAGE } from "@/content/services/performance-marketing/content";
 import {
   PPC_BLOGS_SECTION,
-  PPC_CAMPAIGNS,
   PPC_CASE_STUDIES,
   PPC_CLIENT_LOGOS_HEADING,
   PPC_CONTACT_CTA,
@@ -23,6 +23,7 @@ import {
   PPC_MODAL_SERVICE_FIELD,
   PPC_PAGE,
   PPC_SERVICES,
+  PPC_WHY_CHOOSE_US,
 } from "@/content/services/performance-marketing/ppc-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(PPC_PAGE);
@@ -39,7 +40,11 @@ const Page = () => {
       contactUs={PPC_CONTACT_CTA}
       customSections={
         <>
-          <StickyScroll heading={PPC_CAMPAIGNS.heading} reasons={PPC_CAMPAIGNS.reasons} showCta={false} />
+          <CardsGrid cols={3} heading={PPC_WHY_CHOOSE_US.heading}>
+            {PPC_WHY_CHOOSE_US.items.map((item, i) => (
+              <BoothWhyCard index={i} item={item} key={item.title} />
+            ))}
+          </CardsGrid>
 
           <Carousel
             cols={4}

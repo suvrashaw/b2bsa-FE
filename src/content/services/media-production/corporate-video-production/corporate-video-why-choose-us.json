@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Corporate Video Production?",
+  "items": [
+    {
+      "description": "Recognized by industry leaders for creative excellence and innovation in enterprise video production.",
+      "icon": "Award",
+      "image": "/images/services/media-production-2.avif",
+      "title": "Award-Winning"
+    },
+    {
+      "description": "150+ experienced professionals in design, production, and strategy delivering world-class video content.",
+      "icon": "Users2",
+      "image": "/images/home/testimonials/testimonial-1.avif",
+      "title": "Expert Team"
+    },
+    {
+      "description": "Delivering corporate video experiences across 30+ countries worldwide for global enterprise brands.",
+      "icon": "Globe2",
+      "image": "/images/services/performance-marketing.avif",
+      "title": "Global Reach"
+    },
+    {
+      "description": "Consistently exceeding client KPIs and ROI expectations with measurable business outcomes.",
+      "icon": "TrendingUp",
+      "image": "/images/services/media-production-1.avif",
+      "title": "Proven Results"
+    }
+  ]
+}

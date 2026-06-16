@@ -4,10 +4,10 @@ import { EventsCard } from "@/components/items/EventsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -27,8 +27,8 @@ import {
   ABOUT_VISION_MISSION,
   ABOUT_VISION_SPOTLIGHT,
 } from "@/content/about/content";
-import CLIENT_LOGOS from "@/content/home/client-logos.json";
 import { normalizeEvent } from "@/content/events-utils";
+import CLIENT_LOGOS from "@/content/home/client-logos.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";

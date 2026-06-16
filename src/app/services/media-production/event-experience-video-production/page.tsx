@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -72,9 +72,9 @@ const Page = () => {
       page={EVENT_EXPERIENCE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <FeatureCarouselSection
+        <Capabilities
+          capabilities={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
           description={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.description}
-          features={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
           heading={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.heading}
         />
       }

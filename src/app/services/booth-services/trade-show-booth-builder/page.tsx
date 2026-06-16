@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 
+import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_BUILDER_BLOG_POSTS,
@@ -20,6 +22,7 @@ import {
   BOOTH_BUILDER_FUTURE_READY,
   BOOTH_BUILDER_HERO,
   BOOTH_BUILDER_PAGE,
+  BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
   BOOTH_BUILDER_PROOF_BAR,
   BOOTH_BUILDER_RELATED_SERVICES,
@@ -77,22 +80,61 @@ const Page = () => {
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
+        <StickyScroll
+          heading="Booth Sizes and Formats We Design"
+          reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+            description: item.descriptions.join(" "),
+            id: item.id,
+            image: item.image,
+            title: item.heading,
+          }))}
+          showImagePanel
+        />
+      }
+      preStudiesSections={
         <>
-          <StickyScroll
-            heading="What We Do in Exhibition Stand Builder"
-            reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
-              description: item.descriptions.join(" "),
-              id: item.id,
-              image: item.image,
-              title: item.heading,
-            }))}
-            showImagePanel
-          />
           <CardsGrid heading={BOOTH_BUILDER_FUTURE_READY.heading}>
             {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
               <BasicCards item={item} key={item.title} />
             ))}
           </CardsGrid>
+
+          <section className="bg-brand-gray py-16 md:py-20" id="pricing">
+            <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+              <SectionHeader as="h2" className="mb-12 text-center">
+                {BOOTH_BUILDER_PRICING.heading}
+              </SectionHeader>
+              <div className="grid gap-8 lg:grid-cols-2">
+                {BOOTH_BUILDER_PRICING.services.map((service) => (
+                  <div
+                    className="flex flex-col gap-6 rounded-2xl border border-brand-blue/10 bg-white p-8 shadow-sm"
+                    key={service.title}
+                  >
+                    <div>
+                      <h3 className="font-heading text-xl font-bold text-brand-charcoal">
+                        {service.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-brand-charcoal/60">{service.description}</p>
+                    </div>
+                    <ul className="grow space-y-3">
+                      {service.features.map((feature) => (
+                        <li
+                          className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/70"
+                          key={feature}
+                        >
+                          <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild className="mt-auto" variant="primary">
+                      <Link href={service.cta.href}>{service.cta.label}</Link>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </>
       }
       process={BOOTH_BUILDER_PROCESS}

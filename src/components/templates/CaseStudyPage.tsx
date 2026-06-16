@@ -4,13 +4,13 @@ import { useMemo } from "react";
 
 import type { CaseStudyDetail } from "@/content/case-studies/individual";
 
+import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import { CardsGrid } from "@/components/sections/CardsGrid";
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
 import { Eyebrow } from "@/components/ui/Eyebrow";

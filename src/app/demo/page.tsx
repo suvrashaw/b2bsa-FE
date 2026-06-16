@@ -26,7 +26,7 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
@@ -224,7 +224,7 @@ const CULTURE_DATA = {
   ],
 };
 
-// ─── FeatureCarouselSection ──────────────────────────────────────────────────
+// ─── Capabilities ──────────────────────────────────────────────────
 
 const FEATURE_CAROUSEL_ITEMS = [
   {
@@ -491,7 +491,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
     { href: "/services/booth-services/trade-show-booth-builder", label: "Booth Builder" },
   ],
-  FeatureCarouselSection: [
+  Capabilities: [
     { href: "/services/booth-services/trade-show-booth-builder", label: "Service Detail" },
   ],
   GlobalPresence: [{ href: "/about", label: "About" }],
@@ -555,7 +555,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
   FAQ: { items: ["FAQCard"], ui: ["Eyebrow", "Heading"] },
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
-  FeatureCarouselSection: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
+  Capabilities: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   GlobalPresence: { items: [], ui: ["Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
@@ -712,11 +712,11 @@ const DemoPage = () => {
       <DemoLabel name="ServicesStack" />
       <ServicesStack />
 
-      {/* 15 – FeatureCarouselSection */}
-      <DemoLabel name="FeatureCarouselSection" />
-      <FeatureCarouselSection
+      {/* 15 – Capabilities */}
+      <DemoLabel name="Capabilities" />
+      <Capabilities
+        capabilities={FEATURE_CAROUSEL_ITEMS}
         description="Four core capabilities that turn trade show investment into enterprise pipeline."
-        features={FEATURE_CAROUSEL_ITEMS}
         heading="How We Drive Results"
       />
 

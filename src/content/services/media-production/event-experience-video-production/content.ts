@@ -17,7 +17,6 @@ export const EVENT_EXPERIENCE_VIDEO_CONTACT_CTA = {
 export { default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION } from "./experience-video-blogs-section.json";
 export { default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES } from "./experience-video-capabilities.json";
 export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./experience-video-deliverables.json";
-export { default as EVENT_EXPERIENCE_VIDEO_EVENT_TYPES_SECTION } from "./experience-video-event-types-section.json";
 
 export { default as EVENT_EXPERIENCE_VIDEO_INTRO } from "./experience-video-intro.json";
 export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./experience-video-related-services.json";

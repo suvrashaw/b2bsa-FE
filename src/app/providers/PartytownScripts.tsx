@@ -35,8 +35,8 @@ export const PartytownScripts = () => {
           <Script
             dangerouslySetInnerHTML={GA_INLINE_SCRIPT_HTML}
             id="google-analytics-inline"
-            type="text/partytown"
             strategy="afterInteractive"
+            type="text/partytown"
           />
         </>
       ) : null}

@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -88,15 +88,15 @@ const Page = () => {
             showCommonCta
           />
 
-          <FeatureCarouselSection
+          <Capabilities
+            capabilities={SMM_CAPABILITIES_FEATURES}
             description={SMM_CAPABILITIES.description}
-            features={SMM_CAPABILITIES_FEATURES}
             heading={SMM_CAPABILITIES.heading}
             showFeatureDescriptions={false}
           />
 
-          <FeatureCarouselSection
-            features={SMM_INDUSTRIES_FEATURES}
+          <Capabilities
+            capabilities={SMM_INDUSTRIES_FEATURES}
             heading={SMM_INDUSTRIES.heading}
             mediaPosition="left"
             showFeatureDescriptions={false}

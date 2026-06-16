@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
-import { Timeline } from "@/components/sections/Timeline";
+import { Carousel } from "@/components/sections/Carousel";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -30,6 +30,27 @@ import {
 } from "@/content/services/global-event-solutions/event-branding-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
+
+const capabilityAssets = [
+  { icon: "Palette", image: "/images/events/event_other_1.avif" },
+  { icon: "PenTool", image: "/images/events/event_other_2.avif" },
+  { icon: "Monitor", image: "/images/events/event_other_3.avif" },
+  { icon: "Printer", image: "/images/events/event_other_4.avif" },
+  { icon: "Image", image: "/images/services/booth/booth-5.avif" },
+  { icon: "Layers", image: "/images/home/testimonials/testimonial-1.avif" },
+  { icon: "Layout", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "Sparkles", image: "/images/home/why-choose-us/global_reach.avif" },
+  { icon: "Type", image: "/images/home/why-choose-us/proven_execution.avif" },
+  { icon: "Fingerprint", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+];
+
+const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Palette",
+  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -71,11 +92,11 @@ const Page = () => {
       preProcessSections={
         <>
           <ContactModalTrigger label="Plan Your Event Branding" />
-          <Timeline
+          <Capabilities
+            capabilities={capabilityFeatures}
             description={EVENT_BRANDING_CAPABILITIES.description}
-            phases={EVENT_BRANDING_CAPABILITIES.phases}
-            showPhaseNumbers={false}
-            title={EVENT_BRANDING_CAPABILITIES.title}
+            heading={EVENT_BRANDING_CAPABILITIES.title}
+            mediaPosition="right"
           />
           <ContactModalTrigger label="Talk to Branding Experts" />
         </>

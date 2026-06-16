@@ -1,6 +1,8 @@
 {
+  "contactModal": {},
   "ctaLabel": "Contact Our Team",
   "heading": "What's Included in Our Virtual Video Event Production Services",
+  "showCommonCta": true,
   "services": [
     {
       "color": "bg-brand-blue",
@@ -44,7 +46,7 @@
     },
     {
       "color": "bg-brand-primary",
-      "description": "Enhance online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
+      "description": "Enhance your online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
       "icon": "Palette",
       "id": "virtual-event-branding",
       "image": "/images/services/media-production-2.avif",

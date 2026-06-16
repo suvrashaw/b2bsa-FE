@@ -5,9 +5,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -34,19 +34,19 @@ const BOOTH_RENTAL_RANGE_REASONS = [
     description:
       "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
     id: "rental-10x10",
-    image: "/images/booth/10x10.jpg",
+    image: "/images/booth/10x10.avif",
     title: "10x10 Standard",
   },
   {
     description: "Room for product-led demos, a defined visitor journey, and a meeting zone.",
     id: "rental-10x20",
-    image: "/images/booth/10x20.jpg",
+    image: "/images/booth/10x20.avif",
     title: "10x20 Inline",
   },
   {
     description: "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
     id: "rental-20x20",
-    image: "/images/booth/20x20.jpg",
+    image: "/images/booth/20x20.avif",
     title: "20x20 Island",
   },
   {
@@ -60,7 +60,7 @@ const BOOTH_RENTAL_RANGE_REASONS = [
     description:
       "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
     id: "rental-custom",
-    image: "/images/booth/40x40.jpg",
+    image: "/images/booth/40x40.avif",
     title: "Custom-Branded Rentals",
   },
 ];
@@ -74,7 +74,7 @@ const Page = () => {
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={3} heading="Explore Related Solutions">
+          <CardsGrid className="pt-0" cols={3} heading="Explore Related Solutions">
             {BOOTH_RENTAL_RELATED_SERVICES.map((service, index) => (
               <ServicesLinkCard index={index} key={service.href} service={service} />
             ))}

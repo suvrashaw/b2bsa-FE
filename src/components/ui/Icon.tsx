@@ -92,7 +92,7 @@ interface IconProps extends LucideProps {
 
 const ICONS: Record<string, ComponentType<LucideProps>> = {
   // PascalCase (used by sections directly)
-  Activity, // kebab-case (used by FeatureCarousel after camelToKebab conversion)
+  Activity, // kebab-case (used by CapabilitiesCarousel after camelToKebab conversion)
   activity: Activity,
   Archive,
   archive: Archive,

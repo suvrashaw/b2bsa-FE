@@ -6,11 +6,11 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { LiveStreamProjects } from "@/components/sections/LiveStreamProjects";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { Icon } from "@/components/ui/Icon";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
@@ -76,27 +76,12 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <CardsGrid
-            cols={4}
+          <Capabilities
+            capabilities={LIVE_STREAMING_CAPABILITIES_FEATURES}
             description={LIVE_STREAMING_CAPABILITIES.description}
-            gap="gap-5"
-            gridClassName="items-stretch"
             heading={LIVE_STREAMING_CAPABILITIES.heading}
-          >
-            {LIVE_STREAMING_CAPABILITIES_FEATURES.map((feature) => (
-              <div
-                className="flex h-full w-full flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-sm"
-                key={feature.id}
-              >
-                <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue text-white">
-                  <Icon className="h-7 w-7" name={feature.icon} strokeWidth={2} />
-                </div>
-                <h3 className="font-heading text-sm font-bold text-brand-charcoal md:text-base">
-                  {feature.label}
-                </h3>
-              </div>
-            ))}
-          </CardsGrid>
+            mediaPosition="right"
+          />
 
           <Spotlight
             {...LIVE_STREAMING_AREAS_SPOTLIGHT}

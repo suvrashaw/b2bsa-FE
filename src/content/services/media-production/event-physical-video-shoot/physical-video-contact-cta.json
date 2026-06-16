@@ -5,6 +5,7 @@
   },
   "badge": "On-Site Production",
   "description": "Capture your event properly and turn live interactions into video assets your marketing, sales, and leadership teams can keep using long after the show closes.",
+  "headingLines": ["Ready to Capture", "Your Event On-Site?"],
   "primaryCta": {
     "href": "/contact",
     "label": "Book a Video Shoot",

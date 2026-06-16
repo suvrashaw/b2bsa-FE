@@ -6,8 +6,8 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicesStack } from "@/components/sections/ServicesStack";
-import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
@@ -32,6 +32,27 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
 
 const servicesContactModal = {};
+
+const capabilityAssets = [
+  { icon: "Users", image: "/images/events/event_other_1.avif" },
+  { icon: "MessageSquare", image: "/images/events/event_other_2.avif" },
+  { icon: "CalendarCheck", image: "/images/events/event_other_3.avif" },
+  { icon: "Globe2", image: "/images/events/event_other_4.avif" },
+  { icon: "Star", image: "/images/services/booth/booth-5.avif" },
+  { icon: "Zap", image: "/images/home/testimonials/testimonial-1.avif" },
+  { icon: "Award", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "ClipboardList", image: "/images/home/why-choose-us/global_reach.avif" },
+  { icon: "Compass", image: "/images/home/why-choose-us/proven_execution.avif" },
+  { icon: "Map", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+];
+
+const capabilityFeatures = CORP_NETWORKING_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Users",
+  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -71,11 +92,11 @@ const Page = () => {
       page={CORP_NETWORKING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <Timeline
+        <Capabilities
+          capabilities={capabilityFeatures}
           description={CORP_NETWORKING_CAPABILITIES.description}
-          phases={CORP_NETWORKING_CAPABILITIES.phases}
-          showPhaseNumbers={false}
-          title={CORP_NETWORKING_CAPABILITIES.title}
+          heading={CORP_NETWORKING_CAPABILITIES.title}
+          mediaPosition="right"
         />
       }
       preStudiesSections={

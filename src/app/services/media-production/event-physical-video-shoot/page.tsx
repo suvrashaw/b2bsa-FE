@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Carousel } from "@/components/sections/Carousel";
 import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { Timeline } from "@/components/sections/Timeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -33,6 +33,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_PHYSICAL_VIDEO_CASE_STUDIES}
+      clientLogosHeading="Trusted by Global Brands for On-Site Event Video Production"
       contactUs={EVENT_PHYSICAL_VIDEO_CONTACT_CTA}
       customSections={
         <>

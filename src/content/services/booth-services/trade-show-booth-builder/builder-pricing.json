@@ -1,0 +1,31 @@
+{
+  "heading": "Exhibition Stands Pricing",
+  "services": [
+    {
+      "title": "Custom & Modular Exhibition Stands",
+      "description": "Duration: Flexible, based on project scope",
+      "features": [
+        "Fully tailored designs to match your brand identity and event requirements",
+        "Modular systems for multi-event reuse, reducing cost per show by 30–50%",
+        "In-house fabrication, international logistics, and on-site installation included"
+      ],
+      "cta": {
+        "href": "/contact",
+        "label": "Get Pricing & Project Plan"
+      }
+    },
+    {
+      "title": "3D Design & Visualization",
+      "description": "Duration: 5–10 business days per concept",
+      "features": [
+        "Photorealistic 3D renders reviewed with your team before production begins",
+        "Multiple revision rounds until full client sign-off on structure and graphics",
+        "Available as a standalone service or included in full turnkey build packages"
+      ],
+      "cta": {
+        "href": "/contact",
+        "label": "Get Pricing & Project Plan"
+      }
+    }
+  ]
+}

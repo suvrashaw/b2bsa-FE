@@ -5,9 +5,8 @@ import type { ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Children, useCallback, useEffect, useRef, useState } from "react";
 
-import { cn } from "@/lib";
-
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { cn } from "@/lib";
 
 type ColsValue = 2 | 3 | 4;
 

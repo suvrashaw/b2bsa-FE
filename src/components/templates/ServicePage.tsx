@@ -4,7 +4,7 @@ import type { PricingProps } from "@/components/items/PricingCard";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
 import type { FAQProps } from "@/components/sections/FAQAccordion";
-import type { FeatureCarouselItem } from "@/components/sections/FeatureCarouselSection";
+import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
@@ -21,7 +21,7 @@ import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { FeatureCarouselSection } from "@/components/sections/FeatureCarouselSection";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -67,6 +67,8 @@ export interface ServicePageProps {
   preProcessSections?: ReactNode;
   // ─── Extra sections between industries and case studies ─
   preStudiesSections?: ReactNode;
+  // ─── Slot between related services and contact ───────
+  preContactSections?: ReactNode;
   // ─── Process ────────────────────────────────────
   process?: {
     cta?: { href?: string; label: string; opensModal?: boolean };
@@ -122,7 +124,7 @@ const renderServicesSection = (
 ) => {
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
-    const features: FeatureCarouselItem[] = items.map((s) => ({
+    const features: CapabilitiesItem[] = items.map((s) => ({
       description: s.description,
       icon: s.icon,
       id: s.id,
@@ -130,8 +132,8 @@ const renderServicesSection = (
       label: s.title,
     }));
     return (
-      <FeatureCarouselSection
-        features={features}
+      <Capabilities
+        capabilities={features}
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
       />
     );
@@ -161,6 +163,7 @@ export const ServicePage = ({
   hero,
   page,
   parentPage,
+  preContactSections,
   preProcessSections,
   preStudiesSections,
   process,
@@ -262,12 +265,14 @@ export const ServicePage = ({
       )}
 
       {relatedServices && relatedServices.length > 0 && (
-        <CardsGrid cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"}>
+        <CardsGrid cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"} className="py-10 md:py-12 lg:py-14">
           {relatedServices.map((service, index) => (
             <ServicesLinkCard index={index} key={service.href} service={service} />
           ))}
         </CardsGrid>
       )}
+
+      {preContactSections}
 
       <ContactUs {...contactUs} />
 

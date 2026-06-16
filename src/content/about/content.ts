@@ -31,7 +31,7 @@ export const ABOUT_INQUIRY = {
 export const ABOUT_PAGE = PAGE_DATA as MarketingPageDefinition;
 
 export const ABOUT_VISION_SPOTLIGHT = {
-  align: VISION_MISSION_DATA.visionAlign as "right" | "left",
+  align: VISION_MISSION_DATA.visionAlign as "left" | "right",
   description: VISION_MISSION_DATA.vision,
   titleLine1: VISION_MISSION_DATA.visionTitleLine1,
   titleLine2: VISION_MISSION_DATA.visionTitleLine2,

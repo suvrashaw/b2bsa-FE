@@ -1,21 +1,23 @@
 export interface CaseStudyEntry {
-  id: string;
-  title: string;
-  event: string;
-  location: string;
-  client: string;
-  services: string[];
-  requirements: string;
   challenge: string;
-  solution: string;
-  outcome: string;
+  client: string;
+  event: string;
+  href: string;
+  id: string;
+  image: string;
+  location: string;
   metric: string;
   metricLabel: string;
-  image: string;
-  href: string;
+  outcome: string;
+  requirements: string;
+  services: string[];
+  solution: string;
+  title: string;
 }
 
 import type { MarketingPageDefinition } from "@/content/page-definitions";
+
+import STUDIES_DATA from "@/content/shared/case-studies.json";
 
 import CARD_CTA_LABEL_DATA from "./card-cta-label.json";
 import CTA_DATA from "./cta.json";
@@ -27,7 +29,6 @@ import HERO_DATA from "./hero.json";
 import INTRO_DATA from "./intro.json";
 import PAGE_DATA from "./page.json";
 import RESULTS_HEADING_DATA from "./results-heading.json";
-import STUDIES_DATA from "@/content/shared/case-studies.json";
 import TEMPLATE_DATA from "./template.json";
 
 export const CASE_STUDIES_PAGE_CONTENT = {
