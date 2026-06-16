@@ -114,7 +114,7 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
             {item.title}
           </h3>
           <p
-            className={`text-sm leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
+            className={`line-clamp-4 text-sm leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
           >
             {item.description}
           </p>

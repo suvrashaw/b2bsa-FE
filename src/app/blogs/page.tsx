@@ -10,7 +10,6 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
   BLOG_CONTACT,
-  BLOG_HERO,
   BLOG_PAGE,
   BLOG_SERVICE_CAROUSEL,
 } from "@/content/blogs/content";
@@ -27,11 +26,14 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
       <Hero
-        description={BLOG_HERO.description}
+        centered
         images={BLOG_HERO_IMAGES}
         title="Blogs and Articles"
         variant="compact"
       />
+      <Suspense>
+        <BlogsSection />
+      </Suspense>
       <Carousel
         autoplayInterval={4000}
         heading={BLOG_SERVICE_CAROUSEL.heading}
@@ -42,9 +44,6 @@ const Page = () => {
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
       </Carousel>
-      <Suspense>
-        <BlogsSection />
-      </Suspense>
       <ContactUsForm {...BLOG_CONTACT} />
       <Footer />
     </main>

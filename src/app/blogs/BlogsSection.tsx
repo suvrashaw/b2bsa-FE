@@ -73,7 +73,7 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
     }
   }
 
-  const options = BLOG_CATEGORIES.filter((category) => counts.has(category.name)).map(
+  const options = BLOG_CATEGORIES.map(
     (category) => ({
       count: counts.get(category.name) ?? 0,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -234,7 +234,7 @@ export const BlogsSection = () => {
             <div className="bg-brand-blue px-4 py-3">
               <h2 className="text-sm font-bold tracking-widest text-white uppercase">Categories</h2>
             </div>
-            <div className="space-y-2 p-4">
+            <div className="max-h-72 space-y-2 overflow-y-auto p-4">
               {categories.map((category) => (
                 <CategoryButton
                   category={category}

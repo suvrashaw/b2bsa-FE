@@ -4,10 +4,9 @@ import { useMemo } from "react";
 
 import type { CaseStudyDetail } from "@/content/case-studies/individual";
 
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import { ServicesImageCard } from "@/components/items/ServicesImageCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
@@ -36,11 +35,6 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       { label: METADATA_LABELS[2], value: study.location },
     ],
     [study.client, study.event, study.location]
-  );
-
-  const serviceLinks = useMemo(
-    () => study.services.map((s) => ({ href: "/services", title: s })),
-    [study.services]
   );
 
   const cinematicBg = useMemo(
@@ -78,12 +72,19 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       </section>
 
       {/* Services Delivered */}
-      {serviceLinks.length > 0 && (
-        <CardsGrid cols={3} heading="Services Delivered">
-          {serviceLinks.map((service, index) => (
-            <ServicesLinkCard index={index} key={service.href} service={service} />
-          ))}
-        </CardsGrid>
+      {study.services.length > 0 && (
+        <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+            <SectionHeader as="h2" className="mb-10 text-center">
+              Services Delivered
+            </SectionHeader>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {study.services.map((service, index) => (
+                <ServicesImageCard index={index} key={service} service={service} />
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* About the Event */}

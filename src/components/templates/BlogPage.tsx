@@ -6,15 +6,16 @@ import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Button } from "@/components/ui/Button";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs/data";
+import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/shared";
 
@@ -79,7 +80,7 @@ const BlogSidebarSubscribe = () => {
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
       <div className="bg-gradient-to-r from-brand-blue to-brand-cyan px-4 py-4">
         <p className="text-sm font-bold tracking-widest text-white uppercase">
-          Stay Ahead of the Market
+          Let&apos;s Connect for Upcoming Event Strategy
         </p>
       </div>
       <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
@@ -87,8 +88,8 @@ const BlogSidebarSubscribe = () => {
           <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
             Don&apos;t Just Scroll!
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-gray-600">
-            <span className="font-bold text-brand-blue">Get it on email</span> and stay in the loop.
+          <p className="mt-2 text-sm leading-relaxed font-bold text-brand-blue">
+            Let&apos;s Connect for Upcoming Event Strategy!
           </p>
         </div>
 
@@ -119,6 +120,17 @@ const BlogSidebarSubscribe = () => {
               </option>
             ))}
           </select>
+
+          <label className="sr-only" htmlFor="blog-subscribe-event">
+            Event Name
+          </label>
+          <input
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+            id="blog-subscribe-event"
+            placeholder="Event name"
+            required
+            type="text"
+          />
         </div>
 
         <button
@@ -126,7 +138,7 @@ const BlogSidebarSubscribe = () => {
           disabled={loading}
           type="submit"
         >
-          {loading ? "Sending..." : "Get it on email"}
+          {loading ? "Sending..." : "Get Your Upcoming Event Strategy"}
         </button>
       </form>
     </section>
@@ -362,7 +374,16 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         </aside>
       </div>
 
-      <ServicesStack />
+      <Carousel
+        autoplayInterval={4000}
+        heading="Our B2B Event Services & Trade Show Solutions"
+        id="services"
+        layout="carousel"
+      >
+        {HOME_SERVICES_CONTENT.services.slice(0, 5).map((item, i) => (
+          <BoothWhyCard index={i} item={item} key={item.id} />
+        ))}
+      </Carousel>
 
       <ContactUs
         badge="Talk to an Expert"
