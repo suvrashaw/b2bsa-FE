@@ -8,11 +8,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface HeroProps {
+  animateFromLeft?: boolean;
+  centered?: boolean;
   description?: string;
+  eyebrow?: string;
+  imageOpacity?: number;
   images?: string[];
   poster?: string;
   primaryCta?: { href: string; label: string };
@@ -47,6 +52,9 @@ const SECONDARY_CTA_STYLE = {
   WebkitBackdropFilter: "blur(12px)",
 };
 
+const EYEBROW_ANIMATE = { opacity: 1, y: 0 };
+const EYEBROW_INITIAL = { opacity: 0, y: 16 };
+const EYEBROW_TRANSITION = { delay: 0.2, duration: 0.6 };
 const DESCRIPTION_ANIMATE = { opacity: 1, y: 0 };
 const DESCRIPTION_INITIAL = { opacity: 0, y: 20 };
 const DESCRIPTION_TRANSITION = { delay: 0.7, duration: 0.8 };
@@ -60,17 +68,27 @@ const IMAGE_INITIAL = { opacity: 0 };
 const IMAGE_EXIT = { opacity: 0 };
 const IMAGE_TRANSITION = { duration: 1.2 };
 
-const TitleLine = ({ index, line }: { index: number; line: ReactNode }) => {
+const TITLE_LINE_LEFT_INITIAL = { opacity: 0, x: "-60px" };
+
+const TitleLine = ({
+  fromLeft,
+  index,
+  line,
+}: {
+  fromLeft?: boolean;
+  index: number;
+  line: ReactNode;
+}) => {
   const lineTransition = useMemo(
-    () => ({ delay: 0.4 + index * 0.15, duration: 0.72, ease: [0.22, 1, 0.36, 1] as const }),
+    () => ({ delay: 0.3 + index * 0.12, duration: 0.72, ease: [0.22, 1, 0.36, 1] as const }),
     [index]
   );
   return (
-    <span className="block overflow-hidden">
+    <span className={fromLeft ? "block" : "block overflow-hidden"}>
       <motion.span
         animate={TITLE_LINE_ANIMATE}
         className="block"
-        initial={TITLE_LINE_INITIAL}
+        initial={fromLeft ? TITLE_LINE_LEFT_INITIAL : TITLE_LINE_INITIAL}
         transition={lineTransition}
       >
         {line}
@@ -114,7 +132,11 @@ const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string })
 );
 
 export const Hero = ({
+  animateFromLeft = false,
+  centered = false,
   description,
+  eyebrow,
+  imageOpacity = 1,
   images,
   poster,
   primaryCta,
@@ -146,6 +168,7 @@ export const Hero = ({
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -100]);
   const contentStyle = useMemo(() => ({ y }), [y]);
+  const imageOpacityStyle = useMemo(() => ({ opacity: imageOpacity }), [imageOpacity]);
 
   const imageModeClass =
     variant === "compact"
@@ -186,6 +209,7 @@ export const Hero = ({
           exit={IMAGE_EXIT}
           initial={IMAGE_INITIAL}
           key={currentIndex}
+          style={imageOpacityStyle}
           transition={IMAGE_TRANSITION}
         >
           <Image alt="" className="object-cover" fill priority src={images?.[currentIndex] ?? ""} />
@@ -205,10 +229,21 @@ export const Hero = ({
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
-      <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
-        <motion.div className="max-w-4xl" style={contentStyle}>
+      <div className={cn("relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8", centered && "flex flex-col items-center text-center")}>
+        <motion.div className={cn("max-w-4xl", centered && "w-full")} style={contentStyle}>
+          {eyebrow && (
+            <motion.div
+              animate={EYEBROW_ANIMATE}
+              initial={EYEBROW_INITIAL}
+              transition={EYEBROW_TRANSITION}
+            >
+              <Eyebrow className="mb-4 border-white/30 bg-white/10 text-white/90">
+                {eyebrow}
+              </Eyebrow>
+            </motion.div>
+          )}
           <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
-            {isStringTitle
+            {isStringTitle && !animateFromLeft
               ? (titleLines as string[]).map((_, index) => (
                   <TypewriterLine
                     isActive={activeLineIdx === index}
@@ -217,7 +252,7 @@ export const Hero = ({
                   />
                 ))
               : (titleLines as ReactNode[]).map((line, index) => (
-                  <TitleLine index={index} key={index} line={line} />
+                  <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
                 ))}
           </SectionHeader>
 
@@ -236,7 +271,7 @@ export const Hero = ({
           {(primaryCta ?? secondaryCta) && (
             <motion.div
               animate={CTA_ANIMATE}
-              className="flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6"
+              className={cn("flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6", centered && "justify-center")}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >

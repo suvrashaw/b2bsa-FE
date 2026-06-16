@@ -12,7 +12,7 @@ module.exports = {
     if (path === '/') {
       priority = 1;
       changefreq = 'weekly';
-    } else if (path.startsWith('/services') || path === '/trade-show-calendar') {
+    } else if (path.startsWith('/services') || path === '/tradeshow-calendar') {
       priority = 0.9;
       changefreq = 'weekly';
     } else if (path.startsWith('/blogs') || path.startsWith('/case-studies')) {
@@ -21,7 +21,7 @@ module.exports = {
     } else if (path === '/privacy-policy' || path === '/cookie-policy') {
       priority = 0.3;
       changefreq = 'yearly';
-    } else if (path === '/about' || path === '/contact') {
+    } else if (path === '/about-us' || path === '/contact-us') {
       priority = 0.8;
       changefreq = 'monthly';
     }
@@ -34,4 +34,4 @@ module.exports = {
       priority,
     };
   },
-}
+};

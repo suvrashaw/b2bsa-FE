@@ -33,7 +33,7 @@ const XIcon = ({ className }: { className?: string }) => (
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
-import { cn } from "@/lib";
+import { cn, toTitleCase } from "@/lib";
 
 const FooterCommandMap = dynamic(
   () => import("./footer/FooterCommandMap").then((mod) => mod.FooterCommandMap),
@@ -243,7 +243,7 @@ export const Footer = () => {
                     className="text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
                     href={item.href}
                   >
-                    {item.name}
+                    {toTitleCase(item.name)}
                   </Link>
                 </li>
               ))}
@@ -272,13 +272,13 @@ export const Footer = () => {
                 Subscribe
               </Button>
             </div>
-            </div>
           </div>
+        </div>
 
         <div className="mb-6 grid gap-4 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
           {footerAddresses.map((item) => (
             <address
-              className="not-italic rounded border border-white/20 bg-white/10 p-4 text-sm text-white/85 backdrop-blur-sm"
+              className="text-sm text-white/85 not-italic"
               key={item.region}
             >
               <span className="mb-2 block text-xs font-semibold tracking-widest text-white/60 uppercase">

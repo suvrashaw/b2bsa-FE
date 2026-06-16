@@ -131,7 +131,7 @@ export interface CultureData {
   reasons: { description: string; id: string; image: string; title: string }[];
 }
 
-export const Culture = ({ data }: { data: CultureData }) => {
+export const Culture = ({ data, showParallax = true }: { data: CultureData; showParallax?: boolean }) => {
   const parallaxImages = [
     ...(data.centerImage ? [{ alt: "Center Image", src: data.centerImage }] : []),
     ...data.reasons
@@ -165,7 +165,7 @@ export const Culture = ({ data }: { data: CultureData }) => {
         </div>
       </div>
 
-      <ZoomParallax centerText={data.centerText} images={parallaxImages} />
+      {showParallax && <ZoomParallax centerText={data.centerText} images={parallaxImages} />}
     </section>
   );
 };

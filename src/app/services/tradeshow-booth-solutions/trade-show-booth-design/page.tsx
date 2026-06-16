@@ -14,6 +14,7 @@ import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getDefaultEvents } from "@/content/events-utils";
 import { HOME_EVENTS_CONTENT } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   BOOTH_DESIGN_BLOGS_SECTION,
   BOOTH_DESIGN_CASE_STUDIES,
@@ -29,7 +30,6 @@ import {
   BOOTH_DESIGN_SPOTLIGHT,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 
@@ -91,7 +91,7 @@ const Page = () => {
       parentPage={GES_PAGE}
       preContactSections={
         <section className="bg-brand-gray py-12 md:py-16">
-          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8 text-center">
+          <div className="container mx-auto max-w-screen-2xl px-4 text-center sm:px-6 md:px-8">
             <Button asChild size="lg" variant="primary">
               <Link href="/contact-us">Get a Free Consultation</Link>
             </Button>

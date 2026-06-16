@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import { type RelatedService, ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -11,7 +11,13 @@ import { HPMI_PAGE } from "@/content/services/hpmi/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(HPMI_PAGE);
 
-const hpmiLinks = serviceNavigationGroups.find((group) => group.name === "HPMI")?.links ?? [];
+const hpmiLinks: RelatedService[] =
+  serviceNavigationGroups
+    .find((group) => group.name === "HPMI")
+    ?.links?.map((service) => ({
+      href: service.href,
+      title: service.name,
+    })) ?? [];
 
 const Page = () => {
   return (
@@ -29,7 +35,7 @@ const Page = () => {
       </section>
       <CardsGrid cols={2} heading="HPMI" headingAlign="left">
         {hpmiLinks.map((service, index) => (
-          <ServicesLinkCard index={index} key={service.href} service={{ href: service.href, title: service.name }} />
+          <ServicesLinkCard index={index} key={service.href} service={service} />
         ))}
       </CardsGrid>
       <Footer />

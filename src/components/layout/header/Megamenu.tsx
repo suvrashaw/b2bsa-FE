@@ -2,7 +2,7 @@ import Link from "next/link";
 import { memo } from "react";
 
 import { type NavLink, type ServiceNavGroup } from "@/content/navigation";
-import { cn } from "@/lib";
+import { cn, toHeadingCaps } from "@/lib";
 
 const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
   return (
@@ -41,7 +41,7 @@ export const MegamenuServiceGroup = memo(
           href={group.href}
           onClick={onClose}
         >
-          {group.name}
+          {toHeadingCaps(group.name)}
         </Link>
         {subGroups.length > 0 ? (
           <div className="grid grid-cols-2 gap-x-4">

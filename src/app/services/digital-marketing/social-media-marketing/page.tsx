@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -92,14 +92,12 @@ const Page = () => {
             capabilities={SMM_CAPABILITIES_FEATURES}
             description={SMM_CAPABILITIES.description}
             heading={SMM_CAPABILITIES.heading}
-            showFeatureDescriptions={false}
           />
 
           <Capabilities
             capabilities={SMM_INDUSTRIES_FEATURES}
             heading={SMM_INDUSTRIES.heading}
             mediaPosition="left"
-            showFeatureDescriptions={false}
           />
         </>
       }

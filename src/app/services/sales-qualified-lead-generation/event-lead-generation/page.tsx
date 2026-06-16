@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { SQL_PAGE } from "@/content/services/sales-qualified-lead-generation/content";
 import {
   EVENT_LEAD_CASE_STUDIES,
   EVENT_LEAD_CONTACT_CTA,
@@ -13,7 +14,6 @@ import {
   EVENT_LEAD_SERVICES,
   EVENT_LEAD_WHY,
 } from "@/content/services/sales-qualified-lead-generation/event-lead-generation/content";
-import { SQL_PAGE } from "@/content/services/sales-qualified-lead-generation/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LEAD_PAGE);
 

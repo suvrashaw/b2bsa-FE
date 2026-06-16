@@ -1,4 +1,4 @@
-import { SQL_HERO } from "../content";
+import { SQL_HERO } from "@/content/services/sales-qualified-lead-generation/content";
 
 export {
   SQL_CASE_STUDIES as EVENT_LEAD_CASE_STUDIES,

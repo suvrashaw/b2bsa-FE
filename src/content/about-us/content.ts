@@ -11,9 +11,11 @@ import VISION_MISSION_DATA from "./vision-mission.json";
 
 const ABOUT_EVENT_IDS = new Set([
   "adobe-summit-2026",
+  "gitex-global",
   "hannover-messe-2026",
   "itw-2026",
   "sap-sapphire-2026",
+  "sibos-amsterdam",
 ]);
 
 export const ABOUT_FOUNDER_STORY = FOUNDERSTORY_DATA;

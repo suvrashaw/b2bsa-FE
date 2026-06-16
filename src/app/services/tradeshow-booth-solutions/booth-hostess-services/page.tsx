@@ -4,13 +4,14 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
   BOOTH_HOSTESS_CAPABILITIES,
@@ -24,7 +25,6 @@ import {
   BOOTH_HOSTESS_RELATED_SERVICES,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 

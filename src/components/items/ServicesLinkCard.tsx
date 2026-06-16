@@ -31,7 +31,7 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
       whileInView={RELATEDSERVICES_WHILE_IN_VIEW}
     >
       <Link
-        className="group relative flex h-full items-center justify-between overflow-hidden rounded-xl border border-gray-100 bg-white px-8 py-7 transition-colors duration-300 hover:border-brand-blue hover:bg-brand-blue"
+        className="group relative flex h-full items-center justify-between overflow-hidden rounded-xl border border-brand-blue bg-brand-blue px-8 py-7 transition-colors duration-300 hover:border-brand-blue hover:bg-white"
         href={service.href}
       >
         {/* Cyan glow orb blooms from top-right corner on hover */}
@@ -40,11 +40,11 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
           className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
         />
 
-        <h3 className="relative font-heading text-xl font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-white">
+        <h3 className="relative font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-brand-charcoal">
           {service.title}
         </h3>
 
-        <div className="relative ml-6 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-50 text-brand-blue transition-all duration-300 group-hover:bg-brand-cyan group-hover:text-brand-charcoal">
+        <div className="relative ml-6 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-brand-cyan group-hover:text-brand-charcoal">
           <MoveRight className="h-5 w-5" />
         </div>
       </Link>

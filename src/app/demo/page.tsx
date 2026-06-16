@@ -16,6 +16,7 @@ import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
 import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { Blogs } from "@/components/sections/Blogs";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -26,7 +27,6 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
@@ -445,6 +445,9 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Corp Networking",
     },
   ],
+  Capabilities: [
+    { href: "/services/tradeshow-booth-solutions/trade-show-booth-builder", label: "Service Detail" },
+  ],
   CardsSection: [
     { href: "/services/tradeshow-booth-solutions/trade-show-booth-builder", label: "Booth Builder" },
   ],
@@ -460,7 +463,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/contact-us", label: "Contact" },
   ],
   ContactUs: [
-    { href: "/services/market-research/data-augmentation-services", label: "Data Augmentation" },
+    { href: "/services/market-research/data-augmentation-services", label: "Data Augmentation Services" },
     { href: "/services/global-event-solutions", label: "Global ES" },
     { href: "/services/market-research", label: "Market Research" },
   ],
@@ -490,9 +493,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
     { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
     { href: "/services/tradeshow-booth-solutions/trade-show-booth-builder", label: "Booth Builder" },
-  ],
-  Capabilities: [
-    { href: "/services/tradeshow-booth-solutions/trade-show-booth-builder", label: "Service Detail" },
   ],
   GlobalPresence: [{ href: "/about-us", label: "About" }],
   Hero: [
@@ -543,6 +543,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
   BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
   BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
+  Capabilities: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   CardsSection: { items: ["BasicCards"], ui: ["Heading"] },
   CaseStudies: { items: ["CaseStudyItem"], ui: ["Button", "Eyebrow", "Heading"] },
   CinematicSequence: { items: [], ui: ["Heading"] },
@@ -555,7 +556,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
   FAQ: { items: ["FAQCard"], ui: ["Eyebrow", "Heading"] },
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
-  Capabilities: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   GlobalPresence: { items: [], ui: ["Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },

@@ -19,6 +19,7 @@ export interface SpotlightProps {
   descriptionItems?: readonly string[];
   id?: string;
   imageAlt?: string;
+  imageContainerClassName?: string;
   imagePosition?: "left" | "right";
   imageUrl?: string;
   label?: string;
@@ -390,6 +391,7 @@ export const Spotlight = ({
   descriptionItems,
   id,
   imageAlt = "Feature image",
+  imageContainerClassName,
   imagePosition = "right",
   imageUrl,
   label,
@@ -486,7 +488,7 @@ export const Spotlight = ({
             />
           ) : (
             <SpotlightImageBlock
-              className={imageBlockClassName}
+              className={cn(imageBlockClassName, imageContainerClassName)}
               imageAlt={imageAlt}
               imageUrl={imageUrl}
               isHovered={isHovered}

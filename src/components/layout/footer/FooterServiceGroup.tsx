@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { type NavLink, type ServiceNavGroup, type ServiceSubGroup } from "@/content/navigation";
-import { cn } from "@/lib";
+import { cn, toHeadingCaps } from "@/lib";
 
 const EMPTY_NAV_LINKS: NavLink[] = [];
 
@@ -60,7 +60,7 @@ export const FooterServiceGroup = ({
         )}
         href={group.href}
       >
-        {group.name}
+        {toHeadingCaps(group.name)}
       </Link>
       {childLinks}
     </div>

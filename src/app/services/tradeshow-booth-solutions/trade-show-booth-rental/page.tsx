@@ -13,6 +13,8 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
+import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import {
   BOOTH_RENTAL_BLOGS_SECTION,
   BOOTH_RENTAL_CASE_STUDIES,
@@ -26,8 +28,6 @@ import {
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
-import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
   {

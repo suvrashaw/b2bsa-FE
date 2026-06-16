@@ -132,7 +132,11 @@ export const Header = ({
         <LanguageSelector lightText={headerLightText} />
 
         <Link className="hidden lg:block" href="/contact-us">
-          <Button size="sm" variant="primary" className="btn-schedule rounded-full normal-case schedule-shake font-semibold">
+          <Button
+            className="btn-schedule schedule-shake rounded-full font-semibold normal-case"
+            size="sm"
+            variant="primary"
+          >
             Startup Special Sale
           </Button>
         </Link>
@@ -231,7 +235,10 @@ export const Header = ({
 
             <div className="p-6">
               <Link href="/contact-us" onClick={closeMobileMenu}>
-                <Button className="w-full btn-schedule rounded-full normal-case schedule-shake font-semibold" variant="primary">
+                <Button
+                  className="btn-schedule schedule-shake w-full rounded-full font-semibold normal-case"
+                  variant="primary"
+                >
                   Startup Special Sale
                 </Button>
               </Link>

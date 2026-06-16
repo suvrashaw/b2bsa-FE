@@ -13,6 +13,7 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   BOOTH_BUILDER_BLOG_POSTS,
   BOOTH_BUILDER_BLOGS_SECTION,
@@ -31,7 +32,6 @@ import {
   BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 const pageMetadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
 

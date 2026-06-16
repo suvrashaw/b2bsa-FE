@@ -1,9 +1,9 @@
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
+import { PERF_SERVICES } from "@/content/services/digital-marketing/content";
 import { GES_SERVICES } from "@/content/services/global-event-solutions/content";
 import { RESEARCH_SERVICES } from "@/content/services/market-research/content";
 import { MEDIA_SERVICES } from "@/content/services/media-production/content";
-import { PERF_SERVICES } from "@/content/services/digital-marketing/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
 import BLOGS_SECTION_DATA from "./blogs-section.json";

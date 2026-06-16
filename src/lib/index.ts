@@ -5,6 +5,13 @@ export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 };
 
+export const toTitleCase = (value: string) =>
+  value
+    .toLowerCase()
+    .replaceAll(/\b\w/g, (char) => char.toUpperCase());
+
+export const toHeadingCaps = (value: string) => value.toUpperCase();
+
 export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
 
 export {

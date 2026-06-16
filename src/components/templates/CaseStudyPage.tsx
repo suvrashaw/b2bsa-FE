@@ -48,11 +48,21 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     [study.title, study.image]
   );
 
+  const challengeSecondary = useMemo(
+    () => ({
+      align: "right" as const,
+      description: study.solution,
+      titleLine1: "Our",
+      titleLine2: "Solution",
+    }),
+    [study.solution]
+  );
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header forceLightMode />
 
-      <Hero images={heroImages} primaryCta={HERO_PRIMARY_CTA} title={study.title} />
+      <Hero imageOpacity={0.35} images={heroImages} primaryCta={HERO_PRIMARY_CTA} title={study.title} />
 
       {/* Event metadata */}
       <section className="bg-brand-gray py-10">
@@ -76,6 +86,17 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         </CardsGrid>
       )}
 
+      {/* About the Event */}
+      {study.eventDescription && (
+        <section className="bg-brand-gray py-16 md:py-20">
+          <div className="container mx-auto max-w-3xl px-4 text-center sm:px-6 md:px-8">
+            <p className="text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+              {study.eventDescription}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Client Requirements — dark editorial section, centered */}
       <section className="relative overflow-hidden bg-[#111518] py-24 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_8%,#4BC0D9_0%,rgba(75,192,217,0.82)_18%,rgba(30,96,145,0.55)_34%,transparent_50%),radial-gradient(circle_at_92%_78%,rgba(120,0,0,0.92)_0%,rgba(178,58,72,0.55)_26%,transparent_58%),linear-gradient(135deg,#111518_0%,#173D4C_34%,#28113A_68%,#4A001E_100%)]" />
@@ -90,26 +111,14 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         </div>
       </section>
 
-      {/* Challenges — Spotlight, image left */}
+      {/* Challenges & Solution — side by side */}
       <Spotlight
         className="[&_p]:text-lg"
         description={study.challenges}
-        imageAlt={study.title}
-        imageUrl={study.image}
+        secondarySpotlight={challengeSecondary}
         showCta={false}
         titleLine1="The"
         titleLine2="Challenges"
-      />
-
-      {/* Our Solution — Spotlight, image right */}
-      <Spotlight
-        className="[&_p]:text-lg [&>div:first-child]:md:order-2 [&>div:last-child]:md:order-1"
-        description={study.solution}
-        imageAlt={study.title}
-        imageUrl={study.image}
-        showCta={false}
-        titleLine1="Our"
-        titleLine2="Solution"
       />
 
       {/* Outcome — Stats with heading and description */}
@@ -117,7 +126,6 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         className="[&_p]:text-lg"
         description={study.outcome}
         heading="Outcome"
-        imageUrl={study.image}
         stats={study.outcomeStats}
       />
 

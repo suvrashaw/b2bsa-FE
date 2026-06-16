@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
   MODULAR_BOOTHS_CONTACT_CTA,
@@ -14,7 +15,6 @@ import {
   MODULAR_BOOTHS_RELATED_SERVICES,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/modular-booth-solutions/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MODULAR_BOOTHS_PAGE);
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { memo, useCallback } from "react";
 
 import { type topNavigation } from "@/content/navigation";
-import { cn } from "@/lib";
+import { cn, toTitleCase } from "@/lib";
 
 export const DesktopNavLink = memo(
   ({
@@ -20,6 +20,7 @@ export const DesktopNavLink = memo(
     onServicesClick: () => void;
   }) => {
     const isServices = link.name.toLowerCase() === "services";
+    const label = toTitleCase(link.name);
 
     const handleMouseEnter = useCallback(() => onMouseEnter(link.name), [link.name, onMouseEnter]);
 
@@ -43,7 +44,7 @@ export const DesktopNavLink = memo(
             onMouseEnter={handleMouseEnter}
             type="button"
           >
-            {link.name}
+            {label}
             <ChevronDown
               className={cn(
                 "h-3.5 w-3.5 opacity-70 transition-transform duration-300",
@@ -54,7 +55,7 @@ export const DesktopNavLink = memo(
           </button>
         ) : (
           <Link className={linkClassName} href={link.href} onMouseEnter={handleMouseEnter}>
-            {link.name}
+            {label}
             <span className={underlineClassName} />
           </Link>
         )}

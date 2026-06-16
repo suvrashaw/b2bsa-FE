@@ -31,20 +31,20 @@ export const ServicesCard = ({
         <div className="pointer-events-auto">
           {serviceLabel && (
             <div className="mb-6 flex items-center gap-2">
-              <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm transition-colors duration-700 md:group-has-[.image-pane:hover]/card:border-transparent md:group-has-[.image-pane:hover]/card:bg-white/20 md:group-has-[.image-pane:hover]/card:text-white md:group-has-[.image-pane:hover]/card:backdrop-blur-md">
+              <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm">
                 <Icon
-                  className="h-3 w-3 text-brand-blue transition-colors duration-700 md:group-has-[.image-pane:hover]/card:text-white"
+                  className="h-3 w-3 text-brand-blue"
                   name={service.icon}
                 />
                 {serviceLabel}
               </span>
             </div>
           )}
-          <h3 className="mb-6 font-heading text-2xl leading-tight font-bold transition-colors duration-700 md:group-has-[.image-pane:hover]/card:!text-white">
+          <h3 className="mb-6 font-heading text-2xl leading-tight font-bold">
             {service.title}
           </h3>
 
-          <p className="text-base leading-relaxed font-medium text-gray-600 transition-colors duration-700 md:text-lg md:group-has-[.image-pane:hover]/card:text-gray-200">
+          <p className="text-base leading-relaxed font-medium text-gray-600 md:text-lg">
             {service.description}
           </p>
         </div>
@@ -53,7 +53,7 @@ export const ServicesCard = ({
           service.href ? (
             <Button
               asChild
-              className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
+              className="pointer-events-auto mt-10 w-max md:mt-0"
               variant="primary"
             >
               <Link href={service.href}>
@@ -63,7 +63,7 @@ export const ServicesCard = ({
             </Button>
           ) : (
             <Button
-              className="pointer-events-auto mt-10 w-max transition-all duration-700 md:mt-0 md:group-has-[.image-pane:hover]/card:border-white md:group-has-[.image-pane:hover]/card:bg-white md:group-has-[.image-pane:hover]/card:text-brand-blue"
+              className="pointer-events-auto mt-10 w-max md:mt-0"
               onClick={onCtaClick}
               type="button"
               variant="primary"
@@ -79,7 +79,7 @@ export const ServicesCard = ({
       <div className="group/image image-pane z-0 h-64 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-3/5 md:hover:w-full">
         <Image
           alt={service.title}
-          className="object-cover transition-transform duration-700 max-md:blur-[4px] max-md:scale-105 md:group-hover/image:scale-105"
+          className="object-cover transition-transform duration-700 max-md:scale-105 max-md:blur-[4px] md:group-hover/image:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 60vw"
           src={service.image}

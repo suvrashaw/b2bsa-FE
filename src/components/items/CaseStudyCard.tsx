@@ -46,11 +46,19 @@ export const CaseStudyCard = ({
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           src={image}
         />
-        <div className="absolute inset-0 bg-brand-charcoal/45 transition-colors duration-300 group-hover:bg-brand-charcoal/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/75 to-brand-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/30 via-transparent to-transparent" />
       </div>
 
-      <div className="absolute top-6 right-6 z-10 rounded-2xl border border-white/10 bg-white/10 px-4 py-2.5 backdrop-blur-md transition-all duration-300 group-hover:border-white/20 group-hover:bg-white/20">
+      {/* Blue overlay — hidden by default, blooms on hover */}
+      <div className="absolute inset-0 z-[1] bg-brand-blue/0 transition-colors duration-500 group-hover:bg-brand-blue/80" />
+
+      {/* Metric badge */}
+      <div
+        className={cn(
+          "absolute top-6 right-6 z-10 rounded-2xl border border-white/10 bg-white/10 px-4 py-2.5 backdrop-blur-md transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/20 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0",
+          revealed && "opacity-100 translate-y-0"
+        )}
+      >
         <div className="font-heading text-lg leading-none font-bold text-white">{metric}</div>
         <div className="mt-1 text-[8px] font-bold tracking-wider text-white/80 uppercase">
           {metricLabel}
@@ -58,33 +66,31 @@ export const CaseStudyCard = ({
       </div>
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center">
-        <div className="w-full transform text-center transition-transform duration-300 group-hover:-translate-y-2">
+        <div
+          className={cn(
+            "w-full transform text-center opacity-0 translate-y-3 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0",
+            revealed && "opacity-100 translate-y-0"
+          )}
+        >
           <h3 className="mx-auto max-w-xs text-center font-sans text-lg leading-snug font-bold !text-white drop-shadow-md md:text-xl">
             {title}
           </h3>
-          <div
+          <p
             className={cn(
-              "max-h-0 overflow-hidden transition-[max-height] duration-300 group-hover:max-h-40",
-              revealed && "max-h-40"
+              "mx-auto mt-4 line-clamp-2 max-w-md text-sm leading-relaxed text-white/85 opacity-0 transition-opacity delay-75 duration-500 group-hover:opacity-100",
+              revealed && "opacity-100"
             )}
           >
-            <p
-              className={cn(
-                "mx-auto mt-4 line-clamp-2 max-w-md text-sm leading-relaxed text-white/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-                revealed && "opacity-100"
-              )}
-            >
-              {description}
-            </p>
-            <span
-              className={cn(
-                "mt-4 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-                revealed && "opacity-100"
-              )}
-            >
-              {ctaLabel}
-            </span>
-          </div>
+            {description}
+          </p>
+          <span
+            className={cn(
+              "mt-4 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 uppercase opacity-0 transition-opacity delay-100 duration-500 group-hover:opacity-100",
+              revealed && "opacity-100"
+            )}
+          >
+            {ctaLabel}
+          </span>
         </div>
       </div>
     </>

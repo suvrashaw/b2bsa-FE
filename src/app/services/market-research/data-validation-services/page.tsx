@@ -11,7 +11,7 @@ import {
   DATA_VALIDATION_PAGE,
   DATA_VALIDATION_PROCESS,
   DATA_VALIDATION_SPOTLIGHT,
-} from "@/content/services/market-research/data-validation-services-services/content";
+} from "@/content/services/market-research/data-validation-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
 

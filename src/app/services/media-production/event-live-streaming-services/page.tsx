@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { LiveStreamProjects } from "@/components/sections/LiveStreamProjects";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";

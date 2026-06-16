@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
 import type { PricingProps } from "@/components/items/PricingCard";
+import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
 import type { FAQProps } from "@/components/sections/FAQAccordion";
-import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
@@ -15,13 +15,13 @@ import { PricingCard } from "@/components/items/PricingCard";
 import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
@@ -63,12 +63,12 @@ export interface ServicePageProps {
 
   // ─── SEO ────────────────────────────────────────
   parentPage?: MarketingPageIdentity;
+  // ─── Slot between related services and contact ───────
+  preContactSections?: ReactNode;
   // ─── Escape hatch before Timeline ───────────────
   preProcessSections?: ReactNode;
   // ─── Extra sections between industries and case studies ─
   preStudiesSections?: ReactNode;
-  // ─── Slot between related services and contact ───────
-  preContactSections?: ReactNode;
   // ─── Process ────────────────────────────────────
   process?: {
     cta?: { href?: string; label: string; opensModal?: boolean };
@@ -265,7 +265,7 @@ export const ServicePage = ({
       )}
 
       {relatedServices && relatedServices.length > 0 && (
-        <CardsGrid cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"} className="py-10 md:py-12 lg:py-14">
+        <CardsGrid className="py-10 md:py-12 lg:py-14" cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"}>
           {relatedServices.map((service, index) => (
             <ServicesLinkCard index={index} key={service.href} service={service} />
           ))}

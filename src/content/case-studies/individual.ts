@@ -2,6 +2,7 @@ export interface CaseStudyDetail {
   challenges: string;
   client: string;
   event: string;
+  eventDescription: string;
   image: string;
   location: string;
   outcome: string;

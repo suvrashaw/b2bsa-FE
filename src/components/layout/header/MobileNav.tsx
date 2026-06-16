@@ -11,7 +11,7 @@ import {
   serviceNavigationGroups,
   type topNavigation,
 } from "@/content/navigation";
-import { cn } from "@/lib";
+import { cn, toHeadingCaps, toTitleCase } from "@/lib";
 
 const MOBILE_SUBMENU_ANIMATE = { height: "auto", opacity: 1 };
 const MOBILE_SUBMENU_COLLAPSED = { height: 0, opacity: 0 };
@@ -71,7 +71,7 @@ const MobileServiceGroup = ({
         href={group.href}
         onClick={onClose}
       >
-        {group.name}
+        {toHeadingCaps(group.name)}
       </Link>
     );
   }
@@ -83,7 +83,7 @@ const MobileServiceGroup = ({
         onClick={handleToggle}
         type="button"
       >
-        <span>{group.name}</span>
+        <span>{toHeadingCaps(group.name)}</span>
         {hasSubContent && (
           <ChevronDown
             className={cn(
@@ -137,6 +137,7 @@ export const MobileNavItem = memo(
     openServiceGroup: null | string;
   }) => {
     const hasChildren = link.name.toLowerCase() === "services";
+    const label = toTitleCase(link.name);
     const handleToggle = useCallback(() => onToggle(link.name), [link.name, onToggle]);
 
     return (
@@ -147,7 +148,7 @@ export const MobileNavItem = memo(
             onClick={handleToggle}
             type="button"
           >
-            <span>{link.name}</span>
+            <span>{label}</span>
             <ChevronDown
               className={cn(
                 "h-5 w-5 text-gray-400 transition-transform duration-300",
@@ -161,7 +162,7 @@ export const MobileNavItem = memo(
             href={link.href}
             onClick={onClose}
           >
-            {link.name}
+            {label}
           </Link>
         )}
 

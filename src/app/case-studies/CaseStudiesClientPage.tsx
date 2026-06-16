@@ -9,6 +9,7 @@ import { type MouseEvent, type ReactNode, useCallback, useEffect, useState } fro
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Pagination } from "@/components/ui/Pagination";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
@@ -265,6 +266,8 @@ export const CaseStudiesClientPage = () => {
           </div>
         </div>
       </section>
+
+      <ContactUsForm />
 
       <Footer />
     </main>

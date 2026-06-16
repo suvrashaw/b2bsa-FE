@@ -4,14 +4,15 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_LOGISTICS_BENEFITS,
   EVENT_LOGISTICS_BLOGS_SECTION,
@@ -27,7 +28,6 @@ import {
   EVENT_LOGISTICS_RELATED_SERVICES,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
