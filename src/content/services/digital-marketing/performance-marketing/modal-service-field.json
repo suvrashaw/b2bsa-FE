@@ -1,0 +1,14 @@
+{
+  "label": "Select the service you need",
+  "options": [
+    {
+      "label": "Performance Marketing",
+      "value": "performance-marketing"
+    },
+    {
+      "label": "Performance Marketing",
+      "value": "ppc-services"
+    }
+  ],
+  "placeholder": "Select a service..."
+}

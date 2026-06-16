@@ -19,7 +19,7 @@ export const DesktopNavLink = memo(
     onMouseEnter: (name: string) => void;
     onServicesClick: () => void;
   }) => {
-    const isServices = link.name === "Services";
+    const isServices = link.name.toLowerCase() === "services";
 
     const handleMouseEnter = useCallback(() => onMouseEnter(link.name), [link.name, onMouseEnter]);
 

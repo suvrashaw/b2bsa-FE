@@ -1,7 +1,7 @@
 import { Building2, CalendarDays, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 
-import type { CalendarTradeShow } from "@/content/trade-show-calendar/content";
+import type { CalendarTradeShow } from "@/content/tradeshow-calendar/content";
 
 import { Button } from "@/components/ui/Button";
 
@@ -67,7 +67,7 @@ export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
 
     <div className="mt-5 flex w-full">
       <Button asChild className="w-full" size="sm" variant="secondary">
-        <Link href="/contact">Let&apos;s Talk</Link>
+        <Link href="/contact-us">Let&apos;s Talk</Link>
       </Button>
     </div>
   </article>
@@ -107,7 +107,7 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
       </div>
       <div className="mt-2 flex w-full lg:mt-0 lg:justify-end">
         <Button asChild className="w-full lg:w-auto" size="sm" variant="secondary">
-          <Link href="/contact">Let&apos;s Talk</Link>
+          <Link href="/contact-us">Let&apos;s Talk</Link>
         </Button>
       </div>
     </div>

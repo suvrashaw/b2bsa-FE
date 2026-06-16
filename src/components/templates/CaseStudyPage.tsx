@@ -16,10 +16,10 @@ import { Stats } from "@/components/sections/Stats";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
-const HERO_PRIMARY_CTA = { href: "/contact", label: "Get a Custom Proposal" } as const;
+const HERO_PRIMARY_CTA = { href: "/contact-us", label: "Get a Custom Proposal" } as const;
 const METADATA_LABELS = ["Client", "Event", "Location"] as const;
 const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event program?"];
-const CINEMATIC_PRIMARY = { href: "/contact", label: "Start a Conversation" } as const;
+const CINEMATIC_PRIMARY = { href: "/contact-us", label: "Start a Conversation" } as const;
 const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
 
 interface CaseStudyPageProps {

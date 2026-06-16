@@ -79,7 +79,7 @@ export const ServicesCard = ({
       <div className="group/image image-pane z-0 h-64 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-3/5 md:hover:w-full">
         <Image
           alt={service.title}
-          className="object-cover transition-transform duration-700 md:group-hover/image:scale-105"
+          className="object-cover transition-transform duration-700 max-md:blur-[4px] max-md:scale-105 md:group-hover/image:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 60vw"
           src={service.image}

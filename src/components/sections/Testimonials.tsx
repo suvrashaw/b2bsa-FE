@@ -47,12 +47,12 @@ export const Testimonials = ({
   );
 
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-12" ref={sectionRef}>
+    <section className="relative overflow-hidden bg-brand-gray py-6 md:py-8" ref={sectionRef}>
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-        <div className="mb-8 flex flex-col items-center text-center">
+        <div className="mb-2 flex flex-col items-center text-center">
           <SectionHeader as="h2" className="mb-3 text-center">
             {heading}
           </SectionHeader>
@@ -60,7 +60,7 @@ export const Testimonials = ({
 
         {/* 3D Coverflow Container */}
         <div
-          className="relative flex min-h-[320px] w-full items-center justify-center sm:min-h-[460px] lg:min-h-[500px]"
+          className="relative flex min-h-[260px] w-full items-center justify-center sm:min-h-[320px] lg:min-h-[380px]"
           style={CAROUSEL_PERSPECTIVE_STYLE}
         >
           {testimonials.map((testimonial, index) => {
@@ -83,7 +83,7 @@ export const Testimonials = ({
         </div>
 
         {/* Navigation Arrows */}
-        <div className="relative z-50 mt-8 flex items-center justify-center gap-8">
+        <div className="relative z-50 mt-4 flex items-center justify-center gap-8">
           <button
             aria-label="Previous testimonial"
             className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"

@@ -51,7 +51,7 @@ export const ServicesStack = ({
 
   return (
     <>
-      <section className="bg-brand-gray pt-20 pb-40" id="services">
+      <section className="bg-brand-gray pt-12 pb-12 md:pt-16 md:pb-16" id="services">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="mb-16 flex flex-col items-center text-center">
             <SectionHeader as="h2" className="text-center">

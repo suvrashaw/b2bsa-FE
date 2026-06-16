@@ -287,7 +287,7 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
 // ─── BlogPage ────────────────────────────────────────────────────────────────
 
 const CTA_HEADING_LINES: [string, string] = ["Ready to Make Your", "Next Event Unforgettable?"];
-const CTA_PRIMARY = { href: "/contact", label: "Book a Consultation", opensModal: true };
+const CTA_PRIMARY = { href: "/contact-us", label: "Book a Consultation", opensModal: true };
 const CTA_SECONDARY = { href: "/case-studies", label: "See Our Work" };
 
 export const BlogPage = ({ post }: BlogPageProps) => {

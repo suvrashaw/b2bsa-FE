@@ -105,7 +105,7 @@ export const Timeline = ({
               </Button>
             ) : (
               <Button asChild variant="primary">
-                <Link href={cta.href ?? "/contact"}>{cta.label}</Link>
+                <Link href={cta.href ?? "/contact-us"}>{cta.label}</Link>
               </Button>
             )}
           </div>

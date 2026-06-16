@@ -1,0 +1,13 @@
+{
+  "description": "Ensure smooth event execution with professional event logistics services for trade shows and corporate experiences. We manage coordination, vendor handling, and onsite logistics support for seamless event operations.",
+  "images": [
+    "/images/services/booth/booth-7.avif",
+    "/images/services/booth/booth-8.avif",
+    "/images/events/event_other_4.avif"
+  ],
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Talk to Our Event Team"
+  },
+  "title": "Booth Logistics Services"
+}

@@ -136,7 +136,7 @@ export const MobileNavItem = memo(
     onToggle: (name: string) => void;
     openServiceGroup: null | string;
   }) => {
-    const hasChildren = link.name === "Services";
+    const hasChildren = link.name.toLowerCase() === "services";
     const handleToggle = useCallback(() => onToggle(link.name), [link.name, onToggle]);
 
     return (

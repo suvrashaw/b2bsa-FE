@@ -5,7 +5,7 @@
     {
       "color": "bg-brand-blue",
       "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
-      "href": "/services/booth-services",
+      "href": "/services/tradeshow-booth-solutions",
       "icon": "Presentation",
       "id": "booth-design",
       "image": "/images/services/booth/booth-5.avif",
@@ -68,11 +68,11 @@
     {
       "color": "bg-brand-primary",
       "description": "Clicks are not the goal. Pipeline is. As a specialist B2B digital marketing agency, we manage performance marketing programs where every campaign decision is evaluated against one standard: does it move a qualified buyer measurably closer to a sales conversation?",
-      "href": "/services/performance-marketing",
+      "href": "/services/digital-marketing",
       "icon": "Rocket",
       "id": "performance-marketing",
       "image": "/images/services/performance-marketing-1.avif",
-      "title": "Performance Marketing"
+      "title": "Digital Marketing"
     }
   ]
 }

@@ -65,7 +65,7 @@ const Home = () => {
         cta={
           HOME_EVENTS_CONTENT.viewAllLabel ? (
             <Button asChild variant="secondary">
-              <Link href="/trade-show-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
+              <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
             </Button>
           ) : undefined
         }

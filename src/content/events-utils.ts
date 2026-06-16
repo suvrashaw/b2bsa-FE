@@ -3,7 +3,7 @@ import type { EventCardItem } from "@/components/items/EventsCard";
 import {
   type CalendarTradeShow,
   TRADE_SHOW_CALENDAR_EVENTS,
-} from "@/content/trade-show-calendar/content";
+} from "@/content/tradeshow-calendar/content";
 
 export const getFallbackImage = (index: number) => {
   const images = [
@@ -57,7 +57,7 @@ const getCountryFromLocation = (location?: string) => {
 
 const mapCalendarEventToEvent = (event: CalendarTradeShow, index: number): EventCardItem => ({
   country: event.country,
-  ctaHref: "/trade-show-calendar",
+  ctaHref: "/tradeshow-calendar",
   date: formatCalendarDateRange(event.startDate, event.endDate),
   id: event.id,
   image: getFallbackImage(index),
@@ -68,7 +68,7 @@ const mapCalendarEventToEvent = (event: CalendarTradeShow, index: number): Event
 export const normalizeEvent = (event: EventCardItem, index: number): EventCardItem => ({
   ...event,
   country: event.country ?? getCountryFromLocation(event.location),
-  ctaHref: event.ctaHref ?? "/trade-show-calendar",
+  ctaHref: event.ctaHref ?? "/tradeshow-calendar",
   image: event.image ?? getFallbackImage(index),
 });
 

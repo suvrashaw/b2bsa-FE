@@ -1,0 +1,11 @@
+{
+  "backgroundImage": {
+    "alt": "Ready to Build Your Organic Pipeline?",
+    "src": "/images/home/hero/home_hero_bg.avif"
+  },
+  "headingLines": ["Your buyers are searching. Will they find you — or your competitor?"],
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Get a Free SEO Audit"
+  }
+}

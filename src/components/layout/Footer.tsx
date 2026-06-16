@@ -24,6 +24,11 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
     <path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
   </svg>
 );
+const XIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.547l-5.13-6.707L5.205 22H1.947l7.605-8.694L1.53 2h6.713l4.638 6.132L18.244 2Zm-1.142 17.91h1.804L7.27 3.98H5.335L17.102 19.91Z" />
+  </svg>
+);
 
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -61,6 +66,35 @@ const socialLinks = [
     href: "https://www.youtube.com/@b2bsalesarrow167",
     icon: YoutubeIcon,
     name: "YouTube",
+  },
+  {
+    colorClass: "text-black",
+    href: "",
+    icon: XIcon,
+    name: "X",
+  },
+];
+
+const footerAddresses = [
+  {
+    address: ["10 A 5 Parijat Colony", "Mahaveer Nagar 3 Kota", "Rajasthan 324005"],
+    name: "BTWOB Sales Arrow",
+    region: "India",
+  },
+  {
+    address: ["16192 Coastal Highway", "Lewes DE 19958"],
+    name: "BTWOB SALES ARROW INC",
+    region: "US",
+  },
+  {
+    address: ["71-75 Shelton Street", "Covent Garden", "London", "WC2H 9JQ", "United Kingdom"],
+    name: "Btwob Sales Arrow Limited",
+    region: "UK",
+  },
+  {
+    address: ["KARLSPLATZ 3,,", "MUNICH, 80335,", "GERMANY"],
+    name: "BTWOB Sales Arrow EU UG",
+    region: "Germany",
   },
 ];
 
@@ -110,6 +144,7 @@ export const Footer = () => {
             <FooterServiceGroup group={serviceNavigationGroups[3]} />
             <FooterServiceGroup group={serviceNavigationGroups[4]} />
             <FooterServiceGroup group={serviceNavigationGroups[5]} />
+            <FooterServiceGroup group={serviceNavigationGroups[6]} />
           </div>
         </div>
 
@@ -156,7 +191,6 @@ export const Footer = () => {
               </p>
               <p>New York, USA</p>
               <p>Bengaluru, India</p>
-              <p className="text-white/85">Serving 30+ Countries</p>
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((item) => {
@@ -238,7 +272,28 @@ export const Footer = () => {
                 Subscribe
               </Button>
             </div>
+            </div>
           </div>
+
+        <div className="mb-6 grid gap-4 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
+          {footerAddresses.map((item) => (
+            <address
+              className="not-italic rounded border border-white/20 bg-white/10 p-4 text-sm text-white/85 backdrop-blur-sm"
+              key={item.region}
+            >
+              <span className="mb-2 block text-xs font-semibold tracking-widest text-white/60 uppercase">
+                {item.region}
+              </span>
+              <span className="mb-2 block font-semibold text-white">{item.name}</span>
+              <span className="block leading-relaxed">
+                {item.address.map((line) => (
+                  <span className="block" key={line}>
+                    {line}
+                  </span>
+                ))}
+              </span>
+            </address>
+          ))}
         </div>
 
         <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/25 pt-6 md:flex-row">

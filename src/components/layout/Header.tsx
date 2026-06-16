@@ -59,7 +59,7 @@ export const Header = ({
   }, []);
 
   const handleMouseEnterLink = useCallback((name: string) => {
-    if (name === "Services") {
+    if (name.toLowerCase() === "services") {
       setActiveDropdown("services");
     } else {
       setActiveDropdown(null);
@@ -131,9 +131,9 @@ export const Header = ({
       <div className="flex items-center gap-6">
         <LanguageSelector lightText={headerLightText} />
 
-        <Link className="hidden lg:block" href="/contact">
-          <Button size="sm" variant="primary">
-            Let&apos;s Talk
+        <Link className="hidden lg:block" href="/contact-us">
+          <Button size="sm" variant="primary" className="btn-schedule rounded-full normal-case schedule-shake font-semibold">
+            Startup Special Sale
           </Button>
         </Link>
         <div className="lg:hidden">
@@ -197,6 +197,11 @@ export const Header = ({
                     group={serviceNavigationGroups[5]}
                     onClose={closeMegamenu}
                   />
+                  <MegamenuServiceGroup
+                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+                    group={serviceNavigationGroups[6]}
+                    onClose={closeMegamenu}
+                  />
                 </div>
               </div>
             </div>
@@ -225,9 +230,9 @@ export const Header = ({
             ))}
 
             <div className="p-6">
-              <Link href="/contact" onClick={closeMobileMenu}>
-                <Button className="w-full" variant="primary">
-                  Let&apos;s Talk
+              <Link href="/contact-us" onClick={closeMobileMenu}>
+                <Button className="w-full btn-schedule rounded-full normal-case schedule-shake font-semibold" variant="primary">
+                  Startup Special Sale
                 </Button>
               </Link>
             </div>

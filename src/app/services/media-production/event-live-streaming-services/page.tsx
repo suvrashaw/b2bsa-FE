@@ -28,7 +28,7 @@ import {
   LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_SPOTLIGHT,
   LIVE_STREAMING_WHY_CHOOSE_US,
-} from "@/content/services/media-production/live-streaming-services/content";
+} from "@/content/services/media-production/event-live-streaming-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 

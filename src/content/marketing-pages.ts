@@ -5,40 +5,43 @@ import { buildPageMetadata } from "@/lib/seo";
 
 import type { MarketingPageDefinition } from "./page-definitions";
 
-import { ABOUT_PAGE } from "./about/content";
+import { ABOUT_PAGE } from "./about-us/content";
 import { BLOG_PAGE } from "./blogs/content";
 import { CASE_STUDIES_PAGE } from "./case-studies/content";
-import { CONTACT_PAGE } from "./contact/content";
+import { CONTACT_PAGE } from "./contact-us/content";
 import { HOME_PAGE } from "./home/content";
-import { BOOTH_HOSTESS_PAGE } from "./services/booth-services/booth-hostess-services/content";
-import { EVENT_LOGISTICS_PAGE } from "./services/booth-services/booth-logistics-services/content";
-import { BS_PAGE } from "./services/booth-services/content";
-import { BOOTH_RENTAL_PAGE } from "./services/booth-services/event-booth-rental/content";
-import { MODULAR_BOOTHS_PAGE } from "./services/booth-services/modular-booth-solutions/content";
-import { BOOTH_BUILDER_PAGE } from "./services/booth-services/trade-show-booth-builder/content";
-import { BOOTH_DESIGN_PAGE } from "./services/booth-services/trade-show-booth-design/content";
+import { SERVICES_PAGE } from "./services/content";
+import { BOOTH_HOSTESS_PAGE } from "./services/tradeshow-booth-solutions/booth-hostess-services/content";
+import { EVENT_LOGISTICS_PAGE } from "./services/tradeshow-booth-solutions/booth-logistics-services/content";
+import { BS_PAGE } from "./services/tradeshow-booth-solutions/content";
+import { BOOTH_RENTAL_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-rental/content";
+import { MODULAR_BOOTHS_PAGE } from "./services/tradeshow-booth-solutions/modular-booth-solutions/content";
+import { BOOTH_BUILDER_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-builder/content";
+import { BOOTH_DESIGN_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { GES_PAGE } from "./services/global-event-solutions/content";
 import { CORP_EVENT_PAGE } from "./services/global-event-solutions/corporate-event-solutions/content";
 import { CORP_NETWORKING_PAGE } from "./services/global-event-solutions/corporate-networking-events/content";
-import { EVENT_BRANDING_PAGE } from "./services/global-event-solutions/event-branding-services/content";
+import { EVENT_BRANDING_PAGE } from "./services/global-event-solutions/event-branding-solutions/content";
 import { EVENT_EXPERIENCE_PAGE } from "./services/global-event-solutions/event-experience-creation/content";
 import { RESEARCH_PAGE } from "./services/market-research/content";
-import { DATA_AUGMENTATION_PAGE } from "./services/market-research/data-augmentation/content";
-import { DATA_VALIDATION_PAGE } from "./services/market-research/data-validation/content";
-import { MARKET_INTELLIGENCE_PAGE } from "./services/market-research/market-intelligence/content";
+import { DATA_AUGMENTATION_PAGE } from "./services/market-research/data-augmentation-services/content";
+import { DATA_VALIDATION_PAGE } from "./services/market-research/data-validation-services/content";
+import { MARKET_INTELLIGENCE_PAGE } from "./services/hpmi/human-powered-market-intelligence/content";
+import { HPMI_PAGE } from "./services/hpmi/content";
 import { MEDIA_PAGE } from "./services/media-production/content";
 import { CORPORATE_VIDEO_PAGE } from "./services/media-production/corporate-video-production/content";
 import { EVENT_EXPERIENCE_VIDEO_PAGE } from "./services/media-production/event-experience-video-production/content";
 import { EVENT_PHYSICAL_VIDEO_PAGE } from "./services/media-production/event-physical-video-shoot/content";
 import { EVENT_VIDEO_PAGE } from "./services/media-production/event-video-production/content";
-import { LIVE_STREAMING_PAGE } from "./services/media-production/live-streaming-services/content";
+import { LIVE_STREAMING_PAGE } from "./services/media-production/event-live-streaming-services/content";
 import { VIRTUAL_VIDEO_PAGE } from "./services/media-production/virtual-video-production/content";
-import { PERF_PAGE } from "./services/performance-marketing/content";
-import { PPC_PAGE } from "./services/performance-marketing/ppc-services/content";
-import { SEO_PAGE } from "./services/performance-marketing/seo-services/content";
-import { SMM_PAGE } from "./services/performance-marketing/social-media-marketing-services/content";
+import { PERF_PAGE } from "./services/digital-marketing/content";
+import { PPC_PAGE } from "./services/digital-marketing/performance-marketing/content";
+import { SEO_PAGE } from "./services/digital-marketing/seo-services/content";
+import { SMM_PAGE } from "./services/digital-marketing/social-media-marketing/content";
+import { EVENT_LEAD_PAGE } from "./services/sales-qualified-lead-generation/event-lead-generation/content";
 import { SQL_PAGE } from "./services/sales-qualified-lead-generation/content";
-import { TRADE_SHOW_CALENDAR_PAGE } from "./trade-show-calendar/content";
+import { TRADE_SHOW_CALENDAR_PAGE } from "./tradeshow-calendar/content";
 
 const marketingPages = [
   HOME_PAGE,
@@ -47,6 +50,7 @@ const marketingPages = [
   CASE_STUDIES_PAGE,
   CONTACT_PAGE,
   TRADE_SHOW_CALENDAR_PAGE,
+  SERVICES_PAGE,
   GES_PAGE,
   BS_PAGE,
   BOOTH_DESIGN_PAGE,
@@ -62,10 +66,12 @@ const marketingPages = [
   SEO_PAGE,
   SMM_PAGE,
   SQL_PAGE,
+  EVENT_LEAD_PAGE,
   RESEARCH_PAGE,
   DATA_AUGMENTATION_PAGE,
   DATA_VALIDATION_PAGE,
   MARKET_INTELLIGENCE_PAGE,
+  HPMI_PAGE,
   BOOTH_HOSTESS_PAGE,
   CORP_EVENT_PAGE,
   CORP_NETWORKING_PAGE,

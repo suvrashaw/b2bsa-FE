@@ -5,29 +5,29 @@
     {
       "color": "bg-brand-blue",
       "description": "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
-      "href": "/services/market-research/data-augmentation",
+      "href": "/services/market-research/data-augmentation-services",
       "icon": "PlusCircle",
       "id": "augmentation",
       "image": "/images/services/database-research-1.avif",
-      "title": "Data Augmentation"
+      "title": "Data Augmentation Services"
     },
     {
       "color": "bg-brand-cyan",
       "description": "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
-      "href": "/services/market-research/data-validation",
+      "href": "/services/market-research/data-validation-services",
       "icon": "CheckCircle",
       "id": "validation",
       "image": "/images/services/database-research-revised.avif",
-      "title": "Data Validation"
+      "title": "Data Validation Services"
     },
     {
       "color": "bg-brand-primary",
       "description": "Competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports.",
-      "href": "/services/market-research/market-intelligence",
+      "href": "/services/hpmi/human-powered-market-intelligence",
       "icon": "Search",
       "id": "intelligence",
       "image": "/images/services/market-intelligence.avif",
-      "title": "Human-Powered Market Intelligence"
+      "title": "Human Powered Market Intelligence"
     }
   ]
 }

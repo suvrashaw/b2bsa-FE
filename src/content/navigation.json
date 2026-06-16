@@ -2,31 +2,31 @@
   "topNavigation": [
     {
       "href": "/",
-      "name": "Home"
+      "name": "HOME"
     },
     {
-      "href": "/about",
-      "name": "About Us"
+      "href": "/about-us",
+      "name": "ABOUT US"
     },
     {
-      "href": "/services/global-event-solutions",
-      "name": "Services"
+      "href": "/services",
+      "name": "SERVICES"
     },
     {
-      "href": "/trade-show-calendar",
-      "name": "Tradeshow Calendar"
+      "href": "/tradeshow-calendar",
+      "name": "TRADESHOW CALENDAR"
     },
     {
       "href": "/blogs",
-      "name": "Blogs"
+      "name": "BLOGS"
     },
     {
       "href": "/case-studies",
-      "name": "Case Studies"
+      "name": "CASE STUDIES"
     },
     {
-      "href": "/contact",
-      "name": "Contact"
+      "href": "/contact-us",
+      "name": "CONTACT US"
     }
   ],
   "serviceNavigationGroups": [
@@ -38,8 +38,8 @@
           "name": "Event Experience Creation"
         },
         {
-          "href": "/services/global-event-solutions/event-branding-services",
-          "name": "Event Branding Services"
+          "href": "/services/global-event-solutions/event-branding-solutions",
+          "name": "Event Branding Solutions"
         },
         {
           "href": "/services/global-event-solutions/corporate-event-solutions",
@@ -48,43 +48,39 @@
         {
           "href": "/services/global-event-solutions/corporate-networking-events",
           "name": "Corporate Networking Events"
-        },
-        {
-          "href": "/services/global-event-solutions/event-experience-video-production",
-          "name": "Event Experience Video Production"
         }
       ],
-      "name": "Global Event Solutions"
+      "name": "GLOBAL EVENT SOLUTIONS"
     },
     {
-      "href": "/services/booth-services",
+      "href": "/services/tradeshow-booth-solutions",
       "links": [
         {
-          "href": "/services/booth-services/trade-show-booth-builder",
+          "href": "/services/tradeshow-booth-solutions/trade-show-booth-builder",
           "name": "Trade Show Booth Builder"
         },
         {
-          "href": "/services/booth-services/trade-show-booth-design",
+          "href": "/services/tradeshow-booth-solutions/trade-show-booth-design",
           "name": "Trade Show Booth Design"
         },
         {
-          "href": "/services/booth-services/booth-hostess-services",
+          "href": "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+          "name": "Trade Show Booth Rental"
+        },
+        {
+          "href": "/services/tradeshow-booth-solutions/booth-hostess-services",
           "name": "Booth Hostess Services"
         },
         {
-          "href": "/services/booth-services/booth-logistics-services",
+          "href": "/services/tradeshow-booth-solutions/booth-logistics-services",
           "name": "Booth Logistics Services"
         },
         {
-          "href": "/services/booth-services/modular-booth-solutions",
+          "href": "/services/tradeshow-booth-solutions/modular-booth-solutions",
           "name": "Modular Booth Solutions"
-        },
-        {
-          "href": "/services/booth-services/event-booth-rental",
-          "name": "Event Booth Rental"
         }
       ],
-      "name": "Booth Services"
+      "name": "Tradeshow Booth Solutions"
     },
     {
       "href": "/services/media-production",
@@ -114,66 +110,89 @@
           "name": "Virtual Video Production"
         }
       ],
-      "name": "Media Production"
+      "name": "MEDIA PRODUCTION"
     },
     {
       "href": "/services/sales-qualified-lead-generation",
-      "links": [],
-      "name": "Sales Qualified Lead Generation"
-    },
-    {
-      "href": "/services/performance-marketing",
       "links": [
         {
-          "href": "/services/performance-marketing/seo-services",
+          "href": "/services/sales-qualified-lead-generation/event-lead-generation",
+          "name": "Event Lead Generation"
+        }
+      ],
+      "name": "SALES QUALIFIED LEAD GENERATION"
+    },
+    {
+      "href": "/services/digital-marketing",
+      "links": [
+        {
+          "href": "/services/digital-marketing/seo-services",
           "name": "SEO Services"
         },
         {
-          "href": "/services/performance-marketing/ppc-services",
-          "name": "PPC Services"
+          "href": "/services/digital-marketing/performance-marketing",
+          "name": "Performance Marketing"
         },
         {
-          "href": "/services/performance-marketing/social-media-marketing-services",
-          "name": "Social Media Marketing Services"
+          "href": "/services/digital-marketing/social-media-marketing",
+          "name": "Social Media Marketing"
         }
       ],
-      "name": "Performance Marketing"
+      "name": "Digital Marketing"
     },
     {
       "href": "/services/market-research",
       "links": [
         {
-          "href": "/services/market-research/data-augmentation",
+          "href": "/services/market-research/data-augmentation-services",
           "name": "Data Augmentation Services"
         },
         {
-          "href": "/services/market-research/data-validation",
+          "href": "/services/market-research/data-validation-services",
           "name": "Data Validation Services"
-        },
+        }
+      ],
+      "name": "MARKET RESEARCH"
+    },
+    {
+      "href": "/services/hpmi",
+      "links": [
         {
-          "href": "/services/market-research/market-intelligence",
+          "href": "/services/hpmi/human-powered-market-intelligence",
           "name": "Human Powered Market Intelligence"
         }
       ],
-      "name": "Market Research"
+      "name": "HPMI"
     }
   ],
   "footerNavigation": [
     {
+      "href": "/",
+      "name": "HOME"
+    },
+    {
+      "href": "/about-us",
+      "name": "ABOUT US"
+    },
+    {
+      "href": "/services",
+      "name": "SERVICES"
+    },
+    {
+      "href": "/tradeshow-calendar",
+      "name": "TRADESHOW CALENDAR"
+    },
+    {
       "href": "/blogs",
-      "name": "Blogs"
+      "name": "BLOGS"
     },
     {
       "href": "/case-studies",
-      "name": "Case Studies"
+      "name": "CASE STUDIES"
     },
     {
-      "href": "/about",
-      "name": "About Us"
-    },
-    {
-      "href": "/contact",
-      "name": "Contact"
+      "href": "/contact-us",
+      "name": "CONTACT US"
     }
   ]
 }

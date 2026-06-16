@@ -7,7 +7,7 @@
   "description": "Partner with B2B Sales Arrow for professional virtual video event production services that help your brand deliver engaging webinars, fireside chats, panel discussions, and virtual corporate experiences with confidence.",
   "headingLines": ["Ready to Produce Your", "Next Virtual Event?"],
   "primaryCta": {
-    "href": "/contact",
+    "href": "/contact-us",
     "label": "Schedule a Consultation",
     "opensModal": true
   },

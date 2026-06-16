@@ -118,7 +118,7 @@ export const CaseStudies = ({
     : (cards[0]?.id ?? "");
 
   return (
-    <section className="relative bg-brand-gray py-12 md:py-16 lg:py-20" id="work">
+    <section className="relative bg-brand-gray pt-8 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20" id="work">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
         {sectionHeading && (
           <div className="mb-10 flex flex-col items-center text-center">

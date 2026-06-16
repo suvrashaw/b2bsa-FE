@@ -421,7 +421,7 @@ export const EventsCard = ({
   event,
   flipStyle,
   index,
-  viewAllHref = "/trade-show-calendar",
+  viewAllHref = "/tradeshow-calendar",
 }: EventsCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const shouldReduceMotion = Boolean(useReducedMotion());

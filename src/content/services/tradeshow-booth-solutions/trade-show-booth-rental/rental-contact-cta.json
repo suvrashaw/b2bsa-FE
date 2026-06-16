@@ -1,0 +1,35 @@
+{
+  "backgroundImage": {
+    "alt": "Trade show booth rental consultation backdrop",
+    "src": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920"
+  },
+  "badge": "Ready to Rent?",
+  "description": "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly, at a fraction of the custom build timeline.",
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Check Rental Availability"
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "proofLogos": [
+    {
+      "alt": "Airtel",
+      "src": "/images/client-logos/circle-airtel.svg"
+    },
+    {
+      "alt": "SingleStore",
+      "src": "/images/client-logos/circle-singlestore.svg"
+    },
+    {
+      "alt": "CSC",
+      "src": "/images/client-logos/circle-csc.svg"
+    },
+    {
+      "alt": "United Payments",
+      "src": "/images/client-logos/circle-united-payments.svg"
+    }
+  ],
+  "secondaryCta": {
+    "href": "mailto:info@b2bsalesarrow.com",
+    "label": "Contact Us"
+  }
+}

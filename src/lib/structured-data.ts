@@ -134,7 +134,7 @@ export const buildWebsiteJsonLd = () => ({
     "query-input": "required name=search_term_string",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: `${BASE}/trade-show-calendar?q={search_term_string}`,
+      urlTemplate: `${BASE}/tradeshow-calendar?q={search_term_string}`,
     },
   },
   url: BASE,

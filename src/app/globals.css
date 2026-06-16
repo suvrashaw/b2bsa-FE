@@ -112,7 +112,7 @@ body {
     color: var(--heading-h4);
   }
 
-  /* ── Mobile / Touch globals ──────────────────────────────────── */
+  /* ── Mobile / Touch globals ──────────────────────────────────────── */
   html {
     /* Anchor links land below the fixed header (~64px) */
     scroll-padding-top: 64px;
@@ -491,4 +491,51 @@ body {
     scroll-padding-left: calc((100% - 1536px) / 2 + 2rem);
     padding-left: calc((100% - 1536px) / 2 + 2rem);
   }
+}
+
+/* ── Schedule Shake Animation ── */
+@keyframes schedule-shake {
+  0%, 80%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  82% {
+    transform: rotate(-4deg) scale(1.02);
+  }
+  84% {
+    transform: rotate(4deg) scale(1.02);
+  }
+  86% {
+    transform: rotate(-4deg) scale(1.02);
+  }
+  88% {
+    transform: rotate(4deg) scale(1.02);
+  }
+  90% {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  92% {
+    transform: rotate(2deg) scale(1.02);
+  }
+  94% {
+    transform: rotate(0deg) scale(1.02);
+  }
+}
+
+.schedule-shake {
+  animation: schedule-shake 4s ease-in-out infinite;
+  display: inline-flex;
+  transform-origin: center;
+}
+
+.schedule-shake:hover {
+  animation: none;
+  transform: scale(1.05);
+}
+
+.btn-schedule {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.remv-caps {
+  text-transform: none !important;
 }

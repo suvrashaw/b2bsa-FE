@@ -60,7 +60,7 @@ export const CaseStudyItem = ({
         <Image
           alt={item.title}
           className={cn(
-            "object-cover transition-transform duration-1000",
+            "object-cover transition-transform duration-1000 max-lg:blur-[6px] max-lg:scale-105",
             active ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
           )}
           fill
@@ -72,8 +72,8 @@ export const CaseStudyItem = ({
           className={cn(
             "absolute inset-0 transition-opacity duration-500",
             active
-              ? "from-brand-charcoal/90 via-brand-charcoal/40 bg-gradient-to-t to-transparent"
-              : "bg-brand-charcoal/60 group-hover:bg-brand-charcoal/40"
+              ? "from-brand-charcoal/95 via-brand-charcoal/70 bg-gradient-to-t to-brand-charcoal/30 lg:from-brand-charcoal/90 lg:via-brand-charcoal/40 lg:to-transparent"
+              : "bg-brand-charcoal/70 lg:bg-brand-charcoal/60 lg:group-hover:bg-brand-charcoal/40"
           )}
         />
       </div>

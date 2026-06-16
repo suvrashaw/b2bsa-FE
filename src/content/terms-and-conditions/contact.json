@@ -3,7 +3,7 @@
   "description": "Have specific questions about our terms, privacy practices, or compliance standards? Our team is here to help.",
   "email": "legal@b2bsalesarrow.com",
   "buttonText": "Contact Legal",
-  "buttonHref": "/contact",
+  "buttonHref": "/contact-us",
   "form": {
     "ctaLabel": "Send Query",
     "emailLabel": "Work Email",

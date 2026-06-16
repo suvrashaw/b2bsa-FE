@@ -1,0 +1,35 @@
+{
+  "backgroundImage": {
+    "alt": "Exhibition stand build consultation backdrop",
+    "src": "/images/booth/40x40.jpg"
+  },
+  "badge": "Ready to Build?",
+  "description": "From first brief to final installation, your exhibition stand should move with the same discipline as your sales strategy. Share the event, footprint, timeline, and goals, and we will map the right build path.",
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Request a Build Quote"
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "proofLogos": [
+    {
+      "alt": "Airtel",
+      "src": "/images/client-logos/circle-airtel.svg"
+    },
+    {
+      "alt": "SingleStore",
+      "src": "/images/client-logos/circle-singlestore.svg"
+    },
+    {
+      "alt": "CSC",
+      "src": "/images/client-logos/circle-csc.svg"
+    },
+    {
+      "alt": "United Payments",
+      "src": "/images/client-logos/circle-united-payments.svg"
+    }
+  ],
+  "secondaryCta": {
+    "href": "mailto:info@b2bsalesarrow.com",
+    "label": "Contact Us"
+  }
+}
