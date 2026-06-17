@@ -15,11 +15,6 @@ import LINKEDIN_POSTS_DATA from "./linkedin-posts.json";
 import PAGE_DATA from "./page.json";
 import SERVICECAROUSEL_DATA from "./service-carousel.json";
 
-export interface BlogFAQ {
-  answer: string;
-  question: string;
-}
-
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }
   | { items: string[]; ordered?: boolean; type: "list" }
@@ -28,7 +23,21 @@ export type ContentBlock =
   | { text: string; type: "quote" }
   | { type: "divider" };
 
-export type ImportedBlogPost = {
+export interface SharedBlogPost extends BlogItem {
+  body?: ContentBlock[];
+  externalUrl: string;
+  faqs?: BlogFAQ[];
+  href: string;
+  linkedinEmbedUrl?: string;
+  linkedinUrl?: string;
+}
+
+interface BlogFAQ {
+  answer: string;
+  question: string;
+}
+
+type ImportedBlogPost = {
   body?: ContentBlock[];
   category?: string;
   date: string;
@@ -42,15 +51,6 @@ export type ImportedBlogPost = {
   title: string;
   url: string;
 };
-
-export interface SharedBlogPost extends BlogItem {
-  body?: ContentBlock[];
-  externalUrl: string;
-  faqs?: BlogFAQ[];
-  href: string;
-  linkedinEmbedUrl?: string;
-  linkedinUrl?: string;
-}
 
 const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST;
 export const DEFAULT_BLOG_POST_ID = BLOGS_CONFIG.DEFAULT_BLOG_POST_ID;
@@ -132,7 +132,6 @@ export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] =
 };
 
 export const HOME_BLOG_POSTS = getBlogsByTags([], 5);
-export const RENTAL_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Rental"], 5);
 
 export interface LinkedInPost {
   caption: string;

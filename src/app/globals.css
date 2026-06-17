@@ -542,7 +542,13 @@ body {
 }
 
 .btn-schedule {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  /* stylelint-disable plugin/no-low-performance-animation-properties */
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  /* stylelint-enable plugin/no-low-performance-animation-properties */
 }
 
 .remv-caps {
