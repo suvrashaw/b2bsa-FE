@@ -94,10 +94,7 @@
       "src": "/media/case-studies/cs-new-2.avif"
     },
     "description": "Tell us what you are trying to achieve. We will define the right path.",
-    "headingLines": [
-      "One conversation can clarify",
-      "your entire growth strategy."
-    ],
+    "headingLines": ["One conversation can clarify", "your entire growth strategy."],
     "primaryCta": {
       "href": "/contact-us",
       "label": "Book a Strategy Consultation"

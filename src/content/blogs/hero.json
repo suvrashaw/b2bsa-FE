@@ -1,8 +1,6 @@
 {
   "centered": true,
-  "images": [
-    "/media/blog/hero.avif"
-  ],
+  "images": ["/media/blog/hero.avif"],
   "title": "Blogs and Articles",
   "variant": "compact"
 }

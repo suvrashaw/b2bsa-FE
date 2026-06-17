@@ -6,10 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import {
-  TRADE_SHOW_CALENDAR_HERO,
-  TRADE_SHOW_CALENDAR_PAGE,
-} from "@/content/tradeshow-calendar";
+import { TRADE_SHOW_CALENDAR_HERO, TRADE_SHOW_CALENDAR_PAGE } from "@/content/tradeshow-calendar";
 
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 

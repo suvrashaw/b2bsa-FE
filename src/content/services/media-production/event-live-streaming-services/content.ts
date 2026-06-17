@@ -6,8 +6,6 @@ import CONTACT_CTA_DATA from "./contact-cta.json";
 import LIVE_STREAM_PROJECTS_DATA from "./live-stream-projects.json";
 import STREAMINGSPOTLIGHT_DATA from "./streaming-spotlight.json";
 
-
-
 export const LIVE_STREAMING_PROJECTS = {
   ...CASE_STUDIES_DATA,
   items: LIVE_STREAM_PROJECTS_DATA,

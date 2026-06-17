@@ -304,9 +304,7 @@ export const ContactUs = ({
                 </div>
               ))}
             </div>
-            {proofLabel ? (
-              <p className="text-sm font-medium text-white/80">{proofLabel}</p>
-            ) : null}
+            {proofLabel ? <p className="text-sm font-medium text-white/80">{proofLabel}</p> : null}
           </motion.div>
         </div>
       </div>

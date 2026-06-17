@@ -9,8 +9,6 @@ export const CORPORATE_VIDEO_PORTFOLIO = {
   items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 
-
-
 export const CORPORATE_VIDEO_CONTACT_CTA = {
   ...CINEMATIC_CTA_SHARED,
   ...CONTACT_CTA_DATA,

@@ -5,8 +5,6 @@ import EVENTLOGISTICSCASESTUDIESDATA from "./case-studies.json";
 import LOGISTICSCONTACTCTA_DATA from "./logistics-contact-cta.json";
 import LOGISTICSINDUSTRIESSECTION_DATA from "./logistics-industries-section.json";
 
-
-
 export const EVENT_LOGISTICS_CASE_STUDIES = {
   ...EVENTLOGISTICSCASESTUDIESDATA,
   items: GLOBAL_CASE_STUDIES,

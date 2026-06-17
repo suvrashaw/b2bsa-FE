@@ -1,19 +1,24 @@
-import type { MarketingPageDefinition } from "@/content/page-definitions";
 import type { BlogItem } from "@/content/home/content";
+import type { MarketingPageDefinition } from "@/content/page-definitions";
 
+import rawBlogPosts from "@/content/blogs/blogs.json";
 import { PERF_SERVICES } from "@/content/services/digital-marketing/content";
 import { GES_SERVICES } from "@/content/services/global-event-solutions/content";
 import { RESEARCH_SERVICES } from "@/content/services/market-research/content";
 import { MEDIA_SERVICES } from "@/content/services/media-production/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
-import rawBlogPosts from "@/content/blogs/blogs.json";
 import BLOGS_SECTION_DATA from "./blogs-section.json";
 import BLOGS_CONFIG from "./config.json";
 import CONTACT_DATA from "./contactus.json";
 import LINKEDIN_POSTS_DATA from "./linkedin-posts.json";
 import PAGE_DATA from "./page.json";
 import SERVICECAROUSEL_DATA from "./service-carousel.json";
+
+export interface BlogFAQ {
+  answer: string;
+  question: string;
+}
 
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }
@@ -22,20 +27,6 @@ export type ContentBlock =
   | { text: string; type: "paragraph" }
   | { text: string; type: "quote" }
   | { type: "divider" };
-
-export interface SharedBlogPost extends BlogItem {
-  body?: ContentBlock[];
-  externalUrl: string;
-  faqs?: BlogFAQ[];
-  href: string;
-  linkedinEmbedUrl?: string;
-  linkedinUrl?: string;
-}
-
-export interface BlogFAQ {
-  answer: string;
-  question: string;
-}
 
 export type ImportedBlogPost = {
   body?: ContentBlock[];
@@ -51,6 +42,15 @@ export type ImportedBlogPost = {
   title: string;
   url: string;
 };
+
+export interface SharedBlogPost extends BlogItem {
+  body?: ContentBlock[];
+  externalUrl: string;
+  faqs?: BlogFAQ[];
+  href: string;
+  linkedinEmbedUrl?: string;
+  linkedinUrl?: string;
+}
 
 const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST;
 export const DEFAULT_BLOG_POST_ID = BLOGS_CONFIG.DEFAULT_BLOG_POST_ID;
@@ -124,8 +124,8 @@ export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] =
     return SHARED_BLOG_POSTS.slice(0, minCount);
   }
 
-  const exactMatches = SHARED_BLOG_POSTS.filter(blog => 
-    blog.tags?.some(tag => tags.includes(tag))
+  const exactMatches = SHARED_BLOG_POSTS.filter((blog) =>
+    blog.tags?.some((tag) => tags.includes(tag))
   );
 
   return exactMatches.slice(0, Math.max(exactMatches.length, minCount));
@@ -196,4 +196,4 @@ export const BLOG_SERVICE_CAROUSEL = {
 
 export { default as BLOG_CATEGORIES } from "./categories.json";
 
-export {default as BLOG_HERO} from "./hero.json";
+export { default as BLOG_HERO } from "./hero.json";

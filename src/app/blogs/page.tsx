@@ -15,8 +15,6 @@ import { BlogsSection } from "./BlogsSection";
 
 export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
 
-
-
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">

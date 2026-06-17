@@ -29,7 +29,9 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
 
   if (submitted) {
     return (
-      <div className={`flex flex-col items-center justify-center gap-4 py-16 text-center ${className}`}>
+      <div
+        className={`flex flex-col items-center justify-center gap-4 py-16 text-center ${className}`}
+      >
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue/10">
           <ArrowRight className="h-8 w-8 rotate-[-45deg] text-brand-blue" />
         </div>

@@ -1,5 +1,5 @@
-import type { MarketingPageDefinition } from "@/content/page-definitions";
 import type { EventCardItem } from "@/components/items/EventsCard";
+import type { MarketingPageDefinition } from "@/content/page-definitions";
 
 import EVENTS_DATA from "./events.json";
 import PAGE_DATA from "./page.json";
@@ -77,7 +77,10 @@ const getCountryFromLocation = (location?: string) => {
   return parts.at(-1) ?? location;
 };
 
-export const mapCalendarEventToEvent = (event: CalendarTradeShow, index: number): EventCardItem => ({
+export const mapCalendarEventToEvent = (
+  event: CalendarTradeShow,
+  index: number
+): EventCardItem => ({
   country: event.country,
   ctaHref: "/tradeshow-calendar",
   date: formatCalendarDateRange(event.startDate, event.endDate),

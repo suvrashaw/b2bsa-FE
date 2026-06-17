@@ -15,8 +15,6 @@ export interface CinematicSequenceProps {
   frameUrlTemplate?: CinematicSequenceContent["frameUrlTemplate"];
 }
 
-
-
 export const CinematicSequence = ({
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
   frameCount = content.frameCount,

@@ -4,8 +4,6 @@ import CASESTUDIES_DATA from "./case-studies.json";
 
 export const PPC_CLIENT_LOGOS_HEADING = "Trusted by Global Brands for B2B Paid Advertising";
 
-
-
 export const PPC_CASE_STUDIES = {
   ...CASESTUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,

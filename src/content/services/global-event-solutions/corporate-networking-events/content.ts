@@ -8,8 +8,6 @@ import NETWORKINGINDUSTRIESSECTION_DATA from "./networking-industries-section.js
 
 export { default as CORP_NETWORKING_BLOGS_SECTION } from "./blog.json";
 
-
-
 export const CORP_NETWORKING_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,

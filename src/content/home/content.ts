@@ -241,8 +241,6 @@ interface UpcomingEventItem {
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
   CINEMATICSEQUENCECONTENT_DATA;
 
-
-
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = CLIENTLOGOS_DATA;
 
 export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
@@ -275,4 +273,4 @@ export const HOME_CONTACT_CONTENT: ContactContent = CONTACTCONTENT_DATA;
 
 export const HOME_PAGE = PAGE_DATA as MarketingPageDefinition;
 
-export {default as HOME_HERO_CONTENT} from "./hero.json";
+export { default as HOME_HERO_CONTENT } from "./hero.json";
