@@ -1,7 +1,6 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
-import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact-cta.json";
 import CORPORATEVIDEOPORTFOLIO_DATA from "./corporate-video-portfolio.json";
 
@@ -10,10 +9,7 @@ export const CORPORATE_VIDEO_PORTFOLIO = {
   items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 
-export const CORPORATE_VIDEO_CASE_STUDIES = {
-  ...CASE_STUDIES_DATA,
-  items: GLOBAL_CASE_STUDIES.slice(0, 3),
-};
+
 
 export const CORPORATE_VIDEO_CONTACT_CTA = {
   ...CINEMATIC_CTA_SHARED,

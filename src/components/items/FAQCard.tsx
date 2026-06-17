@@ -34,12 +34,7 @@ const FAQ_IMAGES: string[] = [
   "/images/events/servicenow_2026.avif",
   "/images/home/hero/home_hero_bg.avif",
   "/images/home/hero/home_hero_bg_2.avif",
-  "/images/home/testimonials/testimonial-1.avif",
-  "/images/home/testimonials/testimonial-2.avif",
-  "/images/home/testimonials/testimonial-3.avif",
-  "/images/home/testimonials/testimonial-4.avif",
-  "/images/home/testimonials/testimonial-5.avif",
-  "/images/home/testimonials/testimonial-6.avif",
+
   "/images/home/why-choose-us/global_reach.avif",
   "/images/home/why-choose-us/proven_execution.avif",
   "/images/home/why-choose-us/strategic_creativity.avif",
@@ -74,13 +69,13 @@ export interface FAQCardProps {
  * Returns a stable index into FAQ_IMAGES derived from the question text,
  * so the same card always gets the same image regardless of render order.
  */
-function seedIndexFromQuestion(question: string): number {
+const seedIndexFromQuestion = (question: string): number => {
   let sum = 0;
   for (let i = 0; i < question.length; i++) {
-    sum += question.charCodeAt(i);
+    sum += question.codePointAt(i) ?? 0;
   }
   return sum % FAQ_IMAGES.length;
-}
+};
 
 export const FAQCard = ({
   answer,
@@ -89,8 +84,7 @@ export const FAQCard = ({
   layoutMode: _layoutMode = "carousel",
   question,
 }: FAQCardProps) => {
-  const resolvedImage =
-    image ?? FAQ_IMAGES[seedIndexFromQuestion(question)];
+  const resolvedImage = image ?? FAQ_IMAGES[seedIndexFromQuestion(question)];
 
   return (
     <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">

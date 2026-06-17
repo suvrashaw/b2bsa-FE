@@ -16,10 +16,10 @@ import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
+  ABOUT_CONTACTUS,
   ABOUT_CORE_VALUES,
   ABOUT_FOUNDER_STORY,
   ABOUT_HERO,
-  ABOUT_INQUIRY,
   ABOUT_ORIGIN_TIMELINE,
   ABOUT_PAGE,
   ABOUT_RECENT_EVENTS,
@@ -38,8 +38,6 @@ export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
 const ABOUT_IMAGES = ["/images/about/culture/culture-5.avif"];
 const ABOUT_PRIMARY_CTA = { href: ABOUT_HERO.primaryCtaHref, label: ABOUT_HERO.primaryCtaLabel };
-const ABOUT_CTA_HEADING_LINES = [ABOUT_INQUIRY.heading];
-const ABOUT_CTA_PRIMARY = { href: "/contact-us", label: "Let's Talk" };
 const ABOUT_PROOF_LOGOS = CLIENT_LOGOS.slice(0, 5);
 
 const Page = () => {
@@ -236,9 +234,7 @@ const Page = () => {
 
       {/* CTA */}
       <ContactUs
-        headingLines={ABOUT_CTA_HEADING_LINES}
-        primaryCta={ABOUT_CTA_PRIMARY}
-        proofLabel={ABOUT_INQUIRY.proofLabel}
+        {...ABOUT_CONTACTUS}
         proofLogos={ABOUT_PROOF_LOGOS}
       />
 

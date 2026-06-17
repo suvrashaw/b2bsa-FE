@@ -1,18 +1,13 @@
 import {
   GLOBAL_CASE_STUDIES,
   GLOBAL_INDUSTRY_SERVICES,
-  GLOBAL_PROOF_STATS,
 } from "@/content/shared";
 
 import EVENTLOGISTICSCASESTUDIESDATA from "./case-studies.json";
 import LOGISTICSCONTACTCTA_DATA from "./logistics-contact-cta.json";
 import LOGISTICSINDUSTRIESSECTION_DATA from "./logistics-industries-section.json";
-import EVENTLOGISTICSPROOFBARDATA from "./proof-bar.json";
 
-export const EVENT_LOGISTICS_PROOF_BAR = {
-  ...EVENTLOGISTICSPROOFBARDATA,
-  stats: GLOBAL_PROOF_STATS,
-};
+
 
 export const EVENT_LOGISTICS_CASE_STUDIES = {
   ...EVENTLOGISTICSCASESTUDIESDATA,

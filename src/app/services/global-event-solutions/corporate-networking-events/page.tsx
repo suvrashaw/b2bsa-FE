@@ -39,8 +39,8 @@ const capabilityAssets = [
   { icon: "CalendarCheck", image: "/images/events/event_other_3.avif" },
   { icon: "Globe2", image: "/images/events/event_other_4.avif" },
   { icon: "Star", image: "/images/services/booth/booth-5.avif" },
-  { icon: "Zap", image: "/images/home/testimonials/testimonial-1.avif" },
-  { icon: "Award", image: "/images/home/testimonials/testimonial-2.avif" },
+  { icon: "Zap", image: "/images/services/booth/booth-6.avif" },
+  { icon: "Award", image: "/images/services/booth/booth-7.avif" },
   { icon: "ClipboardList", image: "/images/home/why-choose-us/global_reach.avif" },
   { icon: "Compass", image: "/images/home/why-choose-us/proven_execution.avif" },
   { icon: "Map", image: "/images/home/why-choose-us/strategic_creativity.avif" },
@@ -49,7 +49,10 @@ const capabilityAssets = [
 const capabilityFeatures = CORP_NETWORKING_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
   icon: capabilityAssets[index]?.icon ?? "Users",
-  id: phase.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-").replaceAll(/(^-|-$)/g, ""),
+  id: phase.title
+    .toLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, "-")
+    .replaceAll(/(^-|-$)/g, ""),
   image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
   label: phase.title,
 }));

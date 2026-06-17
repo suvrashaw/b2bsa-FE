@@ -205,7 +205,11 @@ export const ServicePage = ({
 
       {hero && <Hero {...hero} />}
 
-      <ClientLogos description={clientLogosDescription} heading={clientLogosHeading} overlap={false} />
+      <ClientLogos
+        description={clientLogosDescription}
+        heading={clientLogosHeading}
+        overlap={false}
+      />
 
       {proofBar && <Stats {...proofBar} />}
 
@@ -265,7 +269,11 @@ export const ServicePage = ({
       )}
 
       {relatedServices && relatedServices.length > 0 && (
-        <CardsGrid className="py-10 md:py-12 lg:py-14" cols={3} heading={relatedServicesHeading ?? "Explore Related Solutions"}>
+        <CardsGrid
+          className="py-10 md:py-12 lg:py-14"
+          cols={3}
+          heading={relatedServicesHeading ?? "Explore Related Solutions"}
+        >
           {relatedServices.map((service, index) => (
             <ServicesLinkCard index={index} key={service.href} service={service} />
           ))}

@@ -126,10 +126,11 @@ export const CaseStudiesClientPage = () => {
       ? CASE_STUDIES_PAGE_STUDIES
       : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.services.includes(activeFilter));
 
-  const { currentPage, paginatedItems: paginatedStudies, totalPages } = applyPagination(
-    filteredStudies,
-    requestedPage
-  );
+  const {
+    currentPage,
+    paginatedItems: paginatedStudies,
+    totalPages,
+  } = applyPagination(filteredStudies, requestedPage);
   const hasEmptyPage = filteredStudies.length > 0 && paginatedStudies.length === 0;
   let gridContent: ReactNode;
 

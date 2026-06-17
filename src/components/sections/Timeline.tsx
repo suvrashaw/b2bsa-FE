@@ -112,9 +112,7 @@ export const Timeline = ({
         )}
       </div>
 
-      {cta?.opensModal && (
-        <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
-      )}
+      {cta?.opensModal && <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />}
     </section>
   );
 };

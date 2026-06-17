@@ -56,7 +56,12 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     <main className="min-h-screen bg-brand-gray">
       <Header forceLightMode />
 
-      <Hero imageOpacity={0.35} images={heroImages} primaryCta={HERO_PRIMARY_CTA} title={study.title} />
+      <Hero
+        imageOpacity={0.35}
+        images={heroImages}
+        primaryCta={HERO_PRIMARY_CTA}
+        title={study.title}
+      />
 
       {/* Event metadata */}
       <section className="bg-brand-gray py-10">

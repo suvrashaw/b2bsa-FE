@@ -22,7 +22,7 @@
       "description": "Deliver premium executive networking experiences for leadership summits, investor meetings, and C-level business gatherings.",
       "icon": "Target",
       "id": "executive-networking",
-      "image": "/images/home/testimonials/testimonial-4.avif",
+      "image": "",
       "title": "Executive Networking Events"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Manage VIP guest experiences with personalized hospitality, attendee coordination, and premium networking environments.",
       "icon": "Zap",
       "id": "vip-networking",
-      "image": "/images/home/testimonials/testimonial-5.avif",
+      "image": "",
       "title": "VIP Networking Event Solutions"
     },
     {

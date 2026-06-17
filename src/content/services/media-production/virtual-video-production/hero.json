@@ -1,9 +1,9 @@
 {
   "description": "Produce engaging virtual events, fireside chats, webinars, and panel discussions with professional production, branded visuals, and seamless audience experiences.",
   "images": [
-    "/images/services/media-production-1.avif",
-    "/images/services/media-production-2.avif",
-    "/images/events/adobe_summit_2026.avif"
+    "/images/services/media-production/virtual-video-production/hero-1.avif",
+    "/images/services/media-production/virtual-video-production/hero-2.avif",
+    "/images/services/media-production/virtual-video-production/hero-3.avif"
   ],
   "primaryCta": {
     "href": "/contact-us",

@@ -9,7 +9,7 @@ import SHARED_EVENTS_DATA from "@/content/shared/events.json";
 import BLOGS_DATA from "./blogs.json";
 import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";
 import CLIENTLOGOS_DATA from "./client-logos.json";
-import CONTACTCONTENT_DATA from "./contact.json";
+import CONTACTCONTENT_DATA from "./contactus.json";
 import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
 import PAGE_DATA from "./page.json";
@@ -65,13 +65,6 @@ export interface CinematicSequenceContent {
   frameCount: number;
   frameUrls?: string[];
   frameUrlTemplate?: string;
-  heroOverlay?: {
-    description: string;
-    eyebrow?: string;
-    primaryCta: { href: string; label: string };
-    secondaryCta: { href: string; label: string };
-    title: string;
-  };
   loadingText: string;
 }
 
@@ -249,6 +242,8 @@ interface UpcomingEventItem {
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
   CINEMATICSEQUENCECONTENT_DATA;
 
+
+
 export const HOME_CLIENT_LOGOS: ClientLogoItem[] = CLIENTLOGOS_DATA;
 
 export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
@@ -280,3 +275,5 @@ export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
 export const HOME_CONTACT_CONTENT: ContactContent = CONTACTCONTENT_DATA;
 
 export const HOME_PAGE = PAGE_DATA as MarketingPageDefinition;
+
+export {default as HOME_HERO_CONTENT} from "./hero.json";

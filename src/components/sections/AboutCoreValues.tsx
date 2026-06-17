@@ -13,13 +13,7 @@ export interface AboutCoreValuesData {
   values: string[];
 }
 
-const CoreValueCard = ({
-  index,
-  value,
-}: {
-  index: number;
-  value: string;
-}) => {
+const CoreValueCard = ({ index, value }: { index: number; value: string }) => {
   const num = String(index + 1).padStart(2, "0");
   return (
     <div className="relative flex aspect-square flex-col justify-center overflow-hidden rounded-md border border-brand-charcoal/10 bg-brand-white px-6 py-8 shadow-[0_10px_40px_rgba(14,22,31,0.04)] transition-shadow duration-300 hover:shadow-[0_10px_40px_rgba(14,22,31,0.08)] md:px-8 md:py-9">

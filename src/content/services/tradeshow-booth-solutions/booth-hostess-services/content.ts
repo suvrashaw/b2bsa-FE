@@ -1,27 +1,11 @@
-import {
-  GLOBAL_CASE_STUDIES,
-  GLOBAL_INDUSTRY_SERVICES,
-  GLOBAL_PROOF_STATS,
-} from "@/content/shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 import BOOTHHOSTESSCASESTUDIESDATA from "./case-studies.json";
 import HOSTESSCONTACTCTA_DATA from "./hostess-contact-cta.json";
-import HOSTESSINDUSTRIESSECTION_DATA from "./hostess-industries-section.json";
-import BOOTHHOSTESSPROOFBARDATA from "./proof-bar.json";
-
-export const BOOTH_HOSTESS_PROOF_BAR = {
-  ...BOOTHHOSTESSPROOFBARDATA,
-  stats: GLOBAL_PROOF_STATS,
-};
 
 export const BOOTH_HOSTESS_CASE_STUDIES = {
   ...BOOTHHOSTESSCASESTUDIESDATA,
   items: GLOBAL_CASE_STUDIES,
-};
-
-export const BOOTH_HOSTESS_INDUSTRIES_SECTION = {
-  ...HOSTESSINDUSTRIESSECTION_DATA,
-  services: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const BOOTH_HOSTESS_CONTACT_CTA = {

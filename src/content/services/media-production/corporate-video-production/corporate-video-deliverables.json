@@ -6,7 +6,7 @@
       "description": "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
       "icon": "Star",
       "id": "brand",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/services/media-production/corporate-video-production/deliverables-3.avif",
       "title": "Brand and Culture Films"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
       "icon": "Users",
       "id": "thought",
-      "image": "/images/home/testimonials/testimonial-1.avif",
+      "image": "/images/services/media-production/corporate-video-production/deliverables-1.avif",
       "title": "Executive Interview and Thought Leadership Series"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
       "icon": "Zap",
       "id": "sales",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/services/media-production/corporate-video-production/deliverables-2.avif",
       "title": "Sales Enablement Video Content"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
       "icon": "MessageSquare",
       "id": "testimonial",
-      "image": "/images/home/testimonials/testimonial-2.avif",
+      "image": "",
       "title": "Customer Testimonial and Case Study Films"
     }
   ]

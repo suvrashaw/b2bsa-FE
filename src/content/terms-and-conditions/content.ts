@@ -1,4 +1,4 @@
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contactus.json";
 
 export const TERMS_CONTACT = {
   ...CONTACT_DATA,

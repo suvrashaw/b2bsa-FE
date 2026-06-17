@@ -9,7 +9,7 @@
       "description": "Produce engaging fireside chat sessions with professional speaker management, branded visuals, live moderation, and seamless virtual delivery.",
       "icon": "MessageSquare",
       "id": "fireside-chat-production",
-      "image": "/images/home/testimonials/testimonial-1.avif",
+      "image": "",
       "title": "Fireside Chat Production"
     },
     {
@@ -17,7 +17,7 @@
       "description": "Manage multi-speaker virtual panel discussions with audience interaction features, technical support, and smooth conversation flow.",
       "icon": "Users",
       "id": "panel-discussion-production",
-      "image": "/images/home/testimonials/testimonial-2.avif",
+      "image": "",
       "title": "Panel Discussion Production"
     },
     {
@@ -33,7 +33,7 @@
       "description": "Create polished executive conversations and leadership discussions optimized for virtual audiences and digital platforms.",
       "icon": "Mic",
       "id": "executive-virtual-interviews",
-      "image": "/images/home/testimonials/testimonial-3.avif",
+      "image": "",
       "title": "Executive Virtual Interviews"
     },
     {

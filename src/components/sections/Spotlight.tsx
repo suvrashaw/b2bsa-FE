@@ -66,7 +66,11 @@ const SpotlightCta = ({
     "gap-2 transition-all duration-500",
     isHovered && "border-brand-blue bg-brand-blue/5"
   );
-  const icon = isHovered ? <ArrowUpRight className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />;
+  const icon = isHovered ? (
+    <ArrowUpRight className="h-4 w-4" />
+  ) : (
+    <ArrowRight className="h-4 w-4" />
+  );
 
   return (
     <div className="mt-6 md:mt-8 lg:mt-10">
@@ -350,7 +354,12 @@ const SpotlightImageBlock = ({
   }
 
   return (
-    <div className={cn("relative w-[280px] sm:w-[340px] md:w-full md:max-w-[440px] md:min-w-0 lg:max-w-[560px]", className)}>
+    <div
+      className={cn(
+        "relative w-[280px] sm:w-[340px] md:w-full md:max-w-[440px] md:min-w-0 lg:max-w-[560px]",
+        className
+      )}
+    >
       <div
         className="absolute inset-0 rounded-2xl border border-brand-blue/10 transition-all duration-500"
         style={backingStyle}

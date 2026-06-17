@@ -460,7 +460,11 @@ export const TradeShowCalendarSection = () => {
     today,
   ]);
 
-  const { currentPage, paginatedItems: paginatedEvents, totalPages } = applyPagination(filteredEvents, requestedPage);
+  const {
+    currentPage,
+    paginatedItems: paginatedEvents,
+    totalPages,
+  } = applyPagination(filteredEvents, requestedPage);
   const hasEmptyPage = filteredEvents.length > 0 && paginatedEvents.length === 0;
   let resultsContent: ReactNode;
 

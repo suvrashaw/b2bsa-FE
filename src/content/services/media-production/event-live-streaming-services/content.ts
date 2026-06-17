@@ -1,22 +1,12 @@
-import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
 import CAPABILITIES_DATA from "./capabilities.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact-cta.json";
 import LIVE_STREAM_PROJECTS_DATA from "./live-stream-projects.json";
-import PROOF_BAR_DATA from "./proof-bar.json";
 import STREAMINGSPOTLIGHT_DATA from "./streaming-spotlight.json";
 
-export const LIVE_STREAMING_PROOF_BAR = {
-  ...PROOF_BAR_DATA,
-  stats: GLOBAL_PROOF_STATS,
-};
 
-export const LIVE_STREAMING_CASE_STUDIES = {
-  ...CASE_STUDIES_DATA,
-  items: GLOBAL_CASE_STUDIES,
-};
 
 export const LIVE_STREAMING_PROJECTS = {
   ...CASE_STUDIES_DATA,

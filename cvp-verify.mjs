@@ -1,8 +1,12 @@
-import { writeFileSync } from 'node:fs';
-import { chromium } from 'playwright';
+/* eslint-disable security/detect-non-literal-fs-filename */
+import { chromium } from '@playwright/test';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
 
 const URL = 'http://localhost:3000/services/media-production/corporate-video-production';
-const OUT = '/tmp/cvp-verify';
+const OUT = path.join(tmpdir(), 'cvp-verify');
+mkdirSync(OUT, { recursive: true });
 
 const browser = await chromium.launch({ headless: true });
 const page    = await browser.newPage();
@@ -20,7 +24,7 @@ await page.screenshot({ clip: { height: 700, width: 1440, x: 0, y: 0 }, path: `$
 const headings = await page.evaluate(() =>
   [...document.querySelectorAll('h1,h2,h3')].map(el => ({
     tag: el.tagName,
-    text: el.innerText.trim().replaceAll(/\s+/g, ' ').slice(0, 140),
+    text: el.textContent?.trim().replaceAll(/\s+/g, ' ').slice(0, 140) || '',
     y: Math.round(el.getBoundingClientRect().top + window.scrollY),
   }))
 );
@@ -64,7 +68,7 @@ const checks = [
   'Live Streaming Services',
 ];
 const found = await page.evaluate((list) =>
-  list.map(t => ({ found: document.body.innerText.includes(t), text: t })),
+  list.map(t => ({ found: document.body.textContent?.includes(t) ?? false, text: t })),
   checks
 );
 writeFileSync(`${OUT}/sections.json`, JSON.stringify(found, null, 2));
@@ -73,24 +77,24 @@ writeFileSync(`${OUT}/sections.json`, JSON.stringify(found, null, 2));
 const whyCards = await page.evaluate(() => {
   const sec = document.querySelector('#why-choose-us');
   if (!sec) return { sectionFound: false };
-  return { cards: [...sec.querySelectorAll('h3')].map(h => h.innerText.trim()), sectionFound: true };
+  return { cards: [...sec.querySelectorAll('h3')].map(h => h.textContent?.trim() || ''), sectionFound: true };
 });
 writeFileSync(`${OUT}/why-cards.json`, JSON.stringify(whyCards));
 
 // FAQ items count
 const faqCount = await page.evaluate(() => {
-  const faqSec = document.querySelector('#faq') || [...document.querySelectorAll('section')].find(s => s.innerText.includes('Corporate Video FAQs'));
+  const faqSec = document.querySelector('#faq') || [...document.querySelectorAll('section')].find(s => s.textContent?.includes('Corporate Video FAQs'));
   if (!faqSec) return { found: false };
   const buttons = faqSec.querySelectorAll('button');
-  return { count: buttons.length, found: true, questions: [...buttons].map(b => b.innerText.trim().slice(0, 80)) };
+  return { count: buttons.length, found: true, questions: [...buttons].map(b => b.textContent?.trim().slice(0, 80) || '') };
 });
 writeFileSync(`${OUT}/faq.json`, JSON.stringify(faqCount, null, 2));
 
 // related services
 const related = await page.evaluate(() => {
-  const sec = [...document.querySelectorAll('section')].find(s => s.innerText.includes('Explore Related Solutions'));
+  const sec = [...document.querySelectorAll('section')].find(s => s.textContent?.includes('Explore Related Solutions'));
   if (!sec) return { found: false };
-  return { found: true, links: [...sec.querySelectorAll('a')].map(a => ({ href: a.getAttribute('href'), text: a.innerText.trim().replaceAll(/\s+/g,' ') })) };
+  return { found: true, links: [...sec.querySelectorAll('a')].map(a => ({ href: a.getAttribute('href'), text: a.textContent?.trim().replaceAll(/\s+/g,' ') || '' })) };
 });
 writeFileSync(`${OUT}/related.json`, JSON.stringify(related, null, 2));
 

@@ -43,7 +43,7 @@
       "description": "Shooting and post-production for executive conversations and thought leadership sessions.",
       "icon": "Users",
       "id": "fireside",
-      "image": "/images/home/testimonials/testimonial-1.avif",
+      "image": "",
       "title": "Virtual and Physical Fireside Chats"
     },
     {
@@ -70,7 +70,7 @@
       "description": "Fully scripted and produced content from brief to final cut.",
       "icon": "FileText",
       "id": "script-videos",
-      "image": "/images/home/testimonials/testimonial-2.avif",
+      "image": "",
       "title": "Script-Based Videos"
     },
     {
@@ -79,7 +79,7 @@
       "description": "Professional voiceover production for explainers, demos, and corporate content.",
       "icon": "Headphones",
       "id": "voiceover",
-      "image": "/images/home/testimonials/testimonial-3.avif",
+      "image": "",
       "title": "Voice Over Videos"
     },
     {
@@ -106,7 +106,7 @@
       "description": "Training, onboarding, and educational content for internal and external audiences.",
       "icon": "GraduationCap",
       "id": "learning",
-      "image": "/images/home/testimonials/testimonial-4.avif",
+      "image": "",
       "title": "Learning Videos"
     },
     {
@@ -124,7 +124,7 @@
       "description": "Authentic customer proof captured on-site or in studio.",
       "icon": "MessageSquare",
       "id": "testimonial",
-      "image": "/images/home/testimonials/testimonial-5.avif",
+      "image": "",
       "title": "Client Testimonial Videos"
     },
     {
@@ -205,7 +205,7 @@
       "description": "Event invitation and follow-up postcard design.",
       "icon": "Mail",
       "id": "postcards",
-      "image": "/images/home/testimonials/testimonial-6.avif",
+      "image": "",
       "title": "Postcards"
     }
   ]

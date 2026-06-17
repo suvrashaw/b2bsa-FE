@@ -8,7 +8,7 @@
       "href": "/services/tradeshow-booth-solutions",
       "icon": "Presentation",
       "id": "booth-design",
-      "image": "/images/services/booth/booth-5.avif",
+      "image": "/images/home/services/sql-generation-1.avif",
       "title": "Booth Design & Production"
     },
     {
@@ -17,7 +17,7 @@
       "href": "/services/sales-qualified-lead-generation",
       "icon": "Users",
       "id": "active-prospecting",
-      "image": "/images/services/market-intelligence.avif",
+      "image": "/images/home/services/sql-generation-revised.avif",
       "title": "Active Prospecting"
     },
     {
@@ -26,16 +26,16 @@
       "href": "/services/media-production",
       "icon": "MonitorPlay",
       "id": "media",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/media-production-2.avif",
       "title": "Corporate Media Production"
     },
     {
       "color": "bg-brand-cyan",
       "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
-      "href": "/services/global-event-solutions",
+      "href": "/services/hpmi",
       "icon": "Coffee",
       "id": "networking",
-      "image": "/images/events/event_other_1.avif",
+      "image": "/images/home/services/sql-generation-2.avif",
       "title": "Networking"
     },
     {
@@ -44,7 +44,7 @@
       "href": "/services/global-event-solutions",
       "icon": "Palette",
       "id": "branding",
-      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "image": "/images/home/services/database-research-1.avif",
       "title": "Branding"
     },
     {
@@ -53,7 +53,7 @@
       "href": "/services/global-event-solutions",
       "icon": "Lightbulb",
       "id": "experience-creation",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/images/home/services/media-production-1.avif",
       "title": "Experience Creation"
     },
     {
@@ -62,7 +62,7 @@
       "href": "/services/market-research",
       "icon": "Database",
       "id": "market-research",
-      "image": "/images/services/database-research-revised.avif",
+      "image": "/images/home/services/database-research-revised.avif",
       "title": "Database & Market Research"
     },
     {
@@ -71,7 +71,7 @@
       "href": "/services/digital-marketing",
       "icon": "Rocket",
       "id": "performance-marketing",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/performance-marketing-1.avif",
       "title": "Digital Marketing"
     }
   ]

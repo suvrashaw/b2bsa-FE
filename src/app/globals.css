@@ -495,27 +495,36 @@ body {
 
 /* ── Schedule Shake Animation ── */
 @keyframes schedule-shake {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: rotate(0deg) scale(1);
   }
+
   82% {
     transform: rotate(-4deg) scale(1.02);
   }
+
   84% {
     transform: rotate(4deg) scale(1.02);
   }
+
   86% {
     transform: rotate(-4deg) scale(1.02);
   }
+
   88% {
     transform: rotate(4deg) scale(1.02);
   }
+
   90% {
     transform: rotate(-2deg) scale(1.02);
   }
+
   92% {
     transform: rotate(2deg) scale(1.02);
   }
+
   94% {
     transform: rotate(0deg) scale(1.02);
   }

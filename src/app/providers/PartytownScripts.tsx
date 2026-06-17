@@ -23,7 +23,11 @@ const GA_INLINE_SCRIPT_HTML = {
 export const PartytownScripts = () => {
   return (
     <>
-      <Script dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML} id="partytown-snippet" strategy="beforeInteractive" />
+      <Script
+        dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML}
+        id="partytown-snippet"
+        strategy="beforeInteractive"
+      />
       {gaId ? (
         <>
           <Script

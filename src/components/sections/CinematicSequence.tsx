@@ -1,10 +1,8 @@
 "use client";
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   type CinematicSequenceContent,
   HOME_CINEMATIC_SEQUENCE_CONTENT,
@@ -15,35 +13,15 @@ export interface CinematicSequenceProps {
   frameCount?: CinematicSequenceContent["frameCount"];
   frameUrls?: CinematicSequenceContent["frameUrls"];
   frameUrlTemplate?: CinematicSequenceContent["frameUrlTemplate"];
-  heroOverlay?: CinematicSequenceContent["heroOverlay"];
 }
 
-const HERO_PRIMARY_CTA_STYLE = {
-  background:
-    "linear-gradient(135deg, rgba(116,219,243,0.96) 0%, rgba(52,144,181,0.98) 38%, rgba(30,96,145,1) 100%)",
-  borderRadius: "4px",
-  boxShadow: "0 22px 44px rgba(8,26,41,0.28), 0 8px 18px rgba(52,144,181,0.26)",
-};
-const HERO_SECONDARY_CTA_STYLE = {
-  backdropFilter: "blur(12px)",
-  background: "linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)",
-  border: "1px solid rgba(255, 255, 255, 0.25)",
-  borderRadius: "4px",
-  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
-  WebkitBackdropFilter: "blur(12px)",
-};
-const HERO_H1_STYLE = {
-  color: "rgba(255,255,255,0.98)",
-  textShadow: "0 20px 50px rgba(4,9,15,0.3)",
-};
-const HERO_DESC_STYLE = { color: "rgba(255,255,255,0.86)" };
+
 
 export const CinematicSequence = ({
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
   frameCount = content.frameCount,
   frameUrls = content.frameUrls,
   frameUrlTemplate = content.frameUrlTemplate,
-  heroOverlay = content.heroOverlay,
 }: CinematicSequenceProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -113,44 +91,7 @@ export const CinematicSequence = ({
         {/* Frame canvas */}
         <canvas className="absolute inset-0" ref={canvasRef} />
 
-        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/[0.56]" />
-
-        {/* Persistent hero content, visible throughout the scroll */}
-        {heroOverlay && (
-          <div className="absolute bottom-0 left-0 z-20 max-w-3xl px-8 pb-16 md:px-16 md:pb-20">
-            {heroOverlay.eyebrow && (
-              <p className="mb-4 text-sm font-bold tracking-[0.3em] text-brand-cyan uppercase drop-shadow-md">
-                {heroOverlay.eyebrow}
-              </p>
-            )}
-            <SectionHeader as="h1" className="mb-6" style={HERO_H1_STYLE}>
-              {heroOverlay.title}
-            </SectionHeader>
-            <p
-              className="mb-10 max-w-xl text-base leading-relaxed font-semibold"
-              style={HERO_DESC_STYLE}
-            >
-              {heroOverlay.description}
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                className="hero-primary-cta flex min-h-[52px] items-center justify-center rounded-[4px] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:scale-105"
-                href={heroOverlay.primaryCta.href}
-                style={HERO_PRIMARY_CTA_STYLE}
-              >
-                {heroOverlay.primaryCta.label}
-              </Link>
-              <Link
-                className="hero-secondary-cta flex min-h-[52px] items-center justify-center rounded-[4px] px-8 py-3.5 font-bold text-white transition-all duration-300 hover:scale-105"
-                href={heroOverlay.secondaryCta.href}
-                style={HERO_SECONDARY_CTA_STYLE}
-              >
-                {heroOverlay.secondaryCta.label}
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

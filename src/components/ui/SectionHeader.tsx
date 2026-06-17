@@ -16,8 +16,7 @@ const headingVariants = cva("", {
 });
 
 export interface SectionHeaderProps
-  extends HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headingVariants> {
+  extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as?: "h1" | "h2" | "h3" | "h4";
   description?: string;
   heading?: ReactNode;
@@ -54,7 +53,11 @@ const BlockLayout = ({
   const headingEl =
     typeof heading === "string" ? (
       <Tag
-        className={cn(headingVariants({ level: resolvedLevel }), isCenter ? "text-center" : "", className)}
+        className={cn(
+          headingVariants({ level: resolvedLevel }),
+          isCenter ? "text-center" : "",
+          className
+        )}
         style={style}
         {...rest}
       >
@@ -70,7 +73,9 @@ const BlockLayout = ({
         <div
           className={cn(
             "mb-12 md:mb-14",
-            isCenter ? "text-center" : "flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+            isCenter
+              ? "text-center"
+              : "flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
           )}
         >
           {headingEl}

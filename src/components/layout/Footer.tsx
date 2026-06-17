@@ -277,10 +277,7 @@ export const Footer = () => {
 
         <div className="mb-6 grid gap-4 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
           {footerAddresses.map((item) => (
-            <address
-              className="text-sm text-white/85 not-italic"
-              key={item.region}
-            >
+            <address className="text-sm text-white/85 not-italic" key={item.region}>
               <span className="mb-2 block text-xs font-semibold tracking-widest text-white/60 uppercase">
                 {item.region}
               </span>

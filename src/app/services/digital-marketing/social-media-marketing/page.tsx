@@ -48,7 +48,11 @@ const Page = () => {
       contactUs={SMM_CONTACT_CTA}
       customSections={
         <>
-          <StickyScroll heading={SMM_CAMPAIGNS.heading} reasons={SMM_CAMPAIGNS.reasons} showCta={false} />
+          <StickyScroll
+            heading={SMM_CAMPAIGNS.heading}
+            reasons={SMM_CAMPAIGNS.reasons}
+            showCta={false}
+          />
 
           <CardsGrid cols={3} heading={SMM_WHY_CHOOSE_US.heading}>
             {SMM_WHY_CHOOSE_US.items.map((item, i) => (

@@ -67,12 +67,12 @@ export const ServicesImageCard = ({ index, service }: ServicesImageCardProps) =>
     >
       <Link className="flex h-full w-full" href="/services">
         {/* Left: brand-blue text panel */}
-        <div className="flex flex-col w-[60%] shrink-0 justify-between bg-brand-blue px-6 py-5 transition-colors duration-300 group-hover:bg-[#155a8a]">
+        <div className="flex w-[60%] shrink-0 flex-col justify-between bg-brand-blue px-6 py-5 transition-colors duration-300 group-hover:bg-[#155a8a]">
           <span className="font-heading text-xs font-bold tracking-widest text-white/30">
             {number}
           </span>
           <div>
-            <h3 className="text-base font-heading font-bold leading-snug text-white md:text-lg">
+            <h3 className="font-heading text-base leading-snug font-bold text-white md:text-lg">
               {service}
             </h3>
             <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-brand-cyan uppercase">

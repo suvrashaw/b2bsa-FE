@@ -22,6 +22,5 @@ export { default as VIRTUAL_VIDEO_BLOGS_SECTION } from "./virtual-video-blogs-se
 export { default as VIRTUAL_VIDEO_CAPABILITIES } from "./virtual-video-capabilities.json";
 export { default as VIRTUAL_VIDEO_DELIVERABLES } from "./virtual-video-deliverables.json";
 export { default as VIRTUAL_VIDEO_INTRO } from "./virtual-video-intro.json";
-export { default as VIRTUAL_VIDEO_PROOF_BAR } from "./virtual-video-proof-bar.json";
 export { default as VIRTUAL_VIDEO_RELATED_SERVICES } from "./virtual-video-related-services.json";
 export { default as VIRTUAL_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";

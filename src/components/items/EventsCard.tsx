@@ -50,13 +50,7 @@ const CARD_SHELL_CLASS =
 const isInteractiveTarget = (target: EventTarget | null) =>
   target instanceof HTMLElement && Boolean(target.closest("a, button"));
 
-const CardFront = ({
-  event,
-  eventImage,
-}: {
-  event: EventCardItem;
-  eventImage: string;
-}) => (
+const CardFront = ({ event, eventImage }: { event: EventCardItem; eventImage: string }) => (
   <>
     <Image
       alt={event.title}

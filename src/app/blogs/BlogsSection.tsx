@@ -73,15 +73,13 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
     }
   }
 
-  const options = BLOG_CATEGORIES.map(
-    (category) => ({
-      count: counts.get(category.name) ?? 0,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      icon: (category as any).icon,
-      id: category.id,
-      name: category.name,
-    })
-  );
+  const options = BLOG_CATEGORIES.map((category) => ({
+    count: counts.get(category.name) ?? 0,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    icon: (category as any).icon,
+    id: category.id,
+    name: category.name,
+  }));
 
   return [{ count: blogs.length, id: ALL_CATEGORY_ID, name: ALL_CATEGORY_NAME }, ...options];
 };
@@ -109,7 +107,11 @@ export const BlogsSection = () => {
     return blogs.filter((blog) => blog.category === activeCategoryName);
   }, [activeCategory, activeCategoryName, blogs]);
 
-  const { currentPage, paginatedItems: paginatedBlogs, totalPages } = applyPagination(filteredBlogs, requestedPage);
+  const {
+    currentPage,
+    paginatedItems: paginatedBlogs,
+    totalPages,
+  } = applyPagination(filteredBlogs, requestedPage);
   const hasEmptyPage = filteredBlogs.length > 0 && paginatedBlogs.length === 0;
   let blogsContent: ReactNode;
 

@@ -6,9 +6,7 @@ export const cn = (...inputs: ClassValue[]) => {
 };
 
 export const toTitleCase = (value: string) =>
-  value
-    .toLowerCase()
-    .replaceAll(/\b\w/g, (char) => char.toUpperCase());
+  value.toLowerCase().replaceAll(/\b\w/g, (char) => char.toUpperCase());
 
 export const toHeadingCaps = (value: string) => value.toUpperCase();
 

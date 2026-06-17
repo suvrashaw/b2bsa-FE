@@ -8,7 +8,15 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
-export interface LiveStreamProjectItem {
+export interface LiveStreamProjectsProps {
+  description?: string;
+  heading: string;
+  id?: string;
+  items: LiveStreamProjectItem[];
+  playlistLabel?: string;
+}
+
+interface LiveStreamProjectItem {
   client: string;
   description: string;
   duration?: string;
@@ -20,14 +28,6 @@ export interface LiveStreamProjectItem {
   thumbnail: string;
   title: string;
   videoUrl?: string;
-}
-
-export interface LiveStreamProjectsProps {
-  description?: string;
-  heading: string;
-  id?: string;
-  items: LiveStreamProjectItem[];
-  playlistLabel?: string;
 }
 
 export const LiveStreamProjects = ({

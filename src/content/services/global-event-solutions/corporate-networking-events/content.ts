@@ -1,21 +1,16 @@
 import {
   GLOBAL_CASE_STUDIES,
   GLOBAL_INDUSTRY_SERVICES,
-  GLOBAL_PROOF_STATS,
 } from "@/content/shared";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact-cta.json";
 import NETWORKINGCONTACTCTA_DATA from "./networking-contact-cta.json";
 import NETWORKINGINDUSTRIESSECTION_DATA from "./networking-industries-section.json";
-import PROOF_BAR_DATA from "./proof-bar.json";
 
 export { default as CORP_NETWORKING_FAQ } from "./faq.json";
 
-export const CORP_NETWORKING_PROOF_BAR = {
-  ...PROOF_BAR_DATA,
-  stats: GLOBAL_PROOF_STATS,
-};
+
 
 export const CORP_NETWORKING_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,

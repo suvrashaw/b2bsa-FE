@@ -1,0 +1,17 @@
+{
+  "description": "Trusted across 30+ countries, we deliver custom trade show booth design, active on-ground prospecting, and end-to-end event execution that turns exhibitions into a qualified B2B sales pipeline.",
+  "eyebrow": "GLOBAL CAPABILITY. STRATEGIC GROWTH.",
+  "mobileVideoUrl": "/videos/home/mobile.mp4",
+  "mobileVideoWebm": "/videos/home/mobile.webm",
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Get a Custom Proposal"
+  },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "See Our Work"
+  },
+  "title": "B2B Global Event Solutions & Trade Show Booth Design",
+  "videoUrl": "/videos/home/desktop.mp4",
+  "videoWebm": "/videos/home/desktop.webm"
+}

@@ -69,7 +69,7 @@ const eslintConfig = defineConfig([
           rules: [
             { disallow: { to: { type: "*" } }, from: { type: "types" } },
             { allow: { to: { type: ["types"] } }, from: { type: "lib" } },
-            { allow: { to: { type: ["types", "lib"] } }, from: { type: "content" } },
+            { allow: { to: { type: ["types", "lib", "content"] } }, from: { type: "content" } },
             { allow: { to: { type: ["types", "lib", "content"] } }, from: { type: "ui" } },
             { allow: { to: { type: ["types", "lib", "ui"] } }, from: { type: "cards" } },
             { allow: { to: { type: ["types", "lib", "content", "ui"] } }, from: { type: "forms" } },

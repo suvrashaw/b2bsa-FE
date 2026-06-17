@@ -94,11 +94,7 @@ export const Carousel = ({
   return (
     <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)} id={id}>
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-        <SectionHeader
-          description={description}
-          heading={heading}
-          headingAlign={headingAlign}
-        />
+        <SectionHeader description={description} heading={heading} headingAlign={headingAlign} />
 
         <div
           className={cn(

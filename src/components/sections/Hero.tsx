@@ -19,6 +19,8 @@ export interface HeroProps {
   eyebrow?: string;
   imageOpacity?: number;
   images?: string[];
+  mobileVideoUrl?: string;
+  mobileVideoWebm?: string;
   poster?: string;
   primaryCta?: { href: string; label: string };
   secondaryCta?: { href: string; label: string };
@@ -26,6 +28,7 @@ export interface HeroProps {
   variant?: "compact" | "default";
   videoSrc?: string;
   videoUrl?: string;
+  videoWebm?: string;
 }
 
 const CINEMATIC_VEIL_STYLE = {
@@ -138,6 +141,8 @@ export const Hero = ({
   eyebrow,
   imageOpacity = 1,
   images,
+  mobileVideoUrl,
+  mobileVideoWebm,
   poster,
   primaryCta,
   secondaryCta,
@@ -145,6 +150,7 @@ export const Hero = ({
   variant = "default",
   videoSrc,
   videoUrl,
+  videoWebm,
 }: HeroProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -176,17 +182,37 @@ export const Hero = ({
       : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
   let background: React.ReactNode;
   if (isVideoMode) {
+    const hasMobileVideo = Boolean(mobileVideoUrl);
     background = (
-      <video
-        autoPlay
-        className="hero-bg-video absolute inset-0 h-full w-full object-cover"
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      >
-        <source src={effectiveVideoUrl} type="video/mp4" />
-      </video>
+      <>
+        <video
+          autoPlay
+          className={cn(
+            "hero-bg-video absolute inset-0 h-full w-full object-cover",
+            hasMobileVideo && "hidden md:block"
+          )}
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        >
+          {videoWebm && <source src={videoWebm} type="video/webm" />}
+          <source src={effectiveVideoUrl} type="video/mp4" />
+        </video>
+        {hasMobileVideo && (
+          <video
+            autoPlay
+            className="hero-bg-video absolute inset-0 h-full w-full object-cover md:hidden"
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          >
+            {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
+            <source src={mobileVideoUrl!} type="video/mp4" />
+          </video>
+        )}
+      </>
     );
   } else if (videoSrc) {
     background = (
@@ -223,13 +249,25 @@ export const Hero = ({
       className={cn("relative flex overflow-hidden bg-brand-charcoal", imageModeClass)}
       ref={containerRef}
     >
-      {isVideoMode && <link as="video" href={effectiveVideoUrl} rel="preload" type="video/mp4" />}
+      {isVideoMode && (
+        <link
+          as="video"
+          href={videoWebm ?? effectiveVideoUrl}
+          rel="preload"
+          type={videoWebm ? "video/webm" : "video/mp4"}
+        />
+      )}
       <div className="absolute inset-0 z-0">
         {background}
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
-      <div className={cn("relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8", centered && "flex flex-col items-center text-center")}>
+      <div
+        className={cn(
+          "relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8",
+          centered && "flex flex-col items-center text-center"
+        )}
+      >
         <motion.div className={cn("max-w-4xl", centered && "w-full")} style={contentStyle}>
           {eyebrow && (
             <motion.div
@@ -271,7 +309,10 @@ export const Hero = ({
           {(primaryCta ?? secondaryCta) && (
             <motion.div
               animate={CTA_ANIMATE}
-              className={cn("flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6", centered && "justify-center")}
+              className={cn(
+                "flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6",
+                centered && "justify-center"
+              )}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >

@@ -20,9 +20,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Button } from "@/components/ui/Button";
 import { getDefaultEvents } from "@/content/events-utils";
 import {
-  HOME_CINEMATIC_SEQUENCE_CONTENT,
   HOME_EVENTS_CONTENT,
   HOME_FAQ_CONTENT,
+  HOME_HERO_CONTENT,
   HOME_PAGE,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -39,10 +39,14 @@ const Home = () => {
       <Header forceLightMode />
       <div id="home">
         <Hero
-          description={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.description}
-          primaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.primaryCta}
-          secondaryCta={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.secondaryCta}
-          title={HOME_CINEMATIC_SEQUENCE_CONTENT.heroOverlay!.title}
+          description={HOME_HERO_CONTENT.description}
+          mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
+          mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
+          primaryCta={HOME_HERO_CONTENT.primaryCta}
+          secondaryCta={HOME_HERO_CONTENT.secondaryCta}
+          title={HOME_HERO_CONTENT.title}
+          videoUrl={HOME_HERO_CONTENT.videoUrl}
+          videoWebm={HOME_HERO_CONTENT.videoWebm}
         />
       </div>
 

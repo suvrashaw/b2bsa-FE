@@ -1,6 +1,6 @@
-export const DEFAULT_PAGE_SIZE = 6;
+const DEFAULT_PAGE_SIZE = 6;
 
-export const getPaginationPageCount = (itemCount: number, pageSize = DEFAULT_PAGE_SIZE) => {
+const getPaginationPageCount = (itemCount: number, pageSize = DEFAULT_PAGE_SIZE) => {
   if (itemCount <= 0) {
     return 0;
   }
@@ -8,7 +8,7 @@ export const getPaginationPageCount = (itemCount: number, pageSize = DEFAULT_PAG
   return Math.max(2, Math.ceil(itemCount / pageSize));
 };
 
-export const clampPaginationPage = (page: number, pageCount: number) => {
+const clampPaginationPage = (page: number, pageCount: number) => {
   if (pageCount <= 0) {
     return 1;
   }
@@ -16,7 +16,7 @@ export const clampPaginationPage = (page: number, pageCount: number) => {
   return Math.min(Math.max(page, 1), pageCount);
 };
 
-export const getPaginationItems = <T>(
+const getPaginationItems = <T>(
   items: readonly T[],
   page: number,
   pageSize = DEFAULT_PAGE_SIZE

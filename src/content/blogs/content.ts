@@ -7,7 +7,7 @@ import { MEDIA_SERVICES } from "@/content/services/media-production/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
 import BLOGS_SECTION_DATA from "./blogs-section.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contactus.json";
 import { SHARED_BLOG_POSTS } from "./data";
 import PAGE_DATA from "./page.json";
 import SERVICECAROUSEL_DATA from "./service-carousel.json";
@@ -63,4 +63,7 @@ export const BLOG_SERVICE_CAROUSEL = {
 };
 
 export { default as BLOG_CATEGORIES } from "./categories.json";
-export { default as BLOG_HERO } from "./hero.json";
+
+
+
+export {default as BLOG_HERO} from "./hero.json";
