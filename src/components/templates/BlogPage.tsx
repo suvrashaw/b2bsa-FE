@@ -15,8 +15,8 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Button } from "@/components/ui/Button";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs/data";
-import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/blogs/linkedinPosts";
+import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 // ─── BlogSidebarTrending ─────────────────────────────────────────────────────

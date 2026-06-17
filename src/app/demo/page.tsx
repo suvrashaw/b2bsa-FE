@@ -37,9 +37,9 @@ import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs/data";
-import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
-import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/blogs/linkedinPosts";
+import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
+import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 

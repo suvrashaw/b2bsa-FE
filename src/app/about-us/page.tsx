@@ -28,8 +28,8 @@ import {
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
 } from "@/content/about-us/content";
-import { normalizeEvent } from "@/content/tradeshow-calendar/events-utils";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { normalizeEvent } from "@/content/tradeshow-calendar/events-utils";
 import { buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
