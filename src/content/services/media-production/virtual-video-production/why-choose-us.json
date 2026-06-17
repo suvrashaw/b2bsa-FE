@@ -4,37 +4,37 @@
     {
       "description": "We manage planning, production, streaming, audience engagement, and technical support for smooth virtual event execution.",
       "icon": "Globe2",
-      "image": "/images/services/media-production/virtual-video-production/why-choose-us-1.avif",
+      "image": "/media/services/media-production/virtual-video-production/why-choose-us-1.avif",
       "title": "End-to-End Virtual Event Management"
     },
     {
       "description": "Our team understands the requirements of executive webinars, leadership sessions, virtual conferences, and enterprise online events.",
       "icon": "Award",
-      "image": "/images/services/media-production/virtual-video-production/why-choose-us-2.avif",
+      "image": "/media/services/media-production/virtual-video-production/why-choose-us-2.avif",
       "title": "Corporate Virtual Event Expertise"
     },
     {
       "description": "We deliver broadcast-quality virtual experiences with polished visuals, branded graphics, and seamless technical execution.",
       "icon": "TrendingUp",
-      "image": "/images/home/services/corporate-media-production.avif",
+      "image": "/media/home/services/corporate-media-production.avif",
       "title": "Professional Production Quality"
     },
     {
       "description": "From speaker onboarding to live troubleshooting, our team ensures uninterrupted virtual event delivery.",
       "icon": "Users2",
-      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
       "title": "Reliable Technical Support"
     },
     {
       "description": "We help brands improve audience participation through interactive engagement tools, Q&A management, and virtual networking features.",
       "icon": "TrendingUp",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Interactive Audience Experiences"
     },
     {
       "description": "We provide scalable virtual event production services tailored to webinars, panel discussions, hybrid events, and executive sessions.",
       "icon": "Globe2",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "title": "Flexible Virtual & Hybrid Solutions"
     }
   ]

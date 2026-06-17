@@ -9,7 +9,7 @@
       ],
       "image": {
         "alt": "Custom modular exhibition stand",
-        "src": "/images/booth/20x40.jpg"
+        "src": "/media/booth/20x40.jpg"
       },
       "title": "Custom Exhibition Stand Solutions - Modular & Bespoke"
     },
@@ -21,7 +21,7 @@
       ],
       "image": {
         "alt": "3D exhibition stand design and project planning",
-        "src": "/images/booth/30x40.avif"
+        "src": "/media/booth/30x40.avif"
       },
       "title": "3D Design & Project Management Services"
     },
@@ -33,7 +33,7 @@
       ],
       "image": {
         "alt": "Finished trade show stand ready for attendees",
-        "src": "/images/booth/40x40.jpg"
+        "src": "/media/booth/40x40.jpg"
       },
       "title": "Our Process To Get Your Stand Ready"
     }

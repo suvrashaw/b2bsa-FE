@@ -1,5 +1,5 @@
 {
-  "centerImage": "/images/about-us/values/partnership.avif",
+  "centerImage": "/media/about-us/values/partnership.avif",
   "description": "Commercial outcomes, quality, genuine partnership, and local execution discipline guide every program.",
   "eyebrow": "OUR PRINCIPLES",
   "heading": "What We Believe In",
@@ -7,25 +7,25 @@
     {
       "description": "We measure success by commercial outcomes, qualified conversations, measurable pipeline, and revenue impact. Not campaign volume or impression counts.",
       "id": "accountability",
-      "image": "/images/about-us/values/accountability.avif",
+      "image": "/media/about-us/values/accountability.avif",
       "title": "Accountability Over Activity"
     },
     {
       "description": "Quality, relevance, and conversion, not vanity numbers that look impressive on a report but do not move a sales team forward.",
       "id": "precision",
-      "image": "/images/about-us/values/precision.avif",
+      "image": "/media/about-us/values/precision.avif",
       "title": "Precision Over Volume"
     },
     {
       "description": "Enterprise growth work requires more than execution. It requires context, genuine trust, and shared accountability for outcomes across the life of the program.",
       "id": "partnership",
-      "image": "/images/about-us/values/partnership.avif",
+      "image": "/media/about-us/values/partnership.avif",
       "title": "Partnership Over Vendor Relationships"
     },
     {
       "description": "International strategy combined with regional market knowledge, cultural context, and on-ground delivery capability across every market we serve.",
       "id": "global",
-      "image": "/images/about-us/values/global-reach.avif",
+      "image": "/media/about-us/values/global-reach.avif",
       "title": "Global Thinking, Local Execution"
     }
   ]

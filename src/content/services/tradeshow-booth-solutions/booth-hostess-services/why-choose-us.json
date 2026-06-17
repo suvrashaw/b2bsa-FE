@@ -10,7 +10,7 @@
     {
       "description": "We understand the operational requirements of conferences, exhibitions, networking events, and executive corporate experiences.",
       "icon": "Globe2",
-      "image": "/images/events/event_other_4.avif",
+      "image": "/media/events/event_other_4.avif",
       "title": "Corporate Event Expertise"
     },
     {
@@ -22,19 +22,19 @@
     {
       "description": "We provide scalable staffing support for trade shows, conferences, product launches, and corporate networking events.",
       "icon": "TrendingUp",
-      "image": "/images/services/booth/booth-6.avif",
+      "image": "/media/services/booth/booth-6.avif",
       "title": "Flexible Event Staffing Solutions"
     },
     {
       "description": "We support international events with multilingual event hostesses for improved audience communication and engagement.",
       "icon": "Languages",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "title": "Multilingual Support"
     },
     {
       "description": "From registration management to VIP coordination, we provide complete event hostess support for successful event execution.",
       "icon": "Users2",
-      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/why-choose-us/proven_execution.avif",
       "title": "End-to-End Event Support"
     }
   ]

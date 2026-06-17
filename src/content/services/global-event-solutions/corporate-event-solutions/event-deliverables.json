@@ -6,7 +6,7 @@
       "description": "Manage event strategy, scheduling, venue coordination, audience experience, and operational planning for successful business events.",
       "icon": "Target",
       "id": "event-planning",
-      "image": "/images/events/adobe_summit_2026.avif",
+      "image": "/media/events/adobe_summit_2026.avif",
       "title": "Corporate Event Planning"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Deliver professional conference and executive summit experiences with seamless event coordination and onsite support.",
       "icon": "Mic",
       "id": "conference-summit",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Conference & Summit Management"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Support trade shows and exhibitions with booth management, branding, logistics, staffing, and attendee engagement solutions.",
       "icon": "Presentation",
       "id": "trade-show",
-      "image": "/images/services/booth/booth-5.avif",
+      "image": "/media/services/booth/booth-5.avif",
       "title": "Trade Show & Exhibition Support"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Organize business networking events, VIP receptions, hospitality experiences, and executive meetups.",
       "icon": "Users",
       "id": "networking",
-      "image": "/images/events/event_other_3.avif",
+      "image": "/media/events/event_other_3.avif",
       "title": "Networking Event Solutions"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Enhance event experiences with professional branding, signage, stage setup, visual production, and media support.",
       "icon": "Palette",
       "id": "branding-production",
-      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/why-choose-us/strategic_creativity.avif",
       "title": "Event Branding & Production"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Provide complete event management support from planning and coordination to onsite execution and post-event assistance.",
       "icon": "Zap",
       "id": "end-to-end",
-      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/why-choose-us/proven_execution.avif",
       "title": "End-to-End Event Execution"
     }
   ]

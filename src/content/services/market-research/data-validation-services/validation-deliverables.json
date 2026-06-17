@@ -6,7 +6,7 @@
       "description": "Syntax check, domain validity, MX record confirmation, and deliverability indicators — reducing bounce rates and protecting sender reputation.",
       "icon": "MailCheck",
       "id": "email-verification",
-      "image": "/images/services/data/data-1.avif",
+      "image": "/media/services/data/data-1.avif",
       "title": "Email Address Verification"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Format, country code, carrier data, and active-line indicators — eliminating wasted calling time on disconnected or reassigned numbers.",
       "icon": "PhoneCall",
       "id": "phone-validation",
-      "image": "/images/services/data/data-2.avif",
+      "image": "/media/services/data/data-2.avif",
       "title": "Phone Number Validation"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Confirming company name, website domain, location, and business details are accurate and current.",
       "icon": "Building",
       "id": "company-verification",
-      "image": "/images/services/data/data-1.avif",
+      "image": "/media/services/data/data-1.avif",
       "title": "Company and Domain Verification"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Verifying whether contacts still hold their listed role and whether buying committee relevance is accurate.",
       "icon": "UserCheck",
       "id": "job-title",
-      "image": "/images/services/data/data-2.avif",
+      "image": "/media/services/data/data-2.avif",
       "title": "Job Title and Role Confirmation"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Identifying duplicates across contacts, accounts, emails, and domains — creating a cleaner CRM view and reducing repeated outreach.",
       "icon": "CopyMinus",
       "id": "duplicate-detection",
-      "image": "/images/services/data/data-1.avif",
+      "image": "/media/services/data/data-1.avif",
       "title": "Duplicate Detection and Merge"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Flagging contacts who have left the company, changed roles, or should no longer be in active outreach lists.",
       "icon": "UserMinus",
       "id": "departed-contact",
-      "image": "/images/services/data/data-2.avif",
+      "image": "/media/services/data/data-2.avif",
       "title": "Departed Contact Removal"
     }
   ]

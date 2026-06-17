@@ -1,9 +1,9 @@
 {
   "description": "Capture conferences, trade shows, and corporate events with high-quality pre-event, highlight, and post-event videos designed to extend audience engagement and brand visibility.",
   "images": [
-    "/images/events/adobe_summit_2026.avif",
-    "/images/events/servicenow_2026.avif",
-    "/images/events/inma_2026.avif"
+    "/media/events/adobe_summit_2026.avif",
+    "/media/events/servicenow_2026.avif",
+    "/media/events/inma_2026.avif"
   ],
   "primaryCta": {
     "href": "/contact-us",

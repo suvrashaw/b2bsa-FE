@@ -4,61 +4,61 @@
     {
       "icon": "Megaphone",
       "id": "b2b-social-media-marketing",
-      "image": "/images/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/services/unused-performance-marketing.avif",
       "label": "B2B social media marketing"
     },
     {
       "icon": "Briefcase",
       "id": "linkedin-marketing-campaigns",
-      "image": "/images/home/services/digital-marketing.avif",
+      "image": "/media/home/services/digital-marketing.avif",
       "label": "LinkedIn marketing campaigns"
     },
     {
       "icon": "Palette",
       "id": "social-media-content-creation",
-      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/why-choose-us/strategic_creativity.avif",
       "label": "Social media content creation"
     },
     {
       "icon": "Building2",
       "id": "corporate-brand-positioning",
-      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/why-choose-us/proven_execution.avif",
       "label": "Corporate brand positioning"
     },
     {
       "icon": "Target",
       "id": "paid-social-media-campaigns",
-      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
       "label": "Paid social media campaigns"
     },
     {
       "icon": "Lightbulb",
       "id": "thought-leadership-marketing",
-      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/why-choose-us/strategic_creativity.avif",
       "label": "Thought leadership marketing"
     },
     {
       "icon": "Calendar",
       "id": "event-promotion-campaigns",
-      "image": "/images/events/event_other_1.avif",
+      "image": "/media/events/event_other_1.avif",
       "label": "Event promotion campaigns"
     },
     {
       "icon": "Video",
       "id": "video-and-creative-production",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "label": "Video and creative production"
     },
     {
       "icon": "MessageSquare",
       "id": "community-engagement-support",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "label": "Community engagement support"
     },
     {
       "icon": "BarChart3",
       "id": "analytics-and-performance-reporting",
-      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
       "label": "Analytics and performance reporting"
     }
   ],

@@ -26,7 +26,7 @@ import {
   HOME_PAGE,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
+import { getDefaultEvents } from "@/content/tradeshow-calendar";
 import { buildFaqJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 

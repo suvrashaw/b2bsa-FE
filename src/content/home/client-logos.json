@@ -2,46 +2,46 @@
   {
     "alt": "Airtel",
     "id": "airtel",
-    "src": "/images/client-logos/Airtel.svg"
+    "src": "/media/client-logos/Airtel.svg"
   },
   {
     "alt": "BOSCH",
     "id": "bosch",
-    "src": "/images/client-logos/BOSCH.svg"
+    "src": "/media/client-logos/BOSCH.svg"
   },
   {
     "alt": "CSC",
     "id": "csc",
-    "src": "/images/client-logos/CSC.svg"
+    "src": "/media/client-logos/CSC.svg"
   },
   {
     "alt": "Infosys",
     "id": "infosys",
-    "src": "/images/client-logos/Infosys.svg"
+    "src": "/media/client-logos/Infosys.svg"
   },
   {
     "alt": "SingleStore",
     "id": "singlestore",
-    "src": "/images/client-logos/SingleStore.svg"
+    "src": "/media/client-logos/SingleStore.svg"
   },
   {
     "alt": "Syngene",
     "id": "syngene",
-    "src": "/images/client-logos/Syngene.svg"
+    "src": "/media/client-logos/Syngene.svg"
   },
   {
     "alt": "Temenos",
     "id": "temenos",
-    "src": "/images/client-logos/Temenos.svg"
+    "src": "/media/client-logos/Temenos.svg"
   },
   {
     "alt": "United Payment",
     "id": "unitedpayment",
-    "src": "/images/client-logos/UnitedPayment.svg"
+    "src": "/media/client-logos/UnitedPayment.svg"
   },
   {
     "alt": "Worldpay",
     "id": "worldpay",
-    "src": "/images/client-logos/Worldpay.svg"
+    "src": "/media/client-logos/Worldpay.svg"
   }
 ]

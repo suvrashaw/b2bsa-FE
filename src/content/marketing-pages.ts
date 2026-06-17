@@ -6,11 +6,11 @@ import { buildPageMetadata } from "@/lib/seo";
 import type { MarketingPageDefinition } from "./page-definitions";
 
 import { ABOUT_PAGE } from "./about-us/content";
-import { BLOG_PAGE } from "./blogs/content";
-import { CASE_STUDIES_PAGE } from "./case-studies/content";
+import { BLOG_PAGE } from "./blogs";
+import { CASE_STUDIES_PAGE } from "./case-studies";
 import { CONTACT_PAGE } from "./contact-us/content";
 import { HOME_PAGE } from "./home/content";
-import { SERVICES_PAGE } from "./services/content";
+import { SERVICES_PAGE } from "./services";
 import { PERF_PAGE } from "./services/digital-marketing/content";
 import { PPC_PAGE } from "./services/digital-marketing/performance-marketing/content";
 import { SEO_PAGE } from "./services/digital-marketing/seo-services/content";
@@ -41,7 +41,7 @@ import { MODULAR_BOOTHS_PAGE } from "./services/tradeshow-booth-solutions/modula
 import { BOOTH_BUILDER_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-builder/content";
 import { BOOTH_DESIGN_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { BOOTH_RENTAL_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-rental/content";
-import { TRADE_SHOW_CALENDAR_PAGE } from "./tradeshow-calendar/content";
+import { TRADE_SHOW_CALENDAR_PAGE } from "./tradeshow-calendar";
 
 const marketingPages = [
   HOME_PAGE,

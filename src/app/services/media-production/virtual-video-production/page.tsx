@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -30,16 +30,16 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
 const capabilityAssets = [
-  { icon: "Users", image: "/images/events/event_other_1.avif" },
-  { icon: "Video", image: "/images/events/event_other_2.avif" },
-  { icon: "Mic", image: "/images/events/event_other_3.avif" },
-  { icon: "MessageCircle", image: "/images/events/event_other_4.avif" },
-  { icon: "Layers", image: "/images/services/booth/booth-5.avif" },
-  { icon: "Wrench", image: "/images/services/booth/booth-6.avif" },
-  { icon: "Globe", image: "/images/services/booth/booth-7.avif" },
-  { icon: "Film", image: "/images/home/why-choose-us/global_reach.avif" },
-  { icon: "Monitor", image: "/images/home/why-choose-us/proven_execution.avif" },
-  { icon: "Shuffle", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+  { icon: "Users", image: "/media/events/event_other_1.avif" },
+  { icon: "Video", image: "/media/events/event_other_2.avif" },
+  { icon: "Mic", image: "/media/events/event_other_3.avif" },
+  { icon: "MessageCircle", image: "/media/events/event_other_4.avif" },
+  { icon: "Layers", image: "/media/services/booth/booth-5.avif" },
+  { icon: "Wrench", image: "/media/services/booth/booth-6.avif" },
+  { icon: "Globe", image: "/media/services/booth/booth-7.avif" },
+  { icon: "Film", image: "/media/home/why-choose-us/global_reach.avif" },
+  { icon: "Monitor", image: "/media/home/why-choose-us/proven_execution.avif" },
+  { icon: "Shuffle", image: "/media/home/why-choose-us/strategic_creativity.avif" },
 ];
 
 const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase, index) => ({
@@ -49,7 +49,7 @@ const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase, index) 
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  image: capabilityAssets[index]?.image ?? "/media/events/event_other_1.avif",
   label: phase.title,
 }));
 

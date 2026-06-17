@@ -29,13 +29,13 @@ import {
   ABOUT_VISION_MISSION,
 } from "@/content/about-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { normalizeEvent } from "@/content/tradeshow-calendar/events-utils";
+import { normalizeEvent } from "@/content/tradeshow-calendar";
 import { buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
-const ABOUT_IMAGES = ["/images/about-us/culture/culture-5.avif"];
+const ABOUT_IMAGES = ["/media/about-us/culture/culture-5.avif"];
 const ABOUT_PRIMARY_CTA = { href: ABOUT_HERO.primaryCtaHref, label: ABOUT_HERO.primaryCtaLabel };
 
 const Page = () => {
@@ -124,7 +124,7 @@ const Page = () => {
                   className="object-cover"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  src="/images/about-us/culture/culture-1.avif"
+                  src="/media/about-us/culture/culture-1.avif"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -134,7 +134,7 @@ const Page = () => {
                     className="object-cover"
                     fill
                     sizes="(max-width: 1024px) 50vw, 22vw"
-                    src="/images/about-us/culture/culture-4.avif"
+                    src="/media/about-us/culture/culture-4.avif"
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
@@ -143,7 +143,7 @@ const Page = () => {
                     className="object-cover"
                     fill
                     sizes="(max-width: 1024px) 50vw, 22vw"
-                    src="/images/about-us/culture/culture-5.avif"
+                    src="/media/about-us/culture/culture-5.avif"
                   />
                 </div>
               </div>

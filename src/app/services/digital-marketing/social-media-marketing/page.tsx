@@ -11,7 +11,7 @@ import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { PERF_PAGE } from "@/content/services/digital-marketing/content";
 import {

@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
@@ -32,14 +32,14 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
 const capabilityAssets = [
-  { icon: "Truck", image: "/images/services/booth/booth-5.avif" },
-  { icon: "Building2", image: "/images/events/event_other_1.avif" },
-  { icon: "Wrench", image: "/images/services/booth/booth-6.avif" },
-  { icon: "ClipboardCheck", image: "/images/events/event_other_2.avif" },
-  { icon: "Package", image: "/images/services/booth/booth-7.avif" },
-  { icon: "CalendarDays", image: "/images/home/why-choose-us/global_reach.avif" },
-  { icon: "Globe2", image: "/images/events/event_other_3.avif" },
-  { icon: "Settings", image: "/images/events/event_other_4.avif" },
+  { icon: "Truck", image: "/media/services/booth/booth-5.avif" },
+  { icon: "Building2", image: "/media/events/event_other_1.avif" },
+  { icon: "Wrench", image: "/media/services/booth/booth-6.avif" },
+  { icon: "ClipboardCheck", image: "/media/events/event_other_2.avif" },
+  { icon: "Package", image: "/media/services/booth/booth-7.avif" },
+  { icon: "CalendarDays", image: "/media/home/why-choose-us/global_reach.avif" },
+  { icon: "Globe2", image: "/media/events/event_other_3.avif" },
+  { icon: "Settings", image: "/media/events/event_other_4.avif" },
 ];
 
 const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index) => ({
@@ -49,7 +49,7 @@ const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/images/services/booth/booth-5.avif",
+  image: capabilityAssets[index]?.image ?? "/media/services/booth/booth-5.avif",
   label: phase.title,
 }));
 

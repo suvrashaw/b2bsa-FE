@@ -95,7 +95,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
           <div className="absolute inset-0 h-full w-full">
             <Globe
               backgroundColor="rgba(0,0,0,0)"
-              globeImageUrl="/images/globe-earth-night.avif"
+              globeImageUrl="/media/globe-earth-night.avif"
               htmlElement={getHtmlElement}
               htmlElementsData={validCities}
               onGlobeReady={handleGlobeReady}

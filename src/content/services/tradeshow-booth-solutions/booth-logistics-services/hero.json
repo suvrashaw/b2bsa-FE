@@ -1,9 +1,9 @@
 {
   "description": "Ensure smooth event execution with professional event logistics services for trade shows and corporate experiences. We manage coordination, vendor handling, and onsite logistics support for seamless event operations.",
   "images": [
-    "/images/services/tradeshow-booth-solutions/booth-logistics-services/hero-1.avif",
-    "/images/services/tradeshow-booth-solutions/booth-logistics-services/hero-2.avif",
-    "/images/services/tradeshow-booth-solutions/booth-logistics-services/hero-3.avif"
+    "/media/services/tradeshow-booth-solutions/booth-logistics-services/hero-1.avif",
+    "/media/services/tradeshow-booth-solutions/booth-logistics-services/hero-2.avif",
+    "/media/services/tradeshow-booth-solutions/booth-logistics-services/hero-3.avif"
   ],
   "primaryCta": {
     "href": "/contact-us",

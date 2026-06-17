@@ -4,25 +4,25 @@
     {
       "description": "Making the website crawlable, indexable, and fast before any content investment.",
       "id": "technical-foundation",
-      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
       "title": "Technical Foundation"
     },
     {
       "description": "Pillar-and-cluster content model built around buyer intent across the full purchase journey.",
       "id": "content-architecture",
-      "image": "/images/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/why-choose-us/strategic_creativity.avif",
       "title": "Content Architecture"
     },
     {
       "description": "Quality backlinks, digital PR, and thought leadership content that builds domain credibility over time.",
       "id": "authority-building",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "title": "Authority Building"
     },
     {
       "description": "Quarterly strategy refinement based on rankings, organic traffic, qualified leads, and pipeline data.",
       "id": "measurement-iteration",
-      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/why-choose-us/proven_execution.avif",
       "title": "Measurement & Iteration"
     }
   ]

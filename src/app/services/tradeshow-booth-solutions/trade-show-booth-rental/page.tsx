@@ -11,7 +11,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
@@ -34,33 +34,33 @@ const BOOTH_RENTAL_RANGE_REASONS = [
     description:
       "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
     id: "rental-10x10",
-    image: "/images/booth/10x10.avif",
+    image: "/media/booth/10x10.avif",
     title: "10x10 Standard",
   },
   {
     description: "Room for product-led demos, a defined visitor journey, and a meeting zone.",
     id: "rental-10x20",
-    image: "/images/booth/10x20.avif",
+    image: "/media/booth/10x20.avif",
     title: "10x20 Inline",
   },
   {
     description: "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
     id: "rental-20x20",
-    image: "/images/booth/20x20.avif",
+    image: "/media/booth/20x20.avif",
     title: "20x20 Island",
   },
   {
     description:
       "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
     id: "rental-double-deck",
-    image: "/images/booth/30x30.avif",
+    image: "/media/booth/30x30.avif",
     title: "Double-Deck",
   },
   {
     description:
       "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
     id: "rental-custom",
-    image: "/images/booth/40x40.avif",
+    image: "/media/booth/40x40.avif",
     title: "Custom-Branded Rentals",
   },
 ];

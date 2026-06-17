@@ -16,7 +16,7 @@ export const BOOTH_BUILDER_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 
 export const BOOTH_BUILDER_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Builder"], 5);
 

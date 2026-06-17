@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { SharedBlogPost } from "@/content/blogs/data";
+import type { SharedBlogPost } from "@/content/blogs";
 
 export interface BlogsCarouselCardProps {
   post: SharedBlogPost;

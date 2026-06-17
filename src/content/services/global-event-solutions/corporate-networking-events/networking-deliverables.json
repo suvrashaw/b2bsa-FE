@@ -6,7 +6,7 @@
       "description": "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
       "icon": "Users",
       "id": "networking-events",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Corporate Networking Events"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
-      "image": "/images/events/event_other_3.avif",
+      "image": "/media/events/event_other_3.avif",
       "title": "Networking Reception Solutions"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
       "icon": "MapPin",
       "id": "networking-dinners",
-      "image": "/images/events/event_other_4.avif",
+      "image": "/media/events/event_other_4.avif",
       "title": "Networking Dinner Event Solutions"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
       "icon": "Globe2",
       "id": "b2b-networking",
-      "image": "/images/services/booth/booth-5.avif",
+      "image": "/media/services/booth/booth-5.avif",
       "title": "B2B Networking Event Services"
     }
   ]

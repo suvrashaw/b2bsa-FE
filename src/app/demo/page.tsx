@@ -36,22 +36,22 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { getBlogsByTags } from "@/content/blogs/data";
-import { LINKEDIN_POSTS } from "@/content/blogs/linkedinPosts";
+import { getBlogsByTags } from "@/content/blogs";
+import { LINKEDIN_POSTS } from "@/content/blogs";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
-import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
+import { getDefaultEvents } from "@/content/tradeshow-calendar";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
-const IMG_WAF = "/images/case-studies/cs-new-2.avif";
-const IMG_SIBOS = "/images/case-studies/cs-new-1.avif";
-const IMG_SAP = "/images/case-studies/cs-10.avif";
-const IMG_DISTRIBUTECH = "/images/case-studies/cs-9.avif";
-const IMG_MONEY = "/images/case-studies/cs-new-1.avif";
-const IMG_EV1 = "/images/events/event_other_1.avif";
-const IMG_EV2 = "/images/events/event_other_2.avif";
-const IMG_EV3 = "/images/events/event_other_3.avif";
-const IMG_EV4 = "/images/events/event_other_4.avif";
+const IMG_WAF = "/media/case-studies/cs-new-2.avif";
+const IMG_SIBOS = "/media/case-studies/cs-new-1.avif";
+const IMG_SAP = "/media/case-studies/cs-10.avif";
+const IMG_DISTRIBUTECH = "/media/case-studies/cs-9.avif";
+const IMG_MONEY = "/media/case-studies/cs-new-1.avif";
+const IMG_EV1 = "/media/events/event_other_1.avif";
+const IMG_EV2 = "/media/events/event_other_2.avif";
+const IMG_EV3 = "/media/events/event_other_3.avif";
+const IMG_EV4 = "/media/events/event_other_4.avif";
 
 // ─── Pricing ─────────────────────────────────────────────────────────────────
 
@@ -422,7 +422,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   Blogs: [
     { href: "/", label: "Home" },
     { href: "/blogs", label: "Blogs" },
-    { href: "/thank-you", label: "Thank You" },
   ],
   BlogsCarousel: [
     { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
@@ -542,7 +541,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
   ServicesStack: [
     { href: "/", label: "Home" },
-    { href: "/thank-you", label: "Thank You" },
     {
       href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
@@ -743,7 +741,7 @@ const DemoPage = () => {
       <Stats
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
-        imageUrl="/images/contact/hero/ezgif-frame-017.jpg"
+        imageUrl="/media/contact/hero/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
 

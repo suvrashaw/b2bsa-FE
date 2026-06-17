@@ -14,7 +14,7 @@
       "description": "Corporate networking receptions that encourage business discussions, relationship building, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
-      "image": "/images/events/event_other_3.avif",
+      "image": "/media/events/event_other_3.avif",
       "title": "Networking Receptions"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Professional networking dinner event solutions focused on client engagement and relationship development.",
       "icon": "UtensilsCrossed",
       "id": "business-networking-dinners",
-      "image": "/images/events/event_other_4.avif",
+      "image": "/media/events/event_other_4.avif",
       "title": "Business Networking Dinners"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Networking support for conferences, summits, exhibitions, and trade shows.",
       "icon": "Monitor",
       "id": "conference-networking-sessions",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Conference Networking Sessions"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Organized networking experiences for partner engagement, client appreciation, and business collaboration opportunities.",
       "icon": "Handshake",
       "id": "partner-client-meetups",
-      "image": "/images/events/event_other_1.avif",
+      "image": "/media/events/event_other_1.avif",
       "title": "Partner & Client Meetups"
     },
     {
@@ -54,7 +54,7 @@
       "description": "Networking event support for trade shows and exhibitions with audience engagement and hospitality coordination.",
       "icon": "Store",
       "id": "trade-show-networking-events",
-      "image": "/images/case-studies/cs-3.avif",
+      "image": "/media/case-studies/cs-3.avif",
       "title": "Trade Show Networking Events"
     },
     {
@@ -62,7 +62,7 @@
       "description": "Premium hospitality experiences for executive meetings, business gatherings, and relationship-building events.",
       "icon": "Building2",
       "id": "corporate-hospitality-events",
-      "image": "/images/case-studies/cs-4.avif",
+      "image": "/media/case-studies/cs-4.avif",
       "title": "Corporate Hospitality Events"
     }
   ]

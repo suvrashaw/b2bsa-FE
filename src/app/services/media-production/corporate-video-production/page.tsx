@@ -7,7 +7,7 @@ import { CardsGrid } from "@/components/sections/CardsGrid";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {

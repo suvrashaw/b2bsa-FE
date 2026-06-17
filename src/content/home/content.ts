@@ -2,9 +2,8 @@ import type { ReactNode } from "react";
 
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
-import { HOME_BLOG_POSTS } from "@/content/blogs/data";
+import { HOME_BLOG_POSTS } from "@/content/blogs";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
-import SHARED_EVENTS_DATA from "@/content/tradeshow-calendar/featured.json";
 
 import BLOGS_DATA from "./blogs.json";
 import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";
@@ -258,7 +257,7 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
 
 export const HOME_EVENTS_CONTENT: EventsContent = {
   ...EVENTS_DATA,
-  events: SHARED_EVENTS_DATA.slice(0, 7) as UpcomingEventItem[],
+  events: [],
 };
 
 export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = WHYCHOOSEUSCONTENT_DATA;

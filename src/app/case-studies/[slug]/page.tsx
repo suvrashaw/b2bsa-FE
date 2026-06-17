@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CaseStudyPage } from "@/components/templates/CaseStudyPage";
-import { CASE_STUDY_DETAILS } from "@/content/case-studies/individual";
+import { CASE_STUDY_DETAILS } from "@/content/case-studies";
 
 type CaseStudyPageProps = {
   params: Promise<{

@@ -4,31 +4,31 @@
     {
       "description": "Our meticulous planning and real-time updates give you peace of mind, knowing that your event setup will go according to plan without unnecessary stress.",
       "icon": "Clock",
-      "image": "/images/events/event_other_1.avif",
+      "image": "/media/events/event_other_1.avif",
       "title": "On-Time Deliveries, Every Time"
     },
     {
       "description": "By minimizing wasteful practices and improving delivery schedules, we help your event budget stretch further, ultimately leading to a more cost-effective execution.",
       "icon": "TrendingDown",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "title": "Cost Savings & Efficiency"
     },
     {
       "description": "From direct-to-show site deliveries to smooth coordination with vendors and venues, our expert team ensures every logistical detail is handled with precision.",
       "icon": "Network",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Seamless Coordination & Execution"
     },
     {
       "description": "Our accurate check-in/check-out processes prevent mix-ups and damage, ensuring all items are accounted for and ready for use when needed.",
       "icon": "Package",
-      "image": "/images/services/booth/booth-5.avif",
+      "image": "/media/services/booth/booth-5.avif",
       "title": "Advanced Storage & Inventory Management"
     },
     {
       "description": "We have strategies in place to address any challenges that arise, keeping your event on track and reducing the chance of disruptions.",
       "icon": "Shield",
-      "image": "/images/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/why-choose-us/proven_execution.avif",
       "title": "Risk Mitigation & Contingency Planning"
     }
   ]

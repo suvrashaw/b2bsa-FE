@@ -13,7 +13,7 @@ import {
   type CalendarTradeShow,
   TRADE_SHOW_CALENDAR_EVENTS,
   TRADE_SHOW_CALENDAR_HERO,
-} from "@/content/tradeshow-calendar/content";
+} from "@/content/tradeshow-calendar";
 import { cn, siteUrl } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 

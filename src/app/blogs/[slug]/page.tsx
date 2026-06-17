@@ -8,7 +8,7 @@ import {
   DEFAULT_BLOG_POST_HREF,
   DEFAULT_BLOG_POST_ID,
   SHARED_BLOG_POSTS,
-} from "@/content/blogs/data";
+} from "@/content/blogs";
 import { siteUrl } from "@/lib";
 
 type BlogPostPageProps = {

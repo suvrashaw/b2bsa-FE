@@ -9,18 +9,18 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   TRADE_SHOW_CALENDAR_HERO,
   TRADE_SHOW_CALENDAR_PAGE,
-} from "@/content/tradeshow-calendar/content";
+} from "@/content/tradeshow-calendar";
 
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
-  "/images/events/adobe_summit_2026.avif",
-  "/images/events/event_other_1.avif",
-  "/images/events/event_other_2.avif",
-  "/images/events/event_other_3.avif",
-  "/images/events/event_other_4.avif",
-  "/images/events/inma_2026.avif",
-  "/images/events/servicenow_2026.avif",
+  "/media/events/adobe_summit_2026.avif",
+  "/media/events/event_other_1.avif",
+  "/media/events/event_other_2.avif",
+  "/media/events/event_other_3.avif",
+  "/media/events/event_other_4.avif",
+  "/media/events/inma_2026.avif",
+  "/media/events/servicenow_2026.avif",
 ];
 
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);

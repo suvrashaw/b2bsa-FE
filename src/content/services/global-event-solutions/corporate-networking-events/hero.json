@@ -1,12 +1,12 @@
 {
   "description": "Create meaningful business connections with professional networking event solutions for conferences, networking receptions and corporate hospitality events. We help brands deliver engaging networking experiences with seamless event coordination and audience engagement support.",
-  "mobileVideoUrl": "/videos/services/global-event-solutions/corporate-networking-events/mobile.mp4",
-  "mobileVideoWebm": "/videos/services/global-event-solutions/corporate-networking-events/mobile.webm",
+  "mobileVideoUrl": "/media/services/global-event-solutions/corporate-networking-events/hero/mobile.mp4",
+  "mobileVideoWebm": "/media/services/global-event-solutions/corporate-networking-events/hero/mobile.webm",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Talk to Our Event Team"
   },
   "title": "Corporate Networking Event Solutions",
-  "videoUrl": "/videos/services/global-event-solutions/corporate-networking-events/desktop.mp4",
-  "videoWebm": "/videos/services/global-event-solutions/corporate-networking-events/desktop.webm"
+  "videoUrl": "/media/services/global-event-solutions/corporate-networking-events/hero/desktop.mp4",
+  "videoWebm": "/media/services/global-event-solutions/corporate-networking-events/hero/desktop.webm"
 }

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
@@ -14,8 +13,8 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Button } from "@/components/ui/Button";
-import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs/data";
-import { LINKEDIN_POSTS } from "@/content/blogs/linkedinPosts";
+import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
+import { LINKEDIN_POSTS } from "@/content/blogs";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
@@ -62,19 +61,16 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
 // ─── BlogSidebarSubscribe ────────────────────────────────────────────────────
 
 const BlogSidebarSubscribe = () => {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = useCallback(
-    async (event: { preventDefault: () => void }) => {
-      event.preventDefault();
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 600));
-      setLoading(false);
-      router.push("/thank-you");
-    },
-    [router]
-  );
+  const handleSubmit = useCallback(async (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    setLoading(false);
+    setSubmitted(true);
+  }, []);
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
@@ -83,64 +79,71 @@ const BlogSidebarSubscribe = () => {
           Let&apos;s Connect for Upcoming Event Strategy
         </p>
       </div>
-      <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
-        <div>
-          <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
-            Don&apos;t Just Scroll!
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed font-bold text-brand-blue">
-            Let&apos;s Connect for Upcoming Event Strategy!
-          </p>
+      {submitted ? (
+        <div className="flex flex-col items-center gap-3 p-6 text-center">
+          <p className="font-heading text-lg font-bold text-brand-charcoal">You&apos;re all set!</p>
+          <p className="text-sm text-gray-500">We&apos;ll be in touch with your event strategy.</p>
         </div>
+      ) : (
+        <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
+          <div>
+            <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
+              Don&apos;t Just Scroll!
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed font-bold text-brand-blue">
+              Let&apos;s Connect for Upcoming Event Strategy!
+            </p>
+          </div>
 
-        <div className="space-y-3">
-          <label className="sr-only" htmlFor="blog-subscribe-email">
-            Work Email
-          </label>
-          <input
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
-            id="blog-subscribe-email"
-            placeholder="Work email"
-            required
-            type="email"
-          />
+          <div className="space-y-3">
+            <label className="sr-only" htmlFor="blog-subscribe-email">
+              Work Email
+            </label>
+            <input
+              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+              id="blog-subscribe-email"
+              placeholder="Work email"
+              required
+              type="email"
+            />
 
-          <label className="sr-only" htmlFor="blog-subscribe-industry">
-            Industry
-          </label>
-          <select
-            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
-            id="blog-subscribe-industry"
-            required
+            <label className="sr-only" htmlFor="blog-subscribe-industry">
+              Industry
+            </label>
+            <select
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
+              id="blog-subscribe-industry"
+              required
+            >
+              <option value="">Select industry</option>
+              {GLOBAL_INDUSTRY_SERVICES.map((service) => (
+                <option key={service.id} value={service.id}>
+                  {service.title}
+                </option>
+              ))}
+            </select>
+
+            <label className="sr-only" htmlFor="blog-subscribe-event">
+              Event Name
+            </label>
+            <input
+              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+              id="blog-subscribe-event"
+              placeholder="Event name"
+              required
+              type="text"
+            />
+          </div>
+
+          <button
+            className="w-full rounded-[4px] bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
+            disabled={loading}
+            type="submit"
           >
-            <option value="">Select industry</option>
-            {GLOBAL_INDUSTRY_SERVICES.map((service) => (
-              <option key={service.id} value={service.id}>
-                {service.title}
-              </option>
-            ))}
-          </select>
-
-          <label className="sr-only" htmlFor="blog-subscribe-event">
-            Event Name
-          </label>
-          <input
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
-            id="blog-subscribe-event"
-            placeholder="Event name"
-            required
-            type="text"
-          />
-        </div>
-
-        <button
-          className="w-full rounded-[4px] bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
-          disabled={loading}
-          type="submit"
-        >
-          {loading ? "Sending..." : "Get Your Upcoming Event Strategy"}
-        </button>
-      </form>
+            {loading ? "Sending..." : "Get Your Upcoming Event Strategy"}
+          </button>
+        </form>
+      )}
     </section>
   );
 };

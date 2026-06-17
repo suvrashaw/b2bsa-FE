@@ -86,12 +86,12 @@
   },
   "illustration": {
     "alt": "Contact Us",
-    "src": "/images/contact/image.avif"
+    "src": "/media/contact/image.avif"
   },
   "cta": {
     "backgroundImage": {
       "alt": "Contact",
-      "src": "/images/case-studies/cs-new-2.avif"
+      "src": "/media/case-studies/cs-new-2.avif"
     },
     "description": "Tell us what you are trying to achieve. We will define the right path.",
     "headingLines": [

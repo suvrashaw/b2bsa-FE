@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
 import type { ContactContent } from "@/content/home/content";
@@ -17,19 +16,30 @@ export interface ContactFormProps {
 }
 
 export const ContactForm = ({ className, form }: ContactFormProps) => {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = useCallback(
-    async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 600));
-      setLoading(false);
-      router.push("/thank-you");
-    },
-    [router]
-  );
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    setLoading(false);
+    setSubmitted(true);
+  }, []);
+
+  if (submitted) {
+    return (
+      <div className={`flex flex-col items-center justify-center gap-4 py-16 text-center ${className}`}>
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue/10">
+          <ArrowRight className="h-8 w-8 rotate-[-45deg] text-brand-blue" />
+        </div>
+        <h3 className="font-heading text-2xl font-bold text-brand-charcoal">Message received!</h3>
+        <p className="max-w-sm text-gray-500">
+          Thank you for reaching out. We&apos;ll be in touch shortly.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form className={className} onSubmit={handleSubmit}>

@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import { BLOG_CONTACT, BLOG_HERO, BLOG_PAGE, BLOG_SERVICE_CAROUSEL } from "@/content/blogs/content";
+import { BLOG_CONTACT, BLOG_HERO, BLOG_PAGE, BLOG_SERVICE_CAROUSEL } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
 import { BlogsSection } from "./BlogsSection";

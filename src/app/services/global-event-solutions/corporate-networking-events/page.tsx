@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
@@ -34,16 +34,16 @@ export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE)
 const servicesContactModal = {};
 
 const capabilityAssets = [
-  { icon: "Users", image: "/images/events/event_other_1.avif" },
-  { icon: "MessageSquare", image: "/images/events/event_other_2.avif" },
-  { icon: "CalendarCheck", image: "/images/events/event_other_3.avif" },
-  { icon: "Globe2", image: "/images/events/event_other_4.avif" },
-  { icon: "Star", image: "/images/services/booth/booth-5.avif" },
-  { icon: "Zap", image: "/images/services/booth/booth-6.avif" },
-  { icon: "Award", image: "/images/services/booth/booth-7.avif" },
-  { icon: "ClipboardList", image: "/images/home/why-choose-us/global_reach.avif" },
-  { icon: "Compass", image: "/images/home/why-choose-us/proven_execution.avif" },
-  { icon: "Map", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+  { icon: "Users", image: "/media/events/event_other_1.avif" },
+  { icon: "MessageSquare", image: "/media/events/event_other_2.avif" },
+  { icon: "CalendarCheck", image: "/media/events/event_other_3.avif" },
+  { icon: "Globe2", image: "/media/events/event_other_4.avif" },
+  { icon: "Star", image: "/media/services/booth/booth-5.avif" },
+  { icon: "Zap", image: "/media/services/booth/booth-6.avif" },
+  { icon: "Award", image: "/media/services/booth/booth-7.avif" },
+  { icon: "ClipboardList", image: "/media/home/why-choose-us/global_reach.avif" },
+  { icon: "Compass", image: "/media/home/why-choose-us/proven_execution.avif" },
+  { icon: "Map", image: "/media/home/why-choose-us/strategic_creativity.avif" },
 ];
 
 const capabilityFeatures = CORP_NETWORKING_CAPABILITIES.phases.map((phase, index) => ({
@@ -53,7 +53,7 @@ const capabilityFeatures = CORP_NETWORKING_CAPABILITIES.phases.map((phase, index
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  image: capabilityAssets[index]?.image ?? "/media/events/event_other_1.avif",
   label: phase.title,
 }));
 

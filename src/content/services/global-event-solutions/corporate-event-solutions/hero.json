@@ -1,9 +1,9 @@
 {
   "description": "Deliver impactful business experiences with professional corporate event solutions for conferences, trade shows and networking events. We provide end-to-end event planning, coordination, branding, logistics, and onsite event support.",
   "images": [
-    "/images/events/event_other_1.avif",
-    "/images/events/adobe_summit_2026.avif",
-    "/images/services/booth/booth-6.avif"
+    "/media/events/event_other_1.avif",
+    "/media/events/adobe_summit_2026.avif",
+    "/media/services/booth/booth-6.avif"
   ],
   "primaryCta": {
     "href": "/contact-us",

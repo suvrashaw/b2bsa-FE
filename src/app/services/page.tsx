@@ -7,7 +7,7 @@ import { CardsGrid } from "@/components/sections/CardsGrid";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { serviceNavigationGroups } from "@/content/navigation";
-import { SERVICES_PAGE } from "@/content/services/content";
+import { SERVICES_PAGE } from "@/content/services";
 
 export const metadata: Metadata = getMarketingPageMetadata(SERVICES_PAGE);
 

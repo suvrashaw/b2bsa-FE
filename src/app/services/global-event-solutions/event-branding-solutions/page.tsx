@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { getBlogsByTags } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
@@ -32,16 +32,16 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
 const capabilityAssets = [
-  { icon: "Palette", image: "/images/events/event_other_1.avif" },
-  { icon: "PenTool", image: "/images/events/event_other_2.avif" },
-  { icon: "Monitor", image: "/images/events/event_other_3.avif" },
-  { icon: "Printer", image: "/images/events/event_other_4.avif" },
-  { icon: "Image", image: "/images/services/booth/booth-5.avif" },
-  { icon: "Layers", image: "/images/services/booth/booth-6.avif" },
-  { icon: "Layout", image: "/images/services/booth/booth-7.avif" },
-  { icon: "Sparkles", image: "/images/home/why-choose-us/global_reach.avif" },
-  { icon: "Type", image: "/images/home/why-choose-us/proven_execution.avif" },
-  { icon: "Fingerprint", image: "/images/home/why-choose-us/strategic_creativity.avif" },
+  { icon: "Palette", image: "/media/events/event_other_1.avif" },
+  { icon: "PenTool", image: "/media/events/event_other_2.avif" },
+  { icon: "Monitor", image: "/media/events/event_other_3.avif" },
+  { icon: "Printer", image: "/media/events/event_other_4.avif" },
+  { icon: "Image", image: "/media/services/booth/booth-5.avif" },
+  { icon: "Layers", image: "/media/services/booth/booth-6.avif" },
+  { icon: "Layout", image: "/media/services/booth/booth-7.avif" },
+  { icon: "Sparkles", image: "/media/home/why-choose-us/global_reach.avif" },
+  { icon: "Type", image: "/media/home/why-choose-us/proven_execution.avif" },
+  { icon: "Fingerprint", image: "/media/home/why-choose-us/strategic_creativity.avif" },
 ];
 
 const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
@@ -51,7 +51,7 @@ const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index)
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/images/events/event_other_1.avif",
+  image: capabilityAssets[index]?.image ?? "/media/events/event_other_1.avif",
   label: phase.title,
 }));
 

@@ -110,16 +110,16 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
 // ─── Culture ─────────────────────────────────────────────────────────────────
 
 const PARALLAX_IMAGES = [
-  { alt: "Global reach", src: "/images/home/why-choose-us/global_reach.avif" },
-  { alt: "Proven execution", src: "/images/home/why-choose-us/proven_execution.avif" },
-  { alt: "Strategic creativity", src: "/images/home/why-choose-us/strategic_creativity.avif" },
+  { alt: "Global reach", src: "/media/home/why-choose-us/global_reach.avif" },
+  { alt: "Proven execution", src: "/media/home/why-choose-us/proven_execution.avif" },
+  { alt: "Strategic creativity", src: "/media/home/why-choose-us/strategic_creativity.avif" },
   {
     alt: "Technology-led delivery",
-    src: "/images/home/why-choose-us/technology_led_delivery.avif",
+    src: "/media/home/why-choose-us/technology_led_delivery.avif",
   },
-  { alt: "B2B Sales Arrow culture", src: "/images/about-us/culture/culture-1.avif" },
-  { alt: "B2B Sales Arrow team", src: "/images/about-us/culture/culture-4.avif" },
-  { alt: "B2B Sales Arrow office", src: "/images/about-us/culture/culture-5.avif" },
+  { alt: "B2B Sales Arrow culture", src: "/media/about-us/culture/culture-1.avif" },
+  { alt: "B2B Sales Arrow team", src: "/media/about-us/culture/culture-4.avif" },
+  { alt: "B2B Sales Arrow office", src: "/media/about-us/culture/culture-5.avif" },
 ];
 
 export interface CultureData {

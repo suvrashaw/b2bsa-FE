@@ -4,7 +4,7 @@
     "description": "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
     "icon": "Cpu",
     "id": "technology-saas",
-    "image": "/images/events/event_other_1.avif",
+    "image": "/media/events/event_other_1.avif",
     "title": "Technology & SaaS"
   },
   {
@@ -12,7 +12,7 @@
     "description": "Financial technology, payments, banking innovation, and investment platforms.",
     "icon": "Coins",
     "id": "fintech",
-    "image": "/images/events/event_other_2.avif",
+    "image": "/media/events/event_other_2.avif",
     "title": "FinTech"
   },
   {
@@ -20,7 +20,7 @@
     "description": "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
     "icon": "Activity",
     "id": "healthcare-pharma",
-    "image": "/images/events/event_other_3.avif",
+    "image": "/media/events/event_other_3.avif",
     "title": "Healthcare & Pharma"
   },
   {
@@ -28,7 +28,7 @@
     "description": "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
     "icon": "Settings",
     "id": "manufacturing",
-    "image": "/images/events/event_other_4.avif",
+    "image": "/media/events/event_other_4.avif",
     "title": "Manufacturing"
   },
   {
@@ -36,7 +36,7 @@
     "description": "Airlines, airports, MRO providers, and aviation technology companies at major industry shows.",
     "icon": "Plane",
     "id": "aviation",
-    "image": "/images/case-studies/cs-new-2.avif",
+    "image": "/media/case-studies/cs-new-2.avif",
     "title": "Aviation"
   },
   {
@@ -44,7 +44,7 @@
     "description": "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
     "icon": "ShoppingBag",
     "id": "retail-ecommerce",
-    "image": "/images/case-studies/cs-4.avif",
+    "image": "/media/case-studies/cs-4.avif",
     "title": "Retail & E-commerce"
   },
   {
@@ -52,7 +52,7 @@
     "description": "TV broadcasters, streaming platforms, content producers, and media technology companies.",
     "icon": "Radio",
     "id": "media-broadcasting",
-    "image": "/images/home/services/corporate-media-production.avif",
+    "image": "/media/home/services/corporate-media-production.avif",
     "title": "Media & Broadcasting"
   },
   {
@@ -60,7 +60,7 @@
     "description": "Mobile operators, network equipment vendors, and telecom technology innovators.",
     "icon": "Wifi",
     "id": "telecommunications",
-    "image": "/images/events/inma_2026.avif",
+    "image": "/media/events/inma_2026.avif",
     "title": "Telecommunications"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
     "icon": "Wrench",
     "id": "automotive",
-    "image": "/images/case-studies/cs-3.avif",
+    "image": "/media/case-studies/cs-3.avif",
     "title": "Automotive"
   },
   {
@@ -76,7 +76,7 @@
     "description": "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
     "icon": "Zap",
     "id": "energy-utilities",
-    "image": "/images/case-studies/cs-5.avif",
+    "image": "/media/case-studies/cs-5.avif",
     "title": "Energy & Utilities"
   }
 ]

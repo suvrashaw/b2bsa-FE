@@ -4,25 +4,25 @@
     {
       "description": "We manage pre-production, event-day filming, post-production, and content delivery so every stage stays coordinated.",
       "icon": "Award",
-      "image": "/images/services/media-production/event-physical-video-shoot/why-choose-us-3.avif",
+      "image": "/media/services/media-production/event-physical-video-shoot/why-choose-us-3.avif",
       "title": "End-to-End Shoot Management"
     },
     {
       "description": "Our crews understand live event constraints, speaker schedules, booth activity, audience movement, and venue rules.",
       "icon": "Users2",
-      "image": "/images/services/media-production/event-physical-video-shoot/why-choose-us-1.avif",
+      "image": "/media/services/media-production/event-physical-video-shoot/why-choose-us-1.avif",
       "title": "Live Event Expertise"
     },
     {
       "description": "We combine professional cameras, audio, lighting, and direction to turn real event moments into polished business content.",
       "icon": "TrendingUp",
-      "image": "/images/services/media-production/event-physical-video-shoot/why-choose-us-2.avif",
+      "image": "/media/services/media-production/event-physical-video-shoot/why-choose-us-2.avif",
       "title": "Production-Ready Quality"
     },
     {
       "description": "We support corporate and trade show video projects across major international event destinations.",
       "icon": "Globe2",
-      "image": "/images/home/services/experience-creation.avif",
+      "image": "/media/home/services/experience-creation.avif",
       "title": "Global Event Coverage"
     }
   ]

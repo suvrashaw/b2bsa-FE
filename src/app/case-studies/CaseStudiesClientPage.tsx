@@ -16,7 +16,7 @@ import {
   CASE_STUDIES_PAGE_CONTENT,
   CASE_STUDIES_PAGE_STUDIES,
   type CaseStudyEntry,
-} from "@/content/case-studies/content";
+} from "@/content/case-studies";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
 const ALL_FILTER = CASE_STUDIES_PAGE_CONTENT.gridFilters[0];

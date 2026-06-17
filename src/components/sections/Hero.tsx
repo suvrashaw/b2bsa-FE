@@ -156,7 +156,7 @@ export const Hero = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const isVideoMode = !images?.length;
-  const effectiveVideoUrl = videoUrl ?? "/videos/demo-video.mp4";
+  const effectiveVideoUrl = videoUrl ?? "/media/demo-video.mp4";
   const isStringTitle = typeof title === "string";
   const titleLines = isStringTitle ? (title as string).split("\n") : [title as ReactNode];
   const stringLines = isStringTitle ? (title as string).split("\n") : [];

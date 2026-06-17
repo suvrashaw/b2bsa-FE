@@ -12,10 +12,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 const PROOF_LOGOS = [
-  { alt: "Airtel", src: "/images/client-logos/Airtel-Icon.svg" },
-  { alt: "SingleStore", src: "/images/client-logos/SingleStore-Icon.svg" },
-  { alt: "CSC", src: "/images/client-logos/CSC-Icon.svg" },
-  { alt: "United Payments", src: "/images/client-logos/UnitedPayments-Icon.svg" },
+  { alt: "Airtel", src: "/media/client-logos/Airtel-Icon.svg" },
+  { alt: "SingleStore", src: "/media/client-logos/SingleStore-Icon.svg" },
+  { alt: "CSC", src: "/media/client-logos/CSC-Icon.svg" },
+  { alt: "United Payments", src: "/media/client-logos/UnitedPayments-Icon.svg" },
 ] as const;
 
 export interface ContactUsProps {

@@ -12,12 +12,12 @@ interface ServicesImageCardProps {
 }
 
 const FALLBACK_IMAGES = [
-  "/images/events/event_other_1.avif",
-  "/images/events/event_other_2.avif",
-  "/images/events/event_other_3.avif",
-  "/images/events/event_other_4.avif",
-  "/images/case-studies/cs-new-3.avif",
-  "/images/case-studies/cs-new-10.avif",
+  "/media/events/event_other_1.avif",
+  "/media/events/event_other_2.avif",
+  "/media/events/event_other_3.avif",
+  "/media/events/event_other_4.avif",
+  "/media/case-studies/cs-new-3.avif",
+  "/media/case-studies/cs-new-10.avif",
 ];
 
 const CARD_INITIAL = { opacity: 0, y: 16 };
@@ -27,16 +27,16 @@ const CARD_VIEWPORT = { once: true };
 const getServiceImage = (serviceName: string, index: number): string => {
   const n = serviceName.toLowerCase();
   if (n.includes("booth") || n.includes("exhibit") || n.includes("stand")) {
-    return "/images/services/booth/booth-5.avif";
+    return "/media/services/booth/booth-5.avif";
   }
   if (n.includes("prospect") || n.includes("sql") || n.includes("lead") || n.includes("floor")) {
-    return "/images/home/services/booth-design-and-production.avif";
+    return "/media/home/services/booth-design-and-production.avif";
   }
   if (n.includes("database") || n.includes("data augment") || n.includes("data valid")) {
-    return "/images/home/services/branding.avif";
+    return "/media/home/services/branding.avif";
   }
   if (n.includes("media") || n.includes("video") || n.includes("stream") || n.includes("av")) {
-    return "/images/home/services/experience-creation.avif";
+    return "/media/home/services/experience-creation.avif";
   }
   if (
     n.includes("market") ||
@@ -44,10 +44,10 @@ const getServiceImage = (serviceName: string, index: number): string => {
     n.includes("performance") ||
     n.includes("social")
   ) {
-    return "/images/home/services/digital-marketing.avif";
+    return "/media/home/services/digital-marketing.avif";
   }
   if (n.includes("research") || n.includes("intelligence") || n.includes("validation")) {
-    return "/images/home/services/unused-market-intelligence.avif";
+    return "/media/home/services/unused-market-intelligence.avif";
   }
   return FALLBACK_IMAGES[index % FALLBACK_IMAGES.length] ?? FALLBACK_IMAGES[0]!;
 };

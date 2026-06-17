@@ -6,7 +6,7 @@
       "description": "Manage venue communication, floor planning, setup schedules, and operational coordination for smooth event execution.",
       "icon": "MapPin",
       "id": "venue-coordination",
-      "image": "/images/events/event_other_1.avif",
+      "image": "/media/events/event_other_1.avif",
       "title": "Venue Coordination"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Coordinate booth installation, branding materials, equipment delivery, and onsite setup support for exhibitions and trade shows.",
       "icon": "Layers",
       "id": "booth-setup",
-      "image": "/images/services/booth/booth-5.avif",
+      "image": "/media/services/booth/booth-5.avif",
       "title": "Booth Setup & Material Handling"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Handle transportation logistics, shipment coordination, and event material movement efficiently across locations.",
       "icon": "Globe2",
       "id": "transportation",
-      "image": "/images/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/why-choose-us/global_reach.avif",
       "title": "Transportation & Shipment Management"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Work closely with production teams, suppliers, venue partners, and event vendors to ensure seamless event operations.",
       "icon": "Users",
       "id": "vendor-coordination",
-      "image": "/images/events/event_other_2.avif",
+      "image": "/media/events/event_other_2.avif",
       "title": "Vendor Coordination"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Provide onsite logistics management for attendee flow, equipment handling, setup supervision, and operational assistance.",
       "icon": "Target",
       "id": "onsite-support",
-      "image": "/images/services/booth/booth-6.avif",
+      "image": "/media/services/booth/booth-6.avif",
       "title": "Onsite Event Support"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Oversee event timelines, coordination activities, and operational workflows to ensure successful event delivery.",
       "icon": "Zap",
       "id": "operations-management",
-      "image": "/images/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
       "title": "Event Operations Management"
     }
   ]
