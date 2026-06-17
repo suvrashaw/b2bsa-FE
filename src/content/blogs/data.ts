@@ -1,6 +1,6 @@
 import type { BlogItem } from "@/content/home/content";
 
-import rawBlogPosts from "@/content/shared/blogs.json";
+import rawBlogPosts from "@/content/blogs/blogs.json";
 
 export type ContentBlock =
   | { alt: string; caption?: string; src: string; type: "image" }

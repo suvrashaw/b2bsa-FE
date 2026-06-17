@@ -11,7 +11,7 @@ import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs/data";
-import { getDefaultEvents } from "@/content/events-utils";
+import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
 import { HOME_EVENTS_CONTENT } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";

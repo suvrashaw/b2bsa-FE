@@ -18,7 +18,7 @@ import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Button } from "@/components/ui/Button";
-import { getDefaultEvents } from "@/content/events-utils";
+import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
 import {
   HOME_EVENTS_CONTENT,
   HOME_FAQ_CONTENT,
@@ -26,7 +26,7 @@ import {
   HOME_PAGE,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { buildFaqJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 

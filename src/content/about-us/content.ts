@@ -1,6 +1,6 @@
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
-import SHARED_EVENTS_DATA from "@/content/shared/events.json";
+import SHARED_EVENTS_DATA from "@/content/tradeshow-calendar/featured.json";
 
 import CONTACTUS_DATA from "./contactus.json";
 import EVENTS_SECTION_DATA from "./events.json";

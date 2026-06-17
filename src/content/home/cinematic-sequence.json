@@ -58,6 +58,6 @@
     }
   ],
   "frameCount": 60,
-  "frameUrlTemplate": "/images/Frames/ezgif-frame-%d.jpg",
+  "frameUrlTemplate": "/images/contact/hero/ezgif-frame-%d.jpg",
   "loadingText": "Loading Cinematic Experience..."
 }

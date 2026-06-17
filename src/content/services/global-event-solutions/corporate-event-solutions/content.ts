@@ -1,8 +1,5 @@
-import {
-  GLOBAL_CASE_STUDIES,
-  GLOBAL_INDUSTRY_SERVICES,
-  GLOBAL_PROOF_STATS,
-} from "@/content/shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
+import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACTCTA_DATA from "./contact-cta.json";

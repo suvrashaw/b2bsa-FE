@@ -1,4 +1,4 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import CAPABILITIES_DATA from "./capabilities.json";
 import CASESTUDIES_DATA from "./case-studies.json";

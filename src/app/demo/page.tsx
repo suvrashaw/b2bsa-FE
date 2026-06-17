@@ -37,9 +37,9 @@ import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs/data";
-import { getDefaultEvents } from "@/content/events-utils";
+import { getDefaultEvents } from "@/content/tradeshow-calendar/events-utils";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
-import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
+import { LINKEDIN_POSTS } from "@/content/blogs/linkedinPosts";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
@@ -743,7 +743,7 @@ const DemoPage = () => {
       <Stats
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
-        imageUrl="/images/Frames/ezgif-frame-017.jpg"
+        imageUrl="/images/contact/hero/ezgif-frame-017.jpg"
         stats={PROOF_STATS}
       />
 

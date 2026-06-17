@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
 import { HOME_BLOG_POSTS } from "@/content/blogs/data";
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
-import SHARED_EVENTS_DATA from "@/content/shared/events.json";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
+import SHARED_EVENTS_DATA from "@/content/tradeshow-calendar/featured.json";
 
 import BLOGS_DATA from "./blogs.json";
 import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";

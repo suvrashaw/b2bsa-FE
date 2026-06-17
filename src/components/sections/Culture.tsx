@@ -117,9 +117,9 @@ const PARALLAX_IMAGES = [
     alt: "Technology-led delivery",
     src: "/images/home/why-choose-us/technology_led_delivery.avif",
   },
-  { alt: "B2B Sales Arrow culture", src: "/images/about/culture/culture-1.avif" },
-  { alt: "B2B Sales Arrow team", src: "/images/about/culture/culture-4.avif" },
-  { alt: "B2B Sales Arrow office", src: "/images/about/culture/culture-5.avif" },
+  { alt: "B2B Sales Arrow culture", src: "/images/about-us/culture/culture-1.avif" },
+  { alt: "B2B Sales Arrow team", src: "/images/about-us/culture/culture-4.avif" },
+  { alt: "B2B Sales Arrow office", src: "/images/about-us/culture/culture-5.avif" },
 ];
 
 export interface CultureData {

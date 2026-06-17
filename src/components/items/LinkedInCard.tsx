@@ -8,7 +8,7 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-import type { LinkedInPost } from "@/content/linkedinPosts";
+import type { LinkedInPost } from "@/content/blogs/linkedinPosts";
 
 const cardViewport = { once: true } as const;
 

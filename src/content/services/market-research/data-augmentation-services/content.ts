@@ -1,5 +1,5 @@
-import { GLOBAL_CASE_STUDIES } from "@/content/shared";
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
+import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CONTACT_CTA_DATA from "./augmentation-cta.json";
 

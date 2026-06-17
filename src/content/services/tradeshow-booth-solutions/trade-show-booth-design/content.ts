@@ -1,4 +1,5 @@
-import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
+import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
 import DESIGNCONTACTCTA_DATA from "./design-contact-cta.json";

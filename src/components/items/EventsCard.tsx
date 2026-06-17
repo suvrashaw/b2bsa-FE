@@ -11,7 +11,7 @@ import { useCallback, useState } from "react";
 import type { EventsContent } from "@/content/home/content";
 
 import { Button } from "@/components/ui/Button";
-import { getFallbackImage } from "@/content/events-utils";
+import { getFallbackImage } from "@/content/tradeshow-calendar/events-utils";
 import { cn } from "@/lib";
 
 export type EventCardItem = {

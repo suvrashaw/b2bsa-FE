@@ -1,4 +1,4 @@
-import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
+import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CAPABILITIES_DATA from "./capabilities.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
