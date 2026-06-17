@@ -6,7 +6,7 @@
       "description": "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       "icon": "Video",
       "id": "multi-camera",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "title": "Multi-Camera Live Production"
     },
     {
@@ -14,7 +14,7 @@
       "description": "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
       "icon": "Globe",
       "id": "platform",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Platform Management"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       "icon": "Archive",
       "id": "archive",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Recording and Archive Delivery"
     },
     {

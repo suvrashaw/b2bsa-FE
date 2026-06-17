@@ -29,7 +29,6 @@ import {
   ABOUT_VISION_MISSION,
 } from "@/content/about-us/content";
 import { normalizeEvent } from "@/content/events-utils";
-import CLIENT_LOGOS from "@/content/home/client-logos.json";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";

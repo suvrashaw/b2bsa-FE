@@ -23,10 +23,10 @@ export const EVENT_LOGISTICS_CONTACT_CTA = {
   ...LOGISTICSCONTACTCTA_DATA,
 };
 
+export { default as EVENT_LOGISTICS_BLOGS_SECTION } from "./blog.json";
 export { default as EVENT_LOGISTICS_FAQ } from "./faq.json";
 export { default as EVENT_LOGISTICS_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_LOGISTICS_BENEFITS } from "./logistics-benefits.json";
-export { default as EVENT_LOGISTICS_BLOGS_SECTION } from "./logistics-blogs-section.json";
 export { default as EVENT_LOGISTICS_CAPABILITIES } from "./logistics-capabilities.json";
 export { default as EVENT_LOGISTICS_DELIVERABLES } from "./logistics-deliverables.json";
 export { default as EVENT_LOGISTICS_INTRO } from "./logistics-intro.json";

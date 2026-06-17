@@ -21,7 +21,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
-      <Hero {...BLOG_HERO} />
+      <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
       <Suspense>
         <BlogsSection />
       </Suspense>

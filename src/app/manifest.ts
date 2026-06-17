@@ -7,8 +7,14 @@ const manifest = (): MetadataRoute.Manifest => ({
   icons: [
     {
       purpose: "any",
+      sizes: "192x192",
+      src: "/images/logo/logo-192.png",
+      type: "image/png",
+    },
+    {
+      purpose: "any",
       sizes: "512x512",
-      src: "/images/favicon/512x512.png",
+      src: "/images/logo/logo-512.png",
       type: "image/png",
     },
   ],

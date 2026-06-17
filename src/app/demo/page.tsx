@@ -3,8 +3,6 @@
 import { Pencil, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
 
-import type { SharedBlogPost } from "@/content/blogs/data";
-
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
@@ -38,7 +36,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { SHARED_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getDefaultEvents } from "@/content/events-utils";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { LINKEDIN_POSTS } from "@/content/linkedinPosts";
@@ -418,7 +416,7 @@ const SPOTLIGHT_DEMO_PROPS = {
 
 // ─── BlogsCarousel ──────────────────────────────────────────────────────
 
-const DEMO_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 4) as SharedBlogPost[];
+const DEMO_BLOG_POSTS = getBlogsByTags([], 4);
 
 // ─── DemoLabel ───────────────────────────────────────────────────────────────
 

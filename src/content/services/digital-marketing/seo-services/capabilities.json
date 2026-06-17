@@ -4,13 +4,13 @@
     {
       "icon": "Search",
       "id": "technical-seo",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "Technical SEO audit & remediation"
     },
     {
       "icon": "Target",
       "id": "keyword-research",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "Keyword research & intent mapping"
     },
     {
@@ -46,7 +46,7 @@
     {
       "icon": "Zap",
       "id": "core-web-vitals",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "Core Web Vitals optimisation"
     }
   ],

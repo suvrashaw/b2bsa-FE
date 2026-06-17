@@ -9,7 +9,7 @@ import BRANDINGINDUSTRIESSECTION_DATA from "./branding-industries-section.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
 
-export { default as EVENT_BRANDING_BLOGS_SECTION } from "./branding-blogs-section.json";
+export { default as EVENT_BRANDING_BLOGS_SECTION } from "./blog.json";
 
 export const EVENT_BRANDING_PROOF_BAR = {
   ...PROOF_BAR_DATA,

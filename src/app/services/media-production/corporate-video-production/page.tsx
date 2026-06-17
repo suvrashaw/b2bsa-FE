@@ -7,7 +7,7 @@ import { CardsGrid } from "@/components/sections/CardsGrid";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -37,7 +37,7 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </CardsGrid>
-          <Blogs blogs={HOME_BLOG_POSTS} />
+          <Blogs blogs={getBlogsByTags(["Corporate Video Production"])} />
         </>
       }
       faq={CORPORATE_VIDEO_FAQ}

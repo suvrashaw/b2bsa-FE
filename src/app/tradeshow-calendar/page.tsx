@@ -14,7 +14,13 @@ import {
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
-  "/images/blog/thumbnails/trade-show-booth-trends-2026.avif",
+  "/images/events/adobe_summit_2026.avif",
+  "/images/events/event_other_1.avif",
+  "/images/events/event_other_2.avif",
+  "/images/events/event_other_3.avif",
+  "/images/events/event_other_4.avif",
+  "/images/events/inma_2026.avif",
+  "/images/events/servicenow_2026.avif",
 ];
 
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);

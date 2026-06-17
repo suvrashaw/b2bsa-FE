@@ -16,7 +16,7 @@
       "description": "Editing, colour grading, sound design, and final delivery for all video assets.",
       "icon": "Film",
       "id": "post-production",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "title": "Video Post-Production"
     },
     {
@@ -25,7 +25,7 @@
       "description": "Filmed product demonstrations for SaaS, technology, equipment, and enterprise solutions.",
       "icon": "Play",
       "id": "demo-videos",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Production Demo Videos"
     },
     {
@@ -97,7 +97,7 @@
       "description": "Complex solutions simplified into clear, buyer-friendly video stories.",
       "icon": "Lightbulb",
       "id": "explanatory",
-      "image": "/images/services/sql-generation-2.avif",
+      "image": "/images/home/services/networking.avif",
       "title": "Explanatory Videos"
     },
     {
@@ -142,7 +142,7 @@
       "description": "Professional multi-camera broadcast from trade shows, conferences, and launches.",
       "icon": "Radio",
       "id": "live-streaming",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "title": "Live Event Streaming"
     },
     {
@@ -151,7 +151,7 @@
       "description": "Ambient or supplementary content streamed alongside main event programming.",
       "icon": "Wifi",
       "id": "passive-streaming",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Passive Video Streaming"
     },
     {
@@ -169,7 +169,7 @@
       "description": "Digital and print banners for events, social, and campaigns.",
       "icon": "Image",
       "id": "banners",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "title": "Banners"
     },
     {
@@ -178,7 +178,7 @@
       "description": "Branded print and digital poster design for event marketing.",
       "icon": "Layout",
       "id": "posters",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Posters"
     },
     {
@@ -187,7 +187,7 @@
       "description": "Animated social content for campaigns and event promotion.",
       "icon": "Zap",
       "id": "gifs",
-      "image": "/images/services/sql-generation-revised.avif",
+      "image": "/images/home/services/active-prospecting.avif",
       "title": "GIFs"
     },
     {

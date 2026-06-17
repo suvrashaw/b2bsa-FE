@@ -11,7 +11,7 @@ import { LiveStreamProjects } from "@/components/sections/LiveStreamProjects";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -64,7 +64,7 @@ const Page = () => {
             headingAlign="left"
             id="blogs"
           >
-            {RENTAL_BLOG_POSTS.map((post) => (
+            {getBlogsByTags(["Event Live Streaming Services"]).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

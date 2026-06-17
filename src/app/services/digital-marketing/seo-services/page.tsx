@@ -9,7 +9,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { PERF_PAGE } from "@/content/services/digital-marketing/content";
 import {
@@ -57,7 +57,7 @@ const Page = () => {
             headingAlign="left"
             id="blogs"
           >
-            {RENTAL_BLOG_POSTS.map((post) => (
+            {getBlogsByTags(["Seo Services"]).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

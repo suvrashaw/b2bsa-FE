@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
 import { HOME_BLOG_POSTS } from "@/content/blogs/data";
-import SHARED_CASE_STUDIES_DATA from "@/content/shared/case-studies.json";
+import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 import SHARED_EVENTS_DATA from "@/content/shared/events.json";
 
 import BLOGS_DATA from "./blogs.json";
@@ -253,7 +253,7 @@ export const HOME_SERVICES_CONTENT: HomeServicesContent = SERVICES_DATA;
 export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ctaLabel: "Full Study",
   heading: "Proven Global Event Solutions: Enterprise Success Stories",
-  items: SHARED_CASE_STUDIES_DATA as unknown as CaseStudyItem[],
+  items: GLOBAL_CASE_STUDIES as unknown as CaseStudyItem[],
 };
 
 export const HOME_EVENTS_CONTENT: EventsContent = {

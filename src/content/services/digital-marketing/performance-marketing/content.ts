@@ -11,7 +11,7 @@ export const PPC_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-export { default as PPC_BLOGS_SECTION } from "./blogs-section.json";
+export { default as PPC_BLOGS_SECTION } from "./blog.json";
 export { default as PPC_CONTACT_CTA } from "./contact-cta.json";
 export { default as PPC_FAQ } from "./faq.json";
 export { default as PPC_HERO } from "./hero.json";

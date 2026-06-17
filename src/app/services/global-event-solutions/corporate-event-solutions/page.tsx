@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
@@ -80,7 +80,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {RENTAL_BLOG_POSTS.map((post) => (
+            {getBlogsByTags(["Corporate Event Solutions"]).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

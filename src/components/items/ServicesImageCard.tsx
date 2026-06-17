@@ -30,13 +30,13 @@ const getServiceImage = (serviceName: string, index: number): string => {
     return "/images/services/booth/booth-5.avif";
   }
   if (n.includes("prospect") || n.includes("sql") || n.includes("lead") || n.includes("floor")) {
-    return "/images/services/sql-generation-1.avif";
+    return "/images/home/services/booth-design-and-production.avif";
   }
   if (n.includes("database") || n.includes("data augment") || n.includes("data valid")) {
-    return "/images/services/database-research-1.avif";
+    return "/images/home/services/branding.avif";
   }
   if (n.includes("media") || n.includes("video") || n.includes("stream") || n.includes("av")) {
-    return "/images/services/media-production-1.avif";
+    return "/images/home/services/experience-creation.avif";
   }
   if (
     n.includes("market") ||
@@ -44,10 +44,10 @@ const getServiceImage = (serviceName: string, index: number): string => {
     n.includes("performance") ||
     n.includes("social")
   ) {
-    return "/images/services/performance-marketing-1.avif";
+    return "/images/home/services/digital-marketing.avif";
   }
   if (n.includes("research") || n.includes("intelligence") || n.includes("validation")) {
-    return "/images/services/market-intelligence.avif";
+    return "/images/home/services/unused-market-intelligence.avif";
   }
   return FALLBACK_IMAGES[index % FALLBACK_IMAGES.length] ?? FALLBACK_IMAGES[0]!;
 };

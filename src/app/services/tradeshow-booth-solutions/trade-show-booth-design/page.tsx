@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getDefaultEvents } from "@/content/events-utils";
 import { HOME_EVENTS_CONTENT } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -78,7 +78,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {RENTAL_BLOG_POSTS.map((post) => (
+            {getBlogsByTags(["Trade Show Booth Design"]).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

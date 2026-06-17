@@ -160,7 +160,7 @@ export const Footer = () => {
                 className="rounded-md bg-transparent object-contain object-left"
                 fill
                 sizes="192px"
-                src="/images/logo_white.svg"
+                src="/images/logo/logo-white.svg"
               />
             </Link>
             <SectionHeader as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>

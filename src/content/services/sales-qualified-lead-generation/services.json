@@ -7,7 +7,7 @@
       "description": "Target companies and roles by industry, size, geography, tech stack, seniority, and buying committee structure.",
       "icon": "Users",
       "id": "prospecting",
-      "image": "/images/services/sql-generation-1.avif",
+      "image": "/images/home/services/booth-design-and-production.avif",
       "title": "ICP Definition and Firmographic Targeting"
     },
     {
@@ -15,7 +15,7 @@
       "description": "LinkedIn outbound, paid campaigns, content-led inbound, event capture, cold email simultaneously.",
       "icon": "CalendarCheck",
       "id": "appointment",
-      "image": "/images/services/sql-generation-2.avif",
+      "image": "/images/home/services/networking.avif",
       "title": "Multi-Channel Demand Generation"
     },
     {
@@ -23,7 +23,7 @@
       "description": "Content engagement, ad responses, website behaviour, and buying signals tracked across channels.",
       "icon": "Database",
       "id": "database",
-      "image": "/images/services/sql-generation-revised.avif",
+      "image": "/images/home/services/active-prospecting.avif",
       "title": "Intent Signal Scoring"
     },
     {
@@ -31,7 +31,7 @@
       "description": "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
       "icon": "Target",
       "id": "icp",
-      "image": "/images/services/market-intelligence.avif",
+      "image": "/images/home/services/unused-market-intelligence.avif",
       "title": "Human-Verified Qualification"
     }
   ]

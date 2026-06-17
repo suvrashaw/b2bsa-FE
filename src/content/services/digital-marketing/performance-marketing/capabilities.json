@@ -4,13 +4,13 @@
     {
       "icon": "Search",
       "id": "google-search",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "Google Search PPC"
     },
     {
       "icon": "Monitor",
       "id": "display-programmatic",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "Display & programmatic advertising"
     },
     {
@@ -46,7 +46,7 @@
     {
       "icon": "LineChart",
       "id": "pipeline-attribution",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "Pipeline attribution reporting"
     }
   ],

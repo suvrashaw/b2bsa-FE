@@ -7,7 +7,7 @@
       "description": "High-intent campaigns around the terms enterprise buyers use when actively comparing vendors — structured for lead quality and cost per qualified opportunity.",
       "icon": "Search",
       "id": "google-search-ppc",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "title": "Google Search — PPC"
     },
     {
@@ -15,7 +15,7 @@
       "description": "Awareness and retargeting campaigns keeping your brand visible across relevant digital environments.",
       "icon": "Monitor",
       "id": "google-display-programmatic",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Google Display & Programmatic"
     },
     {

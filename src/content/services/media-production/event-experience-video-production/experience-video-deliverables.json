@@ -9,7 +9,7 @@
       "description": "Build excitement and increase event attendance with professionally produced teaser videos, invitation videos, countdown videos, and event marketing campaigns.",
       "icon": "Video",
       "id": "pre-event-promotional-videos",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "title": "Pre-Event Promotional Videos"
     },
     {
@@ -25,7 +25,7 @@
       "description": "Extend your event impact with post-event recap videos designed for social media, internal communication, audience engagement, and future event promotion.",
       "icon": "MonitorPlay",
       "id": "post-event-recap-videos",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Post-Event Recap Videos"
     },
     {
@@ -49,7 +49,7 @@
       "description": "Create short-form event videos optimized for LinkedIn, Instagram, YouTube, and other digital marketing channels.",
       "icon": "Share2",
       "id": "social-media-event-content",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Social Media Event Content"
     }
   ]

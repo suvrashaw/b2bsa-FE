@@ -25,7 +25,7 @@ export const SMM_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-export { default as SMM_BLOGS_SECTION } from "./blogs-section.json";
+export { default as SMM_BLOGS_SECTION } from "./blog.json";
 export { default as SMM_CAMPAIGNS } from "./campaigns.json";
 export { default as SMM_CONTACT_CTA } from "./contact-cta.json";
 export { default as SMM_FAQ } from "./faq.json";

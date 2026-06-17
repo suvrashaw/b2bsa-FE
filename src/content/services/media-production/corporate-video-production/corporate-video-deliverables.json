@@ -14,7 +14,7 @@
       "description": "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
       "icon": "Cpu",
       "id": "product",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Product and Solution Explainer Videos"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       "icon": "TrendingUp",
       "id": "investor",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "title": "Investor and Board Presentation Videos"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
       "icon": "MessageSquare",
       "id": "testimonial",
-      "image": "",
+      "image": "/images/home/hero/home_hero_bg.avif",
       "title": "Customer Testimonial and Case Study Films"
     }
   ]

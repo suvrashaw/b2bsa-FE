@@ -54,21 +54,21 @@
     {
       "id": "branded-motion-graphics",
       "icon": "Layers",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "label": "Branded Motion Graphics",
       "description": "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics."
     },
     {
       "id": "fast-turnaround-post-production",
       "icon": "Zap",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "label": "Fast Turnaround Post-Production",
       "description": "Fast post-event editing support for immediate publishing and internal communication needs."
     },
     {
       "id": "social-media-optimized-formats",
       "icon": "Share2",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "Social Media Optimized Formats",
       "description": "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more."
     }

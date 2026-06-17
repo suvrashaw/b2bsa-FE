@@ -8,9 +8,9 @@
     "metric": "HD",
     "metricLabel": "stream-ready production",
     "platform": "YouTube + custom RTMP",
-    "thumbnail": "/images/services/media-production-2.avif",
+    "thumbnail": "/images/home/services/corporate-media-production.avif",
     "title": "Conference Keynote Broadcast",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   },
   {
     "client": "Corporate leadership team",
@@ -23,7 +23,7 @@
     "platform": "Private event stream",
     "thumbnail": "/images/case-studies/cs-5.avif",
     "title": "Executive Town Hall Stream",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   },
   {
     "client": "Product marketing team",
@@ -34,9 +34,9 @@
     "metric": "Live",
     "metricLabel": "demo switching",
     "platform": "LinkedIn Live + YouTube",
-    "thumbnail": "/images/services/media-production-1.avif",
+    "thumbnail": "/images/home/services/experience-creation.avif",
     "title": "Product Launch Live Demo",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   },
   {
     "client": "Industry panel program",
@@ -49,7 +49,7 @@
     "platform": "Hybrid webinar",
     "thumbnail": "/images/case-studies/cs-new-9.avif",
     "title": "Industry Panel Discussion",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   },
   {
     "client": "Trade show booth team",
@@ -62,7 +62,7 @@
     "platform": "Social simulcast",
     "thumbnail": "/images/case-studies/cs-10.avif",
     "title": "Trade Show Booth Live Stream",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   },
   {
     "client": "Customer webinar audience",
@@ -73,8 +73,8 @@
     "metric": "Backup",
     "metricLabel": "streaming path",
     "platform": "Zoom + YouTube archive",
-    "thumbnail": "/images/services/media-production-2.avif",
+    "thumbnail": "/images/home/services/corporate-media-production.avif",
     "title": "Customer Webinar Production",
-    "videoUrl": "/videos/hero-gtc-2026.mp4"
+    "videoUrl": "/videos/demo-video.mp4"
   }
 ]

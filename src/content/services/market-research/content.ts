@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES, GLOBAL_PROOF_STATS } from "@/content/shared";
 import CINEMATIC_CTA_SHARED from "@/content/shared/cinematic-cta.json";
 
-import RESEARCHCASESTUDIES_DATA from "./research-case-studies.json";
+import RESEARCHCASESTUDIES_DATA from "./case-studies.json";
 import RESEARCHCONTACTCTA_DATA from "./research-contact-cta.json";
 import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
 

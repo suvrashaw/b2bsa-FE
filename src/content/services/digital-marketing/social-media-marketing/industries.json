@@ -9,13 +9,13 @@
     {
       "icon": "Landmark",
       "id": "fintech",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "FinTech"
     },
     {
       "icon": "Activity",
       "id": "healthcare-pharma",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "Healthcare & Pharma"
     },
     {
@@ -57,7 +57,7 @@
     {
       "icon": "ShoppingBag",
       "id": "retail-e-commerce",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "Retail & E-commerce"
     }
   ],

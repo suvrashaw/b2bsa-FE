@@ -8,7 +8,7 @@ import CONTACT_CTA_DATA from "./contact-cta.json";
 import NETWORKINGCONTACTCTA_DATA from "./networking-contact-cta.json";
 import NETWORKINGINDUSTRIESSECTION_DATA from "./networking-industries-section.json";
 
-export { default as CORP_NETWORKING_FAQ } from "./faq.json";
+export { default as CORP_NETWORKING_BLOGS_SECTION } from "./blog.json";
 
 
 
@@ -27,8 +27,8 @@ export const CORP_NETWORKING_CONTACT_CTA = {
   ...CONTACT_CTA_DATA,
 };
 
+export { default as CORP_NETWORKING_FAQ } from "./faq.json";
 export { default as CORP_NETWORKING_IMAGE_HERO } from "./hero.json";
-export { default as CORP_NETWORKING_BLOGS_SECTION } from "./networking-blogs-section.json";
 export { default as CORP_NETWORKING_CAPABILITIES } from "./networking-capabilities.json";
 export { default as CORP_NETWORKING_DELIVERABLES } from "./networking-deliverables.json";
 export { default as CORP_NETWORKING_EVENT_TYPES } from "./networking-event-types.json";

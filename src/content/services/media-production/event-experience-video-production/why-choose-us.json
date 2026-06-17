@@ -16,13 +16,13 @@
     {
       "description": "We deliver visually engaging event videos with professional filming, dynamic editing, and branded storytelling.",
       "icon": "TrendingUp",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "title": "Cinematic-Quality Production"
     },
     {
       "description": "We provide quick post-event editing support for social media publishing and immediate marketing use.",
       "icon": "Users2",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Fast Turnaround Delivery"
     },
     {
@@ -34,7 +34,7 @@
     {
       "description": "Our event videos are designed to support brand visibility, audience engagement, event promotion, and digital marketing campaigns.",
       "icon": "TrendingUp",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Marketing-Focused Content"
     }
   ]

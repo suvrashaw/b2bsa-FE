@@ -10,7 +10,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { RENTAL_BLOG_POSTS } from "@/content/blogs/data";
+import { getBlogsByTags } from "@/content/blogs/data";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
@@ -78,7 +78,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {RENTAL_BLOG_POSTS.map((post) => (
+            {getBlogsByTags(["Virtual Video Production"]).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

@@ -18,12 +18,12 @@ export const BOOTH_RENTAL_CONTACT_CTA = {
   ...RENTALCONTACTCTA_DATA,
 };
 
+export { default as BOOTH_RENTAL_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_RENTAL_FAQ } from "./faq.json";
 export { default as BOOTH_RENTAL_HERO } from "./hero.json";
 export { default as BOOTH_RENTAL_PAGE } from "./page.json";
-export { default as BOOTH_RENTAL_PROCESS } from "./process.json";
 
-export { default as BOOTH_RENTAL_BLOGS_SECTION } from "./rental-blogs-section.json";
+export { default as BOOTH_RENTAL_PROCESS } from "./process.json";
 export { default as BOOTH_RENTAL_RELATED_SERVICES } from "./rental-related-services.json";
 export { default as BOOTH_RENTAL_RENT_VS_BUY } from "./rental-rent-vs-buy.json";
 export { default as BOOTH_RENTAL_WHY } from "./why.json";

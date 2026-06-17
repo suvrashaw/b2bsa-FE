@@ -4,13 +4,13 @@
     {
       "icon": "Megaphone",
       "id": "b2b-social-media-marketing",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "label": "B2B social media marketing"
     },
     {
       "icon": "Briefcase",
       "id": "linkedin-marketing-campaigns",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "label": "LinkedIn marketing campaigns"
     },
     {

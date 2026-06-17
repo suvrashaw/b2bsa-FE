@@ -7,7 +7,7 @@
       "description": "Crawlability, Core Web Vitals, broken links, redirects, schema markup, sitemaps, and page speed — identifying and fixing technical issues that prevent proper indexing.",
       "icon": "Search",
       "id": "technical-seo-audit",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "title": "Technical SEO Audit & Remediation"
     },
     {
@@ -15,7 +15,7 @@
       "description": "Identifying terms enterprise buyers use across awareness, consideration, comparison, and purchase stages — mapped to intent, page type, funnel stage, and commercial value.",
       "icon": "Target",
       "id": "keyword-research",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Keyword Research & Search Intent Mapping"
     },
     {
@@ -55,7 +55,7 @@
       "description": "Rankings, organic traffic, conversions, qualified leads, and pipeline influence — reported with clear commercial context.",
       "icon": "BarChart3",
       "id": "seo-reporting",
-      "image": "/images/services/performance-marketing.avif",
+      "image": "/images/home/services/unused-performance-marketing.avif",
       "title": "SEO Reporting & KPI Dashboards"
     }
   ]

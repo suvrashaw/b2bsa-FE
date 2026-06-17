@@ -1,4 +1,3 @@
-import mediaProofLogos from "@/content/services/media-production/media-proof-logos.json";
 import { GLOBAL_CASE_STUDIES } from "@/content/shared";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
@@ -14,10 +13,10 @@ export const EVENT_PHYSICAL_VIDEO_CONTACT_CTA = {
   proofLogos: mediaProofLogos,
 };
 
+export { default as EVENT_PHYSICAL_VIDEO_BLOGS_SECTION } from "./blog.json";
 export { default as EVENT_PHYSICAL_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_PHYSICAL_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_PHYSICAL_VIDEO_PAGE } from "./page.json";
-export { default as EVENT_PHYSICAL_VIDEO_BLOGS_SECTION } from "./physical-video-blogs-section.json";
 export { default as EVENT_PHYSICAL_VIDEO_DELIVERABLES } from "./physical-video-deliverables.json";
 
 export { default as EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN } from "./physical-video-production-plan.json";

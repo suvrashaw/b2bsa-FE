@@ -17,7 +17,7 @@
       "description": "Cinematic brand storytelling and high-fidelity corporate content that builds authority.",
       "icon": "MonitorPlay",
       "id": "media",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "title": "Media Production"
     },
     {
@@ -25,7 +25,7 @@
       "description": "Data-driven SEO, paid advertising, and LinkedIn campaigns engineered to scale enterprise pipeline.",
       "icon": "Rocket",
       "id": "performance",
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "title": "Digital Marketing"
     },
     {
@@ -33,7 +33,7 @@
       "description": "Precision-targeted acquisition strategies for high-value B2B accounts ready to buy.",
       "icon": "Users",
       "id": "lead-gen",
-      "image": "/images/services/sql-generation-revised.avif",
+      "image": "/images/home/services/active-prospecting.avif",
       "title": "Sales Qualified Lead Generation"
     },
     {
@@ -41,7 +41,7 @@
       "description": "Human-powered intelligence, data augmentation, and validation to fuel confident decisions.",
       "icon": "Lightbulb",
       "id": "market-research",
-      "image": "/images/services/database-research-revised.avif",
+      "image": "/images/home/services/database-and-market-research.avif",
       "title": "Market Research"
     }
   ]

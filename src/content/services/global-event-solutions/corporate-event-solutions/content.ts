@@ -10,7 +10,7 @@ import EVENTCONTACTCTA_DATA from "./event-contact-cta.json";
 import EVENTINDUSTRIESSECTION_DATA from "./event-industries-section.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
 
-export { default as CORP_EVENT_BLOGS_SECTION } from "./event-blogs-section.json";
+export { default as CORP_EVENT_BLOGS_SECTION } from "./blog.json";
 
 export const CORP_EVENT_PROOF_BAR = {
   ...PROOF_BAR_DATA,

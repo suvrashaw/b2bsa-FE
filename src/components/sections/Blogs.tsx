@@ -90,6 +90,8 @@ export const Blogs = ({
   viewAllHref = "/blogs",
   viewAllLabel = "View All Blogs",
 }: BlogsProps = {}) => {
+  const displayBlogs = blogs.slice(0, 3);
+
   return (
     <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="blogs">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
@@ -97,7 +99,7 @@ export const Blogs = ({
           <SectionHeader as="h2">{heading}</SectionHeader>
         </div>
 
-        <BlogDeckLayout blogs={blogs} ctaLabel={ctaLabel} layout={layout} />
+        <BlogDeckLayout blogs={displayBlogs} ctaLabel={ctaLabel} layout={layout} />
 
         {viewAllHref && (
           <div className="mt-12 text-center">

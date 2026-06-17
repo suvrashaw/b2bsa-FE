@@ -12,9 +12,9 @@ export const BOOTH_HOSTESS_CONTACT_CTA = {
   ...HOSTESSCONTACTCTA_DATA,
 };
 
+export { default as BOOTH_HOSTESS_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_HOSTESS_FAQ } from "./faq.json";
 export { default as BOOTH_HOSTESS_IMAGE_HERO } from "./hero.json";
-export { default as BOOTH_HOSTESS_BLOGS_SECTION } from "./hostess-blogs-section.json";
 export { default as BOOTH_HOSTESS_CAPABILITIES } from "./hostess-capabilities.json";
 
 export { default as BOOTH_HOSTESS_DELIVERABLES } from "./hostess-deliverables.json";

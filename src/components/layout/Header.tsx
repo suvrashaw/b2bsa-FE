@@ -110,7 +110,7 @@ export const Header = ({
             fill
             priority
             sizes="160px"
-            src="/images/logo_primary.svg"
+            src="/images/logo/logo-primary.svg"
           />
         </Link>
       </div>

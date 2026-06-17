@@ -11,6 +11,13 @@ import { ContactModal } from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
+const PROOF_LOGOS = [
+  { alt: "Airtel", src: "/images/client-logos/Airtel-Icon.svg" },
+  { alt: "SingleStore", src: "/images/client-logos/SingleStore-Icon.svg" },
+  { alt: "CSC", src: "/images/client-logos/CSC-Icon.svg" },
+  { alt: "United Payments", src: "/images/client-logos/UnitedPayments-Icon.svg" },
+] as const;
+
 export interface ContactUsProps {
   backgroundImage?: {
     alt: string;
@@ -25,10 +32,6 @@ export interface ContactUsProps {
     opensModal?: boolean;
   };
   proofLabel?: string;
-  proofLogos?: readonly {
-    alt: string;
-    src: string;
-  }[];
   secondaryCta?: {
     href: string;
     label: string;
@@ -99,7 +102,6 @@ export const ContactUs = ({
   headingLines,
   primaryCta,
   proofLabel,
-  proofLogos,
   secondaryCta,
 }: ContactUsProps) => {
   const [pointerOffset, setPointerOffset] = useState({ x: 0, y: 0 });
@@ -278,8 +280,7 @@ export const ContactUs = ({
             ) : null}
           </motion.div>
 
-          {proofLogos && proofLogos.length > 0 ? (
-            <motion.div
+          <motion.div
               className="mt-12 flex items-center justify-center gap-4"
               custom={0.32}
               initial="hidden"
@@ -288,7 +289,7 @@ export const ContactUs = ({
               whileInView="visible"
             >
               <div className="flex -space-x-3">
-                {proofLogos.map((logo) => (
+                {PROOF_LOGOS.map((logo) => (
                   <div
                     className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
                     key={logo.alt}
@@ -307,7 +308,6 @@ export const ContactUs = ({
                 <p className="text-sm font-medium text-white/80">{proofLabel}</p>
               ) : null}
             </motion.div>
-          ) : null}
         </div>
       </div>
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />

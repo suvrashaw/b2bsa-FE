@@ -4,13 +4,13 @@
     {
       "icon": "Video",
       "id": "multi-camera-production",
-      "image": "/images/services/media-production-1.avif",
+      "image": "/images/home/services/experience-creation.avif",
       "label": "Multi-camera production setups"
     },
     {
       "icon": "Monitor",
       "id": "hd-4k-streaming",
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "label": "HD and 4K live streaming capabilities"
     },
     {

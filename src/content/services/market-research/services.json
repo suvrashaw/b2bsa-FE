@@ -8,7 +8,7 @@
       "href": "/services/market-research/data-augmentation-services",
       "icon": "PlusCircle",
       "id": "augmentation",
-      "image": "/images/services/database-research-1.avif",
+      "image": "/images/home/services/branding.avif",
       "title": "Data Augmentation Services"
     },
     {
@@ -17,7 +17,7 @@
       "href": "/services/market-research/data-validation-services",
       "icon": "CheckCircle",
       "id": "validation",
-      "image": "/images/services/database-research-revised.avif",
+      "image": "/images/home/services/database-and-market-research.avif",
       "title": "Data Validation Services"
     },
     {
@@ -26,7 +26,7 @@
       "href": "/services/hpmi/human-powered-market-intelligence",
       "icon": "Search",
       "id": "intelligence",
-      "image": "/images/services/market-intelligence.avif",
+      "image": "/images/home/services/unused-market-intelligence.avif",
       "title": "Human Powered Market Intelligence"
     }
   ]

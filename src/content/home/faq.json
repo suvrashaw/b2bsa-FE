@@ -21,7 +21,7 @@
     {
       "answer": "We deploy trained sales specialists to the floor to engage senior delegates, qualify them via BANT criteria, and deliver verified SQLs directly to your team.",
       "id": 4,
-      "image": "/images/services/sql-generation-revised.avif",
+      "image": "/images/home/services/active-prospecting.avif",
       "question": "How do you guarantee high-quality leads from an exhibition?"
     },
     {
@@ -39,13 +39,13 @@
     {
       "answer": "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
       "id": 7,
-      "image": "/images/services/performance-marketing-1.avif",
+      "image": "/images/home/services/digital-marketing.avif",
       "question": "How do you drive traffic to our booth before events?"
     },
     {
       "answer": "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year's worth of digital content to fuel your ongoing sales pipeline.",
       "id": 8,
-      "image": "/images/services/media-production-2.avif",
+      "image": "/images/home/services/corporate-media-production.avif",
       "question": "Can you help us repurpose the event for digital marketing?"
     }
   ],

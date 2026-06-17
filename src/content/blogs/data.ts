@@ -108,5 +108,18 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
   })
   .map(({ sortIndex: _sortIndex, ...post }) => post);
 
-export const HOME_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 3);
-export const RENTAL_BLOG_POSTS = SHARED_BLOG_POSTS.slice(0, 5);
+export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] => {
+  if (!tags || tags.length === 0) {
+    return SHARED_BLOG_POSTS.slice(0, minCount);
+  }
+
+  // Filter blogs that contain ANY of the requested tags
+  const exactMatches = SHARED_BLOG_POSTS.filter(blog => 
+    blog.tags?.some(tag => tags.includes(tag))
+  );
+
+  return exactMatches.slice(0, Math.max(exactMatches.length, minCount));
+};
+
+export const HOME_BLOG_POSTS = getBlogsByTags([], 5);
+export const RENTAL_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Rental"], 5);

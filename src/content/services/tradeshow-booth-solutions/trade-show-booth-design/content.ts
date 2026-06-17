@@ -18,7 +18,7 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
   ...DESIGNCONTACTCTA_DATA,
 };
 
-export { default as BOOTH_DESIGN_BLOGS_SECTION } from "./design-blogs-section.json";
+export { default as BOOTH_DESIGN_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_DESIGN_DELIVERABLES } from "./design-deliverables.json";
 export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./design-related-services.json";
 
