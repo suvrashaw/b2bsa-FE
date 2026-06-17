@@ -72,6 +72,7 @@ const IMAGE_EXIT = { opacity: 0 };
 const IMAGE_TRANSITION = { duration: 1.2 };
 
 const TITLE_LINE_LEFT_INITIAL = { opacity: 0, x: "-60px" };
+const TITLE_LINE_LEFT_ANIMATE = { opacity: 1, x: 0, y: 0 };
 
 const TitleLine = ({
   fromLeft,
@@ -89,7 +90,7 @@ const TitleLine = ({
   return (
     <span className={fromLeft ? "block" : "block overflow-hidden"}>
       <motion.span
-        animate={TITLE_LINE_ANIMATE}
+        animate={fromLeft ? TITLE_LINE_LEFT_ANIMATE : TITLE_LINE_ANIMATE}
         className="block"
         initial={fromLeft ? TITLE_LINE_LEFT_INITIAL : TITLE_LINE_INITIAL}
         transition={lineTransition}

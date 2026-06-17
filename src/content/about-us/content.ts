@@ -26,6 +26,7 @@ export const ABOUT_VALUES = {
 };
 
 export const ABOUT_CONTACTUS = CONTACTUS_DATA.cta;
+export const ABOUT_INQUIRY = CONTACTUS_DATA;
 
 export const ABOUT_PAGE = PAGE_DATA as MarketingPageDefinition;
 

@@ -7,7 +7,6 @@ import { EventsCard } from "@/components/items/EventsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardsGrid } from "@/components/sections/CardsGrid";
-import { ContactUs } from "@/components/sections/ContactUs";
 import { Culture } from "@/components/sections/Culture";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -16,7 +15,6 @@ import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
-  ABOUT_CONTACTUS,
   ABOUT_CORE_VALUES,
   ABOUT_FOUNDER_STORY,
   ABOUT_HERO,
@@ -74,9 +72,6 @@ const Page = () => {
       {/* Vision & Mission — left: Mission + Vision stacked, right: team images */}
       <section className="bg-brand-gray py-16 md:py-20">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-          <p className="mb-10 text-xs font-medium tracking-[0.25em] text-brand-charcoal/50 uppercase">
-            {ABOUT_VISION_MISSION.sectionLabel}
-          </p>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
             {/* Left: Mission + Vision */}
             <div>
@@ -214,11 +209,11 @@ const Page = () => {
       {/* Founder Story — smaller image */}
       <Spotlight
         align="left"
-        className="[&>div:first-child]:md:order-last"
         description={ABOUT_FOUNDER_STORY.story}
         id="founder"
         imageAlt={ABOUT_FOUNDER_STORY.image.alt}
-        imageContainerClassName="lg:max-w-[340px]"
+        imageContainerClassName="lg:max-w-[440px]"
+        imagePosition="left"
         imageUrl={ABOUT_FOUNDER_STORY.imageUrl}
         label={ABOUT_FOUNDER_STORY.sectionLabel}
         sectionClassName="scroll-mt-28"
@@ -227,11 +222,8 @@ const Page = () => {
         titleLine2={ABOUT_FOUNDER_STORY.nameLine2}
       />
 
-      {/* What We Believe In — without the zoomed parallax/quote section */}
-      <Culture data={ABOUT_VALUES} showParallax={false} />
-
-      {/* CTA */}
-      <ContactUs {...ABOUT_CONTACTUS} />
+      {/* What We Believe In */}
+      <Culture data={ABOUT_VALUES} />
 
       <Footer />
     </main>

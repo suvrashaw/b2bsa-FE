@@ -157,7 +157,7 @@ const SpotlightTextBlock = ({
   return (
     <div
       className={cn(
-        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col lg:pt-4",
+        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col",
         pairedWithMedia && "md:min-w-0 md:w-full md:max-w-[640px] lg:max-w-[720px]",
         !pairedWithMedia && "md:w-full md:max-w-[480px] lg:max-w-[560px]",
         align === "left" && "items-start text-left",
@@ -419,8 +419,8 @@ export const Spotlight = ({
   const usesMediaSplitLayout = !secondarySpotlight;
   const mediaGridClassName =
     imagePosition === "left"
-      ? "md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-start"
-      : "md:grid md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-start";
+      ? "md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center"
+      : "md:grid md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-center";
   let textBlockClassName: string | undefined;
   let imageBlockClassName: string | undefined;
 

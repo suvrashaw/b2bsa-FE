@@ -5,9 +5,11 @@ import type { ReactNode } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useRef } from "react";
 
 import { CultureReasonCard } from "@/components/items/CultureReasonCard";
+import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
@@ -94,12 +96,15 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
         })}
         {centerText && (
           <motion.div
-            className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/70 px-4 md:px-12 lg:px-24"
+            className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-8 bg-black/70 px-4 md:px-12 lg:px-24"
             style={textMotionStyle}
           >
-            <p className="max-w-4xl text-center text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
-              {centerText}
-            </p>
+            <h2 className="max-w-4xl text-center text-3xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+              Ready to Create an Unforgettable Event Experience?
+            </h2>
+            <Button asChild className="pointer-events-auto" size="lg" variant="primary">
+              <Link href="/contact-us">Let&apos;s talk</Link>
+            </Button>
           </motion.div>
         )}
       </div>
@@ -110,13 +115,6 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
 // ─── Culture ─────────────────────────────────────────────────────────────────
 
 const PARALLAX_IMAGES = [
-  { alt: "Global reach", src: "/media/home/why-choose-us/global_reach.avif" },
-  { alt: "Proven execution", src: "/media/home/why-choose-us/proven_execution.avif" },
-  { alt: "Strategic creativity", src: "/media/home/why-choose-us/strategic_creativity.avif" },
-  {
-    alt: "Technology-led delivery",
-    src: "/media/home/why-choose-us/technology_led_delivery.avif",
-  },
   { alt: "B2B Sales Arrow culture", src: "/media/about-us/culture/culture-1.avif" },
   { alt: "B2B Sales Arrow team", src: "/media/about-us/culture/culture-4.avif" },
   { alt: "B2B Sales Arrow office", src: "/media/about-us/culture/culture-5.avif" },
