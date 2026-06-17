@@ -10,7 +10,6 @@ export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
 
 export const EVENT_PHYSICAL_VIDEO_CONTACT_CTA = {
   ...PHYSICALVIDEOCONTACTCTA_DATA,
-  proofLogos: mediaProofLogos,
 };
 
 export { default as EVENT_PHYSICAL_VIDEO_BLOGS_SECTION } from "./blog.json";

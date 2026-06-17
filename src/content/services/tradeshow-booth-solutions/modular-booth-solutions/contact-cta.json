@@ -5,14 +5,17 @@
   },
   "badge": "Flexible Presence",
   "description": "One booth system. Every event. Any market.",
-  "headingLines": ["One Booth System.", "Every Event. Any Market."],
-  "primaryCta": { "href": "/contact-us", "label": "Get a Modular Booth Quote" },
-  "proofLabel": "Trusted by 500+ companies",
-  "proofLogos": [
-    { "alt": "Airtel", "src": "/images/client-logos/Airtel-Icon.svg" },
-    { "alt": "SingleStore", "src": "/images/client-logos/SingleStore-Icon.svg" },
-    { "alt": "CSC", "src": "/images/client-logos/CSC-Icon.svg" },
-    { "alt": "United Payments", "src": "/images/client-logos/UnitedPayments-Icon.svg" }
+  "headingLines": [
+    "One Booth System.",
+    "Every Event. Any Market."
   ],
-  "secondaryCta": { "href": "mailto:info@b2bsalesarrow.com", "label": "Contact Us" }
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Get a Modular Booth Quote"
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "secondaryCta": {
+    "href": "mailto:info@b2bsalesarrow.com",
+    "label": "Contact Us"
+  }
 }

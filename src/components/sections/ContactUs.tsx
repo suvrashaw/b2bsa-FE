@@ -281,33 +281,33 @@ export const ContactUs = ({
           </motion.div>
 
           <motion.div
-              className="mt-12 flex items-center justify-center gap-4"
-              custom={0.32}
-              initial="hidden"
-              variants={ctaRevealVariants}
-              viewport={ctaViewport}
-              whileInView="visible"
-            >
-              <div className="flex -space-x-3">
-                {PROOF_LOGOS.map((logo) => (
-                  <div
-                    className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
-                    key={logo.alt}
-                  >
-                    <Image
-                      alt={logo.alt}
-                      className="object-cover"
-                      height={40}
-                      src={logo.src}
-                      width={40}
-                    />
-                  </div>
-                ))}
-              </div>
-              {proofLabel ? (
-                <p className="text-sm font-medium text-white/80">{proofLabel}</p>
-              ) : null}
-            </motion.div>
+            className="mt-12 flex items-center justify-center gap-4"
+            custom={0.32}
+            initial="hidden"
+            variants={ctaRevealVariants}
+            viewport={ctaViewport}
+            whileInView="visible"
+          >
+            <div className="flex -space-x-3">
+              {PROOF_LOGOS.map((logo) => (
+                <div
+                  className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
+                  key={logo.alt}
+                >
+                  <Image
+                    alt={logo.alt}
+                    className="object-cover"
+                    height={40}
+                    src={logo.src}
+                    width={40}
+                  />
+                </div>
+              ))}
+            </div>
+            {proofLabel ? (
+              <p className="text-sm font-medium text-white/80">{proofLabel}</p>
+            ) : null}
+          </motion.div>
         </div>
       </div>
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />

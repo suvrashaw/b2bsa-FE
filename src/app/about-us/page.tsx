@@ -37,7 +37,6 @@ export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
 const ABOUT_IMAGES = ["/images/about/culture/culture-5.avif"];
 const ABOUT_PRIMARY_CTA = { href: ABOUT_HERO.primaryCtaHref, label: ABOUT_HERO.primaryCtaLabel };
-const ABOUT_PROOF_LOGOS = CLIENT_LOGOS.slice(0, 5);
 
 const Page = () => {
   return (
@@ -232,10 +231,7 @@ const Page = () => {
       <Culture data={ABOUT_VALUES} showParallax={false} />
 
       {/* CTA */}
-      <ContactUs
-        {...ABOUT_CONTACTUS}
-        proofLogos={ABOUT_PROOF_LOGOS}
-      />
+      <ContactUs {...ABOUT_CONTACTUS} />
 
       <Footer />
     </main>

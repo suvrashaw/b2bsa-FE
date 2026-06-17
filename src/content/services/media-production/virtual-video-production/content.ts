@@ -10,7 +10,6 @@ export const VIRTUAL_VIDEO_CASE_STUDIES = {
 
 export const VIRTUAL_VIDEO_CONTACT_CTA = {
   ...VIRTUALVIDEOCONTACTCTA_DATA,
-  proofLogos: mediaProofLogos,
 };
 
 export { default as VIRTUAL_VIDEO_BLOGS_SECTION } from "./blog.json";

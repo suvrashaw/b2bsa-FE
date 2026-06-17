@@ -393,11 +393,6 @@ const CONTACT_CINEMATIC_PROPS = {
   headingLines: ["Ready to Turn Your", "Next Event Into Pipeline?"] as [string, string],
   primaryCta: { href: "/contact-us", label: "Get a Custom Proposal", opensModal: false },
   proofLabel: "Trusted by global brands",
-  proofLogos: [
-    { alt: "Client A", src: IMG_EV1 },
-    { alt: "Client B", src: IMG_EV2 },
-    { alt: "Client C", src: IMG_EV3 },
-  ],
   secondaryCta: { href: "/case-studies", label: "See Case Studies" },
 };
 
@@ -931,7 +926,6 @@ const DemoPage = () => {
         headingLines={CONTACT_CINEMATIC_PROPS.headingLines}
         primaryCta={CONTACT_CINEMATIC_PROPS.primaryCta}
         proofLabel={CONTACT_CINEMATIC_PROPS.proofLabel}
-        proofLogos={CONTACT_CINEMATIC_PROPS.proofLogos}
         secondaryCta={CONTACT_CINEMATIC_PROPS.secondaryCta}
       />
 

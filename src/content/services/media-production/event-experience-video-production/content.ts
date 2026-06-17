@@ -10,7 +10,6 @@ export const EVENT_EXPERIENCE_VIDEO_CASE_STUDIES = {
 
 export const EVENT_EXPERIENCE_VIDEO_CONTACT_CTA = {
   ...EXPERIENCEVIDEOCONTACTCTA_DATA,
-  proofLogos: mediaProofLogos,
 };
 
 export { default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION } from "./blog.json";
