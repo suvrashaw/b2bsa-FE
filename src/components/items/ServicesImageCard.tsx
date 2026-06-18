@@ -7,54 +7,23 @@ import Link from "next/link";
 import { useMemo } from "react";
 
 interface ServicesImageCardProps {
+  image?: string;
   index: number;
   service: string;
 }
 
-const FALLBACK_IMAGES = [
-  "/media/events/event_other_1.avif",
-  "/media/events/event_other_2.avif",
-  "/media/events/event_other_3.avif",
-  "/media/events/event_other_4.avif",
-  "/media/case-studies/cs-new-3.avif",
-  "/media/case-studies/cs-new-10.avif",
-];
+const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
 const CARD_INITIAL = { opacity: 0, y: 16 };
 const CARD_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const CARD_VIEWPORT = { once: true };
 
-const getServiceImage = (serviceName: string, index: number): string => {
-  const n = serviceName.toLowerCase();
-  if (n.includes("booth") || n.includes("exhibit") || n.includes("stand")) {
-    return "/media/services/booth/booth-5.avif";
-  }
-  if (n.includes("prospect") || n.includes("sql") || n.includes("lead") || n.includes("floor")) {
-    return "/media/home/services/booth-design-and-production.avif";
-  }
-  if (n.includes("database") || n.includes("data augment") || n.includes("data valid")) {
-    return "/media/home/services/branding.avif";
-  }
-  if (n.includes("media") || n.includes("video") || n.includes("stream") || n.includes("av")) {
-    return "/media/home/services/experience-creation.avif";
-  }
-  if (
-    n.includes("market") ||
-    n.includes("digital") ||
-    n.includes("performance") ||
-    n.includes("social")
-  ) {
-    return "/media/home/services/digital-marketing.avif";
-  }
-  if (n.includes("research") || n.includes("intelligence") || n.includes("validation")) {
-    return "/media/home/services/unused-market-intelligence.avif";
-  }
-  return FALLBACK_IMAGES[index % FALLBACK_IMAGES.length] ?? FALLBACK_IMAGES[0]!;
-};
-
-export const ServicesImageCard = ({ index, service }: ServicesImageCardProps) => {
+export const ServicesImageCard = ({
+  image = PLACEHOLDER_IMAGE,
+  index,
+  service,
+}: ServicesImageCardProps) => {
   const transition = useMemo(() => ({ delay: index * 0.08, duration: 0.5 }), [index]);
-  const image = useMemo(() => getServiceImage(service, index), [service, index]);
   const number = String(index + 1).padStart(2, "0");
 
   return (

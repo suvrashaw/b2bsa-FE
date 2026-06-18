@@ -3,7 +3,7 @@
     {
       "answer": "We provide end-to-end solutions, from custom booth design and floor prospecting to digital marketing and market research, all engineered to drive measurable pipeline growth.",
       "id": 1,
-      "image": "/media/services/booth/booth-5.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "What services do you offer as an event partner?"
     },
     {
@@ -15,19 +15,19 @@
     {
       "answer": "Our team crafts premium booth designs tailored to your industry, fusing architectural creativity with sales psychology to convert floor traffic into qualified enterprise leads.",
       "id": 3,
-      "image": "/media/services/booth/booth-7.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "Can you build custom exhibits for our specific industry?"
     },
     {
       "answer": "We deploy trained sales specialists to the floor to engage senior delegates, qualify them via BANT criteria, and deliver verified SQLs directly to your team.",
       "id": 4,
-      "image": "/media/home/services/active-prospecting.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "How do you guarantee high-quality leads from an exhibition?"
     },
     {
       "answer": "We elevate your brand through curated experiences, including exclusive VIP dinners, premium corporate giveaways, and interactive booth activities designed for deep engagement.",
       "id": 5,
-      "image": "/media/events/event_other_1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "Do you help with attendee engagement and networking?"
     },
     {
@@ -39,13 +39,13 @@
     {
       "answer": "We execute targeted pre-event marketing using personalized email sequences and social media to fill your calendar with high-intent meetings before the show begins.",
       "id": 7,
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "How do you drive traffic to our booth before events?"
     },
     {
       "answer": "Our media team captures broadcast-grade video and 3D animations on-site, transforming your event into a year's worth of digital content to fuel your ongoing sales pipeline.",
       "id": 8,
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "question": "Can you help us repurpose the event for digital marketing?"
     }
   ],

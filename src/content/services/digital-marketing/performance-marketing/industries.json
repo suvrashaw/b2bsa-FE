@@ -3,49 +3,49 @@
     {
       "icon": "Monitor",
       "id": "technology-saas",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Technology & SaaS"
     },
     {
       "icon": "Landmark",
       "id": "fintech",
-      "image": "/media/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "FinTech"
     },
     {
       "icon": "Activity",
       "id": "healthcare-pharma",
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Healthcare & Pharma"
     },
     {
       "icon": "Zap",
       "id": "energy",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Energy & Infrastructure"
     },
     {
       "icon": "Wifi",
       "id": "telecommunications",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Telecommunications"
     },
     {
       "icon": "Briefcase",
       "id": "professional-services",
-      "image": "/media/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Professional Services"
     },
     {
       "icon": "DollarSign",
       "id": "financial-services",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Financial Services"
     },
     {
       "icon": "Building2",
       "id": "enterprise-software",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Enterprise Software"
     }
   ],

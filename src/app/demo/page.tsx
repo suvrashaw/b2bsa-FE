@@ -43,15 +43,15 @@ import { getDefaultEvents } from "@/content/tradeshow-calendar";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
-const IMG_WAF = "/media/case-studies/cs-new-2.avif";
-const IMG_SIBOS = "/media/case-studies/cs-new-1.avif";
-const IMG_SAP = "/media/case-studies/cs-10.avif";
-const IMG_DISTRIBUTECH = "/media/case-studies/cs-9.avif";
-const IMG_MONEY = "/media/case-studies/cs-new-1.avif";
-const IMG_EV1 = "/media/events/event_other_1.avif";
-const IMG_EV2 = "/media/events/event_other_2.avif";
-const IMG_EV3 = "/media/events/event_other_3.avif";
-const IMG_EV4 = "/media/events/event_other_4.avif";
+const IMG_WAF = "/media/home/hero/home_hero_bg.avif";
+const IMG_SIBOS = "/media/home/hero/home_hero_bg.avif";
+const IMG_SAP = "/media/home/hero/home_hero_bg.avif";
+const IMG_DISTRIBUTECH = "/media/home/hero/home_hero_bg.avif";
+const IMG_MONEY = "/media/home/hero/home_hero_bg.avif";
+const IMG_EV1 = "/media/home/hero/home_hero_bg.avif";
+const IMG_EV2 = "/media/home/hero/home_hero_bg.avif";
+const IMG_EV3 = "/media/home/hero/home_hero_bg.avif";
+const IMG_EV4 = "/media/home/hero/home_hero_bg.avif";
 
 // ─── Pricing ─────────────────────────────────────────────────────────────────
 
@@ -741,7 +741,7 @@ const DemoPage = () => {
       <Stats
         description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
         heading="Proven at Scale"
-        imageUrl="/media/contact/hero/ezgif-frame-017.jpg"
+        imageUrl="/media/home/hero/home_hero_bg.avif"
         stats={PROOF_STATS}
       />
 

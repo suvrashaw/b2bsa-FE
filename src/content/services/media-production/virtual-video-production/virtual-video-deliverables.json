@@ -9,7 +9,7 @@
       "description": "Produce engaging fireside chat sessions with professional speaker management, branded visuals, live moderation, and seamless virtual delivery.",
       "icon": "MessageSquare",
       "id": "fireside-chat-production",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Fireside Chat Production"
     },
     {
@@ -17,7 +17,7 @@
       "description": "Manage multi-speaker virtual panel discussions with audience interaction features, technical support, and smooth conversation flow.",
       "icon": "Users",
       "id": "panel-discussion-production",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Panel Discussion Production"
     },
     {
@@ -25,7 +25,7 @@
       "description": "Deliver professional webinars with branded presentations, audience engagement tools, speaker coordination, and reliable event streaming.",
       "icon": "MonitorPlay",
       "id": "webinar-production-services",
-      "image": "/media/home/services/experience-creation.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Webinar Production Services"
     },
     {
@@ -33,7 +33,7 @@
       "description": "Create polished executive conversations and leadership discussions optimized for virtual audiences and digital platforms.",
       "icon": "Mic",
       "id": "executive-virtual-interviews",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Executive Virtual Interviews"
     },
     {
@@ -41,7 +41,7 @@
       "description": "Connect physical and virtual audiences through hybrid event video production solutions designed for maximum audience engagement.",
       "icon": "Radio",
       "id": "hybrid-event-production",
-      "image": "/media/events/event_other_1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Hybrid Event Production"
     },
     {
@@ -49,7 +49,7 @@
       "description": "Enhance your online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
       "icon": "Palette",
       "id": "virtual-event-branding",
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Virtual Event Branding"
     }
   ]

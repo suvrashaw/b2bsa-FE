@@ -91,7 +91,7 @@
   "cta": {
     "backgroundImage": {
       "alt": "Contact",
-      "src": "/media/case-studies/cs-new-2.avif"
+      "src": "/media/home/hero/home_hero_bg.avif"
     },
     "description": "Tell us what you are trying to achieve. We will define the right path.",
     "headingLines": ["One conversation can clarify", "your entire growth strategy."],

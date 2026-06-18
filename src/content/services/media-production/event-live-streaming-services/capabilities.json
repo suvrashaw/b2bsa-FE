@@ -4,61 +4,61 @@
     {
       "icon": "Video",
       "id": "multi-camera-production",
-      "image": "/media/home/services/experience-creation.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Multi-camera production setups"
     },
     {
       "icon": "Monitor",
       "id": "hd-4k-streaming",
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "HD and 4K live streaming capabilities"
     },
     {
       "icon": "Mic",
       "id": "wireless-audio",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Wireless audio systems"
     },
     {
       "icon": "Lightbulb",
       "id": "professional-lighting",
-      "image": "/media/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Professional lighting setups"
     },
     {
       "icon": "Shuffle",
       "id": "live-switching",
-      "image": "/media/events/servicenow_2026.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live switching and video mixing"
     },
     {
       "icon": "Layers",
       "id": "live-graphics",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live graphics and branded overlays"
     },
     {
       "icon": "ShieldCheck",
       "id": "backup-streaming",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Backup internet and streaming redundancy"
     },
     {
       "icon": "BarChart3",
       "id": "audience-monitoring",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Real-time audience monitoring"
     },
     {
       "icon": "Users",
       "id": "production-support",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Onsite and remote production support"
     },
     {
       "icon": "Globe",
       "id": "multi-platform",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Streaming across multiple platforms simultaneously"
     }
   ],

@@ -61,7 +61,7 @@ const ParallaxItem = ({ alt, index, scale, src }: ParallaxItemProps) => {
           className="object-cover"
           fill
           sizes="25vw"
-          src={src || "/placeholder.svg"}
+          src={src || "/media/home/hero/home_hero_bg.avif"}
         />
       </div>
     </motion.div>
@@ -99,7 +99,7 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
             className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-8 bg-black/70 px-4 md:px-12 lg:px-24"
             style={textMotionStyle}
           >
-            <h2 className="max-w-4xl text-center text-3xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            <h2 className="max-w-4xl text-center text-3xl leading-tight font-bold text-white md:text-5xl lg:text-6xl">
               Ready to Create an Unforgettable Event Experience?
             </h2>
             <Button asChild className="pointer-events-auto" size="lg" variant="primary">
@@ -114,12 +114,6 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
 
 // ─── Culture ─────────────────────────────────────────────────────────────────
 
-const PARALLAX_IMAGES = [
-  { alt: "B2B Sales Arrow culture", src: "/media/about-us/culture/culture-1.avif" },
-  { alt: "B2B Sales Arrow team", src: "/media/about-us/culture/culture-4.avif" },
-  { alt: "B2B Sales Arrow office", src: "/media/about-us/culture/culture-5.avif" },
-];
-
 export interface CultureData {
   centerImage?: string;
   centerText?: string;
@@ -131,9 +125,11 @@ export interface CultureData {
 
 export const Culture = ({
   data,
+  parallaxImages: scopedParallaxImages = [],
   showParallax = true,
 }: {
   data: CultureData;
+  parallaxImages?: ParallaxImage[];
   showParallax?: boolean;
 }) => {
   const parallaxImages = [
@@ -141,7 +137,7 @@ export const Culture = ({
     ...data.reasons
       .map((r) => ({ alt: r.title, src: r.image }))
       .filter((img) => img.src !== data.centerImage),
-    ...PARALLAX_IMAGES,
+    ...scopedParallaxImages,
   ].slice(0, 7);
 
   return (

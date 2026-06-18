@@ -7,7 +7,7 @@
       "href": "/services/digital-marketing/seo-services",
       "icon": "Search",
       "id": "seo",
-      "image": "/media/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "SEO Services"
     },
     {
@@ -16,7 +16,7 @@
       "href": "/services/digital-marketing/performance-marketing",
       "icon": "Zap",
       "id": "paid",
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Performance Marketing"
     }
   ]

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
@@ -43,7 +43,13 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
             key={post.id}
           >
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-100">
-              <Image alt={post.title} className="object-cover" fill sizes="64px" src={post.image} />
+              <Image
+                alt={post.title}
+                className="object-cover"
+                fill
+                sizes="64px"
+                src={PLACEHOLDER_IMAGE}
+              />
             </div>
             <div className="min-w-0">
               <h3 className="line-clamp-2 text-sm leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">
@@ -304,10 +310,26 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
 const CTA_HEADING_LINES: [string, string] = ["Ready to Make Your", "Next Event Unforgettable?"];
 const CTA_PRIMARY = { href: "/contact-us", label: "Book a Consultation", opensModal: true };
 const CTA_SECONDARY = { href: "/case-studies", label: "See Our Work" };
+const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
 export const BlogPage = ({ post }: BlogPageProps) => {
   const blocks = post.body ?? [];
   const readTime = getReadTime(blocks);
+  const placeholderServiceItems = useMemo(
+    () =>
+      HOME_SERVICES_CONTENT.services
+        .slice(0, 5)
+        .map((item) => ({ ...item, image: PLACEHOLDER_IMAGE })),
+    []
+  );
+  const relatedPosts = useMemo(
+    () =>
+      SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((relatedPost) => ({
+        ...relatedPost,
+        image: PLACEHOLDER_IMAGE,
+      })),
+    [post.id]
+  );
   const faqItems = post.faqs?.map((faq, index) => ({
     answer: faq.answer,
     id: `${post.id}-faq-${index + 1}`,
@@ -383,7 +405,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         id="services"
         layout="carousel"
       >
-        {HOME_SERVICES_CONTENT.services.slice(0, 5).map((item, i) => (
+        {placeholderServiceItems.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.id} />
         ))}
       </Carousel>
@@ -408,7 +430,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         id="blogs"
         layout="carousel"
       >
-        {SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((post) => (
+        {relatedPosts.map((post) => (
           <BlogsCarouselCard key={post.id} post={post} />
         ))}
       </Carousel>

@@ -7,7 +7,7 @@
       "href": "/services/media-production/event-video-production",
       "icon": "Camera",
       "id": "event-video",
-      "image": "/media/events/event_other_1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Video Production"
     },
     {
@@ -16,7 +16,7 @@
       "href": "/services/media-production/corporate-video-production",
       "icon": "Clapperboard",
       "id": "corporate-video",
-      "image": "/media/home/services/experience-creation.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Video Production"
     },
     {
@@ -25,7 +25,7 @@
       "href": "/services/media-production/event-live-streaming-services",
       "icon": "Radio",
       "id": "live-streaming",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Live Streaming Services"
     }
   ]

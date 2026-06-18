@@ -73,12 +73,14 @@ const EventDetails = ({
   eventCountry,
   eventCtaHref,
   eventDate,
+  eventTitle,
   handleLinkClick,
 }: {
   ctaLabel: string;
   eventCountry?: string;
   eventCtaHref: string;
   eventDate?: string;
+  eventTitle: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
 }) => (
   <>
@@ -109,7 +111,11 @@ const EventDetails = ({
       size="sm"
       variant="primary"
     >
-      <Link href={eventCtaHref} onClick={handleLinkClick}>
+      <Link
+        aria-label={`${ctaLabel} for ${eventTitle}`}
+        href={eventCtaHref}
+        onClick={handleLinkClick}
+      >
         {ctaLabel} <ArrowUpRight className="h-4 w-4" />
       </Link>
     </Button>
@@ -118,6 +124,7 @@ const EventDetails = ({
 
 const EventDetailsPanel = ({
   ctaLabel,
+  event,
   eventCountry,
   eventCtaHref,
   eventDate,
@@ -129,6 +136,7 @@ const EventDetailsPanel = ({
       eventCountry={eventCountry}
       eventCtaHref={eventCtaHref}
       eventDate={eventDate}
+      eventTitle={event.title}
       handleLinkClick={handleLinkClick}
     />
   </div>

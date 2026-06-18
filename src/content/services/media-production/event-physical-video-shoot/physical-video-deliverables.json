@@ -7,7 +7,7 @@
       "description": "Capture meaningful conversations with speakers, attendees, partners, or internal teams to create authentic event-driven content.",
       "icon": "Mic",
       "id": "event-interview-videos",
-      "image": "https://images.unsplash.com/photo-1559523161-0fc0d8b814f2?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Interview Videos"
     },
     {
@@ -15,7 +15,7 @@
       "description": "Record on-site customer feedback and success stories that build trust and strengthen your brand credibility.",
       "icon": "MessageSquare",
       "id": "client-testimonial-shoots",
-      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Client Testimonial Shoots"
     },
     {
@@ -23,7 +23,7 @@
       "description": "Film short expert-led insights from founders, executives, or speakers to position your brand as an industry authority.",
       "icon": "Users2",
       "id": "thought-leadership-video-bytes",
-      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Thought Leadership Video Bytes"
     },
     {
@@ -31,7 +31,7 @@
       "description": "Showcase keynote moments, impactful quotes, and presentation snippets that can be repurposed for marketing and post-event engagement.",
       "icon": "Presentation",
       "id": "speaker-highlight-videos",
-      "image": "https://images.unsplash.com/photo-1475721027187-40247339488a?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Speaker Highlight Videos"
     },
     {
@@ -39,7 +39,7 @@
       "description": "Turn your event into a polished summary video that captures the atmosphere, audience response, and key moments in one compelling story.",
       "icon": "Film",
       "id": "event-recap-videos",
-      "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Recap Videos"
     },
     {
@@ -47,7 +47,7 @@
       "description": "Document branded booths, installations, activations, and interactions to highlight how your audience experienced the event.",
       "icon": "Camera",
       "id": "brand-experience-coverage",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Brand Experience Coverage"
     },
     {
@@ -55,7 +55,7 @@
       "description": "Professionally record panel sessions and expert discussions for future use across social media, internal sharing, or gated content.",
       "icon": "Users",
       "id": "panel-discussion-coverage",
-      "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Panel Discussion Coverage"
     },
     {
@@ -63,7 +63,7 @@
       "description": "Capture on-site leadership messages, welcome notes, or post-event reflections that add a strong brand voice to your event communication.",
       "icon": "UserPlus",
       "id": "leadership-message-videos",
-      "image": "https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Leadership Message Videos"
     },
     {
@@ -71,7 +71,7 @@
       "description": "Create short-form event videos designed for quick sharing across LinkedIn, Instagram, YouTube, and other digital channels.",
       "icon": "Share2",
       "id": "social-media-event-clips",
-      "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Social Media Event Clips"
     },
     {
@@ -79,7 +79,7 @@
       "description": "Film candid preparation moments, team coordination, and production details to add authenticity and humanize your event story.",
       "icon": "Sparkles",
       "id": "behind-the-scenes-event-content",
-      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Behind-the-Scenes Event Content"
     }
   ]

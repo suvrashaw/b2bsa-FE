@@ -7,7 +7,7 @@
       "description": "Crawlability, Core Web Vitals, broken links, redirects, schema markup, sitemaps, and page speed — identifying and fixing technical issues that prevent proper indexing.",
       "icon": "Search",
       "id": "technical-seo-audit",
-      "image": "/media/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Technical SEO Audit & Remediation"
     },
     {
@@ -15,7 +15,7 @@
       "description": "Identifying terms enterprise buyers use across awareness, consideration, comparison, and purchase stages — mapped to intent, page type, funnel stage, and commercial value.",
       "icon": "Target",
       "id": "keyword-research",
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Keyword Research & Search Intent Mapping"
     },
     {
@@ -23,7 +23,7 @@
       "description": "Titles, meta descriptions, headings, URLs, internal linking, schema markup, and body copy — optimised for both search engines and buyers.",
       "icon": "FileText",
       "id": "on-page-seo",
-      "image": "/media/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "On-Page SEO Optimisation"
     },
     {
@@ -31,7 +31,7 @@
       "description": "Pillar pages, service pages, cluster articles, FAQs, and conversion-focused copy — building topical authority and converting qualified visitors.",
       "icon": "BookOpen",
       "id": "content-strategy",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Content Strategy & SEO Copywriting"
     },
     {
@@ -39,7 +39,7 @@
       "description": "Ethical link acquisition through digital PR, content partnerships, and industry mentions — quality, relevance, and long-term domain credibility.",
       "icon": "Link",
       "id": "authority-link-building",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Authority Link Building"
     },
     {
@@ -47,7 +47,7 @@
       "description": "Hreflang implementation, regional landing pages, and market-specific keyword strategy for brands operating across multiple geographies.",
       "icon": "Globe",
       "id": "international-seo",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "International & Local SEO"
     },
     {
@@ -55,7 +55,7 @@
       "description": "Rankings, organic traffic, conversions, qualified leads, and pipeline influence — reported with clear commercial context.",
       "icon": "BarChart3",
       "id": "seo-reporting",
-      "image": "/media/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "SEO Reporting & KPI Dashboards"
     }
   ]

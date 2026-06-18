@@ -4,25 +4,25 @@
     {
       "href": "/services/tradeshow-booth-solutions/trade-show-booth-design",
       "id": "trade-show-booth-design",
-      "image": "/media/services/booth/booth-10.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade show booth design"
     },
     {
       "href": "/services/global-event-solutions",
       "id": "global-event-solutions",
-      "image": "/media/services/booth/booth-7.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Global event solutions"
     },
     {
       "href": "/services/media-production",
       "id": "media-production-services",
-      "image": "/media/home/services/experience-creation.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Media production services"
     },
     {
       "href": "/services/global-event-solutions/event-branding-solutions",
       "id": "event-branding",
-      "image": "/media/events/event_other_4.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Branding"
     }
   ]

@@ -33,7 +33,7 @@ import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
-const ABOUT_IMAGES = ["/media/about-us/culture/culture-5.avif"];
+const ABOUT_IMAGES = [ABOUT_HERO.image.src];
 const ABOUT_PRIMARY_CTA = { href: ABOUT_HERO.primaryCtaHref, label: ABOUT_HERO.primaryCtaLabel };
 
 const Page = () => {

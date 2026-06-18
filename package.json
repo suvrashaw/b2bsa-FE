@@ -22,7 +22,7 @@
     "test:ui": "playwright test --config configs/playwright.config.ts --ui"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.3",
+    "@qwik.dev/partytown": "^0.14.0",
     "@radix-ui/react-slot": "^1.2.5",
     "@vercel/og": "^0.11.1",
     "class-variance-authority": "^0.7.1",
@@ -123,5 +123,10 @@
       "**/public/**",
       "**/reports/**"
     ]
+  },
+  "overrides": {
+    "postcss": "^8.5.15",
+    "d3-color": "^3.1.0",
+    "@opentelemetry/core": "^2.8.0"
   }
 }

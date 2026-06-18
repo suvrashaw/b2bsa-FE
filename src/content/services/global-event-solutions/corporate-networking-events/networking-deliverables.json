@@ -6,7 +6,7 @@
       "description": "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
       "icon": "Users",
       "id": "networking-events",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Networking Events"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
-      "image": "/media/events/event_other_3.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Networking Reception Solutions"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Deliver premium executive networking experiences for leadership summits, investor meetings, and C-level business gatherings.",
       "icon": "Target",
       "id": "executive-networking",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Executive Networking Events"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Manage VIP guest experiences with personalized hospitality, attendee coordination, and premium networking environments.",
       "icon": "Zap",
       "id": "vip-networking",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "VIP Networking Event Solutions"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
       "icon": "MapPin",
       "id": "networking-dinners",
-      "image": "/media/events/event_other_4.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Networking Dinner Event Solutions"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
       "icon": "Globe2",
       "id": "b2b-networking",
-      "image": "/media/services/booth/booth-5.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "B2B Networking Event Services"
     }
   ]

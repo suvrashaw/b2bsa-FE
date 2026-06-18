@@ -4,37 +4,37 @@
     {
       "description": "We manage planning, coordination, transportation, setup, and onsite operational support for smooth event execution.",
       "icon": "Globe2",
-      "image": "/media/home/why-choose-us/proven_execution.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "End-to-End Logistics Support"
     },
     {
       "description": "Our team understands the operational requirements of conferences, exhibitions, trade shows, and executive corporate events.",
       "icon": "Award",
-      "image": "/media/events/adobe_summit_2026.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Event Expertise"
     },
     {
       "description": "We ensure timely communication, vendor management, and operational efficiency across all event activities.",
       "icon": "CheckCircle",
-      "image": "/media/events/event_other_4.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Reliable Event Coordination"
     },
     {
       "description": "We provide flexible event logistics support for both small corporate gatherings and large-scale international exhibitions.",
       "icon": "TrendingUp",
-      "image": "/media/events/event_other_3.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Scalable Logistics Solutions"
     },
     {
       "description": "Our onsite teams help manage setup supervision, attendee coordination, and event execution support efficiently.",
       "icon": "Target",
-      "image": "/media/services/booth/booth-6.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Onsite Operational Management"
     },
     {
       "description": "We support event logistics operations across major global conferences, trade shows, and business events.",
       "icon": "Users2",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Global Event Experience"
     }
   ]

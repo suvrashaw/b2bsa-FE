@@ -34,6 +34,7 @@ export interface HeroProps {
 const CINEMATIC_VEIL_STYLE = {
   background: "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
 };
+const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 const H1_STYLE = {
   color: "rgba(255, 255, 255, 0.98)",
   textShadow: "0 20px 50px rgba(4, 9, 15, 0.24)",
@@ -199,6 +200,7 @@ export const Hero = ({
         >
           {videoWebm && <source src={videoWebm} type="video/webm" />}
           <source src={effectiveVideoUrl} type="video/mp4" />
+          <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
         </video>
         {hasMobileVideo && (
           <video
@@ -211,6 +213,13 @@ export const Hero = ({
           >
             {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
             <source src={mobileVideoUrl!} type="video/mp4" />
+            <track
+              default
+              kind="captions"
+              label="English"
+              src="data:text/vtt,WEBVTT"
+              srcLang="en"
+            />
           </video>
         )}
       </>
@@ -225,7 +234,9 @@ export const Hero = ({
         playsInline
         poster={poster ?? images?.[0]}
         src={videoSrc}
-      />
+      >
+        <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
+      </video>
     );
   } else {
     background = (
@@ -239,7 +250,13 @@ export const Hero = ({
           style={imageOpacityStyle}
           transition={IMAGE_TRANSITION}
         >
-          <Image alt="" className="object-cover" fill priority src={images?.[currentIndex] ?? ""} />
+          <Image
+            alt=""
+            className="object-cover"
+            fill
+            priority
+            src={images?.[currentIndex] || PLACEHOLDER_IMAGE}
+          />
         </motion.div>
       </AnimatePresence>
     );

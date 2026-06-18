@@ -37,16 +37,16 @@ const deliverableProps = {
   showCommonCta: true,
 };
 const capabilityAssets = [
-  { icon: "Users", image: "/media/services/booth/booth-5.avif" },
-  { icon: "CalendarCheck", image: "/media/events/event_other_1.avif" },
-  { icon: "Sparkles", image: "/media/services/booth/booth-6.avif" },
-  { icon: "MessageSquare", image: "/media/events/event_other_2.avif" },
-  { icon: "ClipboardList", image: "/media/services/booth/booth-7.avif" },
-  { icon: "Globe2", image: "/media/home/why-choose-us/global_reach.avif" },
-  { icon: "Presentation", image: "/media/events/event_other_3.avif" },
-  { icon: "Award", image: "/media/events/event_other_4.avif" },
-  { icon: "Users2", image: "/media/services/booth/booth-5.avif" },
-  { icon: "Rocket", image: "/media/events/event_other_1.avif" },
+  { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "CalendarCheck", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Sparkles", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "MessageSquare", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "ClipboardList", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Globe2", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Presentation", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Award", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Users2", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Rocket", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
@@ -55,7 +55,7 @@ const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) 
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/services/booth/booth-5.avif",
+  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
   label: phase.title,
 }));
 

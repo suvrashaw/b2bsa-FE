@@ -16,25 +16,25 @@
     {
       "description": "We deliver broadcast-quality virtual experiences with polished visuals, branded graphics, and seamless technical execution.",
       "icon": "TrendingUp",
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Professional Production Quality"
     },
     {
       "description": "From speaker onboarding to live troubleshooting, our team ensures uninterrupted virtual event delivery.",
       "icon": "Users2",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Reliable Technical Support"
     },
     {
       "description": "We help brands improve audience participation through interactive engagement tools, Q&A management, and virtual networking features.",
       "icon": "TrendingUp",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Interactive Audience Experiences"
     },
     {
       "description": "We provide scalable virtual event production services tailored to webinars, panel discussions, hybrid events, and executive sessions.",
       "icon": "Globe2",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Flexible Virtual & Hybrid Solutions"
     }
   ]

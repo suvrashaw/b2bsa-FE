@@ -1,4 +1,4 @@
-declare module "@builder.io/partytown/react" {
+declare module "@qwik.dev/partytown/react" {
   import type { ComponentType } from "react";
 
   export interface PartytownProps {
@@ -10,7 +10,7 @@ declare module "@builder.io/partytown/react" {
   export const Partytown: ComponentType<PartytownProps>;
 }
 
-declare module "@builder.io/partytown/integration" {
+declare module "@qwik.dev/partytown/integration" {
   export interface PartytownConfig {
     debug?: boolean;
     forward?: string[];

@@ -7,7 +7,7 @@
       "description": "High-intent campaigns around the terms enterprise buyers use when actively comparing vendors — structured for lead quality and cost per qualified opportunity.",
       "icon": "Search",
       "id": "google-search-ppc",
-      "image": "/media/home/services/unused-performance-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Google Search — PPC"
     },
     {
@@ -15,7 +15,7 @@
       "description": "Awareness and retargeting campaigns keeping your brand visible across relevant digital environments.",
       "icon": "Monitor",
       "id": "google-display-programmatic",
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Google Display & Programmatic"
     },
     {
@@ -23,7 +23,7 @@
       "description": "Video campaigns for awareness, education, product storytelling, and demand generation.",
       "icon": "Video",
       "id": "youtube-advertising",
-      "image": "/media/home/why-choose-us/strategic_creativity.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "YouTube Advertising"
     },
     {
@@ -31,7 +31,7 @@
       "description": "Keeping your brand in front of target accounts and decision-makers who have already shown interest — moving prospects from first touch to deeper consideration.",
       "icon": "Target",
       "id": "retargeting-abm",
-      "image": "/media/home/why-choose-us/technology_led_delivery.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Retargeting & Account-Based Advertising"
     },
     {
@@ -39,7 +39,7 @@
       "description": "Supplementary paid search for desktop-heavy B2B buyer segments where Microsoft's search share is meaningful.",
       "icon": "BarChart3",
       "id": "microsoft-ads",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Microsoft Ads"
     }
   ]

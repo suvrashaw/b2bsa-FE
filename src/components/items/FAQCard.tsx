@@ -4,57 +4,7 @@ import type { ReactNode } from "react";
 
 import Image from "next/image";
 
-/** Static pool of images drawn from services / events / booth / home / about. */
-const FAQ_IMAGES: string[] = [
-  "/media/about-us/culture/culture-1.avif",
-  "/media/about-us/culture/culture-4.avif",
-  "/media/about-us/culture/culture-5.avif",
-  "/media/about-us/hero.avif",
-  "/media/about-us/leadership/paras-sir.avif",
-  "/media/about-us/values/accountability.avif",
-  "/media/about-us/values/global-reach.avif",
-  "/media/about-us/values/partnership.avif",
-  "/media/about-us/values/precision.avif",
-  "/media/booth/10x10.avif",
-  "/media/booth/10x20.avif",
-  "/media/booth/10x30.avif",
-  "/media/booth/20x20.avif",
-  "/media/booth/20x30.avif",
-  "/media/booth/20x40.avif",
-  "/media/booth/30x30.avif",
-  "/media/booth/30x40.avif",
-  "/media/booth/40x40.avif",
-  "/media/events/adobe_summit_2026.avif",
-  "/media/events/event_other_1.avif",
-  "/media/events/event_other_2.avif",
-  "/media/events/event_other_3.avif",
-  "/media/events/event_other_4.avif",
-  "/media/events/inma_2026.avif",
-  "/media/events/servicenow_2026.avif",
-  "/media/home/hero/home_hero_bg.avif",
-  "/media/home/hero/home_hero_bg_2.avif",
-
-  "/media/home/why-choose-us/global_reach.avif",
-  "/media/home/why-choose-us/proven_execution.avif",
-  "/media/home/why-choose-us/strategic_creativity.avif",
-  "/media/home/why-choose-us/technology_led_delivery.avif",
-  "/media/services/booth/booth-10.avif",
-  "/media/services/booth/booth-5.avif",
-  "/media/services/booth/booth-6.avif",
-  "/media/services/booth/booth-7.avif",
-  "/media/services/booth/booth-8.avif",
-  "/media/services/booth/booth-9.avif",
-  "/media/home/services/branding.avif",
-  "/media/home/services/database-and-market-research.avif",
-  "/media/home/services/unused-market-intelligence.avif",
-  "/media/home/services/experience-creation.avif",
-  "/media/home/services/corporate-media-production.avif",
-  "/media/home/services/digital-marketing.avif",
-  "/media/home/services/unused-performance-marketing.avif",
-  "/media/home/services/booth-design-and-production.avif",
-  "/media/home/services/networking.avif",
-  "/media/home/services/active-prospecting.avif",
-];
+const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
 export interface FAQCardProps {
   answer: React.ReactNode | string;
@@ -64,18 +14,6 @@ export interface FAQCardProps {
   question: string;
 }
 
-/**
- * Returns a stable index into FAQ_IMAGES derived from the question text,
- * so the same card always gets the same image regardless of render order.
- */
-const seedIndexFromQuestion = (question: string): number => {
-  let sum = 0;
-  for (let i = 0; i < question.length; i++) {
-    sum += question.codePointAt(i) ?? 0;
-  }
-  return sum % FAQ_IMAGES.length;
-};
-
 export const FAQCard = ({
   answer,
   icon: _icon,
@@ -83,7 +21,7 @@ export const FAQCard = ({
   layoutMode: _layoutMode = "carousel",
   question,
 }: FAQCardProps) => {
-  const resolvedImage = image ?? FAQ_IMAGES[seedIndexFromQuestion(question)];
+  const resolvedImage = image ?? PLACEHOLDER_IMAGE;
 
   return (
     <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">

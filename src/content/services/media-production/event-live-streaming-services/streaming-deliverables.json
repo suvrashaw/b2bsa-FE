@@ -6,7 +6,7 @@
       "description": "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       "icon": "Video",
       "id": "multi-camera",
-      "image": "/media/home/services/experience-creation.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Multi-Camera Live Production"
     },
     {
@@ -14,7 +14,7 @@
       "description": "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
       "icon": "Globe",
       "id": "platform",
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Platform Management"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Speaker names, session titles, sponsor overlays, and live branded transitions.",
       "icon": "Layers",
       "id": "graphics",
-      "image": "/media/events/servicenow_2026.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Real-Time Graphics and Lower Thirds"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
       "icon": "MessageSquare",
       "id": "engagement",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Live Audience Engagement"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       "icon": "Archive",
       "id": "archive",
-      "image": "/media/home/services/corporate-media-production.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Recording and Archive Delivery"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
       "icon": "ShieldCheck",
       "id": "support",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Global Technical Support"
     }
   ]

@@ -6,7 +6,7 @@
       "description": "Our event hostesses assist with attendee check-ins, badge distribution, visitor guidance, and registration support for smooth event entry experiences.",
       "icon": "Users",
       "id": "registration",
-      "image": "/media/events/event_other_1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Registration Desk Management"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Increase booth interactions with professional hostesses who welcome visitors, engage attendees, support lead generation, and represent your brand professionally.",
       "icon": "Target",
       "id": "booth-engagement",
-      "image": "/media/services/booth/booth-5.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Engagement"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Provide premium experiences for executives, speakers, sponsors, and VIP guests with dedicated event hostess support.",
       "icon": "Sparkles",
       "id": "vip-coordination",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "VIP Guest Coordination"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Manage audience flow, session coordination, guest assistance, and attendee communication during conferences and networking events.",
       "icon": "Mic",
       "id": "conference-support",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Conference & Networking Support"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Enhance customer interaction and event engagement during product launches, brand activations, and experiential marketing events.",
       "icon": "Zap",
       "id": "product-launch",
-      "image": "/media/events/event_other_3.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Product Launch Event Support"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Support international audiences with multilingual event hostesses for global trade shows and corporate events.",
       "icon": "Globe2",
       "id": "multilingual",
-      "image": "/media/home/why-choose-us/global_reach.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Multilingual Event Staffing"
     }
   ]

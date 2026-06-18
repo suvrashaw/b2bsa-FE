@@ -24,7 +24,10 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <Header darkBackground />
-      <CinematicSequence />
+      <CinematicSequence
+        frameCount={60}
+        frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg"
+      />
       <ClientLogos />
       <ContactUsForm {...CONTACT_FORM} />
       <Timeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />

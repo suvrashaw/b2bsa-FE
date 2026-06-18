@@ -32,16 +32,16 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
 const capabilityAssets = [
-  { icon: "Palette", image: "/media/events/event_other_1.avif" },
-  { icon: "PenTool", image: "/media/events/event_other_2.avif" },
-  { icon: "Monitor", image: "/media/events/event_other_3.avif" },
-  { icon: "Printer", image: "/media/events/event_other_4.avif" },
-  { icon: "Image", image: "/media/services/booth/booth-5.avif" },
-  { icon: "Layers", image: "/media/services/booth/booth-6.avif" },
-  { icon: "Layout", image: "/media/services/booth/booth-7.avif" },
-  { icon: "Sparkles", image: "/media/home/why-choose-us/global_reach.avif" },
-  { icon: "Type", image: "/media/home/why-choose-us/proven_execution.avif" },
-  { icon: "Fingerprint", image: "/media/home/why-choose-us/strategic_creativity.avif" },
+  { icon: "Palette", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "PenTool", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Monitor", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Printer", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Image", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Layers", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Layout", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Sparkles", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Type", image: "/media/home/hero/home_hero_bg.avif" },
+  { icon: "Fingerprint", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
 const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
@@ -51,7 +51,7 @@ const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index)
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/events/event_other_1.avif",
+  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
   label: phase.title,
 }));
 

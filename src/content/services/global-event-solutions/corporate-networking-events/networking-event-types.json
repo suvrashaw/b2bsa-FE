@@ -6,7 +6,7 @@
       "description": "Professional networking experiences designed for leadership teams, investors, partners, and C-level executives.",
       "icon": "Users2",
       "id": "executive-networking-events",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Executive Networking Events"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Corporate networking receptions that encourage business discussions, relationship building, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
-      "image": "/media/events/event_other_3.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Networking Receptions"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Exclusive hospitality events for clients, executives, sponsors, and strategic business partners.",
       "icon": "Star",
       "id": "vip-hospitality-events",
-      "image": "",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "VIP Hospitality Events"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Professional networking dinner event solutions focused on client engagement and relationship development.",
       "icon": "UtensilsCrossed",
       "id": "business-networking-dinners",
-      "image": "/media/events/event_other_4.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Business Networking Dinners"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Networking support for conferences, summits, exhibitions, and trade shows.",
       "icon": "Monitor",
       "id": "conference-networking-sessions",
-      "image": "/media/events/event_other_2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Conference Networking Sessions"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Organized networking experiences for partner engagement, client appreciation, and business collaboration opportunities.",
       "icon": "Handshake",
       "id": "partner-client-meetups",
-      "image": "/media/events/event_other_1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Partner & Client Meetups"
     },
     {
@@ -54,7 +54,7 @@
       "description": "Networking event support for trade shows and exhibitions with audience engagement and hospitality coordination.",
       "icon": "Store",
       "id": "trade-show-networking-events",
-      "image": "/media/case-studies/cs-3.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Networking Events"
     },
     {
@@ -62,7 +62,7 @@
       "description": "Premium hospitality experiences for executive meetings, business gatherings, and relationship-building events.",
       "icon": "Building2",
       "id": "corporate-hospitality-events",
-      "image": "/media/case-studies/cs-4.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Hospitality Events"
     }
   ]

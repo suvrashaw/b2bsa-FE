@@ -7,7 +7,6 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import BLOGS_DATA from "./blogs.json";
 import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";
-import CLIENTLOGOS_DATA from "./client-logos.json";
 import CONTACTCONTENT_DATA from "./contactus.json";
 import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
@@ -65,12 +64,6 @@ export interface CinematicSequenceContent {
   frameUrls?: string[];
   frameUrlTemplate?: string;
   loadingText: string;
-}
-
-export interface ClientLogoItem {
-  alt: string;
-  id: string;
-  src: string;
 }
 
 export interface ContactContent {
@@ -240,8 +233,6 @@ interface UpcomingEventItem {
 
 export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
   CINEMATICSEQUENCECONTENT_DATA;
-
-export const HOME_CLIENT_LOGOS: ClientLogoItem[] = CLIENTLOGOS_DATA;
 
 export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
 

@@ -20,6 +20,7 @@ const METADATA_LABELS = ["Client", "Event", "Location"] as const;
 const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event program?"];
 const CINEMATIC_PRIMARY = { href: "/contact-us", label: "Start a Conversation" } as const;
 const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
+const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
 interface CaseStudyPageProps {
   study: CaseStudyDetail;
@@ -37,10 +38,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     [study.client, study.event, study.location]
   );
 
-  const cinematicBg = useMemo(
-    () => ({ alt: study.title, src: study.image }),
-    [study.title, study.image]
-  );
+  const cinematicBg = useMemo(() => ({ alt: study.title, src: PLACEHOLDER_IMAGE }), [study.title]);
 
   const challengeSecondary = useMemo(
     () => ({

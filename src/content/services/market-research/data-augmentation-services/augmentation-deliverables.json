@@ -6,7 +6,7 @@
       "description": "Verified job title, direct business email, LinkedIn profile URL, direct phone number where available, department, seniority level, and buying committee relevance.",
       "icon": "UserCheck",
       "id": "contact-level",
-      "image": "/media/services/data/data-1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Contact-Level Enrichment"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Revenue range, employee count, industry classification, headquarters location, technology stack, funding signals, expansion indicators, and hiring activity.",
       "icon": "Building2",
       "id": "account-level",
-      "image": "/media/services/data/data-2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Account-Level Enrichment"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Content engagement signals, solution research activity, competitor comparison behaviour, event participation data, and category interest indicators.",
       "icon": "Target",
       "id": "intent-data",
-      "image": "/media/services/data/data-1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Intent Data"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.",
       "icon": "Settings",
       "id": "custom-fields",
-      "image": "/media/services/data/data-2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Custom Fields"
     }
   ]

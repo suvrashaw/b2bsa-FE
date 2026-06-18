@@ -1,5 +1,4 @@
-import { partytownSnippet } from "@builder.io/partytown/integration";
-import Script from "next/script";
+import { Partytown } from "@qwik.dev/partytown/react";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -12,10 +11,6 @@ const GA_INLINE_SCRIPT = `
   window.gtag('config', '${gaId}', { send_page_view: true });
 `;
 
-const PARTYTOWN_SNIPPET_HTML = {
-  __html: partytownSnippet({ debug: false, forward: PARTYTOWN_FORWARD }),
-};
-
 const GA_INLINE_SCRIPT_HTML = {
   __html: GA_INLINE_SCRIPT,
 };
@@ -23,23 +18,19 @@ const GA_INLINE_SCRIPT_HTML = {
 export const PartytownScripts = () => {
   return (
     <>
-      <Script
-        dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML}
-        id="partytown-snippet"
-        strategy="beforeInteractive"
-      />
+      <Partytown debug={false} forward={PARTYTOWN_FORWARD} />
       {gaId ? (
         <>
-          <Script
+          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+          <script
             id="google-analytics"
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="lazyOnload"
             type="text/partytown"
           />
-          <Script
+          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+          <script
             dangerouslySetInnerHTML={GA_INLINE_SCRIPT_HTML}
             id="google-analytics-inline"
-            strategy="afterInteractive"
             type="text/partytown"
           />
         </>

@@ -6,7 +6,7 @@
       "description": "Analysing your competitive environment — positioning, audiences, messaging, strategic gaps, and where your brand can exploit market whitespace.",
       "icon": "Map",
       "id": "competitor-analysis",
-      "image": "/media/services/data/data-1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Competitor Analysis and Landscape Mapping"
     },
     {
@@ -14,7 +14,7 @@
       "description": "How buyers in your category discover, evaluate, compare, and choose solutions — buying triggers, objections, decision criteria, and content preferences at each stage.",
       "icon": "UserSearch",
       "id": "buyer-behaviour",
-      "image": "/media/services/data/data-2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Buyer Behaviour and Purchase Journey Research"
     },
     {
@@ -22,7 +22,7 @@
       "description": "Estimating market size and structure by segment, geography, industry, and account type for prioritisation, investment planning, and board communication.",
       "icon": "PieChart",
       "id": "tam-analysis",
-      "image": "/media/services/data/data-1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Total Addressable Market (TAM) Analysis"
     },
     {
@@ -30,7 +30,7 @@
       "description": "Demand potential, competitor presence, buyer readiness, regulatory context, pricing expectations, and adoption barriers before committing a budget to a new market.",
       "icon": "Globe2",
       "id": "market-entry",
-      "image": "/media/services/data/data-2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Market Entry Feasibility Studies"
     },
     {
@@ -38,7 +38,7 @@
       "description": "Structured interviews revealing why deals are won, lost, delayed, or displaced. Win/loss analysis is one of the highest-ROI research investments available to B2B enterprise brands.",
       "icon": "Trophy",
       "id": "win-loss",
-      "image": "/media/services/data/data-1.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Win/Loss Interview Programs"
     },
     {
@@ -46,7 +46,7 @@
       "description": "Industry specialists and practitioners providing validated perspective for high-stakes strategic decisions.",
       "icon": "Users",
       "id": "expert-panel",
-      "image": "/media/services/data/data-2.avif",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Expert Panel Research"
     }
   ]
