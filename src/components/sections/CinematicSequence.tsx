@@ -9,6 +9,7 @@ import {
 } from "@/content/home/content";
 
 export interface CinematicSequenceProps {
+  children?: React.ReactNode;
   content?: CinematicSequenceContent;
   frameCount?: CinematicSequenceContent["frameCount"];
   frameUrls?: CinematicSequenceContent["frameUrls"];
@@ -16,6 +17,7 @@ export interface CinematicSequenceProps {
 }
 
 export const CinematicSequence = ({
+  children,
   content = HOME_CINEMATIC_SEQUENCE_CONTENT,
   frameCount = content.frameCount,
   frameUrls = content.frameUrls,
@@ -90,6 +92,12 @@ export const CinematicSequence = ({
         <canvas className="absolute inset-0" ref={canvasRef} />
 
         <div className="absolute inset-0 bg-black/[0.56]" />
+
+        {children && (
+          <div className="relative z-10 w-full px-4 md:px-6 lg:px-8">
+            {children}
+          </div>
+        )}
       </div>
     </section>
   );
