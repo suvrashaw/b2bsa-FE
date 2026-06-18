@@ -6,13 +6,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
-export interface ClientLogosProps {
-  className?: string;
-  id?: string;
-  subtitle?: string;
-  title: string;
-}
-
 interface ClientLogoItem {
   alt: string;
   id: string;

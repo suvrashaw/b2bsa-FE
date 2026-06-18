@@ -124,7 +124,7 @@ const EventDetails = ({
 
 const EventDetailsPanel = ({
   ctaLabel,
-  event,
+  event: eventItem,
   eventCountry,
   eventCtaHref,
   eventDate,
@@ -136,7 +136,7 @@ const EventDetailsPanel = ({
       eventCountry={eventCountry}
       eventCtaHref={eventCtaHref}
       eventDate={eventDate}
-      eventTitle={event.title}
+      eventTitle={eventItem.title}
       handleLinkClick={handleLinkClick}
     />
   </div>

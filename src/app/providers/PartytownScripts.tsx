@@ -1,4 +1,5 @@
 import { Partytown } from "@qwik.dev/partytown/react";
+import Script from "next/script";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -21,16 +22,16 @@ export const PartytownScripts = () => {
       <Partytown debug={false} forward={PARTYTOWN_FORWARD} />
       {gaId ? (
         <>
-          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-          <script
+          <Script
             id="google-analytics"
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            strategy="lazyOnload"
             type="text/partytown"
           />
-          {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-          <script
+          <Script
             dangerouslySetInnerHTML={GA_INLINE_SCRIPT_HTML}
             id="google-analytics-inline"
+            strategy="afterInteractive"
             type="text/partytown"
           />
         </>
