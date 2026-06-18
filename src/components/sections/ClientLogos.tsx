@@ -70,7 +70,7 @@ const LogosRow = ({
       <div className="flex shrink-0 items-center" key={logo.id}>
         <Image
           alt={logo.alt}
-          className="h-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
+          className="h-8 w-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
           draggable={false}
           height={32}
           onMouseEnter={onLogoMouseEnter}
@@ -129,7 +129,7 @@ export const ClientLogos = ({
             <div className="flex shrink-0 items-center" key={logo.id}>
               <Image
                 alt={logo.alt}
-                className="h-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
+                className="h-12 w-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
                 draggable={false}
                 height={48}
                 src={logo.src}
