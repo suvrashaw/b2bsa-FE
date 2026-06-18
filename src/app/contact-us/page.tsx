@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CinematicSequence } from "@/components/sections/CinematicSequence";
@@ -7,7 +10,6 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Timeline } from "@/components/sections/Timeline";
-import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   CONTACT_FORM,
@@ -35,6 +37,14 @@ const PRIMARY_CTA_STYLE = {
   boxShadow:
     "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
 };
+const SECONDARY_CTA_STYLE = {
+  backdropFilter: "blur(12px)",
+  background: `linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)`,
+  border: "1px solid rgba(255, 255, 255, 0.25)",
+  borderRadius: "4px",
+  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
+  WebkitBackdropFilter: "blur(12px)",
+};
 
 const Page = () => {
   return (
@@ -45,14 +55,14 @@ const Page = () => {
         frameCount={60}
         frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg"
       >
-        <div className="container mx-auto flex max-w-screen-2xl flex-col items-center text-center">
+        <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl">
             <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
               <span className="block">Let&apos;s Build Your</span>
               <span className="block">Enterprise Growth Strategy</span>
             </SectionHeader>
             <p
-              className="mx-auto mb-12 max-w-2xl text-base font-semibold leading-relaxed lg:text-xl"
+              className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
               style={DESCRIPTION_STYLE}
             >
               Whether you need a booth for next quarter, a sharper{" "}
@@ -61,15 +71,22 @@ const Page = () => {
               market intelligence — one conversation is enough to define the
               right path.
             </p>
-            <div className="flex justify-center">
-              <Button
-                asChild
-                className="transition-all duration-300 hover:scale-105"
-                size="lg"
+            <div className="flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6">
+              <Link
+                className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                href="#contact"
                 style={PRIMARY_CTA_STYLE}
               >
-                <a href="#contact">Submit Inquiry</a>
-              </Button>
+                Submit Inquiry
+                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                href="#contact"
+                style={SECONDARY_CTA_STYLE}
+              >
+                Book a Meeting
+              </Link>
             </div>
           </div>
         </div>
