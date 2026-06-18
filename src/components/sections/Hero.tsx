@@ -127,12 +127,15 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
   return { activeLineIdx, visibleLines };
 };
 
-const TypewriterLine = ({ isActive, text }: { isActive: boolean; text: string }) => (
-  <span className="block">
-    {text}
-    {isActive && (
-      <span className="ml-0.5 inline-block h-[0.85em] w-[2px] animate-pulse bg-current align-middle" />
-    )}
+const TypewriterLine = ({ fullText, isActive, text }: { fullText: string; isActive: boolean; text: string; }) => (
+  <span className="relative block">
+    <span aria-hidden="true" className="invisible">{fullText}</span>
+    <span className="absolute inset-0">
+      {text}
+      {isActive && (
+        <span className="ml-0.5 inline-block h-[0.85em] w-[2px] animate-pulse bg-current align-middle" />
+      )}
+    </span>
   </span>
 );
 
@@ -302,6 +305,7 @@ export const Hero = ({
             {isStringTitle && !animateFromLeft
               ? (titleLines as string[]).map((_, index) => (
                   <TypewriterLine
+                    fullText={stringLines[index] ?? ""}
                     isActive={activeLineIdx === index}
                     key={index}
                     text={visibleLines[index] ?? ""}

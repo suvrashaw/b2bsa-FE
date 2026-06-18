@@ -96,7 +96,7 @@ const ctaSparkleTransition = {
 } as const;
 
 export const ContactUs = ({
-  backgroundImage,
+  backgroundImage = { alt: "B2B Sales Agency", src: "/media/home/hero/home_hero_bg.avif" },
   badge,
   description,
   headingLines,

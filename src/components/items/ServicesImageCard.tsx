@@ -57,6 +57,7 @@ export const ServicesImageCard = ({
             alt={service}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             fill
+            quality={60}
             sizes="(max-width: 640px) 40vw, (max-width: 1024px) 20vw, 15vw"
             src={image}
           />

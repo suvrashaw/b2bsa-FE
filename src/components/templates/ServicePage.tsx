@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useMemo } from "react";
 
 import type { PricingProps } from "@/components/items/PricingCard";
 import type { CapabilitiesItem } from "@/components/sections/Capabilities";
@@ -181,6 +182,27 @@ export const ServicePage = ({
   const steps = process?.phases ?? process?.steps ?? [];
   const processTitle = process?.title ?? process?.heading ?? "";
 
+  const fallbackBg = useMemo(() => {
+    const image =
+      hero?.images?.[0] ||
+      spotlight?.imageUrl ||
+      why?.imageUrl ||
+      services?.services?.[0]?.image ||
+      services?.content?.services?.[0]?.image ||
+      secondaryServices?.services?.[0]?.image ||
+      secondaryServices?.content?.services?.[0]?.image;
+    const altText = typeof hero?.title === "string" ? hero.title : page.pageName;
+    return image ? { alt: altText, src: image } : undefined;
+  }, [
+    hero?.images,
+    hero?.title,
+    page.pageName,
+    spotlight?.imageUrl,
+    why?.imageUrl,
+    services,
+    secondaryServices,
+  ]);
+
   const schemas = [
     buildServiceJsonLd({
       description: page.seo.description,
@@ -282,7 +304,10 @@ export const ServicePage = ({
 
       {preContactSections}
 
-      <ContactUs {...contactUs} />
+      <ContactUs
+        {...contactUs}
+        backgroundImage={contactUs.backgroundImage || fallbackBg}
+      />
 
       <Footer />
     </main>

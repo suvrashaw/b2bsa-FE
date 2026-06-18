@@ -3,20 +3,6 @@ import type { NextConfig } from "next";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/services/hpmi",
-        destination: "/services/hpmi/human-powered-market-intelligence",
-        permanent: true,
-      },
-      {
-        source: "/events",
-        destination: "/tradeshow-calendar",
-        permanent: true,
-      },
-    ];
-  },
   headers: async () => [
     {
       headers: [
@@ -45,6 +31,20 @@ const nextConfig: NextConfig = {
         protocol: "https",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        destination: "/services/hpmi/human-powered-market-intelligence",
+        permanent: true,
+        source: "/services/hpmi",
+      },
+      {
+        destination: "/tradeshow-calendar",
+        permanent: true,
+        source: "/events",
+      },
+    ];
   },
 };
 

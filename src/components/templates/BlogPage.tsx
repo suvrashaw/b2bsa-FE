@@ -336,6 +336,11 @@ export const BlogPage = ({ post }: BlogPageProps) => {
     question: faq.question,
   }));
 
+  const contactUsBg = useMemo(
+    () => ({ alt: post.title, src: post.image }),
+    [post.title, post.image]
+  );
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header lightHeaderText />
@@ -411,6 +416,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
       </Carousel>
 
       <ContactUs
+        backgroundImage={contactUsBg}
         badge="Talk to an Expert"
         description="Whether you're planning your next trade show appearance or need event staffing worldwide, our team is ready to help you execute flawlessly."
         headingLines={CTA_HEADING_LINES}

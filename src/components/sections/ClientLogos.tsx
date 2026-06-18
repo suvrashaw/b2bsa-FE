@@ -54,7 +54,7 @@ const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) =
   return { handleWheel, setIsHovered, x };
 };
 
-const IMG_SIZE_STYLE = { height: "32px", width: "auto" } as const;
+
 
 const LogosRow = ({
   logos,
@@ -70,13 +70,12 @@ const LogosRow = ({
       <div className="flex shrink-0 items-center" key={logo.id}>
         <Image
           alt={logo.alt}
-          className="w-auto h-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
+          className="h-auto max-w-[140px] object-contain transition-all duration-300 hover:scale-110"
           draggable={false}
           height={32}
           onMouseEnter={onLogoMouseEnter}
           onMouseLeave={onLogoMouseLeave}
           src={logo.src}
-          style={IMG_SIZE_STYLE}
           width={140}
         />
       </div>
@@ -130,11 +129,10 @@ export const ClientLogos = ({
             <div className="flex shrink-0 items-center" key={logo.id}>
               <Image
                 alt={logo.alt}
-                className="h-auto w-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
+                className="h-auto max-w-[160px] object-contain transition-all duration-300 hover:scale-105"
                 draggable={false}
                 height={48}
                 src={logo.src}
-                style={IMG_SIZE_STYLE}
                 width={160}
               />
             </div>

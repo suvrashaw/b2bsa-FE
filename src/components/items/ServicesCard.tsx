@@ -48,7 +48,10 @@ export const ServicesCard = ({
           (service.href ? (
             <Button asChild className="pointer-events-auto mt-10 w-max md:mt-0" variant="primary">
               <Link aria-label={`${ctaLabel} about ${service.title}`} href={service.href}>
-                <span className="mr-4">{ctaLabel}</span>
+                <span className="mr-4">
+                  {ctaLabel}
+                  <span className="sr-only"> about {service.title}</span>
+                </span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -60,7 +63,10 @@ export const ServicesCard = ({
               type="button"
               variant="primary"
             >
-              <span className="mr-4">{ctaLabel}</span>
+              <span className="mr-4">
+                {ctaLabel}
+                <span className="sr-only"> about {service.title}</span>
+              </span>
               <ArrowRight className="h-4 w-4" />
             </Button>
           ))}

@@ -28,7 +28,7 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
     <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <button
         className={cn(
-          "flex items-center gap-1.5 text-sm font-medium transition-colors",
+          "flex items-center gap-1.5 p-2 min-h-[44px] text-sm font-medium transition-colors",
           lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
         )}
         type="button"

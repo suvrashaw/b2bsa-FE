@@ -133,8 +133,7 @@ export const Header = ({
 
         <Link className="hidden lg:block" href="/contact-us">
           <Button
-            className="btn-schedule schedule-shake rounded-full font-semibold normal-case"
-            size="sm"
+            className="btn-schedule schedule-shake min-h-[44px] rounded-full font-semibold normal-case"
             variant="primary"
           >
             Startup Special Sale
@@ -144,7 +143,7 @@ export const Header = ({
           <button
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
-              "rounded-full p-2 transition-colors hover:bg-brand-gray/5",
+              "rounded-full p-3 min-h-[48px] min-w-[48px] flex items-center justify-center transition-colors hover:bg-brand-gray/5",
               lightText ? "text-white" : ""
             )}
             onClick={toggleMobileMenu}

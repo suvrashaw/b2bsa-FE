@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { EventsCard } from "@/components/items/EventsCard";
 import { FAQCard } from "@/components/items/FAQCard";
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Blogs } from "@/components/sections/Blogs";
-import { CardsGrid } from "@/components/sections/CardsGrid";
-import { Carousel } from "@/components/sections/Carousel";
-import { CaseStudies } from "@/components/sections/CaseStudies";
-import { ClientLogos } from "@/components/sections/ClientLogos";
-import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import { HomeStats } from "@/components/sections/HomeStats";
-import { ServicesStack } from "@/components/sections/ServicesStack";
-import { StickyScroll } from "@/components/sections/StickyScroll";
-import { Testimonials } from "@/components/sections/Testimonials";
+
+const Footer = dynamic(() => import("@/components/layout/Footer").then((mod) => mod.Footer));
+const Blogs = dynamic(() => import("@/components/sections/Blogs").then((mod) => mod.Blogs));
+const CardsGrid = dynamic(() => import("@/components/sections/CardsGrid").then((mod) => mod.CardsGrid));
+const Carousel = dynamic(() => import("@/components/sections/Carousel").then((mod) => mod.Carousel));
+const CaseStudies = dynamic(() => import("@/components/sections/CaseStudies").then((mod) => mod.CaseStudies));
+const ClientLogos = dynamic(() => import("@/components/sections/ClientLogos").then((mod) => mod.ClientLogos));
+const ContactUsForm = dynamic(() => import("@/components/sections/ContactUsForm").then((mod) => mod.ContactUsForm));
+const HomeStats = dynamic(() => import("@/components/sections/HomeStats").then((mod) => mod.HomeStats));
+const ServicesStack = dynamic(() => import("@/components/sections/ServicesStack").then((mod) => mod.ServicesStack));
+const StickyScroll = dynamic(() => import("@/components/sections/StickyScroll").then((mod) => mod.StickyScroll));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then((mod) => mod.Testimonials));
 import { Button } from "@/components/ui/Button";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import {

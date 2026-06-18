@@ -19,6 +19,8 @@ import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
 
+const CONTACT_US_BG = { alt: "Contact Us", src: "/media/contact/hero.avif" };
+
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -31,7 +33,7 @@ const Page = () => {
       <ClientLogos />
       <ContactUsForm {...CONTACT_FORM} />
       <Timeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
-      <ContactUs {...CONTACT_US} />
+      <ContactUs {...CONTACT_US} backgroundImage={CONTACT_US_BG} />
       <Footer />
     </main>
   );
