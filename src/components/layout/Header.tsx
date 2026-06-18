@@ -131,14 +131,15 @@ export const Header = ({
       <div className="flex items-center gap-6">
         <LanguageSelector lightText={headerLightText} />
 
-        <Link className="hidden lg:block" href="/contact-us">
-          <Button
-            className="btn-schedule schedule-shake min-h-[44px] rounded-full font-semibold normal-case"
-            variant="primary"
-          >
+        <Button
+          asChild
+          className="btn-schedule schedule-shake hidden min-h-[44px] rounded-full font-semibold normal-case lg:block"
+          variant="primary"
+        >
+          <Link href="/contact-us">
             Startup Special Sale
-          </Button>
-        </Link>
+          </Link>
+        </Button>
         <div className="lg:hidden">
           <button
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
@@ -233,14 +234,15 @@ export const Header = ({
             ))}
 
             <div className="p-6">
-              <Link href="/contact-us" onClick={closeMobileMenu}>
-                <Button
-                  className="btn-schedule schedule-shake w-full rounded-full font-semibold normal-case"
-                  variant="primary"
-                >
+              <Button
+                asChild
+                className="btn-schedule schedule-shake w-full rounded-full font-semibold normal-case"
+                variant="primary"
+              >
+                <Link href="/contact-us" onClick={closeMobileMenu}>
                   Startup Special Sale
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         )}

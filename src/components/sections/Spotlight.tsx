@@ -13,6 +13,7 @@ import { cn } from "@/lib";
 export interface SpotlightProps {
   align?: SpotlightAlignment;
   className?: string;
+  ctaAriaLabel?: string;
   ctaHref?: string;
   ctaLabel?: string;
   description: string;
@@ -50,11 +51,13 @@ interface SpotlightSecondaryBlock {
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
 const SpotlightCta = ({
+  ctaAriaLabel,
   ctaHref,
   ctaLabel,
   isHovered,
   onClick,
 }: {
+  ctaAriaLabel?: string;
   ctaHref?: string;
   ctaLabel?: string;
   isHovered: boolean;
@@ -76,13 +79,13 @@ const SpotlightCta = ({
     <div className="mt-6 md:mt-8 lg:mt-10">
       {ctaHref ? (
         <Button asChild className={ctaClassName} variant="secondary">
-          <Link href={ctaHref}>
+          <Link aria-label={ctaAriaLabel || ctaLabel} href={ctaHref}>
             {ctaLabel}
             {icon}
           </Link>
         </Button>
       ) : (
-        <Button className={ctaClassName} onClick={onClick} variant="secondary">
+        <Button aria-label={ctaAriaLabel || ctaLabel} className={ctaClassName} onClick={onClick} variant="secondary">
           {ctaLabel}
           {icon}
         </Button>
@@ -94,6 +97,7 @@ const SpotlightCta = ({
 const SpotlightTextBlock = ({
   align = "center",
   className,
+  ctaAriaLabel,
   ctaHref,
   ctaLabel,
   description,
@@ -109,6 +113,7 @@ const SpotlightTextBlock = ({
 }: {
   align?: SpotlightAlignment;
   className?: string;
+  ctaAriaLabel?: string;
   ctaHref?: string;
   ctaLabel?: string;
   description: string;
@@ -248,7 +253,7 @@ const SpotlightTextBlock = ({
         </div>
       )}
 
-      <SpotlightCta ctaHref={ctaHref} ctaLabel={ctaLabel} isHovered={isHovered} onClick={onClick} />
+      <SpotlightCta ctaAriaLabel={ctaAriaLabel} ctaHref={ctaHref} ctaLabel={ctaLabel} isHovered={isHovered} onClick={onClick} />
     </div>
   );
 };
@@ -470,6 +475,7 @@ export const Spotlight = ({
           <SpotlightTextBlock
             align={align}
             className={textBlockClassName}
+            ctaAriaLabel={`${ctaLabel} about ${titleLine1} ${titleLine2}`}
             ctaHref={ctaHref}
             ctaLabel={showCta ? ctaLabel : undefined}
             description={description}
@@ -486,6 +492,7 @@ export const Spotlight = ({
           {secondarySpotlight ? (
             <SpotlightTextBlock
               align={secondarySpotlight.align ?? "right"}
+              ctaAriaLabel={`${secondarySpotlight.ctaLabel || ctaLabel} about ${secondarySpotlight.titleLine1} ${secondarySpotlight.titleLine2}`}
               ctaHref={secondarySpotlight.ctaHref}
               ctaLabel={secondarySpotlight.ctaLabel}
               description={secondarySpotlight.description}
