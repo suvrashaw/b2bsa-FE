@@ -8,7 +8,7 @@
       "href": "/services/tradeshow-booth-solutions",
       "icon": "Presentation",
       "id": "booth-design",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/booth-design-and-production.avif",
       "title": "Booth Design & Production"
     },
     {
@@ -17,7 +17,7 @@
       "href": "/services/sales-qualified-lead-generation",
       "icon": "Users",
       "id": "active-prospecting",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/active-prospecting.avif",
       "title": "Active Prospecting"
     },
     {
@@ -26,7 +26,7 @@
       "href": "/services/media-production",
       "icon": "MonitorPlay",
       "id": "media",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/corporate-media-production.avif",
       "title": "Corporate Media Production"
     },
     {
@@ -35,7 +35,7 @@
       "href": "/services/hpmi",
       "icon": "Coffee",
       "id": "networking",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/networking.avif",
       "title": "Networking"
     },
     {
@@ -44,7 +44,7 @@
       "href": "/services/global-event-solutions",
       "icon": "Palette",
       "id": "branding",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/branding.avif",
       "title": "Branding"
     },
     {
@@ -53,7 +53,7 @@
       "href": "/services/global-event-solutions",
       "icon": "Lightbulb",
       "id": "experience-creation",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/experience-creation.avif",
       "title": "Experience Creation"
     },
     {
@@ -62,7 +62,7 @@
       "href": "/services/market-research",
       "icon": "Database",
       "id": "market-research",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/database-and-market-research.avif",
       "title": "Database & Market Research"
     },
     {
@@ -71,7 +71,7 @@
       "href": "/services/digital-marketing",
       "icon": "Rocket",
       "id": "performance-marketing",
-      "image": "/media/home/hero/home_hero_bg.avif",
+      "image": "/media/home/services/digital-marketing.avif",
       "title": "Digital Marketing"
     }
   ]
