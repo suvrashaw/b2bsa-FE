@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
@@ -26,16 +26,24 @@ interface StatsProps {
 
 const MARQUEE_SPEED = 5;
 
-const useStatsMarquee = (isVisible: boolean, isPaused: boolean) => {
+const useStatsMarquee = (isVisible: boolean, isReduced: boolean) => {
   const baseX = useMotionValue(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useAnimationFrame((_, delta) => {
-    if (isVisible && !isPaused) {
+    if (isVisible && !isReduced && !isHovered) {
       baseX.set(baseX.get() - MARQUEE_SPEED * (delta / 1000));
     }
   });
 
-  return useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
+
+  const handleWheel = (e: React.WheelEvent) => {
+    const scrollAmount = e.deltaX === 0 ? e.deltaY : e.deltaX;
+    baseX.set(baseX.get() - scrollAmount * 0.05);
+  };
+
+  return { handleWheel, setIsHovered, x };
 };
 
 const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
@@ -70,8 +78,11 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   const prefersReduced =
     globalThis.window !== undefined &&
     globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const x = useStatsMarquee(isVisible, prefersReduced);
+  const { handleWheel, setIsHovered, x } = useStatsMarquee(isVisible, prefersReduced);
   const marqueeStyle = useMemo(() => ({ x }), [x]);
+
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -86,10 +97,19 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden py-4" ref={containerRef}>
-      <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-16 bg-linear-to-r from-brand-gray to-transparent" />
-      <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-16 bg-linear-to-l from-brand-gray to-transparent" />
-      <motion.div className="flex w-max" style={marqueeStyle}>
+    <div
+      className="pointer-events-auto relative w-[calc(100%+2rem)] -mx-4 overflow-hidden py-4 md:w-[calc(100%+3rem)] md:-mx-6 lg:mx-0 lg:w-full"
+      onWheel={handleWheel}
+      ref={containerRef}
+    >
+      <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-48 bg-linear-to-r from-brand-gray to-transparent" />
+      <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-48 bg-linear-to-l from-brand-gray to-transparent" />
+      <motion.div
+        className="flex w-max cursor-grab active:cursor-grabbing"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={marqueeStyle}
+      >
         <div className="flex items-center">
           <StatRow items={items} keyPrefix="a" />
         </div>
@@ -128,23 +148,23 @@ export const Stats = ({
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         {imageUrl ? (
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="flex flex-col">
+            <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
               {heading && (
-                <SectionHeader as="h2" className="mb-4">
+                <SectionHeader as="h2" className="mb-4 text-center lg:text-left">
                   {heading}
                 </SectionHeader>
               )}
               {description && (
-                <p className="mb-8 text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+                <p className="mb-8 text-center text-base leading-relaxed text-brand-charcoal/70 md:text-lg lg:text-left">
                   {description}
                 </p>
               )}
               <StatsMarquee items={flatItems} />
             </div>
 
-            <div className="group relative aspect-[4/3] w-full">
-              <div className="absolute inset-0 rounded-3xl border border-brand-blue/10 shadow-[6px_6px_0px_0px] shadow-brand-blue/10 transition-all duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-blue/15" />
-              <div className="relative h-full w-full overflow-hidden rounded-3xl">
+            <div className="group relative aspect-[4/3] w-[calc(100%+2rem)] -mx-4 md:w-[calc(100%+3rem)] md:-mx-6 lg:mx-0 lg:w-full">
+              <div className="absolute inset-0 border-0 transition-all duration-300 lg:rounded-3xl lg:border lg:border-brand-blue/10 lg:shadow-[6px_6px_0px_0px] lg:shadow-brand-blue/10 lg:group-hover:-translate-x-1 lg:group-hover:-translate-y-1 lg:group-hover:shadow-[12px_12px_0px_0px] lg:group-hover:shadow-brand-blue/15" />
+              <div className="relative h-full w-full overflow-hidden rounded-none lg:rounded-3xl">
                 <Image
                   alt={imageAlt}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
