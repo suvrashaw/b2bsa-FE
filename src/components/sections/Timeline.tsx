@@ -54,7 +54,7 @@ export const Timeline = ({
 
   return (
     <section className={cn("py-20 bg-brand-gray", className)}>
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         {(resolvedTitle || resolvedDescription) && (
           <div className="mb-20 text-center">
             {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}

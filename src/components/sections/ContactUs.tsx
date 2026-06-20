@@ -199,7 +199,7 @@ export const ContactUs = ({
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           {badge ? (
             <motion.div

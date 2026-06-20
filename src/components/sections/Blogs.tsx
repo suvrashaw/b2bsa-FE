@@ -94,7 +94,7 @@ export const Blogs = ({
 
   return (
     <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="blogs">
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
           <SectionHeader as="h2">{heading}</SectionHeader>
         </div>

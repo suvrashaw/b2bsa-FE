@@ -10,10 +10,13 @@ import { cn } from "@/lib";
 
 type ColsValue = 2 | 3 | 4;
 
+// Widths are % of the flex container's content box (= 100vw − 2×40px padding).
+// At lg the cols=3 entry fills exactly 3 cards + 2 gaps, creating the
+// symmetric left-peek / 3-cards / right-peek layout.
 const CAROUSEL_WIDTHS: Record<ColsValue, string> = {
-  2: "w-[85%] sm:w-[72%] md:w-[calc(50%-10px)]",
-  3: "w-[85%] sm:w-[72%] md:w-[46%] lg:w-[calc(33.33%-14px)]",
-  4: "w-[85%] sm:w-[72%] md:w-[46%] lg:w-[calc(25%-15px)]",
+  2: "w-[85%] sm:w-[72%] md:w-[48%]",
+  3: "w-[80%] sm:w-[65%] md:w-[40%] lg:w-[32%]",
+  4: "w-[80%] sm:w-[65%] md:w-[38%] lg:w-[23%]",
 };
 
 // ─── Copies rendered to enable seamless infinite looping ─────────────────────
@@ -134,34 +137,39 @@ export const Carousel = ({
 
   return (
     <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)} id={id}>
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      {/* Header stays contained */}
+      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <SectionHeader description={description} heading={heading} headingAlign={headingAlign} />
+      </div>
 
-        <div
-          className={cn(
-            "flex snap-x snap-mandatory overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden",
-            gap
-          )}
-          onMouseEnter={autoplayInterval ? handleMouseEnter : undefined}
-          onMouseLeave={autoplayInterval ? handleMouseLeave : undefined}
-          onPointerDown={handlePointerDown}
-          onPointerUp={handlePointerUp}
-          ref={scrollRef}
-        >
-          {/* Three copies: [copy-0] [copy-1 (start)] [copy-2] */}
-          {Array.from({ length: COPY_COUNT }, (_, copyIndex) =>
-            childArray.map((child, i) => (
-              <div
-                className={cn("shrink-0 snap-start", carouselWidthClass)}
-                data-card-scroll
-                key={`copy-${copyIndex}-${i}`}
-              >
-                {child}
-              </div>
-            ))
-          )}
-        </div>
+      {/* Scroll track is full bleed but padded so adjacent cards peek symmetrically */}
+      <div
+        className={cn(
+          "flex snap-x snap-mandatory overflow-x-auto px-10 pb-4 [scroll-padding-left:2.5rem] [&::-webkit-scrollbar]:hidden",
+          gap
+        )}
+        onMouseEnter={autoplayInterval ? handleMouseEnter : undefined}
+        onMouseLeave={autoplayInterval ? handleMouseLeave : undefined}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        ref={scrollRef}
+      >
+        {/* Three copies: [copy-0] [copy-1 (start)] [copy-2] */}
+        {Array.from({ length: COPY_COUNT }, (_, copyIndex) =>
+          childArray.map((child, i) => (
+            <div
+              className={cn("shrink-0 snap-start", carouselWidthClass)}
+              data-card-scroll
+              key={`copy-${copyIndex}-${i}`}
+            >
+              {child}
+            </div>
+          ))
+        )}
+      </div>
 
+      {/* Arrows and CTA stay contained */}
+      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mt-8 flex justify-center gap-4">
           <button
             aria-label="Previous"

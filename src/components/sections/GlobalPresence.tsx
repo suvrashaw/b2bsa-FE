@@ -70,7 +70,7 @@ export const GlobalPresence = ({ data }: { data: GlobalPresenceData }) => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,192,217,0.1)_0%,transparent_70%)]" />
 
-      <div className="relative z-10 container mx-auto grid max-w-screen-2xl grid-cols-1 gap-16 px-4 sm:px-6 md:px-8 lg:grid-cols-2 lg:items-center">
+      <div className="relative z-10 container mx-auto grid max-w-screen-2xl grid-cols-1 gap-16 px-4 md:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
         <motion.div
           animate={leftAnimate}
           className="flex max-w-2xl flex-col items-start text-left"

@@ -100,7 +100,7 @@ export const FAQAccordion = ({
       <div
         className={cn(
           "relative z-10",
-          isArticle ? "" : "container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8"
+          isArticle ? "" : "container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8"
         )}
       >
         <motion.div

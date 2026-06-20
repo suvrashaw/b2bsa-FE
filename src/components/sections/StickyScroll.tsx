@@ -100,7 +100,7 @@ export const StickyScroll = ({
   return (
     <section className="relative bg-brand-gray" ref={containerRef} style={sectionStyle}>
       <div
-        className={`sticky top-0 container mx-auto flex h-dvh max-w-screen-2xl px-4 sm:px-6 md:px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
+        className={`sticky top-0 container mx-auto flex h-dvh max-w-screen-2xl px-4 md:px-6 lg:px-8 ${showImagePanel ? "flex-row" : "items-center justify-center"}`}
       >
         {/* Left text panel */}
         <div

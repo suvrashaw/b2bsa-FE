@@ -51,7 +51,7 @@ export const Testimonials = ({
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
-      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mb-2 flex flex-col items-center text-center">
           <SectionHeader as="h2" className="mb-3 text-center">
             {heading}

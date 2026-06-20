@@ -125,7 +125,7 @@ export const Stats = ({
 
   return (
     <div className={cn("bg-brand-gray py-16 md:py-20", className)}>
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         {imageUrl ? (
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col">
