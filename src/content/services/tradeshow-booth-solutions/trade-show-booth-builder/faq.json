@@ -3,32 +3,38 @@
     {
       "answer": "A turnkey exhibition booth is an all-inclusive service, design, fabrication, logistics, installation, and breakdown, managed by one partner. Nothing is left for your team to coordinate. One brief, one invoice, one point of accountability.",
       "id": "turnkey",
-      "question": "What is a turnkey trade show booth?"
+      "question": "What is a turnkey trade show booth?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, exhibition stand design and build is our full-service model. We design the structure, manage fabrication, handle international logistics, and install on-site.",
       "id": "design-build",
-      "question": "Do you also do exhibition stand design and building?"
+      "question": "Do you also do exhibition stand design and building?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Standard custom builds: 12–16 weeks from design brief to installation. Double-deck or technology-heavy structures: 16–20 weeks. For tight timelines, modular or rental options may be more appropriate.",
       "id": "lead-time",
-      "question": "What is the typical build lead time?"
+      "question": "What is the typical build lead time?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, included in our turnkey booth service. We have managed deliveries across 40+ countries.",
       "id": "shipping-customs",
-      "question": "Do you handle international shipping and customs?"
+      "question": "Do you handle international shipping and customs?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, reuse planning is built into the structure from the start. Many enterprise clients run the same booth for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
       "id": "reuse",
-      "question": "Can the booth be reused?"
+      "question": "Can the booth be reused?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, our team manages assembly, alignment, quality review, and on-site support throughout the event.",
       "id": "installation",
-      "question": "Do you manage on-site installation?"
+      "question": "Do you manage on-site installation?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Trade Show Booth Builder FAQs",

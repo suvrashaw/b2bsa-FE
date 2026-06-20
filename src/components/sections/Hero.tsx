@@ -184,7 +184,9 @@ export const Hero = ({
   const imageModeClass =
     variant === "compact"
       ? "items-center md:items-end min-h-[50vh] pt-16 pb-12 md:pt-24 md:pb-16"
-      : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
+      : isVideoMode
+        ? "items-center md:items-end min-h-[560px] pt-20 pb-24 md:min-h-svh md:pt-32 md:pb-40"
+        : "items-center md:items-end min-h-[560px] pt-20 pb-12 md:min-h-svh md:pt-32 md:pb-20";
   let background: React.ReactNode;
   if (isVideoMode) {
     const hasMobileVideo = Boolean(mobileVideoUrl);

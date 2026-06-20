@@ -4,37 +4,44 @@
     {
       "answer": "Design fees typically range from $3,000 for a compact 10x10 to $60,000+ for large custom or double-deck structures. See our pricing guide table above for reference ranges. Contact us for a project-specific estimate based on your booth size, event, and brief.",
       "id": "cost",
-      "question": "How much does custom trade show booth design cost?"
+      "question": "How much does custom trade show booth design cost?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "A custom trade show booth is designed and built specifically for your brand. A modular booth uses a reusable system with updated graphics between events, faster and more cost-efficient for multi-event programs. We design and build both.",
       "id": "modular-vs-custom",
-      "question": "What is the difference between modular and custom booth design?"
+      "question": "What is the difference between modular and custom booth design?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "From brief to approved 3D renders: 3–5 weeks. Fabrication lead time varies by complexity. For major international events, engage us 14–20 weeks before the show.",
       "id": "timeline",
-      "question": "How long does the design process take?"
+      "question": "How long does the design process take?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes. We extend your brand system, typefaces, colour palette, photography style, into a physical exhibition environment without losing consistency.",
       "id": "brand-guidelines",
-      "question": "Can you work with our existing brand guidelines?"
+      "question": "Can you work with our existing brand guidelines?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes. Reuse planning is built into the design from the start. Many clients run the same booth system for 3–5 years with graphic updates, reducing cost per event by 30–50%.",
       "id": "reuse",
-      "question": "Can the booth be reused at multiple events?"
+      "question": "Can the booth be reused at multiple events?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, full design-to-build service or design-only with production-ready files for your fabrication partner. You choose the scope.",
       "id": "fabrication",
-      "question": "Do you handle fabrication and build as well?"
+      "question": "Do you handle fabrication and build as well?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "GITEX, CES, MWC, AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and major regional industry trade shows across all sectors and markets.",
       "id": "events",
-      "question": "What events do you design booths for?"
+      "question": "What events do you design booths for?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ]
 }

@@ -3,27 +3,32 @@
     {
       "answer": "Virtual video event production involves planning, managing, and producing online corporate events such as webinars, fireside chats, panel discussions, and virtual conferences.",
       "id": "what-is-virtual-video-event-production",
-      "question": "What is virtual video event production?"
+      "question": "What is virtual video event production?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes. We provide end-to-end webinar production services, including technical setup, speaker management, branding, and audience engagement support.",
       "id": "webinar-production-services",
-      "question": "Do you provide webinar production services?"
+      "question": "Do you provide webinar production services?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes. We specialize in multi-speaker virtual event production for panel discussions, executive conversations, and hybrid conferences.",
       "id": "multi-speaker-virtual-events",
-      "question": "Can you manage multi-speaker virtual events?"
+      "question": "Can you manage multi-speaker virtual events?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes. We provide hybrid event production services that connect onsite and remote audiences through professional virtual event technology.",
       "id": "hybrid-events",
-      "question": "Do you support hybrid events?"
+      "question": "Do you support hybrid events?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "We support Zoom, Microsoft Teams, LinkedIn Live, YouTube Live, Vimeo, and custom virtual event platforms.",
       "id": "platforms-supported",
-      "question": "Which platforms do you support?"
+      "question": "Which platforms do you support?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Frequently Asked Questions About Virtual Video Event Production"

@@ -3,17 +3,20 @@
     {
       "answer": "For major international events: 6–10 weeks in advance. Last-minute bookings possible for smaller events.",
       "id": "booking",
-      "question": "How far ahead should we book?"
+      "question": "How far ahead should we book?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Standard highlight reel and social cut-downs: 5–10 business days. Full multi-format packages: 10–20 business days.",
       "id": "post-production",
-      "question": "How long does post-production take?"
+      "question": "How long does post-production take?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, across 40+ countries. GITEX, CES, MWC, AWS re:Invent, Web Summit, ADIPEC, and major regional trade shows covered.",
       "id": "international",
-      "question": "Do you cover international events?"
+      "question": "Do you cover international events?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Event Video FAQs"

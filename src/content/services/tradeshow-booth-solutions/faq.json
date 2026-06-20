@@ -3,32 +3,38 @@
     {
       "answer": "Global event solutions are end-to-end services covering strategy, booth design, lead capture, logistics, and post-event reporting across international markets under one accountable partner.",
       "id": "definition",
-      "question": "What are global event solutions?"
+      "question": "What are global event solutions?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "For custom booths at major international shows, 12–20 weeks ahead is ideal. For modular or rental formats, 6–8 weeks is typically sufficient.",
       "id": "engagement",
-      "question": "How early should we engage an event solutions partner?"
+      "question": "How early should we engage an event solutions partner?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Through qualified lead volume, meeting conversion rate, cost per qualified opportunity, and CRM pipeline movement within 90 days, benchmarked against pre-event commercial targets.",
       "id": "roi",
-      "question": "How do you measure event ROI?"
+      "question": "How do you measure event ROI?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, and this integration is where the greatest commercial gains are made. The physical environment, lead capture workflow, and CRM routing are designed as one system from the first brief.",
       "id": "integration",
-      "question": "Can you manage booth design and lead generation together?"
+      "question": "Can you manage booth design and lead generation together?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Technology, SaaS, financial services, fintech, healthcare, energy, telecom, and professional services, across events including GITEX, CES, MWC, ADIPEC, Arab Health, Money20/20, and Hannover Messe.",
       "id": "industries",
-      "question": "Which industries do you serve?"
+      "question": "Which industries do you serve?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, Southeast Asia, Africa, Latin America, and Eastern Europe, with local logistics partners and compliance knowledge in each region.",
       "id": "markets",
-      "question": "Do you support emerging markets?"
+      "question": "Do you support emerging markets?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Frequently Asked Questions"

@@ -3,17 +3,20 @@
     {
       "answer": "B2B media production covers all video and content production services created for business-to-business brands, corporate films, event video, demos, live streaming, and post-production designed for enterprise marketing and sales enablement.",
       "id": "what-is",
-      "question": "What is B2B media production?"
+      "question": "What is B2B media production?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, combining shoots reduces cost and logistical complexity significantly.",
       "id": "combined",
-      "question": "Can you handle event and corporate video in the same project?"
+      "question": "Can you handle event and corporate video in the same project?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, 15-second, 30-second, and 60-second cuts for LinkedIn, YouTube, Instagram, and paid campaigns. Vertical and square formats on request.",
       "id": "social",
-      "question": "Do you deliver social media formats?"
+      "question": "Do you deliver social media formats?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Media Production FAQs"

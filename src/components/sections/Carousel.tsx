@@ -16,6 +16,12 @@ const CAROUSEL_WIDTHS: Record<ColsValue, string> = {
   4: "w-[85%] sm:w-[72%] md:w-[46%] lg:w-[calc(25%-15px)]",
 };
 
+// ─── Copies rendered to enable seamless infinite looping ─────────────────────
+// Layout: [copy-0] [copy-1 ← start here] [copy-2]
+// When scroll drifts into copy-0 or copy-2, teleport instantly back into copy-1.
+const COPY_COUNT = 3;
+const MIDDLE_COPY = 1;
+
 export interface CarouselProps {
   autoplayInterval?: number;
   children: ReactNode;
@@ -47,32 +53,69 @@ export const Carousel = ({
   const scrollRef = useRef<HTMLDivElement>(null);
   const pointerStartX = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
+  const childArray = Children.toArray(children);
+  const carouselWidthClass = CAROUSEL_WIDTHS[cols];
 
-  const handleScrollPrev = useCallback(() => {
+  // ── Initialise scroll at the start of the middle copy ──────────────────────
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || childArray.length === 0) return;
+    requestAnimationFrame(() => {
+      const singleWidth = el.scrollWidth / COPY_COUNT;
+      el.scrollTo({ behavior: "instant", left: singleWidth * MIDDLE_COPY });
+    });
+    // Only run once on mount — childArray.length won't change after mount.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // ── Teleport back into the middle copy when scrolling hits a boundary ──────
+  // Uses a debounce so the teleport only fires after the smooth-scroll animation
+  // has settled — the instant jump is then invisible to the user.
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    let timer: ReturnType<typeof setTimeout>;
+
+    const recentre = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const singleWidth = el.scrollWidth / COPY_COUNT;
+        if (el.scrollLeft < singleWidth) {
+          // Drifted into copy-0 → jump forward by one copy width
+          el.scrollTo({ behavior: "instant", left: el.scrollLeft + singleWidth });
+        } else if (el.scrollLeft >= singleWidth * 2) {
+          // Drifted into copy-2 → jump back by one copy width
+          el.scrollTo({ behavior: "instant", left: el.scrollLeft - singleWidth });
+        }
+      }, 50);
+    };
+
+    el.addEventListener("scroll", recentre, { passive: true });
+    return () => {
+      el.removeEventListener("scroll", recentre);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  // ── Navigation ─────────────────────────────────────────────────────────────
+  const scrollByCard = useCallback((direction: -1 | 1) => {
     const el = scrollRef.current;
     if (!el) return;
     const card = el.querySelector<HTMLElement>("[data-card-scroll]");
-    el.scrollBy({ behavior: "smooth", left: -1 * ((card?.offsetWidth ?? 300) + 20) });
+    el.scrollBy({ behavior: "smooth", left: direction * ((card?.offsetWidth ?? 300) + 20) });
   }, []);
 
-  const handleScrollNext = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 10;
-    if (atEnd) {
-      el.scrollTo({ behavior: "smooth", left: 0 });
-    } else {
-      const card = el.querySelector<HTMLElement>("[data-card-scroll]");
-      el.scrollBy({ behavior: "smooth", left: (card?.offsetWidth ?? 300) + 20 });
-    }
-  }, []);
+  const handleScrollPrev = useCallback(() => scrollByCard(-1), [scrollByCard]);
+  const handleScrollNext = useCallback(() => scrollByCard(1), [scrollByCard]);
 
+  // ── Autoplay ───────────────────────────────────────────────────────────────
   useEffect(() => {
     if (!autoplayInterval || isPaused) return;
     const timer = setInterval(handleScrollNext, autoplayInterval);
     return () => clearInterval(timer);
   }, [autoplayInterval, handleScrollNext, isPaused]);
 
+  // ── Pointer / drag ─────────────────────────────────────────────────────────
   const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
     pointerStartX.current = e.clientX;
   }, []);
@@ -88,8 +131,6 @@ export const Carousel = ({
 
   const handleMouseEnter = useCallback(() => setIsPaused(true), []);
   const handleMouseLeave = useCallback(() => setIsPaused(false), []);
-
-  const carouselWidthClass = CAROUSEL_WIDTHS[cols];
 
   return (
     <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)} id={id}>
@@ -107,11 +148,18 @@ export const Carousel = ({
           onPointerUp={handlePointerUp}
           ref={scrollRef}
         >
-          {Children.map(children, (child, i) => (
-            <div className={cn("shrink-0 snap-start", carouselWidthClass)} data-card-scroll key={i}>
-              {child}
-            </div>
-          ))}
+          {/* Three copies: [copy-0] [copy-1 (start)] [copy-2] */}
+          {Array.from({ length: COPY_COUNT }, (_, copyIndex) =>
+            childArray.map((child, i) => (
+              <div
+                className={cn("shrink-0 snap-start", carouselWidthClass)}
+                data-card-scroll
+                key={`copy-${copyIndex}-${i}`}
+              >
+                {child}
+              </div>
+            ))
+          )}
         </div>
 
         <div className="mt-8 flex justify-center gap-4">
@@ -131,7 +179,7 @@ export const Carousel = ({
           </button>
         </div>
 
-        {(cta || headingAction) && (
+        {(cta ?? headingAction) && (
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             {headingAction}
             {cta}

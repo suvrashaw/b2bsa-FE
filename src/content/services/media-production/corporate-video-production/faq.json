@@ -3,37 +3,44 @@
     {
       "answer": "Brief to delivery: 4–8 weeks for a standard project. Multi-video programs or executive series: 8–16 weeks.",
       "id": "timeline",
-      "question": "How long does production take?"
+      "question": "How long does production take?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, script development and messaging strategy are included in our full corporate video production service.",
       "id": "script",
-      "question": "Do you write the script?"
+      "question": "Do you write the script?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Master file, web-optimised version, social formats (16:9, 1:1, and 9:16 vertical). Subtitle files and thumbnails on request.",
       "id": "formats",
-      "question": "What formats are included in delivery?"
+      "question": "What formats are included in delivery?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, client offices, conference venues, studios, product facilities, and trade show events.",
       "id": "location",
-      "question": "Can we film on location?"
+      "question": "Can we film on location?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "The cost varies depending on project scope, duration, and production requirements. Please contact us for a customized quote based on your specific needs.",
       "id": "cost",
-      "question": "What is the cost of corporate video production?"
+      "question": "What is the cost of corporate video production?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, we have extensive capabilities for remote and virtual video production, allowing us to capture high-quality content from subject matter experts worldwide without the need for travel.",
       "id": "remote",
-      "question": "Can you produce videos remotely or virtually?"
+      "question": "Can you produce videos remotely or virtually?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, we offer localization services including multi-language subtitles and professional voiceovers to ensure your corporate video effectively reaches global audiences.",
       "id": "language",
-      "question": "Do you offer multi-language or subtitled versions?"
+      "question": "Do you offer multi-language or subtitled versions?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Corporate Video FAQs"

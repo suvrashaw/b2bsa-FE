@@ -62,6 +62,38 @@
       "venue": "New York, NY"
     },
     {
+      "attendeeCount": 3000,
+      "city": "Austin",
+      "country": "United States",
+      "endDate": "2026-02-25",
+      "exhibitorCount": 120,
+      "id": "cba-live-2026",
+      "image": "/media/events/event_other_2.avif",
+      "industry": "Financial Services",
+      "name": "CBA Live 2026",
+      "region": "TX",
+      "sourceUrl": "https://www.icba.org",
+      "startDate": "2026-02-23",
+      "summary": "Annual live conference for community banking leaders, fintech innovators, and enterprise financial services buyers.",
+      "venue": "Austin Convention Center"
+    },
+    {
+      "attendeeCount": 25000,
+      "city": "San Jose",
+      "country": "United States",
+      "endDate": "2026-03-13",
+      "exhibitorCount": 200,
+      "id": "nvidia-gtc-2026",
+      "image": "/media/events/event_other_3.avif",
+      "industry": "Technology and SaaS",
+      "name": "NVIDIA GTC 2026",
+      "region": "CA",
+      "sourceUrl": "https://www.nvidia.com/gtc/",
+      "startDate": "2026-03-10",
+      "summary": "NVIDIA's global GPU technology conference for AI, accelerated computing, robotics, and enterprise innovation leaders.",
+      "venue": "San Jose Convention Center"
+    },
+    {
       "attendeeCount": 12000,
       "city": "Las Vegas",
       "country": "United States",
@@ -93,6 +125,22 @@
       "venue": "Hannover Messe"
     },
     {
+      "attendeeCount": 2000,
+      "city": "Detroit",
+      "country": "United States",
+      "endDate": "2026-04-30",
+      "exhibitorCount": 100,
+      "id": "autotech-2026",
+      "image": "/media/events/event_other_4.avif",
+      "industry": "Manufacturing",
+      "name": "Autotech 2026",
+      "region": "MI",
+      "sourceUrl": "https://www.autotechcouncil.org",
+      "startDate": "2026-04-28",
+      "summary": "Automotive technology conference bringing together mobility innovators, OEMs, supplier executives, and enterprise technology buyers.",
+      "venue": "Cobo Center"
+    },
+    {
       "attendeeCount": 1500,
       "city": "Stockholm",
       "country": "Sweden",
@@ -122,6 +170,38 @@
       "startDate": "2026-05-11",
       "summary": "ServiceNow's global customer and partner conference for enterprise platform innovation and digital workflows.",
       "venue": "Las Vegas Convention Center"
+    },
+    {
+      "attendeeCount": 8000,
+      "city": "Las Vegas",
+      "country": "United States",
+      "endDate": "2026-05-21",
+      "exhibitorCount": 200,
+      "id": "hp-discovery-2026",
+      "image": "/media/events/event_other_1.avif",
+      "industry": "Technology and SaaS",
+      "name": "HP Discovery 2026",
+      "region": "NV",
+      "sourceUrl": "https://www.hp.com",
+      "startDate": "2026-05-19",
+      "summary": "HP's annual channel and partner conference connecting resellers, distributors, and technology buyers with enterprise product launches.",
+      "venue": "Caesars Palace"
+    },
+    {
+      "attendeeCount": 5000,
+      "city": "Las Vegas",
+      "country": "United States",
+      "endDate": "2026-05-30",
+      "exhibitorCount": 100,
+      "id": "zenith-live-2026",
+      "image": "/media/events/event_other_2.avif",
+      "industry": "Technology and SaaS",
+      "name": "Zenith Live 2026",
+      "region": "NV",
+      "sourceUrl": "https://www.zscaler.com/zenithlive",
+      "startDate": "2026-05-27",
+      "summary": "Zscaler's annual customer and partner conference for zero-trust security, cloud networking, and enterprise cybersecurity innovation.",
+      "venue": "MGM Grand"
     },
     {
       "attendeeCount": 8500,
@@ -171,6 +251,22 @@
       "venue": "Hyatt Regency Chicago"
     },
     {
+      "attendeeCount": 12000,
+      "city": "San Francisco",
+      "country": "United States",
+      "endDate": "2026-06-18",
+      "exhibitorCount": 150,
+      "id": "snowflake-summit-2026",
+      "image": "/media/events/event_other_3.avif",
+      "industry": "Technology and SaaS",
+      "name": "Snowflake Summit 2026",
+      "region": "CA",
+      "sourceUrl": "https://www.snowflake.com/summit/",
+      "startDate": "2026-06-15",
+      "summary": "Snowflake's global data cloud conference for data engineers, enterprise architects, AI practitioners, and cloud platform leaders.",
+      "venue": "Moscone Center"
+    },
+    {
       "attendeeCount": 20000,
       "city": "San Diego",
       "country": "United States",
@@ -185,6 +281,22 @@
       "startDate": "2026-06-22",
       "summary": "A global biotechnology and life sciences convention for partnering, investor conversations, and healthcare innovation.",
       "venue": "San Diego Convention Center"
+    },
+    {
+      "attendeeCount": 14000,
+      "city": "San Francisco",
+      "country": "United States",
+      "endDate": "2026-07-02",
+      "exhibitorCount": 200,
+      "id": "databricks-summit-2026",
+      "image": "/media/events/event_other_4.avif",
+      "industry": "Technology and SaaS",
+      "name": "Databricks Data+AI Summit 2026",
+      "region": "CA",
+      "sourceUrl": "https://databricks.com/dataaisummit/",
+      "startDate": "2026-06-29",
+      "summary": "Databricks' annual data and AI conference for engineers, data scientists, and enterprise technology leaders driving open-source AI and analytics.",
+      "venue": "Moscone Center"
     },
     {
       "attendeeCount": 40000,
@@ -219,6 +331,21 @@
       "venue": "Miami Beach Convention Center"
     },
     {
+      "attendeeCount": 20000,
+      "city": "Madrid",
+      "country": "Spain",
+      "endDate": "2026-10-08",
+      "exhibitorCount": 300,
+      "id": "sap-sapphire-2026-madrid",
+      "image": "/media/events/event_other_1.avif",
+      "industry": "Technology and SaaS",
+      "name": "SAP Sapphire 2026 Madrid",
+      "sourceUrl": "https://www.sap.com/sapphire",
+      "startDate": "2026-10-06",
+      "summary": "SAP's European flagship conference for enterprise software, cloud transformation, and AI-driven business innovation across EMEA markets.",
+      "venue": "IFEMA Madrid"
+    },
+    {
       "attendeeCount": 11000,
       "city": "Las Vegas",
       "country": "United States",
@@ -233,6 +360,22 @@
       "startDate": "2026-10-18",
       "summary": "The flagship US fintech and payments show for executive buyers, banking innovators, and commerce platforms.",
       "venue": "The Venetian Las Vegas"
+    },
+    {
+      "attendeeCount": 2500,
+      "city": "Dallas",
+      "country": "United States",
+      "endDate": "2026-10-29",
+      "exhibitorCount": 80,
+      "id": "iucx-2026",
+      "image": "/media/events/event_other_2.avif",
+      "industry": "Telecom",
+      "name": "IUCX 2026",
+      "region": "TX",
+      "sourceUrl": "https://www.iucx.com",
+      "startDate": "2026-10-27",
+      "summary": "International unified communications and enterprise connectivity conference for CIOs, telecom executives, and enterprise technology decision-makers.",
+      "venue": "Hilton Anatole"
     },
     {
       "attendeeCount": 205000,

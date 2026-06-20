@@ -3,17 +3,20 @@
     {
       "answer": "Human-powered market intelligence combines structured research methodology, expert analyst interpretation, and primary interview programs to produce strategic insights that reflect the complexity and nuance of real markets — going beyond what automated data aggregation tools can deliver.",
       "id": "what-is-it",
-      "question": "What is human-powered market intelligence?"
+      "question": "What is human-powered market intelligence?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "AI tools aggregate and summarise publicly available data quickly — useful for initial landscape mapping. Human intelligence conducts primary interviews, interprets strategic intent, assesses ambiguous signals, and provides context that purely data-driven tools cannot. For high-stakes commercial decisions, human intelligence is the more reliable input.",
       "id": "ai-difference",
-      "question": "How is this different from an AI research tool?"
+      "question": "How is this different from an AI research tool?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Competitor analysis: 2–3 weeks. Market entry feasibility: 4–8 weeks. Win/loss interview program: 3–6 weeks. Ongoing subscriptions: continuous delivery.",
       "id": "timeline",
-      "question": "How long does a project take?"
+      "question": "How long does a project take?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Frequently Asked Questions"

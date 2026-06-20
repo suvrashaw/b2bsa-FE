@@ -4,7 +4,7 @@
   "services": [
     {
       "color": "bg-brand-blue",
-      "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+      "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
       "href": "/services/tradeshow-booth-solutions",
       "icon": "Presentation",
       "id": "booth-design",
@@ -31,7 +31,7 @@
     },
     {
       "color": "bg-brand-cyan",
-      "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+      "description": "We design and manage exclusive networking experiences — VIP dinners, roundtables, and hosted meetings — that connect your team directly with key enterprise decision-makers.",
       "href": "/services/hpmi",
       "icon": "Coffee",
       "id": "networking",
@@ -40,7 +40,7 @@
     },
     {
       "color": "bg-brand-primary",
-      "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+      "description": "We create cohesive event branding — from booth graphics and signage to digital displays — so your enterprise presence commands attention across the entire venue.",
       "href": "/services/global-event-solutions",
       "icon": "Palette",
       "id": "branding",
@@ -49,7 +49,7 @@
     },
     {
       "color": "bg-brand-blue",
-      "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+      "description": "We design immersive booth experiences — interactive demos, live activations, and engagement zones — that turn passive visitors into active pipeline opportunities.",
       "href": "/services/global-event-solutions",
       "icon": "Lightbulb",
       "id": "experience-creation",

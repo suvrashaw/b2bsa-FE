@@ -3,27 +3,32 @@
     {
       "answer": "Event experience video production services help businesses capture conferences, trade shows, networking events, and corporate experiences through professional video storytelling.",
       "id": "what-are-event-experience-video-production-services",
-      "question": "What are event experience video production services?"
+      "question": "What are event experience video production services?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, we create teaser videos, invitation videos, event countdown videos, and promotional content to increase audience engagement before the event.",
       "id": "pre-event-promotional-videos",
-      "question": "Do you provide pre-event promotional videos?"
+      "question": "Do you provide pre-event promotional videos?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, we produce post-event highlight reels and recap videos optimized for marketing, social media, and audience engagement.",
       "id": "post-event-recap-videos",
-      "question": "Can you create post-event recap videos?"
+      "question": "Can you create post-event recap videos?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Yes, we provide professional trade show videography services, including booth coverage, customer interaction filming, and event highlights.",
       "id": "trade-show-video-coverage",
-      "question": "Do you provide trade show video coverage?"
+      "question": "Do you provide trade show video coverage?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "answer": "Delivery timelines depend on project scope, but we also provide fast-turnaround editing support for urgent marketing requirements.",
       "id": "event-video-delivery-speed",
-      "question": "How quickly can you deliver event videos?"
+      "question": "How quickly can you deliver event videos?",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "heading": "Frequently Asked Questions About Event Experience Video Production"

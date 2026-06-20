@@ -54,10 +54,10 @@ const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
   );
 };
 
-const StatRow = ({ items }: { items: StatItem[] }) => (
+const StatRow = ({ items, keyPrefix }: { items: StatItem[]; keyPrefix: string }) => (
   <>
     {items.map((item, i) => (
-      <div className="flex shrink-0 items-center" key={item.key}>
+      <div className="flex shrink-0 items-center" key={`${keyPrefix}-${item.key}`}>
         <StatChip index={i} item={item} />
       </div>
     ))}
@@ -91,10 +91,10 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
       <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-16 bg-linear-to-l from-brand-gray to-transparent" />
       <motion.div className="flex w-max" style={marqueeStyle}>
         <div className="flex items-center">
-          <StatRow items={items} />
+          <StatRow items={items} keyPrefix="a" />
         </div>
         <div className="flex items-center">
-          <StatRow items={items} />
+          <StatRow items={items} keyPrefix="b" />
         </div>
       </motion.div>
     </div>

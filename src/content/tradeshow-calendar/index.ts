@@ -82,7 +82,7 @@ export const mapCalendarEventToEvent = (
   index: number
 ): EventCardItem => ({
   country: event.country,
-  ctaHref: "/tradeshow-calendar",
+  ctaHref: `/tradeshow-calendar/${event.id}`,
   date: formatCalendarDateRange(event.startDate, event.endDate),
   id: event.id,
   image: event.image ?? getFallbackImage(index),
