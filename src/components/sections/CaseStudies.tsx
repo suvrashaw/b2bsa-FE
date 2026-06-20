@@ -50,7 +50,7 @@ const CaseStudyCard = ({
       active={active}
       className={
         active
-          ? "min-h-[280px] sm:min-h-[360px] lg:min-h-0"
+          ? "lg:min-h-0"
           : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"
       }
       ctaLabel={ctaLabel}

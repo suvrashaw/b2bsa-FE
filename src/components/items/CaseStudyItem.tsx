@@ -80,10 +80,10 @@ export const CaseStudyItem = ({
 
       <div
         className={cn(
-          "absolute inset-0 flex flex-col",
+          "flex flex-col",
           active
-            ? "justify-end p-6 md:justify-between lg:justify-end lg:p-8"
-            : "justify-center p-4 sm:p-6 lg:justify-end lg:p-8"
+            ? "relative z-[1] p-6 md:p-8 lg:absolute lg:inset-0 lg:justify-end lg:p-8"
+            : "absolute inset-0 justify-center p-4 sm:p-6 lg:justify-end lg:p-8"
         )}
       >
         <div className={cn("flex gap-4", active ? "items-start" : "items-center")}>
@@ -111,10 +111,10 @@ export const CaseStudyItem = ({
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}
               >
-                <h3 className="mb-4 line-clamp-2 font-heading text-lg font-bold !text-white md:text-xl">
+                <h3 className="mb-4 font-heading text-lg font-bold !text-white md:text-xl">
                   {item.title}
                 </h3>
-                <p className="line-clamp-4 max-w-xl text-sm leading-relaxed text-gray-200 md:text-base">
+                <p className="max-w-xl text-sm leading-relaxed text-gray-200 md:text-base">
                   {item.secondarySummary.text}
                 </p>
               </motion.div>
