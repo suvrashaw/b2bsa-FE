@@ -28,10 +28,10 @@ const PaginationPageButton = ({ currentPage, onPageChange, page }: PaginationPag
     <button
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "flex h-10 min-w-10 items-center justify-center rounded-lg border px-3 text-sm font-bold transition",
+        "flex h-12 min-w-[48px] items-center justify-center rounded-full border px-3 text-sm font-bold shadow-sm transition-colors",
         isActive
-          ? "border-brand-blue bg-brand-blue text-white shadow-sm"
-          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue"
+          ? "border-transparent bg-brand-blue text-white"
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-transparent hover:bg-brand-blue hover:text-white"
       )}
       onClick={handleClick}
       type="button"
@@ -66,12 +66,12 @@ export const Pagination = ({
     >
       <button
         aria-label="Previous page"
-        className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-brand-charcoal transition hover:border-brand-blue hover:text-brand-blue disabled:pointer-events-none disabled:opacity-40"
+        className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
         disabled={currentPage <= 1}
         onClick={handlePrevious}
         type="button"
       >
-        <ChevronLeft className="h-4 w-4" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
 
       {Array.from({ length: totalPages }, (_, index) => {
@@ -89,12 +89,12 @@ export const Pagination = ({
 
       <button
         aria-label="Next page"
-        className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-brand-charcoal transition hover:border-brand-blue hover:text-brand-blue disabled:pointer-events-none disabled:opacity-40"
+        className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
         disabled={currentPage >= totalPages}
         onClick={handleNext}
         type="button"
       >
-        <ChevronRight className="h-4 w-4" />
+        <ChevronRight className="h-6 w-6" />
       </button>
     </nav>
   );

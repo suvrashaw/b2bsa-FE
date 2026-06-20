@@ -92,7 +92,7 @@ export const Header = ({
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 lg:max-xl:px-4 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
@@ -101,7 +101,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 lg:h-[37px] lg:w-[134px]"
+          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 xl:h-[37px] xl:w-[134px]"
           href="/"
         >
           <Image
@@ -115,7 +115,7 @@ export const Header = ({
         </Link>
       </div>
 
-      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex lg:max-xl:left-[46%] lg:max-xl:gap-4">
+      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 xl:flex">
         {topNavigation.map((link) => (
           <DesktopNavLink
             activeDropdown={activeDropdown}
@@ -133,14 +133,14 @@ export const Header = ({
 
         <Button
           asChild
-          className="btn-schedule schedule-shake hidden min-h-[44px] rounded-full font-semibold normal-case lg:block"
+          className="btn-schedule schedule-shake hidden min-h-[44px] rounded-full font-semibold normal-case xl:block"
           variant="primary"
         >
           <Link href="/contact-us">
             Startup Special Sale
           </Link>
         </Button>
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <button
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
@@ -165,11 +165,17 @@ export const Header = ({
             onMouseEnter={openServicesMegamenu}
             transition={MEGAMENU_TRANSITION}
           >
-            <div className="mx-auto w-full max-w-7xl px-8 lg:max-xl:px-10 xl:px-12">
+            <div className="mx-auto w-full max-w-7xl px-8 xl:px-12">
               <div className="flex justify-between gap-4 xl:gap-8">
                 <div className="min-w-0">
                   <MegamenuServiceGroup
+                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
                     group={serviceNavigationGroups[0]}
+                    onClose={closeMegamenu}
+                  />
+                  <MegamenuServiceGroup
+                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+                    group={serviceNavigationGroups[5]}
                     onClose={closeMegamenu}
                   />
                 </div>
@@ -198,11 +204,6 @@ export const Header = ({
                   />
                   <MegamenuServiceGroup
                     className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[5]}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
                     group={serviceNavigationGroups[6]}
                     onClose={closeMegamenu}
                   />
@@ -217,7 +218,7 @@ export const Header = ({
         {isMobileMenuOpen && (
           <motion.div
             animate={MOBILE_MENU_ANIMATE}
-            className="absolute top-full right-0 left-0 max-h-[80vh] overflow-y-auto border-b border-gray-100 bg-white shadow-2xl lg:hidden"
+            className="absolute top-full right-0 left-0 max-h-[80vh] overflow-y-auto border-b border-gray-100 bg-white shadow-2xl xl:hidden"
             exit={MOBILE_MENU_EXIT}
             initial={MOBILE_MENU_INITIAL}
           >

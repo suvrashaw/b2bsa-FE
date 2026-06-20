@@ -84,15 +84,15 @@ const footerAddresses = [
   {
     address: ["16192 Coastal Highway", "Lewes DE 19958"],
     name: "BTWOB SALES ARROW INC",
-    region: "US",
+    region: "United States",
   },
   {
-    address: ["71-75 Shelton Street", "Covent Garden", "London", "WC2H 9JQ", "United Kingdom"],
+    address: ["71-75 Shelton Street", "Covent Garden", "London, WC2H 9JQ"],
     name: "Btwob Sales Arrow Limited",
-    region: "UK",
+    region: "United Kingdom",
   },
   {
-    address: ["KARLSPLATZ 3,,", "MUNICH, 80335,", "GERMANY"],
+    address: ["Karlsplatz 3,", "Munich, 80335"],
     name: "BTWOB Sales Arrow EU UG",
     region: "Germany",
   },
@@ -130,9 +130,10 @@ export const Footer = () => {
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 pt-12 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:px-6 md:px-8">
         {/* Row 1: Services sitemap */}
-        <div className="mb-6 flex flex-col gap-7 border-b border-white/10 pb-6 lg:flex-row lg:justify-between lg:gap-4 xl:gap-8">
-          <div className="min-w-0">
+        <div className="mb-6 grid gap-7 border-b border-white/10 pb-6 md:grid-cols-2 lg:flex lg:justify-between lg:gap-4 xl:gap-8">
+          <div className="min-w-0 space-y-6">
             <FooterServiceGroup group={serviceNavigationGroups[0]} />
+            <FooterServiceGroup group={serviceNavigationGroups[5]} />
           </div>
           <div className="min-w-0">
             <FooterServiceGroup group={serviceNavigationGroups[1]} />
@@ -143,7 +144,6 @@ export const Footer = () => {
           <div className="min-w-0 space-y-6">
             <FooterServiceGroup group={serviceNavigationGroups[3]} />
             <FooterServiceGroup group={serviceNavigationGroups[4]} />
-            <FooterServiceGroup group={serviceNavigationGroups[5]} />
             <FooterServiceGroup group={serviceNavigationGroups[6]} />
           </div>
         </div>

@@ -85,13 +85,7 @@ export const BlogCard = ({
           sizes="(max-width: 768px) 100vw, 400px"
           src={blog.image}
         />
-        {blog.category && (
-          <div className="absolute top-4 left-4">
-            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
-              {blog.category}
-            </span>
-          </div>
-        )}
+
       </div>
       <div className="p-8">
         {blog.date && (
@@ -124,13 +118,7 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
           sizes="(max-width: 768px) 100vw, 400px"
           src={blog.image}
         />
-        {blog.category && (
-          <div className="absolute top-4 left-4">
-            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider uppercase shadow-sm backdrop-blur-md">
-              {blog.category}
-            </span>
-          </div>
-        )}
+
       </div>
       <div className="flex flex-1 flex-col p-6">
         {blog.date && (

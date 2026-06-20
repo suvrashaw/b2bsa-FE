@@ -8,17 +8,14 @@ import type { LinkedInPost } from "@/content/blogs";
 // ── constants ────────────────────────────────────────────────────────────────
 
 const COMPANY_NAME = "B2B Sales Arrow";
-const COMPANY_TAGLINE = "B2B Lead Generation & Marketing";
-const COMPANY_LOGO = "/media/logo/logo-primary.svg";
-const LINKEDIN_URL = "https://www.linkedin.com/company/b2b-sales-arrow/";
+const COMPANY_TAGLINE =
+  "Trade Show Booth Builder | Exhibition Stand Design | Experiential Marketing | 800+ Events | 15+ Markets";
+const COMPANY_LOGO = "/media/logo/b2bsa-linkedin-avatar.png";
+const LINKEDIN_URL = "https://www.linkedin.com/company/b2b-sales-arrow-llc/";
 
 // ── icons ────────────────────────────────────────────────────────────────────
 
-const LinkedInSquareIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-  </svg>
-);
+
 
 const ThumbUpIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
@@ -86,34 +83,30 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
         rel="noreferrer"
         target="_blank"
       >
-        {/* Avatar container with LinkedIn badge */}
+        {/* Avatar container */}
         <div className="relative shrink-0">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-[4px] border border-[#e0dfdc] bg-white p-1">
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded border border-[#e0dfdc] bg-white">
             <Image
               alt={COMPANY_NAME}
-              className="object-contain"
-              height={40}
+              className="object-cover"
+              height={48}
               src={COMPANY_LOGO}
-              width={40}
+              width={48}
             />
           </div>
-          {/* LinkedIn [in] badge */}
-          <span className="absolute -right-1 -bottom-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#0A66C2] ring-1 ring-white">
-            <LinkedInSquareIcon className="h-2.5 w-2.5 text-white" />
-          </span>
         </div>
 
         {/* Name + tagline + timestamp */}
         <div className="min-w-0">
-          <p className="truncate text-sm leading-tight font-semibold text-[#000000E6]">
+          <p className="truncate text-sm leading-tight font-semibold text-[#000000E6] hover:text-[#0A66C2] hover:underline">
             {COMPANY_NAME}
           </p>
           <p className="truncate text-xs leading-snug text-[#00000099]">
             {COMPANY_TAGLINE}
           </p>
-          <p className="mt-0.5 flex items-center gap-1 text-xs text-[#00000099]">
+          <p className="flex items-center gap-1 text-xs text-[#00000099]">
             <span>1h</span>
-            <span>·</span>
+            <span className="mb-[2px] leading-none">·</span>
             {/* Globe icon */}
             <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 17.93V18a1 1 0 0 0-1-1H8a2 2 0 0 1-2-2v-1l-1.07-.36A8.01 8.01 0 0 1 4 12c0-.34.02-.68.07-1H6a2 2 0 0 1 2 2v1a1 1 0 0 0 1 1h2v1.93zM18.93 15H18a1 1 0 0 0-1 1v1.93A8.03 8.03 0 0 1 13 19.93V18h-1v-2h3a1 1 0 0 0 1-1v-1a2 2 0 0 1 2-2h.93c.05.32.07.66.07 1 0 .7-.08 1.37-.07 2z" />
@@ -124,34 +117,36 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
 
       {/* Follow button */}
       <a
-        className="flex shrink-0 items-center gap-1 rounded-full border border-[#0A66C2] px-3 py-1 text-xs font-semibold text-[#0A66C2] transition-colors hover:bg-[#0A66C2]/5"
+        className="flex shrink-0 items-center rounded px-2 py-1 text-sm font-semibold text-[#0A66C2] transition-colors hover:bg-[#0A66C2]/10"
         href={LINKEDIN_URL}
         rel="noreferrer"
         target="_blank"
       >
-        <span className="text-base leading-none">+</span>
+        <span className="mr-1 text-lg leading-none">+</span>
         Follow
       </a>
     </div>
 
     {/* ── Caption / Post text ── */}
-    <div className="px-4 pb-3">
+    <div className="px-4 pb-2">
       <p className="line-clamp-3 text-sm leading-relaxed text-[#000000E6]">
         {post.caption}
       </p>
-      <a
-        className="text-sm font-medium text-[#00000099] hover:text-[#000000E6]"
-        href={post.url}
-        rel="noreferrer"
-        target="_blank"
-      >
-        …more
-      </a>
-
-      {/* Hashtag */}
-      {post.hashtag && (
-        <p className="mt-1.5 text-xs font-medium text-[#0A66C2]">{post.hashtag}</p>
-      )}
+      <div className="mt-1 flex items-center gap-2">
+        {post.hashtag && (
+          <span className="text-sm font-semibold text-[#0A66C2] hover:underline">
+            {post.hashtag}
+          </span>
+        )}
+        <a
+          className="text-sm text-[#00000099] hover:text-[#0A66C2] hover:underline"
+          href={post.url}
+          rel="noreferrer"
+          target="_blank"
+        >
+          ...more
+        </a>
+      </div>
     </div>
 
     {/* ── Post image ── */}
@@ -171,44 +166,44 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
     </a>
 
     {/* ── Engagement row ── */}
-    <div className="flex items-center justify-around border-t border-[#e0dfdc] px-2 py-1">
+    <div className="flex items-center justify-between border-t border-[#e0dfdc] px-2 py-1.5 sm:px-4">
       <a
-        className="flex flex-1 items-center justify-center gap-1.5 rounded py-1.5 text-xs font-medium text-[#00000099] transition-colors hover:bg-[#f3f2ef] hover:text-[#000000E6]"
+        className="flex flex-1 items-center justify-center gap-1.5 rounded-md py-2.5 text-sm font-semibold text-[#00000099] transition-colors"
         href={post.url}
         rel="noreferrer"
         target="_blank"
       >
-        <ThumbUpIcon className="h-4 w-4" />
+        <ThumbUpIcon className="h-[18px] w-[18px]" />
         <span className="hidden sm:inline">Like</span>
       </a>
 
       <a
-        className="flex flex-1 items-center justify-center gap-1.5 rounded py-1.5 text-xs font-medium text-[#00000099] transition-colors hover:bg-[#f3f2ef] hover:text-[#000000E6]"
+        className="flex flex-1 items-center justify-center gap-1.5 rounded-md py-2.5 text-sm font-semibold text-[#00000099] transition-colors"
         href={post.url}
         rel="noreferrer"
         target="_blank"
       >
-        <CommentIcon className="h-4 w-4" />
+        <CommentIcon className="h-[18px] w-[18px]" />
         <span className="hidden sm:inline">Comment</span>
       </a>
 
       <a
-        className="flex flex-1 items-center justify-center gap-1.5 rounded py-1.5 text-xs font-medium text-[#00000099] transition-colors hover:bg-[#f3f2ef] hover:text-[#000000E6]"
+        className="flex flex-1 items-center justify-center gap-1.5 rounded-md py-2.5 text-sm font-semibold text-[#00000099] transition-colors"
         href={post.url}
         rel="noreferrer"
         target="_blank"
       >
-        <RepostIcon className="h-4 w-4" />
+        <RepostIcon className="h-[18px] w-[18px]" />
         <span className="hidden sm:inline">Repost</span>
       </a>
 
       <a
-        className="flex flex-1 items-center justify-center gap-1.5 rounded py-1.5 text-xs font-medium text-[#00000099] transition-colors hover:bg-[#f3f2ef] hover:text-[#000000E6]"
+        className="flex flex-1 items-center justify-center gap-1.5 rounded-md py-2.5 text-sm font-semibold text-[#00000099] transition-colors"
         href={post.url}
         rel="noreferrer"
         target="_blank"
       >
-        <SendIcon className="h-4 w-4" />
+        <SendIcon className="h-[18px] w-[18px]" />
         <span className="hidden sm:inline">Send</span>
       </a>
     </div>

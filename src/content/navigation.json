@@ -155,14 +155,9 @@
       "name": "MARKET RESEARCH"
     },
     {
-      "href": "/services/hpmi",
-      "links": [
-        {
-          "href": "/services/hpmi/human-powered-market-intelligence",
-          "name": "Human Powered Market Intelligence"
-        }
-      ],
-      "name": "HPMI"
+      "href": "/services/hpmi/human-powered-market-intelligence",
+      "links": [],
+      "name": "Human Powered Market Intelligence"
     }
   ],
   "footerNavigation": [
