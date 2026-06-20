@@ -110,7 +110,7 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
 
           <div className="flex flex-col items-center p-6 text-center">
             <h3
-              className={`mb-2 text-lg font-semibold transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
+              className={`type-h3 mb-2 transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
             >
               {item.title}
             </h3>
@@ -151,7 +151,7 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
 
           <div className="flex flex-col items-center p-6 text-center">
             <h3
-              className={`mb-2 text-lg font-semibold transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
+              className={`type-h3 mb-2 transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
             >
               {item.title}
             </h3>

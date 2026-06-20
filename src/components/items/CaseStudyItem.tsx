@@ -78,8 +78,15 @@ export const CaseStudyItem = ({
         />
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-end p-8 md:justify-between lg:justify-end">
-        <div className="flex items-start gap-4">
+      <div
+        className={cn(
+          "absolute inset-0 flex flex-col",
+          active
+            ? "justify-end p-6 md:justify-between lg:justify-end lg:p-8"
+            : "justify-center p-4 sm:p-6 lg:justify-end lg:p-8"
+        )}
+      >
+        <div className={cn("flex gap-4", active ? "items-start" : "items-center")}>
           <div
             className={cn(
               "flex h-12 w-12 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300",
@@ -88,6 +95,12 @@ export const CaseStudyItem = ({
           >
             <Icon className="h-5 w-5 text-white" name={item.icon} />
           </div>
+
+          {!active && (
+            <h3 className="line-clamp-2 min-w-0 flex-1 font-heading text-sm font-bold text-white lg:hidden">
+              {item.title}
+            </h3>
+          )}
 
           <AnimatePresence mode="popLayout">
             {active ? (

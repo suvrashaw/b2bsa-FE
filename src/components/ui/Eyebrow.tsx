@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib";
 
 const eyebrowVariants = cva(
-  "mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-semibold tracking-wide",
+  "mb-6 inline-block rounded-full px-4 py-1.5 type-eyebrow",
   {
     defaultVariants: {
       variant: "blue",

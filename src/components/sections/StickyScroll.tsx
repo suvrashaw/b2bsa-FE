@@ -125,7 +125,7 @@ export const StickyScroll = ({
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <SectionHeader as="h3">{activeReason.title}</SectionHeader>
                   </div>
-                  <p className="max-w-md text-base leading-relaxed text-gray-600 md:text-lg">
+                  <p className="max-w-md type-body-l leading-relaxed text-gray-600">
                     {activeReason.description}
                   </p>
                 </motion.div>

@@ -83,7 +83,7 @@ export const TestimonialCard = ({
 
       {/* Content */}
       <div className="px-8 pt-3 pb-12 text-center">
-        <p className="text-[15px] leading-relaxed text-gray-600">
+        <p className="type-body-m leading-relaxed text-gray-600">
           &ldquo;{stripOuterQuoteMarks(testimonial.quote)}&rdquo;
         </p>
 

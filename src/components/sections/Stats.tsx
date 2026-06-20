@@ -56,7 +56,7 @@ const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
         "text-white"
       )}
     >
-      <span className="font-heading text-3xl font-bold md:text-4xl">{item.value}</span>
+      <span className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">{item.value}</span>
       <span className="text-xs font-bold tracking-widest uppercase opacity-80">{item.label}</span>
     </div>
   );
@@ -155,7 +155,7 @@ export const Stats = ({
                 </SectionHeader>
               )}
               {description && (
-                <p className="mb-8 text-center text-base leading-relaxed text-brand-charcoal/70 md:text-lg lg:text-left">
+                <p className="mb-8 text-center type-body-l leading-relaxed text-brand-charcoal/70 lg:text-left">
                   {description}
                 </p>
               )}
@@ -184,7 +184,7 @@ export const Stats = ({
               </SectionHeader>
             )}
             {description && (
-              <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+              <p className="mx-auto mb-8 max-w-3xl type-body-l leading-relaxed text-brand-charcoal/70">
                 {description}
               </p>
             )}

@@ -99,9 +99,9 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
             className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-8 bg-black/70 px-4 md:px-12 lg:px-24"
             style={textMotionStyle}
           >
-            <h2 className="max-w-4xl text-center text-3xl leading-tight font-bold text-white md:text-5xl lg:text-6xl">
+            <SectionHeader as="h2" className="max-w-4xl text-center text-white" level="h1">
               Ready to Create an Unforgettable Event Experience?
-            </h2>
+            </SectionHeader>
             <Button asChild className="pointer-events-auto" size="lg" variant="primary">
               <Link href="/contact-us">Let&apos;s talk</Link>
             </Button>
@@ -152,12 +152,13 @@ export const Culture = ({
             "blur-[30px]"
           )}
         />
-        <SectionHeader as="h2" className="mb-6">
-          {typeof data.heading === "string" ? data.heading : "What We Believe In"}
-        </SectionHeader>
-        <p className="mx-auto max-w-2xl text-center text-base leading-relaxed text-brand-charcoal/70 transition-colors duration-500 md:text-lg">
-          {data.description}
-        </p>
+        <SectionHeader
+          as="h2"
+          description={data.description}
+          descriptionSize="body-l"
+          heading={typeof data.heading === "string" ? data.heading : "What We Believe In"}
+          headingAlign="center"
+        />
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
           {data.reasons.map((reason) => (
             <CultureReasonCard key={reason.id} reason={reason} />

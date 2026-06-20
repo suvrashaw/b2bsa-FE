@@ -38,13 +38,13 @@ export const ContactUsForm = ({
       <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Side: Contact Info & Image */}
-          <div className="flex flex-col items-start text-left">
-            <div className="w-full text-left">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="w-full text-center md:text-left">
               <SectionHeader as="h2" className="mb-8">
                 {heading}
               </SectionHeader>
             </div>
-            <p className="mb-12 max-w-md text-left text-base leading-relaxed text-gray-600 md:text-lg">
+            <p className="mb-12 max-w-md text-center type-body-l leading-relaxed text-gray-600 md:text-left">
               {description}
             </p>
 
@@ -56,7 +56,7 @@ export const ContactUsForm = ({
               >
                 <Image
                   alt={illustration.alt}
-                  className="h-auto w-full drop-shadow-xl"
+                  className="mx-auto h-auto w-full drop-shadow-xl md:mx-0"
                   height={360}
                   src={illustration.src}
                   width={480}

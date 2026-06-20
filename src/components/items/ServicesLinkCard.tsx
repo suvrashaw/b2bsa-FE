@@ -40,7 +40,7 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
           className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
         />
 
-        <h3 className="relative font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-brand-charcoal">
+        <h3 className="relative type-h3 text-white transition-colors duration-300 group-hover:text-brand-charcoal">
           {service.title}
         </h3>
 

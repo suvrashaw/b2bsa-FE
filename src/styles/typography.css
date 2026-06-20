@@ -1,0 +1,33 @@
+@layer components {
+  .type-h1 {
+    @apply font-heading text-3xl leading-[1.02] font-black md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .type-h2 {
+    @apply font-heading text-2xl leading-tight font-bold md:text-3xl lg:text-4xl;
+  }
+
+  .type-h3 {
+    @apply font-heading text-xl leading-tight font-bold md:text-2xl;
+  }
+
+  .type-body-l {
+    @apply text-sm md:text-lg;
+  }
+
+  .type-body-m {
+    @apply text-sm md:text-base;
+  }
+
+  .type-body-s {
+    @apply text-xs;
+  }
+
+  .type-label {
+    @apply text-xs uppercase tracking-widest;
+  }
+
+  .type-eyebrow {
+    @apply text-xs md:text-sm font-semibold tracking-wide;
+  }
+}

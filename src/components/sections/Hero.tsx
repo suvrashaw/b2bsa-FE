@@ -321,7 +321,7 @@ export const Hero = ({
           {description && (
             <motion.p
               animate={DESCRIPTION_ANIMATE}
-              className="mb-12 max-w-2xl text-base leading-relaxed font-semibold lg:text-xl"
+              className="mb-12 max-w-2xl type-body-l leading-relaxed font-semibold"
               initial={DESCRIPTION_INITIAL}
               style={DESCRIPTION_STYLE}
               transition={DESCRIPTION_TRANSITION}

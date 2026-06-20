@@ -136,7 +136,7 @@ export const CaseStudies = ({
               {sectionHeading}
             </SectionHeader>
             {sectionDescription && (
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
+              <p className="mt-4 max-w-3xl type-body-m leading-relaxed text-gray-600">
                 {sectionDescription}
               </p>
             )}
@@ -147,7 +147,7 @@ export const CaseStudies = ({
             {heading}
           </SectionHeader>
           {description && (
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">{description}</p>
+            <p className="mt-4 max-w-3xl type-body-m leading-relaxed text-gray-600">{description}</p>
           )}
         </div>
 

@@ -25,8 +25,8 @@ export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) =
       <p className="mb-5 text-sm leading-relaxed font-bold tracking-[0.18em] text-[#1E6091] uppercase">
         {item.client ?? item.title}
       </p>
-      <h3 className="font-heading text-2xl leading-tight font-bold md:text-3xl">{item.title}</h3>
-      <p className="mt-4 text-xl leading-relaxed text-[#333333]">Case Study</p>
+      <h3 className="type-h3 leading-tight">{item.title}</h3>
+      <p className="mt-4 type-body-m leading-relaxed text-[#333333]">Case Study</p>
 
       <Link
         className="mt-auto inline-flex w-fit items-center gap-2 pt-12 font-heading text-2xl font-bold text-[#0C6573] transition-colors hover:text-[#1E6091] md:text-3xl"

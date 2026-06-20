@@ -7,9 +7,9 @@ import { cn } from "@/lib";
 const headingVariants = cva("", {
   variants: {
     level: {
-      h1: "font-heading [font-size:clamp(24px,6vw,32px)] leading-[1.02] font-black text-[var(--heading-h1)] md:text-4xl lg:text-5xl xl:text-6xl",
-      h2: "font-heading [font-size:clamp(20px,5vw,26px)] leading-tight font-bold text-[var(--heading-h2)] md:text-3xl lg:text-4xl",
-      h3: "font-heading [font-size:clamp(16px,4vw,20px)] leading-tight font-bold text-[var(--heading-h3)] md:text-2xl",
+      h1: "type-h1 text-[var(--heading-h1)]",
+      h2: "type-h2 text-[var(--heading-h2)]",
+      h3: "type-h3 text-[var(--heading-h3)]",
       h4: "text-[10px] font-bold tracking-wider text-[var(--heading-h4)] uppercase md:text-xs",
     },
   },
@@ -19,6 +19,7 @@ export interface SectionHeaderProps
   extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as?: "h1" | "h2" | "h3" | "h4";
   description?: string;
+  descriptionSize?: "body-l" | "body-m";
   heading?: ReactNode;
   headingAction?: ReactNode;
   headingAlign?: "center" | "left";
@@ -28,6 +29,7 @@ export interface SectionHeaderProps
 type BlockProps = {
   className?: string;
   description?: string;
+  descriptionSize: "body-l" | "body-m";
   heading: ReactNode;
   headingAction?: ReactNode;
   headingAlign: "center" | "left";
@@ -40,6 +42,7 @@ type BlockProps = {
 const BlockLayout = ({
   className,
   description,
+  descriptionSize,
   heading,
   headingAction,
   headingAlign,
@@ -85,7 +88,8 @@ const BlockLayout = ({
       {description && (
         <p
           className={cn(
-            "-mt-6 mb-12 max-w-2xl text-sm text-brand-charcoal/70 md:text-base",
+            "-mt-6 mb-12 max-w-2xl text-brand-charcoal/70",
+            descriptionSize === "body-l" ? "type-body-l" : "type-body-m",
             isCenter ? "mx-auto text-center" : ""
           )}
         >
@@ -101,6 +105,7 @@ export const SectionHeader = ({
   children,
   className,
   description,
+  descriptionSize = "body-m",
   heading,
   headingAction,
   headingAlign = "center",
@@ -117,6 +122,7 @@ export const SectionHeader = ({
       <BlockLayout
         className={className}
         description={description}
+        descriptionSize={descriptionSize}
         heading={heading}
         headingAction={headingAction}
         headingAlign={headingAlign}

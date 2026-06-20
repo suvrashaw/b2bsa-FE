@@ -37,9 +37,9 @@ export const ServicesCard = ({
               </span>
             </div>
           )}
-          <h3 className="mb-6 font-heading text-2xl leading-tight font-bold">{service.title}</h3>
+          <h3 className="type-h3 mb-6 leading-tight max-md:text-white max-md:drop-shadow-lg">{service.title}</h3>
 
-          <p className="text-base leading-relaxed font-medium text-gray-600 md:text-lg">
+          <p className="type-body-l leading-relaxed font-medium text-gray-600 max-md:text-white max-md:drop-shadow-lg">
             {service.description}
           </p>
         </div>

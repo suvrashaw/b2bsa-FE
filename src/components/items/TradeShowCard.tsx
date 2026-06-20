@@ -47,7 +47,7 @@ export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
         <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
           {show.industry}
         </p>
-        <h3 className="mt-2 font-heading text-xl leading-tight font-bold text-brand-charcoal">
+        <h3 className="mt-2 type-h3 text-brand-charcoal">
           {show.name}
         </h3>
       </div>
@@ -80,7 +80,7 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
         <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">
           {show.industry}
         </p>
-        <h3 className="mt-2 font-heading text-xl font-bold text-brand-charcoal">{show.name}</h3>
+        <h3 className="mt-2 type-h3 text-brand-charcoal">{show.name}</h3>
         <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
       </div>
       <div className="space-y-2">

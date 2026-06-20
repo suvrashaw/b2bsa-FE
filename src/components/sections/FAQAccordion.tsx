@@ -115,7 +115,7 @@ export const FAQAccordion = ({
             {heading}
           </SectionHeader>
           {description && (
-            <p className={cn("max-w-xl text-base text-gray-600", !isArticle && "mx-auto")}>
+            <p className={cn("max-w-xl type-body-m text-gray-600", !isArticle && "mx-auto")}>
               {description}
             </p>
           )}

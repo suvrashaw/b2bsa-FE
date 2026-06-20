@@ -41,7 +41,7 @@ export const ServicesImageCard = ({
             {number}
           </span>
           <div>
-            <h3 className="font-heading text-base leading-snug font-bold text-white md:text-lg">
+            <h3 className="type-h3 leading-snug text-white">
               {service}
             </h3>
             <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-brand-cyan uppercase">

@@ -120,7 +120,7 @@ export const ClientLogos = ({
           </SectionHeader>
         )}
         {description && (
-          <p className="mx-auto max-w-3xl px-4 pb-4 text-center text-base leading-relaxed text-brand-charcoal/70">
+          <p className="mx-auto max-w-3xl px-4 pb-4 text-center type-body-m leading-relaxed text-brand-charcoal/70">
             {description}
           </p>
         )}
@@ -153,7 +153,7 @@ export const ClientLogos = ({
         </SectionHeader>
       )}
       {description && (
-        <p className="mx-auto max-w-3xl px-4 pb-4 text-center text-base leading-relaxed text-brand-charcoal/70">
+        <p className="mx-auto max-w-3xl px-4 pb-4 text-center type-body-m leading-relaxed text-brand-charcoal/70">
           {description}
         </p>
       )}

@@ -204,7 +204,7 @@ const CapabilitiesShowcaseCard = ({
             isActive ? "opacity-100" : "opacity-0"
           )}
         >
-          <p className="text-base leading-relaxed text-gray-200 md:text-lg">
+          <p className="type-body-l leading-relaxed text-gray-200">
             {capability.description}
           </p>
         </div>
@@ -338,7 +338,7 @@ export const Capabilities = ({
             {heading}
           </SectionHeader>
           {description ? (
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+            <p className="mx-auto max-w-2xl type-body-l leading-relaxed text-brand-charcoal/70">
               {description}
             </p>
           ) : null}

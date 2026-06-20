@@ -203,7 +203,7 @@ export const ContactUs = ({
         <div className="mx-auto max-w-5xl text-center">
           {badge ? (
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-sm font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-xs md:text-sm font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md"
               initial="hidden"
               variants={ctaBadgeVariants}
               viewport={ctaViewport}
@@ -235,7 +235,7 @@ export const ContactUs = ({
 
           {description && (
             <motion.p
-              className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-xl"
+              className="mx-auto mt-6 max-w-3xl type-body-l leading-relaxed text-white/88"
               custom={0.16}
               initial="hidden"
               variants={ctaRevealVariants}

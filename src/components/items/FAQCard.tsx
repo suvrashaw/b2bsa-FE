@@ -40,7 +40,7 @@ export const FAQCard = ({
 
           {/* Content on top of overlay */}
           <div className="absolute inset-0 flex flex-col items-start justify-end p-8">
-            <h3 className="font-heading text-base leading-snug font-semibold text-white md:text-xl">
+            <h3 className="type-h3 leading-snug text-white">
               {question}
             </h3>
           </div>

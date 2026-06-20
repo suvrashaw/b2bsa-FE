@@ -29,7 +29,7 @@ export const BasicCards = ({ item }: BasicCardsProps) => {
       </div>
 
       <div className="p-8">
-        <h3 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
+        <h3 className="type-h3 text-brand-charcoal">
           {item.title}
         </h3>
 

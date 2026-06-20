@@ -59,7 +59,7 @@ export const Timeline = ({
           <div className="mb-20 text-center">
             {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}
             {resolvedDescription && (
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+              <p className="mx-auto mt-6 max-w-2xl type-body-l leading-relaxed text-brand-charcoal/70">
                 {resolvedDescription}
               </p>
             )}

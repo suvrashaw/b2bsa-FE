@@ -25,21 +25,22 @@ export const CorporateVideoIndustriesSection = ({
         <div className="max-w-5xl">
           <SectionHeader
             as="h2"
-            className="max-w-4xl text-4xl leading-none text-white md:text-5xl lg:text-6xl"
+            className="max-w-4xl leading-none text-white"
+            level="h1"
           >
             {heading}
           </SectionHeader>
-          <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/86 md:text-lg">
+          <p className="mt-7 max-w-4xl type-body-l leading-relaxed text-white/86">
             {description}
           </p>
 
           <div className="mt-8 max-w-4xl space-y-6 md:mt-10 md:space-y-7">
             {industries.map((industry) => (
               <article key={industry.title}>
-                <h3 className="font-heading text-xl leading-tight font-bold text-[#4BC0D9] md:text-2xl">
+                <h3 className="type-h3 leading-tight text-[#4BC0D9]">
                   {industry.title}
                 </h3>
-                <p className="mt-2 max-w-3xl text-base leading-relaxed text-white/84 md:text-lg">
+                <p className="mt-2 max-w-3xl type-body-l leading-relaxed text-white/84">
                   {industry.description}
                 </p>
               </article>
