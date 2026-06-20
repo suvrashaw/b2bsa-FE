@@ -98,7 +98,7 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
 
   return (
     <div
-      className="pointer-events-auto relative w-[calc(100%+2rem)] -mx-4 overflow-hidden py-4 md:w-[calc(100%+3rem)] md:-mx-6 lg:mx-0 lg:w-full"
+      className="pointer-events-auto relative -mx-4 w-[calc(100%+2rem)] overflow-hidden py-4 md:-mx-6 md:w-[calc(100%+3rem)] lg:mx-0 lg:w-full"
       onWheel={handleWheel}
       ref={containerRef}
     >
@@ -162,7 +162,7 @@ export const Stats = ({
               <StatsMarquee items={flatItems} />
             </div>
 
-            <div className="group relative aspect-[4/3] w-[calc(100%+2rem)] -mx-4 md:w-[calc(100%+3rem)] md:-mx-6 lg:mx-0 lg:w-full">
+            <div className="group relative -mx-4 aspect-[4/3] w-[calc(100%+2rem)] md:-mx-6 md:w-[calc(100%+3rem)] lg:mx-0 lg:w-full">
               <div className="absolute inset-0 border-0 transition-all duration-300 lg:rounded-3xl lg:border lg:border-brand-blue/10 lg:shadow-[6px_6px_0px_0px] lg:shadow-brand-blue/10 lg:group-hover:-translate-x-1 lg:group-hover:-translate-y-1 lg:group-hover:shadow-[12px_12px_0px_0px] lg:group-hover:shadow-brand-blue/15" />
               <div className="relative h-full w-full overflow-hidden rounded-none lg:rounded-3xl">
                 <Image

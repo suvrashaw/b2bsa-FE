@@ -25,9 +25,9 @@ export const ServicesCard = ({
   showCta = true,
 }: ServicesCardProps) => {
   return (
-    <div className="relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:h-[400px] md:flex-row">
+    <div className="relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row">
       {/* Content Area */}
-      <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 md:w-2/5 lg:p-12">
+      <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 md:w-1/2 md:p-6 lg:w-2/5 lg:p-12">
         <div className="pointer-events-auto">
           {serviceLabel && (
             <div className="mb-6 flex items-center gap-2">
@@ -73,7 +73,7 @@ export const ServicesCard = ({
       </div>
 
       {/* Image Area */}
-      <div className="image-pane z-0 h-64 w-full overflow-hidden md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-3/5">
+      <div className="image-pane z-0 h-64 w-full overflow-hidden md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-1/2 lg:w-3/5">
         <Image
           alt={service.title}
           className="object-cover max-md:scale-105 max-md:blur-[4px]"

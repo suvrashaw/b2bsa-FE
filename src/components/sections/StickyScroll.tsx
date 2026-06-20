@@ -104,7 +104,7 @@ export const StickyScroll = ({
       >
         {/* Left text panel */}
         <div
-          className={`flex h-dvh flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2 md:pr-8" : "max-w-4xl items-center text-center md:w-3/4"}`}
+          className={`flex h-dvh flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
           <SectionHeader as="h2" className="mb-14 w-full text-left">
             {heading}

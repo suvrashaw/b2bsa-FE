@@ -256,20 +256,20 @@ const CapabilitiesCarousel = ({
     <div className="mx-auto w-full max-w-7xl" ref={containerRef}>
       <div
         className={cn(
-          "relative flex min-h-[600px] flex-col overflow-hidden lg:min-h-[640px] lg:flex-row",
-          mediaPosition === "left" && "lg:flex-row-reverse"
+          "relative flex min-h-[480px] flex-col overflow-hidden md:min-h-[520px] md:flex-row",
+          mediaPosition === "left" && "md:flex-row-reverse"
         )}
       >
         <div
           className={cn(
-            "relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 lg:w-[55%]",
-            mediaPosition === "left" ? "lg:pr-16 lg:pl-0" : "lg:pl-16"
+            "relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 md:pr-8 md:w-[55%]",
+            mediaPosition === "left" ? "md:pr-16 md:pl-0" : "md:pl-16"
           )}
         >
           <div
             className={cn(
               "relative z-20 flex h-[300px] w-full items-center justify-center",
-              mediaPosition === "left" ? "lg:justify-end" : "lg:justify-start"
+              mediaPosition === "left" ? "md:justify-end" : "md:justify-start"
             )}
           >
             {capabilities.map((capability, index) => (
@@ -287,8 +287,8 @@ const CapabilitiesCarousel = ({
         </div>
         <div
           className={cn(
-            "relative flex min-h-[500px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[600px] md:px-12 md:py-24 lg:py-16",
-            mediaPosition === "left" ? "lg:pl-14 lg:pr-0" : "lg:pr-14 lg:pl-0"
+            "relative flex min-h-[400px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[500px] md:px-12 md:py-16",
+            mediaPosition === "left" ? "md:pl-14 md:pr-0" : "md:pr-14 md:pl-0"
           )}
         >
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">

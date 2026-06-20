@@ -12,7 +12,6 @@ import { FAQCard } from "@/components/items/FAQCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
-import { AboutCoreValues } from "@/components/sections/AboutCoreValues";
 import { Blogs } from "@/components/sections/Blogs";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -25,7 +24,6 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { GlobalPresence } from "@/components/sections/GlobalPresence";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -282,24 +280,6 @@ const BASIC_CARD_ITEMS = [
   },
 ];
 
-// ─── GlobalPresence ──────────────────────────────────────────────────────────
-
-const GLOBAL_PRESENCE_DATA = {
-  cities: [
-    { color: "#4BC0D9", lat: 51.5074, lng: -0.1278, name: "London", size: 0.6 },
-    { color: "#1E6091", lat: 40.7128, lng: -74.006, name: "New York", size: 0.7 },
-    { color: "#4BC0D9", lat: 25.2048, lng: 55.2708, name: "Dubai", size: 0.5 },
-    { color: "#1E6091", lat: 52.52, lng: 13.405, name: "Berlin", size: 0.45 },
-    { color: "#4BC0D9", lat: 1.3521, lng: 103.8198, name: "Singapore", size: 0.5 },
-    { color: "#1E6091", lat: 48.8566, lng: 2.3522, name: "Paris", size: 0.45 },
-    { color: "#4BC0D9", lat: 37.7749, lng: -122.4194, name: "San Francisco", size: 0.5 },
-    { color: "#1E6091", lat: 35.6762, lng: 139.6503, name: "Tokyo", size: 0.4 },
-  ],
-  description:
-    "Our team has delivered enterprise event programs across 40+ countries, from Las Vegas to Singapore.",
-  title: "A Global Footprint",
-};
-
 // ─── ServiceCarouselSection ──────────────────────────────────────────────────
 
 const _SERVICE_CAROUSEL_ITEMS = [
@@ -367,22 +347,6 @@ const PROCESS_TIMELINE_PHASES = [
   },
 ];
 
-// ─── AboutCoreValues ─────────────────────────────────────────────────────────
-
-const ABOUT_CORE_VALUES_DATA = {
-  description:
-    "These are the principles that guide every client engagement, every hire, and every event we run.",
-  heading: "What We Stand For",
-  values: [
-    "Pipeline over presence — every show must drive revenue",
-    "Radical ownership of client outcomes",
-    "Transparent reporting, always",
-    "Speed without sacrificing quality",
-    "Global expertise, local execution",
-    "People-first culture, results-first mindset",
-  ],
-};
-
 // ─── ContactUs ─────────────────────────────────────────────────────
 
 const CONTACT_CINEMATIC_PROPS = {
@@ -418,7 +382,6 @@ const DEMO_BLOG_POSTS = getBlogsByTags([], 4);
 type PageLink = { href: string; label: string };
 
 const COMPONENT_PAGES: Record<string, PageLink[]> = {
-  AboutCoreValues: [{ href: "/about-us", label: "About" }],
   Blogs: [
     { href: "/", label: "Home" },
     { href: "/blogs", label: "Blogs" },
@@ -509,7 +472,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Booth Builder",
     },
   ],
-  GlobalPresence: [{ href: "/about-us", label: "About" }],
   Hero: [
     { href: "/tradeshow-calendar", label: "Trade Show Cal." },
     { href: "/case-studies/waf-2025", label: "Case Study" },
@@ -588,7 +550,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
 };
 
 const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
-  AboutCoreValues: { items: [], ui: ["Heading"] },
   Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
   BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
   BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
@@ -605,7 +566,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
   FAQ: { items: ["FAQCard"], ui: ["Eyebrow", "Heading"] },
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
-  GlobalPresence: { items: [], ui: ["Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
@@ -749,10 +709,6 @@ const DemoPage = () => {
       <DemoLabel name="HomeStats" />
       <HomeStats />
 
-      {/* 08 – AboutCoreValues */}
-      <DemoLabel name="AboutCoreValues" />
-      <AboutCoreValues data={ABOUT_CORE_VALUES_DATA} />
-
       {/* 12 – Culture */}
       <DemoLabel name="Culture" />
       <Culture data={CULTURE_DATA} />
@@ -856,10 +812,6 @@ const DemoPage = () => {
           />
         ))}
       </CardsGrid>
-
-      {/* 29 – GlobalPresence */}
-      <DemoLabel name="GlobalPresence" />
-      <GlobalPresence data={GLOBAL_PRESENCE_DATA} />
 
       {/* 30 – Blogs */}
       <DemoLabel name="Blogs" />

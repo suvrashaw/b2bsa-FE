@@ -66,7 +66,7 @@ export const Timeline = ({
           </div>
         )}
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className="relative mx-auto max-w-5xl md:px-6">
           {/* Vertical Line */}
           <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/50 to-transparent" />
 

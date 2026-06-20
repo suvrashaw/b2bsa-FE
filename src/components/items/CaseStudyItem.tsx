@@ -78,7 +78,7 @@ export const CaseStudyItem = ({
         />
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-end p-8">
+      <div className="absolute inset-0 flex flex-col justify-end p-8 md:justify-between lg:justify-end">
         <div className="flex items-start gap-4">
           <div
             className={cn(
