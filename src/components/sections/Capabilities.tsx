@@ -262,7 +262,7 @@ const CapabilitiesCarousel = ({
       >
         <div
           className={cn(
-            "relative z-30 flex min-h-[350px] w-full flex-col items-start justify-center overflow-hidden px-8 md:min-h-[450px] md:px-16 md:pr-8 md:w-[55%]",
+            "relative z-30 flex min-h-[240px] w-full flex-col items-start justify-center overflow-hidden px-4 md:min-h-[450px] md:w-[55%] md:px-16 md:pr-8",
             mediaPosition === "left" ? "md:pr-16 md:pl-0" : "md:pl-16"
           )}
         >
@@ -287,7 +287,7 @@ const CapabilitiesCarousel = ({
         </div>
         <div
           className={cn(
-            "relative flex min-h-[400px] flex-1 items-center justify-center overflow-hidden px-6 py-16 md:min-h-[500px] md:px-12 md:py-16",
+            "relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden px-4 py-8 md:min-h-[500px] md:px-12 md:py-16",
             mediaPosition === "left" ? "md:pl-14 md:pr-0" : "md:pr-14 md:pl-0"
           )}
         >

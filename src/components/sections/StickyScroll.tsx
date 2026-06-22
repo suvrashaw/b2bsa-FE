@@ -106,16 +106,16 @@ export const StickyScroll = ({
         <div
           className={`flex h-dvh flex-col items-start justify-center ${showImagePanel ? "w-full md:w-1/2" : "max-w-4xl items-center text-center md:w-3/4"}`}
         >
-          <SectionHeader as="h2" className="mb-14 w-full text-left">
+          <SectionHeader as="h2" className="mb-4 w-full text-left md:mb-8">
             {heading}
           </SectionHeader>
 
-          <div className="relative mt-4 flex min-h-[200px] w-full">
+          <div className="relative flex min-h-[200px] w-full">
             {activeReason && (
               <AnimatePresence mode="wait">
                 <motion.div
                   animate={TEXT_ANIMATE}
-                  className="absolute inset-0 flex flex-col items-start justify-center text-left"
+                  className="absolute inset-0 flex flex-col items-start justify-start text-left pt-2"
                   exit={TEXT_EXIT}
                   initial={TEXT_INITIAL}
                   key={resolvedActiveIndex}

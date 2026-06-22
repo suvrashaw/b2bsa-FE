@@ -142,7 +142,7 @@ export const Culture = ({
 
   return (
     <section className="relative w-full bg-brand-gray pt-12 transition-colors duration-500">
-      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-8 text-center">
+      <div className="relative mb-12 flex min-h-[50vh] flex-col items-center justify-center px-4 text-center md:px-8">
         {/* Radial spotlight */}
         <div
           aria-hidden="true"

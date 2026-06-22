@@ -464,7 +464,7 @@ export const Spotlight = ({
       <section className={cn("bg-brand-gray py-20", sectionClassName)} id={id}>
         <div
           className={cn(
-            "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-8 md:gap-14 lg:gap-20",
+            "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-4 md:px-8 md:gap-14 lg:gap-20",
             usesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
             usesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
             className

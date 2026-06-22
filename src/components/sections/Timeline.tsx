@@ -53,10 +53,10 @@ export const Timeline = ({
   );
 
   return (
-    <section className={cn("py-20 bg-brand-gray", className)}>
+    <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)}>
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         {(resolvedTitle || resolvedDescription) && (
-          <div className="mb-20 text-center">
+          <div className="mb-8 text-center md:mb-14 lg:mb-20">
             {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}
             {resolvedDescription && (
               <p className="mx-auto mt-6 max-w-2xl type-body-l leading-relaxed text-brand-charcoal/70">
@@ -70,7 +70,7 @@ export const Timeline = ({
           {/* Vertical Line */}
           <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/50 to-transparent" />
 
-          <div className="space-y-16">
+          <div className="space-y-8 md:space-y-12 lg:space-y-16">
             {resolvedSteps.map((step, index) => (
               <motion.div
                 className="relative flex flex-col items-start"

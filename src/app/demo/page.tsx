@@ -657,10 +657,10 @@ const DemoPage = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       {/* Sticky demo banner */}
-      <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-brand-charcoal px-8 py-3 shadow-xl">
+      <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-brand-charcoal px-4 py-3 shadow-xl md:px-8">
         <div className="flex items-center gap-4">
           <span className="font-mono text-sm font-black text-white">B2BSA2 / DEMO</span>
-          <span className="font-mono text-xs text-white/40">— all section components</span>
+          <span className="hidden font-mono text-xs text-white/40 md:inline">— all section components</span>
         </div>
         <span className="rounded-full bg-brand-blue/30 px-3 py-1 font-mono text-xs text-brand-cyan">
           /demo
