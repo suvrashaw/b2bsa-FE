@@ -27,7 +27,7 @@ interface BlogSidebarTrendingProps {
 const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
   const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(
     0,
-    4
+    3
   );
 
   return (
@@ -38,24 +38,24 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
       <div className="divide-y divide-gray-100">
         {trendingPosts.map((post) => (
           <Link
-            className="group flex gap-3 p-4 transition-colors hover:bg-brand-gray"
+            className="group flex gap-3 p-3 transition-colors hover:bg-brand-gray"
             href={post.href}
             key={post.id}
           >
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-100">
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-gray-100">
               <Image
                 alt={post.title}
                 className="object-cover"
                 fill
-                sizes="64px"
+                sizes="48px"
                 src={PLACEHOLDER_IMAGE}
               />
             </div>
             <div className="min-w-0">
-              <h3 className="line-clamp-2 text-sm leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">
+              <h3 className="line-clamp-2 text-[13px] leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">
                 {post.title}
               </h3>
-              {post.date && <p className="mt-2 text-xs font-medium text-gray-500">{post.date}</p>}
+              {post.date && <p className="mt-1 text-[11px] font-medium text-gray-500">{post.date}</p>}
             </div>
           </Link>
         ))}
@@ -80,9 +80,9 @@ const BlogSidebarSubscribe = () => {
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
-      <div className="bg-gradient-to-r from-brand-blue to-brand-cyan px-4 py-4">
+      <div className="bg-gradient-to-r from-brand-blue to-brand-cyan px-4 py-3">
         <p className="text-sm font-bold tracking-widest text-white uppercase">
-          Let&apos;s Connect for Upcoming Event Strategy
+          Let&apos;s Connect for Event Strategy
         </p>
       </div>
       {submitted ? (
@@ -91,13 +91,13 @@ const BlogSidebarSubscribe = () => {
           <p className="text-sm text-gray-500">We&apos;ll be in touch with your event strategy.</p>
         </div>
       ) : (
-        <form className="space-y-4 rounded-b-2xl bg-white p-6" onSubmit={handleSubmit}>
+        <form className="space-y-4 rounded-b-2xl bg-white p-5" onSubmit={handleSubmit}>
           <div>
             <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
               Don&apos;t Just Scroll!
             </h2>
             <p className="mt-2 text-sm leading-relaxed font-bold text-brand-blue">
-              Let&apos;s Connect for Upcoming Event Strategy!
+              Let&apos;s Connect for Event Strategy!
             </p>
           </div>
 
@@ -106,7 +106,7 @@ const BlogSidebarSubscribe = () => {
               Work Email
             </label>
             <input
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+              className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-email"
               placeholder="Work email"
               required
@@ -117,7 +117,7 @@ const BlogSidebarSubscribe = () => {
               Industry
             </label>
             <select
-              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-industry"
               required
             >
@@ -133,7 +133,7 @@ const BlogSidebarSubscribe = () => {
               Event Name
             </label>
             <input
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
+              className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-event"
               placeholder="Event name"
               required

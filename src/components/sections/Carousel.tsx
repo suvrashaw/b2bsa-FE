@@ -145,7 +145,7 @@ export const Carousel = ({
       {/* Scroll track is full bleed but padded so adjacent cards peek symmetrically */}
       <div
         className={cn(
-          "flex snap-x snap-mandatory overflow-x-auto px-10 pb-4 [scroll-padding-left:2.5rem] [&::-webkit-scrollbar]:hidden",
+          "flex snap-x snap-mandatory overflow-x-auto px-10 py-4 [scroll-padding-left:2.5rem] [&::-webkit-scrollbar]:hidden",
           gap
         )}
         onMouseEnter={autoplayInterval ? handleMouseEnter : undefined}
