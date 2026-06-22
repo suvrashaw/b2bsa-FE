@@ -54,7 +54,7 @@ const Page = () => {
       />
 
       {/* Who We Are */}
-      <section className="bg-brand-gray py-16 md:py-20">
+      <section className="bg-brand-gray pt-16 pb-6 md:pt-20 md:pb-8">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeader as="h2" className="mb-6">
@@ -70,13 +70,13 @@ const Page = () => {
       </section>
 
       {/* Vision & Mission — left: Mission + Vision stacked, right: team images */}
-      <section className="bg-brand-gray py-16 md:py-20">
+      <section className="bg-brand-gray pt-6 pb-16 md:pt-8 md:pb-20">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
             {/* Left: Mission + Vision */}
-            <div>
-              <div className="mb-12">
-                <SectionHeader as="h2" className="mb-6 text-left">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <div className="mb-12 w-full">
+                <SectionHeader as="h2" className="mb-6 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
                     {ABOUT_VISION_MISSION.missionTitleLine1}
                   </span>
@@ -84,7 +84,7 @@ const Page = () => {
                     {ABOUT_VISION_MISSION.missionTitleLine2}
                   </span>
                 </SectionHeader>
-                <ul className="space-y-3">
+                <ul className="inline-block space-y-3 text-left">
                   {ABOUT_VISION_MISSION.missionItems.map((item) => (
                     <li
                       className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/70 md:text-base"
@@ -96,8 +96,8 @@ const Page = () => {
                   ))}
                 </ul>
               </div>
-              <div>
-                <SectionHeader as="h2" className="mb-4 text-left">
+              <div className="w-full">
+                <SectionHeader as="h2" className="mb-4 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
                     {ABOUT_VISION_MISSION.visionTitleLine1}
                   </span>
