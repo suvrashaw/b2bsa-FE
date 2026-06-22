@@ -96,6 +96,14 @@ export const TestimonialCard = ({
             <Star className="h-3 w-3 fill-amber-400 text-amber-400" key={i} />
           ))}
         </div>
+
+        {testimonial.serviceTag && (
+          <div className="mt-5 flex justify-center">
+            <span className="rounded-full bg-brand-blue/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-brand-blue uppercase">
+              {testimonial.serviceTag}
+            </span>
+          </div>
+        )}
       </div>
 
       {!isCenter && (

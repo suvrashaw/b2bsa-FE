@@ -148,8 +148,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Row 2: Brand / Contact / Navigation / Newsletter */}
-        <div className="mb-6 grid gap-8 md:grid-cols-2 lg:grid-cols-[1.35fr_0.9fr_0.7fr_1.25fr] lg:gap-10">
+        {/* Row 2: Brand / Navigation / Top Cities / Contact */}
+        <div className="mb-6 grid gap-8 md:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.65fr_0.9fr] lg:gap-10">
           <div>
             <Link
               className="relative mb-6 block h-12 w-48 transition-opacity hover:opacity-90"
@@ -178,6 +178,45 @@ export const Footer = () => {
 
           <div>
             <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
+              Navigation
+            </span>
+            <ul className="space-y-2">
+              {footerNavigation.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    className="block text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
+                    href={item.href}
+                  >
+                    {toTitleCase(item.name)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
+              Top Cities
+            </span>
+            <ul className="space-y-2">
+              {[
+                "New York",
+                "London",
+                "Dubai",
+                "Singapore",
+                "Las Vegas",
+                "Amsterdam",
+                "Frankfurt",
+              ].map((city) => (
+                <li className="text-sm text-white/90" key={city}>
+                  {city}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
               Contact
             </span>
             <div className="mb-5 space-y-1.5 text-sm text-white/90">
@@ -189,8 +228,6 @@ export const Footer = () => {
                   info@b2bsalesarrow.com
                 </a>
               </p>
-              <p>New York, USA</p>
-              <p>Bengaluru, India</p>
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((item) => {
@@ -230,34 +267,10 @@ export const Footer = () => {
                 );
               })}
             </div>
-          </div>
-
-          <div>
-            <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
-              Navigation
-            </span>
-            <ul className="space-y-3">
-              {footerNavigation.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    className="text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
-                    href={item.href}
-                  >
-                    {toTitleCase(item.name)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
-              Stay Ahead
-            </span>
-            <p className="mb-4 text-sm text-white/90">
+            <p className="mt-4 text-sm text-white/90">
               Subscribe to our enterprise growth newsletter.
             </p>
-            <div className="pointer-events-auto flex min-w-0 items-center rounded-[4px] border border-white/35 bg-white/10 p-1 text-white transition-colors focus-within:border-white">
+            <div className="pointer-events-auto mt-3 flex min-w-0 items-center rounded-[4px] border border-white/35 bg-white/10 p-1 text-white transition-colors focus-within:border-white">
               <input
                 className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white transition-colors placeholder:text-white/85 focus:outline-none"
                 placeholder="Work Email"

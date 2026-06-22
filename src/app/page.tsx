@@ -67,6 +67,7 @@ const Home = () => {
       </div>
 
       <CardsGrid
+        className="pb-8 md:pb-12 lg:pb-16"
         cols={3}
         cta={
           HOME_EVENTS_CONTENT.viewAllLabel ? (
