@@ -72,12 +72,12 @@ export const CaseStudyCard = ({
             revealed && "opacity-100 translate-y-0"
           )}
         >
-          <h3 className="mx-auto max-w-xs text-center font-sans text-lg leading-snug font-bold !text-white drop-shadow-md md:text-xl">
+          <h3 className="mx-auto max-w-xs text-center font-sans text-base leading-snug font-bold !text-white drop-shadow-md md:text-xl">
             {title}
           </h3>
           <p
             className={cn(
-              "mx-auto mt-4 line-clamp-2 max-w-md text-sm leading-relaxed text-white/85 opacity-0 transition-opacity delay-75 duration-500 group-hover:opacity-100",
+              "mx-auto mt-4 line-clamp-2 max-w-md text-xs leading-relaxed text-white/85 opacity-0 transition-opacity delay-75 duration-500 group-hover:opacity-100",
               revealed && "opacity-100"
             )}
           >

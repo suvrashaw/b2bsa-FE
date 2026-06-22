@@ -21,7 +21,7 @@ export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) =
       />
     </div>
 
-    <div className="flex min-h-[300px] flex-col p-8 md:p-10">
+    <div className="flex min-h-[300px] flex-col p-5 md:p-10">
       <p className="mb-5 text-sm leading-relaxed font-bold tracking-[0.18em] text-[#1E6091] uppercase">
         {item.client ?? item.title}
       </p>

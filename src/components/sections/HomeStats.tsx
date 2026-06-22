@@ -72,10 +72,10 @@ interface HomeStatsProps {
 
 const StatCard = ({ stat }: { stat: HomeStatItem }) => (
   <div
-    className={`relative overflow-hidden rounded-xl p-6 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
+    className={`relative overflow-hidden rounded-2xl p-5 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
   >
     <div className="relative z-10">
-      <div className="text-sm font-medium opacity-80">{stat.label}</div>
+      <div className="text-xs font-medium opacity-80">{stat.label}</div>
       <div className="mt-2 font-heading text-3xl font-bold md:text-4xl lg:text-5xl">{stat.value}</div>
     </div>
   </div>

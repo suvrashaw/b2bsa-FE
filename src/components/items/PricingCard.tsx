@@ -45,7 +45,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
       />
 
       {/* Main Content Card Container */}
-      <div className="relative rounded-2xl p-8">
+      <div className="relative rounded-2xl p-5 md:p-8">
         {tier.popular && (
           <div className="absolute -top-3.5 -right-2 z-20 rotate-6 rounded-full border border-brand-blue bg-gradient-to-r from-brand-blue to-brand-primary px-4 py-1.5 font-sans text-xs font-black tracking-wider text-white uppercase shadow-md">
             Popular!

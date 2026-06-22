@@ -28,7 +28,7 @@ export const BlogsCarouselCard = ({ post }: BlogsCarouselCardProps) => {
             <p className="text-sm font-semibold tracking-wide text-brand-primary">{post.date}</p>
           ) : null}
 
-          <h3 className="mt-3 font-heading text-xl leading-[1.12] font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-brand-blue md:text-2xl">
+          <h3 className="mt-3 font-heading text-base leading-[1.12] font-bold text-brand-charcoal transition-colors duration-300 group-hover:text-brand-blue md:text-xl lg:text-2xl">
             {post.title}
           </h3>
         </div>

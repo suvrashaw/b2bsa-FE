@@ -39,7 +39,7 @@ export const FAQCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/25" />
 
           {/* Content on top of overlay */}
-          <div className="absolute inset-0 flex flex-col items-start justify-end p-8">
+          <div className="absolute inset-0 flex flex-col items-start justify-end p-5 md:p-8">
             <h3 className="type-h3 leading-snug text-white">
               {question}
             </h3>
@@ -47,8 +47,8 @@ export const FAQCard = ({
         </div>
 
         {/* Back: Answer */}
-        <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-8 text-left shadow-inner [backface-visibility:hidden]">
-          <p className="text-sm leading-relaxed text-white md:text-base">{answer}</p>
+        <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 md:p-8 text-left shadow-inner [backface-visibility:hidden]">
+          <p className="text-xs leading-relaxed text-white md:text-base">{answer}</p>
         </div>
       </div>
     </div>

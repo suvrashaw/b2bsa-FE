@@ -37,20 +37,15 @@ export const FAQAccordionItem = ({
       )}
     >
       <button
-        className="flex w-full items-center gap-4 px-6 py-5 text-left"
+        className="flex w-full items-center gap-3 px-5 py-5 text-left md:px-6 md:gap-4"
         onClick={handleClick}
         type="button"
       >
-        <span className="w-9 shrink-0 text-base font-bold text-brand-blue">{num}.</span>
-        {/* Mobile: icon on LEFT before question text */}
-        <span className="shrink-0 text-brand-cyan md:hidden">
-          {isOpen ? <X className="h-[18px] w-[18px]" /> : <Plus className="h-[18px] w-[18px]" />}
-        </span>
+        <span className="w-6 shrink-0 text-base font-bold text-brand-blue md:w-8">{num}.</span>
         <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-lg">
           {question}
         </span>
-        {/* Desktop: icon on RIGHT */}
-        <span className="hidden shrink-0 text-brand-cyan md:block">
+        <span className="shrink-0 text-brand-cyan">
           {isOpen ? <X className="h-[18px] w-[18px]" /> : <Plus className="h-[18px] w-[18px]" />}
         </span>
       </button>
@@ -64,7 +59,7 @@ export const FAQAccordionItem = ({
             initial={ANSWER_INITIAL}
             transition={ANSWER_TRANSITION}
           >
-            <div className="px-6 pt-1 pb-6">
+            <div className="px-5 pt-1 pb-6 md:px-6">
               <p className="text-sm leading-relaxed text-brand-charcoal/60 md:text-base">
                 {answer}
               </p>

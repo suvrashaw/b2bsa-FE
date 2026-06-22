@@ -58,7 +58,7 @@ export const LiveStreamProjects = ({
           <div className="flex flex-col gap-4 border-b border-brand-charcoal/10 px-4 py-5 sm:px-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-xs font-semibold text-brand-blue uppercase">{playlistLabel}</p>
-              <h3 className="mt-2 font-heading text-lg font-bold text-brand-charcoal md:text-xl">
+              <h3 className="mt-2 font-heading text-base font-bold text-brand-charcoal md:text-xl">
                 Project Playback Gallery
               </h3>
             </div>
@@ -110,10 +110,10 @@ export const LiveStreamProjects = ({
                       </span>
                     )}
                   </div>
-                  <h3 className="mt-4 font-heading text-xl font-bold text-brand-charcoal md:text-2xl">
+                  <h3 className="mt-4 font-heading text-base font-bold text-brand-charcoal md:text-xl lg:text-2xl">
                     {activeProject.title}
                   </h3>
-                  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
+                  <p className="mt-3 max-w-3xl text-xs leading-relaxed text-brand-charcoal/70 md:text-base">
                     {activeProject.description}
                   </p>
                 </div>

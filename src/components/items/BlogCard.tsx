@@ -87,15 +87,15 @@ export const BlogCard = ({
         />
 
       </div>
-      <div className="p-8">
+      <div className="p-5 md:p-8">
         {blog.date && (
           <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-lg leading-tight font-bold md:text-xl">
+        <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-base leading-tight font-bold md:text-xl">
           {blog.title}
         </h3>
         {blog.excerpt && (
-          <p className="mb-6 line-clamp-3 min-h-[3.75rem] text-sm leading-relaxed text-gray-600 md:text-base">
+          <p className="mb-6 line-clamp-3 min-h-[3.75rem] text-xs leading-relaxed text-gray-600 md:text-base">
             {blog.excerpt}
           </p>
         )}
@@ -120,15 +120,15 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
         />
 
       </div>
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5 md:p-6">
         {blog.date && (
           <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
         )}
-        <h3 className="mb-3 font-heading text-lg leading-snug font-bold md:text-xl">
+        <h3 className="mb-3 font-heading text-base leading-snug font-bold md:text-xl">
           {blog.title}
         </h3>
         {blog.excerpt && (
-          <p className="mb-4 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600 md:text-base">
+          <p className="mb-4 line-clamp-3 flex-1 text-xs leading-relaxed text-gray-600 md:text-base">
             {blog.excerpt}
           </p>
         )}

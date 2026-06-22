@@ -129,7 +129,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
 
     {/* ── Caption / Post text ── */}
     <div className="px-4 pb-2">
-      <p className="line-clamp-3 text-sm leading-relaxed text-[#000000E6]">
+      <p className="line-clamp-3 text-xs leading-relaxed text-[#000000E6]">
         {post.caption}
       </p>
       <div className="mt-1 flex items-center gap-2">

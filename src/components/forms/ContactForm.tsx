@@ -46,7 +46,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
   return (
     <form className={className} onSubmit={handleSubmit}>
       <div className="space-y-6">
-        <div className={`grid gap-6 ${form.lastNameLabel ? "grid-cols-2" : "grid-cols-1"}`}>
+        <div className={`grid gap-6 ${form.lastNameLabel ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
           <FormInput
             autoComplete="given-name"
             id="contact-first-name"
@@ -85,7 +85,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           />
         )}
 
-        <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-2" : "grid-cols-1"}`}>
+        <div className={`grid gap-6 ${form.phoneLabel ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
           <FormInput
             autoComplete="email"
             id="contact-email"
@@ -107,7 +107,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         </div>
 
         {(form.countryLabel || form.timelineLabel) && (
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {form.countryLabel && (
               <FormInput
                 autoComplete="country-name"

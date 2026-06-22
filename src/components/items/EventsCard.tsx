@@ -61,7 +61,7 @@ const CardFront = ({ event, eventImage }: { event: EventCardItem; eventImage: st
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
     <div className="absolute right-5 bottom-5 left-5 z-10">
-      <h3 className="line-clamp-2 font-heading text-lg leading-tight font-bold !text-white md:text-xl">
+      <h3 className="line-clamp-2 font-heading text-base leading-tight font-bold !text-white md:text-xl">
         {event.title}
       </h3>
     </div>
@@ -401,7 +401,7 @@ const SplitFlipCard = ({
           isFlipped && "opacity-0"
         )}
       >
-        <h3 className="line-clamp-2 font-heading text-lg leading-tight font-bold !text-white md:text-xl">
+        <h3 className="line-clamp-2 font-heading text-base leading-tight font-bold !text-white md:text-xl">
           {event.title}
         </h3>
       </div>
