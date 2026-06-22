@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "@/lib";
 
 const buttonVariants = cva(
-  "btn-shimmer group inline-flex min-h-[40px] md:min-h-[44px] items-center justify-center rounded-[4px] font-medium transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "btn-shimmer group inline-flex min-h-[40px] items-center justify-center whitespace-nowrap rounded-[4px] font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue disabled:pointer-events-none disabled:opacity-50 md:min-h-[44px]",
   {
     defaultVariants: {
       size: "default",
@@ -13,9 +13,9 @@ const buttonVariants = cva(
     },
     variants: {
       size: {
-        default: "px-6 py-2 text-sm md:px-8 md:py-3.5 md:text-base",
+        default: "px-6 py-2 text-xs md:px-8 md:py-3.5 md:text-base",
         icon: "h-10 w-10 md:h-11 md:w-11",
-        lg: "px-6 py-2 text-sm md:px-10 md:py-4 md:text-lg",
+        lg: "px-6 py-2 text-xs md:px-10 md:py-4 md:text-lg",
         sm: "px-4 py-1.5 text-xs md:px-6 md:py-2.5 md:text-sm",
       },
       variant: {

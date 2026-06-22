@@ -43,7 +43,7 @@ const Page = () => {
           <CardsGrid
             cols={3}
             cta={
-              <Button asChild variant="secondary">
+              <Button asChild variant="primary">
                 <Link href="/tradeshow-calendar">Explore All Upcoming Events</Link>
               </Button>
             }
@@ -70,7 +70,7 @@ const Page = () => {
             cols={4}
             heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

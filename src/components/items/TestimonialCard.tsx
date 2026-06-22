@@ -46,7 +46,7 @@ export const TestimonialCard = ({
   const rotateY = isCenter ? 0 : sideRotateY;
   const sideX = pos > 0 ? `${65 * absPos}%` : `-${65 * absPos}%`;
   const x = isCenter ? 0 : sideX;
-  const z = isCenter ? 100 : -100 * absPos;
+  const z = isCenter ? 0 : -150 * absPos;
   const scale = isCenter ? 1 : 1 - 0.1 * absPos;
   let opacity = 0;
   if (isCenter) {
@@ -75,14 +75,14 @@ export const TestimonialCard = ({
       transition={CARD_TRANSITION}
     >
       {/* Quote icon — floats half above the card top edge */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${!isCenter ? "max-md:opacity-0" : ""}`}>
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue shadow-lg">
           <Quote className="h-6 w-6 text-white" />
         </div>
       </div>
 
       {/* Content */}
-      <div className="px-8 pt-3 pb-12 text-center">
+      <div className={`px-8 pt-3 pb-12 text-center transition-opacity duration-300 ${!isCenter ? "max-md:opacity-0" : ""}`}>
         <p className="type-body-m leading-relaxed text-gray-600">
           &ldquo;{stripOuterQuoteMarks(testimonial.quote)}&rdquo;
         </p>

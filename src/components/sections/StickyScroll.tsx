@@ -150,7 +150,7 @@ export const StickyScroll = ({
 
           {showCta && (
             <div className="mt-8">
-              <Button onClick={openModal} size="lg" variant="secondary">
+              <Button onClick={openModal} size="lg" variant="primary">
                 Let&apos;s Discuss
               </Button>
             </div>

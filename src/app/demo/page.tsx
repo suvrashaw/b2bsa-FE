@@ -823,7 +823,7 @@ const DemoPage = () => {
         cols={4}
         heading="From the Blog"
         headingAction={
-          <Button asChild className="shrink-0 self-start md:self-auto" variant="secondary">
+          <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         }

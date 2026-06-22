@@ -66,7 +66,7 @@ export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
     </div>
 
     <div className="mt-5 flex w-full">
-      <Button asChild className="w-full" size="sm" variant="secondary">
+      <Button asChild className="w-full" size="sm" variant="primary">
         <Link href="/contact-us">Let&apos;s Talk</Link>
       </Button>
     </div>
@@ -106,7 +106,7 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
         </div>
       </div>
       <div className="mt-2 flex w-full lg:mt-0 lg:justify-end">
-        <Button asChild className="w-full lg:w-auto" size="sm" variant="secondary">
+        <Button asChild className="w-full lg:w-auto" size="sm" variant="primary">
           <Link href="/contact-us">Let&apos;s Talk</Link>
         </Button>
       </div>

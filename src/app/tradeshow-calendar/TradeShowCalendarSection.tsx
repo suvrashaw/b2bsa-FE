@@ -640,7 +640,7 @@ export const TradeShowCalendarSection = () => {
               </select>
             </FilterPanel>
 
-            <Button className="w-full gap-2" onClick={handleClearFilters} variant="secondary">
+            <Button className="w-full gap-2" onClick={handleClearFilters} variant="primary">
               <RotateCcw className="h-4 w-4" />
               Clear Filters
             </Button>

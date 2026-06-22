@@ -78,14 +78,14 @@ const SpotlightCta = ({
   return (
     <div className="mt-6 md:mt-8 lg:mt-10">
       {ctaHref ? (
-        <Button asChild className={ctaClassName} variant="secondary">
+        <Button asChild className={ctaClassName} variant="primary">
           <Link aria-label={ctaAriaLabel || ctaLabel} href={ctaHref}>
             {ctaLabel}
             {icon}
           </Link>
         </Button>
       ) : (
-        <Button aria-label={ctaAriaLabel || ctaLabel} className={ctaClassName} onClick={onClick} variant="secondary">
+        <Button aria-label={ctaAriaLabel || ctaLabel} className={ctaClassName} onClick={onClick} variant="primary">
           {ctaLabel}
           {icon}
         </Button>
@@ -244,7 +244,7 @@ const SpotlightTextBlock = ({
               className="gap-1.5"
               key={city}
               onClick={onLocationBadgeClick}
-              variant="secondary"
+              variant="primary"
             >
               <MapPin className="h-3.5 w-3.5 shrink-0" />
               {city}

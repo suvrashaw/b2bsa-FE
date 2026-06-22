@@ -267,7 +267,7 @@ export const Footer = () => {
                 aria-label="Subscribe"
                 className="h-10 border-white/30 text-white hover:border-white hover:bg-white/10"
                 size="sm"
-                variant="secondary"
+                variant="primary"
               >
                 Subscribe
               </Button>

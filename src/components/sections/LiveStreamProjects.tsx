@@ -133,7 +133,7 @@ export const LiveStreamProjects = ({
                       </div>
                     )}
                     {activeProject.externalUrl && (
-                      <Button asChild className="w-full gap-2 lg:w-auto" variant="secondary">
+                      <Button asChild className="w-full gap-2 lg:w-auto" variant="primary">
                         <a href={activeProject.externalUrl} rel="noreferrer" target="_blank">
                           Open Playlist
                           <ExternalLink className="h-4 w-4" />
