@@ -71,7 +71,7 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           {...SEO_SERVICES}
-          cardCtaMode="linked"
+          cardCtaMode="none"
           commonCtaLabel="Contact Our Team"
           contactModal={servicesContactModal}
           showCommonCta

@@ -65,10 +65,7 @@ const SpotlightCta = ({
 }) => {
   if (!ctaLabel) return null;
 
-  const ctaClassName = cn(
-    "gap-2 transition-all duration-500",
-    isHovered && "border-brand-blue bg-brand-blue/5"
-  );
+  const ctaClassName = cn("gap-2 transition-all duration-500");
   const icon = isHovered ? (
     <ArrowUpRight className="h-4 w-4" />
   ) : (

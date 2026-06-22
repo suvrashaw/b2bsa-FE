@@ -8,7 +8,7 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { StickyScroll } from "@/components/sections/StickyScroll";
+import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -137,10 +137,19 @@ const Page = () => {
               </div>
             ))}
           </CardsGrid>
-          <StickyScroll
+          <ServicesStack
+            cardCtaMode="none"
+            commonCtaLabel="Talk to an Expert"
+            contactModal={{}}
             heading="Our Rental Booth Range"
-            reasons={BOOTH_RENTAL_RANGE_REASONS}
-            showImagePanel
+            serviceLabel=""
+            services={BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
+              description: item.description,
+              id: item.id,
+              image: item.image,
+              title: item.title,
+            })) as any}
+            showCommonCta
           />
         </>
       }

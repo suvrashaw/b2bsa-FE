@@ -105,7 +105,7 @@ const Page = () => {
       preStudiesSections={
         <ServicesStack
           {...CORP_NETWORKING_EVENT_TYPES}
-          cardCtaMode="linked"
+          cardCtaMode="none"
           commonCtaLabel="Contact Our Team"
           contactModal={servicesContactModal}
           showCommonCta

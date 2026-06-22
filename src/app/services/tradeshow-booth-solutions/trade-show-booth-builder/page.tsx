@@ -8,7 +8,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { StickyScroll } from "@/components/sections/StickyScroll";
+import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -80,15 +80,19 @@ const Page = () => {
       page={BOOTH_BUILDER_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <StickyScroll
+        <ServicesStack
+          cardCtaMode="none"
+          commonCtaLabel="Talk to an Expert"
+          contactModal={{}}
           heading="Booth Sizes and Formats We Design"
-          reasons={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+          serviceLabel=""
+          services={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
             description: item.descriptions.join(" "),
             id: item.id,
             image: item.image,
             title: item.heading,
-          }))}
-          showImagePanel
+          })) as any}
+          showCommonCta
         />
       }
       preStudiesSections={
