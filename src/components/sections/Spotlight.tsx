@@ -162,17 +162,16 @@ const SpotlightTextBlock = ({
   return (
     <div
       className={cn(
-        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col",
+        "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center",
         pairedWithMedia && "md:min-w-0 md:w-full md:max-w-[640px] lg:max-w-[720px]",
         !pairedWithMedia && "md:w-full md:max-w-[480px] lg:max-w-[560px]",
-        align === "left" && "items-start text-left",
-        align === "right" && "items-end text-right",
-        align === "center" && "items-center text-center",
+        align === "left" && "md:items-start md:text-left",
+        align === "right" && "md:items-end md:text-right",
         className
       )}
     >
       {label && (
-        <div className="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
+        <div className={cn("mb-6 flex items-center justify-center gap-3 md:mb-8 md:gap-4", align === "left" && "md:justify-start", align === "right" && "md:flex-row-reverse md:justify-start")}>
           <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
           <span
             className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs"
@@ -212,14 +211,14 @@ const SpotlightTextBlock = ({
             {descriptionItems?.map((item) => (
               <li
                 className={cn(
-                  "flex gap-3",
-                  align === "right" && "flex-row-reverse",
-                  align === "center" && "justify-center"
+                  "flex gap-3 justify-center",
+                  align === "left" && "md:justify-start",
+                  align === "right" && "md:flex-row-reverse"
                 )}
                 key={item}
               >
                 <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
-                <span>{item}</span>
+                <span className={cn(align === "left" && "md:text-left", align === "right" && "md:text-right")}>{item}</span>
               </li>
             ))}
           </ul>

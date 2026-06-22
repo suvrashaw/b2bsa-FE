@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 
+import { useState } from "react";
 import Image from "next/image";
 
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
@@ -22,10 +23,14 @@ export const FAQCard = ({
   question,
 }: FAQCardProps) => {
   const resolvedImage = image ?? PLACEHOLDER_IMAGE;
+  const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="group h-[280px] w-full cursor-pointer [perspective:1000px]">
-      <div className="relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] hover:shadow-xl">
+    <div 
+      className="group h-[280px] w-full cursor-pointer [perspective:1000px]"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div className={`relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
         {/* Front: Image + overlay + question */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]">
           <Image

@@ -342,17 +342,17 @@ export const Hero = ({
             >
               {primaryCta && (
                 <Link
-                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="group relative flex min-h-[58px] w-full items-center justify-center whitespace-nowrap rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={primaryCta.href}
                   style={PRIMARY_CTA_STYLE}
                 >
                   {primaryCta.label}
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-3 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
                 </Link>
               )}
               {secondaryCta && (
                 <Link
-                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="flex min-h-[58px] w-full items-center justify-center whitespace-nowrap rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={secondaryCta.href}
                   style={SECONDARY_CTA_STYLE}
                 >
