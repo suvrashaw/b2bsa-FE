@@ -32,7 +32,7 @@ export const CaseStudyCard = ({
   title,
 }: CaseStudyCardProps) => {
   const sharedClassName = cn(
-    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-xl bg-brand-charcoal text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white lg:h-[437px]",
+    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-2xl md:rounded-xl bg-brand-charcoal text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white lg:h-[437px]",
     colSpan
   );
 

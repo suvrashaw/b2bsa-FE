@@ -115,7 +115,7 @@ export const ClientLogos = ({
     return (
       <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <SectionHeader as="h2" className="pt-10 pb-3 text-center">
+          <SectionHeader as="h2" className="pt-10 pb-3 text-center px-4 md:px-0">
             {heading}
           </SectionHeader>
         )}
@@ -148,7 +148,7 @@ export const ClientLogos = ({
       ref={containerRef}
     >
       {heading && (
-        <SectionHeader as="h2" className="pt-10 pb-3 text-center">
+        <SectionHeader as="h2" className="pt-10 pb-3 text-center px-4 md:px-0">
           {heading}
         </SectionHeader>
       )}

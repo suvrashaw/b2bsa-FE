@@ -92,7 +92,7 @@ export const Header = ({
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-2 sm:px-8 py-3 sm:py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
@@ -101,7 +101,7 @@ export const Header = ({
     >
       <div className="flex items-center gap-2">
         <Link
-          className="relative block h-10 w-36 transition-all duration-300 hover:opacity-80 xl:h-[37px] xl:w-[134px]"
+          className="relative block h-6 w-[88px] transition-all duration-300 hover:opacity-80 xl:h-[37px] xl:w-[134px]"
           href="/"
         >
           <Image
@@ -128,12 +128,12 @@ export const Header = ({
         ))}
       </nav>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-1.5 xl:gap-6">
         <LanguageSelector lightText={headerLightText} />
 
         <Button
           asChild
-          className="btn-schedule schedule-shake hidden min-h-[44px] rounded-full font-semibold normal-case xl:block"
+          className="btn-schedule schedule-shake min-h-[28px] px-2 py-1 xl:min-h-[44px] xl:px-8 xl:py-3.5 rounded-full font-semibold normal-case text-[10px] sm:text-xs xl:text-base whitespace-nowrap"
           variant="primary"
         >
           <Link href="/contact-us">
@@ -144,7 +144,7 @@ export const Header = ({
           <button
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
-              "rounded-full p-3 min-h-[48px] min-w-[48px] flex items-center justify-center transition-colors hover:bg-brand-gray/5",
+              "rounded-full p-2 min-h-[40px] min-w-[40px] flex items-center justify-center transition-colors hover:bg-brand-gray/5 xl:p-3 xl:min-h-[48px] xl:min-w-[48px]",
               lightText ? "text-white" : ""
             )}
             onClick={toggleMobileMenu}
@@ -233,18 +233,6 @@ export const Header = ({
                 openServiceGroup={openMobileServiceGroup}
               />
             ))}
-
-            <div className="p-6">
-              <Button
-                asChild
-                className="btn-schedule schedule-shake w-full rounded-full font-semibold normal-case"
-                variant="primary"
-              >
-                <Link href="/contact-us" onClick={closeMobileMenu}>
-                  Startup Special Sale
-                </Link>
-              </Button>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -46,7 +46,7 @@ export const CaseStudyItem = ({
   return (
     <motion.div
       className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-3xl",
+        "group relative cursor-pointer overflow-hidden rounded-2xl md:rounded-3xl",
         active ? "lg:max-w-none lg:flex-[4]" : "lg:max-w-[120px] lg:flex-[1]",
         className
       )}
@@ -82,18 +82,18 @@ export const CaseStudyItem = ({
         className={cn(
           "flex flex-col",
           active
-            ? "relative z-[1] p-6 md:p-8 lg:absolute lg:inset-0 lg:justify-end lg:p-8"
+            ? "relative z-[1] p-4 md:p-8 lg:absolute lg:inset-0 lg:justify-end lg:p-8"
             : "absolute inset-0 justify-center p-4 sm:p-6 lg:justify-end lg:p-8"
         )}
       >
         <div className={cn("flex gap-4", active ? "items-start" : "items-center")}>
           <div
             className={cn(
-              "flex h-12 w-12 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300",
+              "flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300",
               active ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
             )}
           >
-            <Icon className="h-5 w-5 text-white" name={item.icon} />
+            <Icon className="h-4 w-4 md:h-5 md:w-5 text-white" name={item.icon} />
           </div>
 
           {!active && (
@@ -111,10 +111,10 @@ export const CaseStudyItem = ({
                 initial={ACTIVE_CONTENT_INITIAL}
                 transition={ACTIVE_CONTENT_TRANSITION}
               >
-                <h3 className="mb-4 font-heading text-lg font-bold !text-white md:text-xl">
+                <h3 className="mb-4 font-heading text-sm font-bold !text-white md:text-xl">
                   {item.title}
                 </h3>
-                <p className="max-w-xl text-sm leading-relaxed text-gray-200 md:text-base">
+                <p className="max-w-xl text-xs leading-relaxed text-gray-200 md:text-base">
                   {item.secondarySummary.text}
                 </p>
               </motion.div>
@@ -126,7 +126,7 @@ export const CaseStudyItem = ({
           {active && item.href ? (
             <motion.div
               animate={CTA_ANIMATE}
-              className="mt-6 lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
+              className="mt-4 md:mt-6 self-end lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
               exit={CTA_EXIT}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}

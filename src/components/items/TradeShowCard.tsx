@@ -41,7 +41,7 @@ const EventMeta = ({ icon: Icon, label }: { icon: typeof CalendarDays; label: st
 );
 
 export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
-  <article className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
+  <article className="flex h-full flex-col rounded-2xl md:rounded-lg border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md">
     <div className="mb-5 flex items-start justify-between gap-4">
       <div>
         <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">

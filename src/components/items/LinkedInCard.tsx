@@ -67,7 +67,7 @@ export interface LinkedInCardProps {
 
 export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
   <motion.article
-    className="flex w-full flex-col overflow-hidden rounded-lg border border-[#e0dfdc] bg-white shadow-sm"
+    className="flex w-full flex-col overflow-hidden rounded-2xl md:rounded-lg border border-[#e0dfdc] bg-white shadow-sm"
     custom={index}
     initial="hidden"
     variants={cardVariants}

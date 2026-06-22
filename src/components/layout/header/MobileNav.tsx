@@ -67,7 +67,7 @@ const MobileServiceGroup = ({
   if (!hasSubContent) {
     return (
       <Link
-        className="flex w-full items-center px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
+        className="flex w-full items-center px-6 py-3 text-left text-sm font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
         href={group.href}
         onClick={onClose}
       >
@@ -79,7 +79,7 @@ const MobileServiceGroup = ({
   return (
     <div>
       <button
-        className="flex w-full items-center justify-between px-6 py-3 text-left text-base font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
+        className="flex w-full items-center justify-between px-6 py-3 text-left text-sm font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
         onClick={handleToggle}
         type="button"
       >
@@ -144,7 +144,7 @@ export const MobileNavItem = memo(
       <div className="border-b border-gray-50 last:border-0">
         {hasChildren ? (
           <button
-            className="flex w-full items-center justify-between px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+            className="flex w-full items-center justify-between px-6 py-4 font-heading text-base font-bold transition-colors hover:text-brand-blue"
             onClick={handleToggle}
             type="button"
           >
@@ -158,7 +158,7 @@ export const MobileNavItem = memo(
           </button>
         ) : (
           <Link
-            className="flex w-full items-center px-6 py-4 font-heading text-xl font-bold transition-colors hover:text-brand-blue"
+            className="flex w-full items-center px-6 py-4 font-heading text-base font-bold transition-colors hover:text-brand-blue"
             href={link.href}
             onClick={onClose}
           >

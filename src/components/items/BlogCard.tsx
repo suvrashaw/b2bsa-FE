@@ -73,7 +73,7 @@ export const BlogCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl"
+      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-2xl md:rounded-3xl border border-gray-100 bg-white shadow-2xl"
       style={cardStyle}
       transition={BLOG_CARD_TRANSITION}
     >
@@ -109,7 +109,7 @@ export const BlogCard = ({
 
 export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl md:rounded-3xl border border-gray-100 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
       <div className="relative h-52 w-full shrink-0 overflow-hidden">
         <Image
           alt={blog.title}

@@ -25,9 +25,9 @@ export const ServicesCard = ({
   showCta = true,
 }: ServicesCardProps) => {
   return (
-    <div className="relative flex h-auto flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row">
+    <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl md:rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row">
       {/* Content Area */}
-      <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-8 md:w-1/2 md:p-6 lg:w-2/5 lg:p-12">
+      <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-5 md:w-1/2 md:p-6 lg:w-2/5 lg:p-12">
         <div className="pointer-events-auto">
           {serviceLabel && (
             <div className="mb-6 flex items-center gap-2">
@@ -37,7 +37,7 @@ export const ServicesCard = ({
               </span>
             </div>
           )}
-          <h3 className="type-h3 mb-6 leading-tight max-md:text-white max-md:drop-shadow-lg">{service.title}</h3>
+          <h3 className="type-h3 mb-4 leading-tight max-md:text-white max-md:drop-shadow-lg">{service.title}</h3>
 
           <p className="type-body-l leading-relaxed font-medium text-gray-600 max-md:text-white max-md:drop-shadow-lg">
             {service.description}
@@ -46,7 +46,7 @@ export const ServicesCard = ({
 
         {showCta &&
           (service.href ? (
-            <Button asChild className="pointer-events-auto mt-10 w-max md:mt-0" variant="primary">
+            <Button asChild className="pointer-events-auto mt-6 w-max md:mt-0" variant="primary">
               <Link aria-label={`${ctaLabel} about ${service.title}`} href={service.href}>
                 <span className="mr-4">
                   {ctaLabel}
@@ -58,7 +58,7 @@ export const ServicesCard = ({
           ) : (
             <Button
               aria-label={`${ctaLabel} about ${service.title}`}
-              className="pointer-events-auto mt-10 w-max md:mt-0"
+              className="pointer-events-auto mt-6 w-max md:mt-0"
               onClick={onCtaClick}
               type="button"
               variant="primary"
@@ -73,7 +73,7 @@ export const ServicesCard = ({
       </div>
 
       {/* Image Area */}
-      <div className="image-pane z-0 h-64 w-full overflow-hidden md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-1/2 lg:w-3/5">
+      <div className="image-pane z-0 h-48 w-full overflow-hidden md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-1/2 lg:w-3/5">
         <Image
           alt={service.title}
           className="object-cover max-md:scale-105"

@@ -28,7 +28,7 @@ export const ServicesImageCard = ({
 
   return (
     <motion.div
-      className="group h-44 w-full overflow-hidden rounded-xl"
+      className="group h-44 w-full overflow-hidden rounded-2xl md:rounded-xl"
       initial={CARD_INITIAL}
       transition={transition}
       viewport={CARD_VIEWPORT}

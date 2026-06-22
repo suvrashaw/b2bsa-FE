@@ -10,7 +10,7 @@ export interface CorporateVideoCardItem {
 }
 
 export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) => (
-  <article className="group overflow-hidden rounded-lg bg-white text-[#222222] shadow-[0_26px_70px_rgba(0,0,0,0.24)]">
+  <article className="group overflow-hidden rounded-2xl md:rounded-lg bg-white text-[#222222] shadow-[0_26px_70px_rgba(0,0,0,0.24)]">
     <div className="relative aspect-[1.45] overflow-hidden">
       <Image
         alt={item.title}

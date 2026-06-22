@@ -32,7 +32,7 @@ export const FAQAccordionItem = ({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-xl border bg-white transition-colors duration-300",
+        "overflow-hidden rounded-2xl md:rounded-xl border bg-white transition-colors duration-300",
         isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300"
       )}
     >
