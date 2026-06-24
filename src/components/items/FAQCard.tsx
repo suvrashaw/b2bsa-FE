@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
@@ -25,10 +25,12 @@ export const FAQCard = ({
   const resolvedImage = image ?? PLACEHOLDER_IMAGE;
   const [isFlipped, setIsFlipped] = useState(false);
 
+  const handleClick = useCallback(() => setIsFlipped((prev) => !prev), []);
+
   return (
     <div
       className="group h-[280px] w-full cursor-pointer [perspective:1000px]"
-      onClick={() => setIsFlipped(!isFlipped)}
+      onClick={handleClick}
     >
       <div
         className={`relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}

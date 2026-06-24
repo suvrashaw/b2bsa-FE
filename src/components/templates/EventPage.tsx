@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import type { FAQProps } from "@/components/sections/FAQAccordion";
 
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { EventMetadata } from "@/components/items/EventMetadata";
 import { TradeShowCard } from "@/components/items/TradeShowCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -14,7 +15,6 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 
@@ -153,25 +153,13 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────── */}
       <Hero
+        eyebrow={<EventMetadata metadata={metadata} />}
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
         secondaryCta={heroSecondaryCta}
         title={event.name}
       />
-
-      {/* ── 2. Event Metadata Eyebrows ───────────────────────────────────── */}
-      <section className="bg-brand-gray py-10">
-        <div className="container mx-auto px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            {metadata.map(({ label, value }) => (
-              <Eyebrow className="m-0 !mb-0" key={label} variant="blue">
-                <span className="font-bold">{label}:</span> {value}
-              </Eyebrow>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── 3. Stats — Event at a Glance ────────────────────────────────── */}
       <Stats description={event.summary} heading="Event at a Glance" stats={stats} />

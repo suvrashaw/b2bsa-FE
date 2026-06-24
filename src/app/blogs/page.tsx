@@ -10,6 +10,7 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import { BLOG_CONTACT, BLOG_HERO, BLOG_PAGE, BLOG_SERVICE_CAROUSEL } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { buildCollectionPageJsonLd, JsonLd } from "@/lib";
 
 import { BlogsSection } from "./BlogsSection";
 
@@ -18,6 +19,13 @@ export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
+      <JsonLd
+        data={buildCollectionPageJsonLd({
+          description: BLOG_PAGE.seo.description,
+          name: BLOG_PAGE.seo.title.split(" | ", 1)[0],
+          url: "/blogs",
+        })}
+      />
       <Header lightHeaderText />
       <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
       <Suspense>

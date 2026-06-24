@@ -13,7 +13,10 @@ export const toHeadingCaps = (value: string) => value.toUpperCase();
 export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
 
 export {
+  buildAboutPageJsonLd,
   buildBreadcrumbJsonLd,
+  buildCollectionPageJsonLd,
+  buildContactPageJsonLd,
   buildFaqJsonLd,
   buildHowToJsonLd,
   buildItemListJsonLd,

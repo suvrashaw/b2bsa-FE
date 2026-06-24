@@ -33,6 +33,17 @@ import { getDefaultEvents } from "@/content/tradeshow-calendar";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 
+const EMPTY_CONTACT_MODAL = {};
+
+const SHOWCASE_SERVICES = BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+  color: "brand-blue",
+  description: item.descriptions.join(" "),
+  icon: "Star",
+  id: item.id,
+  image: item.image,
+  title: item.heading,
+}));
+
 const Page = () => {
   return (
     <ServicePage
@@ -101,17 +112,10 @@ const Page = () => {
         <ServicesStack
           cardCtaMode="none"
           commonCtaLabel="Talk to an Expert"
-          contactModal={{}}
+          contactModal={EMPTY_CONTACT_MODAL}
           heading="Booth Sizes and Formats We Design"
           serviceLabel=""
-          services={
-            BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
-              description: item.descriptions.join(" "),
-              id: item.id,
-              image: item.image,
-              title: item.heading,
-            })) as any
-          }
+          services={SHOWCASE_SERVICES}
           showCommonCta
         />
       }

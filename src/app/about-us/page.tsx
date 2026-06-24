@@ -28,7 +28,7 @@ import {
 } from "@/content/about-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { normalizeEvent } from "@/content/tradeshow-calendar";
-import { buildLocalBusinessJsonLd } from "@/lib";
+import { buildAboutPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
@@ -40,6 +40,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
+      <JsonLd data={buildAboutPageJsonLd(ABOUT_PAGE.seo.description)} />
       <Header darkBackground />
 
       {/* Hero — centered, no description, "About Us" eyebrow, slide-from-left animation */}

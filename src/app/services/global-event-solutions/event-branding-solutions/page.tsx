@@ -55,6 +55,11 @@ const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index)
   label: phase.title,
 }));
 
+const SECONDARY_SERVICES = {
+  ...EVENT_BRANDING_INDUSTRIES_SECTION,
+  showCapabilityDescriptions: false,
+};
+
 const Page = () => {
   return (
     <ServicePage
@@ -107,10 +112,7 @@ const Page = () => {
       proofBar={EVENT_BRANDING_PROOF_BAR}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
-      secondaryServices={{
-        ...EVENT_BRANDING_INDUSTRIES_SECTION,
-        showCapabilityDescriptions: false,
-      }}
+      secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
       spotlight={EVENT_BRANDING_INTRO}

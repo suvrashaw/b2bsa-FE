@@ -43,7 +43,7 @@ import { BOOTH_DESIGN_PAGE } from "./services/tradeshow-booth-solutions/trade-sh
 import { BOOTH_RENTAL_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-rental/content";
 import { TRADE_SHOW_CALENDAR_PAGE } from "./tradeshow-calendar";
 
-const marketingPages = [
+export const marketingPages = [
   HOME_PAGE,
   ABOUT_PAGE,
   BLOG_PAGE,

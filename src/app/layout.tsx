@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     default: "B2B Sales Arrow | Premium Growth Partner",
     template: "%s | B2B Sales Arrow",
   },
+  twitter: {
+    creator: "@B2B_SalesArrow",
+    site: "@B2B_SalesArrow",
+  },
 };
 
 export const viewport: Viewport = {

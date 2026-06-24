@@ -84,87 +84,64 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
     >
       {item.href ? (
         <Link className="block h-full w-full" href={item.href}>
-          <div className="relative h-32 overflow-hidden bg-brand-gray/50">
-            {item.image && (
-              <Image
-                alt={item.title}
-                className={`object-cover transition-all duration-700 ${hovered ? "scale-110" : "scale-100"}`}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                src={item.image}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
-            {Icon && (
-              <div
-                className={`absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-500 ${hovered ? "scale-110 rotate-6" : ""}`}
-              >
-                <Icon
-                  className={`h-6 w-6 text-brand-blue transition-transform duration-300 ${hovered ? "scale-110" : ""}`}
-                />
-              </div>
-            )}
-          </div>
-
-          <div className="flex flex-col items-center p-6 text-center">
-            <h3
-              className={`type-h3 mb-2 transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
-            >
-              {item.title}
-            </h3>
-            <p
-              className={`line-clamp-4 text-xs leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
-            >
-              {item.description}
-            </p>
-          </div>
-
-          <div
-            className={`pointer-events-none absolute inset-0 rounded-2xl border-2 border-brand-blue transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
-          />
+          <InnerContent hovered={hovered} Icon={Icon} item={item} />
         </Link>
       ) : (
         <div className="block h-full w-full">
-          <div className="relative h-32 overflow-hidden bg-brand-gray/50">
-            {item.image && (
-              <Image
-                alt={item.title}
-                className={`object-cover transition-all duration-700 ${hovered ? "scale-110" : "scale-100"}`}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                src={item.image}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
-            {Icon && (
-              <div
-                className={`absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-500 ${hovered ? "scale-110 rotate-6" : ""}`}
-              >
-                <Icon
-                  className={`h-6 w-6 text-brand-blue transition-transform duration-300 ${hovered ? "scale-110" : ""}`}
-                />
-              </div>
-            )}
-          </div>
-
-          <div className="flex flex-col items-center p-6 text-center">
-            <h3
-              className={`type-h3 mb-2 transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
-            >
-              {item.title}
-            </h3>
-            <p
-              className={`line-clamp-4 text-xs leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
-            >
-              {item.description}
-            </p>
-          </div>
-
-          <div
-            className={`pointer-events-none absolute inset-0 rounded-2xl border-2 border-brand-blue transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
-          />
+          <InnerContent hovered={hovered} Icon={Icon} item={item} />
         </div>
       )}
     </motion.article>
   );
 };
+
+const InnerContent = ({
+  hovered,
+  Icon,
+  item,
+}: {
+  hovered: boolean;
+  Icon: React.ElementType | undefined;
+  item: BoothWhyChooseUsItem;
+}) => (
+  <>
+    <div className="relative h-32 overflow-hidden bg-brand-gray/50">
+      {item.image && (
+        <Image
+          alt={item.title}
+          className={`object-cover transition-all duration-700 ${hovered ? "scale-110" : "scale-100"}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          src={item.image}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
+      {Icon && (
+        <div
+          className={`absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-500 ${hovered ? "scale-110 rotate-6" : ""}`}
+        >
+          <Icon
+            className={`h-6 w-6 text-brand-blue transition-transform duration-300 ${hovered ? "scale-110" : ""}`}
+          />
+        </div>
+      )}
+    </div>
+
+    <div className="flex flex-col items-center p-6 text-center">
+      <h3
+        className={`type-h3 mb-2 transition-all duration-300 ${hovered ? "translate-x-1 text-brand-blue" : "text-brand-charcoal"}`}
+      >
+        {item.title}
+      </h3>
+      <p
+        className={`line-clamp-4 text-xs leading-relaxed transition-all duration-300 md:text-base ${hovered ? "text-brand-charcoal" : "text-brand-charcoal/68"}`}
+      >
+        {item.description}
+      </p>
+    </div>
+
+    <div
+      className={`pointer-events-none absolute inset-0 rounded-2xl border-2 border-brand-blue transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
+    />
+  </>
+);

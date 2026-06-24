@@ -18,7 +18,7 @@ import {
   CONTACT_US,
 } from "@/content/contact-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { buildLocalBusinessJsonLd } from "@/lib";
+import { buildContactPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
@@ -50,6 +50,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
+      <JsonLd data={buildContactPageJsonLd(CONTACT_PAGE.seo.description)} />
       <Header darkBackground />
       <CinematicSequence frameCount={60} frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg">
         <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">

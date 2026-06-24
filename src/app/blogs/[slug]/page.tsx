@@ -5,7 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
 import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
-import { siteUrl } from "@/lib";
+import { buildBreadcrumbJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -46,6 +46,8 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
       images: ogImages,
       modifiedTime: metadataPost.date,
       publishedTime: metadataPost.date,
+      ...(metadataPost.category && { section: metadataPost.category }),
+      ...(metadataPost.tags?.length && { tags: metadataPost.tags }),
       title: metadataPost.title,
       type: "article",
     },
@@ -79,6 +81,13 @@ const Page = async ({ params }: BlogPostPageProps) => {
         headline={post.title}
         image={post.image}
         url={`${siteUrl}/blogs/${post.id}`}
+      />
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", url: siteUrl },
+          { name: "Blogs", url: `${siteUrl}/blogs` },
+          { name: post.title, url: `${siteUrl}/blogs/${post.id}` },
+        ])}
       />
       <BlogPage post={post} />
     </>

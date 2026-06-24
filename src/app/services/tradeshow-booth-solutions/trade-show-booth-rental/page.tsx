@@ -65,6 +65,17 @@ const BOOTH_RENTAL_RANGE_REASONS = [
   },
 ];
 
+const EMPTY_CONTACT_MODAL = {};
+
+const RENTAL_SERVICES = BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
+  color: "brand-blue",
+  description: item.description,
+  icon: "Star",
+  id: item.id,
+  image: item.image,
+  title: item.title,
+}));
+
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_RENTAL_PAGE);
 
 const Page = () => {
@@ -139,17 +150,10 @@ const Page = () => {
           <ServicesStack
             cardCtaMode="none"
             commonCtaLabel="Talk to an Expert"
-            contactModal={{}}
+            contactModal={EMPTY_CONTACT_MODAL}
             heading="Our Rental Booth Range"
             serviceLabel=""
-            services={
-              BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
-                description: item.description,
-                id: item.id,
-                image: item.image,
-                title: item.title,
-              })) as any
-            }
+            services={RENTAL_SERVICES}
             showCommonCta
           />
         </>

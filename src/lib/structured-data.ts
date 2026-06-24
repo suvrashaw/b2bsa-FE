@@ -8,9 +8,48 @@ const ORGANIZATION = {
     "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
   logo: `${BASE}/media/logo/logo-primary.avif`,
   name: "B2B Sales Arrow",
-  sameAs: ["https://www.linkedin.com/company/b2b-sales-arrow/"],
+  sameAs: [
+    "https://www.linkedin.com/company/b2b-sales-arrow-llc/",
+    "https://www.facebook.com/b2bsalesarrow",
+    "https://www.instagram.com/b2b_sales_arrow/",
+    "https://www.youtube.com/@b2bsalesarrow167",
+    "https://x.com/B2B_SalesArrow",
+  ],
   url: BASE,
 };
+
+const ADDRESSES = [
+  {
+    "@type": "PostalAddress",
+    addressCountry: "IN",
+    addressLocality: "Kota",
+    addressRegion: "Rajasthan",
+    postalCode: "324005",
+    streetAddress: "10 A 5 Parijat Colony, Mahaveer Nagar 3",
+  },
+  {
+    "@type": "PostalAddress",
+    addressCountry: "US",
+    addressLocality: "Lewes",
+    addressRegion: "DE",
+    postalCode: "19958",
+    streetAddress: "16192 Coastal Highway",
+  },
+  {
+    "@type": "PostalAddress",
+    addressCountry: "GB",
+    addressLocality: "London",
+    postalCode: "WC2H 9JQ",
+    streetAddress: "71-75 Shelton Street, Covent Garden",
+  },
+  {
+    "@type": "PostalAddress",
+    addressCountry: "DE",
+    addressLocality: "Munich",
+    postalCode: "80335",
+    streetAddress: "Karlsplatz 3",
+  },
+];
 
 export interface ServiceSchemaInput {
   description: string;
@@ -70,6 +109,7 @@ export const buildOrganizationJsonLd = () => {
   return {
     "@context": "https://schema.org",
     ...ORGANIZATION,
+    address: ADDRESSES,
   };
 };
 
@@ -116,6 +156,7 @@ export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInpu
 export const buildLocalBusinessJsonLd = () => ({
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  address: ADDRESSES,
   areaServed: ["New York", "Bengaluru", "Global"],
   description: ORGANIZATION.description,
   email: "info@b2bsalesarrow.com",
@@ -123,6 +164,41 @@ export const buildLocalBusinessJsonLd = () => ({
   name: ORGANIZATION.name,
   sameAs: ORGANIZATION.sameAs,
   url: BASE,
+});
+
+export const buildAboutPageJsonLd = (description: string) => ({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  description,
+  name: `About ${ORGANIZATION.name}`,
+  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  url: `${BASE}/about-us`,
+});
+
+export const buildContactPageJsonLd = (description: string) => ({
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  description,
+  name: `Contact ${ORGANIZATION.name}`,
+  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  url: `${BASE}/contact-us`,
+});
+
+export const buildCollectionPageJsonLd = ({
+  description,
+  name,
+  url,
+}: {
+  description: string;
+  name: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  description,
+  name,
+  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  url: `${BASE}${url}`,
 });
 
 export const buildWebsiteJsonLd = () => ({

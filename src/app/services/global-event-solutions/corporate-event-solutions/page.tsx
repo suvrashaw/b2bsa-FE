@@ -43,7 +43,9 @@ const capabilityAssets = [
   { icon: "Globe2", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
-const capabilityFeatures = (CORP_EVENT_CAPABILITIES.phases as { title: string; description?: string }[]).map((phase, index) => ({
+const capabilityFeatures = (
+  CORP_EVENT_CAPABILITIES.phases as { description?: string; title: string }[]
+).map((phase, index) => ({
   description: phase.description,
   icon: capabilityAssets[index]?.icon ?? "CalendarCheck",
   id: phase.title

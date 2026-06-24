@@ -4,11 +4,17 @@ import { notFound } from "next/navigation";
 
 import { EventPage } from "@/components/templates/EventPage";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
+import { buildBreadcrumbJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type EventDetailPageProps = {
   params: Promise<{
     id: string;
   }>;
+};
+
+const SUPERSEDED_BY: Record<string, string> = {
+  "gitex-global": "gitex-global-2026",
+  "money-20-20-amsterdam": "money2020-europe-2026",
 };
 
 const findEventById = (id: string) => TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
@@ -24,10 +30,13 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
     return { title: "Event Not Found" };
   }
 
+  const canonicalId = SUPERSEDED_BY[id] ?? id;
+
   return {
     alternates: {
-      canonical: `/tradeshow-calendar/${event.id}`,
+      canonical: `/tradeshow-calendar/${canonicalId}`,
     },
+    ...(SUPERSEDED_BY[id] && { robots: { follow: true, index: false } }),
     description: event.summary,
     openGraph: {
       description: event.summary,
@@ -35,7 +44,7 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
         ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
         : undefined,
       title: event.name,
-      type: "article",
+      type: "website",
     },
     title: event.name,
     twitter: {
@@ -55,7 +64,18 @@ const Page = async ({ params }: EventDetailPageProps) => {
 
   if (!event) notFound();
 
-  return <EventPage event={event} />;
+  return (
+    <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Home", url: siteUrl },
+          { name: "Tradeshow Calendar", url: `${siteUrl}/tradeshow-calendar` },
+          { name: event.name, url: `${siteUrl}/tradeshow-calendar/${id}` },
+        ])}
+      />
+      <EventPage event={event} />
+    </>
+  );
 };
 
 export default Page;

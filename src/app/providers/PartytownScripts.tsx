@@ -5,6 +5,8 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 const PARTYTOWN_SNIPPET = partytownSnippet({ debug: false, forward: ["dataLayer.push"] });
 
+const PARTYTOWN_SNIPPET_HTML = { __html: PARTYTOWN_SNIPPET };
+
 const GA_INLINE_SCRIPT_HTML = {
   __html: `
   window.dataLayer = window.dataLayer || [];
@@ -18,7 +20,7 @@ export const PartytownScripts = () => {
   return (
     <>
       <Script
-        dangerouslySetInnerHTML={{ __html: PARTYTOWN_SNIPPET }}
+        dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML}
         id="partytown-init"
         strategy="beforeInteractive"
       />

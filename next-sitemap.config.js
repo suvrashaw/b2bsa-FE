@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
-  exclude: ['/icon.png', '/favicon.ico', '/demo', '/thank-you'],
+  exclude: ['/icon.png', '/favicon.ico', '/apple-icon.png', '/manifest.webmanifest', '/demo', '/thank-you'],
   generateIndexSitemap: false,
   generateRobotsTxt: true,
   siteUrl: process.env.SITE_URL || 'https://b2bsalesarrow.com',
@@ -18,10 +18,10 @@ module.exports = {
     } else if (path.startsWith('/blogs') || path.startsWith('/case-studies')) {
       priority = 0.7;
       changefreq = 'weekly';
-    } else if (path === '/privacy-policy' || path === '/cookie-policy') {
+    } else if (['/cookie-policy', '/privacy-policy', '/terms-and-conditions'].includes(path)) {
       priority = 0.3;
       changefreq = 'yearly';
-    } else if (path === '/about-us' || path === '/contact-us') {
+    } else if (['/about-us', '/contact-us'].includes(path)) {
       priority = 0.8;
       changefreq = 'monthly';
     }

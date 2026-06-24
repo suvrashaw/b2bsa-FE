@@ -19,12 +19,12 @@ const buildArticleData = ({
   description,
   headline,
   image,
-  publisherLogo = `${siteUrl}/icon.png`,
+  publisherLogo = `${siteUrl}/media/logo/logo-600.png`,
   publisherName = "B2B Sales Arrow",
   url,
 }: ArticleJsonLdProps) => ({
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   author: {
     "@type": "Organization",
     name: authorName,

@@ -16,7 +16,7 @@ export interface HeroProps {
   animateFromLeft?: boolean;
   centered?: boolean;
   description?: string;
-  eyebrow?: string;
+  eyebrow?: ReactNode | string;
   imageOpacity?: number;
   images?: string[];
   mobileVideoUrl?: string;
@@ -191,12 +191,15 @@ export const Hero = ({
   const contentStyle = useMemo(() => ({ y }), [y]);
   const imageOpacityStyle = useMemo(() => ({ opacity: imageOpacity }), [imageOpacity]);
 
-  const imageModeClass =
-    variant === "compact"
-      ? "items-center md:items-end min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16"
-      : isVideoMode
-        ? "items-center md:items-end min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40"
-        : "items-center md:items-end min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20";
+  let imageModeClass =
+    "items-center md:items-end min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20";
+  if (variant === "compact") {
+    imageModeClass = "items-center md:items-end min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16";
+  } else if (isVideoMode) {
+    imageModeClass =
+      "items-center md:items-end min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40";
+  }
+
   let background: React.ReactNode;
   if (isVideoMode) {
     const hasMobileVideo = Boolean(mobileVideoUrl);
@@ -308,9 +311,13 @@ export const Hero = ({
               initial={EYEBROW_INITIAL}
               transition={EYEBROW_TRANSITION}
             >
-              <Eyebrow className="mb-4 border-white/30 bg-white/10 text-white/90">
-                {eyebrow}
-              </Eyebrow>
+              {typeof eyebrow === "string" ? (
+                <Eyebrow className="mb-4 border-white/30 bg-white/10 text-white/90">
+                  {eyebrow}
+                </Eyebrow>
+              ) : (
+                eyebrow
+              )}
             </motion.div>
           )}
           <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
