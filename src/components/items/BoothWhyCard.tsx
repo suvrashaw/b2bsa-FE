@@ -35,7 +35,7 @@ const icons = {
 } as const;
 
 interface BoothWhyChooseUsItem {
-  description: string;
+  description?: string;
   href?: string;
   icon?: string;
   image?: string;

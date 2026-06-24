@@ -44,7 +44,7 @@ const capabilityAssets = [
   { icon: "Map", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
-const capabilityFeatures = CORP_NETWORKING_CAPABILITIES.phases.map((phase, index) => ({
+const capabilityFeatures = (CORP_NETWORKING_CAPABILITIES.phases as { title: string; description?: string }[]).map((phase, index) => ({
   description: phase.description,
   icon: capabilityAssets[index]?.icon ?? "Users",
   id: phase.title
