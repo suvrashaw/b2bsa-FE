@@ -17,6 +17,7 @@ export {
   buildBreadcrumbJsonLd,
   buildCollectionPageJsonLd,
   buildContactPageJsonLd,
+  buildEventJsonLd,
   buildFaqJsonLd,
   buildHowToJsonLd,
   buildItemListJsonLd,

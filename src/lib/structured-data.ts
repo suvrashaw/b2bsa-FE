@@ -113,6 +113,13 @@ export const buildOrganizationJsonLd = () => {
     "@context": "https://schema.org",
     ...ORGANIZATION,
     address: ADDRESSES,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "info@b2bsalesarrow.com",
+      },
+    ],
   };
 };
 
@@ -145,6 +152,7 @@ export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInpu
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    areaServed: "Worldwide",
     description,
     name,
     provider: { "@id": ORGANIZATION["@id"] },
@@ -213,11 +221,13 @@ export const buildCollectionPageJsonLd = ({
 export const buildWebPageJsonLd = ({
   breadcrumbId,
   description,
+  image,
   name,
   url,
 }: {
   breadcrumbId?: string;
   description: string;
+  image?: string;
   name: string;
   url: string;
 }) => ({
@@ -229,6 +239,50 @@ export const buildWebPageJsonLd = ({
   inLanguage: "en-US",
   isPartOf: { "@id": `${BASE}/#website` },
   name,
+  ...(image && { primaryImageOfPage: { "@type": "ImageObject", url: image } }),
+  url,
+});
+
+export const buildEventJsonLd = ({
+  city,
+  country,
+  description,
+  endDate,
+  image,
+  name,
+  startDate,
+  url,
+  venue,
+}: {
+  city: string;
+  country: string;
+  description: string;
+  endDate: string;
+  image?: string;
+  name: string;
+  startDate: string;
+  url: string;
+  venue: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@id": `${url}/#event`,
+  "@type": "Event",
+  description,
+  endDate,
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  ...(image && { image }),
+  location: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: country,
+      addressLocality: city,
+    },
+    name: venue,
+  },
+  name,
+  startDate,
   url,
 });
 

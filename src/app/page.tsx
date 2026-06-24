@@ -47,7 +47,7 @@ import {
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
-import { buildFaqJsonLd } from "@/lib";
+import { buildFaqJsonLd, buildPageGraph, buildWebPageJsonLd, siteUrl } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
@@ -55,7 +55,16 @@ export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
 const Home = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
-      <JsonLd data={buildFaqJsonLd(HOME_FAQ_CONTENT.faqs)} />
+      <JsonLd
+        data={buildPageGraph([
+          buildWebPageJsonLd({
+            description: HOME_PAGE.seo.description,
+            name: HOME_PAGE.seo.title,
+            url: siteUrl,
+          }),
+          buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
+        ])}
+      />
       <Header forceLightMode />
       <div id="home">
         <Hero

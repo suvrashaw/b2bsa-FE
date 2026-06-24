@@ -75,6 +75,11 @@ const Page = async ({ params }: BlogPostPageProps) => {
   }
 
   const postUrl = `${siteUrl}/blogs/${post.id}`;
+  type BodyBlock = { text?: string; type: string };
+  const wordCount = (post.body as BodyBlock[]).reduce(
+    (n, b) => n + (b.text ? b.text.trim().split(/\s+/).filter(Boolean).length : 0),
+    0
+  );
 
   return (
     <>
@@ -83,15 +88,19 @@ const Page = async ({ params }: BlogPostPageProps) => {
           buildWebPageJsonLd({
             breadcrumbId: `${postUrl}/#breadcrumb`,
             description: post.excerpt || post.title,
+            image: post.image,
             name: post.title,
             url: postUrl,
           }),
           buildBlogPostingJsonLd({
+            ...(post.category && { articleSection: post.category }),
             datePublished: post.date || new Date().toISOString(),
             description: post.excerpt || post.title,
             headline: post.title,
             image: post.image,
+            ...(post.tags?.length && { keywords: post.tags }),
             url: postUrl,
+            ...(wordCount > 0 && { wordCount }),
           }),
           buildBreadcrumbJsonLd(
             [

@@ -64,6 +64,7 @@ const Page = async ({ params }: CaseStudyPageProps) => {
           buildWebPageJsonLd({
             breadcrumbId: `${studyUrl}/#breadcrumb`,
             description,
+            image: study.image,
             name: study.title,
             url: studyUrl,
           }),

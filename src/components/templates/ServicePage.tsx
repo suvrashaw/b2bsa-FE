@@ -207,10 +207,12 @@ export const ServicePage = ({
   ]);
 
   const pageUrl = `${siteUrl}${normalizePath(page.seo.canonicalPath)}`;
+  const primaryImageUrl = fallbackBg?.src ? `${siteUrl}${fallbackBg.src}` : undefined;
   const pageGraph = buildPageGraph([
     buildWebPageJsonLd({
       breadcrumbId: `${pageUrl}/#breadcrumb`,
       description: page.seo.description,
+      ...(primaryImageUrl && { image: primaryImageUrl }),
       name: page.seo.title,
       url: pageUrl,
     }),

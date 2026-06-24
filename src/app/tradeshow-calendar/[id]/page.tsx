@@ -4,7 +4,14 @@ import { notFound } from "next/navigation";
 
 import { EventPage } from "@/components/templates/EventPage";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
-import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
+import {
+  buildBreadcrumbJsonLd,
+  buildEventJsonLd,
+  buildPageGraph,
+  buildWebPageJsonLd,
+  JsonLd,
+  siteUrl,
+} from "@/lib";
 
 type EventDetailPageProps = {
   params: Promise<{
@@ -74,8 +81,20 @@ const Page = async ({ params }: EventDetailPageProps) => {
           buildWebPageJsonLd({
             breadcrumbId: `${eventUrl}/#breadcrumb`,
             description: event.summary,
+            ...(event.image && { image: event.image }),
             name: event.name,
             url: eventUrl,
+          }),
+          buildEventJsonLd({
+            city: event.city,
+            country: event.country,
+            description: event.summary,
+            endDate: event.endDate,
+            ...(event.image && { image: event.image }),
+            name: event.name,
+            startDate: event.startDate,
+            url: eventUrl,
+            venue: event.venue,
           }),
           buildBreadcrumbJsonLd(
             [

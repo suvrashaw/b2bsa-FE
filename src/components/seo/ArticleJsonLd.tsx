@@ -1,30 +1,37 @@
 import { JsonLd, siteUrl } from "@/lib/json-ld";
 
 export interface ArticleJsonLdProps {
+  articleSection?: string;
   authorName?: string;
   dateModified?: string;
   datePublished: string;
   description: string;
   headline: string;
   image: string;
+  keywords?: string[];
   publisherLogo?: string;
   publisherName?: string;
   url: string;
+  wordCount?: number;
 }
 
 export const buildBlogPostingJsonLd = ({
+  articleSection,
   authorName = "B2B Sales Arrow",
   dateModified,
   datePublished,
   description,
   headline,
   image,
+  keywords,
   publisherLogo = `${siteUrl}/media/logo/logo-600.png`,
   publisherName = "B2B Sales Arrow",
   url,
+  wordCount,
 }: ArticleJsonLdProps) => ({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  ...(articleSection && { articleSection }),
   author: {
     "@id": `${siteUrl}/#organization`,
     "@type": "Organization",
@@ -36,10 +43,12 @@ export const buildBlogPostingJsonLd = ({
   description,
   headline,
   image,
+  inLanguage: "en-US",
   isPartOf: {
     "@id": `${siteUrl}/blogs/#collection`,
     "@type": "CollectionPage",
   },
+  ...(keywords?.length && { keywords: keywords.join(", ") }),
   mainEntityOfPage: {
     "@id": `${url}/#webpage`,
     "@type": "WebPage",
@@ -54,6 +63,7 @@ export const buildBlogPostingJsonLd = ({
     name: publisherName,
   },
   url,
+  ...(wordCount && { wordCount }),
 });
 
 export const ArticleJsonLd = (props: ArticleJsonLdProps) => (
