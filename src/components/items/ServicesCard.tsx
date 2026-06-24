@@ -25,7 +25,7 @@ export const ServicesCard = ({
   showCta = true,
 }: ServicesCardProps) => {
   return (
-    <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl md:rounded-3xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row">
+    <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl">
       {/* Content Area */}
       <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-5 md:w-1/2 md:p-6 lg:w-2/5 lg:p-12">
         <div className="pointer-events-auto">
@@ -37,7 +37,9 @@ export const ServicesCard = ({
               </span>
             </div>
           )}
-          <h3 className="type-h3 mb-4 leading-tight max-md:text-white max-md:drop-shadow-lg">{service.title}</h3>
+          <h3 className="type-h3 mb-4 leading-tight max-md:text-white max-md:drop-shadow-lg">
+            {service.title}
+          </h3>
 
           <p className="type-body-l leading-relaxed font-medium text-gray-600 max-md:text-white max-md:drop-shadow-lg">
             {service.description}

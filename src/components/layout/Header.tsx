@@ -133,12 +133,10 @@ export const Header = ({
 
         <Button
           asChild
-          className="btn-schedule schedule-shake min-h-[28px] px-2 py-1 xl:min-h-[44px] xl:px-8 xl:py-3.5 rounded-full font-semibold normal-case text-[10px] sm:text-xs xl:text-base whitespace-nowrap"
+          className="btn-schedule schedule-shake min-h-[28px] rounded-full px-2 py-1 text-[10px] font-semibold whitespace-nowrap normal-case sm:text-xs xl:min-h-[44px] xl:px-8 xl:py-3.5 xl:text-base"
           variant="primary"
         >
-          <Link href="/contact-us">
-            Startup Special Sale
-          </Link>
+          <Link href="/contact-us">Startup Special Sale</Link>
         </Button>
         <div className="xl:hidden">
           <button

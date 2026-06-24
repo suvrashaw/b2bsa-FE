@@ -51,10 +51,7 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <Header darkBackground />
-      <CinematicSequence
-        frameCount={60}
-        frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg"
-      >
+      <CinematicSequence frameCount={60} frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg">
         <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl">
             <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
@@ -66,10 +63,9 @@ const Page = () => {
               style={DESCRIPTION_STYLE}
             >
               Whether you need a booth for next quarter, a sharper{" "}
-              <span className="font-bold text-white">lead generation</span>{" "}
-              system, enterprise video, a full digital marketing program, or
-              market intelligence — one conversation is enough to define the
-              right path.
+              <span className="font-bold text-white">lead generation</span> system, enterprise
+              video, a full digital marketing program, or market intelligence — one conversation is
+              enough to define the right path.
             </p>
             <div className="flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6">
               <Link

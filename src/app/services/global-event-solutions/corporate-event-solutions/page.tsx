@@ -9,7 +9,6 @@ import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
@@ -76,7 +75,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >
@@ -93,18 +91,17 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <ContactModalTrigger label="Plan Your Corporate Event" />
           <Capabilities
             capabilities={capabilityFeatures}
             description={CORP_EVENT_CAPABILITIES.description}
             heading={CORP_EVENT_CAPABILITIES.title}
             mediaPosition="right"
           />
-          <ContactModalTrigger label="Talk to Our Event Team" />
         </>
       }
       proofBar={CORP_EVENT_PROOF_BAR}
       relatedServices={CORP_EVENT_RELATED_SERVICES}
+      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}

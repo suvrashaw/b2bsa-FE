@@ -64,7 +64,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >
@@ -86,12 +85,14 @@ const Page = () => {
           contactModal={{}}
           heading="Booth Sizes and Formats We Design"
           serviceLabel=""
-          services={BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
-            description: item.descriptions.join(" "),
-            id: item.id,
-            image: item.image,
-            title: item.heading,
-          })) as any}
+          services={
+            BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
+              description: item.descriptions.join(" "),
+              id: item.id,
+              image: item.image,
+              title: item.heading,
+            })) as any
+          }
           showCommonCta
         />
       }

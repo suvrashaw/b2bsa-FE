@@ -37,7 +37,7 @@ export const FAQAccordionItem = ({
       )}
     >
       <button
-        className="flex w-full items-center gap-3 px-5 py-5 text-left md:px-6 md:gap-4"
+        className="flex w-full items-center gap-3 px-5 py-5 text-left md:gap-4 md:px-6"
         onClick={handleClick}
         type="button"
       >

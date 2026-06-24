@@ -67,8 +67,6 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
   const handleMouseEnter = useCallback(() => setHovered(true), []);
   const handleMouseLeave = useCallback(() => setHovered(false), []);
 
-
-
   return (
     <motion.article
       className={cn(

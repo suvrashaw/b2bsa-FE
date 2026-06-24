@@ -21,7 +21,6 @@ const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event 
 const CINEMATIC_PRIMARY = { href: "/contact-us", label: "Start a Conversation" } as const;
 const CINEMATIC_SECONDARY = { href: "/case-studies", label: "View Case Studies" } as const;
 
-
 interface CaseStudyPageProps {
   study: CaseStudyDetail;
 }
@@ -38,7 +37,10 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     [study.client, study.event, study.location]
   );
 
-  const cinematicBg = useMemo(() => ({ alt: study.title, src: study.image }), [study.title, study.image]);
+  const cinematicBg = useMemo(
+    () => ({ alt: study.title, src: study.image }),
+    [study.title, study.image]
+  );
 
   const challengeSecondary = useMemo(
     () => ({

@@ -115,7 +115,7 @@ export const StickyScroll = ({
               <AnimatePresence mode="wait">
                 <motion.div
                   animate={TEXT_ANIMATE}
-                  className="absolute inset-0 flex flex-col items-start justify-start text-left pt-2"
+                  className="absolute inset-0 flex flex-col items-start justify-start pt-2 text-left"
                   exit={TEXT_EXIT}
                   initial={TEXT_INITIAL}
                   key={resolvedActiveIndex}
@@ -125,7 +125,7 @@ export const StickyScroll = ({
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
                     <SectionHeader as="h3">{activeReason.title}</SectionHeader>
                   </div>
-                  <p className="max-w-md type-body-l leading-relaxed text-gray-600">
+                  <p className="type-body-l max-w-md leading-relaxed text-gray-600">
                     {activeReason.description}
                   </p>
                 </motion.div>

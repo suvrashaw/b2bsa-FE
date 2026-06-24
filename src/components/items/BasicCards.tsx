@@ -16,7 +16,7 @@ interface BasicCardsProps {
 
 export const BasicCards = ({ item }: BasicCardsProps) => {
   return (
-    <article className="group overflow-hidden rounded-2xl md:rounded-[2rem] border border-brand-blue/10 bg-brand-gray shadow-[0_24px_60px_rgba(18,38,54,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-[0_28px_75px_rgba(18,38,54,0.13)]">
+    <article className="group overflow-hidden rounded-2xl border border-brand-blue/10 bg-brand-gray shadow-[0_24px_60px_rgba(18,38,54,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-[0_28px_75px_rgba(18,38,54,0.13)] md:rounded-[2rem]">
       <div className="relative h-64 overflow-hidden">
         <Image
           alt={item.image.alt}
@@ -29,9 +29,7 @@ export const BasicCards = ({ item }: BasicCardsProps) => {
       </div>
 
       <div className="p-5 md:p-8">
-        <h3 className="type-h3 text-brand-charcoal">
-          {item.title}
-        </h3>
+        <h3 className="type-h3 text-brand-charcoal">{item.title}</h3>
 
         <ul className="mt-7 space-y-4">
           {item.bullets.map((bullet) => (

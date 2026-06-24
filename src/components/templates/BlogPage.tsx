@@ -55,7 +55,9 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
               <h3 className="line-clamp-2 text-[13px] leading-snug font-bold text-brand-charcoal transition-colors group-hover:text-brand-blue">
                 {post.title}
               </h3>
-              {post.date && <p className="mt-1 text-[11px] font-medium text-gray-500">{post.date}</p>}
+              {post.date && (
+                <p className="mt-1 text-[11px] font-medium text-gray-500">{post.date}</p>
+              )}
             </div>
           </Link>
         ))}

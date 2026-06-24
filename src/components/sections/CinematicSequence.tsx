@@ -93,11 +93,7 @@ export const CinematicSequence = ({
 
         <div className="absolute inset-0 bg-black/[0.56]" />
 
-        {children && (
-          <div className="relative z-10 w-full px-4 md:px-6 lg:px-8">
-            {children}
-          </div>
-        )}
+        {children && <div className="relative z-10 w-full px-4 md:px-6 lg:px-8">{children}</div>}
       </div>
     </section>
   );

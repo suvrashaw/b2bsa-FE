@@ -11,15 +11,12 @@ type EventDetailPageProps = {
   }>;
 };
 
-const findEventById = (id: string) =>
-  TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
+const findEventById = (id: string) => TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
 
 export const generateStaticParams = () =>
   TRADE_SHOW_CALENDAR_EVENTS.map((event) => ({ id: event.id }));
 
-export const generateMetadata = async ({
-  params,
-}: EventDetailPageProps): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: EventDetailPageProps): Promise<Metadata> => {
   const { id } = await params;
   const event = findEventById(id);
 

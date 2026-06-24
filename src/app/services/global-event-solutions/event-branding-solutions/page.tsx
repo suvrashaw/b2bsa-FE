@@ -77,7 +77,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >
@@ -100,6 +99,7 @@ const Page = () => {
             description={EVENT_BRANDING_CAPABILITIES.description}
             heading={EVENT_BRANDING_CAPABILITIES.title}
             mediaPosition="right"
+            showCapabilityDescriptions={false}
           />
           <ContactModalTrigger label="Talk to Branding Experts" />
         </>
@@ -107,7 +107,10 @@ const Page = () => {
       proofBar={EVENT_BRANDING_PROOF_BAR}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
-      secondaryServices={EVENT_BRANDING_INDUSTRIES_SECTION}
+      secondaryServices={{
+        ...EVENT_BRANDING_INDUSTRIES_SECTION,
+        showCapabilityDescriptions: false,
+      }}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
       spotlight={EVENT_BRANDING_INTRO}

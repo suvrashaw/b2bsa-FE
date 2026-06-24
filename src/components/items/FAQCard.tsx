@@ -2,8 +2,8 @@
 
 import type { ReactNode } from "react";
 
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
@@ -26,11 +26,13 @@ export const FAQCard = ({
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div 
+    <div
       className="group h-[280px] w-full cursor-pointer [perspective:1000px]"
       onClick={() => setIsFlipped(!isFlipped)}
     >
-      <div className={`relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
+      <div
+        className={`relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}
+      >
         {/* Front: Image + overlay + question */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]">
           <Image
@@ -45,14 +47,12 @@ export const FAQCard = ({
 
           {/* Content on top of overlay */}
           <div className="absolute inset-0 flex flex-col items-start justify-end p-5 md:p-8">
-            <h3 className="type-h3 leading-snug text-white">
-              {question}
-            </h3>
+            <h3 className="type-h3 leading-snug text-white">{question}</h3>
           </div>
         </div>
 
         {/* Back: Answer */}
-        <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 md:p-8 text-left shadow-inner [backface-visibility:hidden]">
+        <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 text-left shadow-inner [backface-visibility:hidden] md:p-8">
           <p className="text-xs leading-relaxed text-white md:text-base">{answer}</p>
         </div>
       </div>

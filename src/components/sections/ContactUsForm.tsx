@@ -44,7 +44,7 @@ export const ContactUsForm = ({
                 {heading}
               </SectionHeader>
             </div>
-            <p className="mb-12 max-w-md text-center type-body-l leading-relaxed text-gray-600 md:text-left">
+            <p className="type-body-l mb-12 max-w-md text-center leading-relaxed text-gray-600 md:text-left">
               {description}
             </p>
 

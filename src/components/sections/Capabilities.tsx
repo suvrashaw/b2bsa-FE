@@ -204,9 +204,7 @@ const CapabilitiesShowcaseCard = ({
             isActive ? "opacity-100" : "opacity-0"
           )}
         >
-          <p className="type-body-l leading-relaxed text-gray-200">
-            {capability.description}
-          </p>
+          <p className="type-body-l leading-relaxed text-gray-200">{capability.description}</p>
         </div>
       ) : null}
     </motion.div>
@@ -338,7 +336,7 @@ export const Capabilities = ({
             {heading}
           </SectionHeader>
           {description ? (
-            <p className="mx-auto max-w-2xl type-body-l leading-relaxed text-brand-charcoal/70">
+            <p className="type-body-l mx-auto max-w-2xl leading-relaxed text-brand-charcoal/70">
               {description}
             </p>
           ) : null}

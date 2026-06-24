@@ -41,9 +41,7 @@ export const ServicesImageCard = ({
             {number}
           </span>
           <div>
-            <h3 className="type-h3 leading-snug text-white">
-              {service}
-            </h3>
+            <h3 className="type-h3 leading-snug text-white">{service}</h3>
             <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-brand-cyan uppercase">
               Explore
               <MoveRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />

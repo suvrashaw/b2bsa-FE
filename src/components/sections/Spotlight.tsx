@@ -82,7 +82,12 @@ const SpotlightCta = ({
           </Link>
         </Button>
       ) : (
-        <Button aria-label={ctaAriaLabel || ctaLabel} className={ctaClassName} onClick={onClick} variant="primary">
+        <Button
+          aria-label={ctaAriaLabel || ctaLabel}
+          className={ctaClassName}
+          onClick={onClick}
+          variant="primary"
+        >
           {ctaLabel}
           {icon}
         </Button>
@@ -168,7 +173,13 @@ const SpotlightTextBlock = ({
       )}
     >
       {label && (
-        <div className={cn("mb-6 flex items-center justify-center gap-3 md:mb-8 md:gap-4", align === "left" && "md:justify-start", align === "right" && "md:flex-row-reverse md:justify-start")}>
+        <div
+          className={cn(
+            "mb-6 flex items-center justify-center gap-3 md:mb-8 md:gap-4",
+            align === "left" && "md:justify-start",
+            align === "right" && "md:flex-row-reverse md:justify-start"
+          )}
+        >
           <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
           <span
             className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs"
@@ -215,7 +226,14 @@ const SpotlightTextBlock = ({
                 key={item}
               >
                 <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
-                <span className={cn(align === "left" && "md:text-left", align === "right" && "md:text-right")}>{item}</span>
+                <span
+                  className={cn(
+                    align === "left" && "md:text-left",
+                    align === "right" && "md:text-right"
+                  )}
+                >
+                  {item}
+                </span>
               </li>
             ))}
           </ul>
@@ -236,12 +254,7 @@ const SpotlightTextBlock = ({
       {locationBadges && locationBadges.length > 0 && (
         <div className="mt-6 grid grid-cols-2 gap-3 md:mt-8">
           {locationBadges.map((city) => (
-            <Button
-              className="gap-1.5"
-              key={city}
-              onClick={onLocationBadgeClick}
-              variant="primary"
-            >
+            <Button className="gap-1.5" key={city} onClick={onLocationBadgeClick} variant="primary">
               <MapPin className="h-3.5 w-3.5 shrink-0" />
               {city}
             </Button>
@@ -249,7 +262,13 @@ const SpotlightTextBlock = ({
         </div>
       )}
 
-      <SpotlightCta ctaAriaLabel={ctaAriaLabel} ctaHref={ctaHref} ctaLabel={ctaLabel} isHovered={isHovered} onClick={onClick} />
+      <SpotlightCta
+        ctaAriaLabel={ctaAriaLabel}
+        ctaHref={ctaHref}
+        ctaLabel={ctaLabel}
+        isHovered={isHovered}
+        onClick={onClick}
+      />
     </div>
   );
 };

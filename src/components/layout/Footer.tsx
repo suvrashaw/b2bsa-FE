@@ -30,6 +30,8 @@ const XIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+import { ArrowUpRight } from "lucide-react";
+
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
@@ -69,7 +71,7 @@ const socialLinks = [
   },
   {
     colorClass: "text-black",
-    href: "",
+    href: "https://x.com/B2B_SalesArrow",
     icon: XIcon,
     name: "X",
   },
@@ -222,50 +224,13 @@ export const Footer = () => {
             <div className="mb-5 space-y-1.5 text-sm text-white/90">
               <p>
                 <a
-                  className="transition-colors hover:text-white hover:underline"
+                  className="group inline-flex items-center gap-1 transition-colors hover:text-white hover:underline"
                   href="mailto:info@b2bsalesarrow.com"
                 >
                   info@b2bsalesarrow.com
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </p>
-            </div>
-            <div className="flex items-center gap-3">
-              {socialLinks.map((item) => {
-                const Icon = item.icon;
-                const baseClass =
-                  "flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-brand-gray transition-all duration-300";
-
-                if (item.href) {
-                  return (
-                    <a
-                      aria-label={`Visit B2B Sales Arrow on ${item.name}`}
-                      className={cn(baseClass, "hover:text-white", item.colorClass)}
-                      href={item.href}
-                      key={item.name}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <Icon className="h-4 w-4" />
-                    </a>
-                  );
-                }
-
-                return (
-                  <button
-                    aria-label={`${item.name} profile coming soon`}
-                    className={cn(
-                      baseClass,
-                      item.colorClass.split(" ", 1)[0],
-                      "cursor-not-allowed opacity-60 hover:bg-brand-gray"
-                    )}
-                    disabled
-                    key={item.name}
-                    type="button"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </button>
-                );
-              })}
             </div>
             <p className="mt-4 text-sm text-white/90">
               Subscribe to our enterprise growth newsletter.
@@ -306,11 +271,53 @@ export const Footer = () => {
           ))}
         </div>
 
-        <div className="pointer-events-auto flex flex-col items-center justify-between gap-4 border-t border-white/25 pt-6 md:flex-row">
-          <p className="text-xs text-white/80">
-            © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
-          </p>
-          <div className="flex gap-6 text-xs text-white/80">
+        <div className="pointer-events-auto flex flex-col items-center justify-between gap-6 border-t border-white/25 pt-6 md:flex-row md:gap-4">
+          <div className="text-xs text-white/80 md:flex-1">
+            <p>© {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.</p>
+          </div>
+
+          <div className="flex justify-center md:flex-1">
+            <div className="flex items-center gap-3">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+                const baseClass =
+                  "flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-brand-gray transition-all duration-300";
+
+                if (item.href) {
+                  return (
+                    <a
+                      aria-label={`Visit B2B Sales Arrow on ${item.name}`}
+                      className={cn(baseClass, "hover:text-white", item.colorClass)}
+                      href={item.href}
+                      key={item.name}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  );
+                }
+
+                return (
+                  <button
+                    aria-label={`${item.name} profile coming soon`}
+                    className={cn(
+                      baseClass,
+                      item.colorClass.split(" ", 1)[0],
+                      "cursor-not-allowed opacity-60 hover:bg-brand-gray"
+                    )}
+                    disabled
+                    key={item.name}
+                    type="button"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-white/80 md:flex-1 md:justify-end">
             <Link
               className="transition-colors hover:text-white hover:underline"
               href="/privacy-policy"

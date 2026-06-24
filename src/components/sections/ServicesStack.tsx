@@ -24,6 +24,7 @@ export interface ServicesStackProps {
   heading?: HomeServicesContent["heading"];
   serviceLabel?: HomeServicesContent["serviceLabel"];
   services?: HomeServiceItem[];
+  showCapabilityDescriptions?: boolean;
   showCardCtas?: boolean;
   showCommonCta?: boolean;
 }

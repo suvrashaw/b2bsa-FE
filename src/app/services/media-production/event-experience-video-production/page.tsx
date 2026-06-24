@@ -56,7 +56,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >

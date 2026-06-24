@@ -31,7 +31,6 @@ export interface ContactUsProps {
     label: string;
     opensModal?: boolean;
   };
-  proofLabel?: string;
   secondaryCta?: {
     href: string;
     label: string;
@@ -101,7 +100,6 @@ export const ContactUs = ({
   description,
   headingLines,
   primaryCta,
-  proofLabel,
   secondaryCta,
 }: ContactUsProps) => {
   const [pointerOffset, setPointerOffset] = useState({ x: 0, y: 0 });
@@ -203,7 +201,7 @@ export const ContactUs = ({
         <div className="mx-auto max-w-5xl text-center">
           {badge ? (
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-xs md:text-sm font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-xs font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md md:text-sm"
               initial="hidden"
               variants={ctaBadgeVariants}
               viewport={ctaViewport}
@@ -235,7 +233,7 @@ export const ContactUs = ({
 
           {description && (
             <motion.p
-              className="mx-auto mt-6 max-w-3xl type-body-l leading-relaxed text-white/88"
+              className="type-body-l mx-auto mt-6 max-w-3xl leading-relaxed text-white/88"
               custom={0.16}
               initial="hidden"
               variants={ctaRevealVariants}
@@ -304,7 +302,7 @@ export const ContactUs = ({
                 </div>
               ))}
             </div>
-            {proofLabel ? <p className="text-sm font-medium text-white/80">{proofLabel}</p> : null}
+            <p className="text-sm font-medium text-white/80">Trusted by global brands</p>
           </motion.div>
         </div>
       </div>

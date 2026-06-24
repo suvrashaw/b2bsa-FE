@@ -54,8 +54,6 @@ const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) =
   return { handleWheel, setIsHovered, x };
 };
 
-
-
 const LogosRow = ({
   logos,
   onLogoMouseEnter,
@@ -115,12 +113,12 @@ export const ClientLogos = ({
     return (
       <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <SectionHeader as="h2" className="pt-10 pb-3 text-center px-4 md:px-0">
+          <SectionHeader as="h2" className="px-4 pt-10 pb-3 text-center md:px-0">
             {heading}
           </SectionHeader>
         )}
         {description && (
-          <p className="mx-auto max-w-3xl px-4 pb-4 text-center type-body-m leading-relaxed text-brand-charcoal/70">
+          <p className="type-body-m mx-auto max-w-3xl px-4 pb-4 text-center leading-relaxed text-brand-charcoal/70">
             {description}
           </p>
         )}
@@ -148,12 +146,12 @@ export const ClientLogos = ({
       ref={containerRef}
     >
       {heading && (
-        <SectionHeader as="h2" className="pt-10 pb-3 text-center px-4 md:px-0">
+        <SectionHeader as="h2" className="px-4 pt-10 pb-3 text-center md:px-0">
           {heading}
         </SectionHeader>
       )}
       {description && (
-        <p className="mx-auto max-w-3xl px-4 pb-4 text-center type-body-m leading-relaxed text-brand-charcoal/70">
+        <p className="type-body-m mx-auto max-w-3xl px-4 pb-4 text-center leading-relaxed text-brand-charcoal/70">
           {description}
         </p>
       )}

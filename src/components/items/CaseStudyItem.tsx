@@ -93,7 +93,7 @@ export const CaseStudyItem = ({
               active ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
             )}
           >
-            <Icon className="h-4 w-4 md:h-5 md:w-5 text-white" name={item.icon} />
+            <Icon className="h-4 w-4 text-white md:h-5 md:w-5" name={item.icon} />
           </div>
 
           {!active && (
@@ -126,7 +126,7 @@ export const CaseStudyItem = ({
           {active && item.href ? (
             <motion.div
               animate={CTA_ANIMATE}
-              className="mt-4 md:mt-6 self-end lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
+              className="mt-4 self-end md:mt-6 lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
               exit={CTA_EXIT}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}

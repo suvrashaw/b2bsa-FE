@@ -137,6 +137,7 @@ const renderServicesSection = (
       <Capabilities
         capabilities={features}
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
+        showCapabilityDescriptions={section.showCapabilityDescriptions}
       />
     );
   }
@@ -305,10 +306,7 @@ export const ServicePage = ({
 
       {preContactSections}
 
-      <ContactUs
-        {...contactUs}
-        backgroundImage={contactUs.backgroundImage || fallbackBg}
-      />
+      <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />
 
       <Footer />
     </main>

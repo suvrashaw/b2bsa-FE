@@ -7,7 +7,7 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ServicesStack } from "@/components/sections/ServicesStack";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -30,8 +30,6 @@ import {
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
-
-const servicesContactModal = {};
 
 const capabilityAssets = [
   { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
@@ -79,7 +77,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >
@@ -103,12 +100,16 @@ const Page = () => {
         />
       }
       preStudiesSections={
-        <ServicesStack
-          {...CORP_NETWORKING_EVENT_TYPES}
-          cardCtaMode="none"
-          commonCtaLabel="Contact Our Team"
-          contactModal={servicesContactModal}
-          showCommonCta
+        <StickyScroll
+          heading={CORP_NETWORKING_EVENT_TYPES.heading}
+          reasons={CORP_NETWORKING_EVENT_TYPES.services.map(
+            ({ description, id, image, title }) => ({
+              description,
+              id,
+              image,
+              title,
+            })
+          )}
         />
       }
       relatedServices={CORP_NETWORKING_RELATED_SERVICES}

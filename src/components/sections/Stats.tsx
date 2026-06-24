@@ -155,7 +155,7 @@ export const Stats = ({
                 </SectionHeader>
               )}
               {description && (
-                <p className="mb-8 text-center type-body-l leading-relaxed text-brand-charcoal/70 lg:text-left">
+                <p className="type-body-l mb-8 text-center leading-relaxed text-brand-charcoal/70 lg:text-left">
                   {description}
                 </p>
               )}
@@ -184,7 +184,7 @@ export const Stats = ({
               </SectionHeader>
             )}
             {description && (
-              <p className="mx-auto mb-8 max-w-3xl type-body-l leading-relaxed text-brand-charcoal/70">
+              <p className="type-body-l mx-auto mb-8 max-w-3xl leading-relaxed text-brand-charcoal/70">
                 {description}
               </p>
             )}

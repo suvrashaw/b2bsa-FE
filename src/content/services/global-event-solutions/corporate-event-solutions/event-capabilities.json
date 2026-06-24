@@ -2,43 +2,33 @@
   "description": "Our corporate event solutions are designed to help enterprises deliver smooth, engaging, and professionally managed business events across industries and global event destinations.",
   "phases": [
     {
-      "description": "Full lifecycle event management from brief to post-event reporting.",
       "title": "End-to-end event management"
     },
     {
-      "description": "Structured planning for conference and executive summit programmes.",
       "title": "Conference and summit planning"
     },
     {
-      "description": "Booth management, branding, and attendee engagement at trade shows.",
       "title": "Trade show operational support"
     },
     {
-      "description": "Organizing structured networking experiences for business audiences.",
       "title": "Networking event coordination"
     },
     {
-      "description": "Event identity, signage, stage graphics, and visual production.",
       "title": "Event branding and production"
     },
     {
-      "description": "Attendee check-in, badge management, and registration communication.",
       "title": "Guest registration management"
     },
     {
-      "description": "Managing suppliers, production teams, and venue partners.",
       "title": "Vendor coordination support"
     },
     {
-      "description": "Day-of supervision, operational oversight, and troubleshooting.",
       "title": "Onsite event management"
     },
     {
-      "description": "VIP hospitality, executive guest programmes, and premium experiences.",
       "title": "Executive hospitality services"
     },
     {
-      "description": "Freight, customs, installation, and logistics for global events.",
       "title": "Global event logistics coordination"
     }
   ],

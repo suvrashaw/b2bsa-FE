@@ -174,11 +174,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       </section>
 
       {/* ── 3. Stats — Event at a Glance ────────────────────────────────── */}
-      <Stats
-        description={event.summary}
-        heading="Event at a Glance"
-        stats={stats}
-      />
+      <Stats description={event.summary} heading="Event at a Glance" stats={stats} />
 
       {/* ── 4. Spotlight — Why Exhibit ───────────────────────────────────── */}
       <Spotlight

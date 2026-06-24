@@ -96,7 +96,6 @@ const Page = () => {
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
-            headingAlign="left"
             id="blogs"
             layout="carousel"
           >
@@ -143,12 +142,14 @@ const Page = () => {
             contactModal={{}}
             heading="Our Rental Booth Range"
             serviceLabel=""
-            services={BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
-              description: item.description,
-              id: item.id,
-              image: item.image,
-              title: item.title,
-            })) as any}
+            services={
+              BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
+                description: item.description,
+                id: item.id,
+                image: item.image,
+                title: item.title,
+              })) as any
+            }
             showCommonCta
           />
         </>

@@ -48,11 +48,7 @@ const CaseStudyCard = ({
   return (
     <CaseStudyItem
       active={active}
-      className={
-        active
-          ? "lg:min-h-0"
-          : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"
-      }
+      className={active ? "lg:min-h-0" : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"}
       ctaLabel={ctaLabel}
       item={item}
       onActivate={handleActivate}
@@ -136,7 +132,7 @@ export const CaseStudies = ({
               {sectionHeading}
             </SectionHeader>
             {sectionDescription && (
-              <p className="mt-4 max-w-3xl type-body-m leading-relaxed text-gray-600">
+              <p className="type-body-m mt-4 max-w-3xl leading-relaxed text-gray-600">
                 {sectionDescription}
               </p>
             )}
@@ -147,7 +143,9 @@ export const CaseStudies = ({
             {heading}
           </SectionHeader>
           {description && (
-            <p className="mt-4 max-w-3xl type-body-m leading-relaxed text-gray-600">{description}</p>
+            <p className="type-body-m mt-4 max-w-3xl leading-relaxed text-gray-600">
+              {description}
+            </p>
           )}
         </div>
 

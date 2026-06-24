@@ -31,7 +31,7 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
       whileInView={RELATEDSERVICES_WHILE_IN_VIEW}
     >
       <Link
-        className="group relative flex h-full items-center justify-between overflow-hidden rounded-2xl md:rounded-xl border border-brand-blue bg-brand-blue px-8 py-7 transition-colors duration-300 hover:border-brand-blue hover:bg-white"
+        className="group relative flex h-full items-center justify-between overflow-hidden rounded-2xl border border-brand-blue bg-brand-blue px-8 py-7 transition-colors duration-300 hover:border-brand-blue hover:bg-white md:rounded-xl"
         href={service.href}
       >
         {/* Cyan glow orb blooms from top-right corner on hover */}
@@ -40,7 +40,7 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
           className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
         />
 
-        <h3 className="relative type-h3 text-white transition-colors duration-300 group-hover:text-brand-charcoal">
+        <h3 className="type-h3 relative text-white transition-colors duration-300 group-hover:text-brand-charcoal">
           {service.title}
         </h3>
 

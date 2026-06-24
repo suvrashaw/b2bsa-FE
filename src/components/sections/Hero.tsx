@@ -127,9 +127,19 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
   return { activeLineIdx, visibleLines };
 };
 
-const TypewriterLine = ({ fullText, isActive, text }: { fullText: string; isActive: boolean; text: string; }) => (
+const TypewriterLine = ({
+  fullText,
+  isActive,
+  text,
+}: {
+  fullText: string;
+  isActive: boolean;
+  text: string;
+}) => (
   <span className="relative block">
-    <span aria-hidden="true" className="invisible">{fullText}</span>
+    <span aria-hidden="true" className="invisible">
+      {fullText}
+    </span>
     <span className="absolute inset-0">
       {text}
       {isActive && (
@@ -321,7 +331,7 @@ export const Hero = ({
           {description && (
             <motion.p
               animate={DESCRIPTION_ANIMATE}
-              className="mb-12 max-w-2xl type-body-l leading-relaxed font-semibold"
+              className="type-body-l mb-12 max-w-2xl leading-relaxed font-semibold"
               initial={DESCRIPTION_INITIAL}
               style={DESCRIPTION_STYLE}
               transition={DESCRIPTION_TRANSITION}
@@ -342,7 +352,7 @@ export const Hero = ({
             >
               {primaryCta && (
                 <Link
-                  className="group relative flex min-h-[58px] w-full items-center justify-center whitespace-nowrap rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={primaryCta.href}
                   style={PRIMARY_CTA_STYLE}
                 >
@@ -352,7 +362,7 @@ export const Hero = ({
               )}
               {secondaryCta && (
                 <Link
-                  className="flex min-h-[58px] w-full items-center justify-center whitespace-nowrap rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
                   href={secondaryCta.href}
                   style={SECONDARY_CTA_STYLE}
                 >
