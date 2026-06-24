@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description:
     "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
   metadataBase: new URL("https://b2bsalesarrow.com"),
+  openGraph: {
+    locale: "en_US",
+    siteName: "B2B Sales Arrow",
+    type: "website",
+  },
   title: {
     default: "B2B Sales Arrow | Premium Growth Partner",
     template: "%s | B2B Sales Arrow",
@@ -49,6 +54,12 @@ const RootLayout = ({
     <html className={`${inter.variable} h-full antialiased`} lang="en" suppressHydrationWarning>
       <head>
         <PartytownScripts />
+        <link
+          href="/feed.xml"
+          rel="alternate"
+          title="B2B Sales Arrow Blog"
+          type="application/rss+xml"
+        />
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <Script

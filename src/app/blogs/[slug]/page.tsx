@@ -48,6 +48,7 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
       publishedTime: metadataPost.date,
       ...(metadataPost.category && { section: metadataPost.category }),
       ...(metadataPost.tags?.length && { tags: metadataPost.tags }),
+      locale: "en_US",
       title: metadataPost.title,
       type: "article",
     },

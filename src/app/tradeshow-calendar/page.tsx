@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { TRADE_SHOW_CALENDAR_HERO, TRADE_SHOW_CALENDAR_PAGE } from "@/content/tradeshow-calendar";
+import { buildCollectionPageJsonLd, JsonLd } from "@/lib";
 
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
@@ -25,6 +26,13 @@ export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_P
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
+      <JsonLd
+        data={buildCollectionPageJsonLd({
+          description: TRADE_SHOW_CALENDAR_PAGE.seo.description,
+          name: TRADE_SHOW_CALENDAR_PAGE.seo.title.split(" | ", 1)[0],
+          url: "/tradeshow-calendar",
+        })}
+      />
       <Header darkBackground />
       <Hero
         description={TRADE_SHOW_CALENDAR_HERO.description}

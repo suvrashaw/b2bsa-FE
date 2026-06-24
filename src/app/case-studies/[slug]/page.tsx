@@ -34,6 +34,7 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
     openGraph: {
       description,
       images: [{ alt: study.title, height: 630, url: study.image, width: 1200 }],
+      locale: "en_US",
       title: study.title,
       type: "article",
     },

@@ -43,6 +43,7 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
       images: event.image
         ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
         : undefined,
+      locale: "en_US",
       title: event.name,
       type: "website",
     },
