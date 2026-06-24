@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 
-import { SHARED_BLOG_POSTS } from "@/content/blogs";
 import { CASE_STUDY_DETAILS } from "@/content/case-studies";
 import { HOME_PAGE } from "@/content/home/content";
-import { marketingPages } from "@/content/marketing-pages";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 import { siteUrl } from "@/lib/json-ld";
+import { getLLMSContentLists } from "@/lib/llms";
 
 export const dynamic = "force-static";
 
@@ -14,12 +13,7 @@ const abs = (path: string) => `${siteUrl}${path}`;
 const pageTitle = (seoTitle: string) => seoTitle.split(" | ", 1)[0];
 
 export const GET = () => {
-  const serviceHubs = marketingPages.filter((p) => p.pageType === "serviceHub");
-  const serviceDetails = marketingPages.filter((p) => p.pageType === "serviceDetail");
-  const companyPages = marketingPages.filter(
-    (p) => p.pageType === "company" || p.pageType === "contact"
-  );
-  const publishedPosts = SHARED_BLOG_POSTS.filter((p) => p.body);
+  const { companyPages, publishedPosts, serviceDetails, serviceHubs } = getLLMSContentLists();
 
   const lines: string[] = [
     `# B2B Sales Arrow`,

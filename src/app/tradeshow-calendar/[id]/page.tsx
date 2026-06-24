@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { EventPage } from "@/components/templates/EventPage";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
-import { buildBreadcrumbJsonLd, JsonLd, siteUrl } from "@/lib";
+import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type EventDetailPageProps = {
   params: Promise<{
@@ -65,13 +65,26 @@ const Page = async ({ params }: EventDetailPageProps) => {
 
   if (!event) notFound();
 
+  const eventUrl = `${siteUrl}/tradeshow-calendar/${id}`;
+
   return (
     <>
       <JsonLd
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: siteUrl },
-          { name: "Tradeshow Calendar", url: `${siteUrl}/tradeshow-calendar` },
-          { name: event.name, url: `${siteUrl}/tradeshow-calendar/${id}` },
+        data={buildPageGraph([
+          buildWebPageJsonLd({
+            breadcrumbId: `${eventUrl}/#breadcrumb`,
+            description: event.summary,
+            name: event.name,
+            url: eventUrl,
+          }),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "Tradeshow Calendar", url: `${siteUrl}/tradeshow-calendar` },
+              { name: event.name, url: eventUrl },
+            ],
+            eventUrl
+          ),
         ])}
       />
       <EventPage event={event} />

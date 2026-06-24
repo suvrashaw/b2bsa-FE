@@ -12,7 +12,7 @@ export interface ArticleJsonLdProps {
   url: string;
 }
 
-const buildArticleData = ({
+export const buildBlogPostingJsonLd = ({
   authorName = "B2B Sales Arrow",
   dateModified,
   datePublished,
@@ -26,6 +26,7 @@ const buildArticleData = ({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   author: {
+    "@id": `${siteUrl}/#organization`,
     "@type": "Organization",
     name: authorName,
     url: siteUrl,
@@ -35,11 +36,16 @@ const buildArticleData = ({
   description,
   headline,
   image,
+  isPartOf: {
+    "@id": `${siteUrl}/blogs/#collection`,
+    "@type": "CollectionPage",
+  },
   mainEntityOfPage: {
-    "@id": url,
+    "@id": `${url}/#webpage`,
     "@type": "WebPage",
   },
   publisher: {
+    "@id": `${siteUrl}/#organization`,
     "@type": "Organization",
     logo: {
       "@type": "ImageObject",
@@ -51,5 +57,5 @@ const buildArticleData = ({
 });
 
 export const ArticleJsonLd = (props: ArticleJsonLdProps) => (
-  <JsonLd data={buildArticleData(props)} />
+  <JsonLd data={buildBlogPostingJsonLd(props)} />
 );

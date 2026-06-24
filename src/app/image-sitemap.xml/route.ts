@@ -10,8 +10,7 @@ export const dynamic = "force-static";
 const escapeXml = (str: string) =>
   str.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
-const absImage = (path: string) =>
-  path.startsWith("http") ? path : `${siteUrl}${path}`;
+const absImage = (path: string) => (path.startsWith("http") ? path : `${siteUrl}${path}`);
 
 const imageEntry = (loc: string, image: string, title: string, caption: string) =>
   `  <url>
@@ -25,12 +24,7 @@ const imageEntry = (loc: string, image: string, title: string, caption: string) 
 
 export const GET = () => {
   const blogEntries = SHARED_BLOG_POSTS.filter((p) => p.body && p.image).map((post) =>
-    imageEntry(
-      `${siteUrl}/blogs/${post.id}`,
-      post.image,
-      post.title,
-      post.excerpt ?? post.title
-    )
+    imageEntry(`${siteUrl}/blogs/${post.id}`, post.image, post.title, post.excerpt ?? post.title)
   );
 
   const caseStudyEntries = CASE_STUDY_DETAILS.filter((s) => s.image).map((study) =>
@@ -43,12 +37,7 @@ export const GET = () => {
   );
 
   const eventEntries = TRADE_SHOW_CALENDAR_EVENTS.filter((e) => e.image).map((event) =>
-    imageEntry(
-      `${siteUrl}/tradeshow-calendar/${event.id}`,
-      event.image!,
-      event.name,
-      event.summary
-    )
+    imageEntry(`${siteUrl}/tradeshow-calendar/${event.id}`, event.image!, event.name, event.summary)
   );
 
   const urlElements = [...blogEntries, ...caseStudyEntries, ...eventEntries].join("\n");

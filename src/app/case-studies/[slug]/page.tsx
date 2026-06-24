@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { CaseStudyPage } from "@/components/templates/CaseStudyPage";
 import { CASE_STUDY_DETAILS } from "@/content/case-studies";
-import { buildBreadcrumbJsonLd, JsonLd, siteUrl } from "@/lib";
+import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -54,13 +54,27 @@ const Page = async ({ params }: CaseStudyPageProps) => {
 
   if (!study) notFound();
 
+  const studyUrl = `${siteUrl}/case-studies/${study.slug}`;
+  const description = study.outcome.split(".", 1)[0] + ".";
+
   return (
     <>
       <JsonLd
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: siteUrl },
-          { name: "Case Studies", url: `${siteUrl}/case-studies` },
-          { name: study.title, url: `${siteUrl}/case-studies/${study.slug}` },
+        data={buildPageGraph([
+          buildWebPageJsonLd({
+            breadcrumbId: `${studyUrl}/#breadcrumb`,
+            description,
+            name: study.title,
+            url: studyUrl,
+          }),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "Case Studies", url: `${siteUrl}/case-studies` },
+              { name: study.title, url: studyUrl },
+            ],
+            studyUrl
+          ),
         ])}
       />
       <CaseStudyPage study={study} />

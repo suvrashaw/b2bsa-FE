@@ -1,5 +1,42 @@
+/* eslint-disable unicorn/prefer-module, @typescript-eslint/no-require-imports */
 /** @type {import('next-sitemap').IConfig} */
-// eslint-disable-next-line unicorn/prefer-module
+
+const BLOGS_JSON = require('./src/content/blogs/blogs.json');
+const BLOGS_CONFIG = require('./src/content/blogs/config.json');
+const EVENTS_JSON = require('./src/content/tradeshow-calendar/events.json').events || [];
+
+const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST || 'https://b2bsalesarrow.com';
+
+const getBlogSlug = (url, fallbackIndex) => {
+  try {
+    const pathname = new URL(url, BLOG_HOST).pathname;
+    const slug = pathname
+      .split('/')
+      .findLast(Boolean)
+      ?.replaceAll(/[^a-z0-9-]+/gi, '-')
+      .replaceAll(/(^-|-$)/g, '')
+      .toLowerCase();
+    return slug || `blog-${fallbackIndex + 1}`;
+  } catch {
+    return `blog-${fallbackIndex + 1}`;
+  }
+};
+
+const BLOG_LASTMOD = {};
+for (const [index, post] of BLOGS_JSON.entries()) {
+  if (post.date && post.url) {
+    const slug = getBlogSlug(post.url, index);
+    BLOG_LASTMOD[`/blogs/${slug}`] = new Date(post.date).toISOString();
+  }
+}
+
+const EVENT_LASTMOD = {};
+for (const event of EVENTS_JSON) {
+  if (event.id && event.startDate) {
+    EVENT_LASTMOD[`/tradeshow-calendar/${event.id}`] = new Date(event.startDate).toISOString();
+  }
+}
+
 module.exports = {
   exclude: ['/icon.png', '/favicon.ico', '/apple-icon.png', '/manifest.webmanifest', '/demo', '/thank-you'],
   generateIndexSitemap: false,
@@ -26,10 +63,12 @@ module.exports = {
       changefreq = 'monthly';
     }
 
+    const contentLastmod = BLOG_LASTMOD[path] ?? EVENT_LASTMOD[path];
+
     return {
       alternateRefs: config.alternateRefs ?? [],
       changefreq,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      lastmod: contentLastmod ?? (config.autoLastmod ? new Date().toISOString() : undefined),
       loc: path,
       priority,
     };

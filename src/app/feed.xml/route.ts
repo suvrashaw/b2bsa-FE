@@ -25,7 +25,7 @@ export const GET = () => {
     <link>${siteUrl}/blogs/${post.id}</link>
     <guid isPermaLink="true">${siteUrl}/blogs/${post.id}</guid>
     <description>${escapeXml(post.excerpt ?? post.title)}</description>
-    <pubDate>${toRfc2822(post.date)}</pubDate>
+    ${post.date ? `<pubDate>${toRfc2822(post.date)}</pubDate>` : ""}
     ${post.category ? `<category>${escapeXml(post.category)}</category>` : ""}
   </item>`
     )

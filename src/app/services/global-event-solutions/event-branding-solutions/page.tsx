@@ -115,7 +115,7 @@ const Page = () => {
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
-      spotlight={EVENT_BRANDING_INTRO}
+      spotlight={{ ...EVENT_BRANDING_INTRO, sectionClassName: "pt-8 md:pt-12" }}
     />
   );
 };

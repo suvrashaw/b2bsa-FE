@@ -136,7 +136,7 @@ export const Header = ({
           className="btn-schedule schedule-shake min-h-[28px] rounded-full px-2 py-1 text-[10px] font-semibold whitespace-nowrap normal-case sm:text-xs xl:min-h-[44px] xl:px-8 xl:py-3.5 xl:text-base"
           variant="primary"
         >
-          <Link href="/contact-us">Let's Talk</Link>
+          <Link href="/contact-us">Let&apos;s Talk</Link>
         </Button>
         <div className="xl:hidden">
           <button

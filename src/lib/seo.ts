@@ -18,13 +18,22 @@ export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
     }),
     openGraph: {
       description: seo.description,
-      images: [{ height: 630, url: ogImageUrl, width: 1200 }],
+      images: [{ alt: seo.title, height: 630, url: ogImageUrl, width: 1200 }],
       locale: "en_US",
       siteName: "B2B Sales Arrow",
       title: seo.title,
       type: "website",
       url: canonicalUrl,
     },
+    robots: seo.noIndex
+      ? { follow: false, index: false }
+      : {
+          follow: true,
+          index: true,
+          "max-image-preview": "large" as const,
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
     title: seo.title,
     twitter: {
       card: "summary_large_image",
@@ -32,6 +41,5 @@ export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
       images: [ogImageUrl],
       title: seo.title,
     },
-    ...(seo.noIndex && { robots: { follow: false, index: false } }),
   };
 };

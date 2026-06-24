@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 import { notFound, redirect } from "next/navigation";
 
-import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
+import { buildBlogPostingJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
 import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
-import { buildBreadcrumbJsonLd, JsonLd, siteUrl } from "@/lib";
+import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -74,20 +74,33 @@ const Page = async ({ params }: BlogPostPageProps) => {
     notFound();
   }
 
+  const postUrl = `${siteUrl}/blogs/${post.id}`;
+
   return (
     <>
-      <ArticleJsonLd
-        datePublished={post.date || new Date().toISOString()}
-        description={post.excerpt || post.title}
-        headline={post.title}
-        image={post.image}
-        url={`${siteUrl}/blogs/${post.id}`}
-      />
       <JsonLd
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: siteUrl },
-          { name: "Blogs", url: `${siteUrl}/blogs` },
-          { name: post.title, url: `${siteUrl}/blogs/${post.id}` },
+        data={buildPageGraph([
+          buildWebPageJsonLd({
+            breadcrumbId: `${postUrl}/#breadcrumb`,
+            description: post.excerpt || post.title,
+            name: post.title,
+            url: postUrl,
+          }),
+          buildBlogPostingJsonLd({
+            datePublished: post.date || new Date().toISOString(),
+            description: post.excerpt || post.title,
+            headline: post.title,
+            image: post.image,
+            url: postUrl,
+          }),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "Blogs", url: `${siteUrl}/blogs` },
+              { name: post.title, url: postUrl },
+            ],
+            postUrl
+          ),
         ])}
       />
       <BlogPage post={post} />

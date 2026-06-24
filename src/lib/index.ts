@@ -22,6 +22,8 @@ export {
   buildItemListJsonLd,
   buildLocalBusinessJsonLd,
   buildOrganizationJsonLd,
+  buildPageGraph,
   buildServiceJsonLd,
+  buildWebPageJsonLd,
   buildWebsiteJsonLd,
 } from "@/lib/structured-data";

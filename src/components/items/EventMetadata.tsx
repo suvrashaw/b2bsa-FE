@@ -10,7 +10,11 @@ export const EventMetadata = ({ metadata }: EventMetadataProps) => {
       {metadata.map(
         ({ label, value }) =>
           value && (
-            <Eyebrow className="m-0 !mb-0 border-white/30 bg-white/10 text-white/90" key={label} variant="blue">
+            <Eyebrow
+              className="m-0 !mb-0 border-white/30 bg-white/10 text-white/90"
+              key={label}
+              variant="blue"
+            >
               <span className="font-bold">{label}:</span> {value}
             </Eyebrow>
           )

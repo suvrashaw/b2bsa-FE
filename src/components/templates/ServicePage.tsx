@@ -34,8 +34,9 @@ import {
   buildFaqJsonLd,
   buildHowToJsonLd,
   buildItemListJsonLd,
-  buildOrganizationJsonLd,
+  buildPageGraph,
   buildServiceJsonLd,
+  buildWebPageJsonLd,
   JsonLd,
   normalizePath,
   siteUrl,
@@ -205,26 +206,30 @@ export const ServicePage = ({
     secondaryServices,
   ]);
 
-  const schemas = [
+  const pageUrl = `${siteUrl}${normalizePath(page.seo.canonicalPath)}`;
+  const pageGraph = buildPageGraph([
+    buildWebPageJsonLd({
+      breadcrumbId: `${pageUrl}/#breadcrumb`,
+      description: page.seo.description,
+      name: page.seo.title,
+      url: pageUrl,
+    }),
     buildServiceJsonLd({
       description: page.seo.description,
       name: page.pageName,
       url: page.seo.canonicalPath,
     }),
-    buildBreadcrumbJsonLd(getBreadcrumbs(page, parentPage)),
-    buildOrganizationJsonLd(),
+    buildBreadcrumbJsonLd(getBreadcrumbs(page, parentPage), pageUrl),
     ...(faq.faqs?.length ? [buildFaqJsonLd(faq.faqs)] : []),
     ...(steps.length > 0 ? [buildHowToJsonLd(processTitle, steps)] : []),
     ...(services
       ? [buildItemListJsonLd(services.services ?? services.content?.services ?? [])]
       : []),
-  ];
+  ]);
 
   return (
     <main className="min-h-screen bg-brand-gray">
-      {schemas.map((schema, i) => (
-        <JsonLd data={schema} key={i} />
-      ))}
+      <JsonLd data={pageGraph} />
       <Header darkBackground />
 
       {hero && <Hero {...hero} />}

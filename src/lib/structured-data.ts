@@ -3,6 +3,7 @@ import { isValidElement, type ReactNode } from "react";
 import { siteUrl as BASE } from "@/lib/json-ld";
 
 const ORGANIZATION = {
+  "@id": `${BASE}/#organization`,
   "@type": "Organization" as const,
   description:
     "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
@@ -57,18 +58,20 @@ export interface ServiceSchemaInput {
   url: string;
 }
 
-export const buildBreadcrumbJsonLd = (crumbs: Array<{ name: string; url: string }>) => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map(({ name, url }, index) => ({
-      "@type": "ListItem",
-      item: url,
-      name,
-      position: index + 1,
-    })),
-  };
-};
+export const buildBreadcrumbJsonLd = (
+  crumbs: Array<{ name: string; url: string }>,
+  pageUrl?: string
+) => ({
+  "@context": "https://schema.org",
+  ...(pageUrl && { "@id": `${pageUrl}/#breadcrumb` }),
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map(({ name, url }, index) => ({
+    "@type": "ListItem",
+    item: url,
+    name,
+    position: index + 1,
+  })),
+});
 
 const toJsonLdText = (node: ReactNode): string => {
   if (node === null || node === undefined || typeof node === "boolean") {
@@ -144,17 +147,14 @@ export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInpu
     "@type": "Service",
     description,
     name,
-    provider: {
-      "@type": "Organization",
-      name: ORGANIZATION.name,
-      url: ORGANIZATION.url,
-    },
+    provider: { "@id": ORGANIZATION["@id"] },
     url: `${BASE}${url}`,
   };
 };
 
 export const buildLocalBusinessJsonLd = () => ({
   "@context": "https://schema.org",
+  "@id": `${BASE}/#local-business`,
   "@type": "ProfessionalService",
   address: ADDRESSES,
   areaServed: ["New York", "Bengaluru", "Global"],
@@ -168,19 +168,25 @@ export const buildLocalBusinessJsonLd = () => ({
 
 export const buildAboutPageJsonLd = (description: string) => ({
   "@context": "https://schema.org",
+  "@id": `${BASE}/about-us/#page`,
   "@type": "AboutPage",
   description,
+  inLanguage: "en-US",
+  isPartOf: { "@id": `${BASE}/#website` },
   name: `About ${ORGANIZATION.name}`,
-  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  publisher: { "@id": ORGANIZATION["@id"] },
   url: `${BASE}/about-us`,
 });
 
 export const buildContactPageJsonLd = (description: string) => ({
   "@context": "https://schema.org",
+  "@id": `${BASE}/contact-us/#page`,
   "@type": "ContactPage",
   description,
+  inLanguage: "en-US",
+  isPartOf: { "@id": `${BASE}/#website` },
   name: `Contact ${ORGANIZATION.name}`,
-  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  publisher: { "@id": ORGANIZATION["@id"] },
   url: `${BASE}/contact-us`,
 });
 
@@ -194,15 +200,48 @@ export const buildCollectionPageJsonLd = ({
   url: string;
 }) => ({
   "@context": "https://schema.org",
+  "@id": `${BASE}${url}/#collection`,
   "@type": "CollectionPage",
   description,
+  inLanguage: "en-US",
+  isPartOf: { "@id": `${BASE}/#website` },
   name,
-  publisher: { "@type": "Organization", name: ORGANIZATION.name, url: ORGANIZATION.url },
+  publisher: { "@id": ORGANIZATION["@id"] },
   url: `${BASE}${url}`,
+});
+
+export const buildWebPageJsonLd = ({
+  breadcrumbId,
+  description,
+  name,
+  url,
+}: {
+  breadcrumbId?: string;
+  description: string;
+  name: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@id": `${url}/#webpage`,
+  "@type": "WebPage",
+  ...(breadcrumbId && { breadcrumb: { "@id": breadcrumbId } }),
+  description,
+  inLanguage: "en-US",
+  isPartOf: { "@id": `${BASE}/#website` },
+  name,
+  url,
+});
+
+export const buildPageGraph = (
+  schemas: Array<{ "@context"?: string } & Record<string, unknown>>
+) => ({
+  "@context": "https://schema.org",
+  "@graph": schemas.map(({ "@context": _ctx, ...rest }) => rest),
 });
 
 export const buildWebsiteJsonLd = () => ({
   "@context": "https://schema.org",
+  "@id": `${BASE}/#website`,
   "@type": "WebSite",
   name: ORGANIZATION.name,
   potentialAction: {

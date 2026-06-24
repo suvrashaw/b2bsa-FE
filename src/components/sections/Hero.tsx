@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -149,6 +149,109 @@ const TypewriterLine = ({
   </span>
 );
 
+const HeroBackground = ({
+  currentIndex,
+  effectiveVideoUrl,
+  imageOpacityStyle,
+  images,
+  isVideoMode,
+  mobileVideoUrl,
+  mobileVideoWebm,
+  poster,
+  videoSrc,
+  videoWebm,
+}: {
+  currentIndex: number;
+  effectiveVideoUrl: string;
+  imageOpacityStyle: CSSProperties;
+  images?: string[];
+  isVideoMode: boolean;
+  mobileVideoUrl?: string;
+  mobileVideoWebm?: string;
+  poster?: string;
+  videoSrc?: string;
+  videoWebm?: string;
+}) => {
+  if (isVideoMode) {
+    const hasMobileVideo = Boolean(mobileVideoUrl);
+    return (
+      <>
+        <video
+          autoPlay
+          className={cn(
+            "hero-bg-video absolute inset-0 h-full w-full object-cover",
+            hasMobileVideo && "hidden md:block"
+          )}
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        >
+          {videoWebm && <source src={videoWebm} type="video/webm" />}
+          <source src={effectiveVideoUrl} type="video/mp4" />
+          <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
+        </video>
+        {hasMobileVideo && (
+          <video
+            autoPlay
+            className="hero-bg-video absolute inset-0 h-full w-full object-cover md:hidden"
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          >
+            {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
+            <source src={mobileVideoUrl!} type="video/mp4" />
+            <track
+              default
+              kind="captions"
+              label="English"
+              src="data:text/vtt,WEBVTT"
+              srcLang="en"
+            />
+          </video>
+        )}
+      </>
+    );
+  } else if (videoSrc) {
+    return (
+      <video
+        autoPlay
+        className="absolute inset-0 h-full w-full object-cover"
+        loop
+        muted
+        playsInline
+        poster={poster ?? images?.[0]}
+        src={videoSrc}
+      >
+        <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
+      </video>
+    );
+  } else {
+    return (
+      <AnimatePresence>
+        <motion.div
+          animate={IMAGE_ANIMATE}
+          className="absolute inset-0"
+          exit={IMAGE_EXIT}
+          initial={IMAGE_INITIAL}
+          key={currentIndex}
+          style={imageOpacityStyle}
+          transition={IMAGE_TRANSITION}
+        >
+          <Image
+            alt=""
+            className="object-cover"
+            fill
+            priority
+            src={images?.[currentIndex] || PLACEHOLDER_IMAGE}
+          />
+        </motion.div>
+      </AnimatePresence>
+    );
+  }
+};
+
 export const Hero = ({
   animateFromLeft = false,
   centered = false,
@@ -200,86 +303,6 @@ export const Hero = ({
       "items-center md:items-end min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40";
   }
 
-  let background: React.ReactNode;
-  if (isVideoMode) {
-    const hasMobileVideo = Boolean(mobileVideoUrl);
-    background = (
-      <>
-        <video
-          autoPlay
-          className={cn(
-            "hero-bg-video absolute inset-0 h-full w-full object-cover",
-            hasMobileVideo && "hidden md:block"
-          )}
-          loop
-          muted
-          playsInline
-          preload="metadata"
-        >
-          {videoWebm && <source src={videoWebm} type="video/webm" />}
-          <source src={effectiveVideoUrl} type="video/mp4" />
-          <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
-        </video>
-        {hasMobileVideo && (
-          <video
-            autoPlay
-            className="hero-bg-video absolute inset-0 h-full w-full object-cover md:hidden"
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          >
-            {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
-            <source src={mobileVideoUrl!} type="video/mp4" />
-            <track
-              default
-              kind="captions"
-              label="English"
-              src="data:text/vtt,WEBVTT"
-              srcLang="en"
-            />
-          </video>
-        )}
-      </>
-    );
-  } else if (videoSrc) {
-    background = (
-      <video
-        autoPlay
-        className="absolute inset-0 h-full w-full object-cover"
-        loop
-        muted
-        playsInline
-        poster={poster ?? images?.[0]}
-        src={videoSrc}
-      >
-        <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
-      </video>
-    );
-  } else {
-    background = (
-      <AnimatePresence>
-        <motion.div
-          animate={IMAGE_ANIMATE}
-          className="absolute inset-0"
-          exit={IMAGE_EXIT}
-          initial={IMAGE_INITIAL}
-          key={currentIndex}
-          style={imageOpacityStyle}
-          transition={IMAGE_TRANSITION}
-        >
-          <Image
-            alt=""
-            className="object-cover"
-            fill
-            priority
-            src={images?.[currentIndex] || PLACEHOLDER_IMAGE}
-          />
-        </motion.div>
-      </AnimatePresence>
-    );
-  }
-
   return (
     <section
       className={cn("relative flex overflow-hidden bg-brand-charcoal", imageModeClass)}
@@ -294,7 +317,18 @@ export const Hero = ({
         />
       )}
       <div className="absolute inset-0 z-0">
-        {background}
+        <HeroBackground
+          currentIndex={currentIndex}
+          effectiveVideoUrl={effectiveVideoUrl}
+          imageOpacityStyle={imageOpacityStyle}
+          images={images}
+          isVideoMode={isVideoMode}
+          mobileVideoUrl={mobileVideoUrl}
+          mobileVideoWebm={mobileVideoWebm}
+          poster={poster}
+          videoSrc={videoSrc}
+          videoWebm={videoWebm}
+        />
         <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 

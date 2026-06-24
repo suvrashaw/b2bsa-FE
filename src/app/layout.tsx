@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
+import { StickyContactBar } from "@/components/layout/StickyContactBar";
 import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib";
 
 import "./globals.css";
@@ -23,6 +24,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "B2B Sales Arrow",
     type: "website",
+  },
+  robots: {
+    follow: true,
+    index: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
   title: {
     default: "B2B Sales Arrow | Premium Growth Partner",
@@ -73,6 +81,7 @@ const RootLayout = ({
           type="application/ld+json"
         />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <StickyContactBar />
       </body>
     </html>
   );
