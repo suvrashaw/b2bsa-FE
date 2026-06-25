@@ -60,6 +60,8 @@ const SECONDARY_SERVICES = {
   showCapabilityDescriptions: false,
 };
 
+const EVENT_BRANDING_SPOTLIGHT = { ...EVENT_BRANDING_INTRO, sectionClassName: "pt-8 md:pt-12" };
+
 const Page = () => {
   return (
     <ServicePage
@@ -115,7 +117,7 @@ const Page = () => {
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
-      spotlight={{ ...EVENT_BRANDING_INTRO, sectionClassName: "pt-8 md:pt-12" }}
+      spotlight={EVENT_BRANDING_SPOTLIGHT}
     />
   );
 };

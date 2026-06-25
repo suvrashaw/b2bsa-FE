@@ -6,7 +6,8 @@ import Script from "next/script";
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { StickyContactBar } from "@/components/layout/StickyContactBar";
-import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib";
+import { marketingPages } from "@/content/marketing-pages";
+import { buildOrganizationJsonLd, buildWebsiteJsonLd, siteUrl } from "@/lib";
 
 import "./globals.css";
 
@@ -17,6 +18,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteUrl}/feed.xml`,
+    },
+  },
   description:
     "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
   metadataBase: new URL("https://b2bsalesarrow.com"),
@@ -48,7 +54,13 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-const organizationJsonLd = buildOrganizationJsonLd();
+const serviceOffers = marketingPages
+  .filter((p) => p.pageType === "serviceDetail")
+  .map((p) => ({ name: p.pageName, url: `${siteUrl}${p.seo.canonicalPath}` }));
+
+const knowsAbout = marketingPages.filter((p) => p.pageType === "serviceHub").map((p) => p.pageName);
+
+const organizationJsonLd = buildOrganizationJsonLd(serviceOffers, knowsAbout);
 const websiteJsonLd = buildWebsiteJsonLd();
 const ORG_JSON_LD_SCRIPT = { __html: JSON.stringify(organizationJsonLd) };
 const WEBSITE_JSON_LD_SCRIPT = { __html: JSON.stringify(websiteJsonLd) };
@@ -68,6 +80,11 @@ const RootLayout = ({
           title="B2B Sales Arrow Blog"
           type="application/rss+xml"
         />
+        <link href="https://www.linkedin.com/company/b2b-sales-arrow-llc/" rel="me" />
+        <link href="https://www.facebook.com/b2bsalesarrow" rel="me" />
+        <link href="https://www.instagram.com/b2b_sales_arrow/" rel="me" />
+        <link href="https://x.com/B2B_SalesArrow" rel="me" />
+        <link href="https://www.youtube.com/@b2bsalesarrow167" rel="me" />
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <Script

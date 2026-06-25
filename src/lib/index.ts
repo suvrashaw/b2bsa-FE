@@ -21,6 +21,7 @@ export {
   buildFaqJsonLd,
   buildHowToJsonLd,
   buildItemListJsonLd,
+  buildLinkedItemListJsonLd,
   buildLocalBusinessJsonLd,
   buildOrganizationJsonLd,
   buildPageGraph,

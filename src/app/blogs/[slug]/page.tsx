@@ -42,13 +42,14 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     },
     description: metadataPost.excerpt,
     openGraph: {
+      authors: ["B2B Sales Arrow"],
       description: metadataPost.excerpt,
       images: ogImages,
+      locale: "en_US",
       modifiedTime: metadataPost.date,
       publishedTime: metadataPost.date,
       ...(metadataPost.category && { section: metadataPost.category }),
       ...(metadataPost.tags?.length && { tags: metadataPost.tags }),
-      locale: "en_US",
       title: metadataPost.title,
       type: "article",
     },
@@ -76,10 +77,15 @@ const Page = async ({ params }: BlogPostPageProps) => {
 
   const postUrl = `${siteUrl}/blogs/${post.id}`;
   type BodyBlock = { text?: string; type: string };
-  const wordCount = (post.body as BodyBlock[]).reduce(
+  const bodyBlocks = post.body as BodyBlock[];
+  const wordCount = bodyBlocks.reduce(
     (n, b) => n + (b.text ? b.text.trim().split(/\s+/).filter(Boolean).length : 0),
     0
   );
+  const tableOfContents = bodyBlocks
+    .filter((b) => b.type === "heading" && b.text)
+    .map((b) => b.text!)
+    .join("\n");
 
   return (
     <>
@@ -87,6 +93,8 @@ const Page = async ({ params }: BlogPostPageProps) => {
         data={buildPageGraph([
           buildWebPageJsonLd({
             breadcrumbId: `${postUrl}/#breadcrumb`,
+            dateModified: post.date || undefined,
+            datePublished: post.date || undefined,
             description: post.excerpt || post.title,
             image: post.image,
             name: post.title,
@@ -99,6 +107,7 @@ const Page = async ({ params }: BlogPostPageProps) => {
             headline: post.title,
             image: post.image,
             ...(post.tags?.length && { keywords: post.tags }),
+            ...(tableOfContents && { tableOfContents }),
             url: postUrl,
             ...(wordCount > 0 && { wordCount }),
           }),

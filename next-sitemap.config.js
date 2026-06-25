@@ -1,20 +1,20 @@
 /* eslint-disable unicorn/prefer-module, @typescript-eslint/no-require-imports */
 /** @type {import('next-sitemap').IConfig} */
 
-const BLOGS_JSON = require('./src/content/blogs/blogs.json');
-const BLOGS_CONFIG = require('./src/content/blogs/config.json');
-const EVENTS_JSON = require('./src/content/tradeshow-calendar/events.json').events || [];
+const BLOGS_JSON = require("./src/content/blogs/blogs.json");
+const BLOGS_CONFIG = require("./src/content/blogs/config.json");
+const EVENTS_JSON = require("./src/content/tradeshow-calendar/events.json").events || [];
 
-const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST || 'https://b2bsalesarrow.com';
+const BLOG_HOST = BLOGS_CONFIG.BLOG_HOST || "https://b2bsalesarrow.com";
 
 const getBlogSlug = (url, fallbackIndex) => {
   try {
     const pathname = new URL(url, BLOG_HOST).pathname;
     const slug = pathname
-      .split('/')
+      .split("/")
       .findLast(Boolean)
-      ?.replaceAll(/[^a-z0-9-]+/gi, '-')
-      .replaceAll(/(^-|-$)/g, '')
+      ?.replaceAll(/[^a-z0-9-]+/gi, "-")
+      .replaceAll(/(^-|-$)/g, "")
       .toLowerCase();
     return slug || `blog-${fallbackIndex + 1}`;
   } catch {
@@ -38,29 +38,36 @@ for (const event of EVENTS_JSON) {
 }
 
 module.exports = {
-  exclude: ['/icon.png', '/favicon.ico', '/apple-icon.png', '/manifest.webmanifest', '/demo', '/thank-you'],
+  exclude: [
+    "/icon.png",
+    "/favicon.ico",
+    "/apple-icon.png",
+    "/manifest.webmanifest",
+    "/demo",
+    "/thank-you",
+  ],
   generateIndexSitemap: false,
   generateRobotsTxt: true,
-  siteUrl: process.env.SITE_URL || 'https://b2bsalesarrow.com',
+  siteUrl: process.env.SITE_URL || "https://b2bsalesarrow.com",
   transform: async (config, path) => {
     let priority = config.priority || 0.7;
-    let changefreq = config.changefreq || 'daily';
+    let changefreq = config.changefreq || "daily";
 
-    if (path === '/') {
+    if (path === "/") {
       priority = 1;
-      changefreq = 'weekly';
-    } else if (path.startsWith('/services') || path === '/tradeshow-calendar') {
+      changefreq = "weekly";
+    } else if (path.startsWith("/services") || path === "/tradeshow-calendar") {
       priority = 0.9;
-      changefreq = 'weekly';
-    } else if (path.startsWith('/blogs') || path.startsWith('/case-studies')) {
+      changefreq = "weekly";
+    } else if (path.startsWith("/blogs") || path.startsWith("/case-studies")) {
       priority = 0.7;
-      changefreq = 'weekly';
-    } else if (['/cookie-policy', '/privacy-policy', '/terms-and-conditions'].includes(path)) {
+      changefreq = "weekly";
+    } else if (["/cookie-policy", "/privacy-policy", "/terms-and-conditions"].includes(path)) {
       priority = 0.3;
-      changefreq = 'yearly';
-    } else if (['/about-us', '/contact-us'].includes(path)) {
+      changefreq = "yearly";
+    } else if (["/about-us", "/contact-us"].includes(path)) {
       priority = 0.8;
-      changefreq = 'monthly';
+      changefreq = "monthly";
     }
 
     const contentLastmod = BLOG_LASTMOD[path] ?? EVENT_LASTMOD[path];

@@ -6,8 +6,18 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { TRADE_SHOW_CALENDAR_HERO, TRADE_SHOW_CALENDAR_PAGE } from "@/content/tradeshow-calendar";
-import { buildCollectionPageJsonLd, JsonLd } from "@/lib";
+import {
+  TRADE_SHOW_CALENDAR_EVENTS,
+  TRADE_SHOW_CALENDAR_HERO,
+  TRADE_SHOW_CALENDAR_PAGE,
+} from "@/content/tradeshow-calendar";
+import {
+  buildCollectionPageJsonLd,
+  buildLinkedItemListJsonLd,
+  buildPageGraph,
+  JsonLd,
+  siteUrl,
+} from "@/lib";
 
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
@@ -27,11 +37,19 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
-        data={buildCollectionPageJsonLd({
-          description: TRADE_SHOW_CALENDAR_PAGE.seo.description,
-          name: TRADE_SHOW_CALENDAR_PAGE.seo.title.split(" | ", 1)[0],
-          url: "/tradeshow-calendar",
-        })}
+        data={buildPageGraph([
+          buildCollectionPageJsonLd({
+            description: TRADE_SHOW_CALENDAR_PAGE.seo.description,
+            name: TRADE_SHOW_CALENDAR_PAGE.seo.title.split(" | ", 1)[0],
+            url: "/tradeshow-calendar",
+          }),
+          buildLinkedItemListJsonLd(
+            TRADE_SHOW_CALENDAR_EVENTS.slice(0, 10).map((e) => ({
+              name: e.name,
+              url: `${siteUrl}/tradeshow-calendar/${e.id}`,
+            }))
+          ),
+        ])}
       />
       <Header darkBackground />
       <Hero

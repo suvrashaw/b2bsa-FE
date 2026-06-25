@@ -1,4 +1,4 @@
-import { JsonLd, siteUrl } from "@/lib/json-ld";
+import { siteUrl } from "@/lib/json-ld";
 
 export interface ArticleJsonLdProps {
   articleSection?: string;
@@ -11,6 +11,7 @@ export interface ArticleJsonLdProps {
   keywords?: string[];
   publisherLogo?: string;
   publisherName?: string;
+  tableOfContents?: string;
   url: string;
   wordCount?: number;
 }
@@ -26,12 +27,16 @@ export const buildBlogPostingJsonLd = ({
   keywords,
   publisherLogo = `${siteUrl}/media/logo/logo-600.png`,
   publisherName = "B2B Sales Arrow",
+  tableOfContents,
   url,
   wordCount,
 }: ArticleJsonLdProps) => ({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  ...(articleSection && { articleSection }),
+  ...(articleSection && {
+    about: { "@type": "Thing", name: articleSection },
+    articleSection,
+  }),
   author: {
     "@id": `${siteUrl}/#organization`,
     "@type": "Organization",
@@ -44,6 +49,7 @@ export const buildBlogPostingJsonLd = ({
   headline,
   image,
   inLanguage: "en-US",
+  isAccessibleForFree: true,
   isPartOf: {
     "@id": `${siteUrl}/blogs/#collection`,
     "@type": "CollectionPage",
@@ -62,10 +68,8 @@ export const buildBlogPostingJsonLd = ({
     },
     name: publisherName,
   },
+  ...(tableOfContents && { tableOfContents }),
   url,
   ...(wordCount && { wordCount }),
 });
 
-export const ArticleJsonLd = (props: ArticleJsonLdProps) => (
-  <JsonLd data={buildBlogPostingJsonLd(props)} />
-);

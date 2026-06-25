@@ -55,6 +55,7 @@ const ADDRESSES = [
 export interface ServiceSchemaInput {
   description: string;
   name: string;
+  serviceType?: string;
   url: string;
 }
 
@@ -108,7 +109,10 @@ export const buildFaqJsonLd = (faqs: Array<{ answer: ReactNode; question: string
   };
 };
 
-export const buildOrganizationJsonLd = () => {
+export const buildOrganizationJsonLd = (
+  serviceOffers?: Array<{ name: string; url: string }>,
+  knowsAbout?: string[]
+) => {
   return {
     "@context": "https://schema.org",
     ...ORGANIZATION,
@@ -120,6 +124,17 @@ export const buildOrganizationJsonLd = () => {
         email: "info@b2bsalesarrow.com",
       },
     ],
+    ...(knowsAbout?.length && { knowsAbout }),
+    ...(serviceOffers?.length && {
+      makesOffer: serviceOffers.map(({ name, url }) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name,
+          url,
+        },
+      })),
+    }),
   };
 };
 
@@ -148,14 +163,31 @@ export const buildItemListJsonLd = (items: Array<{ title: string }>) => ({
   })),
 });
 
-export const buildServiceJsonLd = ({ description, name, url }: ServiceSchemaInput) => {
+export const buildLinkedItemListJsonLd = (items: Array<{ name: string; url: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: items.map(({ name, url }, index) => ({
+    "@type": "ListItem",
+    item: {
+      "@id": `${url}/#webpage`,
+      "@type": "WebPage",
+      name,
+      url,
+    },
+    position: index + 1,
+  })),
+});
+
+export const buildServiceJsonLd = ({ description, name, serviceType, url }: ServiceSchemaInput) => {
   return {
     "@context": "https://schema.org",
+    "@id": `${BASE}${url}/#service`,
     "@type": "Service",
     areaServed: "Worldwide",
     description,
     name,
     provider: { "@id": ORGANIZATION["@id"] },
+    ...(serviceType && { serviceType }),
     url: `${BASE}${url}`,
   };
 };
@@ -165,7 +197,7 @@ export const buildLocalBusinessJsonLd = () => ({
   "@id": `${BASE}/#local-business`,
   "@type": "ProfessionalService",
   address: ADDRESSES,
-  areaServed: ["New York", "Bengaluru", "Global"],
+  areaServed: ["Kota", "Lewes", "London", "Munich"],
   description: ORGANIZATION.description,
   email: "info@b2bsalesarrow.com",
   logo: ORGANIZATION.logo,
@@ -220,24 +252,34 @@ export const buildCollectionPageJsonLd = ({
 
 export const buildWebPageJsonLd = ({
   breadcrumbId,
+  dateModified,
+  datePublished,
   description,
   image,
+  mainEntityId,
   name,
   url,
 }: {
   breadcrumbId?: string;
+  dateModified?: string;
+  datePublished?: string;
   description: string;
   image?: string;
+  mainEntityId?: string;
   name: string;
   url: string;
 }) => ({
   "@context": "https://schema.org",
   "@id": `${url}/#webpage`,
   "@type": "WebPage",
+  author: { "@id": `${BASE}/#organization` },
   ...(breadcrumbId && { breadcrumb: { "@id": breadcrumbId } }),
+  ...(dateModified && { dateModified }),
+  ...(datePublished && { datePublished }),
   description,
   inLanguage: "en-US",
   isPartOf: { "@id": `${BASE}/#website` },
+  ...(mainEntityId && { mainEntity: { "@id": mainEntityId } }),
   name,
   ...(image && { primaryImageOfPage: { "@type": "ImageObject", url: image } }),
   url,
