@@ -20,7 +20,10 @@ interface ServicesLinkCardProps {
 }
 
 export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
-  const transition = useMemo(() => ({ delay: index * 0.1, duration: 0.4 }), [index]);
+  const transition = useMemo(
+    () => ({ delay: index * 0.1, duration: 0.4 }),
+    [index],
+  );
 
   return (
     <motion.div

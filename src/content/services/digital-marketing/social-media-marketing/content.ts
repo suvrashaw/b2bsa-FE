@@ -4,7 +4,8 @@ import CAPABILITIES_DATA from "./capabilities.json";
 import CASESTUDIES_DATA from "./case-studies.json";
 import INDUSTRIES_DATA from "./industries.json";
 
-export const SMM_CLIENT_LOGOS_HEADING = "Trusted by Global Brands for Event Hostess Services";
+export const SMM_CLIENT_LOGOS_HEADING =
+  "Trusted by Global Brands for Event Hostess Services";
 
 export const SMM_CAPABILITIES = {
   description: CAPABILITIES_DATA.description,

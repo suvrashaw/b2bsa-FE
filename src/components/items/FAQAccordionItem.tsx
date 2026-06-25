@@ -33,7 +33,7 @@ export const FAQAccordionItem = ({
     <div
       className={cn(
         "overflow-hidden rounded-2xl border bg-white transition-colors duration-300 md:rounded-xl",
-        isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300"
+        isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300",
       )}
     >
       <button
@@ -41,12 +41,18 @@ export const FAQAccordionItem = ({
         onClick={handleClick}
         type="button"
       >
-        <span className="w-6 shrink-0 text-base font-bold text-brand-blue md:w-8">{num}.</span>
+        <span className="w-6 shrink-0 text-base font-bold text-brand-blue md:w-8">
+          {num}.
+        </span>
         <span className="flex-1 font-heading text-base font-semibold text-brand-charcoal md:text-lg">
           {question}
         </span>
         <span className="shrink-0 text-brand-cyan">
-          {isOpen ? <X className="size-[18px]" /> : <Plus className="size-[18px]" />}
+          {isOpen ? (
+            <X className="size-[18px]" />
+          ) : (
+            <Plus className="size-[18px]" />
+          )}
         </span>
       </button>
 

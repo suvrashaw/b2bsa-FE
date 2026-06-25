@@ -72,4 +72,3 @@ export const buildBlogPostingJsonLd = ({
   url,
   ...(wordCount && { wordCount }),
 });
-

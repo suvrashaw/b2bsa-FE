@@ -83,10 +83,16 @@ export const Carousel = ({
         const singleWidth = el.scrollWidth / COPY_COUNT;
         if (el.scrollLeft < singleWidth) {
           // Drifted into copy-0 → jump forward by one copy width
-          el.scrollTo({ behavior: "instant", left: el.scrollLeft + singleWidth });
+          el.scrollTo({
+            behavior: "instant",
+            left: el.scrollLeft + singleWidth,
+          });
         } else if (el.scrollLeft >= singleWidth * 2) {
           // Drifted into copy-2 → jump back by one copy width
-          el.scrollTo({ behavior: "instant", left: el.scrollLeft - singleWidth });
+          el.scrollTo({
+            behavior: "instant",
+            left: el.scrollLeft - singleWidth,
+          });
         }
       }, 50);
     };
@@ -103,7 +109,10 @@ export const Carousel = ({
     const el = scrollRef.current;
     if (!el) return;
     const card = el.querySelector<HTMLElement>("[data-card-scroll]");
-    el.scrollBy({ behavior: "smooth", left: direction * ((card?.offsetWidth ?? 300) + 20) });
+    el.scrollBy({
+      behavior: "smooth",
+      left: direction * ((card?.offsetWidth ?? 300) + 20),
+    });
   }, []);
 
   const handleScrollPrev = useCallback(() => scrollByCard(-1), [scrollByCard]);
@@ -117,9 +126,12 @@ export const Carousel = ({
   }, [autoplayInterval, handleScrollNext, isPaused]);
 
   // ── Pointer / drag ─────────────────────────────────────────────────────────
-  const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
-    pointerStartX.current = e.clientX;
-  }, []);
+  const handlePointerDown = useCallback(
+    (e: React.PointerEvent<HTMLDivElement>) => {
+      pointerStartX.current = e.clientX;
+    },
+    [],
+  );
 
   const handlePointerUp = useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
@@ -127,24 +139,31 @@ export const Carousel = ({
       if (diff < -50) handleScrollNext();
       else if (diff > 50) handleScrollPrev();
     },
-    [handleScrollNext, handleScrollPrev]
+    [handleScrollNext, handleScrollPrev],
   );
 
   const handleMouseEnter = useCallback(() => setIsPaused(true), []);
   const handleMouseLeave = useCallback(() => setIsPaused(false), []);
 
   return (
-    <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)} id={id}>
+    <section
+      className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)}
+      id={id}
+    >
       {/* Header stays contained */}
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
-        <SectionHeader description={description} heading={heading} headingAlign={headingAlign} />
+        <SectionHeader
+          description={description}
+          heading={heading}
+          headingAlign={headingAlign}
+        />
       </div>
 
       {/* Scroll track is full bleed but padded so adjacent cards peek symmetrically */}
       <div
         className={cn(
           "flex snap-x snap-mandatory [scroll-padding-left:2.5rem] overflow-x-auto px-10 py-4 [&::-webkit-scrollbar]:hidden",
-          gap
+          gap,
         )}
         onMouseEnter={autoplayInterval ? handleMouseEnter : undefined}
         onMouseLeave={autoplayInterval ? handleMouseLeave : undefined}
@@ -162,7 +181,7 @@ export const Carousel = ({
             >
               {child}
             </div>
-          ))
+          )),
         )}
       </div>
 

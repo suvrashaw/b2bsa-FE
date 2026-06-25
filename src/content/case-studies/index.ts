@@ -43,7 +43,8 @@ export const CASE_STUDIES_PAGE_CONTENT = {
   resultsHeading: RESULTS_HEADING_DATA,
   template: TEMPLATE_DATA,
 };
-export const CASE_STUDIES_PAGE_STUDIES = STUDIES_DATA as unknown as CaseStudyEntry[];
+export const CASE_STUDIES_PAGE_STUDIES =
+  STUDIES_DATA as unknown as CaseStudyEntry[];
 
 export const CASE_STUDIES_PAGE = PAGE_DATA as MarketingPageDefinition;
 
@@ -75,6 +76,7 @@ const SELECTED_CASE_STUDY_IDS = [
   "waf-2025",
 ];
 
-export const GLOBAL_CASE_STUDIES: CaseStudyEntry[] = SELECTED_CASE_STUDY_IDS.map((id) =>
-  STUDIES_DATA.find((cs) => cs.id === id)
-).filter(Boolean) as unknown as CaseStudyEntry[];
+export const GLOBAL_CASE_STUDIES: CaseStudyEntry[] =
+  SELECTED_CASE_STUDY_IDS.map((id) =>
+    STUDIES_DATA.find((cs) => cs.id === id),
+  ).filter(Boolean) as unknown as CaseStudyEntry[];

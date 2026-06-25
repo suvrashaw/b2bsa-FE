@@ -27,7 +27,9 @@ import {
   EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-physical-video-shoot/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(EVENT_PHYSICAL_VIDEO_PAGE);
+export const metadata: Metadata = getMarketingPageMetadata(
+  EVENT_PHYSICAL_VIDEO_PAGE,
+);
 
 const Page = () => {
   return (
@@ -50,7 +52,11 @@ const Page = () => {
             cols={4}
             heading={EVENT_PHYSICAL_VIDEO_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

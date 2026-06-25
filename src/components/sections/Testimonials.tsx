@@ -5,7 +5,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCard } from "@/components/items/TestimonialCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home/content";
+import {
+  HOME_TESTIMONIALS_CONTENT,
+  type TestimonialsContent,
+} from "@/content/home/content";
 
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];
@@ -31,22 +34,29 @@ export const Testimonials = ({
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
-      threshold: 0.1,
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      {
+        threshold: 0.1,
+      },
+    );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const { getRelativePosition, handleNext, handlePrev, setActiveIndex } = useCoverflowCarousel(
-    testimonials.length,
-    initialIndex,
-    autoplayInterval,
-    isVisible
-  );
+  const { getRelativePosition, handleNext, handlePrev, setActiveIndex } =
+    useCoverflowCarousel(
+      testimonials.length,
+      initialIndex,
+      autoplayInterval,
+      isVisible,
+    );
 
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-6 md:py-8" ref={sectionRef}>
+    <section
+      className="relative overflow-hidden bg-brand-gray py-6 md:py-8"
+      ref={sectionRef}
+    >
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 size-[600px] -translate-1/2 rounded-full bg-[#1E6091]/5 blur-[100px]" />
 
@@ -107,10 +117,10 @@ const useCoverflowCarousel = (
   total: number,
   initialIndex: number,
   autoplayInterval: number,
-  isVisible: boolean
+  isVisible: boolean,
 ) => {
   const [activeIndex, setActiveIndex] = useState(() =>
-    Math.min(initialIndex, Math.max(total - 1, 0))
+    Math.min(initialIndex, Math.max(total - 1, 0)),
   );
 
   // Auto-scroll functionality

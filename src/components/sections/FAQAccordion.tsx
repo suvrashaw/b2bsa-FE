@@ -43,7 +43,10 @@ const FAQAccordionRow = ({
   onToggle,
   question,
 }: FAQAccordionRowProps) => {
-  const transition = useMemo(() => ({ delay: index * 0.07, duration: 0.4 }), [index]);
+  const transition = useMemo(
+    () => ({ delay: index * 0.07, duration: 0.4 }),
+    [index],
+  );
   return (
     <motion.div
       animate={ITEM_ANIMATE}
@@ -86,7 +89,9 @@ export const FAQAccordion = ({
     <section
       className={cn(
         "relative",
-        isArticle ? "bg-transparent py-0" : "bg-brand-gray py-14 md:py-20 lg:py-24"
+        isArticle
+          ? "bg-transparent py-0"
+          : "bg-brand-gray py-14 md:py-20 lg:py-24",
       )}
       id="faq"
     >
@@ -100,7 +105,9 @@ export const FAQAccordion = ({
       <div
         className={cn(
           "relative z-10",
-          isArticle ? "" : "container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8"
+          isArticle
+            ? ""
+            : "container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8",
         )}
       >
         <motion.div
@@ -115,13 +122,23 @@ export const FAQAccordion = ({
             {heading}
           </SectionHeader>
           {description && (
-            <p className={cn("type-body-m max-w-xl text-gray-600", !isArticle && "mx-auto")}>
+            <p
+              className={cn(
+                "type-body-m max-w-xl text-gray-600",
+                !isArticle && "mx-auto",
+              )}
+            >
               {description}
             </p>
           )}
         </motion.div>
 
-        <div className={cn("flex flex-col gap-4", isArticle ? "" : "mx-auto max-w-[860px]")}>
+        <div
+          className={cn(
+            "flex flex-col gap-4",
+            isArticle ? "" : "mx-auto max-w-[860px]",
+          )}
+        >
           {faqs.map((faq, i) => (
             <FAQAccordionRow
               answer={faq.answer}

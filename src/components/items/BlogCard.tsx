@@ -18,7 +18,11 @@ export interface BlogCardProps {
   total: number;
 }
 
-const BLOG_CARD_TRANSITION = { damping: 30, stiffness: 300, type: "spring" } as const;
+const BLOG_CARD_TRANSITION = {
+  damping: 30,
+  stiffness: 300,
+  type: "spring",
+} as const;
 const BLOG_CARD_MOBILE_QUERY = "(max-width: 1023px)";
 
 const getMobileSnapshot = () =>
@@ -42,7 +46,11 @@ export const BlogCard = ({
   spread,
   total,
 }: BlogCardProps) => {
-  const isMobile = useSyncExternalStore(subscribeToMobileQuery, getMobileSnapshot, () => false);
+  const isMobile = useSyncExternalStore(
+    subscribeToMobileQuery,
+    getMobileSnapshot,
+    () => false,
+  );
 
   const relativeIndex = index - (total - 1) / 2;
   const rotationOffset = relativeIndex * 8;
@@ -59,7 +67,10 @@ export const BlogCard = ({
   const activeX = isMobile ? 0 : hoverX;
   const activeY = isMobile ? hoverY : 0;
 
-  const cardAnimate = useMemo(() => ({ scale: isHovered ? 0.9 : 1 }), [isHovered]);
+  const cardAnimate = useMemo(
+    () => ({ scale: isHovered ? 0.9 : 1 }),
+    [isHovered],
+  );
   const cardStyle = useMemo(
     () => ({
       rotate: isHovered ? 0 : rotate,
@@ -67,7 +78,7 @@ export const BlogCard = ({
       y: isHovered ? activeY : y,
       zIndex: index,
     }),
-    [isHovered, rotate, activeX, x, activeY, y, index]
+    [isHovered, rotate, activeX, x, activeY, y, index],
   );
 
   return (
@@ -88,7 +99,9 @@ export const BlogCard = ({
       </div>
       <div className="p-5 md:p-8">
         {blog.date && (
-          <span className="mb-3 block text-sm font-medium text-gray-500">{blog.date}</span>
+          <span className="mb-3 block text-sm font-medium text-gray-500">
+            {blog.date}
+          </span>
         )}
         <h3 className="mb-4 line-clamp-2 min-h-[3.5rem] font-heading text-base leading-tight font-bold md:text-xl">
           {blog.title}
@@ -120,7 +133,9 @@ export const BlogCardGrid = ({ blog }: { blog: BlogItem }) => {
       </div>
       <div className="flex flex-1 flex-col p-5 md:p-6">
         {blog.date && (
-          <span className="mb-2 block text-sm font-medium text-gray-500">{blog.date}</span>
+          <span className="mb-2 block text-sm font-medium text-gray-500">
+            {blog.date}
+          </span>
         )}
         <h3 className="mb-3 font-heading text-base leading-snug font-bold md:text-xl">
           {blog.title}

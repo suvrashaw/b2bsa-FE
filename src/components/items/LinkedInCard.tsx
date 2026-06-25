@@ -56,9 +56,17 @@ const RepostIcon = ({ className }: { className?: string }) => (
     viewBox="0 0 24 24"
   >
     <path d="M17 1l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M3 11V9a4 4 0 0 1 4-4h14" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M3 11V9a4 4 0 0 1 4-4h14"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
     <path d="M7 23l-4-4 4-4" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M21 13v2a4 4 0 0 1-4 4H3" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M21 13v2a4 4 0 0 1-4 4H3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
@@ -71,7 +79,11 @@ const SendIcon = ({ className }: { className?: string }) => (
     viewBox="0 0 24 24"
   >
     <path d="M22 2L11 13" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M22 2L15 22l-4-9-9-4 20-7z" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M22 2L15 22l-4-9-9-4 20-7z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
@@ -131,7 +143,9 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
           <p className="truncate text-sm leading-tight font-semibold text-[#000000E6] hover:text-[#0A66C2] hover:underline">
             {COMPANY_NAME}
           </p>
-          <p className="truncate text-xs leading-snug text-[#00000099]">{COMPANY_TAGLINE}</p>
+          <p className="truncate text-xs leading-snug text-[#00000099]">
+            {COMPANY_TAGLINE}
+          </p>
           <p className="flex items-center gap-1 text-xs text-[#00000099]">
             <span>1h</span>
             <span className="mb-[2px] leading-none">·</span>
@@ -157,7 +171,9 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
 
     {/* ── Caption / Post text ── */}
     <div className="px-4 pb-2">
-      <p className="line-clamp-3 text-xs leading-relaxed text-[#000000E6]">{post.caption}</p>
+      <p className="line-clamp-3 text-xs leading-relaxed text-[#000000E6]">
+        {post.caption}
+      </p>
       <div className="mt-1 flex items-center gap-2">
         {post.hashtag && (
           <span className="text-sm font-semibold text-[#0A66C2] hover:underline">

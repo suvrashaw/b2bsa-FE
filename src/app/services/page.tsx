@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
-import { type RelatedService, ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import {
+  type RelatedService,
+  ServicesLinkCard,
+} from "@/components/items/ServicesLinkCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -11,10 +14,12 @@ import { SERVICES_PAGE } from "@/content/services";
 
 export const metadata: Metadata = getMarketingPageMetadata(SERVICES_PAGE);
 
-const serviceLinks: RelatedService[] = serviceNavigationGroups.map((service) => ({
-  href: service.href,
-  title: service.name,
-}));
+const serviceLinks: RelatedService[] = serviceNavigationGroups.map(
+  (service) => ({
+    href: service.href,
+    title: service.name,
+  }),
+);
 
 const Page = () => {
   return (
@@ -32,7 +37,11 @@ const Page = () => {
       </section>
       <CardsGrid cols={3} heading="SERVICES" headingAlign="left">
         {serviceLinks.map((service, index) => (
-          <ServicesLinkCard index={index} key={service.href} service={service} />
+          <ServicesLinkCard
+            index={index}
+            key={service.href}
+            service={service}
+          />
         ))}
       </CardsGrid>
       <Footer />

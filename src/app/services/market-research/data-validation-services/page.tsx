@@ -13,7 +13,8 @@ import {
   DATA_VALIDATION_SPOTLIGHT,
 } from "@/content/services/market-research/data-validation-services/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
+export const metadata: Metadata =
+  getMarketingPageMetadata(DATA_VALIDATION_PAGE);
 
 const Page = () => {
   return (

@@ -16,7 +16,10 @@ import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
-import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
+import {
+  type CalendarTradeShow,
+  TRADE_SHOW_CALENDAR_EVENTS,
+} from "@/content/tradeshow-calendar";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -90,26 +93,32 @@ export interface EventPageProps {
 // ─── EventPage ────────────────────────────────────────────────────────────────
 
 export const EventPage = ({ event, faq }: EventPageProps) => {
-  const heroImages = useMemo(() => [event.image ?? PLACEHOLDER_IMAGE], [event.image]);
+  const heroImages = useMemo(
+    () => [event.image ?? PLACEHOLDER_IMAGE],
+    [event.image],
+  );
 
   const heroSecondaryCta = useMemo(
     () => ({ href: event.sourceUrl, label: "Visit Official Site" }),
-    [event.sourceUrl]
+    [event.sourceUrl],
   );
 
   const metadata = useMemo(
     () => [
-      { label: "Date", value: formatEventDateRange(event.startDate, event.endDate) },
+      {
+        label: "Date",
+        value: formatEventDateRange(event.startDate, event.endDate),
+      },
       { label: "Venue", value: event.venue },
       { label: "Location", value: formatLocation(event) },
       { label: "Industry", value: event.industry },
     ],
-    [event]
+    [event],
   );
 
   const durationDays = useMemo(
     () => computeDurationDays(event.startDate, event.endDate),
-    [event.startDate, event.endDate]
+    [event.startDate, event.endDate],
   );
 
   const stats = useMemo(
@@ -118,15 +127,15 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       `${formatStat(event.exhibitorCount)} Exhibitors`,
       `${durationDays} ${durationDays === 1 ? "Day" : "Days"}`,
     ],
-    [event.attendeeCount, event.exhibitorCount, durationDays]
+    [event.attendeeCount, event.exhibitorCount, durationDays],
   );
 
   const relatedEvents = useMemo(
     () =>
       TRADE_SHOW_CALENDAR_EVENTS.filter(
-        (e) => e.industry === event.industry && e.id !== event.id
+        (e) => e.industry === event.industry && e.id !== event.id,
       ).slice(0, 6),
-    [event.industry, event.id]
+    [event.industry, event.id],
   );
 
   const serviceItems = useMemo(
@@ -134,17 +143,17 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       HOME_SERVICES_CONTENT.services
         .slice(0, 5)
         .map((item) => ({ ...item, image: item.image ?? PLACEHOLDER_IMAGE })),
-    []
+    [],
   );
 
   const contactUsBg = useMemo(
     () => ({ alt: event.name, src: event.image ?? PLACEHOLDER_IMAGE }),
-    [event.name, event.image]
+    [event.name, event.image],
   );
 
   const contactUsHeadingLines = useMemo(
     () => [`Ready to Exhibit at`, `${event.name}?`],
-    [event.name]
+    [event.name],
   );
 
   return (
@@ -162,7 +171,11 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       />
 
       {/* ── 3. Stats — Event at a Glance ────────────────────────────────── */}
-      <Stats description={event.summary} heading="Event at a Glance" stats={stats} />
+      <Stats
+        description={event.summary}
+        heading="Event at a Glance"
+        stats={stats}
+      />
 
       {/* ── 4. Spotlight — Why Exhibit ───────────────────────────────────── */}
       <Spotlight

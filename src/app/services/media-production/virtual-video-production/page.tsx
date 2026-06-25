@@ -42,16 +42,19 @@ const capabilityAssets = [
   { icon: "Shuffle", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
-const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase, index) => ({
-  description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Video",
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
-  label: phase.title,
-}));
+const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map(
+  (phase, index) => ({
+    description: phase.description,
+    icon: capabilityAssets[index]?.icon ?? "Video",
+    id: phase.title
+      .toLowerCase()
+      .replaceAll(/[^a-z0-9]+/g, "-")
+      .replaceAll(/(^-|-$)/g, ""),
+    image:
+      capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+    label: phase.title,
+  }),
+);
 
 const Page = () => {
   return (
@@ -61,7 +64,11 @@ const Page = () => {
       contactUs={VIRTUAL_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid
+            cols={4}
+            heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+          >
             {VIRTUAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -70,7 +77,11 @@ const Page = () => {
             cols={4}
             heading={VIRTUAL_VIDEO_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

@@ -8,7 +8,10 @@ import type { TestimonialsContent } from "@/content/home/content";
 
 type TestimonialItem = TestimonialsContent["testimonials"][number];
 
-const CARD_STYLE_BASE = { transformOrigin: "center", transformStyle: "preserve-3d" as const };
+const CARD_STYLE_BASE = {
+  transformOrigin: "center",
+  transformStyle: "preserve-3d" as const,
+};
 const CARD_TRANSITION = { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const };
 
 const isOuterQuoteMark = (char: string) => ["'", '"', "“", "”"].includes(char);
@@ -57,10 +60,21 @@ export const TestimonialCard = ({
   const blur = isCenter ? 0 : 3 * absPos;
   const zIndex = 50 - absPos * 10;
   const cardAnimate = useMemo(
-    () => ({ filter: `blur(${blur}px)`, opacity, rotateY, scale, x, z, zIndex }),
-    [blur, opacity, rotateY, scale, x, z, zIndex]
+    () => ({
+      filter: `blur(${blur}px)`,
+      opacity,
+      rotateY,
+      scale,
+      x,
+      z,
+      zIndex,
+    }),
+    [blur, opacity, rotateY, scale, x, z, zIndex],
   );
-  const handleClick = useCallback(() => setActiveIndex(index), [index, setActiveIndex]);
+  const handleClick = useCallback(
+    () => setActiveIndex(index),
+    [index, setActiveIndex],
+  );
 
   return (
     <motion.div
@@ -92,7 +106,9 @@ export const TestimonialCard = ({
         </p>
 
         <div className="mt-5">
-          <p className="font-heading text-sm font-bold text-brand-blue">{testimonial.author}</p>
+          <p className="font-heading text-sm font-bold text-brand-blue">
+            {testimonial.author}
+          </p>
         </div>
 
         <div className="mt-3 flex justify-center gap-1">

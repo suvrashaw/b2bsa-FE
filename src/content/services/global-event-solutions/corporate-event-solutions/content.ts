@@ -1,5 +1,8 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
-import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
+import {
+  GLOBAL_INDUSTRY_SERVICES,
+  GLOBAL_PROOF_STATS,
+} from "@/content/services";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACTCTA_DATA from "./contact-cta.json";
@@ -19,12 +22,18 @@ export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-const aviationIndustry = GLOBAL_INDUSTRY_SERVICES.find((s) => s.id === "aviation");
-const otherIndustries = GLOBAL_INDUSTRY_SERVICES.filter((s) => s.id !== "aviation");
+const aviationIndustry = GLOBAL_INDUSTRY_SERVICES.find(
+  (s) => s.id === "aviation",
+);
+const otherIndustries = GLOBAL_INDUSTRY_SERVICES.filter(
+  (s) => s.id !== "aviation",
+);
 
 export const CORP_EVENT_INDUSTRIES_SECTION = {
   ...EVENTINDUSTRIESSECTION_DATA,
-  services: aviationIndustry ? [...otherIndustries, aviationIndustry] : GLOBAL_INDUSTRY_SERVICES,
+  services: aviationIndustry
+    ? [...otherIndustries, aviationIndustry]
+    : GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const CORP_EVENT_CONTACT_CTA = {

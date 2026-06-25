@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Component Library | B2B Sales Arrow",
 };
 
-const DemoLayout = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+const DemoLayout = ({ children }: { children: React.ReactNode }) => (
+  <>{children}</>
+);
 
 export default DemoLayout;

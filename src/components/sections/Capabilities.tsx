@@ -55,7 +55,11 @@ const camelToKebab = (value: string) => {
 
 type CardStatus = "active" | "hidden" | "next" | "prev";
 
-const getCardStatus = (currentIndex: number, index: number, itemCount: number): CardStatus => {
+const getCardStatus = (
+  currentIndex: number,
+  index: number,
+  itemCount: number,
+): CardStatus => {
   const diff = index - currentIndex;
   let normalizedDiff = diff;
   if (diff > itemCount / 2) normalizedDiff -= itemCount;
@@ -73,7 +77,8 @@ const getNavItemMotion = (wrappedDistance: number) => ({
 
 const getShowcaseMotion = (status: CardStatus) => {
   if (status === "active") return { opacity: 1, rotate: 0, scale: 1, y: 0 };
-  if (status === "prev") return { opacity: 0.4, rotate: -3, scale: 0.85, y: -60 };
+  if (status === "prev")
+    return { opacity: 0.4, rotate: -3, scale: 0.85, y: -60 };
   if (status === "next") return { opacity: 0.4, rotate: 3, scale: 0.85, y: 60 };
   return { opacity: 0, rotate: 0, scale: 0.7, y: 0 };
 };
@@ -90,23 +95,26 @@ const getShowcaseCardClassName = (status: CardStatus) => {
   return cn(
     "absolute inset-0 origin-center overflow-hidden rounded-[2rem] bg-white shadow-2xl",
     depthClassName,
-    isActive ? "pointer-events-auto" : "pointer-events-none"
+    isActive ? "pointer-events-auto" : "pointer-events-none",
   );
 };
 
 const getCapabilitiesImageClassName = (isActive: boolean) =>
   cn(
     "size-full object-cover transition-all duration-700",
-    isActive ? "blur-0 grayscale-0" : "blur-[2px] brightness-75 grayscale"
+    isActive ? "blur-0 grayscale-0" : "blur-[2px] brightness-75 grayscale",
   );
 
 const getCapabilitiesIconClassName = (isActive: boolean) =>
   cn(
     "flex items-center justify-center transition-colors duration-500",
-    isActive ? "text-white" : "text-brand-charcoal/40"
+    isActive ? "text-white" : "text-brand-charcoal/40",
   );
 
-const renderCapabilitiesIcon = (icon: CapabilitiesItem["icon"], isActive: boolean) => (
+const renderCapabilitiesIcon = (
+  icon: CapabilitiesItem["icon"],
+  isActive: boolean,
+) => (
   <div className={getCapabilitiesIconClassName(isActive)}>
     <Icon className="size-[18px]" name={camelToKebab(icon)} strokeWidth={2} />
   </div>
@@ -136,11 +144,20 @@ const CapabilitiesNavItem = ({
     "group relative inline-flex w-fit items-center gap-4 rounded-full px-6 py-3.5 transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4",
     isActive
       ? "z-10 bg-brand-blue text-white shadow-xl shadow-brand-blue/20"
-      : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal"
+      : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal",
   );
-  const handleClick = useCallback(() => onChipClick(index), [index, onChipClick]);
-  const handleMouseEnter = useCallback(() => onPauseChange(true), [onPauseChange]);
-  const handleMouseLeave = useCallback(() => onPauseChange(false), [onPauseChange]);
+  const handleClick = useCallback(
+    () => onChipClick(index),
+    [index, onChipClick],
+  );
+  const handleMouseEnter = useCallback(
+    () => onPauseChange(true),
+    [onPauseChange],
+  );
+  const handleMouseLeave = useCallback(
+    () => onPauseChange(false),
+    [onPauseChange],
+  );
 
   return (
     <motion.div
@@ -201,10 +218,12 @@ const CapabilitiesShowcaseCard = ({
         <div
           className={cn(
             "pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 transition-opacity duration-500",
-            isActive ? "opacity-100" : "opacity-0"
+            isActive ? "opacity-100" : "opacity-0",
           )}
         >
-          <p className="type-body-l leading-relaxed text-gray-200">{capability.description}</p>
+          <p className="type-body-l leading-relaxed text-gray-200">
+            {capability.description}
+          </p>
         </div>
       ) : null}
     </motion.div>
@@ -221,24 +240,29 @@ const CapabilitiesCarousel = ({
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const currentIndex = ((step % capabilities.length) + capabilities.length) % capabilities.length;
+  const currentIndex =
+    ((step % capabilities.length) + capabilities.length) % capabilities.length;
 
   const nextStep = useCallback(() => setStep((prev) => prev + 1), []);
 
   const handleChipClick = useCallback(
     (index: number) => {
-      const diff = (index - currentIndex + capabilities.length) % capabilities.length;
+      const diff =
+        (index - currentIndex + capabilities.length) % capabilities.length;
       if (diff > 0) setStep((cur) => cur + diff);
     },
-    [currentIndex, capabilities.length]
+    [currentIndex, capabilities.length],
   );
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
-      threshold: 0.1,
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      {
+        threshold: 0.1,
+      },
+    );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
@@ -254,19 +278,19 @@ const CapabilitiesCarousel = ({
       <div
         className={cn(
           "relative flex min-h-[480px] flex-col overflow-hidden md:min-h-[520px] md:flex-row",
-          mediaPosition === "left" && "md:flex-row-reverse"
+          mediaPosition === "left" && "md:flex-row-reverse",
         )}
       >
         <div
           className={cn(
             "relative z-30 flex min-h-[240px] w-full flex-col items-start justify-center overflow-hidden px-4 md:min-h-[450px] md:w-[55%] md:px-16 md:pr-8",
-            mediaPosition === "left" ? "md:pr-16 md:pl-0" : "md:pl-16"
+            mediaPosition === "left" ? "md:pr-16 md:pl-0" : "md:pl-16",
           )}
         >
           <div
             className={cn(
               "relative z-20 flex h-[300px] w-full items-center justify-center",
-              mediaPosition === "left" ? "md:justify-end" : "md:justify-start"
+              mediaPosition === "left" ? "md:justify-end" : "md:justify-start",
             )}
           >
             {capabilities.map((capability, index) => (
@@ -285,7 +309,7 @@ const CapabilitiesCarousel = ({
         <div
           className={cn(
             "relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden px-4 py-8 md:min-h-[500px] md:px-12 md:py-16",
-            mediaPosition === "left" ? "md:pr-0 md:pl-14" : "md:pr-14 md:pl-0"
+            mediaPosition === "left" ? "md:pr-0 md:pl-14" : "md:pr-14 md:pl-0",
           )}
         >
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">

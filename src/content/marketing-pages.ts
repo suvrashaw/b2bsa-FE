@@ -83,24 +83,30 @@ export const marketingPages = [
   VIRTUAL_VIDEO_PAGE,
 ] satisfies MarketingPageDefinition[];
 
-const marketingPagesById = Object.fromEntries(marketingPages.map((page) => [page.pageId, page]));
-
-const marketingPagesByPath = Object.fromEntries(
-  marketingPages.map((page) => [normalizePath(page.seo.canonicalPath), page])
+const marketingPagesById = Object.fromEntries(
+  marketingPages.map((page) => [page.pageId, page]),
 );
 
-export const getMarketingPageById = (pageId: string) => marketingPagesById[pageId];
+const marketingPagesByPath = Object.fromEntries(
+  marketingPages.map((page) => [normalizePath(page.seo.canonicalPath), page]),
+);
 
-export const getMarketingPageByPath = (path: string) => marketingPagesByPath[normalizePath(path)];
+export const getMarketingPageById = (pageId: string) =>
+  marketingPagesById[pageId];
+
+export const getMarketingPageByPath = (path: string) =>
+  marketingPagesByPath[normalizePath(path)];
 
 import MARKETING_PAGES_CONFIG from "./marketing-pages-config.json";
 
 export const getMarketingPageGroup = (page: MarketingPageDefinition) => {
   return (
-    MARKETING_PAGES_CONFIG.groups[page.pageType as keyof typeof MARKETING_PAGES_CONFIG.groups] ||
-    MARKETING_PAGES_CONFIG.defaultGroup
+    MARKETING_PAGES_CONFIG.groups[
+      page.pageType as keyof typeof MARKETING_PAGES_CONFIG.groups
+    ] || MARKETING_PAGES_CONFIG.defaultGroup
   );
 };
 
-export const getMarketingPageMetadata = (page: MarketingPageDefinition): Metadata =>
-  buildPageMetadata(page.seo, page.pageId);
+export const getMarketingPageMetadata = (
+  page: MarketingPageDefinition,
+): Metadata => buildPageMetadata(page.seo, page.pageId);

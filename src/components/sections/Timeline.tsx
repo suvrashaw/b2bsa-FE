@@ -48,8 +48,12 @@ export const Timeline = ({
   const resolvedTitle = title ?? heading;
   const resolvedDescription = description ?? subtitle;
   const stepTransitions = useMemo(
-    () => (steps ?? phases ?? []).map((_, index) => ({ delay: index * 0.1, duration: 0.6 })),
-    [steps, phases]
+    () =>
+      (steps ?? phases ?? []).map((_, index) => ({
+        delay: index * 0.1,
+        duration: 0.6,
+      })),
+    [steps, phases],
   );
 
   return (
@@ -57,7 +61,9 @@ export const Timeline = ({
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         {(resolvedTitle || resolvedDescription) && (
           <div className="mb-8 text-center md:mb-14 lg:mb-20">
-            {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}
+            {resolvedTitle && (
+              <SectionHeader as="h2">{resolvedTitle}</SectionHeader>
+            )}
             {resolvedDescription && (
               <p className="type-body-l mx-auto mt-6 max-w-2xl leading-relaxed text-brand-charcoal/70">
                 {resolvedDescription}
@@ -86,7 +92,9 @@ export const Timeline = ({
                 {/* Content */}
                 <div className="w-full pl-8">
                   <div className="[#212529] rounded-xl border border-gray-100 bg-white p-8 text-left shadow-xl transition-all duration-300 hover:border-brand-blue/30">
-                    <h3 className="mb-4 text-base font-bold md:text-xl">{step.title}</h3>
+                    <h3 className="mb-4 text-base font-bold md:text-xl">
+                      {step.title}
+                    </h3>
                     <p className="text-xs leading-relaxed text-gray-600 md:text-base">
                       {step.description}
                     </p>
@@ -100,7 +108,11 @@ export const Timeline = ({
         {cta && (
           <div className="mt-14 flex justify-center">
             {cta.opensModal ? (
-              <Button onClick={openContactModal} type="button" variant="primary">
+              <Button
+                onClick={openContactModal}
+                type="button"
+                variant="primary"
+              >
                 {cta.label}
               </Button>
             ) : (
@@ -112,7 +124,9 @@ export const Timeline = ({
         )}
       </div>
 
-      {cta?.opensModal && <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />}
+      {cta?.opensModal && (
+        <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
+      )}
     </section>
   );
 };

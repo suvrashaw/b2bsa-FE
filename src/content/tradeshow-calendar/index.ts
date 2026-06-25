@@ -21,7 +21,8 @@ export interface CalendarTradeShow {
   venue: string;
 }
 
-export const TRADE_SHOW_CALENDAR_EVENTS: CalendarTradeShow[] = EVENTS_DATA.events;
+export const TRADE_SHOW_CALENDAR_EVENTS: CalendarTradeShow[] =
+  EVENTS_DATA.events;
 
 export const TRADE_SHOW_CALENDAR_PAGE = PAGE_DATA as MarketingPageDefinition;
 
@@ -79,7 +80,7 @@ const getCountryFromLocation = (location?: string) => {
 
 export const mapCalendarEventToEvent = (
   event: CalendarTradeShow,
-  index: number
+  index: number,
 ): EventCardItem => ({
   country: event.country,
   ctaHref: `/tradeshow-calendar/${event.id}`,
@@ -90,7 +91,10 @@ export const mapCalendarEventToEvent = (
   title: event.name,
 });
 
-export const normalizeEvent = (event: EventCardItem, index: number): EventCardItem => ({
+export const normalizeEvent = (
+  event: EventCardItem,
+  index: number,
+): EventCardItem => ({
   ...event,
   country: event.country ?? getCountryFromLocation(event.location),
   ctaHref: event.ctaHref ?? "/tradeshow-calendar",
@@ -100,10 +104,12 @@ export const normalizeEvent = (event: EventCardItem, index: number): EventCardIt
 export const getDefaultEvents = (): EventCardItem[] => {
   const today = new Date();
   const todayUtc = new Date(
-    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()),
   );
 
-  return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= todayUtc)
+  return TRADE_SHOW_CALENDAR_EVENTS.filter(
+    (event) => toUtcDate(event.endDate) >= todayUtc,
+  )
     .toSorted((a, b) => a.startDate.localeCompare(b.startDate))
     .slice(0, 8)
     .map((event, index) => mapCalendarEventToEvent(event, index));

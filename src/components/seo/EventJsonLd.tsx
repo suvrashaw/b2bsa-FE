@@ -44,4 +44,6 @@ const buildEventData = ({
   url,
 });
 
-export const EventJsonLd = (props: EventJsonLdProps) => <JsonLd data={buildEventData(props)} />;
+export const EventJsonLd = (props: EventJsonLdProps) => (
+  <JsonLd data={buildEventData(props)} />
+);

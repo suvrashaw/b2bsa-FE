@@ -27,9 +27,9 @@ export const ABOUT_VALUES = {
 export const ABOUT_PAGE = PAGE_DATA as MarketingPageDefinition;
 export const ABOUT_RECENT_EVENTS = {
   ...EVENTS_SECTION_DATA,
-  events: TRADE_SHOW_CALENDAR_EVENTS.filter((e) => ABOUT_EVENT_IDS.has(e.id)).map((e, i) =>
-    mapCalendarEventToEvent(e, i)
-  ),
+  events: TRADE_SHOW_CALENDAR_EVENTS.filter((e) =>
+    ABOUT_EVENT_IDS.has(e.id),
+  ).map((e, i) => mapCalendarEventToEvent(e, i)),
 };
 export { default as ABOUT_CORE_VALUES } from "./core-values.json";
 export { default as ABOUT_HERO } from "./hero.json";

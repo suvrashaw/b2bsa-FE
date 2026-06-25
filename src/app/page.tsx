@@ -9,34 +9,42 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 
 /* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
-const Footer = dynamic(() => import("@/components/layout/Footer").then((mod) => mod.Footer));
-const Blogs = dynamic(() => import("@/components/sections/Blogs").then((mod) => mod.Blogs));
+const Footer = dynamic(() =>
+  import("@/components/layout/Footer").then((mod) => mod.Footer),
+);
+const Blogs = dynamic(() =>
+  import("@/components/sections/Blogs").then((mod) => mod.Blogs),
+);
 const CardsGrid = dynamic(() =>
-  import("@/components/sections/CardsGrid").then((mod) => mod.CardsGrid)
+  import("@/components/sections/CardsGrid").then((mod) => mod.CardsGrid),
 );
 const Carousel = dynamic(() =>
-  import("@/components/sections/Carousel").then((mod) => mod.Carousel)
+  import("@/components/sections/Carousel").then((mod) => mod.Carousel),
 );
 const CaseStudies = dynamic(() =>
-  import("@/components/sections/CaseStudies").then((mod) => mod.CaseStudies)
+  import("@/components/sections/CaseStudies").then((mod) => mod.CaseStudies),
 );
 const ClientLogos = dynamic(() =>
-  import("@/components/sections/ClientLogos").then((mod) => mod.ClientLogos)
+  import("@/components/sections/ClientLogos").then((mod) => mod.ClientLogos),
 );
 const ContactUsForm = dynamic(() =>
-  import("@/components/sections/ContactUsForm").then((mod) => mod.ContactUsForm)
+  import("@/components/sections/ContactUsForm").then(
+    (mod) => mod.ContactUsForm,
+  ),
 );
 const HomeStats = dynamic(() =>
-  import("@/components/sections/HomeStats").then((mod) => mod.HomeStats)
+  import("@/components/sections/HomeStats").then((mod) => mod.HomeStats),
 );
 const ServicesStack = dynamic(() =>
-  import("@/components/sections/ServicesStack").then((mod) => mod.ServicesStack)
+  import("@/components/sections/ServicesStack").then(
+    (mod) => mod.ServicesStack,
+  ),
 );
 const StickyScroll = dynamic(() =>
-  import("@/components/sections/StickyScroll").then((mod) => mod.StickyScroll)
+  import("@/components/sections/StickyScroll").then((mod) => mod.StickyScroll),
 );
 const Testimonials = dynamic(() =>
-  import("@/components/sections/Testimonials").then((mod) => mod.Testimonials)
+  import("@/components/sections/Testimonials").then((mod) => mod.Testimonials),
 );
 /* eslint-enable unicorn/prefer-await */
 import { Button } from "@/components/ui/Button";
@@ -49,7 +57,12 @@ import {
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
-import { buildFaqJsonLd, buildPageGraph, buildWebPageJsonLd, siteUrl } from "@/lib";
+import {
+  buildFaqJsonLd,
+  buildPageGraph,
+  buildWebPageJsonLd,
+  siteUrl,
+} from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
@@ -92,7 +105,10 @@ const Home = () => {
       </div>
 
       <div id="work">
-        <CaseStudies items={GLOBAL_CASE_STUDIES} viewAllLabel="View All Case Studies" />
+        <CaseStudies
+          items={GLOBAL_CASE_STUDIES}
+          viewAllLabel="View All Case Studies"
+        />
       </div>
 
       <CardsGrid
@@ -101,7 +117,9 @@ const Home = () => {
         cta={
           HOME_EVENTS_CONTENT.viewAllLabel ? (
             <Button asChild variant="primary">
-              <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
+              <Link href="/tradeshow-calendar">
+                {HOME_EVENTS_CONTENT.viewAllLabel}
+              </Link>
             </Button>
           ) : undefined
         }
@@ -135,7 +153,12 @@ const Home = () => {
         layout="carousel"
       >
         {HOME_FAQ_CONTENT.faqs.map((f) => (
-          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+          <FAQCard
+            answer={f.answer}
+            image={f.image}
+            key={f.id}
+            question={f.question}
+          />
         ))}
       </Carousel>
 

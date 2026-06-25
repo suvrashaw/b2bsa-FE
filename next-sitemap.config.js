@@ -25,7 +25,7 @@ const getBlogSlug = (url, fallbackIndex) => {
 const BLOG_LASTMOD = {};
 for (const [index, post] of BLOGS_JSON.entries()) {
   if (!(post.date && post.url)) {
-  	continue;
+    continue;
   }
 
   const slug = getBlogSlug(post.url, index);

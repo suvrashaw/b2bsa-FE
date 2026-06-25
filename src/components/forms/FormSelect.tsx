@@ -33,7 +33,7 @@ export const FormSelect = ({
         className={cn(
           "w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-600 transition-colors focus:border-brand-blue focus:outline-none",
           error && "border-red-400 focus:border-red-500",
-          className
+          className,
         )}
         id={id}
         {...props}

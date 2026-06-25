@@ -19,13 +19,16 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setLoading(false);
-    setSubmitted(true);
-  }, []);
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      setLoading(false);
+      setSubmitted(true);
+    },
+    [],
+  );
 
   if (submitted) {
     return (
@@ -35,7 +38,9 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         <div className="flex size-16 items-center justify-center rounded-full bg-brand-blue/10">
           <ArrowRight className="size-8 rotate-[-45deg] text-brand-blue" />
         </div>
-        <h3 className="font-heading text-2xl font-bold text-brand-charcoal">Message received!</h3>
+        <h3 className="font-heading text-2xl font-bold text-brand-charcoal">
+          Message received!
+        </h3>
         <p className="max-w-sm text-gray-500">
           Thank you for reaching out. We&apos;ll be in touch shortly.
         </p>
@@ -168,13 +173,18 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
               required
               type="checkbox"
             />
-            <label className="text-sm leading-snug text-gray-500" htmlFor="contact-consent">
+            <label
+              className="text-sm leading-snug text-gray-500"
+              htmlFor="contact-consent"
+            >
               {form.consentLabel}
             </label>
           </div>
         )}
 
-        {form.trustNote && <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>}
+        {form.trustNote && (
+          <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>
+        )}
 
         <Button
           className="flex w-full items-center justify-center py-4 text-lg"

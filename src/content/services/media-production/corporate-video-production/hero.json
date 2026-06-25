@@ -2,7 +2,10 @@
   "description": "Your corporate video should make your market believe you are the right partner, before a sales conversation begins.",
   "mobileVideoUrl": "/media/services/media-production/corporate-video-production/hero/mobile.mp4",
   "mobileVideoWebm": "/media/services/media-production/corporate-video-production/hero/mobile.webm",
-  "primaryCta": { "href": "/contact-us", "label": "Request a Corporate Video Quote" },
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Request a Corporate Video Quote"
+  },
   "title": "Corporate Video Production Solutions That Command Enterprise Attention",
   "videoUrl": "/media/services/media-production/corporate-video-production/hero/desktop.mp4",
   "videoWebm": "/media/services/media-production/corporate-video-production/hero/desktop.webm"

@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 
 const manifest = (): MetadataRoute.Manifest => ({
   background_color: "#ffffff",
-  description: "Global capability. Strategic growth partner for B2B enterprises.",
+  description:
+    "Global capability. Strategic growth partner for B2B enterprises.",
   display: "standalone",
   icons: [
     {

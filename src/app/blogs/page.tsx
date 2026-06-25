@@ -41,12 +41,15 @@ const Page = () => {
           buildLinkedItemListJsonLd(
             SHARED_BLOG_POSTS.filter((p) => p.body)
               .slice(0, 10)
-              .map((p) => ({ name: p.title, url: `${siteUrl}/blogs/${p.id}` }))
+              .map((p) => ({ name: p.title, url: `${siteUrl}/blogs/${p.id}` })),
           ),
         ])}
       />
       <Header lightHeaderText />
-      <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
+      <Hero
+        {...BLOG_HERO}
+        variant={BLOG_HERO.variant as "compact" | "default"}
+      />
       <Suspense>
         <BlogsSection />
       </Suspense>

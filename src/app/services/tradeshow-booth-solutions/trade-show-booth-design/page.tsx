@@ -55,7 +55,9 @@ const Page = () => {
             cols={3}
             cta={
               <Button asChild variant="primary">
-                <Link href="/tradeshow-calendar">Explore All Upcoming Events</Link>
+                <Link href="/tradeshow-calendar">
+                  Explore All Upcoming Events
+                </Link>
               </Button>
             }
             description={HOME_EVENTS_CONTENT.description}
@@ -72,7 +74,11 @@ const Page = () => {
               />
             ))}
           </CardsGrid>
-          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid
+            cols={4}
+            heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+          >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -81,7 +87,11 @@ const Page = () => {
             cols={4}
             heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

@@ -12,7 +12,8 @@ import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home/content";
 
 type Blog = BlogsContent["blogs"][number];
 
-const getBlogHref = (id: number | string, href?: string) => href ?? `/blogs/${id}`;
+const getBlogHref = (id: number | string, href?: string) =>
+  href ?? `/blogs/${id}`;
 
 interface BlogDeckLayoutProps {
   blogs: Blog[];
@@ -20,7 +21,11 @@ interface BlogDeckLayoutProps {
   layout?: "deck" | "grid";
 }
 
-const BlogDeckLayout = ({ blogs, ctaLabel, layout = "deck" }: BlogDeckLayoutProps) => {
+const BlogDeckLayout = ({
+  blogs,
+  ctaLabel,
+  layout = "deck",
+}: BlogDeckLayoutProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -40,7 +45,11 @@ const BlogDeckLayout = ({ blogs, ctaLabel, layout = "deck" }: BlogDeckLayoutProp
     return (
       <div className="mt-8 mb-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-8 lg:grid-cols-3">
         {blogs.map((blog) => (
-          <Link className="block h-full" href={getBlogHref(blog.id, blog.href)} key={blog.id}>
+          <Link
+            className="block h-full"
+            href={getBlogHref(blog.id, blog.href)}
+            key={blog.id}
+          >
             <BlogCardGrid blog={blog} />
           </Link>
         ))}
@@ -56,7 +65,11 @@ const BlogDeckLayout = ({ blogs, ctaLabel, layout = "deck" }: BlogDeckLayoutProp
       ref={containerRef}
     >
       {blogs.map((blog, index) => (
-        <Link className="contents" href={getBlogHref(blog.id, blog.href)} key={blog.id}>
+        <Link
+          className="contents"
+          href={getBlogHref(blog.id, blog.href)}
+          key={blog.id}
+        >
           <BlogCard
             blog={blog}
             ctaLabel={ctaLabel}
@@ -93,13 +106,20 @@ export const Blogs = ({
   const displayBlogs = blogs.slice(0, 3);
 
   return (
-    <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="blogs">
+    <section
+      className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20"
+      id="blogs"
+    >
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mb-4 flex flex-col items-center text-center lg:mb-8">
           <SectionHeader as="h2">{heading}</SectionHeader>
         </div>
 
-        <BlogDeckLayout blogs={displayBlogs} ctaLabel={ctaLabel} layout={layout} />
+        <BlogDeckLayout
+          blogs={displayBlogs}
+          ctaLabel={ctaLabel}
+          layout={layout}
+        />
 
         {viewAllHref && (
           <div className="mt-12 text-center">

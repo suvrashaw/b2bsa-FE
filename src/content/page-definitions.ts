@@ -14,4 +14,7 @@ export interface MarketingPageDefinition {
   seo: CmsSeo;
 }
 
-export type MarketingPageIdentity = Pick<MarketingPageDefinition, "pageName" | "seo">;
+export type MarketingPageIdentity = Pick<
+  MarketingPageDefinition,
+  "pageName" | "seo"
+>;

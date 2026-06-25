@@ -13,7 +13,9 @@ import {
   DATA_AUGMENTATION_PROCESS,
 } from "@/content/services/market-research/data-augmentation-services/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(DATA_AUGMENTATION_PAGE);
+export const metadata: Metadata = getMarketingPageMetadata(
+  DATA_AUGMENTATION_PAGE,
+);
 
 const Page = () => {
   return (

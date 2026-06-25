@@ -30,7 +30,9 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
 
-const tailwindConfigPath = fileURLToPath(new URL("../src/app/globals.css", import.meta.url));
+const tailwindConfigPath = fileURLToPath(
+  new URL("../src/app/globals.css", import.meta.url),
+);
 
 const eslintConfig = defineConfig([
   // TypeScript parser + @typescript-eslint/recommended rules
@@ -107,22 +109,47 @@ const eslintConfig = defineConfig([
           rules: [
             { disallow: { to: { type: "*" } }, from: { type: "types" } },
             { allow: { to: { type: ["types"] } }, from: { type: "lib" } },
-            { allow: { to: { type: ["types", "lib", "content"] } }, from: { type: "content" } },
-            { allow: { to: { type: ["types", "lib", "content"] } }, from: { type: "ui" } },
-            { allow: { to: { type: ["types", "lib", "ui"] } }, from: { type: "cards" } },
-            { allow: { to: { type: ["types", "lib", "content", "ui"] } }, from: { type: "forms" } },
+            {
+              allow: { to: { type: ["types", "lib", "content"] } },
+              from: { type: "content" },
+            },
+            {
+              allow: { to: { type: ["types", "lib", "content"] } },
+              from: { type: "ui" },
+            },
+            {
+              allow: { to: { type: ["types", "lib", "ui"] } },
+              from: { type: "cards" },
+            },
+            {
+              allow: { to: { type: ["types", "lib", "content", "ui"] } },
+              from: { type: "forms" },
+            },
             {
               allow: { to: { type: ["types", "lib", "content", "ui"] } },
               from: { type: "layout" },
             },
             {
-              allow: { to: { type: ["types", "lib", "content", "ui", "cards", "forms"] } },
+              allow: {
+                to: {
+                  type: ["types", "lib", "content", "ui", "cards", "forms"],
+                },
+              },
               from: { type: "sections" },
             },
             {
               allow: {
                 to: {
-                  type: ["types", "lib", "content", "ui", "cards", "forms", "sections", "layout"],
+                  type: [
+                    "types",
+                    "lib",
+                    "content",
+                    "ui",
+                    "cards",
+                    "forms",
+                    "sections",
+                    "layout",
+                  ],
                 },
               },
               from: { type: "templates" },
@@ -268,7 +295,7 @@ const eslintConfig = defineConfig([
         { pattern: "src/lib/**/*", type: "lib" },
         { pattern: "src/content/**/*", type: "content" },
         { pattern: "src/components/ui/**/*", type: "ui" },
-        { pattern: "src/components/cards/**/*", type: "cards" },
+        { pattern: "src/components/items/**/*", type: "cards" },
         { pattern: "src/components/forms/**/*", type: "forms" },
         { pattern: "src/components/layout/**/*", type: "layout" },
         { pattern: "src/components/sections/**/*", type: "sections" },
@@ -276,10 +303,16 @@ const eslintConfig = defineConfig([
         { pattern: "src/app/**/*", type: "app" },
       ],
       "import-x/resolver": {
-        node: true,
         typescript: true,
       },
-      polyfills: ["IntersectionObserver", "Object.fromEntries", "queueMicrotask"],
+      "import/resolver": {
+        typescript: true,
+      },
+      polyfills: [
+        "IntersectionObserver",
+        "Object.fromEntries",
+        "queueMicrotask",
+      ],
       tailwindcss: {
         cssConfigPath: tailwindConfigPath,
       },

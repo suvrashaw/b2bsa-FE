@@ -40,7 +40,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           "group-hover:translate-[-4px]",
           tier.popular
             ? "border-brand-primary/20 shadow-brand-primary/20 group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-primary/30"
-            : "group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-blue/15"
+            : "group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-blue/15",
         )}
       />
 
@@ -57,12 +57,14 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           <div
             className={cn(
               "mb-4 flex size-12 items-center justify-center rounded-xl border transition-colors duration-300",
-              tier.color === "blue" && "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-              tier.color === "cyan" && "border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
+              tier.color === "blue" &&
+                "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+              tier.color === "cyan" &&
+                "border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
               tier.color === "primary" &&
                 "border-brand-primary/20 bg-brand-primary/10 text-brand-primary",
               !["blue", "cyan", "primary"].includes(tier.color) &&
-                "border-brand-blue/20 bg-brand-blue/10 text-brand-blue"
+                "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
             )}
           >
             {tier.icon}
@@ -74,12 +76,16 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           >
             {tier.name}
           </SectionHeader>
-          <p className="font-sans text-sm font-semibold text-gray-500">{tier.description}</p>
+          <p className="font-sans text-sm font-semibold text-gray-500">
+            {tier.description}
+          </p>
         </div>
 
         {/* Pricing Display */}
         <div className="mb-6 flex items-baseline font-sans text-brand-charcoal">
-          <span className="text-3xl font-black tracking-tight">${tier.price}</span>
+          <span className="text-3xl font-black tracking-tight">
+            ${tier.price}
+          </span>
           <span className="ml-2 text-sm font-bold text-gray-400">/month</span>
         </div>
 
@@ -103,7 +109,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
             "relative h-13 w-full rounded-[4px] border font-sans text-base font-bold transition-all duration-300 active:scale-97",
             tier.popular
               ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-0.5 hover:shadow-[6px_6px_0px_0px] hover:brightness-110"
-              : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
+              : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]",
           )}
         >
           Get Started

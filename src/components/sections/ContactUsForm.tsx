@@ -5,7 +5,10 @@ import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home/content";
+import {
+  type ContactContent,
+  HOME_CONTACT_CONTENT,
+} from "@/content/home/content";
 
 interface ContactUsFormProps {
   content?: ContactContent;
@@ -17,7 +20,11 @@ interface ContactUsFormProps {
 }
 
 const CONTACTUS_ANIMATE = { y: [0, -15, 0] };
-const CONTACTUS_TRANSITION = { duration: 4, ease: "easeInOut", repeat: Infinity } as const;
+const CONTACTUS_TRANSITION = {
+  duration: 4,
+  ease: "easeInOut",
+  repeat: Infinity,
+} as const;
 
 export const ContactUsForm = ({
   content = HOME_CONTACT_CONTENT,

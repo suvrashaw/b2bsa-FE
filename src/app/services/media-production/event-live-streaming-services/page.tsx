@@ -32,7 +32,12 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 
-const LIVE_STREAMING_LOCATION_BADGES = ["New York", "Dubai", "Singapore", "London"];
+const LIVE_STREAMING_LOCATION_BADGES = [
+  "New York",
+  "Dubai",
+  "Singapore",
+  "London",
+];
 const LIVE_STREAMING_AREAS_SPOTLIGHT = {
   ...LIVE_STREAMING_AREAS_SERVED,
   imagePosition: "left" as const,
@@ -57,7 +62,11 @@ const Page = () => {
             cols={4}
             heading={LIVE_STREAMING_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

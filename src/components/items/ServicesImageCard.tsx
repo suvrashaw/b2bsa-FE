@@ -23,7 +23,10 @@ export const ServicesImageCard = ({
   index,
   service,
 }: ServicesImageCardProps) => {
-  const transition = useMemo(() => ({ delay: index * 0.08, duration: 0.5 }), [index]);
+  const transition = useMemo(
+    () => ({ delay: index * 0.08, duration: 0.5 }),
+    [index],
+  );
   const number = String(index + 1).padStart(2, "0");
 
   return (

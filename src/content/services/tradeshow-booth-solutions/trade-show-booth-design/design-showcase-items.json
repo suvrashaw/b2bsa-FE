@@ -4,7 +4,9 @@
       "href": "/contact-us",
       "label": "Get 10×10 Booth Quote"
     },
-    "descriptions": ["Regional shows, first-time exhibitors, satellite presences"],
+    "descriptions": [
+      "Regional shows, first-time exhibitors, satellite presences"
+    ],
     "eyebrow": "100 sq ft",
     "heading": "10x10 Booth",
     "id": "showcase-10x10",
@@ -15,7 +17,9 @@
       "href": "/contact-us",
       "label": "Get 10×20 Booth Quote"
     },
-    "descriptions": ["Product demos with visitor journey and conversation zone"],
+    "descriptions": [
+      "Product demos with visitor journey and conversation zone"
+    ],
     "eyebrow": "200 sq ft",
     "heading": "10x20 Inline",
     "id": "showcase-10x20",
@@ -26,7 +30,9 @@
       "href": "/contact-us",
       "label": "Get 20×20 Booth Quote"
     },
-    "descriptions": ["Premium four-sided visibility, demos, meetings, AV zones"],
+    "descriptions": [
+      "Premium four-sided visibility, demos, meetings, AV zones"
+    ],
     "eyebrow": "400 sq ft",
     "heading": "20x20 Island",
     "id": "showcase-20x20",
@@ -37,7 +43,9 @@
       "href": "/contact-us",
       "label": "Get Double-Deck Quote"
     },
-    "descriptions": ["Executive meeting suite + lower engagement zone. Major global shows"],
+    "descriptions": [
+      "Executive meeting suite + lower engagement zone. Major global shows"
+    ],
     "eyebrow": "Premium",
     "heading": "Double-Deck Structure",
     "id": "showcase-double-deck",
@@ -48,7 +56,9 @@
       "href": "/contact-us",
       "label": "Get Custom Booth Quote"
     },
-    "descriptions": ["Fully bespoke flagship builds for maximum commercial impact"],
+    "descriptions": [
+      "Fully bespoke flagship builds for maximum commercial impact"
+    ],
     "eyebrow": "Bespoke",
     "heading": "Custom Environments",
     "id": "showcase-custom",

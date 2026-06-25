@@ -4,8 +4,18 @@ import { notFound, redirect } from "next/navigation";
 
 import { buildBlogPostingJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
-import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
-import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
+import {
+  DEFAULT_BLOG_POST_HREF,
+  DEFAULT_BLOG_POST_ID,
+  SHARED_BLOG_POSTS,
+} from "@/content/blogs";
+import {
+  buildBreadcrumbJsonLd,
+  buildPageGraph,
+  buildWebPageJsonLd,
+  JsonLd,
+  siteUrl,
+} from "@/lib";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -13,7 +23,8 @@ type BlogPostPageProps = {
   }>;
 };
 
-const findPostBySlug = (slug: string) => SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
+const findPostBySlug = (slug: string) =>
+  SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
 
 const getDefaultPost = () => findPostBySlug(DEFAULT_BLOG_POST_ID);
 
@@ -23,7 +34,9 @@ export const generateStaticParams = () => {
   }));
 };
 
-export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: BlogPostPageProps): Promise<Metadata> => {
   const { slug } = await params;
   const post = findPostBySlug(slug);
   const metadataPost = post?.body ? post : getDefaultPost();
@@ -34,7 +47,14 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const ogImages = [{ alt: metadataPost.title, height: 630, url: metadataPost.image, width: 1200 }];
+  const ogImages = [
+    {
+      alt: metadataPost.title,
+      height: 630,
+      url: metadataPost.image,
+      width: 1200,
+    },
+  ];
 
   return {
     alternates: {
@@ -57,7 +77,14 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
     twitter: {
       card: "summary_large_image",
       description: metadataPost.excerpt,
-      images: [{ alt: metadataPost.title, height: 630, url: metadataPost.image, width: 1200 }],
+      images: [
+        {
+          alt: metadataPost.title,
+          height: 630,
+          url: metadataPost.image,
+          width: 1200,
+        },
+      ],
       title: metadataPost.title,
     },
   };
@@ -79,8 +106,9 @@ const Page = async ({ params }: BlogPostPageProps) => {
   type BodyBlock = { text?: string; type: string };
   const bodyBlocks = post.body as BodyBlock[];
   const wordCount = bodyBlocks.reduce(
-    (n, b) => n + (b.text ? b.text.trim().split(/\s+/).filter(Boolean).length : 0),
-    0
+    (n, b) =>
+      n + (b.text ? b.text.trim().split(/\s+/).filter(Boolean).length : 0),
+    0,
   );
   const tableOfContents = bodyBlocks
     .filter((b) => b.type === "heading" && b.text)
@@ -117,7 +145,7 @@ const Page = async ({ params }: BlogPostPageProps) => {
               { name: "Blogs", url: `${siteUrl}/blogs` },
               { name: post.title, url: postUrl },
             ],
-            postUrl
+            postUrl,
           ),
         ])}
       />

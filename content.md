@@ -46,13 +46,13 @@ Our Mission: 
 
 **By The Numbers (Insights Column):** 
 
-* 30+ Countries Served 
+- 30+ Countries Served 
 
-* 300+ Global Events Handled 
+- 300+ Global Events Handled 
 
-* 2,500+ SQLs Delivered 
+- 2,500+ SQLs Delivered 
 
-* 10+ Years of B2B Experience 
+- 10+ Years of B2B Experience 
 
 **Our Services**
 
@@ -98,33 +98,33 @@ H2: Upcoming Trade Shows & Global Industry Events 
 
 Subtext: Meet our team on the ground. We are bringing our end-to-end event solution expertise to the most anticipated enterprise conferences of the year: 
 
-* Adobe Summit 
+- Adobe Summit 
 
-* Autotech 
+- Autotech 
 
-* CBA Live 
+- CBA Live 
 
-* Databricks Summit 
+- Databricks Summit 
 
-* Hannover Messe 
+- Hannover Messe 
 
-* HP Discovery 
+- HP Discovery 
 
-* IUCX 
+- IUCX 
 
-* ITW (International Telecoms Week) 
+- ITW (International Telecoms Week) 
 
-* NVIDIA GTC 2026 
+- NVIDIA GTC 2026 
 
-* SAP Sapphire 2026 Madrid 
+- SAP Sapphire 2026 Madrid 
 
-* SAP Sapphire 2026 Orlando 
+- SAP Sapphire 2026 Orlando 
 
-* ServiceNow Knowledge 2026 
+- ServiceNow Knowledge 2026 
 
-* Snowflake Summit 
+- Snowflake Summit 
 
-* Zenith Live 
+- Zenith Live 
 
 CTA: Meet Us There\!  
 
@@ -246,29 +246,29 @@ Partner with B2B Sales Arrow to design high-impact trade show booths and execute
 
 **\[Contact Form Layout\]** 
 
-* Name \[Text Field\] 
+- Name \[Text Field\] 
 
-* Work Email \[Text Field\] 
+- Work Email \[Text Field\] 
 
-* Company Name \[Text Field\] 
+- Company Name \[Text Field\] 
 
-* Phone Number (Optional) \[Text Field\] 
+- Phone Number (Optional) \[Text Field\] 
 
 Tell us about your event goals and requirements: \[Text Area\] 
 
 \[Checkbox\] I agree to receive communications from B2B Sales Arrow regarding their services. 
 
-*Primary CTA Button: Get Your Custom Proposal *
+_Primary CTA Button: Get Your Custom Proposal _
 
 **Talk to Our Event Experts ** 
 
-* Email: [info@b2bsalesarrow.com](mailto:info@b2bsalesarrow.com) 
+- Email: [info@b2bsalesarrow.com](mailto:info@b2bsalesarrow.com) 
 
-* 📍 New York, USA 
+- 📍 New York, USA 
 
-* 📍 Bengaluru, India 
+- 📍 Bengaluru, India 
 
-* 🌍 Serving 30+ Countries 
+- 🌍 Serving 30+ Countries 
 
 **Footer Section** 
 
@@ -286,18 +286,18 @@ We deliver premier global event solutions that turn your corporate presence into
 
 # **PAGE 1 — Global Event Solutions**
 
-|  Primary keywords (bold GREEN): global event solutions, B2B event solutions, corporate event solutions, B2B events agency LSI / semantic keywords (bold PURPLE): trade show management, exhibition management company, event ROI measurement, B2B event planning, international trade show presence, experiential event strategy |
-| :---- |
+| Primary keywords (bold GREEN): global event solutions, B2B event solutions, corporate event solutions, B2B events agency LSI / semantic keywords (bold PURPLE): trade show management, exhibition management company, event ROI measurement, B2B event planning, international trade show presence, experiential event strategy |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ## **META**
 
-| Field | Content |
-| :---- | :---- |
-| Title | Global Event Solutions for Enterprise B2B Brands | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                    |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Global Event Solutions for Enterprise B2B Brands                                                                                                                           | B2B Sales Arrow |
 | Meta Desc | End-to-end global event solutions — strategy, booth design, lead capture and on-ground execution across 40+ countries. 250+ enterprise events. $1.2B+ pipeline influenced. |
-| URL | /services/global-event-solutions/ |
+| URL       | /services/global-event-solutions/                                                                                                                                          |
 
-## **WHAT ARE GLOBAL EVENT SOLUTIONS?  ← AI definition block (keep at top)**
+## **WHAT ARE GLOBAL EVENT SOLUTIONS? ← AI definition block (keep at top)**
 
 **Global event solutions** are end-to-end services covering every stage of international B2B event participation — from strategy and **exhibition stand design** to on-ground execution, **trade show lead capture**, and post-event pipeline reporting — delivered consistently across multiple markets under one accountable partner.
 
@@ -309,15 +309,15 @@ We deliver premier global event solutions that turn your corporate presence into
 
 From GITEX to CES to MWC, B2B Sales Arrow delivers **B2B event solutions** that create qualified pipeline, not just presence. Strategy, booth design, lead capture and **post-event reporting** — all under one team, one brief, one outcome.
 
-**CTA: Book a Strategy Session  |  View Event Portfolio**
+**CTA: Book a Strategy Session | View Event Portfolio**
 
 ## **PROOF BAR**
 
-250+ events  |  $1.2B+ pipeline influenced  |  15,000+ enterprise leads  |  98% client retention  |  500+ booth designs  |  40+ countries
+250+ events | $1.2B+ pipeline influenced | 15,000+ enterprise leads | 98% client retention | 500+ booth designs | 40+ countries
 
 ⚠️ NOTE: Reduce '40+ countries' to appear max 2–3 times across the full page (currently overused).
 
-## **WHAT WE DO  (\~250 words)**
+## **WHAT WE DO (\~250 words)**
 
 ### **H2: End-to-End Corporate Event Solutions Under One Roof**
 
@@ -327,19 +327,19 @@ When the same team that designs your booth also designs your **lead qualificatio
 
 **Core Service Areas**
 
-* Trade Show Booth Design — **exhibition environments** engineered for visitor flow and lead conversion
+- Trade Show Booth Design — **exhibition environments** engineered for visitor flow and lead conversion
 
-* **Event Lead Generation** — real-time capture, BANT scoring, and CRM handoff
+- **Event Lead Generation** — real-time capture, BANT scoring, and CRM handoff
 
-* Industry Events — strategic presence at GITEX, CES, MWC, Dreamforce and more
+- Industry Events — strategic presence at GITEX, CES, MWC, Dreamforce and more
 
-* Custom Events — **proprietary brand experiences** built around commercial objectives
+- Custom Events — **proprietary brand experiences** built around commercial objectives
 
-* Event Booth Rental — **modular exhibition systems** globally available
+- Event Booth Rental — **modular exhibition systems** globally available
 
-* Trade Show Booth Builder — fabrication to **on-site installation**
+- Trade Show Booth Builder — fabrication to **on-site installation**
 
-## **WHY IT MATTERS  (\~200 words)**
+## **WHY IT MATTERS (\~200 words)**
 
 ### **H2: The Business Case for Live Events in Enterprise B2B**
 
@@ -347,7 +347,7 @@ Enterprise buyers do not commit from a single email or ad. They need trust, cont
 
 CEIR research shows 81% of **trade show attendees** hold buying authority. The question is whether your **B2B event solutions** are built to capture that opportunity — or simply occupy floor space.
 
-## **OUR PROCESS  (\~280 words)**
+## **OUR PROCESS (\~280 words)**
 
 ### **H2: Our 5-Phase Global Event Execution Framework**
 
@@ -385,13 +385,13 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **GLOBAL REACH  (\~120 words)**
+## **GLOBAL REACH (\~120 words)**
 
 ### **H2: Where We Execute**
 
 Our **enterprise event programs** span North America, EMEA, APAC, the Middle East, and Latin America. Key events include GITEX (Dubai), CES (Las Vegas), MWC (Barcelona), AWS re:Invent, Dreamforce, Web Summit, ADIPEC, Money20/20, Hannover Messe, and Sibos — alongside major regional **industry trade shows** in every sector we serve.
 
-## **FAQ  (\~350 words — target featured snippets)**
+## **FAQ (\~350 words — target featured snippets)**
 
 ### **H2: Frequently Asked Questions**
 
@@ -427,15 +427,15 @@ Yes — Southeast Asia, Africa, Latin America, and Eastern Europe, with local lo
 
 # **PAGE 2 — Trade Show Booth Design**
 
-| 📌  SEO GUIDE Word count target: 2,200  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): trade show booth design, custom trade show booth, exhibition booth design, trade show displays LSI / semantic keywords (bold PURPLE): 10x10 trade show booth, 20x20 trade show booth, exhibition stand design, booth traffic flow, branded exhibition space, experiential booth design, display booths for trade shows |
-| :---- |
+| 📌 SEO GUIDE Word count target: 2,200 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): trade show booth design, custom trade show booth, exhibition booth design, trade show displays LSI / semantic keywords (bold PURPLE): 10x10 trade show booth, 20x20 trade show booth, exhibition stand design, booth traffic flow, branded exhibition space, experiential booth design, display booths for trade shows |
+| :------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Custom Trade Show Booth Design for Enterprise Brands | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                        |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Custom Trade Show Booth Design for Enterprise Brands                                                                                                                           | B2B Sales Arrow |
 | Meta Desc | 500+ custom trade show booth designs delivered globally. We design 10x10 to double-deck exhibition environments that stop foot traffic and convert floor visits into pipeline. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1:**
 
@@ -443,9 +443,9 @@ Yes — Southeast Asia, Africa, Latin America, and Eastern Europe, with local lo
 
 We design **custom trade show booths** that buyers stop at deliberately — because the space, the story, and the sales system inside it were built together from day one.
 
-**CTA: Request a Design Quote  |  View Booth Portfolio**
+**CTA: Request a Design Quote | View Booth Portfolio**
 
-## **WHY GENERIC FAILS  (\~200 words)**
+## **WHY GENERIC FAILS (\~200 words)**
 
 ### **H2: Why Generic Exhibition Booth Design Costs You Qualified Leads**
 
@@ -453,7 +453,7 @@ A generic **trade show display** occupies floor space. It rarely creates a reaso
 
 The gap between a booth that generates badge scans and one that generates **qualified meetings** is almost entirely a design question: is the space engineered around buyer psychology and **sales conversion**, or around how it looks in a 3D render?
 
-## **DESIGN SERVICES  (\~350 words)**
+## **DESIGN SERVICES (\~350 words)**
 
 ### **H2: Our Trade Show Booth Design Services**
 
@@ -485,31 +485,31 @@ The most underused commercial tool in **exhibition stand design** — accent lig
 
 ### **H2: Booth Sizes and Formats We Design**
 
-| Format | Best For |
-| :---- | :---- |
-| 10x10 Booth (100 sq ft) | Regional shows, first-time exhibitors, satellite presences |
-| 10x20 Inline (200 sq ft) | Product demos with visitor journey and conversation zone |
-| 20x20 Island (400 sq ft) | Premium four-sided visibility — demos, meetings, AV zones |
-| Double-Deck Structure | Executive meeting suite \+ lower engagement zone. Major global shows |
-| Custom Environments | Fully bespoke flagship builds for maximum commercial impact |
+| Format                   | Best For                                                             |
+| :----------------------- | :------------------------------------------------------------------- |
+| 10x10 Booth (100 sq ft)  | Regional shows, first-time exhibitors, satellite presences           |
+| 10x20 Inline (200 sq ft) | Product demos with visitor journey and conversation zone             |
+| 20x20 Island (400 sq ft) | Premium four-sided visibility — demos, meetings, AV zones            |
+| Double-Deck Structure    | Executive meeting suite \+ lower engagement zone. Major global shows |
+| Custom Environments      | Fully bespoke flagship builds for maximum commercial impact          |
 
-## **PRICING GUIDANCE  ← NEW per PDF correction**
+## **PRICING GUIDANCE ← NEW per PDF correction**
 
 ### **H2: What Does Trade Show Booth Design Cost?**
 
 Buyers researching booth design need pricing context before they enquire. Use these as approximate guide ranges (not quotes — always scope per brief):
 
-| Booth Type | Approximate Design Investment Range |
-| :---- | :---- |
-| 10x10 Custom Design | $3,000 – $8,000 design fee \+ fabrication from $8,000 |
-| 10x20 Inline Design | $6,000 – $15,000 design \+ fabrication from $15,000 |
-| 20x20 Island Design | $10,000 – $25,000 design \+ fabrication from $30,000 |
+| Booth Type                 | Approximate Design Investment Range                   |
+| :------------------------- | :---------------------------------------------------- |
+| 10x10 Custom Design        | $3,000 – $8,000 design fee \+ fabrication from $8,000 |
+| 10x20 Inline Design        | $6,000 – $15,000 design \+ fabrication from $15,000   |
+| 20x20 Island Design        | $10,000 – $25,000 design \+ fabrication from $30,000  |
 | Double-Deck / Large Custom | $20,000 – $60,000+ design \+ fabrication from $60,000 |
-| Modular / Reusable System | $5,000 – $18,000 design \+ system from $12,000 |
+| Modular / Reusable System  | $5,000 – $18,000 design \+ system from $12,000        |
 
 Note: Final cost depends on materials, technology integration, geography, and fabrication scope. Contact us for a project-specific estimate.
 
-## **OUR DESIGN PROCESS  (\~300 words)  ← Updated to Rapti's 8-phase framework**
+## **OUR DESIGN PROCESS (\~300 words) ← Updated to Rapti's 8-phase framework**
 
 ### **H2: From Brief to Build — Our 8-Phase Booth Design Process**
 
@@ -553,7 +553,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~400 words)**
+## **FAQ (\~400 words)**
 
 ### **H2: Trade Show Booth Design FAQs**
 
@@ -593,19 +593,19 @@ Every square foot of your booth should earn its place. Build a **custom trade sh
 
 # **PAGE 3 — Event Lead Generation**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): trade show lead generation, trade show lead capture, event lead generation, exhibitor lead capture service, active prospecting B2B LSI / semantic keywords (bold PURPLE): BANT qualification, CHAMP qualification, post-event lead nurture, lead scoring trade show, CRM lead capture, buyer intent data, sales qualified leads from events |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): trade show lead generation, trade show lead capture, event lead generation, exhibitor lead capture service, active prospecting B2B LSI / semantic keywords (bold PURPLE): BANT qualification, CHAMP qualification, post-event lead nurture, lead scoring trade show, CRM lead capture, buyer intent data, sales qualified leads from events |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Trade Show Lead Generation and Event Lead Capture | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Trade Show Lead Generation and Event Lead Capture                                                                                                      | B2B Sales Arrow |
 | Meta Desc | Stop losing leads after the show. Our trade show lead generation system covers ICP targeting, real-time lead scoring, CRM sync and post-event nurture. |
 
-## **DEFINITION  ← AI block**
+## **DEFINITION ← AI block**
 
 **Trade show lead generation** is the end-to-end process of identifying, engaging, qualifying, and routing potential buyers at B2B events into your sales pipeline — with enough context for your sales team to act on them immediately.
 
-## **QUALIFICATION FRAMEWORKS  ← Move earlier per PDF correction**
+## **QUALIFICATION FRAMEWORKS ← Move earlier per PDF correction**
 
 ### **H2: How We Qualify Leads — BANT and CHAMP**
 
@@ -617,7 +617,7 @@ BANT — Budget (is there budget available?), Authority (is this the decision-ma
 
 Both frameworks ensure qualification happens during the live **booth conversation** — not retrospectively from a contact list.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1:**
 
@@ -627,7 +627,7 @@ We don't just capture leads — we engineer a complete **trade show lead generat
 
 **CTA: Build Your Lead Generation System**
 
-## **ACTIVE PROSPECTING  ← New section per PDF correction**
+## **ACTIVE PROSPECTING ← New section per PDF correction**
 
 ### **H2: Active Prospecting — Going Beyond Passive Booth Traffic**
 
@@ -635,7 +635,7 @@ We don't just capture leads — we engineer a complete **trade show lead generat
 
 Combined with your booth as the destination, **active prospecting** typically increases qualified lead volume by 30–50% compared to passive booth-only strategies.
 
-## **OUR SYSTEM  (\~300 words)**
+## **OUR SYSTEM (\~300 words)**
 
 ### **H2: Before, During, and After**
 
@@ -651,25 +651,25 @@ Structured **lead capture workflows**, booth team briefing, BANT/CHAMP qualifica
 
 Within 48 hours: clean lead file with quality scores, conversation notes, qualification outcomes, and a recommended next action for every record.
 
-## **SERVICES  (\~280 words)**
+## **SERVICES (\~280 words)**
 
 ### **H2: What Our Trade Show Lead Generation Service Covers**
 
-* **Pre-event ICP mapping and targeting** — defining your ideal attendee by role, company, and intent before the show opens
+- **Pre-event ICP mapping and targeting** — defining your ideal attendee by role, company, and intent before the show opens
 
-* On-site lead capture technology — NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo)
+- On-site lead capture technology — NFC, QR, badge scan, custom intake, and CRM integration (Salesforce, HubSpot, Marketo)
 
-* Real-time lead scoring — BANT or CHAMP qualification during live conversations
+- Real-time lead scoring — BANT or CHAMP qualification during live conversations
 
-* **Active prospecting** — proactive floor outreach to target accounts beyond booth traffic
+- **Active prospecting** — proactive floor outreach to target accounts beyond booth traffic
 
-* Instant CRM routing — hot leads flagged and delivered to the right sales owner same-day
+- Instant CRM routing — hot leads flagged and delivered to the right sales owner same-day
 
-* Post-event nurture sequences — personalised follow-up by lead quality tier and conversation context
+- Post-event nurture sequences — personalised follow-up by lead quality tier and conversation context
 
-* Pipeline attribution reporting — lead volume, qualification rate, meeting conversion, and **event ROI** vs. pre-event forecast
+- Pipeline attribution reporting — lead volume, qualification rate, meeting conversion, and **event ROI** vs. pre-event forecast
 
-## **RESULTS  (\~120 words)  ⚠️ CEIR NOTE**
+## **RESULTS (\~120 words) ⚠️ CEIR NOTE**
 
 ⚠️ PDF CORRECTION: The '20–40% conversion' claim attributed to CEIR is not verified accurate. Remove this statistic. Use only verified internal numbers:
 
@@ -701,7 +701,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~320 words)**
+## **FAQ (\~320 words)**
 
 **Q: What is trade show lead generation?**
 
@@ -731,15 +731,15 @@ Stop leaving **trade show leads** on the floor. Build a system that captures, qu
 
 # **PAGE 4 — Industry Events**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): corporate event management, corporate event solutions, B2B events agency, industry event solutions LSI / semantic keywords (bold PURPLE): experiential marketing agency, event ROI forecasting, B2B conference management, trade show participation strategy, exhibition management |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): corporate event management, corporate event solutions, B2B events agency, industry event solutions LSI / semantic keywords (bold PURPLE): experiential marketing agency, event ROI forecasting, B2B conference management, trade show participation strategy, exhibition management |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Industry Events Strategy and Execution | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                          |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Industry Events Strategy and Execution                                                                                                                                           | B2B Sales Arrow |
 | Meta Desc | Full-service corporate event management for enterprise brands — event selection, ROI forecasting, booth design, pre-show targeting and on-ground execution across 40+ countries. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Dominate the Industry Events That Drive Your Market**
 
@@ -747,7 +747,7 @@ As a specialist **B2B events agency** and **experiential marketing agency**, we 
 
 **CTA: Build Your Industry Event Strategy**
 
-## **EXPERIENTIAL MARKETING POSITIONING  ← Develop per PDF correction**
+## **EXPERIENTIAL MARKETING POSITIONING ← Develop per PDF correction**
 
 ### **H2: B2B Sales Arrow as Your Experiential Marketing Agency**
 
@@ -755,7 +755,7 @@ Beyond logistics, we are an **experiential marketing agency** — designing even
 
 Experiential B2B marketing works because **enterprise buyers** make complex purchasing decisions through trust and context — not just information. A well-designed event experience builds both simultaneously. That is what separates a brand that generates qualified meetings from one that generates badge scans.
 
-## **EVENTS WE COVER  (\~280 words)**
+## **EVENTS WE COVER (\~280 words)**
 
 ### **H2: Key Events Where We Execute**
 
@@ -779,7 +779,7 @@ ADIPEC (Abu Dhabi), CERAWeek (Houston), Hannover Messe — built for technical d
 
 Mobile World Congress (Barcelona) — the single most concentrated gathering of telecom and cloud buyers globally.
 
-## **EVENT SELECTION STRATEGY  (\~200 words)**
+## **EVENT SELECTION STRATEGY (\~200 words)**
 
 ### **H2: Why the Right Events Are Your Best Sales Channel**
 
@@ -787,15 +787,15 @@ Our **event ROI forecasting** framework evaluates five criteria before committin
 
 ## **WHAT WE MANAGE**
 
-* Event selection and ROI forecasting
+- Event selection and ROI forecasting
 
-* Booth design, fabrication, and logistics
+- Booth design, fabrication, and logistics
 
-* Pre-show lead targeting and meeting generation
+- Pre-show lead targeting and meeting generation
 
-* On-site execution, staff management, and lead capture
+- On-site execution, staff management, and lead capture
 
-* Post-show analytics and pipeline report within 72 hours
+- Post-show analytics and pipeline report within 72 hours
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -821,7 +821,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~350 words — expanded per PDF correction)**
+## **FAQ (\~350 words — expanded per PDF correction)**
 
 **Q: What is an experiential marketing agency for B2B?**
 
@@ -859,15 +859,15 @@ The strongest strategy is not about showing up everywhere — it is about choosi
 
 # **PAGE 5 — Custom Events**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): custom event solutions, corporate event solutions company, brand experience agency, hybrid event solutions company LSI / semantic keywords (bold PURPLE): proprietary event production, executive roundtable, hosted buyer program, client summit, gala dinner, roadshow, pop-up brand activation |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): custom event solutions, corporate event solutions company, brand experience agency, hybrid event solutions company LSI / semantic keywords (bold PURPLE): proprietary event production, executive roundtable, hosted buyer program, client summit, gala dinner, roadshow, pop-up brand activation |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Custom B2B Event Production and Strategy | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                      |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Custom B2B Event Production and Strategy                                                                                                                                                     | B2B Sales Arrow |
 | Meta Desc | Custom event solutions for B2B brands — executive roundtables, gala cruise dinners, hosted buyer programs, roadshows, client summits, and premium brand experiences from brief to follow-up. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Custom Event Solutions That Position Your Brand as the Market Authority**
 
@@ -875,7 +875,7 @@ When your brand controls the room, the agenda, and the guest list, the event bec
 
 **CTA: Design Your Custom Event**
 
-## **EVENT FORMATS  (\~400 words)  ← Keep specific examples per PDF correction**
+## **EVENT FORMATS (\~400 words) ← Keep specific examples per PDF correction**
 
 ### **H2: Custom Event Formats We Produce**
 
@@ -923,21 +923,21 @@ Structured agenda events that bring customers, users, and partners together thro
 
 In-person events extended to global virtual audiences through broadcast-quality **live streaming**, audience engagement tools, and post-event content distribution.
 
-## **WHAT WE MANAGE  (\~200 words)**
+## **WHAT WE MANAGE (\~200 words)**
 
-* Venue strategy and sourcing — matching the format, audience, and brand positioning
+- Venue strategy and sourcing — matching the format, audience, and brand positioning
 
-* Event identity design — invitations, signage, stage graphics, and all branded touchpoints
+- Event identity design — invitations, signage, stage graphics, and all branded touchpoints
 
-* Speaker and agenda curation — content sequencing, panel formats, and executive moments
+- Speaker and agenda curation — content sequencing, panel formats, and executive moments
 
-* AV, stage, and technology production — sound, lighting, screens, live feeds, recording
+- AV, stage, and technology production — sound, lighting, screens, live feeds, recording
 
-* Attendee experience design — registration flow, seating, hospitality, and follow-up
+- Attendee experience design — registration flow, seating, hospitality, and follow-up
 
-* Live streaming and content capture — for hybrid events and post-event asset creation
+- Live streaming and content capture — for hybrid events and post-event asset creation
 
-* Post-event follow-up — email sequences, recap content, and next-step recommendations for priority accounts
+- Post-event follow-up — email sequences, recap content, and next-step recommendations for priority accounts
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -963,7 +963,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~220 words)**
+## **FAQ (\~220 words)**
 
 **Q: How far in advance should custom event planning begin?**
 
@@ -989,15 +989,15 @@ Senior buyers protect their time. The event that earns it must justify every ele
 
 # **PAGE 6 — Event Booth Rental**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): trade show booth rental, modular booth rental, event booth rental, portable exhibition stand LSI / semantic keywords (bold PURPLE): brandable rental booth, 10x10 booth hire, 20x20 booth rental, double-deck rental, rental exhibition stand, temporary exhibit booth |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): trade show booth rental, modular booth rental, event booth rental, portable exhibition stand LSI / semantic keywords (bold PURPLE): brandable rental booth, 10x10 booth hire, 20x20 booth rental, double-deck rental, rental exhibition stand, temporary exhibit booth |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Trade Show Booth Rental for Enterprise Exhibitors | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                               |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Trade Show Booth Rental for Enterprise Exhibitors                                                                                                                     | B2B Sales Arrow |
 | Meta Desc | Enterprise trade show booth rental — modular, fully branded, globally deployable. From 10x10 to double-deck. Professional presence without the custom build timeline. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Trade Show Booth Rental — Enterprise Presence Without the Build Timeline**
 
@@ -1005,21 +1005,21 @@ When speed matters or you're testing a new market, **trade show booth rental** g
 
 **CTA: Check Rental Availability**
 
-## **WHEN TO RENT  (\~180 words)**
+## **WHEN TO RENT (\~180 words)**
 
 ### **H2: When Rental Is the Smarter Decision**
 
-* Timeline under 8 weeks — custom fabrication not feasible
+- Timeline under 8 weeks — custom fabrication not feasible
 
-* Testing a new market — validate event ROI before committing to a full custom build
+- Testing a new market — validate event ROI before committing to a full custom build
 
-* Budget flexibility required — spread cost across specific events
+- Budget flexibility required — spread cost across specific events
 
-* Concurrent deployment — secondary presence while your custom booth is at another show
+- Concurrent deployment — secondary presence while your custom booth is at another show
 
-* First time at a specific event — learn the environment before investing in a major build
+- First time at a specific event — learn the environment before investing in a major build
 
-## **INVENTORY  (\~250 words)**
+## **INVENTORY (\~250 words)**
 
 ### **H2: Our Rental Booth Range**
 
@@ -1079,7 +1079,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~280 words)**
+## **FAQ (\~280 words)**
 
 **Q: How far ahead should I book?**
 
@@ -1109,15 +1109,15 @@ Fast does not have to feel temporary. A properly configured **trade show rental 
 
 # **PAGE 7 — Trade Show Booth Builder**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): trade show booth builder, exhibition stand builder, custom exhibit booths, turnkey exhibition booth LSI / semantic keywords (bold PURPLE): exhibition stand design and build, exhibit fabrication, booth construction company, double-deck booth builder, turnkey booth solution, booth installation service |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): trade show booth builder, exhibition stand builder, custom exhibit booths, turnkey exhibition booth LSI / semantic keywords (bold PURPLE): exhibition stand design and build, exhibit fabrication, booth construction company, double-deck booth builder, turnkey booth solution, booth installation service |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Trade Show Booth Builder and Exhibition Stand Design and Build | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                 |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Trade Show Booth Builder and Exhibition Stand Design and Build                                                                                                                          | B2B Sales Arrow |
 | Meta Desc | Enterprise trade show booth builder delivering concept-to-installation fabrication across 40+ countries. Custom builds, modular systems, double-deck structures, and turnkey solutions. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Trade Show Booth Builders Who Engineer for Conversion, Not Just Aesthetics**
 
@@ -1125,21 +1125,21 @@ As your enterprise **trade show booth builder** and **exhibition stand builder**
 
 **CTA: Get a Build Quote**
 
-## **WHAT WE BUILD  (\~200 words)  ← Updated per PDF: include exhibition stand design and turnkey**
+## **WHAT WE BUILD (\~200 words) ← Updated per PDF: include exhibition stand design and turnkey**
 
 ### **H2: Exhibition Stand Design, Build, and Turnkey Solutions**
 
 We offer three engagement models for enterprise clients:
 
-* Full **exhibition stand design and build** — concept, 3D design, fabrication, logistics, and on-site installation under one team
+- Full **exhibition stand design and build** — concept, 3D design, fabrication, logistics, and on-site installation under one team
 
-* **Turnkey booth solutions** — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps
+- **Turnkey booth solutions** — everything included: design, materials, production, shipping, installation, and post-event storage. One price, zero gaps
 
-* Design-only with production-ready files — for clients with a preferred fabrication partner
+- Design-only with production-ready files — for clients with a preferred fabrication partner
 
 Our **turnkey exhibition booths** are particularly valued by enterprise teams managing international events without the internal capacity to coordinate multiple vendor streams.
 
-## **CAPABILITIES  (\~250 words)**
+## **CAPABILITIES (\~250 words)**
 
 ### **H2: What We Build**
 
@@ -1163,7 +1163,7 @@ LED walls, **digital displays**, interactive screens, and product demo systems b
 
 Reusable components, lower-waste fabrication, and recyclable graphic options for brands with environmental commitments.
 
-## **BUILD PROCESS  (\~200 words)**
+## **BUILD PROCESS (\~200 words)**
 
 ### **H2: Our Booth Build Process**
 
@@ -1209,7 +1209,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~320 words)**
+## **FAQ (\~320 words)**
 
 **Q: What is a turnkey trade show booth?**
 
@@ -1243,15 +1243,15 @@ Build with an **exhibition stand builder** that understands the floor, the brand
 
 # **PAGE 8 — Modular and Portable Booths**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): modular booth, portable trade show booth displays, trade show booths 10x10, eco-friendly booth LSI / semantic keywords (bold PURPLE): reusable exhibition stand, modular exhibition system, portable exhibit display, reconfigurable trade show booth, fabric display booth |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): modular booth, portable trade show booth displays, trade show booths 10x10, eco-friendly booth LSI / semantic keywords (bold PURPLE): reusable exhibition stand, modular exhibition system, portable exhibit display, reconfigurable trade show booth, fabric display booth |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Modular and Portable Trade Show Booth Systems | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Modular and Portable Trade Show Booth Systems                                                                                                                          | B2B Sales Arrow |
 | Meta Desc | Reusable modular booth systems and portable trade show displays — consistent brand presence across multiple markets. 30–50% lower cost per event than custom rebuilds. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Modular and Portable Trade Show Booths — Engineered for Enterprise Efficiency**
 
@@ -1259,7 +1259,7 @@ The same **modular booth** system — New York, Dubai, Singapore, London — one
 
 **CTA: Get a Modular Booth Quote**
 
-## **WHY MODULAR  (\~180 words)**
+## **WHY MODULAR (\~180 words)**
 
 ### **H2: The Commercial Case for Modular Systems**
 
@@ -1267,7 +1267,7 @@ A **reusable modular booth** amortised across five or more events per year typic
 
 Modular is especially valuable for multi-city event tours, emerging market activations, **roadshow programs**, and satellite presences alongside a flagship custom booth.
 
-## **PRODUCT RANGE  (\~280 words)**
+## **PRODUCT RANGE (\~280 words)**
 
 ### **H2: Our Modular Booth Range**
 
@@ -1297,17 +1297,17 @@ Fast-deploy for roadshows, sales activations, and internal events.
 
 ## **FEATURES**
 
-* Tool-free assembly in under 4 hours
+- Tool-free assembly in under 4 hours
 
-* Custom graphic panels updated between events without structural changes
+- Custom graphic panels updated between events without structural changes
 
-* Integrated LED and screen options — **digital engagement** built in
+- Integrated LED and screen options — **digital engagement** built in
 
-* Hard-case shipping to airline check-in specs for international deployment
+- Hard-case shipping to airline check-in specs for international deployment
 
-* Reconfigurable for different booth footprints
+- Reconfigurable for different booth footprints
 
-* Sustainable materials available — **eco-friendly booth** options for environmental reporting
+- Sustainable materials available — **eco-friendly booth** options for environmental reporting
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -1333,7 +1333,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~220 words)**
+## **FAQ (\~220 words)**
 
 **Q: What is a modular trade show booth?**
 
@@ -1359,21 +1359,21 @@ One booth system. Every event. Any market.
 
 # **PAGE 9 — Media Production**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): video production company, video production services, B2B media production, commercial video production LSI / semantic keywords (bold PURPLE): enterprise video content, brand video production, thought leadership video, marketing video production, B2B content creation |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): video production company, video production services, B2B media production, commercial video production LSI / semantic keywords (bold PURPLE): enterprise video content, brand video production, thought leadership video, marketing video production, B2B content creation |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ⚠️ PDF NOTE: Reduce total content on this page — balance with visuals/flowcharts in the live site. Keep copy concise.
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Media Production and Video Production Company | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                             |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| Title     | B2B Media Production and Video Production Company                                                                                                                   | B2B Sales Arrow |
 | Meta Desc | Enterprise B2B media production — event video, corporate films, product demos, live streaming and video editing. Content your sales and marketing teams keep using. |
 
-## **DEFINITION  ← New AI search block per PDF correction**
+## **DEFINITION ← New AI search block per PDF correction**
 
 **B2B media production** is the creation of professional video, film, and content assets specifically for business-to-business brands — covering corporate films, event video, product demonstrations, live streaming, and post-production services designed to support marketing, sales enablement, and thought leadership.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Media Production That Builds Enterprise Authority Before the First Sales Call**
 
@@ -1381,7 +1381,7 @@ Before a buyer books a meeting, they judge your brand by what they see. Our **vi
 
 **CTA: Start Your Media Project**
 
-## **SERVICES  (\~250 words)  ← Balanced, concise per PDF note**
+## **SERVICES (\~250 words) ← Balanced, concise per PDF note**
 
 ### **H2: What We Produce**
 
@@ -1401,7 +1401,7 @@ Raw footage transformed into polished assets with **colour grading**, captions, 
 
 Multi-camera **corporate live streaming** for conferences, launches, and hybrid events.
 
-## **PHILOSOPHY  (\~120 words)**
+## **PHILOSOPHY (\~120 words)**
 
 ### **H2: We Don't Just Film — We Tell Stories That Sell**
 
@@ -1409,15 +1409,15 @@ Strategy decides why footage matters. We shape every video around the buyer's pa
 
 ## **PRODUCTION CAPABILITIES**
 
-* 4K cinema camera capture — professional lighting and audio
+- 4K cinema camera capture — professional lighting and audio
 
-* Multi-camera event production globally
+- Multi-camera event production globally
 
-* Studio and on-location crews across 40+ markets
+- Studio and on-location crews across 40+ markets
 
-* Motion graphics, **colour grading**, and sound design
+- Motion graphics, **colour grading**, and sound design
 
-* Drone footage for outdoor events and campus environments
+- Drone footage for outdoor events and campus environments
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -1443,7 +1443,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~180 words)**
+## **FAQ (\~180 words)**
 
 **Q: What is B2B media production?**
 
@@ -1465,15 +1465,15 @@ Content should keep working long after the campaign ends. Build **video assets**
 
 # **PAGE 10 — Event Video Production**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): event video production company, trade show video production, live event video production LSI / semantic keywords (bold PURPLE): event highlight reel, conference video production, booth walkthrough video, on-site testimonial capture, event sizzle reel, post-event video assets |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): event video production company, trade show video production, live event video production LSI / semantic keywords (bold PURPLE): event highlight reel, conference video production, booth walkthrough video, on-site testimonial capture, event sizzle reel, post-event video assets |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Event Video Production Company for Trade Shows and Conferences | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                    |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Event Video Production Company for Trade Shows and Conferences                                                                                                             | B2B Sales Arrow |
 | Meta Desc | Specialist event video production — highlight reels, booth walkthroughs, speaker coverage, on-site testimonials, and social cut-downs that work for months after the show. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Event Video Production That Turns Live Moments Into Lasting Revenue Assets**
 
@@ -1481,7 +1481,7 @@ Your event lasts three days. The right **event video production** gives your mar
 
 **CTA: Get a Production Quote**
 
-## **FULL VIDEO SERVICES LIST  ← Per PDF correction**
+## **FULL VIDEO SERVICES LIST ← Per PDF correction**
 
 ### **H2: Event Video and Media Services**
 
@@ -1537,27 +1537,27 @@ Your event lasts three days. The right **event video production** gives your mar
 
 49. Postcards — event invitation and follow-up postcard design
 
-## **PRICING GUIDANCE  ← New per PDF correction**
+## **PRICING GUIDANCE ← New per PDF correction**
 
 ### **H2: Event Video Production — Approximate Price Guide**
 
 Investment varies by format, duration, crew size, and post-production scope. Use these as orientation ranges:
 
-| Service | Approximate Range |
-| :---- | :---- |
-| Event Highlight Reel (1–2 min, single camera) | $1,500 – $4,000 |
-| Event Highlight Reel (multi-camera, full production) | $4,000 – $10,000 |
-| On-Site Testimonial Capture (3–5 subjects) | $1,200 – $3,500 |
-| Speaker / Keynote Coverage (single day) | $2,000 – $5,000 |
-| Social Cut-Downs (from existing footage) | $500 – $1,500 per set |
-| 2D Animation Explainer (60–90 sec) | $3,000 – $8,000 |
-| 3D Animation (60 sec) | $8,000 – $20,000 |
-| Live Event Streaming (half-day, multi-camera) | $2,500 – $6,000 |
-| Full Event Video Package (multi-format) | $8,000 – $25,000+ |
+| Service                                              | Approximate Range     |
+| :--------------------------------------------------- | :-------------------- |
+| Event Highlight Reel (1–2 min, single camera)        | $1,500 – $4,000       |
+| Event Highlight Reel (multi-camera, full production) | $4,000 – $10,000      |
+| On-Site Testimonial Capture (3–5 subjects)           | $1,200 – $3,500       |
+| Speaker / Keynote Coverage (single day)              | $2,000 – $5,000       |
+| Social Cut-Downs (from existing footage)             | $500 – $1,500 per set |
+| 2D Animation Explainer (60–90 sec)                   | $3,000 – $8,000       |
+| 3D Animation (60 sec)                                | $8,000 – $20,000      |
+| Live Event Streaming (half-day, multi-camera)        | $2,500 – $6,000       |
+| Full Event Video Package (multi-format)              | $8,000 – $25,000+     |
 
 Contact us for a project-specific estimate. All packages include delivery in required formats for web, social, and sales use.
 
-## **WHY IT MATTERS  (\~120 words)**
+## **WHY IT MATTERS (\~120 words)**
 
 ### **H2: Your Event Lasts 3 Days. Your Video Lasts 3 Years.**
 
@@ -1587,7 +1587,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: How far ahead should we book?**
 
@@ -1609,17 +1609,17 @@ Capture it properly. Make your event work for months after the show closes.
 
 # **PAGE 11 — Corporate Video Production**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): corporate video production solutions, video production company, brand film LSI / semantic keywords (bold PURPLE): executive interview video, product explainer video, sales enablement video, investor video, customer testimonial film, B2B brand film |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): corporate video production solutions, video production company, brand film LSI / semantic keywords (bold PURPLE): executive interview video, product explainer video, sales enablement video, investor video, customer testimonial film, B2B brand film |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ⚠️ PDF NOTE: Balance content with visuals — keep copy concise.
 
-| Field | Content |
-| :---- | :---- |
-| Title | Corporate Video Production Solutions for Enterprise B2B Brands | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                    |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Corporate Video Production Solutions for Enterprise B2B Brands                                                                                                                             | B2B Sales Arrow |
 | Meta Desc | Enterprise corporate video production — brand films, product explainers, executive interviews, investor content and sales enablement videos that build authority and shorten sales cycles. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Corporate Video Production Solutions That Command Enterprise Attention**
 
@@ -1627,7 +1627,7 @@ Your **corporate video** should make your market believe you are the right partn
 
 **CTA: Request a Corporate Video Quote**
 
-## **VIDEO TYPES  (\~280 words)**
+## **VIDEO TYPES (\~280 words)**
 
 ### **H2: What We Produce**
 
@@ -1655,7 +1655,7 @@ Demo videos, **product walkthroughs**, and objection-handling clips that help sa
 
 Real outcomes from real customers — the most trusted content format in B2B purchasing decisions.
 
-## **ROI  (\~120 words)**
+## **ROI (\~120 words)**
 
 ### **H2: How Corporate Video Accelerates Your Sales Cycle**
 
@@ -1685,7 +1685,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: How long does production take?**
 
@@ -1711,17 +1711,17 @@ When your offering is complex, **corporate video** makes it clear — with the p
 
 # **PAGE 12 — Video Editing Services**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): video editing services, professional video editing, corporate video editing, post-production LSI / semantic keywords (bold PURPLE): colour grading services, social media video editing, motion graphics, subtitle captioning, video cut-down, enterprise video editing |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): video editing services, professional video editing, corporate video editing, post-production LSI / semantic keywords (bold PURPLE): colour grading services, social media video editing, motion graphics, subtitle captioning, video cut-down, enterprise video editing |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ⚠️ PDF NOTE: Reduce content on this page — balance with visual flow diagram in the live site.
 
-| Field | Content |
-| :---- | :---- |
-| Title | Professional Video Editing Services for B2B Brands | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                       |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| Title     | Professional Video Editing Services for B2B Brands                                                                                                            | B2B Sales Arrow |
 | Meta Desc | B2B professional video editing — colour grading, motion graphics, social cut-downs, subtitles, and post-production. Fast turnaround. Enterprise-scale volume. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Professional Video Editing Services That Transform Raw Footage Into Revenue Assets**
 
@@ -1729,7 +1729,7 @@ Raw footage has potential. Edited footage has a job. We turn your event recordin
 
 **CTA: Send Us Your Footage**
 
-## **SERVICES  (\~220 words)**
+## **SERVICES (\~220 words)**
 
 ### **H2: Our Post-Production Services**
 
@@ -1759,12 +1759,12 @@ Audio clean-up, voice balancing, **licensed music**, and sound effects.
 
 ## **TURNAROUND**
 
-| Deliverable | Typical Turnaround |
-| :---- | :---- |
-| Single video edit (under 5 min) | 3–5 business days |
-| Event highlight reel | 5–8 business days |
-| Multi-video package (5+ videos) | 10–15 business days |
-| Ongoing high-volume program | Custom workflow \+ weekly delivery capacity agreed upfront |
+| Deliverable                     | Typical Turnaround                                         |
+| :------------------------------ | :--------------------------------------------------------- |
+| Single video edit (under 5 min) | 3–5 business days                                          |
+| Event highlight reel            | 5–8 business days                                          |
+| Multi-video package (5+ videos) | 10–15 business days                                        |
+| Ongoing high-volume program     | Custom workflow \+ weekly delivery capacity agreed upfront |
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -1790,7 +1790,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~160 words)**
+## **FAQ (\~160 words)**
 
 **Q: Can you edit footage shot by someone else?**
 
@@ -1812,17 +1812,17 @@ You already have the raw material. We shape it into content people watch, unders
 
 # **PAGE 13 — Live Streaming Services**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): live streaming services, corporate live streaming, hybrid event solutions company LSI / semantic keywords (bold PURPLE): multi-camera live stream, LinkedIn Live streaming, YouTube Live corporate, virtual event streaming, hybrid event production, event live stream production |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): live streaming services, corporate live streaming, hybrid event solutions company LSI / semantic keywords (bold PURPLE): multi-camera live stream, LinkedIn Live streaming, YouTube Live corporate, virtual event streaming, hybrid event production, event live stream production |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ⚠️ Focus keyphrase corrected: use 'live streaming services' / 'corporate live streaming' — NOT 'hybrid event solutions company'
 
-| Field | Content |
-| :---- | :---- |
-| Title | Corporate Live Streaming and Hybrid Event Solutions | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                  |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Corporate Live Streaming and Hybrid Event Solutions                                                                                                                                      | B2B Sales Arrow |
 | Meta Desc | Professional corporate live streaming and hybrid event production — multi-camera broadcasts for conferences, launches, town halls, and investor events. Global reach. Broadcast quality. |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Live Streaming and Hybrid Event Solutions That Extend Your Event to Every Screen**
 
@@ -1830,7 +1830,7 @@ Our **corporate live streaming** and **hybrid event solutions** bring your event
 
 **CTA: Get a Live Stream Quote**
 
-## **CAPABILITIES  (\~220 words)**
+## **CAPABILITIES (\~220 words)**
 
 ### **H2: Live Streaming Services**
 
@@ -1860,19 +1860,19 @@ Planning, testing, live troubleshooting, **backup workflows**, and on-site techn
 
 ## **EVENTS WE STREAM**
 
-* Trade shows and exhibition presentations
+- Trade shows and exhibition presentations
 
-* Corporate town halls and all-hands
+- Corporate town halls and all-hands
 
-* Product launches and announcements
+- Product launches and announcements
 
-* Conferences and panel discussions
+- Conferences and panel discussions
 
-* Investor relations events
+- Investor relations events
 
-* Hybrid internal events — in-room and remote audiences combined
+- Hybrid internal events — in-room and remote audiences combined
 
-## **HYBRID EVENTS  (\~120 words)**
+## **HYBRID EVENTS (\~120 words)**
 
 ### **H2: Hybrid Event Solutions**
 
@@ -1902,7 +1902,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: What is corporate live streaming?**
 
@@ -1924,44 +1924,44 @@ Your event. Every screen. Everywhere.
 
 # **PAGE 14 — Performance Marketing**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): B2B digital marketing agency, performance marketing, digital marketing services, pipeline marketing LSI / semantic keywords (bold PURPLE): B2B demand generation, pipeline attribution, revenue marketing, full-funnel B2B marketing, B2B lead generation agency |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): B2B digital marketing agency, performance marketing, digital marketing services, pipeline marketing LSI / semantic keywords (bold PURPLE): B2B demand generation, pipeline attribution, revenue marketing, full-funnel B2B marketing, B2B lead generation agency |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Performance Marketing Built to Fill Enterprise Pipeline | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                              |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Performance Marketing Built to Fill Enterprise Pipeline                                                                                                                                          | B2B Sales Arrow |
 | Meta Desc | Specialist B2B digital marketing agency — SEO, paid advertising, and LinkedIn Ads managed around qualified pipeline and revenue attribution. Every campaign decision tracked to commercial outcomes. |
-| URL | /services/performance-marketing/ |
+| URL       | /services/performance-marketing/                                                                                                                                                                     |
 
-## **DEFINITION  ← AI block**
+## **DEFINITION ← AI block**
 
 **B2B performance marketing** is a data-driven approach to digital marketing where every campaign, channel, and decision is optimised for measurable revenue outcomes — qualified leads, pipeline influence, and closed revenue — rather than awareness metrics like impressions or clicks.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Performance Marketing Built to Fill Enterprise Pipeline**
 
 Clicks are not the goal. Pipeline is. As a specialist **B2B digital marketing agency**, we manage performance marketing programs where every campaign decision is evaluated against one standard: does it move a qualified buyer measurably closer to a sales conversation?
 
-**CTA: Request a Performance Marketing Audit  |  Book a Free Consultation**
+**CTA: Request a Performance Marketing Audit | Book a Free Consultation**
 
-## **SERVICES  (\~200 words)**
+## **SERVICES (\~200 words)**
 
 ### **H2: Our Performance Marketing Services**
 
-* **B2B SEO Services** — organic visibility built through technical SEO, content architecture, and authority building that compounds over time
+- **B2B SEO Services** — organic visibility built through technical SEO, content architecture, and authority building that compounds over time
 
-* Paid Advertising — Google Search, Display, YouTube, **programmatic**, retargeting, and Microsoft Ads managed around lead quality
+- Paid Advertising — Google Search, Display, YouTube, **programmatic**, retargeting, and Microsoft Ads managed around lead quality
 
-* **LinkedIn Ads for B2B** — Sponsored Content, Lead Gen Forms, Document Ads, and ABM targeting reaching decision-makers by role, company, and intent
+- **LinkedIn Ads for B2B** — Sponsored Content, Lead Gen Forms, Document Ads, and ABM targeting reaching decision-makers by role, company, and intent
 
-## **PHILOSOPHY  (\~150 words)**
+## **PHILOSOPHY (\~150 words)**
 
 ### **H2: Every Action Has a Number**
 
 The right **B2B digital marketing agency** tracks what happens after the first interaction: conversion quality, lead source, **SQL movement**, pipeline influenced, cost per qualified opportunity, and revenue attribution. If your current marketing reports stop at click-through rate or cost per lead, you are measuring activity — not commercial performance.
 
-## **CHANNEL STRATEGY  (\~250 words)**
+## **CHANNEL STRATEGY (\~250 words)**
 
 ### **H2: How We Build Your B2B Marketing Engine**
 
@@ -2009,7 +2009,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~250 words)**
+## **FAQ (\~250 words)**
 
 **Q: What is B2B performance marketing?**
 
@@ -2035,34 +2035,34 @@ Stop guessing. Start knowing. A **performance marketing** audit reveals where sp
 
 # **PAGE 15 — SEO Services**
 
-| 📌  SEO GUIDE Primary keywords (bold GREEN): B2B SEO services, SEO agency, technical SEO audit services, enterprise SEO LSI / semantic keywords (bold PURPLE): B2B search engine optimisation, organic pipeline, topical authority, Core Web Vitals, content architecture, link building, keyword strategy |
-| :---- |
+| 📌 SEO GUIDE Primary keywords (bold GREEN): B2B SEO services, SEO agency, technical SEO audit services, enterprise SEO LSI / semantic keywords (bold PURPLE): B2B search engine optimisation, organic pipeline, topical authority, Core Web Vitals, content architecture, link building, keyword strategy |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B SEO Services and Enterprise SEO Agency | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                             |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B SEO Services and Enterprise SEO Agency                                                                                                                                                          | B2B Sales Arrow |
 | Meta Desc | Enterprise B2B SEO services — technical SEO audits, keyword strategy, content architecture, and authority building. Organic pipeline for enterprise buyers at every stage of a complex sales cycle. |
-| URL | /services/seo-services/ |
+| URL       | /services/seo-services/                                                                                                                                                                             |
 
-## **DEFINITION  ← AI block**
+## **DEFINITION ← AI block**
 
 **B2B SEO services**: optimising a website to be found by enterprise buyers across a complex, multi-touch purchasing journey — from initial awareness through active vendor evaluation — generating organic pipeline that compounds over time.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B SEO Services That Build Organic Pipeline — Not Just Traffic**
 
 Enterprise buyers search before they buy — at every stage of their decision. Our **B2B SEO services** build the technical foundation, content depth, and topical authority required to be found and trusted throughout.
 
-**CTA: Request a Free SEO Audit  |  Download Our B2B SEO Playbook**
+**CTA: Request a Free SEO Audit | Download Our B2B SEO Playbook**
 
-## **WHY B2B SEO IS DIFFERENT  (\~180 words)**
+## **WHY B2B SEO IS DIFFERENT (\~180 words)**
 
 ### **H2: B2B SEO Is Fundamentally Different From B2C**
 
 B2B buyers operate in **buying committees** of 3–7 decision-makers. They research for months using lower-volume but highly specific search terms. They need content at every stage of a long evaluation cycle. Ranking for high-volume consumer keywords is a poor strategic objective for an enterprise brand. The goal is to rank for terms your actual buyers use when they are actively evaluating — and to be credible and authoritative throughout the entire research process.
 
-## **SERVICES  (\~300 words)**
+## **SERVICES (\~300 words)**
 
 ### **H2: Our B2B SEO Services**
 
@@ -2094,7 +2094,7 @@ Hreflang implementation, regional landing pages, and market-specific keyword str
 
 Rankings, organic traffic, conversions, qualified leads, and **pipeline influence** — reported with clear commercial context.
 
-## **METHODOLOGY  (\~180 words)**
+## **METHODOLOGY (\~180 words)**
 
 ### **H2: Our SEO Methodology**
 
@@ -2130,7 +2130,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~300 words)**
+## **FAQ (\~300 words)**
 
 **Q: How long does B2B SEO take to produce results?**
 
@@ -2160,24 +2160,24 @@ Your buyers are searching. Will they find you — or your competitor?
 
 # **PAGE 16 — Paid Advertising**
 
-| 📌  SEO GUIDE Word count target: 1,700  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B paid advertising, PPC agency, paid search B2B, digital advertising LSI / semantic keywords (bold PURPLE): Google Ads B2B, programmatic advertising, B2B PPC management, retargeting enterprise, account-based advertising, landing page CRO |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,700 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B paid advertising, PPC agency, paid search B2B, digital advertising LSI / semantic keywords (bold PURPLE): Google Ads B2B, programmatic advertising, B2B PPC management, retargeting enterprise, account-based advertising, landing page CRO |
+| :------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Paid Advertising and PPC Agency for Enterprise | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                            |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Paid Advertising and PPC Agency for Enterprise                                                                                                                                 | B2B Sales Arrow |
 | Meta Desc | Specialist B2B PPC agency — Google Search, Display, YouTube, programmatic, and LinkedIn Ads managed around qualified pipeline and cost per qualified opportunity. Not just clicks. |
-| URL | /services/paid-advertising/ |
+| URL       | /services/paid-advertising/                                                                                                                                                        |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Paid Advertising That Generates Pipeline, Not Just Clicks**
 
 As a specialist **B2B PPC agency**, we manage paid programs where targeting precision, message relevance, and post-click experience are all structured around one outcome: qualified pipeline for your enterprise sales team.
 
-**CTA: Request a Paid Media Audit  |  Request a Campaign Proposal**
+**CTA: Request a Paid Media Audit | Request a Campaign Proposal**
 
-## **PAID CHANNELS  (\~220 words)**
+## **PAID CHANNELS (\~220 words)**
 
 ### **H2: Channels We Manage**
 
@@ -2201,7 +2201,7 @@ Keeping your brand in front of **target accounts** and decision-makers who have 
 
 Supplementary paid search for **desktop-heavy B2B buyer segments** where Microsoft's search share is meaningful.
 
-## **OUR APPROACH  (\~220 words)**
+## **OUR APPROACH (\~220 words)**
 
 ### **H2: How We Build Paid Campaigns That Convert**
 
@@ -2241,7 +2241,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: What is B2B paid advertising?**
 
@@ -2267,30 +2267,30 @@ A paid media audit reveals wasted spend, low-intent keywords, poor conversion pa
 
 # **PAGE 17 — LinkedIn Ads for B2B**
 
-| 📌  SEO GUIDE Word count target: 1,800  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): LinkedIn Ads for B2B, LinkedIn lead generation ads, LinkedIn Ads management, LinkedIn ABM LSI / semantic keywords (bold PURPLE): LinkedIn Sponsored Content, LinkedIn Lead Gen Forms, ABM targeting LinkedIn, Document Ads, buying committee targeting, LinkedIn retargeting |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,800 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): LinkedIn Ads for B2B, LinkedIn lead generation ads, LinkedIn Ads management, LinkedIn ABM LSI / semantic keywords (bold PURPLE): LinkedIn Sponsored Content, LinkedIn Lead Gen Forms, ABM targeting LinkedIn, Document Ads, buying committee targeting, LinkedIn retargeting |
+| :------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | LinkedIn Ads for B2B Lead Generation and ABM | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                            |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | LinkedIn Ads for B2B Lead Generation and ABM                                                                                                                       | B2B Sales Arrow |
 | Meta Desc | Enterprise LinkedIn Ads for B2B — Sponsored Content, Lead Gen Forms, ABM targeting, and pipeline attribution. Reach decision-makers by title, company, and intent. |
-| URL | /services/linkedin-ads/ |
+| URL       | /services/linkedin-ads/                                                                                                                                            |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: LinkedIn Ads for B2B — The Highest-Intent Enterprise Pipeline Channel**
 
 LinkedIn is where enterprise buyers reveal their role, their company, and their commercial intent. Our **LinkedIn Ads for B2B** programs reach your exact ICP and convert professional attention into qualified meetings and pipeline.
 
-**CTA: Request a LinkedIn Ads Audit  |  Request a Campaign Strategy**
+**CTA: Request a LinkedIn Ads Audit | Request a Campaign Strategy**
 
-## **WHY LINKEDIN FOR B2B  (\~160 words)**
+## **WHY LINKEDIN FOR B2B (\~160 words)**
 
 ### **H2: The Most Precise B2B Targeting Channel**
 
 LinkedIn targeting gives enterprise marketers verified professional attributes — **job title**, company size, industry, seniority, department, geography, and named account lists — available for precise campaign targeting. CPL is typically 2–5x higher than Google Display, but lead quality — measured by ICP fit and conversion to sales opportunity — is frequently superior when targeting, creative, and post-click experience are built correctly for the B2B audience.
 
-## **AD FORMATS  (\~280 words)**
+## **AD FORMATS (\~280 words)**
 
 ### **H2: LinkedIn Ad Formats We Specialise In**
 
@@ -2314,7 +2314,7 @@ Webinars, roundtables, product launches promoted to precisely targeted **profess
 
 Direct-message campaigns for high-relevance personalised outreach tied to a specific action or offer.
 
-## **LINKEDIN ABM  (\~160 words)**
+## **LINKEDIN ABM (\~160 words)**
 
 ### **H2: LinkedIn Ads and Account-Based Marketing**
 
@@ -2344,7 +2344,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~260 words)**
+## **FAQ (\~260 words)**
 
 **Q: Why should B2B companies advertise on LinkedIn?**
 
@@ -2374,28 +2374,28 @@ Your next enterprise customer is on LinkedIn right now. Show them the right mess
 
 # **PAGE 18 — Sales Qualified Lead Generation**
 
-| 📌  SEO GUIDE Word count target: 1,800  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): sales qualified lead generation, B2B SQL generation, qualified B2B leads, active prospecting B2B LSI / semantic keywords (bold PURPLE): SQL definition, MQL vs SQL, BANT qualification, CHAMP qualification, CRM-ready leads, verified B2B leads, intent-based prospecting |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,800 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): sales qualified lead generation, B2B SQL generation, qualified B2B leads, active prospecting B2B LSI / semantic keywords (bold PURPLE): SQL definition, MQL vs SQL, BANT qualification, CHAMP qualification, CRM-ready leads, verified B2B leads, intent-based prospecting |
+| :------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Sales Qualified Lead Generation for Enterprise B2B | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                         |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Sales Qualified Lead Generation for Enterprise B2B                                                                                                                                              | B2B Sales Arrow |
 | Meta Desc | Enterprise sales qualified lead generation — verified decision-makers, BANT/CHAMP qualification, intent signals, and CRM-ready prospect profiles. Leads your sales team can act on immediately. |
-| URL | /services/sales-qualified-lead-generation/ |
+| URL       | /services/sales-qualified-lead-generation/                                                                                                                                                      |
 
-## **DEFINITION  ← AI block**
+## **DEFINITION ← AI block**
 
 A **sales qualified lead** (SQL) is a prospect confirmed to meet agreed qualification criteria — company fit, buying authority, verified business need, and purchase timeline — making them genuinely ready for a direct sales conversation.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Sales Qualified Lead Generation — Decision-Makers, Not Data**
 
 Your team does not need more names on a list. Our **sales qualified lead generation** programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action — not a badge scan CSV.
 
-**CTA: Request a SQL Strategy Session  |  Build Your SQL Program**
+**CTA: Request a SQL Strategy Session | Build Your SQL Program**
 
-## **THE PROBLEM  (\~160 words)**
+## **THE PROBLEM (\~160 words)**
 
 ### **H2: Why Most Lead Generation Programs Fail Sales Teams**
 
@@ -2403,35 +2403,35 @@ Generic lists create activity, not revenue. MQLs often lack the intent, context,
 
 We solve this by defining qualification standards with your sales team first, tracking intent signals across multiple channels, applying BANT or **CHAMP qualification frameworks**, and routing only prospects meeting agreed criteria — with full conversation context.
 
-## **SQL MODEL  (\~280 words)**
+## **SQL MODEL (\~280 words)**
 
 ### **H2: How We Generate Sales Qualified Leads**
 
-* ICP Definition and Firmographic Targeting — target companies and roles by industry, size, geography, **tech stack**, seniority, and buying committee structure
+- ICP Definition and Firmographic Targeting — target companies and roles by industry, size, geography, **tech stack**, seniority, and buying committee structure
 
-* Multi-Channel Demand Generation — **LinkedIn outbound**, paid campaigns, content-led inbound, event capture, cold email simultaneously
+- Multi-Channel Demand Generation — **LinkedIn outbound**, paid campaigns, content-led inbound, event capture, cold email simultaneously
 
-* Intent Signal Scoring — content engagement, ad responses, website behaviour, and **buying signals** tracked across channels
+- Intent Signal Scoring — content engagement, ad responses, website behaviour, and **buying signals** tracked across channels
 
-* Human-Verified Qualification — BANT/CHAMP in live conversations, not retrospectively from contact lists
+- Human-Verified Qualification — BANT/CHAMP in live conversations, not retrospectively from contact lists
 
-* CRM Delivery and Routing — clean profiles routed by territory, account owner, or product interest
+- CRM Delivery and Routing — clean profiles routed by territory, account owner, or product interest
 
-* Pipeline Tracking and Attribution — first engagement to qualified opportunity and pipeline contribution
+- Pipeline Tracking and Attribution — first engagement to qualified opportunity and pipeline contribution
 
 ## **WHAT A SQL LOOKS LIKE**
 
 ### **H2: Your Sales-Ready Prospect Profile Includes**
 
-* Verified contact: name, direct email, LinkedIn URL, direct phone where available
+- Verified contact: name, direct email, LinkedIn URL, direct phone where available
 
-* Company profile: size, industry, revenue range, **technology stack**, and account tier
+- Company profile: size, industry, revenue range, **technology stack**, and account tier
 
-* Buying role: confirmed job title, seniority, and buying committee relevance
+- Buying role: confirmed job title, seniority, and buying committee relevance
 
-* Qualification outcome: BANT/CHAMP notes on need, urgency, and authority confirmed
+- Qualification outcome: BANT/CHAMP notes on need, urgency, and authority confirmed
 
-* Recommended next action: specific outreach based on profile and engagement context
+- Recommended next action: specific outreach based on profile and engagement context
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -2457,7 +2457,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~260 words)**
+## **FAQ (\~260 words)**
 
 **Q: What is the difference between MQL and SQL?**
 
@@ -2483,40 +2483,40 @@ A lead is only valuable when your team can act on it with confidence. Give them 
 
 # **PAGE 19 — Market Research**
 
-| 📌  SEO GUIDE Word count target: 1,700  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B market research agency, market research, B2B market intelligence, market research companies LSI / semantic keywords (bold PURPLE): B2B competitive intelligence, buyer behaviour research, TAM analysis, market entry research, brand research, go-to-market research |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,700 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B market research agency, market research, B2B market intelligence, market research companies LSI / semantic keywords (bold PURPLE): B2B competitive intelligence, buyer behaviour research, TAM analysis, market entry research, brand research, go-to-market research |
+| :------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Market Research Agency and Intelligence Services | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                  |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Market Research Agency and Intelligence Services                                                                                                                                     | B2B Sales Arrow |
 | Meta Desc | Enterprise B2B market research agency — data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves. |
-| URL | /services/market-research/ |
+| URL       | /services/market-research/                                                                                                                                                               |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Market Research That Gives Your Enterprise an Unfair Competitive Advantage**
 
 Better strategy starts with better intelligence. Our **B2B market research agency** helps enterprise teams understand their markets more clearly than the competition — and move on that advantage faster.
 
-**CTA: Request a Research Consultation  |  Download a Sample Report**
+**CTA: Request a Research Consultation | Download a Sample Report**
 
-## **SERVICES  (\~200 words)**
+## **SERVICES (\~200 words)**
 
 ### **H2: Our B2B Market Research Services**
 
-* **Data Augmentation** — enriching CRM records with verified firmographic, technographic, role-based, and **intent data** to create precision sales intelligence
+- **Data Augmentation** — enriching CRM records with verified firmographic, technographic, role-based, and **intent data** to create precision sales intelligence
 
-* Data Validation — cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates
+- Data Validation — cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates
 
-* Human-Powered Market Intelligence — competitor analysis, **buyer behaviour research**, TAM analysis, win/loss interviews, expert panels, and strategic reports
+- Human-Powered Market Intelligence — competitor analysis, **buyer behaviour research**, TAM analysis, win/loss interviews, expert panels, and strategic reports
 
-## **WHY DATA QUALITY MATTERS  (\~150 words)**
+## **WHY DATA QUALITY MATTERS (\~150 words)**
 
 ### **H2: Bad Data Costs Enterprise Sales Teams Millions**
 
 Gartner estimates poor data quality costs organisations $12.9M per year. In B2B specifically: SDRs waste time on wrong contacts, email campaigns damage sender reputation through **high bounce rates**, attribution models produce inaccurate ROI data, and strategic decisions are made on incorrect market assumptions. Clean, validated, enriched data is the foundation that makes every **B2B marketing** and sales motion more effective.
 
-## **RESEARCH FRAMEWORK  (\~180 words)**
+## **RESEARCH FRAMEWORK (\~180 words)**
 
 ### **H2: How We Deliver Market Intelligence**
 
@@ -2554,7 +2554,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: What is B2B market research?**
 
@@ -2576,28 +2576,28 @@ Own your competitive intelligence advantage.
 
 # **PAGE 20 — Data Augmentation**
 
-| 📌  SEO GUIDE Word count target: 1,600  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): data augmentation services, CRM data enrichment, contact data enrichment, firmographic data enrichment LSI / semantic keywords (bold PURPLE): technographic data enrichment, intent data, CRM enrichment services, B2B data enrichment, account enrichment, sales intelligence data |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,600 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): data augmentation services, CRM data enrichment, contact data enrichment, firmographic data enrichment LSI / semantic keywords (bold PURPLE): technographic data enrichment, intent data, CRM enrichment services, B2B data enrichment, account enrichment, sales intelligence data |
+| :------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Data Augmentation Services and CRM Enrichment | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                               |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Data Augmentation Services and CRM Enrichment                                                                                                                                                     | B2B Sales Arrow |
 | Meta Desc | B2B data augmentation services — verified firmographic, technographic, contact, and intent data enrichment. Transform your CRM from an incomplete database into a precision sales intelligence asset. |
-| URL | /services/data-augmentation/ |
+| URL       | /services/data-augmentation/                                                                                                                                                                          |
 
-## **DEFINITION  ← AI block**
+## **DEFINITION ← AI block**
 
 **B2B data augmentation** is the process of enriching existing contact or account records with additional verified information — job titles, emails, company revenue, **technology stack**, and buying intent signals — to make records more complete, accurate, and useful for sales and marketing activities.
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Data Augmentation Services — Transform Incomplete CRM Data Into Sales Intelligence**
 
 Blank job titles, missing emails, outdated company names — incomplete data creates misdirected outreach and wasted SDR time. Our **data augmentation services** turn what your CRM has into what your sales team actually needs.
 
-**CTA: Request a Data Augmentation Demo  |  Upload a Sample List**
+**CTA: Request a Data Augmentation Demo | Upload a Sample List**
 
-## **WHAT WE AUGMENT  (\~240 words)**
+## **WHAT WE AUGMENT (\~240 words)**
 
 ### **H2: Data Fields We Enrich**
 
@@ -2617,7 +2617,7 @@ Content engagement signals, solution research activity, competitor comparison be
 
 Any additional fields required by your CRM structure, qualification model, ABM strategy, or territory planning — enriched to match how your team actually sells.
 
-## **PROCESS  (\~150 words)**
+## **PROCESS (\~150 words)**
 
 ### **H2: How Data Augmentation Works**
 
@@ -2655,7 +2655,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: How accurate is enriched data?**
 
@@ -2677,24 +2677,24 @@ Your CRM is leaking revenue. Better **data enrichment** improves segmentation, p
 
 # **PAGE 21 — Data Validation**
 
-| 📌  SEO GUIDE Word count target: 1,600  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): data validation services, email list validation, CRM data cleansing, data cleansing service LSI / semantic keywords (bold PURPLE): B2B email verification, phone number validation, CRM deduplication, bounce rate reduction, contact database cleanup, data hygiene services |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,600 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): data validation services, email list validation, CRM data cleansing, data cleansing service LSI / semantic keywords (bold PURPLE): B2B email verification, phone number validation, CRM deduplication, bounce rate reduction, contact database cleanup, data hygiene services |
+| :------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Data Validation and CRM Data Cleansing Services | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                         |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| Title     | B2B Data Validation and CRM Data Cleansing Services                                                                                                                             | B2B Sales Arrow |
 | Meta Desc | B2B data validation services — email verification, phone validation, job title confirmation, duplicate detection, and CRM data cleansing. Clean data your sales team can trust. |
-| URL | /services/data-validation/ |
+| URL       | /services/data-validation/                                                                                                                                                      |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: B2B Data Validation Services — Clean Data Your Sales Team Can Actually Trust**
 
 Invalid emails, outdated contacts, and duplicate records don't just create inefficiency — they damage sender reputation and cost real SDR time. Our **data validation services** make your database a reliable commercial asset.
 
-**CTA: Start a Data Validation Project  |  Get a Free Data Quality Audit**
+**CTA: Start a Data Validation Project | Get a Free Data Quality Audit**
 
-## **WHAT WE VALIDATE  (\~250 words)**
+## **WHAT WE VALIDATE (\~250 words)**
 
 ### **H2: Our Data Validation Services Cover**
 
@@ -2722,13 +2722,13 @@ Identifying duplicates across contacts, accounts, emails, and domains — creati
 
 Flagging contacts who have left the company, changed roles, or should no longer be in active outreach lists.
 
-## **THE COST OF BAD DATA  (\~140 words)**
+## **THE COST OF BAD DATA (\~140 words)**
 
 ### **H2: Why Data Validation Cannot Be an Afterthought**
 
 Gartner estimates poor data quality costs organisations $12.9M per year. In B2B sales: SDRs waste 25–30% of their time on wrong contacts and outdated information, email campaigns generate **high bounce rates** that damage domain sender score over time, attribution models produce inaccurate ROI data, and CRM forecasting cannot be trusted. **Data validation** restores confidence — and with it, the commercial effectiveness of every outreach motion your team runs.
 
-## **PROCESS  (\~150 words)**
+## **PROCESS (\~150 words)**
 
 ### **H2: Our Validation Process**
 
@@ -2766,7 +2766,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~180 words)**
+## **FAQ (\~180 words)**
 
 **Q: How often should we validate our database?**
 
@@ -2788,24 +2788,24 @@ Do not prospect with broken data. Before launching another campaign, make sure t
 
 # **PAGE 22 — Human-Powered Market Intelligence**
 
-| 📌  SEO GUIDE Word count target: 1,700  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): human-powered market intelligence, B2B market intelligence services, competitive intelligence B2B LSI / semantic keywords (bold PURPLE): competitor analysis, buyer behaviour research, win loss analysis, TAM analysis, expert panel research, market entry feasibility, strategic market research |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,700 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): human-powered market intelligence, B2B market intelligence services, competitive intelligence B2B LSI / semantic keywords (bold PURPLE): competitor analysis, buyer behaviour research, win loss analysis, TAM analysis, expert panel research, market entry feasibility, strategic market research |
+| :------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Human-Powered B2B Market Intelligence Services | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                                         |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | Human-Powered B2B Market Intelligence Services                                                                                                                                                                  | B2B Sales Arrow |
 | Meta Desc | Human-powered market intelligence for B2B — competitor analysis, buyer behaviour research, TAM analysis, win/loss interviews, expert panels, and strategic reports. The insight automated tools cannot deliver. |
-| URL | /services/market-intelligence/ |
+| URL       | /services/market-intelligence/                                                                                                                                                                                  |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Human-Powered Market Intelligence — The Insight Automated Tools Cannot Deliver**
 
 AI tools scrape. Humans understand. Our **human-powered market intelligence** delivers the strategic context, competitive insight, and buyer intelligence that automated platforms consistently miss.
 
-**CTA: Commission a Research Report  |  Schedule an Intelligence Briefing**
+**CTA: Commission a Research Report | Schedule an Intelligence Briefing**
 
-## **WHY HUMAN INTELLIGENCE  (\~160 words)**
+## **WHY HUMAN INTELLIGENCE (\~160 words)**
 
 ### **H2: What Automated Research Tools Cannot Do**
 
@@ -2813,7 +2813,7 @@ Automated **market research** tools are effective at aggregating publicly availa
 
 Markets are shaped by motives, timing, and nuance that require human judgment to interpret correctly. Our analyst team goes beyond what the data suggests and tells you what it means — and what you should do about it.
 
-## **RESEARCH SERVICES  (\~300 words)**
+## **RESEARCH SERVICES (\~300 words)**
 
 ### **H2: What We Research and Deliver**
 
@@ -2843,15 +2843,15 @@ Industry specialists and practitioners providing validated perspective for high-
 
 ## **DELIVERABLE FORMATS**
 
-* Executive Strategy Briefing Decks — concise, leadership-ready findings with context, risks, opportunities, and recommended actions
+- Executive Strategy Briefing Decks — concise, leadership-ready findings with context, risks, opportunities, and recommended actions
 
-* Detailed Research Reports — full-depth documentation with methodology, findings, and source notes
+- Detailed Research Reports — full-depth documentation with methodology, findings, and source notes
 
-* Live Analyst Briefings — interactive findings presentations with real-time Q\&A
+- Live Analyst Briefings — interactive findings presentations with real-time Q\&A
 
-* Ongoing Intelligence Subscriptions — continuous tracking of competitors, market shifts, and buyer behaviour
+- Ongoing Intelligence Subscriptions — continuous tracking of competitors, market shifts, and buyer behaviour
 
-* Custom Dashboards and Data Visualisation — market maps, competitor comparisons, and account views
+- Custom Dashboards and Data Visualisation — market maps, competitor comparisons, and account views
 
 ## **CLIENT SUCCESS STORIES**
 
@@ -2877,7 +2877,7 @@ B2B Sales Arrow has delivered measurable commercial outcomes at some of the worl
 **Challenge:** Managing dual-client outreach under restricted event timelines  
 **What We Did:** Delivered active prospecting, meeting coordination, and booth engagement support
 
-## **FAQ  (\~200 words)**
+## **FAQ (\~200 words)**
 
 **Q: What is human-powered market intelligence?**
 
@@ -2899,22 +2899,22 @@ The most valuable strategic meetings start with the right intelligence. **Human-
 
 # **PAGE 23 — Blog**
 
-| 📌  SEO GUIDE Word count target: 1,200  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B marketing blog, enterprise marketing insights, trade show strategy blog LSI / semantic keywords (bold PURPLE): B2B content hub, event marketing articles, trade show insights, B2B pipeline strategy, enterprise growth blog |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,200 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B marketing blog, enterprise marketing insights, trade show strategy blog LSI / semantic keywords (bold PURPLE): B2B content hub, event marketing articles, trade show insights, B2B pipeline strategy, enterprise growth blog |
+| :------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Growth Insights and Strategy Blog | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                   |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Growth Insights and Strategy Blog                                                                                                                                                     | B2B Sales Arrow |
 | Meta Desc | Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research — written for enterprise marketers and sales leaders. |
-| URL | /blog/ |
+| URL       | /blog/                                                                                                                                                                                    |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Thought Leadership for Enterprise Growth Teams**
 
 Ideas should help you make better decisions — not fill a content calendar. Practical intelligence on **trade show strategy**, **performance marketing**, B2B video, market research, and pipeline growth. Written for senior marketers who need substance, not noise.
 
-**CTA: Read the Latest Insights  |  Subscribe for Growth Intelligence**
+**CTA: Read the Latest Insights | Subscribe for Growth Intelligence**
 
 ## **PRIORITY ARTICLES — Publish These First**
 
@@ -2940,19 +2940,19 @@ Target: **GITEX exhibitor guide**. Length: 2,200 words. Seasonal, low competitio
 
 ## **CONTENT CATEGORIES**
 
-* Event Strategy — trade show ROI, booth design, lead generation, event selection, global event management
+- Event Strategy — trade show ROI, booth design, lead generation, event selection, global event management
 
-* Trade Show Booth Design — design principles, booth formats, sustainable builds, and exhibition case studies
+- Trade Show Booth Design — design principles, booth formats, sustainable builds, and exhibition case studies
 
-* Performance Marketing — B2B SEO, LinkedIn Ads, paid advertising, and pipeline marketing strategy
+- Performance Marketing — B2B SEO, LinkedIn Ads, paid advertising, and pipeline marketing strategy
 
-* Video Production — corporate video strategy, event video best practices, and content production guides
+- Video Production — corporate video strategy, event video best practices, and content production guides
 
-* Market Research — data quality, competitive intelligence, and market entry research
+- Market Research — data quality, competitive intelligence, and market entry research
 
-* Lead Generation — SQL generation, sales prospecting, and pipeline qualification
+- Lead Generation — SQL generation, sales prospecting, and pipeline qualification
 
-* Case Studies — documented outcomes from B2B Sales Arrow client programs
+- Case Studies — documented outcomes from B2B Sales Arrow client programs
 
 ## **NEWSLETTER CTA**
 
@@ -2962,26 +2962,26 @@ Monthly growth intelligence on **event strategy**, performance marketing, pipeli
 
 # **PAGE 24 — Case Studies**
 
-| 📌  SEO GUIDE Word count target: 1,200  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B marketing case studies, event marketing results, enterprise marketing success stories LSI / semantic keywords (bold PURPLE): trade show lead generation results, booth design outcomes, B2B pipeline results, event ROI proof |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,200 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B marketing case studies, event marketing results, enterprise marketing success stories LSI / semantic keywords (bold PURPLE): trade show lead generation results, booth design outcomes, B2B pipeline results, event ROI proof |
+| :------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-| Field | Content |
-| :---- | :---- |
-| Title | B2B Marketing Case Studies and Event Results | B2B Sales Arrow |
+| Field     | Content                                                                                                                                                                                                    |
+| :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Title     | B2B Marketing Case Studies and Event Results                                                                                                                                                               | B2B Sales Arrow |
 | Meta Desc | Enterprise B2B marketing case studies — documented results across trade show lead generation, booth design, video production, performance marketing, and market research. Real programs. Verified results. |
-| URL | /case-studies/ |
+| URL       | /case-studies/                                                                                                                                                                                             |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Enterprise Results That Speak for Themselves**
 
 Results matter more than promises. Documented outcomes from real enterprise B2B programs — **trade show lead generation**, booth design, video production, performance marketing, and market research.
 
-250+ events  |  $1.2B+ pipeline influenced  |  40+ countries  |  15,000+ enterprise leads  |  98% client retention  |  500+ booth designs
+250+ events | $1.2B+ pipeline influenced | 40+ countries | 15,000+ enterprise leads | 98% client retention | 500+ booth designs
 
 ## **FILTER**
 
-Filter by: Service Category  |  Industry  |  Geography  |  Company Size
+Filter by: Service Category | Industry | Geography | Company Size
 
 ## **PUBLISHED CASE STUDIES — 2025**
 
@@ -3019,17 +3019,17 @@ Results: 14 pre-scheduled meetings with C-level and VP-level aviation decision-m
 
 ## **CASE STUDY TEMPLATE — For Future Entries**
 
-* Client Context: industry, size, geography, event or campaign type
+- Client Context: industry, size, geography, event or campaign type
 
-* The Challenge: specific commercial problem or objective
+- The Challenge: specific commercial problem or objective
 
-* What We Did: exact scope, geography, timeline, and approach
+- What We Did: exact scope, geography, timeline, and approach
 
-* The Results: specific numbers — leads, pipeline, meetings, cost per opportunity
+- The Results: specific numbers — leads, pipeline, meetings, cost per opportunity
 
-* Client Quote: named, attributed, with job title
+- Client Quote: named, attributed, with job title
 
-* Service Tags: which B2B Sales Arrow services were involved
+- Service Tags: which B2B Sales Arrow services were involved
 
 ## **CTA BANNER**
 
@@ -3039,28 +3039,28 @@ Enterprise results are not accidental. They are engineered through strategy, cre
 
 # **PAGE 25 — About Us**
 
-| 📌  SEO GUIDE Word count target: 1,400  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B growth agency, enterprise marketing company, global B2B agency, event solutions company LSI / semantic keywords (bold PURPLE): B2B marketing partner, global enterprise agency, enterprise growth partner, about B2B Sales Arrow |
-| :---- |
+| 📌 SEO GUIDE Word count target: 1,400 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): B2B growth agency, enterprise marketing company, global B2B agency, event solutions company LSI / semantic keywords (bold PURPLE): B2B marketing partner, global enterprise agency, enterprise growth partner, about B2B Sales Arrow |
+| :------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | About B2B Sales Arrow | Enterprise Growth Partners |
+| Field     | Content                                                                                                                                                                                                                          |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| Title     | About B2B Sales Arrow                                                                                                                                                                                                            | Enterprise Growth Partners |
 | Meta Desc | B2B Sales Arrow is a global enterprise growth agency delivering event solutions, video production, performance marketing, and market research across 40+ countries. Built to connect strategy to measurable commercial outcomes. |
-| URL | /about/ |
+| URL       | /about/                                                                                                                                                                                                                          |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: We Are the Growth Partner Your Enterprise Deserves**
 
 B2B Sales Arrow is not a vendor. We are a strategic growth partner — bringing event solutions, video production, **performance marketing**, and market research under one team with one commercial brief and clear accountability to outcomes.
 
-**CTA: Request a Strategy Consultation  |  Meet the Team**
+**CTA: Request a Strategy Consultation | Meet the Team**
 
-## **OUR MISSION  (\~100 words)**
+## **OUR MISSION (\~100 words)**
 
 To transform how B2B enterprise brands connect with their buyers — through innovative **event experiences**, high-quality media, precision **digital marketing**, and intelligent market intelligence — delivering measurable commercial outcomes that justify every investment and advance our clients' growth objectives.
 
-## **OUR STORY  (\~160 words)**
+## **OUR STORY (\~160 words)**
 
 ### **H2: How B2B Sales Arrow Was Built**
 
@@ -3070,27 +3070,27 @@ We built a model where event solutions, video production, performance marketing,
 
 ## **BY THE NUMBERS**
 
-* 250+ enterprise events executed across 40+ countries
+- 250+ enterprise events executed across 40+ countries
 
-* $1.2B+ in influenced pipeline generated for clients
+- $1.2B+ in influenced pipeline generated for clients
 
-* 15,000+ verified enterprise leads captured and delivered
+- 15,000+ verified enterprise leads captured and delivered
 
-* 98% client retention across annual programs
+- 98% client retention across annual programs
 
-* 500+ custom booth designs delivered globally
+- 500+ custom booth designs delivered globally
 
 ## **RECENT EVENTS — 2025**
 
 ### **H2: Where We Have Been Delivering This Year**
 
-* Adobe Summit — Las Vegas, USA (Enterprise Technology, Lead Generation Program)
+- Adobe Summit — Las Vegas, USA (Enterprise Technology, Lead Generation Program)
 
-* Money 20/20 Europe — Amsterdam, Netherlands (Fintech, First-Time Market Entry Program)
+- Money 20/20 Europe — Amsterdam, Netherlands (Fintech, First-Time Market Entry Program)
 
-* World Aviation Festival — Amsterdam, Netherlands (Aviation Technology, Executive Relationship Program)
+- World Aviation Festival — Amsterdam, Netherlands (Aviation Technology, Executive Relationship Program)
 
-## **OUR VALUES  (\~250 words)**
+## **OUR VALUES (\~250 words)**
 
 ### **H2: What We Believe In**
 
@@ -3124,28 +3124,28 @@ If you need event presence, media content, **performance marketing**, or market 
 
 # **PAGE 26 — Contact Us**
 
-| 📌  SEO GUIDE Word count target: 700  |  Keyword density: 1.2–1.8% Primary keywords (bold GREEN): contact B2B Sales Arrow, book a strategy consultation, enterprise marketing inquiry LSI / semantic keywords (bold PURPLE): B2B agency contact, strategy call booking, enterprise event agency inquiry |
-| :---- |
+| 📌 SEO GUIDE Word count target: 700 | Keyword density: 1.2–1.8% Primary keywords (bold GREEN): contact B2B Sales Arrow, book a strategy consultation, enterprise marketing inquiry LSI / semantic keywords (bold PURPLE): B2B agency contact, strategy call booking, enterprise event agency inquiry |
+| :---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| Field | Content |
-| :---- | :---- |
-| Title | Contact B2B Sales Arrow | Book a Strategy Consultation |
+| Field     | Content                                                                                                                                                                                                        |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| Title     | Contact B2B Sales Arrow                                                                                                                                                                                        | Book a Strategy Consultation |
 | Meta Desc | Contact B2B Sales Arrow to book a strategy consultation for event solutions, video production, performance marketing, market research, or sales qualified lead generation. We respond within one business day. |
-| URL | /contact/ |
+| URL       | /contact/                                                                                                                                                                                                      |
 
-## **HERO  ⚡ Short**
+## **HERO ⚡ Short**
 
 ### **H1: Let's Build Your Enterprise Growth Strategy**
 
 Whether you need a booth for next quarter, a sharper **lead generation** system, enterprise video, a full digital marketing program, or market intelligence — one conversation is enough to define the right path.
 
-**CTA: Submit Inquiry  |  Book a Meeting**
+**CTA: Submit Inquiry | Book a Meeting**
 
 ## **CONTACT FORM**
 
 ### **Form Fields**
 
-First Name  |  Last Name  |  Company Name  |  Job Title  |  Work Email  |  Phone  |  Country / Region  |  Service of Interest (dropdown — all 22 services)  |  Estimated Project Timeline  |  Message / Project Brief  |  Submit Inquiry
+First Name | Last Name | Company Name | Job Title | Work Email | Phone | Country / Region | Service of Interest (dropdown — all 22 services) | Estimated Project Timeline | Message / Project Brief | Submit Inquiry
 
 Trust note: We respond to every inquiry within one business day. Your information is never shared with third parties.
 
@@ -3153,17 +3153,17 @@ Trust note: We respond to every inquiry within one business day. Your informatio
 
 Email: hello@b2bsalesarrow.com
 
-**⚠️  Phone: \[INSERT NUMBER BEFORE LAUNCH — missing phone number reduces trust significantly\]**
+**⚠️ Phone: \[INSERT NUMBER BEFORE LAUNCH — missing phone number reduces trust significantly\]**
 
 Book a Meeting: \[Calendly link or calendar embed\]
 
 ## **OUR OFFICES**
 
-New York  |  London  |  Dubai  |  Singapore  |  Sydney  |  Toronto
+New York | London | Dubai | Singapore | Sydney | Toronto
 
 Regional delivery coverage across 40+ markets worldwide.
 
-## **WHAT HAPPENS NEXT  (\~100 words)**
+## **WHAT HAPPENS NEXT (\~100 words)**
 
 75. We review your inquiry within one business day and confirm receipt.
 

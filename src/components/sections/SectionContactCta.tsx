@@ -9,7 +9,9 @@ interface SectionContactCtaProps {
   label?: string;
 }
 
-export const SectionContactCta = ({ label = "Contact Our Team" }: SectionContactCtaProps) => {
+export const SectionContactCta = ({
+  label = "Contact Our Team",
+}: SectionContactCtaProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);

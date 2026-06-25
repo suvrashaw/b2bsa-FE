@@ -29,7 +29,8 @@ import {
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
+export const metadata: Metadata =
+  getMarketingPageMetadata(CORP_NETWORKING_PAGE);
 
 const capabilityAssets = [
   { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
@@ -45,7 +46,10 @@ const capabilityAssets = [
 ];
 
 const capabilityFeatures = (
-  CORP_NETWORKING_CAPABILITIES.phases as { description?: string; title: string }[]
+  CORP_NETWORKING_CAPABILITIES.phases as {
+    description?: string;
+    title: string;
+  }[]
 ).map((phase, index) => ({
   description: phase.description,
   icon: capabilityAssets[index]?.icon ?? "Users",
@@ -66,7 +70,11 @@ const Page = () => {
       contactUs={CORP_NETWORKING_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={CORP_NETWORKING_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid
+            cols={4}
+            heading={CORP_NETWORKING_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+          >
             {CORP_NETWORKING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -75,7 +83,11 @@ const Page = () => {
             cols={4}
             heading={CORP_NETWORKING_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
@@ -110,7 +122,7 @@ const Page = () => {
               id,
               image,
               title,
-            })
+            }),
           )}
         />
       }

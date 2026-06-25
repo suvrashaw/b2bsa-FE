@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-import { type NavLink, type ServiceNavGroup, type ServiceSubGroup } from "@/content/navigation";
+import {
+  type NavLink,
+  type ServiceNavGroup,
+  type ServiceSubGroup,
+} from "@/content/navigation";
 import { cn, toHeadingCaps } from "@/lib";
 
 const EMPTY_NAV_LINKS: NavLink[] = [];
@@ -56,7 +60,7 @@ export const FooterServiceGroup = ({
       <Link
         className={cn(
           "mb-3 block text-sm font-semibold text-white transition-colors hover:text-white hover:underline",
-          noWrapTitle ? "whitespace-nowrap" : ""
+          noWrapTitle ? "whitespace-nowrap" : "",
         )}
         href={group.href}
       >

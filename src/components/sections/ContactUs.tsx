@@ -15,7 +15,10 @@ const PROOF_LOGOS = [
   { alt: "Airtel", src: "/media/client-logos/Airtel-Icon.svg" },
   { alt: "SingleStore", src: "/media/client-logos/SingleStore-Icon.svg" },
   { alt: "CSC", src: "/media/client-logos/CSC-Icon.svg" },
-  { alt: "United Payments", src: "/media/client-logos/UnitedPayments-Icon.svg" },
+  {
+    alt: "United Payments",
+    src: "/media/client-logos/UnitedPayments-Icon.svg",
+  },
 ] as const;
 
 export interface ContactUsProps {
@@ -77,7 +80,11 @@ const ctaFloatTwoTransition = {
   ease: "easeInOut",
   repeat: Infinity,
 } as const;
-const ctaFloatThreeAnimate = { scale: [1, 1.04, 1], x: [0, 12, 0], y: [0, -10, 0] };
+const ctaFloatThreeAnimate = {
+  scale: [1, 1.04, 1],
+  x: [0, 12, 0],
+  y: [0, -10, 0],
+};
 const ctaFloatThreeTransition = {
   duration: 10,
   ease: "easeInOut",
@@ -95,7 +102,10 @@ const ctaSparkleTransition = {
 } as const;
 
 export const ContactUs = ({
-  backgroundImage = { alt: "B2B Sales Agency", src: "/media/home/hero/home_hero_bg.avif" },
+  backgroundImage = {
+    alt: "B2B Sales Agency",
+    src: "/media/home/hero/home_hero_bg.avif",
+  },
   badge,
   description,
   headingLines,
@@ -105,12 +115,15 @@ export const ContactUs = ({
   const [pointerOffset, setPointerOffset] = useState({ x: 0, y: 0 });
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-  const handlePointerMove = useCallback((event: React.MouseEvent<HTMLElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 36;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 36;
-    setPointerOffset({ x, y });
-  }, []);
+  const handlePointerMove = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 36;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 36;
+      setPointerOffset({ x, y });
+    },
+    [],
+  );
 
   const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
   const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
@@ -123,13 +136,13 @@ export const ContactUs = ({
     () => ({
       transform: `translate3d(${pointerOffset.x * 0.65}px, ${pointerOffset.y * 0.65}px, 0)`,
     }),
-    [pointerOffset.x, pointerOffset.y]
+    [pointerOffset.x, pointerOffset.y],
   );
   const floatingBubbleTwoStyle = useMemo(
     () => ({
       transform: `translate3d(${-pointerOffset.x * 0.7}px, ${-pointerOffset.y * 0.55}px, 0)`,
     }),
-    [pointerOffset.x, pointerOffset.y]
+    [pointerOffset.x, pointerOffset.y],
   );
 
   return (
@@ -155,14 +168,20 @@ export const ContactUs = ({
       </div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-[8%]" style={floatingBubbleOneStyle}>
+        <div
+          className="absolute top-20 left-[8%]"
+          style={floatingBubbleOneStyle}
+        >
           <motion.div
             animate={ctaFloatOneAnimate}
             className="size-40 rounded-full bg-white/12 blur-3xl"
             transition={ctaFloatOneTransition}
           />
         </div>
-        <div className="absolute right-[12%] bottom-16" style={floatingBubbleTwoStyle}>
+        <div
+          className="absolute right-[12%] bottom-16"
+          style={floatingBubbleTwoStyle}
+        >
           <motion.div
             animate={ctaFloatTwoAnimate}
             className="size-56 rounded-full bg-brand-cyan/20 blur-3xl"
@@ -191,8 +210,11 @@ export const ContactUs = ({
         <div className="absolute top-24 right-[8%] grid grid-cols-5 gap-3 opacity-25">
           {dotRows.flatMap((row) =>
             dotColumns.map((column) => (
-              <span className="size-1.5 rounded-full bg-white" key={`${row}-${column}`} />
-            ))
+              <span
+                className="size-1.5 rounded-full bg-white"
+                key={`${row}-${column}`}
+              />
+            )),
           )}
         </div>
       </div>
@@ -225,7 +247,9 @@ export const ContactUs = ({
               <SectionHeader as="h2" className="mt-8 text-white">
                 <span className="block text-white/80">{headingLines[0]}</span>
                 {headingLines[1] ? (
-                  <span className="mt-2 block text-white">{headingLines[1]}</span>
+                  <span className="mt-2 block text-white">
+                    {headingLines[1]}
+                  </span>
                 ) : null}
               </SectionHeader>
             </motion.div>
@@ -302,7 +326,9 @@ export const ContactUs = ({
                 </div>
               ))}
             </div>
-            <p className="text-sm font-medium text-white/80">Trusted by global brands</p>
+            <p className="text-sm font-medium text-white/80">
+              Trusted by global brands
+            </p>
           </motion.div>
         </div>
       </div>

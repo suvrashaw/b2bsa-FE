@@ -1,5 +1,10 @@
 {
   "heading": "About Virtual Event Video Production",
   "imageUrl": "/media/home/hero/home_hero_bg.avif",
-  "stats": ["250+ events", "500+ video productions", "40+ countries", "98% client retention"]
+  "stats": [
+    "250+ events",
+    "500+ video productions",
+    "40+ countries",
+    "98% client retention"
+  ]
 }

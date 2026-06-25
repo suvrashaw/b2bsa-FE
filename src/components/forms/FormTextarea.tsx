@@ -25,7 +25,7 @@ export const FormTextarea = ({
         className={cn(
           "w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none",
           error && "border-red-400 focus:border-red-500",
-          className
+          className,
         )}
         id={id}
         rows={rows}

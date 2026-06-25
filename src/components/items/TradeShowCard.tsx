@@ -33,7 +33,13 @@ export const formatLocation = ({ city, country, region }: CalendarTradeShow) =>
 const formatCompactLocation = ({ city, country, region }: CalendarTradeShow) =>
   [city, region].filter(Boolean).join(", ") || country;
 
-const EventMeta = ({ icon: Icon, label }: { icon: typeof CalendarDays; label: string }) => (
+const EventMeta = ({
+  icon: Icon,
+  label,
+}: {
+  icon: typeof CalendarDays;
+  label: string;
+}) => (
   <div className="flex items-start gap-2 text-sm font-medium text-brand-charcoal/75">
     <Icon className="mt-0.5 size-4 shrink-0 text-brand-blue" />
     <span>{label}</span>
@@ -51,12 +57,23 @@ export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
       </div>
     </div>
 
-    <p className="mb-5 flex-1 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
+    <p className="mb-5 flex-1 text-sm leading-relaxed text-brand-charcoal/70">
+      {show.summary}
+    </p>
 
     <div className="space-y-3 border-y border-gray-100 py-4">
-      <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
-      <EventMeta icon={MapPin} label={`${show.venue}, ${formatLocation(show)}`} />
-      <EventMeta icon={Users} label={`${NUMBER_FORMAT.format(show.attendeeCount)} attendees`} />
+      <EventMeta
+        icon={CalendarDays}
+        label={formatDateRange(show.startDate, show.endDate)}
+      />
+      <EventMeta
+        icon={MapPin}
+        label={`${show.venue}, ${formatLocation(show)}`}
+      />
+      <EventMeta
+        icon={Users}
+        label={`${NUMBER_FORMAT.format(show.attendeeCount)} attendees`}
+      />
       <EventMeta
         icon={Building2}
         label={`${NUMBER_FORMAT.format(show.exhibitorCount)} exhibitors`}
@@ -79,11 +96,19 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
           {show.industry}
         </p>
         <h3 className="type-h3 mt-2 text-brand-charcoal">{show.name}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/70">{show.summary}</p>
+        <p className="mt-2 text-sm leading-relaxed text-brand-charcoal/70">
+          {show.summary}
+        </p>
       </div>
       <div className="space-y-2">
-        <EventMeta icon={CalendarDays} label={formatDateRange(show.startDate, show.endDate)} />
-        <EventMeta icon={MapPin} label={`${show.venue}, ${formatCompactLocation(show)}`} />
+        <EventMeta
+          icon={CalendarDays}
+          label={formatDateRange(show.startDate, show.endDate)}
+        />
+        <EventMeta
+          icon={MapPin}
+          label={`${show.venue}, ${formatCompactLocation(show)}`}
+        />
       </div>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
         <div>
@@ -104,7 +129,12 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
         </div>
       </div>
       <div className="mt-2 flex w-full lg:mt-0 lg:justify-end">
-        <Button asChild className="w-full lg:w-auto" size="sm" variant="primary">
+        <Button
+          asChild
+          className="w-full lg:w-auto"
+          size="sm"
+          variant="primary"
+        >
           <Link href="/contact-us">Let&apos;s Talk</Link>
         </Button>
       </div>

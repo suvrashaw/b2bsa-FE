@@ -156,7 +156,12 @@ const CORP_VIDEO_PORTFOLIO_ITEMS = [
     image: IMG_DISTRIBUTECH,
     title: "DistribuTECH 2023",
   },
-  { client: "Enterprise SaaS", href: "/case-studies", image: IMG_SAP, title: "SAP Sapphire 2023" },
+  {
+    client: "Enterprise SaaS",
+    href: "/case-studies",
+    image: IMG_SAP,
+    title: "SAP Sapphire 2023",
+  },
 ];
 
 // ─── BoothWhyChooseUs ────────────────────────────────────────────────────────
@@ -194,13 +199,15 @@ const CULTURE_DATA = {
   heading: "Built by People Who Live on the Show Floor",
   reasons: [
     {
-      description: "We show up early, stay late, and treat every client goal as our own.",
+      description:
+        "We show up early, stay late, and treat every client goal as our own.",
       id: "ownership",
       image: IMG_EV1,
       title: "Radical Ownership",
     },
     {
-      description: "Every KPI we set is tied back to pipeline, SQLs, or revenue outcomes.",
+      description:
+        "Every KPI we set is tied back to pipeline, SQLs, or revenue outcomes.",
       id: "outcomes",
       image: IMG_EV2,
       title: "Outcome Obsession",
@@ -213,7 +220,8 @@ const CULTURE_DATA = {
       title: "Event Agility",
     },
     {
-      description: "Our global team brings on-the-ground knowledge in 40+ countries.",
+      description:
+        "Our global team brings on-the-ground knowledge in 40+ countries.",
       id: "global",
       image: IMG_EV4,
       title: "Global Perspective",
@@ -225,28 +233,32 @@ const CULTURE_DATA = {
 
 const FEATURE_CAROUSEL_ITEMS = [
   {
-    description: "On-floor teams that engage, qualify, and book meetings with your ideal accounts.",
+    description:
+      "On-floor teams that engage, qualify, and book meetings with your ideal accounts.",
     icon: "Users",
     id: "prospecting",
     image: IMG_WAF,
     label: "Active Prospecting",
   },
   {
-    description: "Custom booth structures engineered for brand impact, logistics, and reuse.",
+    description:
+      "Custom booth structures engineered for brand impact, logistics, and reuse.",
     icon: "Box",
     id: "booth",
     image: IMG_EV1,
     label: "Booth Design",
   },
   {
-    description: "Cinematic event video, testimonial shoots, and same-day social content.",
+    description:
+      "Cinematic event video, testimonial shoots, and same-day social content.",
     icon: "Video",
     id: "media",
     image: IMG_EV2,
     label: "Media Production",
   },
   {
-    description: "Pre-event outreach, scheduling, and CRM-connected meeting tracking.",
+    description:
+      "Pre-event outreach, scheduling, and CRM-connected meeting tracking.",
     icon: "CalendarDays",
     id: "meetings",
     image: IMG_EV3,
@@ -258,7 +270,11 @@ const FEATURE_CAROUSEL_ITEMS = [
 
 const BASIC_CARD_ITEMS = [
   {
-    bullets: ["LED video walls", "Interactive touch displays", "Live social feed integration"],
+    bullets: [
+      "LED video walls",
+      "Interactive touch displays",
+      "Live social feed integration",
+    ],
     image: { alt: "Tech-integrated booth", src: IMG_EV1 },
     title: "Technology Integration",
   },
@@ -319,11 +335,12 @@ const _SERVICE_CAROUSEL_ITEMS = [
   },
 ];
 
-const _SERVICE_CAROUSEL_ITEMS_TYPED: HomeServiceItem[] = _SERVICE_CAROUSEL_ITEMS.map((item) => ({
-  ...item,
-  color: "bg-brand-blue",
-  icon: "ArrowRight",
-}));
+const _SERVICE_CAROUSEL_ITEMS_TYPED: HomeServiceItem[] =
+  _SERVICE_CAROUSEL_ITEMS.map((item) => ({
+    ...item,
+    color: "bg-brand-blue",
+    icon: "ArrowRight",
+  }));
 
 // ─── Timeline ─────────────────────────────────────────────────────────
 
@@ -362,8 +379,15 @@ const CONTACT_CINEMATIC_PROPS = {
   badge: "Limited Availability — Book Early",
   description:
     "Tell us about your next event. We'll map out a custom engagement strategy within 24 hours.",
-  headingLines: ["Ready to Turn Your", "Next Event Into Pipeline?"] as [string, string],
-  primaryCta: { href: "/contact-us", label: "Get a Custom Proposal", opensModal: false },
+  headingLines: ["Ready to Turn Your", "Next Event Into Pipeline?"] as [
+    string,
+    string,
+  ],
+  primaryCta: {
+    href: "/contact-us",
+    label: "Get a Custom Proposal",
+    opensModal: false,
+  },
   proofLabel: "Trusted by global brands",
   secondaryCta: { href: "/case-studies", label: "See Case Studies" },
 };
@@ -395,7 +419,10 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/blogs", label: "Blogs" },
   ],
   BlogsCarousel: [
-    { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
+    {
+      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      label: "Booth Hostess",
+    },
     {
       href: "/services/tradeshow-booth-solutions/trade-show-booth-rental",
       label: "Trade Show Booth Rental",
@@ -406,8 +433,14 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     },
   ],
   BoothWhyChooseUs: [
-    { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
-    { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
+    {
+      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      label: "Booth Hostess",
+    },
+    {
+      href: "/services/global-event-solutions/corporate-event-solutions",
+      label: "Corp Events",
+    },
     {
       href: "/services/global-event-solutions/corporate-networking-events",
       label: "Corp Networking",
@@ -453,16 +486,25 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/contact-us", label: "Contact" },
   ],
   CorporateVideoIndustriesSection: [
-    { href: "/services/media-production/corporate-video-production", label: "Corporate Video" },
+    {
+      href: "/services/media-production/corporate-video-production",
+      label: "Corporate Video",
+    },
   ],
   CorporateVideoPortfolioSection: [
-    { href: "/services/media-production/corporate-video-production", label: "Corporate Video" },
+    {
+      href: "/services/media-production/corporate-video-production",
+      label: "Corporate Video",
+    },
   ],
   Culture: [{ href: "/about-us", label: "About" }],
   Events: [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About" },
-    { href: "/services/tradeshow-booth-solutions/trade-show-booth-design", label: "Booth Design" },
+    {
+      href: "/services/tradeshow-booth-solutions/trade-show-booth-design",
+      label: "Booth Design",
+    },
   ],
   FAQ: [
     { href: "/", label: "Home" },
@@ -473,8 +515,14 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     },
   ],
   FAQAccordion: [
-    { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
-    { href: "/services/global-event-solutions/corporate-event-solutions", label: "Corp Events" },
+    {
+      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      label: "Booth Hostess",
+    },
+    {
+      href: "/services/global-event-solutions/corporate-event-solutions",
+      label: "Corp Events",
+    },
     {
       href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Booth Builder",
@@ -545,7 +593,10 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
   Testimonials: [{ href: "/", label: "Home" }],
   Timeline: [
-    { href: "/services/tradeshow-booth-solutions/booth-hostess-services", label: "Booth Hostess" },
+    {
+      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      label: "Booth Hostess",
+    },
     {
       href: "/services/tradeshow-booth-solutions/booth-logistics-services",
       label: "Event Logistics",
@@ -557,13 +608,22 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
 };
 
-const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
-  Blogs: { items: ["BlogCard", "BlogCardGrid"], ui: ["Button", "Eyebrow", "Heading"] },
+const COMPONENT_DEPENDENCIES: Record<
+  string,
+  { items: string[]; ui: string[] }
+> = {
+  Blogs: {
+    items: ["BlogCard", "BlogCardGrid"],
+    ui: ["Button", "Eyebrow", "Heading"],
+  },
   BlogsCarousel: { items: ["BlogsCarouselCard"], ui: ["Button", "Heading"] },
   BoothWhyChooseUs: { items: ["BoothWhyCard"], ui: ["Button", "Heading"] },
   Capabilities: { items: [], ui: ["Eyebrow", "Heading", "Icon"] },
   CardsSection: { items: ["BasicCards"], ui: ["Heading"] },
-  CaseStudies: { items: ["CaseStudyItem"], ui: ["Button", "Eyebrow", "Heading"] },
+  CaseStudies: {
+    items: ["CaseStudyItem"],
+    ui: ["Button", "Eyebrow", "Heading"],
+  },
   CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
@@ -582,8 +642,14 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
   Spotlight: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   Stats: { items: [], ui: ["Heading"] },
-  StickyScroll: { items: [], ui: ["Button", "ContactModal", "Eyebrow", "Heading"] },
-  Testimonials: { items: ["TestimonialCarouselCard"], ui: ["Eyebrow", "Heading"] },
+  StickyScroll: {
+    items: [],
+    ui: ["Button", "ContactModal", "Eyebrow", "Heading"],
+  },
+  Testimonials: {
+    items: ["TestimonialCarouselCard"],
+    ui: ["Eyebrow", "Heading"],
+  },
   Timeline: { items: [], ui: ["Heading"] },
 };
 
@@ -597,7 +663,9 @@ const DemoLabel = ({ name }: { name: string }) => {
         <span className="font-mono text-[10px] font-medium tracking-[0.25em] text-white/40 uppercase">
           section
         </span>
-        <span className="font-mono text-xs font-bold tracking-wide text-brand-cyan">{name}</span>
+        <span className="font-mono text-xs font-bold tracking-wide text-brand-cyan">
+          {name}
+        </span>
       </div>
       {pages.length > 0 && (
         <div className="flex flex-wrap gap-1.5 px-6 pb-2">
@@ -616,7 +684,9 @@ const DemoLabel = ({ name }: { name: string }) => {
       )}
       {pages.length === 0 && (
         <div className="px-6 pb-2">
-          <span className="font-mono text-[10px] text-white/25 italic">demo only</span>
+          <span className="font-mono text-[10px] text-white/25 italic">
+            demo only
+          </span>
         </div>
       )}
 
@@ -667,7 +737,9 @@ const DemoPage = () => {
       {/* Sticky demo banner */}
       <div className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-brand-charcoal px-4 py-3 shadow-xl md:px-8">
         <div className="flex items-center gap-4">
-          <span className="font-mono text-sm font-black text-white">B2BSA2 / DEMO</span>
+          <span className="font-mono text-sm font-black text-white">
+            B2BSA2 / DEMO
+          </span>
           <span className="hidden font-mono text-xs text-white/40 md:inline">
             — all section components
           </span>
@@ -741,7 +813,11 @@ const DemoPage = () => {
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />
-      <CardsGrid cols={4} heading="Why Clients Choose Our Booths" id="why-choose-us">
+      <CardsGrid
+        cols={4}
+        heading="Why Clients Choose Our Booths"
+        id="why-choose-us"
+      >
         {BOOTH_WHY_ITEMS.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
@@ -757,13 +833,13 @@ const DemoPage = () => {
 
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
-      <Carousel cols={4} heading="Active Prospecting & Events" layout="carousel">
+      <Carousel
+        cols={4}
+        heading="Active Prospecting & Events"
+        layout="carousel"
+      >
         {_SERVICE_CAROUSEL_ITEMS_TYPED.map((item) => (
-          <ServicesCard
-            ctaLabel="Get Started"
-            key={item.id}
-            service={item}
-          />
+          <ServicesCard ctaLabel="Get Started" key={item.id} service={item} />
         ))}
       </Carousel>
 
@@ -832,7 +908,11 @@ const DemoPage = () => {
         cols={4}
         heading="From the Blog"
         headingAction={
-          <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+          <Button
+            asChild
+            className="shrink-0 self-start md:self-auto"
+            variant="primary"
+          >
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         }
@@ -868,7 +948,12 @@ const DemoPage = () => {
         layout="carousel"
       >
         {HOME_FAQ_CONTENT.faqs.map((f) => (
-          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
+          <FAQCard
+            answer={f.answer}
+            image={f.image}
+            key={f.id}
+            question={f.question}
+          />
         ))}
       </Carousel>
 

@@ -18,54 +18,67 @@ const LANGUAGES = [
   { code: "ZH", name: "中文" },
 ] as const;
 
-export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const LanguageSelector = memo(
+  ({ lightText }: { lightText: boolean }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-  const handleMouseEnter = useCallback(() => setIsOpen(true), []);
-  const handleMouseLeave = useCallback(() => setIsOpen(false), []);
+    const handleMouseEnter = useCallback(() => setIsOpen(true), []);
+    const handleMouseLeave = useCallback(() => setIsOpen(false), []);
 
-  return (
-    <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <button
-        className={cn(
-          "flex min-h-[44px] items-center gap-1.5 p-2 text-sm font-medium transition-colors",
-          lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
-        )}
-        type="button"
+    return (
+      <div
+        className="relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <Globe className="size-4" />
-        <span>EN</span>
-        <ChevronDown
-          className={cn("size-3 transition-transform duration-200", isOpen ? "rotate-180" : "")}
-        />
-      </button>
+        <button
+          className={cn(
+            "flex min-h-[44px] items-center gap-1.5 p-2 text-sm font-medium transition-colors",
+            lightText
+              ? "text-white hover:text-white/80"
+              : "hover:text-brand-blue",
+          )}
+          type="button"
+        >
+          <Globe className="size-4" />
+          <span>EN</span>
+          <ChevronDown
+            className={cn(
+              "size-3 transition-transform duration-200",
+              isOpen ? "rotate-180" : "",
+            )}
+          />
+        </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            animate={LANG_DROPDOWN_ANIMATE}
-            className="absolute top-full right-0 mt-2 min-w-[148px] overflow-hidden rounded-xl border border-gray-100 bg-white py-1.5 shadow-xl"
-            exit={LANG_DROPDOWN_EXIT}
-            initial={LANG_DROPDOWN_INITIAL}
-            transition={LANG_DROPDOWN_TRANSITION}
-          >
-            {LANGUAGES.map((lang) => (
-              <button
-                className={cn(
-                  "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue",
-                  lang.code === "EN" ? "font-semibold text-brand-blue" : "text-brand-charcoal"
-                )}
-                key={lang.code}
-                type="button"
-              >
-                <span className="w-7 text-xs font-bold">{lang.code}</span>
-                <span>{lang.name}</span>
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-});
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              animate={LANG_DROPDOWN_ANIMATE}
+              className="absolute top-full right-0 mt-2 min-w-[148px] overflow-hidden rounded-xl border border-gray-100 bg-white py-1.5 shadow-xl"
+              exit={LANG_DROPDOWN_EXIT}
+              initial={LANG_DROPDOWN_INITIAL}
+              transition={LANG_DROPDOWN_TRANSITION}
+            >
+              {LANGUAGES.map((lang) => (
+                <button
+                  className={cn(
+                    "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue",
+                    lang.code === "EN"
+                      ? "font-semibold text-brand-blue"
+                      : "text-brand-charcoal",
+                  )}
+                  key={lang.code}
+                  type="button"
+                >
+                  <span className="w-7 text-xs font-bold">{lang.code}</span>
+                  <span>{lang.name}</span>
+                </button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  },
+);
 LanguageSelector.displayName = "LanguageSelector";

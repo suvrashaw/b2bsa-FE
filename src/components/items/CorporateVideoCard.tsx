@@ -9,7 +9,11 @@ export interface CorporateVideoCardItem {
   title: string;
 }
 
-export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) => (
+export const CorporateVideoCard = ({
+  item,
+}: {
+  item: CorporateVideoCardItem;
+}) => (
   <article className="group overflow-hidden rounded-2xl bg-white text-[#222222] shadow-[0_26px_70px_rgba(0,0,0,0.24)] md:rounded-lg">
     <div className="relative aspect-[1.45] overflow-hidden">
       <Image
@@ -26,7 +30,9 @@ export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) =
         {item.client ?? item.title}
       </p>
       <h3 className="type-h3 leading-tight">{item.title}</h3>
-      <p className="type-body-m mt-4 leading-relaxed text-[#333333]">Case Study</p>
+      <p className="type-body-m mt-4 leading-relaxed text-[#333333]">
+        Case Study
+      </p>
 
       <Link
         className="mt-auto inline-flex w-fit items-center gap-2 pt-12 font-heading text-2xl font-bold text-[#0C6573] transition-colors hover:text-[#1E6091] md:text-3xl"

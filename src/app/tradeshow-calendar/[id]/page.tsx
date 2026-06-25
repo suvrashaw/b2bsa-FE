@@ -24,12 +24,15 @@ const SUPERSEDED_BY: Record<string, string> = {
   "money-20-20-amsterdam": "money2020-europe-2026",
 };
 
-const findEventById = (id: string) => TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
+const findEventById = (id: string) =>
+  TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
 
 export const generateStaticParams = () =>
   TRADE_SHOW_CALENDAR_EVENTS.map((event) => ({ id: event.id }));
 
-export const generateMetadata = async ({ params }: EventDetailPageProps): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: EventDetailPageProps): Promise<Metadata> => {
   const { id } = await params;
   const event = findEventById(id);
 
@@ -99,10 +102,13 @@ const Page = async ({ params }: EventDetailPageProps) => {
           buildBreadcrumbJsonLd(
             [
               { name: "Home", url: siteUrl },
-              { name: "Tradeshow Calendar", url: `${siteUrl}/tradeshow-calendar` },
+              {
+                name: "Tradeshow Calendar",
+                url: `${siteUrl}/tradeshow-calendar`,
+              },
               { name: event.name, url: eventUrl },
             ],
-            eventUrl
+            eventUrl,
           ),
         ])}
       />

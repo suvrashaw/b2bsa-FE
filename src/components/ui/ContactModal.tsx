@@ -11,7 +11,8 @@ import { Button } from "@/components/ui/Button";
 const BASE_MODAL_FORM = {
   companyLabel: "Company Name",
   companyPlaceholder: "Your Company",
-  consentLabel: "I agree to receive communications from B2B Sales Arrow regarding their services.",
+  consentLabel:
+    "I agree to receive communications from B2B Sales Arrow regarding their services.",
   ctaLabel: "Send Your Enquiry",
   emailLabel: "Work Email",
   emailPlaceholder: "john@company.com",
@@ -37,21 +38,26 @@ export interface ContactModalServiceField {
   placeholder?: string;
 }
 
-export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProps) => {
+export const ContactModal = ({
+  isOpen,
+  onClose,
+  serviceField,
+}: ContactModalProps) => {
   const form = useMemo(
     () => ({
       ...BASE_MODAL_FORM,
       ...(serviceField && {
-            serviceLabel: serviceField.label ?? "Select the service you need",
-            serviceOptions: serviceField.options,
-            servicePlaceholder: serviceField.placeholder ?? "Select a service...",
-          }),
+        serviceLabel: serviceField.label ?? "Select the service you need",
+        serviceOptions: serviceField.options,
+        servicePlaceholder: serviceField.placeholder ?? "Select a service...",
+      }),
     }),
-    [serviceField]
+    [serviceField],
   );
 
   const handleBackdropKeyDown = useCallback(
-    (e: React.KeyboardEvent) => (e.key === "Enter" || e.key === " ") && onClose(),
+    (e: React.KeyboardEvent) =>
+      (e.key === "Enter" || e.key === " ") && onClose(),
     [onClose],
   );
 
@@ -85,8 +91,12 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
       <div className="relative z-10 max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
         <div className="mb-6 flex items-start justify-between">
           <div>
-            <h2 className="font-heading text-2xl font-black text-brand-charcoal">Get in Touch</h2>
-            <p className="mt-1 text-sm text-gray-500">Our team will respond within 24 hours.</p>
+            <h2 className="font-heading text-2xl font-black text-brand-charcoal">
+              Get in Touch
+            </h2>
+            <p className="mt-1 text-sm text-gray-500">
+              Our team will respond within 24 hours.
+            </p>
           </div>
           <button
             aria-label="Close"
@@ -138,7 +148,11 @@ export const ContactModalTrigger = ({
           {label}
         </Button>
       </div>
-      <ContactModal isOpen={isOpen} onClose={close} serviceField={serviceField} />
+      <ContactModal
+        isOpen={isOpen}
+        onClose={close}
+        serviceField={serviceField}
+      />
     </>
   );
 };

@@ -3,9 +3,15 @@
 import type { CSSProperties, ReactElement, ReactNode } from "react";
 
 import { useEffect, useMemo, useState } from "react";
-import { ComposableMap, Geographies, Geography, useMapContext } from "react-simple-maps";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  useMapContext,
+} from "react-simple-maps";
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const GEO_URL =
+  "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const MAP_WIDTH = 1200;
 const MAP_HEIGHT = 720;
@@ -77,7 +83,11 @@ const arcPath = (from: [number, number], to: [number, number]) => {
   return `M ${fromX} ${fromY} Q ${middleX} ${Math.min(fromY, toY) - lift} ${toX} ${toY}`;
 };
 
-const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) => {
+const FooterMapOverlay = ({
+  activeRouteIndex,
+}: {
+  activeRouteIndex: number;
+}) => {
   const { projection } = useMapContext();
 
   const points = useMemo<ProjectedCityNode[]>(
@@ -86,7 +96,7 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
         ...city,
         point: projection(city.coordinates) ?? ([0, 0] as [number, number]),
       })),
-    [projection]
+    [projection],
   );
 
   const routes = useMemo<RouteNode[]>(
@@ -97,12 +107,14 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
         id: `footer-route-${point.id}`,
         to: points[index + 1],
       })),
-    [points]
+    [points],
   );
 
   const activeRoute = routes[activeRouteIndex % Math.max(routes.length, 1)];
   const focusX =
-    (activeRoute ? activeRoute.from.point[0] + activeRoute.to.point[0] : MAP_WIDTH) / 2;
+    (activeRoute
+      ? activeRoute.from.point[0] + activeRoute.to.point[0]
+      : MAP_WIDTH) / 2;
   const focusY = activeRoute
     ? Math.min(activeRoute.from.point[1], activeRoute.to.point[1]) - 40
     : MAP_HEIGHT / 3;
@@ -120,14 +132,26 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
           <stop offset="44%" stopColor="#e7fdff" />
           <stop offset="100%" stopColor="#8df2ff" />
         </linearGradient>
-        <filter height="200%" id="footer-map-glow" width="200%" x="-50%" y="-50%">
+        <filter
+          height="200%"
+          id="footer-map-glow"
+          width="200%"
+          x="-50%"
+          y="-50%"
+        >
           <feGaussianBlur result="blurred" stdDeviation="2.5" />
           <feMerge>
             <feMergeNode in="blurred" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <filter height="260%" id="footer-map-glow-strong" width="260%" x="-80%" y="-80%">
+        <filter
+          height="260%"
+          id="footer-map-glow-strong"
+          width="260%"
+          x="-80%"
+          y="-80%"
+        >
           <feGaussianBlur result="blurred" stdDeviation="5.5" />
           <feMerge>
             <feMergeNode in="blurred" />
@@ -154,17 +178,27 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
               d={route.d}
               fill="none"
               filter={isActive ? "url(#footer-map-glow)" : undefined}
-              stroke={isActive ? "rgba(191, 248, 255, 0.12)" : "rgba(143, 232, 255, 0.05)"}
+              stroke={
+                isActive
+                  ? "rgba(191, 248, 255, 0.12)"
+                  : "rgba(143, 232, 255, 0.05)"
+              }
               strokeLinecap="round"
               strokeWidth={isActive ? 8 : 2.5}
             />
             <path
               className={
-                isActive ? "footer-command-map-route-active" : "footer-command-map-route-idle"
+                isActive
+                  ? "footer-command-map-route-active"
+                  : "footer-command-map-route-idle"
               }
               d={route.d}
               fill="none"
-              stroke={isActive ? "url(#footer-map-route)" : "rgba(143, 232, 255, 0.28)"}
+              stroke={
+                isActive
+                  ? "url(#footer-map-route)"
+                  : "rgba(143, 232, 255, 0.28)"
+              }
               strokeDasharray={isActive ? "16 13" : "6 13"}
               strokeLinecap="round"
               strokeWidth={isActive ? 3.2 : 1.25}
@@ -175,30 +209,45 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
 
       {activeRoute ? (
         <circle fill="#f0feff" filter="url(#footer-map-glow)" r={4.75}>
-          <animateMotion dur="3.8s" path={activeRoute.d} repeatCount="indefinite" />
+          <animateMotion
+            dur="3.8s"
+            path={activeRoute.d}
+            repeatCount="indefinite"
+          />
         </circle>
       ) : null}
 
       {points.map((point) => {
         const [x, y] = point.point;
         const isRouteNode =
-          activeRoute && (point.id === activeRoute.from.id || point.id === activeRoute.to.id);
+          activeRoute &&
+          (point.id === activeRoute.from.id || point.id === activeRoute.to.id);
         return (
           <g key={point.id}>
             <circle
               cx={x}
               cy={y}
-              fill={isRouteNode ? "rgba(198, 250, 255, 0.1)" : "rgba(75, 192, 217, 0.05)"}
+              fill={
+                isRouteNode
+                  ? "rgba(198, 250, 255, 0.1)"
+                  : "rgba(75, 192, 217, 0.05)"
+              }
               r={isRouteNode ? 22 : 12}
             />
             <circle
-              className={isRouteNode ? "footer-command-map-ring-active" : undefined}
+              className={
+                isRouteNode ? "footer-command-map-ring-active" : undefined
+              }
               cx={x}
               cy={y}
               fill="none"
               filter={isRouteNode ? "url(#footer-map-glow-strong)" : undefined}
               r={isRouteNode ? 9 : 5}
-              stroke={isRouteNode ? "rgba(225, 253, 255, 0.58)" : "rgba(143, 232, 255, 0.28)"}
+              stroke={
+                isRouteNode
+                  ? "rgba(225, 253, 255, 0.58)"
+                  : "rgba(143, 232, 255, 0.28)"
+              }
               strokeWidth={isRouteNode ? 2 : 1.5}
             />
             <circle
@@ -222,7 +271,7 @@ export const FooterCommandMap = () => {
   useEffect(() => {
     const interval = globalThis.setInterval(
       () => setActiveRouteIndex((index) => (index + 1) % routeCount),
-      3800
+      3800,
     );
     return () => globalThis.clearInterval(interval);
   }, [routeCount]);
@@ -272,7 +321,11 @@ export const FooterCommandMap = () => {
           pointer-events: none;
           content: "";
           background:
-            radial-gradient(ellipse 56% 42% at 51% 43%, rgba(155, 243, 255, 0.07), transparent 70%),
+            radial-gradient(
+              ellipse 56% 42% at 51% 43%,
+              rgba(155, 243, 255, 0.07),
+              transparent 70%
+            ),
             linear-gradient(
               90deg,
               rgba(30, 96, 145, 0.1),
@@ -297,7 +350,11 @@ export const FooterCommandMap = () => {
               transparent 76%,
               rgba(30, 96, 145, 0.3)
             ),
-            radial-gradient(ellipse at center, transparent 46%, rgba(30, 96, 145, 0.24) 100%);
+            radial-gradient(
+              ellipse at center,
+              transparent 46%,
+              rgba(30, 96, 145, 0.24) 100%
+            );
         }
 
         .footer-command-map-scan {

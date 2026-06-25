@@ -2,9 +2,20 @@
 
 import { Grid2X2, List, RotateCcw, Search } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { type ChangeEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  type ChangeEvent,
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
-import { formatLocation, TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
+import {
+  formatLocation,
+  TradeShowCard,
+  TradeShowListItem,
+} from "@/components/items/TradeShowCard";
 import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { Button } from "@/components/ui/Button";
 import { Pagination } from "@/components/ui/Pagination";
@@ -63,7 +74,10 @@ const addMonths = (date: Date, months: number) => {
   return nextDate;
 };
 
-const sortItems = <T,>(items: T[], compare: (first: T, second: T) => number) => {
+const sortItems = <T,>(
+  items: T[],
+  compare: (first: T, second: T) => number,
+) => {
   const sortedItems = [...items];
   sortedItems.sort(compare);
   return sortedItems;
@@ -72,17 +86,23 @@ const sortItems = <T,>(items: T[], compare: (first: T, second: T) => number) => 
 const matchesNumberFilter = (
   actualValue: number,
   operator: NumberOperator,
-  requestedValue: string
+  requestedValue: string,
 ) => {
   if (!requestedValue.trim()) return true;
 
   const parsedValue = Number(requestedValue);
   if (Number.isNaN(parsedValue)) return true;
 
-  return operator === "gte" ? actualValue >= parsedValue : actualValue <= parsedValue;
+  return operator === "gte"
+    ? actualValue >= parsedValue
+    : actualValue <= parsedValue;
 };
 
-const matchesDateRange = (show: CalendarTradeShow, range: DateRange, today: Date) => {
+const matchesDateRange = (
+  show: CalendarTradeShow,
+  range: DateRange,
+  today: Date,
+) => {
   if (range === "all") return true;
 
   const startDate = toDate(show.startDate);
@@ -130,7 +150,7 @@ const ViewModeButton = ({
         "flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition",
         activeMode === mode.value
           ? "border-brand-charcoal bg-brand-charcoal text-white"
-          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue"
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue",
       )}
       onClick={handleClick}
       type="button"
@@ -141,7 +161,13 @@ const ViewModeButton = ({
   );
 };
 
-const FilterPanel = ({ children, title }: { children: ReactNode; title: string }) => (
+const FilterPanel = ({
+  children,
+  title,
+}: {
+  children: ReactNode;
+  title: string;
+}) => (
   <section className={CONTROL_PANEL_CLASS}>
     <h2 className="mb-3 text-sm font-bold text-brand-charcoal">{title}</h2>
     {children}
@@ -188,7 +214,7 @@ const DirectionButton = ({
         "min-h-11 flex-1 rounded-lg border px-3 text-sm font-semibold transition",
         selectedDirection === direction
           ? "border-brand-charcoal bg-brand-charcoal text-white"
-          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue"
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-brand-blue hover:text-brand-blue",
       )}
       onClick={handleClick}
       type="button"
@@ -212,7 +238,11 @@ const NumberFilter = ({
   value: string;
 }) => (
   <div className="grid grid-cols-[0.85fr_1.15fr] gap-3">
-    <select className={FORM_CONTROL_CLASS} onChange={onOperatorChange} value={operator}>
+    <select
+      className={FORM_CONTROL_CLASS}
+      onChange={onOperatorChange}
+      value={operator}
+    >
       {NUMBER_OPERATOR_OPTIONS.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -238,10 +268,12 @@ export const TradeShowCalendarSection = () => {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [attendeeOperator, setAttendeeOperator] = useState<NumberOperator>("gte");
+  const [attendeeOperator, setAttendeeOperator] =
+    useState<NumberOperator>("gte");
   const [attendeeValue, setAttendeeValue] = useState("");
   const [dateRange, setDateRange] = useState<DateRange>("all");
-  const [exhibitorOperator, setExhibitorOperator] = useState<NumberOperator>("gte");
+  const [exhibitorOperator, setExhibitorOperator] =
+    useState<NumberOperator>("gte");
   const [exhibitorValue, setExhibitorValue] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState("All Industries");
@@ -264,30 +296,34 @@ export const TradeShowCalendarSection = () => {
       const query = params.toString();
       router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
     },
-    [pathname, router, searchParams]
+    [pathname, router, searchParams],
   );
 
   const today = useMemo(() => {
     const now = new Date();
-    return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+    return new Date(
+      Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+    );
   }, []);
 
   const locationOptions = useMemo(
     () =>
-      sortItems([...new Set(events.map((event) => formatLocation(event)))], (first, second) =>
-        first.localeCompare(second)
+      sortItems(
+        [...new Set(events.map((event) => formatLocation(event)))],
+        (first, second) => first.localeCompare(second),
       ),
-    [events]
+    [events],
   );
 
   const industryOptions = useMemo(
     () => [
       "All Industries",
-      ...sortItems([...new Set(events.map((event) => event.industry))], (first, second) =>
-        first.localeCompare(second)
+      ...sortItems(
+        [...new Set(events.map((event) => event.industry))],
+        (first, second) => first.localeCompare(second),
       ),
     ],
-    [events]
+    [events],
   );
 
   const handleAttendeeOperatorChange = useCallback(
@@ -295,7 +331,7 @@ export const TradeShowCalendarSection = () => {
       setAttendeeOperator(event.currentTarget.value as NumberOperator);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleAttendeeValueChange = useCallback(
@@ -303,7 +339,7 @@ export const TradeShowCalendarSection = () => {
       setAttendeeValue(event.currentTarget.value);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleClearFilters = useCallback(() => {
@@ -326,7 +362,7 @@ export const TradeShowCalendarSection = () => {
       setDateRange(event.currentTarget.value as DateRange);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleExhibitorOperatorChange = useCallback(
@@ -334,7 +370,7 @@ export const TradeShowCalendarSection = () => {
       setExhibitorOperator(event.currentTarget.value as NumberOperator);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleExhibitorValueChange = useCallback(
@@ -342,7 +378,7 @@ export const TradeShowCalendarSection = () => {
       setExhibitorValue(event.currentTarget.value);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleIndustryChange = useCallback(
@@ -350,7 +386,7 @@ export const TradeShowCalendarSection = () => {
       setSelectedIndustry(event.currentTarget.value);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleLocationChange = useCallback(
@@ -360,11 +396,11 @@ export const TradeShowCalendarSection = () => {
       setSelectedLocations((currentLocations) =>
         checked
           ? [...currentLocations, value]
-          : currentLocations.filter((location) => location !== value)
+          : currentLocations.filter((location) => location !== value),
       );
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleSearchChange = useCallback(
@@ -372,7 +408,7 @@ export const TradeShowCalendarSection = () => {
       setSearchQuery(event.currentTarget.value);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleSortFieldChange = useCallback(
@@ -380,7 +416,7 @@ export const TradeShowCalendarSection = () => {
       setSortField(event.currentTarget.value as SortField);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const handleSortDirectionChange = useCallback(
@@ -388,7 +424,7 @@ export const TradeShowCalendarSection = () => {
       setSortDirection(direction);
       updatePage(1);
     },
-    [updatePage]
+    [updatePage],
   );
 
   const filteredEvents = useMemo(() => {
@@ -408,9 +444,11 @@ export const TradeShowCalendarSection = () => {
         .join(" ")
         .toLowerCase();
 
-      const matchesSearch = !normalizedQuery || searchableText.includes(normalizedQuery);
+      const matchesSearch =
+        !normalizedQuery || searchableText.includes(normalizedQuery);
       const isMatchesIndustry =
-        selectedIndustry === "All Industries" || show.industry === selectedIndustry;
+        selectedIndustry === "All Industries" ||
+        show.industry === selectedIndustry;
       const matchesLocation =
         selectedLocations.length === 0 || selectedLocations.includes(location);
 
@@ -418,8 +456,16 @@ export const TradeShowCalendarSection = () => {
         matchesSearch &&
         isMatchesIndustry &&
         matchesLocation &&
-        matchesNumberFilter(show.attendeeCount, attendeeOperator, attendeeValue) &&
-        matchesNumberFilter(show.exhibitorCount, exhibitorOperator, exhibitorValue) &&
+        matchesNumberFilter(
+          show.attendeeCount,
+          attendeeOperator,
+          attendeeValue,
+        ) &&
+        matchesNumberFilter(
+          show.exhibitorCount,
+          exhibitorOperator,
+          exhibitorValue,
+        ) &&
         matchesDateRange(show, dateRange, today)
       );
     });
@@ -432,7 +478,10 @@ export const TradeShowCalendarSection = () => {
       }
 
       if (sortField === "location") {
-        return formatLocation(first).localeCompare(formatLocation(second)) * direction;
+        return (
+          formatLocation(first).localeCompare(formatLocation(second)) *
+          direction
+        );
       }
 
       if (sortField === "attendees") {
@@ -443,7 +492,11 @@ export const TradeShowCalendarSection = () => {
         return (first.exhibitorCount - second.exhibitorCount) * direction;
       }
 
-      return (toDate(first.startDate).getTime() - toDate(second.startDate).getTime()) * direction;
+      return (
+        (toDate(first.startDate).getTime() -
+          toDate(second.startDate).getTime()) *
+        direction
+      );
     });
   }, [
     attendeeOperator,
@@ -465,7 +518,8 @@ export const TradeShowCalendarSection = () => {
     paginatedItems: paginatedEvents,
     totalPages,
   } = applyPagination(filteredEvents, requestedPage);
-  const hasEmptyPage = filteredEvents.length > 0 && paginatedEvents.length === 0;
+  const hasEmptyPage =
+    filteredEvents.length > 0 && paginatedEvents.length === 0;
   let resultsContent: ReactNode;
 
   useEffect(() => {
@@ -481,9 +535,14 @@ export const TradeShowCalendarSection = () => {
           No trade shows found
         </SectionHeader>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
-          Adjust the search, filters, or date range to broaden the calendar results.
+          Adjust the search, filters, or date range to broaden the calendar
+          results.
         </p>
-        <Button className="mt-6 gap-2" onClick={handleClearFilters} variant="primary">
+        <Button
+          className="mt-6 gap-2"
+          onClick={handleClearFilters}
+          variant="primary"
+        >
           <RotateCcw className="size-4" />
           Reset Calendar
         </Button>
@@ -496,7 +555,8 @@ export const TradeShowCalendarSection = () => {
           No more trade shows on this page.
         </SectionHeader>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
-          Use the pagination controls to return to the available calendar results.
+          Use the pagination controls to return to the available calendar
+          results.
         </p>
       </div>
     );
@@ -640,7 +700,11 @@ export const TradeShowCalendarSection = () => {
               </select>
             </FilterPanel>
 
-            <Button className="w-full gap-2" onClick={handleClearFilters} variant="primary">
+            <Button
+              className="w-full gap-2"
+              onClick={handleClearFilters}
+              variant="primary"
+            >
               <RotateCcw className="size-4" />
               Clear Filters
             </Button>

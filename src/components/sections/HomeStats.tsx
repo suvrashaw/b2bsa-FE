@@ -6,7 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home/content";
+import {
+  HOME_STATS_CONTENT,
+  type HomeStatItem,
+  type StatsContent,
+} from "@/content/home/content";
 
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
 
@@ -18,7 +22,10 @@ const TRANSITION = { duration: 0.38 } as const;
 const useRotatingWord = (words: string[], interval = 2500) => {
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
+    const id = setInterval(
+      () => setIndex((i) => (i + 1) % words.length),
+      interval,
+    );
     return () => clearInterval(id);
   }, [words.length, interval]);
   return { key: index, word: words[index] };
@@ -30,7 +37,11 @@ interface RotatingWordBadgeProps {
   words: string[];
 }
 
-const RotatingWordBadge = ({ className, interval, words }: RotatingWordBadgeProps) => {
+const RotatingWordBadge = ({
+  className,
+  interval,
+  words,
+}: RotatingWordBadgeProps) => {
   const { key: wordKey, word } = useRotatingWord(words, interval);
   return (
     <AnimatePresence mode="wait">
@@ -95,24 +106,34 @@ export const HomeStats = ({
   title,
 }: HomeStatsProps = {}) => {
   const resolvedHeading = title ?? heading ?? content.heading;
-  const resolvedStats: HomeStatItem[] = (items ?? stats ?? content.stats).map((stat, index) => ({
-    ...stat,
-    bg: stat.bg ?? ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3],
-    icon: stat.icon ?? ["TrendingUp", "Globe", "Target"][index % 3],
-  }));
+  const resolvedStats: HomeStatItem[] = (items ?? stats ?? content.stats).map(
+    (stat, index) => ({
+      ...stat,
+      bg:
+        stat.bg ??
+        ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3],
+      icon: stat.icon ?? ["TrendingUp", "Globe", "Target"][index % 3],
+    }),
+  );
 
   const col1Stats = [...resolvedStats, ...resolvedStats];
   const offsetStats = [...resolvedStats.slice(3), ...resolvedStats.slice(0, 3)];
   const col2Stats = [...offsetStats, ...offsetStats];
 
   return (
-    <section className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20" id="about">
+    <section
+      className="overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20"
+      id="about"
+    >
       <div className="container mx-auto grid items-center gap-8 px-4 md:gap-12 md:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div className="order-last flex flex-col items-start space-y-6 text-left lg:order-none">
           <div className="w-full text-left">
             <SectionHeader as="h2" className="mb-6 lg:text-4xl xl:text-5xl">
               <span className="block">{resolvedHeading}</span>
-              <RotatingWordBadge className="block text-brand-blue" words={ROTATING_WORDS} />
+              <RotatingWordBadge
+                className="block text-brand-blue"
+                words={ROTATING_WORDS}
+              />
             </SectionHeader>
             {description && (
               <div className="type-body-l space-y-6 leading-relaxed text-brand-charcoal/80">
@@ -129,7 +150,10 @@ export const HomeStats = ({
                 </p>
                 {mission && (
                   <p className="group-hover:text-brand-blue:text-brand-cyan mt-6 font-serif text-xl leading-relaxed text-black italic transition-colors duration-500 md:text-2xl">
-                    <span className="font-bold text-brand-blue not-italic">Mission:</span> {mission}
+                    <span className="font-bold text-brand-blue not-italic">
+                      Mission:
+                    </span>{" "}
+                    {mission}
                   </p>
                 )}
                 {attribution && (

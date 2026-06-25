@@ -29,7 +29,7 @@ const Page = () => (
           CASE_STUDY_DETAILS.slice(0, 10).map((s) => ({
             name: s.title,
             url: `${siteUrl}/case-studies/${s.slug}`,
-          }))
+          })),
         ),
       ])}
     />

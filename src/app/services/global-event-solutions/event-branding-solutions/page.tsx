@@ -44,23 +44,29 @@ const capabilityAssets = [
   { icon: "Fingerprint", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
-const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
-  description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Palette",
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
-  label: phase.title,
-}));
+const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map(
+  (phase, index) => ({
+    description: phase.description,
+    icon: capabilityAssets[index]?.icon ?? "Palette",
+    id: phase.title
+      .toLowerCase()
+      .replaceAll(/[^a-z0-9]+/g, "-")
+      .replaceAll(/(^-|-$)/g, ""),
+    image:
+      capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+    label: phase.title,
+  }),
+);
 
 const SECONDARY_SERVICES = {
   ...EVENT_BRANDING_INDUSTRIES_SECTION,
   showCapabilityDescriptions: false,
 };
 
-const EVENT_BRANDING_SPOTLIGHT = { ...EVENT_BRANDING_INTRO, sectionClassName: "pt-8 md:pt-12" };
+const EVENT_BRANDING_SPOTLIGHT = {
+  ...EVENT_BRANDING_INTRO,
+  sectionClassName: "pt-8 md:pt-12",
+};
 
 const Page = () => {
   return (
@@ -71,7 +77,11 @@ const Page = () => {
       contactUs={EVENT_BRANDING_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={EVENT_BRANDING_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid
+            cols={4}
+            heading={EVENT_BRANDING_WHY_CHOOSE_US.heading}
+            id="why-choose-us"
+          >
             {EVENT_BRANDING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -80,7 +90,11 @@ const Page = () => {
             cols={4}
             heading={EVENT_BRANDING_BLOGS_SECTION.heading}
             headingAction={
-              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+              <Button
+                asChild
+                className="shrink-0 self-start md:self-auto"
+                variant="primary"
+              >
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

@@ -34,13 +34,16 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
+import {
+  footerNavigation,
+  serviceNavigationGroups,
+} from "@/content/navigation";
 import { cn, toTitleCase } from "@/lib";
 
 /* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
 const FooterCommandMap = dynamic(
   () => import("./footer/FooterCommandMap").then((mod) => mod.FooterCommandMap),
-  { ssr: false }
+  { ssr: false },
 );
 /* eslint-enable unicorn/prefer-await */
 
@@ -81,7 +84,11 @@ const socialLinks = [
 
 const footerAddresses = [
   {
-    address: ["10 A 5 Parijat Colony", "Mahaveer Nagar 3 Kota", "Rajasthan 324005"],
+    address: [
+      "10 A 5 Parijat Colony",
+      "Mahaveer Nagar 3 Kota",
+      "Rajasthan 324005",
+    ],
     name: "BTWOB Sales Arrow",
     region: "India",
   },
@@ -112,20 +119,23 @@ export const Footer = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
-        	return;
+          return;
         }
 
         setFooterInView(true);
         observer.disconnect();
       },
-      { rootMargin: "300px" }
+      { rootMargin: "300px" },
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <footer className="relative overflow-hidden bg-brand-blue" ref={containerRef}>
+    <footer
+      className="relative overflow-hidden bg-brand-blue"
+      ref={containerRef}
+    >
       {/* Map as static background */}
       <div className="pointer-events-none absolute inset-0 z-0 translate-y-[10%] scale-[1.65] opacity-75">
         {footerInView && <FooterCommandMap />}
@@ -144,7 +154,10 @@ export const Footer = () => {
             <FooterServiceGroup group={serviceNavigationGroups[1]} />
           </div>
           <div className="min-w-0">
-            <FooterServiceGroup group={serviceNavigationGroups[2]} noWrapTitle />
+            <FooterServiceGroup
+              group={serviceNavigationGroups[2]}
+              noWrapTitle
+            />
           </div>
           <div className="min-w-0 space-y-6">
             <FooterServiceGroup group={serviceNavigationGroups[3]} />
@@ -168,16 +181,21 @@ export const Footer = () => {
                 src="/media/logo/logo-white.svg"
               />
             </Link>
-            <SectionHeader as="h2" className="mb-3 text-lg font-bold text-white!" preserveClassName>
+            <SectionHeader
+              as="h2"
+              className="mb-3 text-lg font-bold text-white!"
+              preserveClassName
+            >
               Turn Your Next Trade Show into a Revenue Engine
             </SectionHeader>
             <p className="max-w-sm text-sm leading-relaxed text-white/90">
-              We deliver premier global event solutions that turn your corporate presence into a
-              measurable revenue engine. Let&apos;s build your pipeline together.
+              We deliver premier global event solutions that turn your corporate
+              presence into a measurable revenue engine. Let&apos;s build your
+              pipeline together.
             </p>
             <p className="mt-3 max-w-sm text-sm font-medium text-white/80">
-              Mission: To transform your global event presence into measurable, high-impact
-              commercial outcomes.
+              Mission: To transform your global event presence into measurable,
+              high-impact commercial outcomes.
             </p>
           </div>
 
@@ -258,11 +276,16 @@ export const Footer = () => {
 
         <div className="mb-6 grid gap-4 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
           {footerAddresses.map((item) => (
-            <address className="text-sm text-white/85 not-italic" key={item.region}>
+            <address
+              className="text-sm text-white/85 not-italic"
+              key={item.region}
+            >
               <span className="mb-2 block text-xs font-semibold tracking-widest text-white/60 uppercase">
                 {item.region}
               </span>
-              <span className="mb-2 block font-semibold text-white">{item.name}</span>
+              <span className="mb-2 block font-semibold text-white">
+                {item.name}
+              </span>
               <span className="block leading-relaxed">
                 {item.address.map((line) => (
                   <span className="block" key={line}>
@@ -276,7 +299,9 @@ export const Footer = () => {
 
         <div className="pointer-events-auto flex flex-col items-center justify-between gap-6 border-t border-white/25 pt-6 md:flex-row md:gap-4">
           <div className="text-xs text-white/80 md:flex-1">
-            <p>© {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.</p>
+            <p>
+              © {new Date().getFullYear()} B2B Sales Arrow. All Rights Reserved.
+            </p>
           </div>
 
           <div className="flex justify-center md:flex-1">
@@ -290,7 +315,11 @@ export const Footer = () => {
                   return (
                     <a
                       aria-label={`Visit B2B Sales Arrow on ${item.name}`}
-                      className={cn(baseClass, "hover:text-white", item.colorClass)}
+                      className={cn(
+                        baseClass,
+                        "hover:text-white",
+                        item.colorClass,
+                      )}
                       href={item.href}
                       key={item.name}
                       rel="noreferrer"
@@ -307,7 +336,7 @@ export const Footer = () => {
                     className={cn(
                       baseClass,
                       item.colorClass.split(" ", 1)[0],
-                      "cursor-not-allowed opacity-60 hover:bg-brand-gray"
+                      "cursor-not-allowed opacity-60 hover:bg-brand-gray",
                     )}
                     disabled
                     key={item.name}

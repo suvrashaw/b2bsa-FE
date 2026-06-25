@@ -60,7 +60,12 @@ interface BoothWhyCardProps {
   style?: React.CSSProperties;
 }
 
-export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProps) => {
+export const BoothWhyCard = ({
+  className,
+  index,
+  item,
+  style,
+}: BoothWhyCardProps) => {
   const [hovered, setHovered] = useState(false);
   const Icon = item.icon ? icons[item.icon as keyof typeof icons] : undefined;
 
@@ -71,7 +76,7 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
     <motion.article
       className={cn(
         "group relative cursor-pointer overflow-hidden rounded-2xl border border-brand-blue/8 bg-white transition-all duration-500 hover:border-brand-blue/30 hover:shadow-2xl",
-        className
+        className,
       )}
       custom={index}
       initial="hidden"

@@ -1,5 +1,8 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
-import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
+import {
+  GLOBAL_INDUSTRY_SERVICES,
+  GLOBAL_PROOF_STATS,
+} from "@/content/services";
 
 import BRANDINGCONTACTCTA_DATA from "./branding-contact-cta.json";
 import BRANDINGINDUSTRIESSECTION_DATA from "./branding-industries-section.json";

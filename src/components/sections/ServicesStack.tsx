@@ -4,7 +4,10 @@ import { useCallback, useMemo, useState } from "react";
 
 import { ServicesCard } from "@/components/items/ServicesCard";
 import { Button } from "@/components/ui/Button";
-import { ContactModal, type ContactModalServiceField } from "@/components/ui/ContactModal";
+import {
+  ContactModal,
+  type ContactModalServiceField,
+} from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   HOME_SERVICES_CONTENT,
@@ -44,8 +47,12 @@ export const ServicesStack = ({
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const resolvedCardCtaMode = cardCtaMode ?? (showCardCtas ? "all" : "none");
   const stickyStyles = useMemo(
-    () => services.map((_, index) => ({ top: `calc(100px + ${index * 20}px)`, zIndex: index })),
-    [services]
+    () =>
+      services.map((_, index) => ({
+        top: `calc(100px + ${index * 20}px)`,
+        zIndex: index,
+      })),
+    [services],
   );
   const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
   const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
@@ -62,7 +69,11 @@ export const ServicesStack = ({
 
           <div className="relative flex flex-col gap-12">
             {services.map((service, index) => (
-              <div className="sticky" key={service.id} style={stickyStyles[index]}>
+              <div
+                className="sticky"
+                key={service.id}
+                style={stickyStyles[index]}
+              >
                 <ServicesCard
                   ctaLabel={ctaLabel}
                   onCtaClick={contactModal ? openContactModal : undefined}
