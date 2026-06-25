@@ -35,13 +35,11 @@ const buttonVariants = cva(
           "border-2 border-white/60 bg-transparent text-white hover:border-white hover:bg-white/10",
       },
     },
-  },
+  }
 );
 
 interface ButtonProps
-  extends
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
@@ -50,11 +48,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     const isShowArrow = variant === "primary" && !asChild && size !== "icon";
     return (
-      <Comp
-        className={cn(buttonVariants({ className, size, variant }))}
-        ref={ref}
-        {...props}
-      >
+      <Comp className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props}>
         {isShowArrow ? (
           <>
             {children}
@@ -74,7 +68,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </Comp>
     );
-  },
+  }
 );
 Button.displayName = "Button";
 

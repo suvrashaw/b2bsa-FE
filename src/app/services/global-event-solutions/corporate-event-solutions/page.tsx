@@ -64,11 +64,7 @@ const Page = () => {
       contactUs={CORP_EVENT_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={3}
-            heading={CORP_EVENT_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <CardsGrid cols={3} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -77,11 +73,7 @@ const Page = () => {
             cols={4}
             heading={CORP_EVENT_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

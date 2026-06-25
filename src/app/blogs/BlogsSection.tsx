@@ -36,11 +36,7 @@ interface CategoryOption {
 const ALL_CATEGORY_ID = "all";
 const ALL_CATEGORY_NAME = "All";
 
-const CategoryButton = ({
-  category,
-  isActive,
-  onChange,
-}: CategoryButtonProps) => {
+const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) => {
   const Icon = category.icon;
   const handleClick = useCallback(() => {
     onChange(category.id);
@@ -52,7 +48,7 @@ const CategoryButton = ({
         "flex w-full items-center justify-between gap-3 rounded-lg p-3 text-left text-sm font-bold transition",
         isActive
           ? "bg-brand-blue text-white"
-          : "text-brand-charcoal hover:bg-brand-gray hover:text-brand-blue",
+          : "text-brand-charcoal hover:bg-brand-gray hover:text-brand-blue"
       )}
       onClick={handleClick}
       type="button"
@@ -83,10 +79,7 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
     name: category.name,
   }));
 
-  return [
-    { count: blogs.length, id: ALL_CATEGORY_ID, name: ALL_CATEGORY_NAME },
-    ...options,
-  ];
+  return [{ count: blogs.length, id: ALL_CATEGORY_ID, name: ALL_CATEGORY_NAME }, ...options];
 };
 
 export const BlogsSection = () => {
@@ -98,14 +91,11 @@ export const BlogsSection = () => {
   const categories = useMemo(() => getCategoryOptions(blogs), [blogs]);
   const requestedPage = parsePaginationPage(searchParams.get("page"));
   const requestedCategory = searchParams.get("category") ?? ALL_CATEGORY_ID;
-  const activeCategory = categories.some(
-    (category) => category.id === requestedCategory,
-  )
+  const activeCategory = categories.some((category) => category.id === requestedCategory)
     ? requestedCategory
     : ALL_CATEGORY_ID;
   const activeCategoryName =
-    categories.find((category) => category.id === activeCategory)?.name ??
-    ALL_CATEGORY_NAME;
+    categories.find((category) => category.id === activeCategory)?.name ?? ALL_CATEGORY_NAME;
 
   const filteredBlogs = useMemo(() => {
     if (activeCategory === ALL_CATEGORY_ID) {
@@ -142,41 +132,35 @@ export const BlogsSection = () => {
       const query = params.toString();
       router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
     },
-    [pathname, router, searchParams],
+    [pathname, router, searchParams]
   );
 
   const handleCategoryChange = useCallback(
     (category: string) => {
       updateDirectoryParams(category, 1);
     },
-    [updateDirectoryParams],
+    [updateDirectoryParams]
   );
 
   const handleSelectCategory = useCallback(
     (event: ChangeEvent<HTMLSelectElement>) => {
       handleCategoryChange(event.currentTarget.value);
     },
-    [handleCategoryChange],
+    [handleCategoryChange]
   );
 
   const handlePageChange = useCallback(
     (page: number) => {
       updateDirectoryParams(activeCategory, page);
     },
-    [activeCategory, updateDirectoryParams],
+    [activeCategory, updateDirectoryParams]
   );
 
   useEffect(() => {
     if (requestedCategory !== activeCategory || requestedPage !== currentPage) {
       updateDirectoryParams(activeCategory, currentPage);
     }
-  }, [
-    activeCategory,
-    currentPage,
-    requestedCategory,
-    requestedPage,
-    updateDirectoryParams,
-  ]);
+  }, [activeCategory, currentPage, requestedCategory, requestedPage, updateDirectoryParams]);
 
   if (paginatedBlogs.length > 0) {
     blogsContent = (
@@ -195,17 +179,14 @@ export const BlogsSection = () => {
           No more articles on this page.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
-          Use the pagination controls to return to the available article
-          results.
+          Use the pagination controls to return to the available article results.
         </p>
       </div>
     );
   } else {
     blogsContent = (
       <div className="rounded-2xl border border-gray-100 bg-white px-8 py-14 text-center shadow-sm">
-        <h2 className="font-heading text-2xl font-bold text-brand-charcoal">
-          No articles found.
-        </h2>
+        <h2 className="font-heading text-2xl font-bold text-brand-charcoal">No articles found.</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-charcoal/65">
           Choose a different category to browse the blog library.
         </p>
@@ -251,9 +232,7 @@ export const BlogsSection = () => {
         <aside className="hidden lg:block">
           <div className="sticky top-28 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
             <div className="bg-brand-blue px-4 py-3">
-              <h2 className="text-sm font-bold tracking-widest text-white uppercase">
-                Categories
-              </h2>
+              <h2 className="text-sm font-bold tracking-widest text-white uppercase">Categories</h2>
             </div>
             <div className="max-h-72 space-y-2 overflow-y-auto p-4">
               {categories.map((category) => (

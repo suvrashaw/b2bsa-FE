@@ -19,7 +19,7 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
           className={cn(
             "w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none",
             error && "border-red-400 focus:border-red-500",
-            className,
+            className
           )}
           id={id}
           ref={ref}
@@ -29,6 +29,6 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
         {error && <p className="text-xs text-red-500">{error}</p>}
       </div>
     );
-  },
+  }
 );
 FormTextarea.displayName = "FormTextarea";

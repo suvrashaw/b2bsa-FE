@@ -24,8 +24,7 @@ import {
   CORPORATE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/corporate-video-production/content";
 
-export const metadata: Metadata =
-  getMarketingPageMetadata(CORPORATE_VIDEO_PAGE);
+export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE);
 
 const Page = () => {
   return (
@@ -33,11 +32,7 @@ const Page = () => {
       contactUs={CORPORATE_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={4}
-            heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <CardsGrid cols={4} heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORPORATE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -56,10 +51,7 @@ const Page = () => {
           <CardsGrid
             className="bg-[#111111] text-white"
             heading={
-              <SectionHeader
-                as="h2"
-                className="max-w-4xl text-white lg:text-4xl"
-              >
+              <SectionHeader as="h2" className="max-w-4xl text-white lg:text-4xl">
                 {CORPORATE_VIDEO_PORTFOLIO.heading}
               </SectionHeader>
             }

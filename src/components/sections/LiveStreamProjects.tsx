@@ -39,16 +39,13 @@ export const LiveStreamProjects = ({
 }: LiveStreamProjectsProps) => {
   const [activeId, setActiveId] = useState(items[0]?.id ?? "");
   const activeProject = items.find((item) => item.id === activeId) ?? items[0];
-  const handleProjectSelect = useCallback(
-    (event: MouseEvent<HTMLButtonElement>) => {
-      const nextId = event.currentTarget.dataset.projectId;
+  const handleProjectSelect = useCallback((event: MouseEvent<HTMLButtonElement>) => {
+    const nextId = event.currentTarget.dataset.projectId;
 
-      if (nextId) {
-        setActiveId(nextId);
-      }
-    },
-    [],
-  );
+    if (nextId) {
+      setActiveId(nextId);
+    }
+  }, []);
 
   if (!activeProject) return null;
 
@@ -60,9 +57,7 @@ export const LiveStreamProjects = ({
         <div className="overflow-hidden rounded-lg border border-brand-charcoal/10 bg-white shadow-sm">
           <div className="flex flex-col gap-4 border-b border-brand-charcoal/10 px-4 py-5 sm:px-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-xs font-semibold text-brand-blue uppercase">
-                {playlistLabel}
-              </p>
+              <p className="text-xs font-semibold text-brand-blue uppercase">{playlistLabel}</p>
               <h3 className="mt-2 font-heading text-base font-bold text-brand-charcoal md:text-xl">
                 Project Playback Gallery
               </h3>
@@ -138,16 +133,8 @@ export const LiveStreamProjects = ({
                       </div>
                     )}
                     {activeProject.externalUrl && (
-                      <Button
-                        asChild
-                        className="w-full gap-2 lg:w-auto"
-                        variant="primary"
-                      >
-                        <a
-                          href={activeProject.externalUrl}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
+                      <Button asChild className="w-full gap-2 lg:w-auto" variant="primary">
+                        <a href={activeProject.externalUrl} rel="noreferrer" target="_blank">
                           Open Playlist
                           <ExternalLink className="size-4" />
                         </a>
@@ -171,7 +158,7 @@ export const LiveStreamProjects = ({
                           "group grid w-full grid-cols-[96px_minmax(0,1fr)] gap-3 rounded-lg border p-2 text-left transition-colors duration-300 sm:grid-cols-[120px_minmax(0,1fr)]",
                           isActive
                             ? "border-brand-blue bg-white shadow-sm"
-                            : "border-transparent bg-white/70 hover:border-brand-blue/30 hover:bg-white",
+                            : "border-transparent bg-white/70 hover:border-brand-blue/30 hover:bg-white"
                         )}
                         data-project-id={item.id}
                         key={item.id}

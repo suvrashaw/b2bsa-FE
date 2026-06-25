@@ -25,7 +25,7 @@ export const FAQAccordionItem = ({ answer, index, isOpen, question }: FAQAccordi
     <Accordion.Item
       className={cn(
         "overflow-hidden rounded-2xl border bg-white transition-colors duration-300 md:rounded-xl",
-        isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300",
+        isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300"
       )}
       value={String(index)}
     >

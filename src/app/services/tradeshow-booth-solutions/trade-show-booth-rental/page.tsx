@@ -38,15 +38,13 @@ const BOOTH_RENTAL_RANGE_REASONS = [
     title: "10x10 Standard",
   },
   {
-    description:
-      "Room for product-led demos, a defined visitor journey, and a meeting zone.",
+    description: "Room for product-led demos, a defined visitor journey, and a meeting zone.",
     id: "rental-10x20",
     image: "/media/booth/10x20.avif",
     title: "10x20 Inline",
   },
   {
-    description:
-      "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
+    description: "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
     id: "rental-20x20",
     image: "/media/booth/20x20.avif",
     title: "20x20 Island",
@@ -87,17 +85,9 @@ const Page = () => {
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            className="pt-0"
-            cols={3}
-            heading="Explore Related Solutions"
-          >
+          <CardsGrid className="pt-0" cols={3} heading="Explore Related Solutions">
             {BOOTH_RENTAL_RELATED_SERVICES.map((service, index) => (
-              <ServicesLinkCard
-                index={index}
-                key={service.href}
-                service={service}
-              />
+              <ServicesLinkCard index={index} key={service.href} service={service} />
             ))}
           </CardsGrid>
           <CardsGrid
@@ -113,11 +103,7 @@ const Page = () => {
             cols={4}
             heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
@@ -148,15 +134,9 @@ const Page = () => {
                 key={reason.title}
               >
                 <div className="mb-6 flex items-center justify-center text-brand-blue">
-                  {reason.icon === "Coins" && (
-                    <Coins className="size-20" strokeWidth={1.5} />
-                  )}
-                  {reason.icon === "Move" && (
-                    <Move className="size-20" strokeWidth={1.5} />
-                  )}
-                  {reason.icon === "Truck" && (
-                    <Truck className="size-20" strokeWidth={1.5} />
-                  )}
+                  {reason.icon === "Coins" && <Coins className="size-20" strokeWidth={1.5} />}
+                  {reason.icon === "Move" && <Move className="size-20" strokeWidth={1.5} />}
+                  {reason.icon === "Truck" && <Truck className="size-20" strokeWidth={1.5} />}
                 </div>
                 <h3 className="mb-4 font-heading text-xl font-bold text-brand-charcoal">
                   {reason.title}

@@ -27,9 +27,8 @@ export const FAQCard = ({
 
   const handleClick = useCallback(() => setIsFlipped((prev) => !prev), []);
   const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) =>
-      (e.key === "Enter" || e.key === " ") && handleClick(),
-    [handleClick],
+    (e: React.KeyboardEvent) => (e.key === "Enter" || e.key === " ") && handleClick(),
+    [handleClick]
   );
 
   return (
@@ -63,9 +62,7 @@ export const FAQCard = ({
 
         {/* Back: Answer */}
         <div className="absolute inset-0 flex size-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 text-left shadow-inner [backface-visibility:hidden] md:p-8">
-          <p className="text-xs leading-relaxed text-white md:text-base">
-            {answer}
-          </p>
+          <p className="text-xs leading-relaxed text-white md:text-base">{answer}</p>
         </div>
       </div>
     </div>

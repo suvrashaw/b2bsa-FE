@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata(
   CASE_STUDIES_PAGE.seo,
-  CASE_STUDIES_PAGE.pageId,
+  CASE_STUDIES_PAGE.pageId
 );
 
 const CaseStudiesLayout = ({ children }: { children: ReactNode }) => {

@@ -29,8 +29,7 @@ import {
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 
-export const metadata: Metadata =
-  getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
+export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
 const capabilityAssets = [
   { icon: "Truck", image: "/media/home/hero/home_hero_bg.avif" },
@@ -43,19 +42,16 @@ const capabilityAssets = [
   { icon: "Settings", image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
-const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map(
-  (phase, index) => ({
-    description: phase.description,
-    icon: capabilityAssets[index]?.icon ?? "Truck",
-    id: phase.title
-      .toLowerCase()
-      .replaceAll(/[^a-z0-9]+/g, "-")
-      .replaceAll(/(^-|-$)/g, ""),
-    image:
-      capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
-    label: phase.title,
-  }),
-);
+const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Truck",
+  id: phase.title
+    .toLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, "-")
+    .replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -65,11 +61,7 @@ const Page = () => {
       contactUs={EVENT_LOGISTICS_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={4}
-            heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <CardsGrid cols={4} heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading} id="why-choose-us">
             {EVENT_LOGISTICS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -78,11 +70,7 @@ const Page = () => {
             cols={4}
             heading={EVENT_LOGISTICS_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
@@ -111,11 +99,7 @@ const Page = () => {
         </>
       }
       preStudiesSections={
-        <CardsGrid
-          cols={3}
-          heading={EVENT_LOGISTICS_BENEFITS.heading}
-          id="benefits"
-        >
+        <CardsGrid cols={3} heading={EVENT_LOGISTICS_BENEFITS.heading} id="benefits">
           {EVENT_LOGISTICS_BENEFITS.items.map((item, i) => (
             <BoothWhyCard index={i} item={item} key={item.title} />
           ))}

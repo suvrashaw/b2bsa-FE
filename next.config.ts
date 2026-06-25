@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 
 const nextConfig: NextConfig = {
-  reactCompiler: true,
   headers: async () => [
     {
       headers: [
@@ -44,6 +43,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  reactCompiler: true,
   redirects: async () => {
     return [
       {

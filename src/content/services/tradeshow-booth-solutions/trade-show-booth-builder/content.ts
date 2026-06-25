@@ -17,10 +17,7 @@ export const BOOTH_BUILDER_CASE_STUDIES = {
 
 import { getBlogsByTags } from "@/content/blogs";
 
-export const BOOTH_BUILDER_BLOG_POSTS = getBlogsByTags(
-  ["Trade Show Booth Builder"],
-  5,
-);
+export const BOOTH_BUILDER_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Builder"], 5);
 
 export const BOOTH_BUILDER_CONTACT_CTA = {
   ...BUILDERCONTACTCTA_DATA,

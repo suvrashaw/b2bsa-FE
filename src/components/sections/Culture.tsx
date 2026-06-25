@@ -68,13 +68,7 @@ const ParallaxItem = ({ alt, index, scale, src }: ParallaxItemProps) => {
   );
 };
 
-const ZoomParallax = ({
-  centerText,
-  images,
-}: {
-  centerText?: string;
-  images: ParallaxImage[];
-}) => {
+const ZoomParallax = ({ centerText, images }: { centerText?: string; images: ParallaxImage[] }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end end"],
@@ -88,20 +82,9 @@ const ZoomParallax = ({
   const scale9 = useTransform(scrollYProgress, [0, 0.8, 1], [1, 9, 9]);
 
   const textOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
-  const textMotionStyle = useMemo(
-    () => ({ opacity: textOpacity }),
-    [textOpacity],
-  );
+  const textMotionStyle = useMemo(() => ({ opacity: textOpacity }), [textOpacity]);
 
-  const scales = [
-    scale5_center,
-    scale5,
-    scale6,
-    scale5,
-    scale6,
-    scale8,
-    scale9,
-  ];
+  const scales = [scale5_center, scale5, scale6, scale5, scale6, scale8, scale9];
 
   return (
     <div className="relative h-[300vh]" ref={container}>
@@ -109,34 +92,17 @@ const ZoomParallax = ({
         {images.map(({ alt, src }, index) => {
           const scale = scales[index % scales.length];
 
-          return (
-            <ParallaxItem
-              alt={alt}
-              index={index}
-              key={index}
-              scale={scale}
-              src={src}
-            />
-          );
+          return <ParallaxItem alt={alt} index={index} key={index} scale={scale} src={src} />;
         })}
         {centerText && (
           <motion.div
             className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-8 bg-black/70 px-4 md:px-12 lg:px-24"
             style={textMotionStyle}
           >
-            <SectionHeader
-              as="h2"
-              className="max-w-4xl text-center text-white"
-              level="h1"
-            >
+            <SectionHeader as="h2" className="max-w-4xl text-center text-white" level="h1">
               Ready to Create an Unforgettable Event Experience?
             </SectionHeader>
-            <Button
-              asChild
-              className="pointer-events-auto"
-              size="lg"
-              variant="primary"
-            >
+            <Button asChild className="pointer-events-auto" size="lg" variant="primary">
               <Link href="/contact-us">Let&apos;s talk</Link>
             </Button>
           </motion.div>
@@ -167,9 +133,7 @@ export const Culture = ({
   showParallax?: boolean;
 }) => {
   const parallaxImages = [
-    ...(data.centerImage
-      ? [{ alt: "Center Image", src: data.centerImage }]
-      : []),
+    ...(data.centerImage ? [{ alt: "Center Image", src: data.centerImage }] : []),
     ...data.reasons
       .map((r) => ({ alt: r.title, src: r.image }))
       .filter((img) => img.src !== data.centerImage),
@@ -185,18 +149,14 @@ export const Culture = ({
           className={cn(
             "pointer-events-none absolute -top-1/2 left-1/2 size-[120vmin] -translate-x-1/2 rounded-full",
             "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.05),transparent_50%)]",
-            "blur-[30px]",
+            "blur-[30px]"
           )}
         />
         <SectionHeader
           as="h2"
           description={data.description}
           descriptionSize="body-l"
-          heading={
-            typeof data.heading === "string"
-              ? data.heading
-              : "What We Believe In"
-          }
+          heading={typeof data.heading === "string" ? data.heading : "What We Believe In"}
           headingAlign="center"
         />
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
@@ -206,9 +166,7 @@ export const Culture = ({
         </div>
       </div>
 
-      {showParallax && (
-        <ZoomParallax centerText={data.centerText} images={parallaxImages} />
-      )}
+      {showParallax && <ZoomParallax centerText={data.centerText} images={parallaxImages} />}
     </section>
   );
 };

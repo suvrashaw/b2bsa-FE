@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  useTransform,
-  wrap,
-} from "framer-motion";
+import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -48,11 +42,7 @@ export interface ClientLogosProps {
   wrapItems?: boolean;
 }
 
-const useLogoMarquee = (
-  speed: number,
-  wheelSpeed: number,
-  isVisible: boolean,
-) => {
+const useLogoMarquee = (speed: number, wheelSpeed: number, isVisible: boolean) => {
   const baseX = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -110,45 +100,27 @@ export const ClientLogos = ({
 }: ClientLogosProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const { handleWheel, setIsHovered, x } = useLogoMarquee(
-    speed,
-    wheelSpeed,
-    isVisible,
-  );
+  const { handleWheel, setIsHovered, x } = useLogoMarquee(speed, wheelSpeed, isVisible);
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      {
-        threshold: 0.1,
-      },
-    );
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
+      threshold: 0.1,
+    });
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const handleMouseEnter = useCallback(
-    () => setIsHovered(true),
-    [setIsHovered],
-  );
-  const handleMouseLeave = useCallback(
-    () => setIsHovered(false),
-    [setIsHovered],
-  );
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
   const marqueeStyle = useMemo(() => ({ x }), [x]);
 
   if (wrapItems) {
     return (
-      <div
-        className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}
-      >
+      <div className={`relative z-30 w-full bg-brand-gray ${overlap ? "-mt-16" : ""}`}>
         {heading && (
-          <SectionHeader
-            as="h2"
-            className="px-4 pt-10 pb-3 text-center md:px-0"
-          >
+          <SectionHeader as="h2" className="px-4 pt-10 pb-3 text-center md:px-0">
             {heading}
           </SectionHeader>
         )}
@@ -197,10 +169,7 @@ export const ClientLogos = ({
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48 bg-linear-to-r from-brand-gray to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48 bg-linear-to-l from-brand-gray to-transparent" />
 
-        <motion.div
-          className="flex w-max cursor-grab active:cursor-grabbing"
-          style={marqueeStyle}
-        >
+        <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
             <LogosRow
               logos={logos}

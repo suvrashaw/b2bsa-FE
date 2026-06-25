@@ -23,23 +23,15 @@ export const CorporateVideoIndustriesSection = ({
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="max-w-5xl">
-          <SectionHeader
-            as="h2"
-            className="max-w-4xl leading-none text-white"
-            level="h1"
-          >
+          <SectionHeader as="h2" className="max-w-4xl leading-none text-white" level="h1">
             {heading}
           </SectionHeader>
-          <p className="type-body-l mt-7 max-w-4xl leading-relaxed text-white/86">
-            {description}
-          </p>
+          <p className="type-body-l mt-7 max-w-4xl leading-relaxed text-white/86">{description}</p>
 
           <div className="mt-8 max-w-4xl space-y-6 md:mt-10 md:space-y-7">
             {industries.map((industry) => (
               <article key={industry.title}>
-                <h3 className="type-h3 leading-tight text-[#4BC0D9]">
-                  {industry.title}
-                </h3>
+                <h3 className="type-h3 leading-tight text-[#4BC0D9]">{industry.title}</h3>
                 <p className="type-body-l mt-2 max-w-3xl leading-relaxed text-white/84">
                   {industry.description}
                 </p>

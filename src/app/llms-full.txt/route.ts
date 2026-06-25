@@ -33,8 +33,7 @@ const abs = (path: string) => `${siteUrl}${path}`;
 const pageTitle = (seoTitle: string) => seoTitle.split(" | ", 1)[0];
 
 export const GET = () => {
-  const { companyPages, publishedPosts, serviceDetails, serviceHubs } =
-    getLLMSContentLists();
+  const { companyPages, publishedPosts, serviceDetails, serviceHubs } = getLLMSContentLists();
 
   const lines: string[] = [
     `# B2B Sales Arrow`,
@@ -90,9 +89,7 @@ export const GET = () => {
       `**Solution:** ${study.solution}`,
       ``,
       `**Outcome:** ${study.outcome}`,
-      ...(study.outcomeStats?.length
-        ? [``, `Key results: ${study.outcomeStats.join(" | ")}`]
-        : []),
+      ...(study.outcomeStats?.length ? [``, `Key results: ${study.outcomeStats.join(" | ")}`] : []),
       ``,
     ]),
     `## Tradeshow Calendar`,

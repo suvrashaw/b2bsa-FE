@@ -65,10 +65,9 @@ const Page = () => {
               Who We Are
             </SectionHeader>
             <p className="text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
-              B2B Sales Arrow is not a vendor. We are a strategic growth
-              partner, bringing event solutions, video production, performance
-              marketing, and market research under one team with one commercial
-              brief and clear accountability to outcomes.
+              B2B Sales Arrow is not a vendor. We are a strategic growth partner, bringing event
+              solutions, video production, performance marketing, and market research under one team
+              with one commercial brief and clear accountability to outcomes.
             </p>
           </div>
         </div>
@@ -81,10 +80,7 @@ const Page = () => {
             {/* Left: Mission + Vision */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="mb-12 w-full">
-                <SectionHeader
-                  as="h2"
-                  className="mb-6 text-center lg:text-left"
-                >
+                <SectionHeader as="h2" className="mb-6 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
                     {ABOUT_VISION_MISSION.missionTitleLine1}
                   </span>
@@ -105,10 +101,7 @@ const Page = () => {
                 </ul>
               </div>
               <div className="w-full">
-                <SectionHeader
-                  as="h2"
-                  className="mb-4 text-center lg:text-left"
-                >
+                <SectionHeader as="h2" className="mb-4 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
                     {ABOUT_VISION_MISSION.visionTitleLine1}
                   </span>

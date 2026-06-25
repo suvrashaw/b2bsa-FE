@@ -65,11 +65,7 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={4}
-            heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -78,11 +74,7 @@ const Page = () => {
             cols={4}
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
@@ -134,9 +126,7 @@ const Page = () => {
                       <h3 className="font-heading text-xl font-bold text-brand-charcoal">
                         {service.title}
                       </h3>
-                      <p className="mt-1 text-sm text-brand-charcoal/60">
-                        {service.description}
-                      </p>
+                      <p className="mt-1 text-sm text-brand-charcoal/60">{service.description}</p>
                     </div>
                     <ul className="grow space-y-3">
                       {service.features.map((feature) => (

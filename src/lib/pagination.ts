@@ -1,9 +1,6 @@
 const DEFAULT_PAGE_SIZE = 6;
 
-const getPaginationPageCount = (
-  itemCount: number,
-  pageSize = DEFAULT_PAGE_SIZE,
-) => {
+const getPaginationPageCount = (itemCount: number, pageSize = DEFAULT_PAGE_SIZE) => {
   if (itemCount <= 0) {
     return 0;
   }
@@ -19,11 +16,7 @@ const clampPaginationPage = (page: number, pageCount: number) => {
   return Math.min(Math.max(page, 1), pageCount);
 };
 
-const getPaginationItems = <T>(
-  items: readonly T[],
-  page: number,
-  pageSize = DEFAULT_PAGE_SIZE,
-) => {
+const getPaginationItems = <T>(items: readonly T[], page: number, pageSize = DEFAULT_PAGE_SIZE) => {
   const startIndex = (page - 1) * pageSize;
   return items.slice(startIndex, startIndex + pageSize);
 };
@@ -31,7 +24,7 @@ const getPaginationItems = <T>(
 export const applyPagination = <T>(
   items: readonly T[],
   requestedPage: number,
-  pageSize = DEFAULT_PAGE_SIZE,
+  pageSize = DEFAULT_PAGE_SIZE
 ) => {
   const totalPages = getPaginationPageCount(items.length, pageSize);
   const currentPage = clampPaginationPage(requestedPage, totalPages);

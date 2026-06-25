@@ -249,11 +249,9 @@ export const HOME_EVENTS_CONTENT: EventsContent = {
   events: [],
 };
 
-export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent =
-  WHYCHOOSEUSCONTENT_DATA;
+export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = WHYCHOOSEUSCONTENT_DATA;
 
-export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent =
-  TESTIMONIALSCONTENT_DATA;
+export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = TESTIMONIALSCONTENT_DATA;
 
 export const HOME_BLOGS_CONTENT: BlogsContent = {
   ...BLOGS_DATA,

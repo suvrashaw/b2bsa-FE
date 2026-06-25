@@ -18,6 +18,5 @@ export interface ServiceSubGroup {
 import NAVIGATION_DATA from "./navigation.json";
 
 export const topNavigation: NavLink[] = NAVIGATION_DATA.topNavigation;
-export const serviceNavigationGroups: ServiceNavGroup[] =
-  NAVIGATION_DATA.serviceNavigationGroups;
+export const serviceNavigationGroups: ServiceNavGroup[] = NAVIGATION_DATA.serviceNavigationGroups;
 export const footerNavigation: NavLink[] = NAVIGATION_DATA.footerNavigation;

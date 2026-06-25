@@ -32,17 +32,14 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
           <button
             className={cn(
               "flex min-h-[44px] items-center gap-1.5 p-2 text-sm font-medium transition-colors",
-              lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue",
+              lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
             )}
             type="button"
           >
             <Globe className="size-4" />
             <span>EN</span>
             <ChevronDown
-              className={cn(
-                "size-3 transition-transform duration-200",
-                open ? "rotate-180" : "",
-              )}
+              className={cn("size-3 transition-transform duration-200", open ? "rotate-180" : "")}
             />
           </button>
         </DropdownMenu.Trigger>
@@ -65,7 +62,7 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
                           "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue focus:bg-brand-blue/5 focus:text-brand-blue focus:outline-none",
                           lang.code === "EN"
                             ? "font-semibold text-brand-blue"
-                            : "text-brand-charcoal",
+                            : "text-brand-charcoal"
                         )}
                         type="button"
                       >

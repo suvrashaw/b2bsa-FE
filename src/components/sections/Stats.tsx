@@ -2,13 +2,7 @@
 
 import type { ReactNode } from "react";
 
-import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  useTransform,
-  wrap,
-} from "framer-motion";
+import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -59,32 +53,19 @@ const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
       className={cn(
         "mx-3 flex min-w-[180px] shrink-0 flex-col items-center gap-1.5 rounded-xl px-8 py-6 shadow-lg",
         bg,
-        "text-white",
+        "text-white"
       )}
     >
-      <span className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
-        {item.value}
-      </span>
-      <span className="text-xs font-bold tracking-widest uppercase opacity-80">
-        {item.label}
-      </span>
+      <span className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">{item.value}</span>
+      <span className="text-xs font-bold tracking-widest uppercase opacity-80">{item.label}</span>
     </div>
   );
 };
 
-const StatRow = ({
-  items,
-  keyPrefix,
-}: {
-  items: StatItem[];
-  keyPrefix: string;
-}) => (
+const StatRow = ({ items, keyPrefix }: { items: StatItem[]; keyPrefix: string }) => (
   <>
     {items.map((item, i) => (
-      <div
-        className="flex shrink-0 items-center"
-        key={`${keyPrefix}-${item.key}`}
-      >
+      <div className="flex shrink-0 items-center" key={`${keyPrefix}-${item.key}`}>
         <StatChip index={i} item={item} />
       </div>
     ))}
@@ -97,27 +78,18 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   const prefersReduced =
     globalThis.window !== undefined &&
     globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const { handleWheel, setIsHovered, x } = useStatsMarquee(
-    isVisible,
-    prefersReduced,
-  );
+  const { handleWheel, setIsHovered, x } = useStatsMarquee(isVisible, prefersReduced);
   const marqueeStyle = useMemo(() => ({ x }), [x]);
 
-  const handleMouseEnter = useCallback(
-    () => setIsHovered(true),
-    [setIsHovered],
-  );
-  const handleMouseLeave = useCallback(
-    () => setIsHovered(false),
-    [setIsHovered],
-  );
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry?.isIntersecting ?? false),
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -167,7 +139,7 @@ export const Stats = ({
         label: spaceIdx === -1 ? "" : trimmed.slice(spaceIdx + 1),
         value: spaceIdx === -1 ? trimmed : trimmed.slice(0, spaceIdx),
       };
-    }),
+    })
   );
 
   return (
@@ -177,10 +149,7 @@ export const Stats = ({
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
               {heading && (
-                <SectionHeader
-                  as="h2"
-                  className="mb-4 text-center lg:text-left"
-                >
+                <SectionHeader as="h2" className="mb-4 text-center lg:text-left">
                   {heading}
                 </SectionHeader>
               )}

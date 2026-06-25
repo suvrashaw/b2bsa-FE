@@ -13,9 +13,7 @@ import {
   MARKET_INTELLIGENCE_SPOTLIGHT,
 } from "@/content/services/hpmi/human-powered-market-intelligence/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(
-  MARKET_INTELLIGENCE_PAGE,
-);
+export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 
 const Page = () => {
   return (

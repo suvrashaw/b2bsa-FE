@@ -58,9 +58,7 @@ const serviceOffers = marketingPages
   .filter((p) => p.pageType === "serviceDetail")
   .map((p) => ({ name: p.pageName, url: `${siteUrl}${p.seo.canonicalPath}` }));
 
-const knowsAbout = marketingPages
-  .filter((p) => p.pageType === "serviceHub")
-  .map((p) => p.pageName);
+const knowsAbout = marketingPages.filter((p) => p.pageType === "serviceHub").map((p) => p.pageName);
 
 const organizationJsonLd = buildOrganizationJsonLd(serviceOffers, knowsAbout);
 const websiteJsonLd = buildWebsiteJsonLd();
@@ -73,11 +71,7 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html
-      className={`${inter.variable} h-full antialiased`}
-      lang="en"
-      suppressHydrationWarning
-    >
+    <html className={`${inter.variable} h-full antialiased`} lang="en" suppressHydrationWarning>
       <head>
         <PartytownScripts />
         <link
@@ -86,10 +80,7 @@ const RootLayout = ({
           title="B2B Sales Arrow Blog"
           type="application/rss+xml"
         />
-        <link
-          href="https://www.linkedin.com/company/b2b-sales-arrow-llc/"
-          rel="me"
-        />
+        <link href="https://www.linkedin.com/company/b2b-sales-arrow-llc/" rel="me" />
         <link href="https://www.facebook.com/b2bsalesarrow" rel="me" />
         <link href="https://www.instagram.com/b2b_sales_arrow/" rel="me" />
         <link href="https://x.com/B2B_SalesArrow" rel="me" />

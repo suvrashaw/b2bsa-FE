@@ -2,12 +2,7 @@
 
 import type { CSSProperties, ReactNode } from "react";
 
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,8 +32,7 @@ export interface HeroProps {
 }
 
 const CINEMATIC_VEIL_STYLE = {
-  background:
-    "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
+  background: "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90.865%)",
 };
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 const H1_STYLE = {
@@ -58,8 +52,7 @@ const SECONDARY_CTA_STYLE = {
   background: `linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)`,
   border: "1px solid rgba(255, 255, 255, 0.25)",
   borderRadius: "4px",
-  boxShadow:
-    "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
+  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
   WebkitBackdropFilter: "blur(12px)",
 };
 
@@ -97,7 +90,7 @@ const TitleLine = ({
       duration: 0.72,
       ease: [0.22, 1, 0.36, 1] as const,
     }),
-    [index],
+    [index]
   );
   return (
     <span className={fromLeft ? "block" : "block overflow-hidden"}>
@@ -115,10 +108,7 @@ const TitleLine = ({
 
 const useTypewriter = (lines: string[], charDelay = 30) => {
   const [charCount, setCharCount] = useState(0);
-  const totalChars = useMemo(
-    () => lines.reduce((s, l) => s + l.length, 0),
-    [lines],
-  );
+  const totalChars = useMemo(() => lines.reduce((s, l) => s + l.length, 0), [lines]);
 
   useEffect(() => {
     if (charCount >= totalChars) return;
@@ -128,20 +118,13 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
 
   const isDone = charCount >= totalChars;
   const visibleLines = lines.map((line, idx) => {
-    const charsBeforeThis = lines
-      .slice(0, idx)
-      .reduce((s, l) => s + l.length, 0);
-    return line.slice(
-      0,
-      Math.min(line.length, Math.max(0, charCount - charsBeforeThis)),
-    );
+    const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
+    return line.slice(0, Math.min(line.length, Math.max(0, charCount - charsBeforeThis)));
   });
   const activeLineIdx = isDone
     ? -1
     : lines.findIndex((line, idx) => {
-        const charsBeforeThis = lines
-          .slice(0, idx)
-          .reduce((s, l) => s + l.length, 0);
+        const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
         return charCount < charsBeforeThis + line.length;
       });
 
@@ -201,7 +184,7 @@ const HeroBackground = ({
           autoPlay
           className={cn(
             "hero-bg-video absolute inset-0 size-full object-cover",
-            hasMobileVideo && "hidden md:block",
+            hasMobileVideo && "hidden md:block"
           )}
           loop
           muted
@@ -210,13 +193,7 @@ const HeroBackground = ({
         >
           {videoWebm && <source src={videoWebm} type="video/webm" />}
           <source src={effectiveVideoUrl} type="video/mp4" />
-          <track
-            default
-            kind="captions"
-            label="English"
-            src="data:text/vtt,WEBVTT"
-            srcLang="en"
-          />
+          <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
         </video>
         {hasMobileVideo && (
           <video
@@ -227,9 +204,7 @@ const HeroBackground = ({
             playsInline
             preload="metadata"
           >
-            {mobileVideoWebm && (
-              <source src={mobileVideoWebm} type="video/webm" />
-            )}
+            {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
             <source src={mobileVideoUrl!} type="video/mp4" />
             <track
               default
@@ -253,13 +228,7 @@ const HeroBackground = ({
       poster={poster ?? images?.[0]}
       src={videoSrc}
     >
-      <track
-        default
-        kind="captions"
-        label="English"
-        src="data:text/vtt,WEBVTT"
-        srcLang="en"
-      />
+      <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
     </video>
   ) : (
     <AnimatePresence>
@@ -308,9 +277,7 @@ export const Hero = ({
   const isVideoMode = !images?.length;
   const effectiveVideoUrl = videoUrl ?? "/media/demo-video.mp4";
   const isStringTitle = typeof title === "string";
-  const titleLines = isStringTitle
-    ? (title as string).split("\n")
-    : [title as ReactNode];
+  const titleLines = isStringTitle ? (title as string).split("\n") : [title as ReactNode];
   const stringLines = isStringTitle ? (title as string).split("\n") : [];
   const { activeLineIdx, visibleLines } = useTypewriter(stringLines, 30);
 
@@ -326,16 +293,12 @@ export const Hero = ({
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -100]);
   const contentStyle = useMemo(() => ({ y }), [y]);
-  const imageOpacityStyle = useMemo(
-    () => ({ opacity: imageOpacity }),
-    [imageOpacity],
-  );
+  const imageOpacityStyle = useMemo(() => ({ opacity: imageOpacity }), [imageOpacity]);
 
   let imageModeClass =
     "items-center md:items-end min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20";
   if (variant === "compact") {
-    imageModeClass =
-      "items-center md:items-end min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16";
+    imageModeClass = "items-center md:items-end min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16";
   } else if (isVideoMode) {
     imageModeClass =
       "items-center md:items-end min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40";
@@ -343,10 +306,7 @@ export const Hero = ({
 
   return (
     <section
-      className={cn(
-        "relative flex overflow-hidden bg-brand-charcoal",
-        imageModeClass,
-      )}
+      className={cn("relative flex overflow-hidden bg-brand-charcoal", imageModeClass)}
       ref={containerRef}
     >
       {isVideoMode && (
@@ -370,22 +330,16 @@ export const Hero = ({
           videoSrc={videoSrc}
           videoWebm={videoWebm}
         />
-        <div
-          className="pointer-events-none absolute inset-0 z-10"
-          style={CINEMATIC_VEIL_STYLE}
-        />
+        <div className="pointer-events-none absolute inset-0 z-10" style={CINEMATIC_VEIL_STYLE} />
       </div>
 
       <div
         className={cn(
           "relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8",
-          centered && "flex flex-col items-center text-center",
+          centered && "flex flex-col items-center text-center"
         )}
       >
-        <motion.div
-          className={cn("max-w-4xl", centered && "w-full")}
-          style={contentStyle}
-        >
+        <motion.div className={cn("max-w-4xl", centered && "w-full")} style={contentStyle}>
           {eyebrow && (
             <motion.div
               animate={EYEBROW_ANIMATE}
@@ -412,12 +366,7 @@ export const Hero = ({
                   />
                 ))
               : (titleLines as ReactNode[]).map((line, index) => (
-                  <TitleLine
-                    fromLeft={animateFromLeft}
-                    index={index}
-                    key={index}
-                    line={line}
-                  />
+                  <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
                 ))}
           </SectionHeader>
 
@@ -438,7 +387,7 @@ export const Hero = ({
               animate={CTA_ANIMATE}
               className={cn(
                 "flex flex-col flex-wrap gap-4 md:flex-row md:items-center md:gap-6",
-                centered && "justify-center",
+                centered && "justify-center"
               )}
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}

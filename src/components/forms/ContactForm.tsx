@@ -227,9 +227,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           </div>
         )}
 
-        {form.trustNote && (
-          <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>
-        )}
+        {form.trustNote && <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>}
 
         <Button
           className="flex w-full items-center justify-center py-4 text-lg"

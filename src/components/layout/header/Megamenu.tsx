@@ -4,13 +4,7 @@ import { memo } from "react";
 import { type NavLink, type ServiceNavGroup } from "@/content/navigation";
 import { cn, toHeadingCaps } from "@/lib";
 
-const MegamenuSubLink = ({
-  onClose,
-  sub,
-}: {
-  onClose: () => void;
-  sub: NavLink;
-}) => {
+const MegamenuSubLink = ({ onClose, sub }: { onClose: () => void; sub: NavLink }) => {
   return (
     <Link
       className="block min-w-0 text-xs leading-snug font-semibold break-words text-gray-500 transition-colors hover:text-gray-900"
@@ -42,7 +36,7 @@ export const MegamenuServiceGroup = memo(
         <Link
           className={cn(
             "mb-4 block text-sm font-black break-words text-brand-charcoal transition-colors hover:text-brand-blue",
-            noWrapTitle && "whitespace-nowrap",
+            noWrapTitle && "whitespace-nowrap"
           )}
           href={group.href}
           onClick={onClose}
@@ -58,11 +52,7 @@ export const MegamenuServiceGroup = memo(
                 </p>
                 <div className="space-y-3">
                   {sg.links.map((sub) => (
-                    <MegamenuSubLink
-                      key={sub.name}
-                      onClose={onClose}
-                      sub={sub}
-                    />
+                    <MegamenuSubLink key={sub.name} onClose={onClose} sub={sub} />
                   ))}
                 </div>
               </div>
@@ -79,6 +69,6 @@ export const MegamenuServiceGroup = memo(
         )}
       </div>
     );
-  },
+  }
 );
 MegamenuServiceGroup.displayName = "MegamenuServiceGroup";

@@ -31,9 +31,7 @@ const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
   "/media/events/servicenow_2026.avif",
 ];
 
-export const metadata: Metadata = getMarketingPageMetadata(
-  TRADE_SHOW_CALENDAR_PAGE,
-);
+export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
 
 const Page = () => {
   return (
@@ -49,7 +47,7 @@ const Page = () => {
             TRADE_SHOW_CALENDAR_EVENTS.slice(0, 10).map((e) => ({
               name: e.name,
               url: `${siteUrl}/tradeshow-calendar/${e.id}`,
-            })),
+            }))
           ),
         ])}
       />

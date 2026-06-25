@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { EVENT_EXPERIENCE_PAGE } from "@/content/services/global-event-solutions/event-experience-creation/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(
-  EVENT_EXPERIENCE_PAGE,
-);
+export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE);
 
 const Page = () => {
   return (

@@ -22,18 +22,15 @@ export const DesktopNavLink = memo(
     const isServices = link.name.toLowerCase() === "services";
     const label = toTitleCase(link.name);
 
-    const handleMouseEnter = useCallback(
-      () => onMouseEnter(link.name),
-      [link.name, onMouseEnter],
-    );
+    const handleMouseEnter = useCallback(() => onMouseEnter(link.name), [link.name, onMouseEnter]);
 
     const linkClassName = cn(
       "group relative flex items-center gap-1.5 text-base font-semibold whitespace-nowrap transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
-      lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue",
+      lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
     );
     const underlineClassName = cn(
       "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
-      isServices && activeDropdown === "services" ? "w-full" : "",
+      isServices && activeDropdown === "services" ? "w-full" : ""
     );
 
     return (
@@ -51,23 +48,19 @@ export const DesktopNavLink = memo(
             <ChevronDown
               className={cn(
                 "size-3.5 opacity-70 transition-transform duration-300",
-                activeDropdown === "services" ? "rotate-180" : "",
+                activeDropdown === "services" ? "rotate-180" : ""
               )}
             />
             <span className={underlineClassName} />
           </button>
         ) : (
-          <Link
-            className={linkClassName}
-            href={link.href}
-            onMouseEnter={handleMouseEnter}
-          >
+          <Link className={linkClassName} href={link.href} onMouseEnter={handleMouseEnter}>
             {label}
             <span className={underlineClassName} />
           </Link>
         )}
       </div>
     );
-  },
+  }
 );
 DesktopNavLink.displayName = "DesktopNavLink";

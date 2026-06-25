@@ -12,8 +12,7 @@ import { Button } from "@/components/ui/Button";
 const BASE_MODAL_FORM = {
   companyLabel: "Company Name",
   companyPlaceholder: "Your Company",
-  consentLabel:
-    "I agree to receive communications from B2B Sales Arrow regarding their services.",
+  consentLabel: "I agree to receive communications from B2B Sales Arrow regarding their services.",
   ctaLabel: "Send Your Enquiry",
   emailLabel: "Work Email",
   emailPlaceholder: "john@company.com",
@@ -39,11 +38,7 @@ export interface ContactModalServiceField {
   placeholder?: string;
 }
 
-export const ContactModal = ({
-  isOpen,
-  onClose,
-  serviceField,
-}: ContactModalProps) => {
+export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProps) => {
   const form = useMemo(
     () => ({
       ...BASE_MODAL_FORM,
@@ -53,14 +48,14 @@ export const ContactModal = ({
         servicePlaceholder: serviceField.placeholder ?? "Select a service...",
       }),
     }),
-    [serviceField],
+    [serviceField]
   );
 
   const handleOpenChange = useCallback(
     (isOpen: boolean) => {
       if (!isOpen) onClose();
     },
-    [onClose],
+    [onClose]
   );
 
   return (

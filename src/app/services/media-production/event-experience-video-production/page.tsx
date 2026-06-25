@@ -26,9 +26,7 @@ import {
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(
-  EVENT_EXPERIENCE_VIDEO_PAGE,
-);
+export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_VIDEO_PAGE);
 
 const spotlightProps = { ...EVENT_EXPERIENCE_VIDEO_INTRO, showCta: false };
 const deliverableProps = {
@@ -57,22 +55,16 @@ const Page = () => {
             cols={4}
             heading={EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Event Experience Video Production"]).map(
-              (post) => (
-                <BlogsCarouselCard key={post.id} post={post} />
-              ),
-            )}
+            {getBlogsByTags(["Event Experience Video Production"]).map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
           </Carousel>
         </>
       }

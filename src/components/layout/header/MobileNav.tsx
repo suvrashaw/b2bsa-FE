@@ -26,13 +26,7 @@ const MOBILE_GROUP_TRANSITION = {
 
 type ServiceNavSubGroup = NonNullable<ServiceNavGroup["groups"]>[number];
 
-const MobileSubGroupLinks = ({
-  links,
-  onClose,
-}: {
-  links: NavLink[];
-  onClose: () => void;
-}) => (
+const MobileSubGroupLinks = ({ links, onClose }: { links: NavLink[]; onClose: () => void }) => (
   <>
     {links.map((sub) => (
       <Link
@@ -73,12 +67,8 @@ const MobileServiceGroup = ({
   onClose: () => void;
   onToggle: (name: string) => void;
 }) => {
-  const hasSubContent =
-    (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
-  const handleToggle = useCallback(
-    () => onToggle(group.name),
-    [group.name, onToggle],
-  );
+  const hasSubContent = (group.groups?.length ?? 0) > 0 || (group.links?.length ?? 0) > 0;
+  const handleToggle = useCallback(() => onToggle(group.name), [group.name, onToggle]);
 
   if (!hasSubContent) {
     return (
@@ -104,7 +94,7 @@ const MobileServiceGroup = ({
           <ChevronDown
             className={cn(
               "size-4 shrink-0 text-gray-400 transition-transform duration-300",
-              isOpen && "rotate-180",
+              isOpen && "rotate-180"
             )}
           />
         )}
@@ -127,9 +117,7 @@ const MobileServiceGroup = ({
                   subGroup={subGroup}
                 />
               ))}
-              {group.links && (
-                <MobileSubGroupLinks links={group.links} onClose={onClose} />
-              )}
+              {group.links && <MobileSubGroupLinks links={group.links} onClose={onClose} />}
             </div>
           </motion.div>
         )}
@@ -156,10 +144,7 @@ export const MobileNavItem = memo(
   }) => {
     const hasChildren = link.name.toLowerCase() === "services";
     const label = toTitleCase(link.name);
-    const handleToggle = useCallback(
-      () => onToggle(link.name),
-      [link.name, onToggle],
-    );
+    const handleToggle = useCallback(() => onToggle(link.name), [link.name, onToggle]);
 
     return (
       <div className="border-b border-gray-50 last:border-0">
@@ -173,7 +158,7 @@ export const MobileNavItem = memo(
             <ChevronDown
               className={cn(
                 "size-5 text-gray-400 transition-transform duration-300",
-                isOpen && "rotate-180",
+                isOpen && "rotate-180"
               )}
             />
           </button>
@@ -212,6 +197,6 @@ export const MobileNavItem = memo(
         </AnimatePresence>
       </div>
     );
-  },
+  }
 );
 MobileNavItem.displayName = "MobileNavItem";

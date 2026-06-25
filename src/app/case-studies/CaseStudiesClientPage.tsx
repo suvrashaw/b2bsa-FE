@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import {
-  type MouseEvent,
-  type ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { type MouseEvent, type ReactNode, useCallback, useEffect, useState } from "react";
 
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { Footer } from "@/components/layout/Footer";
@@ -46,8 +40,7 @@ const DEFAULT_GRID_SPANS = [
   "md:col-span-1 lg:col-span-3",
 ] as const;
 
-const isPageHref = (href?: string): href is string =>
-  href?.startsWith("/") ?? false;
+const isPageHref = (href?: string): href is string => href?.startsWith("/") ?? false;
 const isTouchInteraction = () =>
   globalThis.window !== undefined &&
   globalThis.window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -86,13 +79,7 @@ const FilterPill = ({
   );
 };
 
-const GridStudyCard = ({
-  colSpan,
-  study,
-}: {
-  colSpan: string;
-  study: CaseStudyEntry;
-}) => {
+const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEntry }) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const href = study.href;
   const description = study.title;
@@ -103,7 +90,7 @@ const GridStudyCard = ({
       event.preventDefault();
       setIsRevealed(true);
     },
-    [isRevealed],
+    [isRevealed]
   );
 
   const card = (
@@ -140,17 +127,14 @@ export const CaseStudiesClientPage = () => {
   const filteredStudies =
     activeFilter === ALL_FILTER
       ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((study) =>
-          study.services.includes(activeFilter),
-        );
+      : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.services.includes(activeFilter));
 
   const {
     currentPage,
     paginatedItems: paginatedStudies,
     totalPages,
   } = applyPagination(filteredStudies, requestedPage);
-  const hasEmptyPage =
-    filteredStudies.length > 0 && paginatedStudies.length === 0;
+  const hasEmptyPage = filteredStudies.length > 0 && paginatedStudies.length === 0;
   let gridContent: ReactNode;
 
   const updatePage = useCallback(
@@ -166,7 +150,7 @@ export const CaseStudiesClientPage = () => {
       const query = params.toString();
       router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
     },
-    [pathname, router, searchParams],
+    [pathname, router, searchParams]
   );
 
   const handleFilterChange = useCallback(
@@ -174,7 +158,7 @@ export const CaseStudiesClientPage = () => {
       setActiveFilter(filter);
       updatePage(1);
     },
-    [updatePage],
+    [updatePage]
   );
 
   useEffect(() => {
@@ -202,8 +186,7 @@ export const CaseStudiesClientPage = () => {
           No more case studies on this page.
         </SectionHeader>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-          Use the pagination controls to return to the available case study
-          results.
+          Use the pagination controls to return to the available case study results.
         </p>
       </div>
     );

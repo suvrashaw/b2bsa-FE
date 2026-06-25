@@ -50,7 +50,7 @@ export const CaseStudyItem = ({
       className={cn(
         "group relative cursor-pointer overflow-hidden rounded-2xl md:rounded-3xl",
         active ? "lg:max-w-none lg:flex-[4]" : "lg:max-w-[120px] lg:flex-[1]",
-        className,
+        className
       )}
       layout
       onClick={onActivate}
@@ -63,7 +63,7 @@ export const CaseStudyItem = ({
           alt={item.title}
           className={cn(
             "object-cover transition-transform duration-1000 max-lg:scale-105 max-lg:blur-[6px]",
-            active ? "scale-105" : "scale-100 grayscale hover:grayscale-0",
+            active ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
           )}
           fill
           priority={active}
@@ -75,7 +75,7 @@ export const CaseStudyItem = ({
             "absolute inset-0 transition-opacity duration-500",
             active
               ? "bg-gradient-to-t from-brand-charcoal/95 via-brand-charcoal/70 to-brand-charcoal/30 lg:from-brand-charcoal/90 lg:via-brand-charcoal/40 lg:to-transparent"
-              : "bg-brand-charcoal/70 lg:bg-brand-charcoal/60 lg:group-hover:bg-brand-charcoal/40",
+              : "bg-brand-charcoal/70 lg:bg-brand-charcoal/60 lg:group-hover:bg-brand-charcoal/40"
           )}
         />
       </div>
@@ -85,18 +85,14 @@ export const CaseStudyItem = ({
           "flex flex-col",
           active
             ? "relative z-[1] p-4 md:p-8 lg:absolute lg:inset-0 lg:justify-end lg:p-8"
-            : "absolute inset-0 justify-center p-4 sm:p-6 lg:justify-end lg:p-8",
+            : "absolute inset-0 justify-center p-4 sm:p-6 lg:justify-end lg:p-8"
         )}
       >
-        <div
-          className={cn("flex gap-4", active ? "items-start" : "items-center")}
-        >
+        <div className={cn("flex gap-4", active ? "items-start" : "items-center")}>
           <div
             className={cn(
               "flex size-10 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300 md:size-12",
-              active
-                ? "bg-brand-blue/90"
-                : "bg-white/10 group-hover:bg-brand-cyan/80",
+              active ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
             )}
           >
             <Icon className="size-4 text-white md:size-5" name={item.icon} />

@@ -44,16 +44,11 @@ const CaseStudyCard = ({
   };
   setActiveId: (id: string) => void;
 }) => {
-  const handleActivate = useCallback(
-    () => setActiveId(item.id),
-    [item.id, setActiveId],
-  );
+  const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
   return (
     <CaseStudyItem
       active={active}
-      className={
-        active ? "lg:min-h-0" : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"
-      }
+      className={active ? "lg:min-h-0" : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"}
       ctaLabel={ctaLabel}
       item={item}
       onActivate={handleActivate}
@@ -92,15 +87,13 @@ export const CaseStudies = ({
   viewAllLabel = content.viewAllLabel,
 }: CaseStudiesProps = {}) => {
   const initialItems = items ?? caseStudies ?? content.items;
-  const resolvedCaseStudies = (
-    maxItems ? initialItems.slice(0, maxItems) : initialItems
-  ).map((study, index) => ({
-    ...study,
-    icon:
-      study.icon ??
-      FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
-    id: study.id ?? createCaseStudyId(study, index),
-  }));
+  const resolvedCaseStudies = (maxItems ? initialItems.slice(0, maxItems) : initialItems).map(
+    (study, index) => ({
+      ...study,
+      icon: study.icon ?? FALLBACK_CASE_STUDY_ICONS[index % FALLBACK_CASE_STUDY_ICONS.length],
+      id: study.id ?? createCaseStudyId(study, index),
+    })
+  );
 
   const cards = resolvedCaseStudies.map((study) => ({
     client: study.client ?? study.title,
@@ -122,9 +115,7 @@ export const CaseStudies = ({
     title: study.title,
   }));
   const middleIndex = Math.floor(resolvedCaseStudies.length / 2);
-  const [activeId, setActiveId] = useState<string>(
-    resolvedCaseStudies[middleIndex]?.id ?? "",
-  );
+  const [activeId, setActiveId] = useState<string>(resolvedCaseStudies[middleIndex]?.id ?? "");
   const activeCaseStudyId = cards.some((study) => study.id === activeId)
     ? activeId
     : (cards[0]?.id ?? "");

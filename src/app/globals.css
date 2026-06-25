@@ -192,11 +192,7 @@ body {
   --pill-bg-2-hover: color-mix(in oklch, var(--foreground) 2%, transparent);
   --pill-border-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
   --pill-shadow-hover: color-mix(in oklch, var(--background) 70%, transparent);
-  --pill-highlight-hover: color-mix(
-    in oklch,
-    var(--foreground) 20%,
-    transparent
-  );
+  --pill-highlight-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
 
   font-family: "Plus Jakarta Sans", sans-serif;
 
@@ -219,17 +215,13 @@ body {
   0%,
   100% {
     transform: scale(1);
-    filter: drop-shadow(
-      0 0 5px color-mix(in oklch, var(--brand-primary) 50%, transparent)
-    );
+    filter: drop-shadow(0 0 5px color-mix(in oklch, var(--brand-primary) 50%, transparent));
   }
 
   15%,
   45% {
     transform: scale(1.2);
-    filter: drop-shadow(
-      0 0 10px color-mix(in oklch, var(--brand-primary) 80%, transparent)
-    );
+    filter: drop-shadow(0 0 10px color-mix(in oklch, var(--brand-primary) 80%, transparent));
   }
 
   30% {
@@ -259,20 +251,8 @@ body {
     );
   background-size: 60px 60px;
   /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 30%,
-    black 70%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 30%,
-    black 70%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
 }
 
 .footer-aurora {
@@ -287,11 +267,7 @@ body {
 .footer-glass-pill {
   border: 1px solid var(--pill-border);
 
-  background: linear-gradient(
-    145deg,
-    var(--pill-bg-1) 0%,
-    var(--pill-bg-2) 100%
-  );
+  background: linear-gradient(145deg, var(--pill-bg-1) 0%, var(--pill-bg-2) 100%);
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
@@ -312,11 +288,7 @@ body {
 .footer-glass-pill:hover {
   border-color: var(--pill-border-hover);
   color: var(--foreground);
-  background: linear-gradient(
-    145deg,
-    var(--pill-bg-1-hover) 0%,
-    var(--pill-bg-2-hover) 100%
-  );
+  background: linear-gradient(145deg, var(--pill-bg-1-hover) 0%, var(--pill-bg-2-hover) 100%);
   box-shadow:
     0 20px 40px -10px var(--pill-shadow-hover),
     inset 0 1px 1px var(--pill-highlight-hover);
@@ -338,8 +310,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 
-  -webkit-text-stroke: 1px
-    color-mix(in oklch, var(--foreground) 5%, transparent);
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--foreground) 5%, transparent);
 }
 
 .footer-text-glow {
@@ -351,9 +322,7 @@ body {
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-background-clip: text;
   background-clip: text;
-  filter: drop-shadow(
-    0 0 20px color-mix(in oklch, var(--foreground) 15%, transparent)
-  );
+  filter: drop-shadow(0 0 20px color-mix(in oklch, var(--foreground) 15%, transparent));
 
   -webkit-text-fill-color: transparent;
 }
@@ -411,11 +380,7 @@ body {
 }
 
 .hero-veil {
-  background: linear-gradient(
-    180deg,
-    rgb(21 57 73 / 50%) 0%,
-    rgb(53 144 181 / 90%) 90.865%
-  );
+  background: linear-gradient(180deg, rgb(21 57 73 / 50%) 0%, rgb(53 144 181 / 90%) 90.865%);
   animation: hero-veil-breathe 10s ease-in-out infinite alternate;
 }
 
@@ -483,11 +448,7 @@ body {
   border: 1px solid rgb(255 255 255 / 25%) !important;
   border-radius: 4px !important;
 
-  background: linear-gradient(
-    180deg,
-    rgb(0 0 0 / 45%) 0%,
-    rgb(0 0 0 / 30%) 100%
-  ) !important;
+  background: linear-gradient(180deg, rgb(0 0 0 / 45%) 0%, rgb(0 0 0 / 30%) 100%) !important;
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);

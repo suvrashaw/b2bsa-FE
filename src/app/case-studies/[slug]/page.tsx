@@ -4,13 +4,7 @@ import { notFound } from "next/navigation";
 
 import { CaseStudyPage } from "@/components/templates/CaseStudyPage";
 import { CASE_STUDY_DETAILS } from "@/content/case-studies";
-import {
-  buildBreadcrumbJsonLd,
-  buildPageGraph,
-  buildWebPageJsonLd,
-  JsonLd,
-  siteUrl,
-} from "@/lib";
+import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -18,15 +12,11 @@ type CaseStudyPageProps = {
   }>;
 };
 
-const findStudyBySlug = (slug: string) =>
-  CASE_STUDY_DETAILS.find((study) => study.slug === slug);
+const findStudyBySlug = (slug: string) => CASE_STUDY_DETAILS.find((study) => study.slug === slug);
 
-export const generateStaticParams = () =>
-  CASE_STUDY_DETAILS.map((study) => ({ slug: study.slug }));
+export const generateStaticParams = () => CASE_STUDY_DETAILS.map((study) => ({ slug: study.slug }));
 
-export const generateMetadata = async ({
-  params,
-}: CaseStudyPageProps): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<Metadata> => {
   const { slug } = await params;
   const study = findStudyBySlug(slug);
 
@@ -43,9 +33,7 @@ export const generateMetadata = async ({
     description,
     openGraph: {
       description,
-      images: [
-        { alt: study.title, height: 630, url: study.image, width: 1200 },
-      ],
+      images: [{ alt: study.title, height: 630, url: study.image, width: 1200 }],
       locale: "en_US",
       title: study.title,
       type: "article",
@@ -54,9 +42,7 @@ export const generateMetadata = async ({
     twitter: {
       card: "summary_large_image",
       description,
-      images: [
-        { alt: study.title, height: 630, url: study.image, width: 1200 },
-      ],
+      images: [{ alt: study.title, height: 630, url: study.image, width: 1200 }],
       title: study.title,
     },
   };
@@ -88,7 +74,7 @@ const Page = async ({ params }: CaseStudyPageProps) => {
               { name: "Case Studies", url: `${siteUrl}/case-studies` },
               { name: study.title, url: studyUrl },
             ],
-            studyUrl,
+            studyUrl
           ),
         ])}
       />

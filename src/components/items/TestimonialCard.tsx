@@ -69,12 +69,9 @@ export const TestimonialCard = ({
       z,
       zIndex,
     }),
-    [blur, opacity, rotateY, scale, x, z, zIndex],
+    [blur, opacity, rotateY, scale, x, z, zIndex]
   );
-  const handleClick = useCallback(
-    () => setActiveIndex(index),
-    [index, setActiveIndex],
-  );
+  const handleClick = useCallback(() => setActiveIndex(index), [index, setActiveIndex]);
 
   return (
     <motion.div
@@ -106,9 +103,7 @@ export const TestimonialCard = ({
         </p>
 
         <div className="mt-5">
-          <p className="font-heading text-sm font-bold text-brand-blue">
-            {testimonial.author}
-          </p>
+          <p className="font-heading text-sm font-bold text-brand-blue">{testimonial.author}</p>
         </div>
 
         <div className="mt-3 flex justify-center gap-1">

@@ -16,9 +16,7 @@ const headingVariants = cva("", {
 });
 
 export interface SectionHeaderProps
-  extends
-    HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headingVariants> {
+  extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
   as?: "h1" | "h2" | "h3" | "h4";
   description?: string;
   descriptionSize?: "body-l" | "body-m";
@@ -61,7 +59,7 @@ const BlockLayout = ({
         className={cn(
           headingVariants({ level: resolvedLevel }),
           isCenter ? "text-center" : "",
-          className,
+          className
         )}
         style={style}
         {...rest}
@@ -80,13 +78,11 @@ const BlockLayout = ({
             "mb-12 md:mb-14",
             isCenter
               ? "text-center"
-              : "flex flex-col gap-4 md:flex-row md:items-center md:justify-between",
+              : "flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
           )}
         >
           {headingEl}
-          {headingAction && (
-            <div className={isCenter ? "mt-6" : ""}>{headingAction}</div>
-          )}
+          {headingAction && <div className={isCenter ? "mt-6" : ""}>{headingAction}</div>}
         </div>
       )}
       {description && (
@@ -94,7 +90,7 @@ const BlockLayout = ({
           className={cn(
             "-mt-6 mb-12 max-w-2xl text-brand-charcoal/70",
             descriptionSize === "body-l" ? "type-body-l" : "type-body-m",
-            isCenter ? "mx-auto text-center" : "",
+            isCenter ? "mx-auto text-center" : ""
           )}
         >
           {description}

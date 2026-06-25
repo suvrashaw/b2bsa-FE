@@ -28,7 +28,7 @@ export const CinematicSequence = ({
   const { firstFrameLoaded, imagesRef } = useCinematicFrameImages(
     frameCount,
     frameUrlTemplate,
-    frameUrls,
+    frameUrls
   );
 
   const { scrollYProgress } = useScroll({
@@ -53,17 +53,14 @@ export const CinematicSequence = ({
       }
       return null;
     },
-    [frameCount, imagesRef],
+    [frameCount, imagesRef]
   );
 
   // Track progress and draw the corresponding frame
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (!firstFrameLoaded || !canvasRef.current) return;
 
-    const frameIndex = Math.min(
-      frameCount - 1,
-      Math.floor(latest * frameCount),
-    );
+    const frameIndex = Math.min(frameCount - 1, Math.floor(latest * frameCount));
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const img = getNearestFrame(frameIndex);
@@ -82,10 +79,7 @@ export const CinematicSequence = ({
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      const frameIndex = Math.min(
-        frameCount - 1,
-        Math.floor(scrollYProgress.get() * frameCount),
-      );
+      const frameIndex = Math.min(frameCount - 1, Math.floor(scrollYProgress.get() * frameCount));
       const img = getNearestFrame(frameIndex);
       if (ctx && img) {
         drawCover(ctx, img, canvas.width, canvas.height);
@@ -107,22 +101,13 @@ export const CinematicSequence = ({
 
         <div className="absolute inset-0 bg-black/[0.56]" />
 
-        {children && (
-          <div className="relative z-10 w-full px-4 md:px-6 lg:px-8">
-            {children}
-          </div>
-        )}
+        {children && <div className="relative z-10 w-full px-4 md:px-6 lg:px-8">{children}</div>}
       </div>
     </section>
   );
 };
 
-const drawCover = (
-  ctx: CanvasRenderingContext2D,
-  img: HTMLImageElement,
-  w: number,
-  h: number,
-) => {
+const drawCover = (ctx: CanvasRenderingContext2D, img: HTMLImageElement, w: number, h: number) => {
   const imgRatio = img.width / img.height;
   const canvasRatio = w / h;
   let renderH, renderW, x, y;
@@ -148,23 +133,17 @@ const LOAD_CONCURRENCY = 8;
 const createEmptyFrames = (frameCount: number) =>
   Array.from({ length: frameCount }, (): HTMLImageElement | null => null);
 
-const getCinematicFrameUrl = (
-  index: number,
-  frameUrlTemplate?: string,
-  frameUrls?: string[],
-) => {
+const getCinematicFrameUrl = (index: number, frameUrlTemplate?: string, frameUrls?: string[]) => {
   if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
   if (frameUrlTemplate)
-    return frameUrlTemplate.replace("%d", () =>
-      index.toString().padStart(3, "0"),
-    );
+    return frameUrlTemplate.replace("%d", () => index.toString().padStart(3, "0"));
   return "";
 };
 
 const loadCinematicFrame = (
   frameNumber: number,
   getFrameUrl: (index: number) => string,
-  onFrameLoad: (frameNumber: number, image: HTMLImageElement) => void,
+  onFrameLoad: (frameNumber: number, image: HTMLImageElement) => void
 ): Promise<void> =>
   new Promise((resolve) => {
     const image = new globalThis.Image();
@@ -181,7 +160,7 @@ const loadCinematicFrame = (
 
 const loadCinematicFrames = async (
   frameCount: number,
-  loadFrame: (frameNumber: number) => Promise<void>,
+  loadFrame: (frameNumber: number) => Promise<void>
 ) => {
   let nextFrameNumber = 1;
 
@@ -194,20 +173,16 @@ const loadCinematicFrames = async (
   };
 
   await Promise.all(
-    Array.from({ length: Math.min(LOAD_CONCURRENCY, frameCount) }, () =>
-      loadNextFrame(),
-    ),
+    Array.from({ length: Math.min(LOAD_CONCURRENCY, frameCount) }, () => loadNextFrame())
   );
 };
 
 const useCinematicFrameImages = (
   frameCount: number,
   frameUrlTemplate?: string,
-  frameUrls?: string[],
+  frameUrls?: string[]
 ) => {
-  const imagesRef = useRef<(HTMLImageElement | null)[]>(
-    createEmptyFrames(frameCount),
-  );
+  const imagesRef = useRef<(HTMLImageElement | null)[]>(createEmptyFrames(frameCount));
   const [firstFrameLoaded, setFirstFrameLoaded] = useState(false);
 
   useEffect(() => {
@@ -233,7 +208,7 @@ const useCinematicFrameImages = (
 
     /* eslint-disable unicorn/prefer-await -- effect callback cannot be async */
     loadCinematicFrames(frameCount, (frameNumber) =>
-      loadCinematicFrame(frameNumber, getFrameUrl, handleFrameLoad),
+      loadCinematicFrame(frameNumber, getFrameUrl, handleFrameLoad)
     ).catch(() => {});
     /* eslint-enable unicorn/prefer-await */
 

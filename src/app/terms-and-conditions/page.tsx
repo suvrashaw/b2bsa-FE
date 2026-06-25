@@ -6,11 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
-import {
-  TERMS_CONTACT,
-  TERMS_FAQ,
-  TERMS_HERO,
-} from "@/content/terms-and-conditions/content";
+import { TERMS_CONTACT, TERMS_FAQ, TERMS_HERO } from "@/content/terms-and-conditions/content";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({

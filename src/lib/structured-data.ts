@@ -61,7 +61,7 @@ export interface ServiceSchemaInput {
 
 export const buildBreadcrumbJsonLd = (
   crumbs: Array<{ name: string; url: string }>,
-  pageUrl?: string,
+  pageUrl?: string
 ) => ({
   "@context": "https://schema.org",
   ...(pageUrl && { "@id": `${pageUrl}/#breadcrumb` }),
@@ -79,11 +79,7 @@ const toJsonLdText = (node: ReactNode): string => {
     return "";
   }
 
-  if (
-    typeof node === "string" ||
-    typeof node === "number" ||
-    typeof node === "bigint"
-  ) {
+  if (typeof node === "string" || typeof node === "number" || typeof node === "bigint") {
     return String(node);
   }
 
@@ -98,9 +94,7 @@ const toJsonLdText = (node: ReactNode): string => {
   return "";
 };
 
-export const buildFaqJsonLd = (
-  faqs: Array<{ answer: ReactNode; question: string }>,
-) => {
+export const buildFaqJsonLd = (faqs: Array<{ answer: ReactNode; question: string }>) => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -117,7 +111,7 @@ export const buildFaqJsonLd = (
 
 export const buildOrganizationJsonLd = (
   serviceOffers?: Array<{ name: string; url: string }>,
-  knowsAbout?: string[],
+  knowsAbout?: string[]
 ) => {
   return {
     "@context": "https://schema.org",
@@ -146,7 +140,7 @@ export const buildOrganizationJsonLd = (
 
 export const buildHowToJsonLd = (
   title: string,
-  steps: Array<{ description: string; title: string }>,
+  steps: Array<{ description: string; title: string }>
 ) => ({
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -169,9 +163,7 @@ export const buildItemListJsonLd = (items: Array<{ title: string }>) => ({
   })),
 });
 
-export const buildLinkedItemListJsonLd = (
-  items: Array<{ name: string; url: string }>,
-) => ({
+export const buildLinkedItemListJsonLd = (items: Array<{ name: string; url: string }>) => ({
   "@context": "https://schema.org",
   "@type": "ItemList",
   itemListElement: items.map(({ name, url }, index) => ({
@@ -186,12 +178,7 @@ export const buildLinkedItemListJsonLd = (
   })),
 });
 
-export const buildServiceJsonLd = ({
-  description,
-  name,
-  serviceType,
-  url,
-}: ServiceSchemaInput) => {
+export const buildServiceJsonLd = ({ description, name, serviceType, url }: ServiceSchemaInput) => {
   return {
     "@context": "https://schema.org",
     "@id": `${BASE}${url}/#service`,
@@ -342,7 +329,7 @@ export const buildEventJsonLd = ({
 });
 
 export const buildPageGraph = (
-  schemas: Array<{ "@context"?: string } & Record<string, unknown>>,
+  schemas: Array<{ "@context"?: string } & Record<string, unknown>>
 ) => ({
   "@context": "https://schema.org",
   "@graph": schemas.map(({ "@context": _ctx, ...rest }) => rest),

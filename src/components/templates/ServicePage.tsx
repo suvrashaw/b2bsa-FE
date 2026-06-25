@@ -106,10 +106,7 @@ export interface ServicePageProps {
   why?: SpotlightProps;
 }
 
-const getBreadcrumbs = (
-  page: MarketingPageIdentity,
-  parentPage?: MarketingPageIdentity,
-) => {
+const getBreadcrumbs = (page: MarketingPageIdentity, parentPage?: MarketingPageIdentity) => {
   const crumbs = [{ name: "Home", url: siteUrl }];
   if (parentPage) {
     crumbs.push({
@@ -126,7 +123,7 @@ const getBreadcrumbs = (
 
 const renderServicesSection = (
   section: ServicesStackProps,
-  sectionType: "carousel" | "grid" = "grid",
+  sectionType: "carousel" | "grid" = "grid"
 ) => {
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
@@ -197,8 +194,7 @@ export const ServicePage = ({
       services?.content?.services?.[0]?.image ||
       secondaryServices?.services?.[0]?.image ||
       secondaryServices?.content?.services?.[0]?.image;
-    const altText =
-      typeof hero?.title === "string" ? hero.title : page.pageName;
+    const altText = typeof hero?.title === "string" ? hero.title : page.pageName;
     return image ? { alt: altText, src: image } : undefined;
   }, [
     hero?.images,
@@ -211,9 +207,7 @@ export const ServicePage = ({
   ]);
 
   const pageUrl = `${siteUrl}${normalizePath(page.seo.canonicalPath)}`;
-  const primaryImageUrl = fallbackBg?.src
-    ? `${siteUrl}${fallbackBg.src}`
-    : undefined;
+  const primaryImageUrl = fallbackBg?.src ? `${siteUrl}${fallbackBg.src}` : undefined;
   const pageGraph = buildPageGraph([
     buildWebPageJsonLd({
       breadcrumbId: `${pageUrl}/#breadcrumb`,
@@ -233,11 +227,7 @@ export const ServicePage = ({
     ...(faq.faqs?.length ? [buildFaqJsonLd(faq.faqs)] : []),
     ...(steps.length > 0 ? [buildHowToJsonLd(processTitle, steps)] : []),
     ...(services
-      ? [
-          buildItemListJsonLd(
-            services.services ?? services.content?.services ?? [],
-          ),
-        ]
+      ? [buildItemListJsonLd(services.services ?? services.content?.services ?? [])]
       : []),
   ]);
 
@@ -275,8 +265,7 @@ export const ServicePage = ({
         />
       )}
 
-      {secondaryServices &&
-        renderServicesSection(secondaryServices, secondaryServicesSectionType)}
+      {secondaryServices && renderServicesSection(secondaryServices, secondaryServicesSectionType)}
 
       {preStudiesSections}
 
@@ -307,12 +296,7 @@ export const ServicePage = ({
           layout="carousel"
         >
           {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
-            <FAQCard
-              answer={f.answer}
-              image={f.image}
-              key={f.id}
-              question={f.question}
-            />
+            <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
           ))}
         </Carousel>
       )}
@@ -324,21 +308,14 @@ export const ServicePage = ({
           heading={relatedServicesHeading ?? "Explore Related Solutions"}
         >
           {relatedServices.map((service, index) => (
-            <ServicesLinkCard
-              index={index}
-              key={service.href}
-              service={service}
-            />
+            <ServicesLinkCard index={index} key={service.href} service={service} />
           ))}
         </CardsGrid>
       )}
 
       {preContactSections}
 
-      <ContactUs
-        {...contactUs}
-        backgroundImage={contactUs.backgroundImage || fallbackBg}
-      />
+      <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />
 
       <Footer />
     </main>

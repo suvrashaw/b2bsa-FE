@@ -66,7 +66,7 @@ export const StickyContactBar = () => {
             className={cn(
               "group relative flex size-12 items-center justify-center text-white shadow-md",
               "rounded-l-xl transition-all duration-200 hover:-translate-x-1 hover:shadow-xl",
-              bg,
+              bg
             )}
             href={href}
             key={label}

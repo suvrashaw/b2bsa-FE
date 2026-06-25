@@ -48,15 +48,8 @@ export const ServicesCard = ({
 
         {showCta &&
           (service.href ? (
-            <Button
-              asChild
-              className="pointer-events-auto mt-6 w-max md:mt-0"
-              variant="primary"
-            >
-              <Link
-                aria-label={`${ctaLabel} about ${service.title}`}
-                href={service.href}
-              >
+            <Button asChild className="pointer-events-auto mt-6 w-max md:mt-0" variant="primary">
+              <Link aria-label={`${ctaLabel} about ${service.title}`} href={service.href}>
                 <span className="mr-4">
                   {ctaLabel}
                   <span className="sr-only"> about {service.title}</span>

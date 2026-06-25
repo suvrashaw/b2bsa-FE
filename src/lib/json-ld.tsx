@@ -10,8 +10,5 @@ const createJsonLdMarkup = (data: object) => ({
 });
 
 export const JsonLd = ({ data }: { data: object }) => (
-  <script
-    dangerouslySetInnerHTML={createJsonLdMarkup(data)}
-    type="application/ld+json"
-  />
+  <script dangerouslySetInnerHTML={createJsonLdMarkup(data)} type="application/ld+json" />
 );

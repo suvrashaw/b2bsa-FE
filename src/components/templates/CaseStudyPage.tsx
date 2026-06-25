@@ -20,10 +20,7 @@ const HERO_PRIMARY_CTA = {
   label: "Get a Custom Proposal",
 } as const;
 const METADATA_LABELS = ["Client", "Event", "Location"] as const;
-const CINEMATIC_HEADING: [string, string] = [
-  "Ready to build",
-  "your next event program?",
-];
+const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event program?"];
 const CINEMATIC_PRIMARY = {
   href: "/contact-us",
   label: "Start a Conversation",
@@ -46,12 +43,12 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       { label: METADATA_LABELS[1], value: study.event },
       { label: METADATA_LABELS[2], value: study.location },
     ],
-    [study.client, study.event, study.location],
+    [study.client, study.event, study.location]
   );
 
   const cinematicBg = useMemo(
     () => ({ alt: study.title, src: study.image }),
-    [study.title, study.image],
+    [study.title, study.image]
   );
 
   const challengeSecondary = useMemo(
@@ -61,7 +58,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       titleLine1: "Our",
       titleLine2: "Solution",
     }),
-    [study.solution],
+    [study.solution]
   );
 
   return (
@@ -85,11 +82,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
             </SectionHeader>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {study.services.map((service, index) => (
-                <ServicesImageCard
-                  index={index}
-                  key={service}
-                  service={service}
-                />
+                <ServicesImageCard index={index} key={service} service={service} />
               ))}
             </div>
           </div>

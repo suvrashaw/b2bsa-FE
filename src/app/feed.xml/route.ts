@@ -27,7 +27,7 @@ export const GET = () => {
     <description>${escapeXml(post.excerpt ?? post.title)}</description>
     ${post.date ? `<pubDate>${toRfc2822(post.date)}</pubDate>` : ""}
     ${post.category ? `<category>${escapeXml(post.category)}</category>` : ""}
-  </item>`,
+  </item>`
     )
     .join("");
 

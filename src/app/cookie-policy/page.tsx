@@ -37,9 +37,8 @@ const Page = () => {
             Cookie Policy
           </SectionHeader>
           <p className="mb-12 max-w-3xl text-xl leading-relaxed text-gray-600">
-            This Cookie Policy explains how B2B Sales Arrow uses cookies and
-            similar technologies to operate, protect, measure, and improve our
-            website.
+            This Cookie Policy explains how B2B Sales Arrow uses cookies and similar technologies to
+            operate, protect, measure, and improve our website.
           </p>
 
           <div className="space-y-10">
@@ -65,10 +64,9 @@ const Page = () => {
               Managing Your Cookie Preferences
             </SectionHeader>
             <p className="leading-relaxed text-white/80">
-              You can control or delete cookies through your browser settings.
-              Disabling certain cookies may affect form submission, embedded
-              media, or parts of the website experience. If you have questions,
-              contact us at info@b2bsalesarrow.com.
+              You can control or delete cookies through your browser settings. Disabling certain
+              cookies may affect form submission, embedded media, or parts of the website
+              experience. If you have questions, contact us at info@b2bsalesarrow.com.
             </p>
           </section>
         </div>

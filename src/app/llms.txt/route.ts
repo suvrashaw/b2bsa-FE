@@ -13,8 +13,7 @@ const abs = (path: string) => `${siteUrl}${path}`;
 const pageTitle = (seoTitle: string) => seoTitle.split(" | ", 1)[0];
 
 export const GET = () => {
-  const { companyPages, publishedPosts, serviceDetails, serviceHubs } =
-    getLLMSContentLists();
+  const { companyPages, publishedPosts, serviceDetails, serviceHubs } = getLLMSContentLists();
 
   const lines: string[] = [
     `# B2B Sales Arrow`,
@@ -24,43 +23,37 @@ export const GET = () => {
     `## Service Categories`,
     ``,
     ...serviceHubs.map(
-      (p) =>
-        `- [${pageTitle(p.seo.title)}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`,
+      (p) => `- [${pageTitle(p.seo.title)}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`
     ),
     ``,
     `## Services`,
     ``,
     ...serviceDetails.map(
-      (p) =>
-        `- [${pageTitle(p.seo.title)}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`,
+      (p) => `- [${pageTitle(p.seo.title)}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`
     ),
     ``,
     `## Blog Posts`,
     ``,
     ...publishedPosts.map(
-      (p) =>
-        `- [${p.title}](${abs("/blogs/" + p.id)}): ${p.excerpt ?? p.title}`,
+      (p) => `- [${p.title}](${abs("/blogs/" + p.id)}): ${p.excerpt ?? p.title}`
     ),
     ``,
     `## Case Studies`,
     ``,
     ...CASE_STUDY_DETAILS.map(
-      (s) =>
-        `- [${s.title}](${abs("/case-studies/" + s.slug)}): ${s.outcome.split(".", 1)[0]}.`,
+      (s) => `- [${s.title}](${abs("/case-studies/" + s.slug)}): ${s.outcome.split(".", 1)[0]}.`
     ),
     ``,
     `## Tradeshow Calendar`,
     ``,
     ...TRADE_SHOW_CALENDAR_EVENTS.map(
-      (e) =>
-        `- [${e.name}](${abs("/tradeshow-calendar/" + e.id)}): ${e.summary}`,
+      (e) => `- [${e.name}](${abs("/tradeshow-calendar/" + e.id)}): ${e.summary}`
     ),
     ``,
     `## Company`,
     ``,
     ...companyPages.map(
-      (p) =>
-        `- [${p.pageName}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`,
+      (p) => `- [${p.pageName}](${abs(p.seo.canonicalPath)}): ${p.seo.description}`
     ),
   ];
 

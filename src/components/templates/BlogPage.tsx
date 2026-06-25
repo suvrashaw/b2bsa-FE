@@ -13,11 +13,7 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Button } from "@/components/ui/Button";
-import {
-  type ContentBlock,
-  SHARED_BLOG_POSTS,
-  type SharedBlogPost,
-} from "@/content/blogs";
+import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/blogs";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
@@ -29,16 +25,15 @@ interface BlogSidebarTrendingProps {
 }
 
 const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
-  const trendingPosts = SHARED_BLOG_POSTS.filter(
-    (post) => String(post.id) !== currentId,
-  ).slice(0, 3);
+  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(
+    0,
+    3
+  );
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
       <div className="bg-brand-blue px-4 py-3">
-        <h2 className="text-sm font-bold tracking-widest text-white uppercase">
-          Trending Posts
-        </h2>
+        <h2 className="text-sm font-bold tracking-widest text-white uppercase">Trending Posts</h2>
       </div>
       <div className="divide-y divide-gray-100">
         {trendingPosts.map((post) => (
@@ -61,9 +56,7 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
                 {post.title}
               </h3>
               {post.date && (
-                <p className="mt-1 text-[11px] font-medium text-gray-500">
-                  {post.date}
-                </p>
+                <p className="mt-1 text-[11px] font-medium text-gray-500">{post.date}</p>
               )}
             </div>
           </Link>
@@ -79,16 +72,13 @@ const BlogSidebarSubscribe = () => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = useCallback(
-    async (event: { preventDefault: () => void }) => {
-      event.preventDefault();
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 600));
-      setLoading(false);
-      setSubmitted(true);
-    },
-    [],
-  );
+  const handleSubmit = useCallback(async (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    setLoading(false);
+    setSubmitted(true);
+  }, []);
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
@@ -99,18 +89,11 @@ const BlogSidebarSubscribe = () => {
       </div>
       {submitted ? (
         <div className="flex flex-col items-center gap-3 p-6 text-center">
-          <p className="font-heading text-lg font-bold text-brand-charcoal">
-            You&apos;re all set!
-          </p>
-          <p className="text-sm text-gray-500">
-            We&apos;ll be in touch with your event strategy.
-          </p>
+          <p className="font-heading text-lg font-bold text-brand-charcoal">You&apos;re all set!</p>
+          <p className="text-sm text-gray-500">We&apos;ll be in touch with your event strategy.</p>
         </div>
       ) : (
-        <form
-          className="space-y-4 rounded-b-2xl bg-white p-5"
-          onSubmit={handleSubmit}
-        >
+        <form className="space-y-4 rounded-b-2xl bg-white p-5" onSubmit={handleSubmit}>
           <div>
             <h2 className="font-heading text-xl leading-tight font-bold text-brand-charcoal">
               Don&apos;t Just Scroll!
@@ -183,9 +166,7 @@ const BlogSidebarLinkedIn = ({ post }: { post: SharedBlogPost }) => {
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
       <div className="bg-brand-blue px-4 py-3">
-        <h2 className="text-sm font-bold tracking-widest text-white uppercase">
-          LinkedIn
-        </h2>
+        <h2 className="text-sm font-bold tracking-widest text-white uppercase">LinkedIn</h2>
       </div>
       <div className="space-y-4 p-4">
         {post.linkedinEmbedUrl && (
@@ -220,8 +201,7 @@ export interface BlogPageProps {
   post: SharedBlogPost;
 }
 
-const countWords = (text: string) =>
-  text.trim().split(/\s+/).filter(Boolean).length;
+const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
 const getBlockWordCount = (block: ContentBlock) => {
   switch (block.type) {
@@ -243,10 +223,7 @@ const getBlockWordCount = (block: ContentBlock) => {
 };
 
 const getReadTime = (blocks: ContentBlock[]) => {
-  const totalWords = blocks.reduce(
-    (total, block) => total + getBlockWordCount(block),
-    0,
-  );
+  const totalWords = blocks.reduce((total, block) => total + getBlockWordCount(block), 0);
   return `${Math.max(4, Math.ceil(totalWords / 225))} min read`;
 };
 
@@ -305,10 +282,7 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
           key={index}
         >
           {block.items.map((item) => (
-            <li
-              className="leading-relaxed marker:font-bold marker:text-brand-blue"
-              key={item}
-            >
+            <li className="leading-relaxed marker:font-bold marker:text-brand-blue" key={item}>
               {item}
             </li>
           ))}
@@ -337,10 +311,7 @@ const renderContentBlock = (block: ContentBlock, index: number) => {
 
 // ─── BlogPage ────────────────────────────────────────────────────────────────
 
-const CTA_HEADING_LINES: [string, string] = [
-  "Ready to Make Your",
-  "Next Event Unforgettable?",
-];
+const CTA_HEADING_LINES: [string, string] = ["Ready to Make Your", "Next Event Unforgettable?"];
 const CTA_PRIMARY = {
   href: "/contact-us",
   label: "Book a Consultation",
@@ -357,17 +328,15 @@ export const BlogPage = ({ post }: BlogPageProps) => {
       HOME_SERVICES_CONTENT.services
         .slice(0, 5)
         .map((item) => ({ ...item, image: PLACEHOLDER_IMAGE })),
-    [],
+    []
   );
   const relatedPosts = useMemo(
     () =>
-      SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map(
-        (relatedPost) => ({
-          ...relatedPost,
-          image: PLACEHOLDER_IMAGE,
-        }),
-      ),
-    [post.id],
+      SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((relatedPost) => ({
+        ...relatedPost,
+        image: PLACEHOLDER_IMAGE,
+      })),
+    [post.id]
   );
   const faqItems = post.faqs?.map((faq, index) => ({
     answer: faq.answer,
@@ -377,7 +346,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
   const contactUsBg = useMemo(
     () => ({ alt: post.title, src: post.image }),
-    [post.title, post.image],
+    [post.title, post.image]
   );
 
   return (
@@ -467,11 +436,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         cols={4}
         heading="Related Articles"
         headingAction={
-          <Button
-            asChild
-            className="shrink-0 self-start md:self-auto"
-            variant="primary"
-          >
+          <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
             <Link href="/blogs">View All Blogs</Link>
           </Button>
         }

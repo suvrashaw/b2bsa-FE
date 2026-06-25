@@ -66,11 +66,7 @@ const SpotlightCta = ({
   if (!ctaLabel) return null;
 
   const ctaClassName = cn("gap-2 transition-all duration-500");
-  const icon = isHovered ? (
-    <ArrowUpRight className="size-4" />
-  ) : (
-    <ArrowRight className="size-4" />
-  );
+  const icon = isHovered ? <ArrowUpRight className="size-4" /> : <ArrowRight className="size-4" />;
 
   return (
     <div className="mt-6 md:mt-8 lg:mt-10">
@@ -132,28 +128,28 @@ const SpotlightTextBlock = ({
   const hasDescriptionItems = Boolean(descriptionItems);
   const lineStyle = useMemo(
     () => ({ transitionTimingFunction: EASE, width: isHovered ? 48 : 32 }),
-    [isHovered],
+    [isHovered]
   );
   const labelStyle = useMemo(
     () => ({
       letterSpacing: isHovered ? "0.3em" : "0.25em",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const title1Style = useMemo(
     () => ({
       transform: isHovered ? "translateY(-2px)" : "translateY(0)",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const title2Style = useMemo(
     () => ({
       transform: isHovered ? "translateX(12px)" : "translateX(0)",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const descStyle = useMemo(
     () => ({
@@ -161,19 +157,18 @@ const SpotlightTextBlock = ({
       transform: isHovered ? "translateY(-4px)" : "translateY(0)",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
 
   return (
     <div
       className={cn(
         "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center",
-        pairedWithMedia &&
-          "md:w-full md:max-w-[640px] md:min-w-0 lg:max-w-[720px]",
+        pairedWithMedia && "md:w-full md:max-w-[640px] md:min-w-0 lg:max-w-[720px]",
         !pairedWithMedia && "md:w-full md:max-w-[480px] lg:max-w-[560px]",
         align === "left" && "md:items-start md:text-left",
         align === "right" && "md:items-end md:text-right",
-        className,
+        className
       )}
     >
       {label && (
@@ -181,13 +176,10 @@ const SpotlightTextBlock = ({
           className={cn(
             "mb-6 flex items-center justify-center gap-3 md:mb-8 md:gap-4",
             align === "left" && "md:justify-start",
-            align === "right" && "md:flex-row-reverse md:justify-start",
+            align === "right" && "md:flex-row-reverse md:justify-start"
           )}
         >
-          <div
-            className="h-px bg-brand-charcoal transition-all duration-700"
-            style={lineStyle}
-          />
+          <div className="h-px bg-brand-charcoal transition-all duration-700" style={lineStyle} />
           <span
             className="text-[10px] font-medium text-brand-charcoal uppercase transition-all duration-700 md:text-xs"
             style={labelStyle}
@@ -217,7 +209,7 @@ const SpotlightTextBlock = ({
           className={cn(
             "mt-6 max-w-[580px] space-y-3 text-sm leading-relaxed transition-all duration-700 md:mt-8 md:text-base lg:mt-10",
             pairedWithMedia && "md:max-w-none",
-            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]",
+            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]"
           )}
           style={descStyle}
         >
@@ -228,7 +220,7 @@ const SpotlightTextBlock = ({
                 className={cn(
                   "flex justify-center gap-3",
                   align === "left" && "md:justify-start",
-                  align === "right" && "md:flex-row-reverse",
+                  align === "right" && "md:flex-row-reverse"
                 )}
                 key={item}
               >
@@ -236,7 +228,7 @@ const SpotlightTextBlock = ({
                 <span
                   className={cn(
                     align === "left" && "md:text-left",
-                    align === "right" && "md:text-right",
+                    align === "right" && "md:text-right"
                   )}
                 >
                   {item}
@@ -250,7 +242,7 @@ const SpotlightTextBlock = ({
           className={cn(
             "mt-6 max-w-[580px] text-sm leading-relaxed whitespace-pre-line transition-all duration-700 md:mt-8 md:text-base lg:mt-10",
             pairedWithMedia && "md:max-w-none",
-            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]",
+            !pairedWithMedia && "md:max-w-[440px] lg:max-w-[520px]"
           )}
           style={descStyle}
         >
@@ -261,12 +253,7 @@ const SpotlightTextBlock = ({
       {locationBadges && locationBadges.length > 0 && (
         <div className="mt-6 grid grid-cols-2 gap-3 md:mt-8">
           {locationBadges.map((city) => (
-            <Button
-              className="gap-1.5"
-              key={city}
-              onClick={onLocationBadgeClick}
-              variant="primary"
-            >
+            <Button className="gap-1.5" key={city} onClick={onLocationBadgeClick} variant="primary">
               <MapPin className="size-3.5 shrink-0" />
               {city}
             </Button>
@@ -306,18 +293,18 @@ const SpotlightImageBlock = ({
       transform: isHovered ? "translate(-4px, -4px)" : "translate(0, 0)",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const imgStyle = useMemo(
     () => ({
       transform: isHovered ? "scale(1.03)" : "scale(1)",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const overlayStyle = useMemo(
     () => ({ opacity: isHovered ? 1 : 0, transitionTimingFunction: EASE }),
-    [isHovered],
+    [isHovered]
   );
   const cornerTLV = useMemo(
     () => ({
@@ -327,7 +314,7 @@ const SpotlightImageBlock = ({
       transitionDelay: "50ms",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const cornerTLH = useMemo(
     () => ({
@@ -337,7 +324,7 @@ const SpotlightImageBlock = ({
       transitionDelay: "100ms",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const cornerBRV = useMemo(
     () => ({
@@ -347,7 +334,7 @@ const SpotlightImageBlock = ({
       transitionDelay: "150ms",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
   const cornerBRH = useMemo(
     () => ({
@@ -357,7 +344,7 @@ const SpotlightImageBlock = ({
       transitionDelay: "200ms",
       transitionTimingFunction: EASE,
     }),
-    [isHovered],
+    [isHovered]
   );
 
   let mediaElement: React.ReactNode = null;
@@ -392,7 +379,7 @@ const SpotlightImageBlock = ({
     <div
       className={cn(
         "relative w-[280px] sm:w-[340px] md:w-full md:max-w-[440px] md:min-w-0 lg:max-w-[560px]",
-        className,
+        className
       )}
     >
       <div
@@ -460,13 +447,10 @@ export const Spotlight = ({
   let imageBlockClassName: string | undefined;
 
   if (isUsesMediaSplitLayout) {
-    textBlockClassName =
-      imagePosition === "left"
-        ? "md:justify-self-start"
-        : "md:justify-self-end";
+    textBlockClassName = imagePosition === "left" ? "md:justify-self-start" : "md:justify-self-end";
     imageBlockClassName = cn(
       imagePosition === "left" && "md:order-first md:justify-self-start",
-      imagePosition === "right" && "md:justify-self-end",
+      imagePosition === "right" && "md:justify-self-end"
     );
   } else if (imagePosition === "left") {
     imageBlockClassName = "md:order-first";
@@ -498,13 +482,9 @@ export const Spotlight = ({
         <div
           className={cn(
             "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-4 md:gap-14 md:px-8 lg:gap-20",
-            isUsesMediaSplitLayout
-              ? "max-w-6xl lg:max-w-[1360px]"
-              : "max-w-6xl lg:max-w-6xl",
-            isUsesMediaSplitLayout
-              ? mediaGridClassName
-              : "md:grid md:grid-cols-2",
-            className,
+            isUsesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
+            isUsesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
+            className
           )}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -550,8 +530,7 @@ export const Spotlight = ({
           )}
         </div>
       </section>
-      {(triggerContactModal ||
-        (locationBadges && locationBadges.length > 0)) && (
+      {(triggerContactModal || (locationBadges && locationBadges.length > 0)) && (
         <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
       )}
     </>

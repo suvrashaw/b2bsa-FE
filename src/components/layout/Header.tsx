@@ -39,9 +39,7 @@ export const Header = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<"services" | null>(null);
   const [openMobileNav, setOpenMobileNav] = useState<null | string>(null);
-  const [openMobileServiceGroup, setOpenMobileServiceGroup] = useState<
-    null | string
-  >(null);
+  const [openMobileServiceGroup, setOpenMobileServiceGroup] = useState<null | string>(null);
 
   const solidHeader = forceLightMode || scrolled;
   const lightText = darkBackground && !solidHeader;
@@ -53,10 +51,7 @@ export const Header = ({
     setOpenMobileServiceGroup(null);
   }, []);
 
-  const toggleMobileMenu = useCallback(
-    () => setIsMobileMenuOpen((prev) => !prev),
-    [],
-  );
+  const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((prev) => !prev), []);
 
   const toggleMobileNav = useCallback((name: string) => {
     setOpenMobileNav((prev) => (prev === name ? null : name));
@@ -76,10 +71,7 @@ export const Header = ({
   }, []);
 
   const closeMegamenu = useCallback(() => setActiveDropdown(null), []);
-  const openServicesMegamenu = useCallback(
-    () => setActiveDropdown("services"),
-    [],
-  );
+  const openServicesMegamenu = useCallback(() => setActiveDropdown("services"), []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,8 +86,7 @@ export const Header = ({
 
   let headerSurfaceClass = "bg-transparent";
   if (solidHeader) {
-    headerSurfaceClass =
-      "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100";
+    headerSurfaceClass = "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100";
   } else if (lightText) {
     headerSurfaceClass =
       "border-b border-white/10 bg-brand-charcoal/30 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md";
@@ -106,7 +97,7 @@ export const Header = ({
       animate={HEADER_ANIMATE}
       className={cn(
         "fixed inset-x-0 top-0 z-50 flex items-center justify-between px-2 py-3 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300 sm:px-8 sm:py-4",
-        headerSurfaceClass,
+        headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
       onMouseLeave={closeMegamenu}
@@ -153,20 +144,14 @@ export const Header = ({
         </Button>
         <div className="xl:hidden">
           <button
-            aria-label={
-              isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"
-            }
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
               "flex min-h-[40px] min-w-[40px] items-center justify-center rounded-full p-2 transition-colors hover:bg-brand-gray/5 xl:min-h-[48px] xl:min-w-[48px] xl:p-3",
-              lightText ? "text-white" : "",
+              lightText ? "text-white" : ""
             )}
             onClick={toggleMobileMenu}
           >
-            {isMobileMenuOpen ? (
-              <X className="size-6" />
-            ) : (
-              <Menu className="size-6" />
-            )}
+            {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
         </div>
       </div>

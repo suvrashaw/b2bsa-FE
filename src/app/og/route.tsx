@@ -9,8 +9,7 @@ import { siteUrl } from "@/lib/json-ld";
 
 export const runtime = "edge";
 const defaultOgContent = {
-  description:
-    "Premium growth partner for enterprise event and digital solutions.",
+  description: "Premium growth partner for enterprise event and digital solutions.",
   group: "B2B Growth",
   title: "B2B Sales Arrow",
 };
@@ -149,21 +148,15 @@ export const GET = (request: { url: string }) => {
             <div style={ogBrandMarkStyle}>B</div>
             <div style={ogBrandTextStyle}>
               <span style={ogBrandTitleStyle}>B2B Sales Arrow</span>
-              <span style={ogBrandUrlStyle}>
-                {siteUrl.replace("https://", "")}
-              </span>
+              <span style={ogBrandUrlStyle}>{siteUrl.replace("https://", "")}</span>
             </div>
           </div>
           <div style={ogGroupPillStyle}>{content.group}</div>
         </div>
 
         <div style={ogMainCopyStyle}>
-          <div style={ogEyebrowStyle}>
-            Enterprise growth systems, built to convert.
-          </div>
-          <div style={getOgTitleStyle(content.title.length)}>
-            {content.title}
-          </div>
+          <div style={ogEyebrowStyle}>Enterprise growth systems, built to convert.</div>
+          <div style={getOgTitleStyle(content.title.length)}>{content.title}</div>
           <div style={ogDescriptionStyle}>{content.description}</div>
         </div>
 
@@ -182,7 +175,7 @@ export const GET = (request: { url: string }) => {
       },
       height: 630,
       width: 1200,
-    },
+    }
   );
 };
 

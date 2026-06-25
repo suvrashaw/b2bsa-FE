@@ -42,13 +42,7 @@ interface FlipCardProps extends EventDetailsPanelProps {
   shouldReduceMotion: boolean;
 }
 
-type FlipStyle =
-  | "diagonal"
-  | "diagonalWipe"
-  | "hinge"
-  | "horizontal"
-  | "split"
-  | "vertical";
+type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" | "vertical";
 
 const CARD_SHELL_CLASS =
   "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[220px]";
@@ -56,13 +50,7 @@ const CARD_SHELL_CLASS =
 const isInteractiveTarget = (target: EventTarget | null) =>
   target instanceof HTMLElement && Boolean(target.closest("a, button"));
 
-const CardFront = ({
-  event,
-  eventImage,
-}: {
-  event: EventCardItem;
-  eventImage: string;
-}) => (
+const CardFront = ({ event, eventImage }: { event: EventCardItem; eventImage: string }) => (
   <>
     <Image
       alt={event.title}
@@ -169,10 +157,8 @@ const HorizontalFlipCard = ({
     <div
       className={cn(
         "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]",
-        shouldReduceMotion
-          ? "transition-none"
-          : "transition-transform duration-700 ease-out",
-        isFlipped && "[transform:rotateY(180deg)]",
+        shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+        isFlipped && "[transform:rotateY(180deg)]"
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
@@ -207,10 +193,8 @@ const VerticalFlipCard = ({
     <div
       className={cn(
         "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotateX(180deg)] group-hover:[transform:rotateX(180deg)]",
-        shouldReduceMotion
-          ? "transition-none"
-          : "transition-transform duration-700 ease-out",
-        isFlipped && "[transform:rotateX(180deg)]",
+        shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+        isFlipped && "[transform:rotateX(180deg)]"
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
@@ -253,10 +237,8 @@ const HingeFlipCard = ({
     <div
       className={cn(
         "absolute inset-0 origin-left overflow-hidden rounded-[22px] [backface-visibility:hidden] [transform-style:preserve-3d] group-focus-within:[transform:rotateY(-112deg)] group-hover:[transform:rotateY(-112deg)]",
-        shouldReduceMotion
-          ? "transition-none"
-          : "transition-transform duration-700 ease-out",
-        isFlipped && "[transform:rotateY(-112deg)]",
+        shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+        isFlipped && "[transform:rotateY(-112deg)]"
       )}
     >
       <CardFront event={event} eventImage={eventImage} />
@@ -279,10 +261,8 @@ const DiagonalFlipCard = ({
     <div
       className={cn(
         "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotate3d(1,1,0,180deg)] group-hover:[transform:rotate3d(1,1,0,180deg)]",
-        shouldReduceMotion
-          ? "transition-none"
-          : "transition-transform duration-700 ease-out",
-        isFlipped && "[transform:rotate3d(1,1,0,180deg)]",
+        shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+        isFlipped && "[transform:rotate3d(1,1,0,180deg)]"
       )}
     >
       <div className="absolute inset-0 overflow-hidden rounded-[22px] [backface-visibility:hidden]">
@@ -318,7 +298,7 @@ const DiagonalWipeRevealCard = ({
       className={cn(
         "absolute inset-0 z-10 flex flex-col justify-between rounded-[22px] bg-white opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100",
         shouldReduceMotion ? "delay-0" : "delay-500",
-        isFlipped && "opacity-100 delay-0",
+        isFlipped && "opacity-100 delay-0"
       )}
     >
       <EventDetailsPanel
@@ -334,7 +314,7 @@ const DiagonalWipeRevealCard = ({
       className={cn(
         "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
         shouldReduceMotion ? "delay-0" : "delay-500",
-        isFlipped && "opacity-0 delay-0",
+        isFlipped && "opacity-0 delay-0"
       )}
     >
       <CardFront event={event} eventImage={eventImage} />
@@ -343,7 +323,7 @@ const DiagonalWipeRevealCard = ({
       className={cn(
         "pointer-events-none absolute -inset-20 z-30 translate-x-[-130%] skew-x-[-18deg] bg-[linear-gradient(135deg,#1E6091_0%,#B23A48_58%,#780000_100%)] opacity-95 transition-transform duration-700 ease-out group-focus-within:translate-x-[130%] group-hover:translate-x-[130%]",
         shouldReduceMotion && "hidden",
-        isFlipped && "translate-x-[130%]",
+        isFlipped && "translate-x-[130%]"
       )}
     />
   </div>
@@ -372,7 +352,7 @@ const SplitFlipCard = ({
     <div
       className={cn(
         "pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[22px] transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
-        isFlipped && "opacity-0",
+        isFlipped && "opacity-0"
       )}
     >
       <CardFront event={event} eventImage={eventImage} />
@@ -380,16 +360,14 @@ const SplitFlipCard = ({
     <div
       className={cn(
         "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] opacity-0 transition-opacity duration-100 group-focus-within:opacity-100 group-hover:opacity-100",
-        isFlipped && "opacity-100",
+        isFlipped && "opacity-100"
       )}
     >
       <div
         className={cn(
           "absolute inset-y-0 left-0 w-1/2 origin-left overflow-hidden rounded-l-[22px] [backface-visibility:hidden] group-focus-within:[transform:rotateY(-112deg)] group-hover:[transform:rotateY(-112deg)]",
-          shouldReduceMotion
-            ? "transition-none"
-            : "transition-transform duration-700 ease-out",
-          isFlipped && "[transform:rotateY(-112deg)]",
+          shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+          isFlipped && "[transform:rotateY(-112deg)]"
         )}
       >
         <Image
@@ -404,10 +382,8 @@ const SplitFlipCard = ({
       <div
         className={cn(
           "absolute inset-y-0 right-0 w-1/2 origin-right overflow-hidden rounded-r-[22px] [backface-visibility:hidden] group-focus-within:[transform:rotateY(112deg)] group-hover:[transform:rotateY(112deg)]",
-          shouldReduceMotion
-            ? "transition-none"
-            : "transition-transform duration-700 ease-out",
-          isFlipped && "[transform:rotateY(112deg)]",
+          shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
+          isFlipped && "[transform:rotateY(112deg)]"
         )}
       >
         <Image
@@ -422,7 +398,7 @@ const SplitFlipCard = ({
       <div
         className={cn(
           "pointer-events-none absolute inset-x-5 bottom-5 z-30 transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
-          isFlipped && "opacity-0",
+          isFlipped && "opacity-0"
         )}
       >
         <h3 className="line-clamp-2 font-heading text-base leading-tight font-bold !text-white md:text-xl">
@@ -433,10 +409,7 @@ const SplitFlipCard = ({
   </div>
 );
 
-const FLIP_CARD_COMPONENTS: Record<
-  FlipStyle,
-  (props: FlipCardProps) => ReactNode
-> = {
+const FLIP_CARD_COMPONENTS: Record<FlipStyle, (props: FlipCardProps) => ReactNode> = {
   diagonal: DiagonalFlipCard,
   diagonalWipe: DiagonalWipeRevealCard,
   hinge: HingeFlipCard,
@@ -474,21 +447,15 @@ export const EventsCard = ({
     }
   }, []);
 
-  const handleLinkClick = useCallback(
-    (linkEvent: MouseEvent<HTMLAnchorElement>) => {
-      linkEvent.stopPropagation();
-    },
-    [],
-  );
+  const handleLinkClick = useCallback((linkEvent: MouseEvent<HTMLAnchorElement>) => {
+    linkEvent.stopPropagation();
+  }, []);
 
   return (
     <div className="w-full">
       <div
         aria-label={`Show details for ${event.title}`}
-        className={cn(
-          CARD_SHELL_CLASS,
-          isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]",
-        )}
+        className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         role="button"

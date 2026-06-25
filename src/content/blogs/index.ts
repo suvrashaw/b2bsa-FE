@@ -77,9 +77,7 @@ const parseBlogDate = (value: string) => {
   return Number.isNaN(timestamp) ? null : timestamp;
 };
 
-export const SHARED_BLOG_POSTS: SharedBlogPost[] = (
-  rawBlogPosts as ImportedBlogPost[]
-)
+export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlogPost[])
   .map((post, index) => {
     const id = createBlogId(post.url, index);
 
@@ -121,16 +119,13 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (
   })
   .map(({ sortIndex: _sortIndex, ...post }) => post);
 
-export const getBlogsByTags = (
-  tags: string[],
-  minCount = 5,
-): SharedBlogPost[] => {
+export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] => {
   if (!tags || tags.length === 0) {
     return SHARED_BLOG_POSTS.slice(0, minCount);
   }
 
   const exactMatches = SHARED_BLOG_POSTS.filter((blog) =>
-    blog.tags?.some((tag) => tags.includes(tag)),
+    blog.tags?.some((tag) => tags.includes(tag))
   );
 
   return exactMatches.slice(0, Math.max(exactMatches.length, minCount));
@@ -195,9 +190,7 @@ export const BLOG_SERVICE_CAROUSEL = {
       image: s.image,
       title: s.title,
     }))
-    .toSorted(
-      (a, b) => (b.description?.length || 0) - (a.description?.length || 0),
-    ),
+    .toSorted((a, b) => (b.description?.length || 0) - (a.description?.length || 0)),
 };
 
 export { default as BLOG_CATEGORIES } from "./categories.json";

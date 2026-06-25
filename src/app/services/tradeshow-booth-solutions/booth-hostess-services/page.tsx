@@ -48,19 +48,16 @@ const capabilityAssets = [
   { icon: "Users2", image: "/media/home/hero/home_hero_bg.avif" },
   { icon: "Rocket", image: "/media/home/hero/home_hero_bg.avif" },
 ];
-const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map(
-  (phase, index) => ({
-    description: phase.description,
-    icon: capabilityAssets[index]?.icon ?? "Users",
-    id: phase.title
-      .toLowerCase()
-      .replaceAll(/[^a-z0-9]+/g, "-")
-      .replaceAll(/(^-|-$)/g, ""),
-    image:
-      capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
-    label: phase.title,
-  }),
-);
+const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) => ({
+  description: phase.description,
+  icon: capabilityAssets[index]?.icon ?? "Users",
+  id: phase.title
+    .toLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, "-")
+    .replaceAll(/(^-|-$)/g, ""),
+  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  label: phase.title,
+}));
 
 const Page = () => {
   return (
@@ -70,11 +67,7 @@ const Page = () => {
       contactUs={BOOTH_HOSTESS_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={4}
-            heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <CardsGrid cols={4} heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_HOSTESS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
@@ -83,11 +76,7 @@ const Page = () => {
             cols={4}
             heading={BOOTH_HOSTESS_BLOGS_SECTION.heading}
             headingAction={
-              <Button
-                asChild
-                className="shrink-0 self-start md:self-auto"
-                variant="primary"
-              >
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
               </Button>
             }

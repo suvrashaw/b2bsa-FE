@@ -43,10 +43,7 @@ export const CardsGrid = ({
   const flexWidthClass = FLEX_WIDTHS[cols];
 
   return (
-    <section
-      className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)}
-      id={id}
-    >
+    <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)} id={id}>
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <SectionHeader
           description={description}
@@ -55,9 +52,7 @@ export const CardsGrid = ({
           headingAlign={headingAlign}
         />
 
-        <div
-          className={cn("flex flex-wrap justify-center", gap, gridClassName)}
-        >
+        <div className={cn("flex flex-wrap justify-center", gap, gridClassName)}>
           {Children.map(children, (child, i) => (
             <div className={flexWidthClass} key={i}>
               {child}

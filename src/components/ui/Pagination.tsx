@@ -18,11 +18,7 @@ interface PaginationProps {
   totalPages: number;
 }
 
-const PaginationPageButton = ({
-  currentPage,
-  onPageChange,
-  page,
-}: PaginationPageButtonProps) => {
+const PaginationPageButton = ({ currentPage, onPageChange, page }: PaginationPageButtonProps) => {
   const isActive = page === currentPage;
   const handleClick = useCallback(() => {
     onPageChange(page);
@@ -35,7 +31,7 @@ const PaginationPageButton = ({
         "flex h-12 min-w-[48px] items-center justify-center rounded-full border px-3 text-sm font-bold shadow-sm transition-colors",
         isActive
           ? "border-transparent bg-brand-blue text-white"
-          : "border-gray-200 bg-white text-brand-charcoal hover:border-transparent hover:bg-brand-blue hover:text-white",
+          : "border-gray-200 bg-white text-brand-charcoal hover:border-transparent hover:bg-brand-blue hover:text-white"
       )}
       onClick={handleClick}
       type="button"
@@ -66,10 +62,7 @@ export const Pagination = ({
   return (
     <nav
       aria-label="Pagination"
-      className={cn(
-        "flex flex-wrap items-center justify-center gap-2",
-        className,
-      )}
+      className={cn("flex flex-wrap items-center justify-center gap-2", className)}
     >
       <button
         aria-label="Previous page"

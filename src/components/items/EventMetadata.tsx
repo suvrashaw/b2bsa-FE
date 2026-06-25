@@ -17,7 +17,7 @@ export const EventMetadata = ({ metadata }: EventMetadataProps) => {
             >
               <span className="font-bold">{label}:</span> {value}
             </Eyebrow>
-          ),
+          )
       )}
     </div>
   );
