@@ -112,12 +112,12 @@ const useTypewriter = (lines: string[], charDelay = 30) => {
     return () => clearTimeout(t);
   }, [charCount, totalChars, charDelay]);
 
-  const done = charCount >= totalChars;
+  const isDone = charCount >= totalChars;
   const visibleLines = lines.map((line, idx) => {
     const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
     return line.slice(0, Math.min(line.length, Math.max(0, charCount - charsBeforeThis)));
   });
-  const activeLineIdx = done
+  const activeLineIdx = isDone
     ? -1
     : lines.findIndex((line, idx) => {
         const charsBeforeThis = lines.slice(0, idx).reduce((s, l) => s + l.length, 0);
@@ -213,8 +213,8 @@ const HeroBackground = ({
         )}
       </>
     );
-  } else if (videoSrc) {
-    return (
+  }
+  return videoSrc ? (
       <video
         autoPlay
         className="absolute inset-0 size-full object-cover"
@@ -226,9 +226,7 @@ const HeroBackground = ({
       >
         <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
       </video>
-    );
-  } else {
-    return (
+    ) : (
       <AnimatePresence>
         <motion.div
           animate={IMAGE_ANIMATE}
@@ -249,7 +247,6 @@ const HeroBackground = ({
         </motion.div>
       </AnimatePresence>
     );
-  }
 };
 
 export const Hero = ({

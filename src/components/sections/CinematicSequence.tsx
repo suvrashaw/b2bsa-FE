@@ -39,10 +39,17 @@ export const CinematicSequence = ({
   const getNearestFrame = useCallback(
     (index: number) => {
       const images = imagesRef.current;
-      if (images[index]) return images[index];
+      const currentImage = images[index];
+      if (currentImage !== null) return currentImage;
       for (let offset = 1; offset < frameCount; offset++) {
-        if (index - offset >= 0 && images[index - offset]) return images[index - offset];
-        if (index + offset < frameCount && images[index + offset]) return images[index + offset];
+        if (index >= offset) {
+          const prevImage = images[index - offset];
+          if (prevImage !== null) return prevImage;
+        }
+        if (index + offset < frameCount) {
+          const nextImage = images[index + offset];
+          if (nextImage !== null) return nextImage;
+        }
       }
       return null;
     },
@@ -79,6 +86,7 @@ export const CinematicSequence = ({
       }
     };
 
+    // eslint-disable-next-line unicorn/prefer-observer-apis -- canvas resize needs synchronous layout reads
     window.addEventListener("resize", handleResize);
     handleResize();
 
@@ -127,7 +135,8 @@ const createEmptyFrames = (frameCount: number) =>
 
 const getCinematicFrameUrl = (index: number, frameUrlTemplate?: string, frameUrls?: string[]) => {
   if (frameUrls && frameUrls.length >= index) return frameUrls[index - 1];
-  if (frameUrlTemplate) return frameUrlTemplate.replace("%d", index.toString().padStart(3, "0"));
+  if (frameUrlTemplate)
+    return frameUrlTemplate.replace("%d", () => index.toString().padStart(3, "0"));
   return "";
 };
 
@@ -177,7 +186,7 @@ const useCinematicFrameImages = (
   const [firstFrameLoaded, setFirstFrameLoaded] = useState(false);
 
   useEffect(() => {
-    let cancelled = false;
+    let isCancelled = false;
     imagesRef.current = createEmptyFrames(frameCount);
 
     const getFrameUrl = (index: number) => {
@@ -185,7 +194,7 @@ const useCinematicFrameImages = (
     };
 
     const handleFrameLoad = (frameNumber: number, image: HTMLImageElement) => {
-      if (cancelled) return;
+      if (isCancelled) return;
 
       imagesRef.current[frameNumber - 1] = image;
       if (frameNumber === 1) {
@@ -195,15 +204,17 @@ const useCinematicFrameImages = (
 
     // eslint-disable-next-line compat/compat
     queueMicrotask(() => {
-      if (!cancelled) setFirstFrameLoaded(false);
+      if (!isCancelled) setFirstFrameLoaded(false);
     });
 
+    /* eslint-disable unicorn/prefer-await -- effect callback cannot be async */
     loadCinematicFrames(frameCount, (frameNumber) =>
       loadCinematicFrame(frameNumber, getFrameUrl, handleFrameLoad)
     ).catch(() => {});
+    /* eslint-enable unicorn/prefer-await */
 
     return () => {
-      cancelled = true;
+      isCancelled = true;
     };
   }, [frameCount, frameUrlTemplate, frameUrls]);
 

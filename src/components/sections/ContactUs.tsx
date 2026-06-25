@@ -69,19 +69,19 @@ const ctaFloatOneAnimate = { scale: [1, 1.06, 1], y: [0, -16, 0] };
 const ctaFloatOneTransition = {
   duration: 8,
   ease: "easeInOut",
-  repeat: Number.POSITIVE_INFINITY,
+  repeat: Infinity,
 } as const;
 const ctaFloatTwoAnimate = { scale: [1, 1.08, 1], y: [0, 14, 0] };
 const ctaFloatTwoTransition = {
   duration: 9,
   ease: "easeInOut",
-  repeat: Number.POSITIVE_INFINITY,
+  repeat: Infinity,
 } as const;
 const ctaFloatThreeAnimate = { scale: [1, 1.04, 1], x: [0, 12, 0], y: [0, -10, 0] };
 const ctaFloatThreeTransition = {
   duration: 10,
   ease: "easeInOut",
-  repeat: Number.POSITIVE_INFINITY,
+  repeat: Infinity,
 } as const;
 const ctaSparkleAnimate = {
   opacity: [0.25, 0.8, 0.25],
@@ -91,7 +91,7 @@ const ctaSparkleAnimate = {
 const ctaSparkleTransition = {
   duration: 5.5,
   ease: "easeInOut",
-  repeat: Number.POSITIVE_INFINITY,
+  repeat: Infinity,
 } as const;
 
 export const ContactUs = ({

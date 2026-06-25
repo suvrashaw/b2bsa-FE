@@ -101,9 +101,8 @@ const FooterMapOverlay = ({ activeRouteIndex }: { activeRouteIndex: number }) =>
   );
 
   const activeRoute = routes[activeRouteIndex % Math.max(routes.length, 1)];
-  const focusX = activeRoute
-    ? (activeRoute.from.point[0] + activeRoute.to.point[0]) / 2
-    : MAP_WIDTH / 2;
+  const focusX =
+    (activeRoute ? activeRoute.from.point[0] + activeRoute.to.point[0] : MAP_WIDTH) / 2;
   const focusY = activeRoute
     ? Math.min(activeRoute.from.point[1], activeRoute.to.point[1]) - 40
     : MAP_HEIGHT / 3;

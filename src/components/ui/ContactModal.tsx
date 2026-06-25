@@ -41,13 +41,11 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
   const form = useMemo(
     () => ({
       ...BASE_MODAL_FORM,
-      ...(serviceField
-        ? {
+      ...(serviceField && {
             serviceLabel: serviceField.label ?? "Select the service you need",
             serviceOptions: serviceField.options,
             servicePlaceholder: serviceField.placeholder ?? "Select a service...",
-          }
-        : {}),
+          }),
     }),
     [serviceField]
   );

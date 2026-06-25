@@ -409,14 +409,14 @@ export const TradeShowCalendarSection = () => {
         .toLowerCase();
 
       const matchesSearch = !normalizedQuery || searchableText.includes(normalizedQuery);
-      const matchesIndustry =
+      const isMatchesIndustry =
         selectedIndustry === "All Industries" || show.industry === selectedIndustry;
       const matchesLocation =
         selectedLocations.length === 0 || selectedLocations.includes(location);
 
       return (
         matchesSearch &&
-        matchesIndustry &&
+        isMatchesIndustry &&
         matchesLocation &&
         matchesNumberFilter(show.attendeeCount, attendeeOperator, attendeeValue) &&
         matchesNumberFilter(show.exhibitorCount, exhibitorOperator, exhibitorValue) &&

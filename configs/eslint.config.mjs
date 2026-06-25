@@ -1,5 +1,5 @@
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import eslintReact from "@eslint-react/eslint-plugin";
+import nextPlugin from "@next/eslint-plugin-next";
 import eslintConfigPrettier from "eslint-config-prettier";
 import boundaries from "eslint-plugin-boundaries";
 import checkFile from "eslint-plugin-check-file";
@@ -10,13 +10,13 @@ import jsonc from "eslint-plugin-jsonc";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import node from "eslint-plugin-n";
 import noConstructorBind from "eslint-plugin-no-constructor-bind";
-import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import noSecrets from "eslint-plugin-no-secrets";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
 import preferArrow from "eslint-plugin-prefer-arrow";
 import promise from "eslint-plugin-promise";
+import reactHooks from "eslint-plugin-react-hooks";
 import reactPerf from "eslint-plugin-react-perf";
 import reactRefresh from "eslint-plugin-react-refresh";
 import regexp from "eslint-plugin-regexp";
@@ -28,12 +28,45 @@ import unusedImports from "eslint-plugin-unused-imports";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import { defineConfig, globalIgnores } from "eslint/config";
 import { fileURLToPath } from "node:url";
+import tseslint from "typescript-eslint";
 
 const tailwindConfigPath = fileURLToPath(new URL("../src/app/globals.css", import.meta.url));
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+  // TypeScript parser + @typescript-eslint/recommended rules
+  ...tseslint.configs.recommended,
+
+  // Next.js rules (all 21, matching warn/error levels from eslint-config-next)
+  {
+    ...nextPlugin.configs.recommended,
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+  },
+  // core-web-vitals escalations: warn → error for these two
+  {
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+    rules: {
+      "@next/next/no-html-link-for-pages": "error",
+      "@next/next/no-sync-scripts": "error",
+    },
+  },
+
+  // React Hooks (rules-of-hooks: error, exhaustive-deps: warn)
+  {
+    ...reactHooks.configs.flat["recommended"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
+  },
+
+  // React rules — ESLint v10 compatible replacement for eslint-plugin-react
+  {
+    ...eslintReact.configs["recommended-typescript"],
+    files: ["**/*.{jsx,tsx}"],
+    rules: {
+      // false positive in Next.js App Router Server Components (run once on server, not a live render loop)
+      "@eslint-react/purity": "off",
+    },
+  },
+
+  // Project-wide rules
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts}"],
     plugins: {
@@ -44,7 +77,6 @@ const eslintConfig = defineConfig([
       "import-x": importX,
       n: node,
       "no-constructor-bind": noConstructorBind,
-      "no-relative-import-paths": noRelativeImportPaths,
       "no-secrets": noSecrets,
       "no-use-extend-native": noUseExtendNative,
       perfectionist: perfectionist,
@@ -144,6 +176,9 @@ const eslintConfig = defineConfig([
       // Browser Compatibility
       "compat/compat": "warn",
 
+      // Import — anonymous default export (was provided by eslint-config-next via eslint-plugin-import)
+      "import-x/no-anonymous-default-export": "warn",
+
       // Node.js rules
       ...node.configs["flat/recommended"].rules,
       // Disable — false positive for TypeScript path aliases (@/)
@@ -153,12 +188,6 @@ const eslintConfig = defineConfig([
       ...noUseExtendNative.configs.recommended.rules,
 
       "no-constructor-bind/no-constructor-bind": "error",
-
-      // Import Standardization
-      "no-relative-import-paths/no-relative-import-paths": [
-        "warn",
-        { allowSameFolder: true, prefix: "@", rootDir: "src" },
-      ],
 
       // Secrets (Increased tolerance for high-entropy URLs)
       "no-secrets/no-secrets": ["error", { tolerance: 4.5 }],
@@ -206,7 +235,10 @@ const eslintConfig = defineConfig([
 
       // Unicorn
       ...unicorn.configs.recommended.rules,
+      // new in v69 — conflicts with React `Props` convention and Next.js `params`/`searchParams` names
+      "unicorn/default-export-style": "off",
       "unicorn/filename-case": "off",
+      "unicorn/name-replacements": "off",
       "unicorn/no-null": "off",
       "unicorn/prefer-query-selector": "warn",
       "unicorn/prevent-abbreviations": "off",
@@ -225,7 +257,6 @@ const eslintConfig = defineConfig([
 
       // JSX Nesting (SEO & Hydration)
       "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
-
     },
     settings: {
       "boundaries/elements": [
@@ -249,10 +280,10 @@ const eslintConfig = defineConfig([
       },
     },
   },
-  // JSX Accessibility — full rule set; plugin already registered by eslint-config-next
+  // JSX Accessibility — full rule set including plugin registration
   {
+    ...jsxA11y.flatConfigs.recommended,
     files: ["**/*.{jsx,tsx}"],
-    rules: jsxA11y.flatConfigs.recommended.rules,
   },
   globalIgnores([
     ".next/**",

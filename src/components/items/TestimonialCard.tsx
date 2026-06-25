@@ -96,7 +96,7 @@ export const TestimonialCard = ({
         </div>
 
         <div className="mt-3 flex justify-center gap-1">
-          {Array.from({ length: testimonial.rating }).map((_, i) => (
+          {Array.from({ length: testimonial.rating }, (_, i) => (
             <Star className="size-3 fill-amber-400 text-amber-400" key={i} />
           ))}
         </div>

@@ -37,10 +37,12 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { footerNavigation, serviceNavigationGroups } from "@/content/navigation";
 import { cn, toTitleCase } from "@/lib";
 
+/* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
 const FooterCommandMap = dynamic(
   () => import("./footer/FooterCommandMap").then((mod) => mod.FooterCommandMap),
   { ssr: false }
 );
+/* eslint-enable unicorn/prefer-await */
 
 import { FooterServiceGroup } from "./footer/FooterServiceGroup";
 
@@ -110,10 +112,12 @@ export const Footer = () => {
     // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setFooterInView(true);
-          observer.disconnect();
+        if (!entry.isIntersecting) {
+        	return;
         }
+
+        setFooterInView(true);
+        observer.disconnect();
       },
       { rootMargin: "300px" }
     );

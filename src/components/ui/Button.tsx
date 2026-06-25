@@ -46,10 +46,10 @@ interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ asChild = false, children, className, size, variant, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    const showArrow = variant === "primary" && !asChild && size !== "icon";
+    const isShowArrow = variant === "primary" && !asChild && size !== "icon";
     return (
       <Comp className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props}>
-        {showArrow ? (
+        {isShowArrow ? (
           <>
             {children}
             <span className="relative inline-flex size-4 shrink-0">

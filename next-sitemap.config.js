@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/prefer-module, @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-require-imports */
 /** @type {import('next-sitemap').IConfig} */
 
 const BLOGS_JSON = require("./src/content/blogs/blogs.json");
@@ -24,10 +24,12 @@ const getBlogSlug = (url, fallbackIndex) => {
 
 const BLOG_LASTMOD = {};
 for (const [index, post] of BLOGS_JSON.entries()) {
-  if (post.date && post.url) {
-    const slug = getBlogSlug(post.url, index);
-    BLOG_LASTMOD[`/blogs/${slug}`] = new Date(post.date).toISOString();
+  if (!(post.date && post.url)) {
+  	continue;
   }
+
+  const slug = getBlogSlug(post.url, index);
+  BLOG_LASTMOD[`/blogs/${slug}`] = new Date(post.date).toISOString();
 }
 
 const EVENT_LASTMOD = {};

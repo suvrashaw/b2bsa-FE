@@ -8,6 +8,7 @@ import { FAQCard } from "@/components/items/FAQCard";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 
+/* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
 const Footer = dynamic(() => import("@/components/layout/Footer").then((mod) => mod.Footer));
 const Blogs = dynamic(() => import("@/components/sections/Blogs").then((mod) => mod.Blogs));
 const CardsGrid = dynamic(() =>
@@ -37,6 +38,7 @@ const StickyScroll = dynamic(() =>
 const Testimonials = dynamic(() =>
   import("@/components/sections/Testimonials").then((mod) => mod.Testimonials)
 );
+/* eslint-enable unicorn/prefer-await */
 import { Button } from "@/components/ui/Button";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import {

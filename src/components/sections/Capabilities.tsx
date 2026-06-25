@@ -118,7 +118,7 @@ interface CapabilitiesNavItemProps {
   index: number;
   itemCount: number;
   onChipClick: (index: number) => void;
-  onPauseChange: (value: boolean) => void;
+  onPauseChange: (isPaused: boolean) => void;
 }
 
 const CapabilitiesNavItem = ({

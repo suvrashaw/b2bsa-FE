@@ -436,7 +436,7 @@ export const Spotlight = ({
 }: SpotlightProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const usesMediaSplitLayout = !secondarySpotlight;
+  const isUsesMediaSplitLayout = !secondarySpotlight;
   const mediaGridClassName =
     imagePosition === "left"
       ? "md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center"
@@ -444,7 +444,7 @@ export const Spotlight = ({
   let textBlockClassName: string | undefined;
   let imageBlockClassName: string | undefined;
 
-  if (usesMediaSplitLayout) {
+  if (isUsesMediaSplitLayout) {
     textBlockClassName = imagePosition === "left" ? "md:justify-self-start" : "md:justify-self-end";
     imageBlockClassName = cn(
       imagePosition === "left" && "md:order-first md:justify-self-start",
@@ -480,8 +480,8 @@ export const Spotlight = ({
         <div
           className={cn(
             "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-4 md:gap-14 md:px-8 lg:gap-20",
-            usesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
-            usesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
+            isUsesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
+            isUsesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
             className
           )}
           onMouseEnter={handleMouseEnter}
@@ -500,7 +500,7 @@ export const Spotlight = ({
             locationBadges={locationBadges}
             onClick={handleCtaClick}
             onLocationBadgeClick={handleBadgeClick}
-            pairedWithMedia={usesMediaSplitLayout}
+            pairedWithMedia={isUsesMediaSplitLayout}
             titleLine1={titleLine1}
             titleLine2={titleLine2}
           />

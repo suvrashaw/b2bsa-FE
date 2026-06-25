@@ -34,5 +34,5 @@ export const applyPagination = <T>(
 
 export const parsePaginationPage = (value: null | string) => {
   const parsedPage = Number(value);
-  return Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;
+  return Number.isSafeInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;
 };
