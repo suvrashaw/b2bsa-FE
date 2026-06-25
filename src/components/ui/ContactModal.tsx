@@ -52,6 +52,11 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
     [serviceField]
   );
 
+  const handleBackdropKeyDown = useCallback(
+    (e: React.KeyboardEvent) => (e.key === "Enter" || e.key === " ") && onClose(),
+    [onClose],
+  );
+
   useEffect(() => {
     if (!isOpen) return;
     const handleKey = (e: KeyboardEvent) => {
@@ -76,7 +81,7 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
       <div
         className="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm"
         onClick={onClose}
-        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClose()}
+        onKeyDown={handleBackdropKeyDown}
         role="presentation"
       />
       <div className="relative z-10 max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">

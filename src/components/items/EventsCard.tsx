@@ -453,7 +453,7 @@ export const EventsCard = ({
 
   return (
     <div className="w-full">
-      <article
+      <div
         aria-label={`Show details for ${event.title}`}
         className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}
         onClick={handleClick}
@@ -472,7 +472,7 @@ export const EventsCard = ({
           isFlipped={isFlipped}
           shouldReduceMotion={shouldReduceMotion}
         />
-      </article>
+      </div>
     </div>
   );
 };

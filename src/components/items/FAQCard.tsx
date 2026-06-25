@@ -26,12 +26,16 @@ export const FAQCard = ({
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = useCallback(() => setIsFlipped((prev) => !prev), []);
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => (e.key === "Enter" || e.key === " ") && handleClick(),
+    [handleClick],
+  );
 
   return (
     <div
       className="group h-[280px] w-full cursor-pointer [perspective:1000px]"
       onClick={handleClick}
-      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleClick()}
+      onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
     >
