@@ -61,6 +61,10 @@ const eslintConfig = defineConfig([
     ...eslintReact.configs["recommended-typescript"],
     files: ["**/*.{jsx,tsx}"],
     rules: {
+      // not in recommended-typescript but present in the package — covers react/no-unknown-property
+      "@eslint-react/dom-no-unknown-property": "warn",
+      // not in recommended-typescript but present in the package — covers react/jsx-no-target-blank
+      "@eslint-react/dom-no-unsafe-target-blank": "warn",
       // false positive in Next.js App Router Server Components (run once on server, not a live render loop)
       "@eslint-react/purity": "off",
     },

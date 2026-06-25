@@ -258,6 +258,7 @@ export const FooterCommandMap = () => {
         <FooterMapOverlay activeRouteIndex={activeRouteIndex} />
       </ComposableMap>
 
+      {/* eslint-disable-next-line @eslint-react/dom-no-unknown-property -- styled-jsx attributes */}
       <style global jsx>{`
         .footer-command-map-root {
           filter: saturate(1.1) contrast(1.06);

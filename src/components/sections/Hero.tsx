@@ -412,6 +412,7 @@ export const Hero = ({
         </motion.div>
       </div>
 
+      {/* eslint-disable-next-line @eslint-react/dom-no-unknown-property -- styled-jsx attribute */}
       <style jsx>{`
         .hero-bg-video {
           animation: hero-media-drift 22s ease-in-out infinite alternate;
