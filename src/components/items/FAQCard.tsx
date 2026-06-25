@@ -31,6 +31,9 @@ export const FAQCard = ({
     <div
       className="group h-[280px] w-full cursor-pointer [perspective:1000px]"
       onClick={handleClick}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleClick()}
+      role="button"
+      tabIndex={0}
     >
       <div
         className={`relative size-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}

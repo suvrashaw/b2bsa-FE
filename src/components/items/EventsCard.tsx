@@ -458,6 +458,7 @@ export const EventsCard = ({
         className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
+        role="button"
         tabIndex={0}
       >
         <FlipCard

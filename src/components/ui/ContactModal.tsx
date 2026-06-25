@@ -73,7 +73,12 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
       className="fixed inset-0 z-[200] flex items-center justify-center p-4"
       role="dialog"
     >
-      <div className="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm" onClick={onClose} />
+      <div
+        className="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm"
+        onClick={onClose}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onClose()}
+        role="presentation"
+      />
       <div className="relative z-10 max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
         <div className="mb-6 flex items-start justify-between">
           <div>
