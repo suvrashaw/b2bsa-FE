@@ -3,6 +3,8 @@
 import { Pencil, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
 
+import type { HomeServiceItem } from "@/content/home/content";
+
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
@@ -316,6 +318,12 @@ const _SERVICE_CAROUSEL_ITEMS = [
     title: "Media Production",
   },
 ];
+
+const _SERVICE_CAROUSEL_ITEMS_TYPED: HomeServiceItem[] = _SERVICE_CAROUSEL_ITEMS.map((item) => ({
+  ...item,
+  color: "bg-brand-blue",
+  icon: "ArrowRight",
+}));
 
 // ─── Timeline ─────────────────────────────────────────────────────────
 
@@ -750,12 +758,11 @@ const DemoPage = () => {
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
       <Carousel cols={4} heading="Active Prospecting & Events" layout="carousel">
-        {_SERVICE_CAROUSEL_ITEMS.map((item) => (
+        {_SERVICE_CAROUSEL_ITEMS_TYPED.map((item) => (
           <ServicesCard
             ctaLabel="Get Started"
             key={item.id}
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            service={{ ...item, icon: "ArrowRight" } as any}
+            service={item}
           />
         ))}
       </Carousel>

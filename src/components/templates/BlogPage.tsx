@@ -208,7 +208,7 @@ const getBlockWordCount = (block: ContentBlock) => {
     return 0;
   }
 
-  // eslint-disable-next-line unicorn/prefer-includes-over-repeated-comparisons
+  // eslint-disable-next-line unicorn/prefer-includes-over-repeated-comparisons -- Array.includes() loses TypeScript discriminant narrowing; block.text is inaccessible without the union check
   if (block.type === "heading" || block.type === "paragraph" || block.type === "quote") {
     return countWords(block.text);
   }

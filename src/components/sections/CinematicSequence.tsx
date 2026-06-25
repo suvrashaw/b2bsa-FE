@@ -202,7 +202,6 @@ const useCinematicFrameImages = (
       }
     };
 
-    // eslint-disable-next-line compat/compat
     queueMicrotask(() => {
       if (!isCancelled) setFirstFrameLoaded(false);
     });

@@ -75,8 +75,6 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
 
   const options = BLOG_CATEGORIES.map((category) => ({
     count: counts.get(category.name) ?? 0,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    icon: (category as any).icon,
     id: category.id,
     name: category.name,
   }));

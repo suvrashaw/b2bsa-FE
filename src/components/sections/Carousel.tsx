@@ -67,9 +67,7 @@ export const Carousel = ({
       const singleWidth = el.scrollWidth / COPY_COUNT;
       el.scrollTo({ behavior: "instant", left: singleWidth * MIDDLE_COPY });
     });
-    // Only run once on mount — childArray.length won't change after mount.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [childArray.length]);
 
   // ── Teleport back into the middle copy when scrolling hits a boundary ──────
   // Uses a debounce so the teleport only fires after the smooth-scroll animation

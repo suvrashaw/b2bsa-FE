@@ -279,6 +279,7 @@ const eslintConfig = defineConfig([
         node: true,
         typescript: true,
       },
+      polyfills: ["IntersectionObserver", "Object.fromEntries", "queueMicrotask"],
       tailwindcss: {
         cssConfigPath: tailwindConfigPath,
       },

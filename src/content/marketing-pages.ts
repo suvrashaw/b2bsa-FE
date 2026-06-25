@@ -83,10 +83,8 @@ export const marketingPages = [
   VIRTUAL_VIDEO_PAGE,
 ] satisfies MarketingPageDefinition[];
 
-// eslint-disable-next-line compat/compat
 const marketingPagesById = Object.fromEntries(marketingPages.map((page) => [page.pageId, page]));
 
-// eslint-disable-next-line compat/compat
 const marketingPagesByPath = Object.fromEntries(
   marketingPages.map((page) => [normalizePath(page.seo.canonicalPath), page])
 );

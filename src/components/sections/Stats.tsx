@@ -87,7 +87,6 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    // eslint-disable-next-line compat/compat
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry?.isIntersecting ?? false),
       { threshold: 0.1 }
