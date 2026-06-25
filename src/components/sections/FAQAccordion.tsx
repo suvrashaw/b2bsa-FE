@@ -1,5 +1,6 @@
 "use client";
 
+import * as Accordion from "@radix-ui/react-accordion";
 import { motion } from "framer-motion";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
 
@@ -31,18 +32,10 @@ interface FAQAccordionRowProps {
   id: number | string;
   index: number;
   isOpen: boolean;
-  onToggle: (i: number) => void;
   question: string;
 }
 
-const FAQAccordionRow = ({
-  answer,
-  id,
-  index,
-  isOpen,
-  onToggle,
-  question,
-}: FAQAccordionRowProps) => {
+const FAQAccordionRow = ({ answer, id, index, isOpen, question }: FAQAccordionRowProps) => {
   const transition = useMemo(
     () => ({ delay: index * 0.07, duration: 0.4 }),
     [index],
@@ -56,13 +49,7 @@ const FAQAccordionRow = ({
       viewport={ITEM_VIEWPORT}
       whileInView={ITEM_ANIMATE}
     >
-      <FAQAccordionItem
-        answer={answer}
-        index={index}
-        isOpen={isOpen}
-        onToggle={onToggle}
-        question={question}
-      />
+      <FAQAccordionItem answer={answer} index={index} isOpen={isOpen} question={question} />
     </motion.div>
   );
 };
@@ -81,8 +68,8 @@ export const FAQAccordion = ({
   const [openIndex, setOpenIndex] = useState<number>(0);
   const isArticle = variant === "article";
 
-  const handleToggle = useCallback((index: number) => {
-    setOpenIndex((prev) => (prev === index ? -1 : index));
+  const handleValueChange = useCallback((value: string) => {
+    setOpenIndex(value === "" ? -1 : Number(value));
   }, []);
 
   return (
@@ -133,11 +120,15 @@ export const FAQAccordion = ({
           )}
         </motion.div>
 
-        <div
+        <Accordion.Root
           className={cn(
             "flex flex-col gap-4",
             isArticle ? "" : "mx-auto max-w-[860px]",
           )}
+          collapsible
+          onValueChange={handleValueChange}
+          type="single"
+          value={openIndex >= 0 ? String(openIndex) : ""}
         >
           {faqs.map((faq, i) => (
             <FAQAccordionRow
@@ -146,11 +137,10 @@ export const FAQAccordion = ({
               index={i}
               isOpen={openIndex === i}
               key={faq.id}
-              onToggle={handleToggle}
               question={faq.question}
             />
           ))}
-        </div>
+        </Accordion.Root>
       </div>
     </section>
   );

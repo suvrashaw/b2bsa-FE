@@ -1,7 +1,8 @@
 "use client";
 
+import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import type { ContactContent } from "@/content/home/content";
 
@@ -55,61 +56,43 @@ export const ContactModal = ({
     [serviceField],
   );
 
-  const handleBackdropKeyDown = useCallback(
-    (e: React.KeyboardEvent) =>
-      (e.key === "Enter" || e.key === " ") && onClose(),
+  const handleOpenChange = useCallback(
+    (isOpen: boolean) => {
+      if (!isOpen) onClose();
+    },
     [onClose],
   );
 
-  useEffect(() => {
-    if (!isOpen) return;
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handleKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = "";
-    };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
-
   return (
-    <div
-      aria-modal="true"
-      className="fixed inset-0 z-[200] flex items-center justify-center p-4"
-      role="dialog"
-    >
-      <div
-        className="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm"
-        onClick={onClose}
-        onKeyDown={handleBackdropKeyDown}
-        role="presentation"
-      />
-      <div className="relative z-10 max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
-        <div className="mb-6 flex items-start justify-between">
-          <div>
-            <h2 className="font-heading text-2xl font-black text-brand-charcoal">
-              Get in Touch
-            </h2>
-            <p className="mt-1 text-sm text-gray-500">
-              Our team will respond within 24 hours.
-            </p>
+    <Dialog.Root onOpenChange={handleOpenChange} open={isOpen}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 z-[199] bg-brand-charcoal/80 backdrop-blur-sm" />
+        <Dialog.Content className="fixed inset-0 z-[200] flex items-center justify-center p-4 focus:outline-none">
+          <div className="relative max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-8 shadow-2xl">
+            <div className="mb-6 flex items-start justify-between">
+              <div>
+                <Dialog.Title className="text-left font-heading text-2xl font-black text-brand-charcoal">
+                  Get in Touch
+                </Dialog.Title>
+                <Dialog.Description className="mt-1 text-sm text-gray-500">
+                  Our team will respond within 24 hours.
+                </Dialog.Description>
+              </div>
+              <Dialog.Close asChild>
+                <button
+                  aria-label="Close"
+                  className="ml-4 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-brand-charcoal"
+                  type="button"
+                >
+                  <X className="size-5" />
+                </button>
+              </Dialog.Close>
+            </div>
+            <ContactForm form={form} />
           </div>
-          <button
-            aria-label="Close"
-            className="ml-4 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-brand-charcoal"
-            onClick={onClose}
-            type="button"
-          >
-            <X className="size-5" />
-          </button>
-        </div>
-        <ContactForm form={form} />
-      </div>
-    </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 };
 
@@ -148,11 +131,7 @@ export const ContactModalTrigger = ({
           {label}
         </Button>
       </div>
-      <ContactModal
-        isOpen={isOpen}
-        onClose={close}
-        serviceField={serviceField}
-      />
+      <ContactModal isOpen={isOpen} onClose={close} serviceField={serviceField} />
     </>
   );
 };
