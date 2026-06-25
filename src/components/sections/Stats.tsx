@@ -102,8 +102,8 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
       onWheel={handleWheel}
       ref={containerRef}
     >
-      <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-12 bg-linear-to-r from-brand-gray to-transparent md:w-48" />
-      <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-12 bg-linear-to-l from-brand-gray to-transparent md:w-48" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-linear-to-r from-brand-gray to-transparent md:w-48" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-linear-to-l from-brand-gray to-transparent md:w-48" />
       <motion.div
         className="flex w-max cursor-grab active:cursor-grabbing"
         onMouseEnter={handleMouseEnter}
@@ -163,8 +163,8 @@ export const Stats = ({
             </div>
 
             <div className="group relative -mx-4 aspect-[4/3] w-[calc(100%+2rem)] md:-mx-6 md:w-[calc(100%+3rem)] lg:mx-0 lg:w-full">
-              <div className="absolute inset-0 border-0 transition-all duration-300 lg:rounded-3xl lg:border lg:border-brand-blue/10 lg:shadow-[6px_6px_0px_0px] lg:shadow-brand-blue/10 lg:group-hover:-translate-x-1 lg:group-hover:-translate-y-1 lg:group-hover:shadow-[12px_12px_0px_0px] lg:group-hover:shadow-brand-blue/15" />
-              <div className="relative h-full w-full overflow-hidden rounded-none lg:rounded-3xl">
+              <div className="absolute inset-0 border-0 transition-all duration-300 lg:rounded-3xl lg:border lg:border-brand-blue/10 lg:shadow-[6px_6px_0px_0px] lg:shadow-brand-blue/10 lg:group-hover:-translate-1 lg:group-hover:shadow-[12px_12px_0px_0px] lg:group-hover:shadow-brand-blue/15" />
+              <div className="relative size-full overflow-hidden rounded-none lg:rounded-3xl">
                 <Image
                   alt={imageAlt}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

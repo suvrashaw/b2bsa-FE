@@ -25,7 +25,7 @@ export const DesktopNavLink = memo(
     const handleMouseEnter = useCallback(() => onMouseEnter(link.name), [link.name, onMouseEnter]);
 
     const linkClassName = cn(
-      "group relative flex items-center gap-1.5 whitespace-nowrap text-base font-semibold transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
+      "group relative flex items-center gap-1.5 text-base font-semibold whitespace-nowrap transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
       lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
     );
     const underlineClassName = cn(
@@ -47,7 +47,7 @@ export const DesktopNavLink = memo(
             {label}
             <ChevronDown
               className={cn(
-                "h-3.5 w-3.5 opacity-70 transition-transform duration-300",
+                "size-3.5 opacity-70 transition-transform duration-300",
                 activeDropdown === "services" ? "rotate-180" : ""
               )}
             />

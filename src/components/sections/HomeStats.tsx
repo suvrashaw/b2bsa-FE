@@ -143,8 +143,8 @@ export const HomeStats = ({
         </div>
 
         <div className="group/scroller relative order-first h-[400px] overflow-hidden p-2 md:h-[600px] md:p-4 lg:order-none">
-          <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
-          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-brand-gray to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-t from-brand-gray to-transparent" />
 
           <div className="relative grid h-full grid-cols-2 gap-6">
             <div className="flex animate-scroll-up flex-col gap-6 pb-6 group-hover/scroller:[animation-play-state:paused]">

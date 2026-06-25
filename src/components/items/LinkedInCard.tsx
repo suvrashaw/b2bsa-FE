@@ -115,7 +115,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
       >
         {/* Avatar container */}
         <div className="relative shrink-0">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded border border-[#e0dfdc] bg-white">
+          <div className="flex size-12 items-center justify-center overflow-hidden rounded border border-[#e0dfdc] bg-white">
             <Image
               alt={COMPANY_NAME}
               className="object-cover"
@@ -136,7 +136,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
             <span>1h</span>
             <span className="mb-[2px] leading-none">·</span>
             {/* Globe icon */}
-            <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="size-3" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 17.93V18a1 1 0 0 0-1-1H8a2 2 0 0 1-2-2v-1l-1.07-.36A8.01 8.01 0 0 1 4 12c0-.34.02-.68.07-1H6a2 2 0 0 1 2 2v1a1 1 0 0 0 1 1h2v1.93zM18.93 15H18a1 1 0 0 0-1 1v1.93A8.03 8.03 0 0 1 13 19.93V18h-1v-2h3a1 1 0 0 0 1-1v-1a2 2 0 0 1 2-2h.93c.05.32.07.66.07 1 0 .7-.08 1.37-.07 2z" />
             </svg>
           </p>
@@ -199,7 +199,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
         rel="noreferrer"
         target="_blank"
       >
-        <ThumbUpIcon className="h-[18px] w-[18px]" />
+        <ThumbUpIcon className="size-[18px]" />
         <span className="hidden sm:inline">Like</span>
       </a>
 
@@ -209,7 +209,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
         rel="noreferrer"
         target="_blank"
       >
-        <CommentIcon className="h-[18px] w-[18px]" />
+        <CommentIcon className="size-[18px]" />
         <span className="hidden sm:inline">Comment</span>
       </a>
 
@@ -219,7 +219,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
         rel="noreferrer"
         target="_blank"
       >
-        <RepostIcon className="h-[18px] w-[18px]" />
+        <RepostIcon className="size-[18px]" />
         <span className="hidden sm:inline">Repost</span>
       </a>
 
@@ -229,7 +229,7 @@ export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
         rel="noreferrer"
         target="_blank"
       >
-        <SendIcon className="h-[18px] w-[18px]" />
+        <SendIcon className="size-[18px]" />
         <span className="hidden sm:inline">Send</span>
       </a>
     </div>

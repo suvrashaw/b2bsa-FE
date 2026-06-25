@@ -145,7 +145,7 @@ export const Carousel = ({
       {/* Scroll track is full bleed but padded so adjacent cards peek symmetrically */}
       <div
         className={cn(
-          "flex snap-x snap-mandatory overflow-x-auto px-10 py-4 [scroll-padding-left:2.5rem] [&::-webkit-scrollbar]:hidden",
+          "flex snap-x snap-mandatory [scroll-padding-left:2.5rem] overflow-x-auto px-10 py-4 [&::-webkit-scrollbar]:hidden",
           gap
         )}
         onMouseEnter={autoplayInterval ? handleMouseEnter : undefined}
@@ -173,17 +173,17 @@ export const Carousel = ({
         <div className="mt-8 flex justify-center gap-4">
           <button
             aria-label="Previous"
-            className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            className="flex size-12 min-h-[44px] items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={handleScrollPrev}
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="size-6" />
           </button>
           <button
             aria-label="Next"
-            className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
+            className="flex size-12 min-h-[44px] items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white"
             onClick={handleScrollNext}
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="size-6" />
           </button>
         </div>
 

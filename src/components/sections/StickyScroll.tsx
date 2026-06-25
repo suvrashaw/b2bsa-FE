@@ -122,7 +122,7 @@ export const StickyScroll = ({
                   transition={TEXT_TRANSITION}
                 >
                   <div className="mb-4 flex items-center gap-3">
-                    <CheckCircle2 className="h-6 w-6 shrink-0 text-brand-blue" />
+                    <CheckCircle2 className="size-6 shrink-0 text-brand-blue" />
                     <SectionHeader as="h3">{activeReason.title}</SectionHeader>
                   </div>
                   <p className="type-body-l max-w-md leading-relaxed text-gray-600">
@@ -162,7 +162,7 @@ export const StickyScroll = ({
           <div className="relative hidden h-dvh w-1/2 overflow-hidden md:block">
             <motion.div
               animate={slideAnimate}
-              className="absolute top-0 right-0 left-0 flex flex-col"
+              className="absolute inset-x-0 top-0 flex flex-col"
               transition={IMAGE_SLIDE_TRANSITION}
             >
               {reasons.map((reason, index) => (

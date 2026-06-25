@@ -32,12 +32,12 @@ export const FAQAccordionItem = ({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-2xl md:rounded-xl border bg-white transition-colors duration-300",
+        "overflow-hidden rounded-2xl border bg-white transition-colors duration-300 md:rounded-xl",
         isOpen ? "border-brand-cyan" : "border-gray-200 hover:border-gray-300"
       )}
     >
       <button
-        className="flex w-full items-center gap-3 px-5 py-5 text-left md:gap-4 md:px-6"
+        className="flex w-full items-center gap-3 p-5 text-left md:gap-4 md:px-6"
         onClick={handleClick}
         type="button"
       >
@@ -46,7 +46,7 @@ export const FAQAccordionItem = ({
           {question}
         </span>
         <span className="shrink-0 text-brand-cyan">
-          {isOpen ? <X className="h-[18px] w-[18px]" /> : <Plus className="h-[18px] w-[18px]" />}
+          {isOpen ? <X className="size-[18px]" /> : <Plus className="size-[18px]" />}
         </span>
       </button>
 

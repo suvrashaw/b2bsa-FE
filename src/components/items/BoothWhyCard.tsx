@@ -83,11 +83,11 @@ export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProp
       whileInView="visible"
     >
       {item.href ? (
-        <Link className="block h-full w-full" href={item.href}>
+        <Link className="block size-full" href={item.href}>
           <InnerContent hovered={hovered} Icon={Icon} item={item} />
         </Link>
       ) : (
-        <div className="block h-full w-full">
+        <div className="block size-full">
           <InnerContent hovered={hovered} Icon={Icon} item={item} />
         </div>
       )}
@@ -118,10 +118,10 @@ const InnerContent = ({
       <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
       {Icon && (
         <div
-          className={`absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-500 ${hovered ? "scale-110 rotate-6" : ""}`}
+          className={`absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm transition-all duration-500 ${hovered ? "scale-110 rotate-6" : ""}`}
         >
           <Icon
-            className={`h-6 w-6 text-brand-blue transition-transform duration-300 ${hovered ? "scale-110" : ""}`}
+            className={`size-6 text-brand-blue transition-transform duration-300 ${hovered ? "scale-110" : ""}`}
           />
         </div>
       )}

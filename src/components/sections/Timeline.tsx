@@ -68,7 +68,7 @@ export const Timeline = ({
 
         <div className="relative mx-auto max-w-5xl md:px-6">
           {/* Vertical Line */}
-          <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/50 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/50 to-transparent" />
 
           <div className="space-y-8 md:space-y-12 lg:space-y-16">
             {resolvedSteps.map((step, index) => (
@@ -81,7 +81,7 @@ export const Timeline = ({
                 whileInView={TIMELINE_WHILE_IN_VIEW}
               >
                 {/* Dot */}
-                <div className="absolute top-1/2 left-0 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)]" />
+                <div className="absolute top-1/2 left-0 z-10 size-4 -translate-1/2 rounded-full bg-brand-cyan shadow-[0_0_15px_rgba(75,192,217,0.8)]" />
 
                 {/* Content */}
                 <div className="w-full pl-8">

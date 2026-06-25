@@ -42,7 +42,7 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
             href={post.href}
             key={post.id}
           >
-            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-gray-100">
+            <div className="relative size-12 shrink-0 overflow-hidden rounded-xl bg-gray-100">
               <Image
                 alt={post.title}
                 className="object-cover"
@@ -173,7 +173,7 @@ const BlogSidebarLinkedIn = ({ post }: { post: SharedBlogPost }) => {
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-brand-gray">
             <iframe
               allowFullScreen
-              className="absolute inset-0 h-full w-full border-0"
+              className="absolute inset-0 size-full border-0"
               loading="lazy"
               src={post.linkedinEmbedUrl}
               title={`LinkedIn post for ${post.title}`}

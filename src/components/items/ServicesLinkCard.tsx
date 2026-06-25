@@ -37,15 +37,15 @@ export const ServicesLinkCard = ({ index, service }: ServicesLinkCardProps) => {
         {/* Cyan glow orb blooms from top-right corner on hover */}
         <span
           aria-hidden="true"
-          className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
+          className="absolute -top-8 -right-8 size-32 rounded-full bg-brand-cyan/25 opacity-0 transition-all duration-500 group-hover:scale-[2.5] group-hover:opacity-100"
         />
 
         <h3 className="type-h3 relative text-white transition-colors duration-300 group-hover:text-brand-charcoal">
           {service.title}
         </h3>
 
-        <div className="relative ml-6 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-brand-cyan group-hover:text-brand-charcoal">
-          <MoveRight className="h-5 w-5" />
+        <div className="relative ml-6 flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-brand-cyan group-hover:text-brand-charcoal">
+          <MoveRight className="size-5" />
         </div>
       </Link>
     </motion.div>

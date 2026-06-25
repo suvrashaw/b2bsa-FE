@@ -86,7 +86,7 @@ export const ContactModal = ({ isOpen, onClose, serviceField }: ContactModalProp
             onClick={onClose}
             type="button"
           >
-            <X className="h-5 w-5" />
+            <X className="size-5" />
           </button>
         </div>
         <ContactForm form={form} />

@@ -91,7 +91,7 @@ const Page = () => {
                       className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/70 md:text-base"
                       key={item}
                     >
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
+                      <span className="mt-2 size-2 shrink-0 rounded-full bg-brand-cyan" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -163,7 +163,7 @@ const Page = () => {
                 className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/80 md:text-base"
                 key={value}
               >
-                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
+                <span className="mt-1.5 size-2 shrink-0 rounded-full bg-brand-cyan" />
                 <span>{value}</span>
               </li>
             ))}

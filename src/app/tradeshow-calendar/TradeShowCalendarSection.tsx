@@ -135,7 +135,7 @@ const ViewModeButton = ({
       onClick={handleClick}
       type="button"
     >
-      <Icon className="h-4 w-4" />
+      <Icon className="size-4" />
       {mode.label}
     </button>
   );
@@ -160,7 +160,7 @@ const LocationCheckbox = ({
   <label className="flex cursor-pointer items-start gap-2 text-sm leading-relaxed font-medium text-brand-charcoal/80">
     <input
       checked={checked}
-      className="mt-1 h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
+      className="mt-1 size-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
       onChange={onChange}
       type="checkbox"
       value={label}
@@ -484,7 +484,7 @@ export const TradeShowCalendarSection = () => {
           Adjust the search, filters, or date range to broaden the calendar results.
         </p>
         <Button className="mt-6 gap-2" onClick={handleClearFilters} variant="primary">
-          <RotateCcw className="h-4 w-4" />
+          <RotateCcw className="size-4" />
           Reset Calendar
         </Button>
       </div>
@@ -523,7 +523,7 @@ export const TradeShowCalendarSection = () => {
       <section className="bg-brand-gray pt-16 pb-8">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="relative mx-auto mt-10 max-w-3xl">
-            <Search className="absolute top-1/2 left-5 h-5 w-5 -translate-y-1/2 text-brand-charcoal/40" />
+            <Search className="absolute top-1/2 left-5 size-5 -translate-y-1/2 text-brand-charcoal/40" />
             <input
               className="w-full rounded-lg border border-gray-200 bg-white py-4 pr-5 pl-14 text-base font-medium text-brand-charcoal shadow-sm transition outline-none placeholder:text-brand-charcoal/40 focus:border-brand-blue/40 focus:ring-4 focus:ring-brand-blue/10"
               onChange={handleSearchChange}
@@ -641,7 +641,7 @@ export const TradeShowCalendarSection = () => {
             </FilterPanel>
 
             <Button className="w-full gap-2" onClick={handleClearFilters} variant="primary">
-              <RotateCcw className="h-4 w-4" />
+              <RotateCcw className="size-4" />
               Clear Filters
             </Button>
           </aside>

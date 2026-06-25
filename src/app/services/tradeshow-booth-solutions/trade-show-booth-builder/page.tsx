@@ -131,7 +131,7 @@ const Page = () => {
                           className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/70"
                           key={feature}
                         >
-                          <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+                          <CheckCircle className="mt-0.5 size-4 shrink-0 text-brand-blue" />
                           {feature}
                         </li>
                       ))}

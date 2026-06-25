@@ -45,7 +45,7 @@ const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) =
   return (
     <button
       className={cn(
-        "flex w-full items-center justify-between gap-3 rounded-lg px-3 py-3 text-left text-sm font-bold transition",
+        "flex w-full items-center justify-between gap-3 rounded-lg p-3 text-left text-sm font-bold transition",
         isActive
           ? "bg-brand-blue text-white"
           : "text-brand-charcoal hover:bg-brand-gray hover:text-brand-blue"
@@ -54,7 +54,7 @@ const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) =
       type="button"
     >
       <span className="flex min-w-0 items-center gap-2">
-        {Icon ? <Icon className="h-4 w-4 shrink-0" /> : null}
+        {Icon ? <Icon className="size-4 shrink-0" /> : null}
         <span className="truncate">{category.name}</span>
       </span>
       <span className={isActive ? "text-white/80" : "text-brand-charcoal/45"}>
@@ -217,7 +217,7 @@ export const BlogsSection = () => {
                   </option>
                 ))}
               </select>
-              <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-brand-charcoal/50" />
+              <ChevronDown className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-brand-charcoal/50" />
             </div>
           </div>
 

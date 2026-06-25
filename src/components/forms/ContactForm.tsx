@@ -32,8 +32,8 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
       <div
         className={`flex flex-col items-center justify-center gap-4 py-16 text-center ${className}`}
       >
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue/10">
-          <ArrowRight className="h-8 w-8 rotate-[-45deg] text-brand-blue" />
+        <div className="flex size-16 items-center justify-center rounded-full bg-brand-blue/10">
+          <ArrowRight className="size-8 rotate-[-45deg] text-brand-blue" />
         </div>
         <h3 className="font-heading text-2xl font-bold text-brand-charcoal">Message received!</h3>
         <p className="max-w-sm text-gray-500">
@@ -163,7 +163,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         {form.consentLabel && (
           <div className="flex items-start gap-3">
             <input
-              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-brand-blue"
+              className="mt-0.5 size-4 shrink-0 cursor-pointer rounded border-brand-blue"
               id="contact-consent"
               required
               type="checkbox"
@@ -183,7 +183,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           variant="primary"
         >
           {loading ? "Sending…" : form.ctaLabel}
-          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
     </form>

@@ -32,7 +32,7 @@ export const ServicesCard = ({
           {serviceLabel && (
             <div className="mb-6 flex items-center gap-2">
               <span className="flex items-center gap-2 rounded-full border border-gray-100 bg-white px-3 py-1 text-xs font-bold text-gray-600 shadow-sm">
-                <Icon className="h-3 w-3 text-brand-blue" name={service.icon} />
+                <Icon className="size-3 text-brand-blue" name={service.icon} />
                 {serviceLabel}
               </span>
             </div>
@@ -54,7 +54,7 @@ export const ServicesCard = ({
                   {ctaLabel}
                   <span className="sr-only"> about {service.title}</span>
                 </span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="size-4" />
               </Link>
             </Button>
           ) : (
@@ -69,13 +69,13 @@ export const ServicesCard = ({
                 {ctaLabel}
                 <span className="sr-only"> about {service.title}</span>
               </span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="size-4" />
             </Button>
           ))}
       </div>
 
       {/* Image Area */}
-      <div className="image-pane z-0 h-48 w-full overflow-hidden md:absolute md:top-0 md:right-0 md:bottom-0 md:h-full md:w-1/2 lg:w-3/5">
+      <div className="image-pane z-0 h-48 w-full overflow-hidden md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-3/5">
         <Image
           alt={service.title}
           className="object-cover max-md:scale-105"

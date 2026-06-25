@@ -96,8 +96,8 @@ const getShowcaseCardClassName = (status: CardStatus) => {
 
 const getCapabilitiesImageClassName = (isActive: boolean) =>
   cn(
-    "h-full w-full object-cover transition-all duration-700",
-    isActive ? "grayscale-0 blur-0" : "grayscale blur-[2px] brightness-75"
+    "size-full object-cover transition-all duration-700",
+    isActive ? "blur-0 grayscale-0" : "blur-[2px] brightness-75 grayscale"
   );
 
 const getCapabilitiesIconClassName = (isActive: boolean) =>
@@ -108,7 +108,7 @@ const getCapabilitiesIconClassName = (isActive: boolean) =>
 
 const renderCapabilitiesIcon = (icon: CapabilitiesItem["icon"], isActive: boolean) => (
   <div className={getCapabilitiesIconClassName(isActive)}>
-    <Icon className="h-[18px] w-[18px]" name={camelToKebab(icon)} strokeWidth={2} />
+    <Icon className="size-[18px]" name={camelToKebab(icon)} strokeWidth={2} />
   </div>
 );
 
@@ -286,7 +286,7 @@ const CapabilitiesCarousel = ({
         <div
           className={cn(
             "relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden px-4 py-8 md:min-h-[500px] md:px-12 md:py-16",
-            mediaPosition === "left" ? "md:pl-14 md:pr-0" : "md:pr-14 md:pl-0"
+            mediaPosition === "left" ? "md:pr-0 md:pl-14" : "md:pr-14 md:pl-0"
           )}
         >
           <div className="relative flex aspect-[4/5] w-full max-w-[420px] items-center justify-center">
@@ -327,8 +327,8 @@ export const Capabilities = ({
   return (
     <section className="relative overflow-hidden bg-brand-gray py-12 md:py-16 lg:py-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-8 right-[8%] h-48 w-48 rounded-full bg-brand-cyan/12 blur-3xl" />
-        <div className="absolute bottom-0 left-[6%] h-56 w-56 rounded-full bg-brand-blue/10 blur-3xl" />
+        <div className="absolute top-8 right-[8%] size-48 rounded-full bg-brand-cyan/12 blur-3xl" />
+        <div className="absolute bottom-0 left-[6%] size-56 rounded-full bg-brand-blue/10 blur-3xl" />
       </div>
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">

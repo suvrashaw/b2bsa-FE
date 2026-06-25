@@ -37,7 +37,7 @@ export const BasicCards = ({ item }: BasicCardsProps) => {
               className="flex gap-3 text-xs leading-relaxed text-brand-charcoal/72 md:text-base"
               key={bullet}
             >
-              <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+              <CheckCircle className="mt-0.5 size-4 shrink-0 text-brand-blue" />
               <span>{bullet}</span>
             </li>
           ))}

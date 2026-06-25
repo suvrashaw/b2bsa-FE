@@ -75,7 +75,7 @@ const Page = () => {
                 style={PRIMARY_CTA_STYLE}
               >
                 Submit Inquiry
-                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-3 size-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"

@@ -134,9 +134,9 @@ const Page = () => {
                 key={reason.title}
               >
                 <div className="mb-6 flex items-center justify-center text-brand-blue">
-                  {reason.icon === "Coins" && <Coins className="h-20 w-20" strokeWidth={1.5} />}
-                  {reason.icon === "Move" && <Move className="h-20 w-20" strokeWidth={1.5} />}
-                  {reason.icon === "Truck" && <Truck className="h-20 w-20" strokeWidth={1.5} />}
+                  {reason.icon === "Coins" && <Coins className="size-20" strokeWidth={1.5} />}
+                  {reason.icon === "Move" && <Move className="size-20" strokeWidth={1.5} />}
+                  {reason.icon === "Truck" && <Truck className="size-20" strokeWidth={1.5} />}
                 </div>
                 <h3 className="mb-4 font-heading text-xl font-bold text-brand-charcoal">
                   {reason.title}

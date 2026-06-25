@@ -67,9 +67,9 @@ const SpotlightCta = ({
 
   const ctaClassName = cn("gap-2 transition-all duration-500");
   const icon = isHovered ? (
-    <ArrowUpRight className="h-4 w-4" />
+    <ArrowUpRight className="size-4" />
   ) : (
-    <ArrowRight className="h-4 w-4" />
+    <ArrowRight className="size-4" />
   );
 
   return (
@@ -165,7 +165,7 @@ const SpotlightTextBlock = ({
     <div
       className={cn(
         "relative z-10 flex w-full max-w-[640px] shrink-0 flex-col items-center text-center",
-        pairedWithMedia && "md:min-w-0 md:w-full md:max-w-[640px] lg:max-w-[720px]",
+        pairedWithMedia && "md:w-full md:max-w-[640px] md:min-w-0 lg:max-w-[720px]",
         !pairedWithMedia && "md:w-full md:max-w-[480px] lg:max-w-[560px]",
         align === "left" && "md:items-start md:text-left",
         align === "right" && "md:items-end md:text-right",
@@ -219,13 +219,13 @@ const SpotlightTextBlock = ({
             {descriptionItems?.map((item) => (
               <li
                 className={cn(
-                  "flex gap-3 justify-center",
+                  "flex justify-center gap-3",
                   align === "left" && "md:justify-start",
                   align === "right" && "md:flex-row-reverse"
                 )}
                 key={item}
               >
-                <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-brand-cyan" />
+                <span className="mt-2.5 size-2 shrink-0 rounded-full bg-brand-cyan" />
                 <span
                   className={cn(
                     align === "left" && "md:text-left",
@@ -255,7 +255,7 @@ const SpotlightTextBlock = ({
         <div className="mt-6 grid grid-cols-2 gap-3 md:mt-8">
           {locationBadges.map((city) => (
             <Button className="gap-1.5" key={city} onClick={onLocationBadgeClick} variant="primary">
-              <MapPin className="h-3.5 w-3.5 shrink-0" />
+              <MapPin className="size-3.5 shrink-0" />
               {city}
             </Button>
           ))}
@@ -350,7 +350,7 @@ const SpotlightImageBlock = ({
     mediaElement = (
       <video
         autoPlay
-        className="h-full w-full object-cover transition-all duration-1000"
+        className="size-full object-cover transition-all duration-1000"
         loop
         muted
         playsInline
@@ -364,7 +364,7 @@ const SpotlightImageBlock = ({
     mediaElement = (
       <Image
         alt={imageAlt}
-        className="h-full w-full object-cover transition-all duration-1000"
+        className="size-full object-cover transition-all duration-1000"
         fill
         sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px"
         src={imageUrl}
@@ -479,7 +479,7 @@ export const Spotlight = ({
       <section className={cn("bg-brand-gray py-20", sectionClassName)} id={id}>
         <div
           className={cn(
-            "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-4 md:px-8 md:gap-14 lg:gap-20",
+            "group relative mx-auto flex w-full cursor-pointer flex-col items-center justify-center gap-8 px-4 md:gap-14 md:px-8 lg:gap-20",
             usesMediaSplitLayout ? "max-w-6xl lg:max-w-[1360px]" : "max-w-6xl lg:max-w-6xl",
             usesMediaSplitLayout ? mediaGridClassName : "md:grid md:grid-cols-2",
             className

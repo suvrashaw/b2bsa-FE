@@ -33,7 +33,7 @@ export const FAQCard = ({
       onClick={handleClick}
     >
       <div
-        className={`relative h-full w-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}
+        className={`relative size-full rounded-2xl shadow-md transition-transform duration-500 ease-in-out [transform-style:preserve-3d] hover:shadow-xl md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* Front: Image + overlay + question */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]">
@@ -54,7 +54,7 @@ export const FAQCard = ({
         </div>
 
         {/* Back: Answer */}
-        <div className="absolute inset-0 flex h-full w-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 text-left shadow-inner [backface-visibility:hidden] md:p-8">
+        <div className="absolute inset-0 flex size-full [transform:rotateY(180deg)] flex-col items-start justify-center rounded-2xl border border-white/20 bg-brand-blue p-5 text-left shadow-inner [backface-visibility:hidden] md:p-8">
           <p className="text-xs leading-relaxed text-white md:text-base">{answer}</p>
         </div>
       </div>

@@ -76,10 +76,10 @@ export const TestimonialCard = ({
     >
       {/* Quote icon — floats half above the card top edge */}
       <div
-        className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${isCenter ? "" : "max-md:opacity-0"}`}
+        className={`absolute top-0 left-1/2 -translate-1/2 transition-opacity duration-300 ${isCenter ? "" : "max-md:opacity-0"}`}
       >
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue shadow-lg">
-          <Quote className="h-6 w-6 text-white" />
+        <div className="flex size-12 items-center justify-center rounded-full bg-brand-blue shadow-lg">
+          <Quote className="size-6 text-white" />
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export const TestimonialCard = ({
 
         <div className="mt-3 flex justify-center gap-1">
           {Array.from({ length: testimonial.rating }).map((_, i) => (
-            <Star className="h-3 w-3 fill-amber-400 text-amber-400" key={i} />
+            <Star className="size-3 fill-amber-400 text-amber-400" key={i} />
           ))}
         </div>
 

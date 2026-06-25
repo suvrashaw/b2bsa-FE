@@ -92,8 +92,8 @@ export const FAQAccordion = ({
     >
       {!isArticle && (
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
-          <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
+          <div className="absolute top-0 left-0 size-[500px] rounded-full bg-brand-blue/5 blur-[100px]" />
+          <div className="absolute right-0 bottom-0 size-[500px] rounded-full bg-brand-cyan/5 blur-[100px]" />
         </div>
       )}
 
@@ -115,7 +115,7 @@ export const FAQAccordion = ({
             {heading}
           </SectionHeader>
           {description && (
-            <p className={cn("max-w-xl type-body-m text-gray-600", !isArticle && "mx-auto")}>
+            <p className={cn("type-body-m max-w-xl text-gray-600", !isArticle && "mx-auto")}>
               {description}
             </p>
           )}

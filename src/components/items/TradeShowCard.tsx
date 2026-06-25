@@ -35,7 +35,7 @@ const formatCompactLocation = ({ city, country, region }: CalendarTradeShow) =>
 
 const EventMeta = ({ icon: Icon, label }: { icon: typeof CalendarDays; label: string }) => (
   <div className="flex items-start gap-2 text-sm font-medium text-brand-charcoal/75">
-    <Icon className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+    <Icon className="mt-0.5 size-4 shrink-0 text-brand-blue" />
     <span>{label}</span>
   </div>
 );

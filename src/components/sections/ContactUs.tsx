@@ -158,20 +158,20 @@ export const ContactUs = ({
         <div className="absolute top-20 left-[8%]" style={floatingBubbleOneStyle}>
           <motion.div
             animate={ctaFloatOneAnimate}
-            className="h-40 w-40 rounded-full bg-white/12 blur-3xl"
+            className="size-40 rounded-full bg-white/12 blur-3xl"
             transition={ctaFloatOneTransition}
           />
         </div>
         <div className="absolute right-[12%] bottom-16" style={floatingBubbleTwoStyle}>
           <motion.div
             animate={ctaFloatTwoAnimate}
-            className="h-56 w-56 rounded-full bg-brand-cyan/20 blur-3xl"
+            className="size-56 rounded-full bg-brand-cyan/20 blur-3xl"
             transition={ctaFloatTwoTransition}
           />
         </div>
         <motion.div
           animate={ctaFloatThreeAnimate}
-          className="absolute top-1/3 left-1/2 h-28 w-28 rounded-full bg-white/8 blur-2xl"
+          className="absolute top-1/3 left-1/2 size-28 rounded-full bg-white/8 blur-2xl"
           transition={ctaFloatThreeTransition}
         />
 
@@ -191,7 +191,7 @@ export const ContactUs = ({
         <div className="absolute top-24 right-[8%] grid grid-cols-5 gap-3 opacity-25">
           {dotRows.flatMap((row) =>
             dotColumns.map((column) => (
-              <span className="h-1.5 w-1.5 rounded-full bg-white" key={`${row}-${column}`} />
+              <span className="size-1.5 rounded-full bg-white" key={`${row}-${column}`} />
             ))
           )}
         </div>
@@ -207,7 +207,7 @@ export const ContactUs = ({
               viewport={ctaViewport}
               whileInView="visible"
             >
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white">
+              <span className="relative inline-flex size-2.5 rounded-full bg-white">
                 <span className="absolute inset-0 animate-ping rounded-full bg-white/80" />
               </span>
               {badge}
@@ -254,16 +254,16 @@ export const ContactUs = ({
           >
             {primaryCta.opensModal ? (
               <Button onClick={openContactModal} size="lg" variant="white">
-                <CalendarDays className="mr-2 h-5 w-5" />
+                <CalendarDays className="mr-2 size-5" />
                 {primaryCta.label}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
               </Button>
             ) : (
               <Button asChild size="lg" variant="white">
                 <Link href={primaryCta.href}>
-                  <CalendarDays className="mr-2 h-5 w-5" />
+                  <CalendarDays className="mr-2 size-5" />
                   {primaryCta.label}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             )}
@@ -271,7 +271,7 @@ export const ContactUs = ({
             {secondaryCta ? (
               <Button asChild size="lg" variant="white-outline">
                 <Link href={secondaryCta.href}>
-                  <Mail className="mr-2 h-5 w-5" />
+                  <Mail className="mr-2 size-5" />
                   {secondaryCta.label}
                 </Link>
               </Button>
@@ -289,7 +289,7 @@ export const ContactUs = ({
             <div className="flex -space-x-3">
               {PROOF_LOGOS.map((logo) => (
                 <div
-                  className="h-10 w-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
+                  className="size-10 overflow-hidden rounded-full border-2 border-white/50 bg-white transition-all duration-300 hover:z-10 hover:scale-110"
                   key={logo.alt}
                 >
                   <Image

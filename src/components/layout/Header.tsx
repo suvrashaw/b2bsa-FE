@@ -92,7 +92,7 @@ export const Header = ({
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-2 sm:px-8 py-3 sm:py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 flex items-center justify-between px-2 py-3 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300 sm:px-8 sm:py-4",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
@@ -142,12 +142,12 @@ export const Header = ({
           <button
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             className={cn(
-              "rounded-full p-2 min-h-[40px] min-w-[40px] flex items-center justify-center transition-colors hover:bg-brand-gray/5 xl:p-3 xl:min-h-[48px] xl:min-w-[48px]",
+              "flex min-h-[40px] min-w-[40px] items-center justify-center rounded-full p-2 transition-colors hover:bg-brand-gray/5 xl:min-h-[48px] xl:min-w-[48px] xl:p-3",
               lightText ? "text-white" : ""
             )}
             onClick={toggleMobileMenu}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
         </div>
       </div>
@@ -216,7 +216,7 @@ export const Header = ({
         {isMobileMenuOpen && (
           <motion.div
             animate={MOBILE_MENU_ANIMATE}
-            className="absolute top-full right-0 left-0 max-h-[80vh] overflow-y-auto border-b border-gray-100 bg-white shadow-2xl xl:hidden"
+            className="absolute inset-x-0 top-full max-h-[80vh] overflow-y-auto border-b border-gray-100 bg-white shadow-2xl xl:hidden"
             exit={MOBILE_MENU_EXIT}
             initial={MOBILE_MENU_INITIAL}
           >

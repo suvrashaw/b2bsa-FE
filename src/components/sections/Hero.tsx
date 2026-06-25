@@ -179,7 +179,7 @@ const HeroBackground = ({
         <video
           autoPlay
           className={cn(
-            "hero-bg-video absolute inset-0 h-full w-full object-cover",
+            "hero-bg-video absolute inset-0 size-full object-cover",
             hasMobileVideo && "hidden md:block"
           )}
           loop
@@ -194,7 +194,7 @@ const HeroBackground = ({
         {hasMobileVideo && (
           <video
             autoPlay
-            className="hero-bg-video absolute inset-0 h-full w-full object-cover md:hidden"
+            className="hero-bg-video absolute inset-0 size-full object-cover md:hidden"
             loop
             muted
             playsInline
@@ -217,7 +217,7 @@ const HeroBackground = ({
     return (
       <video
         autoPlay
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 size-full object-cover"
         loop
         muted
         playsInline
@@ -398,7 +398,7 @@ export const Hero = ({
                   style={PRIMARY_CTA_STYLE}
                 >
                   {primaryCta.label}
-                  <ArrowRight className="ml-3 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-3 size-5 shrink-0 transition-transform group-hover:translate-x-1" />
                 </Link>
               )}
               {secondaryCta && (

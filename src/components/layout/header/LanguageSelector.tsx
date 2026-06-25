@@ -28,15 +28,15 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
     <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <button
         className={cn(
-          "flex items-center gap-1.5 p-2 min-h-[44px] text-sm font-medium transition-colors",
+          "flex min-h-[44px] items-center gap-1.5 p-2 text-sm font-medium transition-colors",
           lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
         )}
         type="button"
       >
-        <Globe className="h-4 w-4" />
+        <Globe className="size-4" />
         <span>EN</span>
         <ChevronDown
-          className={cn("h-3 w-3 transition-transform duration-200", isOpen ? "rotate-180" : "")}
+          className={cn("size-3 transition-transform duration-200", isOpen ? "rotate-180" : "")}
         />
       </button>
 

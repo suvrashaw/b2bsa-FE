@@ -228,7 +228,7 @@ export const Footer = () => {
                   href="mailto:info@b2bsalesarrow.com"
                 >
                   info@b2bsalesarrow.com
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </p>
             </div>
@@ -293,7 +293,7 @@ export const Footer = () => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <Icon className="h-4 w-4" />
+                      <Icon className="size-4" />
                     </a>
                   );
                 }
@@ -310,7 +310,7 @@ export const Footer = () => {
                     key={item.name}
                     type="button"
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="size-4" />
                   </button>
                 );
               })}

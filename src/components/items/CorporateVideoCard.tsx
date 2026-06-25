@@ -33,7 +33,7 @@ export const CorporateVideoCard = ({ item }: { item: CorporateVideoCardItem }) =
         href={item.href ?? "/case-studies"}
       >
         View Project
-        <ArrowUpRight className="h-6 w-6 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <ArrowUpRight className="size-6 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </Link>
     </div>
   </article>

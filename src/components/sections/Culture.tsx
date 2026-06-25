@@ -32,7 +32,7 @@ const ParallaxItem = ({ alt, index, scale, src }: ParallaxItemProps) => {
 
   return (
     <motion.div
-      className={`absolute top-0 flex h-full w-full items-center justify-center ${
+      className={`absolute top-0 flex size-full items-center justify-center ${
         index === 1
           ? "[&>div]:!-top-[30vh] [&>div]:!left-[5vw] [&>div]:!h-[30vh] [&>div]:!w-[35vw]"
           : ""
@@ -147,7 +147,7 @@ export const Culture = ({
         <div
           aria-hidden="true"
           className={cn(
-            "pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full",
+            "pointer-events-none absolute -top-1/2 left-1/2 size-[120vmin] -translate-x-1/2 rounded-full",
             "bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.05),transparent_50%)]",
             "blur-[30px]"
           )}

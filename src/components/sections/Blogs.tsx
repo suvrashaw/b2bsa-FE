@@ -50,7 +50,7 @@ const BlogDeckLayout = ({ blogs, ctaLabel, layout = "deck" }: BlogDeckLayoutProp
 
   return (
     <div
-      className="perspective-1000 relative mx-auto mt-8 mb-6 flex h-[580px] w-full max-w-3xl cursor-pointer items-center justify-center sm:h-[640px] lg:mt-10 lg:mb-10 lg:h-[580px]"
+      className="perspective-1000 relative mx-auto mt-8 mb-6 flex h-[580px] w-full max-w-3xl cursor-pointer items-center justify-center sm:h-[640px] lg:my-10 lg:h-[580px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={containerRef}
@@ -105,7 +105,7 @@ export const Blogs = ({
           <div className="mt-12 text-center">
             <Button asChild variant="primary">
               <Link href={viewAllHref}>
-                {viewAllLabel} <ArrowUpRight className="h-5 w-5" />
+                {viewAllLabel} <ArrowUpRight className="size-5" />
               </Link>
             </Button>
           </div>

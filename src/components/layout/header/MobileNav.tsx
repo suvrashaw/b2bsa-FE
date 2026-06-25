@@ -87,7 +87,7 @@ const MobileServiceGroup = ({
         {hasSubContent && (
           <ChevronDown
             className={cn(
-              "h-4 w-4 shrink-0 text-gray-400 transition-transform duration-300",
+              "size-4 shrink-0 text-gray-400 transition-transform duration-300",
               isOpen && "rotate-180"
             )}
           />
@@ -151,7 +151,7 @@ export const MobileNavItem = memo(
             <span>{label}</span>
             <ChevronDown
               className={cn(
-                "h-5 w-5 text-gray-400 transition-transform duration-300",
+                "size-5 text-gray-400 transition-transform duration-300",
                 isOpen && "rotate-180"
               )}
             />

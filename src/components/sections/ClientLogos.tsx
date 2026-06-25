@@ -159,8 +159,8 @@ export const ClientLogos = ({
         className="pointer-events-auto relative overflow-hidden py-6 pb-10"
         onWheel={handleWheel}
       >
-        <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-48 bg-linear-to-r from-brand-gray to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-48 bg-linear-to-l from-brand-gray to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48 bg-linear-to-r from-brand-gray to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48 bg-linear-to-l from-brand-gray to-transparent" />
 
         <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">

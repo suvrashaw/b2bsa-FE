@@ -56,11 +56,11 @@ export const CaseStudyItem = ({
       onHoverStart={onActivate}
       transition={CARD_TRANSITION}
     >
-      <div className="absolute inset-0 h-full w-full">
+      <div className="absolute inset-0 size-full">
         <Image
           alt={item.title}
           className={cn(
-            "object-cover transition-transform duration-1000 max-lg:blur-[6px] max-lg:scale-105",
+            "object-cover transition-transform duration-1000 max-lg:scale-105 max-lg:blur-[6px]",
             active ? "scale-105" : "scale-100 grayscale hover:grayscale-0"
           )}
           fill
@@ -72,7 +72,7 @@ export const CaseStudyItem = ({
           className={cn(
             "absolute inset-0 transition-opacity duration-500",
             active
-              ? "from-brand-charcoal/95 via-brand-charcoal/70 bg-gradient-to-t to-brand-charcoal/30 lg:from-brand-charcoal/90 lg:via-brand-charcoal/40 lg:to-transparent"
+              ? "bg-gradient-to-t from-brand-charcoal/95 via-brand-charcoal/70 to-brand-charcoal/30 lg:from-brand-charcoal/90 lg:via-brand-charcoal/40 lg:to-transparent"
               : "bg-brand-charcoal/70 lg:bg-brand-charcoal/60 lg:group-hover:bg-brand-charcoal/40"
           )}
         />
@@ -89,11 +89,11 @@ export const CaseStudyItem = ({
         <div className={cn("flex gap-4", active ? "items-start" : "items-center")}>
           <div
             className={cn(
-              "flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300",
-              active ? "bg-brand-blue/90" : "group-hover:bg-brand-cyan/80 bg-white/10"
+              "flex size-10 shrink-0 items-center justify-center rounded-full backdrop-blur-md transition-colors duration-300 md:size-12",
+              active ? "bg-brand-blue/90" : "bg-white/10 group-hover:bg-brand-cyan/80"
             )}
           >
-            <Icon className="h-4 w-4 text-white md:h-5 md:w-5" name={item.icon} />
+            <Icon className="size-4 text-white md:size-5" name={item.icon} />
           </div>
 
           {!active && (
@@ -133,7 +133,7 @@ export const CaseStudyItem = ({
             >
               <Link href={item.href}>
                 <Button className="shadow-lg" variant="primary">
-                  {ctaLabel} <ArrowUpRight className="h-4 w-4" />
+                  {ctaLabel} <ArrowUpRight className="size-4" />
                 </Button>
               </Link>
             </motion.div>

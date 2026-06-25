@@ -66,12 +66,12 @@ export const Pagination = ({
     >
       <button
         aria-label="Previous page"
-        className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
+        className="flex size-12 min-h-[44px] items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
         disabled={currentPage <= 1}
         onClick={handlePrevious}
         type="button"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="size-6" />
       </button>
 
       {Array.from({ length: totalPages }, (_, index) => {
@@ -89,12 +89,12 @@ export const Pagination = ({
 
       <button
         aria-label="Next page"
-        className="flex h-12 min-h-[44px] w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
+        className="flex size-12 min-h-[44px] items-center justify-center rounded-full border border-gray-200 bg-white text-brand-charcoal shadow-sm transition-colors hover:border-transparent hover:bg-brand-blue hover:text-white disabled:pointer-events-none disabled:opacity-40"
         disabled={currentPage >= totalPages}
         onClick={handleNext}
         type="button"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="size-6" />
       </button>
     </nav>
   );

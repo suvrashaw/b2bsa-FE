@@ -37,7 +37,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           "absolute inset-0 rounded-2xl border border-brand-charcoal/10 bg-white",
           "transition-all duration-300",
           "shadow-[6px_6px_0px_0px] shadow-brand-blue/10",
-          "group-hover:translate-x-[-4px] group-hover:translate-y-[-4px]",
+          "group-hover:translate-[-4px]",
           tier.popular
             ? "border-brand-primary/20 shadow-brand-primary/20 group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-primary/30"
             : "group-hover:shadow-[12px_12px_0px_0px] group-hover:shadow-brand-blue/15"
@@ -56,7 +56,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
         <div className="mb-6">
           <div
             className={cn(
-              "mb-4 flex h-12 w-12 items-center justify-center rounded-xl border transition-colors duration-300",
+              "mb-4 flex size-12 items-center justify-center rounded-xl border transition-colors duration-300",
               tier.color === "blue" && "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
               tier.color === "cyan" && "border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
               tier.color === "primary" &&
@@ -87,8 +87,8 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
         <div className="mb-8 space-y-4">
           {tier.features.map((feature) => (
             <div className="flex items-center gap-3.5" key={feature}>
-              <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary">
-                <Check className="h-3 w-3" />
+              <div className="flex size-5 shrink-0 items-center justify-center rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary">
+                <Check className="size-3" />
               </div>
               <span className="font-sans text-base font-semibold text-brand-charcoal/80">
                 {feature}
@@ -102,8 +102,8 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           className={cn(
             "relative h-13 w-full rounded-[4px] border font-sans text-base font-bold transition-all duration-300 active:scale-97",
             tier.popular
-              ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[6px_6px_0px_0px]"
-              : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
+              ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-0.5 hover:shadow-[6px_6px_0px_0px] hover:brightness-110"
+              : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
           )}
         >
           Get Started

@@ -60,7 +60,7 @@ const CardFront = ({ event, eventImage }: { event: EventCardItem; eventImage: st
       src={eventImage}
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
-    <div className="absolute right-5 bottom-5 left-5 z-10">
+    <div className="absolute inset-x-5 bottom-5 z-10">
       <h3 className="line-clamp-2 font-heading text-base leading-tight font-bold !text-white md:text-xl">
         {event.title}
       </h3>
@@ -88,16 +88,16 @@ const EventDetails = ({
       <div className="mt-0 space-y-3">
         {eventDate ? (
           <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
-              <Calendar className="h-4 w-4 text-[#1E6091]" />
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
+              <Calendar className="size-4 text-[#1E6091]" />
             </span>
             <span>{eventDate}</span>
           </div>
         ) : null}
         {eventCountry ? (
           <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#B23A48]/10">
-              <MapPin className="h-4 w-4 text-[#B23A48]" />
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#B23A48]/10">
+              <MapPin className="size-4 text-[#B23A48]" />
             </span>
             <span className="line-clamp-1">{eventCountry}</span>
           </div>
@@ -116,7 +116,7 @@ const EventDetails = ({
         href={eventCtaHref}
         onClick={handleLinkClick}
       >
-        {ctaLabel} <ArrowUpRight className="h-4 w-4" />
+        {ctaLabel} <ArrowUpRight className="size-4" />
       </Link>
     </Button>
   </>
@@ -156,7 +156,7 @@ const HorizontalFlipCard = ({
   <div className="absolute inset-[1.5px] rounded-[22px] bg-white [perspective:1100px]">
     <div
       className={cn(
-        "relative h-full w-full rounded-[22px] [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]",
+        "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]",
         shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
         isFlipped && "[transform:rotateY(180deg)]"
       )}
@@ -192,7 +192,7 @@ const VerticalFlipCard = ({
   <div className="absolute inset-[1.5px] rounded-[22px] bg-white [perspective:1100px]">
     <div
       className={cn(
-        "relative h-full w-full rounded-[22px] [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] group-focus-within:[transform:rotateX(180deg)]",
+        "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotateX(180deg)] group-hover:[transform:rotateX(180deg)]",
         shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
         isFlipped && "[transform:rotateX(180deg)]"
       )}
@@ -236,7 +236,7 @@ const HingeFlipCard = ({
     />
     <div
       className={cn(
-        "absolute inset-0 origin-left overflow-hidden rounded-[22px] [backface-visibility:hidden] [transform-style:preserve-3d] group-hover:[transform:rotateY(-112deg)] group-focus-within:[transform:rotateY(-112deg)]",
+        "absolute inset-0 origin-left overflow-hidden rounded-[22px] [backface-visibility:hidden] [transform-style:preserve-3d] group-focus-within:[transform:rotateY(-112deg)] group-hover:[transform:rotateY(-112deg)]",
         shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
         isFlipped && "[transform:rotateY(-112deg)]"
       )}
@@ -260,7 +260,7 @@ const DiagonalFlipCard = ({
   <div className="absolute inset-[1.5px] rounded-[22px] bg-white [perspective:1200px]">
     <div
       className={cn(
-        "relative h-full w-full rounded-[22px] [transform-style:preserve-3d] group-hover:[transform:rotate3d(1,1,0,180deg)] group-focus-within:[transform:rotate3d(1,1,0,180deg)]",
+        "relative size-full rounded-[22px] [transform-style:preserve-3d] group-focus-within:[transform:rotate3d(1,1,0,180deg)] group-hover:[transform:rotate3d(1,1,0,180deg)]",
         shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
         isFlipped && "[transform:rotate3d(1,1,0,180deg)]"
       )}
@@ -296,7 +296,7 @@ const DiagonalWipeRevealCard = ({
   <div className="absolute inset-[1.5px] overflow-hidden rounded-[22px] bg-white">
     <div
       className={cn(
-        "absolute inset-0 z-10 flex flex-col justify-between rounded-[22px] bg-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100",
+        "absolute inset-0 z-10 flex flex-col justify-between rounded-[22px] bg-white opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100",
         shouldReduceMotion ? "delay-0" : "delay-500",
         isFlipped && "opacity-100 delay-0"
       )}
@@ -312,7 +312,7 @@ const DiagonalWipeRevealCard = ({
     </div>
     <div
       className={cn(
-        "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] transition-opacity duration-200 group-hover:opacity-0 group-focus-within:opacity-0",
+        "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
         shouldReduceMotion ? "delay-0" : "delay-500",
         isFlipped && "opacity-0 delay-0"
       )}
@@ -321,7 +321,7 @@ const DiagonalWipeRevealCard = ({
     </div>
     <div
       className={cn(
-        "pointer-events-none absolute -inset-20 z-30 -translate-x-[130%] skew-x-[-18deg] bg-[linear-gradient(135deg,#1E6091_0%,#B23A48_58%,#780000_100%)] opacity-95 transition-transform duration-700 ease-out group-hover:translate-x-[130%] group-focus-within:translate-x-[130%]",
+        "pointer-events-none absolute -inset-20 z-30 translate-x-[-130%] skew-x-[-18deg] bg-[linear-gradient(135deg,#1E6091_0%,#B23A48_58%,#780000_100%)] opacity-95 transition-transform duration-700 ease-out group-focus-within:translate-x-[130%] group-hover:translate-x-[130%]",
         shouldReduceMotion && "hidden",
         isFlipped && "translate-x-[130%]"
       )}
@@ -351,7 +351,7 @@ const SplitFlipCard = ({
     />
     <div
       className={cn(
-        "pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[22px] transition-opacity duration-200 group-hover:opacity-0 group-focus-within:opacity-0",
+        "pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[22px] transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
         isFlipped && "opacity-0"
       )}
     >
@@ -359,13 +359,13 @@ const SplitFlipCard = ({
     </div>
     <div
       className={cn(
-        "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] opacity-0 transition-opacity duration-100 group-hover:opacity-100 group-focus-within:opacity-100",
+        "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-[22px] opacity-0 transition-opacity duration-100 group-focus-within:opacity-100 group-hover:opacity-100",
         isFlipped && "opacity-100"
       )}
     >
       <div
         className={cn(
-          "absolute inset-y-0 left-0 w-1/2 origin-left overflow-hidden rounded-l-[22px] [backface-visibility:hidden] group-hover:[transform:rotateY(-112deg)] group-focus-within:[transform:rotateY(-112deg)]",
+          "absolute inset-y-0 left-0 w-1/2 origin-left overflow-hidden rounded-l-[22px] [backface-visibility:hidden] group-focus-within:[transform:rotateY(-112deg)] group-hover:[transform:rotateY(-112deg)]",
           shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
           isFlipped && "[transform:rotateY(-112deg)]"
         )}
@@ -381,7 +381,7 @@ const SplitFlipCard = ({
       </div>
       <div
         className={cn(
-          "absolute inset-y-0 right-0 w-1/2 origin-right overflow-hidden rounded-r-[22px] [backface-visibility:hidden] group-hover:[transform:rotateY(112deg)] group-focus-within:[transform:rotateY(112deg)]",
+          "absolute inset-y-0 right-0 w-1/2 origin-right overflow-hidden rounded-r-[22px] [backface-visibility:hidden] group-focus-within:[transform:rotateY(112deg)] group-hover:[transform:rotateY(112deg)]",
           shouldReduceMotion ? "transition-none" : "transition-transform duration-700 ease-out",
           isFlipped && "[transform:rotateY(112deg)]"
         )}
@@ -397,7 +397,7 @@ const SplitFlipCard = ({
       </div>
       <div
         className={cn(
-          "pointer-events-none absolute right-5 bottom-5 left-5 z-30 transition-opacity duration-200 group-hover:opacity-0 group-focus-within:opacity-0",
+          "pointer-events-none absolute inset-x-5 bottom-5 z-30 transition-opacity duration-200 group-focus-within:opacity-0 group-hover:opacity-0",
           isFlipped && "opacity-0"
         )}
       >

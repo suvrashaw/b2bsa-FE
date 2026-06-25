@@ -34,7 +34,7 @@ export const ServicesImageCard = ({
       viewport={CARD_VIEWPORT}
       whileInView={CARD_WHILE_IN_VIEW}
     >
-      <Link className="flex h-full w-full" href="/services">
+      <Link className="flex size-full" href="/services">
         {/* Left: brand-blue text panel */}
         <div className="flex w-[60%] shrink-0 flex-col justify-between bg-brand-blue px-6 py-5 transition-colors duration-300 group-hover:bg-[#155a8a]">
           <span className="font-heading text-xs font-bold tracking-widest text-white/30">
@@ -44,7 +44,7 @@ export const ServicesImageCard = ({
             <h3 className="type-h3 leading-snug text-white">{service}</h3>
             <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-brand-cyan uppercase">
               Explore
-              <MoveRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+              <MoveRight className="size-3 transition-transform duration-300 group-hover:translate-x-1" />
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export const ServicesImageCard = ({
         <div className="relative flex-1 overflow-hidden">
           <Image
             alt={service}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
             fill
             quality={60}
             sizes="(max-width: 640px) 40vw, (max-width: 1024px) 20vw, 15vw"

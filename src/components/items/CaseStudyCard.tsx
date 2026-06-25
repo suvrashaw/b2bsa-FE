@@ -32,7 +32,7 @@ export const CaseStudyCard = ({
   title,
 }: CaseStudyCardProps) => {
   const sharedClassName = cn(
-    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-2xl md:rounded-xl bg-brand-charcoal text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white lg:h-[437px]",
+    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-2xl bg-brand-charcoal text-left focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none md:rounded-xl lg:h-[437px]",
     colSpan
   );
 
@@ -55,8 +55,8 @@ export const CaseStudyCard = ({
       {/* Metric badge */}
       <div
         className={cn(
-          "absolute top-6 right-6 z-10 rounded-2xl border border-white/10 bg-white/10 px-4 py-2.5 backdrop-blur-md transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/20 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0",
-          revealed && "opacity-100 translate-y-0"
+          "absolute top-6 right-6 z-10 translate-y-2 rounded-2xl border border-white/10 bg-white/10 px-4 py-2.5 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:border-white/20 group-hover:bg-white/20 group-hover:opacity-100",
+          revealed && "translate-y-0 opacity-100"
         )}
       >
         <div className="font-heading text-lg leading-none font-bold text-white">{metric}</div>
@@ -68,8 +68,8 @@ export const CaseStudyCard = ({
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center">
         <div
           className={cn(
-            "w-full transform text-center opacity-0 translate-y-3 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0",
-            revealed && "opacity-100 translate-y-0"
+            "w-full translate-y-3 transform text-center opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100",
+            revealed && "translate-y-0 opacity-100"
           )}
         >
           <h3 className="mx-auto max-w-xs text-center font-sans text-base leading-snug font-bold !text-white drop-shadow-md md:text-xl">

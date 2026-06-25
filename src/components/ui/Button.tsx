@@ -15,7 +15,7 @@ const buttonVariants = cva(
     variants: {
       size: {
         default: "px-6 py-2 text-xs md:px-8 md:py-3.5 md:text-base",
-        icon: "h-10 w-10 md:h-11 md:w-11",
+        icon: "size-10 md:size-11",
         lg: "px-6 py-2 text-xs md:px-8 md:py-3.5 md:text-base",
         sm: "px-6 py-2 text-xs md:px-8 md:py-3.5 md:text-base",
       },
@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {showArrow ? (
           <>
             {children}
-            <span className="relative inline-flex h-4 w-4 shrink-0">
+            <span className="relative inline-flex size-4 shrink-0">
               <ArrowRight
                 className="absolute inset-0 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
                 size={16}

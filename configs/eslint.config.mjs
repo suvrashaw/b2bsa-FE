@@ -7,6 +7,7 @@ import compat from "eslint-plugin-compat";
 import depend from "eslint-plugin-depend";
 import importX from "eslint-plugin-import-x";
 import jsonc from "eslint-plugin-jsonc";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import node from "eslint-plugin-n";
 import noConstructorBind from "eslint-plugin-no-constructor-bind";
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
@@ -34,6 +35,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts}"],
     plugins: {
       boundaries: boundaries,
       "check-file": checkFile,
@@ -224,7 +226,6 @@ const eslintConfig = defineConfig([
       // JSX Nesting (SEO & Hydration)
       "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
 
-      // JSX-A11y handled by eslint-config-next/core-web-vitals
     },
     settings: {
       "boundaries/elements": [
@@ -244,9 +245,14 @@ const eslintConfig = defineConfig([
         typescript: true,
       },
       tailwindcss: {
-        config: tailwindConfigPath,
+        cssConfigPath: tailwindConfigPath,
       },
     },
+  },
+  // JSX Accessibility — full rule set; plugin already registered by eslint-config-next
+  {
+    files: ["**/*.{jsx,tsx}"],
+    rules: jsxA11y.flatConfigs.recommended.rules,
   },
   globalIgnores([
     ".next/**",

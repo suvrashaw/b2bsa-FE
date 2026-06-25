@@ -63,7 +63,7 @@ export const LiveStreamProjects = ({
               </h3>
             </div>
             <span className="inline-flex w-fit items-center gap-2 rounded-sm bg-brand-blue/10 px-3 py-2 text-xs font-semibold text-brand-blue">
-              <Video className="h-4 w-4" />
+              <Video className="size-4" />
               {items.length} featured formats
             </span>
           </div>
@@ -73,7 +73,7 @@ export const LiveStreamProjects = ({
               <div className="relative aspect-video overflow-hidden rounded-lg bg-brand-charcoal">
                 {activeProject.videoUrl ? (
                   <video
-                    className="h-full w-full object-cover"
+                    className="size-full object-cover"
                     controls
                     key={activeProject.id}
                     muted
@@ -93,7 +93,7 @@ export const LiveStreamProjects = ({
                   />
                 )}
                 <div className="pointer-events-none absolute top-4 left-4 inline-flex items-center gap-2 rounded-sm bg-brand-charcoal/80 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-                  <Radio className="h-4 w-4 text-brand-cyan" />
+                  <Radio className="size-4 text-brand-cyan" />
                   Broadcast preview
                 </div>
               </div>
@@ -121,7 +121,7 @@ export const LiveStreamProjects = ({
                 {(activeProject.metric || activeProject.externalUrl) && (
                   <div className="flex flex-col gap-4 lg:min-w-52 lg:items-end">
                     {activeProject.metric && (
-                      <div className="w-full rounded-lg border border-brand-charcoal/10 bg-brand-gray px-4 py-4 lg:text-right">
+                      <div className="w-full rounded-lg border border-brand-charcoal/10 bg-brand-gray p-4 lg:text-right">
                         <div className="font-heading text-2xl font-bold text-brand-blue">
                           {activeProject.metric}
                         </div>
@@ -136,7 +136,7 @@ export const LiveStreamProjects = ({
                       <Button asChild className="w-full gap-2 lg:w-auto" variant="primary">
                         <a href={activeProject.externalUrl} rel="noreferrer" target="_blank">
                           Open Playlist
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLink className="size-4" />
                         </a>
                       </Button>
                     )}
@@ -173,12 +173,12 @@ export const LiveStreamProjects = ({
                             sizes="120px"
                             src={item.thumbnail}
                           />
-                          <span className="absolute top-2 left-2 inline-flex h-6 w-6 items-center justify-center rounded-sm bg-brand-charcoal/80 text-xs font-bold text-white">
+                          <span className="absolute top-2 left-2 inline-flex size-6 items-center justify-center rounded-sm bg-brand-charcoal/80 text-xs font-bold text-white">
                             {index + 1}
                           </span>
                           {isActive && (
-                            <span className="absolute right-2 bottom-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-blue text-white">
-                              <Play className="h-3.5 w-3.5 fill-current" />
+                            <span className="absolute right-2 bottom-2 inline-flex size-7 items-center justify-center rounded-full bg-brand-blue text-white">
+                              <Play className="size-3.5 fill-current" />
                             </span>
                           )}
                         </div>
