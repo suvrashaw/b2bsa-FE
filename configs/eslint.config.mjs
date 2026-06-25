@@ -16,6 +16,7 @@ import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
 import preferArrow from "eslint-plugin-prefer-arrow";
 import promise from "eslint-plugin-promise";
+import reactCompiler from "eslint-plugin-react-compiler";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactPerf from "eslint-plugin-react-perf";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -56,6 +57,13 @@ const eslintConfig = defineConfig([
   {
     ...reactHooks.configs.flat["recommended"],
     files: ["**/*.{js,jsx,ts,tsx}"],
+  },
+
+  // React Compiler — enforces Rules of React required for auto-memoization
+  {
+    files: ["**/*.{jsx,tsx}"],
+    plugins: { "react-compiler": reactCompiler },
+    rules: { "react-compiler/react-compiler": "error" },
   },
 
   // React rules — ESLint v10 compatible replacement for eslint-plugin-react
