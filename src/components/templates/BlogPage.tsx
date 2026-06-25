@@ -224,24 +224,22 @@ const countWords = (text: string) =>
   text.trim().split(/\s+/).filter(Boolean).length;
 
 const getBlockWordCount = (block: ContentBlock) => {
-  if (block.type === "divider") {
-    return 0;
+  switch (block.type) {
+    case "divider": {
+      return 0;
+    }
+    case "heading":
+    case "paragraph":
+    case "quote": {
+      return countWords(block.text);
+    }
+    case "image": {
+      return countWords(block.caption ?? block.alt);
+    }
+    default: {
+      return block.items.reduce((total, item) => total + countWords(item), 0);
+    }
   }
-
-  // eslint-disable-next-line unicorn/prefer-includes-over-repeated-comparisons -- Array.includes() loses TypeScript discriminant narrowing; block.text is inaccessible without the union check
-  if (
-    block.type === "heading" ||
-    block.type === "paragraph" ||
-    block.type === "quote"
-  ) {
-    return countWords(block.text);
-  }
-
-  if (block.type === "image") {
-    return countWords(block.caption ?? block.alt);
-  }
-
-  return block.items.reduce((total, item) => total + countWords(item), 0);
 };
 
 const getReadTime = (blocks: ContentBlock[]) => {
