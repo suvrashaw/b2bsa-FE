@@ -394,7 +394,7 @@ export const Hero = ({
             >
               {primaryCta && (
                 <Link
-                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-[transform,filter] duration-300 hover:-translate-y-0.5 hover:brightness-110 md:w-auto md:px-10"
                   href={primaryCta.href}
                   style={PRIMARY_CTA_STYLE}
                 >
@@ -404,7 +404,7 @@ export const Hero = ({
               )}
               {secondaryCta && (
                 <Link
-                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-[transform,filter] duration-300 hover:-translate-y-0.5 hover:brightness-110 md:w-auto md:px-10"
                   href={secondaryCta.href}
                   style={SECONDARY_CTA_STYLE}
                 >
