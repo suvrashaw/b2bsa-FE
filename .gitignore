@@ -83,3 +83,4 @@ playwright/.auth/
 memory/
 public/sitemap*.xml
 public/robots.txt
+.lighthouse/
