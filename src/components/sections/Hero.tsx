@@ -416,24 +416,6 @@ export const Hero = ({
         </motion.div>
       </div>
 
-      {/* eslint-disable-next-line @eslint-react/dom-no-unknown-property -- styled-jsx attribute */}
-      <style jsx>{`
-        .hero-bg-video {
-          animation: hero-media-drift 22s ease-in-out infinite alternate;
-          will-change: transform;
-        }
-        @keyframes hero-media-drift {
-          0% {
-            transform: scale(1.03) translate3d(-1.5%, 0, 0);
-          }
-          50% {
-            transform: scale(1.08) translate3d(1%, -1.2%, 0);
-          }
-          100% {
-            transform: scale(1.05) translate3d(0.5%, 1%, 0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
