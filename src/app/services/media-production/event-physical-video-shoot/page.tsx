@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -70,9 +70,9 @@ const Page = () => {
       page={EVENT_PHYSICAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <ProcessTimeline
-          phases={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.phases}
-          title={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.title}
+        <StickyScroll
+          heading={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.heading}
+          reasons={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.reasons}
         />
       }
       process={EVENT_PHYSICAL_VIDEO_PROCESS}

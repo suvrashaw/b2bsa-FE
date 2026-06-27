@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
-import PHYSICALVIDEOCONTACTCTA_DATA from "./physical-video-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 
 export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,
@@ -9,7 +9,7 @@ export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
 };
 
 export const EVENT_PHYSICAL_VIDEO_CONTACT_CTA = {
-  ...PHYSICALVIDEOCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as EVENT_PHYSICAL_VIDEO_BLOGS_SECTION } from "./blog.json";

@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import BOOTHHOSTESSCASESTUDIESDATA from "./case-studies.json";
-import HOSTESSCONTACTCTA_DATA from "./hostess-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 
 export const BOOTH_HOSTESS_CASE_STUDIES = {
   ...BOOTHHOSTESSCASESTUDIESDATA,
@@ -9,13 +9,13 @@ export const BOOTH_HOSTESS_CASE_STUDIES = {
 };
 
 export const BOOTH_HOSTESS_CONTACT_CTA = {
-  ...HOSTESSCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as BOOTH_HOSTESS_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_HOSTESS_FAQ } from "./faq.json";
 export { default as BOOTH_HOSTESS_IMAGE_HERO } from "./hero.json";
-export { default as BOOTH_HOSTESS_CAPABILITIES } from "./hostess-capabilities.json";
+export { default as BOOTH_HOSTESS_CAPABILITIES } from "./capabilities.json";
 
 export { default as BOOTH_HOSTESS_DELIVERABLES } from "./hostess-deliverables.json";
 export { default as BOOTH_HOSTESS_INTRO } from "./hostess-intro.json";

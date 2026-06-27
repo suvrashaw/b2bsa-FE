@@ -2,7 +2,7 @@ import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CAPABILITIES_DATA from "./capabilities.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_CTA_DATA from "./contact-cta.json";
+import CONTACT_CTA_DATA from "./contact.json";
 import LIVE_STREAM_PROJECTS_DATA from "./live-stream-projects.json";
 import STREAMINGSPOTLIGHT_DATA from "./streaming-spotlight.json";
 

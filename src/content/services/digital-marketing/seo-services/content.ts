@@ -10,7 +10,7 @@ export const SEO_CASE_STUDIES = {
 };
 
 export { default as SEO_BLOGS_SECTION } from "./blog.json";
-export { default as SEO_CONTACT_CTA } from "./contact-cta.json";
+export { default as SEO_CONTACT_CTA } from "./contact.json";
 export { default as SEO_FAQ } from "./faq.json";
 export { default as SEO_HERO } from "./hero.json";
 export { default as SEO_INTRO } from "./intro.json";

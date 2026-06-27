@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
 
-import BRANDINGCONTACTCTA_DATA from "./branding-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 import BRANDINGINDUSTRIESSECTION_DATA from "./branding-industries-section.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
@@ -24,10 +24,10 @@ export const EVENT_BRANDING_INDUSTRIES_SECTION = {
 };
 
 export const EVENT_BRANDING_CONTACT_CTA = {
-  ...BRANDINGCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
-export { default as EVENT_BRANDING_CAPABILITIES } from "./branding-capabilities.json";
+export { default as EVENT_BRANDING_CAPABILITIES } from "./capabilities.json";
 export { default as EVENT_BRANDING_DELIVERABLES } from "./branding-deliverables.json";
 export { default as EVENT_BRANDING_INTRO } from "./branding-intro.json";
 export { default as EVENT_BRANDING_RELATED_SERVICES } from "./related-services.json";

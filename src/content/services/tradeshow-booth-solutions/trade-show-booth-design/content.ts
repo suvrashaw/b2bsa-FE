@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
-import DESIGNCONTACTCTA_DATA from "./design-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 import BOOTHDESIGNPROOFBARDATA from "./proof-bar.json";
 
 export const BOOTH_DESIGN_PROOF_BAR = {
@@ -16,7 +16,7 @@ export const BOOTH_DESIGN_CASE_STUDIES = {
 };
 
 export const BOOTH_DESIGN_CONTACT_CTA = {
-  ...DESIGNCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as BOOTH_DESIGN_BLOGS_SECTION } from "./blog.json";

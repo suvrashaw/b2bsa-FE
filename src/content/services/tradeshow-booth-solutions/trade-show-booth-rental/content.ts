@@ -3,7 +3,7 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHRENTALCASESTUDIESDATA from "./case-studies.json";
 import BOOTHRENTALPROOFBARDATA from "./proof-bar.json";
-import RENTALCONTACTCTA_DATA from "./rental-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 
 export const BOOTH_RENTAL_PROOF_BAR = {
   ...BOOTHRENTALPROOFBARDATA,
@@ -16,7 +16,7 @@ export const BOOTH_RENTAL_CASE_STUDIES = {
 };
 
 export const BOOTH_RENTAL_CONTACT_CTA = {
-  ...RENTALCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as BOOTH_RENTAL_BLOGS_SECTION } from "./blog.json";

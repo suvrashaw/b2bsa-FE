@@ -1,25 +1,35 @@
 {
-  "phases": [
+  "heading": "Event Video Production Plan",
+  "reasons": [
     {
       "description": "We align the event goal, audience, content priorities, shot requirements, speaker access, and delivery timelines before the shoot.",
+      "id": "brief",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Brief and Content Goals"
     },
     {
       "description": "We define interviews, speaker clips, booth coverage, social cut-downs, B-roll, and recap footage so the event day is focused.",
+      "id": "shot-list",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Shot List and Production Map"
     },
     {
       "description": "We plan cameras, audio, lighting, crew roles, venue access, and backup workflows around the realities of the live event space.",
+      "id": "crew-equipment",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Crew and Equipment Planning"
     },
     {
       "description": "Our crew captures the high-value moments while coordinating around sessions, attendees, speakers, and brand activations.",
+      "id": "on-site-shoot",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "On-Site Shoot Direction"
     },
     {
       "description": "Footage is organized into a practical post-production roadmap for highlight reels, testimonials, clips, and long-form assets.",
+      "id": "post-event-roadmap",
+      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Post-Event Asset Roadmap"
     }
-  ],
-  "title": "Event Video Production Plan"
+  ]
 }

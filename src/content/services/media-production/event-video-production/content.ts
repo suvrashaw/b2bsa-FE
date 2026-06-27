@@ -3,7 +3,7 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_CTA_DATA from "./contact-cta.json";
+import CONTACT_CTA_DATA from "./contact.json";
 import PROOF_BAR_DATA from "./proof-bar.json";
 
 export { default as EVENT_VIDEO_FAQ } from "./faq.json";

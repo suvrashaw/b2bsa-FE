@@ -2,8 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_CTA_DATA from "./contact-cta.json";
-import NETWORKINGCONTACTCTA_DATA from "./networking-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 import NETWORKINGINDUSTRIESSECTION_DATA from "./networking-industries-section.json";
 
 export { default as CORP_NETWORKING_BLOGS_SECTION } from "./blog.json";
@@ -19,13 +18,12 @@ export const CORP_NETWORKING_INDUSTRIES_SECTION = {
 };
 
 export const CORP_NETWORKING_CONTACT_CTA = {
-  ...NETWORKINGCONTACTCTA_DATA,
-  ...CONTACT_CTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as CORP_NETWORKING_FAQ } from "./faq.json";
 export { default as CORP_NETWORKING_IMAGE_HERO } from "./hero.json";
-export { default as CORP_NETWORKING_CAPABILITIES } from "./networking-capabilities.json";
+export { default as CORP_NETWORKING_CAPABILITIES } from "./capabilities.json";
 export { default as CORP_NETWORKING_DELIVERABLES } from "./networking-deliverables.json";
 export { default as CORP_NETWORKING_EVENT_TYPES } from "./networking-event-types.json";
 export { default as CORP_NETWORKING_INTRO } from "./networking-intro.json";

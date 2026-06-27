@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
-import BUILDERCONTACTCTA_DATA from "./builder-contact-cta.json";
+import CONTACT_DATA from "./contact.json";
 import BOOTHBUILDERCASESTUDIESDATA from "./case-studies.json";
 import BOOTHBUILDERPROOFBARDATA from "./proof-bar.json";
 
@@ -20,7 +20,7 @@ import { getBlogsByTags } from "@/content/blogs";
 export const BOOTH_BUILDER_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Builder"], 5);
 
 export const BOOTH_BUILDER_CONTACT_CTA = {
-  ...BUILDERCONTACTCTA_DATA,
+  ...CONTACT_DATA,
 };
 
 export { default as BOOTH_BUILDER_BLOGS_SECTION } from "./blog.json";
