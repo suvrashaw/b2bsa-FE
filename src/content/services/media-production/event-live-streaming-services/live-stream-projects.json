@@ -9,7 +9,8 @@
     "metricLabel": "stream-ready production",
     "platform": "YouTube + custom RTMP",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Conference Keynote Broadcast"
+    "title": "Conference Keynote Broadcast",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   },
   {
     "client": "Corporate leadership team",
@@ -21,7 +22,8 @@
     "metricLabel": "speaker coverage",
     "platform": "Private event stream",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Executive Town Hall Stream"
+    "title": "Executive Town Hall Stream",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   },
   {
     "client": "Product marketing team",
@@ -33,7 +35,8 @@
     "metricLabel": "demo switching",
     "platform": "LinkedIn Live + YouTube",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Product Launch Live Demo"
+    "title": "Product Launch Live Demo",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   },
   {
     "client": "Industry panel program",
@@ -45,7 +48,8 @@
     "metricLabel": "audience workflow",
     "platform": "Hybrid webinar",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Industry Panel Discussion"
+    "title": "Industry Panel Discussion",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   },
   {
     "client": "Trade show booth team",
@@ -57,7 +61,8 @@
     "metricLabel": "event crew",
     "platform": "Social simulcast",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Trade Show Booth Live Stream"
+    "title": "Trade Show Booth Live Stream",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   },
   {
     "client": "Customer webinar audience",
@@ -69,6 +74,7 @@
     "metricLabel": "streaming path",
     "platform": "Zoom + YouTube archive",
     "thumbnail": "/media/home/hero/home_hero_bg.avif",
-    "title": "Customer Webinar Production"
+    "title": "Customer Webinar Production",
+    "videoUrl": "https://www.youtube.com/watch?v=jrX6r94JhSA"
   }
 ]

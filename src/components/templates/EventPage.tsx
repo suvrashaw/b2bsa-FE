@@ -14,7 +14,6 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { Stats } from "@/components/sections/Stats";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 
@@ -164,17 +163,12 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         title={event.name}
       />
 
-      {/* ── 3. Stats — Event at a Glance ────────────────────────────────── */}
-      <Stats description={event.summary} heading="Event at a Glance" stats={stats} />
-
-      {/* ── 4. Spotlight — Why Exhibit ───────────────────────────────────── */}
+      {/* ── 3. Spotlight — Why Exhibit + Event at a Glance ──────────────── */}
       <Spotlight
-        ctaHref="/contact-us"
-        ctaLabel="Get a Booth Strategy"
         description={event.summary}
         imageAlt={event.name}
         imageUrl={event.image ?? PLACEHOLDER_IMAGE}
-        showCta
+        stats={stats}
         titleLine1="Why Exhibit at"
         titleLine2={event.name}
       />

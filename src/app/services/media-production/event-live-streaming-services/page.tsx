@@ -7,7 +7,6 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { LiveStreamProjects } from "@/components/sections/LiveStreamProjects";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -23,8 +22,8 @@ import {
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_FAQ,
   LIVE_STREAMING_HERO,
+  LIVE_STREAMING_CASE_STUDIES,
   LIVE_STREAMING_PAGE,
-  LIVE_STREAMING_PROJECTS,
   LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_SPOTLIGHT,
   LIVE_STREAMING_CLIENT_LOGOS,
@@ -42,12 +41,11 @@ const LIVE_STREAMING_AREAS_SPOTLIGHT = {
 const Page = () => {
   return (
     <ServicePage
+      caseStudies={LIVE_STREAMING_CASE_STUDIES}
       clientLogos={LIVE_STREAMING_CLIENT_LOGOS}
       contactUs={LIVE_STREAMING_CONTACT_CTA}
       customSections={
         <>
-          <LiveStreamProjects {...LIVE_STREAMING_PROJECTS} />
-
           <CardsGrid cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading}>
             {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />

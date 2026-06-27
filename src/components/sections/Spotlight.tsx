@@ -1,21 +1,17 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { motion, useAnimationFrame, useMotionValue, useTransform, wrap } from "framer-motion";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface SpotlightProps {
   align?: SpotlightAlignment;
   className?: string;
-  ctaAriaLabel?: string;
-  ctaHref?: string;
-  ctaLabel?: string;
   description: string;
   descriptionItems?: readonly string[];
   id?: string;
@@ -25,10 +21,9 @@ export interface SpotlightProps {
   imageUrl?: string;
   label?: string;
   locationBadges?: readonly string[];
-  onClick?: () => void;
   secondarySpotlight?: SpotlightSecondaryBlock;
   sectionClassName?: string;
-  showCta?: boolean;
+  stats?: string[];
   titleLine1: string;
   titleLine2: string;
   triggerContactModal?: boolean;
@@ -39,8 +34,6 @@ type SpotlightAlignment = "center" | "left" | "right";
 
 interface SpotlightSecondaryBlock {
   align?: SpotlightAlignment;
-  ctaHref?: string;
-  ctaLabel?: string;
   description: string;
   descriptionItems?: readonly string[];
   label?: string;
@@ -48,83 +41,156 @@ interface SpotlightSecondaryBlock {
   titleLine2: string;
 }
 
-const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+interface StatItem {
+  key: string;
+  label: string;
+  value: string;
+}
 
-const SpotlightCta = ({
-  ctaAriaLabel,
-  ctaHref,
-  ctaLabel,
-  isHovered,
-  onClick,
-}: {
-  ctaAriaLabel?: string;
-  ctaHref?: string;
-  ctaLabel?: string;
-  isHovered: boolean;
-  onClick?: () => void;
-}) => {
-  if (!ctaLabel) return null;
+const MARQUEE_SPEED = 5;
 
-  const ctaClassName = cn("gap-2 transition-all duration-500");
-  const icon = isHovered ? <ArrowUpRight className="size-4" /> : <ArrowRight className="size-4" />;
+const useStatsMarquee = (isVisible: boolean, isReduced: boolean) => {
+  const baseX = useMotionValue(0);
+  const [isHovered, setIsHovered] = useState(false);
 
+  useAnimationFrame((_, delta) => {
+    if (isVisible && !isReduced && !isHovered) {
+      baseX.set(baseX.get() - MARQUEE_SPEED * (delta / 1000));
+    }
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
+
+  const handleWheel = (e: React.WheelEvent) => {
+    const scrollAmount = e.deltaX === 0 ? e.deltaY : e.deltaX;
+    baseX.set(baseX.get() - scrollAmount * 0.05);
+  };
+
+  return { handleWheel, setIsHovered, x };
+};
+
+const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
+  const bg = ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3];
   return (
-    <div className="mt-6 md:mt-8 lg:mt-10">
-      {ctaHref ? (
-        <Button asChild className={ctaClassName} variant="primary">
-          <Link aria-label={ctaAriaLabel || ctaLabel} href={ctaHref}>
-            {ctaLabel}
-            {icon}
-          </Link>
-        </Button>
-      ) : (
-        <Button
-          aria-label={ctaAriaLabel || ctaLabel}
-          className={ctaClassName}
-          onClick={onClick}
-          variant="primary"
-        >
-          {ctaLabel}
-        </Button>
+    <div
+      className={cn(
+        "mx-3 flex min-w-[180px] shrink-0 flex-col items-center gap-1.5 rounded-xl px-8 py-6 shadow-lg",
+        bg,
+        "text-white"
       )}
+    >
+      <span className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">{item.value}</span>
+      <span className="text-xs font-bold tracking-widest uppercase opacity-80">{item.label}</span>
     </div>
   );
 };
 
+const StatRow = ({ items, keyPrefix }: { items: StatItem[]; keyPrefix: string }) => (
+  <>
+    {items.map((item, i) => (
+      <div className="flex shrink-0 items-center" key={`${keyPrefix}-${item.key}`}>
+        <StatChip index={i} item={item} />
+      </div>
+    ))}
+  </>
+);
+
+const StatsMarquee = ({ items }: { items: StatItem[] }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const prefersReduced =
+    globalThis.window !== undefined &&
+    globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const { handleWheel, setIsHovered, x } = useStatsMarquee(isVisible, prefersReduced);
+  const marqueeStyle = useMemo(() => ({ x }), [x]);
+
+  const handleMouseEnter = useCallback(() => setIsHovered(true), [setIsHovered]);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), [setIsHovered]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry?.isIntersecting ?? false),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      className="pointer-events-auto relative -mx-4 w-[calc(100%+2rem)] overflow-hidden py-4 md:-mx-6 md:w-[calc(100%+3rem)] lg:mx-0 lg:w-full"
+      onWheel={handleWheel}
+      ref={containerRef}
+    >
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-linear-to-r from-brand-gray to-transparent md:w-48" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-linear-to-l from-brand-gray to-transparent md:w-48" />
+      <motion.div
+        className="flex w-max cursor-grab active:cursor-grabbing"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={marqueeStyle}
+      >
+        <div className="flex items-center">
+          <StatRow items={items} keyPrefix="a" />
+        </div>
+        <div className="flex items-center">
+          <StatRow items={items} keyPrefix="b" />
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+
+
 const SpotlightTextBlock = ({
   align = "center",
   className,
-  ctaAriaLabel,
-  ctaHref,
-  ctaLabel,
   description,
   descriptionItems,
   isHovered,
   label,
   locationBadges,
-  onClick,
   onLocationBadgeClick,
   pairedWithMedia = false,
+  stats,
   titleLine1,
   titleLine2,
 }: {
   align?: SpotlightAlignment;
   className?: string;
-  ctaAriaLabel?: string;
-  ctaHref?: string;
-  ctaLabel?: string;
   description: string;
   descriptionItems?: readonly string[];
   isHovered: boolean;
   label?: string;
   locationBadges?: readonly string[];
-  onClick?: () => void;
   onLocationBadgeClick?: () => void;
   pairedWithMedia?: boolean;
+  stats?: string[];
   titleLine1: string;
   titleLine2: string;
 }) => {
   const hasDescriptionItems = Boolean(descriptionItems);
+  
+  let flatItems: StatItem[] = [];
+  if (stats && stats.length > 0) {
+    flatItems = stats.flatMap((stat, index) =>
+      stat.split("|").map((s, pIndex) => {
+        const trimmed = s.trim();
+        const spaceIdx = trimmed.indexOf(" ");
+        return {
+          key: `${index}-${pIndex}`,
+          label: spaceIdx === -1 ? "" : trimmed.slice(spaceIdx + 1),
+          value: spaceIdx === -1 ? trimmed : trimmed.slice(0, spaceIdx),
+        };
+      })
+    );
+  }
+
   const lineStyle = useMemo(
     () => ({ transitionTimingFunction: EASE, width: isHovered ? 48 : 32 }),
     [isHovered]
@@ -260,13 +326,11 @@ const SpotlightTextBlock = ({
         </div>
       )}
 
-      <SpotlightCta
-        ctaAriaLabel={ctaAriaLabel}
-        ctaHref={ctaHref}
-        ctaLabel={ctaLabel}
-        isHovered={isHovered}
-        onClick={onClick}
-      />
+      {flatItems.length > 0 && (
+        <div className="mt-8 w-full md:mt-10">
+          <StatsMarquee items={flatItems} />
+        </div>
+      )}
     </div>
   );
 };
@@ -415,8 +479,6 @@ const SpotlightImageBlock = ({
 export const Spotlight = ({
   align = "center",
   className,
-  ctaHref,
-  ctaLabel = "Explore",
   description,
   descriptionItems,
   id,
@@ -426,10 +488,9 @@ export const Spotlight = ({
   imageUrl,
   label,
   locationBadges,
-  onClick,
   secondarySpotlight,
   sectionClassName,
-  showCta = true,
+  stats,
   titleLine1,
   titleLine2,
   triggerContactModal = false,
@@ -458,15 +519,6 @@ export const Spotlight = ({
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
-  const handleCtaClick = useCallback(() => {
-    if (onClick) {
-      onClick();
-    }
-    if (triggerContactModal) {
-      setIsModalOpen(true);
-    }
-  }, [onClick, triggerContactModal]);
-
   const handleBadgeClick = useCallback(() => {
     setIsModalOpen(true);
   }, []);
@@ -491,26 +543,20 @@ export const Spotlight = ({
           <SpotlightTextBlock
             align={align}
             className={textBlockClassName}
-            ctaAriaLabel={`${ctaLabel} about ${titleLine1} ${titleLine2}`}
-            ctaHref={ctaHref}
-            ctaLabel={showCta ? ctaLabel : undefined}
             description={description}
             descriptionItems={descriptionItems}
             isHovered={isHovered}
             label={label}
             locationBadges={locationBadges}
-            onClick={handleCtaClick}
             onLocationBadgeClick={handleBadgeClick}
             pairedWithMedia={isUsesMediaSplitLayout}
+            stats={stats}
             titleLine1={titleLine1}
             titleLine2={titleLine2}
           />
           {secondarySpotlight ? (
             <SpotlightTextBlock
               align={secondarySpotlight.align ?? "right"}
-              ctaAriaLabel={`${secondarySpotlight.ctaLabel || ctaLabel} about ${secondarySpotlight.titleLine1} ${secondarySpotlight.titleLine2}`}
-              ctaHref={secondarySpotlight.ctaHref}
-              ctaLabel={secondarySpotlight.ctaLabel}
               description={secondarySpotlight.description}
               descriptionItems={secondarySpotlight.descriptionItems}
               isHovered={isHovered}

@@ -1,3 +1,4 @@
+import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CAPABILITIES_DATA from "./capabilities.json";
@@ -10,6 +11,11 @@ export const LIVE_STREAMING_PROJECTS = {
   ...CASE_STUDIES_DATA,
   items: LIVE_STREAM_PROJECTS_DATA,
   playlistLabel: "Live Streaming Projects",
+};
+
+export const LIVE_STREAMING_CASE_STUDIES = {
+  ...CASE_STUDIES_DATA,
+  items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 
 export const LIVE_STREAMING_SPOTLIGHT = {

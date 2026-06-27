@@ -27,7 +27,6 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { Stats } from "@/components/sections/Stats";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   buildBreadcrumbJsonLd,
@@ -243,9 +242,26 @@ export const ServicePage = ({
         overlap={false}
       />
 
-      {proofBar && <Stats {...proofBar} />}
-
-      {spotlight && <Spotlight {...spotlight} />}
+      {(spotlight || proofBar) && (
+        <Spotlight
+          align={spotlight?.align ?? "left"}
+          description={spotlight?.description ?? proofBar?.description ?? ""}
+          descriptionItems={spotlight?.descriptionItems}
+          imageAlt={spotlight?.imageAlt ?? "Feature image"}
+          imageContainerClassName={spotlight?.imageContainerClassName}
+          imagePosition={spotlight?.imagePosition ?? "right"}
+          imageUrl={spotlight?.imageUrl ?? proofBar?.imageUrl}
+          label="INTRODUCTION"
+          locationBadges={spotlight?.locationBadges}
+          secondarySpotlight={spotlight?.secondarySpotlight}
+          sectionClassName={spotlight?.sectionClassName}
+          stats={proofBar?.stats}
+          titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
+          titleLine2={spotlight?.titleLine2 ?? ""}
+          triggerContactModal={spotlight?.triggerContactModal}
+          videoUrl={spotlight?.videoUrl}
+        />
+      )}
 
       {services && renderServicesSection(services, servicesSectionType)}
 

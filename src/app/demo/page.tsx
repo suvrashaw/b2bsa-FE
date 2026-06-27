@@ -30,7 +30,6 @@ import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { Stats } from "@/components/sections/Stats";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
@@ -380,12 +379,11 @@ const CONTACT_CINEMATIC_PROPS = {
 // ─── Spotlight ───────────────────────────────────────────────────────────────
 
 const SPOTLIGHT_DEMO_PROPS = {
-  ctaHref: "/case-studies",
-  ctaLabel: "See Case Studies",
   description:
     "Most exhibitors measure success by business cards collected. We measure it by qualified pipeline generated within 30 days of event close.",
   imageUrl: IMG_EV1,
   label: "Our Approach",
+  stats: PROOF_STATS,
   titleLine1: "Event ROI That",
   titleLine2: "You Can Measure",
 };
@@ -557,14 +555,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Service Detail",
     },
   ],
-  Stats: [
-    { href: "/case-studies/waf-2025", label: "Case Study" },
-    {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
-      label: "Service Detail",
-    },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
-  ],
   StickyScroll: [
     { href: "/", label: "Home" },
     {
@@ -622,8 +612,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
   RentVsBuySection: { items: [], ui: ["Heading"] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
-  Spotlight: { items: [], ui: ["Button", "ContactModal", "Heading"] },
-  Stats: { items: [], ui: ["Heading"] },
+  Spotlight: { items: [], ui: ["ContactModal", "Heading"] },
   StickyScroll: {
     items: [],
     ui: ["Button", "ContactModal", "Eyebrow", "Heading"],
@@ -753,15 +742,6 @@ const DemoPage = () => {
       {/* 05 – ClientLogos */}
       <DemoLabel name="ClientLogos" />
       <ClientLogos />
-
-      {/* 06 – Stats */}
-      <DemoLabel name="Stats" />
-      <Stats
-        description="Consistent, measurable results across every engagement — from startup exhibitors to Fortune 500 event programs."
-        heading="Proven at Scale"
-        imageUrl="/media/home/hero/home_hero_bg.avif"
-        stats={PROOF_STATS}
-      />
 
       {/* 07 – HomeStats */}
       <DemoLabel name="HomeStats" />
