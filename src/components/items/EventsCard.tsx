@@ -116,7 +116,7 @@ const EventDetails = ({
         href={eventCtaHref}
         onClick={handleLinkClick}
       >
-        {ctaLabel} <ArrowUpRight className="size-4" />
+        {ctaLabel}
       </Link>
     </Button>
   </>

@@ -266,14 +266,12 @@ export const ContactUs = ({
               <Button onClick={openContactModal} size="lg" variant="white">
                 <CalendarDays className="mr-2 size-5" />
                 {primaryCta.label}
-                <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
               </Button>
             ) : (
               <Button asChild size="lg" variant="white">
                 <Link href={primaryCta.href}>
                   <CalendarDays className="mr-2 size-5" />
                   {primaryCta.label}
-                  <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             )}

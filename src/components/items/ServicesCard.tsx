@@ -54,7 +54,6 @@ export const ServicesCard = ({
                   {ctaLabel}
                   <span className="sr-only"> about {service.title}</span>
                 </span>
-                <ArrowRight className="size-4" />
               </Link>
             </Button>
           ) : (
@@ -69,7 +68,6 @@ export const ServicesCard = ({
                 {ctaLabel}
                 <span className="sr-only"> about {service.title}</span>
               </span>
-              <ArrowRight className="size-4" />
             </Button>
           ))}
       </div>

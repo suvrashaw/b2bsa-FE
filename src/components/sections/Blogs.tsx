@@ -104,9 +104,7 @@ export const Blogs = ({
         {viewAllHref && (
           <div className="mt-12 text-center">
             <Button asChild variant="primary">
-              <Link href={viewAllHref}>
-                {viewAllLabel} <ArrowUpRight className="size-5" />
-              </Link>
+              <Link href={viewAllHref}>{viewAllLabel}</Link>
             </Button>
           </div>
         )}

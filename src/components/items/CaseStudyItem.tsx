@@ -133,11 +133,9 @@ export const CaseStudyItem = ({
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >
-              <Link href={item.href}>
-                <Button className="shadow-lg" variant="primary">
-                  {ctaLabel} <ArrowUpRight className="size-4" />
-                </Button>
-              </Link>
+              <Button asChild className="shadow-lg" variant="primary">
+                <Link href={item.href}>{ctaLabel}</Link>
+              </Button>
             </motion.div>
           ) : null}
         </AnimatePresence>

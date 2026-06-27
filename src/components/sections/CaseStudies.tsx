@@ -163,11 +163,9 @@ export const CaseStudies = ({
 
         {viewAllLabel && (
           <div className="mt-12 text-center">
-            <Link href={viewAllHref}>
-              <Button variant="primary">
-                {viewAllLabel} <ArrowUpRight className="size-5" />
-              </Button>
-            </Link>
+            <Button asChild variant="primary">
+              <Link href={viewAllHref}>{viewAllLabel}</Link>
+            </Button>
           </div>
         )}
       </div>

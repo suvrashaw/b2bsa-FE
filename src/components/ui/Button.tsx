@@ -6,7 +6,7 @@ import * as React from "react";
 import { cn } from "@/lib";
 
 const buttonVariants = cva(
-  "btn-shimmer group inline-flex min-h-[40px] items-center justify-center rounded-[4px] font-medium whitespace-nowrap transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 md:min-h-[44px]",
+  "btn-shimmer group gap-2 inline-flex min-h-[40px] items-center justify-center rounded-[4px] font-medium whitespace-nowrap transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 md:min-h-[44px]",
   {
     defaultVariants: {
       size: "default",
@@ -25,11 +25,11 @@ const buttonVariants = cva(
         link: "text-brand-blue underline-offset-4 hover:underline",
         outline:
           "border border-gray-200 bg-transparent hover:border-brand-blue hover:text-brand-blue",
-        primary: "gap-2 bg-brand-blue text-white",
+        primary: "bg-brand-blue text-white",
         secondary:
           "border-2 border-brand-blue/20 bg-transparent text-brand-blue hover:border-brand-blue hover:bg-brand-blue/5",
         tertiary:
-          "gap-2 bg-transparent font-semibold text-brand-blue hover:gap-4 hover:text-brand-blue/80",
+          "bg-transparent font-semibold text-brand-blue hover:gap-4 hover:text-brand-blue/80",
         white: "bg-white text-brand-blue hover:bg-white/95",
         "white-outline":
           "border-2 border-white/60 bg-transparent text-white hover:border-white hover:bg-white/10",
@@ -45,26 +45,49 @@ interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ asChild = false, children, className, size, variant, ...props }, ref) => {
+    const isShowArrow = size !== "icon";
+
+    if (asChild && React.isValidElement(children)) {
+      return (
+        <Slot className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props}>
+          {React.cloneElement(
+            children as React.ReactElement,
+            undefined,
+            <>
+              {(children as React.ReactElement).props.children}
+              {isShowArrow && (
+                <span className="relative inline-flex size-4 shrink-0">
+                  <ArrowRight
+                    className="absolute inset-0 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
+                    size={16}
+                  />
+                  <ArrowUpRight
+                    className="absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                    size={16}
+                  />
+                </span>
+              )}
+            </>
+          )}
+        </Slot>
+      );
+    }
+
     const Comp = asChild ? Slot : "button";
-    const isShowArrow = variant === "primary" && !asChild && size !== "icon";
     return (
       <Comp className={cn(buttonVariants({ className, size, variant }))} ref={ref} {...props}>
-        {isShowArrow ? (
-          <>
-            {children}
-            <span className="relative inline-flex size-4 shrink-0">
-              <ArrowRight
-                className="absolute inset-0 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
-                size={16}
-              />
-              <ArrowUpRight
-                className="absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-                size={16}
-              />
-            </span>
-          </>
-        ) : (
-          children
+        {children}
+        {isShowArrow && (
+          <span className="relative inline-flex size-4 shrink-0">
+            <ArrowRight
+              className="absolute inset-0 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
+              size={16}
+            />
+            <ArrowUpRight
+              className="absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              size={16}
+            />
+          </span>
         )}
       </Comp>
     );

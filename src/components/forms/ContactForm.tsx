@@ -236,7 +236,6 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
           variant="primary"
         >
           {loading ? "Sending…" : form.ctaLabel}
-          <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
     </form>
