@@ -1,0 +1,35 @@
+{
+  "heading": "What Makes Our Event Experiences Different",
+  "items": [
+    {
+      "description": "We do not begin with decoration or logistics. We begin with the business objective, audience profile, and desired outcome.",
+      "icon": "Target",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Strategy Before Production"
+    },
+    {
+      "description": "We design the complete attendee journey, not just isolated event elements.",
+      "icon": "Map",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Experience-Led Thinking"
+    },
+    {
+      "description": "We build events with lead generation, sales conversations, account engagement, and follow-up in mind.",
+      "icon": "TrendingUp",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "B2B Conversion Focus"
+    },
+    {
+      "description": "As part of our Global Event Solutions offering, we support brands that need consistency, quality, and coordination across markets.",
+      "icon": "Globe2",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Global Execution Mindset"
+    },
+    {
+      "description": "Strategy, creative, production, event flow, engagement planning, and post-event handoff are aligned from the beginning.",
+      "icon": "Users2",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "One Connected Team"
+    }
+  ]
+}

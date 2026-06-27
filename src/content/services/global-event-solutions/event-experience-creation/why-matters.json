@@ -1,0 +1,23 @@
+{
+  "heading": "Why Event Experience Creation Matters",
+  "reasons": [
+    {
+      "description": "In competitive B2B markets, your audience is exposed to countless events, campaigns, and digital messages. A well-created event experience gives your brand a chance to stand apart.",
+      "id": "stand-apart",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Stand Apart in a Crowded Market"
+    },
+    {
+      "description": "It allows your audience to see your brand, understand your value, speak with your team, experience your solution, and build trust in a more direct and memorable way.",
+      "id": "direct-connection",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "A More Direct, Memorable Connection"
+    },
+    {
+      "description": "When planned correctly, an event becomes more than a marketing activity. It becomes a business development environment.",
+      "id": "business-development",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "A Business Development Environment"
+    }
+  ]
+}

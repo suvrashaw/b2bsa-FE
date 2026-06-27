@@ -1,0 +1,50 @@
+{
+  "description": "Our event experience creation process connects strategy, creative direction, production, and engagement planning into one cohesive system that delivers measurable results.",
+  "phases": [
+    {
+      "description": "We begin by understanding the business purpose behind the event. Is the goal awareness, pipeline generation, customer engagement, partner activation, education, launch momentum, or executive access?\n\nThis clarity helps us design an event experience around outcomes, not just activities.",
+      "title": "Event strategy and objective mapping"
+    },
+    {
+      "description": "We map how your audience will experience the event from the first invitation to the final follow-up. This includes messaging, entry points, engagement zones, content flow, networking moments, sales touchpoints, and lead routing.",
+      "title": "Audience journey design"
+    },
+    {
+      "description": "We develop the event theme, visual language, brand experience, content flow, and engagement ideas. The goal is to create an environment that feels aligned with your brand and relevant to your audience.",
+      "title": "Creative concept and experience direction"
+    },
+    {
+      "description": "We coordinate the production requirements needed to bring the experience to life, including event setup, branding elements, stage design, content assets, display areas, signage, media requirements, and on-ground support.",
+      "title": "Production and execution planning"
+    },
+    {
+      "description": "For B2B events, attention must turn into action. We help integrate lead capture, qualification workflows, meeting opportunities, attendee tracking, and post-event follow-up planning into the event structure.",
+      "title": "Engagement and lead capture integration"
+    },
+    {
+      "description": "After the event, we support structured follow-up and reporting so that event engagement can move into sales conversations, marketing workflows, and measurable business outcomes.",
+      "title": "Post-event handoff and performance review"
+    }
+  ],
+  "title": "Our Approach to Event Experience Creation",
+  "servicesInclude": {
+    "heading": "Event Experience Creation Services Include",
+    "items": [
+      { "icon": "Lightbulb", "id": "event-concept-development", "image": "/media/home/hero/home_hero_bg.avif", "label": "Event concept development" },
+      { "icon": "Map", "id": "audience-journey-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Audience journey planning" },
+      { "icon": "Palette", "id": "event-theme-creative-direction", "image": "/media/home/hero/home_hero_bg.avif", "label": "Event theme and creative direction" },
+      { "icon": "Fingerprint", "id": "brand-experience-design", "image": "/media/home/hero/home_hero_bg.avif", "label": "Brand experience design" },
+      { "icon": "Rocket", "id": "product-launch-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Product launch planning" },
+      { "icon": "Crown", "id": "executive-event-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Executive event planning" },
+      { "icon": "Presentation", "id": "conference-summit-experience-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Conference and summit experience planning" },
+      { "icon": "Globe2", "id": "roadshow-experience-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Roadshow experience planning" },
+      { "icon": "Wifi", "id": "hybrid-virtual-event-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Hybrid and virtual event planning" },
+      { "icon": "Layout", "id": "stage-display-environment-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Stage, display, and environment planning" },
+      { "icon": "Image", "id": "event-branding-visual-asset-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Event branding and visual asset planning" },
+      { "icon": "Target", "id": "engagement-zone-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Engagement zone planning" },
+      { "icon": "ClipboardList", "id": "lead-capture-qualification-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Lead capture and qualification planning" },
+      { "icon": "Users", "id": "on-ground-coordination-support", "image": "/media/home/hero/home_hero_bg.avif", "label": "On-ground coordination support" },
+      { "icon": "BarChart2", "id": "post-event-follow-up-planning", "image": "/media/home/hero/home_hero_bg.avif", "label": "Post-event follow-up planning" }
+    ]
+  }
+}

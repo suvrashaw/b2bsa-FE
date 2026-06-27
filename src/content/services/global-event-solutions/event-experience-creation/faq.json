@@ -1,0 +1,35 @@
+{
+  "faqs": [
+    {
+      "answer": "Event Experience Creation is the process of designing the complete event journey, including strategy, theme, audience engagement, branding, content flow, physical or digital environment, lead capture, and post-event follow-up.",
+      "id": "what-is",
+      "question": "What is Event Experience Creation?",
+      "image": "/media/home/hero/home_hero_bg.avif"
+    },
+    {
+      "answer": "Traditional event management often focuses on logistics and execution. Event Experience Creation focuses on the complete audience experience and connects it with business goals such as engagement, pipeline, customer relationships, and brand positioning.",
+      "id": "different-from-management",
+      "question": "How is this different from regular event management?",
+      "image": "/media/home/hero/home_hero_bg.avif"
+    },
+    {
+      "answer": "We can support corporate events, product launches, executive roundtables, roadshows, conferences, summits, partner events, brand activations, hybrid events, and virtual experiences.",
+      "id": "event-types",
+      "question": "What types of events can you support?",
+      "image": "/media/home/hero/home_hero_bg.avif"
+    },
+    {
+      "answer": "Yes. Event Experience Creation can be combined with trade show booth design, event lead generation, media production, paid campaigns, LinkedIn outreach, and post-event follow-up workflows.",
+      "id": "combine-services",
+      "question": "Can this service be combined with booth design or lead generation?",
+      "image": "/media/home/hero/home_hero_bg.avif"
+    },
+    {
+      "answer": "This service is ideal for B2B companies, enterprise brands, technology firms, SaaS companies, manufacturing companies, and growth-focused teams that want their events to create stronger audience engagement and measurable business impact.",
+      "id": "who-is-it-for",
+      "question": "Who is this service best suited for?",
+      "image": "/media/home/hero/home_hero_bg.avif"
+    }
+  ],
+  "heading": "Frequently Asked Questions About Event Experience Creation"
+}

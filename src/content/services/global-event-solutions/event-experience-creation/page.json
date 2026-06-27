@@ -4,9 +4,14 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/services/global-event-solutions/event-experience-creation",
-    "description": "Create immersive event experiences that captivate attendees and drive B2B pipeline.",
-    "focusKeyphrase": "Event experience creation",
-    "secondaryKeywords": ["B2B event experience", "Immersive events"],
-    "title": "Event Experience Creation | B2B Sales Arrow"
+    "description": "Create strategic B2B event experiences that engage audiences, support sales conversations, and turn events into measurable business opportunities.",
+    "focusKeyphrase": "event experience creation",
+    "secondaryKeywords": [
+      "B2B event experience",
+      "corporate event experience design",
+      "event experience strategy",
+      "B2B event strategy"
+    ],
+    "title": "Event Experience Creation Services | B2B Sales Arrow"
   }
 }

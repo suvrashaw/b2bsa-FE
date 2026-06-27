@@ -1,0 +1,18 @@
+{
+  "backgroundImage": {
+    "alt": "Event Experience Creation",
+    "src": "/media/home/hero/home_hero_bg.avif"
+  },
+  "badge": "Event Experience Creation",
+  "description": "The best event experiences create attention in the moment and business value after the event.\n\nIf you are planning a product launch, executive event, conference, roadshow, brand activation, or hybrid experience, B2B Sales Arrow can help you design and deliver an event experience that is aligned with your audience, your brand, and your revenue goals.",
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Schedule a Consultation",
+    "opensModal": true
+  },
+  "proofLabel": "Trusted by 500+ companies",
+  "secondaryCta": {
+    "href": "/contact-us",
+    "label": "Talk to Our Event Experience Team"
+  }
+}
