@@ -3,7 +3,11 @@
   "description": "Content should keep working long after the campaign ends. Build video assets your team can use for months.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Start Your Media Project"
+    "label": "Start Your Media Project",
+    "opensModal": true
   },
-  "headingLines": ["Content Should", "Keep Working."]
+  "headingLines": [
+    "Content Should",
+    "Keep Working."
+  ]
 }

@@ -7,7 +7,8 @@
   "description": "From first brief to final installation, your exhibition stand should move with the same discipline as your sales strategy. Share the event, footprint, timeline, and goals, and we will map the right build path.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Request a Build Quote"
+    "label": "Request a Build Quote",
+    "opensModal": true
   },
   "proofLabel": "Trusted by 500+ companies",
   "secondaryCta": {

@@ -1,9 +1,13 @@
 {
   "badge": "Build Authority",
   "description": "When your offering is complex, corporate video makes it clear, with the production quality enterprise buyers expect.",
-  "headingLines": ["Complex Offerings", "Made Crystal Clear."],
+  "headingLines": [
+    "Complex Offerings",
+    "Made Crystal Clear."
+  ],
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Start Your Corporate Video Project"
+    "label": "Start Your Corporate Video Project",
+    "opensModal": true
   }
 }

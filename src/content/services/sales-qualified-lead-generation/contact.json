@@ -3,7 +3,11 @@
   "description": "A lead is only valuable when your team can act on it with confidence. Give them prospects that are ready.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Build Your SQL Generation Program"
+    "label": "Build Your SQL Generation Program",
+    "opensModal": true
   },
-  "headingLines": ["Give Your Team", "Leads That Are Ready."]
+  "headingLines": [
+    "Give Your Team",
+    "Leads That Are Ready."
+  ]
 }

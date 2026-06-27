@@ -7,7 +7,8 @@
   "description": "Partner with B2B Sales Arrow for event branding solutions that help your brand create memorable, engaging, and visually impactful corporate event experiences.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Schedule a Consultation"
+    "label": "Schedule a Consultation",
+    "opensModal": true
   },
   "proofLabel": "Trusted by 500+ companies",
   "secondaryCta": {

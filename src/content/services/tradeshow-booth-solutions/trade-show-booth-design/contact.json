@@ -7,7 +7,8 @@
   "description": "Every square foot of your booth should earn its place. Build a custom trade show booth engineered for commercial momentum.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Start Your Design Project"
+    "label": "Start Your Design Project",
+    "opensModal": true
   },
   "proofLabel": "Trusted by 500+ companies",
   "secondaryCta": {

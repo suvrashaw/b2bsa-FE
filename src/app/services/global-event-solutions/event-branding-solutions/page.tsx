@@ -60,7 +60,7 @@ const SECONDARY_SERVICES = {
   showCapabilityDescriptions: false,
 };
 
-const EVENT_BRANDING_INTRO = {
+const BRANDING_SPOTLIGHT = {
   ...EVENT_BRANDING_INTRO,
   sectionClassName: "pt-8 md:pt-12",
 };
@@ -113,7 +113,7 @@ const Page = () => {
           <ContactModalTrigger label="Talk to Branding Experts" />
         </>
       }
-      spotlight={EVENT_BRANDING_INTRO}
+      spotlight={BRANDING_SPOTLIGHT}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={SECONDARY_SERVICES}

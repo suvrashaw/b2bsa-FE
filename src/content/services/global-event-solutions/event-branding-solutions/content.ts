@@ -8,6 +8,10 @@ import PROOF_BAR_DATA from "./intro.json";
 
 export { default as EVENT_BRANDING_BLOGS_SECTION } from "./blog.json";
 
+export const EVENT_BRANDING_INTRO = {
+  ...PROOF_BAR_DATA,
+  stats: GLOBAL_PROOF_STATS,
+};
 
 export const EVENT_BRANDING_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,
@@ -33,9 +37,3 @@ export { default as EVENT_BRANDING_PAGE } from "./page.json";
 export { default as EVENT_BRANDING_WHY_CHOOSE_US } from "./why-choose-us.json";
 export { default as EVENT_BRANDING_CLIENT_LOGOS } from "./client-logos.json";
 
-import INTRO_DATA from "./intro.json";
-import { GLOBAL_PROOF_STATS } from "@/content/services";
-export const EVENT_BRANDING_INTRO = {
-  ...INTRO_DATA,
-  stats: GLOBAL_PROOF_STATS,
-};

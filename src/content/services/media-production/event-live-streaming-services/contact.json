@@ -1,6 +1,13 @@
 {
   "badge": "Go Live",
   "description": "Your event, delivered live to every screen worldwide.",
-  "headingLines": ["Ready to Stream Your", "Next Corporate Event Live?"],
-  "primaryCta": { "href": "/contact-us", "label": "Plan Your Live Stream" }
+  "headingLines": [
+    "Ready to Stream Your",
+    "Next Corporate Event Live?"
+  ],
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Plan Your Live Stream",
+    "opensModal": true
+  }
 }

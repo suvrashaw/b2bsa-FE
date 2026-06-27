@@ -7,7 +7,8 @@
   "description": "Fast does not have to feel temporary. A properly configured trade show rental booth represents your brand credibly, at a fraction of the custom build timeline.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Check Rental Availability"
+    "label": "Check Rental Availability",
+    "opensModal": true
   },
   "proofLabel": "Trusted by 500+ companies",
   "secondaryCta": {

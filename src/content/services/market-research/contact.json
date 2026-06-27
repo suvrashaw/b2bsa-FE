@@ -3,6 +3,7 @@
   "description": "Own your competitive intelligence advantage.",
   "primaryCta": {
     "href": "/contact-us",
-    "label": "Start a Research Project"
+    "label": "Start a Research Project",
+    "opensModal": true
   }
 }
