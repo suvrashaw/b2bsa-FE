@@ -76,7 +76,7 @@ const Page = () => {
         />
       }
       process={EVENT_PHYSICAL_VIDEO_PROCESS}
-      spotlight={EVENT_PHYSICAL_VIDEO_INTRO}
+      proofBar={EVENT_PHYSICAL_VIDEO_INTRO}
       relatedServices={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES}
       services={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       showPhaseNumbers={false}

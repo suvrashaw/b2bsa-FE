@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
-import { Spotlight } from "@/components/sections/Spotlight";
+import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -84,7 +84,7 @@ const Page = () => {
             heading={EVENT_EXPERIENCE_CAPABILITIES.title}
             mediaPosition="left"
           />
-          <Spotlight {...EVENT_EXPERIENCE_DESIGNED_FOR} />
+          <Spotlight {...(EVENT_EXPERIENCE_DESIGNED_FOR as SpotlightProps)} />
           <StickyScroll
             heading={EVENT_EXPERIENCE_WHY_MATTERS.heading}
             reasons={EVENT_EXPERIENCE_WHY_MATTERS.reasons}

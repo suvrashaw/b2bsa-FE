@@ -7,6 +7,7 @@ import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudiesPortfolio } from "@/components/sections/CaseStudiesPortfolio";
 import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
+import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -72,7 +73,7 @@ const Page = () => {
       }
       spotlight={CORPORATE_VIDEO_INTRO}
       relatedServices={CORPORATE_VIDEO_RELATED_SERVICES}
-      services={CORPORATE_VIDEO_DELIVERABLES}
+      services={CORPORATE_VIDEO_DELIVERABLES as ServicesStackProps}
       servicesSectionType="carousel"
       why={CORPORATE_VIDEO_WHY}
     />
