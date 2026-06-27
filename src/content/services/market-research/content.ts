@@ -3,7 +3,7 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import RESEARCHCASESTUDIES_DATA from "./case-studies.json";
-import RESEARCHCONTACTCTA_DATA from "./research-contact-cta.json";
+import RESEARCHCONTACTCTA_DATA from "./contact.json";
 import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
 
 export const RESEARCH_PROOF_BAR = {

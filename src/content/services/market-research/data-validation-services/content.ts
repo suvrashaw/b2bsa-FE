@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
-import CONTACT_CTA_DATA from "./validation-cta.json";
+import CONTACT_CTA_DATA from "./contact.json";
 
 export const DATA_VALIDATION_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
