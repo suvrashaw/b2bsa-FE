@@ -32,7 +32,6 @@ export const CORP_EVENT_CONTACT_CTA = {
 
 export { default as CORP_EVENT_CAPABILITIES } from "./capabilities.json";
 export { default as CORP_EVENT_DELIVERABLES } from "./event-deliverables.json";
-export { default as CORP_EVENT_INTRO } from "./event-intro.json";
 export { default as CORP_EVENT_RELATED_SERVICES } from "./related-services.json";
 
 export { default as CORP_EVENT_FAQ } from "./faq.json";

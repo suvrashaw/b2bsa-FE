@@ -221,7 +221,6 @@ const Page = () => {
         imageUrl={ABOUT_FOUNDER_STORY.imageUrl}
         label={ABOUT_FOUNDER_STORY.sectionLabel}
         sectionClassName="scroll-mt-28"
-        showCta={false}
         titleLine1={ABOUT_FOUNDER_STORY.nameLine1}
         titleLine2={ABOUT_FOUNDER_STORY.nameLine2}
       />

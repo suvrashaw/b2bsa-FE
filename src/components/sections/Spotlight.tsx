@@ -13,7 +13,7 @@ import { cn } from "@/lib";
 export interface SpotlightProps {
   align?: SpotlightAlignment;
   className?: string;
-  description: string;
+  description?: React.ReactNode;
   descriptionItems?: readonly string[];
   id?: string;
   imageAlt?: string;
@@ -26,7 +26,7 @@ export interface SpotlightProps {
   sectionClassName?: string;
   stats?: string[];
   titleLine1: string;
-  titleLine2: string;
+  titleLine2?: string;
   triggerContactModal?: boolean;
   videoUrl?: string;
 }
@@ -35,11 +35,11 @@ type SpotlightAlignment = "center" | "left" | "right";
 
 interface SpotlightSecondaryBlock {
   align?: SpotlightAlignment;
-  description: string;
+  description?: React.ReactNode;
   descriptionItems?: readonly string[];
   label?: string;
   titleLine1: string;
-  titleLine2: string;
+  titleLine2?: string;
 }
 
 interface StatItem {
@@ -164,7 +164,7 @@ const SpotlightTextBlock = ({
 }: {
   align?: SpotlightAlignment;
   className?: string;
-  description: string;
+  description?: React.ReactNode;
   descriptionItems?: readonly string[];
   isHovered: boolean;
   label?: string;
@@ -173,7 +173,7 @@ const SpotlightTextBlock = ({
   pairedWithMedia?: boolean;
   stats?: string[];
   titleLine1: string;
-  titleLine2: string;
+  titleLine2?: string;
 }) => {
   const hasDescriptionItems = Boolean(descriptionItems);
   

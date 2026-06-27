@@ -24,7 +24,6 @@ export { default as BOOTH_DESIGN_DELIVERABLES } from "./design-deliverables.json
 export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./related-services.json";
 
 export { default as BOOTH_DESIGN_SHOWCASE_ITEMS } from "./design-showcase-items.json";
-export { default as BOOTH_DESIGN_INTRO } from "./design-spotlight.json";
 export { default as BOOTH_DESIGN_FAQ } from "./faq.json";
 export { default as BOOTH_DESIGN_HERO } from "./hero.json";
 export { default as BOOTH_DESIGN_PAGE } from "./page.json";

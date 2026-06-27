@@ -23,7 +23,6 @@ import {
   CORP_EVENT_INDUSTRIES_SECTION,
   CORP_EVENT_INTRO,
   CORP_EVENT_PAGE,
-  CORP_EVENT_INTRO,
   CORP_EVENT_RELATED_SERVICES,
   CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_WHY_CHOOSE_US,
@@ -108,7 +107,6 @@ const Page = () => {
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}
-      spotlight={CORP_EVENT_INTRO}
     />
   );
 };

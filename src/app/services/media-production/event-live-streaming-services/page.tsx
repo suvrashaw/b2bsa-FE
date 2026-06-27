@@ -84,8 +84,7 @@ const Page = () => {
           <Spotlight
             {...LIVE_STREAMING_AREAS_INTRO}
             locationBadges={LIVE_STREAMING_LOCATION_BADGES}
-            showCta={false}
-          />
+            />
         </>
       }
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}

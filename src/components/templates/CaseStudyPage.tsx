@@ -12,7 +12,6 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { Stats } from "@/components/sections/Stats";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const HERO_PRIMARY_CTA = {
@@ -119,18 +118,12 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         className="[&_p]:text-lg"
         description={study.challenges}
         secondarySpotlight={challengeSecondary}
-        showCta={false}
         titleLine1="The"
         titleLine2="Challenges"
       />
 
       {/* Outcome — Stats with heading and description */}
-      <Stats
-        className="[&_p]:text-lg"
-        description={study.outcome}
-        heading="Outcome"
-        stats={study.outcomeStats}
-      />
+      
 
       <ContactUs
         backgroundImage={cinematicBg}

@@ -24,7 +24,6 @@ import {
   EVENT_BRANDING_INDUSTRIES_SECTION,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
-  EVENT_BRANDING_INTRO,
   EVENT_BRANDING_RELATED_SERVICES,
   EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_WHY_CHOOSE_US,
@@ -120,7 +119,6 @@ const Page = () => {
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
-      spotlight={EVENT_BRANDING_INTRO}
     />
   );
 };
