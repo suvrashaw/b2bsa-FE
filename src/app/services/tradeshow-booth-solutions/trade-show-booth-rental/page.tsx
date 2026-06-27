@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -26,6 +26,7 @@ import {
   BOOTH_RENTAL_PROOF_BAR,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
+  BOOTH_RENTAL_CLIENT_LOGOS,
   BOOTH_RENTAL_WHY,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
 
@@ -82,12 +83,13 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BOOTH_RENTAL_CASE_STUDIES}
+      clientLogos={BOOTH_RENTAL_CLIENT_LOGOS}
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
           <CardsGrid className="pt-0" cols={3} heading="Explore Related Solutions">
             {BOOTH_RENTAL_RELATED_SERVICES.map((service, index) => (
-              <ServicesLinkCard index={index} key={service.href} service={service} />
+              <RelatedServicesCard index={index} key={service.href} service={service} />
             ))}
           </CardsGrid>
           <CardsGrid

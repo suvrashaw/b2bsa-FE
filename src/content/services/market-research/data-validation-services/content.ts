@@ -19,3 +19,4 @@ export { default as DATA_VALIDATION_PROCESS } from "./process.json";
 
 export { default as DATA_VALIDATION_DELIVERABLES } from "./validation-deliverables.json";
 export { default as DATA_VALIDATION_SPOTLIGHT } from "./validation-spotlight.json";
+export { default as DATA_VALIDATION_CLIENT_LOGOS } from "./client-logos.json";

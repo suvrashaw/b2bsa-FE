@@ -11,6 +11,7 @@ import {
   GES_PROCESS,
   GES_PROOF_BAR,
   GES_SERVICES,
+  GES_CLIENT_LOGOS,
   GES_WHY,
 } from "@/content/services/global-event-solutions/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={GES_CASE_STUDIES}
+      clientLogos={GES_CLIENT_LOGOS}
       contactUs={GES_CONTACT_CTA}
       faq={GES_FAQ}
       hero={GES_HERO}

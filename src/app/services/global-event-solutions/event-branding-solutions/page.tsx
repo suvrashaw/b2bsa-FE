@@ -26,6 +26,7 @@ import {
   EVENT_BRANDING_PAGE,
   EVENT_BRANDING_PROOF_BAR,
   EVENT_BRANDING_RELATED_SERVICES,
+  EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
 
@@ -69,8 +70,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_BRANDING_CASE_STUDIES}
-      clientLogosDescription="Leading enterprises trust our corporate event branding services to create visually engaging and memorable event experiences across conferences, exhibitions, and trade shows."
-      clientLogosHeading="Trusted by Global Brands for Event Branding Solutions"
+      clientLogos={EVENT_BRANDING_CLIENT_LOGOS}
       contactUs={EVENT_BRANDING_CONTACT_CTA}
       customSections={
         <>

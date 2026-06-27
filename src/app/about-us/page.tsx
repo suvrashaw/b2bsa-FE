@@ -11,7 +11,7 @@ import { Culture } from "@/components/sections/Culture";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { Timeline } from "@/components/sections/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
@@ -175,7 +175,7 @@ const Page = () => {
       </section>
 
       {/* How B2B Sales Arrow Was Built */}
-      <Timeline
+      <ProcessTimeline
         description={ABOUT_ORIGIN_TIMELINE.description}
         heading={ABOUT_ORIGIN_TIMELINE.heading}
         phases={ABOUT_ORIGIN_TIMELINE.phases}

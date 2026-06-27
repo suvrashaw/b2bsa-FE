@@ -26,6 +26,7 @@ import {
   BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
   BOOTH_BUILDER_PROOF_BAR,
+  BOOTH_BUILDER_CLIENT_LOGOS,
   BOOTH_BUILDER_RELATED_SERVICES,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-builder/content";
 import {
@@ -62,6 +63,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BOOTH_BUILDER_CASE_STUDIES}
+      clientLogos={BOOTH_BUILDER_CLIENT_LOGOS}
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>

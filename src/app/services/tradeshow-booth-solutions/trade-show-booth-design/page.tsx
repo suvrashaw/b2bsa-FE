@@ -27,6 +27,7 @@ import {
   BOOTH_DESIGN_RELATED_SERVICES,
   BOOTH_DESIGN_SHOWCASE_ITEMS,
   BOOTH_DESIGN_SPOTLIGHT,
+  BOOTH_DESIGN_CLIENT_LOGOS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
@@ -48,6 +49,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BOOTH_DESIGN_CASE_STUDIES}
+      clientLogos={BOOTH_DESIGN_CLIENT_LOGOS}
       contactUs={BOOTH_DESIGN_CONTACT_CTA}
       customSections={
         <>

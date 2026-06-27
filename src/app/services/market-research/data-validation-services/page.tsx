@@ -10,6 +10,7 @@ import {
   DATA_VALIDATION_HERO,
   DATA_VALIDATION_PAGE,
   DATA_VALIDATION_PROCESS,
+  DATA_VALIDATION_CLIENT_LOGOS,
   DATA_VALIDATION_SPOTLIGHT,
 } from "@/content/services/market-research/data-validation-services/content";
 
@@ -19,6 +20,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={DATA_VALIDATION_CASE_STUDIES}
+      clientLogos={DATA_VALIDATION_CLIENT_LOGOS}
       contactUs={DATA_VALIDATION_CONTACT_CTA}
       faq={DATA_VALIDATION_FAQ}
       hero={DATA_VALIDATION_HERO}

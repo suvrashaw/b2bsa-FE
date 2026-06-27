@@ -14,7 +14,7 @@ interface Step {
   title: string;
 }
 
-interface TimelineProps {
+interface ProcessTimelineProps {
   className?: string;
   cta?: { href?: string; label: string; opensModal?: boolean };
   description?: ReactNode;
@@ -30,7 +30,7 @@ const TIMELINE_INITIAL = { opacity: 0, y: 30 };
 const TIMELINE_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const TIMELINE_VIEWPORT = { once: true };
 
-export const Timeline = ({
+export const ProcessTimeline = ({
   className,
   cta,
   description,
@@ -39,7 +39,7 @@ export const Timeline = ({
   steps,
   subtitle,
   title,
-}: TimelineProps) => {
+}: ProcessTimelineProps) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
   const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);

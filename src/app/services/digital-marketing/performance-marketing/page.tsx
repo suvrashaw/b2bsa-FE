@@ -15,7 +15,7 @@ import { PERF_PAGE } from "@/content/services/digital-marketing/content";
 import {
   PPC_BLOGS_SECTION,
   PPC_CASE_STUDIES,
-  PPC_CLIENT_LOGOS_HEADING,
+  PPC_CLIENT_LOGOS,
   PPC_CONTACT_CTA,
   PPC_FAQ,
   PPC_HERO,
@@ -36,7 +36,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={PPC_CASE_STUDIES}
-      clientLogosHeading={PPC_CLIENT_LOGOS_HEADING}
+      clientLogos={PPC_CLIENT_LOGOS}
       contactUs={PPC_CONTACT_CTA}
       customSections={
         <>

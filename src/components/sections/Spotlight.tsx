@@ -85,7 +85,6 @@ const SpotlightCta = ({
           variant="primary"
         >
           {ctaLabel}
-          {icon}
         </Button>
       )}
     </div>

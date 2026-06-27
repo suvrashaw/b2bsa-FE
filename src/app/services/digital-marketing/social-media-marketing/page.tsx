@@ -20,7 +20,7 @@ import {
   SMM_CAPABILITIES,
   SMM_CAPABILITIES_FEATURES,
   SMM_CASE_STUDIES,
-  SMM_CLIENT_LOGOS_HEADING,
+  SMM_CLIENT_LOGOS,
   SMM_CONTACT_CTA,
   SMM_FAQ,
   SMM_HERO,
@@ -44,7 +44,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={SMM_CASE_STUDIES}
-      clientLogosHeading={SMM_CLIENT_LOGOS_HEADING}
+      clientLogos={SMM_CLIENT_LOGOS}
       contactUs={SMM_CONTACT_CTA}
       customSections={
         <>

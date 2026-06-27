@@ -22,6 +22,7 @@ export interface ServicesStackProps {
   ctaLabel?: HomeServicesContent["ctaLabel"];
   eyebrow?: HomeServicesContent["eyebrow"];
   heading?: HomeServicesContent["heading"];
+  mediaPosition?: "left" | "right";
   serviceLabel?: HomeServicesContent["serviceLabel"];
   services?: HomeServiceItem[];
   showCapabilityDescriptions?: boolean;

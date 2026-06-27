@@ -23,6 +23,7 @@ import {
   EVENT_EXPERIENCE_VIDEO_INTRO,
   EVENT_EXPERIENCE_VIDEO_PAGE,
   EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES,
+  EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS,
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
 
@@ -38,7 +39,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_EXPERIENCE_VIDEO_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for Event Experience Video Production"
+      clientLogos={EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS}
       contactUs={EVENT_EXPERIENCE_VIDEO_CONTACT_CTA}
       customSections={
         <>

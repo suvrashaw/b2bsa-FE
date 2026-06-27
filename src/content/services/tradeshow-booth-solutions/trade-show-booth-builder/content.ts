@@ -26,9 +26,10 @@ export const BOOTH_BUILDER_CONTACT_CTA = {
 export { default as BOOTH_BUILDER_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_BUILDER_FUTURE_READY } from "./builder-future-ready.json";
 export { default as BOOTH_BUILDER_PRICING } from "./builder-pricing.json";
-export { default as BOOTH_BUILDER_RELATED_SERVICES } from "./builder-related-services.json";
+export { default as BOOTH_BUILDER_RELATED_SERVICES } from "./related-services.json";
 export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
 
 export { default as BOOTH_BUILDER_HERO } from "./hero.json";
 export { default as BOOTH_BUILDER_PAGE } from "./page.json";
 export { default as BOOTH_BUILDER_PROCESS } from "./process.json";
+export { default as BOOTH_BUILDER_CLIENT_LOGOS } from "./client-logos.json";

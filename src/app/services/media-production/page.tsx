@@ -11,6 +11,7 @@ import {
   MEDIA_PROCESS,
   MEDIA_PROOF_BAR,
   MEDIA_SERVICES,
+  MEDIA_CLIENT_LOGOS,
   MEDIA_WHY,
 } from "@/content/services/media-production/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={MEDIA_CASE_STUDIES}
+      clientLogos={MEDIA_CLIENT_LOGOS}
       contactUs={MEDIA_CONTACT_CTA}
       faq={MEDIA_FAQ}
       hero={MEDIA_HERO}

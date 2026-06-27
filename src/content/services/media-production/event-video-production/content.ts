@@ -30,3 +30,4 @@ export { default as EVENT_VIDEO_CREATIVE_PRICING } from "./video-creative-pricin
 export { default as EVENT_VIDEO_DELIVERABLES } from "./video-deliverables.json";
 
 export { default as EVENT_VIDEO_WHY } from "./why.json";
+export { default as EVENT_VIDEO_CLIENT_LOGOS } from "./client-logos.json";

@@ -27,6 +27,7 @@ import {
   LIVE_STREAMING_PROJECTS,
   LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_SPOTLIGHT,
+  LIVE_STREAMING_CLIENT_LOGOS,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-live-streaming-services/content";
 
@@ -41,7 +42,7 @@ const LIVE_STREAMING_AREAS_SPOTLIGHT = {
 const Page = () => {
   return (
     <ServicePage
-      clientLogosHeading="Trusted by Global Brands for Event Live Streaming Services"
+      clientLogos={LIVE_STREAMING_CLIENT_LOGOS}
       contactUs={LIVE_STREAMING_CONTACT_CTA}
       customSections={
         <>

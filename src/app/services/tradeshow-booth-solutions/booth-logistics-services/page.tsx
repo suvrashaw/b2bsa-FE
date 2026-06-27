@@ -26,6 +26,7 @@ import {
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
   EVENT_LOGISTICS_RELATED_SERVICES,
+  EVENT_LOGISTICS_CLIENT_LOGOS,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 
@@ -57,7 +58,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_LOGISTICS_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for Event Logistics Support"
+      clientLogos={EVENT_LOGISTICS_CLIENT_LOGOS}
       contactUs={EVENT_LOGISTICS_CONTACT_CTA}
       customSections={
         <>

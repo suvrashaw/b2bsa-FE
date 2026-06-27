@@ -19,6 +19,7 @@ export { default as BOOTH_HOSTESS_CAPABILITIES } from "./hostess-capabilities.js
 
 export { default as BOOTH_HOSTESS_DELIVERABLES } from "./hostess-deliverables.json";
 export { default as BOOTH_HOSTESS_INTRO } from "./hostess-intro.json";
-export { default as BOOTH_HOSTESS_RELATED_SERVICES } from "./hostess-related-services.json";
+export { default as BOOTH_HOSTESS_RELATED_SERVICES } from "./related-services.json";
 export { default as BOOTH_HOSTESS_PAGE } from "./page.json";
 export { default as BOOTH_HOSTESS_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as BOOTH_HOSTESS_CLIENT_LOGOS } from "./client-logos.json";

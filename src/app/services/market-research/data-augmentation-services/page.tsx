@@ -10,6 +10,7 @@ import {
   DATA_AUGMENTATION_FAQ,
   DATA_AUGMENTATION_HERO,
   DATA_AUGMENTATION_PAGE,
+  DATA_AUGMENTATION_CLIENT_LOGOS,
   DATA_AUGMENTATION_PROCESS,
 } from "@/content/services/market-research/data-augmentation-services/content";
 
@@ -19,6 +20,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={DATA_AUGMENTATION_CASE_STUDIES}
+      clientLogos={DATA_AUGMENTATION_CLIENT_LOGOS}
       contactUs={DATA_AUGMENTATION_CONTACT_CTA}
       faq={DATA_AUGMENTATION_FAQ}
       hero={DATA_AUGMENTATION_HERO}

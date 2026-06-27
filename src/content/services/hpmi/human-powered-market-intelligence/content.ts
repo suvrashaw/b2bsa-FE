@@ -19,3 +19,4 @@ export { default as MARKET_INTELLIGENCE_CARDS } from "./market-intelligence-card
 export { default as MARKET_INTELLIGENCE_DELIVERABLES } from "./market-intelligence-deliverables.json";
 export { default as MARKET_INTELLIGENCE_SPOTLIGHT } from "./market-intelligence-spotlight.json";
 export { default as MARKET_INTELLIGENCE_PAGE } from "./page.json";
+export { default as MARKET_INTELLIGENCE_CLIENT_LOGOS } from "./client-logos.json";

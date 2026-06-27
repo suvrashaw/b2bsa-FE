@@ -13,6 +13,7 @@ import {
   EVENT_VIDEO_PAGE,
   EVENT_VIDEO_PROOF_BAR,
   EVENT_VIDEO_RELATED_SERVICES,
+  EVENT_VIDEO_CLIENT_LOGOS,
   EVENT_VIDEO_WHY,
 } from "@/content/services/media-production/event-video-production/content";
 
@@ -22,6 +23,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
+      clientLogos={EVENT_VIDEO_CLIENT_LOGOS}
       contactUs={EVENT_VIDEO_CONTACT_CTA}
       creativePricing={EVENT_VIDEO_CREATIVE_PRICING}
       faq={EVENT_VIDEO_FAQ}

@@ -25,6 +25,7 @@ export { default as BOOTH_RENTAL_HERO } from "./hero.json";
 export { default as BOOTH_RENTAL_PAGE } from "./page.json";
 
 export { default as BOOTH_RENTAL_PROCESS } from "./process.json";
-export { default as BOOTH_RENTAL_RELATED_SERVICES } from "./rental-related-services.json";
+export { default as BOOTH_RENTAL_RELATED_SERVICES } from "./related-services.json";
 export { default as BOOTH_RENTAL_RENT_VS_BUY } from "./rental-rent-vs-buy.json";
 export { default as BOOTH_RENTAL_WHY } from "./why.json";
+export { default as BOOTH_RENTAL_CLIENT_LOGOS } from "./client-logos.json";

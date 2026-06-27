@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
-import { Blogs } from "@/components/sections/Blogs";
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
-import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
+import { Carousel } from "@/components/sections/Carousel";
+import { CaseStudiesPortfolio } from "@/components/sections/CaseStudiesPortfolio";
+import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
 import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
@@ -21,6 +24,7 @@ import {
   CORPORATE_VIDEO_PROOF_BAR,
   CORPORATE_VIDEO_RELATED_SERVICES,
   CORPORATE_VIDEO_WHY,
+  CORPORATE_VIDEO_CLIENT_LOGOS,
   CORPORATE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/corporate-video-production/content";
 
@@ -29,6 +33,7 @@ export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE)
 const Page = () => {
   return (
     <ServicePage
+      clientLogos={CORPORATE_VIDEO_CLIENT_LOGOS}
       contactUs={CORPORATE_VIDEO_CONTACT_CTA}
       customSections={
         <>
@@ -37,7 +42,21 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </CardsGrid>
-          <Blogs blogs={getBlogsByTags(["Corporate Video Production"])} />
+          <Carousel
+            cols={4}
+            heading="Blogs"
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            id="blogs"
+            layout="carousel"
+          >
+            {getBlogsByTags(["Corporate Video Production"]).map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
         </>
       }
       faq={CORPORATE_VIDEO_FAQ}
@@ -47,20 +66,8 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <CorporateVideoIndustriesSection {...CORPORATE_VIDEO_INDUSTRIES} />
-          <CardsGrid
-            className="bg-[#111111] text-white"
-            heading={
-              <SectionHeader as="h2" className="max-w-4xl text-white lg:text-4xl">
-                {CORPORATE_VIDEO_PORTFOLIO.heading}
-              </SectionHeader>
-            }
-            headingAlign="left"
-          >
-            {CORPORATE_VIDEO_PORTFOLIO.items.map((item) => (
-              <CorporateVideoCard item={item} key={item.title} />
-            ))}
-          </CardsGrid>
+          <IndustriesAlt {...CORPORATE_VIDEO_INDUSTRIES} />
+          <CaseStudiesPortfolio {...CORPORATE_VIDEO_PORTFOLIO} />
         </>
       }
       proofBar={CORPORATE_VIDEO_PROOF_BAR}

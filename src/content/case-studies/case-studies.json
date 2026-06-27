@@ -5,6 +5,7 @@
     "event": "Adobe Summit 2025",
     "location": "The Venetian Convention and Expo Center, Las Vegas",
     "client": "Multi-Billion-Dollar Global IT",
+    "clientLogo": "/media/client-logos/Infosys.svg",
     "services": [
       "40x40 Ft Island Booth Design & Production",
       "Active Prospecting & SQL Generation"
@@ -24,6 +25,7 @@
     "event": "Sales Connect Conference (Manufacturing & Insurance Divisions)",
     "location": "Washington, D.C.",
     "client": "Global IT & Consulting Leader (Infosys)",
+    "clientLogo": "/media/client-logos/BOSCH.svg",
     "services": [
       "End-to-End F&B Management",
       "Cruise Gala Dinner",
@@ -47,6 +49,7 @@
     "event": "DistribuTECH 2023",
     "location": "San Diego, US",
     "client": "Global IT and Consulting Leader",
+    "clientLogo": "/media/client-logos/Infosys.svg",
     "services": [
       "Booth Design and Production",
       "Active Prospecting",
@@ -114,6 +117,7 @@
     "event": "NRF 2023 — Retail's Big Show",
     "location": "Javits Center, New York",
     "client": "Global IT & Consulting Leader ($16B+ Revenue)",
+    "clientLogo": "/media/client-logos/Infosys.svg",
     "services": [
       "Active Prospecting",
       "On-Ground SQL Generation",
@@ -137,6 +141,7 @@
     "event": "SAP Sapphire 2023",
     "location": "Orlando, US",
     "client": "Multi-Billion-Dollar Global IT and Consulting Leader",
+    "clientLogo": "/media/client-logos/Infosys.svg",
     "services": [
       "Active Prospecting and SQL Generation",
       "Attendee Engagement and Experience Creation",

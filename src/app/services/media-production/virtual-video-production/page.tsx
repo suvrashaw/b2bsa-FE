@@ -24,6 +24,7 @@ import {
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
   VIRTUAL_VIDEO_RELATED_SERVICES,
+  VIRTUAL_VIDEO_CLIENT_LOGOS,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
 
@@ -57,7 +58,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={VIRTUAL_VIDEO_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for Virtual Video Event Production"
+      clientLogos={VIRTUAL_VIDEO_CLIENT_LOGOS}
       contactUs={VIRTUAL_VIDEO_CONTACT_CTA}
       customSections={
         <>

@@ -14,7 +14,7 @@ import type { MarketingPageIdentity } from "@/content/page-definitions";
 
 import { FAQCard } from "@/components/items/FAQCard";
 import { PricingCard } from "@/components/items/PricingCard";
-import { ServicesLinkCard } from "@/components/items/ServicesLinkCard";
+import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Capabilities } from "@/components/sections/Capabilities";
@@ -28,7 +28,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
-import { Timeline } from "@/components/sections/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -46,8 +46,7 @@ export interface ServicePageProps {
   // ─── Lower funnel ───────────────────────────────
   caseStudies?: CaseStudiesProps;
   // ─── Trust band ─────────────────────────────────
-  clientLogosDescription?: string;
-  clientLogosHeading?: string;
+  clientLogos?: { description?: string; heading?: string };
   // ─── Always required ────────────────────────────
   contactUs: ContactUsProps;
 
@@ -138,6 +137,7 @@ const renderServicesSection = (
       <Capabilities
         capabilities={features}
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
+        mediaPosition={section.mediaPosition}
         showCapabilityDescriptions={section.showCapabilityDescriptions}
       />
     );
@@ -157,8 +157,7 @@ const SERVICE_PAGE_CONTACT_MODAL = {};
 
 export const ServicePage = ({
   caseStudies,
-  clientLogosDescription,
-  clientLogosHeading,
+  clientLogos,
   contactUs,
   creativePricing,
   customSections,
@@ -239,8 +238,8 @@ export const ServicePage = ({
       {hero && <Hero {...hero} />}
 
       <ClientLogos
-        description={clientLogosDescription}
-        heading={clientLogosHeading}
+        description={clientLogos?.description}
+        heading={clientLogos?.heading}
         overlap={false}
       />
 
@@ -255,7 +254,7 @@ export const ServicePage = ({
       {preProcessSections}
 
       {process && (
-        <Timeline
+        <ProcessTimeline
           cta={process.cta}
           description={process.description}
           phases={process.phases}
@@ -308,7 +307,7 @@ export const ServicePage = ({
           heading={relatedServicesHeading ?? "Explore Related Solutions"}
         >
           {relatedServices.map((service, index) => (
-            <ServicesLinkCard index={index} key={service.href} service={service} />
+            <RelatedServicesCard index={index} key={service.href} service={service} />
           ))}
         </CardsGrid>
       )}

@@ -11,6 +11,7 @@ import {
   RESEARCH_PROCESS,
   RESEARCH_PROOF_BAR,
   RESEARCH_SERVICES,
+  RESEARCH_CLIENT_LOGOS,
   RESEARCH_WHY,
 } from "@/content/services/market-research/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={RESEARCH_CASE_STUDIES}
+      clientLogos={RESEARCH_CLIENT_LOGOS}
       contactUs={RESEARCH_CONTACT_CTA}
       faq={RESEARCH_FAQ}
       hero={RESEARCH_HERO}

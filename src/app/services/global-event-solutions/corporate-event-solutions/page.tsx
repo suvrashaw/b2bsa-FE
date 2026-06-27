@@ -25,6 +25,7 @@ import {
   CORP_EVENT_PAGE,
   CORP_EVENT_PROOF_BAR,
   CORP_EVENT_RELATED_SERVICES,
+  CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-event-solutions/content";
 
@@ -60,7 +61,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={CORP_EVENT_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for Corporate Event Solutions"
+      clientLogos={CORP_EVENT_CLIENT_LOGOS}
       contactUs={CORP_EVENT_CONTACT_CTA}
       customSections={
         <>

@@ -19,3 +19,4 @@ export { default as DATA_AUGMENTATION_FAQ } from "./faq.json";
 export { default as DATA_AUGMENTATION_HERO } from "./hero.json";
 export { default as DATA_AUGMENTATION_PAGE } from "./page.json";
 export { default as DATA_AUGMENTATION_PROCESS } from "./process.json";
+export { default as DATA_AUGMENTATION_CLIENT_LOGOS } from "./client-logos.json";

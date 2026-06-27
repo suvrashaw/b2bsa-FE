@@ -21,7 +21,7 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
 
 export { default as BOOTH_DESIGN_BLOGS_SECTION } from "./blog.json";
 export { default as BOOTH_DESIGN_DELIVERABLES } from "./design-deliverables.json";
-export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./design-related-services.json";
+export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./related-services.json";
 
 export { default as BOOTH_DESIGN_SHOWCASE_ITEMS } from "./design-showcase-items.json";
 export { default as BOOTH_DESIGN_SPOTLIGHT } from "./design-spotlight.json";
@@ -30,3 +30,4 @@ export { default as BOOTH_DESIGN_HERO } from "./hero.json";
 export { default as BOOTH_DESIGN_PAGE } from "./page.json";
 export { default as BOOTH_DESIGN_PROCESS } from "./process.json";
 export { default as BOOTH_DESIGN_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as BOOTH_DESIGN_CLIENT_LOGOS } from "./client-logos.json";

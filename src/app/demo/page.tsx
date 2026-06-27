@@ -8,7 +8,7 @@ import type { HomeServiceItem } from "@/content/home/content";
 import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CorporateVideoCard } from "@/components/items/CorporateVideoCard";
+import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { EventsCard } from "@/components/items/EventsCard";
 import { FAQCard } from "@/components/items/FAQCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
@@ -23,7 +23,7 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { CorporateVideoIndustriesSection } from "@/components/sections/CorporateVideoIndustriesSection";
+import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
@@ -33,7 +33,7 @@ import { Spotlight } from "@/components/sections/Spotlight";
 import { Stats } from "@/components/sections/Stats";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Timeline } from "@/components/sections/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
@@ -120,7 +120,7 @@ const PROOF_STATS = [
   "40+ Countries",
 ];
 
-// ─── CorporateVideoIndustriesSection ────────────────────────────────────────
+// ─── IndustriesAlt ────────────────────────────────────────
 
 const CORP_VIDEO_INDUSTRIES = [
   {
@@ -470,7 +470,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/about-us", label: "About" },
     { href: "/contact-us", label: "Contact" },
   ],
-  CorporateVideoIndustriesSection: [
+  IndustriesAlt: [
     {
       href: "/services/media-production/corporate-video-production",
       label: "Corporate Video",
@@ -610,7 +610,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   ContactUsForm: { items: [], ui: ["Eyebrow", "Heading"] },
-  CorporateVideoIndustriesSection: { items: [], ui: ["Heading"] },
+  IndustriesAlt: { items: [], ui: ["Heading"] },
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
@@ -811,9 +811,9 @@ const DemoPage = () => {
         ))}
       </Carousel>
 
-      {/* 21 – CorporateVideoIndustriesSection */}
-      <DemoLabel name="CorporateVideoIndustriesSection" />
-      <CorporateVideoIndustriesSection
+      {/* 21 – IndustriesAlt */}
+      <DemoLabel name="IndustriesAlt" />
+      <IndustriesAlt
         description="We specialise in industries where the sales cycle is long, relationships matter, and trade shows are the fastest path to qualified pipeline."
         heading="Industries We Serve"
         industries={CORP_VIDEO_INDUSTRIES}
@@ -831,13 +831,13 @@ const DemoPage = () => {
         headingAlign="left"
       >
         {CORP_VIDEO_PORTFOLIO_ITEMS.map((item) => (
-          <CorporateVideoCard item={item} key={item.title} />
+          <CaseStudyCard item={item} key={item.title} />
         ))}
       </CardsGrid>
 
       {/* 23 – Timeline */}
       <DemoLabel name="Timeline" />
-      <Timeline heading="What We Manage" phases={PROCESS_TIMELINE_PHASES} />
+      <ProcessTimeline heading="What We Manage" phases={PROCESS_TIMELINE_PHASES} />
 
       {/* 24 – CaseStudies */}
       <DemoLabel name="CaseStudies" />

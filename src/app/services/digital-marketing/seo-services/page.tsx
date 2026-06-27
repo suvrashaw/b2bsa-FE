@@ -15,7 +15,7 @@ import { PERF_PAGE } from "@/content/services/digital-marketing/content";
 import {
   SEO_BLOGS_SECTION,
   SEO_CASE_STUDIES,
-  SEO_CLIENT_LOGOS_HEADING,
+  SEO_CLIENT_LOGOS,
   SEO_CONTACT_CTA,
   SEO_FAQ,
   SEO_HERO,
@@ -36,7 +36,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={SEO_CASE_STUDIES}
-      clientLogosHeading={SEO_CLIENT_LOGOS_HEADING}
+      clientLogos={SEO_CLIENT_LOGOS}
       contactUs={SEO_CONTACT_CTA}
       customSections={
         <>

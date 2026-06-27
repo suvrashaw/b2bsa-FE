@@ -11,6 +11,7 @@ import {
   PERF_PROCESS,
   PERF_PROOF_BAR,
   PERF_SERVICES,
+  PERF_CLIENT_LOGOS,
   PERF_WHY,
 } from "@/content/services/digital-marketing/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={PERF_CASE_STUDIES}
+      clientLogos={PERF_CLIENT_LOGOS}
       contactUs={PERF_CONTACT_CTA}
       faq={PERF_FAQ}
       hero={PERF_HERO}

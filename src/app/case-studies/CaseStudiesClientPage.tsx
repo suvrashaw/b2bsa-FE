@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type MouseEvent, type ReactNode, useCallback, useEffect, useState } from "react";
 
-import { CaseStudyCard } from "@/components/items/CaseStudyCard";
+import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
@@ -94,10 +94,10 @@ const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEn
   );
 
   const card = (
-    <CaseStudyCard
+    <CaseStudyGridCard
       colSpan={colSpan}
-      ctaLabel="View Case Study"
-      description={description}
+      description={study.title}
+      href={study.href}
       image={study.image}
       metric={study.metric}
       metricLabel={study.metricLabel}

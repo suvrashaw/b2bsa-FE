@@ -30,9 +30,10 @@ export const EVENT_BRANDING_CONTACT_CTA = {
 export { default as EVENT_BRANDING_CAPABILITIES } from "./branding-capabilities.json";
 export { default as EVENT_BRANDING_DELIVERABLES } from "./branding-deliverables.json";
 export { default as EVENT_BRANDING_INTRO } from "./branding-intro.json";
-export { default as EVENT_BRANDING_RELATED_SERVICES } from "./branding-related-services.json";
+export { default as EVENT_BRANDING_RELATED_SERVICES } from "./related-services.json";
 
 export { default as EVENT_BRANDING_FAQ } from "./faq.json";
 export { default as EVENT_BRANDING_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_BRANDING_PAGE } from "./page.json";
 export { default as EVENT_BRANDING_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as EVENT_BRANDING_CLIENT_LOGOS } from "./client-logos.json";

@@ -23,6 +23,7 @@ import {
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
   BOOTH_HOSTESS_RELATED_SERVICES,
+  BOOTH_HOSTESS_CLIENT_LOGOS,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
 
@@ -63,7 +64,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BOOTH_HOSTESS_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for Event Hostess Services"
+      clientLogos={BOOTH_HOSTESS_CLIENT_LOGOS}
       contactUs={BOOTH_HOSTESS_CONTACT_CTA}
       customSections={
         <>

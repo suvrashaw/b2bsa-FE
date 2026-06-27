@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import CASESTUDIES_DATA from "./case-studies.json";
 
-export const SEO_CLIENT_LOGOS_HEADING = "Trusted by Global Brands for B2B SEO Services";
+export { default as SEO_CLIENT_LOGOS } from "./client-logos.json";
 
 export const SEO_CASE_STUDIES = {
   ...CASESTUDIES_DATA,

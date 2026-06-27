@@ -6,7 +6,7 @@ import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { Timeline } from "@/components/sections/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -24,6 +24,7 @@ import {
   EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN,
   EVENT_PHYSICAL_VIDEO_PROOF_BAR,
   EVENT_PHYSICAL_VIDEO_RELATED_SERVICES,
+  EVENT_PHYSICAL_VIDEO_CLIENT_LOGOS,
   EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-physical-video-shoot/content";
 
@@ -33,7 +34,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_PHYSICAL_VIDEO_CASE_STUDIES}
-      clientLogosHeading="Trusted by Global Brands for On-Site Event Video Production"
+      clientLogos={EVENT_PHYSICAL_VIDEO_CLIENT_LOGOS}
       contactUs={EVENT_PHYSICAL_VIDEO_CONTACT_CTA}
       customSections={
         <>
@@ -69,7 +70,7 @@ const Page = () => {
       page={EVENT_PHYSICAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <Timeline
+        <ProcessTimeline
           phases={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.phases}
           title={EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN.title}
         />

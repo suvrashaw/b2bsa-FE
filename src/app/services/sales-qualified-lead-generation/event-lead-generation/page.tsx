@@ -12,6 +12,7 @@ import {
   EVENT_LEAD_PROCESS,
   EVENT_LEAD_PROOF_BAR,
   EVENT_LEAD_SERVICES,
+  EVENT_LEAD_CLIENT_LOGOS,
   EVENT_LEAD_WHY,
 } from "@/content/services/sales-qualified-lead-generation/event-lead-generation/content";
 
@@ -21,6 +22,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={EVENT_LEAD_CASE_STUDIES}
+      clientLogos={EVENT_LEAD_CLIENT_LOGOS}
       contactUs={EVENT_LEAD_CONTACT_CTA}
       faq={EVENT_LEAD_FAQ}
       hero={EVENT_LEAD_HERO}

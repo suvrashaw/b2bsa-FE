@@ -9,7 +9,7 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { Timeline } from "@/components/sections/Timeline";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   CONTACT_FORM,
@@ -90,7 +90,7 @@ const Page = () => {
       </CinematicSequence>
       <ClientLogos />
       <ContactUsForm {...CONTACT_FORM} />
-      <Timeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
+      <ProcessTimeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
       <ContactUs {...CONTACT_US} backgroundImage={CONTACT_US_BG} />
       <Footer />
     </main>

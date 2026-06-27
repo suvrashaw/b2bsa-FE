@@ -27,3 +27,4 @@ export { default as RESEARCH_PAGE } from "./page.json";
 export { default as RESEARCH_PROCESS } from "./process.json";
 export { default as RESEARCH_SERVICES } from "./services.json";
 export { default as RESEARCH_WHY } from "./why.json";
+export { default as RESEARCH_CLIENT_LOGOS } from "./client-logos.json";

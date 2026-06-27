@@ -10,6 +10,7 @@ import {
   MARKET_INTELLIGENCE_FAQ,
   MARKET_INTELLIGENCE_HERO,
   MARKET_INTELLIGENCE_PAGE,
+  MARKET_INTELLIGENCE_CLIENT_LOGOS,
   MARKET_INTELLIGENCE_SPOTLIGHT,
 } from "@/content/services/hpmi/human-powered-market-intelligence/content";
 
@@ -19,6 +20,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={MARKET_INTELLIGENCE_CASE_STUDIES}
+      clientLogos={MARKET_INTELLIGENCE_CLIENT_LOGOS}
       contactUs={MARKET_INTELLIGENCE_CONTACT_CTA}
       faq={MARKET_INTELLIGENCE_FAQ}
       hero={MARKET_INTELLIGENCE_HERO}

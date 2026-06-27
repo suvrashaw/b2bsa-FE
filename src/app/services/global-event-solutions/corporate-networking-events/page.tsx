@@ -26,6 +26,7 @@ import {
   CORP_NETWORKING_INTRO,
   CORP_NETWORKING_PAGE,
   CORP_NETWORKING_RELATED_SERVICES,
+  CORP_NETWORKING_CLIENT_LOGOS,
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
 
@@ -64,8 +65,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={CORP_NETWORKING_CASE_STUDIES}
-      clientLogosDescription="Leading enterprises trust our corporate networking event services to deliver impactful networking experiences for executives, clients, partners, and business communities."
-      clientLogosHeading="Trusted by Global Brands for Networking Event Solutions"
+      clientLogos={CORP_NETWORKING_CLIENT_LOGOS}
       contactUs={CORP_NETWORKING_CONTACT_CTA}
       customSections={
         <>

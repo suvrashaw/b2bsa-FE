@@ -1,108 +1,46 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
-import { cn } from "@/lib";
-
-const CARD_TRANSITION = { duration: 0.3, ease: "easeOut" as const };
-const CARD_WHILE_HOVER = { y: -4 };
-
-interface CaseStudyCardProps {
-  colSpan: string;
-  ctaLabel?: string;
-  description: string;
-  format?: "gallery" | "text" | "video";
+export interface CaseStudyCardItem {
+  client?: string;
+  clientLogo?: string;
+  href?: string;
   image: string;
-  metric: string;
-  metricLabel: string;
-  revealed?: boolean;
   title: string;
 }
 
-export const CaseStudyCard = ({
-  colSpan,
-  ctaLabel = "View Case Study",
-  description,
-  format: _format,
-  image,
-  metric,
-  metricLabel,
-  revealed = false,
-  title,
-}: CaseStudyCardProps) => {
-  const sharedClassName = cn(
-    "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-2xl bg-brand-charcoal text-left focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none md:rounded-xl lg:h-[437px]",
-    colSpan
-  );
+export const CaseStudyCard = ({ item }: { item: CaseStudyCardItem }) => (
+  <article className="group overflow-hidden rounded-2xl rounded-tl-none bg-white text-[#222222] shadow-[0_26px_70px_rgba(0,0,0,0.24)] md:rounded-lg md:rounded-tl-none">
+    <div className="relative aspect-[1.45] overflow-hidden">
+      <Image
+        alt={item.title}
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        fill
+        sizes="(max-width: 1024px) 100vw, 33vw"
+        src={item.image}
+      />
+    </div>
 
-  const inner = (
-    <>
-      <div className="absolute inset-0 z-0">
+    <div className="flex min-h-[300px] flex-col p-5 md:p-10">
+      {item.clientLogo ? (
         <Image
-          alt={title}
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          src={image}
+          alt={item.client ?? "Client logo"}
+          className="mb-5 object-contain object-left"
+          height={24}
+          src={item.clientLogo}
+          width={120}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/30 via-transparent to-transparent" />
-      </div>
+      ) : null}
+      <h3 className="type-h3 line-clamp-3 leading-tight">{item.title}</h3>
+      <p className="type-body-m mt-4 leading-relaxed text-[#333333]">Case Study</p>
 
-      {/* Blue overlay — hidden by default, blooms on hover */}
-      <div className="absolute inset-0 z-[1] bg-brand-blue/0 transition-colors duration-500 group-hover:bg-brand-blue/80" />
-
-      {/* Metric badge */}
-      <div
-        className={cn(
-          "absolute top-6 right-6 z-10 translate-y-2 rounded-2xl border border-white/10 bg-white/10 px-4 py-2.5 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:border-white/20 group-hover:bg-white/20 group-hover:opacity-100",
-          revealed && "translate-y-0 opacity-100"
-        )}
+      <Link
+        className="mt-auto inline-flex w-fit items-center gap-2 pt-12 font-heading text-xl font-bold text-[#0C6573] underline decoration-2 underline-offset-4 transition-colors hover:no-underline hover:text-[#1E6091] md:text-2xl"
+        href={item.href ?? "/case-studies"}
       >
-        <div className="font-heading text-lg leading-none font-bold text-white">{metric}</div>
-        <div className="mt-1 text-[8px] font-bold tracking-wider text-white/80 uppercase">
-          {metricLabel}
-        </div>
-      </div>
-
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center">
-        <div
-          className={cn(
-            "w-full translate-y-3 transform text-center opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100",
-            revealed && "translate-y-0 opacity-100"
-          )}
-        >
-          <h3 className="mx-auto max-w-xs text-center font-sans text-base leading-snug font-bold !text-white drop-shadow-md md:text-xl">
-            {title}
-          </h3>
-          <p
-            className={cn(
-              "mx-auto mt-4 line-clamp-2 max-w-md text-xs leading-relaxed text-white/85 opacity-0 transition-opacity delay-75 duration-500 group-hover:opacity-100",
-              revealed && "opacity-100"
-            )}
-          >
-            {description}
-          </p>
-          <span
-            className={cn(
-              "mt-4 inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.35em] text-white/95 uppercase opacity-0 transition-opacity delay-100 duration-500 group-hover:opacity-100",
-              revealed && "opacity-100"
-            )}
-          >
-            {ctaLabel}
-          </span>
-        </div>
-      </div>
-    </>
-  );
-
-  return (
-    <motion.div
-      className={sharedClassName}
-      transition={CARD_TRANSITION}
-      whileHover={CARD_WHILE_HOVER}
-    >
-      {inner}
-    </motion.div>
-  );
-};
+        View Project
+      </Link>
+    </div>
+  </article>
+);

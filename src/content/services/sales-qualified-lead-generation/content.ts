@@ -27,3 +27,4 @@ export { default as SQL_PAGE } from "./page.json";
 export { default as SQL_PROCESS } from "./process.json";
 export { default as SQL_SERVICES } from "./services.json";
 export { default as SQL_WHY } from "./why.json";
+export { default as SQL_CLIENT_LOGOS } from "./client-logos.json";

@@ -11,6 +11,7 @@ import {
   BS_PROCESS,
   BS_PROOF_BAR,
   BS_SERVICES,
+  BS_CLIENT_LOGOS,
   BS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={BS_CASE_STUDIES}
+      clientLogos={BS_CLIENT_LOGOS}
       contactUs={BS_CONTACT_CTA}
       faq={BS_FAQ}
       hero={BS_HERO}

@@ -20,6 +20,7 @@ export { default as EVENT_PHYSICAL_VIDEO_DELIVERABLES } from "./physical-video-d
 
 export { default as EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN } from "./physical-video-production-plan.json";
 export { default as EVENT_PHYSICAL_VIDEO_PROOF_BAR } from "./physical-video-proof-bar.json";
-export { default as EVENT_PHYSICAL_VIDEO_RELATED_SERVICES } from "./physical-video-related-services.json";
+export { default as EVENT_PHYSICAL_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_PHYSICAL_VIDEO_PROCESS } from "./process.json";
 export { default as EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as EVENT_PHYSICAL_VIDEO_CLIENT_LOGOS } from "./client-logos.json";

@@ -29,6 +29,7 @@ export { default as CORP_NETWORKING_CAPABILITIES } from "./networking-capabiliti
 export { default as CORP_NETWORKING_DELIVERABLES } from "./networking-deliverables.json";
 export { default as CORP_NETWORKING_EVENT_TYPES } from "./networking-event-types.json";
 export { default as CORP_NETWORKING_INTRO } from "./networking-intro.json";
-export { default as CORP_NETWORKING_RELATED_SERVICES } from "./networking-related-services.json";
+export { default as CORP_NETWORKING_RELATED_SERVICES } from "./related-services.json";
 export { default as CORP_NETWORKING_PAGE } from "./page.json";
 export { default as CORP_NETWORKING_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as CORP_NETWORKING_CLIENT_LOGOS } from "./client-logos.json";

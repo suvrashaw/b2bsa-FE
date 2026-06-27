@@ -11,6 +11,7 @@ import {
   SQL_PROCESS,
   SQL_PROOF_BAR,
   SQL_SERVICES,
+  SQL_CLIENT_LOGOS,
   SQL_WHY,
 } from "@/content/services/sales-qualified-lead-generation/content";
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={SQL_CASE_STUDIES}
+      clientLogos={SQL_CLIENT_LOGOS}
       contactUs={SQL_CONTACT_CTA}
       faq={SQL_FAQ}
       hero={SQL_HERO}

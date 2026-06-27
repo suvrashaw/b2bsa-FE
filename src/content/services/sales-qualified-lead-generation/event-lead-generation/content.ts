@@ -16,3 +16,4 @@ export const EVENT_LEAD_HERO = {
 };
 
 export { default as EVENT_LEAD_PAGE } from "./page.json";
+export { default as EVENT_LEAD_CLIENT_LOGOS } from "./client-logos.json";

@@ -13,6 +13,7 @@ import {
   MODULAR_BOOTHS_PROOF_BAR,
   MODULAR_BOOTHS_RANGE_SECTION,
   MODULAR_BOOTHS_RELATED_SERVICES,
+  MODULAR_BOOTHS_CLIENT_LOGOS,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/modular-booth-solutions/content";
 
@@ -22,6 +23,7 @@ const Page = () => {
   return (
     <ServicePage
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
+      clientLogos={MODULAR_BOOTHS_CLIENT_LOGOS}
       contactUs={MODULAR_BOOTHS_CONTACT_CTA}
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}

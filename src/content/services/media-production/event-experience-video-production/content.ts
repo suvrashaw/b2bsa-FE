@@ -1,7 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
-import EXPERIENCEVIDEOCONTACTCTA_DATA from "./experience-video-contact-cta.json";
+import EXPERIENCEVIDEOCONTACTCTA_DATA from "./contact.json";
 
 export const EVENT_EXPERIENCE_VIDEO_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,
@@ -13,12 +13,13 @@ export const EVENT_EXPERIENCE_VIDEO_CONTACT_CTA = {
 };
 
 export { default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION } from "./blog.json";
-export { default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES } from "./experience-video-capabilities.json";
-export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./experience-video-deliverables.json";
+export { default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES } from "./capabilities.json";
+export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./whats-included.json";
 
-export { default as EVENT_EXPERIENCE_VIDEO_INTRO } from "./experience-video-intro.json";
-export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./experience-video-related-services.json";
+export { default as EVENT_EXPERIENCE_VIDEO_INTRO } from "./intro.json";
+export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_EXPERIENCE_VIDEO_PAGE } from "./page.json";
 export { default as EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
