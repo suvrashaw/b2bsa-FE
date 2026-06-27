@@ -23,10 +23,10 @@ import {
   BOOTH_DESIGN_HERO,
   BOOTH_DESIGN_PAGE,
   BOOTH_DESIGN_PROCESS,
-  BOOTH_DESIGN_PROOF_BAR,
+  BOOTH_DESIGN_INTRO,
   BOOTH_DESIGN_RELATED_SERVICES,
   BOOTH_DESIGN_SHOWCASE_ITEMS,
-  BOOTH_DESIGN_SPOTLIGHT,
+  BOOTH_DESIGN_INTRO,
   BOOTH_DESIGN_CLIENT_LOGOS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
@@ -122,12 +122,12 @@ const Page = () => {
         />
       }
       process={BOOTH_DESIGN_PROCESS}
-      proofBar={BOOTH_DESIGN_PROOF_BAR}
+      spotlight={BOOTH_DESIGN_INTRO}
       relatedServices={BOOTH_DESIGN_RELATED_SERVICES}
       services={BOOTH_DESIGN_DELIVERABLES}
       servicesSectionType="carousel"
       showPhaseNumbers={false}
-      spotlight={BOOTH_DESIGN_SPOTLIGHT}
+      spotlight={BOOTH_DESIGN_INTRO}
     />
   );
 };

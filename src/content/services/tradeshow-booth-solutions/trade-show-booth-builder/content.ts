@@ -3,9 +3,9 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import CONTACT_DATA from "./contact.json";
 import BOOTHBUILDERCASESTUDIESDATA from "./case-studies.json";
-import BOOTHBUILDERPROOFBARDATA from "./proof-bar.json";
+import BOOTHBUILDERPROOFBARDATA from "./intro.json";
 
-export const BOOTH_BUILDER_PROOF_BAR = {
+export const BOOTH_BUILDER_INTRO = {
   ...BOOTHBUILDERPROOFBARDATA,
   stats: GLOBAL_PROOF_STATS,
 };

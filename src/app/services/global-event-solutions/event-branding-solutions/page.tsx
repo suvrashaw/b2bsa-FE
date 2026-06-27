@@ -24,7 +24,7 @@ import {
   EVENT_BRANDING_INDUSTRIES_SECTION,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
-  EVENT_BRANDING_PROOF_BAR,
+  EVENT_BRANDING_INTRO,
   EVENT_BRANDING_RELATED_SERVICES,
   EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_WHY_CHOOSE_US,
@@ -61,7 +61,7 @@ const SECONDARY_SERVICES = {
   showCapabilityDescriptions: false,
 };
 
-const EVENT_BRANDING_SPOTLIGHT = {
+const EVENT_BRANDING_INTRO = {
   ...EVENT_BRANDING_INTRO,
   sectionClassName: "pt-8 md:pt-12",
 };
@@ -114,13 +114,13 @@ const Page = () => {
           <ContactModalTrigger label="Talk to Branding Experts" />
         </>
       }
-      proofBar={EVENT_BRANDING_PROOF_BAR}
+      spotlight={EVENT_BRANDING_INTRO}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
-      spotlight={EVENT_BRANDING_SPOTLIGHT}
+      spotlight={EVENT_BRANDING_INTRO}
     />
   );
 };

@@ -3,9 +3,9 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
-import BOOTHDESIGNPROOFBARDATA from "./proof-bar.json";
+import BOOTHDESIGNPROOFBARDATA from "./intro.json";
 
-export const BOOTH_DESIGN_PROOF_BAR = {
+export const BOOTH_DESIGN_INTRO = {
   ...BOOTHDESIGNPROOFBARDATA,
   stats: GLOBAL_PROOF_STATS,
 };
@@ -24,7 +24,7 @@ export { default as BOOTH_DESIGN_DELIVERABLES } from "./design-deliverables.json
 export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./related-services.json";
 
 export { default as BOOTH_DESIGN_SHOWCASE_ITEMS } from "./design-showcase-items.json";
-export { default as BOOTH_DESIGN_SPOTLIGHT } from "./design-spotlight.json";
+export { default as BOOTH_DESIGN_INTRO } from "./design-spotlight.json";
 export { default as BOOTH_DESIGN_FAQ } from "./faq.json";
 export { default as BOOTH_DESIGN_HERO } from "./hero.json";
 export { default as BOOTH_DESIGN_PAGE } from "./page.json";

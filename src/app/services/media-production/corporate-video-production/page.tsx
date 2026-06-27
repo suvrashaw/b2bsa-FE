@@ -21,7 +21,7 @@ import {
   CORPORATE_VIDEO_INDUSTRIES,
   CORPORATE_VIDEO_PAGE,
   CORPORATE_VIDEO_PORTFOLIO,
-  CORPORATE_VIDEO_PROOF_BAR,
+  CORPORATE_VIDEO_INTRO,
   CORPORATE_VIDEO_RELATED_SERVICES,
   CORPORATE_VIDEO_WHY,
   CORPORATE_VIDEO_CLIENT_LOGOS,
@@ -44,7 +44,7 @@ const Page = () => {
           </CardsGrid>
           <Carousel
             cols={4}
-            heading="Blogs"
+            heading="Latest Insights on Corporate Video Production & Brand Storytelling"
             headingAction={
               <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
@@ -70,7 +70,7 @@ const Page = () => {
           <CaseStudiesPortfolio {...CORPORATE_VIDEO_PORTFOLIO} />
         </>
       }
-      proofBar={CORPORATE_VIDEO_PROOF_BAR}
+      spotlight={CORPORATE_VIDEO_INTRO}
       relatedServices={CORPORATE_VIDEO_RELATED_SERVICES}
       services={CORPORATE_VIDEO_DELIVERABLES}
       servicesSectionType="carousel"

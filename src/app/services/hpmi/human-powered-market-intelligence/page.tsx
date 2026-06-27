@@ -11,7 +11,7 @@ import {
   MARKET_INTELLIGENCE_HERO,
   MARKET_INTELLIGENCE_PAGE,
   MARKET_INTELLIGENCE_CLIENT_LOGOS,
-  MARKET_INTELLIGENCE_SPOTLIGHT,
+  MARKET_INTELLIGENCE_INTRO,
 } from "@/content/services/hpmi/human-powered-market-intelligence/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
@@ -29,7 +29,7 @@ const Page = () => {
       secondaryServicesSectionType="grid"
       services={MARKET_INTELLIGENCE_DELIVERABLES}
       servicesSectionType="carousel"
-      spotlight={MARKET_INTELLIGENCE_SPOTLIGHT}
+      spotlight={MARKET_INTELLIGENCE_INTRO}
     />
   );
 };

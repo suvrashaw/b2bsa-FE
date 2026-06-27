@@ -9,7 +9,7 @@ import {
   MEDIA_HERO,
   MEDIA_PAGE,
   MEDIA_PROCESS,
-  MEDIA_PROOF_BAR,
+  MEDIA_INTRO,
   MEDIA_SERVICES,
   MEDIA_CLIENT_LOGOS,
   MEDIA_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={MEDIA_HERO}
       page={MEDIA_PAGE}
       process={MEDIA_PROCESS}
-      proofBar={MEDIA_PROOF_BAR}
+      spotlight={MEDIA_INTRO}
       services={MEDIA_SERVICES}
       why={MEDIA_WHY}
     />

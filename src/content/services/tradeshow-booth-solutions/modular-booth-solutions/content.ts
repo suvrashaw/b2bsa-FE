@@ -2,9 +2,9 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import MODULARBOOTHSCASESTUDIESDATA from "./case-studies.json";
-import MODULARBOOTHSPROOFBARDATA from "./proof-bar.json";
+import MODULARBOOTHSPROOFBARDATA from "./intro.json";
 
-export const MODULAR_BOOTHS_PROOF_BAR = {
+export const MODULAR_BOOTHS_INTRO = {
   ...MODULARBOOTHSPROOFBARDATA,
   stats: GLOBAL_PROOF_STATS,
 };

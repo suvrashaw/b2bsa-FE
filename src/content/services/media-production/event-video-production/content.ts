@@ -4,11 +4,11 @@ import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact.json";
-import PROOF_BAR_DATA from "./proof-bar.json";
+import PROOF_BAR_DATA from "./intro.json";
 
 export { default as EVENT_VIDEO_FAQ } from "./faq.json";
 
-export const EVENT_VIDEO_PROOF_BAR = {
+export const EVENT_VIDEO_INTRO = {
   ...PROOF_BAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };

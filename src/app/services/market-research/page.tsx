@@ -9,7 +9,7 @@ import {
   RESEARCH_HERO,
   RESEARCH_PAGE,
   RESEARCH_PROCESS,
-  RESEARCH_PROOF_BAR,
+  RESEARCH_INTRO,
   RESEARCH_SERVICES,
   RESEARCH_CLIENT_LOGOS,
   RESEARCH_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={RESEARCH_HERO}
       page={RESEARCH_PAGE}
       process={RESEARCH_PROCESS}
-      proofBar={RESEARCH_PROOF_BAR}
+      spotlight={RESEARCH_INTRO}
       services={RESEARCH_SERVICES}
       why={RESEARCH_WHY}
     />

@@ -9,7 +9,7 @@ import {
   SQL_HERO,
   SQL_PAGE,
   SQL_PROCESS,
-  SQL_PROOF_BAR,
+  SQL_INTRO,
   SQL_SERVICES,
   SQL_CLIENT_LOGOS,
   SQL_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={SQL_HERO}
       page={SQL_PAGE}
       process={SQL_PROCESS}
-      proofBar={SQL_PROOF_BAR}
+      spotlight={SQL_INTRO}
       services={SQL_SERVICES}
       why={SQL_WHY}
     />

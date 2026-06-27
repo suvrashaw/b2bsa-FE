@@ -2,10 +2,10 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHRENTALCASESTUDIESDATA from "./case-studies.json";
-import BOOTHRENTALPROOFBARDATA from "./proof-bar.json";
+import BOOTHRENTALPROOFBARDATA from "./intro.json";
 import CONTACT_DATA from "./contact.json";
 
-export const BOOTH_RENTAL_PROOF_BAR = {
+export const BOOTH_RENTAL_INTRO = {
   ...BOOTHRENTALPROOFBARDATA,
   stats: GLOBAL_PROOF_STATS,
 };

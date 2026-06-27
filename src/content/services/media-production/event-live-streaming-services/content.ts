@@ -18,7 +18,7 @@ export const LIVE_STREAMING_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES.slice(0, 3),
 };
 
-export const LIVE_STREAMING_SPOTLIGHT = {
+export const LIVE_STREAMING_INTRO = {
   ...STREAMINGSPOTLIGHT_DATA,
   showCta: false,
   triggerContactModal: true,

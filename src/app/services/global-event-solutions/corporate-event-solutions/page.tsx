@@ -23,7 +23,7 @@ import {
   CORP_EVENT_INDUSTRIES_SECTION,
   CORP_EVENT_INTRO,
   CORP_EVENT_PAGE,
-  CORP_EVENT_PROOF_BAR,
+  CORP_EVENT_INTRO,
   CORP_EVENT_RELATED_SERVICES,
   CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_WHY_CHOOSE_US,
@@ -102,7 +102,7 @@ const Page = () => {
           />
         </>
       }
-      proofBar={CORP_EVENT_PROOF_BAR}
+      spotlight={CORP_EVENT_INTRO}
       relatedServices={CORP_EVENT_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}

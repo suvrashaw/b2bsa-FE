@@ -23,7 +23,7 @@ import {
   BOOTH_RENTAL_HERO,
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
-  BOOTH_RENTAL_PROOF_BAR,
+  BOOTH_RENTAL_INTRO,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_CLIENT_LOGOS,
@@ -94,7 +94,7 @@ const Page = () => {
           </CardsGrid>
           <CardsGrid
             cols={4}
-            heading="Why Choose B2B Sales Arrow for Booth Rental?"
+            heading="Why Choose B2B Sales Arrow for Trade Show Booth Rental Services"
             id="why-choose-us"
           >
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
@@ -161,7 +161,7 @@ const Page = () => {
         </>
       }
       process={BOOTH_RENTAL_PROCESS}
-      proofBar={BOOTH_RENTAL_PROOF_BAR}
+      spotlight={BOOTH_RENTAL_INTRO}
       why={BOOTH_RENTAL_WHY}
     />
   );

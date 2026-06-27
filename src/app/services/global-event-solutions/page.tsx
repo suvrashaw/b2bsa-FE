@@ -9,7 +9,7 @@ import {
   GES_HERO,
   GES_PAGE,
   GES_PROCESS,
-  GES_PROOF_BAR,
+  GES_INTRO,
   GES_SERVICES,
   GES_CLIENT_LOGOS,
   GES_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={GES_HERO}
       page={GES_PAGE}
       process={GES_PROCESS}
-      proofBar={GES_PROOF_BAR}
+      spotlight={GES_INTRO}
       services={GES_SERVICES}
       why={GES_WHY}
     />

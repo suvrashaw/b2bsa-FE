@@ -9,7 +9,7 @@ import {
   BS_HERO,
   BS_PAGE,
   BS_PROCESS,
-  BS_PROOF_BAR,
+  BS_INTRO,
   BS_SERVICES,
   BS_CLIENT_LOGOS,
   BS_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={BS_HERO}
       page={BS_PAGE}
       process={BS_PROCESS}
-      proofBar={BS_PROOF_BAR}
+      spotlight={BS_INTRO}
       services={BS_SERVICES}
       why={BS_WHY}
     />

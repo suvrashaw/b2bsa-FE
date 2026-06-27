@@ -9,7 +9,7 @@ import {
   PERF_HERO,
   PERF_PAGE,
   PERF_PROCESS,
-  PERF_PROOF_BAR,
+  PERF_INTRO,
   PERF_SERVICES,
   PERF_CLIENT_LOGOS,
   PERF_WHY,
@@ -27,7 +27,7 @@ const Page = () => {
       hero={PERF_HERO}
       page={PERF_PAGE}
       process={PERF_PROCESS}
-      proofBar={PERF_PROOF_BAR}
+      spotlight={PERF_INTRO}
       services={PERF_SERVICES}
       why={PERF_WHY}
     />

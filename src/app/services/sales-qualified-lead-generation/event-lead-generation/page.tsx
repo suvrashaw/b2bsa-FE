@@ -10,7 +10,7 @@ import {
   EVENT_LEAD_HERO,
   EVENT_LEAD_PAGE,
   EVENT_LEAD_PROCESS,
-  EVENT_LEAD_PROOF_BAR,
+  EVENT_LEAD_INTRO,
   EVENT_LEAD_SERVICES,
   EVENT_LEAD_CLIENT_LOGOS,
   EVENT_LEAD_WHY,
@@ -29,7 +29,7 @@ const Page = () => {
       page={EVENT_LEAD_PAGE}
       parentPage={SQL_PAGE}
       process={EVENT_LEAD_PROCESS}
-      proofBar={EVENT_LEAD_PROOF_BAR}
+      spotlight={EVENT_LEAD_INTRO}
       services={EVENT_LEAD_SERVICES}
       why={EVENT_LEAD_WHY}
     />

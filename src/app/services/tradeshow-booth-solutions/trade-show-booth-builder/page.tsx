@@ -25,7 +25,7 @@ import {
   BOOTH_BUILDER_PAGE,
   BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
-  BOOTH_BUILDER_PROOF_BAR,
+  BOOTH_BUILDER_INTRO,
   BOOTH_BUILDER_CLIENT_LOGOS,
   BOOTH_BUILDER_RELATED_SERVICES,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-builder/content";
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 const boothBuilderProofBar = {
-  ...BOOTH_BUILDER_PROOF_BAR,
+  ...BOOTH_BUILDER_INTRO,
   className: "[&_p]:max-w-5xl",
 };
 
@@ -67,7 +67,7 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <CardsGrid cols={4} heading="Why Choose B2B Sales Arrow for Trade Show Booth Builder Services" id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

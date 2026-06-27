@@ -6,7 +6,7 @@ import RESEARCHCASESTUDIES_DATA from "./case-studies.json";
 import RESEARCHCONTACTCTA_DATA from "./contact.json";
 import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
 
-export const RESEARCH_PROOF_BAR = {
+export const RESEARCH_INTRO = {
   ...RESEARCHPROOFBAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };

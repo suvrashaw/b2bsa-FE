@@ -11,7 +11,7 @@ import {
   DATA_VALIDATION_PAGE,
   DATA_VALIDATION_PROCESS,
   DATA_VALIDATION_CLIENT_LOGOS,
-  DATA_VALIDATION_SPOTLIGHT,
+  DATA_VALIDATION_INTRO,
 } from "@/content/services/market-research/data-validation-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
@@ -28,7 +28,7 @@ const Page = () => {
       process={DATA_VALIDATION_PROCESS}
       services={DATA_VALIDATION_DELIVERABLES}
       servicesSectionType="carousel"
-      spotlight={DATA_VALIDATION_SPOTLIGHT}
+      spotlight={DATA_VALIDATION_INTRO}
     />
   );
 };

@@ -25,7 +25,7 @@ import {
   LIVE_STREAMING_CASE_STUDIES,
   LIVE_STREAMING_PAGE,
   LIVE_STREAMING_RELATED_SERVICES,
-  LIVE_STREAMING_SPOTLIGHT,
+  LIVE_STREAMING_INTRO,
   LIVE_STREAMING_CLIENT_LOGOS,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-live-streaming-services/content";
@@ -33,7 +33,7 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 
 const LIVE_STREAMING_LOCATION_BADGES = ["New York", "Dubai", "Singapore", "London"];
-const LIVE_STREAMING_AREAS_SPOTLIGHT = {
+const LIVE_STREAMING_AREAS_INTRO = {
   ...LIVE_STREAMING_AREAS_SERVED,
   imagePosition: "left" as const,
 };
@@ -82,7 +82,7 @@ const Page = () => {
           />
 
           <Spotlight
-            {...LIVE_STREAMING_AREAS_SPOTLIGHT}
+            {...LIVE_STREAMING_AREAS_INTRO}
             locationBadges={LIVE_STREAMING_LOCATION_BADGES}
             showCta={false}
           />
@@ -91,7 +91,7 @@ const Page = () => {
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       services={LIVE_STREAMING_DELIVERABLES}
-      spotlight={LIVE_STREAMING_SPOTLIGHT}
+      spotlight={LIVE_STREAMING_INTRO}
     />
   );
 };

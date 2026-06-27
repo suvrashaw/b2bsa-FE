@@ -4,11 +4,11 @@ import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
 import EVENTINDUSTRIESSECTION_DATA from "./event-industries-section.json";
-import PROOF_BAR_DATA from "./proof-bar.json";
+import PROOF_BAR_DATA from "./intro.json";
 
 export { default as CORP_EVENT_BLOGS_SECTION } from "./blog.json";
 
-export const CORP_EVENT_PROOF_BAR = {
+export const CORP_EVENT_INTRO = {
   ...PROOF_BAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };

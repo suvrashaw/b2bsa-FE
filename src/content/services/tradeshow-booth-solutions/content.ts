@@ -4,9 +4,9 @@ import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CASESTUDIES_DATA from "./case-studies.json";
 import CONTACTCTA_DATA from "./contact.json";
-import PROOFBAR_DATA from "./proof-bar.json";
+import PROOFBAR_DATA from "./intro.json";
 
-export const BS_PROOF_BAR = {
+export const BS_INTRO = {
   ...PROOFBAR_DATA,
   stats: GLOBAL_PROOF_STATS,
 };
