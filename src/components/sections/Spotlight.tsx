@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
 export interface SpotlightProps {
