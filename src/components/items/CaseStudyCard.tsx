@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,7 +35,7 @@ export const CaseStudyCard = ({ item }: { item: CaseStudyCardItem }) => (
       <p className="type-body-m mt-4 leading-relaxed text-[#333333]">Case Study</p>
 
       <Link
-        className="mt-auto inline-flex w-fit items-center gap-2 pt-12 font-heading text-xl font-bold text-[#0C6573] underline decoration-2 underline-offset-4 transition-colors hover:no-underline hover:text-[#1E6091] md:text-2xl"
+        className="mt-auto inline-flex w-fit items-center gap-2 pt-12 font-heading text-xl font-bold text-[#0C6573] underline decoration-2 underline-offset-4 transition-colors hover:text-[#1E6091] hover:no-underline md:text-2xl"
         href={item.href ?? "/case-studies"}
       >
         View Project

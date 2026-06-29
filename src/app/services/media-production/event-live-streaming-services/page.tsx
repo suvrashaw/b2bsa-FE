@@ -5,8 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
+import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -18,15 +18,15 @@ import {
   LIVE_STREAMING_BLOGS_SECTION,
   LIVE_STREAMING_CAPABILITIES,
   LIVE_STREAMING_CAPABILITIES_FEATURES,
+  LIVE_STREAMING_CASE_STUDIES,
+  LIVE_STREAMING_CLIENT_LOGOS,
   LIVE_STREAMING_CONTACT_CTA,
   LIVE_STREAMING_DELIVERABLES,
   LIVE_STREAMING_FAQ,
   LIVE_STREAMING_HERO,
-  LIVE_STREAMING_CASE_STUDIES,
+  LIVE_STREAMING_INTRO,
   LIVE_STREAMING_PAGE,
   LIVE_STREAMING_RELATED_SERVICES,
-  LIVE_STREAMING_INTRO,
-  LIVE_STREAMING_CLIENT_LOGOS,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-live-streaming-services/content";
 
@@ -46,11 +46,11 @@ const Page = () => {
       contactUs={LIVE_STREAMING_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading}>
+          <Carousel cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
 
           <Carousel
             cols={4}
@@ -84,7 +84,8 @@ const Page = () => {
           <Spotlight
             {...LIVE_STREAMING_AREAS_INTRO}
             locationBadges={LIVE_STREAMING_LOCATION_BADGES}
-            />
+          />
+          <SectionContactCta />
         </>
       }
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}

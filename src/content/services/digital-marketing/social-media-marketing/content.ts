@@ -4,7 +4,7 @@ import CAPABILITIES_DATA from "./capabilities.json";
 import CASESTUDIES_DATA from "./case-studies.json";
 import INDUSTRIES_DATA from "./industries.json";
 
-export { default as SMM_CLIENT_LOGOS } from "./client-logos.json";
+export { default as SMM_BLOGS_SECTION } from "./blog.json";
 
 export const SMM_CAPABILITIES = {
   description: CAPABILITIES_DATA.description,
@@ -25,8 +25,8 @@ export const SMM_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-export { default as SMM_BLOGS_SECTION } from "./blog.json";
 export { default as SMM_CAMPAIGNS } from "./campaigns.json";
+export { default as SMM_CLIENT_LOGOS } from "./client-logos.json";
 export { default as SMM_CONTACT_CTA } from "./contact.json";
 export { default as SMM_FAQ } from "./faq.json";
 export { default as SMM_HERO } from "./hero.json";

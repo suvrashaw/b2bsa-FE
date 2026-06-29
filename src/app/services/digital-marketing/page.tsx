@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   PERF_CASE_STUDIES,
+  PERF_CLIENT_LOGOS,
   PERF_CONTACT_CTA,
   PERF_FAQ,
   PERF_HERO,
+  PERF_INTRO,
   PERF_PAGE,
   PERF_PROCESS,
-  PERF_INTRO,
   PERF_SERVICES,
-  PERF_CLIENT_LOGOS,
   PERF_WHY,
 } from "@/content/services/digital-marketing/content";
 
@@ -27,8 +27,8 @@ const Page = () => {
       hero={PERF_HERO}
       page={PERF_PAGE}
       process={PERF_PROCESS}
-      spotlight={PERF_INTRO}
       services={PERF_SERVICES}
+      spotlight={PERF_INTRO}
       why={PERF_WHY}
     />
   );

@@ -23,16 +23,16 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
+import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
@@ -468,12 +468,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/about-us", label: "About" },
     { href: "/contact-us", label: "Contact" },
   ],
-  IndustriesAlt: [
-    {
-      href: "/services/media-production/corporate-video-production",
-      label: "Corporate Video",
-    },
-  ],
   CorporateVideoPortfolioSection: [
     {
       href: "/services/media-production/corporate-video-production",
@@ -526,6 +520,12 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Service Detail",
     },
     { href: "/services/global-event-solutions", label: "Service Hub" },
+  ],
+  IndustriesAlt: [
+    {
+      href: "/services/media-production/corporate-video-production",
+      label: "Corporate Video",
+    },
   ],
   LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [
@@ -600,7 +600,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   ContactUsForm: { items: [], ui: ["Eyebrow", "Heading"] },
-  IndustriesAlt: { items: [], ui: ["Heading"] },
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
@@ -608,6 +607,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
+  IndustriesAlt: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
   RentVsBuySection: { items: [], ui: ["Heading"] },

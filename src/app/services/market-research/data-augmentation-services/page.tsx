@@ -4,13 +4,13 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   DATA_AUGMENTATION_CASE_STUDIES,
+  DATA_AUGMENTATION_CLIENT_LOGOS,
   DATA_AUGMENTATION_CONTACT_CTA,
   DATA_AUGMENTATION_DEFINITION,
   DATA_AUGMENTATION_DELIVERABLES,
   DATA_AUGMENTATION_FAQ,
   DATA_AUGMENTATION_HERO,
   DATA_AUGMENTATION_PAGE,
-  DATA_AUGMENTATION_CLIENT_LOGOS,
   DATA_AUGMENTATION_PROCESS,
 } from "@/content/services/market-research/data-augmentation-services/content";
 

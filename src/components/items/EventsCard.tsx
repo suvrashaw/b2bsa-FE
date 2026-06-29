@@ -3,7 +3,7 @@
 import type { KeyboardEvent, MouseEvent, ReactNode } from "react";
 
 import { useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useState } from "react";

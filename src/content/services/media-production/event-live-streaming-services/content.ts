@@ -1,4 +1,5 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
+import { GLOBAL_PROOF_STATS } from "@/content/services";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import CAPABILITIES_DATA from "./capabilities.json";
@@ -20,7 +21,7 @@ export const LIVE_STREAMING_CASE_STUDIES = {
 
 export const LIVE_STREAMING_INTRO = {
   ...STREAMINGSPOTLIGHT_DATA,
-  showCta: false,
+  stats: GLOBAL_PROOF_STATS,
   triggerContactModal: true,
 };
 
@@ -38,10 +39,10 @@ export const LIVE_STREAMING_CAPABILITIES_FEATURES = CAPABILITIES_DATA.features;
 
 export { default as LIVE_STREAMING_AREAS_SERVED } from "./areas-served.json";
 export { default as LIVE_STREAMING_BLOGS_SECTION } from "./blog.json";
+export { default as LIVE_STREAMING_CLIENT_LOGOS } from "./client-logos.json";
 export { default as LIVE_STREAMING_FAQ } from "./faq.json";
 export { default as LIVE_STREAMING_HERO } from "./hero.json";
 export { default as LIVE_STREAMING_PAGE } from "./page.json";
 export { default as LIVE_STREAMING_RELATED_SERVICES } from "./related-services.json";
 export { default as LIVE_STREAMING_DELIVERABLES } from "./streaming-deliverables.json";
 export { default as LIVE_STREAMING_WHY_CHOOSE_US } from "./why-choose-us.json";
-export { default as LIVE_STREAMING_CLIENT_LOGOS } from "./client-logos.json";

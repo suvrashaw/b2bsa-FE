@@ -17,6 +17,7 @@ import {
   EVENT_BRANDING_BLOGS_SECTION,
   EVENT_BRANDING_CAPABILITIES,
   EVENT_BRANDING_CASE_STUDIES,
+  EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_CONTACT_CTA,
   EVENT_BRANDING_DELIVERABLES,
   EVENT_BRANDING_FAQ,
@@ -25,7 +26,6 @@ import {
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
   EVENT_BRANDING_RELATED_SERVICES,
-  EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
 
@@ -113,12 +113,12 @@ const Page = () => {
           <ContactModalTrigger label="Talk to Branding Experts" />
         </>
       }
-      spotlight={BRANDING_SPOTLIGHT}
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
+      spotlight={BRANDING_SPOTLIGHT}
     />
   );
 };

@@ -25,9 +25,9 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -245,6 +245,7 @@ export const ServicePage = ({
       {(spotlight || proofBar) && (
         <Spotlight
           align={spotlight?.align ?? "left"}
+          ctaLabel={spotlight?.ctaLabel}
           description={spotlight?.description ?? proofBar?.description ?? ""}
           descriptionItems={spotlight?.descriptionItems}
           imageAlt={spotlight?.imageAlt ?? "Feature image"}
@@ -255,7 +256,7 @@ export const ServicePage = ({
           locationBadges={spotlight?.locationBadges}
           secondarySpotlight={spotlight?.secondarySpotlight}
           sectionClassName={spotlight?.sectionClassName}
-          stats={proofBar?.stats}
+          stats={spotlight?.stats ?? proofBar?.stats}
           titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
           titleLine2={spotlight?.titleLine2 ?? ""}
           triggerContactModal={spotlight?.triggerContactModal}
