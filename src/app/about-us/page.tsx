@@ -29,21 +29,36 @@ import {
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { normalizeEvent } from "@/content/tradeshow-calendar";
 import { buildAboutPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
-const ABOUT_IMAGES = [ABOUT_HERO.image.src];
-const ABOUT_PRIMARY_CTA = {
-  href: ABOUT_HERO.primaryCtaHref,
-  label: ABOUT_HERO.primaryCtaLabel,
+const ABOUT_FALLBACK_CONTENT = {
+  coreValues: ABOUT_CORE_VALUES,
+  events: ABOUT_RECENT_EVENTS,
+  founderStory: ABOUT_FOUNDER_STORY,
+  hero: ABOUT_HERO,
+  originTimeline: ABOUT_ORIGIN_TIMELINE,
+  page: ABOUT_PAGE,
+  services: ABOUT_SIGNATURE_SERVICES,
+  signatureServicesStack: ABOUT_SIGNATURE_SERVICES_STACK,
+  values: ABOUT_VALUES,
+  visionMission: ABOUT_VISION_MISSION,
 };
 
-const Page = () => {
+const Page = async () => {
+  const content = await getStructuredPageContent("/about-us", ABOUT_FALLBACK_CONTENT);
+  const aboutImages = [content.hero.image.src];
+  const aboutPrimaryCta = {
+    href: content.hero.primaryCtaHref,
+    label: content.hero.primaryCtaLabel,
+  };
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
-      <JsonLd data={buildAboutPageJsonLd(ABOUT_PAGE.seo.description)} />
+      <JsonLd data={buildAboutPageJsonLd(content.page.seo.description)} />
       <Header darkBackground />
 
       {/* Hero — centered, no description, "About Us" eyebrow, slide-from-left animation */}
@@ -52,9 +67,9 @@ const Page = () => {
         centered
         eyebrow="About Us"
         imageOpacity={0.7}
-        images={ABOUT_IMAGES}
-        primaryCta={ABOUT_PRIMARY_CTA}
-        title={ABOUT_HERO.title}
+        images={aboutImages}
+        primaryCta={aboutPrimaryCta}
+        title={content.hero.title}
       />
 
       {/* Who We Are */}
@@ -82,14 +97,14 @@ const Page = () => {
               <div className="mb-12 w-full">
                 <SectionHeader as="h2" className="mb-6 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
-                    {ABOUT_VISION_MISSION.missionTitleLine1}
+                    {content.visionMission.missionTitleLine1}
                   </span>
                   <span className="block text-[var(--heading-h2)]">
-                    {ABOUT_VISION_MISSION.missionTitleLine2}
+                    {content.visionMission.missionTitleLine2}
                   </span>
                 </SectionHeader>
                 <ul className="inline-block space-y-3 text-left">
-                  {ABOUT_VISION_MISSION.missionItems.map((item) => (
+                  {content.visionMission.missionItems.map((item) => (
                     <li
                       className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/70 md:text-base"
                       key={item}
@@ -103,14 +118,14 @@ const Page = () => {
               <div className="w-full">
                 <SectionHeader as="h2" className="mb-4 text-center lg:text-left">
                   <span className="block text-brand-charcoal">
-                    {ABOUT_VISION_MISSION.visionTitleLine1}
+                    {content.visionMission.visionTitleLine1}
                   </span>
                   <span className="block text-[var(--heading-h2)]">
-                    {ABOUT_VISION_MISSION.visionTitleLine2}
+                    {content.visionMission.visionTitleLine2}
                   </span>
                 </SectionHeader>
                 <p className="text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
-                  {ABOUT_VISION_MISSION.vision}
+                  {content.visionMission.vision}
                 </p>
               </div>
             </div>
@@ -155,13 +170,13 @@ const Page = () => {
       <section className="bg-brand-gray py-12 md:py-16" id="core-values">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <SectionHeader as="h2" className="mb-2 text-center">
-            {ABOUT_CORE_VALUES.heading}
+            {content.coreValues.heading}
           </SectionHeader>
           <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-brand-charcoal/60 md:text-base">
-            {ABOUT_CORE_VALUES.description}
+            {content.coreValues.description}
           </p>
           <ul className="mx-auto grid max-w-4xl grid-cols-1 gap-x-10 gap-y-3 sm:grid-cols-2">
-            {ABOUT_CORE_VALUES.values.map((value) => (
+            {content.coreValues.values.map((value) => (
               <li
                 className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/80 md:text-base"
                 key={value}
@@ -176,15 +191,15 @@ const Page = () => {
 
       {/* How B2B Sales Arrow Was Built */}
       <ProcessTimeline
-        description={ABOUT_ORIGIN_TIMELINE.description}
-        heading={ABOUT_ORIGIN_TIMELINE.heading}
-        phases={ABOUT_ORIGIN_TIMELINE.phases}
+        description={content.originTimeline.description}
+        heading={content.originTimeline.heading}
+        phases={content.originTimeline.phases}
       />
 
       {/* Signature Services */}
       <ServicesStack
-        heading={ABOUT_SIGNATURE_SERVICES.heading}
-        services={ABOUT_SIGNATURE_SERVICES_STACK}
+        heading={content.services.heading}
+        services={content.signatureServicesStack}
       />
 
       {/* Events We Have Delivered */}
@@ -195,13 +210,13 @@ const Page = () => {
             <Link href="/case-studies">View All Case Studies</Link>
           </Button>
         }
-        description={ABOUT_RECENT_EVENTS.description}
-        heading={ABOUT_RECENT_EVENTS.heading}
+        description={content.events.description}
+        heading={content.events.heading}
         id="events"
       >
-        {ABOUT_RECENT_EVENTS.events.map((event, i) => (
+        {content.events.events.map((event, i) => (
           <EventsCard
-            ctaLabel={ABOUT_RECENT_EVENTS.ctaLabel ?? "View Event"}
+            ctaLabel={content.events.ctaLabel ?? "View Event"}
             event={normalizeEvent(event, i)}
             flipStyle="diagonalWipe"
             index={i}
@@ -213,20 +228,20 @@ const Page = () => {
       {/* Founder Story — smaller image */}
       <Spotlight
         align="left"
-        description={ABOUT_FOUNDER_STORY.story}
+        description={content.founderStory.story}
         id="founder"
-        imageAlt={ABOUT_FOUNDER_STORY.image.alt}
+        imageAlt={content.founderStory.image.alt}
         imageContainerClassName="lg:max-w-[440px]"
         imagePosition="left"
-        imageUrl={ABOUT_FOUNDER_STORY.imageUrl}
-        label={ABOUT_FOUNDER_STORY.sectionLabel}
+        imageUrl={content.founderStory.imageUrl}
+        label={content.founderStory.sectionLabel}
         sectionClassName="scroll-mt-28"
-        titleLine1={ABOUT_FOUNDER_STORY.nameLine1}
-        titleLine2={ABOUT_FOUNDER_STORY.nameLine2}
+        titleLine1={content.founderStory.nameLine1}
+        titleLine2={content.founderStory.nameLine2}
       />
 
       {/* What We Believe In */}
-      <Culture data={ABOUT_VALUES} />
+      <Culture data={content.values} />
 
       <Footer />
     </main>

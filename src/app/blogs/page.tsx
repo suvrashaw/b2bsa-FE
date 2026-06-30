@@ -9,13 +9,16 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
+  BLOG_CATEGORIES,
   BLOG_CONTACT,
   BLOG_HERO,
   BLOG_PAGE,
   BLOG_SERVICE_CAROUSEL,
-  SHARED_BLOG_POSTS,
+  RAW_BLOG_POSTS,
+  normalizeBlogPosts,
 } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import {
   buildCollectionPageJsonLd,
   buildLinkedItemListJsonLd,
@@ -28,39 +31,52 @@ import { BlogsSection } from "./BlogsSection";
 
 export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
 
-const Page = () => {
+const BLOG_FALLBACK_CONTENT = {
+  blogs: RAW_BLOG_POSTS,
+  categories: BLOG_CATEGORIES,
+  contactus: BLOG_CONTACT,
+  hero: BLOG_HERO,
+  page: BLOG_PAGE,
+  serviceCarousel: BLOG_SERVICE_CAROUSEL,
+};
+
+const Page = async () => {
+  const content = await getStructuredPageContent("/blogs", BLOG_FALLBACK_CONTENT);
+  const blogs = normalizeBlogPosts(content.blogs);
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
         data={buildPageGraph([
           buildCollectionPageJsonLd({
-            description: BLOG_PAGE.seo.description,
-            name: BLOG_PAGE.seo.title.split(" | ", 1)[0],
+            description: content.page.seo.description,
+            name: content.page.seo.title.split(" | ", 1)[0],
             url: "/blogs",
           }),
           buildLinkedItemListJsonLd(
-            SHARED_BLOG_POSTS.filter((p) => p.body)
+            blogs
+              .filter((p) => p.body)
               .slice(0, 10)
               .map((p) => ({ name: p.title, url: `${siteUrl}/blogs/${p.id}` }))
           ),
         ])}
       />
       <Header lightHeaderText />
-      <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
+      <Hero {...content.hero} variant={content.hero.variant as "compact" | "default"} />
       <Suspense>
-        <BlogsSection />
+        <BlogsSection blogs={blogs} categories={content.categories} />
       </Suspense>
       <Carousel
         autoplayInterval={4000}
-        heading={BLOG_SERVICE_CAROUSEL.heading}
+        heading={content.serviceCarousel.heading}
         id="why-choose-us"
         layout="carousel"
       >
-        {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (
+        {content.serviceCarousel.items.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />
         ))}
       </Carousel>
-      <ContactUsForm {...BLOG_CONTACT} />
+      <ContactUsForm {...content.contactus} />
       <Footer />
     </main>
   );

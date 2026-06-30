@@ -82,7 +82,6 @@ const FilterPill = ({
 const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEntry }) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const href = study.href;
-  const description = study.title;
 
   const handleLinkClick = useCallback(
     (event: MouseEvent<HTMLAnchorElement>) => {
@@ -116,17 +115,25 @@ const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEn
   return card;
 };
 
-export const CaseStudiesClientPage = () => {
+interface CaseStudiesClientPageProps {
+  content?: typeof CASE_STUDIES_PAGE_CONTENT;
+  studies?: CaseStudyEntry[];
+}
+
+export const CaseStudiesClientPage = ({
+  content = CASE_STUDIES_PAGE_CONTENT,
+  studies = CASE_STUDIES_PAGE_STUDIES,
+}: CaseStudiesClientPageProps = {}) => {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [activeFilter, setActiveFilter] = useState<string>(ALL_FILTER);
+  const [activeFilter, setActiveFilter] = useState<string>(content.gridFilters[0] ?? ALL_FILTER);
   const requestedPage = parsePaginationPage(searchParams.get("page"));
 
   const filteredStudies =
-    activeFilter === ALL_FILTER
-      ? CASE_STUDIES_PAGE_STUDIES
-      : CASE_STUDIES_PAGE_STUDIES.filter((study) => study.services.includes(activeFilter));
+    activeFilter === content.gridFilters[0]
+      ? studies
+      : studies.filter((study) => study.services.includes(activeFilter));
 
   const {
     currentPage,
@@ -193,10 +200,10 @@ export const CaseStudiesClientPage = () => {
     gridContent = (
       <div className="flex min-h-[480px] flex-col items-center justify-center rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
         <SectionHeader as="h2" className="text-center">
-          {CASE_STUDIES_PAGE_CONTENT.emptyState.title}
+          {content.emptyState.title}
         </SectionHeader>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-          {CASE_STUDIES_PAGE_CONTENT.emptyState.description}
+          {content.emptyState.description}
         </p>
       </div>
     );
@@ -216,10 +223,10 @@ export const CaseStudiesClientPage = () => {
             transition={HERO_LEFT_TRANSITION}
           >
             <SectionHeader as="h1" className="leading-[1.05]">
-              {CASE_STUDIES_PAGE_CONTENT.hero.title}
+              {content.hero.title}
             </SectionHeader>
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-700">
-              {CASE_STUDIES_PAGE_CONTENT.hero.description}
+              {content.hero.description}
             </p>
           </motion.div>
 
@@ -230,12 +237,12 @@ export const CaseStudiesClientPage = () => {
             transition={HERO_RIGHT_TRANSITION}
           >
             <Image
-              alt={CASE_STUDIES_PAGE_CONTENT.hero.image.alt}
+              alt={content.hero.image.alt}
               className="object-cover"
               fill
               priority
               sizes="40vw"
-              src={CASE_STUDIES_PAGE_CONTENT.hero.image.src}
+              src={content.hero.image.src}
             />
             <div className="absolute inset-0 bg-linear-to-t from-brand-charcoal/50 via-transparent to-transparent" />
           </motion.div>
@@ -245,7 +252,7 @@ export const CaseStudiesClientPage = () => {
       <section className="w-full bg-brand-gray pb-20 md:pb-24">
         <div className="bg-brand-gray/30 py-8">
           <div className="container mx-auto flex max-w-screen-2xl flex-wrap justify-center gap-3 px-4 sm:px-6 md:px-8">
-            {CASE_STUDIES_PAGE_CONTENT.gridFilters.map((filter) => (
+            {content.gridFilters.map((filter) => (
               <FilterPill
                 filter={filter}
                 isActive={activeFilter === filter}

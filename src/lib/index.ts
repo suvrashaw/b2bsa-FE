@@ -11,6 +11,12 @@ export const toTitleCase = (value: string) =>
 export const toHeadingCaps = (value: string) => value.toUpperCase();
 
 export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
+export {
+  getStructuredPageContent,
+  mergeCmsContent,
+  submitContactForm,
+  subscribeNewsletter,
+} from "@/lib/cms-api";
 
 export {
   buildAboutPageJsonLd,

@@ -97,13 +97,16 @@ export const normalizeEvent = (event: EventCardItem, index: number): EventCardIt
   image: event.image ?? getFallbackImage(index),
 });
 
-export const getDefaultEvents = (): EventCardItem[] => {
+export const getDefaultEvents = (
+  events: CalendarTradeShow[] = TRADE_SHOW_CALENDAR_EVENTS
+): EventCardItem[] => {
   const today = new Date();
   const todayUtc = new Date(
     Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
   );
 
-  return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= todayUtc)
+  return events
+    .filter((event) => toUtcDate(event.endDate) >= todayUtc)
     .toSorted((a, b) => a.startDate.localeCompare(b.startDate))
     .slice(0, 8)
     .map((event, index) => mapCalendarEventToEvent(event, index));

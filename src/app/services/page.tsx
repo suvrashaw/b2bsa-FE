@@ -5,18 +5,24 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { serviceNavigationGroups } from "@/content/navigation";
 import { SERVICES_PAGE } from "@/content/services";
+import { getStructuredPageContent } from "@/lib/cms-api";
 
 export const metadata: Metadata = getMarketingPageMetadata(SERVICES_PAGE);
 
-const serviceLinks: RelatedService[] = serviceNavigationGroups.map((service) => ({
-  href: service.href,
-  title: service.name,
-}));
+const SERVICES_FALLBACK_CONTENT = {
+  services: HOME_SERVICES_CONTENT,
+};
 
-const Page = () => {
+const Page = async () => {
+  const content = await getStructuredPageContent("/", SERVICES_FALLBACK_CONTENT);
+  const serviceLinks: RelatedService[] = content.services.services.map((service) => ({
+    href: service.href ?? "/services",
+    title: service.title,
+  }));
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header forceLightMode />

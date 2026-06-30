@@ -231,9 +231,15 @@ const NumberFilter = ({
   </div>
 );
 
-export const TradeShowCalendarSection = () => {
-  const events = TRADE_SHOW_CALENDAR_EVENTS;
-  const searchPlaceholder = TRADE_SHOW_CALENDAR_HERO.searchPlaceholder;
+interface TradeShowCalendarSectionProps {
+  events?: CalendarTradeShow[];
+  searchPlaceholder?: string;
+}
+
+export const TradeShowCalendarSection = ({
+  events = TRADE_SHOW_CALENDAR_EVENTS,
+  searchPlaceholder = TRADE_SHOW_CALENDAR_HERO.searchPlaceholder,
+}: TradeShowCalendarSectionProps = {}) => {
 
   const pathname = usePathname();
   const router = useRouter();

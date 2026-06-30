@@ -40,55 +40,96 @@ const Testimonials = dynamic(() =>
 );
 /* eslint-enable unicorn/prefer-await */
 import { Button } from "@/components/ui/Button";
+import { RAW_BLOG_POSTS, normalizeBlogPosts } from "@/content/blogs";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import {
   HOME_EVENTS_CONTENT,
   HOME_FAQ_CONTENT,
   HOME_HERO_CONTENT,
+  HOME_BLOGS_CONTENT,
+  HOME_CONTACT_CONTENT,
   HOME_PAGE,
+  HOME_SERVICES_CONTENT,
+  HOME_STATS_CONTENT,
+  HOME_TESTIMONIALS_CONTENT,
+  HOME_WHY_CHOOSE_US_CONTENT,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { getDefaultEvents } from "@/content/tradeshow-calendar";
+import { TRADE_SHOW_CALENDAR_EVENTS, getDefaultEvents } from "@/content/tradeshow-calendar";
 import { buildFaqJsonLd, buildPageGraph, buildWebPageJsonLd, siteUrl } from "@/lib";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
 
-const Home = () => {
+const HOME_FALLBACK_CONTENT = {
+  blogs: HOME_BLOGS_CONTENT,
+  contactus: HOME_CONTACT_CONTENT,
+  events: HOME_EVENTS_CONTENT,
+  faq: HOME_FAQ_CONTENT,
+  hero: HOME_HERO_CONTENT,
+  page: HOME_PAGE,
+  services: HOME_SERVICES_CONTENT,
+  stats: HOME_STATS_CONTENT,
+  testimonials: HOME_TESTIMONIALS_CONTENT,
+  whyChooseUs: HOME_WHY_CHOOSE_US_CONTENT,
+};
+
+const BLOG_POSTS_FALLBACK_CONTENT = {
+  blogs: RAW_BLOG_POSTS,
+};
+
+const TRADE_SHOW_CALENDAR_FALLBACK_CONTENT = {
+  events: { events: TRADE_SHOW_CALENDAR_EVENTS },
+};
+
+const Home = async () => {
+  const [content, blogContent, calendarContent] = await Promise.all([
+    getStructuredPageContent("/", HOME_FALLBACK_CONTENT),
+    getStructuredPageContent("/blogs", BLOG_POSTS_FALLBACK_CONTENT),
+    getStructuredPageContent("/tradeshow-calendar", TRADE_SHOW_CALENDAR_FALLBACK_CONTENT),
+  ]);
+  const blogPosts = normalizeBlogPosts(blogContent.blogs);
+  const eventCards = getDefaultEvents(calendarContent.events.events);
+  const blogsContent = {
+    ...content.blogs,
+    blogs: blogPosts,
+  };
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
         data={buildPageGraph([
           buildWebPageJsonLd({
-            description: HOME_PAGE.seo.description,
-            name: HOME_PAGE.seo.title,
+            description: content.page.seo.description,
+            name: content.page.seo.title,
             url: siteUrl,
           }),
-          buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
+          buildFaqJsonLd(content.faq.faqs),
         ])}
       />
       <Header forceLightMode />
       <div id="home">
         <Hero
-          description={HOME_HERO_CONTENT.description}
-          mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
-          mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
-          primaryCta={HOME_HERO_CONTENT.primaryCta}
-          secondaryCta={HOME_HERO_CONTENT.secondaryCta}
-          title={HOME_HERO_CONTENT.title}
-          videoUrl={HOME_HERO_CONTENT.videoUrl}
-          videoWebm={HOME_HERO_CONTENT.videoWebm}
+          description={content.hero.description}
+          mobileVideoUrl={content.hero.mobileVideoUrl}
+          mobileVideoWebm={content.hero.mobileVideoWebm}
+          primaryCta={content.hero.primaryCta}
+          secondaryCta={content.hero.secondaryCta}
+          title={content.hero.title}
+          videoUrl={content.hero.videoUrl}
+          videoWebm={content.hero.videoWebm}
         />
       </div>
 
       <ClientLogos />
 
       <div id="about">
-        <HomeStats />
+        <HomeStats content={content.stats} />
       </div>
 
       <div id="services">
-        <ServicesStack />
+        <ServicesStack content={content.services} />
       </div>
 
       <div id="work">
@@ -99,19 +140,19 @@ const Home = () => {
         className="pb-8 md:pb-12 lg:pb-16"
         cols={3}
         cta={
-          HOME_EVENTS_CONTENT.viewAllLabel ? (
+          content.events.viewAllLabel ? (
             <Button asChild variant="primary">
-              <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
+              <Link href="/tradeshow-calendar">{content.events.viewAllLabel}</Link>
             </Button>
           ) : undefined
         }
-        description={HOME_EVENTS_CONTENT.description}
-        heading={HOME_EVENTS_CONTENT.heading}
+        description={content.events.description}
+        heading={content.events.heading}
         id="events"
       >
-        {getDefaultEvents().map((event, i) => (
+        {eventCards.map((event, i) => (
           <EventsCard
-            ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+            ctaLabel={content.events.ctaLabel ?? "View Event"}
             event={event}
             flipStyle="diagonalWipe"
             index={i}
@@ -120,27 +161,27 @@ const Home = () => {
         ))}
       </CardsGrid>
 
-      <StickyScroll />
+      <StickyScroll content={content.whyChooseUs} />
 
-      <Testimonials />
+      <Testimonials content={content.testimonials} />
 
       <div id="blogs">
-        <Blogs />
+        <Blogs content={blogsContent} />
       </div>
 
       <Carousel
-        description={HOME_FAQ_CONTENT.description}
-        heading={HOME_FAQ_CONTENT.heading}
+        description={content.faq.description}
+        heading={content.faq.heading}
         id="faq"
         layout="carousel"
       >
-        {HOME_FAQ_CONTENT.faqs.map((f) => (
+        {content.faq.faqs.map((f) => (
           <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
         ))}
       </Carousel>
 
       <div id="contact">
-        <ContactUsForm />
+        <ContactUsForm content={content.contactus} />
       </div>
 
       <Footer />

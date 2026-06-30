@@ -11,6 +11,7 @@ import {
   TRADE_SHOW_CALENDAR_HERO,
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/tradeshow-calendar";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import {
   buildCollectionPageJsonLd,
   buildLinkedItemListJsonLd,
@@ -33,18 +34,30 @@ const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
 
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
 
-const Page = () => {
+const TRADE_SHOW_CALENDAR_FALLBACK_CONTENT = {
+  events: { events: TRADE_SHOW_CALENDAR_EVENTS },
+  hero: TRADE_SHOW_CALENDAR_HERO,
+  page: TRADE_SHOW_CALENDAR_PAGE,
+};
+
+const Page = async () => {
+  const content = await getStructuredPageContent(
+    "/tradeshow-calendar",
+    TRADE_SHOW_CALENDAR_FALLBACK_CONTENT
+  );
+  const events = content.events.events;
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
         data={buildPageGraph([
           buildCollectionPageJsonLd({
-            description: TRADE_SHOW_CALENDAR_PAGE.seo.description,
-            name: TRADE_SHOW_CALENDAR_PAGE.seo.title.split(" | ", 1)[0],
+            description: content.page.seo.description,
+            name: content.page.seo.title.split(" | ", 1)[0],
             url: "/tradeshow-calendar",
           }),
           buildLinkedItemListJsonLd(
-            TRADE_SHOW_CALENDAR_EVENTS.slice(0, 10).map((e) => ({
+            events.slice(0, 10).map((e) => ({
               name: e.name,
               url: `${siteUrl}/tradeshow-calendar/${e.id}`,
             }))
@@ -53,12 +66,15 @@ const Page = () => {
       />
       <Header darkBackground />
       <Hero
-        description={TRADE_SHOW_CALENDAR_HERO.description}
+        description={content.hero.description}
         images={TRADE_SHOW_CALENDAR_HERO_IMAGES}
-        title={TRADE_SHOW_CALENDAR_HERO.title}
+        title={content.hero.title}
       />
       <Suspense>
-        <TradeShowCalendarSection />
+        <TradeShowCalendarSection
+          events={events}
+          searchPlaceholder={content.hero.searchPlaceholder}
+        />
       </Suspense>
       <Footer />
     </main>

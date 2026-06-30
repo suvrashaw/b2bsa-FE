@@ -1,7 +1,5 @@
 import type { ReactNode } from "react";
 
-import { useMemo } from "react";
-
 import type { PricingProps } from "@/components/items/PricingCard";
 import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
@@ -40,6 +38,7 @@ import {
   normalizePath,
   siteUrl,
 } from "@/lib";
+import { getStructuredPageContent } from "@/lib/cms-api";
 
 export interface ServicePageProps {
   // ─── Lower funnel ───────────────────────────────
@@ -154,7 +153,7 @@ const renderServicesSection = (
 
 const SERVICE_PAGE_CONTACT_MODAL = {};
 
-export const ServicePage = ({
+export const ServicePage = async ({
   caseStudies,
   clientLogos,
   contactUs,
@@ -180,52 +179,73 @@ export const ServicePage = ({
   spotlight,
   why,
 }: ServicePageProps) => {
-  const steps = process?.phases ?? process?.steps ?? [];
-  const processTitle = process?.title ?? process?.heading ?? "";
+  const cmsContent = await getStructuredPageContent<Record<string, unknown>>(
+    page.seo.canonicalPath,
+    {}
+  );
 
-  const fallbackBg = useMemo(() => {
+  const resolvedCaseStudies = (cmsContent.caseStudies as CaseStudiesProps | undefined) ?? caseStudies;
+  const resolvedClientLogos =
+    (cmsContent.clientLogos as ServicePageProps["clientLogos"] | undefined) ?? clientLogos;
+  const resolvedContactUs =
+    (cmsContent.contact as ContactUsProps | undefined) ??
+    (cmsContent.contactUs as ContactUsProps | undefined) ??
+    contactUs;
+  const resolvedFaq = (cmsContent.faq as FAQProps | undefined) ?? faq;
+  const resolvedHero = (cmsContent.hero as HeroProps | undefined) ?? hero;
+  const resolvedPage = (cmsContent.page as MarketingPageIdentity | undefined) ?? page;
+  const resolvedProcess =
+    (cmsContent.process as ServicePageProps["process"] | undefined) ?? process;
+  const resolvedSecondaryServices =
+    (cmsContent.secondaryServices as ServicesStackProps | undefined) ?? secondaryServices;
+  const resolvedServices = (cmsContent.services as ServicesStackProps | undefined) ?? services;
+  const resolvedSpotlight =
+    (cmsContent.intro as SpotlightProps | undefined) ??
+    (cmsContent.spotlight as SpotlightProps | undefined) ??
+    spotlight;
+  const resolvedWhy =
+    (cmsContent.why as SpotlightProps | undefined) ??
+    (cmsContent.whyChooseUs as SpotlightProps | undefined) ??
+    why;
+
+  const steps = resolvedProcess?.phases ?? resolvedProcess?.steps ?? [];
+  const processTitle = resolvedProcess?.title ?? resolvedProcess?.heading ?? "";
+
+  const fallbackBg = (() => {
     const image =
-      hero?.images?.[0] ||
-      spotlight?.imageUrl ||
-      why?.imageUrl ||
-      services?.services?.[0]?.image ||
-      services?.content?.services?.[0]?.image ||
-      secondaryServices?.services?.[0]?.image ||
-      secondaryServices?.content?.services?.[0]?.image;
-    const altText = typeof hero?.title === "string" ? hero.title : page.pageName;
+      resolvedHero?.images?.[0] ||
+      resolvedSpotlight?.imageUrl ||
+      resolvedWhy?.imageUrl ||
+      resolvedServices?.services?.[0]?.image ||
+      resolvedServices?.content?.services?.[0]?.image ||
+      resolvedSecondaryServices?.services?.[0]?.image ||
+      resolvedSecondaryServices?.content?.services?.[0]?.image;
+    const altText = typeof resolvedHero?.title === "string" ? resolvedHero.title : resolvedPage.pageName;
     return image ? { alt: altText, src: image } : undefined;
-  }, [
-    hero?.images,
-    hero?.title,
-    page.pageName,
-    spotlight?.imageUrl,
-    why?.imageUrl,
-    services,
-    secondaryServices,
-  ]);
+  })();
 
-  const pageUrl = `${siteUrl}${normalizePath(page.seo.canonicalPath)}`;
+  const pageUrl = `${siteUrl}${normalizePath(resolvedPage.seo.canonicalPath)}`;
   const primaryImageUrl = fallbackBg?.src ? `${siteUrl}${fallbackBg.src}` : undefined;
   const pageGraph = buildPageGraph([
     buildWebPageJsonLd({
       breadcrumbId: `${pageUrl}/#breadcrumb`,
-      description: page.seo.description,
+      description: resolvedPage.seo.description,
       ...(primaryImageUrl && { image: primaryImageUrl }),
       mainEntityId: `${pageUrl}/#service`,
-      name: page.seo.title,
+      name: resolvedPage.seo.title,
       url: pageUrl,
     }),
     buildServiceJsonLd({
-      description: page.seo.description,
-      name: page.pageName,
+      description: resolvedPage.seo.description,
+      name: resolvedPage.pageName,
       serviceType: parentPage?.pageName,
-      url: page.seo.canonicalPath,
+      url: resolvedPage.seo.canonicalPath,
     }),
-    buildBreadcrumbJsonLd(getBreadcrumbs(page, parentPage), pageUrl),
-    ...(faq.faqs?.length ? [buildFaqJsonLd(faq.faqs)] : []),
+    buildBreadcrumbJsonLd(getBreadcrumbs(resolvedPage, parentPage), pageUrl),
+    ...(resolvedFaq.faqs?.length ? [buildFaqJsonLd(resolvedFaq.faqs)] : []),
     ...(steps.length > 0 ? [buildHowToJsonLd(processTitle, steps)] : []),
-    ...(services
-      ? [buildItemListJsonLd(services.services ?? services.content?.services ?? [])]
+    ...(resolvedServices
+      ? [buildItemListJsonLd(resolvedServices.services ?? resolvedServices.content?.services ?? [])]
       : []),
   ]);
 
@@ -234,53 +254,54 @@ export const ServicePage = ({
       <JsonLd data={pageGraph} />
       <Header darkBackground />
 
-      {hero && <Hero {...hero} />}
+      {resolvedHero && <Hero {...resolvedHero} />}
 
       <ClientLogos
-        description={clientLogos?.description}
-        heading={clientLogos?.heading}
+        description={resolvedClientLogos?.description}
+        heading={resolvedClientLogos?.heading}
         overlap={false}
       />
 
-      {(spotlight || proofBar) && (
+      {(resolvedSpotlight || proofBar) && (
         <Spotlight
-          align={spotlight?.align ?? "left"}
-          description={spotlight?.description ?? proofBar?.description ?? ""}
-          descriptionItems={spotlight?.descriptionItems}
-          imageAlt={spotlight?.imageAlt ?? "Feature image"}
-          imageContainerClassName={spotlight?.imageContainerClassName}
-          imagePosition={spotlight?.imagePosition ?? "right"}
-          imageUrl={spotlight?.imageUrl ?? proofBar?.imageUrl}
+          align={resolvedSpotlight?.align ?? "left"}
+          description={resolvedSpotlight?.description ?? proofBar?.description ?? ""}
+          descriptionItems={resolvedSpotlight?.descriptionItems}
+          imageAlt={resolvedSpotlight?.imageAlt ?? "Feature image"}
+          imageContainerClassName={resolvedSpotlight?.imageContainerClassName}
+          imagePosition={resolvedSpotlight?.imagePosition ?? "right"}
+          imageUrl={resolvedSpotlight?.imageUrl ?? proofBar?.imageUrl}
           label="INTRODUCTION"
-          locationBadges={spotlight?.locationBadges}
-          secondarySpotlight={spotlight?.secondarySpotlight}
-          sectionClassName={spotlight?.sectionClassName}
+          locationBadges={resolvedSpotlight?.locationBadges}
+          secondarySpotlight={resolvedSpotlight?.secondarySpotlight}
+          sectionClassName={resolvedSpotlight?.sectionClassName}
           stats={proofBar?.stats}
-          titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
-          titleLine2={spotlight?.titleLine2 ?? ""}
-          triggerContactModal={spotlight?.triggerContactModal}
-          videoUrl={spotlight?.videoUrl}
+          titleLine1={resolvedSpotlight?.titleLine1 ?? proofBar?.heading ?? ""}
+          titleLine2={resolvedSpotlight?.titleLine2 ?? ""}
+          triggerContactModal={resolvedSpotlight?.triggerContactModal}
+          videoUrl={resolvedSpotlight?.videoUrl}
         />
       )}
 
-      {services && renderServicesSection(services, servicesSectionType)}
+      {resolvedServices && renderServicesSection(resolvedServices, servicesSectionType)}
 
-      {why && <Spotlight {...why} />}
+      {resolvedWhy && <Spotlight {...resolvedWhy} />}
 
       {preProcessSections}
 
-      {process && (
+      {resolvedProcess && (
         <ProcessTimeline
-          cta={process.cta}
-          description={process.description}
-          phases={process.phases}
+          cta={resolvedProcess.cta}
+          description={resolvedProcess.description}
+          phases={resolvedProcess.phases}
           showPhaseNumbers={showPhaseNumbers}
-          steps={process.steps}
-          title={process.title ?? process.heading}
+          steps={resolvedProcess.steps}
+          title={resolvedProcess.title ?? resolvedProcess.heading}
         />
       )}
 
-      {secondaryServices && renderServicesSection(secondaryServices, secondaryServicesSectionType)}
+      {resolvedSecondaryServices &&
+        renderServicesSection(resolvedSecondaryServices, secondaryServicesSectionType)}
 
       {preStudiesSections}
 
@@ -297,20 +318,20 @@ export const ServicePage = ({
         </Carousel>
       )}
 
-      {caseStudies && <CaseStudies {...caseStudies} />}
+      {resolvedCaseStudies && <CaseStudies {...resolvedCaseStudies} />}
 
       {customSections}
 
       {faqVariant === "accordion" ? (
-        <FAQAccordion {...faq} />
+        <FAQAccordion {...resolvedFaq} />
       ) : (
         <Carousel
-          description={faq.description ?? faq.content?.description}
-          heading={faq.heading ?? faq.content?.heading}
+          description={resolvedFaq.description ?? resolvedFaq.content?.description}
+          heading={resolvedFaq.heading ?? resolvedFaq.content?.heading}
           id="faq"
           layout="carousel"
         >
-          {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
+          {(resolvedFaq.faqs ?? resolvedFaq.content?.faqs ?? []).map((f) => (
             <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
           ))}
         </Carousel>
@@ -330,7 +351,10 @@ export const ServicePage = ({
 
       {preContactSections}
 
-      <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />
+      <ContactUs
+        {...resolvedContactUs}
+        backgroundImage={resolvedContactUs.backgroundImage || fallbackBg}
+      />
 
       <Footer />
     </main>

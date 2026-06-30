@@ -37,7 +37,7 @@ interface BlogFAQ {
   question: string;
 }
 
-type ImportedBlogPost = {
+export type ImportedBlogPost = {
   body?: ContentBlock[];
   category?: string;
   date: string;
@@ -77,8 +77,9 @@ const parseBlogDate = (value: string) => {
   return Number.isNaN(timestamp) ? null : timestamp;
 };
 
-export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlogPost[])
-  .map((post, index) => {
+export const normalizeBlogPosts = (posts: ImportedBlogPost[]): SharedBlogPost[] =>
+  posts
+    .map((post, index) => {
     const id = createBlogId(post.url, index);
 
     return {
@@ -99,7 +100,7 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       title: post.title,
     };
   })
-  .toSorted((left, right) => {
+    .toSorted((left, right) => {
     const leftTimestamp = parseBlogDate(left.date ?? "");
     const rightTimestamp = parseBlogDate(right.date ?? "");
 
@@ -117,7 +118,11 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
 
     return rightTimestamp - leftTimestamp;
   })
-  .map(({ sortIndex: _sortIndex, ...post }) => post);
+    .map(({ sortIndex: _sortIndex, ...post }) => post);
+
+export const RAW_BLOG_POSTS = rawBlogPosts as ImportedBlogPost[];
+
+export const SHARED_BLOG_POSTS: SharedBlogPost[] = normalizeBlogPosts(RAW_BLOG_POSTS);
 
 export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] => {
   if (!tags || tags.length === 0) {

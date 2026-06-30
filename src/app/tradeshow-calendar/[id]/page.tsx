@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { EventPage } from "@/components/templates/EventPage";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import {
   buildBreadcrumbJsonLd,
   buildEventJsonLd,
@@ -24,14 +25,28 @@ const SUPERSEDED_BY: Record<string, string> = {
   "money-20-20-amsterdam": "money2020-europe-2026",
 };
 
-const findEventById = (id: string) => TRADE_SHOW_CALENDAR_EVENTS.find((event) => event.id === id);
+const TRADE_SHOW_CALENDAR_FALLBACK_CONTENT = {
+  events: { events: TRADE_SHOW_CALENDAR_EVENTS },
+};
+
+const getCalendarEvents = async () => {
+  const content = await getStructuredPageContent(
+    "/tradeshow-calendar",
+    TRADE_SHOW_CALENDAR_FALLBACK_CONTENT
+  );
+  return content.events.events;
+};
+
+const findEventById = (events: typeof TRADE_SHOW_CALENDAR_EVENTS, id: string) =>
+  events.find((event) => event.id === id);
 
 export const generateStaticParams = () =>
   TRADE_SHOW_CALENDAR_EVENTS.map((event) => ({ id: event.id }));
 
 export const generateMetadata = async ({ params }: EventDetailPageProps): Promise<Metadata> => {
   const { id } = await params;
-  const event = findEventById(id);
+  const events = await getCalendarEvents();
+  const event = findEventById(events, id);
 
   if (!event) {
     return { title: "Event Not Found" };
@@ -68,7 +83,8 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
 
 const Page = async ({ params }: EventDetailPageProps) => {
   const { id } = await params;
-  const event = findEventById(id);
+  const events = await getCalendarEvents();
+  const event = findEventById(events, id);
 
   if (!event) notFound();
 

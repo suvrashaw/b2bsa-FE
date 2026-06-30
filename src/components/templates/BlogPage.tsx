@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { type FormEvent, useCallback, useMemo, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
@@ -17,18 +17,17 @@ import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/con
 import { LINKEDIN_POSTS } from "@/content/blogs";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
+import { subscribeNewsletter } from "@/lib/cms-api";
 
 // ─── BlogSidebarTrending ─────────────────────────────────────────────────────
 
 interface BlogSidebarTrendingProps {
   currentId: string;
+  posts: SharedBlogPost[];
 }
 
-const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
-  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(
-    0,
-    3
-  );
+const BlogSidebarTrending = ({ currentId, posts }: BlogSidebarTrendingProps) => {
+  const trendingPosts = posts.filter((post) => String(post.id) !== currentId).slice(0, 3);
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
@@ -69,15 +68,36 @@ const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
 // ─── BlogSidebarSubscribe ────────────────────────────────────────────────────
 
 const BlogSidebarSubscribe = () => {
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = useCallback(async (event: { preventDefault: () => void }) => {
+  const handleSubmit = useCallback(async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get("email") || "");
+    const industry = String(formData.get("industry") || "");
+    const eventName = String(formData.get("eventName") || "");
+
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+
+    try {
+      await subscribeNewsletter({
+        email,
+        name: [industry, eventName].filter(Boolean).join(" | ") || undefined,
+        sourcePage: typeof window === "undefined" ? undefined : window.location.pathname,
+      });
+      setSubmitted(true);
+    } catch (subscriptionError) {
+      setError(
+        subscriptionError instanceof Error
+          ? subscriptionError.message
+          : "Subscription failed. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   return (
@@ -110,6 +130,7 @@ const BlogSidebarSubscribe = () => {
             <input
               className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-email"
+              name="email"
               placeholder="Work email"
               required
               type="email"
@@ -121,6 +142,7 @@ const BlogSidebarSubscribe = () => {
             <select
               className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-gray-700 transition-colors focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-industry"
+              name="industry"
               required
             >
               <option value="">Select industry</option>
@@ -137,11 +159,14 @@ const BlogSidebarSubscribe = () => {
             <input
               className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-blue focus:outline-none"
               id="blog-subscribe-event"
+              name="eventName"
               placeholder="Event name"
               required
               type="text"
             />
           </div>
+
+          {error && <p className="text-sm leading-snug text-red-600">{error}</p>}
 
           <button
             className="w-full rounded-[4px] bg-gradient-to-r from-brand-blue to-brand-cyan py-3 font-bold text-white shadow-sm transition-opacity hover:opacity-95 disabled:pointer-events-none disabled:opacity-60"
@@ -199,6 +224,7 @@ const BlogSidebarLinkedIn = ({ post }: { post: SharedBlogPost }) => {
 
 export interface BlogPageProps {
   post: SharedBlogPost;
+  posts?: SharedBlogPost[];
 }
 
 const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
@@ -320,7 +346,7 @@ const CTA_PRIMARY = {
 const CTA_SECONDARY = { href: "/case-studies", label: "See Our Work" };
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
-export const BlogPage = ({ post }: BlogPageProps) => {
+export const BlogPage = ({ post, posts = SHARED_BLOG_POSTS }: BlogPageProps) => {
   const blocks = post.body ?? [];
   const readTime = getReadTime(blocks);
   const placeholderServiceItems = useMemo(
@@ -405,7 +431,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
         <aside className="mt-10 lg:col-span-1 lg:mt-0">
           <div className="space-y-6 lg:sticky lg:top-24">
-            <BlogSidebarTrending currentId={String(post.id)} />
+              <BlogSidebarTrending currentId={String(post.id)} posts={posts} />
             <BlogSidebarSubscribe />
             <BlogSidebarLinkedIn post={post} />
           </div>

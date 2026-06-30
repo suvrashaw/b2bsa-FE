@@ -26,11 +26,14 @@ interface CategoryButtonProps {
   onChange: (category: string) => void;
 }
 
-interface CategoryOption {
-  count: number;
+interface CategoryDefinition {
   icon?: ElementType;
   id: string;
   name: string;
+}
+
+interface CategoryOption extends CategoryDefinition {
+  count: number;
 }
 
 const ALL_CATEGORY_ID = "all";
@@ -64,7 +67,7 @@ const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) =
   );
 };
 
-const getCategoryOptions = (blogs: SharedBlogPost[]) => {
+const getCategoryOptions = (blogs: SharedBlogPost[], categoryList: CategoryDefinition[]) => {
   const counts = new Map<string, number>();
 
   for (const blog of blogs) {
@@ -73,7 +76,7 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
     }
   }
 
-  const options = BLOG_CATEGORIES.map((category) => ({
+  const options = categoryList.map((category) => ({
     count: counts.get(category.name) ?? 0,
     id: category.id,
     name: category.name,
@@ -82,13 +85,20 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
   return [{ count: blogs.length, id: ALL_CATEGORY_ID, name: ALL_CATEGORY_NAME }, ...options];
 };
 
-export const BlogsSection = () => {
-  const blogs = BLOG_POSTS.blogs;
+interface BlogsSectionProps {
+  blogs?: SharedBlogPost[];
+  categories?: CategoryDefinition[];
+}
+
+export const BlogsSection = ({
+  blogs = BLOG_POSTS.blogs,
+  categories: categoryList = BLOG_CATEGORIES,
+}: BlogsSectionProps = {}) => {
 
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const categories = useMemo(() => getCategoryOptions(blogs), [blogs]);
+  const categories = useMemo(() => getCategoryOptions(blogs, categoryList), [blogs, categoryList]);
   const requestedPage = parsePaginationPage(searchParams.get("page"));
   const requestedCategory = searchParams.get("category") ?? ALL_CATEGORY_ID;
   const activeCategory = categories.some((category) => category.id === requestedCategory)

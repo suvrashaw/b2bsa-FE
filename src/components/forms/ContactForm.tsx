@@ -12,6 +12,7 @@ import { FormInput } from "@/components/forms/FormInput";
 import { FormSelect } from "@/components/forms/FormSelect";
 import { FormTextarea } from "@/components/forms/FormTextarea";
 import { Button } from "@/components/ui/Button";
+import { submitContactForm } from "@/lib/cms-api";
 
 export interface ContactFormProps {
   className?: string;
@@ -36,7 +37,37 @@ const buildSchema = (isConsentRequired: boolean) =>
     timeline: z.string().optional(),
   });
 
+type ContactFormValues = z.infer<ReturnType<typeof buildSchema>>;
+
+const getSourcePage = () => {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+
+  return window.location.pathname;
+};
+
+const buildSubmissionMessage = (values: ContactFormValues) => {
+  const message = values.message?.trim();
+  if (message) {
+    return message;
+  }
+
+  const details = [
+    values.service && `Service: ${values.service}`,
+    values.event && `Event: ${values.event}`,
+    values.country && `Country: ${values.country}`,
+    values.timeline && `Timeline: ${values.timeline}`,
+    values.jobTitle && `Job title: ${values.jobTitle}`,
+  ].filter(Boolean);
+
+  return details.length > 0
+    ? details.join("\n")
+    : "Contact request submitted from the website.";
+};
+
 export const ContactForm = ({ className, form }: ContactFormProps) => {
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -46,7 +77,7 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm({ resolver: zodResolver(schema) });
+  } = useForm<ContactFormValues>({ resolver: zodResolver(schema) });
 
   if (submitted) {
     return (
@@ -64,11 +95,36 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
     );
   }
 
-  const onSubmit = async () => {
+  const onSubmit = async (values: ContactFormValues) => {
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+
+    try {
+      await submitContactForm({
+        company: values.company,
+        email: values.email,
+        message: buildSubmissionMessage(values),
+        name: [values.firstName, values.lastName].filter(Boolean).join(" "),
+        phone: values.phone,
+        sourcePage: getSourcePage(),
+        tracking: {
+          country: values.country,
+          event: values.event,
+          jobTitle: values.jobTitle,
+          service: values.service,
+          timeline: values.timeline,
+        },
+      });
+      setSubmitted(true);
+    } catch (submissionError) {
+      setError(
+        submissionError instanceof Error
+          ? submissionError.message
+          : "We could not send your message. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -228,6 +284,8 @@ export const ContactForm = ({ className, form }: ContactFormProps) => {
         )}
 
         {form.trustNote && <p className="text-sm leading-snug text-gray-500">{form.trustNote}</p>}
+
+        {error && <p className="text-sm leading-snug text-red-600">{error}</p>}
 
         <Button
           className="flex w-full items-center justify-center py-4 text-lg"

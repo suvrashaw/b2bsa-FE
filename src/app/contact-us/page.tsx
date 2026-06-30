@@ -19,6 +19,7 @@ import {
 } from "@/content/contact-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { buildContactPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
+import { getStructuredPageContent } from "@/lib/cms-api";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
@@ -46,11 +47,20 @@ const SECONDARY_CTA_STYLE = {
   WebkitBackdropFilter: "blur(12px)",
 };
 
-const Page = () => {
+const CONTACT_FALLBACK_CONTENT = {
+  contactNextSteps: CONTACT_NEXT_STEPS,
+  contactus: CONTACT_FORM,
+  page: CONTACT_PAGE,
+};
+
+const Page = async () => {
+  const content = await getStructuredPageContent("/contact-us", CONTACT_FALLBACK_CONTENT);
+  const cta = content.contactus.cta ?? CONTACT_US;
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
-      <JsonLd data={buildContactPageJsonLd(CONTACT_PAGE.seo.description)} />
+      <JsonLd data={buildContactPageJsonLd(content.page.seo.description)} />
       <Header darkBackground />
       <CinematicSequence frameCount={60} frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg">
         <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
@@ -89,9 +99,12 @@ const Page = () => {
         </div>
       </CinematicSequence>
       <ClientLogos />
-      <ContactUsForm {...CONTACT_FORM} />
-      <ProcessTimeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
-      <ContactUs {...CONTACT_US} backgroundImage={CONTACT_US_BG} />
+      <ContactUsForm {...content.contactus} />
+      <ProcessTimeline
+        heading={content.contactNextSteps.heading}
+        phases={content.contactNextSteps.phases}
+      />
+      <ContactUs {...cta} backgroundImage={cta.backgroundImage ?? CONTACT_US_BG} />
       <Footer />
     </main>
   );

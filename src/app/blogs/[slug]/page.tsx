@@ -4,8 +4,16 @@ import { notFound, redirect } from "next/navigation";
 
 import { buildBlogPostingJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
-import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
+import {
+  DEFAULT_BLOG_POST_HREF,
+  DEFAULT_BLOG_POST_ID,
+  RAW_BLOG_POSTS,
+  SHARED_BLOG_POSTS,
+  normalizeBlogPosts,
+  type SharedBlogPost,
+} from "@/content/blogs";
 import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
+import { getStructuredPageContent } from "@/lib/cms-api";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -13,9 +21,19 @@ type BlogPostPageProps = {
   }>;
 };
 
-const findPostBySlug = (slug: string) => SHARED_BLOG_POSTS.find((post) => String(post.id) === slug);
+const BLOG_POSTS_FALLBACK_CONTENT = {
+  blogs: RAW_BLOG_POSTS,
+};
 
-const getDefaultPost = () => findPostBySlug(DEFAULT_BLOG_POST_ID);
+const getBlogPosts = async () => {
+  const content = await getStructuredPageContent("/blogs", BLOG_POSTS_FALLBACK_CONTENT);
+  return normalizeBlogPosts(content.blogs);
+};
+
+const findPostBySlug = (posts: SharedBlogPost[], slug: string) =>
+  posts.find((post) => String(post.id) === slug);
+
+const getDefaultPost = (posts: SharedBlogPost[]) => findPostBySlug(posts, DEFAULT_BLOG_POST_ID);
 
 export const generateStaticParams = () => {
   return SHARED_BLOG_POSTS.filter((post) => post.body).map((post) => ({
@@ -25,8 +43,9 @@ export const generateStaticParams = () => {
 
 export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<Metadata> => {
   const { slug } = await params;
-  const post = findPostBySlug(slug);
-  const metadataPost = post?.body ? post : getDefaultPost();
+  const posts = await getBlogPosts();
+  const post = findPostBySlug(posts, slug);
+  const metadataPost = post?.body ? post : getDefaultPost(posts);
 
   if (!metadataPost) {
     return {
@@ -79,7 +98,8 @@ export const generateMetadata = async ({ params }: BlogPostPageProps): Promise<M
 
 const Page = async ({ params }: BlogPostPageProps) => {
   const { slug } = await params;
-  const post = findPostBySlug(slug);
+  const posts = await getBlogPosts();
+  const post = findPostBySlug(posts, slug);
 
   if (!post || !post.body) {
     if (slug !== DEFAULT_BLOG_POST_ID) {
@@ -135,7 +155,7 @@ const Page = async ({ params }: BlogPostPageProps) => {
           ),
         ])}
       />
-      <BlogPage post={post} />
+      <BlogPage post={post} posts={posts} />
     </>
   );
 };
