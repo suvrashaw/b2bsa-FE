@@ -265,7 +265,7 @@ export const ServicePage = async ({
       {(resolvedSpotlight || proofBar) && (
         <Spotlight
           align={resolvedSpotlight?.align ?? "left"}
-          ctaLabel={spotlight?.ctaLabel}
+          ctaLabel={resolvedSpotlight?.ctaLabel}
           description={resolvedSpotlight?.description ?? proofBar?.description ?? ""}
           descriptionItems={resolvedSpotlight?.descriptionItems}
           imageAlt={resolvedSpotlight?.imageAlt ?? "Feature image"}
@@ -273,14 +273,14 @@ export const ServicePage = async ({
           imagePosition={resolvedSpotlight?.imagePosition ?? "right"}
           imageUrl={resolvedSpotlight?.imageUrl ?? proofBar?.imageUrl}
           label="INTRODUCTION"
-          locationBadges={spotlight?.locationBadges}
-          secondarySpotlight={spotlight?.secondarySpotlight}
-          sectionClassName={spotlight?.sectionClassName}
-          stats={proofBar?.stats}
-          titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
-          titleLine2={spotlight?.titleLine2 ?? ""}
-          triggerContactModal={spotlight?.triggerContactModal}
-          videoUrl={spotlight?.videoUrl}
+          locationBadges={resolvedSpotlight?.locationBadges}
+          secondarySpotlight={resolvedSpotlight?.secondarySpotlight}
+          sectionClassName={resolvedSpotlight?.sectionClassName}
+          stats={resolvedSpotlight?.stats ?? proofBar?.stats}
+          titleLine1={resolvedSpotlight?.titleLine1 ?? proofBar?.heading ?? ""}
+          titleLine2={resolvedSpotlight?.titleLine2 ?? ""}
+          triggerContactModal={resolvedSpotlight?.triggerContactModal}
+          videoUrl={resolvedSpotlight?.videoUrl}
         />
       )}
 
