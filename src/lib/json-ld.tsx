@@ -1,4 +1,8 @@
-export const siteUrl = "https://b2bsalesarrow.com";
+export const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.SITE_URL ||
+  "https://b2bsalesarrow.com"
+).replace(/\/$/, "");
 
 export const normalizePath = (path: string) => {
   if (path === "/") return "/";

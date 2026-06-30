@@ -102,6 +102,26 @@ export async function getStructuredPageContent<TContent extends Record<string, u
   }
 }
 
+export async function getPublishedStructuredPage<TContent extends Record<string, unknown>>(
+  slug: string
+): Promise<StructuredPageResponse<TContent> | null> {
+  try {
+    const encodedSlug = encodeSlugPath(slug);
+    const path = encodedSlug ? `/structured-pages/published/${encodedSlug}` : "/structured-pages/published";
+    const response = await fetch(apiUrl(path), {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return (await response.json()) as StructuredPageResponse<TContent>;
+  } catch {
+    return null;
+  }
+}
+
 export async function submitContactForm(payload: ContactSubmissionPayload) {
   const response = await fetch(apiUrl("/contact-submissions"), {
     body: JSON.stringify(payload),
