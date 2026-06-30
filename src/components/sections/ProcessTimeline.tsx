@@ -9,11 +9,6 @@ import { ContactModal } from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
-interface Step {
-  description: string;
-  title: string;
-}
-
 interface ProcessTimelineProps {
   className?: string;
   cta?: { href?: string; label: string; opensModal?: boolean };
@@ -24,6 +19,11 @@ interface ProcessTimelineProps {
   steps?: Step[];
   subtitle?: ReactNode;
   title?: ReactNode;
+}
+
+interface Step {
+  description: string;
+  title: string;
 }
 
 const TIMELINE_INITIAL = { opacity: 0, y: 30 };

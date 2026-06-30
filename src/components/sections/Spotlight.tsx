@@ -13,6 +13,7 @@ import { cn } from "@/lib";
 export interface SpotlightProps {
   align?: SpotlightAlignment;
   className?: string;
+  ctaLabel?: string;
   description?: React.ReactNode;
   descriptionItems?: readonly string[];
   id?: string;
@@ -151,6 +152,7 @@ const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 const SpotlightTextBlock = ({
   align = "center",
   className,
+  ctaLabel,
   description,
   descriptionItems,
   isHovered,
@@ -161,9 +163,11 @@ const SpotlightTextBlock = ({
   stats,
   titleLine1,
   titleLine2,
+  triggerContactModal,
 }: {
   align?: SpotlightAlignment;
   className?: string;
+  ctaLabel?: string;
   description?: React.ReactNode;
   descriptionItems?: readonly string[];
   isHovered: boolean;
@@ -174,23 +178,24 @@ const SpotlightTextBlock = ({
   stats?: string[];
   titleLine1: string;
   titleLine2?: string;
+  triggerContactModal?: boolean;
 }) => {
   const hasDescriptionItems = Boolean(descriptionItems);
   
-  let flatItems: StatItem[] = [];
-  if (stats && stats.length > 0) {
-    flatItems = stats.flatMap((stat, index) =>
-      stat.split("|").map((s, pIndex) => {
-        const trimmed = s.trim();
-        const spaceIdx = trimmed.indexOf(" ");
-        return {
-          key: `${index}-${pIndex}`,
-          label: spaceIdx === -1 ? "" : trimmed.slice(spaceIdx + 1),
-          value: spaceIdx === -1 ? trimmed : trimmed.slice(0, spaceIdx),
-        };
-      })
-    );
-  }
+  const flatItems: StatItem[] =
+    stats && stats.length > 0
+      ? stats.flatMap((stat, index) =>
+          stat.split("|").map((s, pIndex) => {
+            const trimmed = s.trim();
+            const spaceIdx = trimmed.indexOf(" ");
+            return {
+              key: `${index}-${pIndex}`,
+              label: spaceIdx === -1 ? "" : trimmed.slice(spaceIdx + 1),
+              value: spaceIdx === -1 ? trimmed : trimmed.slice(0, spaceIdx),
+            };
+          })
+        )
+      : [];
 
   const lineStyle = useMemo(
     () => ({ transitionTimingFunction: EASE, width: isHovered ? 48 : 32 }),
@@ -324,6 +329,14 @@ const SpotlightTextBlock = ({
               {city}
             </Button>
           ))}
+        </div>
+      )}
+
+      {triggerContactModal && !locationBadges?.length && (
+        <div className="mt-6 md:mt-8">
+          <Button onClick={onLocationBadgeClick} variant="primary">
+            {ctaLabel ?? "Get a Quote"}
+          </Button>
         </div>
       )}
 
@@ -480,6 +493,7 @@ const SpotlightImageBlock = ({
 export const Spotlight = ({
   align = "center",
   className,
+  ctaLabel,
   description,
   descriptionItems,
   id,
@@ -544,6 +558,7 @@ export const Spotlight = ({
           <SpotlightTextBlock
             align={align}
             className={textBlockClassName}
+            ctaLabel={ctaLabel}
             description={description}
             descriptionItems={descriptionItems}
             isHovered={isHovered}
@@ -554,6 +569,7 @@ export const Spotlight = ({
             stats={stats}
             titleLine1={titleLine1}
             titleLine2={titleLine2}
+            triggerContactModal={triggerContactModal}
           />
           {secondarySpotlight ? (
             <SpotlightTextBlock

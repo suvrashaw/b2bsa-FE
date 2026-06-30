@@ -6,11 +6,12 @@ import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact.json";
 import PROOF_BAR_DATA from "./intro.json";
 
-export { default as EVENT_VIDEO_FAQ } from "./faq.json";
+export { default as EVENT_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 
 export const EVENT_VIDEO_INTRO = {
   ...PROOF_BAR_DATA,
   stats: GLOBAL_PROOF_STATS,
+  triggerContactModal: true,
 };
 
 export const EVENT_VIDEO_CASE_STUDIES = {
@@ -23,11 +24,11 @@ export const EVENT_VIDEO_CONTACT_CTA = {
   ...CONTACT_CTA_DATA,
 };
 
+export { default as EVENT_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_VIDEO_HERO } from "./hero.json";
 export { default as EVENT_VIDEO_PAGE } from "./page.json";
 export { default as EVENT_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_VIDEO_CREATIVE_PRICING } from "./video-creative-pricing.json";
-export { default as EVENT_VIDEO_DELIVERABLES } from "./video-deliverables.json";
 
+export { default as EVENT_VIDEO_DELIVERABLES } from "./video-deliverables.json";
 export { default as EVENT_VIDEO_WHY } from "./why.json";
-export { default as EVENT_VIDEO_CLIENT_LOGOS } from "./client-logos.json";

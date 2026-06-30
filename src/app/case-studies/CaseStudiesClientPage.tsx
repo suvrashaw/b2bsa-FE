@@ -106,7 +106,7 @@ const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEn
 
   if (isPageHref(href)) {
     return (
-      <Link className="contents" onClick={handleLinkClick} href={`/case-studies/${study.id}`}>
+      <Link className="contents" href={`/case-studies/${study.id}`} onClick={handleLinkClick}>
         {card}
       </Link>
     );

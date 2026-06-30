@@ -28,7 +28,7 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
         <ChevronDown className="size-3 transition-transform duration-200 group-hover/lang:rotate-180" />
       </button>
 
-      <div className="pointer-events-none absolute right-0 top-full z-[200] pt-2 opacity-0 transition-all duration-200 ease-out group-hover/lang:pointer-events-auto group-hover/lang:opacity-100">
+      <div className="pointer-events-none absolute top-full right-0 z-[200] pt-2 opacity-0 transition-all duration-200 ease-out group-hover/lang:pointer-events-auto group-hover/lang:opacity-100">
         <div
           className="min-w-[148px] translate-y-2 overflow-hidden rounded-xl border border-gray-100 bg-white py-1.5 shadow-xl transition-transform duration-200 ease-out group-hover/lang:translate-y-0"
           role="listbox"

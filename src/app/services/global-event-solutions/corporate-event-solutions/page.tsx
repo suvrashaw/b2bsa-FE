@@ -16,6 +16,7 @@ import {
   CORP_EVENT_BLOGS_SECTION,
   CORP_EVENT_CAPABILITIES,
   CORP_EVENT_CASE_STUDIES,
+  CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_CONTACT_CTA,
   CORP_EVENT_DELIVERABLES,
   CORP_EVENT_FAQ,
@@ -24,7 +25,6 @@ import {
   CORP_EVENT_INTRO,
   CORP_EVENT_PAGE,
   CORP_EVENT_RELATED_SERVICES,
-  CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-event-solutions/content";
 
@@ -101,12 +101,12 @@ const Page = () => {
           />
         </>
       }
-      spotlight={CORP_EVENT_INTRO}
       relatedServices={CORP_EVENT_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}
+      spotlight={CORP_EVENT_INTRO}
     />
   );
 };

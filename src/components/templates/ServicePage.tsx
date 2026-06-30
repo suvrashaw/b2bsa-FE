@@ -23,9 +23,9 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -265,6 +265,7 @@ export const ServicePage = async ({
       {(resolvedSpotlight || proofBar) && (
         <Spotlight
           align={resolvedSpotlight?.align ?? "left"}
+          ctaLabel={spotlight?.ctaLabel}
           description={resolvedSpotlight?.description ?? proofBar?.description ?? ""}
           descriptionItems={resolvedSpotlight?.descriptionItems}
           imageAlt={resolvedSpotlight?.imageAlt ?? "Feature image"}
@@ -272,14 +273,14 @@ export const ServicePage = async ({
           imagePosition={resolvedSpotlight?.imagePosition ?? "right"}
           imageUrl={resolvedSpotlight?.imageUrl ?? proofBar?.imageUrl}
           label="INTRODUCTION"
-          locationBadges={resolvedSpotlight?.locationBadges}
-          secondarySpotlight={resolvedSpotlight?.secondarySpotlight}
-          sectionClassName={resolvedSpotlight?.sectionClassName}
+          locationBadges={spotlight?.locationBadges}
+          secondarySpotlight={spotlight?.secondarySpotlight}
+          sectionClassName={spotlight?.sectionClassName}
           stats={proofBar?.stats}
-          titleLine1={resolvedSpotlight?.titleLine1 ?? proofBar?.heading ?? ""}
-          titleLine2={resolvedSpotlight?.titleLine2 ?? ""}
-          triggerContactModal={resolvedSpotlight?.triggerContactModal}
-          videoUrl={resolvedSpotlight?.videoUrl}
+          titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
+          titleLine2={spotlight?.titleLine2 ?? ""}
+          triggerContactModal={spotlight?.triggerContactModal}
+          videoUrl={spotlight?.videoUrl}
         />
       )}
 

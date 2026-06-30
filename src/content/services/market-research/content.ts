@@ -21,10 +21,10 @@ export const RESEARCH_CONTACT_CTA = {
   ...CINEMATIC_CTA_SHARED,
 };
 
+export { default as RESEARCH_CLIENT_LOGOS } from "./client-logos.json";
 export { default as RESEARCH_FAQ } from "./faq.json";
 export { default as RESEARCH_HERO } from "./hero.json";
 export { default as RESEARCH_PAGE } from "./page.json";
 export { default as RESEARCH_PROCESS } from "./process.json";
 export { default as RESEARCH_SERVICES } from "./services.json";
 export { default as RESEARCH_WHY } from "./why.json";
-export { default as RESEARCH_CLIENT_LOGOS } from "./client-logos.json";

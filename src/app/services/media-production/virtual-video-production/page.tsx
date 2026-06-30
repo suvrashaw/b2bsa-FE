@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -17,6 +16,7 @@ import {
   VIRTUAL_VIDEO_BLOGS_SECTION,
   VIRTUAL_VIDEO_CAPABILITIES,
   VIRTUAL_VIDEO_CASE_STUDIES,
+  VIRTUAL_VIDEO_CLIENT_LOGOS,
   VIRTUAL_VIDEO_CONTACT_CTA,
   VIRTUAL_VIDEO_DELIVERABLES,
   VIRTUAL_VIDEO_FAQ,
@@ -24,7 +24,6 @@ import {
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
   VIRTUAL_VIDEO_RELATED_SERVICES,
-  VIRTUAL_VIDEO_CLIENT_LOGOS,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
 
@@ -62,11 +61,11 @@ const Page = () => {
       contactUs={VIRTUAL_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={3} heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {VIRTUAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={VIRTUAL_VIDEO_BLOGS_SECTION.heading}

@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   SQL_CASE_STUDIES,
+  SQL_CLIENT_LOGOS,
   SQL_CONTACT_CTA,
   SQL_FAQ,
   SQL_HERO,
+  SQL_INTRO,
   SQL_PAGE,
   SQL_PROCESS,
-  SQL_INTRO,
   SQL_SERVICES,
-  SQL_CLIENT_LOGOS,
   SQL_WHY,
 } from "@/content/services/sales-qualified-lead-generation/content";
 
@@ -27,8 +27,8 @@ const Page = () => {
       hero={SQL_HERO}
       page={SQL_PAGE}
       process={SQL_PROCESS}
-      spotlight={SQL_INTRO}
       services={SQL_SERVICES}
+      spotlight={SQL_INTRO}
       why={SQL_WHY}
     />
   );

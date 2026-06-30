@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   MEDIA_CASE_STUDIES,
+  MEDIA_CLIENT_LOGOS,
   MEDIA_CONTACT_CTA,
   MEDIA_FAQ,
   MEDIA_HERO,
+  MEDIA_INTRO,
   MEDIA_PAGE,
   MEDIA_PROCESS,
-  MEDIA_INTRO,
   MEDIA_SERVICES,
-  MEDIA_CLIENT_LOGOS,
   MEDIA_WHY,
 } from "@/content/services/media-production/content";
 
@@ -27,8 +27,8 @@ const Page = () => {
       hero={MEDIA_HERO}
       page={MEDIA_PAGE}
       process={MEDIA_PROCESS}
-      spotlight={MEDIA_INTRO}
       services={MEDIA_SERVICES}
+      spotlight={MEDIA_INTRO}
       why={MEDIA_WHY}
     />
   );

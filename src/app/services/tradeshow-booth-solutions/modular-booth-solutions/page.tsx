@@ -5,15 +5,15 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   MODULAR_BOOTHS_CASE_STUDIES,
+  MODULAR_BOOTHS_CLIENT_LOGOS,
   MODULAR_BOOTHS_CONTACT_CTA,
   MODULAR_BOOTHS_DELIVERABLES,
   MODULAR_BOOTHS_FAQ,
   MODULAR_BOOTHS_HERO,
-  MODULAR_BOOTHS_PAGE,
   MODULAR_BOOTHS_INTRO,
+  MODULAR_BOOTHS_PAGE,
   MODULAR_BOOTHS_RANGE_SECTION,
   MODULAR_BOOTHS_RELATED_SERVICES,
-  MODULAR_BOOTHS_CLIENT_LOGOS,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/modular-booth-solutions/content";
 
@@ -29,11 +29,11 @@ const Page = () => {
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
-      spotlight={MODULAR_BOOTHS_INTRO}
       relatedServices={MODULAR_BOOTHS_RELATED_SERVICES}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       services={MODULAR_BOOTHS_DELIVERABLES}
+      spotlight={MODULAR_BOOTHS_INTRO}
       why={MODULAR_BOOTHS_WHY}
     />
   );

@@ -9,9 +9,9 @@ import { Header } from "@/components/layout/Header";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Culture } from "@/components/sections/Culture";
 import { Hero } from "@/components/sections/Hero";
+import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {

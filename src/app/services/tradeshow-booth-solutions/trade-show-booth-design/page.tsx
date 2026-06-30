@@ -17,16 +17,16 @@ import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   BOOTH_DESIGN_BLOGS_SECTION,
   BOOTH_DESIGN_CASE_STUDIES,
+  BOOTH_DESIGN_CLIENT_LOGOS,
   BOOTH_DESIGN_CONTACT_CTA,
   BOOTH_DESIGN_DELIVERABLES,
   BOOTH_DESIGN_FAQ,
   BOOTH_DESIGN_HERO,
+  BOOTH_DESIGN_INTRO,
   BOOTH_DESIGN_PAGE,
   BOOTH_DESIGN_PROCESS,
-  BOOTH_DESIGN_INTRO,
   BOOTH_DESIGN_RELATED_SERVICES,
   BOOTH_DESIGN_SHOWCASE_ITEMS,
-  BOOTH_DESIGN_CLIENT_LOGOS,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
@@ -121,11 +121,11 @@ const Page = () => {
         />
       }
       process={BOOTH_DESIGN_PROCESS}
-      spotlight={BOOTH_DESIGN_INTRO}
       relatedServices={BOOTH_DESIGN_RELATED_SERVICES}
       services={BOOTH_DESIGN_DELIVERABLES}
       servicesSectionType="carousel"
       showPhaseNumbers={false}
+      spotlight={BOOTH_DESIGN_INTRO}
     />
   );
 };

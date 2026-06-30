@@ -13,17 +13,17 @@ export const CorporateVideoImageStrip = () => {
     <div className="flex h-[216px] w-full overflow-hidden">
       {IMAGES.map((src, idx) => (
         <div
-          key={idx}
-          className={`relative h-full flex-1 w-full ${
+          className={`relative size-full flex-1 ${
             idx >= 2 ? "hidden lg:block" : "block"
           }`}
+          key={idx}
         >
           <Image
-            src={src}
             alt="Corporate video production behind the scenes"
-            fill
             className="object-cover grayscale transition-all duration-500 hover:grayscale-0"
+            fill
             sizes="(max-width: 1024px) 50vw, 20vw"
+            src={src}
           />
         </div>
       ))}

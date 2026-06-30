@@ -2,7 +2,6 @@
 
 import type { ReactNode } from "react";
 
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 

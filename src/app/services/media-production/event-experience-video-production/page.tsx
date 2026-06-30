@@ -5,8 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
+import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -16,6 +16,7 @@ import {
   EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION,
   EVENT_EXPERIENCE_VIDEO_CAPABILITIES,
   EVENT_EXPERIENCE_VIDEO_CASE_STUDIES,
+  EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS,
   EVENT_EXPERIENCE_VIDEO_CONTACT_CTA,
   EVENT_EXPERIENCE_VIDEO_DELIVERABLES,
   EVENT_EXPERIENCE_VIDEO_FAQ,
@@ -23,13 +24,12 @@ import {
   EVENT_EXPERIENCE_VIDEO_INTRO,
   EVENT_EXPERIENCE_VIDEO_PAGE,
   EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES,
-  EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS,
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_VIDEO_PAGE);
 
-const spotlightProps = { ...EVENT_EXPERIENCE_VIDEO_INTRO, showCta: false };
+const spotlightProps = { ...EVENT_EXPERIENCE_VIDEO_INTRO };
 const deliverableProps = {
   ...EVENT_EXPERIENCE_VIDEO_DELIVERABLES,
   showCardCtas: false,
@@ -43,15 +43,11 @@ const Page = () => {
       contactUs={EVENT_EXPERIENCE_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid
-            cols={4}
-            heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={3} heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION.heading}
@@ -75,11 +71,14 @@ const Page = () => {
       page={EVENT_EXPERIENCE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <Capabilities
-          capabilities={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
-          description={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.description}
-          heading={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.heading}
-        />
+        <>
+          <Capabilities
+            capabilities={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
+            description={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.description}
+            heading={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.heading}
+          />
+          <SectionContactCta />
+        </>
       }
       relatedServices={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"

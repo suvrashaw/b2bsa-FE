@@ -1,10 +1,9 @@
 "use client";
 
-import { ExternalLink, Play, Radio, Video } from "lucide-react";
+import { Play, Radio } from "lucide-react";
 import Image from "next/image";
 import { type MouseEvent, useCallback, useState } from "react";
 
-import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
@@ -49,7 +48,7 @@ export const LiveStreamProjects = ({
   if (!activeProject) return null;
 
   const getYoutubeId = (url: string) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : null;
   };
@@ -78,11 +77,11 @@ export const LiveStreamProjects = ({
               <div className="relative aspect-video overflow-hidden rounded-lg bg-brand-charcoal">
                 {ytId ? (
                   <iframe
-                    className="absolute inset-0 size-full border-0"
-                    src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
+                    className="absolute inset-0 size-full border-0"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0`}
                     title={activeProject.title}
                   />
                 ) : activeProject.videoUrl ? (

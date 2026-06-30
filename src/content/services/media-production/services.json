@@ -27,6 +27,33 @@
       "id": "live-streaming",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Live Streaming Services"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "Capture audience engagement, showcase event success, and extend event visibility with cinematic-quality event experience video production.",
+      "href": "/services/media-production/event-experience-video-production",
+      "icon": "Film",
+      "id": "event-experience-video",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Event Experience Video Production"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "On-site professional video capture for conferences, trade shows, product launches, and corporate events with cinematic production quality.",
+      "href": "/services/media-production/event-physical-video-shoot",
+      "icon": "Video",
+      "id": "event-physical-video",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Event Physical Video Shoot"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "End-to-end virtual video production for webinars, fireside chats, executive interviews, virtual conferences, and hybrid corporate events.",
+      "href": "/services/media-production/virtual-video-production",
+      "icon": "MonitorPlay",
+      "id": "virtual-video",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Virtual Video Production"
     }
   ]
 }

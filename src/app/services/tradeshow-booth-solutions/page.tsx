@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BS_CASE_STUDIES,
+  BS_CLIENT_LOGOS,
   BS_CONTACT_CTA,
   BS_FAQ,
   BS_HERO,
+  BS_INTRO,
   BS_PAGE,
   BS_PROCESS,
-  BS_INTRO,
   BS_SERVICES,
-  BS_CLIENT_LOGOS,
   BS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/content";
 
@@ -27,8 +27,8 @@ const Page = () => {
       hero={BS_HERO}
       page={BS_PAGE}
       process={BS_PROCESS}
-      spotlight={BS_INTRO}
       services={BS_SERVICES}
+      spotlight={BS_INTRO}
       why={BS_WHY}
     />
   );

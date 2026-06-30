@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   RESEARCH_CASE_STUDIES,
+  RESEARCH_CLIENT_LOGOS,
   RESEARCH_CONTACT_CTA,
   RESEARCH_FAQ,
   RESEARCH_HERO,
+  RESEARCH_INTRO,
   RESEARCH_PAGE,
   RESEARCH_PROCESS,
-  RESEARCH_INTRO,
   RESEARCH_SERVICES,
-  RESEARCH_CLIENT_LOGOS,
   RESEARCH_WHY,
 } from "@/content/services/market-research/content";
 
@@ -27,8 +27,8 @@ const Page = () => {
       hero={RESEARCH_HERO}
       page={RESEARCH_PAGE}
       process={RESEARCH_PROCESS}
-      spotlight={RESEARCH_INTRO}
       services={RESEARCH_SERVICES}
+      spotlight={RESEARCH_INTRO}
       why={RESEARCH_WHY}
     />
   );

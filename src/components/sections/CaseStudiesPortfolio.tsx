@@ -1,8 +1,10 @@
 import Link from "next/link";
+
+import type { CaseStudyEntry } from "@/content/case-studies";
+
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import type { CaseStudyEntry } from "@/content/case-studies";
 
 export interface CaseStudiesPortfolioProps {
   heading: string;
@@ -15,10 +17,10 @@ export const CaseStudiesPortfolio = ({
 }: CaseStudiesPortfolioProps) => {
   return (
     <CardsGrid
-      className="bg-[#111111] text-white !pt-[100px]"
+      className="bg-[#111111] !pt-[100px] text-white"
       heading={
         <div className="flex flex-col items-start text-left">
-          <SectionHeader as="h2" className="max-w-4xl text-[30px] md:text-[50px] lg:text-[70px] font-black leading-none text-white">
+          <SectionHeader as="h2" className="max-w-4xl text-[30px] leading-none font-black text-white md:text-[50px] lg:text-[70px]">
             {heading}
           </SectionHeader>
           <Link

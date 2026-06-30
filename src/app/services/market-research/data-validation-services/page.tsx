@@ -4,14 +4,14 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   DATA_VALIDATION_CASE_STUDIES,
+  DATA_VALIDATION_CLIENT_LOGOS,
   DATA_VALIDATION_CONTACT_CTA,
   DATA_VALIDATION_DELIVERABLES,
   DATA_VALIDATION_FAQ,
   DATA_VALIDATION_HERO,
+  DATA_VALIDATION_INTRO,
   DATA_VALIDATION_PAGE,
   DATA_VALIDATION_PROCESS,
-  DATA_VALIDATION_CLIENT_LOGOS,
-  DATA_VALIDATION_INTRO,
 } from "@/content/services/market-research/data-validation-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(DATA_VALIDATION_PAGE);
