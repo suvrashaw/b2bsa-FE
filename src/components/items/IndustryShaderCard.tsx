@@ -2,7 +2,7 @@
 
 import { Warp } from "@paper-design/shaders-react";
 
-import { LucideIcon } from "@/components/ui/LucideIcon";
+import { Icon } from "@/components/ui/Icon";
 
 interface IndustryShaderCardProps {
   description: string;
@@ -41,7 +41,7 @@ export const IndustryShaderCard = ({ description, icon, index, title }: Industry
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
       <div className="relative flex h-full min-h-[200px] flex-col justify-end p-6">
         <div className="mb-3 flex size-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm">
-          <LucideIcon className="size-5 text-brand-cyan" name={icon} />
+          <Icon className="size-5 text-brand-cyan" name={icon} />
         </div>
         <h3 className="mb-1.5 font-heading text-base leading-snug font-semibold text-white">
           {title}

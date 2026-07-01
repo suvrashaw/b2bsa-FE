@@ -83,10 +83,9 @@ const Page = () => {
                 <ArrowRight className="ml-3 size-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
+                className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] border border-white/30 bg-white/10 px-6 py-4 font-bold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 md:w-auto md:px-10"
                 href={BOOK_MEETING_HREF}
                 rel="noopener noreferrer"
-                style={PRIMARY_CTA_STYLE}
                 target="_blank"
               >
                 Book a Meeting

@@ -8,7 +8,6 @@ import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
-import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
@@ -100,19 +99,15 @@ const Page = () => {
       page={EVENT_BRANDING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <>
-          <ContactModalTrigger label="Plan Your Event Branding" />
-          <Capabilities
-            capabilities={capabilityFeatures}
-            description={EVENT_BRANDING_CAPABILITIES.description}
-            heading={EVENT_BRANDING_CAPABILITIES.title}
-            mediaPosition="right"
-            showCapabilityDescriptions={false}
-          />
-        </>
+        <Capabilities
+          capabilities={capabilityFeatures}
+          description={EVENT_BRANDING_CAPABILITIES.description}
+          heading={EVENT_BRANDING_CAPABILITIES.title}
+          mediaPosition="right"
+          showCapabilityDescriptions={false}
+        />
       }
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}
-      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}

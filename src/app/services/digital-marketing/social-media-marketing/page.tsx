@@ -102,7 +102,6 @@ const Page = () => {
         </>
       }
       relatedServices={SMM_RELATED_SERVICES}
-      relatedServicesHeading="Related Event & Media Production Services"
       spotlight={SMM_INTRO}
     />
   );
