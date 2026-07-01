@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -69,11 +68,11 @@ const Page = () => {
       contactUs={CORP_NETWORKING_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={CORP_NETWORKING_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={4} heading={CORP_NETWORKING_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {CORP_NETWORKING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={CORP_NETWORKING_BLOGS_SECTION.heading}
@@ -118,7 +117,6 @@ const Page = () => {
         />
       }
       relatedServices={CORP_NETWORKING_RELATED_SERVICES}
-      relatedServicesHeading="Related Event Services"
       secondaryServices={CORP_NETWORKING_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_NETWORKING_DELIVERABLES}

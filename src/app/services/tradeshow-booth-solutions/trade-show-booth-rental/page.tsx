@@ -27,7 +27,6 @@ import {
   BOOTH_RENTAL_PROCESS,
   BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
-  BOOTH_RENTAL_WHY,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
 
 const BOOTH_RENTAL_RANGE_REASONS = [
@@ -92,15 +91,14 @@ const Page = () => {
               <RelatedServicesCard index={index} key={service.href} service={service} />
             ))}
           </CardsGrid>
-          <CardsGrid
+          <Carousel
             cols={4}
             heading="Why Choose B2B Sales Arrow for Trade Show Booth Rental Services"
-            id="why-choose-us"
-          >
+            id="why-choose-us" layout="carousel">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={BOOTH_RENTAL_BLOGS_SECTION.heading}
@@ -156,13 +154,11 @@ const Page = () => {
             heading="Our Rental Booth Range"
             serviceLabel=""
             services={RENTAL_SERVICES}
-            showCommonCta
           />
         </>
       }
       process={BOOTH_RENTAL_PROCESS}
       spotlight={BOOTH_RENTAL_INTRO}
-      why={BOOTH_RENTAL_WHY}
     />
   );
 };

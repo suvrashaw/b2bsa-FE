@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -64,11 +63,11 @@ const Page = () => {
       contactUs={CORP_EVENT_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={3} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={3} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={CORP_EVENT_BLOGS_SECTION.heading}
@@ -102,7 +101,6 @@ const Page = () => {
         </>
       }
       relatedServices={CORP_EVENT_RELATED_SERVICES}
-      relatedServicesHeading="Related Event & Media Production Services"
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}

@@ -1,6 +1,6 @@
 {
   "description": "Running a major trade show program through five separate vendors creates fragmentation, no single partner owns the outcome. Our corporate event solutions consolidate the full journey: event strategy and planning, custom booth design, fabrication, freight, customs compliance, trade show lead generation, CRM integration, and pipeline attribution, all under one team.\n\nWhen the same team that designs your booth also designs your lead qualification workflow, there are no gaps between vendors for budget and buyers to fall through.",
-  "heading": "End-to-End Corporate Event Solutions Under One Roof",
+  "heading": "Our Trade Show Booth Services",
   "services": [
     {
       "color": "bg-brand-blue",
@@ -28,6 +28,33 @@
       "id": "booth-builder",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Builder"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "professional exhibition staffing and brand ambassadors",
+      "href": "/services/tradeshow-booth-solutions/booth-hostess-services",
+      "icon": "Users",
+      "id": "booth-hostess",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Booth Hostess Services"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "end-to-end shipping, customs, and on-site delivery",
+      "href": "/services/tradeshow-booth-solutions/booth-logistics-services",
+      "icon": "Truck",
+      "id": "booth-logistics",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Booth Logistics Services"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "flexible systems adaptable across events and locations",
+      "href": "/services/tradeshow-booth-solutions/modular-booth-solutions",
+      "icon": "Grid",
+      "id": "modular-booth",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Modular Booth Solutions"
     }
   ]
 }

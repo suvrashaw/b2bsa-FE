@@ -5,7 +5,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   RESEARCH_CASE_STUDIES,
   RESEARCH_CLIENT_LOGOS,
-  RESEARCH_CONTACT_CTA,
   RESEARCH_FAQ,
   RESEARCH_HERO,
   RESEARCH_INTRO,
@@ -22,7 +21,6 @@ const Page = () => {
     <ServicePage
       caseStudies={RESEARCH_CASE_STUDIES}
       clientLogos={RESEARCH_CLIENT_LOGOS}
-      contactUs={RESEARCH_CONTACT_CTA}
       faq={RESEARCH_FAQ}
       hero={RESEARCH_HERO}
       page={RESEARCH_PAGE}

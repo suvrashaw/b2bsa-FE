@@ -84,7 +84,7 @@ export const StickyContactBar = () => {
       {/* Mobile: Get a Quote FAB */}
       <button
         aria-label="Get a Quote"
-        className="btn-schedule schedule-shake fixed right-4 bottom-6 z-[60] rounded-full bg-brand-blue px-5 py-3 text-sm font-semibold text-white shadow-xl md:hidden"
+        className="btn-schedule schedule-shake fixed bottom-6 left-1/2 z-[60] -translate-x-1/2 rounded-full bg-brand-blue px-5 py-3 text-sm font-semibold text-white shadow-xl md:hidden"
         onClick={openModal}
         type="button"
       >

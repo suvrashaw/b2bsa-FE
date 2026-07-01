@@ -18,6 +18,7 @@ export interface SpotlightProps {
   descriptionItems?: readonly string[];
   id?: string;
   imageAlt?: string;
+  imageClassName?: string;
   imageContainerClassName?: string;
   imagePosition?: "left" | "right";
   imageUrl?: string;
@@ -352,12 +353,14 @@ const SpotlightTextBlock = ({
 const SpotlightImageBlock = ({
   className,
   imageAlt,
+  imageClassName,
   imageUrl,
   isHovered,
   videoUrl,
 }: {
   className?: string;
   imageAlt: string;
+  imageClassName?: string;
   imageUrl?: string;
   isHovered: boolean;
   videoUrl?: string;
@@ -443,7 +446,7 @@ const SpotlightImageBlock = ({
     mediaElement = (
       <Image
         alt={imageAlt}
-        className="size-full object-cover transition-all duration-1000"
+        className={cn("size-full object-cover transition-all duration-1000", imageClassName)}
         fill
         sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px"
         src={imageUrl}
@@ -498,6 +501,7 @@ export const Spotlight = ({
   descriptionItems,
   id,
   imageAlt = "Feature image",
+  imageClassName,
   imageContainerClassName,
   imagePosition = "right",
   imageUrl,
@@ -585,6 +589,7 @@ export const Spotlight = ({
             <SpotlightImageBlock
               className={cn(imageBlockClassName, imageContainerClassName)}
               imageAlt={imageAlt}
+              imageClassName={imageClassName}
               imageUrl={imageUrl}
               isHovered={isHovered}
               videoUrl={videoUrl}

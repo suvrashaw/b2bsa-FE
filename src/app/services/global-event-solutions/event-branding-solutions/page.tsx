@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -73,11 +72,11 @@ const Page = () => {
       contactUs={EVENT_BRANDING_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={EVENT_BRANDING_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={4} heading={EVENT_BRANDING_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {EVENT_BRANDING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={EVENT_BRANDING_BLOGS_SECTION.heading}
@@ -110,7 +109,6 @@ const Page = () => {
             mediaPosition="right"
             showCapabilityDescriptions={false}
           />
-          <ContactModalTrigger label="Talk to Branding Experts" />
         </>
       }
       relatedServices={EVENT_BRANDING_RELATED_SERVICES}

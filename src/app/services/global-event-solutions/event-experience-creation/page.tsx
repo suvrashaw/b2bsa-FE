@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
+import { Carousel } from "@/components/sections/Carousel";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -58,11 +58,11 @@ const Page = () => {
       contactUs={EVENT_EXPERIENCE_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={4} heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {EVENT_EXPERIENCE_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Capabilities
             capabilities={servicesIncludeFeatures}
             heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}

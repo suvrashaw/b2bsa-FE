@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo } from "react";
 
 import type { CaseStudyDetail } from "@/content/case-studies";
@@ -8,26 +9,23 @@ import { EventMetadata } from "@/components/items/EventMetadata";
 import { ServicesImageCard } from "@/components/items/ServicesImageCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const HERO_PRIMARY_CTA = {
   href: "/contact-us",
   label: "Get a Custom Proposal",
 } as const;
-const METADATA_LABELS = ["Client", "Event", "Location"] as const;
-const CINEMATIC_HEADING: [string, string] = ["Ready to build", "your next event program?"];
-const CINEMATIC_PRIMARY = {
-  href: "/contact-us",
-  label: "Start a Conversation",
-} as const;
-const CINEMATIC_SECONDARY = {
-  href: "/case-studies",
-  label: "View Case Studies",
-} as const;
+
+const GALLERY_COL_SPANS = [
+  "md:col-span-1 lg:col-span-7",
+  "md:col-span-1 lg:col-span-5",
+  "md:col-span-1 lg:col-span-4",
+  "md:col-span-1 lg:col-span-8",
+] as const;
 
 interface CaseStudyPageProps {
   study: CaseStudyDetail;
@@ -36,18 +34,13 @@ interface CaseStudyPageProps {
 export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
   const heroImages = useMemo(() => [study.image], [study.image]);
 
-  const metadata = useMemo(
+  const introMetadata = useMemo(
     () => [
-      { label: METADATA_LABELS[0], value: study.client },
-      { label: METADATA_LABELS[1], value: study.event },
-      { label: METADATA_LABELS[2], value: study.location },
+      { label: "Client", value: study.client },
+      { label: "Event", value: study.event },
+      { label: "Location", value: study.location },
     ],
     [study.client, study.event, study.location]
-  );
-
-  const cinematicBg = useMemo(
-    () => ({ alt: study.title, src: study.image }),
-    [study.title, study.image]
   );
 
   const challengeSecondary = useMemo(
@@ -60,12 +53,16 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
     [study.solution]
   );
 
+  const galleryImages = useMemo(
+    () => study.gallery ?? [study.image, study.image, study.image, study.image],
+    [study.gallery, study.image]
+  );
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header forceLightMode />
 
       <Hero
-        eyebrow={<EventMetadata metadata={metadata} />}
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
@@ -91,8 +88,14 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
       {/* About the Event */}
       {study.eventDescription && (
         <section className="bg-brand-gray py-16 md:py-20">
-          <div className="container mx-auto max-w-3xl px-4 text-center sm:px-6 md:px-8">
-            <p className="text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
+          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+            <SectionHeader as="h2" className="mb-8 text-center">
+              About {study.event}
+            </SectionHeader>
+            <div className="mb-8 flex justify-center">
+              <EventMetadata metadata={introMetadata} />
+            </div>
+            <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
               {study.eventDescription}
             </p>
           </div>
@@ -122,16 +125,32 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         titleLine2="Challenges"
       />
 
-      {/* Outcome — Stats with heading and description */}
-      
+      {/* Event Gallery */}
+      <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+          <SectionHeader as="h2" className="mb-10 text-center">
+            Event Gallery
+          </SectionHeader>
+          <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2 lg:grid-cols-12">
+            {galleryImages.slice(0, 4).map((src, i) => (
+              <div
+                className={`relative h-[280px] overflow-hidden rounded-2xl lg:h-[360px] ${GALLERY_COL_SPANS[i] ?? "lg:col-span-6"}`}
+                key={i}
+              >
+                <Image
+                  alt={`${study.event} gallery image ${i + 1}`}
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 60vw"
+                  src={src}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <ContactUs
-        backgroundImage={cinematicBg}
-        description="Tell us about your next event program and we'll outline an approach."
-        headingLines={CINEMATIC_HEADING}
-        primaryCta={CINEMATIC_PRIMARY}
-        secondaryCta={CINEMATIC_SECONDARY}
-      />
+      <Testimonials />
 
       <ContactUsForm />
 

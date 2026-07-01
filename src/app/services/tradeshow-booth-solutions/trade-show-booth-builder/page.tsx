@@ -67,11 +67,11 @@ const Page = () => {
       contactUs={BOOTH_BUILDER_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading="Why Choose B2B Sales Arrow for Trade Show Booth Builder Services" id="why-choose-us">
+          <Carousel cols={4} heading="Why Choose B2B Sales Arrow for Trade Show Booth Builder Services" id="why-choose-us" layout="carousel">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={BOOTH_BUILDER_BLOGS_SECTION.heading}
@@ -97,12 +97,10 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
-          commonCtaLabel="Talk to an Expert"
           contactModal={EMPTY_CONTACT_MODAL}
           heading="Booth Sizes and Formats We Design"
           serviceLabel=""
           services={SHOWCASE_SERVICES}
-          showCommonCta
         />
       }
       preStudiesSections={

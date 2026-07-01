@@ -46,8 +46,7 @@ export interface ServicePageProps {
   caseStudies?: CaseStudiesProps;
   // ─── Trust band ─────────────────────────────────
   clientLogos?: { description?: string; heading?: string };
-  // ─── Always required ────────────────────────────
-  contactUs: ContactUsProps;
+  contactUs?: ContactUsProps;
 
   creativePricing?: PricingProps;
 
@@ -145,9 +144,7 @@ const renderServicesSection = (
     <ServicesStack
       {...section}
       cardCtaMode={section.cardCtaMode ?? "linked"}
-      commonCtaLabel="Contact Our Team"
       contactModal={section.contactModal ?? SERVICE_PAGE_CONTACT_MODAL}
-      showCommonCta
     />
   );
 };
@@ -161,7 +158,7 @@ export const ServicePage = ({
   creativePricing,
   customSections,
   faq,
-  faqVariant = "cards",
+  faqVariant = "accordion",
   hero,
   page,
   parentPage,
@@ -331,7 +328,7 @@ export const ServicePage = ({
 
       {preContactSections}
 
-      <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />
+      {contactUs && <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />}
 
       <Footer />
     </main>

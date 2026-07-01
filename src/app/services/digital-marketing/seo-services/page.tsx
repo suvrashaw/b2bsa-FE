@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -40,11 +39,11 @@ const Page = () => {
       contactUs={SEO_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={3} heading={SEO_WHY_CHOOSE_US.heading}>
+          <Carousel cols={3} heading={SEO_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {SEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
 
           <Carousel
             cols={4}
@@ -71,9 +70,7 @@ const Page = () => {
         <ServicesStack
           {...SEO_SERVICES}
           cardCtaMode="none"
-          commonCtaLabel="Contact Our Team"
           contactModal={servicesContactModal}
-          showCommonCta
         />
       }
       spotlight={SEO_INTRO}

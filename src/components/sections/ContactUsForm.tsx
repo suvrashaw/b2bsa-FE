@@ -14,6 +14,7 @@ interface ContactUsFormProps {
   form?: ContactContent["form"];
   heading?: ContactContent["heading"];
   illustration?: ContactContent["illustration"] | null;
+  sectionClassName?: string;
 }
 
 const CONTACTUS_ANIMATE = { y: [0, -15, 0] };
@@ -29,10 +30,11 @@ export const ContactUsForm = ({
   form = content.form,
   heading = content.heading,
   illustration = content.illustration,
+  sectionClassName,
 }: ContactUsFormProps = {}) => {
   return (
     <section
-      className="relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24"
+      className={["relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24", sectionClassName].filter(Boolean).join(" ")}
       id="contact"
     >
       {/* Decorative background flare */}

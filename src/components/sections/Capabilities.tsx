@@ -139,7 +139,10 @@ const CapabilitiesNavItem = ({
       : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal"
   );
   const handleClick = useCallback(() => onChipClick(index), [index, onChipClick]);
-  const handleMouseEnter = useCallback(() => onPauseChange(true), [onPauseChange]);
+  const handleMouseEnter = useCallback(() => {
+    onPauseChange(true);
+    onChipClick(index);
+  }, [index, onChipClick, onPauseChange]);
   const handleMouseLeave = useCallback(() => onPauseChange(false), [onPauseChange]);
 
   return (

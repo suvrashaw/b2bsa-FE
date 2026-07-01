@@ -28,6 +28,42 @@
       "id": "booth-builder",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Builder"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "immersive event concepts designed to drive audience engagement",
+      "href": "/services/global-event-solutions/event-experience-creation",
+      "icon": "Sparkles",
+      "id": "event-experience",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Event Experience Creation"
+    },
+    {
+      "color": "bg-brand-cyan",
+      "description": "end-to-end event branding and visual identity solutions",
+      "href": "/services/global-event-solutions/event-branding-solutions",
+      "icon": "Palette",
+      "id": "event-branding",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Event Branding Solutions"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "professional B2B networking event planning and execution",
+      "href": "/services/global-event-solutions/corporate-event-solutions",
+      "icon": "Building2",
+      "id": "corporate-event",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Corporate Event Solutions"
+    },
+    {
+      "color": "bg-brand-blue",
+      "description": "structured networking experiences for enterprise audiences",
+      "href": "/services/global-event-solutions/corporate-networking-events",
+      "icon": "Network",
+      "id": "networking-events",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Corporate Networking Events"
     }
   ]
 }

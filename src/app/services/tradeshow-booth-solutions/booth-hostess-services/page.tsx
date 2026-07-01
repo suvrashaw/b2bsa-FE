@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -32,10 +31,8 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 const servicesContactModal = {};
 const deliverableProps = {
   ...BOOTH_HOSTESS_DELIVERABLES,
-  commonCtaLabel: "Contact Our Team",
   contactModal: servicesContactModal,
   showCardCtas: false,
-  showCommonCta: true,
 };
 const capabilityAssets = [
   { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
@@ -68,11 +65,11 @@ const Page = () => {
       contactUs={BOOTH_HOSTESS_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid cols={4} heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={4} heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {BOOTH_HOSTESS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={BOOTH_HOSTESS_BLOGS_SECTION.heading}
@@ -103,7 +100,6 @@ const Page = () => {
         />
       }
       relatedServices={BOOTH_HOSTESS_RELATED_SERVICES}
-      relatedServicesHeading="Related Event & Media Production Services"
       services={deliverableProps}
       spotlight={BOOTH_HOSTESS_INTRO}
     />

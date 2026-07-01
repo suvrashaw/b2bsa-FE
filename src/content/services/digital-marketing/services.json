@@ -18,6 +18,15 @@
       "id": "paid",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Performance Marketing"
+    },
+    {
+      "color": "bg-brand-primary",
+      "description": "LinkedIn, Instagram, and platform-specific content strategies that build audience and drive qualified inbound leads.",
+      "href": "/services/digital-marketing/social-media-marketing",
+      "icon": "Share2",
+      "id": "social",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Social Media Marketing"
     }
   ]
 }

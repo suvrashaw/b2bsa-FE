@@ -73,11 +73,11 @@ const Page = () => {
               />
             ))}
           </CardsGrid>
-          <CardsGrid cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
+          <Carousel cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
           <Carousel
             cols={4}
             heading={BOOTH_DESIGN_BLOGS_SECTION.heading}
@@ -112,12 +112,10 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
-          commonCtaLabel="Talk to an Expert"
           contactModal={EMPTY_CONTACT_MODAL}
           heading="Booth Sizes and Formats We Design"
           serviceLabel=""
           services={SHOWCASE_SERVICES}
-          showCommonCta
         />
       }
       process={BOOTH_DESIGN_PROCESS}

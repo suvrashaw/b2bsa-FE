@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Capabilities } from "@/components/sections/Capabilities";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -54,11 +53,11 @@ const Page = () => {
             showCta={false}
           />
 
-          <CardsGrid cols={3} heading={SMM_WHY_CHOOSE_US.heading}>
+          <Carousel cols={3} heading={SMM_WHY_CHOOSE_US.heading} id="why-choose-us" layout="carousel">
             {SMM_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
-          </CardsGrid>
+          </Carousel>
 
           <Carousel
             cols={4}
@@ -86,9 +85,7 @@ const Page = () => {
           <ServicesStack
             {...SMM_SERVICES}
             cardCtaMode="none"
-            commonCtaLabel="Contact Our Team"
             contactModal={servicesContactModal}
-            showCommonCta
           />
 
           <Capabilities

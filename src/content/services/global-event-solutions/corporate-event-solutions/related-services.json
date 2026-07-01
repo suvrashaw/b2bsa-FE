@@ -1,14 +1,14 @@
 [
   {
-    "href": "/services/tradeshow-booth-solutions/booth-logistics-services",
-    "title": "Event Logistics Services"
+    "href": "/services/global-event-solutions/event-experience-creation",
+    "title": "Event Experience Creation"
+  },
+  {
+    "href": "/services/global-event-solutions/event-branding-solutions",
+    "title": "Event Branding Solutions"
   },
   {
     "href": "/services/global-event-solutions/corporate-networking-events",
-    "title": "Networking Event Solutions"
-  },
-  {
-    "href": "/services/tradeshow-booth-solutions/booth-hostess-services",
-    "title": "Event Hostess Services"
+    "title": "Corporate Networking Events"
   }
 ]

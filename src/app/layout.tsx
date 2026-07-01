@@ -88,6 +88,11 @@ const RootLayout = ({
       </head>
       <body className="light flex min-h-full flex-col" suppressHydrationWarning>
         <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/73b738e7ff9edd3212b60f491c3e25ee/script.js"
+          strategy="beforeInteractive"
+        />
+        <Script
           dangerouslySetInnerHTML={ORG_JSON_LD_SCRIPT}
           id="organization-json-ld"
           type="application/ld+json"

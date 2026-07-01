@@ -21,6 +21,8 @@ import {
 
 import { TradeShowCalendarSection } from "./TradeShowCalendarSection";
 
+const EXHIBIT_CTA = { href: "/contact-us", label: "Exhibit at a Trade Show" };
+
 const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
   "/media/events/adobe_summit_2026.avif",
   "/media/events/event_other_1.avif",
@@ -53,8 +55,10 @@ const Page = () => {
       />
       <Header darkBackground />
       <Hero
+        centered
         description={TRADE_SHOW_CALENDAR_HERO.description}
         images={TRADE_SHOW_CALENDAR_HERO_IMAGES}
+        primaryCta={EXHIBIT_CTA}
         title={TRADE_SHOW_CALENDAR_HERO.title}
       />
       <Suspense>

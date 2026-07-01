@@ -76,7 +76,7 @@ const Page = () => {
       {/* Vision & Mission — left: Mission + Vision stacked, right: team images */}
       <section className="bg-brand-gray pt-6 pb-16 md:pt-8 md:pb-20">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-20">
             {/* Left: Mission + Vision */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="mb-12 w-full">
@@ -109,15 +109,15 @@ const Page = () => {
                     {ABOUT_VISION_MISSION.visionTitleLine2}
                   </span>
                 </SectionHeader>
-                <p className="text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
+                <p className="text-justify text-sm leading-relaxed text-brand-charcoal/70 md:text-base">
                   {ABOUT_VISION_MISSION.vision}
                 </p>
               </div>
             </div>
 
-            {/* Right: Team images */}
-            <div className="flex flex-col gap-4">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+            {/* Right: Team images — stretches to match left column height */}
+            <div className="flex flex-col gap-4 lg:h-full">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:aspect-auto lg:flex-1">
                 <Image
                   alt="B2B Sales Arrow team"
                   className="object-cover"
@@ -151,7 +151,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Core Values — simple bullet list */}
+      {/* Core Values — separator row style */}
       <section className="bg-brand-gray py-12 md:py-16" id="core-values">
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <SectionHeader as="h2" className="mb-2 text-center">
@@ -160,17 +160,21 @@ const Page = () => {
           <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-brand-charcoal/60 md:text-base">
             {ABOUT_CORE_VALUES.description}
           </p>
-          <ul className="mx-auto grid max-w-4xl grid-cols-1 gap-x-10 gap-y-3 sm:grid-cols-2">
-            {ABOUT_CORE_VALUES.values.map((value) => (
-              <li
-                className="flex gap-3 text-sm leading-relaxed text-brand-charcoal/80 md:text-base"
+          <div className="mx-auto max-w-5xl divide-y divide-brand-charcoal/10 sm:grid sm:grid-cols-2 sm:divide-y-0">
+            {ABOUT_CORE_VALUES.values.map((value, i) => (
+              <div
+                className="flex items-start gap-4 border-l-2 border-brand-blue/30 py-5 pl-5 sm:px-6 sm:odd:border-r sm:odd:border-r-brand-charcoal/10"
                 key={value}
               >
-                <span className="mt-1.5 size-2 shrink-0 rounded-full bg-brand-cyan" />
-                <span>{value}</span>
-              </li>
+                <span className="mt-1.5 font-heading text-xs font-bold text-brand-blue/60">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-sm leading-relaxed text-brand-charcoal/80 md:text-base">
+                  {value}
+                </span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
@@ -216,6 +220,7 @@ const Page = () => {
         description={ABOUT_FOUNDER_STORY.story}
         id="founder"
         imageAlt={ABOUT_FOUNDER_STORY.image.alt}
+        imageClassName="object-top"
         imageContainerClassName="lg:max-w-[440px]"
         imagePosition="left"
         imageUrl={ABOUT_FOUNDER_STORY.imageUrl}

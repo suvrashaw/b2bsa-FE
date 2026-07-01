@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
@@ -37,13 +37,9 @@ const PRIMARY_CTA_STYLE = {
   boxShadow:
     "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
 };
-const SECONDARY_CTA_STYLE = {
-  backdropFilter: "blur(12px)",
-  background: `linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)`,
-  border: "1px solid rgba(255, 255, 255, 0.25)",
-  borderRadius: "4px",
-  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
-  WebkitBackdropFilter: "blur(12px)",
+const BOOK_MEETING_HREF = "https://calendly.com/b2bsalesarrow";
+const HERO_OVERLAY_STYLE = {
+  background: "linear-gradient(180deg, rgba(33, 52, 67, 0.5) 0%, rgba(30, 96, 145, 0.9) 90%)",
 };
 
 const Page = () => {
@@ -52,8 +48,17 @@ const Page = () => {
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <JsonLd data={buildContactPageJsonLd(CONTACT_PAGE.seo.description)} />
       <Header darkBackground />
-      <CinematicSequence frameCount={60} frameUrlTemplate="/media/contact/hero/ezgif-frame-%d.jpg">
-        <div className="relative z-20 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
+      <section className="relative flex min-h-[80vh] items-end pt-32 pb-20">
+        <Image
+          alt="Contact Us"
+          className="object-cover"
+          fill
+          priority
+          sizes="100vw"
+          src="/media/contact/hero.avif"
+        />
+        <div className="absolute inset-0" style={HERO_OVERLAY_STYLE} />
+        <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl">
             <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
               <span className="block">Let&apos;s Build Your</span>
@@ -79,17 +84,19 @@ const Page = () => {
               </Link>
               <Link
                 className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 md:w-auto md:px-10"
-                href="#contact"
-                style={SECONDARY_CTA_STYLE}
+                href={BOOK_MEETING_HREF}
+                rel="noopener noreferrer"
+                style={PRIMARY_CTA_STYLE}
+                target="_blank"
               >
                 Book a Meeting
               </Link>
             </div>
           </div>
         </div>
-      </CinematicSequence>
+      </section>
       <ClientLogos />
-      <ContactUsForm {...CONTACT_FORM} />
+      <ContactUsForm {...CONTACT_FORM} sectionClassName="!pt-6 md:!pt-10" />
       <ProcessTimeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
       <ContactUs {...CONTACT_US} backgroundImage={CONTACT_US_BG} />
       <Footer />

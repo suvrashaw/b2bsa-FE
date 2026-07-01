@@ -52,6 +52,7 @@ export interface CaseStudyDetail {
   client: string;
   event: string;
   eventDescription: string;
+  gallery?: string[];
   image: string;
   location: string;
   outcome: string;
