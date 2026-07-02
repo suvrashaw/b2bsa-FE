@@ -6,6 +6,10 @@
     "href": "/contact-us",
     "label": "Request a Corporate Video Quote"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Corporate Video Production Solutions That Command Enterprise Attention",
   "videoUrl": "/media/media-production/corporate-video-production/hero/desktop.mp4",
   "videoWebm": "/media/media-production/corporate-video-production/hero/desktop.webm"

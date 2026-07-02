@@ -55,7 +55,7 @@ export const FAQAccordionItem = ({ answer, index, isOpen, question }: FAQAccordi
               transition={ANSWER_TRANSITION}
             >
               <div className="px-5 pt-1 pb-6 md:px-6">
-                <p className="text-sm leading-relaxed text-brand-charcoal/60 md:text-base">
+                <p className="text-sm leading-relaxed text-brand-charcoal/75 md:text-base">
                   {answer}
                 </p>
               </div>

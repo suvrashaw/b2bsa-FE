@@ -6,6 +6,10 @@
     "href": "/contact-us",
     "label": "Talk to Our Event Team"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Corporate Networking Event Solutions",
   "videoUrl": "/media/global-event-solutions/corporate-networking-events/hero/desktop.mp4",
   "videoWebm": "/media/global-event-solutions/corporate-networking-events/hero/desktop.webm"

@@ -8,5 +8,9 @@
     "href": "/contact-us",
     "label": "Request a Data Augmentation Services Demo"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "B2B Data Augmentation Services — Transform Incomplete CRM Data Into Sales Intelligence"
 }

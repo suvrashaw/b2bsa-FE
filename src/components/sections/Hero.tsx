@@ -144,7 +144,7 @@ const TypewriterLine = ({
     <span aria-hidden="true" className="invisible">
       {fullText}
     </span>
-    <span className="absolute inset-0">
+    <span className="absolute inset-0 will-change-transform">
       {text}
       {isActive && (
         <span className="ml-0.5 inline-block h-[0.85em] w-[2px] animate-pulse bg-current align-middle" />
@@ -186,6 +186,7 @@ const HeroBackground = ({
             "hero-bg-video absolute inset-0 size-full object-cover",
             hasMobileVideo && "hidden md:block"
           )}
+          fetchPriority="high"
           loop
           muted
           playsInline

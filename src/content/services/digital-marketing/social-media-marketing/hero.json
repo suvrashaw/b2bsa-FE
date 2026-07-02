@@ -8,5 +8,9 @@
     "href": "/contact-us",
     "label": "Grow Your Brand Online"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "B2B Social Media Marketing"
 }

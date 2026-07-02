@@ -9,5 +9,9 @@
     "href": "/contact-us",
     "label": "Plan Virtual Event"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Virtual Video Event Production Services"
 }

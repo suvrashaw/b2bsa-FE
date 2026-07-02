@@ -167,15 +167,18 @@ export const CaseStudiesClientPage = () => {
 
   if (paginatedStudies.length > 0) {
     gridContent = (
-      <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2 lg:grid-cols-12">
-        {paginatedStudies.map((study, index) => (
-          <GridStudyCard
-            colSpan={getGridSpan(index, paginatedStudies.length)}
-            key={study.id}
-            study={study}
-          />
-        ))}
-      </div>
+      <>
+        <h2 className="sr-only">Case Studies</h2>
+        <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2 lg:grid-cols-12">
+          {paginatedStudies.map((study, index) => (
+            <GridStudyCard
+              colSpan={getGridSpan(index, paginatedStudies.length)}
+              key={study.id}
+              study={study}
+            />
+          ))}
+        </div>
+      </>
     );
   } else if (hasEmptyPage) {
     gridContent = (

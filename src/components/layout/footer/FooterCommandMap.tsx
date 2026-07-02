@@ -231,6 +231,7 @@ export const FooterCommandMap = () => {
     <div
       aria-hidden="true"
       className="footer-command-map-root pointer-events-none relative size-full"
+      inert
     >
       <div className="footer-command-map-scan" />
       <ComposableMap

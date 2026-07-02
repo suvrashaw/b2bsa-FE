@@ -9,5 +9,9 @@
     "href": "/contact-us",
     "label": "Talk to Our Event Team"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Booth Logistics Services"
 }

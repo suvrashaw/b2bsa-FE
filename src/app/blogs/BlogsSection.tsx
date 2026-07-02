@@ -164,13 +164,16 @@ export const BlogsSection = () => {
 
   if (paginatedBlogs.length > 0) {
     blogsContent = (
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
-        {paginatedBlogs.map((blog) => (
-          <Link className="block h-full" href={blog.href} key={blog.id}>
-            <BlogCardGrid blog={blog} />
-          </Link>
-        ))}
-      </div>
+      <>
+        <h2 className="sr-only">Blog Posts</h2>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+          {paginatedBlogs.map((blog) => (
+            <Link className="block h-full" href={blog.href} key={blog.id}>
+              <BlogCardGrid blog={blog} />
+            </Link>
+          ))}
+        </div>
+      </>
     );
   } else if (hasEmptyPage) {
     blogsContent = (

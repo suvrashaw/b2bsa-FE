@@ -9,5 +9,9 @@
     "href": "/contact-us",
     "label": "Plan Your Event Branding"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Event Branding Solutions for Corporate Events & Trade Shows"
 }

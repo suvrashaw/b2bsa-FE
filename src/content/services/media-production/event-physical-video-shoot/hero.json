@@ -1,9 +1,15 @@
 {
   "description": "Capture the most impactful moments of your event with high-quality on-site video production - from interviews and client testimonials to thought leadership bytes, speaker highlights, and branded event coverage.",
-  "images": ["/media/home/hero/home_hero_bg.avif"],
+  "images": [
+    "/media/home/hero/home_hero_bg.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Book a Video Shoot"
+  },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
   },
   "title": "Professional On-Site Video Shoots for Events That Deserve to Be Remembered"
 }

@@ -2,7 +2,14 @@
   "description": "Deliver seamless live streaming experiences for conferences, trade shows, webinars, and corporate events with multi-camera production, branded visuals, and reliable technical support.",
   "mobileVideoUrl": "/media/media-production/event-live-streaming-services/hero/mobile.mp4",
   "mobileVideoWebm": "/media/media-production/event-live-streaming-services/hero/mobile.webm",
-  "primaryCta": { "href": "/contact-us", "label": "Stream Your Event" },
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Stream Your Event"
+  },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Event Live Streaming Services for\nCorporate Events, Conferences & Trade Shows",
   "videoUrl": "/media/media-production/event-live-streaming-services/hero/desktop.mp4",
   "videoWebm": "/media/media-production/event-live-streaming-services/hero/desktop.webm"

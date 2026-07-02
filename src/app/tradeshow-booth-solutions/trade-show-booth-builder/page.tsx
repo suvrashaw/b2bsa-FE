@@ -131,7 +131,7 @@ const Page = () => {
                       <h3 className="font-heading text-xl font-bold text-brand-charcoal">
                         {service.title}
                       </h3>
-                      <p className="mt-1 text-sm text-brand-charcoal/60">{service.description}</p>
+                      <p className="mt-1 text-sm text-brand-charcoal/75">{service.description}</p>
                     </div>
                     <ul className="grow space-y-3">
                       {service.features.map((feature) => (

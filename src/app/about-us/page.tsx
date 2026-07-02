@@ -157,7 +157,7 @@ const Page = () => {
           <SectionHeader as="h2" className="mb-2 text-center">
             {ABOUT_CORE_VALUES.heading}
           </SectionHeader>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-brand-charcoal/60 md:text-base">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-brand-charcoal/75 md:text-base">
             {ABOUT_CORE_VALUES.description}
           </p>
           <div className="mx-auto max-w-5xl divide-y divide-brand-charcoal/10 sm:grid sm:grid-cols-2 sm:divide-y-0">

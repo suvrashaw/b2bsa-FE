@@ -8,5 +8,9 @@
     "href": "/contact-us",
     "label": "Request a Free SEO Audit"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "B2B SEO Services That Build Organic Pipeline — Not Just Traffic"
 }

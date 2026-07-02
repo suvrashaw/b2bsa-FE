@@ -9,5 +9,9 @@
     "href": "/contact-us",
     "label": "Plan Your Corporate Event"
   },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "Corporate Event Solutions for Global Brands"
 }

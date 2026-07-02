@@ -1,9 +1,15 @@
 {
   "description": "Clicks are not the goal. Pipeline is. As a specialist B2B digital marketing agency, we manage performance marketing programs where every campaign decision is evaluated against one standard: does it move a qualified buyer measurably closer to a sales conversation?",
-  "images": ["/media/digital-marketing/performance-marketing/hero-1.avif"],
+  "images": [
+    "/media/digital-marketing/performance-marketing/hero-1.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request a Digital Marketing Audit"
+  },
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
   },
   "title": "B2B Digital Marketing Built to Fill Enterprise Pipeline"
 }

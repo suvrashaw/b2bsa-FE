@@ -199,12 +199,14 @@ const DirectionButton = ({
 };
 
 const NumberFilter = ({
+  label,
   onOperatorChange,
   onValueChange,
   operator,
   placeholder,
   value,
 }: {
+  label: string;
   onOperatorChange: (event: ChangeEvent<HTMLSelectElement>) => void;
   onValueChange: (event: ChangeEvent<HTMLInputElement>) => void;
   operator: NumberOperator;
@@ -212,7 +214,7 @@ const NumberFilter = ({
   value: string;
 }) => (
   <div className="grid grid-cols-[0.85fr_1.15fr] gap-3">
-    <select className={FORM_CONTROL_CLASS} onChange={onOperatorChange} value={operator}>
+    <select aria-label={label} className={FORM_CONTROL_CLASS} onChange={onOperatorChange} value={operator}>
       {NUMBER_OPERATOR_OPTIONS.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -554,6 +556,7 @@ export const TradeShowCalendarSection = () => {
             <FilterPanel title="Sort By">
               <div className="space-y-3">
                 <select
+                  aria-label="Sort by field"
                   className={FORM_CONTROL_CLASS}
                   onChange={handleSortFieldChange}
                   value={sortField}
@@ -594,6 +597,7 @@ export const TradeShowCalendarSection = () => {
 
             <FilterPanel title="Industry">
               <select
+                aria-label="Industry"
                 className={FORM_CONTROL_CLASS}
                 onChange={handleIndustryChange}
                 value={selectedIndustry}
@@ -608,6 +612,7 @@ export const TradeShowCalendarSection = () => {
 
             <FilterPanel title="Number of Attendees">
               <NumberFilter
+                label="Attendee count operator"
                 onOperatorChange={handleAttendeeOperatorChange}
                 onValueChange={handleAttendeeValueChange}
                 operator={attendeeOperator}
@@ -618,6 +623,7 @@ export const TradeShowCalendarSection = () => {
 
             <FilterPanel title="Number of Exhibitors">
               <NumberFilter
+                label="Exhibitor count operator"
                 onOperatorChange={handleExhibitorOperatorChange}
                 onValueChange={handleExhibitorValueChange}
                 operator={exhibitorOperator}
@@ -628,6 +634,7 @@ export const TradeShowCalendarSection = () => {
 
             <FilterPanel title="Date Range">
               <select
+                aria-label="Date range"
                 className={FORM_CONTROL_CLASS}
                 onChange={handleDateRangeChange}
                 value={dateRange}

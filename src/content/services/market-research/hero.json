@@ -4,6 +4,9 @@
     "href": "/contact-us",
     "label": "Request a Research Consultation"
   },
-
+  "secondaryCta": {
+    "href": "/case-studies",
+    "label": "View Event Portfolio"
+  },
   "title": "B2B Market Research That Gives Your Enterprise an Unfair Competitive Advantage"
 }
