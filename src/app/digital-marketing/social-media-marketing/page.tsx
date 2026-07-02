@@ -4,12 +4,14 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { PERF_PAGE } from "@/content/services/digital-marketing/content";
@@ -95,11 +97,23 @@ const Page = () => {
             heading={SMM_CAPABILITIES.heading}
           />
 
-          <Capabilities
-            capabilities={SMM_INDUSTRIES_FEATURES}
-            heading={SMM_INDUSTRIES.heading}
-            mediaPosition="left"
-          />
+          <section className="bg-brand-gray py-14 md:py-20" id="industries">
+            <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+              <SectionHeader as="h2" className="mb-10 text-center">
+                {SMM_INDUSTRIES.heading}
+              </SectionHeader>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {SMM_INDUSTRIES_FEATURES.map((industry, i) => (
+                  <IndustryShaderCard
+                    icon={industry.icon}
+                    index={i}
+                    key={industry.id}
+                    title={industry.label}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
         </>
       }
       relatedServices={SMM_RELATED_SERVICES}

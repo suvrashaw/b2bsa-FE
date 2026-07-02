@@ -5,7 +5,7 @@ import { Warp } from "@paper-design/shaders-react";
 import { Icon } from "@/components/ui/Icon";
 
 interface IndustryShaderCardProps {
-  description: string;
+  description?: string;
   icon: string;
   index: number;
   title: string;
@@ -51,7 +51,9 @@ export const IndustryShaderCard = ({
         <h3 className="mb-1.5 font-heading text-base leading-snug font-semibold text-white">
           {title}
         </h3>
-        <p className="text-xs leading-relaxed text-white/70">{description}</p>
+        {description ? (
+          <p className="text-xs leading-relaxed text-white/70">{description}</p>
+        ) : null}
       </div>
     </div>
   );
