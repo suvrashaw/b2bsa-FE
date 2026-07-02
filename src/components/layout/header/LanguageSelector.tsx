@@ -38,9 +38,7 @@ export const LanguageSelector = memo(({ lightText }: { lightText: boolean }) => 
               aria-selected={lang.code === "EN"}
               className={cn(
                 "flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors hover:bg-brand-blue/5 hover:text-brand-blue focus:bg-brand-blue/5 focus:text-brand-blue focus:outline-none",
-                lang.code === "EN"
-                  ? "font-semibold text-brand-blue"
-                  : "text-brand-charcoal"
+                lang.code === "EN" ? "font-semibold text-brand-blue" : "text-brand-charcoal"
               )}
               key={lang.code}
               role="option"

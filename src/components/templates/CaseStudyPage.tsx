@@ -69,22 +69,6 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
         title={study.title}
       />
 
-      {/* Services Delivered */}
-      {study.services.length > 0 && (
-        <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-            <SectionHeader as="h2" className="mb-10 text-center">
-              Services Delivered
-            </SectionHeader>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {study.services.map((service, index) => (
-                <ServicesImageCard index={index} key={service} service={service} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* About the Event */}
       {study.eventDescription && (
         <section className="bg-brand-gray py-16 md:py-20">
@@ -98,6 +82,22 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
             <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
               {study.eventDescription}
             </p>
+          </div>
+        </section>
+      )}
+
+      {/* Services Delivered */}
+      {study.services.length > 0 && (
+        <section className="bg-brand-gray py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
+            <SectionHeader as="h2" className="mb-10 text-center">
+              Services Delivered
+            </SectionHeader>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {study.services.map((service, index) => (
+                <ServicesImageCard index={index} key={service} service={service} />
+              ))}
+            </div>
           </div>
         </section>
       )}

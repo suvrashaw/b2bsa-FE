@@ -6,8 +6,5 @@
     "label": "Start Your Media Project",
     "opensModal": true
   },
-  "headingLines": [
-    "Content Should",
-    "Keep Working."
-  ]
+  "headingLines": ["Content Should", "Keep Working."]
 }

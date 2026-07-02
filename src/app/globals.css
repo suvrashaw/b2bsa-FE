@@ -535,9 +535,14 @@ body {
   }
 }
 
+@layer base {
+  .schedule-shake {
+    display: inline-flex;
+  }
+}
+
 .schedule-shake {
   animation: schedule-shake 4s ease-in-out infinite;
-  display: inline-flex;
   transform-origin: center;
 }
 

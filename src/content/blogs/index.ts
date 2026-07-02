@@ -164,12 +164,12 @@ export type LooseService = {
 };
 
 const SERVICE_FALLBACK_HREFS: Record<string, string> = {
-  appointment: "/services/sales-qualified-lead-generation",
-  database: "/services/sales-qualified-lead-generation",
-  icp: "/services/sales-qualified-lead-generation",
-  intelligence: "/services/market-research",
-  prospecting: "/services/sales-qualified-lead-generation",
-  validation: "/services/market-research",
+  appointment: "/sales-qualified-lead-generation",
+  database: "/sales-qualified-lead-generation",
+  icp: "/sales-qualified-lead-generation",
+  intelligence: "/market-research",
+  prospecting: "/sales-qualified-lead-generation",
+  validation: "/market-research",
 };
 
 export const BLOG_SERVICE_CAROUSEL = {

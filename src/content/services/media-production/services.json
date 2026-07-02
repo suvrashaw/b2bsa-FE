@@ -4,7 +4,7 @@
     {
       "color": "bg-brand-blue",
       "description": "Highlight reels, testimonial clips, speaker coverage, and post-event recap content, extending the ROI of your event investment beyond the show floor.",
-      "href": "/services/media-production/event-video-production",
+      "href": "/media-production/event-video-production",
       "icon": "Camera",
       "id": "event-video",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -13,7 +13,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "Brand films, product explainers, executive interviews, investor content, and sales enablement videos built for long B2B sales cycles.",
-      "href": "/services/media-production/corporate-video-production",
+      "href": "/media-production/corporate-video-production",
       "icon": "Clapperboard",
       "id": "corporate-video",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -22,7 +22,7 @@
     {
       "color": "bg-brand-blue",
       "description": "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",
-      "href": "/services/media-production/event-live-streaming-services",
+      "href": "/media-production/event-live-streaming-services",
       "icon": "Radio",
       "id": "live-streaming",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -31,7 +31,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "Capture audience engagement, showcase event success, and extend event visibility with cinematic-quality event experience video production.",
-      "href": "/services/media-production/event-experience-video-production",
+      "href": "/media-production/event-experience-video-production",
       "icon": "Film",
       "id": "event-experience-video",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -40,7 +40,7 @@
     {
       "color": "bg-brand-blue",
       "description": "On-site professional video capture for conferences, trade shows, product launches, and corporate events with cinematic production quality.",
-      "href": "/services/media-production/event-physical-video-shoot",
+      "href": "/media-production/event-physical-video-shoot",
       "icon": "Video",
       "id": "event-physical-video",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -49,7 +49,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "End-to-end virtual video production for webinars, fireside chats, executive interviews, virtual conferences, and hybrid corporate events.",
-      "href": "/services/media-production/virtual-video-production",
+      "href": "/media-production/virtual-video-production",
       "icon": "MonitorPlay",
       "id": "virtual-video",
       "image": "/media/home/hero/home_hero_bg.avif",

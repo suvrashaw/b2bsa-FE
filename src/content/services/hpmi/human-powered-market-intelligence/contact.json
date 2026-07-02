@@ -1,9 +1,7 @@
 {
   "badge": "Ready to Start",
   "description": "The most valuable strategic meetings start with the right intelligence. Human-powered market intelligence is the advantage that makes decisions faster and more grounded.",
-  "headingLines": [
-    "Get The Right Intelligence"
-  ],
+  "headingLines": ["Get The Right Intelligence"],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Commission a Custom Research Report",

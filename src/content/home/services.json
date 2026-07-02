@@ -5,7 +5,7 @@
     {
       "color": "bg-brand-blue",
       "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
-      "href": "/services/tradeshow-booth-solutions",
+      "href": "/tradeshow-booth-solutions",
       "icon": "Presentation",
       "id": "booth-design",
       "image": "/media/home/services/booth-design-and-production.avif",
@@ -14,7 +14,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action, not a badge scan CSV.",
-      "href": "/services/sales-qualified-lead-generation",
+      "href": "/sales-qualified-lead-generation",
       "icon": "Users",
       "id": "active-prospecting",
       "image": "/media/home/services/active-prospecting.avif",
@@ -23,7 +23,7 @@
     {
       "color": "bg-brand-primary",
       "description": "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust, and keeps earning it long after the shoot.",
-      "href": "/services/media-production",
+      "href": "/media-production",
       "icon": "MonitorPlay",
       "id": "media",
       "image": "/media/home/services/corporate-media-production.avif",
@@ -32,7 +32,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "We design and manage exclusive networking experiences — VIP dinners, roundtables, and hosted meetings — that connect your team directly with key enterprise decision-makers.",
-      "href": "/services/hpmi",
+      "href": "/hpmi",
       "icon": "Coffee",
       "id": "networking",
       "image": "/media/home/services/networking.avif",
@@ -41,7 +41,7 @@
     {
       "color": "bg-brand-primary",
       "description": "We create cohesive event branding — from booth graphics and signage to digital displays — so your enterprise presence commands attention across the entire venue.",
-      "href": "/services/global-event-solutions",
+      "href": "/global-event-solutions",
       "icon": "Palette",
       "id": "branding",
       "image": "/media/home/services/branding.avif",
@@ -50,7 +50,7 @@
     {
       "color": "bg-brand-blue",
       "description": "We design immersive booth experiences — interactive demos, live activations, and engagement zones — that turn passive visitors into active pipeline opportunities.",
-      "href": "/services/global-event-solutions",
+      "href": "/global-event-solutions",
       "icon": "Lightbulb",
       "id": "experience-creation",
       "image": "/media/home/services/experience-creation.avif",
@@ -59,7 +59,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "Better strategy starts with better intelligence. Our B2B market research agency helps enterprise teams understand their markets more clearly than the competition, and move on that advantage faster.",
-      "href": "/services/market-research",
+      "href": "/market-research",
       "icon": "Database",
       "id": "market-research",
       "image": "/media/home/services/database-and-market-research.avif",
@@ -68,10 +68,10 @@
     {
       "color": "bg-brand-primary",
       "description": "Clicks are not the goal. Pipeline is. As a specialist B2B digital marketing agency, we manage performance marketing programs where every campaign decision is evaluated against one standard: does it move a qualified buyer measurably closer to a sales conversation?",
-      "href": "/services/digital-marketing",
+      "href": "/digital-marketing",
       "icon": "Rocket",
       "id": "performance-marketing",
-      "image": "/media/home/services/digital-marketing.avif",
+      "image": "/media/home/digital-marketing.avif",
       "title": "Digital Marketing"
     }
   ]

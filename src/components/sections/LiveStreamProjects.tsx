@@ -2,7 +2,7 @@
 
 import { Play, Radio } from "lucide-react";
 import Image from "next/image";
-import { type MouseEvent, useCallback, useState } from "react";
+import { type MouseEvent, type ReactNode, useCallback, useState } from "react";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
@@ -29,6 +29,12 @@ interface LiveStreamProjectItem {
   videoUrl?: string;
 }
 
+const getYoutubeId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+};
+
 export const LiveStreamProjects = ({
   description,
   heading,
@@ -47,13 +53,45 @@ export const LiveStreamProjects = ({
 
   if (!activeProject) return null;
 
-  const getYoutubeId = (url: string) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
-  };
-
   const ytId = activeProject.videoUrl ? getYoutubeId(activeProject.videoUrl) : null;
+
+  let mediaNode: ReactNode;
+  if (ytId) {
+    mediaNode = (
+      <iframe
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="absolute inset-0 size-full border-0"
+        referrerPolicy="strict-origin-when-cross-origin"
+        src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0`}
+        title={activeProject.title}
+      />
+    );
+  } else if (activeProject.videoUrl) {
+    mediaNode = (
+      <video
+        className="size-full object-cover"
+        controls
+        key={activeProject.id}
+        muted
+        playsInline
+        poster={activeProject.thumbnail}
+        preload="metadata"
+        src={activeProject.videoUrl}
+      />
+    );
+  } else {
+    mediaNode = (
+      <Image
+        alt={activeProject.title}
+        className="object-cover"
+        fill
+        priority
+        sizes="(max-width: 1024px) 100vw, 70vw"
+        src={activeProject.thumbnail}
+      />
+    );
+  }
 
   return (
     <section className="bg-brand-gray py-12 md:py-16 lg:py-20" id={id}>
@@ -75,36 +113,7 @@ export const LiveStreamProjects = ({
           <div className="grid lg:grid-cols-[minmax(0,1fr)_380px]">
             <div className="min-w-0 p-4 sm:p-6">
               <div className="relative aspect-video overflow-hidden rounded-lg bg-brand-charcoal">
-                {ytId ? (
-                  <iframe
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="absolute inset-0 size-full border-0"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0`}
-                    title={activeProject.title}
-                  />
-                ) : activeProject.videoUrl ? (
-                  <video
-                    className="size-full object-cover"
-                    controls
-                    key={activeProject.id}
-                    muted
-                    playsInline
-                    poster={activeProject.thumbnail}
-                    preload="metadata"
-                    src={activeProject.videoUrl}
-                  />
-                ) : (
-                  <Image
-                    alt={activeProject.title}
-                    className="object-cover"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 70vw"
-                    src={activeProject.thumbnail}
-                  />
-                )}
+                {mediaNode}
                 {!ytId && (
                   <div className="pointer-events-none absolute top-4 left-4 inline-flex items-center gap-2 rounded-sm bg-brand-charcoal/80 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
                     <Radio className="size-4 text-brand-cyan" />

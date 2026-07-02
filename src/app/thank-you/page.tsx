@@ -49,10 +49,7 @@ const Page = () => {
                 <Phone className="mt-0.5 size-5 shrink-0 text-brand-blue" strokeWidth={1.5} />
                 <div>
                   <p className="mb-1 font-semibold text-brand-charcoal">Call Us</p>
-                  <a
-                    className="text-sm text-brand-blue hover:underline"
-                    href="tel:+1-800-000-0000"
-                  >
+                  <a className="text-sm text-brand-blue hover:underline" href="tel:+1-800-000-0000">
                     +1 (800) 000-0000
                   </a>
                 </div>

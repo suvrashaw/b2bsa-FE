@@ -4,7 +4,7 @@
     {
       "color": "bg-brand-blue",
       "description": "Organic visibility built through technical SEO, content architecture, and authority building that compounds over time.",
-      "href": "/services/digital-marketing/seo-services",
+      "href": "/digital-marketing/seo-services",
       "icon": "Search",
       "id": "seo",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -13,7 +13,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads managed around lead quality.",
-      "href": "/services/digital-marketing/performance-marketing",
+      "href": "/digital-marketing/performance-marketing",
       "icon": "Zap",
       "id": "paid",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -22,7 +22,7 @@
     {
       "color": "bg-brand-primary",
       "description": "LinkedIn, Instagram, and platform-specific content strategies that build audience and drive qualified inbound leads.",
-      "href": "/services/digital-marketing/social-media-marketing",
+      "href": "/digital-marketing/social-media-marketing",
       "icon": "Share2",
       "id": "social",
       "image": "/media/home/hero/home_hero_bg.avif",

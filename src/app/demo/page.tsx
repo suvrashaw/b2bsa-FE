@@ -403,49 +403,49 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
   BlogsCarousel: [
     {
-      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      href: "/tradeshow-booth-solutions/booth-hostess-services",
       label: "Booth Hostess",
     },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+      href: "/tradeshow-booth-solutions/trade-show-booth-rental",
       label: "Trade Show Booth Rental",
     },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Booth Builder",
     },
   ],
   BoothWhyChooseUs: [
     {
-      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      href: "/tradeshow-booth-solutions/booth-hostess-services",
       label: "Booth Hostess",
     },
     {
-      href: "/services/global-event-solutions/corporate-event-solutions",
+      href: "/global-event-solutions/corporate-event-solutions",
       label: "Corp Events",
     },
     {
-      href: "/services/global-event-solutions/corporate-networking-events",
+      href: "/global-event-solutions/corporate-networking-events",
       label: "Corp Networking",
     },
   ],
   Capabilities: [
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   CardsSection: [
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Booth Builder",
     },
   ],
   CaseStudies: [
     { href: "/", label: "Home" },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/global-event-solutions", label: "Service Hub" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
@@ -457,11 +457,11 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
   ContactUs: [
     {
-      href: "/services/market-research/data-augmentation-services",
+      href: "/market-research/data-augmentation-services",
       label: "Data Augmentation Services",
     },
-    { href: "/services/global-event-solutions", label: "Global ES" },
-    { href: "/services/market-research", label: "Market Research" },
+    { href: "/global-event-solutions", label: "Global ES" },
+    { href: "/market-research", label: "Market Research" },
   ],
   ContactUsForm: [
     { href: "/", label: "Home" },
@@ -470,7 +470,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
   ],
   CorporateVideoPortfolioSection: [
     {
-      href: "/services/media-production/corporate-video-production",
+      href: "/media-production/corporate-video-production",
       label: "Corporate Video",
     },
   ],
@@ -479,7 +479,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-design",
+      href: "/tradeshow-booth-solutions/trade-show-booth-design",
       label: "Booth Design",
     },
   ],
@@ -487,21 +487,21 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/", label: "Home" },
     { href: "/terms-and-conditions", label: "Terms" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   FAQAccordion: [
     {
-      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      href: "/tradeshow-booth-solutions/booth-hostess-services",
       label: "Booth Hostess",
     },
     {
-      href: "/services/global-event-solutions/corporate-event-solutions",
+      href: "/global-event-solutions/corporate-event-solutions",
       label: "Corp Events",
     },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Booth Builder",
     },
   ],
@@ -509,75 +509,75 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/tradeshow-calendar", label: "Trade Show Cal." },
     { href: "/case-studies/waf-2025", label: "Case Study" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   HomeStats: [
     { href: "/", label: "Home" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/global-event-solutions", label: "Service Hub" },
   ],
   IndustriesAlt: [
     {
-      href: "/services/media-production/corporate-video-production",
+      href: "/media-production/corporate-video-production",
       label: "Corporate Video",
     },
   ],
   LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   RentVsBuySection: [
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+      href: "/tradeshow-booth-solutions/trade-show-booth-rental",
       label: "Trade Show Booth Rental",
     },
   ],
   ServicesStack: [
     { href: "/", label: "Home" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   Spotlight: [
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/services/global-event-solutions", label: "Service Hub" },
+    { href: "/global-event-solutions", label: "Service Hub" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],
   StickyScroll: [
     { href: "/", label: "Home" },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+      href: "/tradeshow-booth-solutions/trade-show-booth-rental",
       label: "Trade Show Booth Rental",
     },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Booth Builder",
     },
   ],
   Testimonials: [{ href: "/", label: "Home" }],
   Timeline: [
     {
-      href: "/services/tradeshow-booth-solutions/booth-hostess-services",
+      href: "/tradeshow-booth-solutions/booth-hostess-services",
       label: "Booth Hostess",
     },
     {
-      href: "/services/tradeshow-booth-solutions/booth-logistics-services",
+      href: "/tradeshow-booth-solutions/booth-logistics-services",
       label: "Event Logistics",
     },
     {
-      href: "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
     },
   ],

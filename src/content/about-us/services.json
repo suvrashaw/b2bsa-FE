@@ -2,25 +2,25 @@
   "heading": "Our Signature Service",
   "services": [
     {
-      "href": "/services/tradeshow-booth-solutions/trade-show-booth-design",
+      "href": "/tradeshow-booth-solutions/trade-show-booth-design",
       "id": "trade-show-booth-design",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade show booth design"
     },
     {
-      "href": "/services/global-event-solutions",
+      "href": "/global-event-solutions",
       "id": "global-event-solutions",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Global event solutions"
     },
     {
-      "href": "/services/media-production",
+      "href": "/media-production",
       "id": "media-production-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Media production services"
     },
     {
-      "href": "/services/global-event-solutions/event-branding-solutions",
+      "href": "/global-event-solutions/event-branding-solutions",
       "id": "event-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Branding"

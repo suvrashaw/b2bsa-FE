@@ -6,8 +6,5 @@
     "label": "Book a Free Strategy Session",
     "opensModal": true
   },
-  "headingLines": [
-    "250+ Events.",
-    "$1.2B+ Influenced."
-  ]
+  "headingLines": ["250+ Events.", "$1.2B+ Influenced."]
 }

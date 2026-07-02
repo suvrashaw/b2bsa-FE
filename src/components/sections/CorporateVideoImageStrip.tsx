@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const IMAGES = [
-  "/media/services/media-production/corporate-video-production/deliverables-1.avif",
-  "/media/services/media-production/corporate-video-production/deliverables-2.avif",
-  "/media/services/media-production/corporate-video-production/deliverables-3.avif",
-  "/media/services/media-production/corporate-video-production/why-choose-us-1.avif",
-  "/media/services/media-production/corporate-video-production/why-choose-us-2.avif",
+  "/media/media-production/corporate-video-production/deliverables-1.avif",
+  "/media/media-production/corporate-video-production/deliverables-2.avif",
+  "/media/media-production/corporate-video-production/deliverables-3.avif",
+  "/media/media-production/corporate-video-production/why-choose-us-1.avif",
+  "/media/media-production/corporate-video-production/why-choose-us-2.avif",
 ];
 
 export const CorporateVideoImageStrip = () => {
@@ -13,9 +13,7 @@ export const CorporateVideoImageStrip = () => {
     <div className="flex h-[216px] w-full overflow-hidden">
       {IMAGES.map((src, idx) => (
         <div
-          className={`relative size-full flex-1 ${
-            idx >= 2 ? "hidden lg:block" : "block"
-          }`}
+          className={`relative size-full flex-1 ${idx >= 2 ? "hidden lg:block" : "block"}`}
           key={idx}
         >
           <Image

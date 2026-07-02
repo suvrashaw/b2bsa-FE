@@ -54,7 +54,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             children as React.ReactElement,
             undefined,
             <>
-              {((children as React.ReactElement).props as any).children}
+              {(children as React.ReactElement<{ children?: React.ReactNode }>).props.children}
               {isShowArrow && (
                 <span className="relative inline-flex size-4 shrink-0">
                   <ArrowRight

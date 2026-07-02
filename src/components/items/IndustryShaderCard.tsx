@@ -20,7 +20,12 @@ const CARD_PALETTES: string[][] = [
 
 const WARP_STYLE: React.CSSProperties = { height: "100%", width: "100%" };
 
-export const IndustryShaderCard = ({ description, icon, index, title }: IndustryShaderCardProps) => {
+export const IndustryShaderCard = ({
+  description,
+  icon,
+  index,
+  title,
+}: IndustryShaderCardProps) => {
   const colors = CARD_PALETTES[index % CARD_PALETTES.length];
 
   return (

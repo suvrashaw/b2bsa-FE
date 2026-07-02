@@ -5,7 +5,7 @@
     {
       "color": "bg-brand-blue",
       "description": "exhibition environments engineered for visitor flow and lead conversion",
-      "href": "/services/tradeshow-booth-solutions/trade-show-booth-design",
+      "href": "/tradeshow-booth-solutions/trade-show-booth-design",
       "icon": "Presentation",
       "id": "booth-design",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -14,7 +14,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "modular exhibition systems globally available",
-      "href": "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+      "href": "/tradeshow-booth-solutions/trade-show-booth-rental",
       "icon": "Layers",
       "id": "booth-rental",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -23,7 +23,7 @@
     {
       "color": "bg-brand-primary",
       "description": "fabrication to on-site installation",
-      "href": "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+      "href": "/tradeshow-booth-solutions/trade-show-booth-builder",
       "icon": "Globe2",
       "id": "booth-builder",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -32,7 +32,7 @@
     {
       "color": "bg-brand-blue",
       "description": "professional exhibition staffing and brand ambassadors",
-      "href": "/services/tradeshow-booth-solutions/booth-hostess-services",
+      "href": "/tradeshow-booth-solutions/booth-hostess-services",
       "icon": "Users",
       "id": "booth-hostess",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -41,7 +41,7 @@
     {
       "color": "bg-brand-cyan",
       "description": "end-to-end shipping, customs, and on-site delivery",
-      "href": "/services/tradeshow-booth-solutions/booth-logistics-services",
+      "href": "/tradeshow-booth-solutions/booth-logistics-services",
       "icon": "Truck",
       "id": "booth-logistics",
       "image": "/media/home/hero/home_hero_bg.avif",
@@ -50,7 +50,7 @@
     {
       "color": "bg-brand-primary",
       "description": "flexible systems adaptable across events and locations",
-      "href": "/services/tradeshow-booth-solutions/modular-booth-solutions",
+      "href": "/tradeshow-booth-solutions/modular-booth-solutions",
       "icon": "Grid",
       "id": "modular-booth",
       "image": "/media/home/hero/home_hero_bg.avif",

@@ -4,10 +4,7 @@
     "src": "/media/home/hero/home_hero_bg.avif"
   },
   "description": "Partner with B2B Sales Arrow for networking event solutions that help your brand create meaningful business connections, engaging guest experiences, and successful corporate networking events.",
-  "headingLines": [
-    "Looking to Organize a Professional",
-    "Networking Event?"
-  ],
+  "headingLines": ["Looking to Organize a Professional", "Networking Event?"],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Schedule a Consultation",

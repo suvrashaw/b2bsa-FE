@@ -148,8 +148,6 @@ const StatsMarquee = ({ items }: { items: StatItem[] }) => {
 
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
-
-
 const SpotlightTextBlock = ({
   align = "center",
   className,
@@ -182,7 +180,7 @@ const SpotlightTextBlock = ({
   triggerContactModal?: boolean;
 }) => {
   const hasDescriptionItems = Boolean(descriptionItems);
-  
+
   const flatItems: StatItem[] =
     stats && stats.length > 0
       ? stats.flatMap((stat, index) =>

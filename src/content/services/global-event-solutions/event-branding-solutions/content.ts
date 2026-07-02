@@ -36,4 +36,3 @@ export { default as EVENT_BRANDING_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_BRANDING_PAGE } from "./page.json";
 export { default as EVENT_BRANDING_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_BRANDING_WHY_CHOOSE_US } from "./why-choose-us.json";
-

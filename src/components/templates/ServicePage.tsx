@@ -328,7 +328,9 @@ export const ServicePage = ({
 
       {preContactSections}
 
-      {contactUs && <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />}
+      {contactUs && (
+        <ContactUs {...contactUs} backgroundImage={contactUs.backgroundImage || fallbackBg} />
+      )}
 
       <Footer />
     </main>

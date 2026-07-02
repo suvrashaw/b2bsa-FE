@@ -11,16 +11,16 @@ export interface CaseStudiesPortfolioProps {
   items: CaseStudyEntry[];
 }
 
-export const CaseStudiesPortfolio = ({
-  heading,
-  items,
-}: CaseStudiesPortfolioProps) => {
+export const CaseStudiesPortfolio = ({ heading, items }: CaseStudiesPortfolioProps) => {
   return (
     <CardsGrid
       className="bg-[#111111] !pt-[100px] text-white"
       heading={
         <div className="flex flex-col items-start text-left">
-          <SectionHeader as="h2" className="max-w-4xl text-[30px] leading-none font-black text-white md:text-[50px] lg:text-[70px]">
+          <SectionHeader
+            as="h2"
+            className="max-w-4xl text-[30px] leading-none font-black text-white md:text-[50px] lg:text-[70px]"
+          >
             {heading}
           </SectionHeader>
           <Link

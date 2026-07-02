@@ -5,10 +5,7 @@
   },
   "badge": "Flexible Presence",
   "description": "One booth system. Every event. Any market.",
-  "headingLines": [
-    "One Booth System.",
-    "Every Event. Any Market."
-  ],
+  "headingLines": ["One Booth System.", "Every Event. Any Market."],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Get a Modular Booth Quote",

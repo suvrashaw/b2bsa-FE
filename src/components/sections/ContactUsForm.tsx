@@ -34,7 +34,12 @@ export const ContactUsForm = ({
 }: ContactUsFormProps = {}) => {
   return (
     <section
-      className={["relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24", sectionClassName].filter(Boolean).join(" ")}
+      className={[
+        "relative overflow-hidden bg-brand-gray py-14 md:py-20 lg:py-24",
+        sectionClassName,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       id="contact"
     >
       {/* Decorative background flare */}

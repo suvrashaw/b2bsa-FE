@@ -1,42 +1,34 @@
 import type { Metadata } from "next";
 
-import { type RelatedService, RelatedServicesCard } from "@/components/items/RelatedServicesCard";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { CardsGrid } from "@/components/sections/CardsGrid";
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ServicePage } from "@/components/templates/ServicePage";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { serviceNavigationGroups } from "@/content/navigation";
-import { SERVICES_PAGE } from "@/content/services";
+import {
+  HUB_CASE_STUDIES,
+  HUB_CLIENT_LOGOS,
+  HUB_CONTACT_CTA,
+  HUB_FAQ,
+  HUB_HERO,
+  HUB_INTRO,
+  HUB_PAGE,
+  HUB_SERVICES,
+  HUB_WHY,
+} from "@/content/services/hub-content";
 
-export const metadata: Metadata = getMarketingPageMetadata(SERVICES_PAGE);
-
-const serviceLinks: RelatedService[] = serviceNavigationGroups.map((service) => ({
-  href: service.href,
-  title: service.name,
-}));
+export const metadata: Metadata = getMarketingPageMetadata(HUB_PAGE);
 
 const Page = () => {
   return (
-    <main className="min-h-screen bg-brand-gray">
-      <Header forceLightMode />
-      <section className="bg-white pt-32 pb-12 md:pt-36 md:pb-16">
-        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-          <SectionHeader
-            as="h1"
-            description="Explore the B2B Sales Arrow service portfolio."
-            heading="SERVICES"
-            headingAlign="left"
-          />
-        </div>
-      </section>
-      <CardsGrid cols={3} heading="SERVICES" headingAlign="left">
-        {serviceLinks.map((service, index) => (
-          <RelatedServicesCard index={index} key={service.href} service={service} />
-        ))}
-      </CardsGrid>
-      <Footer />
-    </main>
+    <ServicePage
+      caseStudies={HUB_CASE_STUDIES}
+      clientLogos={HUB_CLIENT_LOGOS}
+      contactUs={HUB_CONTACT_CTA}
+      faq={HUB_FAQ}
+      hero={HUB_HERO}
+      page={HUB_PAGE}
+      services={HUB_SERVICES}
+      spotlight={HUB_INTRO}
+      why={HUB_WHY}
+    />
   );
 };
 

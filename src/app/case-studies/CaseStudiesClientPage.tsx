@@ -82,7 +82,6 @@ const FilterPill = ({
 const GridStudyCard = ({ colSpan, study }: { colSpan: string; study: CaseStudyEntry }) => {
   const [isRevealed, setIsRevealed] = useState(false);
   const href = study.href;
-  const description = study.title;
 
   const handleLinkClick = useCallback(
     (event: MouseEvent<HTMLAnchorElement>) => {

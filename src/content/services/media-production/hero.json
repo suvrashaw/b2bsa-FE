@@ -1,12 +1,12 @@
 {
   "description": "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust, and keeps earning it long after the shoot.",
-  "mobileVideoUrl": "/media/services/media-production/hero/mobile.mp4",
-  "mobileVideoWebm": "/media/services/media-production/hero/mobile.webm",
+  "mobileVideoUrl": "/media/media-production/hero/mobile.mp4",
+  "mobileVideoWebm": "/media/media-production/hero/mobile.webm",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Start Your Media Project"
   },
   "title": "B2B Media Production That Builds Enterprise Authority Before the First Sales Call",
-  "videoUrl": "/media/services/media-production/hero/desktop.mp4",
-  "videoWebm": "/media/services/media-production/hero/desktop.webm"
+  "videoUrl": "/media/media-production/hero/desktop.mp4",
+  "videoWebm": "/media/media-production/hero/desktop.webm"
 }

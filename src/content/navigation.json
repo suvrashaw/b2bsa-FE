@@ -31,131 +31,131 @@
   ],
   "serviceNavigationGroups": [
     {
-      "href": "/services/global-event-solutions",
+      "href": "/global-event-solutions",
       "links": [
         {
-          "href": "/services/global-event-solutions/event-experience-creation",
+          "href": "/global-event-solutions/event-experience-creation",
           "name": "Event Experience Creation"
         },
         {
-          "href": "/services/global-event-solutions/event-branding-solutions",
+          "href": "/global-event-solutions/event-branding-solutions",
           "name": "Event Branding Solutions"
         },
         {
-          "href": "/services/global-event-solutions/corporate-event-solutions",
+          "href": "/global-event-solutions/corporate-event-solutions",
           "name": "Corporate Event Solutions"
         },
         {
-          "href": "/services/global-event-solutions/corporate-networking-events",
+          "href": "/global-event-solutions/corporate-networking-events",
           "name": "Corporate Networking Events"
         }
       ],
       "name": "GLOBAL EVENT SOLUTIONS"
     },
     {
-      "href": "/services/tradeshow-booth-solutions",
+      "href": "/tradeshow-booth-solutions",
       "links": [
         {
-          "href": "/services/tradeshow-booth-solutions/trade-show-booth-builder",
+          "href": "/tradeshow-booth-solutions/trade-show-booth-builder",
           "name": "Trade Show Booth Builder"
         },
         {
-          "href": "/services/tradeshow-booth-solutions/trade-show-booth-design",
+          "href": "/tradeshow-booth-solutions/trade-show-booth-design",
           "name": "Trade Show Booth Design"
         },
         {
-          "href": "/services/tradeshow-booth-solutions/trade-show-booth-rental",
+          "href": "/tradeshow-booth-solutions/trade-show-booth-rental",
           "name": "Trade Show Booth Rental"
         },
         {
-          "href": "/services/tradeshow-booth-solutions/booth-hostess-services",
+          "href": "/tradeshow-booth-solutions/booth-hostess-services",
           "name": "Booth Hostess Services"
         },
         {
-          "href": "/services/tradeshow-booth-solutions/booth-logistics-services",
+          "href": "/tradeshow-booth-solutions/booth-logistics-services",
           "name": "Booth Logistics Services"
         },
         {
-          "href": "/services/tradeshow-booth-solutions/modular-booth-solutions",
+          "href": "/tradeshow-booth-solutions/modular-booth-solutions",
           "name": "Modular Booth Solutions"
         }
       ],
       "name": "Tradeshow Booth Solutions"
     },
     {
-      "href": "/services/media-production",
+      "href": "/media-production",
       "links": [
         {
-          "href": "/services/media-production/event-video-production",
+          "href": "/media-production/event-video-production",
           "name": "Event Video Production"
         },
         {
-          "href": "/services/media-production/corporate-video-production",
+          "href": "/media-production/corporate-video-production",
           "name": "Corporate Video Production"
         },
         {
-          "href": "/services/media-production/event-live-streaming-services",
+          "href": "/media-production/event-live-streaming-services",
           "name": "Event Live Streaming Services"
         },
         {
-          "href": "/services/media-production/event-experience-video-production",
+          "href": "/media-production/event-experience-video-production",
           "name": "Event Experience Video Production"
         },
         {
-          "href": "/services/media-production/event-physical-video-shoot",
+          "href": "/media-production/event-physical-video-shoot",
           "name": "Event Physical Video Shoot"
         },
         {
-          "href": "/services/media-production/virtual-video-production",
+          "href": "/media-production/virtual-video-production",
           "name": "Virtual Video Production"
         }
       ],
       "name": "MEDIA PRODUCTION"
     },
     {
-      "href": "/services/sales-qualified-lead-generation",
+      "href": "/sales-qualified-lead-generation",
       "links": [
         {
-          "href": "/services/sales-qualified-lead-generation/event-lead-generation",
+          "href": "/sales-qualified-lead-generation/event-lead-generation",
           "name": "Event Lead Generation"
         }
       ],
       "name": "SALES QUALIFIED LEAD GENERATION"
     },
     {
-      "href": "/services/digital-marketing",
+      "href": "/digital-marketing",
       "links": [
         {
-          "href": "/services/digital-marketing/seo-services",
+          "href": "/digital-marketing/seo-services",
           "name": "SEO Services"
         },
         {
-          "href": "/services/digital-marketing/performance-marketing",
+          "href": "/digital-marketing/performance-marketing",
           "name": "Performance Marketing"
         },
         {
-          "href": "/services/digital-marketing/social-media-marketing",
+          "href": "/digital-marketing/social-media-marketing",
           "name": "Social Media Marketing"
         }
       ],
       "name": "Digital Marketing"
     },
     {
-      "href": "/services/market-research",
+      "href": "/market-research",
       "links": [
         {
-          "href": "/services/market-research/data-augmentation-services",
+          "href": "/market-research/data-augmentation-services",
           "name": "Data Augmentation Services"
         },
         {
-          "href": "/services/market-research/data-validation-services",
+          "href": "/market-research/data-validation-services",
           "name": "Data Validation Services"
         }
       ],
       "name": "MARKET RESEARCH"
     },
     {
-      "href": "/services/hpmi/human-powered-market-intelligence",
+      "href": "/hpmi/human-powered-market-intelligence",
       "links": [],
       "name": "Human Powered Market Intelligence"
     }

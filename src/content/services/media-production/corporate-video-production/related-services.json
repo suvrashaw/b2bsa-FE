@@ -1,14 +1,14 @@
 [
   {
-    "href": "/services/media-production/event-video-production",
+    "href": "/media-production/event-video-production",
     "title": "Event Video Production"
   },
   {
-    "href": "/services/media-production/video-editing-services",
+    "href": "/media-production/video-editing-services",
     "title": "Video Editing Services"
   },
   {
-    "href": "/services/media-production/event-live-streaming-services",
+    "href": "/media-production/event-live-streaming-services",
     "title": "Live Streaming Services"
   }
 ]
