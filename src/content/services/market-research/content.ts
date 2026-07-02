@@ -1,9 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
-import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import RESEARCHCASESTUDIES_DATA from "./case-studies.json";
-import RESEARCHCONTACTCTA_DATA from "./contact.json";
 import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
 
 export const RESEARCH_INTRO = {
@@ -14,11 +12,6 @@ export const RESEARCH_INTRO = {
 export const RESEARCH_CASE_STUDIES = {
   ...RESEARCHCASESTUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,
-};
-
-export const RESEARCH_CONTACT_CTA = {
-  ...RESEARCHCONTACTCTA_DATA,
-  ...CINEMATIC_CTA_SHARED,
 };
 
 export { default as RESEARCH_CLIENT_LOGOS } from "./client-logos.json";

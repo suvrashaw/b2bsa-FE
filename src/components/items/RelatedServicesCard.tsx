@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 
-export interface RelatedService {
+interface RelatedService {
   href: string;
   title: string;
 }

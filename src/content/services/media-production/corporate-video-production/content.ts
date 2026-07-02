@@ -24,7 +24,6 @@ export { default as CORPORATE_VIDEO_DELIVERABLES } from "./capabilities.json";
 export { default as CORPORATE_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORPORATE_VIDEO_FAQ } from "./faq.json";
 export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
-export { default as CORPORATE_VIDEO_INDUSTRIES } from "./industries.json";
 export { default as CORPORATE_VIDEO_WHY } from "./intro.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
 export { default as CORPORATE_VIDEO_RELATED_SERVICES } from "./related-services.json";
