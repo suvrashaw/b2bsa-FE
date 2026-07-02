@@ -1,6 +1,7 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
+import GES_CONTACT_DATA from "@/content/services/global-event-solutions/contact.json";
 
 export const HUB_PAGE = {
   pageId: "services",
@@ -124,19 +125,57 @@ export const HUB_CASE_STUDIES = {
   viewAllLabel: "",
 };
 
-export { default as HUB_FAQ } from "@/content/services/tradeshow-booth-solutions/faq.json";
+export const HUB_FAQ = {
+  faqs: [
+    {
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      id: "faq-1",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    },
+    {
+      answer:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      id: "faq-2",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Ut enim ad minim veniam, quis nostrud exercitation ullamco?",
+    },
+    {
+      answer:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      id: "faq-3",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit?",
+    },
+    {
+      answer:
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+      id: "faq-4",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse?",
+    },
+    {
+      answer:
+        "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+      id: "faq-5",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus?",
+    },
+    {
+      answer:
+        "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      id: "faq-6",
+      image: "/media/home/hero/home_hero_bg.avif",
+      question: "Et harum quidem rerum facilis est et expedita distinctio?",
+    },
+  ],
+  heading: "Frequently Asked Questions",
+};
 
 export { default as HUB_WHY } from "@/content/services/tradeshow-booth-solutions/why.json";
 
 export const HUB_CONTACT_CTA = {
-  badge: "Let's Talk",
-  description:
-    "250+ events. $1.2B+ influenced. One team, one brief, one outcome. Tell us about your next program.",
-  headingLines: ["One Brief.", "One Outcome."],
-  primaryCta: {
-    href: "/contact-us",
-    label: "Book a Free Strategy Session",
-    opensModal: true,
-  },
+  ...GES_CONTACT_DATA,
   ...CINEMATIC_CTA_SHARED,
 };
