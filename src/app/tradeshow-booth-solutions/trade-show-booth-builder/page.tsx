@@ -102,10 +102,12 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
+          commonCtaLabel="Contact Our Team"
           contactModal={EMPTY_CONTACT_MODAL}
           heading="Booth Sizes and Formats We Design"
           serviceLabel=""
           services={SHOWCASE_SERVICES}
+          showCommonCta
         />
       }
       preStudiesSections={

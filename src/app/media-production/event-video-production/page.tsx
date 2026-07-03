@@ -34,6 +34,7 @@ const Page = () => {
       preProcessSections={<SectionContactCta />}
       relatedServices={EVENT_VIDEO_RELATED_SERVICES}
       services={EVENT_VIDEO_DELIVERABLES}
+      showServicesCommonCta
       spotlight={EVENT_VIDEO_INTRO}
       why={EVENT_VIDEO_WHY}
     />

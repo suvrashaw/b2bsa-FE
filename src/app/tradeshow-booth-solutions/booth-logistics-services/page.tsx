@@ -57,6 +57,7 @@ const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index
   label: phase.title,
 }));
 
+
 const Page = () => {
   return (
     <ServicePage
@@ -142,6 +143,7 @@ const Page = () => {
       }
       relatedServices={EVENT_LOGISTICS_RELATED_SERVICES}
       services={EVENT_LOGISTICS_DELIVERABLES}
+      showServicesCommonCta
       spotlight={EVENT_LOGISTICS_INTRO}
     />
   );

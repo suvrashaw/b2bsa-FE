@@ -54,6 +54,8 @@ import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
 
+const HOME_SERVICES_CONTACT_MODAL = {};
+
 const Home = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
@@ -88,7 +90,7 @@ const Home = () => {
       </div>
 
       <div id="services">
-        <ServicesStack />
+        <ServicesStack commonCtaLabel="Contact Our Team" contactModal={HOME_SERVICES_CONTACT_MODAL} showCommonCta />
       </div>
 
       <div id="work">

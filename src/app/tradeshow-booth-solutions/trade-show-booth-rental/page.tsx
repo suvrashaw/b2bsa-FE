@@ -156,6 +156,7 @@ const Page = () => {
             heading="Our Rental Booth Range"
             serviceLabel=""
             services={RENTAL_SERVICES}
+            showCommonCta
           />
         </>
       }

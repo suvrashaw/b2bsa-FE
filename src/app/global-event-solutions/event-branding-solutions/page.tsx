@@ -116,6 +116,7 @@ const Page = () => {
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
+      showServicesCommonCta
       spotlight={BRANDING_SPOTLIGHT}
     />
   );

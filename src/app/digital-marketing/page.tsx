@@ -28,6 +28,7 @@ const Page = () => {
       page={PERF_PAGE}
       process={PERF_PROCESS}
       services={PERF_SERVICES}
+      showServicesCommonCta
       spotlight={PERF_INTRO}
       why={PERF_WHY}
     />

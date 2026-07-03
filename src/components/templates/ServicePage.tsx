@@ -95,8 +95,8 @@ export interface ServicePageProps {
   // ─── Services ───────────────────────────────────
   services?: ServicesStackProps;
   servicesSectionType?: "carousel" | "grid";
-
   showPhaseNumbers?: boolean;
+  showServicesCommonCta?: boolean;
 
   // ─── Spotlight slots ────────────────────────────
   spotlight?: SpotlightProps;
@@ -120,7 +120,8 @@ const getBreadcrumbs = (page: MarketingPageIdentity, parentPage?: MarketingPageI
 
 const renderServicesSection = (
   section: ServicesStackProps,
-  sectionType: "carousel" | "grid" = "grid"
+  sectionType: "carousel" | "grid" = "grid",
+  hasCommonCta = false
 ) => {
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
@@ -144,7 +145,9 @@ const renderServicesSection = (
     <ServicesStack
       {...section}
       cardCtaMode={section.cardCtaMode ?? "linked"}
+      commonCtaLabel={section.commonCtaLabel ?? (hasCommonCta ? "Contact Our Team" : undefined)}
       contactModal={section.contactModal ?? SERVICE_PAGE_CONTACT_MODAL}
+      showCommonCta={section.showCommonCta ?? hasCommonCta}
     />
   );
 };
@@ -174,6 +177,7 @@ export const ServicePage = ({
   services,
   servicesSectionType = "grid",
   showPhaseNumbers = true,
+  showServicesCommonCta = false,
   spotlight,
   why,
 }: ServicePageProps) => {
@@ -261,7 +265,7 @@ export const ServicePage = ({
         />
       )}
 
-      {services && renderServicesSection(services, servicesSectionType)}
+      {services && renderServicesSection(services, servicesSectionType, showServicesCommonCta ?? false)}
 
       {why && <Spotlight {...why} />}
 

@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
@@ -50,6 +48,7 @@ const capabilityFeatures = (
 const servicesIncludeFeatures = EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.items.map((item) => ({
   icon: item.icon,
   id: item.id,
+  image: item.image,
   label: item.label,
 }));
 
@@ -69,18 +68,12 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <section className="bg-brand-gray py-14 md:py-20" id="services-include">
-            <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-              <SectionHeader as="h2" className="mb-10 text-center">
-                {EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
-              </SectionHeader>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {servicesIncludeFeatures.map((item, i) => (
-                  <IndustryShaderCard icon={item.icon} index={i} key={item.id} title={item.label} />
-                ))}
-              </div>
-            </div>
-          </section>
+          <Capabilities
+            capabilities={servicesIncludeFeatures}
+            heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
+            mediaPosition="right"
+            showCapabilityDescriptions={false}
+          />
         </>
       }
       faq={EVENT_EXPERIENCE_FAQ}
@@ -106,6 +99,7 @@ const Page = () => {
       }
       proofBar={EVENT_EXPERIENCE_INTRO}
       services={EVENT_EXPERIENCE_DELIVERABLES}
+      showServicesCommonCta
       spotlight={EVENT_EXPERIENCE_INTRO}
     />
   );

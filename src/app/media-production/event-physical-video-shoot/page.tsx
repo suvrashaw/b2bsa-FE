@@ -80,6 +80,7 @@ const Page = () => {
       relatedServices={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES}
       services={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       showPhaseNumbers={false}
+      showServicesCommonCta
     />
   );
 };

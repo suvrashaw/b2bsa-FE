@@ -109,6 +109,7 @@ const Page = () => {
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}
+      showServicesCommonCta
       spotlight={CORP_EVENT_INTRO}
     />
   );

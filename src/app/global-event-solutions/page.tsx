@@ -28,6 +28,7 @@ const Page = () => {
       page={GES_PAGE}
       process={GES_PROCESS}
       services={GES_SERVICES}
+      showServicesCommonCta
       spotlight={GES_INTRO}
       why={GES_WHY}
     />

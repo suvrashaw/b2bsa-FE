@@ -40,6 +40,7 @@ const Page = () => {
       }
       process={EVENT_LEAD_PROCESS}
       services={EVENT_LEAD_SERVICES}
+      showServicesCommonCta
       spotlight={EVENT_LEAD_INTRO}
       why={EVENT_LEAD_WHY}
     />

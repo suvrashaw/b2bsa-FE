@@ -96,6 +96,7 @@ const Page = () => {
       relatedServices={LIVE_STREAMING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       services={LIVE_STREAMING_DELIVERABLES}
+      showServicesCommonCta
       spotlight={LIVE_STREAMING_INTRO}
     />
   );

@@ -89,7 +89,7 @@ const Page = () => {
       parentPage={PERF_PAGE}
       preProcessSections={
         <>
-          <ServicesStack {...SMM_SERVICES} cardCtaMode="none" contactModal={servicesContactModal} />
+          <ServicesStack {...SMM_SERVICES} cardCtaMode="none" commonCtaLabel="Contact Our Team" contactModal={servicesContactModal} showCommonCta />
 
           <Capabilities
             capabilities={SMM_CAPABILITIES_FEATURES}

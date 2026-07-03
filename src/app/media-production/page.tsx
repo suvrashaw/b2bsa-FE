@@ -28,6 +28,7 @@ const Page = () => {
       page={MEDIA_PAGE}
       process={MEDIA_PROCESS}
       services={MEDIA_SERVICES}
+      showServicesCommonCta
       spotlight={MEDIA_INTRO}
       why={MEDIA_WHY}
     />

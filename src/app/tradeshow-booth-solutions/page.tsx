@@ -28,6 +28,7 @@ const Page = () => {
       page={BS_PAGE}
       process={BS_PROCESS}
       services={BS_SERVICES}
+      showServicesCommonCta
       spotlight={BS_INTRO}
       why={BS_WHY}
     />

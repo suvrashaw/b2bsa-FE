@@ -33,6 +33,7 @@ const Page = () => {
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       services={MODULAR_BOOTHS_DELIVERABLES}
+      showServicesCommonCta
       spotlight={MODULAR_BOOTHS_INTRO}
       why={MODULAR_BOOTHS_WHY}
     />

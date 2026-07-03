@@ -26,6 +26,7 @@ const Page = () => {
       page={RESEARCH_PAGE}
       process={RESEARCH_PROCESS}
       services={RESEARCH_SERVICES}
+      showServicesCommonCta
       spotlight={RESEARCH_INTRO}
       why={RESEARCH_WHY}
     />
