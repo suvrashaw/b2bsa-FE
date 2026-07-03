@@ -44,6 +44,9 @@ export const ServicesStack = ({
 }: ServicesStackProps = {}) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const resolvedCardCtaMode = cardCtaMode ?? (showCardCtas ? "all" : "none");
+  const anyCardHasCta =
+    resolvedCardCtaMode === "all" ||
+    (resolvedCardCtaMode === "linked" && services.some((s) => Boolean(s.href)));
   const stickyStyles = useMemo(
     () =>
       services.map((_, index) => ({
@@ -82,7 +85,7 @@ export const ServicesStack = ({
             ))}
           </div>
 
-          {showCommonCta && resolvedCardCtaMode === "none" && (
+          {showCommonCta && !anyCardHasCta && (
             <div className="mt-14 flex justify-center">
               <Button
                 onClick={contactModal ? openContactModal : undefined}
