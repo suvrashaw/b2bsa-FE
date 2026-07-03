@@ -9,11 +9,16 @@ import { BasicCards } from "@/components/items/BasicCards";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
+import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
 import { EventsCard } from "@/components/items/EventsCard";
 import { FAQCard } from "@/components/items/FAQCard";
+import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
+import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { ServicesCard } from "@/components/items/ServicesCard";
+import { ServicesImageCard } from "@/components/items/ServicesImageCard";
+import { TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { Blogs } from "@/components/sections/Blogs";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -23,12 +28,15 @@ import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
+import { CorporateVideoImageStrip } from "@/components/sections/CorporateVideoImageStrip";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
 import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
+import { LeadPipelineSection } from "@/components/sections/LeadPipelineSection";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -38,7 +46,8 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/blogs";
 import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
-import { getDefaultEvents } from "@/content/tradeshow-calendar";
+import EVENT_LEAD_PIPELINE from "@/content/services/sales-qualified-lead-generation/event-lead-generation/pipeline.json";
+import { getDefaultEvents, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 
 // ─── Images ─────────────────────────────────────────────────────────────────
 
@@ -392,6 +401,42 @@ const SPOTLIGHT_DEMO_PROPS = {
 
 const DEMO_BLOG_POSTS = getBlogsByTags([], 4);
 
+// ─── IndustryShaderCard ──────────────────────────────────────────────────────
+
+const INDUSTRY_SHADER_ITEMS = [
+  {
+    description: "SaaS, cloud infrastructure, and enterprise software vendors.",
+    icon: "Monitor",
+    title: "Technology & SaaS",
+  },
+  {
+    description: "Payments, banking innovation, and financial technology brands.",
+    icon: "CreditCard",
+    title: "FinTech",
+  },
+  {
+    description: "Energy, renewables, and utilities at major industry exhibitions.",
+    icon: "Zap",
+    title: "Energy & Utilities",
+  },
+];
+
+// ─── RelatedServicesCard ─────────────────────────────────────────────────────
+
+const RELATED_SERVICES_ITEMS = [
+  { href: "/tradeshow-booth-solutions/trade-show-booth-builder", title: "Trade Show Booth Builder" },
+  { href: "/tradeshow-booth-solutions/trade-show-booth-design", title: "Booth Design" },
+  { href: "/sales-qualified-lead-generation/event-lead-generation", title: "Event Lead Generation" },
+];
+
+// ─── ServicesImageCard ───────────────────────────────────────────────────────
+
+const SERVICES_IMAGE_CARD_ITEMS = [
+  { image: IMG_EV1, service: "40×40 Ft Island Booth Design & Production" },
+  { image: IMG_EV2, service: "Active Prospecting & SQL Generation" },
+  { image: IMG_EV3, service: "On-Site Media & Video Production" },
+];
+
 // ─── DemoLabel ───────────────────────────────────────────────────────────────
 
 type PageLink = { href: string; label: string };
@@ -449,6 +494,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Service Detail",
     },
   ],
+  CaseStudyGridCard: [{ href: "/case-studies", label: "Case Studies" }],
   CinematicSequence: [],
   ClientLogos: [
     { href: "/", label: "Home" },
@@ -467,6 +513,12 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About" },
     { href: "/contact-us", label: "Contact" },
+  ],
+  CorporateVideoImageStrip: [
+    {
+      href: "/media-production/corporate-video-production",
+      label: "Corporate Video",
+    },
   ],
   CorporateVideoPortfolioSection: [
     {
@@ -527,8 +579,21 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Corporate Video",
     },
   ],
+  IndustryShaderCard: [{ href: "/about-us", label: "About" }],
+  LeadPipelineSection: [
+    {
+      href: "/sales-qualified-lead-generation/event-lead-generation",
+      label: "Event Lead Generation",
+    },
+  ],
   LinkedInFeed: [{ href: "/", label: "Home" }],
   Pricing: [
+    {
+      href: "/tradeshow-booth-solutions/trade-show-booth-builder",
+      label: "Service Detail",
+    },
+  ],
+  RelatedServicesCard: [
     {
       href: "/tradeshow-booth-solutions/trade-show-booth-builder",
       label: "Service Detail",
@@ -540,6 +605,17 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Trade Show Booth Rental",
     },
   ],
+  SectionContactCta: [
+    {
+      href: "/media-production/virtual-video-production",
+      label: "Virtual Video Production",
+    },
+    {
+      href: "/media-production/corporate-video-production",
+      label: "Corporate Video",
+    },
+  ],
+  ServicesImageCard: [{ href: "/case-studies/adobe-summit-2025", label: "Case Study Detail" }],
   ServicesStack: [
     { href: "/", label: "Home" },
     {
@@ -581,6 +657,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
       label: "Service Detail",
     },
   ],
+  TradeShowCard: [{ href: "/tradeshow-calendar", label: "Trade Show Calendar" }],
 };
 
 const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> = {
@@ -596,10 +673,12 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
     items: ["CaseStudyItem"],
     ui: ["Button", "Eyebrow", "Heading"],
   },
+  CaseStudyGridCard: { items: [], ui: [] },
   CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   ContactUsForm: { items: [], ui: ["Eyebrow", "Heading"] },
+  CorporateVideoImageStrip: { items: [], ui: [] },
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
@@ -608,9 +687,14 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
   IndustriesAlt: { items: [], ui: ["Heading"] },
+  IndustryShaderCard: { items: [], ui: ["Icon"] },
+  LeadPipelineSection: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
   Pricing: { items: ["PricingCard"], ui: ["Eyebrow", "Heading"] },
+  RelatedServicesCard: { items: [], ui: [] },
   RentVsBuySection: { items: [], ui: ["Heading"] },
+  SectionContactCta: { items: [], ui: ["Button", "ContactModal"] },
+  ServicesImageCard: { items: [], ui: [] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
   Spotlight: { items: [], ui: ["ContactModal", "Heading"] },
   StickyScroll: {
@@ -622,6 +706,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
     ui: ["Eyebrow", "Heading"],
   },
   Timeline: { items: [], ui: ["Heading"] },
+  TradeShowCard: { items: [], ui: ["Button"] },
 };
 
 const DemoLabel = ({ name }: { name: string }) => {
@@ -755,6 +840,14 @@ const DemoPage = () => {
       <DemoLabel name="ServicesStack" />
       <ServicesStack />
 
+      {/* 14 – RelatedServicesCard */}
+      <DemoLabel name="RelatedServicesCard" />
+      <CardsGrid heading="Related Services">
+        {RELATED_SERVICES_ITEMS.map((service, index) => (
+          <RelatedServicesCard index={index} key={service.href} service={service} />
+        ))}
+      </CardsGrid>
+
       {/* 15 – Capabilities */}
       <DemoLabel name="Capabilities" />
       <Capabilities
@@ -762,6 +855,20 @@ const DemoPage = () => {
         description="Four core capabilities that turn trade show investment into enterprise pipeline."
         heading="How We Drive Results"
       />
+
+      {/* 16 – IndustryShaderCard */}
+      <DemoLabel name="IndustryShaderCard" />
+      <CardsGrid heading="Industries We Serve">
+        {INDUSTRY_SHADER_ITEMS.map((item, index) => (
+          <IndustryShaderCard
+            description={item.description}
+            icon={item.icon}
+            index={index}
+            key={item.title}
+            title={item.title}
+          />
+        ))}
+      </CardsGrid>
 
       {/* 17 – StickyScroll */}
       <DemoLabel name="StickyScroll" />
@@ -815,13 +922,76 @@ const DemoPage = () => {
         ))}
       </CardsGrid>
 
+      {/* 22b – CorporateVideoImageStrip */}
+      <DemoLabel name="CorporateVideoImageStrip" />
+      <CorporateVideoImageStrip />
+
       {/* 23 – Timeline */}
       <DemoLabel name="Timeline" />
       <ProcessTimeline heading="What We Manage" phases={PROCESS_TIMELINE_PHASES} />
 
+      {/* 23b – LeadPipelineSection */}
+      <DemoLabel name="LeadPipelineSection" />
+      <LeadPipelineSection
+        description={EVENT_LEAD_PIPELINE.description}
+        heading={EVENT_LEAD_PIPELINE.heading}
+        stages={EVENT_LEAD_PIPELINE.stages}
+        steps={EVENT_LEAD_PIPELINE.steps}
+      />
+
       {/* 24 – CaseStudies */}
       <DemoLabel name="CaseStudies" />
       <CaseStudies />
+
+      {/* 24b – CaseStudyGridCard */}
+      <DemoLabel name="CaseStudyGridCard" />
+      <section className="bg-brand-gray py-12">
+        <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
+          <SectionHeader as="h2" className="mb-8 text-center">
+            Case Study Grid Card
+          </SectionHeader>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <CaseStudyGridCard
+              colSpan="md:col-span-1"
+              description="How B2B Sales Arrow Engineered End-to-End Impact at Adobe Summit 2025"
+              image="/media/case-studies/cs-new-9.avif"
+              metric="70+"
+              metricLabel="SQLs Generated"
+              revealed
+              title="Adobe Summit 2025"
+            />
+            <CaseStudyGridCard
+              colSpan="md:col-span-1"
+              description="World Aviation Festival — Full Booth & Lead Generation Program"
+              image={IMG_WAF}
+              metric="120+"
+              metricLabel="Qualified Meetings"
+              revealed
+              title="World Aviation Festival 2025"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 24c – ServicesImageCard */}
+      <DemoLabel name="ServicesImageCard" />
+      <section className="bg-brand-charcoal py-12">
+        <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
+          <SectionHeader as="h2" className="mb-8 text-center text-white">
+            Services Delivered
+          </SectionHeader>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES_IMAGE_CARD_ITEMS.map((item, index) => (
+              <ServicesImageCard
+                image={item.image}
+                index={index}
+                key={item.service}
+                service={item.service}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 26 – Testimonials */}
       <DemoLabel name="Testimonials" />
@@ -845,6 +1015,29 @@ const DemoPage = () => {
           />
         ))}
       </CardsGrid>
+
+      {/* 27b – TradeShowCard + TradeShowListItem */}
+      <DemoLabel name="TradeShowCard" />
+      <section className="bg-brand-gray py-12">
+        <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
+          <SectionHeader as="h2" className="mb-8 text-center">
+            Trade Show Cards
+          </SectionHeader>
+          <div className="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {TRADE_SHOW_CALENDAR_EVENTS.slice(0, 3).map((show) => (
+              <TradeShowCard key={show.id} show={show} />
+            ))}
+          </div>
+          <SectionHeader as="h2" className="mb-6 text-center">
+            Trade Show List Items
+          </SectionHeader>
+          <div className="space-y-4">
+            {TRADE_SHOW_CALENDAR_EVENTS.slice(0, 3).map((show) => (
+              <TradeShowListItem key={show.id} show={show} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 30 – Blogs */}
       <DemoLabel name="Blogs" />
@@ -910,6 +1103,10 @@ const DemoPage = () => {
         primaryCta={CONTACT_CINEMATIC_PROPS.primaryCta}
         secondaryCta={CONTACT_CINEMATIC_PROPS.secondaryCta}
       />
+
+      {/* 35b – SectionContactCta */}
+      <DemoLabel name="SectionContactCta" />
+      <SectionContactCta label="Contact Our Team" />
 
       {/* 36 – ContactUsForm */}
       <DemoLabel name="ContactUsForm" />

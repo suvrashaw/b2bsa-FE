@@ -88,7 +88,7 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
       excerpt: post.excerpt,
       externalUrl: post.url,
       faqs: post.faqs,
-      href: DEFAULT_BLOG_POST_HREF,
+      href: `/blogs/${id}`,
       id,
       image: post.image,
       linkedinEmbedUrl: post.linkedinEmbedUrl,

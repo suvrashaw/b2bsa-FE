@@ -50,6 +50,7 @@ const Page = () => {
       <Hero
         animateFromLeft
         centered
+        centerContent
         eyebrow="About Us"
         imageOpacity={0.7}
         images={ABOUT_IMAGES}

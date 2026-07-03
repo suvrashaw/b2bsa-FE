@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -66,10 +66,8 @@ const getCardStatus = (currentIndex: number, index: number, itemCount: number): 
   return "hidden";
 };
 
-const getNavItemMotion = (wrappedDistance: number) => ({
-  opacity: 1 - Math.abs(wrappedDistance) * 0.25,
-  y: wrappedDistance * ITEM_HEIGHT,
-});
+const getNavItemOpacity = (wrappedDistance: number) =>
+  Math.max(0, 1 - Math.abs(wrappedDistance) * 0.5);
 
 const getShowcaseMotion = (status: CardStatus) => {
   if (status === "active") return { opacity: 1, rotate: 0, scale: 1, y: 0 };
@@ -130,27 +128,43 @@ const CapabilitiesNavItem = ({
   onPauseChange,
 }: CapabilitiesNavItemProps) => {
   const isActive = index === currentIndex;
-  const distance = index - currentIndex;
-  const wrappedDistance = wrap(-(itemCount / 2), itemCount / 2, distance);
+  const wrappedDistance = wrap(-(itemCount / 2), itemCount / 2, index - currentIndex);
+
+  const yMV = useMotionValue(wrappedDistance * ITEM_HEIGHT);
+  const opacityMV = useMotionValue(getNavItemOpacity(wrappedDistance));
+  const prevDistRef = useRef(wrappedDistance);
+
+  useEffect(() => {
+    const prev = prevDistRef.current;
+    const curr = wrappedDistance;
+    prevDistRef.current = curr;
+    const targetY = curr * ITEM_HEIGHT;
+    const targetOpacity = getNavItemOpacity(curr);
+
+    if (Math.abs(curr - prev) > 1) {
+      // Wrap boundary crossed — teleport instantly so the jump is invisible
+      yMV.set(targetY);
+      opacityMV.set(targetOpacity);
+    } else {
+      animate(yMV, targetY, NAV_ITEM_TRANSITION);
+      animate(opacityMV, targetOpacity, { duration: 0.4 });
+    }
+  }, [wrappedDistance, yMV, opacityMV]);
+
   const buttonClassName = cn(
     "group relative inline-flex w-fit items-center gap-4 rounded-full px-6 py-3.5 transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4",
     isActive
       ? "z-10 bg-brand-blue text-white shadow-xl shadow-brand-blue/20"
-      : "bg-transparent text-brand-charcoal/60 hover:text-brand-charcoal"
+      : "bg-white/60 text-brand-charcoal/60 hover:bg-white hover:text-brand-charcoal"
   );
   const handleClick = useCallback(() => onChipClick(index), [index, onChipClick]);
-  const handleMouseEnter = useCallback(() => {
-    onPauseChange(true);
-    onChipClick(index);
-  }, [index, onChipClick, onPauseChange]);
+  const handleMouseEnter = useCallback(() => onPauseChange(true), [onPauseChange]);
   const handleMouseLeave = useCallback(() => onPauseChange(false), [onPauseChange]);
 
   return (
     <motion.div
-      animate={getNavItemMotion(wrappedDistance)}
       className="absolute inset-x-0 flex items-center justify-center px-4 md:px-0"
-      style={NAV_ITEM_STYLE}
-      transition={NAV_ITEM_TRANSITION}
+      style={{ ...NAV_ITEM_STYLE, opacity: opacityMV, y: yMV }}
     >
       <button
         className={buttonClassName}
@@ -230,8 +244,14 @@ const CapabilitiesCarousel = ({
 
   const handleChipClick = useCallback(
     (index: number) => {
-      const diff = (index - currentIndex + capabilities.length) % capabilities.length;
-      if (diff > 0) setStep((cur) => cur + diff);
+      if (index === currentIndex) return;
+      const forward = (index - currentIndex + capabilities.length) % capabilities.length;
+      const backward = capabilities.length - forward;
+      if (forward <= backward) {
+        setStep((cur) => cur + forward);
+      } else {
+        setStep((cur) => cur - backward);
+      }
     },
     [currentIndex, capabilities.length]
   );
@@ -251,6 +271,24 @@ const CapabilitiesCarousel = ({
     const interval = setInterval(nextStep, AUTO_PLAY_INTERVAL);
     return () => clearInterval(interval);
   }, [isPaused, isVisible, nextStep, capabilities.length]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    let lastWheelTime = 0;
+    const onWheel = (e: WheelEvent) => {
+      const r = el.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastWheelTime < 300) return;
+      lastWheelTime = now;
+      setStep((prev) => prev + (e.deltaY > 0 ? 1 : -1));
+    };
+    window.addEventListener("wheel", onWheel, { passive: false });
+    return () => window.removeEventListener("wheel", onWheel);
+  }, []);
+
 
   return (
     <div className="mx-auto w-full max-w-7xl" ref={containerRef}>

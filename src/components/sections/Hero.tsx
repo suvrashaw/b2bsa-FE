@@ -15,6 +15,7 @@ import { cn } from "@/lib";
 export interface HeroProps {
   animateFromLeft?: boolean;
   centered?: boolean;
+  centerContent?: boolean;
   description?: string;
   eyebrow?: ReactNode | string;
   imageOpacity?: number;
@@ -186,7 +187,6 @@ const HeroBackground = ({
             "hero-bg-video absolute inset-0 size-full object-cover",
             hasMobileVideo && "hidden md:block"
           )}
-          fetchPriority="high"
           loop
           muted
           playsInline
@@ -257,6 +257,7 @@ const HeroBackground = ({
 export const Hero = ({
   animateFromLeft = false,
   centered = false,
+  centerContent = false,
   description,
   eyebrow,
   imageOpacity = 1,
@@ -296,13 +297,12 @@ export const Hero = ({
   const contentStyle = useMemo(() => ({ y }), [y]);
   const imageOpacityStyle = useMemo(() => ({ opacity: imageOpacity }), [imageOpacity]);
 
-  let imageModeClass =
-    "items-center md:items-end min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20";
+  const mdAlign = centerContent ? "md:items-center" : "md:items-end";
+  let imageModeClass = `items-center ${mdAlign} min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20`;
   if (variant === "compact") {
-    imageModeClass = "items-center md:items-end min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16";
+    imageModeClass = `items-center ${mdAlign} min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16`;
   } else if (isVideoMode) {
-    imageModeClass =
-      "items-center md:items-end min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40";
+    imageModeClass = `items-center ${mdAlign} min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40`;
   }
 
   return (
@@ -310,12 +310,16 @@ export const Hero = ({
       className={cn("relative flex overflow-hidden bg-brand-charcoal", imageModeClass)}
       ref={containerRef}
     >
-      {isVideoMode && (
+      {isVideoMode && videoWebm && (
+        <link as="video" href={videoWebm} rel="preload" type="video/webm" />
+      )}
+      {isVideoMode && mobileVideoWebm && (
         <link
           as="video"
-          href={videoWebm ?? effectiveVideoUrl}
+          href={mobileVideoWebm}
+          media="(max-width: 767px)"
           rel="preload"
-          type={videoWebm ? "video/webm" : "video/mp4"}
+          type="video/webm"
         />
       )}
       <div className="absolute inset-0 z-0">

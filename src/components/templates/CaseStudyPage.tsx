@@ -45,7 +45,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
 
   const challengeSecondary = useMemo(
     () => ({
-      align: "right" as const,
+      align: "center" as const,
       description: study.solution,
       titleLine1: "Our",
       titleLine2: "Solution",

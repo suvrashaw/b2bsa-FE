@@ -84,23 +84,34 @@ export const Header = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const megamenuOpen = activeDropdown === "services";
   let headerSurfaceClass = "bg-transparent";
   if (solidHeader) {
-    headerSurfaceClass = "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100";
+    headerSurfaceClass = cn(
+      "bg-white/85 backdrop-blur-md shadow-sm",
+      !megamenuOpen && "border-b border-gray-100"
+    );
   } else if (lightText) {
-    headerSurfaceClass =
-      "border-b border-white/10 bg-brand-charcoal/30 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md";
+    headerSurfaceClass = cn(
+      "bg-brand-charcoal/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md",
+      !megamenuOpen && "border-b border-white/10"
+    );
   }
 
+  const megamenuLightText = lightText && !solidHeader;
+  const megamenuSurfaceClass = megamenuLightText
+    ? "bg-brand-charcoal/35 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+    : "bg-white/85 shadow-[0_20px_50px_rgba(0,0,0,0.1)]";
+
   return (
+    <div className="fixed inset-x-0 top-0 z-50" onMouseLeave={closeMegamenu}>
     <motion.header
       animate={HEADER_ANIMATE}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 flex items-center justify-between px-2 py-3 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300 sm:px-8 sm:py-4",
+        "flex items-center justify-between px-2 py-3 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-300 sm:px-8 sm:py-4",
         headerSurfaceClass
       )}
       initial={HEADER_INITIAL}
-      onMouseLeave={closeMegamenu}
       transition={HEADER_TRANSITION}
     >
       <div className="flex items-center gap-2">
@@ -156,66 +167,6 @@ export const Header = ({
         </div>
       </div>
 
-      {/* Desktop Megamenus */}
-      <AnimatePresence>
-        {activeDropdown === "services" && (
-          <motion.div
-            animate={MEGAMENU_ANIMATE}
-            className="absolute inset-x-0 top-full z-[100] bg-white/95 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-md xl:py-8"
-            exit={MEGAMENU_EXIT}
-            initial={MEGAMENU_INITIAL}
-            onMouseEnter={openServicesMegamenu}
-            transition={MEGAMENU_TRANSITION}
-          >
-            <div className="mx-auto w-full max-w-7xl px-8 xl:px-12">
-              <div className="flex justify-between gap-4 xl:gap-8">
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
-                    group={serviceNavigationGroups[0]}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[5]}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    group={serviceNavigationGroups[1]}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    group={serviceNavigationGroups[2]}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
-                    group={serviceNavigationGroups[3]}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="py-1 xl:py-2"
-                    group={serviceNavigationGroups[4]}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[6]}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -239,5 +190,73 @@ export const Header = ({
         )}
       </AnimatePresence>
     </motion.header>
+
+    {/* Desktop Megamenus — outside motion.header to avoid transform stacking context blocking backdrop-filter */}
+    <AnimatePresence>
+      {activeDropdown === "services" && (
+        <motion.div
+          animate={MEGAMENU_ANIMATE}
+          className={cn("w-full py-5 backdrop-blur-md xl:py-8", megamenuSurfaceClass)}
+          exit={MEGAMENU_EXIT}
+          initial={MEGAMENU_INITIAL}
+          onMouseEnter={openServicesMegamenu}
+          transition={MEGAMENU_TRANSITION}
+        >
+          <div className="mx-auto w-full max-w-7xl px-8 xl:px-12">
+            <div className="flex justify-between gap-4 xl:gap-8">
+              <div className="min-w-0">
+                <MegamenuServiceGroup
+                  className="pt-3 pb-1 xl:pt-5 xl:pb-2"
+                  group={serviceNavigationGroups[0]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+                <MegamenuServiceGroup
+                  className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+                  group={serviceNavigationGroups[5]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+              </div>
+              <div className="min-w-0">
+                <MegamenuServiceGroup
+                  group={serviceNavigationGroups[1]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+              </div>
+              <div className="min-w-0">
+                <MegamenuServiceGroup
+                  group={serviceNavigationGroups[2]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+              </div>
+              <div className="min-w-0">
+                <MegamenuServiceGroup
+                  className="pt-3 pb-1 xl:pt-5 xl:pb-2"
+                  group={serviceNavigationGroups[3]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+                <MegamenuServiceGroup
+                  className="py-1 xl:py-2"
+                  group={serviceNavigationGroups[4]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+                <MegamenuServiceGroup
+                  className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+                  group={serviceNavigationGroups[6]}
+                  lightText={megamenuLightText}
+                  onClose={closeMegamenu}
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </div>
   );
 };
