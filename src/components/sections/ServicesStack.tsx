@@ -82,7 +82,7 @@ export const ServicesStack = ({
             ))}
           </div>
 
-          {showCommonCta && (
+          {showCommonCta && resolvedCardCtaMode === "none" && (
             <div className="mt-14 flex justify-center">
               <Button
                 onClick={contactModal ? openContactModal : undefined}

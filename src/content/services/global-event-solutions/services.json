@@ -4,33 +4,6 @@
   "services": [
     {
       "color": "bg-brand-blue",
-      "description": "exhibition environments engineered for visitor flow and lead conversion",
-      "href": "/tradeshow-booth-solutions/trade-show-booth-design",
-      "icon": "Presentation",
-      "id": "booth-design",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Design"
-    },
-    {
-      "color": "bg-brand-cyan",
-      "description": "modular exhibition systems globally available",
-      "href": "/tradeshow-booth-solutions/trade-show-booth-rental",
-      "icon": "Layers",
-      "id": "booth-rental",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Rental"
-    },
-    {
-      "color": "bg-brand-primary",
-      "description": "fabrication to on-site installation",
-      "href": "/tradeshow-booth-solutions/trade-show-booth-builder",
-      "icon": "Globe2",
-      "id": "booth-builder",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Builder"
-    },
-    {
-      "color": "bg-brand-blue",
       "description": "immersive event concepts designed to drive audience engagement",
       "href": "/global-event-solutions/event-experience-creation",
       "icon": "Sparkles",
