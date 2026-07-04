@@ -1,10 +1,5 @@
 {
   "description": "Produce engaging virtual events, fireside chats, webinars, and panel discussions with professional production, branded visuals, and seamless audience experiences.",
-  "images": [
-    "/media/media-production/virtual-video-production/hero-1.avif",
-    "/media/media-production/virtual-video-production/hero-2.avif",
-    "/media/media-production/virtual-video-production/hero-3.avif"
-  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Plan Virtual Event"

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { EventsCard } from "@/components/items/EventsCard";
-import { FAQCard } from "@/components/items/FAQCard";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 
@@ -130,16 +130,7 @@ const Home = () => {
         <Blogs />
       </div>
 
-      <Carousel
-        description={HOME_FAQ_CONTENT.description}
-        heading={HOME_FAQ_CONTENT.heading}
-        id="faq"
-        layout="carousel"
-      >
-        {HOME_FAQ_CONTENT.faqs.map((f) => (
-          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
-        ))}
-      </Carousel>
+      <FAQAccordion content={HOME_FAQ_CONTENT} />
 
       <div id="contact">
         <ContactUsForm />

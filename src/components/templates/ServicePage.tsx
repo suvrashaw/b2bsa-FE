@@ -12,7 +12,6 @@ import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
-import { FAQCard } from "@/components/items/FAQCard";
 import { PricingCard } from "@/components/items/PricingCard";
 import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Footer } from "@/components/layout/Footer";
@@ -161,7 +160,7 @@ export const ServicePage = ({
   creativePricing,
   customSections,
   faq,
-  faqVariant = "accordion",
+  faqVariant: _faqVariant,
   hero,
   page,
   parentPage,
@@ -235,7 +234,7 @@ export const ServicePage = ({
       <JsonLd data={pageGraph} />
       <Header darkBackground />
 
-      {hero && <Hero {...hero} />}
+      {hero && <Hero {...hero} secondaryCta={undefined} />}
 
       <ClientLogos
         description={clientLogos?.description}
@@ -303,20 +302,7 @@ export const ServicePage = ({
 
       {customSections}
 
-      {faqVariant === "accordion" ? (
-        <FAQAccordion {...faq} />
-      ) : (
-        <Carousel
-          description={faq.description ?? faq.content?.description}
-          heading={faq.heading ?? faq.content?.heading}
-          id="faq"
-          layout="carousel"
-        >
-          {(faq.faqs ?? faq.content?.faqs ?? []).map((f) => (
-            <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
-          ))}
-        </Carousel>
-      )}
+      <FAQAccordion {...faq} />
 
       {relatedServices && relatedServices.length > 0 && (
         <CardsGrid

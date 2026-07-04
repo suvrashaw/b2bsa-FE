@@ -32,13 +32,11 @@ const Page = () => {
       parentPage={SQL_PAGE}
       preStudiesSections={
         <LeadPipelineSection
-          description={EVENT_LEAD_PIPELINE.description}
-          heading={EVENT_LEAD_PIPELINE.heading}
+          heading={EVENT_LEAD_PROCESS.title}
           stages={EVENT_LEAD_PIPELINE.stages}
-          steps={EVENT_LEAD_PIPELINE.steps}
+          steps={EVENT_LEAD_PROCESS.phases}
         />
       }
-      process={EVENT_LEAD_PROCESS}
       services={EVENT_LEAD_SERVICES}
       showServicesCommonCta
       spotlight={EVENT_LEAD_INTRO}

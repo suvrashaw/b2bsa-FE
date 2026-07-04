@@ -11,7 +11,7 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
 import { EventsCard } from "@/components/items/EventsCard";
-import { FAQCard } from "@/components/items/FAQCard";
+
 import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
@@ -682,7 +682,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
-  FAQ: { items: ["FAQCard"], ui: ["Eyebrow", "Heading"] },
+
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
@@ -1077,17 +1077,6 @@ const DemoPage = () => {
       </Carousel>
 
       {/* 33 – FAQ */}
-      <DemoLabel name="FAQ" />
-      <Carousel
-        description={HOME_FAQ_CONTENT.description}
-        heading={HOME_FAQ_CONTENT.heading}
-        id="faq-demo"
-        layout="carousel"
-      >
-        {HOME_FAQ_CONTENT.faqs.map((f) => (
-          <FAQCard answer={f.answer} image={f.image} key={f.id} question={f.question} />
-        ))}
-      </Carousel>
 
       {/* 34 – FAQAccordion */}
       <DemoLabel name="FAQAccordion" />

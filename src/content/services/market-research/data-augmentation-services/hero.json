@@ -1,9 +1,5 @@
 {
   "description": "Blank job titles, missing emails, outdated company names — incomplete data creates misdirected outreach and wasted SDR time. Our data augmentation services turn what your CRM has into what your sales team actually needs.",
-  "images": [
-    "/media/market-research/data-augmentation-services/hero-1.avif",
-    "/media/market-research/data-augmentation-services/hero-2.avif"
-  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request a Data Augmentation Services Demo"

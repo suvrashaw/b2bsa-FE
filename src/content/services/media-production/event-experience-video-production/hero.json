@@ -1,10 +1,5 @@
 {
   "description": "Capture conferences, trade shows, and corporate events with high-quality pre-event, highlight, and post-event videos designed to extend audience engagement and brand visibility.",
-  "images": [
-    "/media/home/hero/home_hero_bg.avif",
-    "/media/home/hero/home_hero_bg.avif",
-    "/media/home/hero/home_hero_bg.avif"
-  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Create Event Videos"
