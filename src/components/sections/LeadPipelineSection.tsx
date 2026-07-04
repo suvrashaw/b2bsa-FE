@@ -23,7 +23,7 @@ interface ProcessStep {
   title: string;
 }
 
-const FUNNEL_WIDTHS = ["w-full", "w-[85%]", "w-[65%]", "w-[48%]"];
+const FUNNEL_WIDTHS = ["w-full", "w-[88%]", "w-[72%]", "w-[58%]"];
 
 const FUNNEL_MIN_HEIGHTS = ["min-h-[72px]", "min-h-[68px]", "min-h-[64px]", "min-h-[60px]"];
 
@@ -92,7 +92,7 @@ export const LeadPipelineSection = ({
   return (
     <section className="bg-brand-gray py-16 md:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <div className="mx-auto mb-12 max-w-4xl text-center">
           <SectionHeader as="h2" className="mb-4">
             {heading}
           </SectionHeader>
@@ -101,7 +101,7 @@ export const LeadPipelineSection = ({
           ) : null}
         </div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Left: Process accordion */}
           <div className="flex flex-col gap-3">
             {steps.map((step, i) => (
@@ -116,10 +116,10 @@ export const LeadPipelineSection = ({
           </div>
 
           {/* Right: Funnel diagram */}
-          <div className="flex flex-col items-center justify-center gap-0 pt-8 lg:pt-10">
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-6">
             {stages.map((stage, i) => (
               <div className="flex w-full flex-col items-center" key={stage.label}>
-                <div className="z-10 -mb-1 rounded-full bg-white px-3 py-1 text-[10px] font-semibold tracking-widest text-gray-500 uppercase ring-1 ring-gray-200">
+                <div className="relative z-20 -mb-3 rounded-full bg-white px-3 py-1 text-[10px] font-semibold tracking-widest text-gray-500 uppercase ring-1 ring-gray-200">
                   {stage.label}
                 </div>
                 <button
@@ -129,7 +129,7 @@ export const LeadPipelineSection = ({
                     "flex flex-col items-center justify-center rounded-lg p-4 text-center transition-all duration-500",
                     FUNNEL_WIDTHS[i] ?? "w-1/3",
                     activeStep === i || (activeStep >= stages.length && i === stages.length - 1)
-                      ? "bg-brand-cyan text-brand-charcoal shadow-xl scale-[1.05] z-10 ring-1 ring-brand-cyan font-bold cursor-default"
+                      ? "bg-brand-blue text-white shadow-xl scale-[1.05] z-10 ring-1 ring-brand-blue font-bold cursor-default"
                       : "bg-white text-brand-charcoal ring-1 ring-gray-200 opacity-60 hover:opacity-100 hover:ring-brand-blue/30 cursor-pointer",
                     FUNNEL_MIN_HEIGHTS[i] ?? "min-h-[60px]"
                   )}

@@ -96,6 +96,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
     [event.sourceUrl]
   );
 
+
   const metadata = useMemo(
     () => [
       {
@@ -159,6 +160,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
+        secondaryCta={heroSecondaryCta}
         title={event.name}
       />
 
