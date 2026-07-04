@@ -7,7 +7,7 @@
       "description": "exhibition environments engineered for visitor flow and lead conversion",
       "href": "/tradeshow-booth-solutions/trade-show-booth-design",
       "icon": "Presentation",
-      "id": "booth-design",
+      "id": "trade-show-booth-design",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Design"
     },
@@ -16,7 +16,7 @@
       "description": "modular exhibition systems globally available",
       "href": "/tradeshow-booth-solutions/trade-show-booth-rental",
       "icon": "Layers",
-      "id": "booth-rental",
+      "id": "trade-show-booth-rental",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Rental"
     },
@@ -25,7 +25,7 @@
       "description": "fabrication to on-site installation",
       "href": "/tradeshow-booth-solutions/trade-show-booth-builder",
       "icon": "Globe2",
-      "id": "booth-builder",
+      "id": "trade-show-booth-builder",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Trade Show Booth Builder"
     },
@@ -34,7 +34,7 @@
       "description": "professional exhibition staffing and brand ambassadors",
       "href": "/tradeshow-booth-solutions/booth-hostess-services",
       "icon": "Users",
-      "id": "booth-hostess",
+      "id": "booth-hostess-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Booth Hostess Services"
     },
@@ -43,7 +43,7 @@
       "description": "end-to-end shipping, customs, and on-site delivery",
       "href": "/tradeshow-booth-solutions/booth-logistics-services",
       "icon": "Truck",
-      "id": "booth-logistics",
+      "id": "booth-logistics-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Booth Logistics Services"
     },
@@ -52,7 +52,7 @@
       "description": "flexible systems adaptable across events and locations",
       "href": "/tradeshow-booth-solutions/modular-booth-solutions",
       "icon": "Grid",
-      "id": "modular-booth",
+      "id": "modular-booth-solutions",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Modular Booth Solutions"
     }

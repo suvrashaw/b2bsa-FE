@@ -6,7 +6,7 @@
       "description": "Organic visibility built through technical SEO, content architecture, and authority building that compounds over time.",
       "href": "/digital-marketing/seo-services",
       "icon": "Search",
-      "id": "seo",
+      "id": "seo-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "SEO Services"
     },
@@ -15,7 +15,7 @@
       "description": "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads managed around lead quality.",
       "href": "/digital-marketing/performance-marketing",
       "icon": "Zap",
-      "id": "paid",
+      "id": "performance-marketing",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Performance Marketing"
     },
@@ -24,7 +24,7 @@
       "description": "LinkedIn, Instagram, and platform-specific content strategies that build audience and drive qualified inbound leads.",
       "href": "/digital-marketing/social-media-marketing",
       "icon": "Share2",
-      "id": "social",
+      "id": "social-media-marketing",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Social Media Marketing"
     }

@@ -7,7 +7,7 @@
       "description": "immersive event concepts designed to drive audience engagement",
       "href": "/global-event-solutions/event-experience-creation",
       "icon": "Sparkles",
-      "id": "event-experience",
+      "id": "event-experience-creation",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Experience Creation"
     },
@@ -16,7 +16,7 @@
       "description": "end-to-end event branding and visual identity solutions",
       "href": "/global-event-solutions/event-branding-solutions",
       "icon": "Palette",
-      "id": "event-branding",
+      "id": "event-branding-solutions",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Event Branding Solutions"
     },
@@ -25,7 +25,7 @@
       "description": "professional B2B networking event planning and execution",
       "href": "/global-event-solutions/corporate-event-solutions",
       "icon": "Building2",
-      "id": "corporate-event",
+      "id": "corporate-event-solutions",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Event Solutions"
     },
@@ -34,7 +34,7 @@
       "description": "structured networking experiences for enterprise audiences",
       "href": "/global-event-solutions/corporate-networking-events",
       "icon": "Network",
-      "id": "networking-events",
+      "id": "corporate-networking-events",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Networking Events"
     }

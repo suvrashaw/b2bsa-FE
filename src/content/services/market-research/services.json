@@ -7,7 +7,7 @@
       "description": "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
       "href": "/market-research/data-augmentation-services",
       "icon": "PlusCircle",
-      "id": "augmentation",
+      "id": "data-augmentation-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Data Augmentation Services"
     },
@@ -16,7 +16,7 @@
       "description": "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
       "href": "/market-research/data-validation-services",
       "icon": "CheckCircle",
-      "id": "validation",
+      "id": "data-validation-services",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Data Validation Services"
     }
