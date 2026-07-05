@@ -19,20 +19,16 @@ import { ServicesCard } from "@/components/items/ServicesCard";
 import { ServicesImageCard } from "@/components/items/ServicesImageCard";
 import { TradeShowCard, TradeShowListItem } from "@/components/items/TradeShowCard";
 import { Blogs } from "@/components/sections/Blogs";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CinematicSequence } from "@/components/sections/CinematicSequence";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { CorporateVideoImageStrip } from "@/components/sections/CorporateVideoImageStrip";
 import { Culture } from "@/components/sections/Culture";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { HomeStats } from "@/components/sections/HomeStats";
-import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
 import { LeadPipelineSection } from "@/components/sections/LeadPipelineSection";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
@@ -179,21 +175,6 @@ const PROOF_STATS = [
   "$1.2B+ Pipeline Influenced",
   "98% Client Retention",
   "40+ Countries",
-];
-
-// ─── IndustriesAlt ────────────────────────────────────────
-
-const CORP_VIDEO_INDUSTRIES = [
-  {
-    description:
-      "SaaS platforms, cloud infrastructure, and enterprise software vendors driving pipeline at major tech events.",
-    title: "Technology & SaaS",
-  },
-  {
-    description:
-      "Payments, banking innovation, and financial technology brands at Money20/20 and SIBOS.",
-    title: "FinTech",
-  },
 ];
 
 // ─── CorporateVideoPortfolioSection ─────────────────────────────────────────
@@ -557,7 +538,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     },
   ],
   CaseStudyGridCard: [{ href: "/case-studies", label: "Case Studies" }],
-  CinematicSequence: [],
   ClientLogos: [
     { href: "/", label: "Home" },
     { href: "/blogs", label: "Blogs" },
@@ -575,12 +555,6 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About" },
     { href: "/contact-us", label: "Contact" },
-  ],
-  CorporateVideoImageStrip: [
-    {
-      href: "/media-production/corporate-video-production",
-      label: "Corporate Video",
-    },
   ],
   CorporateVideoPortfolioSection: [
     {
@@ -737,11 +711,9 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
     ui: ["Button", "Eyebrow", "Heading"],
   },
   CaseStudyGridCard: { items: [], ui: [] },
-  CinematicSequence: { items: [], ui: ["Heading"] },
   ClientLogos: { items: [], ui: ["Heading"] },
   ContactUs: { items: [], ui: ["Button", "ContactModal", "Heading"] },
   ContactUsForm: { items: [], ui: ["Eyebrow", "Heading"] },
-  CorporateVideoImageStrip: { items: [], ui: [] },
   CorporateVideoPortfolioSection: { items: [], ui: ["Heading"] },
   Culture: { items: ["CultureReasonCard"], ui: ["Heading"] },
   Events: { items: [], ui: ["Button", "Eyebrow", "Heading"] },
@@ -749,7 +721,6 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   FAQAccordion: { items: ["FAQAccordionItem"], ui: ["Eyebrow", "Heading"] },
   Hero: { items: [], ui: ["Heading"] },
   HomeStats: { items: [], ui: ["Heading"] },
-  IndustriesAlt: { items: [], ui: ["Heading"] },
   IndustryShaderCard: { items: [], ui: ["Icon"] },
   LeadPipelineSection: { items: [], ui: ["Heading"] },
   LinkedInFeed: { items: [], ui: ["Heading"] },
@@ -884,10 +855,6 @@ const DemoPage = () => {
       <DemoLabel name="Spotlight" />
       <Spotlight {...SPOTLIGHT_DEMO_PROPS} />
 
-      {/* 05 – CinematicSequence */}
-      <DemoLabel name="CinematicSequence" />
-      <CinematicSequence />
-
       {/* 05 – ClientLogos */}
       <DemoLabel name="ClientLogos" />
       <ClientLogos />
@@ -914,10 +881,10 @@ const DemoPage = () => {
 
       {/* 15 – Capabilities */}
       <DemoLabel name="Capabilities" />
-      <Capabilities
-        capabilities={FEATURE_CAROUSEL_ITEMS}
+      <ServicesScroll
         description="Four core capabilities that turn trade show investment into enterprise pipeline."
         heading="How We Drive Results"
+        services={FEATURE_CAROUSEL_ITEMS}
       />
 
       {/* 16 – IndustryShaderCard */}
@@ -967,14 +934,6 @@ const DemoPage = () => {
         ))}
       </Carousel>
 
-      {/* 21 – IndustriesAlt */}
-      <DemoLabel name="IndustriesAlt" />
-      <IndustriesAlt
-        description="We specialise in industries where the sales cycle is long, relationships matter, and trade shows are the fastest path to qualified pipeline."
-        heading="Industries We Serve"
-        industries={CORP_VIDEO_INDUSTRIES}
-      />
-
       {/* 22 – CorporateVideoPortfolioSection */}
       <DemoLabel name="CorporateVideoPortfolioSection" />
       <CardsGrid
@@ -990,10 +949,6 @@ const DemoPage = () => {
           <CaseStudyCard item={item} key={item.title} />
         ))}
       </CardsGrid>
-
-      {/* 22b – CorporateVideoImageStrip */}
-      <DemoLabel name="CorporateVideoImageStrip" />
-      <CorporateVideoImageStrip />
 
       {/* 23 – Timeline */}
       <DemoLabel name="Timeline" />

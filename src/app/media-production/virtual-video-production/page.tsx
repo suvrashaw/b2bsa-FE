@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -94,11 +94,10 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <Capabilities
-            capabilities={capabilityFeatures}
+          <ServicesScroll
             description={VIRTUAL_VIDEO_CAPABILITIES.description}
             heading={VIRTUAL_VIDEO_CAPABILITIES.title}
-            mediaPosition="right"
+            services={capabilityFeatures}
           />
           <SectionContactCta label="Contact Our Team" />
         </>

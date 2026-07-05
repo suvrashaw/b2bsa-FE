@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 import type { PricingProps } from "@/components/items/PricingCard";
-import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
 import type { FAQProps } from "@/components/sections/FAQAccordion";
@@ -14,7 +13,6 @@ import { PricingCard } from "@/components/items/PricingCard";
 import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -23,6 +21,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import navigation from "@/content/navigation.json";
@@ -122,7 +121,7 @@ const renderServicesSection = (
 ) => {
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
-    const features: CapabilitiesItem[] = items.map((s) => ({
+    const features = items.map((s) => ({
       description: s.description,
       icon: s.icon,
       id: s.id,
@@ -130,11 +129,9 @@ const renderServicesSection = (
       label: s.title,
     }));
     return (
-      <Capabilities
-        capabilities={features}
+      <ServicesScroll
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
-        mediaPosition={section.mediaPosition}
-        showCapabilityDescriptions={section.showCapabilityDescriptions}
+        services={features}
       />
     );
   }

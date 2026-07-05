@@ -1,14 +1,7 @@
-import { partytownSnippet } from "@qwik.dev/partytown/integration";
+import { Partytown } from "@qwik.dev/partytown/react";
 import Script from "next/script";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
-
-const PARTYTOWN_SNIPPET = partytownSnippet({
-  debug: false,
-  forward: ["dataLayer.push"],
-});
-
-const PARTYTOWN_SNIPPET_HTML = { __html: PARTYTOWN_SNIPPET };
 
 const GA_INLINE_SCRIPT_HTML = {
   __html: `
@@ -22,11 +15,7 @@ const GA_INLINE_SCRIPT_HTML = {
 export const PartytownScripts = () => {
   return (
     <>
-      <Script
-        dangerouslySetInnerHTML={PARTYTOWN_SNIPPET_HTML}
-        id="partytown-init"
-        strategy="beforeInteractive"
-      />
+      <Partytown debug={false} forward={["dataLayer.push"]} />
       {gaId ? (
         <>
           <Script

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -103,12 +103,10 @@ const Page = () => {
       page={EVENT_BRANDING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
-        <Capabilities
-          capabilities={capabilityFeatures}
+        <ServicesScroll
           description={EVENT_BRANDING_CAPABILITIES.description}
           heading={EVENT_BRANDING_CAPABILITIES.title}
-          mediaPosition="right"
-          showCapabilityDescriptions={false}
+          services={capabilityFeatures}
         />
       }
       secondaryServices={SECONDARY_SERVICES}

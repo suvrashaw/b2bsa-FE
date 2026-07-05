@@ -5,9 +5,9 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -98,10 +98,10 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <Capabilities
-            capabilities={capabilityFeatures}
+          <ServicesScroll
             description={EVENT_LOGISTICS_CAPABILITIES.description}
             heading={EVENT_LOGISTICS_CAPABILITIES.title}
+            services={capabilityFeatures}
           />
           <ContactModalTrigger label="Plan Your Event Logistics" />
         </>

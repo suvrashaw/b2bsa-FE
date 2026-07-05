@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -68,11 +68,9 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <Capabilities
-            capabilities={servicesIncludeFeatures}
+          <ServicesScroll
             heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
-            mediaPosition="right"
-            showCapabilityDescriptions={false}
+            services={servicesIncludeFeatures}
           />
         </>
       }
@@ -83,11 +81,10 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <Capabilities
-            capabilities={capabilityFeatures}
+          <ServicesScroll
             description={EVENT_EXPERIENCE_CAPABILITIES.description}
             heading={EVENT_EXPERIENCE_CAPABILITIES.title}
-            mediaPosition="left"
+            services={capabilityFeatures}
           />
           <Spotlight {...(EVENT_EXPERIENCE_DESIGNED_FOR as SpotlightProps)} />
           <StickyScroll

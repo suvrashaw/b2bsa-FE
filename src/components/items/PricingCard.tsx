@@ -14,11 +14,7 @@ export interface PricingProps {
   title?: string;
 }
 
-interface PricingCardProps {
-  tier: PricingTier;
-}
-
-interface PricingTier {
+export interface PricingTier {
   color: string;
   description: string;
   features: string[];
@@ -26,6 +22,10 @@ interface PricingTier {
   name: string;
   popular?: boolean;
   price: number;
+}
+
+interface PricingCardProps {
+  tier: PricingTier;
 }
 
 export const PricingCard = ({ tier }: PricingCardProps) => {

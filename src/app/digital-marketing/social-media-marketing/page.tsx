@@ -5,8 +5,8 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Carousel } from "@/components/sections/Carousel";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -96,10 +96,10 @@ const Page = () => {
             showCommonCta
           />
 
-          <Capabilities
-            capabilities={SMM_CAPABILITIES_FEATURES}
+          <ServicesScroll
             description={SMM_CAPABILITIES.description}
             heading={SMM_CAPABILITIES.heading}
+            services={SMM_CAPABILITIES_FEATURES}
           />
 
           <section className="bg-brand-gray py-14 md:py-20" id="industries">
