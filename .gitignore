@@ -70,6 +70,7 @@ scripts/*
 !scripts/mcp-tailwindcss.sh
 !scripts/mcp-chrome-devtools.sh
 !scripts/load-env-mcp.sh
+!scripts/sync-hub-services.mjs
 
 # env files (un-ignore examples)
 !.env.example
