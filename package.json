@@ -5,7 +5,6 @@
   "scripts": {
     "predev": "node scripts/sync-hub-services.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-hub-services.mjs",
     "build": "npm run partytown:copy && next build && next-sitemap",
     "start": "next start",
     "lint": "eslint --config configs/eslint.config.mjs",
