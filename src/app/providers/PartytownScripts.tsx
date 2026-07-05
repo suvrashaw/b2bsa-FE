@@ -12,10 +12,12 @@ const GA_INLINE_SCRIPT_HTML = {
 `,
 };
 
+const PARTYTOWN_FORWARD = ["dataLayer.push"];
+
 export const PartytownScripts = () => {
   return (
     <>
-      <Partytown debug={false} forward={["dataLayer.push"]} />
+      <Partytown debug={false} forward={PARTYTOWN_FORWARD} />
       {gaId ? (
         <>
           <Script
