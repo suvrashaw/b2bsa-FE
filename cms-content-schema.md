@@ -488,7 +488,7 @@ The practical takeaway for building a new page: **hub pages are composed only fr
 
 - `performance-marketing` and `seo-services`: both have `capabilities.json` **and** `industries.json` on disk, neither ever imported by their `page.tsx`. Sibling `social-media-marketing` renders both correctly.
 - `booth-hostess-services`: has an industries-section file never wired up.
-- `card.json`: present in roughly 20 of 22 leaf content folders, imported nowhere in the entire codebase.
+- `card.json`: 21 copies exist across `src/content/services/`, imported nowhere in the entire codebase (confirmed via `grep`).
 - `market-research` hub + both its leaves (`data-augmentation-services`, `data-validation-services`): all 3 have an unused `contact.json` on disk; none render a Contact CTA section.
 - Top-level `/services` hub: `HUB_FAQ` is hardcoded Lorem-ipsum placeholder text, never finished.
 
