@@ -310,7 +310,7 @@ interface WhyChooseUsSpotlightContent {
 }
 ```
 
-Used on all 6 category hubs, the top-level hub, and 3 leaves (`modular-booth-solutions`, `event-video-production`, `trade-show-booth-rental`) **instead of** the cards variant. This is a genuinely different content type that happens to share a name with #7 — the filename split above is what disambiguates the two going forward.
+Used on all 6 category hubs, the top-level hub, and on `modular-booth-solutions` and `event-video-production` **instead of** the cards variant (neither of those two has a cards section at all). `event-lead-generation` also uses this variant instead of cards. `corporate-video-production` is the one page confirmed to have **both** — a cards Carousel in `customSections` *and* a `why` prop. (`trade-show-booth-rental`, despite having a `why.json`-shaped file on disk per the wider content audit, does not actually pass a `why` prop in its `page.tsx` — it only renders the cards variant, using content borrowed from `trade-show-booth-design`. That file may be present but unwired, similar to the orphaned-content pattern in Appendix B.) This is a genuinely different content type that happens to share a name with #7 — the filename split above is what disambiguates the two going forward.
 
 ### 9. Process / How It Works
 
