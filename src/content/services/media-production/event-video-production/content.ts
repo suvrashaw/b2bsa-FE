@@ -27,7 +27,6 @@ export const EVENT_VIDEO_CONTACT_CTA = {
 export { default as EVENT_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_VIDEO_HERO } from "./hero.json";
 export { default as EVENT_VIDEO_PAGE } from "./page.json";
-export { default as EVENT_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_VIDEO_CREATIVE_PRICING } from "./video-creative-pricing.json";
 
 export { default as EVENT_VIDEO_DELIVERABLES } from "./video-deliverables.json";

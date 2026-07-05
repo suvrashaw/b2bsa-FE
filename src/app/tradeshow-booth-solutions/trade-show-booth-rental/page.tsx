@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -25,7 +24,6 @@ import {
   BOOTH_RENTAL_INTRO,
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
-  BOOTH_RENTAL_RELATED_SERVICES,
   BOOTH_RENTAL_RENT_VS_BUY,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
 
@@ -86,11 +84,6 @@ const Page = () => {
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
-          <CardsGrid className="pt-0" cols={3} heading="Explore Related Solutions">
-            {BOOTH_RENTAL_RELATED_SERVICES.map((service, index) => (
-              <RelatedServicesCard index={index} key={service.href} service={service} />
-            ))}
-          </CardsGrid>
           <Carousel
             cols={4}
             heading="Why Choose B2B Sales Arrow for Trade Show Booth Rental Services"

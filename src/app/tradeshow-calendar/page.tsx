@@ -53,7 +53,7 @@ const Page = () => {
           ),
         ])}
       />
-      <Header darkBackground />
+      <Header />
       <Hero
         centered
         description={TRADE_SHOW_CALENDAR_HERO.description}

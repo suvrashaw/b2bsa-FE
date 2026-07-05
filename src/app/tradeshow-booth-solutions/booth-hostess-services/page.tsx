@@ -22,7 +22,6 @@ import {
   BOOTH_HOSTESS_IMAGE_HERO,
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
-  BOOTH_HOSTESS_RELATED_SERVICES,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
 
@@ -104,7 +103,6 @@ const Page = () => {
           heading={BOOTH_HOSTESS_CAPABILITIES.title}
         />
       }
-      relatedServices={BOOTH_HOSTESS_RELATED_SERVICES}
       services={deliverableProps}
       showServicesCommonCta
       spotlight={BOOTH_HOSTESS_INTRO}

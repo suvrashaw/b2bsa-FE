@@ -28,5 +28,4 @@ export { default as EVENT_LOGISTICS_BENEFITS } from "./logistics-benefits.json";
 export { default as EVENT_LOGISTICS_DELIVERABLES } from "./logistics-deliverables.json";
 export { default as EVENT_LOGISTICS_INTRO } from "./logistics-intro.json";
 export { default as EVENT_LOGISTICS_PAGE } from "./page.json";
-export { default as EVENT_LOGISTICS_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_LOGISTICS_WHY_CHOOSE_US } from "./why-choose-us.json";

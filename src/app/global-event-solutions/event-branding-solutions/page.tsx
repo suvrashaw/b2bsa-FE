@@ -23,7 +23,6 @@ import {
   EVENT_BRANDING_INDUSTRIES_SECTION,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
-  EVENT_BRANDING_RELATED_SERVICES,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
 
@@ -112,7 +111,6 @@ const Page = () => {
           showCapabilityDescriptions={false}
         />
       }
-      relatedServices={EVENT_BRANDING_RELATED_SERVICES}
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}

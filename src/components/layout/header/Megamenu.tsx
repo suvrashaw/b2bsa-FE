@@ -17,9 +17,7 @@ const MegamenuSubLink = ({
     <Link
       className={cn(
         "block min-w-0 text-xs leading-snug font-semibold break-words transition-colors",
-        lightText
-          ? "text-white hover:text-white/80"
-          : "text-gray-500 hover:text-gray-900"
+        lightText ? "text-white hover:text-white/80" : "text-gray-500 hover:text-gray-900"
       )}
       href={sub.href}
       onClick={onClose}
@@ -63,15 +61,22 @@ export const MegamenuServiceGroup = memo(
           <div className="grid grid-cols-2 gap-x-4">
             {subGroups.map((sg) => (
               <div key={sg.name}>
-                <p className={cn(
-                  "mb-4 text-xs font-bold tracking-wide uppercase",
-                  lightText ? "text-white/40" : "text-gray-400"
-                )}>
+                <p
+                  className={cn(
+                    "mb-4 text-xs font-bold tracking-wide uppercase",
+                    lightText ? "text-white/40" : "text-gray-400"
+                  )}
+                >
                   {sg.name}
                 </p>
                 <div className="space-y-3">
                   {sg.links.map((sub) => (
-                    <MegamenuSubLink key={sub.name} lightText={lightText} onClose={onClose} sub={sub} />
+                    <MegamenuSubLink
+                      key={sub.name}
+                      lightText={lightText}
+                      onClose={onClose}
+                      sub={sub}
+                    />
                   ))}
                 </div>
               </div>

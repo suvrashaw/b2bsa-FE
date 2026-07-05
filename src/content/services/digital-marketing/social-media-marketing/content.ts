@@ -33,6 +33,5 @@ export { default as SMM_HERO } from "./hero.json";
 export { default as SMM_INTRO } from "./intro.json";
 export { default as SMM_MODAL_SERVICE_FIELD } from "./modal-service-field.json";
 export { default as SMM_PAGE } from "./page.json";
-export { default as SMM_RELATED_SERVICES } from "./related-services.json";
 export { default as SMM_SERVICES } from "./whats-included.json";
 export { default as SMM_WHY_CHOOSE_US } from "./why-choose-us.json";

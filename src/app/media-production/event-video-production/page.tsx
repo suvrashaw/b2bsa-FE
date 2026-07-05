@@ -14,7 +14,6 @@ import {
   EVENT_VIDEO_HERO,
   EVENT_VIDEO_INTRO,
   EVENT_VIDEO_PAGE,
-  EVENT_VIDEO_RELATED_SERVICES,
   EVENT_VIDEO_WHY,
 } from "@/content/services/media-production/event-video-production/content";
 
@@ -32,7 +31,6 @@ const Page = () => {
       page={EVENT_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={<SectionContactCta />}
-      relatedServices={EVENT_VIDEO_RELATED_SERVICES}
       services={EVENT_VIDEO_DELIVERABLES}
       showServicesCommonCta
       spotlight={EVENT_VIDEO_INTRO}

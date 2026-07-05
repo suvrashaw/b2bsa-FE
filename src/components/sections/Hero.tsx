@@ -14,8 +14,8 @@ import { cn } from "@/lib";
 
 export interface HeroProps {
   animateFromLeft?: boolean;
-  centered?: boolean;
   centerContent?: boolean;
+  centered?: boolean;
   description?: string;
   eyebrow?: ReactNode | string;
   imageOpacity?: number;
@@ -256,8 +256,8 @@ const HeroBackground = ({
 
 export const Hero = ({
   animateFromLeft = false,
-  centered = false,
   centerContent = false,
+  centered = false,
   description,
   eyebrow,
   imageOpacity = 1,

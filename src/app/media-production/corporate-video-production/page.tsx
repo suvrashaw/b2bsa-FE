@@ -22,7 +22,6 @@ import {
   CORPORATE_VIDEO_INTRO,
   CORPORATE_VIDEO_PAGE,
   CORPORATE_VIDEO_PORTFOLIO,
-  CORPORATE_VIDEO_RELATED_SERVICES,
   CORPORATE_VIDEO_WHY,
   CORPORATE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/corporate-video-production/content";
@@ -70,7 +69,6 @@ const Page = () => {
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={<SectionContactCta />}
-      relatedServices={CORPORATE_VIDEO_RELATED_SERVICES}
       services={CORPORATE_VIDEO_DELIVERABLES as ServicesStackProps}
       servicesSectionType="carousel"
       spotlight={CORPORATE_VIDEO_INTRO}

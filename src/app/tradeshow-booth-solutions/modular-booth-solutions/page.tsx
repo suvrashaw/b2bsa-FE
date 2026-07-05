@@ -13,7 +13,6 @@ import {
   MODULAR_BOOTHS_INTRO,
   MODULAR_BOOTHS_PAGE,
   MODULAR_BOOTHS_RANGE_SECTION,
-  MODULAR_BOOTHS_RELATED_SERVICES,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/modular-booth-solutions/content";
 
@@ -29,7 +28,6 @@ const Page = () => {
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={GES_PAGE}
-      relatedServices={MODULAR_BOOTHS_RELATED_SERVICES}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       services={MODULAR_BOOTHS_DELIVERABLES}

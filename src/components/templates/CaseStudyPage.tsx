@@ -60,7 +60,7 @@ export const CaseStudyPage = ({ study }: CaseStudyPageProps) => {
 
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header forceLightMode />
+      <Header />
 
       <Hero
         imageOpacity={0.35}

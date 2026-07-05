@@ -23,7 +23,6 @@ import {
   VIRTUAL_VIDEO_IMAGE_HERO,
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
-  VIRTUAL_VIDEO_RELATED_SERVICES,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
 
@@ -104,7 +103,6 @@ const Page = () => {
           <SectionContactCta label="Contact Our Team" />
         </>
       }
-      relatedServices={VIRTUAL_VIDEO_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       services={VIRTUAL_VIDEO_DELIVERABLES}
       showServicesCommonCta

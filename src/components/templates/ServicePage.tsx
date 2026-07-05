@@ -1,7 +1,5 @@
 import type { ReactNode } from "react";
 
-import { useMemo } from "react";
-
 import type { PricingProps } from "@/components/items/PricingCard";
 import type { CapabilitiesItem } from "@/components/sections/Capabilities";
 import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
@@ -27,6 +25,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
+import navigation from "@/content/navigation.json";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -85,7 +84,6 @@ export interface ServicePageProps {
     stats: string[];
   };
 
-  relatedServices?: { href: string; title: string }[];
   relatedServicesHeading?: ReactNode;
 
   secondaryServices?: ServicesStackProps;
@@ -169,7 +167,6 @@ export const ServicePage = ({
   preStudiesSections,
   process,
   proofBar,
-  relatedServices,
   relatedServicesHeading,
   secondaryServices,
   secondaryServicesSectionType = "grid",
@@ -183,26 +180,30 @@ export const ServicePage = ({
   const steps = process?.phases ?? process?.steps ?? [];
   const processTitle = process?.title ?? process?.heading ?? "";
 
-  const fallbackBg = useMemo(() => {
-    const image =
-      hero?.images?.[0] ||
-      spotlight?.imageUrl ||
-      why?.imageUrl ||
-      services?.services?.[0]?.image ||
-      services?.content?.services?.[0]?.image ||
-      secondaryServices?.services?.[0]?.image ||
-      secondaryServices?.content?.services?.[0]?.image;
-    const altText = typeof hero?.title === "string" ? hero.title : page.pageName;
-    return image ? { alt: altText, src: image } : undefined;
-  }, [
-    hero?.images,
-    hero?.title,
-    page.pageName,
-    spotlight?.imageUrl,
-    why?.imageUrl,
-    services,
-    secondaryServices,
-  ]);
+  let computedRelatedServices: { href: string; title: string }[] = [];
+  for (const group of navigation.serviceNavigationGroups) {
+    const isInCategory = group.links.some((link) => link.href === page.seo.canonicalPath);
+    if (isInCategory) {
+      const otherServices = group.links.filter((link) => link.href !== page.seo.canonicalPath);
+      // eslint-disable-next-line react-hooks/purity, sonarjs/pseudo-random
+      const shuffled = otherServices.toSorted(() => 0.5 - Math.random());
+      computedRelatedServices = shuffled
+        .slice(0, 3)
+        .map((link) => ({ href: link.href, title: link.name }));
+      break;
+    }
+  }
+
+  const fallbackBgImage =
+    hero?.images?.[0] ||
+    spotlight?.imageUrl ||
+    why?.imageUrl ||
+    services?.services?.[0]?.image ||
+    services?.content?.services?.[0]?.image ||
+    secondaryServices?.services?.[0]?.image ||
+    secondaryServices?.content?.services?.[0]?.image;
+  const fallbackBgAltText = typeof hero?.title === "string" ? hero.title : page.pageName;
+  const fallbackBg = fallbackBgImage ? { alt: fallbackBgAltText, src: fallbackBgImage } : undefined;
 
   const pageUrl = `${siteUrl}${normalizePath(page.seo.canonicalPath)}`;
   const primaryImageUrl = fallbackBg?.src ? `${siteUrl}${fallbackBg.src}` : undefined;
@@ -232,7 +233,7 @@ export const ServicePage = ({
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={pageGraph} />
-      <Header darkBackground />
+      <Header />
 
       {hero && <Hero {...hero} secondaryCta={undefined} />}
 
@@ -264,7 +265,8 @@ export const ServicePage = ({
         />
       )}
 
-      {services && renderServicesSection(services, servicesSectionType, showServicesCommonCta ?? false)}
+      {services &&
+        renderServicesSection(services, servicesSectionType, showServicesCommonCta ?? false)}
 
       {why && <Spotlight {...why} />}
 
@@ -304,13 +306,13 @@ export const ServicePage = ({
 
       <FAQAccordion {...faq} />
 
-      {relatedServices && relatedServices.length > 0 && (
+      {computedRelatedServices.length > 0 && (
         <CardsGrid
           className="py-10 md:py-12 lg:py-14"
           cols={3}
           heading={relatedServicesHeading ?? "Explore Related Solutions"}
         >
-          {relatedServices.map((service, index) => (
+          {computedRelatedServices.map((service, index) => (
             <RelatedServicesCard index={index} key={service.href} service={service} />
           ))}
         </CardsGrid>

@@ -72,7 +72,13 @@ const Page = () => {
       page={PPC_PAGE}
       parentPage={PERF_PAGE}
       preProcessSections={
-        <ServicesStack {...PPC_SERVICES} cardCtaMode="none" commonCtaLabel="Contact Our Team" contactModal={servicesContactModal} showCommonCta />
+        <ServicesStack
+          {...PPC_SERVICES}
+          cardCtaMode="none"
+          commonCtaLabel="Contact Our Team"
+          contactModal={servicesContactModal}
+          showCommonCta
+        />
       }
       spotlight={PPC_INTRO}
     />

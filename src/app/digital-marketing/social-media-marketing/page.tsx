@@ -30,7 +30,6 @@ import {
   SMM_INTRO,
   SMM_MODAL_SERVICE_FIELD,
   SMM_PAGE,
-  SMM_RELATED_SERVICES,
   SMM_SERVICES,
   SMM_WHY_CHOOSE_US,
 } from "@/content/services/digital-marketing/social-media-marketing/content";
@@ -89,7 +88,13 @@ const Page = () => {
       parentPage={PERF_PAGE}
       preProcessSections={
         <>
-          <ServicesStack {...SMM_SERVICES} cardCtaMode="none" commonCtaLabel="Contact Our Team" contactModal={servicesContactModal} showCommonCta />
+          <ServicesStack
+            {...SMM_SERVICES}
+            cardCtaMode="none"
+            commonCtaLabel="Contact Our Team"
+            contactModal={servicesContactModal}
+            showCommonCta
+          />
 
           <Capabilities
             capabilities={SMM_CAPABILITIES_FEATURES}
@@ -106,6 +111,7 @@ const Page = () => {
                 {SMM_INDUSTRIES_FEATURES.map((industry, i) => (
                   <IndustryShaderCard
                     icon={industry.icon}
+                    image={industry.image}
                     index={i}
                     key={industry.id}
                     title={industry.label}
@@ -116,7 +122,6 @@ const Page = () => {
           </section>
         </>
       }
-      relatedServices={SMM_RELATED_SERVICES}
       spotlight={SMM_INTRO}
     />
   );

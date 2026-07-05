@@ -6,7 +6,6 @@ import { HOME_BLOG_POSTS } from "@/content/blogs";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import BLOGS_DATA from "./blogs.json";
-import CINEMATICSEQUENCECONTENT_DATA from "./cinematic-sequence.json";
 import CONTACTCONTENT_DATA from "./contactus.json";
 import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
@@ -58,13 +57,6 @@ export interface CaseStudyItem {
   title: string;
 }
 
-export interface CinematicSequenceContent {
-  beats: CinematicStoryBeat[];
-  frameCount: number;
-  frameUrls?: string[];
-  frameUrlTemplate?: string;
-  loadingText: string;
-}
 
 export interface ContactContent {
   description: string;
@@ -170,28 +162,6 @@ export interface TestimonialsContent {
   testimonials: TestimonialItem[];
 }
 
-interface CinematicStoryBeat {
-  className: string;
-  cta?: {
-    className: string;
-    label: string;
-  };
-  description?: {
-    className: string;
-    text: string;
-  };
-  eyebrow?: {
-    className: string;
-    text: string;
-  };
-  id: string;
-  opacityInput: number[];
-  opacityOutput: number[];
-  title: ReactNode;
-  titleClassName: string;
-  yInput: number[];
-  yOutput: number[];
-}
 
 interface ContactServiceOption {
   label: string;
@@ -231,8 +201,6 @@ interface UpcomingEventItem {
   title: string;
 }
 
-export const HOME_CINEMATIC_SEQUENCE_CONTENT: CinematicSequenceContent =
-  CINEMATICSEQUENCECONTENT_DATA;
 
 export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
 

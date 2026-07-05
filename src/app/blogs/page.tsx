@@ -45,7 +45,7 @@ const Page = () => {
           ),
         ])}
       />
-      <Header lightHeaderText />
+      <Header />
       <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
       <Suspense fallback={<div className="min-h-[800px]" />}>
         <BlogsSection />

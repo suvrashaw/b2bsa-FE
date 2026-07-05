@@ -57,19 +57,19 @@ const StepButton = ({ index, isActive, onActivate, step }: StepButtonProps) => {
           {step.title}
         </span>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
           className={cn(
-            "h-5 w-5 shrink-0 transition-colors duration-300",
+            "size-5 shrink-0 transition-colors duration-300",
             isActive ? "text-brand-blue" : "text-brand-charcoal/30"
           )}
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <polyline points="9 18 15 12 9 6" />
         </svg>
@@ -123,16 +123,17 @@ export const LeadPipelineSection = ({
                   {stage.label}
                 </div>
                 <button
-                  onClick={() => setActiveStep(i)}
-                  type="button"
                   className={cn(
                     "flex flex-col items-center justify-center rounded-lg p-4 text-center transition-all duration-500",
                     FUNNEL_WIDTHS[i] ?? "w-1/3",
                     activeStep === i || (activeStep >= stages.length && i === stages.length - 1)
-                      ? "bg-brand-blue text-white shadow-xl scale-[1.05] z-10 ring-1 ring-brand-blue font-bold cursor-default"
-                      : "bg-white text-brand-charcoal ring-1 ring-gray-200 opacity-60 hover:opacity-100 hover:ring-brand-blue/30 cursor-pointer",
+                      ? "z-10 scale-[1.05] cursor-default bg-brand-blue font-bold text-white shadow-xl ring-1 ring-brand-blue"
+                      : "cursor-pointer bg-white text-brand-charcoal opacity-60 ring-1 ring-gray-200 hover:opacity-100 hover:ring-brand-blue/30",
                     FUNNEL_MIN_HEIGHTS[i] ?? "min-h-[60px]"
                   )}
+                  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
+                  onClick={() => setActiveStep(i)}
+                  type="button"
                 >
                   <span className="text-base leading-snug font-bold md:text-lg">{stage.count}</span>
                   <span className="mt-0.5 text-[11px] leading-snug opacity-80">

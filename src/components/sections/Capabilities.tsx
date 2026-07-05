@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import { animate, motion, useMotionValue } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Icon } from "@/components/ui/Icon";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -151,6 +151,11 @@ const CapabilitiesNavItem = ({
     }
   }, [wrappedDistance, yMV, opacityMV]);
 
+  const style = useMemo(
+    () => ({ ...NAV_ITEM_STYLE, opacity: opacityMV, y: yMV }),
+    [opacityMV, yMV]
+  );
+
   const buttonClassName = cn(
     "group relative inline-flex w-fit items-center gap-4 rounded-full px-6 py-3.5 transition-all duration-700 md:px-10 md:py-5 lg:px-8 lg:py-4",
     isActive
@@ -164,7 +169,7 @@ const CapabilitiesNavItem = ({
   return (
     <motion.div
       className="absolute inset-x-0 flex items-center justify-center px-4 md:px-0"
-      style={{ ...NAV_ITEM_STYLE, opacity: opacityMV, y: yMV }}
+      style={style}
     >
       <button
         className={buttonClassName}
@@ -278,7 +283,8 @@ const CapabilitiesCarousel = ({
     let lastWheelTime = 0;
     const onWheel = (e: WheelEvent) => {
       const r = el.getBoundingClientRect();
-      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)
+        return;
       e.preventDefault();
       const now = Date.now();
       if (now - lastWheelTime < 300) return;
@@ -288,7 +294,6 @@ const CapabilitiesCarousel = ({
     window.addEventListener("wheel", onWheel, { passive: false });
     return () => window.removeEventListener("wheel", onWheel);
   }, []);
-
 
   return (
     <div className="mx-auto w-full max-w-7xl" ref={containerRef}>

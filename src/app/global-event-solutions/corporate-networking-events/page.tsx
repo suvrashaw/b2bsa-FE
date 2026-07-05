@@ -25,7 +25,6 @@ import {
   CORP_NETWORKING_INDUSTRIES_SECTION,
   CORP_NETWORKING_INTRO,
   CORP_NETWORKING_PAGE,
-  CORP_NETWORKING_RELATED_SERVICES,
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
 
@@ -121,7 +120,6 @@ const Page = () => {
           )}
         />
       }
-      relatedServices={CORP_NETWORKING_RELATED_SERVICES}
       secondaryServices={CORP_NETWORKING_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_NETWORKING_DELIVERABLES}

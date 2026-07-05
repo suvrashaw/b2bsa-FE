@@ -37,5 +37,4 @@ export { default as CORP_EVENT_DELIVERABLES } from "./event-deliverables.json";
 export { default as CORP_EVENT_FAQ } from "./faq.json";
 export { default as CORP_EVENT_IMAGE_HERO } from "./hero.json";
 export { default as CORP_EVENT_PAGE } from "./page.json";
-export { default as CORP_EVENT_RELATED_SERVICES } from "./related-services.json";
 export { default as CORP_EVENT_WHY_CHOOSE_US } from "./why-choose-us.json";

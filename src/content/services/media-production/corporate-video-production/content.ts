@@ -26,5 +26,4 @@ export { default as CORPORATE_VIDEO_FAQ } from "./faq.json";
 export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
 export { default as CORPORATE_VIDEO_WHY } from "./intro.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
-export { default as CORPORATE_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as CORPORATE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";

@@ -23,7 +23,6 @@ import {
   EVENT_PHYSICAL_VIDEO_PAGE,
   EVENT_PHYSICAL_VIDEO_PROCESS,
   EVENT_PHYSICAL_VIDEO_PRODUCTION_PLAN,
-  EVENT_PHYSICAL_VIDEO_RELATED_SERVICES,
   EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-physical-video-shoot/content";
 
@@ -77,7 +76,6 @@ const Page = () => {
       }
       process={EVENT_PHYSICAL_VIDEO_PROCESS}
       proofBar={EVENT_PHYSICAL_VIDEO_INTRO}
-      relatedServices={EVENT_PHYSICAL_VIDEO_RELATED_SERVICES}
       services={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       showPhaseNumbers={false}
       showServicesCommonCta

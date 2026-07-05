@@ -44,13 +44,13 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <JsonLd data={buildAboutPageJsonLd(ABOUT_PAGE.seo.description)} />
-      <Header darkBackground />
+      <Header />
 
       {/* Hero — centered, no description, "About Us" eyebrow, slide-from-left animation */}
       <Hero
         animateFromLeft
-        centered
         centerContent
+        centered
         eyebrow="About Us"
         imageOpacity={0.7}
         images={ABOUT_IMAGES}

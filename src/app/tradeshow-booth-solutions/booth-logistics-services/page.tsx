@@ -29,7 +29,6 @@ import {
   EVENT_LOGISTICS_INDUSTRIES_SECTION,
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
-  EVENT_LOGISTICS_RELATED_SERVICES,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 
@@ -56,7 +55,6 @@ const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index
   image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
   label: phase.title,
 }));
-
 
 const Page = () => {
   return (
@@ -120,6 +118,7 @@ const Page = () => {
                   <IndustryShaderCard
                     description={industry.description}
                     icon={industry.icon}
+                    image={industry.image}
                     index={i}
                     key={industry.id}
                     title={industry.title}
@@ -141,7 +140,6 @@ const Page = () => {
           </CardsGrid>
         </>
       }
-      relatedServices={EVENT_LOGISTICS_RELATED_SERVICES}
       services={EVENT_LOGISTICS_DELIVERABLES}
       showServicesCommonCta
       spotlight={EVENT_LOGISTICS_INTRO}

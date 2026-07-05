@@ -23,7 +23,6 @@ import {
   EVENT_EXPERIENCE_VIDEO_IMAGE_HERO,
   EVENT_EXPERIENCE_VIDEO_INTRO,
   EVENT_EXPERIENCE_VIDEO_PAGE,
-  EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES,
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
 
@@ -85,7 +84,6 @@ const Page = () => {
           <SectionContactCta />
         </>
       }
-      relatedServices={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       services={deliverableProps}
       showPhaseNumbers={false}

@@ -32,4 +32,3 @@ export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
 export { default as BOOTH_BUILDER_HERO } from "./hero.json";
 export { default as BOOTH_BUILDER_PAGE } from "./page.json";
 export { default as BOOTH_BUILDER_PROCESS } from "./process.json";
-export { default as BOOTH_BUILDER_RELATED_SERVICES } from "./related-services.json";

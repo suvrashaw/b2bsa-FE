@@ -47,7 +47,7 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <JsonLd data={buildContactPageJsonLd(CONTACT_PAGE.seo.description)} />
-      <Header darkBackground />
+      <Header />
       <section className="relative flex min-h-[80vh] items-end pt-32 pb-20">
         <Image
           alt="Contact Us"

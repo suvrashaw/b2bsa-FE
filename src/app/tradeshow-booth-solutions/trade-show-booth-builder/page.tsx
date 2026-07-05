@@ -27,7 +27,6 @@ import {
   BOOTH_BUILDER_PAGE,
   BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
-  BOOTH_BUILDER_RELATED_SERVICES,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-builder/content";
 import {
   BOOTH_DESIGN_SHOWCASE_ITEMS,
@@ -158,7 +157,6 @@ const Page = () => {
       }
       process={BOOTH_BUILDER_PROCESS}
       proofBar={boothBuilderProofBar}
-      relatedServices={BOOTH_BUILDER_RELATED_SERVICES}
     />
   );
 };

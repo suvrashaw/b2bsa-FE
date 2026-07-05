@@ -28,5 +28,4 @@ export { default as BOOTH_DESIGN_FAQ } from "./faq.json";
 export { default as BOOTH_DESIGN_HERO } from "./hero.json";
 export { default as BOOTH_DESIGN_PAGE } from "./page.json";
 export { default as BOOTH_DESIGN_PROCESS } from "./process.json";
-export { default as BOOTH_DESIGN_RELATED_SERVICES } from "./related-services.json";
 export { default as BOOTH_DESIGN_WHY_CHOOSE_US } from "./why-choose-us.json";

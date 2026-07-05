@@ -351,7 +351,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header lightHeaderText />
+      <Header />
 
       <section className="relative isolate flex min-h-[50vh] items-center overflow-hidden bg-brand-charcoal pt-24 text-white">
         <Image

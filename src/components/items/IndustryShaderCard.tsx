@@ -4,9 +4,12 @@ import { Warp } from "@paper-design/shaders-react";
 
 import { Icon } from "@/components/ui/Icon";
 
+const WARP_STYLE = { height: "100%", width: "100%" } as const;
+
 interface IndustryShaderCardProps {
   description?: string;
   icon: string;
+  image?: string;
   index: number;
   title: string;
 }
@@ -14,64 +17,64 @@ interface IndustryShaderCardProps {
 const getShaderConfig = (index: number) => {
   const configs = [
     {
-      proportion: 0.3,
-      softness: 0.8,
+      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
       distortion: 0.15,
-      swirl: 0.6,
-      swirlIterations: 8,
+      proportion: 0.3,
       shape: "checks" as const,
       shapeScale: 0.08,
-      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
+      softness: 0.8,
+      swirl: 0.6,
+      swirlIterations: 8,
     },
     {
-      proportion: 0.4,
-      softness: 1.2,
+      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
       distortion: 0.2,
-      swirl: 0.9,
-      swirlIterations: 12,
+      proportion: 0.4,
       shape: "stripes" as const,
       shapeScale: 0.12,
-      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
+      softness: 1.2,
+      swirl: 0.9,
+      swirlIterations: 12,
     },
     {
-      proportion: 0.35,
-      softness: 0.9,
+      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
       distortion: 0.18,
-      swirl: 0.7,
-      swirlIterations: 10,
+      proportion: 0.35,
       shape: "checks" as const,
       shapeScale: 0.1,
-      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
+      softness: 0.9,
+      swirl: 0.7,
+      swirlIterations: 10,
     },
     {
-      proportion: 0.45,
-      softness: 1.1,
+      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
       distortion: 0.22,
-      swirl: 0.8,
-      swirlIterations: 15,
+      proportion: 0.45,
       shape: "stripes" as const,
       shapeScale: 0.09,
-      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
+      softness: 1.1,
+      swirl: 0.8,
+      swirlIterations: 15,
     },
     {
-      proportion: 0.38,
-      softness: 0.95,
+      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
       distortion: 0.16,
-      swirl: 0.85,
-      swirlIterations: 11,
+      proportion: 0.38,
       shape: "checks" as const,
       shapeScale: 0.11,
-      colors: ["#1e6091", "#4bc0d9", "#1e6091", "#4bc0d9"],
+      softness: 0.95,
+      swirl: 0.85,
+      swirlIterations: 11,
     },
     {
-      proportion: 0.42,
-      softness: 1.0,
+      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
       distortion: 0.19,
-      swirl: 0.75,
-      swirlIterations: 9,
+      proportion: 0.42,
       shape: "stripes" as const,
       shapeScale: 0.13,
-      colors: ["#4bc0d9", "#1e6091", "#4bc0d9", "#1e6091"],
+      softness: 1,
+      swirl: 0.75,
+      swirlIterations: 9,
     },
   ];
   return configs[index % configs.length];
@@ -80,14 +83,27 @@ const getShaderConfig = (index: number) => {
 export const IndustryShaderCard = ({
   description,
   icon,
+  image,
   index,
   title,
 }: IndustryShaderCardProps) => {
   const shaderConfig = getShaderConfig(index);
 
   return (
-    <div className="group relative flex w-full flex-col aspect-[4/5] min-h-[280px] md:aspect-auto md:min-h-[320px]">
-      <div className="absolute inset-0 overflow-hidden rounded-3xl">
+    <div className="group relative flex aspect-[4/5] min-h-[280px] w-full flex-col overflow-hidden rounded-3xl border border-white/20 md:min-h-[320px] dark:border-white/10">
+      {/* Background Image (Default state) */}
+      <div className="absolute inset-0 z-0 transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img alt={title} className="size-full object-cover" src={image} />
+        ) : (
+          <div className="size-full bg-zinc-800" />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Shader Background (Hover state) */}
+      <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
         <Warp
           colors={shaderConfig.colors}
           distortion={shaderConfig.distortion}
@@ -98,26 +114,32 @@ export const IndustryShaderCard = ({
           shapeScale={shaderConfig.shapeScale}
           softness={shaderConfig.softness}
           speed={0.8}
-          style={{ height: "100%", width: "100%" }}
+          style={WARP_STYLE}
           swirl={shaderConfig.swirl}
           swirlIterations={shaderConfig.swirlIterations}
         />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="relative z-10 flex h-full flex-grow flex-col rounded-3xl border border-white/20 bg-black/80 p-5 dark:border-white/10 md:p-8">
-        <div className="mb-4 drop-shadow-lg md:mb-6">
-          <div className="flex size-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm md:size-12">
-            <Icon className="size-5 text-white md:size-6" name={icon} />
+      <div className="relative z-10 flex h-full flex-grow flex-col">
+        {/* Default Content: Icon + Title */}
+        <div className="absolute inset-0 flex flex-col p-5 transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0 md:p-8">
+          <div className="mb-4 drop-shadow-lg md:mb-6">
+            <div className="flex size-10 items-center justify-center rounded-xl bg-white/20 ring-1 ring-white/30 backdrop-blur-sm md:size-12">
+              <Icon className="size-5 text-white md:size-6" name={icon} />
+            </div>
           </div>
+          <h3 className="text-lg font-bold text-white md:text-lg">{title}</h3>
         </div>
 
-        <h3 className="mb-2 text-lg font-bold text-white md:mb-4 md:text-lg">{title}</h3>
-
-        {description ? (
-          <p className="flex-grow text-[11px] font-medium leading-relaxed text-gray-100 md:text-base">
-            {description}
-          </p>
-        ) : null}
+        {/* Hover Content: Description */}
+        <div className="absolute inset-0 flex translate-y-4 flex-col justify-center p-5 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 md:p-8">
+          {description ? (
+            <p className="text-center text-[13px] leading-relaxed font-medium text-gray-100 md:text-base">
+              {description}
+            </p>
+          ) : null}
+        </div>
       </div>
     </div>
   );

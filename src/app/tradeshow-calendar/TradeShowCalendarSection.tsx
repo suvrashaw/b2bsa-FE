@@ -214,7 +214,12 @@ const NumberFilter = ({
   value: string;
 }) => (
   <div className="grid grid-cols-[0.85fr_1.15fr] gap-3">
-    <select aria-label={label} className={FORM_CONTROL_CLASS} onChange={onOperatorChange} value={operator}>
+    <select
+      aria-label={label}
+      className={FORM_CONTROL_CLASS}
+      onChange={onOperatorChange}
+      value={operator}
+    >
       {NUMBER_OPERATOR_OPTIONS.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}

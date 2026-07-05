@@ -72,7 +72,13 @@ const Page = () => {
       page={SEO_PAGE}
       parentPage={PERF_PAGE}
       preProcessSections={
-        <ServicesStack {...SEO_SERVICES} cardCtaMode="none" commonCtaLabel="Contact Our Team" contactModal={servicesContactModal} showCommonCta />
+        <ServicesStack
+          {...SEO_SERVICES}
+          cardCtaMode="none"
+          commonCtaLabel="Contact Our Team"
+          contactModal={servicesContactModal}
+          showCommonCta
+        />
       }
       spotlight={SEO_INTRO}
     />

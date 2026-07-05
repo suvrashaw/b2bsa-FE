@@ -46,7 +46,7 @@ export const ServicesStack = ({
   const resolvedCardCtaMode = cardCtaMode ?? (showCardCtas ? "all" : "none");
   const anyCardHasCta =
     resolvedCardCtaMode === "all" ||
-    (resolvedCardCtaMode === "linked" && services.some((s) => Boolean(s.href)));
+    (resolvedCardCtaMode === "linked" && services.some((s) => s.href));
   const stickyStyles = useMemo(
     () =>
       services.map((_, index) => ({

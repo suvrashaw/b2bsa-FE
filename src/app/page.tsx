@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { EventsCard } from "@/components/items/EventsCard";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Header } from "@/components/layout/Header";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
 
 /* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
@@ -14,9 +14,7 @@ const Blogs = dynamic(() => import("@/components/sections/Blogs").then((mod) => 
 const CardsGrid = dynamic(() =>
   import("@/components/sections/CardsGrid").then((mod) => mod.CardsGrid)
 );
-const Carousel = dynamic(() =>
-  import("@/components/sections/Carousel").then((mod) => mod.Carousel)
-);
+
 const CaseStudies = dynamic(() =>
   import("@/components/sections/CaseStudies").then((mod) => mod.CaseStudies)
 );
@@ -69,7 +67,7 @@ const Home = () => {
           buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
         ])}
       />
-      <Header forceLightMode />
+      <Header />
       <div id="home">
         <Hero
           description={HOME_HERO_CONTENT.description}
@@ -90,7 +88,11 @@ const Home = () => {
       </div>
 
       <div id="services">
-        <ServicesStack commonCtaLabel="Contact Our Team" contactModal={HOME_SERVICES_CONTACT_MODAL} showCommonCta />
+        <ServicesStack
+          commonCtaLabel="Contact Our Team"
+          contactModal={HOME_SERVICES_CONTACT_MODAL}
+          showCommonCta
+        />
       </div>
 
       <div id="work">

@@ -96,7 +96,6 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
     [event.sourceUrl]
   );
 
-
   const metadata = useMemo(
     () => [
       {
@@ -152,7 +151,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
 
   return (
     <main className="min-h-screen bg-brand-gray">
-      <Header forceLightMode />
+      <Header />
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────── */}
       <Hero

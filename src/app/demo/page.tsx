@@ -11,7 +11,6 @@ import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { CaseStudyCard } from "@/components/items/CaseStudyCard";
 import { CaseStudyGridCard } from "@/components/items/CaseStudyGridCard";
 import { EventsCard } from "@/components/items/EventsCard";
-
 import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { PricingCard, type PricingTier } from "@/components/items/PricingCard";
@@ -37,6 +36,7 @@ import { IndustriesAlt } from "@/components/sections/IndustriesAlt";
 import { LeadPipelineSection } from "@/components/sections/LeadPipelineSection";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
+import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -45,7 +45,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/blogs";
-import { HOME_EVENTS_CONTENT, HOME_FAQ_CONTENT } from "@/content/home/content";
+import { HOME_EVENTS_CONTENT } from "@/content/home/content";
 import EVENT_LEAD_PIPELINE from "@/content/services/sales-qualified-lead-generation/event-lead-generation/pipeline.json";
 import { getDefaultEvents, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 
@@ -106,6 +106,59 @@ const DEMO_PRICING_TIERS: PricingTier[] = [
     icon: <Star className="size-5" />,
     name: "Enterprise Engine",
     price: 2999,
+  },
+];
+
+// ─── ServicesScroll ──────────────────────────────────────────────────────────────
+
+const DEMO_SERVICES_SCROLL_ITEMS = [
+  {
+    ctaText: "Get a Free 3D Booth Design",
+    description:
+      "We design custom exhibition stands for World Aviation Festival 2026 that maximize visitor flow, support executive conversations, and create memorable brand experiences.",
+    features: [
+      "Custom 3D Booth Design",
+      "Turnkey Build & Installation",
+      "Meeting & Hospitality Zones",
+      "AV & Interactive Displays",
+    ],
+    id: "booth-design",
+    image: "/media/home/hero/home_hero_bg.avif",
+    label: "SERVICE 01",
+    number: "01",
+    title: "Booth Design & Build",
+  },
+  {
+    ctaText: "Design My Engagement Strategy",
+    description:
+      "Create memorable interactions that attract aviation executives and decision-makers. We design immersive experiences, live demonstrations, and engagement strategies.",
+    features: [
+      "Interactive Visitor Experiences",
+      "Executive Roundtables",
+      "Product Demonstrations",
+      "Audience Engagement Strategy",
+    ],
+    id: "experience-creation",
+    image: "/media/home/hero/home_hero_bg.avif",
+    label: "SERVICE 02",
+    number: "02",
+    title: "Experience Creation",
+  },
+  {
+    ctaText: "See How Our Lead Gen Works",
+    description:
+      "Generate qualified meetings and sales opportunities before, during, and after the event. Our aviation-focused lead generation teams identify, engage, and qualify prospects in real time.",
+    features: [
+      "Pre-Event Outreach Campaigns",
+      "Meeting Scheduling",
+      "Real-Time Lead Qualification",
+      "Sales Qualified Lead Delivery",
+    ],
+    id: "lead-gen",
+    image: "/media/home/hero/home_hero_bg.avif",
+    label: "SERVICE 03",
+    number: "03",
+    title: "On-Ground Lead Generation",
   },
 ];
 
@@ -407,16 +460,19 @@ const INDUSTRY_SHADER_ITEMS = [
   {
     description: "SaaS, cloud infrastructure, and enterprise software vendors.",
     icon: "Monitor",
+    image: "/media/home/hero/home_hero_bg.avif",
     title: "Technology & SaaS",
   },
   {
     description: "Payments, banking innovation, and financial technology brands.",
     icon: "CreditCard",
+    image: "/media/home/hero/home_hero_bg.avif",
     title: "FinTech",
   },
   {
     description: "Energy, renewables, and utilities at major industry exhibitions.",
     icon: "Zap",
+    image: "/media/home/hero/home_hero_bg.avif",
     title: "Energy & Utilities",
   },
 ];
@@ -424,9 +480,15 @@ const INDUSTRY_SHADER_ITEMS = [
 // ─── RelatedServicesCard ─────────────────────────────────────────────────────
 
 const RELATED_SERVICES_ITEMS = [
-  { href: "/tradeshow-booth-solutions/trade-show-booth-builder", title: "Trade Show Booth Builder" },
+  {
+    href: "/tradeshow-booth-solutions/trade-show-booth-builder",
+    title: "Trade Show Booth Builder",
+  },
   { href: "/tradeshow-booth-solutions/trade-show-booth-design", title: "Booth Design" },
-  { href: "/sales-qualified-lead-generation/event-lead-generation", title: "Event Lead Generation" },
+  {
+    href: "/sales-qualified-lead-generation/event-lead-generation",
+    title: "Event Lead Generation",
+  },
 ];
 
 // ─── ServicesImageCard ───────────────────────────────────────────────────────
@@ -616,6 +678,7 @@ const COMPONENT_PAGES: Record<string, PageLink[]> = {
     },
   ],
   ServicesImageCard: [{ href: "/case-studies/adobe-summit-2025", label: "Case Study Detail" }],
+  ServicesScroll: [{ href: "/demo", label: "Demo" }],
   ServicesStack: [
     { href: "/", label: "Home" },
     {
@@ -695,6 +758,7 @@ const COMPONENT_DEPENDENCIES: Record<string, { items: string[]; ui: string[] }> 
   RentVsBuySection: { items: [], ui: ["Heading"] },
   SectionContactCta: { items: [], ui: ["Button", "ContactModal"] },
   ServicesImageCard: { items: [], ui: [] },
+  ServicesScroll: { items: [], ui: ["Button"] },
   ServicesStack: { items: ["ServicesCard"], ui: ["Eyebrow", "Heading"] },
   Spotlight: { items: [], ui: ["ContactModal", "Heading"] },
   StickyScroll: {
@@ -863,6 +927,7 @@ const DemoPage = () => {
           <IndustryShaderCard
             description={item.description}
             icon={item.icon}
+            image={item.image}
             index={index}
             key={item.title}
             title={item.title}
@@ -873,6 +938,10 @@ const DemoPage = () => {
       {/* 17 – StickyScroll */}
       <DemoLabel name="StickyScroll" />
       <StickyScroll />
+
+      {/* 17b - ServicesScroll */}
+      <DemoLabel name="ServicesScroll" />
+      <ServicesScroll services={DEMO_SERVICES_SCROLL_ITEMS} />
 
       {/* 18 – BoothWhyChooseUs */}
       <DemoLabel name="BoothWhyChooseUs" />

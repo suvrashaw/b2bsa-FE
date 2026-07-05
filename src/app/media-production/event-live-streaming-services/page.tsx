@@ -26,7 +26,6 @@ import {
   LIVE_STREAMING_HERO,
   LIVE_STREAMING_INTRO,
   LIVE_STREAMING_PAGE,
-  LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-live-streaming-services/content";
 
@@ -93,7 +92,6 @@ const Page = () => {
           <SectionContactCta />
         </>
       }
-      relatedServices={LIVE_STREAMING_RELATED_SERVICES}
       relatedServicesHeading="Related Event & Media Production Services"
       services={LIVE_STREAMING_DELIVERABLES}
       showServicesCommonCta

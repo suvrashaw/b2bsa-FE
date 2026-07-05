@@ -23,7 +23,6 @@ import {
   CORP_EVENT_INDUSTRIES_SECTION,
   CORP_EVENT_INTRO,
   CORP_EVENT_PAGE,
-  CORP_EVENT_RELATED_SERVICES,
   CORP_EVENT_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-event-solutions/content";
 
@@ -105,7 +104,6 @@ const Page = () => {
           />
         </>
       }
-      relatedServices={CORP_EVENT_RELATED_SERVICES}
       secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
       secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}
