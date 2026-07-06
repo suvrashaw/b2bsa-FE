@@ -1,7 +1,12 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { SQL_HERO } from "@/content/services/sales-qualified-lead-generation/content";
 
+import BLOG_DATA from "./blog.json";
 import EVENT_LEAD_CASESTUDIES_DATA from "./case-studies.json";
+
+export const EVENT_LEAD_GEN_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
 export {
   SQL_CONTACT_CTA as EVENT_LEAD_CONTACT_CTA,

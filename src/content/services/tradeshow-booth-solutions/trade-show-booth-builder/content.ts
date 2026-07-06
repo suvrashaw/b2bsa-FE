@@ -15,20 +15,19 @@ export const BOOTH_BUILDER_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-import { getBlogsByTags } from "@/content/blogs";
+import type { BlogsSectionContent } from "@/content/blogs";
 
-export const BOOTH_BUILDER_BLOG_POSTS = getBlogsByTags(["Trade Show Booth Builder"], 5);
+import BLOG_DATA from "./blog.json";
 
 export const BOOTH_BUILDER_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
-export { default as BOOTH_BUILDER_BLOGS_SECTION } from "./blog.json";
+export const BOOTH_BUILDER_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 export { default as BOOTH_BUILDER_FUTURE_READY } from "./builder-future-ready.json";
-export { default as BOOTH_BUILDER_PRICING } from "./builder-pricing.json";
 export { default as BOOTH_BUILDER_CLIENT_LOGOS } from "./client-logos.json";
 export { default as BOOTH_BUILDER_FAQ } from "./faq.json";
-
 export { default as BOOTH_BUILDER_HERO } from "./hero.json";
 export { default as BOOTH_BUILDER_PAGE } from "./page.json";
+export { default as BOOTH_BUILDER_PRICING } from "./pricing.json";
 export { default as BOOTH_BUILDER_PROCESS } from "./process.json";

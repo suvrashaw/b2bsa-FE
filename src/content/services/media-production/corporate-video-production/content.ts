@@ -1,9 +1,14 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
+import BLOG_DATA from "./blog.json";
 import CORPORATE_VIDEO_CASESTUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact.json";
 import CORPORATE_VIDEO_INTRO_DATA from "./intro.json";
+
+export const CORPORATE_VIDEO_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
 export const CORPORATE_VIDEO_CASE_STUDIES = {
   ...CORPORATE_VIDEO_CASESTUDIES_DATA,

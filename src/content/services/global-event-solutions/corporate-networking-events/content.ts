@@ -1,6 +1,7 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
-import type { BlogsSectionContent } from "@/content/blogs";
 
 import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";

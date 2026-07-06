@@ -1,7 +1,8 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
-import type { BlogsSectionContent } from "@/content/blogs";
 
 import BLOG_DATA from "./blog.json";
 import CAPABILITIES_DATA from "./capabilities.json";

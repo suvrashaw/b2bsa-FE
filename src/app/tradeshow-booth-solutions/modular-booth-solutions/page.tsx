@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
+  MODULAR_BOOTH_BLOGS_SECTION,
   MODULAR_BOOTHS_CASE_STUDIES,
   MODULAR_BOOTHS_CLIENT_LOGOS,
   MODULAR_BOOTHS_CONTACT_CTA,
@@ -24,6 +31,26 @@ const Page = () => {
       caseStudies={MODULAR_BOOTHS_CASE_STUDIES}
       clientLogos={MODULAR_BOOTHS_CLIENT_LOGOS}
       contactUs={MODULAR_BOOTHS_CONTACT_CTA}
+      customSections={
+        <>
+          <Carousel
+            cols={4}
+            heading={MODULAR_BOOTH_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            id="blogs"
+            layout="carousel"
+          >
+            {getBlogsByTags(MODULAR_BOOTH_BLOGS_SECTION.tags).map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
+        </>
+      }
+
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}

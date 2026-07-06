@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
+  HPMI_BLOGS_SECTION,
   MARKET_INTELLIGENCE_CARDS,
   MARKET_INTELLIGENCE_CASE_STUDIES,
   MARKET_INTELLIGENCE_CLIENT_LOGOS,
@@ -22,6 +29,26 @@ const Page = () => {
       caseStudies={MARKET_INTELLIGENCE_CASE_STUDIES}
       clientLogos={MARKET_INTELLIGENCE_CLIENT_LOGOS}
       contactUs={MARKET_INTELLIGENCE_CONTACT_CTA}
+      customSections={
+        <>
+          <Carousel
+            cols={4}
+            heading={HPMI_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            id="blogs"
+            layout="carousel"
+          >
+            {getBlogsByTags(HPMI_BLOGS_SECTION.tags).map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
+        </>
+      }
+
       faq={MARKET_INTELLIGENCE_FAQ}
       hero={MARKET_INTELLIGENCE_HERO}
       page={MARKET_INTELLIGENCE_PAGE}

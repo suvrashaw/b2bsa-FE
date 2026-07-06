@@ -81,7 +81,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Virtual Video Production"]).map((post) => (
+            {getBlogsByTags(VIRTUAL_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

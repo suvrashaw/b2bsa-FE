@@ -86,7 +86,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Event Branding Solutions"]).map((post) => (
+            {getBlogsByTags(EVENT_BRANDING_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

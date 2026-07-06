@@ -14,6 +14,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
+  CORPORATE_VIDEO_BLOGS_SECTION,
   CORPORATE_VIDEO_CASE_STUDIES,
   CORPORATE_VIDEO_CLIENT_LOGOS,
   CORPORATE_VIDEO_CONTACT_CTA,
@@ -48,7 +49,7 @@ const Page = () => {
           </Carousel>
           <Carousel
             cols={4}
-            heading="Latest Insights on Corporate Video Production & Brand Storytelling"
+            heading={CORPORATE_VIDEO_BLOGS_SECTION.heading}
             headingAction={
               <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
                 <Link href="/blogs">View All Blogs</Link>
@@ -57,7 +58,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Corporate Video Production"]).map((post) => (
+            {getBlogsByTags(CORPORATE_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

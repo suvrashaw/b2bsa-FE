@@ -66,7 +66,7 @@ const Page = () => {
             }
             id="blogs"
           >
-            {getBlogsByTags(["Event Live Streaming Services"]).map((post) => (
+            {getBlogsByTags(LIVE_STREAMING_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

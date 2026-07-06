@@ -1,7 +1,12 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
+import BLOG_DATA from "./blog.json";
 import CONTACT_CTA_DATA from "./contact.json";
+
+export const HPMI_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
 export const MARKET_INTELLIGENCE_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,

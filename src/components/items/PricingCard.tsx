@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -15,13 +16,14 @@ export interface PricingProps {
 }
 
 export interface PricingTier {
-  color: string;
+  color?: string;
+  cta?: { href: string; label: string };
   description: string;
   features: string[];
   icon?: ReactNode;
   name: string;
   popular?: boolean;
-  price: number;
+  price?: number;
 }
 
 interface PricingCardProps {
@@ -29,6 +31,8 @@ interface PricingCardProps {
 }
 
 export const PricingCard = ({ tier }: PricingCardProps) => {
+  const color = tier.color ?? "blue";
+
   return (
     <div className={cn("group relative transition-all duration-500")}>
       {/* Neo-brutalist premium background card shadow */}
@@ -54,19 +58,21 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
 
         {/* Header info */}
         <div className="mb-6">
-          <div
-            className={cn(
-              "mb-4 flex size-12 items-center justify-center rounded-xl border transition-colors duration-300",
-              tier.color === "blue" && "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-              tier.color === "cyan" && "border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
-              tier.color === "primary" &&
-                "border-brand-primary/20 bg-brand-primary/10 text-brand-primary",
-              !["blue", "cyan", "primary"].includes(tier.color) &&
-                "border-brand-blue/20 bg-brand-blue/10 text-brand-blue"
-            )}
-          >
-            {tier.icon}
-          </div>
+          {tier.icon && (
+            <div
+              className={cn(
+                "mb-4 flex size-12 items-center justify-center rounded-xl border transition-colors duration-300",
+                color === "blue" && "border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+                color === "cyan" && "border-brand-cyan/20 bg-brand-cyan/10 text-brand-cyan",
+                color === "primary" &&
+                  "border-brand-primary/20 bg-brand-primary/10 text-brand-primary",
+                !["blue", "cyan", "primary"].includes(color) &&
+                  "border-brand-blue/20 bg-brand-blue/10 text-brand-blue"
+              )}
+            >
+              {tier.icon}
+            </div>
+          )}
           <SectionHeader
             as="h3"
             className="mb-2 font-sans text-2xl font-bold text-brand-charcoal"
@@ -77,11 +83,13 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           <p className="font-sans text-sm font-semibold text-gray-500">{tier.description}</p>
         </div>
 
-        {/* Pricing Display */}
-        <div className="mb-6 flex items-baseline font-sans text-brand-charcoal">
-          <span className="text-3xl font-black tracking-tight">${tier.price}</span>
-          <span className="ml-2 text-sm font-bold text-gray-400">/month</span>
-        </div>
+        {/* Pricing Display — only when price is set */}
+        {tier.price != null && (
+          <div className="mb-6 flex items-baseline font-sans text-brand-charcoal">
+            <span className="text-3xl font-black tracking-tight">${tier.price}</span>
+            <span className="ml-2 text-sm font-bold text-gray-400">/month</span>
+          </div>
+        )}
 
         {/* Features List */}
         <div className="mb-8 space-y-4">
@@ -97,17 +105,31 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
           ))}
         </div>
 
-        {/* Get Started CTA */}
-        <Button
-          className={cn(
-            "relative h-13 w-full rounded-[4px] border font-sans text-base font-bold transition-all duration-300 active:scale-97",
-            tier.popular
-              ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-0.5 hover:shadow-[6px_6px_0px_0px] hover:brightness-110"
-              : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
-          )}
-        >
-          Get Started
-        </Button>
+        {/* CTA */}
+        {tier.cta ? (
+          <Button
+            asChild
+            className={cn(
+              "relative h-13 w-full rounded-[4px] border font-sans text-base font-bold transition-all duration-300 active:scale-97",
+              tier.popular
+                ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-0.5 hover:shadow-[6px_6px_0px_0px] hover:brightness-110"
+                : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
+            )}
+          >
+            <Link href={tier.cta.href}>{tier.cta.label}</Link>
+          </Button>
+        ) : (
+          <Button
+            className={cn(
+              "relative h-13 w-full rounded-[4px] border font-sans text-base font-bold transition-all duration-300 active:scale-97",
+              tier.popular
+                ? "border-brand-cyan/20 bg-gradient-to-r from-brand-blue to-brand-primary text-white shadow-[4px_4px_0px_0px] shadow-brand-cyan/20 hover:-translate-0.5 hover:shadow-[6px_6px_0px_0px] hover:brightness-110"
+                : "border-brand-charcoal/20 bg-white text-brand-charcoal shadow-[4px_4px_0px_0px] shadow-brand-charcoal/5 hover:-translate-0.5 hover:bg-brand-charcoal/5 hover:shadow-[6px_6px_0px_0px]"
+            )}
+          >
+            Get Started
+          </Button>
+        )}
       </div>
     </div>
   );

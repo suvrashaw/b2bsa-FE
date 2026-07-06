@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
+import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
+import { Button } from "@/components/ui/Button";
+import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_EXPERIENCE_CAPABILITIES,
   EVENT_EXPERIENCE_CONTACT_CTA,
+  EVENT_EXPERIENCE_CREATION_BLOGS_SECTION,
   EVENT_EXPERIENCE_DELIVERABLES,
   EVENT_EXPERIENCE_DESIGNED_FOR,
   EVENT_EXPERIENCE_FAQ,
@@ -69,12 +75,27 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <ServicesScroll
-            heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
-            services={servicesIncludeFeatures}
-          />
-        </>
-      }
+            <ServicesScroll
+              heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
+              services={servicesIncludeFeatures}
+            />
+            <Carousel
+              cols={4}
+              heading={EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.heading}
+              headingAction={
+                <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+                  <Link href="/blogs">View All Blogs</Link>
+                </Button>
+              }
+              id="blogs"
+              layout="carousel"
+            >
+              {getBlogsByTags(EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.tags).map((post) => (
+                <BlogsCarouselCard key={post.id} post={post} />
+              ))}
+            </Carousel>
+          </>
+        }
       faq={EVENT_EXPERIENCE_FAQ}
       faqVariant="accordion"
       hero={EVENT_EXPERIENCE_IMAGE_HERO}

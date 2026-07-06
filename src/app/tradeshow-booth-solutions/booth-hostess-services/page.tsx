@@ -86,7 +86,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Booth Hostess Services"]).map((post) => (
+            {getBlogsByTags(BOOTH_HOSTESS_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

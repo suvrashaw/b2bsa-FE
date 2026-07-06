@@ -386,12 +386,12 @@ interface CaseStudyEntry {
 
 ### 12. Latest Insights / Blogs
 
-**Section identity:** `Carousel.tsx`+`BlogsCarouselCard.tsx`; the per-page file is a thin wrapper, the real posts are a shared global pool · **Canonical filename:** `blog.json` (wrapper) · **Status:** ⚠️
+**Section identity:** `Carousel.tsx`+`BlogsCarouselCard.tsx`; the per-page file is a thin wrapper, the real posts are a shared global pool · **Canonical filename:** `blog.json` (wrapper) · **Status:** ✅ resolved 2026-07-06
 
 ```ts
 interface BlogsSectionContent {
   heading: string;
-  tags?: string[];   // NOT authored today — see confirmed issue below
+  tags: string[];   // authored in each page's blog.json
   viewAllHref?: string;
   viewAllLabel?: string;
 }
@@ -399,9 +399,11 @@ interface BlogsSectionContent {
 
 Underlying posts live site-wide in `src/content/blogs/blogs.json` (25 posts, `SharedBlogPost` shape).
 
-**Confirmed — the most pervasive content-purity violation found in this entire audit:** each leaf's own `blog.json` is only ever `{ heading }` — no posts, no filter data. The actual filter tag(s) shown is a hardcoded string-array literal passed directly to `getBlogsByTags([...])` inside **15 of the 23 leaves'** `page.tsx` (e.g. `getBlogsByTags(["Performance Marketing"])`), rather than being read from any content field: `performance-marketing`, `seo-services`, `social-media-marketing`, `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `corporate-video-production`, `event-experience-video-production`, `event-live-streaming-services`, `event-physical-video-shoot`, `virtual-video-production`, `booth-hostess-services`, `booth-logistics-services`, `trade-show-booth-design`, `trade-show-booth-rental`. This is more widespread than any other item in Appendix C — it just isn't visible from file shape alone, only from reading the actual render call. `trade-show-booth-builder` is the 16th page with a Blogs section, but it sources the already-filtered post list from `content.ts` rather than calling `getBlogsByTags` with a literal array inside `page.tsx` itself — an architectural (not data) difference from the other 15.
-
-**Missing entirely (7 of 23 leaves, not just one):** `event-experience-creation`, `hpmi`, `data-augmentation-services`, `data-validation-services`, `event-video-production`, `event-lead-generation`, `modular-booth-solutions` — mostly the "minimal" pages that also lack Why-Choose-Us and other optional sections, though `event-experience-creation` and `event-lead-generation` are notable exceptions since they otherwise have rich custom content but still skip Blogs specifically.
+**Update (2026-07-06) — resolved:**
+- **Content-purity violation fixed.** The hardcoded `getBlogsByTags([...])` array literals in `page.tsx` across the 15+ pages were removed. `tags` is now a strictly required field in `BlogsSectionContent` (`src/content/blogs/index.ts`) and each page's `blog.json` now authors its own `tags: [...]` array. `page.tsx` now calls `getBlogsByTags(SECTION_BLOGS.tags)` dynamically.
+- **Architectural outlier standardized.** `trade-show-booth-builder`'s `BOOTH_BUILDER_BLOG_POSTS` workaround in `content.ts` was deleted, and its `page.tsx` was rewritten to match the standard `getBlogsByTags(BOOTH_BUILDER_BLOGS_SECTION.tags)` pattern used by its siblings.
+- **Missing sections added.** The 7 pages that previously skipped the Blogs treatment entirely (`event-experience-creation`, `human-powered-market-intelligence`, `data-augmentation-services`, `data-validation-services`, `event-video-production`, `event-lead-generation`, `modular-booth-solutions`) were given standard `blog.json` wrappers with custom headings/tags and wired up with the `Carousel` component in their `page.tsx`.
+- **`corporate-video-production` completed.** Created its `blog.json` and migrated its `page.tsx` off a hardcoded Carousel heading, bringing it into full schema alignment.
 
 ### 13. FAQ
 

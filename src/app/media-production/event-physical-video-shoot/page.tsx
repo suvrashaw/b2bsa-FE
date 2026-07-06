@@ -57,7 +57,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Event Physical Video Shoot"]).map((post) => (
+            {getBlogsByTags(EVENT_PHYSICAL_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

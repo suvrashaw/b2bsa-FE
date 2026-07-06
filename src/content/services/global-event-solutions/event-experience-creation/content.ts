@@ -1,8 +1,13 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
 
+import BLOG_DATA from "./blog.json";
 import CONTACT_DATA from "./contact.json";
 import INDUSTRIES_DATA from "./industries.json";
 import PROOF_BAR_DATA from "./intro.json";
+
+export const EVENT_EXPERIENCE_CREATION_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
 export const EVENT_EXPERIENCE_INTRO = {
   ...PROOF_BAR_DATA,

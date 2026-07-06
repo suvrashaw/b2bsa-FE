@@ -72,7 +72,7 @@ const Page = () => {
             }
             id="blogs"
           >
-            {getBlogsByTags(["Social Media Marketing"]).map((post) => (
+            {getBlogsByTags(SMM_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>

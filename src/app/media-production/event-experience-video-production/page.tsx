@@ -63,7 +63,7 @@ const Page = () => {
             id="blogs"
             layout="carousel"
           >
-            {getBlogsByTags(["Event Experience Video Production"]).map((post) => (
+            {getBlogsByTags(EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>
