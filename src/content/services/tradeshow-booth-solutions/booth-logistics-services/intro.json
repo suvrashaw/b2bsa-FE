@@ -1,5 +1,9 @@
 {
+  "ctaHref": "/contact-us",
+  "ctaLabel": "Let's Connect",
   "description": "Booth logistics services ensure your exhibition stand, displays, and marketing materials arrive safely, on time, and ready for installation. B2B Sales Arrow provides end-to-end trade show logistics, including international transportation, customs clearance, on-site delivery, installation, dismantling, reverse logistics, and storage across Europe, North America, the Middle East, and Asia.\n\nFrom coordinating shipping schedules and customs documentation to managing drayage, venue access, and exhibitor deadlines, our experienced logistics team oversees every stage of the process. Whether you're exhibiting at a single international event or managing a global exhibition calendar, we help you minimize delays, reduce risk, and ensure your booth is show-ready. Request a customized booth logistics quote for your next trade show today.",
   "imageUrl": "/media/home/hero/home_hero_bg.avif",
-  "titleLine1": "About Global Booth Logistics Services for Trade Shows & Exhibitions"
+  "label": "Booth Logistics Services",
+  "titleLine1": "About Global Booth Logistics Services",
+  "titleLine2": "for Trade Shows & Exhibitions"
 }
