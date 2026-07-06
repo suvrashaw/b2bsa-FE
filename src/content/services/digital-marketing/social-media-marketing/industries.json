@@ -1,77 +1,65 @@
 {
-  "features": [
+  "heading": "Industries We Support with Social Media Marketing",
+  "items": [
     {
       "icon": "Monitor",
       "id": "technology-saas",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Technology & SaaS"
+      "title": "Technology & SaaS"
     },
     {
       "icon": "Landmark",
       "id": "fintech",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "FinTech"
+      "title": "FinTech"
     },
     {
       "icon": "Activity",
       "id": "healthcare-pharma",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Healthcare & Pharma"
+      "title": "Healthcare & Pharma"
     },
     {
       "icon": "Hammer",
       "id": "manufacturing",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Manufacturing"
+      "title": "Manufacturing"
     },
     {
       "icon": "Radio",
       "id": "media-broadcasting",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Media & Broadcasting"
+      "title": "Media & Broadcasting"
     },
     {
       "icon": "Wifi",
       "id": "telecommunications",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Telecommunications"
+      "title": "Telecommunications"
     },
     {
       "icon": "Plane",
       "id": "aviation",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Aviation"
+      "title": "Aviation"
     },
     {
       "icon": "Calendar",
       "id": "event",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Event"
+      "title": "Event"
     },
     {
       "icon": "Truck",
       "id": "automotive",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Automotive"
+      "title": "Automotive"
     },
     {
       "icon": "ShoppingBag",
       "id": "retail-e-commerce",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Retail & E-commerce"
+      "title": "Retail & E-commerce"
     }
-  ],
-  "heading": "Industries We Support with Social Media Marketing",
-  "items": [
-    "Technology & SaaS",
-    "FinTech",
-    "Healthcare & Pharma",
-    "Manufacturing",
-    "Media & Broadcasting",
-    "Telecommunications",
-    "Aviation",
-    "Event",
-    "Automotive",
-    "Retail & E-commerce"
   ]
 }

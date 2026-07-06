@@ -4,17 +4,14 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_LOGISTICS_BENEFITS,
@@ -26,7 +23,7 @@ import {
   EVENT_LOGISTICS_DELIVERABLES,
   EVENT_LOGISTICS_FAQ,
   EVENT_LOGISTICS_IMAGE_HERO,
-  EVENT_LOGISTICS_INDUSTRIES_SECTION,
+  EVENT_LOGISTICS_INDUSTRIES,
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
@@ -94,6 +91,7 @@ const Page = () => {
       faq={EVENT_LOGISTICS_FAQ}
       faqVariant="accordion"
       hero={EVENT_LOGISTICS_IMAGE_HERO}
+      industries={EVENT_LOGISTICS_INDUSTRIES}
       page={EVENT_LOGISTICS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -108,25 +106,6 @@ const Page = () => {
       }
       preStudiesSections={
         <>
-          <section className="bg-brand-gray py-14 md:py-20" id="industries">
-            <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
-              <SectionHeader as="h2" className="mb-10 text-center">
-                {EVENT_LOGISTICS_INDUSTRIES_SECTION.heading}
-              </SectionHeader>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {GLOBAL_INDUSTRY_SERVICES.map((industry, i) => (
-                  <IndustryShaderCard
-                    description={industry.description}
-                    icon={industry.icon}
-                    image={industry.image}
-                    index={i}
-                    key={industry.id}
-                    title={industry.title}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
           <CardsGrid
             className="bg-brand-charcoal/5"
             cols={3}

@@ -17,7 +17,8 @@
     "metric": "70+",
     "metricLabel": "SQLs Generated",
     "image": "/media/case-studies/cs-new-9.avif",
-    "href": "/case-studies/adobe-summit-2025"
+    "href": "/case-studies/adobe-summit-2025",
+    "icon": "Hammer"
   },
   {
     "id": "annual-sales-connect",
@@ -41,7 +42,8 @@
     "metric": "150+",
     "metricLabel": "Attendees Hosted",
     "image": "/media/case-studies/cs-5.avif",
-    "href": "/case-studies/annual-sales-connect"
+    "href": "/case-studies/annual-sales-connect",
+    "icon": "Users2"
   },
   {
     "id": "distributech-2023",
@@ -65,7 +67,8 @@
     "metric": "42",
     "metricLabel": "SQLs Delivered",
     "image": "/media/case-studies/cs-10.avif",
-    "href": "/case-studies/distributech-2023"
+    "href": "/case-studies/distributech-2023",
+    "icon": "Database"
   },
   {
     "id": "money-2020-2023",
@@ -87,7 +90,8 @@
     "metric": "37",
     "metricLabel": "SQLs Delivered",
     "image": "/media/case-studies/cs-4.avif",
-    "href": "/case-studies/money-2020-2023"
+    "href": "/case-studies/money-2020-2023",
+    "icon": "Landmark"
   },
   {
     "id": "money-2020-2022",
@@ -109,7 +113,8 @@
     "metric": "37",
     "metricLabel": "SQLs Delivered",
     "image": "/media/case-studies/cs-3.avif",
-    "href": "/case-studies/money-2020-2022"
+    "href": "/case-studies/money-2020-2022",
+    "icon": "DollarSign"
   },
   {
     "id": "nrf-2023",
@@ -133,7 +138,8 @@
     "metric": "60",
     "metricLabel": "SQLs Delivered",
     "image": "/media/case-studies/cs-7.avif",
-    "href": "/case-studies/nrf-2023"
+    "href": "/case-studies/nrf-2023",
+    "icon": "ShoppingBag"
   },
   {
     "id": "sap-sapphire-2023",
@@ -156,7 +162,8 @@
     "metric": "31",
     "metricLabel": "SQLs Delivered",
     "image": "/media/case-studies/cs-8.avif",
-    "href": "/case-studies/sap-sapphire-2023"
+    "href": "/case-studies/sap-sapphire-2023",
+    "icon": "Star"
   },
   {
     "id": "sibos-2025",
@@ -180,7 +187,8 @@
     "metric": "200+",
     "metricLabel": "Badge Scans",
     "image": "/media/case-studies/cs-new-1.avif",
-    "href": "/case-studies/sibos-2025"
+    "href": "/case-studies/sibos-2025",
+    "icon": "Cpu"
   },
   {
     "id": "waf-2025",
@@ -202,6 +210,7 @@
     "metric": "60",
     "metricLabel": "Qualified Meetings",
     "image": "/media/case-studies/cs-new-2.avif",
-    "href": "/case-studies/waf-2025"
+    "href": "/case-studies/waf-2025",
+    "icon": "Plane"
   }
 ]

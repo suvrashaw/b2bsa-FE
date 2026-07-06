@@ -19,8 +19,8 @@ export { default as MODULAR_BOOTHS_CLIENT_LOGOS } from "./client-logos.json";
 export { default as MODULAR_BOOTHS_CONTACT_CTA } from "./contact.json";
 export { default as MODULAR_BOOTHS_FAQ } from "./faq.json";
 export { default as MODULAR_BOOTHS_HERO } from "./hero.json";
-export { default as MODULAR_BOOTHS_DELIVERABLES } from "./modular-booths-deliverables.json";
-
-export { default as MODULAR_BOOTHS_RANGE_SECTION } from "./modular-booths-range-section.json";
 export { default as MODULAR_BOOTHS_PAGE } from "./page.json";
+
+export { default as MODULAR_BOOTHS_RANGE_SECTION } from "./secondary-services.json";
+export { default as MODULAR_BOOTHS_DELIVERABLES } from "./services.json";
 export { default as MODULAR_BOOTHS_WHY } from "./why.json";

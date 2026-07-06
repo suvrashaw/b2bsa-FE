@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Networking Event Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
       "icon": "Users",
       "id": "networking-events",
@@ -10,7 +9,6 @@
       "title": "Corporate Networking Events"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
@@ -18,7 +16,6 @@
       "title": "Networking Reception Solutions"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Deliver premium executive networking experiences for leadership summits, investor meetings, and C-level business gatherings.",
       "icon": "Target",
       "id": "executive-networking",
@@ -26,7 +23,6 @@
       "title": "Executive Networking Events"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Manage VIP guest experiences with personalized hospitality, attendee coordination, and premium networking environments.",
       "icon": "Zap",
       "id": "vip-networking",
@@ -34,7 +30,6 @@
       "title": "VIP Networking Event Solutions"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
       "icon": "MapPin",
       "id": "networking-dinners",
@@ -42,7 +37,6 @@
       "title": "Networking Dinner Event Solutions"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
       "icon": "Globe2",
       "id": "b2b-networking",

@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Event Hostess Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Our event hostesses assist with attendee check-ins, badge distribution, visitor guidance, and registration support for smooth event entry experiences.",
       "icon": "Users",
       "id": "registration",
@@ -10,7 +9,6 @@
       "title": "Registration Desk Management"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Increase booth interactions with professional hostesses who welcome visitors, engage attendees, support lead generation, and represent your brand professionally.",
       "icon": "Target",
       "id": "booth-engagement",
@@ -18,7 +16,6 @@
       "title": "Trade Show Booth Engagement"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Provide premium experiences for executives, speakers, sponsors, and VIP guests with dedicated event hostess support.",
       "icon": "Sparkles",
       "id": "vip-coordination",
@@ -26,7 +23,6 @@
       "title": "VIP Guest Coordination"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Manage audience flow, session coordination, guest assistance, and attendee communication during conferences and networking events.",
       "icon": "Mic",
       "id": "conference-support",
@@ -34,7 +30,6 @@
       "title": "Conference & Networking Support"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Enhance customer interaction and event engagement during product launches, brand activations, and experiential marketing events.",
       "icon": "Zap",
       "id": "product-launch",
@@ -42,7 +37,6 @@
       "title": "Product Launch Event Support"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Support international audiences with multilingual event hostesses for global trade shows and corporate events.",
       "icon": "Globe2",
       "id": "multilingual",

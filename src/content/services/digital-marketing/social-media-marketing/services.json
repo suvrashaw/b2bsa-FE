@@ -3,7 +3,6 @@
   "heading": "What's Included in Our Social Media Marketing",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Build platform-specific social media strategies aligned with brand goals, audience targeting, and business objectives.",
       "icon": "Target",
       "id": "social-media-strategy-development",
@@ -11,7 +10,6 @@
       "title": "Social Media Strategy Development"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Create engaging social media content including graphics, videos, carousels, thought leadership posts, and campaign creatives.",
       "icon": "Palette",
       "id": "content-creation-design",
@@ -19,7 +17,6 @@
       "title": "Content Creation & Design"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Strengthen B2B brand visibility and professional engagement through strategic LinkedIn marketing campaigns.",
       "icon": "Briefcase",
       "id": "linkedin-marketing-services",
@@ -27,7 +24,6 @@
       "title": "LinkedIn Marketing Services"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Manage organic and paid social media campaigns designed to improve reach, engagement, and lead generation.",
       "icon": "Megaphone",
       "id": "social-media-campaign-management",
@@ -35,7 +31,6 @@
       "title": "Social Media Campaign Management"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Improve audience interaction through consistent communication, engagement management, and social listening support.",
       "icon": "MessageSquare",
       "id": "community-engagement-support",
@@ -43,7 +38,6 @@
       "title": "Community Engagement Support"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Promote conferences, exhibitions, webinars, and corporate events with event-focused social media campaigns.",
       "icon": "Calendar",
       "id": "event-trade-show-promotion",

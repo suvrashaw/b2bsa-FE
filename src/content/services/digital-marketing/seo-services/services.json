@@ -3,7 +3,6 @@
   "heading": "Our B2B SEO Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Crawlability, Core Web Vitals, broken links, redirects, schema markup, sitemaps, and page speed — identifying and fixing technical issues that prevent proper indexing.",
       "icon": "Search",
       "id": "technical-seo-audit",
@@ -11,7 +10,6 @@
       "title": "Technical SEO Audit & Remediation"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Identifying terms enterprise buyers use across awareness, consideration, comparison, and purchase stages — mapped to intent, page type, funnel stage, and commercial value.",
       "icon": "Target",
       "id": "keyword-research",
@@ -19,7 +17,6 @@
       "title": "Keyword Research & Search Intent Mapping"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Titles, meta descriptions, headings, URLs, internal linking, schema markup, and body copy — optimised for both search engines and buyers.",
       "icon": "FileText",
       "id": "on-page-seo",
@@ -27,7 +24,6 @@
       "title": "On-Page SEO Optimisation"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Pillar pages, service pages, cluster articles, FAQs, and conversion-focused copy — building topical authority and converting qualified visitors.",
       "icon": "BookOpen",
       "id": "content-strategy",
@@ -35,7 +31,6 @@
       "title": "Content Strategy & SEO Copywriting"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Ethical link acquisition through digital PR, content partnerships, and industry mentions — quality, relevance, and long-term domain credibility.",
       "icon": "Link",
       "id": "authority-link-building",
@@ -43,7 +38,6 @@
       "title": "Authority Link Building"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Hreflang implementation, regional landing pages, and market-specific keyword strategy for brands operating across multiple geographies.",
       "icon": "Globe",
       "id": "international-seo",
@@ -51,7 +45,6 @@
       "title": "International & Local SEO"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Rankings, organic traffic, conversions, qualified leads, and pipeline influence — reported with clear commercial context.",
       "icon": "BarChart3",
       "id": "seo-reporting",

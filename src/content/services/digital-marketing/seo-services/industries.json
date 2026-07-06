@@ -1,63 +1,53 @@
 {
-  "features": [
+  "heading": "Industries We Support with B2B SEO",
+  "items": [
     {
       "icon": "Monitor",
       "id": "technology-saas",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Technology & SaaS"
+      "title": "Technology & SaaS"
     },
     {
       "icon": "Landmark",
       "id": "fintech",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "FinTech"
+      "title": "FinTech"
     },
     {
       "icon": "Activity",
       "id": "healthcare-pharma",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Healthcare & Pharma"
+      "title": "Healthcare & Pharma"
     },
     {
       "icon": "Zap",
       "id": "energy",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Energy & Infrastructure"
+      "title": "Energy & Infrastructure"
     },
     {
       "icon": "Wifi",
       "id": "telecommunications",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Telecommunications"
+      "title": "Telecommunications"
     },
     {
       "icon": "Briefcase",
       "id": "professional-services",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Professional Services"
+      "title": "Professional Services"
     },
     {
       "icon": "DollarSign",
       "id": "financial-services",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Financial Services"
+      "title": "Financial Services"
     },
     {
       "icon": "Building2",
       "id": "enterprise-software",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Enterprise Software"
+      "title": "Enterprise Software"
     }
-  ],
-  "heading": "Industries We Support with B2B SEO",
-  "items": [
-    "Technology & SaaS",
-    "FinTech",
-    "Healthcare & Pharma",
-    "Energy & Infrastructure",
-    "Telecommunications",
-    "Professional Services",
-    "Financial Services",
-    "Enterprise Software"
   ]
 }

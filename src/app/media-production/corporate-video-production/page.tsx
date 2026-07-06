@@ -14,6 +14,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
+  CORPORATE_VIDEO_CASE_STUDIES,
   CORPORATE_VIDEO_CLIENT_LOGOS,
   CORPORATE_VIDEO_CONTACT_CTA,
   CORPORATE_VIDEO_DELIVERABLES,
@@ -21,7 +22,6 @@ import {
   CORPORATE_VIDEO_HERO,
   CORPORATE_VIDEO_INTRO,
   CORPORATE_VIDEO_PAGE,
-  CORPORATE_VIDEO_PORTFOLIO,
   CORPORATE_VIDEO_WHY,
   CORPORATE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/corporate-video-production/content";
@@ -31,7 +31,7 @@ export const metadata: Metadata = getMarketingPageMetadata(CORPORATE_VIDEO_PAGE)
 const Page = () => {
   return (
     <ServicePage
-      caseStudies={CORPORATE_VIDEO_PORTFOLIO}
+      caseStudies={CORPORATE_VIDEO_CASE_STUDIES}
       clientLogos={CORPORATE_VIDEO_CLIENT_LOGOS}
       contactUs={CORPORATE_VIDEO_CONTACT_CTA}
       customSections={

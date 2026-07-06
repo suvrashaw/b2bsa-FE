@@ -26,5 +26,5 @@ export const VIRTUAL_VIDEO_INTRO = {
   stats: GLOBAL_PROOF_STATS,
   triggerContactModal: true,
 };
-export { default as VIRTUAL_VIDEO_DELIVERABLES } from "./whats-included.json";
+export { default as VIRTUAL_VIDEO_DELIVERABLES } from "./services.json";
 export { default as VIRTUAL_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";

@@ -3,6 +3,7 @@ export interface CaseStudyEntry {
   client: string;
   event: string;
   href: string;
+  icon?: string;
   id: string;
   image: string;
   location: string;

@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Booth Logistics Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Manage venue communication, floor planning, setup schedules, and operational coordination for smooth event execution.",
       "icon": "MapPin",
       "id": "venue-coordination",
@@ -10,7 +9,6 @@
       "title": "Venue Coordination"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Coordinate booth installation, branding materials, equipment delivery, and onsite setup support for exhibitions and trade shows.",
       "icon": "Layers",
       "id": "booth-setup",
@@ -18,7 +16,6 @@
       "title": "Booth Setup & Material Handling"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Handle transportation logistics, shipment coordination, and event material movement efficiently across locations.",
       "icon": "Globe2",
       "id": "transportation",
@@ -26,7 +23,6 @@
       "title": "Transportation & Shipment Management"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Work closely with production teams, suppliers, venue partners, and event vendors to ensure seamless event operations.",
       "icon": "Users",
       "id": "vendor-coordination",
@@ -34,7 +30,6 @@
       "title": "Vendor Coordination"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Provide onsite logistics management for attendee flow, equipment handling, setup supervision, and operational assistance.",
       "icon": "Target",
       "id": "onsite-support",
@@ -42,7 +37,6 @@
       "title": "Onsite Event Support"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Oversee event timelines, coordination activities, and operational workflows to ensure successful event delivery.",
       "icon": "Zap",
       "id": "operations-management",

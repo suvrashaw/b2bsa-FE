@@ -12,7 +12,7 @@ import {
   HUB_PAGE,
   HUB_SERVICES,
   HUB_WHY,
-} from "@/content/services/hub-content";
+} from "@/content/services/hub/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(HUB_PAGE);
 

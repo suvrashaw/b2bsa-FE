@@ -3,7 +3,6 @@
   "heading": "What We Deliver Through On-Site Video Shoot Coverage",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Capture meaningful conversations with speakers, attendees, partners, or internal teams to create authentic event-driven content.",
       "icon": "Mic",
       "id": "event-interview-videos",
@@ -11,7 +10,6 @@
       "title": "Event Interview Videos"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Record on-site customer feedback and success stories that build trust and strengthen your brand credibility.",
       "icon": "MessageSquare",
       "id": "client-testimonial-shoots",
@@ -19,7 +17,6 @@
       "title": "Client Testimonial Shoots"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Film short expert-led insights from founders, executives, or speakers to position your brand as an industry authority.",
       "icon": "Users2",
       "id": "thought-leadership-video-bytes",
@@ -27,7 +24,6 @@
       "title": "Thought Leadership Video Bytes"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Showcase keynote moments, impactful quotes, and presentation snippets that can be repurposed for marketing and post-event engagement.",
       "icon": "Presentation",
       "id": "speaker-highlight-videos",
@@ -35,7 +31,6 @@
       "title": "Speaker Highlight Videos"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Turn your event into a polished summary video that captures the atmosphere, audience response, and key moments in one compelling story.",
       "icon": "Film",
       "id": "event-recap-videos",
@@ -43,7 +38,6 @@
       "title": "Event Recap Videos"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Document branded booths, installations, activations, and interactions to highlight how your audience experienced the event.",
       "icon": "Camera",
       "id": "brand-experience-coverage",
@@ -51,7 +45,6 @@
       "title": "Brand Experience Coverage"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Professionally record panel sessions and expert discussions for future use across social media, internal sharing, or gated content.",
       "icon": "Users",
       "id": "panel-discussion-coverage",
@@ -59,7 +52,6 @@
       "title": "Panel Discussion Coverage"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Capture on-site leadership messages, welcome notes, or post-event reflections that add a strong brand voice to your event communication.",
       "icon": "UserPlus",
       "id": "leadership-message-videos",
@@ -67,7 +59,6 @@
       "title": "Leadership Message Videos"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Create short-form event videos designed for quick sharing across LinkedIn, Instagram, YouTube, and other digital channels.",
       "icon": "Share2",
       "id": "social-media-event-clips",
@@ -75,7 +66,6 @@
       "title": "Social Media Event Clips"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Film candid preparation moments, team coordination, and production details to add authenticity and humanize your event story.",
       "icon": "Sparkles",
       "id": "behind-the-scenes-event-content",

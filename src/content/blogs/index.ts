@@ -119,6 +119,13 @@ export const SHARED_BLOG_POSTS: SharedBlogPost[] = (rawBlogPosts as ImportedBlog
   })
   .map(({ sortIndex: _sortIndex, ...post }) => post);
 
+export interface BlogsSectionContent {
+  heading: string;
+  tags: string[];
+  viewAllHref?: string;
+  viewAllLabel?: string;
+}
+
 export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] => {
   if (!tags || tags.length === 0) {
     return SHARED_BLOG_POSTS.slice(0, minCount);

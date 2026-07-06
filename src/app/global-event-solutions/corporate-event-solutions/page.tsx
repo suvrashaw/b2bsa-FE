@@ -20,7 +20,7 @@ import {
   CORP_EVENT_DELIVERABLES,
   CORP_EVENT_FAQ,
   CORP_EVENT_IMAGE_HERO,
-  CORP_EVENT_INDUSTRIES_SECTION,
+  CORP_EVENT_INDUSTRIES,
   CORP_EVENT_INTRO,
   CORP_EVENT_PAGE,
   CORP_EVENT_WHY_CHOOSE_US,
@@ -92,6 +92,7 @@ const Page = () => {
       faq={CORP_EVENT_FAQ}
       faqVariant="accordion"
       hero={CORP_EVENT_IMAGE_HERO}
+      industries={CORP_EVENT_INDUSTRIES}
       page={CORP_EVENT_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -103,8 +104,6 @@ const Page = () => {
           />
         </>
       }
-      secondaryServices={CORP_EVENT_INDUSTRIES_SECTION}
-      secondaryServicesSectionType="carousel"
       services={CORP_EVENT_DELIVERABLES}
       showServicesCommonCta
       spotlight={CORP_EVENT_INTRO}

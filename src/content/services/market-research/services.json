@@ -3,7 +3,6 @@
   "heading": "Our B2B Market Research Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Enriching CRM records with verified firmographic, technographic, role-based, and intent data to create precision sales intelligence.",
       "href": "/market-research/data-augmentation-services",
       "icon": "PlusCircle",
@@ -12,7 +11,6 @@
       "title": "Data Augmentation Services"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Cleaning, verifying, and improving B2B data quality: emails, phone numbers, job titles, company details, and duplicates.",
       "href": "/market-research/data-validation-services",
       "icon": "CheckCircle",

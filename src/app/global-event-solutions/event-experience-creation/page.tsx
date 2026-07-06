@@ -15,6 +15,7 @@ import {
   EVENT_EXPERIENCE_DESIGNED_FOR,
   EVENT_EXPERIENCE_FAQ,
   EVENT_EXPERIENCE_IMAGE_HERO,
+  EVENT_EXPERIENCE_INDUSTRIES,
   EVENT_EXPERIENCE_INTRO,
   EVENT_EXPERIENCE_PAGE,
   EVENT_EXPERIENCE_WHY_CHOOSE_US,
@@ -77,6 +78,7 @@ const Page = () => {
       faq={EVENT_EXPERIENCE_FAQ}
       faqVariant="accordion"
       hero={EVENT_EXPERIENCE_IMAGE_HERO}
+      industries={EVENT_EXPERIENCE_INDUSTRIES}
       page={EVENT_EXPERIENCE_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -94,7 +96,6 @@ const Page = () => {
           />
         </>
       }
-      proofBar={EVENT_EXPERIENCE_INTRO}
       services={EVENT_EXPERIENCE_DELIVERABLES}
       showServicesCommonCta
       spotlight={EVENT_EXPERIENCE_INTRO}

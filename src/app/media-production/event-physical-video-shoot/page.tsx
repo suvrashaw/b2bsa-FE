@@ -75,10 +75,10 @@ const Page = () => {
         />
       }
       process={EVENT_PHYSICAL_VIDEO_PROCESS}
-      proofBar={EVENT_PHYSICAL_VIDEO_INTRO}
       services={EVENT_PHYSICAL_VIDEO_DELIVERABLES}
       showPhaseNumbers={false}
       showServicesCommonCta
+      spotlight={EVENT_PHYSICAL_VIDEO_INTRO}
     />
   );
 };

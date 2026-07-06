@@ -12,7 +12,7 @@ import {
   MARKET_INTELLIGENCE_HERO,
   MARKET_INTELLIGENCE_INTRO,
   MARKET_INTELLIGENCE_PAGE,
-} from "@/content/services/hpmi/human-powered-market-intelligence/content";
+} from "@/content/services/human-powered-market-intelligence/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 

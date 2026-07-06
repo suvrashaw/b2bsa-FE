@@ -1,0 +1,62 @@
+{
+  "description": "Seven specialist practices, each built for enterprise B2B, designed to operate independently or as an integrated program.",
+  "heading": "Our Core Services",
+  "services": [
+    {
+      "description": "Strategy, booth design, lead capture, logistics, and post-event reporting across international markets, all under one accountable partner.",
+      "href": "/global-event-solutions",
+      "icon": "Globe2",
+      "id": "global-event-solutions",
+      "image": "/media/home/services/branding.avif",
+      "title": "Global Event Solutions"
+    },
+    {
+      "description": "Custom booth design, fabrication, rental, modular systems, logistics, and on-site staffing for exhibitions worldwide.",
+      "href": "/tradeshow-booth-solutions",
+      "icon": "Presentation",
+      "id": "tradeshow-booth-solutions",
+      "image": "/media/home/services/booth-design-and-production.avif",
+      "title": "Tradeshow Booth Solutions"
+    },
+    {
+      "description": "Corporate video, event video production, live streaming, and virtual production that builds trust before and after the event.",
+      "href": "/media-production",
+      "icon": "MonitorPlay",
+      "id": "media-production",
+      "image": "/media/home/services/corporate-media-production.avif",
+      "title": "Media Production"
+    },
+    {
+      "description": "Verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action — not a badge scan CSV.",
+      "href": "/sales-qualified-lead-generation",
+      "icon": "Users",
+      "id": "sales-qualified-lead-generation",
+      "image": "/media/home/services/active-prospecting.avif",
+      "title": "Sales Qualified Lead Generation"
+    },
+    {
+      "description": "Performance marketing, SEO, and social media programs evaluated against one standard: qualified buyers moving closer to a sales conversation.",
+      "href": "/digital-marketing",
+      "icon": "Rocket",
+      "id": "digital-marketing",
+      "image": "/media/home/services/digital-marketing.avif",
+      "title": "Digital Marketing"
+    },
+    {
+      "description": "B2B market research, data augmentation, and data validation that helps enterprise teams understand their markets more clearly than the competition.",
+      "href": "/market-research",
+      "icon": "Database",
+      "id": "market-research",
+      "image": "/media/home/services/database-and-market-research.avif",
+      "title": "Market Research"
+    },
+    {
+      "description": "Human-powered competitive intelligence, buyer research, and strategic reports — insight that cannot be automated or approximated.",
+      "href": "/human-powered-market-intelligence",
+      "icon": "Lightbulb",
+      "id": "hpmi",
+      "image": "/media/home/services/networking.avif",
+      "title": "Human Powered Market Intelligence"
+    }
+  ]
+}

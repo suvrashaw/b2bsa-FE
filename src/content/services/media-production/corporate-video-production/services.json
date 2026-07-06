@@ -3,7 +3,6 @@
   "mediaPosition": "left",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
       "icon": "Star",
       "id": "brand",
@@ -11,7 +10,6 @@
       "title": "Brand and Culture Films"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
       "icon": "Cpu",
       "id": "product",
@@ -19,7 +17,6 @@
       "title": "Product and Solution Explainer Videos"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
       "icon": "Users",
       "id": "thought",
@@ -27,7 +24,6 @@
       "title": "Executive Interview and Thought Leadership Series"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       "icon": "TrendingUp",
       "id": "investor",
@@ -35,7 +31,6 @@
       "title": "Investor and Board Presentation Videos"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
       "icon": "Zap",
       "id": "sales",
@@ -43,7 +38,6 @@
       "title": "Sales Enablement Video Content"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
       "icon": "MessageSquare",
       "id": "testimonial",

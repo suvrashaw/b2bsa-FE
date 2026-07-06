@@ -1,6 +1,8 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
+import type { BlogsSectionContent } from "@/content/blogs";
 
+import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import EXPERIENCEVIDEOCONTACTCTA_DATA from "./contact.json";
 import INTRO_DATA from "./intro.json";
@@ -14,7 +16,7 @@ export const EVENT_EXPERIENCE_VIDEO_CONTACT_CTA = {
   ...EXPERIENCEVIDEOCONTACTCTA_DATA,
 };
 
-export { default as EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION } from "./blog.json";
+export const EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 export { default as EVENT_EXPERIENCE_VIDEO_CAPABILITIES } from "./capabilities.json";
 export { default as EVENT_EXPERIENCE_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 
@@ -26,5 +28,5 @@ export const EVENT_EXPERIENCE_VIDEO_INTRO = {
 export { default as EVENT_EXPERIENCE_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_EXPERIENCE_VIDEO_PAGE } from "./page.json";
-export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./whats-included.json";
+export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";

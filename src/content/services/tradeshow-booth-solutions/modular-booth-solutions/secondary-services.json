@@ -3,7 +3,6 @@
   "heading": "Our Modular Booth Range",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Compact, tool-free assembly for regional shows and satellite presences. Trade show booth 10x10 format ready in under 4 hours.",
       "icon": "Layers",
       "id": "modular-10x10",
@@ -11,7 +10,6 @@
       "title": "10x10 Modular Kits"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Mid-format portable trade show booth displays with room for demos, meetings, and brand storytelling.",
       "icon": "Monitor",
       "id": "modular-inline",
@@ -19,7 +17,6 @@
       "title": "10x20 and 20x20 Inline Configurations"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Multi-sided open systems for higher-traffic exhibition floors with stronger visibility and multiple engagement zones.",
       "icon": "Target",
       "id": "modular-island",
@@ -27,7 +24,6 @@
       "title": "Island Modular Systems"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Reusable modular structure with custom branded finishes, feature walls, and premium lighting for custom-booth impact.",
       "icon": "Palette",
       "id": "modular-hybrid",
@@ -35,7 +31,6 @@
       "title": "Hybrid Modular + Custom Accent Builds"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Lightweight, high-impact backlit fabric displays with maximum visual presence and minimum shipping weight.",
       "icon": "Sparkles",
       "id": "modular-fabric",
@@ -43,7 +38,6 @@
       "title": "Branded Tensile Fabric Displays"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Fast-deploy setups for roadshows, sales activations, and internal events.",
       "icon": "Wrench",
       "id": "modular-portable",

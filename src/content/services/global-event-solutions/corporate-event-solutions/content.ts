@@ -1,12 +1,14 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services";
+import type { BlogsSectionContent } from "@/content/blogs";
 
+import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
-import EVENTINDUSTRIESSECTION_DATA from "./event-industries-section.json";
+import INDUSTRIES_DATA from "./industries.json";
 import PROOF_BAR_DATA from "./intro.json";
 
-export { default as CORP_EVENT_BLOGS_SECTION } from "./blog.json";
+export const CORP_EVENT_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
 export const CORP_EVENT_INTRO = {
   ...PROOF_BAR_DATA,
@@ -18,12 +20,13 @@ export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-const aviationIndustry = GLOBAL_INDUSTRY_SERVICES.find((s) => s.id === "aviation");
-const otherIndustries = GLOBAL_INDUSTRY_SERVICES.filter((s) => s.id !== "aviation");
+const industryItems = GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item);
+const aviationIndustry = industryItems.find((s) => s.id === "aviation");
+const otherIndustries = industryItems.filter((s) => s.id !== "aviation");
 
-export const CORP_EVENT_INDUSTRIES_SECTION = {
-  ...EVENTINDUSTRIESSECTION_DATA,
-  services: aviationIndustry ? [...otherIndustries, aviationIndustry] : GLOBAL_INDUSTRY_SERVICES,
+export const CORP_EVENT_INDUSTRIES = {
+  ...INDUSTRIES_DATA,
+  items: aviationIndustry ? [...otherIndustries, aviationIndustry] : industryItems,
 };
 
 export const CORP_EVENT_CONTACT_CTA = {
@@ -32,9 +35,9 @@ export const CORP_EVENT_CONTACT_CTA = {
 
 export { default as CORP_EVENT_CAPABILITIES } from "./capabilities.json";
 export { default as CORP_EVENT_CLIENT_LOGOS } from "./client-logos.json";
-export { default as CORP_EVENT_DELIVERABLES } from "./event-deliverables.json";
-
 export { default as CORP_EVENT_FAQ } from "./faq.json";
+
 export { default as CORP_EVENT_IMAGE_HERO } from "./hero.json";
 export { default as CORP_EVENT_PAGE } from "./page.json";
+export { default as CORP_EVENT_DELIVERABLES } from "./services.json";
 export { default as CORP_EVENT_WHY_CHOOSE_US } from "./why-choose-us.json";

@@ -1,17 +1,17 @@
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
-import CORPORATEVIDEOPORTFOLIO_DATA from "./case-studies.json";
+import CORPORATE_VIDEO_CASESTUDIES_DATA from "./case-studies.json";
 import CONTACT_CTA_DATA from "./contact.json";
-import STATS_DATA from "./stats.json";
+import CORPORATE_VIDEO_INTRO_DATA from "./intro.json";
 
-export const CORPORATE_VIDEO_PORTFOLIO = {
-  ...CORPORATEVIDEOPORTFOLIO_DATA,
+export const CORPORATE_VIDEO_CASE_STUDIES = {
+  ...CORPORATE_VIDEO_CASESTUDIES_DATA,
   items: GLOBAL_CASE_STUDIES,
 };
 
 export const CORPORATE_VIDEO_INTRO = {
-  ...STATS_DATA,
+  ...CORPORATE_VIDEO_INTRO_DATA,
   triggerContactModal: true,
 };
 
@@ -20,10 +20,10 @@ export const CORPORATE_VIDEO_CONTACT_CTA = {
   ...CONTACT_CTA_DATA,
 };
 
-export { default as CORPORATE_VIDEO_DELIVERABLES } from "./capabilities.json";
 export { default as CORPORATE_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORPORATE_VIDEO_FAQ } from "./faq.json";
 export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
-export { default as CORPORATE_VIDEO_WHY } from "./intro.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
+export { default as CORPORATE_VIDEO_DELIVERABLES } from "./services.json";
 export { default as CORPORATE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";
+export { default as CORPORATE_VIDEO_WHY } from "./why.json";

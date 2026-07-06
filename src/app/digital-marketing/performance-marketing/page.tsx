@@ -18,6 +18,7 @@ import {
   PPC_CONTACT_CTA,
   PPC_FAQ,
   PPC_HERO,
+  PPC_INDUSTRIES,
   PPC_INTRO,
   PPC_MODAL_SERVICE_FIELD,
   PPC_PAGE,
@@ -60,7 +61,7 @@ const Page = () => {
             }
             id="blogs"
           >
-            {getBlogsByTags(["Performance Marketing"]).map((post) => (
+            {getBlogsByTags(PPC_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
             ))}
           </Carousel>
@@ -69,6 +70,7 @@ const Page = () => {
       faq={PPC_FAQ}
       faqVariant="accordion"
       hero={PPC_HERO}
+      industries={PPC_INDUSTRIES}
       page={PPC_PAGE}
       parentPage={PERF_PAGE}
       preProcessSections={

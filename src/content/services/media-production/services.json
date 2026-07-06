@@ -2,7 +2,6 @@
   "heading": "What We Produce",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Highlight reels, testimonial clips, speaker coverage, and post-event recap content, extending the ROI of your event investment beyond the show floor.",
       "href": "/media-production/event-video-production",
       "icon": "Camera",
@@ -11,7 +10,6 @@
       "title": "Event Video Production"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Brand films, product explainers, executive interviews, investor content, and sales enablement videos built for long B2B sales cycles.",
       "href": "/media-production/corporate-video-production",
       "icon": "Clapperboard",
@@ -20,7 +18,6 @@
       "title": "Corporate Video Production"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Multi-camera corporate live streaming for conferences, launches, and hybrid events.",
       "href": "/media-production/event-live-streaming-services",
       "icon": "Radio",
@@ -29,7 +26,6 @@
       "title": "Event Live Streaming Services"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Capture audience engagement, showcase event success, and extend event visibility with cinematic-quality event experience video production.",
       "href": "/media-production/event-experience-video-production",
       "icon": "Film",
@@ -38,7 +34,6 @@
       "title": "Event Experience Video Production"
     },
     {
-      "color": "bg-brand-blue",
       "description": "On-site professional video capture for conferences, trade shows, product launches, and corporate events with cinematic production quality.",
       "href": "/media-production/event-physical-video-shoot",
       "icon": "Video",
@@ -47,7 +42,6 @@
       "title": "Event Physical Video Shoot"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "End-to-end virtual video production for webinars, fireside chats, executive interviews, virtual conferences, and hybrid corporate events.",
       "href": "/media-production/virtual-video-production",
       "icon": "MonitorPlay",

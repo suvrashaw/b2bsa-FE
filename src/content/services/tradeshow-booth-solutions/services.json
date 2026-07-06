@@ -3,7 +3,6 @@
   "heading": "Our Trade Show Booth Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "exhibition environments engineered for visitor flow and lead conversion",
       "href": "/tradeshow-booth-solutions/trade-show-booth-design",
       "icon": "Presentation",
@@ -12,7 +11,6 @@
       "title": "Trade Show Booth Design"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "modular exhibition systems globally available",
       "href": "/tradeshow-booth-solutions/trade-show-booth-rental",
       "icon": "Layers",
@@ -21,7 +19,6 @@
       "title": "Trade Show Booth Rental"
     },
     {
-      "color": "bg-brand-primary",
       "description": "fabrication to on-site installation",
       "href": "/tradeshow-booth-solutions/trade-show-booth-builder",
       "icon": "Globe2",
@@ -30,7 +27,6 @@
       "title": "Trade Show Booth Builder"
     },
     {
-      "color": "bg-brand-blue",
       "description": "professional exhibition staffing and brand ambassadors",
       "href": "/tradeshow-booth-solutions/booth-hostess-services",
       "icon": "Users",
@@ -39,7 +35,6 @@
       "title": "Booth Hostess Services"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "end-to-end shipping, customs, and on-site delivery",
       "href": "/tradeshow-booth-solutions/booth-logistics-services",
       "icon": "Truck",
@@ -48,7 +43,6 @@
       "title": "Booth Logistics Services"
     },
     {
-      "color": "bg-brand-primary",
       "description": "flexible systems adaptable across events and locations",
       "href": "/tradeshow-booth-solutions/modular-booth-solutions",
       "icon": "Grid",

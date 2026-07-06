@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Event Live Streaming Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       "icon": "Video",
       "id": "multi-camera",
@@ -10,7 +9,6 @@
       "title": "Multi-Camera Live Production"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
       "icon": "Globe",
       "id": "platform",
@@ -18,7 +16,6 @@
       "title": "Platform Management"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Speaker names, session titles, sponsor overlays, and live branded transitions.",
       "icon": "Layers",
       "id": "graphics",
@@ -26,7 +23,6 @@
       "title": "Real-Time Graphics and Lower Thirds"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
       "icon": "MessageSquare",
       "id": "engagement",
@@ -34,7 +30,6 @@
       "title": "Live Audience Engagement"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       "icon": "Archive",
       "id": "archive",
@@ -42,7 +37,6 @@
       "title": "Recording and Archive Delivery"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
       "icon": "ShieldCheck",
       "id": "support",

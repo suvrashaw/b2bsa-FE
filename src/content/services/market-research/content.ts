@@ -2,10 +2,10 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import RESEARCHCASESTUDIES_DATA from "./case-studies.json";
-import RESEARCHPROOFBAR_DATA from "./research-proof-bar.json";
+import RESEARCH_INTRO_DATA from "./intro.json";
 
 export const RESEARCH_INTRO = {
-  ...RESEARCHPROOFBAR_DATA,
+  ...RESEARCH_INTRO_DATA,
   stats: GLOBAL_PROOF_STATS,
 };
 
@@ -15,6 +15,7 @@ export const RESEARCH_CASE_STUDIES = {
 };
 
 export { default as RESEARCH_CLIENT_LOGOS } from "./client-logos.json";
+export { default as RESEARCH_CONTACT_CTA } from "./contact.json";
 export { default as RESEARCH_FAQ } from "./faq.json";
 export { default as RESEARCH_HERO } from "./hero.json";
 export { default as RESEARCH_PAGE } from "./page.json";

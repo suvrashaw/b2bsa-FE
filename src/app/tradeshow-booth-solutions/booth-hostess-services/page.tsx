@@ -20,6 +20,7 @@ import {
   BOOTH_HOSTESS_DELIVERABLES,
   BOOTH_HOSTESS_FAQ,
   BOOTH_HOSTESS_IMAGE_HERO,
+  BOOTH_HOSTESS_INDUSTRIES,
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
@@ -94,6 +95,7 @@ const Page = () => {
       faq={BOOTH_HOSTESS_FAQ}
       faqVariant="accordion"
       hero={BOOTH_HOSTESS_IMAGE_HERO}
+      industries={BOOTH_HOSTESS_INDUSTRIES}
       page={BOOTH_HOSTESS_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={

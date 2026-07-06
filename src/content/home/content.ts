@@ -116,7 +116,7 @@ export interface FAQContent {
 }
 
 export interface HomeServiceItem {
-  color: string;
+  color?: string;
   description?: string;
   href?: string;
   icon: string;

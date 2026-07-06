@@ -2,7 +2,6 @@
   "heading": "Deliverable Formats",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Concise, leadership-ready findings with context, risks, opportunities, and recommended actions.",
       "icon": "Presentation",
       "id": "exec-briefing",
@@ -10,7 +9,6 @@
       "title": "Executive Strategy Briefing Decks"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Full-depth documentation with methodology, findings, and source notes.",
       "icon": "FileText",
       "id": "detailed-reports",
@@ -18,7 +16,6 @@
       "title": "Detailed Research Reports"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Interactive findings presentations with real-time Q&A.",
       "icon": "Video",
       "id": "live-briefings",
@@ -26,7 +23,6 @@
       "title": "Live Analyst Briefings"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Continuous tracking of competitors, market shifts, and buyer behaviour.",
       "icon": "RefreshCcw",
       "id": "ongoing-subscriptions",
@@ -34,7 +30,6 @@
       "title": "Ongoing Intelligence Subscriptions"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Market maps, competitor comparisons, and account views.",
       "icon": "LayoutDashboard",
       "id": "custom-dashboards",

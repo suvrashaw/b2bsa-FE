@@ -20,7 +20,7 @@ There is no dynamic `[slug]` route for services and no fully copy-pasted per-pag
 | Category hub | 6 | `/digital-marketing`, `/global-event-solutions`, `/market-research`, `/media-production`, `/sales-qualified-lead-generation`, `/tradeshow-booth-solutions` |
 | Individual leaf service | 23 | `/tradeshow-booth-solutions/trade-show-booth-design`, `/sales-qualified-lead-generation/event-lead-generation`, etc. |
 
-One gap: **`hpmi` (Human-Powered Market Intelligence) has content prepared for a category-hub page (`content.ts`, `page.json`) but no `page.tsx` was ever built** — its one leaf (`human-powered-market-intelligence`) renders fine, but the hub tier for this category doesn't exist as a live page.
+**Update (2026-07-06) — the `hpmi` gap above has been resolved, not filled in.** The never-built category-hub content (`src/content/services/hpmi/content.ts` + `page.json`, plus its `HPMI_PAGE` entry in `marketing-pages.ts`) was deleted outright rather than turned into a live hub page — `hpmi` is confirmed to never be a category hub. Its one leaf moved out from under the retired `hpmi` segment to a top-level route: `src/app/hpmi/human-powered-market-intelligence/page.tsx` → `src/app/human-powered-market-intelligence/page.tsx`, with its content directory moved the same way (`src/content/services/hpmi/human-powered-market-intelligence/` → `src/content/services/human-powered-market-intelligence/`) and `canonicalPath` updated to `/human-powered-market-intelligence`. `/hpmi` now permanently redirects to `/human-powered-market-intelligence` (added in `next.config.ts`, alongside removal of a stale pre-existing `/services/hpmi` redirect rule that pointed at a path that was never real). All internal references — `navigation.json`'s mega-menu group, `hub-content.ts`'s `/services` card, and the homepage services-grid card that linked here — were repointed to the new URL. The rest of this document's remaining mentions of `hpmi` (content-type presence/absence in sections 4, 7, 12, and Appendix C) still refer to this same page by its content id and are unaffected by the route move.
 
 ### The shared template — `ServicePage.tsx`
 
@@ -32,7 +32,7 @@ All 30 pages are thin wrappers: each `page.tsx` imports named content constants 
 Header
 Hero                          — if `hero` given
 ClientLogos                   — ALWAYS rendered (props optional)
-Spotlight #1 "INTRODUCTION"   — if `spotlight` or `proofBar` given
+Spotlight #1 "INTRODUCTION"   — if `spotlight` given
 Services section              — ServicesStack OR Capabilities-carousel, chosen by `servicesSectionType`  — if `services` given
 Spotlight #2 ("why")          — if `why` given
   ── preProcessSections slot (raw JSX) ──
@@ -88,11 +88,11 @@ This rule holds on the large majority of pages — **9 of 23 leaves and all 7 hu
 | # | Content Type | Section Identity | Canonical Filename | Tier(s) | Status |
 |---|---|---|---|---|---|
 | 1 | Hero | `Hero.tsx` | `hero.json` | All 30 | ✅ (one dead field, see Appendix F) |
-| 2 | Client Logos | `ClientLogos.tsx` | `client-logos.json` | All 30 | ⚠️ (logos never actually author-controlled) |
-| 3 | Introduction | `Spotlight.tsx` (`spotlight` prop) or `Spotlight.tsx` (`proofBar` prop) | `intro.json` | All 30 | ⚠️ 9+ filename variants, 2 field-set variants |
-| 4 | Services Included / Nested Services | `ServicesStack.tsx`+`ServicesCard.tsx` (grid) or `Capabilities.tsx` (carousel) | `services.json` | All 30 — meaning differs by tier | ⚠️ filename variants + rendering choice is per-page |
+| 2 | Client Logos | `ClientLogos.tsx` | `client-logos.json` | All 30 | ✅ resolved 2026-07-06 — dead `logos` prop removed |
+| 3 | Introduction | `Spotlight.tsx` (`spotlight` prop) | `intro.json` | All 30 | ✅ resolved 2026-07-06 — one filename, one shape |
+| 4 | Services Included / Nested Services | `ServicesStack.tsx`+`ServicesCard.tsx` (grid) or `Capabilities.tsx` (carousel) | `services.json` | All 30 — meaning differs by tier | ✅ resolved 2026-07-06 — filename drift fixed; rendering choice remains per-page (by design, not drift) |
 | 5 | Capabilities | `Capabilities.tsx` (features shape only) | `capabilities.json` | Leaf only | 🔴 same filename, incompatible "phases" shape in ~7 pages |
-| 6 | Industries We Support | 3 different strategies today (see below); target: `CardsGrid.tsx`+`IndustryShaderCard.tsx` | `industries.json` | Leaf only | 🕳️ the one content type with no consistent pairing |
+| 6 | Industries We Support | `CardsGrid.tsx`+`IndustryShaderCard.tsx` | `industries.json` | Leaf only | ✅ resolved 2026-07-06 — one component pairing, one shape |
 | 7 | Why Choose Us — Cards | `Carousel.tsx`+`BoothWhyCard.tsx` | `why-choose-us.json` | Leaf-predominant | ⚠️ icon field inconsistently present; card reused for "Benefits" too |
 | 8 | Why Choose Us — Spotlight | `Spotlight.tsx` (`why` prop) | `why-spotlight.json` (renamed from today's `why.json`) | All hubs + 3 leaves | 🔴 today (same filename as #7's concept, different shape) — resolved by the rename |
 | 9 | Process / How It Works | `ProcessTimeline.tsx` | `process.json` | All hubs + several leaves | ✅ |
@@ -135,28 +135,26 @@ interface HeroContent {
 
 ### 2. Client Logos
 
-**Section identity:** `ClientLogos.tsx` · **Canonical filename:** `client-logos.json` · **Status:** ⚠️
+**Section identity:** `ClientLogos.tsx` · **Canonical filename:** `client-logos.json` · **Status:** ✅ resolved 2026-07-06
 
 Rendered unconditionally on every page (all props optional). Every page's content only ever supplies a heading/description.
 
-**Confirmed issue:** the actual logo images are 100% hardcoded inside the component (`DEFAULT_CLIENT_LOGOS`, 9 fixed brands) — the component accepts a `logos` field, but no page's content ever populates it.
+**Update (2026-07-06) — resolved, not just documented.** The dead `logos` field was removed from `ClientLogosProps` entirely (`src/components/sections/ClientLogos.tsx`) — the component now references `DEFAULT_CLIENT_LOGOS` (9 fixed brands) directly wherever the `logos` variable used to be, instead of accepting a prop that no content file ever populated. No content JSON authored this field, so the change has zero effect on rendered output; it only removes a prop that gave the false impression of author control.
 
 ```ts
 interface ClientLogosContent {
   heading?: string;
   description?: string;
-  // logos?: { alt, id, src }[] — accepted by the component, never populated today
 }
 ```
 
 ### 3. Introduction
 
-**Section identity:** `Spotlight.tsx` via the `spotlight` prop (forced `label="INTRODUCTION"`), or via the narrower `proofBar` prop · **Canonical filename:** `intro.json` · **Status:** ⚠️
+**Section identity:** `Spotlight.tsx` via the `spotlight` prop (forced `label="INTRODUCTION"`) · **Canonical filename:** `intro.json` · **Status:** ✅ resolved 2026-07-06
 
-Universal — every page passes either `spotlight` or `proofBar` (confirmed directly, page by page). Two real field-set variants exist:
+Universal — every page passes `spotlight` (confirmed directly, page by page). One field-set shape:
 
 ```ts
-// "spotlight" variant — most pages
 interface IntroductionContent {
   titleLine1: string;
   titleLine2?: string;
@@ -169,24 +167,19 @@ interface IntroductionContent {
   imagePosition?: "left" | "right";
   align?: "left" | "center" | "right";
 }
-
-// "proofBar" variant — confirmed used ALONE (no spotlight) on
-// event-physical-video-shoot and trade-show-booth-builder
-interface ProofBarContent {
-  heading: string;                // no titleLine2 equivalent
-  description?: string;
-  imageUrl: string;
-  stats: string[];
-}
 ```
 
-Both render through the same `Spotlight.tsx` component in the same page position — the `proofBar` shape is not a legacy alias to be ignored, it's a genuinely narrower field set some pages use.
+**Update (2026-07-06) — both the filename drift and the field-set split were resolved, not just documented:**
 
-**Filename drift:** at least 9 different filenames feed this content type across the codebase (`intro.json`, `hostess-intro.json`, `logistics-intro.json`, `networking-intro.json`, `streaming-spotlight.json`, `validation-spotlight.json`, `market-intelligence-spotlight.json`, `areas-served.json`, `research-proof-bar.json`). No page is missing Introduction content outright — the drift is entirely in what the file is named, not whether it exists.
+- The narrower `proofBar` prop/shape (`{ heading, description?, imageUrl, stats }`) was removed entirely from `ServicePageProps` and its rendering logic in `src/components/templates/ServicePage.tsx`. Its 2 real users were migrated onto the full `spotlight` shape: `event-physical-video-shoot` (its `physical-video-proof-bar.json` was renamed to `intro.json`, with its `heading` field renamed to `titleLine1`) and `trade-show-booth-builder` (its `intro.json` already held the full shape on disk — only the prop name and an internal variable name changed). `event-experience-creation` had been passing the identical object to both `proofBar` and `spotlight` redundantly; the dead `proofBar` pass was deleted.
+- **A real bug turned up and was fixed as a side effect of this migration:** `trade-show-booth-builder`'s content was already `titleLine1`-shaped, but was being routed through `proofBar`, whose merge logic only ever read `.heading` — meaning this page's Introduction title was silently rendering as an empty string before this fix.
+- Every filename variant was renamed to the canonical `intro.json`: `hostess-intro.json`, `logistics-intro.json`, `networking-intro.json`, `streaming-spotlight.json`, `validation-spotlight.json`, `market-intelligence-spotlight.json`, and `research-proof-bar.json` (the last of which already held full-`spotlight`-shape data despite its "proof-bar" name — filename drift only, not a real second shape).
+- 4 pages — `corporate-networking-events`, `booth-hostess-services`, `booth-logistics-services`, `event-live-streaming-services` — each had an **orphaned `intro.json` sitting on disk, never imported by anything**, alongside the real, differently-named live file. This wasn't previously called out in this audit; it surfaced only while tracing each filename's actual import graph. The orphans were deleted, then the live files were renamed into their place.
+- `areas-served.json` on `event-live-streaming-services` is unaffected by any of this — it feeds a genuinely separate one-off section (see [Areas-Served Spotlight variant](#custom--one-off-sections)), not this content type, despite appearing in this doc's original filename-drift list.
 
 ### 4. Services Included / Nested Services
 
-**Section identity:** `ServicesStack.tsx`+`ServicesCard.tsx` (grid mode) **or** `Capabilities.tsx` (carousel mode, via `servicesSectionType`/`secondaryServicesSectionType`) · **Canonical filename:** `services.json` · **Status:** ⚠️
+**Section identity:** `ServicesStack.tsx`+`ServicesCard.tsx` (grid mode) **or** `Capabilities.tsx` (carousel mode, via `servicesSectionType`/`secondaryServicesSectionType`) · **Canonical filename:** `services.json` · **Status:** ✅
 
 Two semantic uses depending on tier (see [Hub-Tier vs. Leaf-Tier Guidance](#hub-tier-vs-leaf-tier-guidance)), and the rendering component is **not fixed by content identity** — it's a per-page choice:
 
@@ -209,11 +202,11 @@ interface ServiceListItem {
   icon: string;
   image: string;
   href?: string;       // present → links to a page; absent → opens the contact modal
-  color?: string;      // dead field, see Appendix F — safe to omit in new content
+  color?: string;      // dead field, see Appendix F — now stripped from every services.json/secondary-services.json under src/content/services/** except the excluded pages below
 }
 ```
 
-**Filename drift:** `services.json` vs `whats-included.json` vs `*-deliverables.json`, inconsistent even between sibling leaves in the same hub (`social-media-marketing` uses `whats-included.json`; its siblings `performance-marketing`/`seo-services` use `services.json` for the identical shape).
+**Update (2026-07-06) — filename drift resolved.** Every instance of this content type across `src/content/services/**` — previously scattered across `services.json`, `whats-included.json`, `*-deliverables.json`, and one stray `capabilities.json` (`corporate-video-production`, an undocumented instance of the same drift) — is now named `services.json`. The two folders that legitimately hold two instances of this shape in one page (`human-powered-market-intelligence`: primary deliverables + secondary research cards; `modular-booth-solutions`: primary deliverables + secondary range section) use `services.json` for the primary `services` prop and `secondary-services.json` for `secondaryServices`, following the same disambiguation precedent as the Why-Choose-Us / Why-Spotlight split (#7 vs #8). The dead `ServiceListItem.color` field (see Appendix F) was removed from every content file touched by this fix — see that appendix for the two pages still carrying it. `trade-show-booth-design` and `trade-show-booth-builder` were intentionally left out of this fix: `trade-show-booth-design` at the requester's explicit instruction, and `trade-show-booth-builder` because its `builder-pricing.json` is a structurally different content type (see #10) rendered by hand, not through `ServicesStack`/`Capabilities` at all.
 
 ### 5. Capabilities
 
@@ -245,11 +238,17 @@ interface CapabilityItem {
 
 ### 6. Industries We Support
 
-**Section identity:** today, no consistent pairing exists — three different strategies are in active use · **Canonical filename:** `industries.json` · **Status:** 🕳️
+**Section identity:** `CardsGrid.tsx`+`IndustryShaderCard.tsx`, via a new typed `industries` prop on `ServicePageProps` · **Canonical filename:** `industries.json` · **Status:** ✅ resolved 2026-07-06
 
-1. **Own rich content + hand-rolled raw `<section id="industries">` + `IndustryShaderCard`** — confirmed only on `social-media-marketing`. (`performance-marketing` and `seo-services` both have an `industries.json` on disk but never render it — orphaned, same pattern as Capabilities above.)
-2. **Shared/global data + hand-rolled raw `<section id="industries">` + `IndustryShaderCard`**, where the page's own file supplies only the heading and items come from `GLOBAL_INDUSTRY_SERVICES` — confirmed on `booth-logistics-services`.
-3. **Routed through the `secondaryServices` template slot** with `secondaryServicesSectionType="carousel"`, rendered via `Capabilities.tsx`'s plain icon/image cards — **not** `IndustryShaderCard` at all — confirmed on `corporate-event-solutions`, `corporate-networking-events`, and `event-branding-solutions` (every Global Event Solutions leaf with an industries treatment). `event-experience-creation` and `booth-hostess-services` have no Industries treatment in their `page.tsx` at all.
+**Update (2026-07-06) — resolved, not just documented.** This had been the one content type with no consistent component pairing — three different render strategies were in active use, and the real situation was messier than originally documented here: `corporate-event-solutions`, `corporate-networking-events`, and `event-branding-solutions` weren't even using a file called `industries.json` (they used `event-industries-section.json`/`networking-industries-section.json`/`branding-industries-section.json`, routed through the `secondaryServices` slot and rendered via `ServicesScroll`, not `IndustryShaderCard`); `performance-marketing` and `seo-services` had an orphaned `industries.json` shaped like a Capabilities feature list (`{heading, items: string[], features: [...]}`), not the documented shape; and `social-media-marketing`'s live `industries.json` had that same mis-shape.
+
+All of this was consolidated onto one component pairing (`CardsGrid.tsx`+`IndustryShaderCard.tsx`), one shape (below), and one wiring mechanism (a new typed `industries` prop on `ServicePageProps`, rendered in `ServicePage.tsx` at the same position `secondaryServices` occupies):
+
+- `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `booth-logistics-services`: their per-page industries files were renamed to `industries.json` and now supply only heading/description; the industry items themselves still come from the shared `GLOBAL_INDUSTRY_SERVICES` pool (`src/content/services/industry-services.json`) — same shared-pool precedent as Case Studies (#11) and Blogs (#12). `secondaryServices` was *not* removed from `ServicePageProps` — it's still genuinely used for non-industries content on `human-powered-market-intelligence` and `modular-booth-solutions` — only these 3 GES pages moved off of it.
+- `performance-marketing`, `seo-services`: their orphaned, mis-shaped `industries.json` files were rewritten into the canonical shape and wired up for the first time — previously authored but never rendered.
+- `social-media-marketing`: its unique per-page industry list was preserved but rewritten into the canonical shape; the hand-rolled `<section id="industries">` block was replaced with the `industries` prop.
+- `event-experience-creation`, `booth-hostess-services`: previously had no Industries treatment at all; each got a new `industries.json` (heading only) with items sourced from `GLOBAL_INDUSTRY_SERVICES`, matching their GES/tradeshow-booth sibling pages.
+- `corporate-video-production` has a fourth, previously-undocumented orphaned `industries.json` on disk (`{description, heading, industries: [{title, description}]}`, no icon/image, never imported) — **left unresolved**, out of scope for this pass.
 
 ```ts
 interface IndustriesContent {
@@ -265,8 +264,6 @@ interface IndustryItem {
   image?: string;          // falls back to a plain dark panel if omitted
 }
 ```
-
-**Recommended target (not implemented — audit only):** `CardsGrid.tsx`+`IndustryShaderCard.tsx` consistently, matching every other card-based content type's wrapper+card convention.
 
 ### 7. Why Choose Us — Cards
 
@@ -379,9 +376,13 @@ interface CaseStudyEntry {
 }
 ```
 
-**Confirmed:** the shared pool itself (9 entries) is well-shaped and consistent — this content type's data is genuinely solid. But every page shows the identical hardcoded 5-of-9 subset regardless of actual relevance, and the `services[]` tag field that exists specifically to enable per-service filtering is never read for that purpose anywhere. Case-study "icons" shown in the card UI are synthesized by cycling through 3 hardcoded fallback names (`Target`, `Sparkles`, `Building2`), never authored in any content file. `corporate-video-production` uses a differently-named content constant (`CORPORATE_VIDEO_PORTFOLIO`) for the same shape — a naming outlier, not a shape problem.
+**Confirmed:** the shared pool itself (9 entries) is well-shaped and consistent — this content type's data is genuinely solid. But every page shows the identical hardcoded 5-of-9 subset regardless of actual relevance, and the `services[]` tag field that exists specifically to enable per-service filtering is never read for that purpose anywhere — **this selection logic is intentionally left as-is**, out of scope for the update below, same treatment as the other Appendix H items.
 
-**Missing:** `event-lead-generation` (aliases its parent hub's case studies wholesale).
+**Update (2026-07-06) — partially resolved:**
+
+- **Icon synthesis fixed.** Every entry in the shared pool (`src/content/case-studies/case-studies.json`) now authors its own `icon` field (e.g. `Hammer`, `Landmark`, `Cpu`, `Plane` — all from `Icon.tsx`'s existing allow-list), added to the `CaseStudyEntry` interface in `src/content/case-studies/index.ts`. `CaseStudies.tsx` already read `study.icon` when present, falling back to the `Target`/`Sparkles`/`Building2` cycle only when omitted — that fallback still exists in the component for defensive/future use but is no longer exercised by any of the 9 real entries.
+- **Naming outlier fixed.** `corporate-video-production`'s `CORPORATE_VIDEO_PORTFOLIO` was renamed to `CORPORATE_VIDEO_CASE_STUDIES`, matching the `<PREFIX>_CASE_STUDIES` convention used by every other page.
+- **`event-lead-generation` no longer aliases its parent hub's case-studies wrapper.** It now has its own `case-studies.json` (own heading/description) instead of re-exporting `SQL_CASE_STUDIES`. It still renders the same shared `GLOBAL_CASE_STUDIES` 5-of-9 subset as every other page — only the wrapper heading/description is now independent, consistent with how this page's Appendix D borrowing was scoped for its other sections.
 
 ### 12. Latest Insights / Blogs
 
@@ -486,8 +487,8 @@ The practical takeaway for building a new page: **hub pages are composed only fr
 
 ## Appendix B — Orphaned & Unwired Content
 
-- `performance-marketing` and `seo-services`: both have `capabilities.json` **and** `industries.json` on disk, neither ever imported by their `page.tsx`. Sibling `social-media-marketing` renders both correctly.
-- `booth-hostess-services`: has an industries-section file never wired up.
+- `performance-marketing` and `seo-services`: both have `capabilities.json` on disk, never imported by their `page.tsx` — sibling `social-media-marketing` renders it correctly. (Their `industries.json` orphan was resolved 2026-07-06 — see [Content Type #6](#6-industries-we-support).)
+- `corporate-video-production` has an orphaned `industries.json` on disk in a fourth, unrelated shape (`{description, heading, industries: [{title, description}]}`) never imported by its `page.tsx` — discovered 2026-07-06 while resolving Content Type #6, left unresolved as out of scope for that pass.
 - `card.json`: 21 copies exist across `src/content/services/`, imported nowhere in the entire codebase (confirmed via `grep`).
 - `market-research` hub + both its leaves (`data-augmentation-services`, `data-validation-services`): all 3 have an unused `contact.json` on disk; none render a Contact CTA section.
 - Top-level `/services` hub: `HUB_FAQ` is hardcoded Lorem-ipsum placeholder text, never finished.
@@ -524,10 +525,10 @@ Every item below is a literal heading/CTA/icon-name/image-URL/text-array written
 |---|---|---|
 | `Hero.secondaryCta` | `Hero.tsx` | Authored in ~29/30 `hero.json` files, force-discarded by `ServicePage.tsx` on every render |
 | `Carousel.layout` | `Carousel.tsx` | Declared, passed at nearly every call site, never read in the component body |
-| `ServiceListItem.color` | shared `HomeServiceItem` type | Required by the type, authored almost everywhere, never read by `ServicesCard.tsx` or `Capabilities.tsx` |
+| `ServiceListItem.color` | shared `HomeServiceItem` type | Never read by `ServicesCard.tsx` or `Capabilities.tsx`. Made optional on the type and removed 2026-07-06 from every `services.json`/`secondary-services.json` under `src/content/services/**` (including the top-level hub's `src/content/services/hub/services.json`) as part of [Content Type #4](#4-services-included--nested-services)'s drift fix — still present on `trade-show-booth-design/design-deliverables.json` and `trade-show-booth-builder` (both out of scope for that fix), plus one unrelated location outside the services pages entirely that still authors it (`src/content/home/services.json`) — `src/content/about-us/services.json` reuses the same item shape but was already omitting `color`/`icon`/`description` before this fix |
 | `FAQItem.image` / `icon` | `FAQAccordion.tsx` types | Declared, never rendered by `FAQAccordionItem.tsx` |
 | `SpotlightProps.secondarySpotlight` | `Spotlight.tsx` | Defined (side-by-side two-text-block mode), used by zero real pages |
-| `ClientLogosProps.logos` | `ClientLogos.tsx` | Accepted by the component, never populated by any page's content — logos are hardcoded in the component |
+| ~~`ClientLogosProps.logos`~~ | `ClientLogos.tsx` | Removed 2026-07-06 — see [Content Type #2](#2-client-logos) |
 
 ## Appendix G — New Item Components Found
 

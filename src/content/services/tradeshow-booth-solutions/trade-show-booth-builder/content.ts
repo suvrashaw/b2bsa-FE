@@ -3,10 +3,10 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHBUILDERCASESTUDIESDATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
-import BOOTHBUILDERPROOFBARDATA from "./intro.json";
+import BOOTH_BUILDER_INTRO_DATA from "./intro.json";
 
 export const BOOTH_BUILDER_INTRO = {
-  ...BOOTHBUILDERPROOFBARDATA,
+  ...BOOTH_BUILDER_INTRO_DATA,
   stats: GLOBAL_PROOF_STATS,
 };
 

@@ -35,7 +35,6 @@ const DEFAULT_CLIENT_LOGOS: ClientLogoItem[] = [
 export interface ClientLogosProps {
   description?: string;
   heading?: string;
-  logos?: ClientLogoItem[];
   overlap?: boolean;
   speed?: number;
   wheelSpeed?: number;
@@ -92,7 +91,6 @@ const LogosRow = ({
 export const ClientLogos = ({
   description,
   heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
-  logos = DEFAULT_CLIENT_LOGOS,
   overlap = true,
   speed = 2.5,
   wheelSpeed = 0.05,
@@ -130,7 +128,7 @@ export const ClientLogos = ({
           </p>
         )}
         <div className="container mx-auto flex flex-wrap justify-center gap-4 px-8 pb-10">
-          {logos.map((logo) => (
+          {DEFAULT_CLIENT_LOGOS.map((logo) => (
             <div className="flex shrink-0 items-center" key={logo.id}>
               <Image
                 alt={logo.alt}
@@ -172,14 +170,14 @@ export const ClientLogos = ({
         <motion.div className="flex w-max cursor-grab active:cursor-grabbing" style={marqueeStyle}>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
             <LogosRow
-              logos={logos}
+              logos={DEFAULT_CLIENT_LOGOS}
               onLogoMouseEnter={handleMouseEnter}
               onLogoMouseLeave={handleMouseLeave}
             />
           </div>
           <div className="flex items-center gap-10 px-8 md:gap-16 md:px-12">
             <LogosRow
-              logos={logos}
+              logos={DEFAULT_CLIENT_LOGOS}
               onLogoMouseEnter={handleMouseEnter}
               onLogoMouseLeave={handleMouseLeave}
             />

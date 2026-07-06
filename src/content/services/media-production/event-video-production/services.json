@@ -3,7 +3,6 @@
   "services": [
     {
       "category": "Event Video Services",
-      "color": "bg-brand-blue",
       "description": "Build excitement and increase event attendance with professionally produced teaser videos, invitation videos, countdown videos, and event marketing campaigns.",
       "icon": "Megaphone",
       "id": "pre-event-promo",
@@ -12,7 +11,6 @@
     },
     {
       "category": "Event Video Services",
-      "color": "bg-brand-cyan",
       "description": "Capture the best moments from conferences, exhibitions, networking sessions, keynote speeches, and trade show activities with engaging highlight reels.",
       "icon": "Play",
       "id": "event-highlights",
@@ -21,7 +19,6 @@
     },
     {
       "category": "Event Video Services",
-      "color": "bg-brand-primary",
       "description": "Extend your event impact with post-event recap videos designed for social media, internal communication, audience engagement, and future event promotion.",
       "icon": "Film",
       "id": "post-event-recap",
@@ -30,7 +27,6 @@
     },
     {
       "category": "Event Video Services",
-      "color": "bg-brand-blue",
       "description": "Showcase booth engagement, customer interactions, live demonstrations, and brand experiences with professional trade show video production.",
       "icon": "Store",
       "id": "trade-show-coverage",
@@ -39,7 +35,6 @@
     },
     {
       "category": "Event Video Services",
-      "color": "bg-brand-cyan",
       "description": "Capture executive presentations, networking experiences, fireside chats, award ceremonies, and audience interactions with high-quality event videography services.",
       "icon": "Video",
       "id": "corporate-event-videography",
@@ -48,7 +43,6 @@
     },
     {
       "category": "Event Video Services",
-      "color": "bg-brand-primary",
       "description": "Create short-form event videos optimized for LinkedIn, Instagram, YouTube, and other digital marketing channels.",
       "icon": "Share2",
       "id": "social-media-event-content",

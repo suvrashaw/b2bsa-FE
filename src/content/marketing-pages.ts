@@ -20,8 +20,7 @@ import { CORP_EVENT_PAGE } from "./services/global-event-solutions/corporate-eve
 import { CORP_NETWORKING_PAGE } from "./services/global-event-solutions/corporate-networking-events/content";
 import { EVENT_BRANDING_PAGE } from "./services/global-event-solutions/event-branding-solutions/content";
 import { EVENT_EXPERIENCE_PAGE } from "./services/global-event-solutions/event-experience-creation/content";
-import { HPMI_PAGE } from "./services/hpmi/content";
-import { MARKET_INTELLIGENCE_PAGE } from "./services/hpmi/human-powered-market-intelligence/content";
+import { MARKET_INTELLIGENCE_PAGE } from "./services/human-powered-market-intelligence/content";
 import { RESEARCH_PAGE } from "./services/market-research/content";
 import { DATA_AUGMENTATION_PAGE } from "./services/market-research/data-augmentation-services/content";
 import { DATA_VALIDATION_PAGE } from "./services/market-research/data-validation-services/content";
@@ -71,7 +70,6 @@ export const marketingPages = [
   DATA_AUGMENTATION_PAGE,
   DATA_VALIDATION_PAGE,
   MARKET_INTELLIGENCE_PAGE,
-  HPMI_PAGE,
   BOOTH_HOSTESS_PAGE,
   CORP_EVENT_PAGE,
   CORP_NETWORKING_PAGE,

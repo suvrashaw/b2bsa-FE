@@ -3,7 +3,6 @@
   "heading": "End-to-End Corporate Event Solutions Under One Roof",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "immersive event concepts designed to drive audience engagement",
       "href": "/global-event-solutions/event-experience-creation",
       "icon": "Sparkles",
@@ -12,7 +11,6 @@
       "title": "Event Experience Creation"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "end-to-end event branding and visual identity solutions",
       "href": "/global-event-solutions/event-branding-solutions",
       "icon": "Palette",
@@ -21,7 +19,6 @@
       "title": "Event Branding Solutions"
     },
     {
-      "color": "bg-brand-primary",
       "description": "professional B2B networking event planning and execution",
       "href": "/global-event-solutions/corporate-event-solutions",
       "icon": "Building2",
@@ -30,7 +27,6 @@
       "title": "Corporate Event Solutions"
     },
     {
-      "color": "bg-brand-blue",
       "description": "structured networking experiences for enterprise audiences",
       "href": "/global-event-solutions/corporate-networking-events",
       "icon": "Network",

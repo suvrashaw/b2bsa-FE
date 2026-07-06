@@ -3,7 +3,6 @@
   "heading": "How We Generate Sales Qualified Leads",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Target companies and roles by industry, size, geography, tech stack, seniority, and buying committee structure.",
       "icon": "Users",
       "id": "prospecting",
@@ -11,7 +10,6 @@
       "title": "ICP Definition and Firmographic Targeting"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "LinkedIn outbound, paid campaigns, content-led inbound, event capture, cold email simultaneously.",
       "icon": "CalendarCheck",
       "id": "appointment",
@@ -19,7 +17,6 @@
       "title": "Multi-Channel Demand Generation"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Content engagement, ad responses, website behaviour, and buying signals tracked across channels.",
       "icon": "Database",
       "id": "database",
@@ -27,7 +24,6 @@
       "title": "Intent Signal Scoring"
     },
     {
-      "color": "bg-brand-blue",
       "description": "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
       "icon": "Target",
       "id": "icp",

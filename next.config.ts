@@ -47,9 +47,9 @@ const nextConfig: NextConfig = {
   redirects: async () => {
     return [
       {
-        destination: "/services/hpmi/human-powered-market-intelligence",
+        destination: "/human-powered-market-intelligence",
         permanent: true,
-        source: "/services/hpmi",
+        source: "/hpmi",
       },
       {
         destination: "/tradeshow-calendar",

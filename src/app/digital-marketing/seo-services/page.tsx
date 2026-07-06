@@ -18,6 +18,7 @@ import {
   SEO_CONTACT_CTA,
   SEO_FAQ,
   SEO_HERO,
+  SEO_INDUSTRIES,
   SEO_INTRO,
   SEO_MODAL_SERVICE_FIELD,
   SEO_PAGE,
@@ -69,6 +70,7 @@ const Page = () => {
       faq={SEO_FAQ}
       faqVariant="accordion"
       hero={SEO_HERO}
+      industries={SEO_INDUSTRIES}
       page={SEO_PAGE}
       parentPage={PERF_PAGE}
       preProcessSections={

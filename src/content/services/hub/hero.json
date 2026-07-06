@@ -1,0 +1,7 @@
+{
+  "description": "From booth design to lead generation, media production to market research — B2B Sales Arrow delivers the full suite of services enterprise brands need to win at live events and beyond.",
+  "images": ["/media/home/hero/home_hero_bg.avif"],
+  "primaryCta": { "href": "/contact-us", "label": "Book a Strategy Session" },
+  "secondaryCta": { "href": "/case-studies", "label": "View Our Work" },
+  "title": "End-to-End B2B Event & Marketing Services"
+}

@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Corporate Event Services",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Manage event strategy, scheduling, venue coordination, audience experience, and operational planning for successful business events.",
       "icon": "Target",
       "id": "event-planning",
@@ -10,7 +9,6 @@
       "title": "Corporate Event Planning"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Deliver professional conference and executive summit experiences with seamless event coordination and onsite support.",
       "icon": "Mic",
       "id": "conference-summit",
@@ -18,7 +16,6 @@
       "title": "Conference & Summit Management"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Support trade shows and exhibitions with booth management, branding, logistics, staffing, and attendee engagement solutions.",
       "icon": "Presentation",
       "id": "trade-show",
@@ -26,7 +23,6 @@
       "title": "Trade Show & Exhibition Support"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Organize business networking events, VIP receptions, hospitality experiences, and executive meetups.",
       "icon": "Users",
       "id": "networking",
@@ -34,7 +30,6 @@
       "title": "Networking Event Solutions"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Enhance event experiences with professional branding, signage, stage setup, visual production, and media support.",
       "icon": "Palette",
       "id": "branding-production",
@@ -42,7 +37,6 @@
       "title": "Event Branding & Production"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Provide complete event management support from planning and coordination to onsite execution and post-event assistance.",
       "icon": "Zap",
       "id": "end-to-end",

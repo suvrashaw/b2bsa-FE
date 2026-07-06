@@ -2,7 +2,6 @@
   "heading": "What's Included in Our Event Branding Solutions",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Create cohesive brand experiences for conferences, executive events, networking sessions, and corporate gatherings.",
       "icon": "Palette",
       "id": "corporate-branding",
@@ -10,7 +9,6 @@
       "title": "Corporate Event Branding"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Design and execute impactful trade show booth branding that increases visibility and audience engagement.",
       "icon": "Presentation",
       "id": "booth-branding",
@@ -18,7 +16,6 @@
       "title": "Booth Branding Services"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Enhance exhibition spaces with branded backdrops, banners, graphics, signage, and experiential visual elements.",
       "icon": "Layers",
       "id": "exhibition-branding",
@@ -26,7 +23,6 @@
       "title": "Exhibition Branding Solutions"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Deliver complete onsite event branding including entrance branding, directional signage, stage visuals, and event graphics.",
       "icon": "MapPin",
       "id": "onsite-branding",
@@ -34,7 +30,6 @@
       "title": "Onsite Branding Solutions"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Support experiential marketing campaigns and branded activations that encourage audience interaction and engagement.",
       "icon": "Sparkles",
       "id": "brand-activation",
@@ -42,7 +37,6 @@
       "title": "Corporate Brand Activation"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Create immersive and visually engaging event environments that strengthen brand recall and customer experiences.",
       "icon": "Zap",
       "id": "branded-experiences",

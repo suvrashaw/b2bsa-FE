@@ -2,7 +2,6 @@
   "heading": "What We Help You Create",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "We design and manage professional event environments for business audiences, leadership teams, customers, partners, and prospects. Every element is planned to reflect your brand positioning and support meaningful conversations.",
       "icon": "Building2",
       "id": "corporate-event-experiences",
@@ -10,7 +9,6 @@
       "title": "Corporate Event Experiences"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "We help brands introduce new products, platforms, or solutions through immersive launch environments, storytelling-led presentations, live demos, visual content, and audience engagement moments.",
       "icon": "Rocket",
       "id": "product-launch-experiences",
@@ -18,7 +16,6 @@
       "title": "Product Launch Experiences"
     },
     {
-      "color": "bg-brand-primary",
       "description": "For high-value prospects and senior decision-makers, we create focused, premium experiences that encourage deeper discussion, relationship building, and trust-led selling.",
       "icon": "Crown",
       "id": "executive-roundtables",
@@ -26,7 +23,6 @@
       "title": "Executive Roundtables and Private Events"
     },
     {
-      "color": "bg-brand-blue",
       "description": "We develop interactive brand experiences that help audiences engage with your message, product, or campaign in a more memorable and participative way.",
       "icon": "Sparkles",
       "id": "brand-activations",
@@ -34,7 +30,6 @@
       "title": "Brand Activations"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "We support scalable event experience planning for brands that need to take their message across multiple cities, regions, or markets with consistency and impact.",
       "icon": "Globe2",
       "id": "roadshows-multi-city",
@@ -42,7 +37,6 @@
       "title": "Roadshows and Multi-City Events"
     },
     {
-      "color": "bg-brand-primary",
       "description": "From agenda flow to stage experience, attendee engagement, branding, and post-event handoff, we help create structured business events that deliver value for both the brand and the audience.",
       "icon": "Presentation",
       "id": "conferences-summits",
@@ -50,7 +44,6 @@
       "title": "Conferences, Summits, and Partner Events"
     },
     {
-      "color": "bg-brand-blue",
       "description": "We help brands extend event reach through virtual and hybrid experiences supported by content, streaming, digital engagement, and audience follow-up workflows.",
       "icon": "Wifi",
       "id": "hybrid-virtual-experiences",

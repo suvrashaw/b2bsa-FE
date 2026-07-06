@@ -20,7 +20,7 @@ import {
   EVENT_BRANDING_DELIVERABLES,
   EVENT_BRANDING_FAQ,
   EVENT_BRANDING_IMAGE_HERO,
-  EVENT_BRANDING_INDUSTRIES_SECTION,
+  EVENT_BRANDING_INDUSTRIES,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
   EVENT_BRANDING_WHY_CHOOSE_US,
@@ -51,11 +51,6 @@ const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index)
   image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
   label: phase.title,
 }));
-
-const SECONDARY_SERVICES = {
-  ...EVENT_BRANDING_INDUSTRIES_SECTION,
-  showCapabilityDescriptions: false,
-};
 
 const BRANDING_SPOTLIGHT = {
   ...EVENT_BRANDING_INTRO,
@@ -100,6 +95,7 @@ const Page = () => {
       faq={EVENT_BRANDING_FAQ}
       faqVariant="accordion"
       hero={EVENT_BRANDING_IMAGE_HERO}
+      industries={EVENT_BRANDING_INDUSTRIES}
       page={EVENT_BRANDING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -109,8 +105,6 @@ const Page = () => {
           services={capabilityFeatures}
         />
       }
-      secondaryServices={SECONDARY_SERVICES}
-      secondaryServicesSectionType="carousel"
       services={EVENT_BRANDING_DELIVERABLES}
       showServicesCommonCta
       spotlight={BRANDING_SPOTLIGHT}

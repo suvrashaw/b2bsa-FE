@@ -2,7 +2,6 @@
   "heading": "What We Research and Deliver",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Analysing your competitive environment — positioning, audiences, messaging, strategic gaps, and where your brand can exploit market whitespace.",
       "icon": "Map",
       "id": "competitor-analysis",
@@ -10,7 +9,6 @@
       "title": "Competitor Analysis and Landscape Mapping"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "How buyers in your category discover, evaluate, compare, and choose solutions — buying triggers, objections, decision criteria, and content preferences at each stage.",
       "icon": "UserSearch",
       "id": "buyer-behaviour",
@@ -18,7 +16,6 @@
       "title": "Buyer Behaviour and Purchase Journey Research"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Estimating market size and structure by segment, geography, industry, and account type for prioritisation, investment planning, and board communication.",
       "icon": "PieChart",
       "id": "tam-analysis",
@@ -26,7 +23,6 @@
       "title": "Total Addressable Market (TAM) Analysis"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Demand potential, competitor presence, buyer readiness, regulatory context, pricing expectations, and adoption barriers before committing a budget to a new market.",
       "icon": "Globe2",
       "id": "market-entry",
@@ -34,7 +30,6 @@
       "title": "Market Entry Feasibility Studies"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Structured interviews revealing why deals are won, lost, delayed, or displaced. Win/loss analysis is one of the highest-ROI research investments available to B2B enterprise brands.",
       "icon": "Trophy",
       "id": "win-loss",
@@ -42,7 +37,6 @@
       "title": "Win/Loss Interview Programs"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Industry specialists and practitioners providing validated perspective for high-stakes strategic decisions.",
       "icon": "Users",
       "id": "expert-panel",

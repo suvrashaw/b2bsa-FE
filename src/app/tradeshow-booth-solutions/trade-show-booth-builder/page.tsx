@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-const boothBuilderProofBar = {
+const boothBuilderSpotlight = {
   ...BOOTH_BUILDER_INTRO,
   className: "[&_p]:max-w-5xl",
 };
@@ -156,7 +156,7 @@ const Page = () => {
         </>
       }
       process={BOOTH_BUILDER_PROCESS}
-      proofBar={boothBuilderProofBar}
+      spotlight={boothBuilderSpotlight}
     />
   );
 };

@@ -9,6 +9,7 @@ import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
+import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
 import { PricingCard } from "@/components/items/PricingCard";
 import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Footer } from "@/components/layout/Footer";
@@ -56,6 +57,18 @@ export interface ServicePageProps {
 
   // ─── Hero ───────────────────────────────────────
   hero?: HeroProps;
+  // ─── Industries We Support ───────────────────────
+  industries?: {
+    description?: string;
+    heading: string;
+    items: {
+      description?: string;
+      icon: string;
+      id: string;
+      image?: string;
+      title: string;
+    }[];
+  };
   page: MarketingPageIdentity;
 
   // ─── SEO ────────────────────────────────────────
@@ -75,14 +88,6 @@ export interface ServicePageProps {
     steps?: { description: string; title: string }[];
     title?: string;
   };
-  proofBar?: {
-    className?: string;
-    description?: ReactNode;
-    heading?: string;
-    imageUrl: string;
-    stats: string[];
-  };
-
   relatedServicesHeading?: ReactNode;
 
   secondaryServices?: ServicesStackProps;
@@ -157,13 +162,13 @@ export const ServicePage = ({
   faq,
   faqVariant: _faqVariant,
   hero,
+  industries,
   page,
   parentPage,
   preContactSections,
   preProcessSections,
   preStudiesSections,
   process,
-  proofBar,
   relatedServicesHeading,
   secondaryServices,
   secondaryServicesSectionType = "grid",
@@ -240,25 +245,25 @@ export const ServicePage = ({
         overlap={false}
       />
 
-      {(spotlight || proofBar) && (
+      {spotlight && (
         <Spotlight
-          align={spotlight?.align ?? "left"}
-          ctaLabel={spotlight?.ctaLabel}
-          description={spotlight?.description ?? proofBar?.description ?? ""}
-          descriptionItems={spotlight?.descriptionItems}
-          imageAlt={spotlight?.imageAlt ?? "Feature image"}
-          imageContainerClassName={spotlight?.imageContainerClassName}
-          imagePosition={spotlight?.imagePosition ?? "right"}
-          imageUrl={spotlight?.imageUrl ?? proofBar?.imageUrl}
+          align={spotlight.align ?? "left"}
+          ctaLabel={spotlight.ctaLabel}
+          description={spotlight.description ?? ""}
+          descriptionItems={spotlight.descriptionItems}
+          imageAlt={spotlight.imageAlt ?? "Feature image"}
+          imageContainerClassName={spotlight.imageContainerClassName}
+          imagePosition={spotlight.imagePosition ?? "right"}
+          imageUrl={spotlight.imageUrl}
           label="INTRODUCTION"
-          locationBadges={spotlight?.locationBadges}
-          secondarySpotlight={spotlight?.secondarySpotlight}
-          sectionClassName={spotlight?.sectionClassName}
-          stats={spotlight?.stats ?? proofBar?.stats}
-          titleLine1={spotlight?.titleLine1 ?? proofBar?.heading ?? ""}
-          titleLine2={spotlight?.titleLine2 ?? ""}
-          triggerContactModal={spotlight?.triggerContactModal}
-          videoUrl={spotlight?.videoUrl}
+          locationBadges={spotlight.locationBadges}
+          secondarySpotlight={spotlight.secondarySpotlight}
+          sectionClassName={spotlight.sectionClassName}
+          stats={spotlight.stats}
+          titleLine1={spotlight.titleLine1}
+          titleLine2={spotlight.titleLine2 ?? ""}
+          triggerContactModal={spotlight.triggerContactModal}
+          videoUrl={spotlight.videoUrl}
         />
       )}
 
@@ -281,6 +286,26 @@ export const ServicePage = ({
       )}
 
       {secondaryServices && renderServicesSection(secondaryServices, secondaryServicesSectionType)}
+
+      {industries && (
+        <CardsGrid
+          cols={4}
+          description={industries.description}
+          heading={industries.heading}
+          id="industries"
+        >
+          {industries.items.map((item, i) => (
+            <IndustryShaderCard
+              description={item.description}
+              icon={item.icon}
+              image={item.image}
+              index={i}
+              key={item.id}
+              title={item.title}
+            />
+          ))}
+        </CardsGrid>
+      )}
 
       {preStudiesSections}
 

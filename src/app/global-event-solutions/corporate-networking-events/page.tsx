@@ -22,7 +22,7 @@ import {
   CORP_NETWORKING_EVENT_TYPES,
   CORP_NETWORKING_FAQ,
   CORP_NETWORKING_IMAGE_HERO,
-  CORP_NETWORKING_INDUSTRIES_SECTION,
+  CORP_NETWORKING_INDUSTRIES,
   CORP_NETWORKING_INTRO,
   CORP_NETWORKING_PAGE,
   CORP_NETWORKING_WHY_CHOOSE_US,
@@ -97,6 +97,7 @@ const Page = () => {
       faq={CORP_NETWORKING_FAQ}
       faqVariant="accordion"
       hero={CORP_NETWORKING_IMAGE_HERO}
+      industries={CORP_NETWORKING_INDUSTRIES}
       page={CORP_NETWORKING_PAGE}
       parentPage={GES_PAGE}
       preProcessSections={
@@ -119,8 +120,6 @@ const Page = () => {
           )}
         />
       }
-      secondaryServices={CORP_NETWORKING_INDUSTRIES_SECTION}
-      secondaryServicesSectionType="carousel"
       services={CORP_NETWORKING_DELIVERABLES}
       showServicesCommonCta
       spotlight={CORP_NETWORKING_INTRO}
