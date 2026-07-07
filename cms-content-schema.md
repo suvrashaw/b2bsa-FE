@@ -67,7 +67,7 @@ The only legitimate exceptions:
 1. **Logic-defined sections** — content computed at render time rather than authored, e.g. `RelatedServicesCard.tsx` (see [Related Services](#related-services-auto-derived--not-a-content-type)).
 2. **Shared/common-pool sections** — content correctly pulled from one site-wide JSON pool instead of being duplicated per page, e.g. `BlogsCarouselCard.tsx` (`src/content/blogs/blogs.json`) and `CaseStudies.tsx` (`src/content/case-studies/case-studies.json`).
 
-This rule holds on the large majority of pages — **9 of 23 leaves and all 7 hubs have zero violations**. Every violation found is listed in full in [Appendix C](#appendix-c--pagetsx-content-purity-violations).
+**Update (2026-07-08) — this rule now holds on every page.** What was originally "9 of 23 leaves and all 7 hubs have zero violations" is, as of 2026-07-08, **all 23 leaves and all 7 hubs** — every violation found in the original audit has been resolved. Full history in [Appendix C](#appendix-c--pagetsx-content-purity-violations).
 
 ---
 
@@ -87,7 +87,7 @@ This rule holds on the large majority of pages — **9 of 23 leaves and all 7 hu
 
 | # | Content Type | Section Identity | Canonical Filename | Tier(s) | Status |
 |---|---|---|---|---|---|
-| 1 | Hero | `Hero.tsx` | `hero.json` | All 30 | ✅ (one dead field, see Appendix F) |
+| 1 | Hero | `Hero.tsx` | `hero.json` | All 30 | ✅ resolved 2026-07-08 — dead `secondaryCta` field removed, see Appendix F |
 | 2 | Client Logos | `ClientLogos.tsx` | `client-logos.json` | All 30 | ✅ resolved 2026-07-06 — dead `logos` prop removed |
 | 3 | Introduction | `Spotlight.tsx` (`spotlight` prop) | `intro.json` | All 30 | ✅ resolved 2026-07-06 — one filename, one shape |
 | 4 | Services Included / Nested Services | `ServicesStack.tsx`+`ServicesCard.tsx` (grid) or `Capabilities.tsx` (carousel) | `services.json` | All 30 — meaning differs by tier | ✅ resolved 2026-07-06 — filename drift fixed; rendering choice remains per-page (by design, not drift) |
@@ -109,11 +109,11 @@ This rule holds on the large majority of pages — **9 of 23 leaves and all 7 hu
 
 ### 1. Hero
 
-**Section identity:** `Hero.tsx` · **Canonical filename:** `hero.json` · **Status:** ✅
+**Section identity:** `Hero.tsx` · **Canonical filename:** `hero.json` · **Status:** ✅ resolved 2026-07-08
 
 Universal — every page has one. Two shape variants exist: a standard photo hero, and a video hero (adds `videoUrl`/`videoWebm`/`mobileVideoUrl`/`mobileVideoWebm`), confirmed on `event-live-streaming-services` and `corporate-networking-events`.
 
-**Confirmed issue:** `ServicePage.tsx` renders `<Hero {...hero} secondaryCta={undefined} />` — the `secondaryCta` field is force-discarded on every single page, even though nearly every `hero.json` authors a real one. New content should omit `secondaryCta` until this override is removed at the code level (see Appendix F) — authoring it currently has no visible effect.
+**Update (2026-07-08) — resolved, not just documented.** This section used to describe `secondaryCta` as force-discarded by `ServicePage.tsx` (`<Hero {...hero} secondaryCta={undefined} />`) despite being authored in 30/30 `hero.json` files. The field has been removed entirely: from `HeroProps`, from `Hero.tsx`'s render logic, from the `ServicePage.tsx` override line (now just `<Hero {...hero} />`), and stripped from all 30 `hero.json` files. See Appendix F.
 
 ```ts
 interface HeroContent {
@@ -121,7 +121,6 @@ interface HeroContent {
   title: string;                 // "\n" splits into separately-animated lines
   description?: string;
   primaryCta?: { href: string; label: string };
-  secondaryCta?: { href: string; label: string }; // currently dead — see Appendix F
   images?: string[];             // photo-rotation mode; omit for video mode
   videoUrl?: string;
   videoWebm?: string;
@@ -202,9 +201,10 @@ interface ServiceListItem {
   icon: string;
   image: string;
   href?: string;       // present → links to a page; absent → opens the contact modal
-  color?: string;      // dead field, see Appendix F — now stripped from every services.json/secondary-services.json under src/content/services/** except the excluded pages below
 }
 ```
+
+**Update (2026-07-08) — `color` fully removed, no exceptions remaining.** The two holdouts noted here previously (`trade-show-booth-design/design-deliverables.json`, `src/content/home/services.json`) are now stripped, and `color?: string` was deleted from the shared `HomeServiceItem` interface itself. See Appendix F.
 
 **Update (2026-07-06) — filename drift resolved.** Every instance of this content type across `src/content/services/**` — previously scattered across `services.json`, `whats-included.json`, `*-deliverables.json`, and one stray `capabilities.json` (`corporate-video-production`, an undocumented instance of the same drift) — is now named `services.json`. The two folders that legitimately hold two instances of this shape in one page (`human-powered-market-intelligence`: primary deliverables + secondary research cards; `modular-booth-solutions`: primary deliverables + secondary range section) use `services.json` for the primary `services` prop and `secondary-services.json` for `secondaryServices`, following the same disambiguation precedent as the Why-Choose-Us / Why-Spotlight split (#7 vs #8). The dead `ServiceListItem.color` field (see Appendix F) was removed from every content file touched by this fix — see that appendix for the two pages still carrying it. `trade-show-booth-design` and `trade-show-booth-builder` were intentionally left out of this fix: `trade-show-booth-design` at the requester's explicit instruction, and `trade-show-booth-builder` because its `builder-pricing.json` is a structurally different content type (see #10) rendered by hand, not through `ServicesStack`/`Capabilities` at all.
 
@@ -233,7 +233,7 @@ interface CapabilitiesContent {
 }
 ```
 
-**Confirmed orphaned files:** `performance-marketing` and `seo-services` both have a `capabilities.json` on disk that their `page.tsx` never imports or renders at all — their sibling `social-media-marketing` renders it correctly. File presence on disk does not mean the content is live; always check the page's actual imports.
+~~**Confirmed orphaned files:** `performance-marketing` and `seo-services` both have a `capabilities.json` on disk that their `page.tsx` never imports or renders at all~~ — **deleted 2026-07-08**, see Appendix B. File presence on disk does not mean the content is live; always check the page's actual imports.
 
 ### 6. Industries We Support
 
@@ -247,7 +247,7 @@ All of this was consolidated onto one component pairing (`CardsGrid.tsx`+`Indust
 - `performance-marketing`, `seo-services`: their orphaned, mis-shaped `industries.json` files were rewritten into the canonical shape and wired up for the first time — previously authored but never rendered.
 - `social-media-marketing`: its unique per-page industry list was preserved but rewritten into the canonical shape; the hand-rolled `<section id="industries">` block was replaced with the `industries` prop.
 - `event-experience-creation`, `booth-hostess-services`: previously had no Industries treatment at all; each got a new `industries.json` (heading only) with items sourced from `GLOBAL_INDUSTRY_SERVICES`, matching their GES/tradeshow-booth sibling pages.
-- `corporate-video-production` has a fourth, previously-undocumented orphaned `industries.json` on disk (`{description, heading, industries: [{title, description}]}`, no icon/image, never imported) — **left unresolved**, out of scope for this pass.
+- ~~`corporate-video-production` has a fourth, previously-undocumented orphaned `industries.json` on disk (`{description, heading, industries: [{title, description}]}`, no icon/image, never imported)~~ — **deleted 2026-07-08**, see Appendix B.
 
 ```ts
 interface IndustriesContent {
@@ -298,7 +298,7 @@ interface WhyChooseUsCardItem {
 
 **Rule (2026-07-07) — Cards vs. Spotlight is content-shape-driven, not arbitrary:** if the "why choose us" content is naturally a **list of discrete, parallel items** (3+ independent benefit/feature points, each with its own short title), render it as **Cards** (this content type, `Carousel.tsx`+`BoothWhyCard.tsx`, `why-choose-us.json`). If it's a **single continuous narrative** (one flowing argument/case, even if it spans two paragraphs or references multiple examples in-line), render it as **Spotlight** (#8, `Spotlight.tsx` via the `why` prop, `why-spotlight.json`). Do not force a narrative into card-shaped items, and do not flatten a genuine item list into prose just to use Spotlight.
 
-**Confirmed compliant (2026-07-07 audit)** against this rule: `event-lead-generation`, `modular-booth-solutions`, and `event-video-production` all use Spotlight, and in every case their `why.json`/`why-spotlight.json` content is a single narrative block with no `items` array — correct per the rule. (`event-lead-generation`'s content is re-exported wholesale from its parent hub's `why.json`, per [Appendix D](#appendix-d--cross-page-content-borrowing) — a separate, pre-existing borrowing pattern, not a rule violation.) `data-validation-services`, `data-augmentation-services`, and `hpmi` have no Why-Choose-Us section at all — whether they get one, and in which shape, is a separate content-authoring decision, out of scope for this rule check.
+**Confirmed compliant (2026-07-07 audit)** against this rule: `event-lead-generation`, `modular-booth-solutions`, and `event-video-production` all use Spotlight, and in every case their `why-spotlight.json` content is a single narrative block with no `items` array — correct per the rule. (**Update (2026-07-08):** `event-lead-generation`'s `why-spotlight.json` used to be re-exported wholesale from its parent hub's file, per [Appendix D](#appendix-d--cross-page-content-borrowing) — it now has its own independent copy; the Cards-vs-Spotlight shape compliance itself was never in question either way.) `data-validation-services`, `data-augmentation-services`, and `hpmi` have no Why-Choose-Us section at all — whether they get one, and in which shape, is a separate content-authoring decision, out of scope for this rule check.
 
 ### 8. Why Choose Us — Spotlight Block
 
@@ -320,7 +320,9 @@ interface WhyChooseUsSpotlightContent {
 }
 ```
 
-Used on all 6 category hubs, the top-level hub, and on `modular-booth-solutions` and `event-video-production` **instead of** the cards variant (neither of those two has a cards section at all). `event-lead-generation` also uses this variant instead of cards. `corporate-video-production` is the one page confirmed to have **both** — a cards Carousel in `customSections` *and* a `why` prop. (`trade-show-booth-rental`, despite having a `why.json`-shaped file on disk per the wider content audit, does not actually pass a `why` prop in its `page.tsx` — it only renders the cards variant, using content borrowed from `trade-show-booth-design`. That file may be present but unwired, similar to the orphaned-content pattern in Appendix B.) This is a genuinely different content type that happens to share a name with #7 — the filename split above is what disambiguates the two going forward.
+Used on all 6 category hubs, the top-level hub, and on `modular-booth-solutions` and `event-video-production` **instead of** the cards variant (neither of those two has a cards section at all). `event-lead-generation` also uses this variant instead of cards. `corporate-video-production` is the one page confirmed to have **both** — a cards Carousel in `customSections` *and* a `why` prop (left as-is, not flagged as a violation — see Appendix D). This is a genuinely different content type that happens to share a name with #7 — the filename split above is what disambiguates the two going forward.
+
+**Update (2026-07-08) — `trade-show-booth-rental` note corrected.** This entry used to describe `trade-show-booth-rental` as having an unwired `why.json`-shaped orphan on disk while only rendering the cards variant (borrowed from `trade-show-booth-design`). That orphan has since been deleted (see Appendix B) — it was genuinely dead, not a missed wiring opportunity. The page still only uses the cards variant, correctly, but now via its own independent `why-choose-us.json` rather than a live import from `trade-show-booth-design` (see Appendix D).
 
 ### 9. Process / How It Works
 
@@ -395,7 +397,7 @@ interface CaseStudyEntry {
 
 - **Icon synthesis fixed.** Every entry in the shared pool (`src/content/case-studies/case-studies.json`) now authors its own `icon` field (e.g. `Hammer`, `Landmark`, `Cpu`, `Plane` — all from `Icon.tsx`'s existing allow-list), added to the `CaseStudyEntry` interface in `src/content/case-studies/index.ts`. `CaseStudies.tsx` already read `study.icon` when present, falling back to the `Target`/`Sparkles`/`Building2` cycle only when omitted — that fallback still exists in the component for defensive/future use but is no longer exercised by any of the 9 real entries.
 - **Naming outlier fixed.** `corporate-video-production`'s `CORPORATE_VIDEO_PORTFOLIO` was renamed to `CORPORATE_VIDEO_CASE_STUDIES`, matching the `<PREFIX>_CASE_STUDIES` convention used by every other page.
-- **`event-lead-generation` no longer aliases its parent hub's case-studies wrapper.** It now has its own `case-studies.json` (own heading/description) instead of re-exporting `SQL_CASE_STUDIES`. It still renders the same shared `GLOBAL_CASE_STUDIES` 5-of-9 subset as every other page — only the wrapper heading/description is now independent, consistent with how this page's Appendix D borrowing was scoped for its other sections.
+- **`event-lead-generation` no longer aliases its parent hub's case-studies wrapper.** It now has its own `case-studies.json` (own heading/description) instead of re-exporting `SQL_CASE_STUDIES`. It still renders the same shared `GLOBAL_CASE_STUDIES` 5-of-9 subset as every other page — only the wrapper heading/description is independent (case-studies was never part of this page's Appendix D wholesale-borrowing list in the first place — see that appendix's 2026-07-08 correction). **As of 2026-07-08, this page's other genuinely-borrowed sections (contact/FAQ/process/services/why) are independent too** — see Appendix D.
 
 ### 12. Latest Insights / Blogs
 
@@ -436,7 +438,7 @@ interface FAQItemContent {
 }
 ```
 
-Zero shape drift found across the codebase. Only gaps: `event-lead-generation` has no independent FAQ (aliases its parent hub's wholesale), and the top-level `/services` hub's `HUB_FAQ` contains literal placeholder Lorem-ipsum text for all 6 Q&A pairs, never replaced with real content.
+Zero shape drift found across the codebase. ~~Only gaps: `event-lead-generation` has no independent FAQ (aliases its parent hub's wholesale)~~ — **resolved 2026-07-08**, it now has its own `faq.json` (see Appendix D). Remaining gap: the top-level `/services` hub's `HUB_FAQ` contains literal placeholder Lorem-ipsum text for all 6 Q&A pairs, never replaced with real content — left alone deliberately, this is a copywriting task, not a schema fix.
 
 ### 14. Contact CTA
 
@@ -461,7 +463,7 @@ interface ContactCtaContent {
 
 **Section identity:** `CardsGrid.tsx`+`RelatedServicesCard.tsx` · **Status:** ∅ — not authored content
 
-Confirmed: `ServicePage.tsx` computes this at render time — it looks up the current page in `navigation.json`'s `serviceNavigationGroups[].links`, takes the other leaves in the same nav group, and shuffles them with an **un-memoized `Math.random()`** (`otherServices.toSorted(() => 0.5 - Math.random())` — there's an `eslint-disable react-hooks/purity, sonarjs/pseudo-random` comment acknowledging this), taking the first 3 as `{ href, title }` cards.
+Confirmed: `ServicePage.tsx` computes this at render time — it looks up the current page in `navigation.json`'s `serviceNavigationGroups[].links`, takes the other leaves in the same nav group, shuffles them, and takes the first 3 as `{ href, title }` cards. **Update (2026-07-08):** the shuffle used to be `otherServices.toSorted(() => 0.5 - Math.random())` (non-deterministic, with an `eslint-disable react-hooks/purity, sonarjs/pseudo-random` comment acknowledging the issue) — it's now a small seeded PRNG (`hashString` + `seededShuffle`) keyed on `page.seo.canonicalPath`, so the same page always produces the same order. See Appendix H.
 
 **The auto-derived link list itself is intentionally non-content — do not add a field for the links to any page.** The list is computed from category membership, not authored. **Correction (2026-07-08):** an earlier version of this section extended that same "don't make it content" guidance to the `relatedServicesHeading` override too, lumping it in with the auto-derived list — that was wrong. The heading is a real, independently-authored string (it varies from the default "Explore Related Solutions" specifically because these 3 pages wanted different wording), so it's exactly the kind of thing the content-purity rule covers, unlike the computed link list itself. It's now content-sourced — see Appendix C.
 
@@ -522,7 +524,7 @@ Every item below is a literal heading/CTA/icon-name/image-URL/text-array written
 - ~~**`booth-logistics-services`**: hardcoded `label` string ("Plan Your Event Logistics") on a `ContactModalTrigger` instance~~ — **resolved 2026-07-08.** New `logistics-cta.json` (`{ label }`) added; the trigger now reads `EVENT_LOGISTICS_CTA.label`.
 - ~~**`trade-show-booth-rental`**: `BOOTH_RENTAL_RANGE_REASONS` — 5 complete content objects... in no JSON file at all~~ — **resolved 2026-07-08.** Moved verbatim into new `rental-range.json` (`{ ctaLabel, heading, items: [...] }`), `color` dropped, `icon` authored per item (previously always the single literal `"Star"`). The page's Why-Choose-Us Carousel heading and items, previously borrowed live from `trade-show-booth-design`, now come from this page's own new `why-choose-us.json` (same duplication precedent as booth-builder). **Note:** the `Coins`/`Move`/`Truck` icon-matching JSX in the separate `BOOTH_RENTAL_RENT_VS_BUY` block (`rental-rent-vs-buy.json`) was intentionally left as-is — on inspection its icon *values* were already content-sourced from that JSON; only the render dispatch (`reason.icon === "Coins" ? <Coins/> : ...`) is inline JS, which is a code-pattern nitpick (could use the shared `Icon.tsx` lookup instead), not a content-purity violation under this doc's rule.
 
-**Confirmed clean:** `event-lead-generation`, `hpmi`, `data-augmentation-services`, `data-validation-services`, `modular-booth-solutions`, `event-video-production`, `performance-marketing`, `seo-services`, `social-media-marketing`, `trade-show-booth-builder`, `trade-show-booth-design`, `trade-show-booth-rental`, `booth-hostess-services`, `booth-logistics-services`, `virtual-video-production`, `event-live-streaming-services`, `event-experience-video-production`, `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `event-experience-creation`, and all 7 hub-tier pages. **As of 2026-07-08, every leaf and hub page in the entire services tree is clean of Appendix C content-purity violations** — the only two genuinely open items left anywhere in this doc are the top-level hub's Lorem-ipsum `HUB_FAQ` (Appendix B, deliberately out of scope) and the cross-page content-borrowing in Appendix D (`event-lead-generation`, top-level hub — scheduled for Batches 4–5).
+**Confirmed clean:** `event-lead-generation`, `hpmi`, `data-augmentation-services`, `data-validation-services`, `modular-booth-solutions`, `event-video-production`, `performance-marketing`, `seo-services`, `social-media-marketing`, `trade-show-booth-builder`, `trade-show-booth-design`, `trade-show-booth-rental`, `booth-hostess-services`, `booth-logistics-services`, `virtual-video-production`, `event-live-streaming-services`, `event-experience-video-production`, `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `event-experience-creation`, and all 7 hub-tier pages. **As of 2026-07-08, every leaf and hub page in the entire services tree is clean of Appendix C content-purity violations, and the Appendix D cross-page content-borrowing is fully resolved too.** The only genuinely open item left anywhere in this doc is the top-level hub's Lorem-ipsum `HUB_FAQ` (Appendix B), deliberately left alone — a copywriting task, not a schema fix.
 
 ## Appendix D — Cross-Page Content Borrowing
 
