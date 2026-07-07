@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Carousel } from "@/components/sections/Carousel";
-import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -93,14 +92,11 @@ const Page = () => {
       page={VIRTUAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <>
-          <ServicesScroll
-            description={VIRTUAL_VIDEO_CAPABILITIES.description}
-            heading={VIRTUAL_VIDEO_CAPABILITIES.title}
-            services={capabilityFeatures}
-          />
-          <SectionContactCta label="Contact Our Team" />
-        </>
+        <ServicesScroll
+          description={VIRTUAL_VIDEO_CAPABILITIES.description}
+          heading={VIRTUAL_VIDEO_CAPABILITIES.title}
+          services={capabilityFeatures}
+        />
       }
       relatedServicesHeading="Related Event & Media Production Services"
       services={VIRTUAL_VIDEO_DELIVERABLES}

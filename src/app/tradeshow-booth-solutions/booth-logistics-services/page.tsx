@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesScroll } from "@/components/sections/ServicesScroll";
+import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
@@ -106,17 +106,11 @@ const Page = () => {
       }
       preStudiesSections={
         <>
-          <CardsGrid
-            className="bg-brand-charcoal/5"
-            cols={3}
-            cta={<ContactModalTrigger label="Get a Logistics Quote" />}
+          <StickyScroll
             heading={EVENT_LOGISTICS_BENEFITS.heading}
-            id="benefits"
-          >
-            {EVENT_LOGISTICS_BENEFITS.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
-            ))}
-          </CardsGrid>
+            reasons={EVENT_LOGISTICS_BENEFITS.reasons}
+            showCta={false}
+          />
         </>
       }
       services={EVENT_LOGISTICS_DELIVERABLES}

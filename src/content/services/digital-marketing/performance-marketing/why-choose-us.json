@@ -2,32 +2,38 @@
   "heading": "Why Choose B2B Sales Arrow for Performance Marketing Services",
   "items": [
     {
-      "description": "Every campaign is measured against qualified leads, pipeline influenced, and cost per qualified opportunity \u2014 not clicks and impressions.",
+      "description": "Every campaign is measured against qualified leads, pipeline influenced, and cost per qualified opportunity — not clicks and impressions.",
+      "icon": "Target",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Pipeline-First Measurement"
     },
     {
-      "description": "We design campaigns for buying committees of 3\u20137 decision-makers with 3\u201318 month sales cycles \u2014 not consumer buying behaviour.",
+      "description": "We design campaigns for buying committees of 3–7 decision-makers with 3–18 month sales cycles — not consumer buying behaviour.",
+      "icon": "Award",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Built for Enterprise B2B"
     },
     {
       "description": "Audience definition, ad copy, landing page, bid strategy, and attribution designed as one system from the first brief.",
+      "icon": "Network",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Integrated Campaign Architecture"
     },
     {
-      "description": "We improve landing pages, forms, CTAs, and trust signals so more qualified visitors become leads \u2014 not just more traffic.",
+      "description": "We improve landing pages, forms, CTAs, and trust signals so more qualified visitors become leads — not just more traffic.",
+      "icon": "TrendingUp",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Conversion Rate Optimisation"
     },
     {
-      "description": "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads \u2014 all under one team, one budget, one outcome.",
+      "description": "Google Search, Display, YouTube, programmatic, retargeting, and Microsoft Ads — all under one team, one budget, one outcome.",
+      "icon": "Globe2",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Multi-Channel Paid Coverage"
     },
     {
       "description": "Named account lists, buying committee role segmentation, and digital surround-sound for high-value enterprise targets.",
+      "icon": "Users2",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Account-Based Advertising"
     }

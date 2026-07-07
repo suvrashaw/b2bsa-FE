@@ -1,6 +1,9 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
+import BLOG_DATA from "./blog.json";
 import BOOTHDESIGNCASESTUDIESDATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
 import BOOTHDESIGNPROOFBARDATA from "./intro.json";
@@ -19,7 +22,8 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
-export { default as BOOTH_DESIGN_BLOGS_SECTION } from "./blog.json";
+export const BOOTH_DESIGN_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
+
 export { default as BOOTH_DESIGN_CLIENT_LOGOS } from "./client-logos.json";
 export { default as BOOTH_DESIGN_DELIVERABLES } from "./design-deliverables.json";
 

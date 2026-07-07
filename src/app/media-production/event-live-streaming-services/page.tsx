@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { Carousel } from "@/components/sections/Carousel";
-import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -88,7 +87,6 @@ const Page = () => {
             {...LIVE_STREAMING_AREAS_INTRO}
             locationBadges={LIVE_STREAMING_LOCATION_BADGES}
           />
-          <SectionContactCta />
         </>
       }
       relatedServicesHeading="Related Event & Media Production Services"

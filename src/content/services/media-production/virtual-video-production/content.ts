@@ -1,6 +1,9 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
+import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
 import VIRTUALVIDEOCONTACTCTA_DATA from "./contact.json";
 import INTRO_DATA from "./intro.json";
@@ -14,7 +17,7 @@ export const VIRTUAL_VIDEO_CONTACT_CTA = {
   ...VIRTUALVIDEOCONTACTCTA_DATA,
 };
 
-export { default as VIRTUAL_VIDEO_BLOGS_SECTION } from "./blog.json";
+export const VIRTUAL_VIDEO_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 export { default as VIRTUAL_VIDEO_CAPABILITIES } from "./capabilities.json";
 export { default as VIRTUAL_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 export { default as VIRTUAL_VIDEO_FAQ } from "./faq.json";

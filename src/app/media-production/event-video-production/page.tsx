@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { Carousel } from "@/components/sections/Carousel";
-import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -57,7 +56,6 @@ const Page = () => {
       hero={EVENT_VIDEO_HERO}
       page={EVENT_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      preProcessSections={<SectionContactCta />}
       services={EVENT_VIDEO_DELIVERABLES}
       showServicesCommonCta
       spotlight={EVENT_VIDEO_INTRO}

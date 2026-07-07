@@ -1,0 +1,964 @@
+{
+  "sales-qualified-lead-generation/event-lead-generation/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "parentPage",
+      "preStudiesSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [],
+      "preStudiesSections": [
+        "LeadPipelineSection"
+      ],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "sales-qualified-lead-generation/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "market-research/data-augmentation-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "servicesSectionType",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "market-research/data-validation-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "servicesSectionType",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "market-research/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "human-powered-market-intelligence/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "secondaryServices",
+      "secondaryServicesSectionType",
+      "services",
+      "servicesSectionType",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "media-production/corporate-video-production/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "servicesSectionType",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "SectionContactCta"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "media-production/event-experience-video-production/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "relatedServicesHeading",
+      "services",
+      "showPhaseNumbers",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll",
+        "SectionContactCta"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "JSX String Prop: relatedServicesHeading=\"Related Event & Media Production Services\""
+    ]
+  },
+  "media-production/event-live-streaming-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "relatedServicesHeading",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll",
+        "Spotlight",
+        "SectionContactCta"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: LIVE_STREAMING_LOCATION_BADGES",
+      "JSX String Prop: relatedServicesHeading=\"Related Event & Media Production Services\""
+    ]
+  },
+  "media-production/event-physical-video-shoot/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "process",
+      "services",
+      "showPhaseNumbers",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "StickyScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "media-production/event-video-production/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "creativePricing",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "SectionContactCta"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "media-production/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "media-production/virtual-video-production/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "relatedServicesHeading",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll",
+        "SectionContactCta"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets",
+      "JSX String Prop: label=\"Contact Our Team\"",
+      "JSX String Prop: relatedServicesHeading=\"Related Event & Media Production Services\""
+    ]
+  },
+  "global-event-solutions/corporate-event-solutions/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets"
+    ]
+  },
+  "global-event-solutions/corporate-networking-events/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "preStudiesSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll"
+      ],
+      "preStudiesSections": [
+        "StickyScroll"
+      ],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets"
+    ]
+  },
+  "global-event-solutions/event-branding-solutions/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets"
+    ]
+  },
+  "global-event-solutions/event-experience-creation/page.tsx": {
+    "props": [
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "ServicesScroll",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll",
+        "Spotlight",
+        "StickyScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets"
+    ]
+  },
+  "global-event-solutions/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "digital-marketing/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "digital-marketing/performance-marketing/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesStack"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "digital-marketing/seo-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesStack"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "digital-marketing/social-media-marketing/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "StickyScroll",
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesStack",
+        "ServicesScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "tradeshow-booth-solutions/booth-hostess-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets"
+    ]
+  },
+  "tradeshow-booth-solutions/booth-logistics-services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "industries",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "preStudiesSections",
+      "services",
+      "showServicesCommonCta",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesScroll",
+        "ContactModalTrigger"
+      ],
+      "preStudiesSections": [
+        "CardsGrid",
+        "ContactModalTrigger",
+        "BoothWhyCard"
+      ],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: capabilityAssets",
+      "JSX String Prop: label=\"Plan Your Event Logistics\"",
+      "JSX String Prop: label=\"Get a Logistics Quote\""
+    ]
+  },
+  "tradeshow-booth-solutions/modular-booth-solutions/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "hero",
+      "page",
+      "parentPage",
+      "secondaryServices",
+      "secondaryServicesSectionType",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "tradeshow-booth-solutions/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "process",
+      "services",
+      "showServicesCommonCta",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  },
+  "tradeshow-booth-solutions/trade-show-booth-builder/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "creativePricing",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "preStudiesSections",
+      "process",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesStack"
+      ],
+      "preStudiesSections": [
+        "CardsGrid",
+        "BasicCards"
+      ],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "JSX String Prop: heading=\"Why Choose B2B Sales Arrow for Trade Show Booth Builder Services\"",
+      "JSX String Prop: heading=\"Booth Sizes and Formats We Design\""
+    ]
+  },
+  "tradeshow-booth-solutions/trade-show-booth-design/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preContactSections",
+      "preProcessSections",
+      "process",
+      "services",
+      "servicesSectionType",
+      "showPhaseNumbers",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "CardsGrid",
+        "Button",
+        "Link",
+        "EventsCard",
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "ServicesStack"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": [
+        "Button",
+        "Link"
+      ]
+    },
+    "hardcodedLiterals": [
+      "JSX String Prop: heading=\"Booth Sizes and Formats We Design\""
+    ]
+  },
+  "tradeshow-booth-solutions/trade-show-booth-rental/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "customSections",
+      "faq",
+      "faqVariant",
+      "hero",
+      "page",
+      "parentPage",
+      "preProcessSections",
+      "process",
+      "spotlight"
+    ],
+    "slots": {
+      "customSections": [
+        "Carousel",
+        "BoothWhyCard",
+        "Carousel",
+        "Button",
+        "Link",
+        "BlogsCarouselCard"
+      ],
+      "preProcessSections": [
+        "CardsGrid",
+        "Coins",
+        "Move",
+        "Truck",
+        "ServicesStack"
+      ],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": [
+      "Array: BOOTH_RENTAL_RANGE_REASONS",
+      "JSX String Prop: heading=\"Why Choose B2B Sales Arrow for Trade Show Booth Rental Services\"",
+      "JSX String Prop: heading=\"Our Rental Booth Range\""
+    ]
+  },
+  "services/page.tsx": {
+    "props": [
+      "caseStudies",
+      "clientLogos",
+      "contactUs",
+      "faq",
+      "hero",
+      "page",
+      "services",
+      "spotlight",
+      "why"
+    ],
+    "slots": {
+      "customSections": [],
+      "preProcessSections": [],
+      "preStudiesSections": [],
+      "preContactSections": []
+    },
+    "hardcodedLiterals": []
+  }
+}

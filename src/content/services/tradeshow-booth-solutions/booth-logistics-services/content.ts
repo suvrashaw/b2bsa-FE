@@ -1,6 +1,9 @@
+import type { BlogsSectionContent } from "@/content/blogs";
+
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
+import BLOG_DATA from "./blog.json";
 import EVENTLOGISTICSCASESTUDIESDATA from "./case-studies.json";
 import CONTACT_DATA from "./contact.json";
 import INDUSTRIES_DATA from "./industries.json";
@@ -19,7 +22,8 @@ export const EVENT_LOGISTICS_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
-export { default as EVENT_LOGISTICS_BLOGS_SECTION } from "./blog.json";
+export const EVENT_LOGISTICS_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
+
 export { default as EVENT_LOGISTICS_CAPABILITIES } from "./capabilities.json";
 export { default as EVENT_LOGISTICS_CLIENT_LOGOS } from "./client-logos.json";
 export { default as EVENT_LOGISTICS_FAQ } from "./faq.json";

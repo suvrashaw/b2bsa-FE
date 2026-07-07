@@ -93,11 +93,11 @@ This rule holds on the large majority of pages — **9 of 23 leaves and all 7 hu
 | 4 | Services Included / Nested Services | `ServicesStack.tsx`+`ServicesCard.tsx` (grid) or `Capabilities.tsx` (carousel) | `services.json` | All 30 — meaning differs by tier | ✅ resolved 2026-07-06 — filename drift fixed; rendering choice remains per-page (by design, not drift) |
 | 5 | Capabilities | `Capabilities.tsx` (features shape only) | `capabilities.json` | Leaf only | 🔴 same filename, incompatible "phases" shape in ~7 pages |
 | 6 | Industries We Support | `CardsGrid.tsx`+`IndustryShaderCard.tsx` | `industries.json` | Leaf only | ✅ resolved 2026-07-06 — one component pairing, one shape |
-| 7 | Why Choose Us — Cards | `Carousel.tsx`+`BoothWhyCard.tsx` | `why-choose-us.json` | Leaf-predominant | ⚠️ icon field inconsistently present; card reused for "Benefits" too |
+| 7 | Why Choose Us — Cards | `Carousel.tsx`+`BoothWhyCard.tsx` | `why-choose-us.json` | Leaf-predominant | ✅ resolved 2026-07-07 — `icon` now present everywhere; `booth-logistics-services`'s "Benefits" block moved off this component entirely (now `StickyScroll`) |
 | 8 | Why Choose Us — Spotlight | `Spotlight.tsx` (`why` prop) | `why-spotlight.json` (renamed from today's `why.json`) | All hubs + 3 leaves | 🔴 today (same filename as #7's concept, different shape) — resolved by the rename |
 | 9 | Process / How It Works | `ProcessTimeline.tsx` | `process.json` | All hubs + several leaves | ✅ |
 | 10 | Pricing / Package Options | `Carousel.tsx`+`PricingCard.tsx` | `pricing.json` | 1 leaf (clean) + 1 leaf (hand-rolled equivalent) | 🕳️ real content type, barely used, inconsistently implemented |
-| 11 | Case Studies | `CaseStudies.tsx`+`CaseStudyItem.tsx` | `case-studies.json` (wrapper) + shared global pool | All but 1 | ⚠️ tag field unused, hardcoded 5-of-9 subset shown everywhere |
+| 11 | Case Studies | `CaseStudies.tsx`+`CaseStudyItem.tsx` | `case-studies.json` (wrapper) + shared global pool | All but 1 | ✅ resolved 2026-07-07 — tag field unused / hardcoded 5-of-9 subset confirmed intentional |
 | 12 | Latest Insights / Blogs | `Carousel.tsx`+`BlogsCarouselCard.tsx` | `blog.json` (wrapper) + shared global pool | 16 of 23 leaves | ⚠️ filter tags hardcoded in `page.tsx`, not content (15 of 23 leaves) |
 | 13 | FAQ | `FAQAccordion.tsx`+`FAQAccordionItem.tsx` | `faq.json` | All but 1 | ✅ best-executed content type in the audit |
 | 14 | Contact CTA | `ContactUs.tsx` | `contact.json` | 27 of 30 | ⚠️ missing on 3 pages despite unused files existing |
@@ -230,9 +230,11 @@ interface CapabilityItem {
 }
 ```
 
-**Confirmed collision:** on 7 pages — `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `event-experience-creation`, `virtual-video-production`, `booth-hostess-services`, `booth-logistics-services` — the file named `capabilities.json` actually only has `{ title, phases: [{ title, description? }] }`, structurally identical to Process content, not `CapabilitiesItem`. To satisfy `Capabilities.tsx`'s prop type, every one of these 7 `page.tsx` files hand-fabricates a placeholder `icon`+`image` array (the same generic background image every entry) and zips it positionally onto the real `phases` data before rendering. **Practical implication: on these 7 pages, `capabilities.json` content only ever controls `title`/`description` — icon and image are not author-controlled at all**, despite the component fully supporting them.
+**Confirmed collision — 6 of 7 pages still unresolved:** `corporate-networking-events`, `event-branding-solutions`, `event-experience-creation`, `virtual-video-production`, `booth-hostess-services`, `booth-logistics-services` — the file named `capabilities.json` actually only has `{ title, phases: [{ title, description? }] }`, structurally identical to Process content, not `CapabilitiesItem`. To satisfy `Capabilities.tsx`'s prop type, every one of these 6 `page.tsx` files hand-fabricates a placeholder `icon`+`image` array (the same generic background image every entry) and zips it positionally onto the real `phases` data before rendering. **Practical implication: on these 6 pages, `capabilities.json` content only ever controls `title`/`description` — icon and image are not author-controlled at all**, despite the component fully supporting them.
 
-**Recommended target:** migrate the "phases" variant's data into the Process content type (#9) — its shape is already identical to `ProcessStepItem` — which would also eliminate the 7 duplicated hardcoded-icon shims. If that migration isn't done, the fallback is to rename this variant to a distinct filename (e.g. `capabilities-narrative.json`) so the collision is at least resolved by name, following the same precedent as the Why-Choose-Us / Why-Spotlight split (#7 vs #8).
+**In progress, uncommitted — `corporate-event-solutions` (found during this scan, not yet finished):** its `capabilities.json` was renamed to `process.json` on disk (`content.ts` now does `export { default as CORP_EVENT_CAPABILITIES } from "./process.json"`), matching the recommended target below by filename — but this is a **rename only, not the actual migration**. `corporate-event-solutions/page.tsx` still imports it as `CORP_EVENT_CAPABILITIES`, still reads `.phases`/`.title`/`.description` off it, still hand-fabricates the same placeholder `capabilityAssets` icon+image array and zips it on positionally, and still feeds the result into the `Capabilities.tsx` carousel — not `ProcessTimeline.tsx`. So this page is not actually using the Process content type yet; it's the same phases-shaped collision under a renamed file. Treat this as a half-finished migration, not a resolved instance.
+
+**Recommended target:** migrate the "phases" variant's data into the Process content type (#9) and render it through `ProcessTimeline.tsx` — its shape is already identical to `ProcessStepItem` — which would also eliminate the hardcoded-icon shims on all 7 pages (6 untouched + `corporate-event-solutions`'s half-done one). If that migration isn't done, the fallback is to rename this variant to a distinct filename (e.g. `capabilities-narrative.json`) so the collision is at least resolved by name, following the same precedent as the Why-Choose-Us / Why-Spotlight split (#7 vs #8) — `corporate-event-solutions`'s `process.json` rename is a step toward this fallback but needs the page.tsx wiring finished (or reverted) to actually count.
 
 **Confirmed orphaned files:** `performance-marketing` and `seo-services` both have a `capabilities.json` on disk that their `page.tsx` never imports or renders at all — their sibling `social-media-marketing` renders it correctly. File presence on disk does not mean the content is live; always check the page's actual imports.
 
@@ -285,15 +287,25 @@ interface WhyChooseUsCardItem {
 }
 ```
 
-**Confirmed:** the `icon` field is present on some pages' items and absent on others (present: `booth-hostess-services`, `booth-logistics-services`, `trade-show-booth-design`, `corporate-event-solutions`, `event-branding-solutions`, `event-experience-creation`; absent: `performance-marketing`, `seo-services`, `social-media-marketing`, `event-live-streaming-services`).
+**Update (2026-07-07) — icon-field gap resolved.** `icon` was added to every item in `why-choose-us.json` on the 4 pages that were missing it (`performance-marketing`, `seo-services`, `social-media-marketing`, `event-live-streaming-services`), each mapped to the closest semantic fit from `BoothWhyCard.tsx`'s fixed 11-value allow-list — some reuse across items was unavoidable since there are only 11 icons for 24 items. `icon` is now present on every page that uses this content type.
 
-**`BoothWhyCard` is also reused beyond "Why Choose Us":** on `booth-logistics-services`, a *second* BoothWhyCard-based block — wrapped in `CardsGrid.tsx` rather than `Carousel.tsx` — renders a "Benefits" section, separate from and in addition to that page's genuine Why-Choose-Us Carousel. Treat `BoothWhyCard` as a generic titled feature/benefit card, not something exclusively tied to "why choose us" semantics.
+**Confirmed data-quality issue found during that pass, left unresolved (out of scope):** `social-media-marketing`'s `why-choose-us.json` content is not actually about social media marketing — its 6 items ("Professional & Trained Staff," "Guest Engagement Focus," "Multilingual Support," etc.) are event-hostess copy, apparently copy-pasted from a booth-hostess-style page. Icons were still added to these items as requested, but the underlying copy needs a real rewrite.
 
-**Missing entirely:** `event-lead-generation`, `data-validation-services`, `data-augmentation-services`, `hpmi`, `modular-booth-solutions`, `event-video-production` — the last two use the Spotlight-block variant (#8) instead, not the cards variant.
+**Update (2026-07-07) — `booth-logistics-services`'s "Benefits" block no longer uses `BoothWhyCard`/`CardsGrid`.** It was migrated to `StickyScroll.tsx` (see [Custom & One-Off Sections](#custom--one-off-sections)) at the requester's direction, specifically to fix a background-color mismatch: the old `CardsGrid` instance hardcoded `className="bg-brand-charcoal/5"`, visually inconsistent with the `bg-brand-gray` default used by the Industries `CardsGrid` immediately before it and the genuine Why-Choose-Us `Carousel` elsewhere on the same page. `StickyScroll.tsx` has no `className` prop — its background is hardcoded to `bg-brand-gray` in the component itself — so the swap fixes the mismatch by construction, with no override needed. Content was reshaped from `{ heading, items: [{ title, description, icon, image }] }` to `{ heading, reasons: [{ id, title, description, image }] }` (`logistics-benefits.json`); the 5 `icon` values were dropped since `StickyScrollReason` has no icon field, and the custom "Get a Logistics Quote" CTA button was dropped since `StickyScroll` only supports a fixed default CTA via `showCta` (set to `false` here), not a custom label. `BoothWhyCard` itself is still reused beyond "Why Choose Us" elsewhere — this pattern (BoothWhyCard as a generic titled feature/benefit card, not exclusively "why choose us") still holds wherever else it's used.
+
+**Important distinction — "Benefits" is not "Why Choose Us":** the migration above swapped `booth-logistics-services`'s *separate* `id="benefits"` block ("Benefits of Expert Event Logistics Solutions," rendered in `preStudiesSections`) from Cards to `StickyScroll`. That page's genuine Why-Choose-Us section — `id="why-choose-us"`, heading "Why Choose B2B Sales Arrow for Booth Logistics Services," rendered via `customSections` — was untouched and still renders as Cards (`Carousel.tsx`+`BoothWhyCard.tsx`). No page's actual Why-Choose-Us content type (#7 Cards vs. #8 Spotlight) was converted anywhere in this pass — see the rule-compliance audit below. Don't read the Benefits swap as evidence of a Cards↔Spotlight conversion; "Benefits" is a different, unrelated ad hoc `BoothWhyCard`-reuse case (not #7/#8 at all) that happened to move to a third component, `StickyScroll`, which is neither Cards nor Spotlight.
+
+**Missing entirely:** `data-validation-services`, `data-augmentation-services`, `hpmi` — none of the three has any Why-Choose-Us content (no `why.json`/`why-choose-us.json` on disk, no `why` prop and no Cards/Carousel block passed in `page.tsx`). `event-lead-generation`, `modular-booth-solutions`, `event-video-production` are **not** missing — they deliberately use the Spotlight-block variant (#8) instead; see the rule below.
+
+**Rule (2026-07-07) — Cards vs. Spotlight is content-shape-driven, not arbitrary:** if the "why choose us" content is naturally a **list of discrete, parallel items** (3+ independent benefit/feature points, each with its own short title), render it as **Cards** (this content type, `Carousel.tsx`+`BoothWhyCard.tsx`, `why-choose-us.json`). If it's a **single continuous narrative** (one flowing argument/case, even if it spans two paragraphs or references multiple examples in-line), render it as **Spotlight** (#8, `Spotlight.tsx` via the `why` prop, `why-spotlight.json`). Do not force a narrative into card-shaped items, and do not flatten a genuine item list into prose just to use Spotlight.
+
+**Confirmed compliant (2026-07-07 audit)** against this rule: `event-lead-generation`, `modular-booth-solutions`, and `event-video-production` all use Spotlight, and in every case their `why.json`/`why-spotlight.json` content is a single narrative block with no `items` array — correct per the rule. (`event-lead-generation`'s content is re-exported wholesale from its parent hub's `why.json`, per [Appendix D](#appendix-d--cross-page-content-borrowing) — a separate, pre-existing borrowing pattern, not a rule violation.) `data-validation-services`, `data-augmentation-services`, and `hpmi` have no Why-Choose-Us section at all — whether they get one, and in which shape, is a separate content-authoring decision, out of scope for this rule check.
 
 ### 8. Why Choose Us — Spotlight Block
 
 **Section identity:** `Spotlight.tsx` via the `why` prop (no forced label, unlike Introduction) · **Canonical filename:** `why-spotlight.json` (renamed from today's `why.json` to disambiguate from #7) · **Status:** 🔴 today, resolved by the rename
+
+**See the Cards-vs-Spotlight content-shape rule under [Content Type #7](#7-why-choose-us--cards) — this variant is for single-narrative content only, never a list of discrete items.**
 
 ```ts
 interface WhyChooseUsSpotlightContent {
@@ -330,9 +342,9 @@ Used on all 6 category hubs plus several leaves (`data-augmentation-services`, `
 
 ### 10. Pricing / Package Options
 
-**Section identity:** `Carousel.tsx`+`PricingCard.tsx` (the template's `creativePricing` mechanism) · **Canonical filename:** `pricing.json` · **Status:** 🕳️
+**Section identity:** `Carousel.tsx`+`PricingCard.tsx` (the template's `creativePricing` mechanism) · **Canonical filename:** `pricing.json` · **Status:** ✅
 
-A real, recurring content block, but barely used and inconsistently implemented:
+A real, recurring content block, now consistently implemented across its usages:
 
 ```ts
 interface PricingContent {
@@ -350,11 +362,11 @@ interface PricingTier {
 }
 ```
 
-**Confirmed:** `event-video-production` uses the clean `creativePricing` template mechanism. `trade-show-booth-builder` instead hand-rolls the visual equivalent entirely in raw JSX (~35 lines, manual `<CheckCircle>` bullet rendering) rather than using the built-in mechanism — duplicated functionality, two different implementations of the same idea.
+**Confirmed:** Both `event-video-production` and `trade-show-booth-builder` now use the clean `creativePricing` template mechanism.
 
 ### 11. Case Studies
 
-**Section identity:** `CaseStudies.tsx`+`CaseStudyItem.tsx`; the per-page file is a thin wrapper, the real items are a shared global pool · **Canonical filename:** `case-studies.json` (wrapper) · **Status:** ⚠️
+**Section identity:** `CaseStudies.tsx`+`CaseStudyItem.tsx`; the per-page file is a thin wrapper, the real items are a shared global pool · **Canonical filename:** `case-studies.json` (wrapper) · **Status:** ✅ resolved 2026-07-07 — behavior confirmed intentional, not a defect
 
 ```ts
 // Per-page wrapper
@@ -363,8 +375,6 @@ interface CaseStudiesWrapperContent {
   description?: string;
   ctaLabel?: string;
   viewAllLabel?: string;
-  // `items` is not actually authored per-page — every page currently
-  // overwrites it with a shared, hardcoded 5-of-9 subset (see below).
 }
 // Shared, site-wide pool — src/content/case-studies/case-studies.json
 interface CaseStudyEntry {
@@ -376,7 +386,9 @@ interface CaseStudyEntry {
 }
 ```
 
-**Confirmed:** the shared pool itself (9 entries) is well-shaped and consistent — this content type's data is genuinely solid. But every page shows the identical hardcoded 5-of-9 subset regardless of actual relevance, and the `services[]` tag field that exists specifically to enable per-service filtering is never read for that purpose anywhere — **this selection logic is intentionally left as-is**, out of scope for the update below, same treatment as the other Appendix H items.
+**Confirmed:** the shared pool itself (9 entries) is well-shaped and consistent — this content type's data is genuinely solid. Every page shows the identical hardcoded 5-of-9 subset regardless of actual relevance, and the `services[]` tag field that exists specifically to enable per-service filtering is never read for that purpose anywhere.
+
+**Update (2026-07-07) — confirmed intentional, closed as resolved; no filtering implemented.** Per-page relevance filtering by `services[]` was considered and explicitly declined — the identical 5-of-9 subset on every page is the accepted behavior, not a defect. The `services[]` tag field remains authored-but-unused, same treatment as the other [Appendix H](#appendix-h--out-of-scope-follow-ups) items. Separately, the wrapper shape above was doc-only pseudocode — no real `CaseStudiesWrapperContent` TypeScript interface exists in the codebase; the per-page `case-studies.json` files (confirmed via `market-research/content.ts`) never author an `items` field in the first place, so the stale comment noting `items` as dead has been removed above rather than requiring any code change.
 
 **Update (2026-07-06) — partially resolved:**
 
@@ -427,7 +439,7 @@ Zero shape drift found across the codebase. Only gaps: `event-lead-generation` h
 
 ### 14. Contact CTA
 
-**Section identity:** `ContactUs.tsx` · **Canonical filename:** `contact.json` · **Status:** ⚠️
+**Section identity:** `ContactUs.tsx` · **Canonical filename:** `contact.json` · **Status:** ✅
 
 ```ts
 interface ContactCtaContent {
@@ -440,7 +452,7 @@ interface ContactCtaContent {
 }
 ```
 
-**Confirmed:** the entire `market-research` category (its hub page plus both leaves, `data-augmentation-services` and `data-validation-services`) is missing a Contact CTA section entirely, despite each having an unused `contact.json` sitting on disk.
+**Confirmed:** all pages now correctly implement the Contact CTA.
 
 ---
 
@@ -469,8 +481,8 @@ The `relatedServicesHeading` override is content-purity-violating on 3 pages tod
   ```
 - **Areas-Served Spotlight variant** — "Global Event Live Streaming Services Across Major Event Destinations." A *second*, standalone `Spotlight.tsx` instance on `event-live-streaming-services`, fed by `areas-served.json`, using the `locationBadges` prop (a hardcoded `["New York","Dubai","Singapore","London"]` array — content-purity violation, see Appendix C) — a prop confirmed used nowhere else in the codebase. Unlike the standard Introduction instance, this one has no forced `label`.
 - **`StickyScroll`** (`src/components/sections/StickyScroll.tsx`) — confirmed a one-off "secondary narrative" primitive on all 4 of its real usages, **never** a Why-Choose-Us alternate: `social-media-marketing` ("Social Media Campaigns We Manage"), `corporate-networking-events` ("Networking Event Types"), `event-physical-video-shoot` ("Production Plan"), `event-experience-creation` ("Why It Matters"). Each of these pages has its own bespoke topic here, separate from (and in most cases alongside) a genuine Why-Choose-Us Carousel elsewhere on the same page.
-- **`SectionContactCta`** (`src/components/sections/SectionContactCta.tsx`) — a minimal "Contact Our Team" button + modal, scoped to the 5 `media-production` leaves. Never content-sourced; one instance (`virtual-video-production`) even hardcodes its label as a literal prop.
-- **Hand-rolled, component-less one-offs**, each unique to one page: a pricing grid on `trade-show-booth-builder`; a CTA band on `trade-show-booth-design`; a rent-vs-buy grid on `trade-show-booth-rental`. See Appendix C for what's hardcoded in each.
+- **`SectionContactCta`** (`src/components/sections/SectionContactCta.tsx`) — a minimal "Contact Our Team" button + modal. **Update (2026-07-07):** removed entirely from 4 of its original 5 `media-production` leaves (`virtual-video-production`, `event-video-production`, `event-live-streaming-services`, `event-experience-video-production`) — each rendered it in `preProcessSections` immediately after a `ServicesStack` with `showServicesCommonCta`, producing two back-to-back "Contact" CTAs; the `ServicesStack` common CTA was kept as the single CTA on all 4. `virtual-video-production`'s hardcoded `label="Contact Our Team"` literal (redundant with the component's own default) was removed along with it. Only `corporate-video-production` still uses `SectionContactCta` (no `showServicesCommonCta` there, so no duplication).
+- **Hand-rolled, component-less one-offs**, each unique to one page: a rent-vs-buy grid on `trade-show-booth-rental`. See Appendix C for what's hardcoded in each. **Update (2026-07-07):** the CTA band on `trade-show-booth-design` (a fully hardcoded button+href in `preContactSections`) was removed — the prop is no longer passed on that page.
 
 ---
 
@@ -492,21 +504,18 @@ The practical takeaway for building a new page: **hub pages are composed only fr
 - `performance-marketing` and `seo-services`: both have `capabilities.json` on disk, never imported by their `page.tsx` — sibling `social-media-marketing` renders it correctly. (Their `industries.json` orphan was resolved 2026-07-06 — see [Content Type #6](#6-industries-we-support).)
 - `corporate-video-production` has an orphaned `industries.json` on disk in a fourth, unrelated shape (`{description, heading, industries: [{title, description}]}`) never imported by its `page.tsx` — discovered 2026-07-06 while resolving Content Type #6, left unresolved as out of scope for that pass.
 - `card.json`: 21 copies exist across `src/content/services/`, imported nowhere in the entire codebase (confirmed via `grep`).
-- `market-research` hub + both its leaves (`data-augmentation-services`, `data-validation-services`): all 3 have an unused `contact.json` on disk; none render a Contact CTA section.
 - Top-level `/services` hub: `HUB_FAQ` is hardcoded Lorem-ipsum placeholder text, never finished.
 
 ## Appendix C — page.tsx Content-Purity Violations
 
 Every item below is a literal heading/CTA/icon-name/image-URL/text-array written directly in a `page.tsx` instead of sourced from that page's own JSON — confirmed by direct read of all 30 pages, not sampled.
 
-- **Most pervasive — hardcoded blog-tag filter arrays**: `getBlogsByTags([...])` called with a literal tag-string array directly in 15 of 23 leaf `page.tsx` files (see Content Type #12 for the full list). Affects more pages than every other item below combined.
 - **Hardcoded `capabilityAssets` icon+image array** (same generic placeholder image every entry): `corporate-event-solutions`, `corporate-networking-events`, `event-branding-solutions`, `event-experience-creation`, `virtual-video-production`, `booth-hostess-services`, `booth-logistics-services`.
 - **`event-live-streaming-services`**: hardcoded `LIVE_STREAMING_LOCATION_BADGES` city-name array; hardcoded `relatedServicesHeading` string.
-- **`corporate-video-production`**: hardcoded Blogs Carousel heading string.
 - **`event-experience-video-production`** and **`virtual-video-production`**: both hardcode the identical `relatedServicesHeading` string.
-- **`virtual-video-production`**: also hardcodes a `SectionContactCta` label.
-- **`trade-show-booth-builder`**: hardcoded Carousel heading string; hardcoded `color`/`icon` stamped onto items borrowed from `trade-show-booth-design`'s content module; a fully hand-rolled pricing-grid `<section>`.
-- **`trade-show-booth-design`**: hardcoded `color`/`icon` on its own showcase items; hardcoded `ServicesStack` heading string; a fully hardcoded CTA button (text + href) in `preContactSections`.
+- **`trade-show-booth-builder`**: hardcoded Carousel heading string; hardcoded `color`/`icon` stamped onto items borrowed from `trade-show-booth-design`'s content module.
+- **`trade-show-booth-design`**: hardcoded `color`/`icon` on its own showcase items; hardcoded `ServicesStack` heading string. **Update (2026-07-07):** the hardcoded CTA button (text + href) in `preContactSections` was removed.
+- **`booth-logistics-services`**: hardcoded `label` strings ("Plan Your Event Logistics", "Get a Logistics Quote") on two `ContactModalTrigger` instances in `page.tsx`.
 - **`trade-show-booth-rental`**: `BOOTH_RENTAL_RANGE_REASONS` — 5 complete content objects (title/description/image) written entirely in `page.tsx`, in no JSON file at all; plus hardcoded `color`/`icon`, hardcoded heading/CTA-label text, and hardcoded icon-string-matching (`Coins`/`Move`/`Truck`).
 
 **Confirmed clean:** `event-lead-generation`, `hpmi`, `data-augmentation-services`, `data-validation-services`, `modular-booth-solutions`, `event-video-production`, `performance-marketing`, `seo-services`, `social-media-marketing`, and all 7 hub-tier pages.
@@ -534,10 +543,11 @@ Every item below is a literal heading/CTA/icon-name/image-URL/text-array written
 
 ## Appendix G — New Item Components Found
 
-Two item components turned up during this audit that weren't part of the original known set:
+Two item components turned up during this audit that weren't part of the original known set (plus one UI primitive used as a one-off):
 
 - **`BasicCards.tsx`** — found on `trade-show-booth-builder`, rendering `BOOTH_BUILDER_FUTURE_READY` items via `CardsGrid.tsx`.
 - **`EventsCard.tsx`** — found on `trade-show-booth-design`, rendering the site's shared upcoming-events content (reused wholesale from the homepage's `HOME_EVENTS_CONTENT` + `getDefaultEvents()`) via `CardsGrid.tsx`.
+- **`ContactModalTrigger`** (`src/components/ui/ContactModal`) — found on `booth-logistics-services`, used twice in raw JSX blocks with hardcoded labels rather than being content-sourced.
 
 ## Appendix H — Out-of-Scope Follow-Ups
 

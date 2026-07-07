@@ -104,15 +104,6 @@ const Page = () => {
       hero={BOOTH_DESIGN_HERO}
       page={BOOTH_DESIGN_PAGE}
       parentPage={GES_PAGE}
-      preContactSections={
-        <section className="bg-brand-gray py-12 md:py-16">
-          <div className="container mx-auto max-w-screen-2xl px-4 text-center sm:px-6 md:px-8">
-            <Button asChild size="lg" variant="primary">
-              <Link href="/contact-us">Get a Free Consultation</Link>
-            </Button>
-          </div>
-        </section>
-      }
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"

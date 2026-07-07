@@ -3,31 +3,37 @@
   "items": [
     {
       "description": "Our event hostesses are trained to represent brands professionally while managing guest interactions with confidence and professionalism.",
+      "icon": "Award",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Professional & Trained Staff"
     },
     {
       "description": "We understand the operational requirements of conferences, exhibitions, networking events, and executive corporate experiences.",
+      "icon": "Target",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Corporate Event Expertise"
     },
     {
       "description": "Our hostess teams help improve attendee experiences through proactive visitor engagement and smooth event coordination.",
+      "icon": "Users2",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Guest Engagement Focus"
     },
     {
       "description": "We provide scalable staffing support for trade shows, conferences, product launches, and corporate networking events.",
+      "icon": "CheckCircle",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Flexible Event Staffing Solutions"
     },
     {
       "description": "We support international events with multilingual event hostesses for improved audience communication and engagement.",
+      "icon": "Globe2",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Multilingual Support"
     },
     {
       "description": "From registration management to VIP coordination, we provide complete event hostess support for successful event execution.",
+      "icon": "Network",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "End-to-End Event Support"
     }
