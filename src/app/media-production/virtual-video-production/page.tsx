@@ -28,21 +28,20 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
 const capabilityAssets = [
-  { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Video", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Mic", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "MessageCircle", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Layers", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Wrench", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Globe", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Film", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Monitor", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Shuffle", image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
 const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Video",
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")

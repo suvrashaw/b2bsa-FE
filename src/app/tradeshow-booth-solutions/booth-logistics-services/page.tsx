@@ -32,19 +32,18 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
 const capabilityAssets = [
-  { icon: "Truck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Building2", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Wrench", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "ClipboardCheck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Package", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "CalendarDays", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Globe2", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Settings", image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
 const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Truck",
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")

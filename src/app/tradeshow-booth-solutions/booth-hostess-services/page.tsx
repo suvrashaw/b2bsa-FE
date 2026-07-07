@@ -35,20 +35,19 @@ const deliverableProps = {
   showCardCtas: false,
 };
 const capabilityAssets = [
-  { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "CalendarCheck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Sparkles", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "MessageSquare", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "ClipboardList", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Globe2", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Presentation", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Award", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Users2", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Rocket", image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
 ];
 const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Users",
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")

@@ -14,7 +14,6 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
-  EVENT_EXPERIENCE_CAPABILITIES,
   EVENT_EXPERIENCE_CONTACT_CTA,
   EVENT_EXPERIENCE_CREATION_BLOGS_SECTION,
   EVENT_EXPERIENCE_DELIVERABLES,
@@ -24,35 +23,15 @@ import {
   EVENT_EXPERIENCE_INDUSTRIES,
   EVENT_EXPERIENCE_INTRO,
   EVENT_EXPERIENCE_PAGE,
+  EVENT_EXPERIENCE_PROCESS,
+  EVENT_EXPERIENCE_SERVICES_INCLUDE,
   EVENT_EXPERIENCE_WHY_CHOOSE_US,
   EVENT_EXPERIENCE_WHY_MATTERS,
 } from "@/content/services/global-event-solutions/event-experience-creation/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE);
 
-const capabilityAssets = [
-  { icon: "Target", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Map", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Lightbulb", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Settings2", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "BarChart2", image: "/media/home/hero/home_hero_bg.avif" },
-];
-
-const capabilityFeatures = (
-  EVENT_EXPERIENCE_CAPABILITIES.phases as { description?: string; title: string }[]
-).map((phase, index) => ({
-  description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Target",
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
-  label: phase.title,
-}));
-
-const servicesIncludeFeatures = EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.items.map((item) => ({
+const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map((item) => ({
   icon: item.icon,
   id: item.id,
   image: item.image,
@@ -76,7 +55,7 @@ const Page = () => {
             ))}
           </Carousel>
             <ServicesScroll
-              heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}
+              heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}
               services={servicesIncludeFeatures}
             />
             <Carousel
@@ -104,11 +83,6 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <ServicesScroll
-            description={EVENT_EXPERIENCE_CAPABILITIES.description}
-            heading={EVENT_EXPERIENCE_CAPABILITIES.title}
-            services={capabilityFeatures}
-          />
           <Spotlight {...(EVENT_EXPERIENCE_DESIGNED_FOR as SpotlightProps)} />
           <StickyScroll
             heading={EVENT_EXPERIENCE_WHY_MATTERS.heading}
@@ -117,6 +91,7 @@ const Page = () => {
           />
         </>
       }
+      process={EVENT_EXPERIENCE_PROCESS}
       services={EVENT_EXPERIENCE_DELIVERABLES}
       showServicesCommonCta
       spotlight={EVENT_EXPERIENCE_INTRO}

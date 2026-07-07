@@ -29,21 +29,20 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
 const capabilityAssets = [
-  { icon: "Palette", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "PenTool", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Monitor", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Printer", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Image", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Layers", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Layout", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Sparkles", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Type", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Fingerprint", image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
 const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
   description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "Palette",
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")

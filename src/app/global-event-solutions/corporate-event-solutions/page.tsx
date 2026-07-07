@@ -29,23 +29,22 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 
 const capabilityAssets = [
-  { icon: "CalendarCheck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Building", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Wrench", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Users", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Palette", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "UserPlus", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Truck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "ClipboardCheck", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Star", image: "/media/home/hero/home_hero_bg.avif" },
-  { icon: "Globe2", image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
+  { image: "/media/home/hero/home_hero_bg.avif" },
 ];
 
 const capabilityFeatures = (
   CORP_EVENT_CAPABILITIES.phases as { description?: string; title: string }[]
 ).map((phase, index) => ({
   description: phase.description,
-  icon: capabilityAssets[index]?.icon ?? "CalendarCheck",
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
