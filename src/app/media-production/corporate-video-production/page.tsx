@@ -41,7 +41,6 @@ const Page = () => {
             cols={3}
             heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {CORPORATE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -56,7 +55,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(CORPORATE_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />

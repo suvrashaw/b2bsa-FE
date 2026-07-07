@@ -8,7 +8,7 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
+import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
   MODULAR_BOOTH_BLOGS_SECTION,
   MODULAR_BOOTHS_CASE_STUDIES,
@@ -42,7 +42,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(MODULAR_BOOTH_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -54,7 +53,7 @@ const Page = () => {
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
-      parentPage={GES_PAGE}
+      parentPage={BS_PAGE}
       secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
       secondaryServicesSectionType="carousel"
       services={MODULAR_BOOTHS_DELIVERABLES}

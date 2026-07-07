@@ -91,11 +91,6 @@ export interface EventPageProps {
 export const EventPage = ({ event, faq }: EventPageProps) => {
   const heroImages = useMemo(() => [event.image ?? PLACEHOLDER_IMAGE], [event.image]);
 
-  const heroSecondaryCta = useMemo(
-    () => ({ href: event.sourceUrl, label: "Visit Official Site" }),
-    [event.sourceUrl]
-  );
-
   const metadata = useMemo(
     () => [
       {
@@ -159,7 +154,6 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
-        secondaryCta={heroSecondaryCta}
         title={event.name}
       />
 
@@ -178,7 +172,6 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         autoplayInterval={4000}
         heading={`Our Event Services at ${event.name}`}
         id="services"
-        layout="carousel"
       >
         {serviceItems.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.id} />
@@ -192,7 +185,6 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
           description={`Other major ${event.industry} events where we help brands exhibit.`}
           heading={`More ${event.industry} Events`}
           id="related-events"
-          layout="carousel"
         >
           {relatedEvents.map((show) => (
             <TradeShowCard key={show.id} show={show} />

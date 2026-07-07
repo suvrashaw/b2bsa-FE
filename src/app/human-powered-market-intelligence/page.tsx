@@ -40,7 +40,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(HPMI_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />

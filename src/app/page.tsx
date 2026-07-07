@@ -74,7 +74,6 @@ const Home = () => {
           mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
           mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
           primaryCta={HOME_HERO_CONTENT.primaryCta}
-          secondaryCta={HOME_HERO_CONTENT.secondaryCta}
           title={HOME_HERO_CONTENT.title}
           videoUrl={HOME_HERO_CONTENT.videoUrl}
           videoWebm={HOME_HERO_CONTENT.videoWebm}

@@ -12,8 +12,7 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
-import { BOOTH_DESIGN_WHY_CHOOSE_US } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
+import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
   BOOTH_RENTAL_BLOGS_SECTION,
   BOOTH_RENTAL_CASE_STUDIES,
@@ -24,51 +23,16 @@ import {
   BOOTH_RENTAL_INTRO,
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
+  BOOTH_RENTAL_RANGE,
   BOOTH_RENTAL_RENT_VS_BUY,
+  BOOTH_RENTAL_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
-
-const BOOTH_RENTAL_RANGE_REASONS = [
-  {
-    description:
-      "Branded back wall, counter, lighting, screen option, and lead capture setup. Fast to configure and deploy.",
-    id: "rental-10x10",
-    image: "/media/booth/10x10.avif",
-    title: "10x10 Standard",
-  },
-  {
-    description: "Room for product-led demos, a defined visitor journey, and a meeting zone.",
-    id: "rental-10x20",
-    image: "/media/booth/10x20.avif",
-    title: "10x20 Inline",
-  },
-  {
-    description: "Four-sided exhibition visibility with demo areas, meeting space, and AV support.",
-    id: "rental-20x20",
-    image: "/media/booth/20x20.avif",
-    title: "20x20 Island",
-  },
-  {
-    description:
-      "Upper-level executive meeting suite + lower-level engagement zone for major global events.",
-    id: "rental-double-deck",
-    image: "/media/booth/30x30.avif",
-    title: "Double-Deck",
-  },
-  {
-    description:
-      "Existing rental structures adapted with your full brand identity, messaging, and engagement zones.",
-    id: "rental-custom",
-    image: "/media/booth/40x40.avif",
-    title: "Custom-Branded Rentals",
-  },
-];
 
 const EMPTY_CONTACT_MODAL = {};
 
-const RENTAL_SERVICES = BOOTH_RENTAL_RANGE_REASONS.map((item) => ({
-  color: "brand-blue",
+const RENTAL_SERVICES = BOOTH_RENTAL_RANGE.items.map((item) => ({
   description: item.description,
-  icon: "Star",
+  icon: item.icon,
   id: item.id,
   image: item.image,
   title: item.title,
@@ -86,11 +50,10 @@ const Page = () => {
         <>
           <Carousel
             cols={4}
-            heading="Why Choose B2B Sales Arrow for Trade Show Booth Rental Services"
+            heading={BOOTH_RENTAL_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
-            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
+            {BOOTH_RENTAL_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
@@ -103,7 +66,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(BOOTH_RENTAL_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -115,7 +77,7 @@ const Page = () => {
       faqVariant="accordion"
       hero={BOOTH_RENTAL_HERO}
       page={BOOTH_RENTAL_PAGE}
-      parentPage={GES_PAGE}
+      parentPage={BS_PAGE}
       preProcessSections={
         <>
           <CardsGrid
@@ -144,9 +106,9 @@ const Page = () => {
           </CardsGrid>
           <ServicesStack
             cardCtaMode="none"
-            commonCtaLabel="Talk to an Expert"
+            commonCtaLabel={BOOTH_RENTAL_RANGE.ctaLabel}
             contactModal={EMPTY_CONTACT_MODAL}
-            heading="Our Rental Booth Range"
+            heading={BOOTH_RENTAL_RANGE.heading}
             serviceLabel=""
             services={RENTAL_SERVICES}
             showCommonCta

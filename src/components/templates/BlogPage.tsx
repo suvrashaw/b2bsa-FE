@@ -416,7 +416,6 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         autoplayInterval={4000}
         heading="Our B2B Event Services & Trade Show Solutions"
         id="services"
-        layout="carousel"
       >
         {placeholderServiceItems.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.id} />
@@ -442,7 +441,6 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         }
         headingAlign="left"
         id="blogs"
-        layout="carousel"
       >
         {relatedPosts.map((post) => (
           <BlogsCarouselCard key={post.id} post={post} />
@@ -452,7 +450,6 @@ export const BlogPage = ({ post }: BlogPageProps) => {
       <Carousel
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
         heading="Follow Our Latest Event Executions on LinkedIn"
-        layout="carousel"
       >
         {LINKEDIN_POSTS.map((post, i) => (
           <LinkedInCard index={i} key={post.id} post={post} />

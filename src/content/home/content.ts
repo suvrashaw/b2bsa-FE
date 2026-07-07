@@ -116,7 +116,6 @@ export interface FAQContent {
 }
 
 export interface HomeServiceItem {
-  color?: string;
   description?: string;
   href?: string;
   icon: string;
@@ -170,9 +169,7 @@ interface ContactServiceOption {
 
 interface FAQItem {
   answer: ReactNode | string;
-  icon?: ReactNode;
   id: number | string;
-  image?: string;
   question: string;
 }
 

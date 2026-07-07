@@ -22,31 +22,19 @@ import {
   VIRTUAL_VIDEO_IMAGE_HERO,
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
+  VIRTUAL_VIDEO_RELATED_SERVICES,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
-const capabilityAssets = [
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-];
-
-const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase, index) => ({
+const capabilityFeatures = VIRTUAL_VIDEO_CAPABILITIES.phases.map((phase) => ({
   description: phase.description,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  image: phase.image,
   label: phase.title,
 }));
 
@@ -62,7 +50,6 @@ const Page = () => {
             cols={3}
             heading={VIRTUAL_VIDEO_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {VIRTUAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -77,7 +64,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(VIRTUAL_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -97,7 +83,7 @@ const Page = () => {
           services={capabilityFeatures}
         />
       }
-      relatedServicesHeading="Related Event & Media Production Services"
+      relatedServicesHeading={VIRTUAL_VIDEO_RELATED_SERVICES.heading}
       services={VIRTUAL_VIDEO_DELIVERABLES}
       showServicesCommonCta
       spotlight={VIRTUAL_VIDEO_INTRO}

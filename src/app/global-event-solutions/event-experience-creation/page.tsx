@@ -48,7 +48,6 @@ const Page = () => {
             cols={4}
             heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {EVENT_EXPERIENCE_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -67,7 +66,6 @@ const Page = () => {
                 </Button>
               }
               id="blogs"
-              layout="carousel"
             >
               {getBlogsByTags(EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.tags).map((post) => (
                 <BlogsCarouselCard key={post.id} post={post} />

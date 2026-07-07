@@ -2,43 +2,53 @@
   "phases": [
     {
       "description": "Speaker scheduling, virtual green rooms, session flow, and show timing for multi-speaker events.",
-      "title": "Multi-Speaker Virtual Event Management"
+      "title": "Multi-Speaker Virtual Event Management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Professional video workflows for crisp virtual sessions, recordings, and post-event distribution.",
-      "title": "HD and 4K Virtual Video Production"
+      "title": "HD and 4K Virtual Video Production",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Live moderation support for intros, transitions, audience prompts, and session continuity.",
-      "title": "Live Event Moderation Support"
+      "title": "Live Event Moderation Support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Q&A, polls, chat, surveys, virtual networking, and audience participation workflows.",
-      "title": "Virtual Audience Engagement Tools"
+      "title": "Virtual Audience Engagement Tools",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Custom overlays, lower thirds, title cards, branded backgrounds, and visual event identity.",
-      "title": "Branded Event Graphics and Overlays"
+      "title": "Branded Event Graphics and Overlays",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Production support for speaker issues, streaming checks, platform disruptions, and live fixes.",
-      "title": "Real-Time Technical Troubleshooting"
+      "title": "Real-Time Technical Troubleshooting",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Streaming support across Zoom, Microsoft Teams, LinkedIn Live, YouTube Live, Vimeo, and custom platforms.",
-      "title": "Platform Integration and Streaming Support"
+      "title": "Platform Integration and Streaming Support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Recorded sessions prepared into recaps, clips, full-session archives, and marketing assets.",
-      "title": "Recording and Post-Event Editing"
+      "title": "Recording and Post-Event Editing",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Production support for webinars, virtual conferences, executive sessions, and online launches.",
-      "title": "Webinar and Conference Production Support"
+      "title": "Webinar and Conference Production Support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Hybrid workflows that connect onsite speakers, remote speakers, and distributed audiences.",
-      "title": "Hybrid Event Production Capabilities"
+      "title": "Hybrid Event Production Capabilities",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Virtual Event Production Capabilities & Technical Expertise",

@@ -22,6 +22,7 @@ import {
   EVENT_EXPERIENCE_VIDEO_IMAGE_HERO,
   EVENT_EXPERIENCE_VIDEO_INTRO,
   EVENT_EXPERIENCE_VIDEO_PAGE,
+  EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES,
   EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-experience-video-production/content";
 
@@ -45,7 +46,6 @@ const Page = () => {
             cols={3}
             heading={EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -60,7 +60,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(EVENT_EXPERIENCE_VIDEO_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -80,7 +79,7 @@ const Page = () => {
           services={EVENT_EXPERIENCE_VIDEO_CAPABILITIES.features}
         />
       }
-      relatedServicesHeading="Related Event & Media Production Services"
+      relatedServicesHeading={EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES.heading}
       services={deliverableProps}
       showPhaseNumbers={false}
       showServicesCommonCta

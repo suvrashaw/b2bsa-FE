@@ -30,6 +30,7 @@ export { default as EVENT_LOGISTICS_FAQ } from "./faq.json";
 export { default as EVENT_LOGISTICS_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_LOGISTICS_INTRO } from "./intro.json";
 export { default as EVENT_LOGISTICS_BENEFITS } from "./logistics-benefits.json";
+export { default as EVENT_LOGISTICS_CTA } from "./logistics-cta.json";
 export { default as EVENT_LOGISTICS_PAGE } from "./page.json";
 export { default as EVENT_LOGISTICS_DELIVERABLES } from "./services.json";
 export { default as EVENT_LOGISTICS_WHY_CHOOSE_US } from "./why-choose-us.json";

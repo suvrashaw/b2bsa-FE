@@ -28,4 +28,4 @@ export { default as MODULAR_BOOTHS_PAGE } from "./page.json";
 
 export { default as MODULAR_BOOTHS_RANGE_SECTION } from "./secondary-services.json";
 export { default as MODULAR_BOOTHS_DELIVERABLES } from "./services.json";
-export { default as MODULAR_BOOTHS_WHY } from "./why.json";
+export { default as MODULAR_BOOTHS_WHY } from "./why-spotlight.json";

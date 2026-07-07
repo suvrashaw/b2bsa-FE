@@ -27,4 +27,4 @@ export { default as BS_HERO } from "./hero.json";
 export { default as BS_PAGE } from "./page.json";
 export { default as BS_PROCESS } from "./process.json";
 export { default as BS_SERVICES } from "./services.json";
-export { default as BS_WHY } from "./why.json";
+export { default as BS_WHY } from "./why-spotlight.json";

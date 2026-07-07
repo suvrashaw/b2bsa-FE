@@ -24,7 +24,6 @@ export interface HeroProps {
   mobileVideoWebm?: string;
   poster?: string;
   primaryCta?: { href: string; label: string };
-  secondaryCta?: { href: string; label: string };
   title: ReactNode | string;
   variant?: "compact" | "default";
   videoSrc?: string;
@@ -48,15 +47,6 @@ const PRIMARY_CTA_STYLE = {
   boxShadow:
     "0 22px 44px rgba(8, 26, 41, 0.28), 0 8px 18px rgba(52, 144, 181, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34)",
 };
-const SECONDARY_CTA_STYLE = {
-  backdropFilter: "blur(12px)",
-  background: `linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.3) 100%)`,
-  border: "1px solid rgba(255, 255, 255, 0.25)",
-  borderRadius: "4px",
-  boxShadow: "0 18px 38px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
-  WebkitBackdropFilter: "blur(12px)",
-};
-
 const EYEBROW_ANIMATE = { opacity: 1, y: 0 };
 const EYEBROW_INITIAL = { opacity: 0, y: 16 };
 const EYEBROW_TRANSITION = { delay: 0.2, duration: 0.6 };
@@ -266,7 +256,6 @@ export const Hero = ({
   mobileVideoWebm,
   poster,
   primaryCta,
-  secondaryCta,
   title,
   variant = "default",
   videoSrc,
@@ -390,7 +379,7 @@ export const Hero = ({
             </motion.p>
           )}
 
-          {(primaryCta ?? secondaryCta) && (
+          {primaryCta && (
             <motion.div
               animate={CTA_ANIMATE}
               className={cn(
@@ -400,25 +389,14 @@ export const Hero = ({
               initial={CTA_INITIAL}
               transition={CTA_TRANSITION}
             >
-              {primaryCta && (
-                <Link
-                  className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-[transform,filter] duration-300 hover:-translate-y-0.5 hover:brightness-110 md:w-auto md:px-10"
-                  href={primaryCta.href}
-                  style={PRIMARY_CTA_STYLE}
-                >
-                  {primaryCta.label}
-                  <ArrowRight className="ml-3 size-5 shrink-0 transition-transform group-hover:translate-x-1" />
-                </Link>
-              )}
-              {secondaryCta && (
-                <Link
-                  className="flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-[transform,filter] duration-300 hover:-translate-y-0.5 hover:brightness-110 md:w-auto md:px-10"
-                  href={secondaryCta.href}
-                  style={SECONDARY_CTA_STYLE}
-                >
-                  {secondaryCta.label}
-                </Link>
-              )}
+              <Link
+                className="group relative flex min-h-[58px] w-full items-center justify-center rounded-[4px] px-6 py-4 font-bold whitespace-nowrap text-white transition-[transform,filter] duration-300 hover:-translate-y-0.5 hover:brightness-110 md:w-auto md:px-10"
+                href={primaryCta.href}
+                style={PRIMARY_CTA_STYLE}
+              >
+                {primaryCta.label}
+                <ArrowRight className="ml-3 size-5 shrink-0 transition-transform group-hover:translate-x-1" />
+              </Link>
             </motion.div>
           )}
         </motion.div>

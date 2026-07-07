@@ -31,4 +31,4 @@ export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
 export { default as CORPORATE_VIDEO_DELIVERABLES } from "./services.json";
 export { default as CORPORATE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";
-export { default as CORPORATE_VIDEO_WHY } from "./why.json";
+export { default as CORPORATE_VIDEO_WHY } from "./why-spotlight.json";

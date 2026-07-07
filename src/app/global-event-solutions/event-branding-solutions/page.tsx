@@ -28,26 +28,13 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
-const capabilityAssets = [
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-];
-
-const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase, index) => ({
+const capabilityFeatures = EVENT_BRANDING_CAPABILITIES.phases.map((phase) => ({
   description: phase.description,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  image: phase.image,
   label: phase.title,
 }));
 
@@ -68,7 +55,6 @@ const Page = () => {
             cols={4}
             heading={EVENT_BRANDING_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {EVENT_BRANDING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -83,7 +69,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(EVENT_BRANDING_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />

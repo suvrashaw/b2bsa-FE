@@ -3,43 +3,53 @@
   "phases": [
     {
       "description": "Trade show booth graphics, fascia, and visual display systems.",
-      "title": "Trade show booth branding"
+      "title": "Trade show booth branding",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Pull-ups, banners, directional boards, and large-format graphics.",
-      "title": "Event signage production"
+      "title": "Event signage production",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Backdrop systems, stage dressing, and presenter environments.",
-      "title": "Stage and backdrop branding"
+      "title": "Stage and backdrop branding",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Immersive branded environments and brand activation experiences.",
-      "title": "Experiential event branding"
+      "title": "Experiential event branding",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Branded activations and interactive experiences for corporate audiences.",
-      "title": "Corporate brand activation support"
+      "title": "Corporate brand activation support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Large-format prints for exhibition halls and outdoor spaces.",
-      "title": "Large-format event graphics"
+      "title": "Large-format event graphics",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Visual identity and branding for networking receptions.",
-      "title": "Networking event branding"
+      "title": "Networking event branding",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Photography, video, and digital display content for events.",
-      "title": "Exhibition visual production"
+      "title": "Exhibition visual production",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Entrance boards, floor graphics, and navigation signage.",
-      "title": "Directional and wayfinding signage"
+      "title": "Directional and wayfinding signage",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Design, production, installation, and onsite branding management.",
-      "title": "End-to-end branding execution"
+      "title": "End-to-end branding execution",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Event Branding Capabilities & Creative Execution"

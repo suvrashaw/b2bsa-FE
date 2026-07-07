@@ -12,7 +12,7 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
+import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
   BOOTH_BUILDER_BLOGS_SECTION,
   BOOTH_BUILDER_CASE_STUDIES,
@@ -25,11 +25,9 @@ import {
   BOOTH_BUILDER_PAGE,
   BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
+  BOOTH_BUILDER_SHOWCASE_ITEMS,
+  BOOTH_BUILDER_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-builder/content";
-import {
-  BOOTH_DESIGN_SHOWCASE_ITEMS,
-  BOOTH_DESIGN_WHY_CHOOSE_US,
-} from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
 
 const pageMetadata = getMarketingPageMetadata(BOOTH_BUILDER_PAGE);
 
@@ -47,10 +45,9 @@ const boothBuilderSpotlight = {
 
 const EMPTY_CONTACT_MODAL = {};
 
-const SHOWCASE_SERVICES = BOOTH_DESIGN_SHOWCASE_ITEMS.map((item) => ({
-  color: "brand-blue",
+const SHOWCASE_SERVICES = BOOTH_BUILDER_SHOWCASE_ITEMS.items.map((item) => ({
   description: item.descriptions.join(" "),
-  icon: "Star",
+  icon: item.icon,
   id: item.id,
   image: item.image,
   title: item.heading,
@@ -67,11 +64,10 @@ const Page = () => {
         <>
           <Carousel
             cols={4}
-            heading="Why Choose B2B Sales Arrow for Trade Show Booth Builder Services"
+            heading={BOOTH_BUILDER_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
-            {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
+            {BOOTH_BUILDER_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
@@ -84,7 +80,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(BOOTH_BUILDER_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -96,13 +91,13 @@ const Page = () => {
       faqVariant="accordion"
       hero={BOOTH_BUILDER_HERO}
       page={BOOTH_BUILDER_PAGE}
-      parentPage={GES_PAGE}
+      parentPage={BS_PAGE}
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
           commonCtaLabel="Contact Our Team"
           contactModal={EMPTY_CONTACT_MODAL}
-          heading="Booth Sizes and Formats We Design"
+          heading={BOOTH_BUILDER_SHOWCASE_ITEMS.heading}
           serviceLabel=""
           services={SHOWCASE_SERVICES}
           showCommonCta

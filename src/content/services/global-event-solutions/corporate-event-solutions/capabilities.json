@@ -2,34 +2,44 @@
   "description": "Our corporate event solutions are designed to help enterprises deliver smooth, engaging, and professionally managed business events across industries and global event destinations.",
   "phases": [
     {
-      "title": "End-to-end event management"
+      "title": "End-to-end event management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Conference and summit planning"
+      "title": "Conference and summit planning",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Trade show operational support"
+      "title": "Trade show operational support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Networking event coordination"
+      "title": "Networking event coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Event branding and production"
+      "title": "Event branding and production",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Guest registration management"
+      "title": "Guest registration management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Vendor coordination support"
+      "title": "Vendor coordination support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Onsite event management"
+      "title": "Onsite event management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Executive hospitality services"
+      "title": "Executive hospitality services",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Global event logistics coordination"
+      "title": "Global event logistics coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Corporate Event Planning & Operational Capabilities"

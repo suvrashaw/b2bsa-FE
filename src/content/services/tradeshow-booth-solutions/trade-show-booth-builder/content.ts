@@ -31,3 +31,5 @@ export { default as BOOTH_BUILDER_HERO } from "./hero.json";
 export { default as BOOTH_BUILDER_PAGE } from "./page.json";
 export { default as BOOTH_BUILDER_PRICING } from "./pricing.json";
 export { default as BOOTH_BUILDER_PROCESS } from "./process.json";
+export { default as BOOTH_BUILDER_SHOWCASE_ITEMS } from "./showcase-items.json";
+export { default as BOOTH_BUILDER_WHY_CHOOSE_US } from "./why-choose-us.json";

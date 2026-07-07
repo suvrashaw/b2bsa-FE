@@ -3,20 +3,17 @@
     {
       "answer": "We target 90%+ accuracy on key fields including job title, direct email, and company association. Email deliverability post-enrichment typically reaches 85–95% for business addresses.",
       "id": "accuracy",
-      "question": "How accurate is enriched data?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How accurate is enriched data?"
     },
     {
       "answer": "500–2,000 records: 5–10 business days. 10,000+ records scoped individually after reviewing your data file.",
       "id": "timeline",
-      "question": "How long does a project take?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How long does a project take?"
     },
     {
       "answer": "Augmentation adds new information to existing records. Validation checks and corrects accuracy of what already exists. The two are complementary — validate first to clean, then augment to complete.",
       "id": "difference",
-      "question": "What is the difference between augmentation and validation?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What is the difference between augmentation and validation?"
     }
   ],
   "heading": "Frequently Asked Questions"

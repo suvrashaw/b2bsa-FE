@@ -3,38 +3,32 @@
     {
       "answer": "Corporate live streaming is the professional broadcast of business events to remote audiences via digital platforms, using professional cameras, lighting, audio, graphics, and platform management.",
       "id": "what-is",
-      "question": "What is corporate live streaming?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What is corporate live streaming?"
     },
     {
       "answer": "Redundancy at every level: backup internet, secondary encoding hardware, backup streaming pathways, and a live technical team monitoring throughout. Mission-critical events get a full technical rehearsal 24–48 hours before broadcast.",
       "id": "reliability",
-      "question": "How do you ensure reliability?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How do you ensure reliability?"
     },
     {
       "answer": "A live stream broadcasts an in-person event to remote viewers. A hybrid event is designed for simultaneous in-person and virtual participation, with interactivity and programming planned for both groups equally.",
       "id": "hybrid-vs-stream",
-      "question": "What is the difference between live stream and hybrid event?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What is the difference between live stream and hybrid event?"
     },
     {
       "answer": "Yes. We can stream simultaneously to YouTube Live, LinkedIn Live, Facebook Live, Vimeo, Twitch, custom RTMP destinations, and private portals — all from a single production setup.",
       "id": "multi-platform",
-      "question": "Can you stream to multiple platforms at the same time?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Can you stream to multiple platforms at the same time?"
     },
     {
       "answer": "Absolutely. We provide full technical support for international events, managing equipment logistics, venue coordination, local internet connectivity, and on-ground production teams for corporate events worldwide.",
       "id": "international",
-      "question": "Do you support international and overseas events?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Do you support international and overseas events?"
     },
     {
       "answer": "Yes. We record and archive all streams in high-quality formats, delivering post-event recordings for on-demand viewing, webinar replays, gated content libraries, social media clips, and internal distribution.",
       "id": "recording",
-      "question": "Do you provide event recording and post-event video delivery?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Do you provide event recording and post-event video delivery?"
     }
   ],
   "heading": "Frequently Asked Questions About Event Live Streaming Services"

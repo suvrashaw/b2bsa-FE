@@ -28,4 +28,4 @@ export { default as MEDIA_HERO } from "./hero.json";
 export { default as MEDIA_PAGE } from "./page.json";
 export { default as MEDIA_PROCESS } from "./process.json";
 export { default as MEDIA_SERVICES } from "./services.json";
-export { default as MEDIA_WHY } from "./why.json";
+export { default as MEDIA_WHY } from "./why-spotlight.json";

@@ -3,35 +3,43 @@
   "phases": [
     {
       "description": "End-to-end logistics for exhibition stand delivery and removal.",
-      "title": "Trade show logistics management"
+      "title": "Trade show logistics management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Operational planning and execution for conference environments.",
-      "title": "Conference operational support"
+      "title": "Conference operational support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Assembly, installation, and dismantling coordination for trade shows.",
-      "title": "Booth setup coordination"
+      "title": "Booth setup coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Day-of oversight for all event operational activities.",
-      "title": "Onsite event supervision"
+      "title": "Onsite event supervision",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "AV, furniture, display, and technical equipment management.",
-      "title": "Equipment coordination"
+      "title": "Equipment coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Timeline planning and schedule management across all event phases.",
-      "title": "Event scheduling management"
+      "title": "Event scheduling management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Cross-border freight, customs clearance, and ATA carnet management.",
-      "title": "International event logistics support"
+      "title": "International event logistics support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Full event lifecycle operational planning and delivery.",
-      "title": "Corporate event operations planning"
+      "title": "Corporate event operations planning",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Event Logistics Capabilities & Operational Expertise"

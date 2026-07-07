@@ -25,12 +25,12 @@ import {
   LIVE_STREAMING_HERO,
   LIVE_STREAMING_INTRO,
   LIVE_STREAMING_PAGE,
+  LIVE_STREAMING_RELATED_SERVICES,
   LIVE_STREAMING_WHY_CHOOSE_US,
 } from "@/content/services/media-production/event-live-streaming-services/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(LIVE_STREAMING_PAGE);
 
-const LIVE_STREAMING_LOCATION_BADGES = ["New York", "Dubai", "Singapore", "London"];
 const LIVE_STREAMING_AREAS_INTRO = {
   ...LIVE_STREAMING_AREAS_SERVED,
   imagePosition: "left" as const,
@@ -48,7 +48,6 @@ const Page = () => {
             cols={3}
             heading={LIVE_STREAMING_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -83,13 +82,10 @@ const Page = () => {
             services={LIVE_STREAMING_CAPABILITIES_FEATURES}
           />
 
-          <Spotlight
-            {...LIVE_STREAMING_AREAS_INTRO}
-            locationBadges={LIVE_STREAMING_LOCATION_BADGES}
-          />
+          <Spotlight {...LIVE_STREAMING_AREAS_INTRO} />
         </>
       }
-      relatedServicesHeading="Related Event & Media Production Services"
+      relatedServicesHeading={LIVE_STREAMING_RELATED_SERVICES.heading}
       services={LIVE_STREAMING_DELIVERABLES}
       showServicesCommonCta
       spotlight={LIVE_STREAMING_INTRO}

@@ -1,6 +1,8 @@
 {
   "description": "We design custom trade show booths that buyers stop at deliberately, because the space, the story, and the sales system inside it were built together from day one.",
-  "primaryCta": { "href": "/contact-us", "label": "Request a Design Quote" },
-  "secondaryCta": { "href": "/case-studies", "label": "View Booth Portfolio" },
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Request a Design Quote"
+  },
   "title": "Trade Show Booth Design That Converts Foot Traffic Into Pipeline"
 }

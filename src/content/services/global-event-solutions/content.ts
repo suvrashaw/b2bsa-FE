@@ -27,4 +27,4 @@ export { default as GES_HERO } from "./hero.json";
 export { default as GES_PAGE } from "./page.json";
 export { default as GES_PROCESS } from "./process.json";
 export { default as GES_SERVICES } from "./services.json";
-export { default as GES_WHY } from "./why.json";
+export { default as GES_WHY } from "./why-spotlight.json";

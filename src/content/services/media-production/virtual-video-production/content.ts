@@ -24,6 +24,7 @@ export { default as VIRTUAL_VIDEO_FAQ } from "./faq.json";
 
 export { default as VIRTUAL_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as VIRTUAL_VIDEO_PAGE } from "./page.json";
+export { default as VIRTUAL_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export const VIRTUAL_VIDEO_INTRO = {
   ...INTRO_DATA,
   stats: GLOBAL_PROOF_STATS,

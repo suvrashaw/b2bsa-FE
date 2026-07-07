@@ -3,32 +3,27 @@
     {
       "answer": "Corporate event solutions involve planning, managing, and executing business events such as conferences, trade shows, networking events, and executive gatherings.",
       "id": "what-are",
-      "question": "What are corporate event solutions?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What are corporate event solutions?"
     },
     {
       "answer": "Yes, we provide complete event planning, logistics, branding, staffing, operational support, and onsite event management services.",
       "id": "end-to-end",
-      "question": "Do you provide end-to-end event management?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Do you provide end-to-end event management?"
     },
     {
       "answer": "Yes, we support international conferences, exhibitions, networking events, and enterprise business experiences worldwide.",
       "id": "global",
-      "question": "Can you support global corporate events?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Can you support global corporate events?"
     },
     {
       "answer": "Yes, we provide networking event planning, VIP hospitality support, executive meetups, and business engagement experiences.",
       "id": "networking",
-      "question": "Do you organize networking and hospitality events?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Do you organize networking and hospitality events?"
     },
     {
       "answer": "We support technology, healthcare, manufacturing, aviation, retail, fintech, media, and enterprise business sectors.",
       "id": "industries",
-      "question": "What industries do you support?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What industries do you support?"
     }
   ],
   "heading": "Frequently Asked Questions About Corporate Event Solutions"

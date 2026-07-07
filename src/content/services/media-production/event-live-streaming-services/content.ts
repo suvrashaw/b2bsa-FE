@@ -40,5 +40,6 @@ export { default as LIVE_STREAMING_CLIENT_LOGOS } from "./client-logos.json";
 export { default as LIVE_STREAMING_FAQ } from "./faq.json";
 export { default as LIVE_STREAMING_HERO } from "./hero.json";
 export { default as LIVE_STREAMING_PAGE } from "./page.json";
+export { default as LIVE_STREAMING_RELATED_SERVICES } from "./related-services.json";
 export { default as LIVE_STREAMING_DELIVERABLES } from "./services.json";
 export { default as LIVE_STREAMING_WHY_CHOOSE_US } from "./why-choose-us.json";

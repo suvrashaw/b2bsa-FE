@@ -26,4 +26,4 @@ export { default as HUB_FAQ } from "./faq.json";
 export { default as HUB_HERO } from "./hero.json";
 export { default as HUB_PAGE } from "./page.json";
 export { default as HUB_SERVICES } from "./services.json";
-export { default as HUB_WHY } from "@/content/services/tradeshow-booth-solutions/why.json";
+export { default as HUB_WHY } from "@/content/services/tradeshow-booth-solutions/why-spotlight.json";

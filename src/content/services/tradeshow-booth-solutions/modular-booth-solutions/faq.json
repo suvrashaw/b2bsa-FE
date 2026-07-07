@@ -3,26 +3,22 @@
     {
       "answer": "A modular trade show booth is a reusable exhibition structure built from interchangeable components that reconfigure for different booth sizes, formats, and events. Graphics update between shows while the structure is reused, reducing cost and logistics complexity across multi-event programs.",
       "id": "what-is",
-      "question": "What is a modular trade show booth?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What is a modular trade show booth?"
     },
     {
       "answer": "Over a multi-event program, modular systems typically deliver 30–50% lower cost per event vs. commissioning a new custom build each time.",
       "id": "cost",
-      "question": "How much cheaper is modular vs. custom?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How much cheaper is modular vs. custom?"
     },
     {
       "answer": "Yes, engineered for international shipping in hard-shell cases. Deployed across 40+ countries.",
       "id": "international",
-      "question": "Can modular booths ship internationally?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Can modular booths ship internationally?"
     },
     {
       "answer": "Most standard formats: tool-free assembly in 2–4 hours by a small team.",
       "id": "assembly",
-      "question": "How quickly can a modular booth be assembled on-site?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How quickly can a modular booth be assembled on-site?"
     }
   ],
   "heading": "Modular Booth FAQs"

@@ -10,7 +10,6 @@ import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
   BOOTH_HOSTESS_CAPABILITIES,
@@ -25,6 +24,7 @@ import {
   BOOTH_HOSTESS_PAGE,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
+import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 
@@ -34,25 +34,13 @@ const deliverableProps = {
   contactModal: servicesContactModal,
   showCardCtas: false,
 };
-const capabilityAssets = [
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-];
-const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase, index) => ({
+const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase) => ({
   description: phase.description,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  image: phase.image,
   label: phase.title,
 }));
 
@@ -68,7 +56,6 @@ const Page = () => {
             cols={4}
             heading={BOOTH_HOSTESS_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {BOOTH_HOSTESS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -83,7 +70,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(BOOTH_HOSTESS_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -96,7 +82,7 @@ const Page = () => {
       hero={BOOTH_HOSTESS_IMAGE_HERO}
       industries={BOOTH_HOSTESS_INDUSTRIES}
       page={BOOTH_HOSTESS_PAGE}
-      parentPage={GES_PAGE}
+      parentPage={BS_PAGE}
       preProcessSections={
         <ServicesScroll
           description={BOOTH_HOSTESS_CAPABILITIES.description}

@@ -29,5 +29,6 @@ export const EVENT_EXPERIENCE_VIDEO_INTRO = {
 export { default as EVENT_EXPERIENCE_VIDEO_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_VIDEO_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_EXPERIENCE_VIDEO_PAGE } from "./page.json";
+export { default as EVENT_EXPERIENCE_VIDEO_RELATED_SERVICES } from "./related-services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_DELIVERABLES } from "./services.json";
 export { default as EVENT_EXPERIENCE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";

@@ -1,0 +1,34 @@
+{
+  "description": "In the enterprise world, quantity is the enemy of quality. Your sales team doesn't need more 'leads', they need more 'qualified conversations.' We specialize in human-powered prospecting that cuts through the noise of automated spam. Our specialists act as a seamless extension of your brand, engaging decision-makers at your most valuable target accounts and qualifying them against strict BANT criteria before they ever reach your sales team's calendar.",
+  "heading": "How We Generate Sales Qualified Leads",
+  "services": [
+    {
+      "description": "Target companies and roles by industry, size, geography, tech stack, seniority, and buying committee structure.",
+      "icon": "Users",
+      "id": "prospecting",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "ICP Definition and Firmographic Targeting"
+    },
+    {
+      "description": "LinkedIn outbound, paid campaigns, content-led inbound, event capture, cold email simultaneously.",
+      "icon": "CalendarCheck",
+      "id": "appointment",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Multi-Channel Demand Generation"
+    },
+    {
+      "description": "Content engagement, ad responses, website behaviour, and buying signals tracked across channels.",
+      "icon": "Database",
+      "id": "database",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Intent Signal Scoring"
+    },
+    {
+      "description": "BANT/CHAMP in live conversations, not retrospectively from contact lists.",
+      "icon": "Target",
+      "id": "icp",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Human-Verified Qualification"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "heading": "Why Choose B2B Sales Arrow for Trade Show Booth Builder Services",
+  "items": [
+    {
+      "description": "We manage every detail, from design to execution, ensuring a seamless and impactful booth experience.",
+      "icon": "Award",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "360-Degree Booth Solutions"
+    },
+    {
+      "description": "We've showcased at top international events in Dubai, Beijing, Toronto, the USA, and Australia, including Money20/20, Adobe Summit, Sibos, WAF, ONS, and more.",
+      "icon": "Globe2",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Global Reach & Premier Events"
+    },
+    {
+      "description": "Our booths incorporate the latest technology to boost engagement and enhance brand visibility.",
+      "icon": "TrendingUp",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Tech-Integrated Booths"
+    },
+    {
+      "description": "With experience across IT, finance, healthcare, BFSI, and more, we deliver customized solutions for every sector.",
+      "icon": "Users2",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Industry Expertise"
+    }
+  ]
+}

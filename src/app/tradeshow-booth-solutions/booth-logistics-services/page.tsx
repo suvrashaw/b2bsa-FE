@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/Button";
 import { ContactModalTrigger } from "@/components/ui/ContactModal";
 import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_LOGISTICS_BENEFITS,
   EVENT_LOGISTICS_BLOGS_SECTION,
@@ -20,6 +19,7 @@ import {
   EVENT_LOGISTICS_CASE_STUDIES,
   EVENT_LOGISTICS_CLIENT_LOGOS,
   EVENT_LOGISTICS_CONTACT_CTA,
+  EVENT_LOGISTICS_CTA,
   EVENT_LOGISTICS_DELIVERABLES,
   EVENT_LOGISTICS_FAQ,
   EVENT_LOGISTICS_IMAGE_HERO,
@@ -28,27 +28,17 @@ import {
   EVENT_LOGISTICS_PAGE,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
+import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
-const capabilityAssets = [
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-  { image: "/media/home/hero/home_hero_bg.avif" },
-];
-
-const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase, index) => ({
+const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase) => ({
   description: phase.description,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replaceAll(/(^-|-$)/g, ""),
-  image: capabilityAssets[index]?.image ?? "/media/home/hero/home_hero_bg.avif",
+  image: phase.image,
   label: phase.title,
 }));
 
@@ -64,7 +54,6 @@ const Page = () => {
             cols={4}
             heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {EVENT_LOGISTICS_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
@@ -79,7 +68,6 @@ const Page = () => {
               </Button>
             }
             id="blogs"
-            layout="carousel"
           >
             {getBlogsByTags(EVENT_LOGISTICS_BLOGS_SECTION.tags).map((post) => (
               <BlogsCarouselCard key={post.id} post={post} />
@@ -92,7 +80,7 @@ const Page = () => {
       hero={EVENT_LOGISTICS_IMAGE_HERO}
       industries={EVENT_LOGISTICS_INDUSTRIES}
       page={EVENT_LOGISTICS_PAGE}
-      parentPage={GES_PAGE}
+      parentPage={BS_PAGE}
       preProcessSections={
         <>
           <ServicesScroll
@@ -100,7 +88,7 @@ const Page = () => {
             heading={EVENT_LOGISTICS_CAPABILITIES.title}
             services={capabilityFeatures}
           />
-          <ContactModalTrigger label="Plan Your Event Logistics" />
+          <ContactModalTrigger label={EVENT_LOGISTICS_CTA.label} />
         </>
       }
       preStudiesSections={

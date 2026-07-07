@@ -2,34 +2,44 @@
   "description": "Our networking event solutions are designed to help brands create engaging, organized, and professionally managed business networking experiences.",
   "phases": [
     {
-      "title": "Executive networking event planning"
+      "title": "Executive networking event planning",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "VIP guest management"
+      "title": "VIP guest management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Networking reception coordination"
+      "title": "Networking reception coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Corporate hospitality support"
+      "title": "Corporate hospitality support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Venue coordination and setup"
+      "title": "Venue coordination and setup",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Guest registration management"
+      "title": "Guest registration management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Audience engagement support"
+      "title": "Audience engagement support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Networking dinner coordination"
+      "title": "Networking dinner coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Event branding assistance"
+      "title": "Event branding assistance",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "title": "Onsite event management"
+      "title": "Onsite event management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Networking Event Planning & Guest Engagement Capabilities"

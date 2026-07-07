@@ -120,6 +120,29 @@ const getBreadcrumbs = (page: MarketingPageIdentity, parentPage?: MarketingPageI
   return crumbs;
 };
 
+const hashString = (value: string) => {
+  let hash = 0;
+  for (let i = 0; i < value.length; i++) {
+    hash = (hash << 5) - hash + value.codePointAt(i)!;
+    hash = Math.trunc(hash);
+  }
+  return hash;
+};
+
+// Deterministic per-seed shuffle so the same page always shows the same
+// related-services order (Math.random() would differ on every request/build).
+const seededShuffle = <T,>(items: T[], seed: number) => {
+  let state = seed;
+  const nextRandom = () => {
+    state = (state * 1_103_515_245 + 12_345) & 0x7f_ff_ff_ff;
+    return state / 0x7f_ff_ff_ff;
+  };
+  return items
+    .map((item) => ({ item, sortKey: nextRandom() }))
+    .toSorted((a, b) => a.sortKey - b.sortKey)
+    .map(({ item }) => item);
+};
+
 const renderServicesSection = (
   section: ServicesStackProps,
   sectionType: "carousel" | "grid" = "grid",
@@ -188,8 +211,7 @@ export const ServicePage = ({
     const isInCategory = group.links.some((link) => link.href === page.seo.canonicalPath);
     if (isInCategory) {
       const otherServices = group.links.filter((link) => link.href !== page.seo.canonicalPath);
-      // eslint-disable-next-line react-hooks/purity, sonarjs/pseudo-random
-      const shuffled = otherServices.toSorted(() => 0.5 - Math.random());
+      const shuffled = seededShuffle(otherServices, hashString(page.seo.canonicalPath));
       computedRelatedServices = shuffled
         .slice(0, 3)
         .map((link) => ({ href: link.href, title: link.name }));
@@ -238,7 +260,7 @@ export const ServicePage = ({
       <JsonLd data={pageGraph} />
       <Header />
 
-      {hero && <Hero {...hero} secondaryCta={undefined} />}
+      {hero && <Hero {...hero} />}
 
       <ClientLogos
         description={clientLogos?.description}
@@ -258,7 +280,6 @@ export const ServicePage = ({
           imageUrl={spotlight.imageUrl}
           label="INTRODUCTION"
           locationBadges={spotlight.locationBadges}
-          secondarySpotlight={spotlight.secondarySpotlight}
           sectionClassName={spotlight.sectionClassName}
           stats={spotlight.stats}
           titleLine1={spotlight.titleLine1}

@@ -44,7 +44,6 @@ const Page = () => {
             cols={3}
             heading={SEO_WHY_CHOOSE_US.heading}
             id="why-choose-us"
-            layout="carousel"
           >
             {SEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />

@@ -54,7 +54,6 @@ const Page = () => {
         autoplayInterval={4000}
         heading={BLOG_SERVICE_CAROUSEL.heading}
         id="why-choose-us"
-        layout="carousel"
       >
         {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (
           <BoothWhyCard index={i} item={item} key={item.title} />

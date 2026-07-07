@@ -35,4 +35,4 @@ export { default as EVENT_VIDEO_PAGE } from "./page.json";
 export { default as EVENT_VIDEO_DELIVERABLES } from "./services.json";
 
 export { default as EVENT_VIDEO_CREATIVE_PRICING } from "./video-creative-pricing.json";
-export { default as EVENT_VIDEO_WHY } from "./why.json";
+export { default as EVENT_VIDEO_WHY } from "./why-spotlight.json";

@@ -166,7 +166,6 @@ const IMAGE_HERO_CTA = { href: "/demo", label: "View Case Study" };
 // ─── ServiceHero ────────────────────────────────────────────────────────────
 
 const SERVICE_HERO_PRIMARY = { href: "/demo", label: "Get a Proposal" };
-const SERVICE_HERO_SECONDARY = { href: "/demo", label: "See Our Work" };
 
 // ─── Stats ───────────────────────────────────────────────────────────────
 
@@ -847,7 +846,6 @@ const DemoPage = () => {
       <Hero
         description="From initial brief to post-event debrief — our active prospecting teams deliver qualified conversations at the world's most competitive B2B events."
         primaryCta={SERVICE_HERO_PRIMARY}
-        secondaryCta={SERVICE_HERO_SECONDARY}
         title="Active Prospecting"
       />
 
@@ -928,7 +926,7 @@ const DemoPage = () => {
 
       {/* 20 – ServiceCarouselSection */}
       <DemoLabel name="ServiceCarouselSection" />
-      <Carousel cols={4} heading="Active Prospecting & Events" layout="carousel">
+      <Carousel cols={4} heading="Active Prospecting & Events">
         {_SERVICE_CAROUSEL_ITEMS_TYPED.map((item) => (
           <ServicesCard ctaLabel="Get Started" key={item.id} service={item} />
         ))}
@@ -1079,7 +1077,6 @@ const DemoPage = () => {
         }
         headingAlign="left"
         id="blogs"
-        layout="carousel"
       >
         {DEMO_BLOG_POSTS.map((post) => (
           <BlogsCarouselCard key={post.id} post={post} />
@@ -1093,7 +1090,6 @@ const DemoPage = () => {
         description="High-end post-production packages tailored to B2B teams"
         heading="Creative Video Editing Pricing"
         id="pricing-demo"
-        layout="carousel"
       >
         {DEMO_PRICING_TIERS.map((tier) => (
           <PricingCard key={tier.name} tier={tier} />
@@ -1130,7 +1126,6 @@ const DemoPage = () => {
       <Carousel
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
         heading="Follow Our Latest Event Executions on LinkedIn"
-        layout="carousel"
       >
         {LINKEDIN_POSTS.map((post, i) => (
           <LinkedInCard index={i} key={post.id} post={post} />

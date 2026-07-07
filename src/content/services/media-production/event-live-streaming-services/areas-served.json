@@ -2,6 +2,7 @@
   "description": "We provide corporate event live streaming services across major global event destinations, helping brands engage audiences worldwide through reliable and professional event broadcasting solutions.",
   "imagePosition": "left",
   "imageUrl": "/media/home/hero/home_hero_bg.avif",
+  "locationBadges": ["New York", "Dubai", "Singapore", "London"],
   "titleLine1": "Global Event Live Streaming Services",
   "titleLine2": "Across Major Event Destinations"
 }

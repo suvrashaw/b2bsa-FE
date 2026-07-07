@@ -3,43 +3,53 @@
   "phases": [
     {
       "description": "Professional booth hostesses for visitor engagement and lead capture.",
-      "title": "Trade show booth staffing"
+      "title": "Trade show booth staffing",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Check-in, badging, and attendee guidance for conference environments.",
-      "title": "Conference registration support"
+      "title": "Conference registration support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Dedicated hosting for executives, speakers, and key stakeholders.",
-      "title": "VIP guest management"
+      "title": "VIP guest management",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Proactive visitor interaction and audience engagement support.",
-      "title": "Audience engagement assistance"
+      "title": "Audience engagement assistance",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "On-floor lead qualification and CRM-ready capture support.",
-      "title": "Lead collection support"
+      "title": "Lead collection support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Fluent hostesses in Arabic, French, German, Mandarin, Spanish, and more.",
-      "title": "Multilingual hostess services"
+      "title": "Multilingual hostess services",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Full coordination support for corporate events and summits.",
-      "title": "Corporate event coordination"
+      "title": "Corporate event coordination",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Uniformed brand ambassadors aligned to your event identity.",
-      "title": "Brand representation support"
+      "title": "Brand representation support",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Guest facilitation and engagement at networking receptions.",
-      "title": "Networking event assistance"
+      "title": "Networking event assistance",
+      "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Experienced product launch event hostess and staffing support.",
-      "title": "Product launch event staffing"
+      "title": "Product launch event staffing",
+      "image": "/media/home/hero/home_hero_bg.avif"
     }
   ],
   "title": "Event Staffing Capabilities & Guest Engagement Support"

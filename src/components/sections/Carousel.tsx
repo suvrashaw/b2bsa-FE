@@ -37,7 +37,6 @@ export interface CarouselProps {
   headingAction?: ReactNode;
   headingAlign?: "center" | "left";
   id?: string;
-  layout?: "carousel" | "grid";
 }
 
 export const Carousel = ({

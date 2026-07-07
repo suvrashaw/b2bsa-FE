@@ -3,20 +3,17 @@
     {
       "answer": "B2B data degrades at approximately 25–30% per year. Validate every 6 months for active outreach databases. Validate immediately before major campaign launches.",
       "id": "how-often",
-      "question": "How often should we validate our database?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "How often should we validate our database?"
     },
     {
       "answer": "We flag problematic records with clear recommendations. Your team decides whether to delete, archive, or re-verify.",
       "id": "delete",
-      "question": "Will you delete contacts or just flag them?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "Will you delete contacts or just flag them?"
     },
     {
       "answer": "Validation checks and corrects accuracy of existing data. Augmentation adds new information to existing records. Complementary — validate first, then augment.",
       "id": "difference",
-      "question": "What is the difference between validation and augmentation?",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "question": "What is the difference between validation and augmentation?"
     }
   ],
   "heading": "Frequently Asked Questions"
