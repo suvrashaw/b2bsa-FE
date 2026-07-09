@@ -17,9 +17,10 @@ import {
 } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
-  buildCollectionPageJsonLd,
+  buildBreadcrumbJsonLd,
   buildLinkedItemListJsonLd,
   buildPageGraph,
+  buildWebPageJsonLd,
   JsonLd,
   siteUrl,
 } from "@/lib";
@@ -28,16 +29,26 @@ import { BlogsSection } from "./BlogsSection";
 
 export const metadata: Metadata = getMarketingPageMetadata(BLOG_PAGE);
 
+const BLOGS_URL = `${siteUrl}/blogs`;
+
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
         data={buildPageGraph([
-          buildCollectionPageJsonLd({
+          buildWebPageJsonLd({
+            breadcrumbId: `${BLOGS_URL}/#breadcrumb`,
             description: BLOG_PAGE.seo.description,
             name: BLOG_PAGE.seo.title.split(" | ", 1)[0],
-            url: "/blogs",
+            url: BLOGS_URL,
           }),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "Blogs", url: BLOGS_URL },
+            ],
+            BLOGS_URL
+          ),
           buildLinkedItemListJsonLd(
             SHARED_BLOG_POSTS.filter((p) => p.body)
               .slice(0, 10)

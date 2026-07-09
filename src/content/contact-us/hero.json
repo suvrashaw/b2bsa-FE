@@ -1,0 +1,21 @@
+{
+  "backgroundImage": {
+    "alt": "Contact Us",
+    "src": "/media/contact/hero.avif"
+  },
+  "descriptionHighlight": "lead generation",
+  "descriptionParts": [
+    "Whether you need a booth for next quarter, a sharper ",
+    " system, enterprise video, a full digital marketing program, or market intelligence — one conversation is enough to define the right path."
+  ],
+  "headingLine1": "Let's Build Your",
+  "headingLine2": "Enterprise Growth Strategy",
+  "primaryCta": {
+    "href": "#contact",
+    "label": "Submit Inquiry"
+  },
+  "secondaryCta": {
+    "href": "https://calendly.com/b2bsalesarrow",
+    "label": "Book a Meeting"
+  }
+}

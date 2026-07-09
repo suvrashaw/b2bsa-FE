@@ -172,43 +172,38 @@ const HeroBackground = ({
   if (isVideoMode) {
     const hasMobileVideo = Boolean(mobileVideoUrl);
     return (
-      <>
-        <video
-          autoPlay
-          className={cn(
-            "hero-bg-video absolute inset-0 size-full object-cover",
-            hasMobileVideo && "hidden md:block"
-          )}
-          loop
-          muted
-          playsInline
-          preload="metadata"
-        >
-          {videoWebm && <source src={videoWebm} type="video/webm" />}
-          <source src={effectiveVideoUrl} type="video/mp4" />
-          <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
-        </video>
-        {hasMobileVideo && (
-          <video
-            autoPlay
-            className="hero-bg-video absolute inset-0 size-full object-cover md:hidden"
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          >
-            {mobileVideoWebm && <source src={mobileVideoWebm} type="video/webm" />}
-            <source src={mobileVideoUrl!} type="video/mp4" />
-            <track
-              default
-              kind="captions"
-              label="English"
-              src="data:text/vtt,WEBVTT"
-              srcLang="en"
-            />
-          </video>
+      <video
+        autoPlay
+        className="hero-bg-video absolute inset-0 size-full object-cover"
+        fetchPriority="high"
+        loop
+        muted
+        playsInline
+        poster={poster}
+        preload="metadata"
+      >
+        {/* Mobile-specific sources — browser ignores these on wide viewports */}
+        {hasMobileVideo && mobileVideoWebm && (
+          <source media="(max-width: 767px)" src={mobileVideoWebm} type="video/webm" />
         )}
-      </>
+        {hasMobileVideo && mobileVideoUrl && (
+          <source media="(max-width: 767px)" src={mobileVideoUrl} type="video/mp4" />
+        )}
+        {/* Desktop sources — scoped when a mobile video exists */}
+        {videoWebm && (
+          <source
+            media={hasMobileVideo ? "(min-width: 768px)" : undefined}
+            src={videoWebm}
+            type="video/webm"
+          />
+        )}
+        <source
+          media={hasMobileVideo ? "(min-width: 768px)" : undefined}
+          src={effectiveVideoUrl}
+          type="video/mp4"
+        />
+        <track default kind="captions" label="English" src="data:text/vtt,WEBVTT" srcLang="en" />
+      </video>
     );
   }
   return videoSrc ? (
@@ -303,7 +298,14 @@ export const Hero = ({
       ref={containerRef}
     >
       {isVideoMode && videoWebm && (
-        <link as="video" href={videoWebm} rel="preload" type="video/webm" />
+        <link
+          as="video"
+          fetchPriority="high"
+          href={videoWebm}
+          media="(min-width: 768px)"
+          rel="preload"
+          type="video/webm"
+        />
       )}
       {isVideoMode && mobileVideoWebm && (
         <link

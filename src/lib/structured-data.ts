@@ -6,18 +6,56 @@ const ORGANIZATION = {
   "@id": `${BASE}/#organization`,
   "@type": "Organization" as const,
   description:
-    "Global capability. Strategic growth partner for B2B enterprises specializing in event solutions and digital marketing.",
+    "Trusted across 30+ countries for B2B event solutions, trade show booth design, and media production that builds real pipelines. Get in touch today.",
+  email: "info@b2bsalesarrow.com",
+  foundingDate: "2012",
   logo: `${BASE}/media/logo/logo-primary.avif`,
   name: "B2B Sales Arrow",
   sameAs: [
-    "https://www.linkedin.com/company/b2b-sales-arrow-llc/",
     "https://www.facebook.com/b2bsalesarrow",
+    "https://www.linkedin.com/company/b2b-sales-arrow-llc/",
     "https://www.instagram.com/b2b_sales_arrow/",
     "https://www.youtube.com/@b2bsalesarrow167",
     "https://x.com/B2B_SalesArrow",
   ],
+  telephone: "+91-70205-58545",
   url: BASE,
 };
+
+// Verbatim knowsAbout list from the schema spec — kept as a fixed array
+// rather than derived from marketingPages so the exact wording and order
+// match the source document.
+const KNOWS_ABOUT = [
+  "Global Event Solutions",
+  "Event Experience Creation",
+  "Event Branding Solutions",
+  "Corporate Event Solutions",
+  "Corporate Networking Events",
+  "Trade Show Booth Solutions",
+  "Trade Show Booth Builder",
+  "Trade Show Booth Design",
+  "Trade Show Booth Rental",
+  "Booth Hostess Services",
+  "Booth Logistics Services",
+  "Modular Booth Solutions",
+  "Sales Qualified Lead Generation",
+  "Event Lead Generation",
+  "Market Research",
+  "Data Augmentation Services",
+  "Data Validation Services",
+  "Media Production",
+  "Event Video Production",
+  "Corporate Video Production",
+  "Event Experience Video Production",
+  "Event Live Streaming Services",
+  "Event Physical Video Shoot",
+  "Virtual Video Production",
+  "Digital Marketing",
+  "SEO Services",
+  "Performance Marketing",
+  "Social Media Marketing",
+  "Human Powered Market Intelligence",
+];
 
 const ADDRESSES = [
   {
@@ -109,10 +147,9 @@ export const buildFaqJsonLd = (faqs: Array<{ answer: ReactNode; question: string
   };
 };
 
-export const buildOrganizationJsonLd = (
-  serviceOffers?: Array<{ name: string; url: string }>,
-  knowsAbout?: string[]
-) => {
+// Note: does not use Offer/makesOffer — the schema spec explicitly excludes
+// the Offer type site-wide, so services are linked via knowsAbout instead.
+export const buildOrganizationJsonLd = (knowsAbout: string[] = KNOWS_ABOUT) => {
   return {
     "@context": "https://schema.org",
     ...ORGANIZATION,
@@ -122,19 +159,10 @@ export const buildOrganizationJsonLd = (
         "@type": "ContactPoint",
         contactType: "sales",
         email: "info@b2bsalesarrow.com",
+        telephone: "+91-70205-58545",
       },
     ],
-    ...(knowsAbout?.length && { knowsAbout }),
-    ...(serviceOffers?.length && {
-      makesOffer: serviceOffers.map(({ name, url }) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name,
-          url,
-        },
-      })),
-    }),
+    ...(knowsAbout.length > 0 && { knowsAbout }),
   };
 };
 
@@ -252,24 +280,23 @@ export const buildContactPageJsonLd = (description: string) => ({
   url: `${BASE}/contact-us`,
 });
 
-export const buildCollectionPageJsonLd = ({
-  description,
-  name,
+export const buildImageObjectJsonLd = ({
+  caption,
+  height = 630,
   url,
+  width = 1200,
 }: {
-  description: string;
-  name: string;
+  caption?: string;
+  height?: number;
   url: string;
+  width?: number;
 }) => ({
   "@context": "https://schema.org",
-  "@id": `${BASE}${url}/#collection`,
-  "@type": "CollectionPage",
-  description,
-  inLanguage: "en-US",
-  isPartOf: { "@id": `${BASE}/#website` },
-  name,
-  publisher: { "@id": ORGANIZATION["@id"] },
-  url: `${BASE}${url}`,
+  "@type": "ImageObject",
+  height,
+  ...(caption && { caption }),
+  url: url.startsWith("http") ? url : `${BASE}${url}`,
+  width,
 });
 
 export const buildWebPageJsonLd = ({
@@ -280,6 +307,9 @@ export const buildWebPageJsonLd = ({
   image,
   mainEntityId,
   name,
+  // Only the Trade Show Calendar hub page should set this — the schema spec
+  // excludes SearchAction everywhere else.
+  searchAction,
   url,
 }: {
   breadcrumbId?: string;
@@ -289,6 +319,7 @@ export const buildWebPageJsonLd = ({
   image?: string;
   mainEntityId?: string;
   name: string;
+  searchAction?: { urlTemplate: string };
   url: string;
 }) => ({
   "@context": "https://schema.org",
@@ -304,6 +335,16 @@ export const buildWebPageJsonLd = ({
   ...(mainEntityId && { mainEntity: { "@id": mainEntityId } }),
   name,
   ...(image && { primaryImageOfPage: { "@type": "ImageObject", url: image } }),
+  ...(searchAction && {
+    potentialAction: {
+      "@type": "SearchAction",
+      "query-input": "required name=search_term_string",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: searchAction.urlTemplate,
+      },
+    },
+  }),
   url,
 });
 
@@ -314,6 +355,7 @@ export const buildEventJsonLd = ({
   endDate,
   image,
   name,
+  organizer,
   startDate,
   url,
   venue,
@@ -324,6 +366,7 @@ export const buildEventJsonLd = ({
   endDate: string;
   image?: string;
   name: string;
+  organizer?: string;
   startDate: string;
   url: string;
   venue: string;
@@ -346,6 +389,12 @@ export const buildEventJsonLd = ({
     name: venue,
   },
   name,
+  ...(organizer && {
+    organizer: {
+      "@type": "Organization",
+      name: organizer,
+    },
+  }),
   startDate,
   url,
 });
@@ -357,18 +406,12 @@ export const buildPageGraph = (
   "@graph": schemas.map(({ "@context": _ctx, ...rest }) => rest),
 });
 
+// No SearchAction here — the schema spec restricts SearchAction to the Trade
+// Show Calendar page only (see buildWebPageJsonLd's `searchAction` param).
 export const buildWebsiteJsonLd = () => ({
   "@context": "https://schema.org",
   "@id": `${BASE}/#website`,
   "@type": "WebSite",
   name: ORGANIZATION.name,
-  potentialAction: {
-    "@type": "SearchAction",
-    "query-input": "required name=search_term_string",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: BASE + "/tradeshow-calendar?q={search_term_string}",
-    },
-  },
   url: BASE,
 });

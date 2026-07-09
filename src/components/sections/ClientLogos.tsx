@@ -5,32 +5,11 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-
-interface ClientLogoItem {
-  alt: string;
-  id: string;
-  src: string;
-}
-
-const DEFAULT_CLIENT_LOGOS: ClientLogoItem[] = [
-  { alt: "Airtel", id: "airtel", src: "/media/client-logos/Airtel.svg" },
-  { alt: "BOSCH", id: "bosch", src: "/media/client-logos/BOSCH.svg" },
-  { alt: "CSC", id: "csc", src: "/media/client-logos/CSC.svg" },
-  { alt: "Infosys", id: "infosys", src: "/media/client-logos/Infosys.svg" },
-  {
-    alt: "SingleStore",
-    id: "singlestore",
-    src: "/media/client-logos/SingleStore.svg",
-  },
-  { alt: "Syngene", id: "syngene", src: "/media/client-logos/Syngene.svg" },
-  { alt: "Temenos", id: "temenos", src: "/media/client-logos/Temenos.svg" },
-  {
-    alt: "United Payment",
-    id: "unitedpayment",
-    src: "/media/client-logos/UnitedPayment.svg",
-  },
-  { alt: "Worldpay", id: "worldpay", src: "/media/client-logos/Worldpay.svg" },
-];
+import {
+  type ClientLogoItem,
+  DEFAULT_CLIENT_LOGOS,
+  DEFAULT_CLIENT_LOGOS_HEADING,
+} from "@/content/client-logos";
 
 export interface ClientLogosProps {
   description?: string;
@@ -90,7 +69,7 @@ const LogosRow = ({
 
 export const ClientLogos = ({
   description,
-  heading = "Trusted by Leading Brands",
+  heading = DEFAULT_CLIENT_LOGOS_HEADING,
   overlap = true,
   speed = 2.5,
   wheelSpeed = 0.05,

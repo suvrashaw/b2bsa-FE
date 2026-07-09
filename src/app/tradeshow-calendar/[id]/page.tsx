@@ -7,7 +7,9 @@ import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 import {
   buildBreadcrumbJsonLd,
   buildEventJsonLd,
+  buildImageObjectJsonLd,
   buildPageGraph,
+  buildServiceJsonLd,
   buildWebPageJsonLd,
   JsonLd,
   siteUrl,
@@ -95,6 +97,7 @@ const Page = async ({ params }: EventDetailPageProps) => {
             endDate: event.endDate,
             ...(event.image && { image: event.image }),
             name: event.name,
+            ...(event.organizer && { organizer: event.organizer }),
             startDate: event.startDate,
             url: eventUrl,
             venue: event.venue,
@@ -110,6 +113,15 @@ const Page = async ({ params }: EventDetailPageProps) => {
             ],
             eventUrl
           ),
+          buildServiceJsonLd({
+            description: `Trade show booth design, build, and on-site delivery for exhibitors attending ${event.name}.`,
+            name: "Trade Show Booth Solutions",
+            serviceType: "Trade Show Booth Solutions",
+            url: "/tradeshow-booth-solutions",
+          }),
+          ...(event.image
+            ? [buildImageObjectJsonLd({ caption: `${event.name} — B2B Sales Arrow`, url: event.image })]
+            : []),
         ])}
       />
       <EventPage event={event} />

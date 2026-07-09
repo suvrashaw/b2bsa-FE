@@ -2,61 +2,51 @@
   "description": "Our social media marketing services are designed to help B2B companies create consistent brand communication and audience engagement across digital platforms.",
   "features": [
     {
-      "icon": "Megaphone",
       "id": "b2b-social-media-marketing",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "B2B social media marketing"
     },
     {
-      "icon": "Briefcase",
       "id": "linkedin-marketing-campaigns",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "LinkedIn marketing campaigns"
     },
     {
-      "icon": "Palette",
       "id": "social-media-content-creation",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Social media content creation"
     },
     {
-      "icon": "Building2",
       "id": "corporate-brand-positioning",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Corporate brand positioning"
     },
     {
-      "icon": "Target",
       "id": "paid-social-media-campaigns",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Paid social media campaigns"
     },
     {
-      "icon": "Lightbulb",
       "id": "thought-leadership-marketing",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Thought leadership marketing"
     },
     {
-      "icon": "Calendar",
       "id": "event-promotion-campaigns",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Event promotion campaigns"
     },
     {
-      "icon": "Video",
       "id": "video-and-creative-production",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Video and creative production"
     },
     {
-      "icon": "MessageSquare",
       "id": "community-engagement-support",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Community engagement support"
     },
     {
-      "icon": "BarChart3",
       "id": "analytics-and-performance-reporting",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Analytics and performance reporting"

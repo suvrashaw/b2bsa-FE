@@ -124,6 +124,7 @@ export interface HomeServiceItem {
 }
 
 export interface HomeServicesContent {
+  commonCtaLabel?: string;
   ctaLabel: string;
   eyebrow?: string;
   heading: ReactNode;
@@ -204,7 +205,10 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
   ctaLabel: "Full Study",
   heading: "Proven Global Event Solutions: Enterprise Success Stories",
   items: GLOBAL_CASE_STUDIES as unknown as CaseStudyItem[],
+  viewAllLabel: "View All Case Studies",
 };
+
+export const HOME_SERVICES_CONTACT_MODAL = {};
 
 export const HOME_EVENTS_CONTENT: EventsContent = {
   ...EVENTS_DATA,

@@ -36,5 +36,7 @@ export { default as ABOUT_HERO } from "./hero.json";
 export { default as ABOUT_ORIGIN_TIMELINE } from "./origin-timeline.json";
 export { default as ABOUT_SIGNATURE_SERVICES } from "./services.json";
 export { default as ABOUT_SIGNATURE_SERVICES_STACK } from "./signature-services-stack.json";
+export { default as ABOUT_TEAM_IMAGES } from "./team-images.json";
 
 export { default as ABOUT_VISION_MISSION } from "./vision-mission.json";
+export { default as ABOUT_WHO_WE_ARE } from "./who-we-are.json";

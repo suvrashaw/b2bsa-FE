@@ -11,3 +11,5 @@ export const CONTACT_US = CONTACTUS_DATA.cta;
 export { default as CONTACT_NEXT_STEPS } from "./contact-next-steps.json";
 
 export { default as CONTACT_FORM } from "./contactus.json";
+
+export { default as CONTACT_HERO } from "./hero.json";

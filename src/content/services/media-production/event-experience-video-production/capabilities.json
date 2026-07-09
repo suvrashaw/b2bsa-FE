@@ -4,70 +4,60 @@
   "features": [
     {
       "id": "multi-camera-event-coverage",
-      "icon": "Camera",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Multi-Camera Event Coverage",
       "description": "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions."
     },
     {
       "id": "4k-video-production",
-      "icon": "Video",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "4K Video Production",
       "description": "Professional camera workflows for sharp, polished event footage and final delivery."
     },
     {
       "id": "professional-audio-recording",
-      "icon": "Mic",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Professional Audio Recording",
       "description": "Clean speaker, panel, interview, and ambient audio captured for usable event storytelling."
     },
     {
       "id": "drone-event-videography",
-      "icon": "Navigation",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Drone Event Videography",
       "description": "Aerial venue footage where location, permissions, and event format make it appropriate."
     },
     {
       "id": "gimbal-cinematic-shots",
-      "icon": "Film",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Gimbal & Cinematic Shots",
       "description": "Gimbal and motion shots that give event videos a more cinematic, dynamic feel."
     },
     {
       "id": "event-photography-integration",
-      "icon": "Aperture",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Photography Integration",
       "description": "Photo capture can be integrated alongside video to support post-event marketing needs."
     },
     {
       "id": "onsite-video-editing",
-      "icon": "MonitorPlay",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Onsite Video Editing",
       "description": "Onsite editing support for urgent social media clips, recaps, or same-day campaign assets."
     },
     {
       "id": "branded-motion-graphics",
-      "icon": "Layers",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Branded Motion Graphics",
       "description": "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics."
     },
     {
       "id": "fast-turnaround-post-production",
-      "icon": "Zap",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Fast Turnaround Post-Production",
       "description": "Fast post-event editing support for immediate publishing and internal communication needs."
     },
     {
       "id": "social-media-optimized-formats",
-      "icon": "Share2",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Social Media Optimized Formats",
       "description": "Landscape, square, and vertical formats prepared for LinkedIn, YouTube, Instagram, and more."

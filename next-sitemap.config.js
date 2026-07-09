@@ -49,7 +49,10 @@ module.exports = {
     "/thank-you",
   ],
   generateIndexSitemap: false,
-  generateRobotsTxt: true,
+  // robots.txt and sitemap.xml are maintained as static files in public/ to
+  // match an external spec verbatim. This config is no longer run as part
+  // of `npm run build` (see package.json) — kept only for manual/local use.
+  generateRobotsTxt: false,
   siteUrl: process.env.SITE_URL || "https://b2bsalesarrow.com",
   transform: async (config, path) => {
     let priority = config.priority || 0.7;

@@ -23,12 +23,21 @@ import {
   ABOUT_RECENT_EVENTS,
   ABOUT_SIGNATURE_SERVICES,
   ABOUT_SIGNATURE_SERVICES_STACK,
+  ABOUT_TEAM_IMAGES,
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
+  ABOUT_WHO_WE_ARE,
 } from "@/content/about-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { normalizeEvent } from "@/content/tradeshow-calendar";
-import { buildAboutPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
+import {
+  buildAboutPageJsonLd,
+  buildBreadcrumbJsonLd,
+  buildImageObjectJsonLd,
+  buildLocalBusinessJsonLd,
+  buildPageGraph,
+  siteUrl,
+} from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
@@ -38,12 +47,25 @@ const ABOUT_PRIMARY_CTA = {
   href: ABOUT_HERO.primaryCtaHref,
   label: ABOUT_HERO.primaryCtaLabel,
 };
+const ABOUT_URL = `${siteUrl}/about-us`;
 
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
-      <JsonLd data={buildAboutPageJsonLd(ABOUT_PAGE.seo.description)} />
+      <JsonLd
+        data={buildPageGraph([
+          buildAboutPageJsonLd(ABOUT_PAGE.seo.description),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "About", url: ABOUT_URL },
+            ],
+            ABOUT_URL
+          ),
+          buildImageObjectJsonLd({ caption: ABOUT_HERO.title, url: ABOUT_HERO.image.src }),
+        ])}
+      />
       <Header />
 
       {/* Hero — centered, no description, "About Us" eyebrow, slide-from-left animation */}
@@ -51,7 +73,7 @@ const Page = () => {
         animateFromLeft
         centerContent
         centered
-        eyebrow="About Us"
+        eyebrow={ABOUT_HERO.eyebrow}
         imageOpacity={0.7}
         images={ABOUT_IMAGES}
         primaryCta={ABOUT_PRIMARY_CTA}
@@ -63,12 +85,10 @@ const Page = () => {
         <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeader as="h2" className="mb-6">
-              Who We Are
+              {ABOUT_WHO_WE_ARE.heading}
             </SectionHeader>
             <p className="text-base leading-relaxed text-brand-charcoal/70 md:text-lg">
-              B2B Sales Arrow is not a vendor. We are a strategic growth partner, bringing event
-              solutions, video production, performance marketing, and market research under one team
-              with one commercial brief and clear accountability to outcomes.
+              {ABOUT_WHO_WE_ARE.description}
             </p>
           </div>
         </div>
@@ -120,30 +140,30 @@ const Page = () => {
             <div className="flex flex-col gap-4 lg:h-full">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:aspect-auto lg:flex-1">
                 <Image
-                  alt="B2B Sales Arrow team"
+                  alt={ABOUT_TEAM_IMAGES[0].alt}
                   className="object-cover"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  src="/media/about-us/culture/culture-1.avif"
+                  src={ABOUT_TEAM_IMAGES[0].src}
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
-                    alt="B2B Sales Arrow team"
+                    alt={ABOUT_TEAM_IMAGES[1].alt}
                     className="object-cover"
                     fill
                     sizes="(max-width: 1024px) 50vw, 22vw"
-                    src="/media/about-us/culture/culture-4.avif"
+                    src={ABOUT_TEAM_IMAGES[1].src}
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
-                    alt="B2B Sales Arrow team"
+                    alt={ABOUT_TEAM_IMAGES[2].alt}
                     className="object-cover"
                     fill
                     sizes="(max-width: 1024px) 50vw, 22vw"
-                    src="/media/about-us/culture/culture-5.avif"
+                    src={ABOUT_TEAM_IMAGES[2].src}
                   />
                 </div>
               </div>
@@ -197,7 +217,7 @@ const Page = () => {
         cols={3}
         cta={
           <Button asChild variant="primary">
-            <Link href="/case-studies">View All Case Studies</Link>
+            <Link href="/case-studies">{ABOUT_RECENT_EVENTS.viewAllLabel}</Link>
           </Button>
         }
         description={ABOUT_RECENT_EVENTS.description}
@@ -206,7 +226,7 @@ const Page = () => {
       >
         {ABOUT_RECENT_EVENTS.events.map((event, i) => (
           <EventsCard
-            ctaLabel={ABOUT_RECENT_EVENTS.ctaLabel ?? "View Event"}
+            ctaLabel={ABOUT_RECENT_EVENTS.ctaLabel}
             event={normalizeEvent(event, i)}
             flipStyle="diagonalWipe"
             index={i}

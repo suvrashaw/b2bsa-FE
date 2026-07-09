@@ -91,7 +91,7 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
-          commonCtaLabel="Contact Our Team"
+          commonCtaLabel={BOOTH_BUILDER_SHOWCASE_ITEMS.ctaLabel}
           contactModal={EMPTY_CONTACT_MODAL}
           heading={BOOTH_BUILDER_SHOWCASE_ITEMS.heading}
           serviceLabel=""

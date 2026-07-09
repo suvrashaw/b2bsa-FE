@@ -33,7 +33,6 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE
 
 const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map(
   (item) => ({
-    icon: item.icon,
     id: item.id,
     image: item.image,
     label: item.label,

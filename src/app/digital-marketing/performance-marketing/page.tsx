@@ -72,7 +72,6 @@ const Page = () => {
         <ServicesStack
           {...PPC_SERVICES}
           cardCtaMode="none"
-          commonCtaLabel="Contact Our Team"
           contactModal={servicesContactModal}
           showCommonCta
         />

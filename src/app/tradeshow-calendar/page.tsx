@@ -12,9 +12,10 @@ import {
   TRADE_SHOW_CALENDAR_PAGE,
 } from "@/content/tradeshow-calendar";
 import {
-  buildCollectionPageJsonLd,
+  buildBreadcrumbJsonLd,
   buildLinkedItemListJsonLd,
   buildPageGraph,
+  buildWebPageJsonLd,
   JsonLd,
   siteUrl,
 } from "@/lib";
@@ -35,16 +36,27 @@ const TRADE_SHOW_CALENDAR_HERO_IMAGES = [
 
 export const metadata: Metadata = getMarketingPageMetadata(TRADE_SHOW_CALENDAR_PAGE);
 
+const CALENDAR_URL = `${siteUrl}/tradeshow-calendar`;
+
 const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd
         data={buildPageGraph([
-          buildCollectionPageJsonLd({
+          buildWebPageJsonLd({
+            breadcrumbId: `${CALENDAR_URL}/#breadcrumb`,
             description: TRADE_SHOW_CALENDAR_PAGE.seo.description,
             name: TRADE_SHOW_CALENDAR_PAGE.seo.title.split(" | ", 1)[0],
-            url: "/tradeshow-calendar",
+            searchAction: { urlTemplate: CALENDAR_URL + "?q={search_term_string}" },
+            url: CALENDAR_URL,
           }),
+          buildBreadcrumbJsonLd(
+            [
+              { name: "Home", url: siteUrl },
+              { name: "Tradeshow Calendar", url: CALENDAR_URL },
+            ],
+            CALENDAR_URL
+          ),
           buildLinkedItemListJsonLd(
             TRADE_SHOW_CALENDAR_EVENTS.slice(0, 10).map((e) => ({
               name: e.name,

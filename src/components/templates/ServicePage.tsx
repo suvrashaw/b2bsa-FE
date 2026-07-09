@@ -30,6 +30,7 @@ import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
   buildHowToJsonLd,
+  buildImageObjectJsonLd,
   buildItemListJsonLd,
   buildPageGraph,
   buildServiceJsonLd,
@@ -252,6 +253,9 @@ export const ServicePage = ({
     ...(steps.length > 0 ? [buildHowToJsonLd(processTitle, steps)] : []),
     ...(services
       ? [buildItemListJsonLd(services.services ?? services.content?.services ?? [])]
+      : []),
+    ...(fallbackBg?.src
+      ? [buildImageObjectJsonLd({ caption: page.pageName, url: fallbackBg.src })]
       : []),
   ]);
 

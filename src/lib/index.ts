@@ -15,11 +15,11 @@ export { JsonLd, normalizePath, siteUrl } from "@/lib/json-ld";
 export {
   buildAboutPageJsonLd,
   buildBreadcrumbJsonLd,
-  buildCollectionPageJsonLd,
   buildContactPageJsonLd,
   buildEventJsonLd,
   buildFaqJsonLd,
   buildHowToJsonLd,
+  buildImageObjectJsonLd,
   buildItemListJsonLd,
   buildLinkedItemListJsonLd,
   buildLocalBusinessJsonLd,

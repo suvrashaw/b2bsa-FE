@@ -44,22 +44,24 @@ import {
   HOME_FAQ_CONTENT,
   HOME_HERO_CONTENT,
   HOME_PAGE,
+  HOME_SERVICES_CONTACT_MODAL,
+  HOME_SERVICES_CONTENT,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
+  buildImageObjectJsonLd,
   buildLocalBusinessListJsonLd,
   buildPageGraph,
   buildWebPageJsonLd,
+  buildWebsiteJsonLd,
   siteUrl,
 } from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
-
-const HOME_SERVICES_CONTACT_MODAL = {};
 
 const Home = () => {
   return (
@@ -72,8 +74,13 @@ const Home = () => {
             name: HOME_PAGE.seo.title,
             url: siteUrl,
           }),
+          buildWebsiteJsonLd(),
           buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
           buildBreadcrumbJsonLd([{ name: "Home", url: siteUrl }], siteUrl),
+          buildImageObjectJsonLd({
+            caption: "B2B Sales Arrow",
+            url: "/media/logo/logo-primary.avif",
+          }),
         ])}
       />
       {buildLocalBusinessListJsonLd().map((entry) => (
@@ -101,14 +108,14 @@ const Home = () => {
 
       <div id="services">
         <ServicesStack
-          commonCtaLabel="Contact Our Team"
+          commonCtaLabel={HOME_SERVICES_CONTENT.commonCtaLabel}
           contactModal={HOME_SERVICES_CONTACT_MODAL}
           showCommonCta
         />
       </div>
 
       <div id="work">
-        <CaseStudies items={GLOBAL_CASE_STUDIES} viewAllLabel="View All Case Studies" />
+        <CaseStudies items={GLOBAL_CASE_STUDIES} />
       </div>
 
       <CardsGrid
@@ -129,7 +136,7 @@ const Home = () => {
           .slice(0, 6)
           .map((event, i) => (
             <EventsCard
-              ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+              ctaLabel={HOME_EVENTS_CONTENT.ctaLabel}
               event={event}
               flipStyle="diagonalWipe"
               index={i}
