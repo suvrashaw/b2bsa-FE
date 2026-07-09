@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib";
 
-const eyebrowVariants = cva("type-eyebrow mb-6 inline-block rounded-full px-4 py-2.5", {
+const eyebrowVariants = cva("type-eyebrow mb-6 inline-flex min-h-[48px] items-center justify-center rounded-full px-4 py-2", {
   defaultVariants: {
     variant: "blue",
   },

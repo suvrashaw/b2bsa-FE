@@ -185,11 +185,11 @@ export const Footer = () => {
             <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
               Navigation
             </span>
-            <ul className="space-y-3">
+            <ul className="flex flex-col">
               {footerNavigation.map((item) => (
                 <li key={item.name}>
                   <Link
-                    className="block py-1 text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
+                    className="flex min-h-[48px] items-center py-2 text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
                     href={item.href}
                   >
                     {toTitleCase(item.name)}
@@ -227,7 +227,7 @@ export const Footer = () => {
             <div className="mb-5 space-y-1.5 text-sm text-white/90">
               <p>
                 <a
-                  className="group inline-flex items-center gap-1 transition-colors hover:text-white hover:underline"
+                  className="group inline-flex min-h-[48px] items-center gap-1 transition-colors hover:text-white hover:underline"
                   href="mailto:info@b2bsalesarrow.com"
                 >
                   info@b2bsalesarrow.com
