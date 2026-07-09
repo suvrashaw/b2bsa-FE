@@ -37,11 +37,7 @@ const Page = () => {
       contactUs={CORPORATE_VIDEO_CONTACT_CTA}
       customSections={
         <>
-          <Carousel
-            cols={3}
-            heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={3} heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORPORATE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

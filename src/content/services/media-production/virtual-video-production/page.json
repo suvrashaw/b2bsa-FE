@@ -4,14 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/media-production/virtual-video-production",
-    "description": "Virtual video event production for webinars, fireside chats, panel discussions, executive interviews, virtual conferences, and hybrid corporate events.",
-    "focusKeyphrase": "virtual video event production",
-    "secondaryKeywords": [
-      "virtual video production",
-      "webinar production services",
-      "virtual event production",
-      "hybrid event production"
-    ],
-    "title": "Virtual Video Event Production Services | B2B Sales Arrow"
+    "description": "Studio-quality virtual video production for distributed enterprise teams - remote direction, professional editing, and broadcast-ready output by B2B Sales.",
+    "focusKeyphrase": "virtual video production",
+    "secondaryKeywords": ["remote video production", "virtual studio production"],
+    "title": "Virtual Video Production | B2B Sales Arrow"
   }
 }

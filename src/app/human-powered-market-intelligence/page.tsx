@@ -47,7 +47,6 @@ const Page = () => {
           </Carousel>
         </>
       }
-
       faq={MARKET_INTELLIGENCE_FAQ}
       hero={MARKET_INTELLIGENCE_HERO}
       page={MARKET_INTELLIGENCE_PAGE}

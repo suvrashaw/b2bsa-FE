@@ -15,6 +15,9 @@ export interface CalendarTradeShow {
   industry: string;
   name: string;
   region?: string;
+  seoDescription?: string;
+  seoKeywords?: string[];
+  seoTitle?: string;
   sourceUrl: string;
   startDate: string;
   summary: string;

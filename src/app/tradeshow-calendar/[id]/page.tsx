@@ -38,30 +38,33 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
   }
 
   const canonicalId = SUPERSEDED_BY[id] ?? id;
+  const ogTitle = event.seoTitle ?? event.name;
+  const description = event.seoDescription ?? event.summary;
 
   return {
     alternates: {
       canonical: `/tradeshow-calendar/${canonicalId}`,
     },
     ...(SUPERSEDED_BY[id] && { robots: { follow: true, index: false } }),
-    description: event.summary,
+    description,
+    ...(event.seoKeywords && { keywords: event.seoKeywords }),
     openGraph: {
-      description: event.summary,
+      description,
       images: event.image
         ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
         : undefined,
       locale: "en_US",
-      title: event.name,
+      title: ogTitle,
       type: "website",
     },
-    title: event.name,
+    title: event.seoTitle ? { absolute: event.seoTitle } : event.name,
     twitter: {
       card: "summary_large_image",
-      description: event.summary,
+      description,
       images: event.image
         ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
         : undefined,
-      title: event.name,
+      title: ogTitle,
     },
   };
 };

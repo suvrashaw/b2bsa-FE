@@ -17,7 +17,9 @@ export const CORP_NETWORKING_CASE_STUDIES = {
 
 export const CORP_NETWORKING_INDUSTRIES = {
   ...INDUSTRIES_DATA,
-  items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, description: _description, ...item }) => item),
+  items: GLOBAL_INDUSTRY_SERVICES.map(
+    ({ color: _color, description: _description, ...item }) => item
+  ),
 };
 
 export const CORP_NETWORKING_CONTACT_CTA = {

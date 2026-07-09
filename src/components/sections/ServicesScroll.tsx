@@ -27,57 +27,6 @@ interface ServiceData {
   title?: string;
 }
 
-export const DEFAULT_SERVICES_SCROLL_ITEMS: ServiceData[] = [
-  {
-    ctaText: "Get a Free 3D Booth Design",
-    description:
-      "We design custom exhibition stands for World Aviation Festival 2026 that maximize visitor flow, support executive conversations, and create memorable brand experiences.",
-    features: [
-      "Custom 3D Booth Design",
-      "Turnkey Build & Installation",
-      "Meeting & Hospitality Zones",
-      "AV & Interactive Displays",
-    ],
-    id: "booth-design",
-    image: "/media/home/hero/home_hero_bg.avif",
-    label: "SERVICE 01",
-    number: "01",
-    title: "Booth Design & Build",
-  },
-  {
-    ctaText: "Design My Engagement Strategy",
-    description:
-      "Create memorable interactions that attract aviation executives and decision-makers. We design immersive experiences, live demonstrations, and engagement strategies.",
-    features: [
-      "Interactive Visitor Experiences",
-      "Executive Roundtables",
-      "Product Demonstrations",
-      "Audience Engagement Strategy",
-    ],
-    id: "experience-creation",
-    image: "/media/home/hero/home_hero_bg.avif",
-    label: "SERVICE 02",
-    number: "02",
-    title: "Experience Creation",
-  },
-  {
-    ctaText: "See How Our Lead Gen Works",
-    description:
-      "Generate qualified meetings and sales opportunities before, during, and after the event. Our aviation-focused lead generation teams identify, engage, and qualify prospects in real time.",
-    features: [
-      "Pre-Event Outreach Campaigns",
-      "Meeting Scheduling",
-      "Real-Time Lead Qualification",
-      "Sales Qualified Lead Delivery",
-    ],
-    id: "lead-gen",
-    image: "/media/home/hero/home_hero_bg.avif",
-    label: "SERVICE 03",
-    number: "03",
-    title: "On-Ground Lead Generation",
-  },
-];
-
 const MOTION_INITIAL = { opacity: 0, y: 60 };
 const MOTION_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const MOTION_TRANSITION = { duration: 0.8 };
@@ -224,11 +173,11 @@ export const ServicesScroll = ({ description, heading, services }: ServicesScrol
                       <div className="mb-4 text-sm font-bold tracking-wider text-orange-500 uppercase">
                         {service.number ? service.label : `SERVICE 0${idx + 1}`}
                       </div>
-                      
+
                       <h3 className="mb-6 text-3xl leading-tight font-bold text-slate-900 md:text-4xl">
                         {service.title || service.label}
                       </h3>
-                      
+
                       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-100">
                         <Image
                           alt={service.title || service.label || "Service image"}
@@ -251,9 +200,7 @@ export const ServicesScroll = ({ description, heading, services }: ServicesScrol
                           {service.features.map((feature, fIdx) => (
                             <div className="flex items-center gap-3" key={fIdx}>
                               <Check className="size-5 shrink-0 text-orange-500" />
-                              <span className="text-sm font-medium text-slate-700">
-                                {feature}
-                              </span>
+                              <span className="text-sm font-medium text-slate-700">{feature}</span>
                             </div>
                           ))}
                         </div>

@@ -7,7 +7,16 @@
     "href": "/contact-us",
     "label": "Get a Custom Proposal"
   },
-  "title": "B2B Global Event Solutions & Trade Show Booth Design",
+  "rotatingWords": [
+    "Trade Show Booth Solutions",
+    "Corporate Video Production",
+    "Event Video Production",
+    "On-Ground Lead Generation",
+    "Experience Creation",
+    "Event Branding Solutions",
+    "Performance Marketing"
+  ],
+  "title": "Enhance Your B2B Events with One Complete Partner",
   "videoUrl": "/media/home/hero/desktop.mp4",
   "videoWebm": "/media/home/hero/desktop.webm"
 }

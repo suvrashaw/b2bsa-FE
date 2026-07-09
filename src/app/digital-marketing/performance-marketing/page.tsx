@@ -40,11 +40,7 @@ const Page = () => {
       contactUs={PPC_CONTACT_CTA}
       customSections={
         <>
-          <Carousel
-            cols={3}
-            heading={PPC_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={3} heading={PPC_WHY_CHOOSE_US.heading} id="why-choose-us">
             {PPC_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

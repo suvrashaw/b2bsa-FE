@@ -5,15 +5,15 @@ import { Header } from "@/components/layout/Header";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Hero } from "@/components/sections/Hero";
-import { TERMS_CONTACT, TERMS_FAQ, TERMS_HERO } from "@/content/terms-and-conditions/content";
-import { buildPageMetadata } from "@/lib/seo";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import {
+  TERMS_CONTACT,
+  TERMS_FAQ,
+  TERMS_HERO,
+  TERMS_PAGE,
+} from "@/content/terms-and-conditions/content";
 
-export const metadata: Metadata = buildPageMetadata({
-  canonicalPath: "/terms-and-conditions",
-  description:
-    "Read the terms and conditions governing the use of the B2B Sales Arrow website and services.",
-  title: "Terms & Conditions | B2B Sales Arrow",
-});
+export const metadata: Metadata = getMarketingPageMetadata(TERMS_PAGE);
 
 const TERMS_IMAGES = [TERMS_HERO.image.src];
 

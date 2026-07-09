@@ -6,7 +6,9 @@ import Link from "next/link";
 import type { HomeServiceItem } from "@/content/home/content";
 
 import { Button } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon } from "@/components/ui/Icon";
+import { serviceNavigationGroups } from "@/content/navigation";
 
 interface ServicesCardProps {
   ctaLabel: string;
@@ -23,6 +25,8 @@ export const ServicesCard = ({
   serviceLabel,
   showCta = true,
 }: ServicesCardProps) => {
+  const childLinks = serviceNavigationGroups.find((group) => group.href === service.href)?.links;
+
   return (
     <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl">
       {/* Content Area */}
@@ -43,6 +47,18 @@ export const ServicesCard = ({
           <p className="type-body-l leading-relaxed font-medium text-gray-600 max-md:text-white max-md:drop-shadow-lg">
             {service.description}
           </p>
+
+          {childLinks && childLinks.length > 0 && (
+            <div className="pointer-events-auto my-6 flex flex-wrap gap-2">
+              {childLinks.map((link) => (
+                <Link href={link.href} key={link.href}>
+                  <Eyebrow className="mb-0 cursor-pointer transition-colors hover:bg-brand-blue/20">
+                    {link.name}
+                  </Eyebrow>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {showCta &&

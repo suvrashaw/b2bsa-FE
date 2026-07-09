@@ -48,11 +48,7 @@ const Page = () => {
       contactUs={CORP_EVENT_CONTACT_CTA}
       customSections={
         <>
-          <Carousel
-            cols={3}
-            heading={CORP_EVENT_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={3} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

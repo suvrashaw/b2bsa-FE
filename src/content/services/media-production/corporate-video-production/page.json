@@ -4,14 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/media-production/corporate-video-production",
-    "description": "Enterprise corporate video production, brand films, product explainers, executive interviews, investor content and sales enablement videos that build authority and shorten sales cycles.",
-    "focusKeyphrase": "corporate video production solutions",
-    "secondaryKeywords": [
-      "video production company",
-      "video production agency",
-      "commercial video production company",
-      "brand film"
-    ],
-    "title": "Corporate Video Production Solutions for Enterprise B2B Brands | B2B Sales Arrow"
+    "description": "Enterprise corporate video production for brand storytelling, sales enablement, and marketing content. B2B Sales Arrow delivers broadcast-quality B2B video.",
+    "focusKeyphrase": "corporate video production",
+    "secondaryKeywords": ["B2B corporate video", "sales enablement video"],
+    "title": "Corporate Video Production | B2B Sales Arrow"
   }
 }

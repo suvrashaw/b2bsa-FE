@@ -334,13 +334,14 @@ export const ServicePage = ({
       {creativePricing && (
         <section className="bg-brand-gray py-12 md:py-16 lg:py-20" id="pricing">
           <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
-            <SectionHeader description={creativePricing.description} heading={creativePricing.title} />
+            <SectionHeader
+              description={creativePricing.description}
+              heading={creativePricing.title}
+            />
             <div
               className={cn(
                 "grid gap-8",
-                (creativePricing.tiers?.length ?? 0) === 2
-                  ? "lg:grid-cols-2"
-                  : "lg:grid-cols-3"
+                (creativePricing.tiers?.length ?? 0) === 2 ? "lg:grid-cols-2" : "lg:grid-cols-3"
               )}
             >
               {(creativePricing.tiers ?? []).map((tier) => (

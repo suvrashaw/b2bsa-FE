@@ -71,11 +71,7 @@ const Page = () => {
               />
             ))}
           </CardsGrid>
-          <Carousel
-            cols={4}
-            heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

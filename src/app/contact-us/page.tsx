@@ -18,7 +18,11 @@ import {
   CONTACT_US,
 } from "@/content/contact-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
-import { buildContactPageJsonLd, buildLocalBusinessJsonLd } from "@/lib";
+import {
+  buildContactPageJsonLd,
+  buildLocalBusinessJsonLd,
+  buildLocalBusinessListJsonLd,
+} from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(CONTACT_PAGE);
@@ -46,6 +50,9 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <JsonLd data={buildLocalBusinessJsonLd()} />
+      {buildLocalBusinessListJsonLd().map((entry) => (
+        <JsonLd data={entry} key={entry["@id"]} />
+      ))}
       <JsonLd data={buildContactPageJsonLd(CONTACT_PAGE.seo.description)} />
       <Header />
       <section className="relative flex min-h-[80vh] items-end pt-32 pb-20">

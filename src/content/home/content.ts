@@ -57,7 +57,6 @@ export interface CaseStudyItem {
   title: string;
 }
 
-
 export interface ContactContent {
   description: string;
   eyebrow?: string;
@@ -161,7 +160,6 @@ export interface TestimonialsContent {
   testimonials: TestimonialItem[];
 }
 
-
 interface ContactServiceOption {
   label: string;
   value: string;
@@ -197,7 +195,6 @@ interface UpcomingEventItem {
   tags?: string[];
   title: string;
 }
-
 
 export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
 

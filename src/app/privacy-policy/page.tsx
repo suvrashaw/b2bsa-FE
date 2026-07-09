@@ -3,14 +3,10 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { buildPageMetadata } from "@/lib/seo";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { PRIVACY_PAGE } from "@/content/privacy-policy/content";
 
-export const metadata: Metadata = buildPageMetadata({
-  canonicalPath: "/privacy-policy",
-  description:
-    "Learn about how B2B Sales Arrow collects, uses, and protects your data in accordance with global privacy standards.",
-  title: "Privacy Policy | B2B Sales Arrow",
-});
+export const metadata: Metadata = getMarketingPageMetadata(PRIVACY_PAGE);
 
 const Page = () => {
   return (

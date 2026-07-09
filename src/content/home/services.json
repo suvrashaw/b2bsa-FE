@@ -11,12 +11,12 @@
       "title": "Booth Design & Production"
     },
     {
-      "description": "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action, not a badge scan CSV.",
+      "description": "Our sales-qualified lead generation service combines pre-event campaigns with on-ground lead gen, delivering verified ICP-fit decision-makers with buying authority, qualification notes, and recommended next actions, not just badge-scan CSVs.",
       "href": "/sales-qualified-lead-generation",
       "icon": "Users",
       "id": "active-prospecting",
       "image": "/media/home/services/active-prospecting.avif",
-      "title": "Active Prospecting"
+      "title": "Event Lead Generation"
     },
     {
       "description": "Before a buyer books a meeting, they judge your brand by what they see. Our video production company creates content that earns trust, and keeps earning it long after the shoot.",
@@ -63,7 +63,7 @@
       "href": "/digital-marketing",
       "icon": "Rocket",
       "id": "performance-marketing",
-      "image": "/media/home/digital-marketing.avif",
+      "image": "/media/home/services/digital-marketing.avif",
       "title": "Digital Marketing"
     }
   ]

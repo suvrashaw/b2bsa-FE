@@ -9,7 +9,9 @@ import { ABOUT_PAGE } from "./about-us/content";
 import { BLOG_PAGE } from "./blogs";
 import { CASE_STUDIES_PAGE } from "./case-studies";
 import { CONTACT_PAGE } from "./contact-us/content";
+import { COOKIE_PAGE } from "./cookie-policy/content";
 import { HOME_PAGE } from "./home/content";
+import { PRIVACY_PAGE } from "./privacy-policy/content";
 import { SERVICES_PAGE } from "./services";
 import { PERF_PAGE } from "./services/digital-marketing/content";
 import { PPC_PAGE } from "./services/digital-marketing/performance-marketing/content";
@@ -40,6 +42,7 @@ import { MODULAR_BOOTHS_PAGE } from "./services/tradeshow-booth-solutions/modula
 import { BOOTH_BUILDER_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-builder/content";
 import { BOOTH_DESIGN_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { BOOTH_RENTAL_PAGE } from "./services/tradeshow-booth-solutions/trade-show-booth-rental/content";
+import { TERMS_PAGE } from "./terms-and-conditions/content";
 import { TRADE_SHOW_CALENDAR_PAGE } from "./tradeshow-calendar";
 
 export const marketingPages = [
@@ -79,6 +82,9 @@ export const marketingPages = [
   EVENT_LOGISTICS_PAGE,
   EVENT_PHYSICAL_VIDEO_PAGE,
   VIRTUAL_VIDEO_PAGE,
+  PRIVACY_PAGE,
+  TERMS_PAGE,
+  COOKIE_PAGE,
 ] satisfies MarketingPageDefinition[];
 
 const marketingPagesById = Object.fromEntries(marketingPages.map((page) => [page.pageId, page]));

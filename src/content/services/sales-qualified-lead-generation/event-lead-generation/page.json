@@ -4,14 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/sales-qualified-lead-generation/event-lead-generation",
-    "description": "Event lead generation for enterprise B2B teams, with verified decision-makers, qualification notes, and CRM-ready prospect profiles.",
+    "description": "B2B Sales Arrow's event lead generation uses on-ground lead generation to deliver qualified trade show leads directly to your sales team.",
     "focusKeyphrase": "event lead generation",
-    "secondaryKeywords": [
-      "trade show lead generation",
-      "B2B event leads",
-      "qualified event leads",
-      "exhibition lead generation company"
-    ],
-    "title": "Event Lead Generation | B2B Sales Arrow"
+    "secondaryKeywords": ["trade show lead generation", "on-ground prospecting"],
+    "title": "Event Lead Generation Services | B2B Sales Arrow"
   }
 }

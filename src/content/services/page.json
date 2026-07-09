@@ -4,8 +4,9 @@
   "pageType": "serviceHub",
   "seo": {
     "canonicalPath": "/services",
-    "description": "Explore B2B Sales Arrow services across global events, tradeshow booth solutions, media production, sales qualified lead generation, digital marketing, market research, and HPMI.",
+    "description": "Explore B2B Sales Arrow services: global event solutions, tradeshow booth design, media production, lead generation, digital marketing, and market research.",
     "focusKeyphrase": "B2B Sales Arrow services",
-    "title": "Services | B2B Sales Arrow"
+    "secondaryKeywords": ["enterprise B2B services overview"],
+    "title": "B2B Sales Arrow Services | Event, Media & Lead Gen"
   }
 }

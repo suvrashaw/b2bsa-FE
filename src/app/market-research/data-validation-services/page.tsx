@@ -47,7 +47,6 @@ const Page = () => {
           </Carousel>
         </>
       }
-
       faq={DATA_VALIDATION_FAQ}
       hero={DATA_VALIDATION_HERO}
       page={DATA_VALIDATION_PAGE}

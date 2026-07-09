@@ -57,7 +57,7 @@ const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) =
         {Icon ? <Icon className="size-4 shrink-0" /> : null}
         <span className="truncate">{category.name}</span>
       </span>
-      <span className={isActive ? "text-white/80" : "text-brand-charcoal/45"}>
+      <span className={isActive ? "text-white/80" : "text-brand-charcoal/75"}>
         {category.count}
       </span>
     </button>

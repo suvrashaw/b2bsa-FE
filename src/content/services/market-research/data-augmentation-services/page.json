@@ -4,15 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/market-research/data-augmentation-services",
-    "description": "B2B data augmentation services — verified firmographic, technographic, contact, and intent data enrichment. Transform your CRM from an incomplete database into a precision sales intelligence asset.",
+    "description": "Enrich and expand your B2B contact and account data with verified, ICP-aligned data augmentation services from B2B Sales Arrow.",
     "focusKeyphrase": "data augmentation services",
-    "secondaryKeywords": [
-      "CRM data enrichment",
-      "contact data enrichment",
-      "firmographic data enrichment",
-      "technographic data enrichment",
-      "intent data"
-    ],
-    "title": "B2B Data Augmentation Services and CRM Enrichment | B2B Sales Arrow"
+    "secondaryKeywords": ["B2B data enrichment", "contact data services"],
+    "title": "Data Augmentation Services | B2B Sales Arrow"
   }
 }

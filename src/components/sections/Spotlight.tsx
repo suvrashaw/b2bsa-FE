@@ -223,7 +223,7 @@ const SpotlightTextBlock = ({
   );
   const descStyle = useMemo(
     () => ({
-      color: isHovered ? "rgb(75 85 99)" : "rgb(75 85 99 / 0.6)",
+      color: isHovered ? "rgb(75 85 99)" : "rgb(75 85 99 / 0.85)",
       transform: isHovered ? "translateY(-4px)" : "translateY(0)",
       transitionTimingFunction: EASE,
     }),

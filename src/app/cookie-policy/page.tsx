@@ -3,14 +3,10 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { buildPageMetadata } from "@/lib/seo";
+import { COOKIE_PAGE } from "@/content/cookie-policy/content";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
 
-export const metadata: Metadata = buildPageMetadata({
-  canonicalPath: "/cookie-policy",
-  description:
-    "Learn how B2B Sales Arrow uses session, analytics, and functional cookies to operate and improve the website.",
-  title: "Cookie Policy | B2B Sales Arrow",
-});
+export const metadata: Metadata = getMarketingPageMetadata(COOKIE_PAGE);
 
 const cookieSections = [
   {

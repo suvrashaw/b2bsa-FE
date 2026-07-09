@@ -4,15 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/digital-marketing/performance-marketing",
-    "description": "Specialist B2B PPC agency — Google Search, Display, YouTube, programmatic, and retargeting managed around qualified pipeline and cost per qualified opportunity. Not just clicks.",
-    "focusKeyphrase": "B2B paid advertising",
-    "secondaryKeywords": [
-      "PPC agency",
-      "paid search B2B",
-      "B2B PPC management",
-      "digital advertising",
-      "Google Ads B2B"
-    ],
-    "title": "Performance Marketing | B2B Sales Arrow"
+    "description": "B2B Sales Arrow's performance marketing services deliver paid and programmatic programs engineered for pipeline, not clicks. ROI-focused B2B ad management.",
+    "focusKeyphrase": "performance marketing services",
+    "secondaryKeywords": ["B2B paid media agency", "ROI-driven ad management"],
+    "title": "Performance Marketing Services | B2B Sales Arrow"
   }
 }

@@ -4,13 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/media-production/event-live-streaming-services",
-    "description": "Professional corporate live streaming and hybrid event production, multi-camera broadcasts for conferences, launches, town halls, and investor events. Global reach. Broadcast quality.",
-    "focusKeyphrase": "hybrid event solutions company",
-    "secondaryKeywords": [
-      "virtual event solutions company",
-      "corporate live streaming",
-      "live event video production company"
-    ],
-    "title": "Corporate Live Streaming and Hybrid Event Solutions | B2B Sales Arrow"
+    "description": "B2B Sales Arrow's event live streaming services deliver professional coverage for enterprise keynotes, hybrid conferences, and global corporate events.",
+    "focusKeyphrase": "event live streaming services",
+    "secondaryKeywords": ["hybrid conference streaming", "corporate live stream"],
+    "title": "Event Live Streaming Services | B2B Sales Arrow"
   }
 }

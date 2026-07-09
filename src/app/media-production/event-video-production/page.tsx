@@ -50,7 +50,6 @@ const Page = () => {
           </Carousel>
         </>
       }
-
       faq={EVENT_VIDEO_FAQ}
       hero={EVENT_VIDEO_HERO}
       page={EVENT_VIDEO_PAGE}

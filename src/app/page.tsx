@@ -47,7 +47,14 @@ import {
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
-import { buildFaqJsonLd, buildPageGraph, buildWebPageJsonLd, siteUrl } from "@/lib";
+import {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+  buildLocalBusinessListJsonLd,
+  buildPageGraph,
+  buildWebPageJsonLd,
+  siteUrl,
+} from "@/lib";
 import { JsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = getMarketingPageMetadata(HOME_PAGE);
@@ -60,13 +67,18 @@ const Home = () => {
       <JsonLd
         data={buildPageGraph([
           buildWebPageJsonLd({
+            breadcrumbId: `${siteUrl}/#breadcrumb`,
             description: HOME_PAGE.seo.description,
             name: HOME_PAGE.seo.title,
             url: siteUrl,
           }),
           buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
+          buildBreadcrumbJsonLd([{ name: "Home", url: siteUrl }], siteUrl),
         ])}
       />
+      {buildLocalBusinessListJsonLd().map((entry) => (
+        <JsonLd data={entry} key={entry["@id"]} />
+      ))}
       <Header />
       <div id="home">
         <Hero
@@ -74,6 +86,7 @@ const Home = () => {
           mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
           mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
           primaryCta={HOME_HERO_CONTENT.primaryCta}
+          rotatingWords={HOME_HERO_CONTENT.rotatingWords}
           title={HOME_HERO_CONTENT.title}
           videoUrl={HOME_HERO_CONTENT.videoUrl}
           videoWebm={HOME_HERO_CONTENT.videoWebm}
@@ -112,15 +125,17 @@ const Home = () => {
         heading={HOME_EVENTS_CONTENT.heading}
         id="events"
       >
-        {getDefaultEvents().map((event, i) => (
-          <EventsCard
-            ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
-            event={event}
-            flipStyle="diagonalWipe"
-            index={i}
-            key={event.id}
-          />
-        ))}
+        {getDefaultEvents()
+          .slice(0, 6)
+          .map((event, i) => (
+            <EventsCard
+              ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+              event={event}
+              flipStyle="diagonalWipe"
+              index={i}
+              key={event.id}
+            />
+          ))}
       </CardsGrid>
 
       <StickyScroll />

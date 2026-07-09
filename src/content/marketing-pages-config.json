@@ -3,7 +3,8 @@
     "serviceHub": "Service",
     "serviceDetail": "Service",
     "company": "Company",
-    "resourceIndex": "Resources"
+    "resourceIndex": "Resources",
+    "legal": "Legal"
   },
   "defaultGroup": "B2B Growth"
 }

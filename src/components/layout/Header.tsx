@@ -89,10 +89,8 @@ export const Header = () => {
     );
   }
 
-  const isMegamenuLightText = isLightText && !isSolidHeader;
-  const megamenuSurfaceClass = isMegamenuLightText
-    ? "bg-brand-charcoal/35 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
-    : "bg-white/85 shadow-[0_20px_50px_rgba(0,0,0,0.1)]";
+  const isMegamenuLightText = false;
+  const megamenuSurfaceClass = "bg-white/85 shadow-[0_20px_50px_rgba(0,0,0,0.1)]";
 
   return (
     <div className="fixed inset-x-0 top-0 z-50" onMouseLeave={closeMegamenu}>

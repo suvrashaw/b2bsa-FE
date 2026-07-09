@@ -4,13 +4,9 @@
   "pageType": "contact",
   "seo": {
     "canonicalPath": "/contact-us",
-    "description": "Contact B2B Sales Arrow to book a strategy consultation for event solutions, video production, performance marketing, market research, or sales qualified lead generation. We respond within one business day.",
+    "description": "Contact B2B Sales Arrow to book a consultation for event solutions, video production, performance marketing, market research, or lead generation. Reach out.",
     "focusKeyphrase": "contact B2B Sales Arrow",
-    "secondaryKeywords": [
-      "B2B growth agency consultation",
-      "enterprise marketing inquiry",
-      "strategy consultation"
-    ],
-    "title": "Contact B2B Sales Arrow | Book a Strategy Consultation"
+    "secondaryKeywords": ["book a consultation", "B2B Sales Arrow contact"],
+    "title": "Contact B2B Sales Arrow | Book a Consultation"
   }
 }

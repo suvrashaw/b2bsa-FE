@@ -4,15 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/market-research/data-validation-services",
-    "description": "B2B data validation services — email verification, phone validation, job title confirmation, duplicate detection, and CRM data cleansing. Clean data your sales team can trust.",
+    "description": "B2B Sales Arrow's data validation services clean, verify, and enrich your B2B database for accurate targeting, stronger deliverability, and qualified outreach.",
     "focusKeyphrase": "data validation services",
-    "secondaryKeywords": [
-      "email list validation",
-      "CRM data cleansing",
-      "data cleansing service",
-      "B2B email verification",
-      "phone number validation"
-    ],
-    "title": "B2B Data Validation Services and CRM Data Cleansing Services | B2B Sales Arrow"
+    "secondaryKeywords": ["B2B data cleansing", "database verification"],
+    "title": "Data Validation Services | B2B Sales Arrow"
   }
 }

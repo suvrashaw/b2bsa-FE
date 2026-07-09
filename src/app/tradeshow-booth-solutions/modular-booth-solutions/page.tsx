@@ -49,7 +49,6 @@ const Page = () => {
           </Carousel>
         </>
       }
-
       faq={MODULAR_BOOTHS_FAQ}
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}

@@ -192,6 +192,28 @@ export const buildServiceJsonLd = ({ description, name, serviceType, url }: Serv
   };
 };
 
+const LOCAL_BUSINESSES = [
+  { address: ADDRESSES[0], name: "India" },
+  { address: ADDRESSES[1], name: "USA" },
+  { address: ADDRESSES[2], name: "United Kingdom" },
+  { address: ADDRESSES[3], name: "Germany" },
+];
+
+// One LocalBusiness entry per office, each linked to the shared Organization
+// via parentOrganization. Data-driven off ADDRESSES so a new office only
+// requires adding one entry to LOCAL_BUSINESSES, not a new page or component.
+export const buildLocalBusinessListJsonLd = () =>
+  LOCAL_BUSINESSES.map(({ address, name }) => ({
+    "@context": "https://schema.org",
+    "@id": `${BASE}/#local-business-${address.addressCountry.toLowerCase()}`,
+    "@type": "LocalBusiness",
+    address,
+    email: "info@b2bsalesarrow.com",
+    name: `${ORGANIZATION.name} – ${name}`,
+    parentOrganization: { "@id": ORGANIZATION["@id"] },
+    url: BASE,
+  }));
+
 export const buildLocalBusinessJsonLd = () => ({
   "@context": "https://schema.org",
   "@id": `${BASE}/#local-business`,

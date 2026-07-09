@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { RotatingWordBadge } from "@/components/ui/RotatingWordBadge";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
 
@@ -24,6 +25,7 @@ export interface HeroProps {
   mobileVideoWebm?: string;
   poster?: string;
   primaryCta?: { href: string; label: string };
+  rotatingWords?: string[];
   title: ReactNode | string;
   variant?: "compact" | "default";
   videoSrc?: string;
@@ -256,6 +258,7 @@ export const Hero = ({
   mobileVideoWebm,
   poster,
   primaryCta,
+  rotatingWords,
   title,
   variant = "default",
   videoSrc,
@@ -362,6 +365,9 @@ export const Hero = ({
               : (titleLines as ReactNode[]).map((line, index) => (
                   <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
                 ))}
+            {rotatingWords && rotatingWords.length > 0 && (
+              <RotatingWordBadge className="block text-white" words={rotatingWords} />
+            )}
           </SectionHeader>
 
           {description && (

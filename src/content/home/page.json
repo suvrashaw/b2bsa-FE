@@ -4,8 +4,9 @@
   "pageType": "home",
   "seo": {
     "canonicalPath": "/",
-    "description": "Global capability. Strategic growth. Enterprise event and digital solutions for modern businesses.",
-    "focusKeyphrase": "B2B global event solutions",
-    "title": "B2B Sales Arrow | Premium Growth Partner"
+    "description": "B2B Sales Arrow is your global B2B event partner, delivering trade show booth design, media production, sales qualified lead generation, and experience creation across 30+ countries.",
+    "focusKeyphrase": "B2B event solutions",
+    "secondaryKeywords": ["trade show booth design", "B2B lead generation agency"],
+    "title": "Global B2B Event Solutions | Trade Show Services | B2B Sales Arrow"
   }
 }

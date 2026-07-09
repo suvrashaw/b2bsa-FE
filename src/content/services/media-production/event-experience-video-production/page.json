@@ -4,14 +4,9 @@
   "pageType": "serviceDetail",
   "seo": {
     "canonicalPath": "/media-production/event-experience-video-production",
-    "description": "Event experience video production services for conferences, trade shows, product launches, networking receptions, and corporate events.",
-    "focusKeyphrase": "event video production services",
-    "secondaryKeywords": [
-      "event experience video production",
-      "trade show video production",
-      "conference video production",
-      "event highlight reel production"
-    ],
-    "title": "Event Video Production Services for Corporate Events | B2B Sales Arrow"
+    "description": "B2B Sales Arrow produces immersive event experience video that captures the energy of your enterprise event and turns it into compelling brand storytelling.",
+    "focusKeyphrase": "event experience video",
+    "secondaryKeywords": ["immersive event video", "brand experience video"],
+    "title": "Event Experience Video Production | B2B Sales Arrow"
   }
 }

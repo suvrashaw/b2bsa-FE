@@ -51,7 +51,6 @@ const Page = () => {
           </Carousel>
         </>
       }
-
       faq={EVENT_LEAD_FAQ}
       hero={EVENT_LEAD_HERO}
       page={EVENT_LEAD_PAGE}

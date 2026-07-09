@@ -4,14 +4,9 @@
   "pageType": "serviceHub",
   "seo": {
     "canonicalPath": "/market-research",
-    "description": "Enterprise B2B market research agency, data augmentation, data validation, and human market intelligence for competitive decisions. Better data. Sharper strategy. Faster market moves.",
+    "description": "B2B Sales Arrow is an enterprise B2B market research agency delivering data services and buyer intelligence that help your team target with precision.",
     "focusKeyphrase": "B2B market research agency",
-    "secondaryKeywords": [
-      "market research",
-      "market research companies",
-      "market research agency",
-      "B2B market intelligence"
-    ],
-    "title": "B2B Market Research Agency and Intelligence Services | B2B Sales Arrow"
+    "secondaryKeywords": ["enterprise market research", "B2B buyer research"],
+    "title": "B2B Market Research Agency | B2B Sales Arrow"
   }
 }

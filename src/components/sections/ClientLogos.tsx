@@ -90,7 +90,7 @@ const LogosRow = ({
 
 export const ClientLogos = ({
   description,
-  heading = "Trusted by Leading Brands for Trade Show & Exhibition Solutions",
+  heading = "Trusted by Leading Brands",
   overlap = true,
   speed = 2.5,
   wheelSpeed = 0.05,

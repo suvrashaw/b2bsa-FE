@@ -48,11 +48,7 @@ const Page = () => {
       contactUs={BOOTH_RENTAL_CONTACT_CTA}
       customSections={
         <>
-          <Carousel
-            cols={4}
-            heading={BOOTH_RENTAL_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={4} heading={BOOTH_RENTAL_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_RENTAL_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}

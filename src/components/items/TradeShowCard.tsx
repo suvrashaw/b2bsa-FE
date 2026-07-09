@@ -87,7 +87,7 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
       </div>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
         <div>
-          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
+          <p className="text-xs font-bold tracking-widest text-brand-charcoal/75 uppercase">
             Attendees
           </p>
           <p className="font-bold text-brand-charcoal">
@@ -95,7 +95,7 @@ export const TradeShowListItem = ({ show }: { show: CalendarTradeShow }) => (
           </p>
         </div>
         <div>
-          <p className="text-xs font-bold tracking-widest text-brand-charcoal/50 uppercase">
+          <p className="text-xs font-bold tracking-widest text-brand-charcoal/75 uppercase">
             Exhibitors
           </p>
           <p className="font-bold text-brand-charcoal">

@@ -4,14 +4,9 @@
   "pageType": "resourceIndex",
   "seo": {
     "canonicalPath": "/blogs",
-    "description": "Practical B2B growth insights on trade show strategy, performance marketing, video production, lead generation, and market research, written for enterprise marketers and sales leaders.",
-    "focusKeyphrase": "B2B marketing blog",
-    "secondaryKeywords": [
-      "enterprise marketing insights",
-      "trade show strategy blog",
-      "market research",
-      "video production company"
-    ],
-    "title": "B2B Growth Insights and Strategy Blog | B2B Sales Arrow"
+    "description": "Read B2B Sales Arrow's blog for insights on trade show strategy, booth design, performance marketing, video production, lead generation, and market research.",
+    "focusKeyphrase": "Blogs",
+    "secondaryKeywords": ["trade show strategy blog", "B2B event insights"],
+    "title": "B2B Growth Insights & Strategy Blog | B2B Sales Arrow"
   }
 }

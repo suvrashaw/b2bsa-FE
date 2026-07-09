@@ -31,12 +31,14 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE);
 
-const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map((item) => ({
-  icon: item.icon,
-  id: item.id,
-  image: item.image,
-  label: item.label,
-}));
+const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map(
+  (item) => ({
+    icon: item.icon,
+    id: item.id,
+    image: item.image,
+    label: item.label,
+  })
+);
 
 const Page = () => {
   return (
@@ -44,35 +46,31 @@ const Page = () => {
       contactUs={EVENT_EXPERIENCE_CONTACT_CTA}
       customSections={
         <>
-          <Carousel
-            cols={4}
-            heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading}
-            id="why-choose-us"
-          >
+          <Carousel cols={4} heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading} id="why-choose-us">
             {EVENT_EXPERIENCE_WHY_CHOOSE_US.items.map((item, i) => (
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-            <ServicesScroll
-              heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}
-              services={servicesIncludeFeatures}
-            />
-            <Carousel
-              cols={4}
-              heading={EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.heading}
-              headingAction={
-                <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
-                  <Link href="/blogs">View All Blogs</Link>
-                </Button>
-              }
-              id="blogs"
-            >
-              {getBlogsByTags(EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.tags).map((post) => (
-                <BlogsCarouselCard key={post.id} post={post} />
-              ))}
-            </Carousel>
-          </>
-        }
+          <ServicesScroll
+            heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}
+            services={servicesIncludeFeatures}
+          />
+          <Carousel
+            cols={4}
+            heading={EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.heading}
+            headingAction={
+              <Button asChild className="shrink-0 self-start md:self-auto" variant="primary">
+                <Link href="/blogs">View All Blogs</Link>
+              </Button>
+            }
+            id="blogs"
+          >
+            {getBlogsByTags(EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.tags).map((post) => (
+              <BlogsCarouselCard key={post.id} post={post} />
+            ))}
+          </Carousel>
+        </>
+      }
       faq={EVENT_EXPERIENCE_FAQ}
       faqVariant="accordion"
       hero={EVENT_EXPERIENCE_IMAGE_HERO}

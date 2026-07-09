@@ -34,7 +34,7 @@ export const buildPageMetadata = (seo: CmsSeo, pageId?: string): Metadata => {
           "max-snippet": -1,
           "max-video-preview": -1,
         },
-    title: seo.title,
+    title: { absolute: seo.title },
     twitter: {
       card: "summary_large_image",
       description: seo.description,

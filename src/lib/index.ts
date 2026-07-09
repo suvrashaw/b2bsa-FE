@@ -23,6 +23,7 @@ export {
   buildItemListJsonLd,
   buildLinkedItemListJsonLd,
   buildLocalBusinessJsonLd,
+  buildLocalBusinessListJsonLd,
   buildOrganizationJsonLd,
   buildPageGraph,
   buildServiceJsonLd,
