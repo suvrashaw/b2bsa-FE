@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   initialScale: 1,
+  themeColor: "#1E6091",
   viewportFit: "cover",
   width: "device-width",
 };
@@ -83,6 +84,12 @@ s0.parentNode.insertBefore(s1, s0);
 // reference it via isPartOf: { "@id": `${siteUrl}/#website" }.
 const organizationJsonLd = buildOrganizationJsonLd();
 const ORG_JSON_LD_SCRIPT = { __html: JSON.stringify(organizationJsonLd) };
+
+const UNREGISTER_SW_SCRIPT = {
+  __html: `if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then((regs) => regs.forEach((r) => r.unregister()));
+}`,
+};
 
 const RootLayout = ({
   children,
@@ -130,6 +137,10 @@ const RootLayout = ({
           dangerouslySetInnerHTML={ORG_JSON_LD_SCRIPT}
           id="organization-json-ld"
           type="application/ld+json"
+        />
+        <Script
+          dangerouslySetInnerHTML={UNREGISTER_SW_SCRIPT}
+          id="unregister-sw"
         />
         <MotionProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>

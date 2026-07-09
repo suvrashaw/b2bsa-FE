@@ -17,6 +17,12 @@ const manifest = (): MetadataRoute.Manifest => ({
       src: "/media/logo/logo-512.png",
       type: "image/png",
     },
+    {
+      purpose: "maskable",
+      sizes: "512x512",
+      src: "/media/logo/logo-512-maskable.png",
+      type: "image/png",
+    },
   ],
   name: "B2B Sales Arrow",
   short_name: "B2BSA",

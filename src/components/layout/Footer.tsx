@@ -185,11 +185,11 @@ export const Footer = () => {
             <span className="mb-4 block text-xs font-semibold tracking-widest text-white uppercase">
               Navigation
             </span>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {footerNavigation.map((item) => (
                 <li key={item.name}>
                   <Link
-                    className="block text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
+                    className="block py-1 text-sm font-medium text-white/90 transition-colors hover:text-white hover:underline"
                     href={item.href}
                   >
                     {toTitleCase(item.name)}
