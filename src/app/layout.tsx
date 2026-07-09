@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 
+import { MotionProvider } from "@/app/providers/MotionProvider";
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { StickyContactBar } from "@/components/layout/StickyContactBar";
@@ -108,7 +109,7 @@ const RootLayout = ({
         <Script
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/73b738e7ff9edd3212b60f491c3e25ee/script.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Script
           dangerouslySetInnerHTML={GTM_INLINE_SCRIPT_HTML}
@@ -118,19 +119,21 @@ const RootLayout = ({
         <Script
           dangerouslySetInnerHTML={CLARITY_INLINE_SCRIPT_HTML}
           id="clarity-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           dangerouslySetInnerHTML={TAWK_TO_INLINE_SCRIPT_HTML}
           id="tawk-to-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           dangerouslySetInnerHTML={ORG_JSON_LD_SCRIPT}
           id="organization-json-ld"
           type="application/ld+json"
         />
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <MotionProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </MotionProvider>
         <StickyContactBar />
       </body>
     </html>

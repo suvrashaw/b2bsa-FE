@@ -308,15 +308,7 @@ export const Hero = ({
           type="video/webm"
         />
       )}
-      {isVideoMode && mobileVideoWebm && (
-        <link
-          as="video"
-          href={mobileVideoWebm}
-          media="(max-width: 767px)"
-          rel="preload"
-          type="video/webm"
-        />
-      )}
+
       <div className="absolute inset-0 z-0">
         <HeroBackground
           currentIndex={currentIndex}

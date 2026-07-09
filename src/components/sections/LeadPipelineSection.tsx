@@ -136,7 +136,7 @@ export const LeadPipelineSection = ({
                   type="button"
                 >
                   <span className="text-base leading-snug font-bold md:text-lg">{stage.count}</span>
-                  <span className="mt-0.5 text-[11px] leading-snug opacity-80">
+                  <span className="mt-0.5 text-[11px] leading-snug text-current/90">
                     {stage.sublabel}
                   </span>
                 </button>

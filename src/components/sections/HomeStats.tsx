@@ -35,7 +35,7 @@ const StatCard = ({ stat }: { stat: HomeStatItem }) => (
     className={`relative overflow-hidden rounded-2xl p-5 shadow-lg md:p-8 ${stat.bg} border border-transparent text-white`}
   >
     <div className="relative z-10">
-      <div className="text-xs font-medium opacity-80">{stat.label}</div>
+      <div className="text-xs font-medium text-white/90">{stat.label}</div>
       <div className="mt-2 font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
         {stat.value}
       </div>
@@ -75,7 +75,7 @@ export const HomeStats = ({
               <RotatingWordBadge className="block text-brand-blue" words={ROTATING_WORDS} />
             </SectionHeader>
             {description && (
-              <div className="type-body-l space-y-6 leading-relaxed text-brand-charcoal/80">
+              <div className="type-body-l space-y-6 leading-relaxed text-brand-charcoal">
                 {description}
               </div>
             )}
