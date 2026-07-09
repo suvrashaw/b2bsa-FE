@@ -175,6 +175,7 @@ const HeroBackground = ({
       <video
         autoPlay
         className="hero-bg-video absolute inset-0 size-full object-cover"
+        // @ts-expect-error: fetchPriority not in React DOM types yet
         fetchPriority="high"
         loop
         muted
