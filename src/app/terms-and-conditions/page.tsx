@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { FAQAccordion } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {

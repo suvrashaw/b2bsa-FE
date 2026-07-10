@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -33,6 +34,7 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE
 
 const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map(
   (item) => ({
+    icon: item.icon,
     id: item.id,
     image: item.image,
     label: item.label,
@@ -47,13 +49,14 @@ const Page = () => {
         <>
           <Carousel cols={4} heading={EVENT_EXPERIENCE_WHY_CHOOSE_US.heading} id="why-choose-us">
             {EVENT_EXPERIENCE_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <CapabilitiesGrid
-            heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}
-            services={servicesIncludeFeatures}
-          />
+          <CardsGrid cols={3} heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}>
+            {servicesIncludeFeatures.map((item) => (
+              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+            ))}
+          </CardsGrid>
           <Carousel
             cols={4}
             heading={EVENT_EXPERIENCE_CREATION_BLOGS_SECTION.heading}

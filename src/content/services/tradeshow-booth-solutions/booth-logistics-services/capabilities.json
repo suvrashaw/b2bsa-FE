@@ -3,31 +3,37 @@
   "phases": [
     {
       "description": "End-to-end logistics for exhibition stand delivery and removal.",
+      "icon": "Truck",
       "title": "Trade show logistics management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Assembly, installation, and dismantling coordination for trade shows.",
+      "icon": "Wrench",
       "title": "Booth setup coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Day-of oversight for all event operational activities.",
+      "icon": "ShieldCheck",
       "title": "Onsite event supervision",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "AV, furniture, display, and technical equipment management.",
+      "icon": "Settings",
       "title": "Equipment coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Cross-border freight, customs clearance, and ATA carnet management.",
+      "icon": "Plane",
       "title": "International event logistics support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Full event lifecycle operational planning and delivery.",
+      "icon": "ClipboardList",
       "title": "Corporate event operations planning",
       "image": "/media/home/hero/home_hero_bg.avif"
     }

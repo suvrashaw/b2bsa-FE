@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { FAQAccordion } from "@/components/sections/FAQ";
 import { Button } from "@/components/ui/Button";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/blogs";
@@ -418,7 +418,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         id="services"
       >
         {placeholderServiceItems.map((item, i) => (
-          <BoothWhyCard index={i} item={item} key={item.id} />
+          <WhyChooseUsCard index={i} item={item} key={item.id} />
         ))}
       </Carousel>
 

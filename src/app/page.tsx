@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { EventsCard } from "@/components/items/EventsCard";
 import { Header } from "@/components/layout/Header";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { FAQAccordion } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 
 /* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
@@ -16,7 +16,7 @@ const CardsGrid = dynamic(() =>
 );
 
 const CaseStudies = dynamic(() =>
-  import("@/components/sections/CaseStudies").then((mod) => mod.CaseStudies)
+  import("@/components/sections/CardsGrid").then((mod) => mod.CaseStudies)
 );
 const ClientLogos = dynamic(() =>
   import("@/components/sections/ClientLogos").then((mod) => mod.ClientLogos)

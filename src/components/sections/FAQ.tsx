@@ -4,7 +4,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { motion } from "framer-motion";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
 
-import { FAQAccordionItem } from "@/components/items/FAQAccordionItem";
+import { FAQItem } from "@/components/items/FAQItem";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home/content";
 import { cn } from "@/lib";
@@ -46,7 +46,7 @@ const FAQAccordionRow = ({ answer, id, index, isOpen, question }: FAQAccordionRo
       viewport={ITEM_VIEWPORT}
       whileInView={ITEM_ANIMATE}
     >
-      <FAQAccordionItem answer={answer} index={index} isOpen={isOpen} question={question} />
+      <FAQItem answer={answer} index={index} isOpen={isOpen} question={question} />
     </motion.div>
   );
 };

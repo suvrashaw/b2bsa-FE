@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { Carousel } from "@/components/sections/Carousel";
-import { LeadPipelineSection } from "@/components/sections/LeadPipelineSection";
+import { LeadPipeline } from "@/components/sections/LeadPipeline";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -56,7 +56,7 @@ const Page = () => {
       page={EVENT_LEAD_PAGE}
       parentPage={SQL_PAGE}
       preStudiesSections={
-        <LeadPipelineSection
+        <LeadPipeline
           heading={EVENT_LEAD_PROCESS.title}
           stages={EVENT_LEAD_PIPELINE.stages}
           steps={EVENT_LEAD_PROCESS.phases}

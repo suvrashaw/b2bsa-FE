@@ -3,31 +3,37 @@
   "phases": [
     {
       "description": "Professional booth hostesses for visitor engagement and lead capture.",
+      "icon": "Users2",
       "title": "Trade show booth staffing",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Check-in, badging, and attendee guidance for conference environments.",
+      "icon": "ClipboardList",
       "title": "Conference registration support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Dedicated hosting for executives, speakers, and key stakeholders.",
+      "icon": "Award",
       "title": "VIP guest management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Proactive visitor interaction and audience engagement support.",
+      "icon": "MessageSquare",
       "title": "Audience engagement assistance",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Fluent hostesses in Arabic, French, German, Mandarin, Spanish, and more.",
+      "icon": "Globe",
       "title": "Multilingual hostess services",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Uniformed brand ambassadors aligned to your event identity.",
+      "icon": "Shield",
       "title": "Brand representation support",
       "image": "/media/home/hero/home_hero_bg.avif"
     }

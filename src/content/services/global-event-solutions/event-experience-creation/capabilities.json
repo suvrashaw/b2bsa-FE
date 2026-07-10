@@ -3,31 +3,37 @@
     "heading": "Event Experience Creation Services Include",
     "items": [
       {
+        "icon": "Lightbulb",
         "id": "event-concept-development",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Event concept development"
       },
       {
+        "icon": "Map",
         "id": "audience-journey-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Audience journey planning"
       },
       {
+        "icon": "Palette",
         "id": "brand-experience-design",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Brand experience design"
       },
       {
+        "icon": "Presentation",
         "id": "conference-summit-experience-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Conference and summit experience planning"
       },
       {
+        "icon": "Image",
         "id": "event-branding-visual-asset-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Event branding and visual asset planning"
       },
       {
+        "icon": "Target",
         "id": "engagement-zone-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Engagement zone planning"

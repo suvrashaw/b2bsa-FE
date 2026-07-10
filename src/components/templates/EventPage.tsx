@@ -2,16 +2,16 @@
 
 import { useMemo } from "react";
 
-import type { FAQProps } from "@/components/sections/FAQAccordion";
+import type { FAQProps } from "@/components/sections/FAQ";
 
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { EventMetadata } from "@/components/items/EventMetadata";
 import { TradeShowCard } from "@/components/items/TradeShowCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { FAQAccordion } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
@@ -174,7 +174,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         id="services"
       >
         {serviceItems.map((item, i) => (
-          <BoothWhyCard index={i} item={item} key={item.id} />
+          <WhyChooseUsCard index={i} item={item} key={item.id} />
         ))}
       </Carousel>
 

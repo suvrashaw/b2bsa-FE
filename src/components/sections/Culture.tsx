@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useRef } from "react";
 
-import { CultureReasonCard } from "@/components/items/CultureReasonCard";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib";
@@ -108,6 +107,23 @@ const ZoomParallax = ({ centerText, images }: { centerText?: string; images: Par
           </motion.div>
         )}
       </div>
+    </div>
+  );
+};
+
+// ─── CultureReasonCard ───────────────────────────────────────────────────────
+
+interface CultureReason {
+  description: string;
+  id: string;
+  title: string;
+}
+
+const CultureReasonCard = ({ reason }: { reason: CultureReason }) => {
+  return (
+    <div className="border-l border-brand-blue/30 pl-5">
+      <h3 className="type-h3 mb-3 text-brand-charcoal">{reason.title}</h3>
+      <p className="type-body-m leading-relaxed text-brand-charcoal/70">{reason.description}</p>
     </div>
   );
 };

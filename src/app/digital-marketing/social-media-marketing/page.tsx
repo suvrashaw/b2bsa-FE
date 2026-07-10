@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -53,7 +54,7 @@ const Page = () => {
 
           <Carousel cols={3} heading={SMM_WHY_CHOOSE_US.heading} id="why-choose-us">
             {SMM_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
 
@@ -88,11 +89,15 @@ const Page = () => {
             showCommonCta
           />
 
-          <CapabilitiesGrid
+          <CardsGrid
+            cols={3}
             description={SMM_CAPABILITIES.description}
             heading={SMM_CAPABILITIES.heading}
-            services={SMM_CAPABILITIES_FEATURES}
-          />
+          >
+            {SMM_CAPABILITIES_FEATURES.map((item) => (
+              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+            ))}
+          </CardsGrid>
         </>
       }
       spotlight={SMM_INTRO}

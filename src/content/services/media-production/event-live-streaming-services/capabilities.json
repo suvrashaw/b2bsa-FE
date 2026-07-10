@@ -2,31 +2,37 @@
   "description": "Our event live streaming services are powered by industry-grade production equipment and experienced live streaming professionals to ensure flawless event delivery.",
   "features": [
     {
+      "icon": "Camera",
       "id": "multi-camera-production",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Multi-camera production setups"
     },
     {
+      "icon": "Video",
       "id": "hd-4k-streaming",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "HD and 4K live streaming capabilities"
     },
     {
+      "icon": "Shuffle",
       "id": "live-switching",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live switching and video mixing"
     },
     {
+      "icon": "Layout",
       "id": "live-graphics",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live graphics and branded overlays"
     },
     {
+      "icon": "Settings",
       "id": "production-support",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Onsite and remote production support"
     },
     {
+      "icon": "Share2",
       "id": "multi-platform",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Streaming across multiple platforms simultaneously"

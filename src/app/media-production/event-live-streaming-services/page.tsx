@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -46,7 +47,7 @@ const Page = () => {
         <>
           <Carousel cols={3} heading={LIVE_STREAMING_WHY_CHOOSE_US.heading} id="why-choose-us">
             {LIVE_STREAMING_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
 
@@ -72,11 +73,15 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <CapabilitiesGrid
+          <CardsGrid
+            cols={3}
             description={LIVE_STREAMING_CAPABILITIES.description}
             heading={LIVE_STREAMING_CAPABILITIES.heading}
-            services={LIVE_STREAMING_CAPABILITIES_FEATURES}
-          />
+          >
+            {LIVE_STREAMING_CAPABILITIES_FEATURES.map((item) => (
+              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+            ))}
+          </CardsGrid>
 
           <Spotlight {...LIVE_STREAMING_AREAS_INTRO} />
         </>

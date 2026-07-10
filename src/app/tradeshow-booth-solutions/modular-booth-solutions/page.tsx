@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -55,10 +56,16 @@ const Page = () => {
       page={MODULAR_BOOTHS_PAGE}
       parentPage={BS_PAGE}
       preProcessSections={
-        <CapabilitiesGrid
-          heading={MODULAR_BOOTHS_RANGE_SECTION.heading}
-          services={MODULAR_BOOTHS_RANGE_SECTION.services}
-        />
+        <CardsGrid cols={3} heading={MODULAR_BOOTHS_RANGE_SECTION.heading}>
+          {MODULAR_BOOTHS_RANGE_SECTION.services.map((item) => (
+            <CapabilityCard
+              description={item.description}
+              icon={item.icon}
+              key={item.id}
+              title={item.title}
+            />
+          ))}
+        </CardsGrid>
       }
       services={MODULAR_BOOTHS_DELIVERABLES}
       showServicesCommonCta

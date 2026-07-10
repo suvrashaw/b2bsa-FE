@@ -3,31 +3,37 @@
   "phases": [
     {
       "description": "Trade show booth graphics, fascia, and visual display systems.",
+      "icon": "Box",
       "title": "Trade show booth branding",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Pull-ups, banners, directional boards, and large-format graphics.",
+      "icon": "Layout",
       "title": "Event signage production",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Backdrop systems, stage dressing, and presenter environments.",
+      "icon": "Presentation",
       "title": "Stage and backdrop branding",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Immersive branded environments and brand activation experiences.",
+      "icon": "Sparkles",
       "title": "Experiential event branding",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Large-format prints for exhibition halls and outdoor spaces.",
+      "icon": "Image",
       "title": "Large-format event graphics",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
       "description": "Design, production, installation, and onsite branding management.",
+      "icon": "CheckCircle",
       "title": "End-to-end branding execution",
       "image": "/media/home/hero/home_hero_bg.avif"
     }

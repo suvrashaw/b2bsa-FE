@@ -6,7 +6,7 @@ import { Plus, X } from "lucide-react";
 
 import { cn } from "@/lib";
 
-export interface FAQAccordionItemProps {
+export interface FAQItemProps {
   answer: React.ReactNode | string;
   index: number;
   isOpen: boolean;
@@ -18,7 +18,7 @@ const ANSWER_EXIT = { height: 0, opacity: 0 } as const;
 const ANSWER_INITIAL = { height: 0, opacity: 0 } as const;
 const ANSWER_TRANSITION = { duration: 0.3, ease: [0.4, 0, 0.2, 1] } as const;
 
-export const FAQAccordionItem = ({ answer, index, isOpen, question }: FAQAccordionItemProps) => {
+export const FAQItem = ({ answer, index, isOpen, question }: FAQItemProps) => {
   const num = String(index + 1).padStart(2, "0");
 
   return (

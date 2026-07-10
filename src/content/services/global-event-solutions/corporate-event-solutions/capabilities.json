@@ -2,26 +2,32 @@
   "description": "Our corporate event solutions are designed to help enterprises deliver smooth, engaging, and professionally managed business events across industries and global event destinations.",
   "phases": [
     {
+      "icon": "ClipboardList",
       "title": "End-to-end event management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Presentation",
       "title": "Conference and summit planning",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Settings",
       "title": "Trade show operational support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Palette",
       "title": "Event branding and production",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "MapPin",
       "title": "Onsite event management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Globe2",
       "title": "Global event logistics coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     }

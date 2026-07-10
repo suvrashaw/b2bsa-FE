@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -42,7 +42,7 @@ const Page = () => {
             id="why-choose-us"
           >
             {EVENT_PHYSICAL_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
           <Carousel

@@ -1,27 +1,26 @@
 import type { ReactNode } from "react";
 
 import type { PricingProps } from "@/components/items/PricingCard";
-import type { CaseStudiesProps } from "@/components/sections/CaseStudies";
+import type { CaseStudiesProps } from "@/components/sections/CardsGrid";
 import type { ContactUsProps } from "@/components/sections/ContactUs";
-import type { FAQProps } from "@/components/sections/FAQAccordion";
+import type { FAQProps } from "@/components/sections/FAQ";
 import type { HeroProps } from "@/components/sections/Hero";
 import type { ServicesStackProps } from "@/components/sections/ServicesStack";
 import type { SpotlightProps } from "@/components/sections/Spotlight";
 import type { MarketingPageIdentity } from "@/content/page-definitions";
 
-import { IndustryShaderCard } from "@/components/items/IndustryShaderCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { IndustryCard } from "@/components/items/IndustryCard";
 import { PricingCard } from "@/components/items/PricingCard";
 import { RelatedServicesCard } from "@/components/items/RelatedServicesCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { CardsGrid } from "@/components/sections/CardsGrid";
-import { CaseStudies } from "@/components/sections/CaseStudies";
+import { CardsGrid, CaseStudies } from "@/components/sections/CardsGrid";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { FAQAccordion } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
-import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -151,18 +150,15 @@ const renderServicesSection = (
 ) => {
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
-    const features = items.map((s) => ({
-      description: s.description,
-      icon: s.icon,
-      id: s.id,
-      image: s.image,
-      label: s.title,
-    }));
     return (
-      <ServicesScroll
+      <CardsGrid
+        cols={3}
         heading={section.heading ?? section.content?.heading ?? "Our Services"}
-        services={features}
-      />
+      >
+        {items.map((s) => (
+          <CapabilityCard description={s.description} icon={s.icon} key={s.id} title={s.title ?? ""} />
+        ))}
+      </CardsGrid>
     );
   }
   return (
@@ -321,7 +317,7 @@ export const ServicePage = ({
           id="industries"
         >
           {industries.items.map((item, i) => (
-            <IndustryShaderCard
+            <IndustryCard
               description={item.description}
               icon={item.icon}
               image={item.image}

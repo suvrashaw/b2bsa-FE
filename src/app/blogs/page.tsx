@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Suspense } from "react";
 
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
@@ -63,7 +63,7 @@ const Page = () => {
       </Suspense>
       <Carousel autoplayInterval={4000} heading={BLOG_SERVICE_CAROUSEL.heading} id="why-choose-us">
         {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (
-          <BoothWhyCard index={i} item={item} key={item.title} />
+          <WhyChooseUsCard index={i} item={item} key={item.title} />
         ))}
       </Carousel>
       <ContactUsForm {...BLOG_CONTACT} />

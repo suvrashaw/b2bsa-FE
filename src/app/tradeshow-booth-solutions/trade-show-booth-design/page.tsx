@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
 import { EventsCard } from "@/components/items/EventsCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -71,7 +71,7 @@ const Page = () => {
           </CardsGrid>
           <Carousel cols={4} heading={BOOTH_DESIGN_WHY_CHOOSE_US.heading} id="why-choose-us">
             {BOOTH_DESIGN_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
           <Carousel
@@ -96,10 +96,16 @@ const Page = () => {
       page={BOOTH_DESIGN_PAGE}
       parentPage={BS_PAGE}
       preProcessSections={
-        <CapabilitiesGrid
-          heading={BOOTH_DESIGN_SHOWCASE_ITEMS.heading}
-          services={SHOWCASE_SERVICES}
-        />
+        <CardsGrid cols={3} heading={BOOTH_DESIGN_SHOWCASE_ITEMS.heading}>
+          {SHOWCASE_SERVICES.map((item) => (
+            <CapabilityCard
+              description={item.description}
+              icon={item.icon}
+              key={item.id}
+              title={item.title}
+            />
+          ))}
+        </CardsGrid>
       }
       process={BOOTH_DESIGN_PROCESS}
       services={BOOTH_DESIGN_DELIVERABLES}

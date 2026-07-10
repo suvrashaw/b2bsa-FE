@@ -2,26 +2,32 @@
   "description": "Our networking event solutions are designed to help brands create engaging, organized, and professionally managed business networking experiences.",
   "phases": [
     {
+      "icon": "Briefcase",
       "title": "Executive networking event planning",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Award",
       "title": "VIP guest management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Users",
       "title": "Networking reception coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "Coffee",
       "title": "Corporate hospitality support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "MapPin",
       "title": "Venue coordination and setup",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
+      "icon": "CalendarCheck",
       "title": "Onsite event management",
       "image": "/media/home/hero/home_hero_bg.avif"
     }

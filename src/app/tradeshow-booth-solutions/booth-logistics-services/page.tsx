@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -34,6 +35,7 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE)
 
 const capabilityFeatures = EVENT_LOGISTICS_CAPABILITIES.phases.map((phase) => ({
   description: phase.description,
+  icon: phase.icon,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
@@ -52,7 +54,7 @@ const Page = () => {
         <>
           <Carousel cols={4} heading={EVENT_LOGISTICS_WHY_CHOOSE_US.heading} id="why-choose-us">
             {EVENT_LOGISTICS_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
           <Carousel
@@ -79,11 +81,20 @@ const Page = () => {
       parentPage={BS_PAGE}
       preProcessSections={
         <>
-          <CapabilitiesGrid
+          <CardsGrid
+            cols={3}
             description={EVENT_LOGISTICS_CAPABILITIES.description}
             heading={EVENT_LOGISTICS_CAPABILITIES.title}
-            services={capabilityFeatures}
-          />
+          >
+            {capabilityFeatures.map((item) => (
+              <CapabilityCard
+                description={item.description}
+                icon={item.icon}
+                key={item.id}
+                title={item.label}
+              />
+            ))}
+          </CardsGrid>
           <ContactModalTrigger label={EVENT_LOGISTICS_CTA.label} />
         </>
       }

@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -38,7 +38,7 @@ const Page = () => {
         <>
           <Carousel cols={3} heading={CORPORATE_VIDEO_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORPORATE_VIDEO_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
           <Carousel
@@ -63,13 +63,16 @@ const Page = () => {
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <>
-          <CapabilitiesGrid
-            heading={CORPORATE_VIDEO_DELIVERABLES.heading}
-            services={CORPORATE_VIDEO_DELIVERABLES.services}
-          />
-          <SectionContactCta />
-        </>
+        <CardsGrid cols={3} heading={CORPORATE_VIDEO_DELIVERABLES.heading}>
+          {CORPORATE_VIDEO_DELIVERABLES.services.map((item) => (
+            <CapabilityCard
+              description={item.description}
+              icon={item.icon}
+              key={item.id}
+              title={item.title}
+            />
+          ))}
+        </CardsGrid>
       }
       spotlight={CORPORATE_VIDEO_INTRO}
       why={CORPORATE_VIDEO_WHY}

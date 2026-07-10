@@ -53,14 +53,14 @@ const cardVariants = {
 
 const BOOTH_WHY_CARD_VIEWPORT = { once: true } as const;
 
-interface BoothWhyCardProps {
+interface WhyChooseUsCardProps {
   className?: string;
   index: number;
   item: BoothWhyChooseUsItem;
   style?: React.CSSProperties;
 }
 
-export const BoothWhyCard = ({ className, index, item, style }: BoothWhyCardProps) => {
+export const WhyChooseUsCard = ({ className, index, item, style }: WhyChooseUsCardProps) => {
   const [hovered, setHovered] = useState(false);
   const Icon = item.icon ? icons[item.icon as keyof typeof icons] : undefined;
 

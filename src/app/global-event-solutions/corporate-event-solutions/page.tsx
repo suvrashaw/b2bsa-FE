@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { BoothWhyCard } from "@/components/items/BoothWhyCard";
-import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
+import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -29,9 +30,15 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 
 const capabilityFeatures = (
-  CORP_EVENT_CAPABILITIES.phases as { description?: string; image: string; title: string }[]
+  CORP_EVENT_CAPABILITIES.phases as {
+    description?: string;
+    icon?: string;
+    image: string;
+    title: string;
+  }[]
 ).map((phase) => ({
   description: phase.description,
+  icon: phase.icon,
   id: phase.title
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
@@ -50,7 +57,7 @@ const Page = () => {
         <>
           <Carousel cols={3} heading={CORP_EVENT_WHY_CHOOSE_US.heading} id="why-choose-us">
             {CORP_EVENT_WHY_CHOOSE_US.items.map((item, i) => (
-              <BoothWhyCard index={i} item={item} key={item.title} />
+              <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
           <Carousel
@@ -77,11 +84,20 @@ const Page = () => {
       parentPage={GES_PAGE}
       preProcessSections={
         <>
-          <CapabilitiesGrid
+          <CardsGrid
+            cols={3}
             description={CORP_EVENT_CAPABILITIES.description}
             heading={CORP_EVENT_CAPABILITIES.title}
-            services={capabilityFeatures}
-          />
+          >
+            {capabilityFeatures.map((item) => (
+              <CapabilityCard
+                description={item.description}
+                icon={item.icon}
+                key={item.id}
+                title={item.label}
+              />
+            ))}
+          </CardsGrid>
         </>
       }
       services={CORP_EVENT_DELIVERABLES}
