@@ -1,0 +1,23 @@
+{
+  "heading": "Cookie Policy",
+  "intro": "This Cookie Policy explains how B2B Sales Arrow uses cookies and similar technologies to operate, protect, measure, and improve our website.",
+  "sections": [
+    {
+      "title": "Session Cookies",
+      "body": "Session cookies help the site load securely, remember temporary interactions, and keep forms and navigation working during a single browsing session."
+    },
+    {
+      "title": "Analytics Cookies",
+      "body": "Analytics cookies help us understand aggregate website usage, including page performance, traffic patterns, and the content visitors find most useful. We use this information to improve the experience and measure marketing effectiveness."
+    },
+    {
+      "title": "Functional Cookies",
+      "body": "Functional cookies support preferences and enhanced site behavior, such as smoother interactions, embedded media, and interface improvements that make the website easier to use."
+    }
+  ],
+  "preferences": {
+    "heading": "Managing Your Cookie Preferences",
+    "body": "You can control or delete cookies through your browser settings. Disabling certain cookies may affect form submission, embedded media, or parts of the website experience. If you have questions, contact us at "
+  },
+  "contactEmail": "info@b2bsalesarrow.com"
+}

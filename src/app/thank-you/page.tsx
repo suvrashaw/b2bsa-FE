@@ -7,12 +7,13 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { getMarketingPageMetadata } from "@/content/marketing-pages";
+import { THANK_YOU_BODY, THANK_YOU_PAGE } from "@/content/thank-you/content";
 
-export const metadata: Metadata = {
-  description: "Thank you for reaching out to B2B Sales Arrow. We will be in touch shortly.",
-  robots: { follow: false, index: false },
-  title: "Thank You for Contacting Us",
-};
+export const metadata: Metadata = getMarketingPageMetadata(THANK_YOU_PAGE);
+
+const telHref = `tel:${THANK_YOU_BODY.phone.replaceAll(/[^\d+]/g, "")}`;
+const mailHref = `mailto:${THANK_YOU_BODY.email}`;
 
 const Page = () => {
   return (
@@ -25,11 +26,10 @@ const Page = () => {
               <CheckCircle className="size-10 text-brand-blue" strokeWidth={1.5} />
             </div>
             <SectionHeader as="h1" className="mb-6">
-              Thank You for Contacting Us!
+              {THANK_YOU_BODY.heading}
             </SectionHeader>
             <p className="mb-12 text-lg leading-relaxed text-brand-charcoal/70">
-              Your inquiry has been received. A member of our team will review your message and get
-              back to you within one business day.
+              {THANK_YOU_BODY.description}
             </p>
 
             <div className="mb-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2">
@@ -37,11 +37,8 @@ const Page = () => {
                 <Mail className="mt-0.5 size-5 shrink-0 text-brand-blue" strokeWidth={1.5} />
                 <div>
                   <p className="mb-1 font-semibold text-brand-charcoal">Email Us</p>
-                  <a
-                    className="text-sm text-brand-blue hover:underline"
-                    href="mailto:info@b2bsalesarrow.com"
-                  >
-                    info@b2bsalesarrow.com
+                  <a className="text-sm text-brand-blue hover:underline" href={mailHref}>
+                    {THANK_YOU_BODY.email}
                   </a>
                 </div>
               </div>
@@ -49,15 +46,15 @@ const Page = () => {
                 <Phone className="mt-0.5 size-5 shrink-0 text-brand-blue" strokeWidth={1.5} />
                 <div>
                   <p className="mb-1 font-semibold text-brand-charcoal">Call Us</p>
-                  <a className="text-sm text-brand-blue hover:underline" href="tel:+1-800-000-0000">
-                    +1 (800) 000-0000
+                  <a className="text-sm text-brand-blue hover:underline" href={telHref}>
+                    {THANK_YOU_BODY.phone}
                   </a>
                 </div>
               </div>
             </div>
 
             <Button asChild variant="primary">
-              <Link href="/">Back to Home</Link>
+              <Link href="/">{THANK_YOU_BODY.backToHomeLabel}</Link>
             </Button>
           </div>
         </div>

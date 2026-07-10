@@ -1,0 +1,11 @@
+{
+  "pageId": "thank-you",
+  "pageName": "Thank You",
+  "pageType": "utility",
+  "seo": {
+    "canonicalPath": "/thank-you",
+    "description": "Thank you for reaching out to B2B Sales Arrow. We will be in touch shortly.",
+    "noIndex": true,
+    "title": "Thank You for Contacting Us"
+  }
+}

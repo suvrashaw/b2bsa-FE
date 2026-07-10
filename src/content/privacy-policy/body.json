@@ -1,0 +1,32 @@
+{
+  "heading": "Privacy Policy",
+  "lastUpdated": "Last Updated: May 2024",
+  "sections": [
+    {
+      "id": "information-we-collect",
+      "title": "1. Information We Collect",
+      "body": "We collect information that you provide directly to us when you fill out a form, request a consultation, or contact us via email. This may include your name, email address, company name, and phone number."
+    },
+    {
+      "id": "how-we-use-your-information",
+      "title": "2. How We Use Your Information",
+      "body": "We use the information we collect to provide, maintain, and improve our services, to communicate with you about your projects, and to send you insights and updates that may be relevant to your business."
+    },
+    {
+      "id": "data-security",
+      "title": "3. Data Security",
+      "body": "We take reasonable measures to protect your personal information from loss, theft, misuse, and unauthorized access. However, no internet transmission is ever completely secure or error-free."
+    },
+    {
+      "id": "cookies",
+      "title": "4. Cookies",
+      "body": "Our website uses cookies to enhance your experience. You can choose to disable cookies in your browser settings, although this may affect the functionality of some parts of the site."
+    },
+    {
+      "id": "contact-us",
+      "title": "5. Contact Us",
+      "body": "If you have any questions about this Privacy Policy, please contact us at "
+    }
+  ],
+  "contactEmail": "info@b2bsalesarrow.com"
+}

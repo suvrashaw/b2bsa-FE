@@ -33,8 +33,8 @@ export const Header = () => {
   const [openMobileServiceGroup, setOpenMobileServiceGroup] = useState<null | string>(null);
 
   const isSolidHeader = scrolled;
-  const isLightText = !isSolidHeader;
-  const isHeaderLightText = !isSolidHeader;
+  const isLightText = true;
+  const isHeaderLightText = true;
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -76,18 +76,12 @@ export const Header = () => {
   }, []);
 
   const isMegamenuOpen = activeDropdown === "services";
-  let headerSurfaceClass = "bg-transparent";
-  if (isSolidHeader) {
-    headerSurfaceClass = cn(
-      "bg-white/85 shadow-sm backdrop-blur-md",
-      !isMegamenuOpen && "border-b border-gray-100"
-    );
-  } else if (isLightText) {
-    headerSurfaceClass = cn(
-      "bg-brand-charcoal/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md",
-      !isMegamenuOpen && "border-b border-white/10"
-    );
-  }
+  const headerSurfaceClass = cn(
+    isSolidHeader
+      ? "bg-brand-primary-dark/95 shadow-sm backdrop-blur-md"
+      : "bg-brand-charcoal/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md",
+    !isMegamenuOpen && "border-b border-white/10"
+  );
 
   const isMegamenuLightText = false;
   const megamenuSurfaceClass = "bg-white/85 shadow-[0_20px_50px_rgba(0,0,0,0.1)]";

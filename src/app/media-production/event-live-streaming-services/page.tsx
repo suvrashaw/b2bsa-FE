@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -72,7 +72,7 @@ const Page = () => {
       parentPage={MEDIA_PAGE}
       preProcessSections={
         <>
-          <ServicesScroll
+          <CapabilitiesGrid
             description={LIVE_STREAMING_CAPABILITIES.description}
             heading={LIVE_STREAMING_CAPABILITIES.heading}
             services={LIVE_STREAMING_CAPABILITIES_FEATURES}

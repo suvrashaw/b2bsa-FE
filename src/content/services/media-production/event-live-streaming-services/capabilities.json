@@ -12,16 +12,6 @@
       "label": "HD and 4K live streaming capabilities"
     },
     {
-      "id": "wireless-audio",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Wireless audio systems"
-    },
-    {
-      "id": "professional-lighting",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Professional lighting setups"
-    },
-    {
       "id": "live-switching",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live switching and video mixing"
@@ -30,16 +20,6 @@
       "id": "live-graphics",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live graphics and branded overlays"
-    },
-    {
-      "id": "backup-streaming",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Backup internet and streaming redundancy"
-    },
-    {
-      "id": "audience-monitoring",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "label": "Real-time audience monitoring"
     },
     {
       "id": "production-support",

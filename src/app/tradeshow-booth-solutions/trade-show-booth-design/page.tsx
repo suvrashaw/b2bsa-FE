@@ -5,9 +5,9 @@ import Link from "next/link";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
 import { EventsCard } from "@/components/items/EventsCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
@@ -31,8 +31,6 @@ import {
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
-
-const EMPTY_CONTACT_MODAL = {};
 
 const SHOWCASE_SERVICES = BOOTH_DESIGN_SHOWCASE_ITEMS.items.map((item) => ({
   description: item.descriptions.join(" "),
@@ -98,14 +96,9 @@ const Page = () => {
       page={BOOTH_DESIGN_PAGE}
       parentPage={BS_PAGE}
       preProcessSections={
-        <ServicesStack
-          cardCtaMode="none"
-          commonCtaLabel={BOOTH_DESIGN_SHOWCASE_ITEMS.ctaLabel}
-          contactModal={EMPTY_CONTACT_MODAL}
+        <CapabilitiesGrid
           heading={BOOTH_DESIGN_SHOWCASE_ITEMS.heading}
-          serviceLabel=""
           services={SHOWCASE_SERVICES}
-          showCommonCta
         />
       }
       process={BOOTH_DESIGN_PROCESS}

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -50,7 +50,7 @@ const Page = () => {
               <BoothWhyCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <ServicesScroll
+          <CapabilitiesGrid
             heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}
             services={servicesIncludeFeatures}
           />

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { Carousel } from "@/components/sections/Carousel";
-import { ServicesScroll } from "@/components/sections/ServicesScroll";
 import { ServicesStack } from "@/components/sections/ServicesStack";
 import { StickyScroll } from "@/components/sections/StickyScroll";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -88,7 +88,7 @@ const Page = () => {
             showCommonCta
           />
 
-          <ServicesScroll
+          <CapabilitiesGrid
             description={SMM_CAPABILITIES.description}
             heading={SMM_CAPABILITIES.heading}
             services={SMM_CAPABILITIES_FEATURES}

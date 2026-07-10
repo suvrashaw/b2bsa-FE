@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
@@ -53,8 +54,12 @@ const Page = () => {
       hero={MODULAR_BOOTHS_HERO}
       page={MODULAR_BOOTHS_PAGE}
       parentPage={BS_PAGE}
-      secondaryServices={MODULAR_BOOTHS_RANGE_SECTION}
-      secondaryServicesSectionType="carousel"
+      preProcessSections={
+        <CapabilitiesGrid
+          heading={MODULAR_BOOTHS_RANGE_SECTION.heading}
+          services={MODULAR_BOOTHS_RANGE_SECTION.services}
+        />
+      }
       services={MODULAR_BOOTHS_DELIVERABLES}
       showServicesCommonCta
       spotlight={MODULAR_BOOTHS_INTRO}

@@ -24,7 +24,7 @@ const Page = () => {
       <Hero
         description={TERMS_HERO.description}
         images={TERMS_IMAGES}
-        title={"Terms &\nConditions"}
+        title={TERMS_HERO.title}
       />
       <FAQAccordion faqs={TERMS_FAQ.faqs} heading={TERMS_FAQ.heading} />
       <ContactUsForm {...TERMS_CONTACT} />

@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 
 import Link from "next/link";
 
-import type { ServicesStackProps } from "@/components/sections/ServicesStack";
-
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { BoothWhyCard } from "@/components/items/BoothWhyCard";
+import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { SectionContactCta } from "@/components/sections/SectionContactCta";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -63,9 +62,15 @@ const Page = () => {
       hero={CORPORATE_VIDEO_HERO}
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
-      preProcessSections={<SectionContactCta />}
-      services={CORPORATE_VIDEO_DELIVERABLES as ServicesStackProps}
-      servicesSectionType="carousel"
+      preProcessSections={
+        <>
+          <CapabilitiesGrid
+            heading={CORPORATE_VIDEO_DELIVERABLES.heading}
+            services={CORPORATE_VIDEO_DELIVERABLES.services}
+          />
+          <SectionContactCta />
+        </>
+      }
       spotlight={CORPORATE_VIDEO_INTRO}
       why={CORPORATE_VIDEO_WHY}
     />

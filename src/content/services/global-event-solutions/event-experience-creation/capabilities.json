@@ -13,44 +13,14 @@
         "label": "Audience journey planning"
       },
       {
-        "id": "event-theme-creative-direction",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Event theme and creative direction"
-      },
-      {
         "id": "brand-experience-design",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Brand experience design"
       },
       {
-        "id": "product-launch-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Product launch planning"
-      },
-      {
-        "id": "executive-event-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Executive event planning"
-      },
-      {
         "id": "conference-summit-experience-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Conference and summit experience planning"
-      },
-      {
-        "id": "roadshow-experience-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Roadshow experience planning"
-      },
-      {
-        "id": "hybrid-virtual-event-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Hybrid and virtual event planning"
-      },
-      {
-        "id": "stage-display-environment-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Stage, display, and environment planning"
       },
       {
         "id": "event-branding-visual-asset-planning",
@@ -61,21 +31,6 @@
         "id": "engagement-zone-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Engagement zone planning"
-      },
-      {
-        "id": "lead-capture-qualification-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Lead capture and qualification planning"
-      },
-      {
-        "id": "on-ground-coordination-support",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "On-ground coordination support"
-      },
-      {
-        "id": "post-event-follow-up-planning",
-        "image": "/media/home/hero/home_hero_bg.avif",
-        "label": "Post-event follow-up planning"
       }
     ]
   }

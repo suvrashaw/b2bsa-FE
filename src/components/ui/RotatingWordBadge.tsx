@@ -10,11 +10,15 @@ const TRANSITION = { duration: 0.38 } as const;
 
 const useRotatingWord = (words: string[], interval = 2500) => {
   const [index, setIndex] = useState(0);
+  const [hasRotated, setHasRotated] = useState(false);
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), interval);
+    const id = setInterval(() => {
+      setHasRotated(true);
+      setIndex((i) => (i + 1) % words.length);
+    }, interval);
     return () => clearInterval(id);
   }, [words.length, interval]);
-  return { key: index, word: words[index] };
+  return { isFirst: !hasRotated, key: index, word: words[index] };
 };
 
 interface RotatingWordBadgeProps {
@@ -24,14 +28,14 @@ interface RotatingWordBadgeProps {
 }
 
 export const RotatingWordBadge = ({ className, interval, words }: RotatingWordBadgeProps) => {
-  const { key: wordKey, word } = useRotatingWord(words, interval);
+  const { isFirst, key: wordKey, word } = useRotatingWord(words, interval);
   return (
     <AnimatePresence mode="wait">
       <motion.span
         animate={ANIMATE}
         className={className}
         exit={EXIT}
-        initial={INITIAL}
+        initial={isFirst ? false : INITIAL}
         key={wordKey}
         transition={TRANSITION}
       >

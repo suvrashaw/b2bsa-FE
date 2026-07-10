@@ -10,6 +10,8 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon } from "@/components/ui/Icon";
 import { serviceNavigationGroups } from "@/content/navigation";
 
+const HIDDEN_CHIP_LABELS = new Set(["Event Experience Video Production", "Event Physical Video Shoot"]);
+
 interface ServicesCardProps {
   ctaLabel: string;
   onCtaClick?: () => void;
@@ -25,7 +27,9 @@ export const ServicesCard = ({
   serviceLabel,
   showCta = true,
 }: ServicesCardProps) => {
-  const childLinks = serviceNavigationGroups.find((group) => group.href === service.href)?.links;
+  const childLinks = serviceNavigationGroups
+    .find((group) => group.href === service.href)
+    ?.links.filter((link) => !HIDDEN_CHIP_LABELS.has(link.name));
 
   return (
     <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl">
@@ -49,7 +53,7 @@ export const ServicesCard = ({
           </p>
 
           {childLinks && childLinks.length > 0 && (
-            <div className="pointer-events-auto my-6 flex flex-wrap gap-2">
+            <div className="pointer-events-auto my-6 flex flex-wrap items-center gap-2">
               {childLinks.map((link) => (
                 <Link href={link.href} key={link.href}>
                   <Eyebrow className="mb-0 cursor-pointer transition-colors hover:bg-brand-blue/20">
