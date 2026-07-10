@@ -34,7 +34,7 @@ export const CORP_EVENT_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
-export { default as CORP_EVENT_CAPABILITIES } from "./capabilities.json";
+export { default as CORP_EVENT_PROCESS } from "./process.json";
 export { default as CORP_EVENT_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORP_EVENT_FAQ } from "./faq.json";
 export { default as CORP_EVENT_IMAGE_HERO } from "./hero.json";

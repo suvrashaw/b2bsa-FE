@@ -8,6 +8,7 @@ export interface CalendarTradeShow {
   attendeeCount: number;
   city: string;
   country: string;
+  description?: string;
   endDate: string;
   exhibitorCount: number;
   id: string;

@@ -14,7 +14,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   CORP_EVENT_BLOGS_SECTION,
-  CORP_EVENT_CAPABILITIES,
+  CORP_EVENT_PROCESS,
   CORP_EVENT_CASE_STUDIES,
   CORP_EVENT_CLIENT_LOGOS,
   CORP_EVENT_CONTACT_CTA,
@@ -30,7 +30,7 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 
 const capabilityFeatures = (
-  CORP_EVENT_CAPABILITIES.phases as {
+  CORP_EVENT_PROCESS.phases as {
     description?: string;
     icon?: string;
     image: string;
@@ -86,8 +86,8 @@ const Page = () => {
         <>
           <CardsGrid
             cols={3}
-            description={CORP_EVENT_CAPABILITIES.description}
-            heading={CORP_EVENT_CAPABILITIES.title}
+            description={CORP_EVENT_PROCESS.description}
+            heading={CORP_EVENT_PROCESS.title}
           >
             {capabilityFeatures.map((item) => (
               <CapabilityCard

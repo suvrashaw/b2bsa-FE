@@ -39,7 +39,6 @@ const ReasonImage = ({
 
 export interface StickyScrollProps {
   content?: StickyScrollContent;
-  eyebrow?: StickyScrollContent["eyebrow"];
   heading?: StickyScrollContent["heading"];
   reasons?: StickyScrollContent["reasons"];
   showCta?: boolean;

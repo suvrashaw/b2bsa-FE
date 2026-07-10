@@ -10,7 +10,6 @@ import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home/conten
 interface ContactUsFormProps {
   content?: ContactContent;
   description?: ContactContent["description"];
-  eyebrow?: ContactContent["eyebrow"];
   form?: ContactContent["form"];
   heading?: ContactContent["heading"];
   illustration?: ContactContent["illustration"] | null;

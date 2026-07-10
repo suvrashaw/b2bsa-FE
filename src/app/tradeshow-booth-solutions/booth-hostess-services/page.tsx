@@ -13,7 +13,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
-  BOOTH_HOSTESS_CAPABILITIES,
+  BOOTH_HOSTESS_PROCESS,
   BOOTH_HOSTESS_CASE_STUDIES,
   BOOTH_HOSTESS_CLIENT_LOGOS,
   BOOTH_HOSTESS_CONTACT_CTA,
@@ -35,7 +35,7 @@ const deliverableProps = {
   contactModal: servicesContactModal,
   showCardCtas: false,
 };
-const capabilityFeatures = BOOTH_HOSTESS_CAPABILITIES.phases.map((phase) => ({
+const capabilityFeatures = BOOTH_HOSTESS_PROCESS.phases.map((phase) => ({
   description: phase.description,
   icon: phase.icon,
   id: phase.title
@@ -84,8 +84,8 @@ const Page = () => {
       preProcessSections={
         <CardsGrid
           cols={3}
-          description={BOOTH_HOSTESS_CAPABILITIES.description}
-          heading={BOOTH_HOSTESS_CAPABILITIES.title}
+          description={BOOTH_HOSTESS_PROCESS.description}
+          heading={BOOTH_HOSTESS_PROCESS.title}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

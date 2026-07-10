@@ -1,19 +1,19 @@
 [
   {
-    "color": "bg-brand-blue",
-    "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
-    "icon": "Presentation",
-    "id": "trade-show-booth-design",
-    "image": "/media/home/hero/home_hero_bg.avif",
-    "title": "Trade show booth design"
-  },
-  {
     "color": "bg-brand-cyan",
     "description": "From strategy and logistics to end-to-end execution, our global event solutions ensure your enterprise events run seamlessly and deliver pipeline across any market worldwide.",
     "icon": "Globe",
     "id": "global-event-solutions",
     "image": "/media/home/hero/home_hero_bg.avif",
-    "title": "Global event solutions"
+    "title": "Global Event Solutions"
+  },
+  {
+    "color": "bg-brand-blue",
+    "description": "We design and build custom trade show booths that stop foot traffic, reflect your brand, and create the perfect environment for high-value sales conversations.",
+    "icon": "Presentation",
+    "id": "trade-show-booth-design",
+    "image": "/media/home/hero/home_hero_bg.avif",
+    "title": "Trade Show Booth Solutions"
   },
   {
     "color": "bg-brand-primary",
@@ -21,7 +21,7 @@
     "icon": "MonitorPlay",
     "id": "media-production-services",
     "image": "/media/home/hero/home_hero_bg.avif",
-    "title": "Media production services"
+    "title": "Media Production"
   },
   {
     "color": "bg-brand-blue",
@@ -29,7 +29,7 @@
     "icon": "Users",
     "id": "active-prospecting",
     "image": "/media/home/hero/home_hero_bg.avif",
-    "title": "Active Prospecting"
+    "title": "Event Lead Generation"
   },
   {
     "color": "bg-brand-cyan",

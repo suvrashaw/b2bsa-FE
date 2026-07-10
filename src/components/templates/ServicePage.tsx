@@ -53,8 +53,6 @@ export interface ServicePageProps {
   customSections?: ReactNode;
 
   faq: FAQProps;
-  // ─── Closing ────────────────────────────────────
-  faqVariant?: "accordion" | "cards";
 
   // ─── Hero ───────────────────────────────────────
   hero?: HeroProps;
@@ -181,7 +179,6 @@ export const ServicePage = ({
   creativePricing,
   customSections,
   faq,
-  faqVariant: _faqVariant,
   hero,
   industries,
   page,

@@ -12,7 +12,6 @@ interface CaseStudyGridCardProps {
   colSpan: string;
   ctaLabel?: string;
   description: string;
-  format?: "gallery" | "text" | "video";
   image: string;
   metric: string;
   metricLabel: string;
@@ -24,7 +23,6 @@ export const CaseStudyGridCard = ({
   colSpan,
   ctaLabel = "View Case Study",
   description,
-  format: _format,
   image,
   metric,
   metricLabel,

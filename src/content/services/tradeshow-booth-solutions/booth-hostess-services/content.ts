@@ -24,7 +24,7 @@ export const BOOTH_HOSTESS_INDUSTRIES = {
 
 export const BOOTH_HOSTESS_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
-export { default as BOOTH_HOSTESS_CAPABILITIES } from "./capabilities.json";
+export { default as BOOTH_HOSTESS_PROCESS } from "./process.json";
 export { default as BOOTH_HOSTESS_CLIENT_LOGOS } from "./client-logos.json";
 export { default as BOOTH_HOSTESS_FAQ } from "./faq.json";
 

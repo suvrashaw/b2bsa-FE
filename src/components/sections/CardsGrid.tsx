@@ -139,7 +139,6 @@ export interface CaseStudiesProps {
   content?: CaseStudiesContent;
   ctaLabel?: CaseStudiesContent["ctaLabel"];
   description?: string;
-  eyebrow?: CaseStudiesContent["eyebrow"];
   getStudyHref?: (study: CaseStudyEntry) => string;
   heading?: ReactNode;
   items?: CaseStudyEntry[];

@@ -210,6 +210,7 @@ const Page = () => {
       <ServicesStack
         heading={ABOUT_SIGNATURE_SERVICES.heading}
         services={ABOUT_SIGNATURE_SERVICES_STACK}
+        showChildLinks={false}
       />
 
       {/* Events We Have Delivered */}

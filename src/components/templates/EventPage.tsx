@@ -5,7 +5,6 @@ import { useMemo } from "react";
 import type { FAQProps } from "@/components/sections/FAQ";
 
 import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
-import { EventMetadata } from "@/components/items/EventMetadata";
 import { TradeShowCard } from "@/components/items/TradeShowCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -90,19 +89,6 @@ export interface EventPageProps {
 
 export const EventPage = ({ event, faq }: EventPageProps) => {
   const heroImages = useMemo(() => [event.image ?? PLACEHOLDER_IMAGE], [event.image]);
-
-  const metadata = useMemo(
-    () => [
-      {
-        label: "Date",
-        value: formatEventDateRange(event.startDate, event.endDate),
-      },
-      { label: "Venue", value: event.venue },
-      { label: "Location", value: formatLocation(event) },
-      { label: "Industry", value: event.industry },
-    ],
-    [event]
-  );
 
   const durationDays = useMemo(
     () => computeDurationDays(event.startDate, event.endDate),

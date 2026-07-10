@@ -10,7 +10,6 @@ import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/h
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];
   content?: TestimonialsContent;
-  eyebrow?: TestimonialsContent["eyebrow"];
   heading?: TestimonialsContent["heading"];
   initialIndex?: TestimonialsContent["initialIndex"];
   testimonials?: TestimonialsContent["testimonials"];

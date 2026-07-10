@@ -20,13 +20,11 @@ export interface ServicesStackProps {
   };
   content?: HomeServicesContent;
   ctaLabel?: HomeServicesContent["ctaLabel"];
-  eyebrow?: HomeServicesContent["eyebrow"];
   heading?: HomeServicesContent["heading"];
-  mediaPosition?: "left" | "right";
   serviceLabel?: HomeServicesContent["serviceLabel"];
   services?: HomeServiceItem[];
-  showCapabilityDescriptions?: boolean;
   showCardCtas?: boolean;
+  showChildLinks?: boolean;
   showCommonCta?: boolean;
 }
 
@@ -40,6 +38,7 @@ export const ServicesStack = ({
   serviceLabel = content.serviceLabel,
   services = content.services,
   showCardCtas = true,
+  showChildLinks = true,
   showCommonCta = false,
 }: ServicesStackProps = {}) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -76,6 +75,7 @@ export const ServicesStack = ({
                   onCtaClick={contactModal ? openContactModal : undefined}
                   service={service}
                   serviceLabel={serviceLabel}
+                  showChildLinks={showChildLinks}
                   showCta={
                     resolvedCardCtaMode === "all" ||
                     (resolvedCardCtaMode === "linked" && Boolean(service.href))

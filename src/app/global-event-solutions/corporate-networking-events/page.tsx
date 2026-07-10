@@ -15,7 +15,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   CORP_NETWORKING_BLOGS_SECTION,
-  CORP_NETWORKING_CAPABILITIES,
+  CORP_NETWORKING_PROCESS,
   CORP_NETWORKING_CASE_STUDIES,
   CORP_NETWORKING_CLIENT_LOGOS,
   CORP_NETWORKING_CONTACT_CTA,
@@ -32,7 +32,7 @@ import {
 export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
 
 const capabilityFeatures = (
-  CORP_NETWORKING_CAPABILITIES.phases as {
+  CORP_NETWORKING_PROCESS.phases as {
     description?: string;
     icon?: string;
     image: string;
@@ -87,8 +87,8 @@ const Page = () => {
       preProcessSections={
         <CardsGrid
           cols={3}
-          description={CORP_NETWORKING_CAPABILITIES.description}
-          heading={CORP_NETWORKING_CAPABILITIES.title}
+          description={CORP_NETWORKING_PROCESS.description}
+          heading={CORP_NETWORKING_PROCESS.title}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

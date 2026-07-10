@@ -17,6 +17,7 @@ interface ServicesCardProps {
   onCtaClick?: () => void;
   service: HomeServiceItem;
   serviceLabel?: string;
+  showChildLinks?: boolean;
   showCta?: boolean;
 }
 
@@ -25,11 +26,14 @@ export const ServicesCard = ({
   onCtaClick,
   service,
   serviceLabel,
+  showChildLinks = true,
   showCta = true,
 }: ServicesCardProps) => {
-  const childLinks = serviceNavigationGroups
-    .find((group) => group.href === service.href)
-    ?.links?.filter((link) => !HIDDEN_CHIP_LABELS.has(link.name));
+  const childLinks =
+    showChildLinks &&
+    serviceNavigationGroups
+      .find((group) => group.href === service.href)
+      ?.links?.filter((link) => !HIDDEN_CHIP_LABELS.has(link.name));
 
   return (
     <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl">

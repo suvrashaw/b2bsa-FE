@@ -18,7 +18,7 @@ export const VIRTUAL_VIDEO_CONTACT_CTA = {
 };
 
 export const VIRTUAL_VIDEO_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
-export { default as VIRTUAL_VIDEO_CAPABILITIES } from "./capabilities.json";
+export { default as VIRTUAL_VIDEO_PROCESS } from "./process.json";
 export { default as VIRTUAL_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 export { default as VIRTUAL_VIDEO_FAQ } from "./faq.json";
 

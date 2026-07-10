@@ -26,7 +26,7 @@ export const CORP_NETWORKING_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
-export { default as CORP_NETWORKING_CAPABILITIES } from "./capabilities.json";
+export { default as CORP_NETWORKING_PROCESS } from "./process.json";
 export { default as CORP_NETWORKING_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORP_NETWORKING_FAQ } from "./faq.json";
 export { default as CORP_NETWORKING_IMAGE_HERO } from "./hero.json";
