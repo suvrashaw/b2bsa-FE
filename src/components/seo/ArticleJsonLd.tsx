@@ -1,4 +1,4 @@
-import { siteUrl } from "@/lib/json-ld";
+import { JsonLd, siteUrl } from "@/lib/json-ld";
 
 export interface ArticleJsonLdProps {
   articleSection?: string;
@@ -72,3 +72,7 @@ export const buildBlogPostingJsonLd = ({
   url,
   ...(wordCount && { wordCount }),
 });
+
+export const ArticleJsonLd = (props: ArticleJsonLdProps) => (
+  <JsonLd data={buildBlogPostingJsonLd(props)} />
+);

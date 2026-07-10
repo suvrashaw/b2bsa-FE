@@ -9,7 +9,7 @@ import {
   type NavLink,
   type ServiceNavGroup,
   serviceNavigationGroups,
-  type topNavigation,
+  topNavigation,
 } from "@/content/navigation";
 import { cn, toHeadingCaps, toTitleCase } from "@/lib";
 
@@ -125,6 +125,34 @@ const MobileServiceGroup = ({
     </div>
   );
 };
+
+export const MobileNav = ({
+  onClose,
+  onServiceGroupToggle,
+  onToggle,
+  openMobileNav,
+  openServiceGroup,
+}: {
+  onClose: () => void;
+  onServiceGroupToggle: (name: string) => void;
+  onToggle: (name: string) => void;
+  openMobileNav: null | string;
+  openServiceGroup: null | string;
+}) => (
+  <>
+    {topNavigation.map((link) => (
+      <MobileNavItem
+        isOpen={openMobileNav === link.name}
+        key={link.name}
+        link={link}
+        onClose={onClose}
+        onServiceGroupToggle={onServiceGroupToggle}
+        onToggle={onToggle}
+        openServiceGroup={openServiceGroup}
+      />
+    ))}
+  </>
+);
 
 export const MobileNavItem = memo(
   ({
