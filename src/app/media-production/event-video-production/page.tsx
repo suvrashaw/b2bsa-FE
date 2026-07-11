@@ -14,6 +14,7 @@ import {
   EVENT_VIDEO_CASE_STUDIES,
   EVENT_VIDEO_CLIENT_LOGOS,
   EVENT_VIDEO_CONTACT_CTA,
+  EVENT_VIDEO_CREATIVE_PRICING,
   EVENT_VIDEO_DELIVERABLES,
   EVENT_VIDEO_FAQ,
   EVENT_VIDEO_HERO,
@@ -30,6 +31,7 @@ const Page = () => {
       caseStudies={EVENT_VIDEO_CASE_STUDIES}
       clientLogos={EVENT_VIDEO_CLIENT_LOGOS}
       contactUs={EVENT_VIDEO_CONTACT_CTA}
+      creativePricing={EVENT_VIDEO_CREATIVE_PRICING}
       customSections={
         <>
           <Carousel
