@@ -103,11 +103,25 @@ export const Header = () => {
           >
             <Image
               alt="B2B Sales Arrow"
-              className="object-contain"
+              className={cn(
+                "object-contain transition-opacity duration-300",
+                isSolidHeader ? "opacity-0" : "opacity-100"
+              )}
               fill
               priority
               sizes="160px"
               src="/media/logo/logo-primary.svg"
+            />
+            <Image
+              alt="B2B Sales Arrow"
+              className={cn(
+                "object-contain transition-opacity duration-300",
+                isSolidHeader ? "opacity-100" : "opacity-0"
+              )}
+              fill
+              priority
+              sizes="160px"
+              src="/media/logo/logo-white.svg"
             />
           </Link>
         </div>

@@ -90,6 +90,7 @@ const Home = () => {
       <div id="home">
         <Hero
           description={HOME_HERO_CONTENT.description}
+          disableTypewriter
           mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
           mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
           primaryCta={HOME_HERO_CONTENT.primaryCta}

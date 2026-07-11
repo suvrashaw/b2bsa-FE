@@ -309,6 +309,7 @@ export const ServicePage = ({
 
       {industries && (
         <CardsGrid
+          cardClassName="w-[calc(50%-12px)] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
           cols={4}
           description={industries.description}
           heading={industries.heading}

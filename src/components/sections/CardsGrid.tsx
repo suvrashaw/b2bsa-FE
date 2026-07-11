@@ -24,6 +24,7 @@ const FLEX_WIDTHS: Record<ColsValue, string> = {
 };
 
 export interface CardsGridProps {
+  cardClassName?: string;
   children: ReactNode;
   className?: string;
   cols?: ColsValue;
@@ -44,6 +45,7 @@ export interface CardsGridProps {
 }
 
 export const CardsGrid = ({
+  cardClassName,
   children,
   className,
   cols = 3,
@@ -82,7 +84,7 @@ export const CardsGrid = ({
         ) : (
           <div className={cn("flex flex-wrap justify-center", gap, gridClassName)}>
             {Children.map(children, (child, i) => (
-              <div className={flexWidthClass} key={i}>
+              <div className={cn(flexWidthClass, cardClassName)} key={i}>
                 {child}
               </div>
             ))}

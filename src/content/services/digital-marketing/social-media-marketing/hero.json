@@ -1,5 +1,10 @@
 {
   "description": "Strengthen your brand presence with strategic social media marketing services designed for B2B companies, corporate brands, and enterprise businesses. We create content-driven campaigns that improve audience engagement, brand visibility, and lead generation across major social platforms.",
+  "images": [
+    "/media/services/digital-marketing/social-media-marketing/hero/1.avif",
+    "/media/services/digital-marketing/social-media-marketing/hero/2.avif",
+    "/media/services/digital-marketing/social-media-marketing/hero/3.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Grow Your Brand Online"

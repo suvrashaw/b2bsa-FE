@@ -167,7 +167,7 @@ export const IndustryCard = ({
               <Icon className="size-5 text-white md:size-6" name={icon} />
             </div>
           </div>
-          <h3 className="text-lg font-bold text-white md:text-lg">{title}</h3>
+          <h3 className="min-w-0 text-lg font-bold text-white md:text-lg">{title}</h3>
         </div>
 
         {/* Hover Content: Description */}

@@ -1,5 +1,9 @@
 {
   "description": "Convert event attendance into qualified pipeline. Our event lead generation services capture, qualify, and deliver sales-ready leads from trade shows, conferences, and corporate events directly to your CRM.",
+  "images": [
+    "/media/services/sales-qualified-lead-generation/event-lead-generation/hero/1.avif",
+    "/media/services/sales-qualified-lead-generation/event-lead-generation/hero/2.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Start Generating Event Leads"

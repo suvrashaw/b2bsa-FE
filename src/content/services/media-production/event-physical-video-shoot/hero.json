@@ -1,5 +1,10 @@
 {
   "description": "Capture the most impactful moments of your event with high-quality on-site video production - from interviews and client testimonials to thought leadership bytes, speaker highlights, and branded event coverage.",
+  "images": [
+    "/media/services/media-production/event-physical-video-shoot/hero/1.avif",
+    "/media/services/media-production/event-physical-video-shoot/hero/2.avif",
+    "/media/services/media-production/event-physical-video-shoot/hero/3.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Book a Video Shoot"

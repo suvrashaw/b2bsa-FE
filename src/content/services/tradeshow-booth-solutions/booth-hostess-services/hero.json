@@ -1,5 +1,11 @@
 {
   "description": "Enhance guest experience at conferences, exhibitions, trade shows, and corporate events with trained event hostesses for registration, audience engagement, and booth support.",
+  "images": [
+    "/media/services/tradeshow-booth-solutions/booth-hostess-services/hero/1.avif",
+    "/media/services/tradeshow-booth-solutions/booth-hostess-services/hero/2.avif",
+    "/media/services/tradeshow-booth-solutions/booth-hostess-services/hero/3.avif",
+    "/media/services/tradeshow-booth-solutions/booth-hostess-services/hero/4.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request A Quote"

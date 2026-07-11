@@ -18,6 +18,7 @@ export interface HeroProps {
   centerContent?: boolean;
   centered?: boolean;
   description?: string;
+  disableTypewriter?: boolean;
   eyebrow?: ReactNode | string;
   imageOpacity?: number;
   images?: string[];
@@ -247,6 +248,7 @@ export const Hero = ({
   centerContent = false,
   centered = false,
   description,
+  disableTypewriter = false,
   eyebrow,
   imageOpacity = 1,
   images,
@@ -269,7 +271,15 @@ export const Hero = ({
   const isStringTitle = typeof title === "string";
   const titleLines = isStringTitle ? (title as string).split("\n") : [title as ReactNode];
   const stringLines = isStringTitle ? (title as string).split("\n") : [];
-  const { activeLineIdx, visibleLines } = useTypewriter(stringLines, 30);
+  const firstRotatingWord =
+    isStringTitle && rotatingWords && rotatingWords.length > 0 ? rotatingWords[0] : undefined;
+  const typewriterLines = firstRotatingWord ? [...stringLines, firstRotatingWord] : stringLines;
+  const { activeLineIdx, visibleLines } = useTypewriter(
+    disableTypewriter ? [] : typewriterLines,
+    30
+  );
+  const badgeLineIdx = stringLines.length;
+  const isBadgeTyped = disableTypewriter || !firstRotatingWord || activeLineIdx === -1;
 
   const imagesLength = images?.length ?? 0;
   useEffect(() => {
@@ -348,7 +358,7 @@ export const Hero = ({
             </motion.div>
           )}
           <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
-            {isStringTitle && !animateFromLeft
+            {isStringTitle && !animateFromLeft && !disableTypewriter
               ? (titleLines as string[]).map((_, index) => (
                   <TypewriterLine
                     fullText={stringLines[index] ?? ""}
@@ -357,10 +367,23 @@ export const Hero = ({
                     text={visibleLines[index] ?? ""}
                   />
                 ))
-              : (titleLines as ReactNode[]).map((line, index) => (
-                  <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
-                ))}
-            {rotatingWords && rotatingWords.length > 0 && (
+              : isStringTitle && disableTypewriter
+                ? (titleLines as string[]).map((line, index) => (
+                    <span className="block" key={index}>
+                      {line}
+                    </span>
+                  ))
+                : (titleLines as ReactNode[]).map((line, index) => (
+                    <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
+                  ))}
+            {firstRotatingWord && !isBadgeTyped && (
+              <TypewriterLine
+                fullText={firstRotatingWord}
+                isActive={activeLineIdx === badgeLineIdx}
+                text={visibleLines[badgeLineIdx] ?? ""}
+              />
+            )}
+            {rotatingWords && rotatingWords.length > 0 && isBadgeTyped && (
               <RotatingWordBadge className="block text-white" words={rotatingWords} />
             )}
           </SectionHeader>
