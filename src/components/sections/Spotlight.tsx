@@ -83,7 +83,9 @@ const StatChip = ({ index, item }: { index: number; item: StatItem }) => {
       )}
     >
       <span className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">{item.value}</span>
-      <span className="text-xs font-bold tracking-widest text-white/90 uppercase">{item.label}</span>
+      <span className="text-xs font-bold tracking-widest text-white/90 uppercase">
+        {item.label}
+      </span>
     </div>
   );
 };

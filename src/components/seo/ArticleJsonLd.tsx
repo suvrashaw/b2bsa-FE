@@ -16,7 +16,7 @@ export interface ArticleJsonLdProps {
   wordCount?: number;
 }
 
-export const buildBlogPostingJsonLd = ({
+const buildBlogPostingJsonLd = ({
   articleSection,
   authorName = "B2B Sales Arrow",
   dateModified,

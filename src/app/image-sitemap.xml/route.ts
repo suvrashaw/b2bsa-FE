@@ -37,7 +37,12 @@ export const GET = () => {
   );
 
   const eventEntries = TRADE_SHOW_CALENDAR_EVENTS.filter((e) => e.image).map((event) =>
-    imageEntry(`${siteUrl}/tradeshow-calendar/${event.id}`, event.image!, event.title, event.summary)
+    imageEntry(
+      `${siteUrl}/tradeshow-calendar/${event.id}`,
+      event.image!,
+      event.title,
+      event.summary
+    )
   );
 
   const urlElements = [...blogEntries, ...caseStudyEntries, ...eventEntries].join("\n");

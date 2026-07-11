@@ -108,11 +108,7 @@ const EventDetails = ({
       size="sm"
       variant="primary"
     >
-      <Link
-        aria-label={`${cta.label} for ${eventTitle}`}
-        href={cta.href}
-        onClick={handleLinkClick}
-      >
+      <Link aria-label={`${cta.label} for ${eventTitle}`} href={cta.href} onClick={handleLinkClick}>
         {cta.label}
       </Link>
     </Button>

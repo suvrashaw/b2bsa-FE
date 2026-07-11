@@ -81,12 +81,7 @@ const StepButton = ({ index, isActive, onActivate, step }: StepButtonProps) => {
   );
 };
 
-export const LeadPipeline = ({
-  description,
-  heading,
-  stages,
-  steps,
-}: LeadPipelineProps) => {
+export const LeadPipeline = ({ description, heading, stages, steps }: LeadPipelineProps) => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (

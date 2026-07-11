@@ -138,10 +138,7 @@ const RootLayout = ({
           id="organization-json-ld"
           type="application/ld+json"
         />
-        <Script
-          dangerouslySetInnerHTML={UNREGISTER_SW_SCRIPT}
-          id="unregister-sw"
-        />
+        <Script dangerouslySetInnerHTML={UNREGISTER_SW_SCRIPT} id="unregister-sw" />
         <MotionProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
         </MotionProvider>

@@ -7,19 +7,22 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib";
 
-const eyebrowVariants = cva("type-eyebrow mb-6 inline-flex min-h-[48px] items-center justify-center rounded-full px-4 py-2", {
-  defaultVariants: {
-    variant: "blue",
-  },
-  variants: {
-    variant: {
-      blue: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-      cyan: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-      neutral: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
-      primary: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+const eyebrowVariants = cva(
+  "type-eyebrow mb-6 inline-flex min-h-[48px] items-center justify-center rounded-full px-4 py-2",
+  {
+    defaultVariants: {
+      variant: "blue",
     },
-  },
-});
+    variants: {
+      variant: {
+        blue: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+        cyan: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+        neutral: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+        primary: "border border-brand-blue/20 bg-brand-blue/10 text-brand-blue",
+      },
+    },
+  }
+);
 
 interface EyebrowProps extends VariantProps<typeof eyebrowVariants> {
   children: ReactNode;

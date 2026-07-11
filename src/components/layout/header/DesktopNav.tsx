@@ -30,7 +30,7 @@ export const DesktopNav = ({
   </nav>
 );
 
-export const DesktopNavLink = memo(
+const DesktopNavLink = memo(
   ({
     activeDropdown,
     lightText,

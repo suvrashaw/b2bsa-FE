@@ -11,7 +11,10 @@ import { Icon } from "@/components/ui/Icon";
 import { serviceNavigationGroups } from "@/content/navigation";
 import { cn } from "@/lib";
 
-const HIDDEN_CHIP_LABELS = new Set(["Event Experience Video Production", "Event Physical Video Shoot"]);
+const HIDDEN_CHIP_LABELS = new Set([
+  "Event Experience Video Production",
+  "Event Physical Video Shoot",
+]);
 
 interface ServicesCardProps {
   className?: string;
@@ -68,7 +71,7 @@ export const ServicesCard = ({
             <div className="pointer-events-auto my-6 flex flex-wrap items-center gap-2">
               {childLinks.map((link) => (
                 <Link href={link.href} key={link.href}>
-                  <Eyebrow className="mb-0 cursor-pointer transition-colors hover:bg-brand-blue/20">
+                  <Eyebrow className="mb-0 cursor-pointer border-white/40 bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-brand-blue/20 md:border-brand-blue/20 md:bg-brand-blue/10 md:text-brand-blue">
                     {link.name}
                   </Eyebrow>
                 </Link>

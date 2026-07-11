@@ -84,21 +84,30 @@ const MobileServiceGroup = ({
 
   return (
     <div>
-      <button
-        className="flex w-full items-center justify-between px-6 py-3 text-left text-sm font-bold text-brand-charcoal transition-colors hover:text-brand-blue"
-        onClick={handleToggle}
-        type="button"
-      >
-        <span>{toHeadingCaps(group.name)}</span>
+      <div className="flex w-full items-center justify-between px-6 py-3 text-left text-sm font-bold text-brand-charcoal">
+        <Link
+          className="transition-colors hover:text-brand-blue"
+          href={group.href}
+          onClick={onClose}
+        >
+          {toHeadingCaps(group.name)}
+        </Link>
         {hasSubContent && (
-          <ChevronDown
-            className={cn(
-              "size-4 shrink-0 text-gray-400 transition-transform duration-300",
-              isOpen && "rotate-180"
-            )}
-          />
+          <button
+            aria-label={`Toggle ${group.name} submenu`}
+            className="-m-1 p-1"
+            onClick={handleToggle}
+            type="button"
+          >
+            <ChevronDown
+              className={cn(
+                "size-4 shrink-0 text-gray-400 transition-transform duration-300",
+                isOpen && "rotate-180"
+              )}
+            />
+          </button>
         )}
-      </button>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
@@ -154,7 +163,7 @@ export const MobileNav = ({
   </>
 );
 
-export const MobileNavItem = memo(
+const MobileNavItem = memo(
   ({
     isOpen,
     link,

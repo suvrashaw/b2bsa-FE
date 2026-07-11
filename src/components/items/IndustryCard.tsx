@@ -1,6 +1,7 @@
 "use client";
 
 import { Warp } from "@paper-design/shaders-react";
+import { useCallback, useState } from "react";
 
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
@@ -91,6 +92,16 @@ export const IndustryCard = ({
   title,
 }: IndustryCardProps) => {
   const shaderConfig = getShaderConfig(index);
+  const [isActive, setIsActive] = useState(false);
+  const toggleActive = useCallback(() => setIsActive((prev) => !prev), []);
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLDivElement>) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      toggleActive();
+    },
+    [toggleActive]
+  );
 
   return (
     <div
@@ -98,9 +109,18 @@ export const IndustryCard = ({
         "group relative flex aspect-[4/5] min-h-[280px] w-full flex-col overflow-hidden rounded-3xl border border-white/20 md:min-h-[320px] dark:border-white/10",
         className
       )}
+      onClick={toggleActive}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
     >
       {/* Background Image (Default state) */}
-      <div className="absolute inset-0 z-0 transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+      <div
+        className={cn(
+          "absolute inset-0 z-0 transition-opacity duration-500 ease-in-out group-hover:opacity-0",
+          isActive && "opacity-0"
+        )}
+      >
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img alt={title} className="size-full object-cover" src={image} />
@@ -111,7 +131,12 @@ export const IndustryCard = ({
       </div>
 
       {/* Shader Background (Hover state) */}
-      <div className="absolute inset-0 z-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
+      <div
+        className={cn(
+          "absolute inset-0 z-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100",
+          isActive && "opacity-100"
+        )}
+      >
         <Warp
           colors={shaderConfig.colors}
           distortion={shaderConfig.distortion}
@@ -131,7 +156,12 @@ export const IndustryCard = ({
 
       <div className="relative z-10 flex h-full flex-grow flex-col">
         {/* Default Content: Icon + Title */}
-        <div className="absolute inset-0 flex flex-col p-5 transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0 md:p-8">
+        <div
+          className={cn(
+            "absolute inset-0 flex flex-col p-5 transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0 md:p-8",
+            isActive && "-translate-y-4 opacity-0"
+          )}
+        >
           <div className="mb-4 drop-shadow-lg md:mb-6">
             <div className="flex size-10 items-center justify-center rounded-xl bg-white/20 ring-1 ring-white/30 backdrop-blur-sm md:size-12">
               <Icon className="size-5 text-white md:size-6" name={icon} />
@@ -141,7 +171,12 @@ export const IndustryCard = ({
         </div>
 
         {/* Hover Content: Description */}
-        <div className="absolute inset-0 flex translate-y-4 flex-col justify-center p-5 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 md:p-8">
+        <div
+          className={cn(
+            "absolute inset-0 flex translate-y-4 flex-col justify-center p-5 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 md:p-8",
+            isActive && "translate-y-0 opacity-100"
+          )}
+        >
           {description ? (
             <p className="text-center text-[13px] leading-relaxed font-medium text-gray-100 md:text-base">
               {description}

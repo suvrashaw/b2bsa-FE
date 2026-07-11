@@ -45,7 +45,10 @@ const Page = () => {
             </SectionHeader>
             <p className="leading-relaxed text-white/80">
               {COOKIE_BODY.preferences.body}
-              <a className="underline hover:no-underline" href={`mailto:${COOKIE_BODY.contactEmail}`}>
+              <a
+                className="underline hover:no-underline"
+                href={`mailto:${COOKIE_BODY.contactEmail}`}
+              >
                 {COOKIE_BODY.contactEmail}
               </a>
             </p>

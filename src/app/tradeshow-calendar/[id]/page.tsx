@@ -120,7 +120,12 @@ const Page = async ({ params }: EventDetailPageProps) => {
             url: "/tradeshow-booth-solutions",
           }),
           ...(event.image
-            ? [buildImageObjectJsonLd({ caption: `${event.title} — B2B Sales Arrow`, url: event.image })]
+            ? [
+                buildImageObjectJsonLd({
+                  caption: `${event.title} — B2B Sales Arrow`,
+                  url: event.image,
+                }),
+              ]
             : []),
         ])}
       />

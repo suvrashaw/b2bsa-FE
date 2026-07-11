@@ -36,12 +36,7 @@ const CTA_INITIAL = { opacity: 0, y: 20 };
 const CTA_EXIT = { opacity: 0, y: 20 };
 const CTA_TRANSITION = { delay: 0.2, duration: 0.3 };
 
-export const CaseStudyCard = ({
-  active,
-  className,
-  item,
-  onActivate,
-}: CaseStudyCardProps) => {
+export const CaseStudyCard = ({ active, className, item, onActivate }: CaseStudyCardProps) => {
   return (
     <motion.div
       className={cn(

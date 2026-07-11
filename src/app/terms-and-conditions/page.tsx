@@ -21,11 +21,7 @@ const Page = () => {
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
-      <Hero
-        description={TERMS_HERO.description}
-        images={TERMS_IMAGES}
-        title={TERMS_HERO.title}
-      />
+      <Hero description={TERMS_HERO.description} images={TERMS_IMAGES} title={TERMS_HERO.title} />
       <FAQAccordion faqs={TERMS_FAQ.faqs} heading={TERMS_FAQ.heading} />
       <ContactUsForm {...TERMS_CONTACT} />
       <Footer />

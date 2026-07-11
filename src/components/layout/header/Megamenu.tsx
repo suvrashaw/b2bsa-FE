@@ -4,13 +4,7 @@ import { memo } from "react";
 import { type NavLink, type ServiceNavGroup, serviceNavigationGroups } from "@/content/navigation";
 import { cn, toHeadingCaps } from "@/lib";
 
-export const Megamenu = ({
-  lightText,
-  onClose,
-}: {
-  lightText?: boolean;
-  onClose: () => void;
-}) => (
+export const Megamenu = ({ lightText, onClose }: { lightText?: boolean; onClose: () => void }) => (
   <div className="flex justify-between gap-4 xl:gap-8">
     <div className="min-w-0">
       <MegamenuServiceGroup
@@ -27,10 +21,18 @@ export const Megamenu = ({
       />
     </div>
     <div className="min-w-0">
-      <MegamenuServiceGroup group={serviceNavigationGroups[1]} lightText={lightText} onClose={onClose} />
+      <MegamenuServiceGroup
+        group={serviceNavigationGroups[1]}
+        lightText={lightText}
+        onClose={onClose}
+      />
     </div>
     <div className="min-w-0">
-      <MegamenuServiceGroup group={serviceNavigationGroups[2]} lightText={lightText} onClose={onClose} />
+      <MegamenuServiceGroup
+        group={serviceNavigationGroups[2]}
+        lightText={lightText}
+        onClose={onClose}
+      />
     </div>
     <div className="min-w-0">
       <MegamenuServiceGroup
@@ -78,7 +80,7 @@ const MegamenuSubLink = ({
   );
 };
 
-export const MegamenuServiceGroup = memo(
+const MegamenuServiceGroup = memo(
   ({
     className,
     group,

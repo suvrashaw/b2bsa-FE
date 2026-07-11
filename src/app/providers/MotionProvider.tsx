@@ -8,7 +8,5 @@ const loadFeatures = async () => {
 };
 
 export const MotionProvider = ({ children }: { children: React.ReactNode }) => (
-  <LazyMotion features={loadFeatures}>
-    {children}
-  </LazyMotion>
+  <LazyMotion features={loadFeatures}>{children}</LazyMotion>
 );

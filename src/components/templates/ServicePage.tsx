@@ -148,12 +148,14 @@ const renderServicesSection = (
   const items = section.services ?? section.content?.services ?? [];
   if (sectionType === "carousel" && items.length > 0) {
     return (
-      <CardsGrid
-        cols={3}
-        heading={section.heading ?? section.content?.heading ?? "Our Services"}
-      >
+      <CardsGrid cols={3} heading={section.heading ?? section.content?.heading ?? "Our Services"}>
         {items.map((s) => (
-          <CapabilityCard description={s.description} icon={s.icon} key={s.id} title={s.title ?? ""} />
+          <CapabilityCard
+            description={s.description}
+            icon={s.icon}
+            key={s.id}
+            title={s.title ?? ""}
+          />
         ))}
       </CardsGrid>
     );

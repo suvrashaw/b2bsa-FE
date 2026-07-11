@@ -15,7 +15,7 @@ export interface PricingProps {
   title?: string;
 }
 
-export interface PricingTier {
+interface PricingTier {
   color?: string;
   cta?: { href: string; label: string };
   description: string;

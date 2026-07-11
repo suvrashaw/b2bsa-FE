@@ -71,7 +71,11 @@ export const CardsGrid = ({
 
         {variant === "expand" ? (
           <div
-            className={cn("flex h-auto w-full flex-col lg:h-[600px] lg:flex-row", gap, gridClassName)}
+            className={cn(
+              "flex h-auto w-full flex-col lg:h-[600px] lg:flex-row",
+              gap,
+              gridClassName
+            )}
           >
             {children}
           </div>
