@@ -53,7 +53,6 @@ const Page = () => {
       secondaryServices={MARKET_INTELLIGENCE_CARDS}
       secondaryServicesSectionType="grid"
       services={MARKET_INTELLIGENCE_DELIVERABLES}
-      servicesSectionType="carousel"
       spotlight={MARKET_INTELLIGENCE_INTRO}
     />
   );

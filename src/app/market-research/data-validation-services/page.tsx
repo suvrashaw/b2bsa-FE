@@ -52,7 +52,6 @@ const Page = () => {
       page={DATA_VALIDATION_PAGE}
       process={DATA_VALIDATION_PROCESS}
       services={DATA_VALIDATION_DELIVERABLES}
-      servicesSectionType="carousel"
       spotlight={DATA_VALIDATION_INTRO}
     />
   );

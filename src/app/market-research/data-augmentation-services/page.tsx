@@ -52,7 +52,6 @@ const Page = () => {
       page={DATA_AUGMENTATION_PAGE}
       process={DATA_AUGMENTATION_PROCESS}
       services={DATA_AUGMENTATION_DELIVERABLES}
-      servicesSectionType="carousel"
       spotlight={DATA_AUGMENTATION_INTRO}
     />
   );

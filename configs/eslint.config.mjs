@@ -31,9 +31,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
 
-const tailwindConfigPath = fileURLToPath(
-  new URL("../src/app/globals.css", import.meta.url),
-);
+const tailwindConfigPath = fileURLToPath(new URL("../src/app/globals.css", import.meta.url));
 
 const eslintConfig = defineConfig([
   // TypeScript parser + @typescript-eslint/recommended rules
@@ -148,16 +146,7 @@ const eslintConfig = defineConfig([
             {
               allow: {
                 to: {
-                  type: [
-                    "types",
-                    "lib",
-                    "content",
-                    "ui",
-                    "cards",
-                    "forms",
-                    "sections",
-                    "layout",
-                  ],
+                  type: ["types", "lib", "content", "ui", "cards", "forms", "sections", "layout"],
                 },
               },
               from: { type: "templates" },
@@ -316,11 +305,7 @@ const eslintConfig = defineConfig([
       "import/resolver": {
         typescript: true,
       },
-      polyfills: [
-        "IntersectionObserver",
-        "Object.fromEntries",
-        "queueMicrotask",
-      ],
+      polyfills: ["IntersectionObserver", "Object.fromEntries", "queueMicrotask"],
       tailwindcss: {
         cssConfigPath: tailwindConfigPath,
       },

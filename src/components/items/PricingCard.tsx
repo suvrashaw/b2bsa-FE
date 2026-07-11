@@ -15,6 +15,10 @@ export interface PricingProps {
   title?: string;
 }
 
+interface PricingCardProps {
+  tier: PricingTier;
+}
+
 interface PricingTier {
   color?: string;
   cta?: { href: string; label: string };
@@ -24,10 +28,6 @@ interface PricingTier {
   popular?: boolean;
   price?: number;
   title: string;
-}
-
-interface PricingCardProps {
-  tier: PricingTier;
 }
 
 export const PricingCard = ({ tier }: PricingCardProps) => {

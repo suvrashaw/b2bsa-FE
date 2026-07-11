@@ -147,6 +147,71 @@ const TypewriterLine = ({
   </span>
 );
 
+const getImageModeClass = (
+  variant: "compact" | "default",
+  isVideoMode: boolean,
+  mdAlign: string
+) => {
+  if (variant === "compact") {
+    return `items-center ${mdAlign} min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16`;
+  }
+  if (isVideoMode) {
+    return `items-center ${mdAlign} min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40`;
+  }
+  return `items-center ${mdAlign} min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20`;
+};
+
+const HeroTitle = ({
+  activeLineIdx,
+  animateFromLeft,
+  disableTypewriter,
+  isStringTitle,
+  stringLines,
+  titleLines,
+  visibleLines,
+}: {
+  activeLineIdx: number;
+  animateFromLeft?: boolean;
+  disableTypewriter: boolean;
+  isStringTitle: boolean;
+  stringLines: string[];
+  titleLines: ReactNode[] | string[];
+  visibleLines: string[];
+}) => {
+  if (isStringTitle && !animateFromLeft && !disableTypewriter) {
+    return (
+      <>
+        {(titleLines as string[]).map((_, index) => (
+          <TypewriterLine
+            fullText={stringLines[index] ?? ""}
+            isActive={activeLineIdx === index}
+            key={index}
+            text={visibleLines[index] ?? ""}
+          />
+        ))}
+      </>
+    );
+  }
+  if (isStringTitle && disableTypewriter) {
+    return (
+      <>
+        {(titleLines as string[]).map((line, index) => (
+          <span className="block" key={index}>
+            {line}
+          </span>
+        ))}
+      </>
+    );
+  }
+  return (
+    <>
+      {(titleLines as ReactNode[]).map((line, index) => (
+        <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
+      ))}
+    </>
+  );
+};
+
 const HeroBackground = ({
   currentIndex,
   effectiveVideoUrl,
@@ -296,12 +361,7 @@ export const Hero = ({
   const imageOpacityStyle = useMemo(() => ({ opacity: imageOpacity }), [imageOpacity]);
 
   const mdAlign = centerContent ? "md:items-center" : "md:items-end";
-  let imageModeClass = `items-center ${mdAlign} min-h-[560px] pt-28 pb-12 md:min-h-svh md:pt-48 md:pb-20`;
-  if (variant === "compact") {
-    imageModeClass = `items-center ${mdAlign} min-h-[50vh] pt-24 pb-12 md:pt-32 md:pb-16`;
-  } else if (isVideoMode) {
-    imageModeClass = `items-center ${mdAlign} min-h-[560px] pt-28 pb-24 md:min-h-svh md:pt-48 md:pb-40`;
-  }
+  const imageModeClass = getImageModeClass(variant, isVideoMode, mdAlign);
 
   return (
     <section
@@ -358,24 +418,15 @@ export const Hero = ({
             </motion.div>
           )}
           <SectionHeader as="h1" className="mb-8" style={H1_STYLE}>
-            {isStringTitle && !animateFromLeft && !disableTypewriter
-              ? (titleLines as string[]).map((_, index) => (
-                  <TypewriterLine
-                    fullText={stringLines[index] ?? ""}
-                    isActive={activeLineIdx === index}
-                    key={index}
-                    text={visibleLines[index] ?? ""}
-                  />
-                ))
-              : isStringTitle && disableTypewriter
-                ? (titleLines as string[]).map((line, index) => (
-                    <span className="block" key={index}>
-                      {line}
-                    </span>
-                  ))
-                : (titleLines as ReactNode[]).map((line, index) => (
-                    <TitleLine fromLeft={animateFromLeft} index={index} key={index} line={line} />
-                  ))}
+            <HeroTitle
+              activeLineIdx={activeLineIdx}
+              animateFromLeft={animateFromLeft}
+              disableTypewriter={disableTypewriter}
+              isStringTitle={isStringTitle}
+              stringLines={stringLines}
+              titleLines={titleLines}
+              visibleLines={visibleLines}
+            />
             {firstRotatingWord && !isBadgeTyped && (
               <TypewriterLine
                 fullText={firstRotatingWord}
