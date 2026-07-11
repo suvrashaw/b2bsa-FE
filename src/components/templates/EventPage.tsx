@@ -4,8 +4,8 @@ import { useMemo } from "react";
 
 import type { FAQProps } from "@/components/sections/FAQ";
 
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { TradeShowCard } from "@/components/items/TradeShowCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
@@ -39,32 +39,6 @@ const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 const toUtcDate = (value: string) => new Date(`${value}T00:00:00.000Z`);
-
-const formatEventDateRange = (startDate: string, endDate: string) => {
-  const fmt = new Intl.DateTimeFormat("en-US", {
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-    year: "numeric",
-  });
-  const compactFmt = new Intl.DateTimeFormat("en-US", {
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-  });
-
-  const start = toUtcDate(startDate);
-  const end = toUtcDate(endDate);
-
-  if (startDate === endDate) return fmt.format(start);
-  if (start.getUTCFullYear() === end.getUTCFullYear()) {
-    return `${compactFmt.format(start)} – ${fmt.format(end)}`;
-  }
-  return `${fmt.format(start)} – ${fmt.format(end)}`;
-};
-
-const formatLocation = (event: CalendarTradeShow) =>
-  [event.city, event.region, event.country].filter(Boolean).join(", ");
 
 const computeDurationDays = (startDate: string, endDate: string) => {
   const start = toUtcDate(startDate);
@@ -136,18 +110,19 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
 
       {/* ── 1. Hero ──────────────────────────────────────────────────────── */}
       <Hero
-        eyebrow={<EventMetadata metadata={metadata} />}
+        description={event.description}
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
         title={event.name}
       />
 
-      {/* ── 3. Spotlight — Why Exhibit + Event at a Glance ──────────────── */}
+      {/* ── 3. Introduction — Why Exhibit + Event at a Glance ────────────── */}
       <Spotlight
         description={event.summary}
         imageAlt={event.name}
         imageUrl={event.image ?? PLACEHOLDER_IMAGE}
+        label="INTRODUCTION"
         stats={stats}
         titleLine1="Why Exhibit at"
         titleLine2={event.name}
