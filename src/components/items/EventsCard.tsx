@@ -6,7 +6,7 @@ import { useReducedMotion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import type { EventsContent } from "@/content/home/content";
 
@@ -16,14 +16,13 @@ import { cn } from "@/lib";
 
 export type EventCardItem = {
   country?: string;
-  ctaHref?: string;
+  cta?: { href?: string; label?: string };
 } & EventsContent["events"][number];
 
 interface EventDetailsPanelProps {
-  ctaLabel: string;
+  cta: { href: string; label: string };
   event: EventCardItem;
   eventCountry?: string;
-  eventCtaHref: string;
   eventDate?: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
 }
@@ -69,16 +68,14 @@ const CardFront = ({ event, eventImage }: { event: EventCardItem; eventImage: st
 );
 
 const EventDetails = ({
-  ctaLabel,
+  cta,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventTitle,
   handleLinkClick,
 }: {
-  ctaLabel: string;
+  cta: { href: string; label: string };
   eventCountry?: string;
-  eventCtaHref: string;
   eventDate?: string;
   eventTitle: string;
   handleLinkClick: (linkEvent: MouseEvent<HTMLAnchorElement>) => void;
@@ -112,29 +109,27 @@ const EventDetails = ({
       variant="primary"
     >
       <Link
-        aria-label={`${ctaLabel} for ${eventTitle}`}
-        href={eventCtaHref}
+        aria-label={`${cta.label} for ${eventTitle}`}
+        href={cta.href}
         onClick={handleLinkClick}
       >
-        {ctaLabel}
+        {cta.label}
       </Link>
     </Button>
   </>
 );
 
 const EventDetailsPanel = ({
-  ctaLabel,
+  cta,
   event: eventItem,
   eventCountry,
-  eventCtaHref,
   eventDate,
   handleLinkClick,
 }: EventDetailsPanelProps) => (
   <div className="flex h-full flex-col justify-between rounded-[22px] bg-white p-5 md:p-6">
     <EventDetails
-      ctaLabel={ctaLabel}
+      cta={cta}
       eventCountry={eventCountry}
-      eventCtaHref={eventCtaHref}
       eventDate={eventDate}
       eventTitle={eventItem.title}
       handleLinkClick={handleLinkClick}
@@ -143,10 +138,9 @@ const EventDetailsPanel = ({
 );
 
 const HorizontalFlipCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -166,10 +160,9 @@ const HorizontalFlipCard = ({
       </div>
       <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
-          ctaLabel={ctaLabel}
+          cta={cta}
           event={event}
           eventCountry={eventCountry}
-          eventCtaHref={eventCtaHref}
           eventDate={eventDate}
           handleLinkClick={handleLinkClick}
         />
@@ -179,10 +172,9 @@ const HorizontalFlipCard = ({
 );
 
 const VerticalFlipCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -202,10 +194,9 @@ const VerticalFlipCard = ({
       </div>
       <div className="absolute inset-0 [transform:rotateX(180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
-          ctaLabel={ctaLabel}
+          cta={cta}
           event={event}
           eventCountry={eventCountry}
-          eventCtaHref={eventCtaHref}
           eventDate={eventDate}
           handleLinkClick={handleLinkClick}
         />
@@ -215,10 +206,9 @@ const VerticalFlipCard = ({
 );
 
 const HingeFlipCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -227,10 +217,9 @@ const HingeFlipCard = ({
 }: FlipCardProps) => (
   <div className="absolute inset-[1.5px] rounded-[22px] bg-white [perspective:1200px]">
     <EventDetailsPanel
-      ctaLabel={ctaLabel}
+      cta={cta}
       event={event}
       eventCountry={eventCountry}
-      eventCtaHref={eventCtaHref}
       eventDate={eventDate}
       handleLinkClick={handleLinkClick}
     />
@@ -247,10 +236,9 @@ const HingeFlipCard = ({
 );
 
 const DiagonalFlipCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -270,10 +258,9 @@ const DiagonalFlipCard = ({
       </div>
       <div className="absolute inset-0 [transform:rotate3d(1,1,0,180deg)] [backface-visibility:hidden]">
         <EventDetailsPanel
-          ctaLabel={ctaLabel}
+          cta={cta}
           event={event}
           eventCountry={eventCountry}
-          eventCtaHref={eventCtaHref}
           eventDate={eventDate}
           handleLinkClick={handleLinkClick}
         />
@@ -283,10 +270,9 @@ const DiagonalFlipCard = ({
 );
 
 const DiagonalWipeRevealCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -302,10 +288,9 @@ const DiagonalWipeRevealCard = ({
       )}
     >
       <EventDetailsPanel
-        ctaLabel={ctaLabel}
+        cta={cta}
         event={event}
         eventCountry={eventCountry}
-        eventCtaHref={eventCtaHref}
         eventDate={eventDate}
         handleLinkClick={handleLinkClick}
       />
@@ -330,10 +315,9 @@ const DiagonalWipeRevealCard = ({
 );
 
 const SplitFlipCard = ({
-  ctaLabel,
+  cta,
   event,
   eventCountry,
-  eventCtaHref,
   eventDate,
   eventImage,
   handleLinkClick,
@@ -342,10 +326,9 @@ const SplitFlipCard = ({
 }: FlipCardProps) => (
   <div className="absolute inset-[1.5px] overflow-hidden rounded-[22px] bg-white [perspective:1200px]">
     <EventDetailsPanel
-      ctaLabel={ctaLabel}
+      cta={cta}
       event={event}
       eventCountry={eventCountry}
-      eventCtaHref={eventCtaHref}
       eventDate={eventDate}
       handleLinkClick={handleLinkClick}
     />
@@ -429,7 +412,13 @@ export const EventsCard = ({
   const shouldReduceMotion = Boolean(useReducedMotion());
   const eventCountry = event.country ?? event.location;
   const eventDate = event.date;
-  const eventCtaHref = event.ctaHref ?? viewAllHref;
+  const cta = useMemo(
+    () => ({
+      href: event.cta?.href ?? viewAllHref,
+      label: event.cta?.label ?? ctaLabel,
+    }),
+    [event.cta?.href, event.cta?.label, viewAllHref, ctaLabel]
+  );
   const eventImage = event.image ?? getFallbackImage(index);
   const FlipCard = FLIP_CARD_COMPONENTS[flipStyle];
 
@@ -462,10 +451,9 @@ export const EventsCard = ({
         tabIndex={0}
       >
         <FlipCard
-          ctaLabel={ctaLabel}
+          cta={cta}
           event={event}
           eventCountry={eventCountry}
-          eventCtaHref={eventCtaHref}
           eventDate={eventDate}
           eventImage={eventImage}
           handleLinkClick={handleLinkClick}

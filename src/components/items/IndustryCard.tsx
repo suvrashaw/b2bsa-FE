@@ -3,10 +3,12 @@
 import { Warp } from "@paper-design/shaders-react";
 
 import { Icon } from "@/components/ui/Icon";
+import { cn } from "@/lib";
 
 const WARP_STYLE = { height: "100%", width: "100%" } as const;
 
 interface IndustryCardProps {
+  className?: string;
   description?: string;
   icon: string;
   image?: string;
@@ -81,6 +83,7 @@ const getShaderConfig = (index: number) => {
 };
 
 export const IndustryCard = ({
+  className,
   description,
   icon,
   image,
@@ -90,7 +93,12 @@ export const IndustryCard = ({
   const shaderConfig = getShaderConfig(index);
 
   return (
-    <div className="group relative flex aspect-[4/5] min-h-[280px] w-full flex-col overflow-hidden rounded-3xl border border-white/20 md:min-h-[320px] dark:border-white/10">
+    <div
+      className={cn(
+        "group relative flex aspect-[4/5] min-h-[280px] w-full flex-col overflow-hidden rounded-3xl border border-white/20 md:min-h-[320px] dark:border-white/10",
+        className
+      )}
+    >
       {/* Background Image (Default state) */}
       <div className="absolute inset-0 z-0 transition-opacity duration-500 ease-in-out group-hover:opacity-0">
         {image ? (

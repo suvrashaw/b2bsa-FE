@@ -7,12 +7,11 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { serviceNavigationGroups, topNavigation } from "@/content/navigation";
 import { cn } from "@/lib";
 
-import { DesktopNavLink } from "./header/DesktopNav";
-import { MegamenuServiceGroup } from "./header/Megamenu";
-import { MobileNavItem } from "./header/MobileNav";
+import { DesktopNav } from "./header/DesktopNav";
+import { Megamenu } from "./header/Megamenu";
+import { MobileNav } from "./header/MobileNav";
 
 const HEADER_ANIMATE = { y: 0 };
 const HEADER_INITIAL = { y: -100 };
@@ -113,18 +112,12 @@ export const Header = () => {
           </Link>
         </div>
 
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 xl:flex">
-          {topNavigation.map((link) => (
-            <DesktopNavLink
-              activeDropdown={activeDropdown}
-              key={link.name}
-              lightText={isHeaderLightText}
-              link={link}
-              onMouseEnter={handleMouseEnterLink}
-              onServicesClick={openServicesMegamenu}
-            />
-          ))}
-        </nav>
+        <DesktopNav
+          activeDropdown={activeDropdown}
+          lightText={isHeaderLightText}
+          onMouseEnter={handleMouseEnterLink}
+          onServicesClick={openServicesMegamenu}
+        />
 
         <div className="flex items-center gap-1.5 xl:gap-6">
           <Button
@@ -156,17 +149,13 @@ export const Header = () => {
               exit={MOBILE_MENU_EXIT}
               initial={MOBILE_MENU_INITIAL}
             >
-              {topNavigation.map((link) => (
-                <MobileNavItem
-                  isOpen={openMobileNav === link.name}
-                  key={link.name}
-                  link={link}
-                  onClose={closeMobileMenu}
-                  onServiceGroupToggle={toggleMobileServiceGroup}
-                  onToggle={toggleMobileNav}
-                  openServiceGroup={openMobileServiceGroup}
-                />
-              ))}
+              <MobileNav
+                onClose={closeMobileMenu}
+                onServiceGroupToggle={toggleMobileServiceGroup}
+                onToggle={toggleMobileNav}
+                openMobileNav={openMobileNav}
+                openServiceGroup={openMobileServiceGroup}
+              />
             </motion.div>
           )}
         </AnimatePresence>
@@ -184,56 +173,7 @@ export const Header = () => {
             transition={MEGAMENU_TRANSITION}
           >
             <div className="mx-auto w-full max-w-7xl px-8 xl:px-12">
-              <div className="flex justify-between gap-4 xl:gap-8">
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
-                    group={serviceNavigationGroups[0]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[5]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    group={serviceNavigationGroups[1]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    group={serviceNavigationGroups[2]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <MegamenuServiceGroup
-                    className="pt-3 pb-1 xl:pt-5 xl:pb-2"
-                    group={serviceNavigationGroups[3]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="py-1 xl:py-2"
-                    group={serviceNavigationGroups[4]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                  <MegamenuServiceGroup
-                    className="pt-1 pb-3 xl:pt-2 xl:pb-5"
-                    group={serviceNavigationGroups[6]}
-                    lightText={isMegamenuLightText}
-                    onClose={closeMegamenu}
-                  />
-                </div>
-              </div>
+              <Megamenu lightText={isMegamenuLightText} onClose={closeMegamenu} />
             </div>
           </motion.div>
         )}

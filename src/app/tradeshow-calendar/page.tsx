@@ -59,7 +59,7 @@ const Page = () => {
           ),
           buildLinkedItemListJsonLd(
             TRADE_SHOW_CALENDAR_EVENTS.slice(0, 10).map((e) => ({
-              name: e.name,
+              name: e.title,
               url: `${siteUrl}/tradeshow-calendar/${e.id}`,
             }))
           ),

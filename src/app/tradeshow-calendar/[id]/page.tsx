@@ -40,7 +40,7 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
   }
 
   const canonicalId = SUPERSEDED_BY[id] ?? id;
-  const ogTitle = event.seoTitle ?? event.name;
+  const ogTitle = event.seoTitle ?? event.title;
   const description = event.seoDescription ?? event.summary;
 
   return {
@@ -53,18 +53,18 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
     openGraph: {
       description,
       images: event.image
-        ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
+        ? [{ alt: event.title, height: 630, url: event.image, width: 1200 }]
         : undefined,
       locale: "en_US",
       title: ogTitle,
       type: "website",
     },
-    title: event.seoTitle ? { absolute: event.seoTitle } : event.name,
+    title: event.seoTitle ? { absolute: event.seoTitle } : event.title,
     twitter: {
       card: "summary_large_image",
       description,
       images: event.image
-        ? [{ alt: event.name, height: 630, url: event.image, width: 1200 }]
+        ? [{ alt: event.title, height: 630, url: event.image, width: 1200 }]
         : undefined,
       title: ogTitle,
     },
@@ -87,7 +87,7 @@ const Page = async ({ params }: EventDetailPageProps) => {
             breadcrumbId: `${eventUrl}/#breadcrumb`,
             description: event.summary,
             ...(event.image && { image: event.image }),
-            name: event.name,
+            name: event.title,
             url: eventUrl,
           }),
           buildEventJsonLd({
@@ -96,7 +96,7 @@ const Page = async ({ params }: EventDetailPageProps) => {
             description: event.summary,
             endDate: event.endDate,
             ...(event.image && { image: event.image }),
-            name: event.name,
+            name: event.title,
             ...(event.organizer && { organizer: event.organizer }),
             startDate: event.startDate,
             url: eventUrl,
@@ -109,18 +109,18 @@ const Page = async ({ params }: EventDetailPageProps) => {
                 name: "Tradeshow Calendar",
                 url: `${siteUrl}/tradeshow-calendar`,
               },
-              { name: event.name, url: eventUrl },
+              { name: event.title, url: eventUrl },
             ],
             eventUrl
           ),
           buildServiceJsonLd({
-            description: `Trade show booth design, build, and on-site delivery for exhibitors attending ${event.name}.`,
+            description: `Trade show booth design, build, and on-site delivery for exhibitors attending ${event.title}.`,
             name: "Trade Show Booth Solutions",
             serviceType: "Trade Show Booth Solutions",
             url: "/tradeshow-booth-solutions",
           }),
           ...(event.image
-            ? [buildImageObjectJsonLd({ caption: `${event.name} — B2B Sales Arrow`, url: event.image })]
+            ? [buildImageObjectJsonLd({ caption: `${event.title} — B2B Sales Arrow`, url: event.image })]
             : []),
         ])}
       />

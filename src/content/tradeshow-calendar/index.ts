@@ -14,7 +14,6 @@ export interface CalendarTradeShow {
   id: string;
   image?: string;
   industry: string;
-  name: string;
   organizer?: string;
   region?: string;
   seoDescription?: string;
@@ -23,6 +22,7 @@ export interface CalendarTradeShow {
   sourceUrl: string;
   startDate: string;
   summary: string;
+  title: string;
   venue: string;
 }
 
@@ -87,18 +87,18 @@ export const mapCalendarEventToEvent = (
   index: number
 ): EventCardItem => ({
   country: event.country,
-  ctaHref: `/tradeshow-calendar/${event.id}`,
+  cta: { href: `/tradeshow-calendar/${event.id}` },
   date: formatCalendarDateRange(event.startDate, event.endDate),
   id: event.id,
   image: event.image ?? getFallbackImage(index),
   location: event.country,
-  title: event.name,
+  title: event.title,
 });
 
 export const normalizeEvent = (event: EventCardItem, index: number): EventCardItem => ({
   ...event,
   country: event.country ?? getCountryFromLocation(event.location),
-  ctaHref: event.ctaHref ?? "/tradeshow-calendar",
+  cta: { href: event.cta?.href ?? "/tradeshow-calendar", label: event.cta?.label },
   image: event.image ?? getFallbackImage(index),
 });
 

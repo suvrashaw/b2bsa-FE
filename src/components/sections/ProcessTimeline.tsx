@@ -17,8 +17,6 @@ interface ProcessTimelineProps {
   phases?: Step[];
   showPhaseNumbers?: boolean;
   steps?: Step[];
-  subtitle?: ReactNode;
-  title?: ReactNode;
 }
 
 interface Step {
@@ -37,16 +35,12 @@ export const ProcessTimeline = ({
   heading,
   phases,
   steps,
-  subtitle,
-  title,
 }: ProcessTimelineProps) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
   const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
 
   const resolvedSteps = steps ?? phases ?? [];
-  const resolvedTitle = title ?? heading;
-  const resolvedDescription = description ?? subtitle;
   const stepTransitions = useMemo(
     () =>
       (steps ?? phases ?? []).map((_, index) => ({
@@ -59,12 +53,12 @@ export const ProcessTimeline = ({
   return (
     <section className={cn("bg-brand-gray py-12 md:py-16 lg:py-20", className)}>
       <div className="container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
-        {(resolvedTitle || resolvedDescription) && (
+        {(heading || description) && (
           <div className="mb-8 text-center md:mb-14 lg:mb-20">
-            {resolvedTitle && <SectionHeader as="h2">{resolvedTitle}</SectionHeader>}
-            {resolvedDescription && (
+            {heading && <SectionHeader as="h2">{heading}</SectionHeader>}
+            {description && (
               <p className="type-body-l mx-auto mt-6 max-w-2xl leading-relaxed text-brand-charcoal/70">
-                {resolvedDescription}
+                {description}
               </p>
             )}
           </div>

@@ -1,8 +1,59 @@
 import Link from "next/link";
 import { memo } from "react";
 
-import { type NavLink, type ServiceNavGroup } from "@/content/navigation";
+import { type NavLink, type ServiceNavGroup, serviceNavigationGroups } from "@/content/navigation";
 import { cn, toHeadingCaps } from "@/lib";
+
+export const Megamenu = ({
+  lightText,
+  onClose,
+}: {
+  lightText?: boolean;
+  onClose: () => void;
+}) => (
+  <div className="flex justify-between gap-4 xl:gap-8">
+    <div className="min-w-0">
+      <MegamenuServiceGroup
+        className="pt-3 pb-1 xl:pt-5 xl:pb-2"
+        group={serviceNavigationGroups[0]}
+        lightText={lightText}
+        onClose={onClose}
+      />
+      <MegamenuServiceGroup
+        className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+        group={serviceNavigationGroups[5]}
+        lightText={lightText}
+        onClose={onClose}
+      />
+    </div>
+    <div className="min-w-0">
+      <MegamenuServiceGroup group={serviceNavigationGroups[1]} lightText={lightText} onClose={onClose} />
+    </div>
+    <div className="min-w-0">
+      <MegamenuServiceGroup group={serviceNavigationGroups[2]} lightText={lightText} onClose={onClose} />
+    </div>
+    <div className="min-w-0">
+      <MegamenuServiceGroup
+        className="pt-3 pb-1 xl:pt-5 xl:pb-2"
+        group={serviceNavigationGroups[3]}
+        lightText={lightText}
+        onClose={onClose}
+      />
+      <MegamenuServiceGroup
+        className="py-1 xl:py-2"
+        group={serviceNavigationGroups[4]}
+        lightText={lightText}
+        onClose={onClose}
+      />
+      <MegamenuServiceGroup
+        className="pt-1 pb-3 xl:pt-2 xl:pb-5"
+        group={serviceNavigationGroups[6]}
+        lightText={lightText}
+        onClose={onClose}
+      />
+    </div>
+  </div>
+);
 
 const MegamenuSubLink = ({
   lightText,

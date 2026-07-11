@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { notFound, redirect } from "next/navigation";
 
-import { buildBlogPostingJsonLd } from "@/components/seo/ArticleJsonLd";
+import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
 import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
 import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
@@ -114,17 +114,6 @@ const Page = async ({ params }: BlogPostPageProps) => {
             name: post.title,
             url: postUrl,
           }),
-          buildBlogPostingJsonLd({
-            ...(post.category && { articleSection: post.category }),
-            datePublished: post.date || new Date().toISOString(),
-            description: post.excerpt || post.title,
-            headline: post.title,
-            image: post.image,
-            ...(post.tags?.length && { keywords: post.tags }),
-            ...(tableOfContents && { tableOfContents }),
-            url: postUrl,
-            ...(wordCount > 0 && { wordCount }),
-          }),
           buildBreadcrumbJsonLd(
             [
               { name: "Home", url: siteUrl },
@@ -134,6 +123,17 @@ const Page = async ({ params }: BlogPostPageProps) => {
             postUrl
           ),
         ])}
+      />
+      <ArticleJsonLd
+        {...(post.category && { articleSection: post.category })}
+        datePublished={post.date || new Date().toISOString()}
+        description={post.excerpt || post.title}
+        headline={post.title}
+        image={post.image}
+        {...(post.tags?.length && { keywords: post.tags })}
+        {...(tableOfContents && { tableOfContents })}
+        url={postUrl}
+        {...(wordCount > 0 && { wordCount })}
       />
       <BlogPage post={post} />
     </>

@@ -27,7 +27,6 @@ interface HomeStatsProps {
     label: string;
     value: string;
   }>;
-  title?: ReactNode;
 }
 
 const StatCard = ({ stat }: { stat: HomeStatItem }) => (
@@ -52,9 +51,8 @@ export const HomeStats = ({
   mission = content.mission,
   quote = content.quote,
   stats,
-  title,
 }: HomeStatsProps = {}) => {
-  const resolvedHeading = title ?? heading ?? content.heading;
+  const resolvedHeading = heading ?? content.heading;
   const resolvedStats: HomeStatItem[] = (items ?? stats ?? content.stats).map((stat, index) => ({
     ...stat,
     bg: stat.bg ?? ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3],

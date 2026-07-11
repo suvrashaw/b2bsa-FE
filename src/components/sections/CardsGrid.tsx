@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Children, useCallback, useState } from "react";
 
-import { CaseStudyItem } from "@/components/items/CaseStudyItem";
+import { CaseStudyCard as CaseStudyItemCard } from "@/components/items/CaseStudyItem";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
@@ -106,14 +106,12 @@ const DEFAULT_CASE_STUDIES_DESCRIPTION =
 
 const CaseStudyCard = ({
   active,
-  ctaLabel,
   item,
   setActiveId,
 }: {
   active: boolean;
-  ctaLabel: string;
   item: {
-    href?: string;
+    cta?: { href: string; label: string };
     icon: string;
     id: string;
     image: string;
@@ -124,10 +122,9 @@ const CaseStudyCard = ({
 }) => {
   const handleActivate = useCallback(() => setActiveId(item.id), [item.id, setActiveId]);
   return (
-    <CaseStudyItem
+    <CaseStudyItemCard
       active={active}
       className={active ? "lg:min-h-0" : "min-h-[80px] sm:min-h-[112px] lg:min-h-0"}
-      ctaLabel={ctaLabel}
       item={item}
       onActivate={handleActivate}
     />
@@ -174,7 +171,7 @@ export const CaseStudies = ({
 
   const cards = resolvedCaseStudies.map((study) => ({
     client: study.client ?? study.title,
-    href: getStudyHref(study),
+    cta: { href: getStudyHref(study), label: ctaLabel },
     icon: study.icon,
     id: study.id,
     image: study.image,
@@ -239,7 +236,6 @@ export const CaseStudies = ({
         {cards.map((study) => (
           <CaseStudyCard
             active={activeCaseStudyId === study.id}
-            ctaLabel={ctaLabel}
             item={study}
             key={study.id}
             setActiveId={setActiveId}

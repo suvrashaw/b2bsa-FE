@@ -2,8 +2,33 @@ import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { memo, useCallback } from "react";
 
-import { type topNavigation } from "@/content/navigation";
+import { topNavigation } from "@/content/navigation";
 import { cn, toTitleCase } from "@/lib";
+
+export const DesktopNav = ({
+  activeDropdown,
+  lightText,
+  onMouseEnter,
+  onServicesClick,
+}: {
+  activeDropdown: "services" | null;
+  lightText: boolean;
+  onMouseEnter: (name: string) => void;
+  onServicesClick: () => void;
+}) => (
+  <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 xl:flex">
+    {topNavigation.map((link) => (
+      <DesktopNavLink
+        activeDropdown={activeDropdown}
+        key={link.name}
+        lightText={lightText}
+        link={link}
+        onMouseEnter={onMouseEnter}
+        onServicesClick={onServicesClick}
+      />
+    ))}
+  </nav>
+);
 
 export const DesktopNavLink = memo(
   ({

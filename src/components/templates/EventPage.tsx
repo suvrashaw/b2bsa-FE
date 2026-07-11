@@ -95,13 +95,13 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
   );
 
   const contactUsBg = useMemo(
-    () => ({ alt: event.name, src: event.image ?? PLACEHOLDER_IMAGE }),
-    [event.name, event.image]
+    () => ({ alt: event.title, src: event.image ?? PLACEHOLDER_IMAGE }),
+    [event.title, event.image]
   );
 
   const contactUsHeadingLines = useMemo(
-    () => [`Ready to Exhibit at`, `${event.name}?`],
-    [event.name]
+    () => [`Ready to Exhibit at`, `${event.title}?`],
+    [event.title]
   );
 
   return (
@@ -114,24 +114,24 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
-        title={event.name}
+        title={event.title}
       />
 
       {/* ── 3. Introduction — Why Exhibit + Event at a Glance ────────────── */}
       <Spotlight
         description={event.summary}
-        imageAlt={event.name}
+        imageAlt={event.title}
         imageUrl={event.image ?? PLACEHOLDER_IMAGE}
         label="INTRODUCTION"
         stats={stats}
         titleLine1="Why Exhibit at"
-        titleLine2={event.name}
+        titleLine2={event.title}
       />
 
       {/* ── 5. Services Carousel — What We Deliver ───────────────────────── */}
       <Carousel
         autoplayInterval={4000}
-        heading={`Our Event Services at ${event.name}`}
+        heading={`Our Event Services at ${event.title}`}
         id="services"
       >
         {serviceItems.map((item, i) => (

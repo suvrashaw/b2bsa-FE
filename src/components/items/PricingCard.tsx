@@ -21,9 +21,9 @@ export interface PricingTier {
   description: string;
   features: string[];
   icon?: ReactNode;
-  name: string;
   popular?: boolean;
   price?: number;
+  title: string;
 }
 
 interface PricingCardProps {
@@ -78,7 +78,7 @@ export const PricingCard = ({ tier }: PricingCardProps) => {
             className="mb-2 font-sans text-2xl font-bold text-brand-charcoal"
             preserveClassName
           >
-            {tier.name}
+            {tier.title}
           </SectionHeader>
           <p className="font-sans text-sm font-semibold text-gray-500">{tier.description}</p>
         </div>

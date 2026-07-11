@@ -47,7 +47,7 @@ export const GET = () => {
     `## Tradeshow Calendar`,
     ``,
     ...TRADE_SHOW_CALENDAR_EVENTS.map(
-      (e) => `- [${e.name}](${abs("/tradeshow-calendar/" + e.id)}): ${e.summary}`
+      (e) => `- [${e.title}](${abs("/tradeshow-calendar/" + e.id)}): ${e.summary}`
     ),
     ``,
     `## Company`,

@@ -6,6 +6,8 @@ import { useCallback, useMemo } from "react";
 
 import type { TestimonialsContent } from "@/content/home/content";
 
+import { cn } from "@/lib";
+
 type TestimonialItem = TestimonialsContent["testimonials"][number];
 
 const CARD_STYLE_BASE = {
@@ -27,6 +29,7 @@ const stripOuterQuoteMarks = (quote: string) => {
 };
 
 interface TestimonialCardProps {
+  className?: string;
   index: number;
   isCenter: boolean;
   isVisible: boolean;
@@ -36,6 +39,7 @@ interface TestimonialCardProps {
 }
 
 export const TestimonialCard = ({
+  className,
   index,
   isCenter,
   isVisible,
@@ -76,9 +80,11 @@ export const TestimonialCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className={`absolute w-full max-w-[340px] cursor-pointer rounded-b-[999px] bg-sky-50 pt-8 shadow-lg will-change-transform sm:max-w-[420px] ${
-        isVisible ? "" : "pointer-events-none"
-      }`}
+      className={cn(
+        "absolute w-full max-w-[340px] cursor-pointer rounded-b-[999px] bg-sky-50 pt-8 shadow-lg will-change-transform sm:max-w-[420px]",
+        !isVisible && "pointer-events-none",
+        className
+      )}
       initial={false}
       key={testimonial.id}
       onClick={handleClick}

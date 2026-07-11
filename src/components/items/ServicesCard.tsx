@@ -9,10 +9,12 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon } from "@/components/ui/Icon";
 import { serviceNavigationGroups } from "@/content/navigation";
+import { cn } from "@/lib";
 
 const HIDDEN_CHIP_LABELS = new Set(["Event Experience Video Production", "Event Physical Video Shoot"]);
 
 interface ServicesCardProps {
+  className?: string;
   ctaLabel: string;
   onCtaClick?: () => void;
   service: HomeServiceItem;
@@ -22,6 +24,7 @@ interface ServicesCardProps {
 }
 
 export const ServicesCard = ({
+  className,
   ctaLabel,
   onCtaClick,
   service,
@@ -36,7 +39,12 @@ export const ServicesCard = ({
       ?.links?.filter((link) => !HIDDEN_CHIP_LABELS.has(link.name));
 
   return (
-    <div className="relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl">
+    <div
+      className={cn(
+        "relative flex h-auto flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:min-h-[400px] md:flex-row md:rounded-3xl",
+        className
+      )}
+    >
       {/* Content Area */}
       <div className="pointer-events-none relative z-10 flex w-full flex-col justify-between p-5 md:w-1/2 md:p-6 lg:w-2/5 lg:p-12">
         <div className="pointer-events-auto">

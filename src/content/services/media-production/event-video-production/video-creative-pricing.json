@@ -6,14 +6,14 @@
       "color": "blue",
       "description": "Perfect for single keynotes, testimonials, or quick highlight reels",
       "features": [
-        "Event Highlight Reel (1–2 min, single camera)",
-        "On-Site Testimonial Capture (3–5 subjects)",
+        "Event Highlight Reel (1\u20132 min, single camera)",
+        "On-Site Testimonial Capture (3\u20135 subjects)",
         "Standard Audio & Color Correction",
         "Includes Web & Social Optimized Drafts",
-        "Typical Delivery: 5–8 Business Days"
+        "Typical Delivery: 5\u20138 Business Days"
       ],
-      "name": "Essential Coverage",
-      "price": 1500
+      "price": 1500,
+      "title": "Essential Coverage"
     },
     {
       "color": "primary",
@@ -25,9 +25,9 @@
         "Branded Motion Graphics & 2D Explainer (60s)",
         "Priority Post-Production Vetting"
       ],
-      "name": "Premium Production",
       "popular": true,
-      "price": 4000
+      "price": 4000,
+      "title": "Premium Production"
     },
     {
       "color": "cyan",
@@ -39,8 +39,8 @@
         "Dedicated Creative Director Allocation",
         "Priority Same-Day Video Draft Delivery"
       ],
-      "name": "Elite Experience",
-      "price": 8000
+      "price": 8000,
+      "title": "Elite Experience"
     }
   ],
   "title": "Event Video Production Pricing Guide"

@@ -40,7 +40,7 @@ const subscribeToMobileQuery = (onStoreChange: () => void) => {
 
 export const BlogCard = ({
   blog,
-  ctaLabel = "Read the complete blog",
+  ctaLabel = "Learn more",
   index,
   isHovered,
   spread,

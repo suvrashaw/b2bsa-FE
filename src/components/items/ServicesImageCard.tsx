@@ -6,7 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
+import { cn } from "@/lib";
+
 interface ServicesImageCardProps {
+  className?: string;
   image?: string;
   index: number;
   service: string;
@@ -19,6 +22,7 @@ const CARD_WHILE_IN_VIEW = { opacity: 1, y: 0 };
 const CARD_VIEWPORT = { once: true };
 
 export const ServicesImageCard = ({
+  className,
   image = PLACEHOLDER_IMAGE,
   index,
   service,
@@ -28,7 +32,7 @@ export const ServicesImageCard = ({
 
   return (
     <motion.div
-      className="group h-44 w-full overflow-hidden rounded-2xl md:rounded-xl"
+      className={cn("group h-44 w-full overflow-hidden rounded-2xl md:rounded-xl", className)}
       initial={CARD_INITIAL}
       transition={transition}
       viewport={CARD_VIEWPORT}
