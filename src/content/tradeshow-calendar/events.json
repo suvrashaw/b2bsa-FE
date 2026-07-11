@@ -9,11 +9,11 @@
       "id": "money-20-20-amsterdam",
       "image": "/media/events/event_other_2.avif",
       "industry": "Financial Services",
-      "name": "Money 20/20",
       "sourceUrl": "https://europe.money2020.com",
       "startDate": "2025-10-05",
       "summary": "European fintech, payments, banking, and financial services leaders gather for dealmaking and market insight.",
-      "venue": "RAI Amsterdam"
+      "venue": "RAI Amsterdam",
+      "title": "Money 20/20"
     },
     {
       "attendeeCount": 10000,
@@ -24,11 +24,11 @@
       "id": "sibos-amsterdam",
       "image": "/media/events/event_other_1.avif",
       "industry": "Financial Services",
-      "name": "SIBOS 2025",
       "sourceUrl": "https://sibos.com",
       "startDate": "2025-10-13",
       "summary": "Swift's global financial services event focused on banking, payments, securities, and digital finance.",
-      "venue": "RAI Amsterdam"
+      "venue": "RAI Amsterdam",
+      "title": "SIBOS 2025"
     },
     {
       "attendeeCount": 180000,
@@ -39,11 +39,11 @@
       "id": "gitex-global",
       "image": "/media/events/event_other_3.avif",
       "industry": "Technology and SaaS",
-      "name": "GITEX Global 2025",
       "sourceUrl": "https://www.gitex.com",
       "startDate": "2025-10-14",
       "summary": "A large-scale technology, AI, startup, cybersecurity, cloud, and government innovation show in Dubai.",
-      "venue": "Dubai Exhibition Centre"
+      "venue": "Dubai Exhibition Centre",
+      "title": "GITEX Global 2025"
     },
     {
       "attendeeCount": 2000,
@@ -54,12 +54,12 @@
       "id": "constellate",
       "image": "/media/events/event_other_4.avif",
       "industry": "Technology and SaaS",
-      "name": "Constellate 2025",
       "region": "NY",
       "sourceUrl": "https://constellate.io",
       "startDate": "2025-12-09",
       "summary": "Enterprise technology conference focused on innovation, SaaS, and the future of work for senior leaders.",
-      "venue": "New York, NY"
+      "venue": "New York, NY",
+      "title": "Constellate 2025"
     },
     {
       "attendeeCount": 3000,
@@ -70,12 +70,12 @@
       "id": "cba-live-2026",
       "image": "/media/events/event_other_2.avif",
       "industry": "Financial Services",
-      "name": "CBA Live 2026",
       "region": "TX",
       "sourceUrl": "https://www.icba.org",
       "startDate": "2026-02-23",
       "summary": "Annual live conference for community banking leaders, fintech innovators, and enterprise financial services buyers.",
-      "venue": "Austin Convention Center"
+      "venue": "Austin Convention Center",
+      "title": "CBA Live 2026"
     },
     {
       "attendeeCount": 25000,
@@ -86,12 +86,12 @@
       "id": "nvidia-gtc-2026",
       "image": "/media/events/event_other_3.avif",
       "industry": "Technology and SaaS",
-      "name": "NVIDIA GTC 2026",
       "region": "CA",
       "sourceUrl": "https://www.nvidia.com/gtc/",
       "startDate": "2026-03-10",
       "summary": "NVIDIA's global GPU technology conference for AI, accelerated computing, robotics, and enterprise innovation leaders.",
-      "venue": "San Jose Convention Center"
+      "venue": "San Jose Convention Center",
+      "title": "NVIDIA GTC 2026"
     },
     {
       "attendeeCount": 12000,
@@ -102,12 +102,12 @@
       "id": "adobe-summit-2026",
       "image": "/media/events/adobe_summit_2026.avif",
       "industry": "Technology and SaaS",
-      "name": "Adobe Summit 2026",
       "region": "NV",
       "sourceUrl": "https://summit.adobe.com",
       "startDate": "2026-03-17",
       "summary": "Adobe's annual digital experience conference for marketing, commerce, and analytics professionals.",
-      "venue": "Las Vegas Convention Center"
+      "venue": "Las Vegas Convention Center",
+      "title": "Adobe Summit 2026"
     },
     {
       "attendeeCount": 130000,
@@ -118,11 +118,11 @@
       "id": "hannover-messe-2026",
       "image": "/media/events/event_other_1.avif",
       "industry": "Manufacturing",
-      "name": "Hannover Messe 2026",
       "sourceUrl": "https://www.hannovermesse.de",
       "startDate": "2026-04-20",
       "summary": "A major industrial technology event covering manufacturing, automation, robotics, energy, and digital factories.",
-      "venue": "Hannover Messe"
+      "venue": "Hannover Messe",
+      "title": "Hannover Messe 2026"
     },
     {
       "attendeeCount": 2000,
@@ -133,12 +133,12 @@
       "id": "autotech-2026",
       "image": "/media/events/event_other_4.avif",
       "industry": "Manufacturing",
-      "name": "Autotech 2026",
       "region": "MI",
       "sourceUrl": "https://www.autotechcouncil.org",
       "startDate": "2026-04-28",
       "summary": "Automotive technology conference bringing together mobility innovators, OEMs, supplier executives, and enterprise technology buyers.",
-      "venue": "Cobo Center"
+      "venue": "Cobo Center",
+      "title": "Autotech 2026"
     },
     {
       "attendeeCount": 1500,
@@ -149,11 +149,11 @@
       "id": "inma-2026",
       "image": "/media/events/inma_2026.avif",
       "industry": "Media and Publishing",
-      "name": "INMA World Congress 2026",
       "sourceUrl": "https://www.inma.org/worldcongress",
       "startDate": "2026-05-04",
       "summary": "Global media industry congress for news publishers, digital transformation leaders, and media innovators.",
-      "venue": "Stockholm, Sweden"
+      "venue": "Stockholm, Sweden",
+      "title": "INMA World Congress 2026"
     },
     {
       "attendeeCount": 25000,
@@ -164,12 +164,12 @@
       "id": "servicenow-2026",
       "image": "/media/events/servicenow_2026.avif",
       "industry": "Technology and SaaS",
-      "name": "ServiceNow Knowledge 2026",
       "region": "NV",
       "sourceUrl": "https://knowledge.servicenow.com",
       "startDate": "2026-05-11",
       "summary": "ServiceNow's global customer and partner conference for enterprise platform innovation and digital workflows.",
-      "venue": "Las Vegas Convention Center"
+      "venue": "Las Vegas Convention Center",
+      "title": "ServiceNow Knowledge 2026"
     },
     {
       "attendeeCount": 8000,
@@ -180,12 +180,12 @@
       "id": "hp-discovery-2026",
       "image": "/media/events/event_other_1.avif",
       "industry": "Technology and SaaS",
-      "name": "HP Discovery 2026",
       "region": "NV",
       "sourceUrl": "https://www.hp.com",
       "startDate": "2026-05-19",
       "summary": "HP's annual channel and partner conference connecting resellers, distributors, and technology buyers with enterprise product launches.",
-      "venue": "Caesars Palace"
+      "venue": "Caesars Palace",
+      "title": "HP Discovery 2026"
     },
     {
       "attendeeCount": 5000,
@@ -196,12 +196,12 @@
       "id": "zenith-live-2026",
       "image": "/media/events/event_other_2.avif",
       "industry": "Technology and SaaS",
-      "name": "Zenith Live 2026",
       "region": "NV",
       "sourceUrl": "https://www.zscaler.com/zenithlive",
       "startDate": "2026-05-27",
       "summary": "Zscaler's annual customer and partner conference for zero-trust security, cloud networking, and enterprise cybersecurity innovation.",
-      "venue": "MGM Grand"
+      "venue": "MGM Grand",
+      "title": "Zenith Live 2026"
     },
     {
       "attendeeCount": 8500,
@@ -212,11 +212,11 @@
       "id": "money2020-europe-2026",
       "image": "/media/events/event_other_2.avif",
       "industry": "Financial Services",
-      "name": "Money20/20 Europe",
       "sourceUrl": "https://europe.money2020.com/attend/faq",
       "startDate": "2026-06-02",
       "summary": "European fintech, payments, banking, and financial services leaders gather for dealmaking, partnerships, and market insight.",
-      "venue": "RAI Amsterdam"
+      "venue": "RAI Amsterdam",
+      "title": "Money20/20 Europe"
     },
     {
       "attendeeCount": 20000,
@@ -227,12 +227,12 @@
       "id": "sap-sapphire-2026",
       "image": "/media/events/event_other_4.avif",
       "industry": "Technology and SaaS",
-      "name": "SAP Sapphire 2026",
       "region": "FL",
       "sourceUrl": "https://www.sap.com/sapphire",
       "startDate": "2026-06-03",
       "summary": "SAP's flagship customer conference for enterprise software, cloud transformation, and AI-driven business innovation.",
-      "venue": "Orange County Convention Center"
+      "venue": "Orange County Convention Center",
+      "title": "SAP Sapphire 2026"
     },
     {
       "attendeeCount": 7500,
@@ -243,12 +243,12 @@
       "id": "itw-2026",
       "image": "/media/events/event_other_3.avif",
       "industry": "Telecom",
-      "name": "ITW 2026",
       "region": "IL",
       "sourceUrl": "https://www.itwtelecoms.com",
       "startDate": "2026-06-08",
       "summary": "International Telecoms Week connecting global carrier, wholesale, and roaming executives for deal-making.",
-      "venue": "Hyatt Regency Chicago"
+      "venue": "Hyatt Regency Chicago",
+      "title": "ITW 2026"
     },
     {
       "attendeeCount": 12000,
@@ -259,12 +259,12 @@
       "id": "snowflake-summit-2026",
       "image": "/media/events/event_other_3.avif",
       "industry": "Technology and SaaS",
-      "name": "Snowflake Summit 2026",
       "region": "CA",
       "sourceUrl": "https://www.snowflake.com/summit/",
       "startDate": "2026-06-15",
       "summary": "Snowflake's global data cloud conference for data engineers, enterprise architects, AI practitioners, and cloud platform leaders.",
-      "venue": "Moscone Center"
+      "venue": "Moscone Center",
+      "title": "Snowflake Summit 2026"
     },
     {
       "attendeeCount": 20000,
@@ -275,12 +275,12 @@
       "id": "bio-international-2026",
       "image": "/media/events/event_other_1.avif",
       "industry": "Healthcare",
-      "name": "BIO International Convention",
       "region": "CA",
       "sourceUrl": "https://www.bio.org/calendar/bio-international-convention",
       "startDate": "2026-06-22",
       "summary": "A global biotechnology and life sciences convention for partnering, investor conversations, and healthcare innovation.",
-      "venue": "San Diego Convention Center"
+      "venue": "San Diego Convention Center",
+      "title": "BIO International Convention"
     },
     {
       "attendeeCount": 14000,
@@ -291,12 +291,12 @@
       "id": "databricks-summit-2026",
       "image": "/media/events/event_other_4.avif",
       "industry": "Technology and SaaS",
-      "name": "Databricks Data+AI Summit 2026",
       "region": "CA",
       "sourceUrl": "https://databricks.com/dataaisummit/",
       "startDate": "2026-06-29",
       "summary": "Databricks' annual data and AI conference for engineers, data scientists, and enterprise technology leaders driving open-source AI and analytics.",
-      "venue": "Moscone Center"
+      "venue": "Moscone Center",
+      "title": "Databricks Data+AI Summit 2026"
     },
     {
       "attendeeCount": 40000,
@@ -307,13 +307,13 @@
       "id": "dreamforce-2026",
       "image": "/media/events/event_other_4.avif",
       "industry": "Technology and SaaS",
-      "name": "Dreamforce",
       "organizer": "Salesforce",
       "region": "CA",
       "sourceUrl": "https://www.salesforce.com/dreamforce/faq",
       "startDate": "2026-09-15",
       "summary": "Salesforce's flagship customer, partner, developer, and enterprise AI conference at Moscone Center.",
-      "venue": "Moscone Center"
+      "venue": "Moscone Center",
+      "title": "Dreamforce"
     },
     {
       "attendeeCount": 10000,
@@ -324,16 +324,20 @@
       "id": "sibos-2026",
       "image": "/media/events/event_other_1.avif",
       "industry": "Financial Services",
-      "name": "Sibos",
       "organizer": "SWIFT",
       "region": "FL",
       "seoDescription": "Meet B2B Sales Arrow at Sibos 2026. Book time with our team on-site.",
-      "seoKeywords": ["Sibos 2026", "Sibos 2026 banking event", "Swift Sibos exhibitor"],
+      "seoKeywords": [
+        "Sibos 2026",
+        "Sibos 2026 banking event",
+        "Swift Sibos exhibitor"
+      ],
       "seoTitle": "Sibos 2026 | Meet B2B Sales Arrow",
       "sourceUrl": "https://www.swift.com/news-events/events/sibos-2026-miami",
       "startDate": "2026-09-28",
       "summary": "Swift's global financial services event focused on banking, payments, securities, and digital finance.",
-      "venue": "Miami Beach Convention Center"
+      "venue": "Miami Beach Convention Center",
+      "title": "Sibos"
     },
     {
       "attendeeCount": 20000,
@@ -344,12 +348,12 @@
       "id": "sap-sapphire-2026-madrid",
       "image": "/media/events/event_other_1.avif",
       "industry": "Technology and SaaS",
-      "name": "SAP Sapphire 2026 Madrid",
       "organizer": "SAP",
       "sourceUrl": "https://www.sap.com/sapphire",
       "startDate": "2026-10-06",
       "summary": "SAP's European flagship conference for enterprise software, cloud transformation, and AI-driven business innovation across EMEA markets.",
-      "venue": "IFEMA Madrid"
+      "venue": "IFEMA Madrid",
+      "title": "SAP Sapphire 2026 Madrid"
     },
     {
       "attendeeCount": 11000,
@@ -360,13 +364,13 @@
       "id": "money2020-usa-2026",
       "image": "/media/events/event_other_2.avif",
       "industry": "Financial Services",
-      "name": "Money20/20 USA",
       "organizer": "Money20/20",
       "region": "NV",
       "sourceUrl": "https://us.money2020.com/attend/faq",
       "startDate": "2026-10-18",
       "summary": "The flagship US fintech and payments show for executive buyers, banking innovators, and commerce platforms.",
-      "venue": "The Venetian Las Vegas"
+      "venue": "The Venetian Las Vegas",
+      "title": "Money20/20 USA"
     },
     {
       "attendeeCount": 2500,
@@ -377,13 +381,13 @@
       "id": "iucx-2026",
       "image": "/media/events/event_other_2.avif",
       "industry": "Telecom",
-      "name": "IUCX 2026",
       "organizer": "Innovate UtilityCX",
       "region": "TX",
       "sourceUrl": "https://www.iucx.com",
       "startDate": "2026-10-27",
       "summary": "International unified communications and enterprise connectivity conference for CIOs, telecom executives, and enterprise technology decision-makers.",
-      "venue": "Hilton Anatole"
+      "venue": "Hilton Anatole",
+      "title": "IUCX 2026"
     },
     {
       "attendeeCount": 205000,
@@ -394,12 +398,12 @@
       "id": "adipec-2026",
       "image": "/media/events/event_other_3.avif",
       "industry": "Energy",
-      "name": "ADIPEC",
       "organizer": "dmg events",
       "sourceUrl": "https://www.adnec.ae/en/eventlisting/adipec-2026",
       "startDate": "2026-11-02",
       "summary": "A global energy exhibition and conference bringing together operators, suppliers, and energy transition leaders.",
-      "venue": "ADNEC Centre Abu Dhabi"
+      "venue": "ADNEC Centre Abu Dhabi",
+      "title": "ADIPEC"
     },
     {
       "attendeeCount": 71000,
@@ -410,12 +414,12 @@
       "id": "web-summit-2026",
       "image": "/media/events/event_other_4.avif",
       "industry": "Technology and SaaS",
-      "name": "Web Summit",
       "organizer": "Web Summit",
       "sourceUrl": "https://websummit.com/essentials/venue-essentials/",
       "startDate": "2026-11-09",
       "summary": "A major technology, startup, investor, and enterprise innovation conference across Lisbon's core venues.",
-      "venue": "MEO Arena and FIL"
+      "venue": "MEO Arena and FIL",
+      "title": "Web Summit"
     },
     {
       "attendeeCount": 60000,
@@ -426,13 +430,13 @@
       "id": "aws-reinvent-2026",
       "image": "/media/events/event_other_1.avif",
       "industry": "Technology and SaaS",
-      "name": "AWS re:Invent",
       "organizer": "Amazon Web Services",
       "region": "NV",
       "sourceUrl": "https://aws.amazon.com/events/reinvent/",
       "startDate": "2026-11-30",
       "summary": "AWS's annual cloud and AI gathering for builders, partners, enterprise technology leaders, and technical teams.",
-      "venue": "Las Vegas, NV"
+      "venue": "Las Vegas, NV",
+      "title": "AWS re:Invent"
     },
     {
       "attendeeCount": 200000,
@@ -443,11 +447,11 @@
       "id": "gitex-global-2026",
       "image": "/media/events/event_other_3.avif",
       "industry": "Technology and SaaS",
-      "name": "GITEX Global",
       "sourceUrl": "https://www.gitex.com/gitex-global-2026",
       "startDate": "2026-12-07",
       "summary": "A large-scale technology, AI, startup, cybersecurity, cloud, and government innovation show in Dubai.",
-      "venue": "Dubai Exhibition Centre"
+      "venue": "Dubai Exhibition Centre",
+      "title": "GITEX Global"
     },
     {
       "attendeeCount": 140000,
@@ -458,12 +462,12 @@
       "id": "ces-2027",
       "image": "/media/events/event_other_2.avif",
       "industry": "Technology and SaaS",
-      "name": "CES",
       "region": "NV",
       "sourceUrl": "https://www.ces.tech/attend/registration-notification/",
       "startDate": "2027-01-06",
       "summary": "The global consumer technology showcase for innovation launches, enterprise partnerships, and media visibility.",
-      "venue": "Las Vegas"
+      "venue": "Las Vegas",
+      "title": "CES"
     },
     {
       "attendeeCount": 235000,
@@ -474,11 +478,11 @@
       "id": "whx-dubai-2027",
       "image": "/media/events/event_other_4.avif",
       "industry": "Healthcare",
-      "name": "WHX Dubai",
       "sourceUrl": "https://www.worldhealthexpo.com/events/healthcare/dubai/en/overview/general-event-FAQs.html",
       "startDate": "2027-01-25",
       "summary": "The rebranded Arab Health platform connecting healthcare, medical technology, diagnostics, and provider ecosystems.",
-      "venue": "Dubai Exhibition Centre"
+      "venue": "Dubai Exhibition Centre",
+      "title": "WHX Dubai"
     },
     {
       "attendeeCount": 105000,
@@ -489,11 +493,11 @@
       "id": "mwc-barcelona-2027",
       "image": "/media/events/event_other_2.avif",
       "industry": "Telecom",
-      "name": "MWC Barcelona",
       "sourceUrl": "https://www.mwcbarcelona.com/",
       "startDate": "2027-03-01",
       "summary": "The leading connectivity, telecom, device, mobile infrastructure, and digital ecosystem event in Barcelona.",
-      "venue": "Fira Gran Via"
+      "venue": "Fira Gran Via",
+      "title": "MWC Barcelona"
     },
     {
       "attendeeCount": 127000,
@@ -504,11 +508,11 @@
       "id": "hannover-messe-2027",
       "image": "/media/events/event_other_3.avif",
       "industry": "Manufacturing",
-      "name": "Hannover Messe",
       "sourceUrl": "https://www.hannovermesse.de/en/for-visitors/opening-hours/",
       "startDate": "2027-04-05",
       "summary": "A major industrial technology event covering manufacturing, automation, robotics, energy, and digital factories.",
-      "venue": "Hannover Messe"
+      "venue": "Hannover Messe",
+      "title": "Hannover Messe"
     }
   ]
 }

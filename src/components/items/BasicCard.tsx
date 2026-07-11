@@ -10,11 +10,11 @@ interface BasicCardItem {
   title: string;
 }
 
-interface BasicCardsProps {
+interface BasicCardProps {
   item: BasicCardItem;
 }
 
-export const BasicCards = ({ item }: BasicCardsProps) => {
+export const BasicCard = ({ item }: BasicCardProps) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-brand-blue/10 bg-brand-gray shadow-[0_24px_60px_rgba(18,38,54,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-[0_28px_75px_rgba(18,38,54,0.13)] md:rounded-[2rem]">
       <div className="relative h-64 overflow-hidden">

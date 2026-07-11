@@ -24,7 +24,7 @@ const VIEW_MODES = [
 
 const SORT_OPTIONS = [
   { label: "Start Date", value: "startDate" },
-  { label: "Name", value: "name" },
+  { label: "Name", value: "title" },
   { label: "Location", value: "location" },
   { label: "Attendees", value: "attendees" },
   { label: "Exhibitors", value: "exhibitors" },
@@ -404,7 +404,7 @@ export const TradeShowCalendarSection = () => {
     const matchingEvents = events.filter((show) => {
       const location = formatLocation(show);
       const searchableText = [
-        show.name,
+        show.title,
         show.venue,
         show.city,
         show.region,
@@ -434,8 +434,8 @@ export const TradeShowCalendarSection = () => {
     return sortItems(matchingEvents, (first, second) => {
       const direction = sortDirection === "asc" ? 1 : -1;
 
-      if (sortField === "name") {
-        return first.name.localeCompare(second.name) * direction;
+      if (sortField === "title") {
+        return first.title.localeCompare(second.title) * direction;
       }
 
       if (sortField === "location") {
@@ -674,13 +674,13 @@ export const TradeShowCalendarSection = () => {
       {paginatedEvents.map((show) => {
         return (
           <EventJsonLd
-            description={show.summary || `${show.name} Trade Show`}
+            description={show.summary || `${show.title} Trade Show`}
             endDate={show.endDate}
             key={show.id}
             locationCity={show.city || ""}
             locationCountry={show.country || "USA"}
             locationName={show.venue || show.city || ""}
-            name={show.name}
+            name={show.title}
             startDate={show.startDate}
             url={show.sourceUrl || `${siteUrl}/tradeshow-calendar`}
           />

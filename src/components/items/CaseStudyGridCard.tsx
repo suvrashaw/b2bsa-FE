@@ -22,7 +22,7 @@ interface CaseStudyGridCardProps {
 
 export const CaseStudyGridCard = ({
   colSpan,
-  ctaLabel = "View Case Study",
+  ctaLabel = "Learn more",
   description,
   format: _format,
   image,

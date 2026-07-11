@@ -87,7 +87,6 @@ export interface ServicePageProps {
     heading?: string;
     phases?: { description: string; title: string }[];
     steps?: { description: string; title: string }[];
-    title?: string;
   };
   relatedServicesHeading?: ReactNode;
 
@@ -201,7 +200,7 @@ export const ServicePage = ({
   why,
 }: ServicePageProps) => {
   const steps = process?.phases ?? process?.steps ?? [];
-  const processTitle = process?.title ?? process?.heading ?? "";
+  const processTitle = process?.heading ?? "";
 
   let computedRelatedServices: { href: string; title: string }[] = [];
   for (const group of navigation.serviceNavigationGroups) {
@@ -300,10 +299,10 @@ export const ServicePage = ({
         <ProcessTimeline
           cta={process.cta}
           description={process.description}
+          heading={process.heading}
           phases={process.phases}
           showPhaseNumbers={showPhaseNumbers}
           steps={process.steps}
-          title={process.title ?? process.heading}
         />
       )}
 
@@ -345,7 +344,7 @@ export const ServicePage = ({
               )}
             >
               {(creativePricing.tiers ?? []).map((tier) => (
-                <PricingCard key={tier.name} tier={tier} />
+                <PricingCard key={tier.title} tier={tier} />
               ))}
             </div>
           </div>

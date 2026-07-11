@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { memo } from "react";
 
-import { type NavLink, serviceNavigationGroups, type ServiceNavGroup } from "@/content/navigation";
+import { type NavLink, type ServiceNavGroup, serviceNavigationGroups } from "@/content/navigation";
 import { cn, toHeadingCaps } from "@/lib";
 
 export const Megamenu = ({

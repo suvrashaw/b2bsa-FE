@@ -8,21 +8,20 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
 
+interface CaseStudyCardProps {
+  active: boolean;
+  className?: string;
+  item: CaseStudyItemData;
+  onActivate?: () => void;
+}
+
 interface CaseStudyItemData {
-  href?: string;
+  cta?: { href: string; label: string };
   icon: string;
   id: string;
   image: string;
   secondarySummary: { text: string };
   title: string;
-}
-
-interface CaseStudyItemProps {
-  active: boolean;
-  className?: string;
-  ctaLabel: string;
-  item: CaseStudyItemData;
-  onActivate?: () => void;
 }
 
 const CARD_TRANSITION = {
@@ -37,13 +36,12 @@ const CTA_INITIAL = { opacity: 0, y: 20 };
 const CTA_EXIT = { opacity: 0, y: 20 };
 const CTA_TRANSITION = { delay: 0.2, duration: 0.3 };
 
-export const CaseStudyItem = ({
+export const CaseStudyCard = ({
   active,
   className,
-  ctaLabel,
   item,
   onActivate,
-}: CaseStudyItemProps) => {
+}: CaseStudyCardProps) => {
   return (
     <motion.div
       className={cn(
@@ -124,7 +122,7 @@ export const CaseStudyItem = ({
         </div>
 
         <AnimatePresence>
-          {active && item.href ? (
+          {active && item.cta ? (
             <motion.div
               animate={CTA_ANIMATE}
               className="mt-4 self-end md:mt-6 lg:absolute lg:right-8 lg:bottom-8 lg:mt-0"
@@ -133,7 +131,7 @@ export const CaseStudyItem = ({
               transition={CTA_TRANSITION}
             >
               <Button asChild className="shadow-lg" variant="primary">
-                <Link href={item.href}>{ctaLabel}</Link>
+                <Link href={item.cta.href}>{item.cta.label}</Link>
               </Button>
             </motion.div>
           ) : null}

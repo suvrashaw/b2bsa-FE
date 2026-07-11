@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import Link from "next/link";
 
-import { BasicCards } from "@/components/items/BasicCards";
+import { BasicCard } from "@/components/items/BasicCard";
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
@@ -102,7 +102,7 @@ const Page = () => {
       preStudiesSections={
         <CardsGrid heading={BOOTH_BUILDER_FUTURE_READY.heading}>
           {BOOTH_BUILDER_FUTURE_READY.items.map((item) => (
-            <BasicCards item={item} key={item.title} />
+            <BasicCard item={item} key={item.title} />
           ))}
         </CardsGrid>
       }
