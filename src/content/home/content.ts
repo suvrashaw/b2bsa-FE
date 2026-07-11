@@ -110,8 +110,6 @@ export interface FAQContent {
   eyebrow?: string;
   faqs: FAQItem[];
   heading: ReactNode;
-  layoutMode?: string;
-  scrollAmount: number;
 }
 
 export interface HomeServiceItem {

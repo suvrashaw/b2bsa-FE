@@ -25,7 +25,7 @@ const buildBlogPostingJsonLd = ({
   headline,
   image,
   keywords,
-  publisherLogo = `${siteUrl}/media/logo/logo-600.png`,
+  publisherLogo = `${siteUrl}/media/logo/logo-512.png`,
   publisherName = "B2B Sales Arrow",
   tableOfContents,
   url,

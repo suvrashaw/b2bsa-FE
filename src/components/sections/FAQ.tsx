@@ -15,8 +15,6 @@ export interface FAQProps {
   eyebrow?: FAQContent["eyebrow"];
   faqs?: FAQContent["faqs"];
   heading?: FAQContent["heading"];
-  layoutMode?: FAQContent["layoutMode"];
-  scrollAmount?: FAQContent["scrollAmount"];
 }
 
 const HEADING_INITIAL = { opacity: 0, y: 20 } as const;
