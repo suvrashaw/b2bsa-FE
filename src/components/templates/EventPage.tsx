@@ -4,9 +4,9 @@ import { useMemo } from "react";
 
 import type { FAQProps } from "@/components/sections/FAQ";
 
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { EventMetadata } from "@/components/items/EventMetadata";
 import { TradeShowCard } from "@/components/items/TradeShowCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
