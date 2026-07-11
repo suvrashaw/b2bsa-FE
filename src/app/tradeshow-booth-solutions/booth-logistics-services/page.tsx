@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -16,7 +16,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   EVENT_LOGISTICS_BENEFITS,
   EVENT_LOGISTICS_BLOGS_SECTION,
-  EVENT_LOGISTICS_PROCESS,
   EVENT_LOGISTICS_CASE_STUDIES,
   EVENT_LOGISTICS_CLIENT_LOGOS,
   EVENT_LOGISTICS_CONTACT_CTA,
@@ -27,6 +26,7 @@ import {
   EVENT_LOGISTICS_INDUSTRIES,
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
+  EVENT_LOGISTICS_PROCESS,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
@@ -74,7 +74,6 @@ const Page = () => {
         </>
       }
       faq={EVENT_LOGISTICS_FAQ}
-      faqVariant="accordion"
       hero={EVENT_LOGISTICS_IMAGE_HERO}
       industries={EVENT_LOGISTICS_INDUSTRIES}
       page={EVENT_LOGISTICS_PAGE}

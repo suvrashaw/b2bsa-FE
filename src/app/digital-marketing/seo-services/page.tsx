@@ -63,7 +63,6 @@ const Page = () => {
         </>
       }
       faq={SEO_FAQ}
-      faqVariant="accordion"
       hero={SEO_HERO}
       industries={SEO_INDUSTRIES}
       page={SEO_PAGE}

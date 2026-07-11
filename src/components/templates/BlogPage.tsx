@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";

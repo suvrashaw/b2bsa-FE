@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { StickyScroll } from "@/components/sections/StickyScroll";
@@ -15,7 +15,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   CORP_NETWORKING_BLOGS_SECTION,
-  CORP_NETWORKING_PROCESS,
   CORP_NETWORKING_CASE_STUDIES,
   CORP_NETWORKING_CLIENT_LOGOS,
   CORP_NETWORKING_CONTACT_CTA,
@@ -26,6 +25,7 @@ import {
   CORP_NETWORKING_INDUSTRIES,
   CORP_NETWORKING_INTRO,
   CORP_NETWORKING_PAGE,
+  CORP_NETWORKING_PROCESS,
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
 
@@ -79,7 +79,6 @@ const Page = () => {
         </>
       }
       faq={CORP_NETWORKING_FAQ}
-      faqVariant="accordion"
       hero={CORP_NETWORKING_IMAGE_HERO}
       industries={CORP_NETWORKING_INDUSTRIES}
       page={CORP_NETWORKING_PAGE}

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -13,7 +13,6 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
-  BOOTH_HOSTESS_PROCESS,
   BOOTH_HOSTESS_CASE_STUDIES,
   BOOTH_HOSTESS_CLIENT_LOGOS,
   BOOTH_HOSTESS_CONTACT_CTA,
@@ -23,6 +22,7 @@ import {
   BOOTH_HOSTESS_INDUSTRIES,
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
+  BOOTH_HOSTESS_PROCESS,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
@@ -76,7 +76,6 @@ const Page = () => {
         </>
       }
       faq={BOOTH_HOSTESS_FAQ}
-      faqVariant="accordion"
       hero={BOOTH_HOSTESS_IMAGE_HERO}
       industries={BOOTH_HOSTESS_INDUSTRIES}
       page={BOOTH_HOSTESS_PAGE}

@@ -84,7 +84,6 @@ const Page = () => {
         </>
       }
       faq={BOOTH_BUILDER_FAQ}
-      faqVariant="accordion"
       hero={BOOTH_BUILDER_HERO}
       page={BOOTH_BUILDER_PAGE}
       parentPage={BS_PAGE}

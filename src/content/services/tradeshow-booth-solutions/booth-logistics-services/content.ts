@@ -24,7 +24,6 @@ export const EVENT_LOGISTICS_CONTACT_CTA = {
 
 export const EVENT_LOGISTICS_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
-export { default as EVENT_LOGISTICS_PROCESS } from "./process.json";
 export { default as EVENT_LOGISTICS_CLIENT_LOGOS } from "./client-logos.json";
 export { default as EVENT_LOGISTICS_FAQ } from "./faq.json";
 export { default as EVENT_LOGISTICS_IMAGE_HERO } from "./hero.json";
@@ -32,5 +31,6 @@ export { default as EVENT_LOGISTICS_INTRO } from "./intro.json";
 export { default as EVENT_LOGISTICS_BENEFITS } from "./logistics-benefits.json";
 export { default as EVENT_LOGISTICS_CTA } from "./logistics-cta.json";
 export { default as EVENT_LOGISTICS_PAGE } from "./page.json";
+export { default as EVENT_LOGISTICS_PROCESS } from "./process.json";
 export { default as EVENT_LOGISTICS_DELIVERABLES } from "./services.json";
 export { default as EVENT_LOGISTICS_WHY_CHOOSE_US } from "./why-choose-us.json";

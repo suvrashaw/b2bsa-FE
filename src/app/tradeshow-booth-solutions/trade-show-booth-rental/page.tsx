@@ -70,7 +70,6 @@ const Page = () => {
         </>
       }
       faq={BOOTH_RENTAL_FAQ}
-      faqVariant="accordion"
       hero={BOOTH_RENTAL_HERO}
       page={BOOTH_RENTAL_PAGE}
       parentPage={BS_PAGE}

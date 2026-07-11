@@ -62,7 +62,6 @@ const Page = () => {
         </>
       }
       faq={EVENT_PHYSICAL_VIDEO_FAQ}
-      faqVariant="accordion"
       hero={EVENT_PHYSICAL_VIDEO_IMAGE_HERO}
       page={EVENT_PHYSICAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}

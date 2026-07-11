@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { Spotlight, type SpotlightProps } from "@/components/sections/Spotlight";
@@ -74,7 +74,6 @@ const Page = () => {
         </>
       }
       faq={EVENT_EXPERIENCE_FAQ}
-      faqVariant="accordion"
       hero={EVENT_EXPERIENCE_IMAGE_HERO}
       industries={EVENT_EXPERIENCE_INDUSTRIES}
       page={EVENT_EXPERIENCE_PAGE}

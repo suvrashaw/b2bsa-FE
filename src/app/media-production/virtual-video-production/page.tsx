@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -14,7 +14,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   VIRTUAL_VIDEO_BLOGS_SECTION,
-  VIRTUAL_VIDEO_PROCESS,
   VIRTUAL_VIDEO_CASE_STUDIES,
   VIRTUAL_VIDEO_CLIENT_LOGOS,
   VIRTUAL_VIDEO_CONTACT_CTA,
@@ -23,6 +22,7 @@ import {
   VIRTUAL_VIDEO_IMAGE_HERO,
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
+  VIRTUAL_VIDEO_PROCESS,
   VIRTUAL_VIDEO_RELATED_SERVICES,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
@@ -70,7 +70,6 @@ const Page = () => {
         </>
       }
       faq={VIRTUAL_VIDEO_FAQ}
-      faqVariant="accordion"
       hero={VIRTUAL_VIDEO_IMAGE_HERO}
       page={VIRTUAL_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}

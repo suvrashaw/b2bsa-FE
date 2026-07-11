@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -75,7 +75,6 @@ const Page = () => {
         </>
       }
       faq={SMM_FAQ}
-      faqVariant="accordion"
       hero={SMM_HERO}
       industries={SMM_INDUSTRIES}
       page={SMM_PAGE}

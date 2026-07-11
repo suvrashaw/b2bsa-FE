@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
-import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CapabilityCard } from "@/components/items/CapabilityCard";
+import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
 import { CardsGrid } from "@/components/sections/CardsGrid";
 import { Carousel } from "@/components/sections/Carousel";
 import { ServicePage } from "@/components/templates/ServicePage";
@@ -14,7 +14,6 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_BRANDING_BLOGS_SECTION,
-  EVENT_BRANDING_PROCESS,
   EVENT_BRANDING_CASE_STUDIES,
   EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_CONTACT_CTA,
@@ -24,6 +23,7 @@ import {
   EVENT_BRANDING_INDUSTRIES,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
+  EVENT_BRANDING_PROCESS,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
 
@@ -75,7 +75,6 @@ const Page = () => {
         </>
       }
       faq={EVENT_BRANDING_FAQ}
-      faqVariant="accordion"
       hero={EVENT_BRANDING_IMAGE_HERO}
       industries={EVENT_BRANDING_INDUSTRIES}
       page={EVENT_BRANDING_PAGE}

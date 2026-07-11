@@ -63,7 +63,6 @@ const Page = () => {
         </>
       }
       faq={PPC_FAQ}
-      faqVariant="accordion"
       hero={PPC_HERO}
       industries={PPC_INDUSTRIES}
       page={PPC_PAGE}
