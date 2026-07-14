@@ -43,10 +43,6 @@ import { JsonLd } from "@/lib/json-ld";
 export const metadata: Metadata = getMarketingPageMetadata(ABOUT_PAGE);
 
 const ABOUT_IMAGES = [ABOUT_HERO.image.src];
-const ABOUT_PRIMARY_CTA = {
-  href: ABOUT_HERO.primaryCtaHref,
-  label: ABOUT_HERO.primaryCtaLabel,
-};
 const ABOUT_URL = `${siteUrl}/about-us`;
 
 const Page = () => {
@@ -76,7 +72,7 @@ const Page = () => {
         eyebrow={ABOUT_HERO.eyebrow}
         imageOpacity={0.7}
         images={ABOUT_IMAGES}
-        primaryCta={ABOUT_PRIMARY_CTA}
+        primaryCta={ABOUT_HERO.primaryCta ?? undefined}
         title={ABOUT_HERO.title}
       />
 

@@ -6,8 +6,8 @@
     "loaderAlt": "Loading",
     "src": "/media/home/hero/home_hero_bg.avif"
   },
-  "primaryCtaLabel": null,
-  "secondaryCtaLabel": null,
+  "primaryCta": null,
+  "secondaryCta": null,
   "showPreloader": false,
   "stat": null,
   "title": "Terms &\nConditions"

@@ -6,10 +6,14 @@
     "loaderAlt": "Loading",
     "src": "/media/about-us/hero.avif"
   },
-  "primaryCtaHref": "/contact-us",
-  "primaryCtaLabel": "Request a Strategy Consultation",
-  "secondaryCtaHref": "#founder",
-  "secondaryCtaLabel": "Meet Paras",
+  "primaryCta": {
+    "href": "/contact-us",
+    "label": "Request a Strategy Consultation"
+  },
+  "secondaryCta": {
+    "href": "#founder",
+    "label": "Meet Paras"
+  },
   "showPreloader": false,
   "stat": {
     "icon": "Globe2",

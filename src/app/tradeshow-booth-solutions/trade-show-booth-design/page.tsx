@@ -54,7 +54,7 @@ const Page = () => {
             cols={3}
             cta={
               <Button asChild variant="primary">
-                <Link href="/tradeshow-calendar">Explore All Upcoming Events</Link>
+                <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
               </Button>
             }
             description={HOME_EVENTS_CONTENT.description}

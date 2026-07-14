@@ -1,6 +1,7 @@
-import type { MarketingPageDefinition } from "@/content/page-definitions";
+import type { MarketingPageDefinition, StaticPageHero } from "@/content/page-definitions";
 
 import CONTACT_DATA from "./contactus.json";
+import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
 
 export const TERMS_CONTACT = {
@@ -8,7 +9,7 @@ export const TERMS_CONTACT = {
   illustration: null,
 };
 
+export const TERMS_HERO: StaticPageHero = HERO_DATA;
 export const TERMS_PAGE = PAGE_DATA as MarketingPageDefinition;
 
 export { default as TERMS_FAQ } from "./faq.json";
-export { default as TERMS_HERO } from "./hero.json";
