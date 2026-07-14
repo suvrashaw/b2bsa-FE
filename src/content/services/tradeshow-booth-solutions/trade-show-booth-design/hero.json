@@ -1,8 +1,12 @@
 {
   "description": "We design custom trade show booths that buyers stop at deliberately, because the space, the story, and the sales system inside it were built together from day one.",
+  "mobileVideoUrl": "/media/services/tradeshow-booth-solutions/hero/mobile.mp4",
+  "mobileVideoWebm": "/media/services/tradeshow-booth-solutions/hero/mobile.webm",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request a Design Quote"
   },
-  "title": "Trade Show Booth Design That Converts Foot Traffic Into Pipeline"
+  "title": "Trade Show Booth Design That Converts Foot Traffic Into Pipeline",
+  "videoUrl": "/media/services/tradeshow-booth-solutions/hero/desktop.mp4",
+  "videoWebm": "/media/services/tradeshow-booth-solutions/hero/desktop.webm"
 }

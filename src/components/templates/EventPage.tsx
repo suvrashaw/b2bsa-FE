@@ -104,6 +104,11 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
     [event.title]
   );
 
+  const introDescription = useMemo(
+    () => (event.summaryDetail ? `${event.summary}\n\n${event.summaryDetail}` : event.summary),
+    [event.summary, event.summaryDetail]
+  );
+
   return (
     <main className="min-h-screen bg-brand-gray">
       <Header />
@@ -114,12 +119,12 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
         imageOpacity={0.35}
         images={heroImages}
         primaryCta={HERO_PRIMARY_CTA}
-        title={event.title}
+        title={event.heroHeading ?? event.title}
       />
 
       {/* ── 3. Introduction — Why Exhibit + Event at a Glance ────────────── */}
       <Spotlight
-        description={event.summary}
+        description={introDescription}
         imageAlt={event.title}
         imageUrl={event.image ?? PLACEHOLDER_IMAGE}
         label="INTRODUCTION"

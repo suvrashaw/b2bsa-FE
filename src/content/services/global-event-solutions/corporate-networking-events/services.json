@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Networking Event Services",
   "services": [
     {
-      "description": "Plan and manage professional networking experiences designed to encourage business interactions and relationship building.",
+      "description": "We plan executive networking events that encourage meaningful conversations and valuable business connections. Every detail is designed to create a professional and welcoming experience.",
       "icon": "Users",
       "id": "networking-events",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Corporate Networking Events"
+      "title": "Executive Networking Event Planning"
     },
     {
-      "description": "Organize networking receptions with smooth guest management, branding support, hospitality coordination, and audience engagement.",
+      "description": "Give your VIP guests the attention they deserve with seamless coordination and personalized support. We help ensure a smooth and memorable experience from arrival to departure.",
       "icon": "Sparkles",
       "id": "networking-receptions",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Networking Reception Solutions"
+      "title": "VIP Guest Management"
     },
     {
-      "description": "Deliver premium executive networking experiences for leadership summits, investor meetings, and C-level business gatherings.",
+      "description": "From venue flow to guest experience, we coordinate networking receptions that make conversations happen naturally. Every element is planned to keep your event engaging and well-organized.",
       "icon": "Target",
       "id": "executive-networking",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Executive Networking Events"
+      "title": "Networking Reception Coordination"
     },
     {
-      "description": "Manage VIP guest experiences with personalized hospitality, attendee coordination, and premium networking environments.",
+      "description": "Create a welcoming atmosphere with hospitality services that make your guests feel valued. We manage the details so every interaction reflects your brand professionally.",
       "icon": "Zap",
       "id": "vip-networking",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "VIP Networking Event Solutions"
+      "title": "Corporate Hospitality Support"
     },
     {
-      "description": "Coordinate business networking dinners and hospitality events that support relationship building and client engagement.",
+      "description": "We work closely with venues to ensure every space is ready before your guests arrive. From layouts to event setup, everything is coordinated for a smooth experience.",
       "icon": "MapPin",
       "id": "networking-dinners",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Networking Dinner Event Solutions"
+      "title": "Venue Coordination and Setup"
     },
     {
-      "description": "Support B2B conferences, trade shows, and business events with structured networking opportunities and professional event execution.",
+      "description": "Our on-site team manages the event in real time, keeping everything on track from start to finish. We handle operations behind the scenes so you can focus on your guests and business objectives.",
       "icon": "Globe2",
       "id": "b2b-networking",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "B2B Networking Event Services"
+      "title": "On-Site Event Management"
     }
   ]
 }

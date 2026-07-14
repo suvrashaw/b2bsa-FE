@@ -1,5 +1,9 @@
 {
   "description": "AI tools scrape. Humans understand. Our human-powered market intelligence delivers the strategic context, competitive insight, and buyer intelligence that automated platforms consistently miss.",
+  "images": [
+    "/media/services/market-research/data-augmentation-services/hero/1.avif",
+    "/media/services/market-research/data-augmentation-services/hero/2.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Book a Strategy Session"

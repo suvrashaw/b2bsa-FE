@@ -1,6 +1,6 @@
 "use client";
 
-import { animate } from "framer-motion";
+import { animate, type AnimationPlaybackControls } from "framer-motion";
 import { memo, useCallback, useEffect, useRef } from "react";
 
 import { cn } from "@/lib";
@@ -36,6 +36,7 @@ export const GlowingEffect = memo(
     const containerRef = useRef<HTMLDivElement>(null);
     const lastPosition = useRef({ x: 0, y: 0 });
     const animationFrameRef = useRef<number>(0);
+    const animationControlsRef = useRef<AnimationPlaybackControls | null>(null);
 
     const handleMove = useCallback(
       (e?: MouseEvent | PointerPosition) => {
@@ -83,11 +84,12 @@ export const GlowingEffect = memo(
           const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
           const newAngle = currentAngle + angleDiff;
 
-          animate(currentAngle, newAngle, {
+          animationControlsRef.current?.stop();
+          animationControlsRef.current = animate(currentAngle, newAngle, {
             duration: movementDuration,
             ease: [0.16, 1, 0.3, 1],
             onUpdate: (value) => {
-              element.style.setProperty("--start", String(value));
+              containerRef.current?.style.setProperty("--start", String(value));
             },
           });
         });
@@ -108,6 +110,7 @@ export const GlowingEffect = memo(
         if (animationFrameRef.current) {
           cancelAnimationFrame(animationFrameRef.current);
         }
+        animationControlsRef.current?.stop();
         window.removeEventListener("scroll", handleScroll);
         document.body.removeEventListener("pointermove", handlePointerMove);
       };

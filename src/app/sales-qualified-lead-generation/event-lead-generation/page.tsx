@@ -57,7 +57,7 @@ const Page = () => {
       parentPage={SQL_PAGE}
       preStudiesSections={
         <LeadPipeline
-          heading={EVENT_LEAD_PROCESS.title}
+          heading={EVENT_LEAD_PROCESS.heading}
           stages={EVENT_LEAD_PIPELINE.stages}
           steps={EVENT_LEAD_PROCESS.phases}
         />

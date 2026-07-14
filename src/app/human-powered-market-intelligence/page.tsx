@@ -23,6 +23,8 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 
+const SECONDARY_SERVICES = { ...MARKET_INTELLIGENCE_CARDS, showCommonCta: true };
+
 const Page = () => {
   return (
     <ServicePage
@@ -50,9 +52,10 @@ const Page = () => {
       faq={MARKET_INTELLIGENCE_FAQ}
       hero={MARKET_INTELLIGENCE_HERO}
       page={MARKET_INTELLIGENCE_PAGE}
-      secondaryServices={MARKET_INTELLIGENCE_CARDS}
+      secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="grid"
       services={MARKET_INTELLIGENCE_DELIVERABLES}
+      showServicesCommonCta
       spotlight={MARKET_INTELLIGENCE_INTRO}
     />
   );

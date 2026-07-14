@@ -28,26 +28,18 @@ import {
   CORP_NETWORKING_PROCESS,
   CORP_NETWORKING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-networking-events/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_NETWORKING_PAGE);
 
-const capabilityFeatures = (
+const capabilityFeatures = buildCapabilityFeatures(
   CORP_NETWORKING_PROCESS.phases as {
     description?: string;
     icon?: string;
     image: string;
     title: string;
   }[]
-).map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+);
 
 const Page = () => {
   return (
@@ -87,7 +79,7 @@ const Page = () => {
         <CardsGrid
           cols={3}
           description={CORP_NETWORKING_PROCESS.description}
-          heading={CORP_NETWORKING_PROCESS.title}
+          heading={CORP_NETWORKING_PROCESS.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

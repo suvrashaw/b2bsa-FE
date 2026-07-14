@@ -2,32 +2,46 @@
   "heading": "Our Modular and Portable Services",
   "services": [
     {
-      "description": "We architect modular environments, designing a master 'kit of parts' that can be deployed in multiple configurations throughout your show cycle.",
+      "description": "Ideal for compact exhibit spaces, our 10×10 modular booths combine functionality with a clean, professional design. They are easy to customize and quick to install.",
       "icon": "Layers",
       "id": "design",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Modular System Design"
+      "title": "10×10 Modular Kits"
     },
     {
-      "description": "Access to the world's most reliable modular systems known for structural integrity and tool-free assembly.",
+      "description": "Maximize your larger booth space with modular layouts designed for visibility and visitor flow. Every configuration is built to support better engagement.",
       "icon": "Wrench",
       "id": "hardware",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Premium Hardware Sourcing"
+      "title": "20×20 Inline Configurations"
     },
     {
-      "description": "High-definition tension fabric and magnetic graphic panels that can be swapped in minutes, allowing you to update messaging for different audiences without new hardware.",
+      "description": "Create an open and inviting booth that attracts visitors from every direction. Our island modular systems are designed for maximum accessibility and brand presence.",
       "icon": "Palette",
       "id": "graphics",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Interchangeable Graphic Systems"
+      "title": "Island Modular System"
     },
     {
-      "description": "For teams that want to manage their own small-scale setups, we provide custom training and video guides for zero-error installation.",
+      "description": "Combine the flexibility of modular systems with custom-built elements for a unique exhibit. This approach gives you a premium look while maintaining efficiency.",
       "icon": "Video",
       "id": "training",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Staff Training and Assembly Guides"
+      "title": "Hybrid Modular + Custom Accent Build"
+    },
+    {
+      "description": "Showcase your brand with lightweight fabric displays that deliver vibrant, high-quality graphics. They are easy to transport, install, and reuse across multiple events.",
+      "icon": "Zap",
+      "id": "tensile-fabric",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Branded Tensile Fabric Display"
+    },
+    {
+      "description": "Perfect for smaller events and promotional activities, these portable displays are quick to set up and easy to carry. They provide a professional brand presence wherever you exhibit.",
+      "icon": "Sparkles",
+      "id": "portable-displays",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Portable Pop-Up and Tabletop Displays"
     }
   ]
 }

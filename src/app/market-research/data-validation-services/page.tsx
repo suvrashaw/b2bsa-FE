@@ -52,6 +52,7 @@ const Page = () => {
       page={DATA_VALIDATION_PAGE}
       process={DATA_VALIDATION_PROCESS}
       services={DATA_VALIDATION_DELIVERABLES}
+      showServicesCommonCta
       spotlight={DATA_VALIDATION_INTRO}
     />
   );

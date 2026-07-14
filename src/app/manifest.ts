@@ -8,13 +8,13 @@ const manifest = (): MetadataRoute.Manifest => ({
     {
       purpose: "any",
       sizes: "512x512",
-      src: "/media/logo/logo-512.png",
+      src: "/media/logo/logo.png",
       type: "image/png",
     },
     {
       purpose: "maskable",
       sizes: "512x512",
-      src: "/media/logo/logo-512.png",
+      src: "/media/logo/logo.png",
       type: "image/png",
     },
   ],

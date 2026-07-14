@@ -9,7 +9,7 @@ const ORGANIZATION = {
     "Trusted across 30+ countries for B2B event solutions, trade show booth design, and media production that builds real pipelines. Get in touch today.",
   email: "info@b2bsalesarrow.com",
   foundingDate: "2012",
-  logo: `${BASE}/media/logo/logo-primary.avif`,
+  logo: `${BASE}/media/logo/logo.avif`,
   name: "B2B Sales Arrow",
   sameAs: [
     "https://www.facebook.com/b2bsalesarrow",

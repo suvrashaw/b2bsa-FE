@@ -1,9 +1,16 @@
 {
   "description": "Design purposeful event experiences that engage audiences, strengthen relationships, and inspire action. From executive events to branded activations, we create experiences aligned with your business goals.",
+  "images": [
+    "/media/services/media-production/corporate-video-production/hero/1.avif",
+    "/media/services/media-production/corporate-video-production/hero/2.avif",
+    "/media/services/media-production/corporate-video-production/hero/3.avif",
+    "/media/services/media-production/corporate-video-production/hero/4.avif",
+    "/media/services/media-production/corporate-video-production/hero/5.avif",
+    "/media/services/media-production/corporate-video-production/hero/6.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Book a Consultation"
   },
-  "title": "Create Event Experiences That Move People, Conversations, and Pipeline",
-  "videoUrl": "/media/demo-video.mp4"
+  "title": "Create Event Experiences That Move People, Conversations, and Pipeline"
 }

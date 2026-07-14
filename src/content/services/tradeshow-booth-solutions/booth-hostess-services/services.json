@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Event Hostess Services",
   "services": [
     {
-      "description": "Our event hostesses assist with attendee check-ins, badge distribution, visitor guidance, and registration support for smooth event entry experiences.",
+      "description": "Our professional booth hostesses' welcome visitors, answer basic questions, and create a positive first impression. They help your team stay focused on meaningful business conversations.",
       "icon": "Users",
       "id": "registration",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Registration Desk Management"
+      "title": "Trade Show Booth Staffing"
     },
     {
-      "description": "Increase booth interactions with professional hostesses who welcome visitors, engage attendees, support lead generation, and represent your brand professionally.",
+      "description": "Ensure a smooth check-in experience with efficient registration support. We help manage attendee arrivals quickly and professionally.",
       "icon": "Target",
       "id": "booth-engagement",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Engagement"
+      "title": "Conference Registration Support"
     },
     {
-      "description": "Provide premium experiences for executives, speakers, sponsors, and VIP guests with dedicated event hostess support.",
+      "description": "Make every VIP guest feel valued with dedicated assistance throughout the event. From greeting to coordination, we ensure a seamless experience.",
       "icon": "Sparkles",
       "id": "vip-coordination",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "VIP Guest Coordination"
+      "title": "VIP Guest Management"
     },
     {
-      "description": "Manage audience flow, session coordination, guest assistance, and attendee communication during conferences and networking events.",
+      "description": "Keep your booth active with hostesses who encourage conversations and guide visitors. Their support helps create a more engaging booth experience.",
       "icon": "Mic",
       "id": "conference-support",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Conference & Networking Support"
+      "title": "Audience Engagement Assistance"
     },
     {
-      "description": "Enhance customer interaction and event engagement during product launches, brand activations, and experiential marketing events.",
+      "description": "Connect confidently with international attendees through multilingual hostess support. Clear communication helps every visitor feel welcome and understood.",
       "icon": "Zap",
       "id": "product-launch",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Product Launch Event Support"
+      "title": "Multilingual Hostess Service"
     },
     {
-      "description": "Support international audiences with multilingual event hostesses for global trade shows and corporate events.",
+      "description": "Our hostesses represent your brand with professionalism and confidence. They help deliver a consistent experience that reflects your company values.",
       "icon": "Globe2",
       "id": "multilingual",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Multilingual Event Staffing"
+      "title": "Brand Representation Support"
     }
   ]
 }

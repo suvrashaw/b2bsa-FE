@@ -2,46 +2,46 @@
   "heading": "What We Help You Create",
   "services": [
     {
-      "description": "We design and manage professional event environments for business audiences, leadership teams, customers, partners, and prospects. Every element is planned to reflect your brand positioning and support meaningful conversations.",
+      "description": "Every successful event starts with a clear idea. We shape concepts that reflect your goals, connect with your audience, and create memorable experiences from the very beginning.",
       "icon": "Building2",
       "id": "corporate-event-experiences",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Corporate Event Experiences"
+      "title": "Event Concept Development"
     },
     {
-      "description": "We help brands introduce new products, platforms, or solutions through immersive launch environments, storytelling-led presentations, live demos, visual content, and audience engagement moments.",
+      "description": "We map every step of your attendee journey to keep people engaged from arrival to follow-up. Every interaction is planned with purpose to improve the overall event experience.",
       "icon": "Rocket",
       "id": "product-launch-experiences",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Product Launch Experiences"
+      "title": "Audience Journey Planning"
     },
     {
-      "description": "For high-value prospects and senior decision-makers, we create focused, premium experiences that encourage deeper discussion, relationship building, and trust-led selling.",
+      "description": "Turn your brand into something people can experience, not just see. We create immersive brand moments that leave a lasting impression on your audience.",
       "icon": "Crown",
       "id": "executive-roundtables",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Executive Roundtables and Private Events"
+      "title": "Brand Experience Design"
     },
     {
-      "description": "We develop interactive brand experiences that help audiences engage with your message, product, or campaign in a more memorable and participative way.",
+      "description": "From keynote sessions to networking spaces, we plan conference experiences that keep attendees informed, engaged, and connected throughout the event.",
       "icon": "Sparkles",
       "id": "brand-activations",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Brand Activations"
+      "title": "Conference and Summit Experience Planning"
     },
     {
-      "description": "We support scalable event experience planning for brands that need to take their message across multiple cities, regions, or markets with consistency and impact.",
+      "description": "We develop event branding and visual assets that create a consistent look across every touchpoint. Your audience enjoys a professional and memorable brand experience from start to finish.",
       "icon": "Globe2",
       "id": "roadshows-multi-city",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Roadshows and Multi-City Events"
+      "title": "Event Branding and Visual Asset Planning"
     },
     {
-      "description": "From agenda flow to stage experience, attendee engagement, branding, and post-event handoff, we help create structured business events that deliver value for both the brand and the audience.",
+      "description": "We design interactive engagement zones that encourage conversations, participation, and meaningful connections. These spaces keep visitors involved and make every interaction more valuable.",
       "icon": "Presentation",
       "id": "conferences-summits",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Conferences, Summits, and Partner Events"
+      "title": "Engagement Zone Planning"
     },
     {
       "description": "We help brands extend event reach through virtual and hybrid experiences supported by content, streaming, digital engagement, and audience follow-up workflows.",

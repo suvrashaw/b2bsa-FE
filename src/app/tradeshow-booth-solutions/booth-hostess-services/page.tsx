@@ -26,6 +26,7 @@ import {
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(BOOTH_HOSTESS_PAGE);
 
@@ -35,16 +36,7 @@ const deliverableProps = {
   contactModal: servicesContactModal,
   showCardCtas: false,
 };
-const capabilityFeatures = BOOTH_HOSTESS_PROCESS.phases.map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+const capabilityFeatures = buildCapabilityFeatures(BOOTH_HOSTESS_PROCESS.phases);
 
 const Page = () => {
   return (
@@ -84,7 +76,7 @@ const Page = () => {
         <CardsGrid
           cols={3}
           description={BOOTH_HOSTESS_PROCESS.description}
-          heading={BOOTH_HOSTESS_PROCESS.title}
+          heading={BOOTH_HOSTESS_PROCESS.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

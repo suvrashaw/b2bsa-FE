@@ -1,8 +1,12 @@
 {
   "description": "From GITEX to CES to MWC, B2B Sales Arrow delivers B2B event solutions that create qualified pipeline, not just presence. Strategy, booth design, lead capture and post-event reporting, all under one team, one brief, one outcome.",
+  "mobileVideoUrl": "/media/services/global-event-solutions/hero/mobile.mp4",
+  "mobileVideoWebm": "/media/services/global-event-solutions/hero/mobile.webm",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Book a Strategy Session"
   },
-  "title": "Global Event Solutions That Turn Trade Show Floors Into Revenue Pipelines"
+  "title": "Global Event Solutions That Turn Trade Show Floors Into Revenue Pipelines",
+  "videoUrl": "/media/services/global-event-solutions/hero/desktop.mp4",
+  "videoWebm": "/media/services/global-event-solutions/hero/desktop.webm"
 }

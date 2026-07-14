@@ -26,19 +26,11 @@ import {
   EVENT_BRANDING_PROCESS,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
-const capabilityFeatures = EVENT_BRANDING_PROCESS.phases.map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+const capabilityFeatures = buildCapabilityFeatures(EVENT_BRANDING_PROCESS.phases);
 
 const BRANDING_SPOTLIGHT = {
   ...EVENT_BRANDING_INTRO,
@@ -83,7 +75,7 @@ const Page = () => {
         <CardsGrid
           cols={3}
           description={EVENT_BRANDING_PROCESS.description}
-          heading={EVENT_BRANDING_PROCESS.title}
+          heading={EVENT_BRANDING_PROCESS.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

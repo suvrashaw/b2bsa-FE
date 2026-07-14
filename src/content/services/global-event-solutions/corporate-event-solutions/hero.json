@@ -1,5 +1,11 @@
 {
   "description": "Deliver impactful business experiences with professional corporate event solutions for conferences, trade shows and networking events. We provide end-to-end event planning, coordination, branding, logistics, and onsite event support.",
+  "images": [
+    "/media/services/global-event-solutions/corporate-networking-events/hero/1.avif",
+    "/media/services/global-event-solutions/corporate-networking-events/hero/2.avif",
+    "/media/services/global-event-solutions/corporate-networking-events/hero/3.avif",
+    "/media/services/global-event-solutions/corporate-networking-events/hero/4.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Plan Your Corporate Event"

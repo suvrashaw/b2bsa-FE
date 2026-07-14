@@ -11,6 +11,7 @@ export interface CalendarTradeShow {
   description?: string;
   endDate: string;
   exhibitorCount: number;
+  heroHeading?: string;
   id: string;
   image?: string;
   industry: string;
@@ -22,6 +23,7 @@ export interface CalendarTradeShow {
   sourceUrl: string;
   startDate: string;
   summary: string;
+  summaryDetail?: string;
   title: string;
   venue: string;
 }

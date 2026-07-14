@@ -5,46 +5,46 @@
   "showCommonCta": true,
   "services": [
     {
-      "description": "Build excitement and increase event attendance with professionally produced teaser videos, invitation videos, countdown videos, and event marketing campaigns.",
+      "description": "Capture every important moment with coordinated multi-camera event coverage. We create dynamic videos that showcase your event from every angle.",
       "icon": "Video",
       "id": "pre-event-promotional-videos",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Pre-Event Promotional Videos"
+      "title": "Multi-Camera Event Coverage"
     },
     {
-      "description": "Capture the best moments from conferences, exhibitions, networking sessions, keynote speeches, and trade show activities with engaging highlight reels.",
+      "description": "Produce sharp, high-quality event videos in stunning 4K resolution. Every frame is designed to reflect your brand professionally.",
       "icon": "Clapperboard",
       "id": "event-highlight-videos",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Event Highlight Videos"
+      "title": "4K Video Production"
     },
     {
-      "description": "Extend your event impact with post-event recap videos designed for social media, internal communication, audience engagement, and future event promotion.",
+      "description": "Add a unique perspective with cinematic aerial footage of your event venue. Drone videography helps showcase the scale and energy of your event.",
       "icon": "MonitorPlay",
       "id": "post-event-recap-videos",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Post-Event Recap Videos"
+      "title": "Drone Event Videography"
     },
     {
-      "description": "Showcase booth engagement, customer interactions, live demonstrations, and brand experiences with professional trade show video production.",
+      "description": "Smooth, cinematic camera movements bring your event story to life. Our gimbal shots create professional visuals that leave a lasting impression.",
       "icon": "Presentation",
       "id": "trade-show-booth-coverage",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Coverage"
+      "title": "Gimbal and Cinematic Shots"
     },
     {
-      "description": "Capture executive presentations, networking experiences, fireside chats, award ceremonies, and audience interactions with high-quality event videography services.",
+      "description": "Enhance your videos with custom motion graphics that match your brand identity. From titles to animations, every detail adds a polished finish.",
       "icon": "Mic",
       "id": "corporate-event-videography",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Corporate Event Videography"
+      "title": "Branded Motion Graphics"
     },
     {
-      "description": "Create short-form event videos optimized for LinkedIn, Instagram, YouTube, and other digital marketing channels.",
+      "description": "Receive professionally edited event videos without long waiting times. Our streamlined post-production process helps you share content while your event is still fresh.",
       "icon": "Share2",
       "id": "social-media-event-content",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Social Media Event Content"
+      "title": "Fast Turnaround Post Production"
     }
   ]
 }

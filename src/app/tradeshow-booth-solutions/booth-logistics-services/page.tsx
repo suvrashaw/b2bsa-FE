@@ -30,19 +30,11 @@ import {
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
-const capabilityFeatures = EVENT_LOGISTICS_PROCESS.phases.map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+const capabilityFeatures = buildCapabilityFeatures(EVENT_LOGISTICS_PROCESS.phases);
 
 const Page = () => {
   return (
@@ -83,7 +75,7 @@ const Page = () => {
           <CardsGrid
             cols={3}
             description={EVENT_LOGISTICS_PROCESS.description}
-            heading={EVENT_LOGISTICS_PROCESS.title}
+            heading={EVENT_LOGISTICS_PROCESS.heading}
           >
             {capabilityFeatures.map((item) => (
               <CapabilityCard

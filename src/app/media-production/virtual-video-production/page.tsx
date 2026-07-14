@@ -26,19 +26,11 @@ import {
   VIRTUAL_VIDEO_RELATED_SERVICES,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
-const capabilityFeatures = VIRTUAL_VIDEO_PROCESS.phases.map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+const capabilityFeatures = buildCapabilityFeatures(VIRTUAL_VIDEO_PROCESS.phases);
 
 const Page = () => {
   return (
@@ -77,7 +69,7 @@ const Page = () => {
         <CardsGrid
           cols={3}
           description={VIRTUAL_VIDEO_PROCESS.description}
-          heading={VIRTUAL_VIDEO_PROCESS.title}
+          heading={VIRTUAL_VIDEO_PROCESS.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

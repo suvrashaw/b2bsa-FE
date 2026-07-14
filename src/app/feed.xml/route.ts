@@ -42,7 +42,7 @@ export const GET = () => {
     <language>en-us</language>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${siteUrl}/media/logo/logo-512.png</url>
+      <url>${siteUrl}/media/logo/logo.png</url>
       <title>${escapeXml(BLOG_PAGE.seo.title.split(" | ", 1)[0])}</title>
       <link>${siteUrl}/blogs</link>
     </image>${items}

@@ -79,7 +79,7 @@ const Home = () => {
           buildBreadcrumbJsonLd([{ name: "Home", url: siteUrl }], siteUrl),
           buildImageObjectJsonLd({
             caption: "B2B Sales Arrow",
-            url: "/media/logo/logo-primary.avif",
+            url: "/media/logo/logo.avif",
           }),
         ])}
       />

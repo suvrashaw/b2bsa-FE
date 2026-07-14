@@ -26,26 +26,18 @@ import {
   CORP_EVENT_PROCESS,
   CORP_EVENT_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/corporate-event-solutions/content";
+import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(CORP_EVENT_PAGE);
 
-const capabilityFeatures = (
+const capabilityFeatures = buildCapabilityFeatures(
   CORP_EVENT_PROCESS.phases as {
     description?: string;
     icon?: string;
     image: string;
     title: string;
   }[]
-).map((phase) => ({
-  description: phase.description,
-  icon: phase.icon,
-  id: phase.title
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replaceAll(/(^-|-$)/g, ""),
-  image: phase.image,
-  label: phase.title,
-}));
+);
 
 const Page = () => {
   return (
@@ -86,7 +78,7 @@ const Page = () => {
           <CardsGrid
             cols={3}
             description={CORP_EVENT_PROCESS.description}
-            heading={CORP_EVENT_PROCESS.title}
+            heading={CORP_EVENT_PROCESS.heading}
           >
             {capabilityFeatures.map((item) => (
               <CapabilityCard

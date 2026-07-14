@@ -78,8 +78,8 @@ export const Header = () => {
   const headerSurfaceClass = cn(
     isSolidHeader
       ? "bg-brand-primary-dark/95 shadow-sm backdrop-blur-md"
-      : "bg-brand-charcoal/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md",
-    !isMegamenuOpen && "border-b border-white/10"
+      : "bg-[linear-gradient(to_bottom,color-mix(in_srgb,var(--color-brand-primary-dark)_80%,transparent)_55%,transparent_100%)]",
+    isSolidHeader && !isMegamenuOpen && "border-b border-white/10"
   );
 
   const isMegamenuLightText = false;
@@ -110,7 +110,7 @@ export const Header = () => {
               fill
               priority
               sizes="160px"
-              src="/media/logo/logo-primary.svg"
+              src="/media/logo/logo.svg"
             />
             <Image
               alt="B2B Sales Arrow"

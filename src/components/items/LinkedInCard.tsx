@@ -10,7 +10,7 @@ import type { LinkedInPost } from "@/content/blogs";
 const COMPANY_NAME = "B2B Sales Arrow";
 const COMPANY_TAGLINE =
   "Trade Show Booth Builder | Exhibition Stand Design | Experiential Marketing | 800+ Events | 15+ Markets";
-const COMPANY_LOGO = "/media/logo/b2bsa-linkedin-avatar.png";
+const COMPANY_LOGO = "/media/logo/b2bsa-linkedin-avatar.avif";
 const LINKEDIN_URL = "https://www.linkedin.com/company/b2b-sales-arrow-llc/";
 
 // ── icons ────────────────────────────────────────────────────────────────────

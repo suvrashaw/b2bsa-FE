@@ -1,5 +1,9 @@
 {
   "description": "Your team does not need more names on a list. Our sales qualified lead generation programs deliver verified decision-makers with ICP fit, buying authority, qualification notes, and a recommended next action, not a badge scan CSV.",
+  "images": [
+    "/media/services/sales-qualified-lead-generation/event-lead-generation/hero/1.avif",
+    "/media/services/sales-qualified-lead-generation/event-lead-generation/hero/2.avif"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request a SQL Strategy Session"
