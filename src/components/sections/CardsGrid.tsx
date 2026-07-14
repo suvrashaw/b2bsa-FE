@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Children, useCallback, useState } from "react";
 
-import { CaseStudyCard as CaseStudyItemCard } from "@/components/items/CaseStudyItem";
+import { CaseStudyCard as CaseStudyItemCard } from "@/components/items/CaseStudyCard";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
@@ -138,7 +138,6 @@ const CaseStudyCard = ({
 };
 
 export interface CaseStudiesProps {
-  caseStudies?: CaseStudyEntry[];
   content?: CaseStudiesContent;
   ctaLabel?: CaseStudiesContent["ctaLabel"];
   description?: string;
@@ -153,7 +152,6 @@ export interface CaseStudiesProps {
 }
 
 export const CaseStudies = ({
-  caseStudies,
   content = HOME_CASE_STUDIES_CONTENT,
   ctaLabel = content.ctaLabel,
   description = DEFAULT_CASE_STUDIES_DESCRIPTION,
@@ -166,7 +164,7 @@ export const CaseStudies = ({
   viewAllHref = "/case-studies",
   viewAllLabel = content.viewAllLabel,
 }: CaseStudiesProps = {}) => {
-  const initialItems = items ?? caseStudies ?? content.items;
+  const initialItems = items ?? content.items;
   const resolvedCaseStudies = (maxItems ? initialItems.slice(0, maxItems) : initialItems).map(
     (study, index) => ({
       ...study,

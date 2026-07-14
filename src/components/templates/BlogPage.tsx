@@ -11,7 +11,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQ";
+import { FAQ } from "@/components/sections/FAQ";
 import { Button } from "@/components/ui/Button";
 import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
 import { LINKEDIN_POSTS } from "@/content/blogs";
@@ -392,7 +392,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
           {faqItems && faqItems.length > 0 && (
             <div className="mt-14 border-t border-gray-200 pt-10">
-              <FAQAccordion
+              <FAQ
                 description=""
                 eyebrow=""
                 faqs={faqItems}

@@ -16,6 +16,7 @@ export interface PricingProps {
 }
 
 interface PricingCardProps {
+  className?: string;
   tier: PricingTier;
 }
 
@@ -30,11 +31,11 @@ interface PricingTier {
   title: string;
 }
 
-export const PricingCard = ({ tier }: PricingCardProps) => {
+export const PricingCard = ({ className, tier }: PricingCardProps) => {
   const color = tier.color ?? "blue";
 
   return (
-    <div className={cn("group relative transition-all duration-500")}>
+    <div className={cn("group relative transition-all duration-500", className)}>
       {/* Neo-brutalist premium background card shadow */}
       <div
         className={cn(

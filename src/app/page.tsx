@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { EventsCard } from "@/components/items/EventsCard";
 import { Header } from "@/components/layout/Header";
-import { FAQAccordion } from "@/components/sections/FAQ";
+import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 
 /* eslint-disable unicorn/prefer-await -- next/dynamic with named exports requires .then() */
@@ -154,7 +154,7 @@ const Home = () => {
         <Blogs />
       </div>
 
-      <FAQAccordion content={HOME_FAQ_CONTENT} />
+      <FAQ content={HOME_FAQ_CONTENT} />
 
       <div id="contact">
         <ContactUsForm />

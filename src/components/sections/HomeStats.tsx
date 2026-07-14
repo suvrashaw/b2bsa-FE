@@ -13,12 +13,6 @@ interface HomeStatsProps {
   content?: StatsContent;
   description?: ReactNode | string;
   heading?: StatsContent["heading"];
-  items?: Array<{
-    bg?: string;
-    icon?: string;
-    label: string;
-    value: string;
-  }>;
   mission?: StatsContent["mission"];
   quote?: StatsContent["quote"];
   stats?: Array<{
@@ -47,13 +41,12 @@ export const HomeStats = ({
   attribution = content.attribution,
   description,
   heading,
-  items,
   mission = content.mission,
   quote = content.quote,
   stats,
 }: HomeStatsProps = {}) => {
   const resolvedHeading = heading ?? content.heading;
-  const resolvedStats: HomeStatItem[] = (items ?? stats ?? content.stats).map((stat, index) => ({
+  const resolvedStats: HomeStatItem[] = (stats ?? content.stats).map((stat, index) => ({
     ...stat,
     bg: stat.bg ?? ["bg-brand-blue", "bg-brand-cyan", "bg-brand-primary"][index % 3],
     icon: stat.icon ?? ["TrendingUp", "Globe", "Target"][index % 3],

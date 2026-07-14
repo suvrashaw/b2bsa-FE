@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import type { LinkedInPost } from "@/content/blogs";
 
+import { cn } from "@/lib";
+
 // ── constants ────────────────────────────────────────────────────────────────
 
 const COMPANY_NAME = "B2B Sales Arrow";
@@ -91,13 +93,17 @@ const cardVariants = {
 // ── component ─────────────────────────────────────────────────────────────────
 
 export interface LinkedInCardProps {
+  className?: string;
   index: number;
   post: LinkedInPost;
 }
 
-export const LinkedInCard = ({ index, post }: LinkedInCardProps) => (
+export const LinkedInCard = ({ className, index, post }: LinkedInCardProps) => (
   <motion.article
-    className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e0dfdc] bg-white shadow-sm md:rounded-lg"
+    className={cn(
+      "flex w-full flex-col overflow-hidden rounded-2xl border border-[#e0dfdc] bg-white shadow-sm md:rounded-lg",
+      className
+    )}
     custom={index}
     initial="hidden"
     variants={cardVariants}

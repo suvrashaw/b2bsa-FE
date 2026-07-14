@@ -9,6 +9,7 @@ const CARD_TRANSITION = { duration: 0.3, ease: "easeOut" as const };
 const CARD_WHILE_HOVER = { y: -4 };
 
 interface CaseStudyGridCardProps {
+  className?: string;
   colSpan: string;
   ctaLabel?: string;
   description: string;
@@ -20,6 +21,7 @@ interface CaseStudyGridCardProps {
 }
 
 export const CaseStudyGridCard = ({
+  className,
   colSpan,
   ctaLabel = "Learn more",
   description,
@@ -31,7 +33,8 @@ export const CaseStudyGridCard = ({
 }: CaseStudyGridCardProps) => {
   const sharedClassName = cn(
     "group relative h-[320px] w-full cursor-pointer overflow-hidden rounded-2xl bg-brand-charcoal text-left focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none md:rounded-xl lg:h-[437px]",
-    colSpan
+    colSpan,
+    className
   );
 
   const inner = (

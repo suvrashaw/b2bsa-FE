@@ -18,7 +18,7 @@ import { Header } from "@/components/layout/Header";
 import { CardsGrid, CaseStudies } from "@/components/sections/CardsGrid";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQ";
+import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ServicesStack } from "@/components/sections/ServicesStack";
@@ -84,7 +84,6 @@ export interface ServicePageProps {
     description?: string;
     heading?: string;
     phases?: { description: string; title: string }[];
-    steps?: { description: string; title: string }[];
   };
   relatedServicesHeading?: ReactNode;
 
@@ -198,7 +197,7 @@ export const ServicePage = ({
   spotlight,
   why,
 }: ServicePageProps) => {
-  const steps = process?.phases ?? process?.steps ?? [];
+  const steps = process?.phases ?? [];
   const processTitle = process?.heading ?? "";
 
   let computedRelatedServices: { href: string; title: string }[] = [];
@@ -216,8 +215,8 @@ export const ServicePage = ({
 
   const fallbackBgImage =
     hero?.images?.[0] ||
-    spotlight?.imageUrl ||
-    why?.imageUrl ||
+    spotlight?.image ||
+    why?.image ||
     services?.services?.[0]?.image ||
     services?.content?.services?.[0]?.image ||
     secondaryServices?.services?.[0]?.image ||
@@ -272,10 +271,10 @@ export const ServicePage = ({
           ctaLabel={spotlight.ctaLabel}
           description={spotlight.description ?? ""}
           descriptionItems={spotlight.descriptionItems}
+          image={spotlight.image}
           imageAlt={spotlight.imageAlt ?? "Feature image"}
           imageContainerClassName={spotlight.imageContainerClassName}
           imagePosition={spotlight.imagePosition ?? "right"}
-          imageUrl={spotlight.imageUrl}
           label="INTRODUCTION"
           locationBadges={spotlight.locationBadges}
           sectionClassName={spotlight.sectionClassName}
@@ -301,7 +300,6 @@ export const ServicePage = ({
           heading={process.heading}
           phases={process.phases}
           showPhaseNumbers={showPhaseNumbers}
-          steps={process.steps}
         />
       )}
 
@@ -355,7 +353,7 @@ export const ServicePage = ({
 
       {customSections}
 
-      <FAQAccordion {...faq} />
+      <FAQ {...faq} />
 
       {computedRelatedServices.length > 0 && (
         <CardsGrid

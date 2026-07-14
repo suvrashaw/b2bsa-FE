@@ -5,6 +5,8 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 
+import { cn } from "@/lib";
+
 interface RelatedService {
   href: string;
   title: string;
@@ -15,16 +17,17 @@ const RELATEDSERVICES_WHILE_IN_VIEW = { opacity: 1, scale: 1 };
 const RELATEDSERVICES_VIEWPORT = { once: true };
 
 interface RelatedServicesCardProps {
+  className?: string;
   index: number;
   service: RelatedService;
 }
 
-export const RelatedServicesCard = ({ index, service }: RelatedServicesCardProps) => {
+export const RelatedServicesCard = ({ className, index, service }: RelatedServicesCardProps) => {
   const transition = useMemo(() => ({ delay: index * 0.1, duration: 0.4 }), [index]);
 
   return (
     <motion.div
-      className="w-full"
+      className={cn("w-full", className)}
       initial={RELATEDSERVICES_INITIAL}
       transition={transition}
       viewport={RELATEDSERVICES_VIEWPORT}

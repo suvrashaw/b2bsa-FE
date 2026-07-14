@@ -28,6 +28,7 @@ interface EventDetailsPanelProps {
 }
 
 interface EventsCardProps {
+  className?: string;
   ctaLabel: string;
   event: EventCardItem;
   flipStyle: FlipStyle;
@@ -44,7 +45,7 @@ interface FlipCardProps extends EventDetailsPanelProps {
 type FlipStyle = "diagonal" | "diagonalWipe" | "hinge" | "horizontal" | "split" | "vertical";
 
 const CARD_SHELL_CLASS =
-  "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1E6091,#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-[#1E6091]/15 focus-visible:outline-none md:h-[220px]";
+  "group relative h-[180px] overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,var(--color-brand-blue),#B23A48)] p-[1.5px] shadow-sm shadow-brand-blue/10 transition-all duration-500 hover:shadow-[0_22px_52px_rgba(30,96,145,0.18)] focus-visible:ring-4 focus-visible:ring-brand-blue/15 focus-visible:outline-none md:h-[220px]";
 
 const isInteractiveTarget = (target: EventTarget | null) =>
   target instanceof HTMLElement && Boolean(target.closest("a, button"));
@@ -85,8 +86,8 @@ const EventDetails = ({
       <div className="mt-0 space-y-3">
         {eventDate ? (
           <div className="flex items-center gap-3 text-sm font-semibold text-brand-charcoal/80">
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1E6091]/10">
-              <Calendar className="size-4 text-[#1E6091]" />
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-blue/10">
+              <Calendar className="size-4 text-brand-blue" />
             </span>
             <span>{eventDate}</span>
           </div>
@@ -104,7 +105,7 @@ const EventDetails = ({
 
     <Button
       asChild
-      className="mt-5 w-fit bg-[#1E6091] hover:bg-[#1E6091]/90"
+      className="mt-5 w-fit bg-brand-blue hover:bg-brand-blue/90"
       size="sm"
       variant="primary"
     >
@@ -398,6 +399,7 @@ const FLIP_CARD_COMPONENTS: Record<FlipStyle, (props: FlipCardProps) => ReactNod
 };
 
 export const EventsCard = ({
+  className,
   ctaLabel,
   event,
   flipStyle,
@@ -437,7 +439,7 @@ export const EventsCard = ({
   }, []);
 
   return (
-    <div className="w-full">
+    <div className={cn("w-full", className)}>
       <div
         aria-label={`Show details for ${event.title}`}
         className={cn(CARD_SHELL_CLASS, isFlipped && "shadow-[0_22px_52px_rgba(178,58,72,0.18)]")}
