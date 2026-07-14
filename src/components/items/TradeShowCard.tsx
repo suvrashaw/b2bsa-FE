@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { CalendarTradeShow } from "@/content/tradeshow-calendar";
 
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib";
 
 const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
   day: "numeric",
@@ -40,8 +41,19 @@ const EventMeta = ({ icon: Icon, label }: { icon: typeof CalendarDays; label: st
   </div>
 );
 
-export const TradeShowCard = ({ show }: { show: CalendarTradeShow }) => (
-  <article className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md md:rounded-lg">
+export const TradeShowCard = ({
+  className,
+  show,
+}: {
+  className?: string;
+  show: CalendarTradeShow;
+}) => (
+  <article
+    className={cn(
+      "flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm shadow-gray-200/50 transition hover:border-brand-blue/30 hover:shadow-md",
+      className
+    )}
+  >
     <div className="mb-5 flex items-start justify-between gap-4">
       <div>
         <p className="text-xs font-bold tracking-widest text-brand-blue uppercase">

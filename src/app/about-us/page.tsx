@@ -241,11 +241,11 @@ const Page = () => {
         align="left"
         description={ABOUT_FOUNDER_STORY.story}
         id="founder"
+        image={ABOUT_FOUNDER_STORY.image.src}
         imageAlt={ABOUT_FOUNDER_STORY.image.alt}
         imageClassName="object-top"
         imageContainerClassName="lg:max-w-[440px]"
         imagePosition="left"
-        imageUrl={ABOUT_FOUNDER_STORY.imageUrl}
         label={ABOUT_FOUNDER_STORY.sectionLabel}
         sectionClassName="scroll-mt-28"
         titleLine1={ABOUT_FOUNDER_STORY.nameLine1}

@@ -1,6 +1,6 @@
 {
   "description": "A B2B data validation service checks existing business data for accuracy, removing duplicate or outdated records and verifying details such as emails and phone numbers. B2B Sales Arrow delivers this service for businesses across the United States, United Kingdom, Europe, the Middle East, and Asia, spanning multiple industries and sectors.\n\nBehind the scenes, our team verifies contact details, removes duplicate entries, and flags inaccurate records before they ever reach your sales pipeline. This process consistently reduces wasted outreach, improves campaign accuracy, and protects revenue teams from costly errors caused by outdated or unreliable data. Let's clean up your database today.",
-  "imageUrl": "/media/home/hero/home_hero_bg.avif",
+  "image": "/media/home/hero/home_hero_bg.avif",
   "titleLine1": "B2B Data Validation Service:",
   "titleLine2": "Accurate, Verified, Reliable Data"
 }

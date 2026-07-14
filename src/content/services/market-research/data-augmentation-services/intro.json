@@ -1,6 +1,6 @@
 {
   "description": "A data augmentation service enriches your existing CRM or contact database by filling in missing information such as job titles, verified email addresses, company details, technographic data, and buying intent signals. B2B Sales Arrow provides this service for businesses across the United States, United Kingdom, Europe, the Middle East, and Asia, working across multiple industries and sectors.\n\nOur team manually verifies and appends each record, ensuring your sales team reaches the right decision-makers with accurate, complete information. This process reduces misdirected outreach, improves pipeline quality, and helps revenue teams focus their efforts where they are most likely to convert. Build a stronger data foundation for your sales team today.",
-  "imageUrl": "/media/home/hero/home_hero_bg.avif",
+  "image": "/media/home/hero/home_hero_bg.avif",
   "titleLine1": "Data Augmentation Service:",
   "titleLine2": "Build a Stronger Data Foundation"
 }

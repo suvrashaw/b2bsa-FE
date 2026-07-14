@@ -10,7 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
-import { FAQAccordion } from "@/components/sections/FAQ";
+import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
 import { HOME_SERVICES_CONTENT } from "@/content/home/content";
@@ -125,8 +125,8 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       {/* ── 3. Introduction — Why Exhibit + Event at a Glance ────────────── */}
       <Spotlight
         description={introDescription}
+        image={event.image ?? PLACEHOLDER_IMAGE}
         imageAlt={event.title}
-        imageUrl={event.image ?? PLACEHOLDER_IMAGE}
         label="INTRODUCTION"
         stats={stats}
         titleLine1="Why Exhibit at"
@@ -160,7 +160,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
 
       {/* ── 7. FAQ (optional) ───────────────────────────────────────────── */}
       {faq && faq.faqs && faq.faqs.length > 0 && (
-        <FAQAccordion
+        <FAQ
           description={faq.description}
           faqs={faq.faqs}
           heading={faq.heading ?? "Frequently Asked Questions"}

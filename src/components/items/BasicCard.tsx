@@ -1,6 +1,8 @@
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
+import { cn } from "@/lib";
+
 interface BasicCardItem {
   bullets: string[];
   image: {
@@ -11,12 +13,18 @@ interface BasicCardItem {
 }
 
 interface BasicCardProps {
+  className?: string;
   item: BasicCardItem;
 }
 
-export const BasicCard = ({ item }: BasicCardProps) => {
+export const BasicCard = ({ className, item }: BasicCardProps) => {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-brand-blue/10 bg-brand-gray shadow-[0_24px_60px_rgba(18,38,54,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-[0_28px_75px_rgba(18,38,54,0.13)] md:rounded-[2rem]">
+    <article
+      className={cn(
+        "group overflow-hidden rounded-2xl border border-brand-blue/10 bg-brand-gray shadow-[0_24px_60px_rgba(18,38,54,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-[0_28px_75px_rgba(18,38,54,0.13)] md:rounded-[2rem]",
+        className
+      )}
+    >
       <div className="relative h-64 overflow-hidden">
         <Image
           alt={item.image.alt}

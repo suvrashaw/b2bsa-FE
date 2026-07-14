@@ -53,7 +53,7 @@ interface FAQAccordionProps extends FAQProps {
   variant?: "article" | "default";
 }
 
-export const FAQAccordion = ({
+export const FAQ = ({
   content = HOME_FAQ_CONTENT,
   description = content.description,
   faqs = content.faqs,

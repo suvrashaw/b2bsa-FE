@@ -3,13 +3,16 @@ import Link from "next/link";
 
 import type { SharedBlogPost } from "@/content/blogs";
 
+import { cn } from "@/lib";
+
 export interface BlogsCarouselCardProps {
+  className?: string;
   post: SharedBlogPost;
 }
 
-export const BlogsCarouselCard = ({ post }: BlogsCarouselCardProps) => {
+export const BlogsCarouselCard = ({ className, post }: BlogsCarouselCardProps) => {
   return (
-    <Link className="group flex h-full flex-col" href={post.href ?? "/blogs"}>
+    <Link className={cn("group flex h-full flex-col", className)} href={post.href ?? "/blogs"}>
       <article className="flex h-full flex-col">
         <div className="relative overflow-hidden rounded-[2rem] transition-all duration-300 group-hover:rounded-none">
           <div className="relative aspect-[1.28/1] w-full bg-brand-charcoal/5">

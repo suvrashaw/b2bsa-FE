@@ -9,8 +9,11 @@ import { useMemo, useSyncExternalStore } from "react";
 
 import type { BlogItem } from "@/content/home/content";
 
+import { cn } from "@/lib";
+
 export interface BlogCardProps {
   blog: BlogItem;
+  className?: string;
   ctaLabel?: string;
   index: number;
   isHovered: boolean;
@@ -40,6 +43,7 @@ const subscribeToMobileQuery = (onStoreChange: () => void) => {
 
 export const BlogCard = ({
   blog,
+  className,
   ctaLabel = "Learn more",
   index,
   isHovered,
@@ -77,7 +81,10 @@ export const BlogCard = ({
   return (
     <motion.div
       animate={cardAnimate}
-      className="absolute w-full max-w-md transform-gpu overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl md:rounded-3xl"
+      className={cn(
+        "absolute w-full max-w-md transform-gpu overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl md:rounded-3xl",
+        className
+      )}
       style={cardStyle}
       transition={BLOG_CARD_TRANSITION}
     >

@@ -16,7 +16,6 @@ interface ProcessTimelineProps {
   heading?: ReactNode;
   phases?: Step[];
   showPhaseNumbers?: boolean;
-  steps?: Step[];
 }
 
 interface Step {
@@ -34,20 +33,19 @@ export const ProcessTimeline = ({
   description,
   heading,
   phases,
-  steps,
 }: ProcessTimelineProps) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const openContactModal = useCallback(() => setIsContactModalOpen(true), []);
   const closeContactModal = useCallback(() => setIsContactModalOpen(false), []);
 
-  const resolvedSteps = steps ?? phases ?? [];
+  const resolvedSteps = phases ?? [];
   const stepTransitions = useMemo(
     () =>
-      (steps ?? phases ?? []).map((_, index) => ({
+      (phases ?? []).map((_, index) => ({
         delay: index * 0.1,
         duration: 0.6,
       })),
-    [steps, phases]
+    [phases]
   );
 
   return (

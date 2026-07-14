@@ -17,11 +17,11 @@ export interface SpotlightProps {
   description?: React.ReactNode;
   descriptionItems?: readonly string[];
   id?: string;
+  image?: string;
   imageAlt?: string;
   imageClassName?: string;
   imageContainerClassName?: string;
   imagePosition?: "left" | "right";
-  imageUrl?: string;
   label?: string;
   locationBadges?: readonly string[];
   secondarySpotlight?: SpotlightSecondaryBlock;
@@ -352,16 +352,16 @@ const SpotlightTextBlock = ({
 
 const SpotlightImageBlock = ({
   className,
+  image,
   imageAlt,
   imageClassName,
-  imageUrl,
   isHovered,
   videoUrl,
 }: {
   className?: string;
+  image?: string;
   imageAlt: string;
   imageClassName?: string;
-  imageUrl?: string;
   isHovered: boolean;
   videoUrl?: string;
 }) => {
@@ -442,14 +442,14 @@ const SpotlightImageBlock = ({
         <source src={videoUrl} type="video/mp4" />
       </video>
     );
-  } else if (imageUrl) {
+  } else if (image) {
     mediaElement = (
       <Image
         alt={imageAlt}
         className={cn("size-full object-cover transition-all duration-1000", imageClassName)}
         fill
         sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 440px, 560px"
-        src={imageUrl}
+        src={image}
         style={imgStyle}
       />
     );
@@ -500,11 +500,11 @@ export const Spotlight = ({
   description,
   descriptionItems,
   id,
+  image,
   imageAlt = "Feature image",
   imageClassName,
   imageContainerClassName,
   imagePosition = "right",
-  imageUrl,
   label,
   locationBadges,
   secondarySpotlight,
@@ -588,9 +588,9 @@ export const Spotlight = ({
           ) : (
             <SpotlightImageBlock
               className={cn(imageBlockClassName, imageContainerClassName)}
+              image={image}
               imageAlt={imageAlt}
               imageClassName={imageClassName}
-              imageUrl={imageUrl}
               isHovered={isHovered}
               videoUrl={videoUrl}
             />

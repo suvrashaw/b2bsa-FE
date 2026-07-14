@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
-import { FAQAccordion } from "@/components/sections/FAQ";
+import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -22,7 +22,7 @@ const Page = () => {
     <main className="min-h-screen bg-brand-gray">
       <Header />
       <Hero description={TERMS_HERO.description} images={TERMS_IMAGES} title={TERMS_HERO.title} />
-      <FAQAccordion faqs={TERMS_FAQ.faqs} heading={TERMS_FAQ.heading} />
+      <FAQ faqs={TERMS_FAQ.faqs} heading={TERMS_FAQ.heading} />
       <ContactUsForm {...TERMS_CONTACT} />
       <Footer />
     </main>
