@@ -18,7 +18,7 @@ export interface CaseStudyEntry {
 
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
-import STUDIES_DATA from "@/content/case-studies/case-studies.json";
+import STUDIES_DATA from "@/content/case-studies/case-studies-data.json";
 
 import CARD_CTA_LABEL_DATA from "./card-cta-label.json";
 import CTA_DATA from "./cta.json";

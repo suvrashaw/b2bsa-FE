@@ -1,10 +1,11 @@
-import type { MarketingPageDefinition } from "@/content/page-definitions";
+import type { MarketingPageDefinition, StaticPageHero } from "@/content/page-definitions";
 
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 import { mapCalendarEventToEvent } from "@/content/tradeshow-calendar";
 
 import EVENTS_SECTION_DATA from "./events.json";
 import FOUNDERSTORY_DATA from "./founder-story.json";
+import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
 import VALUES_DATA from "./values.json";
 
@@ -32,7 +33,7 @@ export const ABOUT_RECENT_EVENTS = {
   ),
 };
 export { default as ABOUT_CORE_VALUES } from "./core-values.json";
-export { default as ABOUT_HERO } from "./hero.json";
+export const ABOUT_HERO: StaticPageHero = HERO_DATA;
 export { default as ABOUT_ORIGIN_TIMELINE } from "./origin-timeline.json";
 export { default as ABOUT_SIGNATURE_SERVICES } from "./services.json";
 export { default as ABOUT_SIGNATURE_SERVICES_STACK } from "./signature-services-stack.json";

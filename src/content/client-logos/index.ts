@@ -1,4 +1,4 @@
-import CLIENT_LOGOS_DATA from "./client-logos.json";
+import CLIENT_LOGOS_DATA from "./client-logos-data.json";
 
 export interface ClientLogoItem {
   alt: string;

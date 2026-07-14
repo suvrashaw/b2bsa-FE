@@ -23,12 +23,12 @@ export const EVENT_EXPERIENCE_INDUSTRIES = {
   items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item),
 };
 
-export { default as EVENT_EXPERIENCE_SERVICES_INCLUDE } from "./capabilities.json";
 export { default as EVENT_EXPERIENCE_DESIGNED_FOR } from "./designed-for.json";
 export { default as EVENT_EXPERIENCE_FAQ } from "./faq.json";
 export { default as EVENT_EXPERIENCE_IMAGE_HERO } from "./hero.json";
 export { default as EVENT_EXPERIENCE_PAGE } from "./page.json";
 export { default as EVENT_EXPERIENCE_PROCESS } from "./process.json";
+export { default as EVENT_EXPERIENCE_SERVICES_INCLUDE } from "./services-include.json";
 export { default as EVENT_EXPERIENCE_DELIVERABLES } from "./services.json";
 export { default as EVENT_EXPERIENCE_WHY_CHOOSE_US } from "./why-choose-us.json";
 export { default as EVENT_EXPERIENCE_WHY_MATTERS } from "./why-matters.json";
