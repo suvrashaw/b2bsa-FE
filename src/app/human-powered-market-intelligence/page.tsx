@@ -53,7 +53,7 @@ const Page = () => {
       hero={MARKET_INTELLIGENCE_HERO}
       page={MARKET_INTELLIGENCE_PAGE}
       secondaryServices={SECONDARY_SERVICES}
-      secondaryServicesSectionType="grid"
+      secondaryServicesSectionType="carousel"
       services={MARKET_INTELLIGENCE_DELIVERABLES}
       showServicesCommonCta
       spotlight={MARKET_INTELLIGENCE_INTRO}

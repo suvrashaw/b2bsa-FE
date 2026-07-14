@@ -32,8 +32,8 @@ export const Header = () => {
   const [openMobileServiceGroup, setOpenMobileServiceGroup] = useState<null | string>(null);
 
   const isSolidHeader = scrolled;
-  const isLightText = true;
-  const isHeaderLightText = true;
+  const isLightText = !isSolidHeader;
+  const isHeaderLightText = !isSolidHeader;
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -77,9 +77,9 @@ export const Header = () => {
   const isMegamenuOpen = activeDropdown === "services";
   const headerSurfaceClass = cn(
     isSolidHeader
-      ? "bg-brand-primary-dark/95 shadow-sm backdrop-blur-md"
+      ? "bg-white shadow-sm"
       : "bg-[linear-gradient(to_bottom,color-mix(in_srgb,var(--color-brand-primary-dark)_80%,transparent)_55%,transparent_100%)]",
-    isSolidHeader && !isMegamenuOpen && "border-b border-white/10"
+    isSolidHeader && !isMegamenuOpen && "border-b border-black/10"
   );
 
   const isMegamenuLightText = false;
@@ -105,7 +105,7 @@ export const Header = () => {
               alt="B2B Sales Arrow"
               className={cn(
                 "object-contain transition-opacity duration-300",
-                isSolidHeader ? "opacity-0" : "opacity-100"
+                isSolidHeader ? "opacity-100" : "opacity-0"
               )}
               fill
               priority
@@ -116,7 +116,7 @@ export const Header = () => {
               alt="B2B Sales Arrow"
               className={cn(
                 "object-contain transition-opacity duration-300",
-                isSolidHeader ? "opacity-100" : "opacity-0"
+                isSolidHeader ? "opacity-0" : "opacity-100"
               )}
               fill
               priority

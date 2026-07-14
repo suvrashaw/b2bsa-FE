@@ -51,7 +51,7 @@ const DesktopNavLink = memo(
 
     const linkClassName = cn(
       "group relative flex items-center gap-1.5 text-base font-semibold whitespace-nowrap transition-colors lg:max-xl:gap-0.5 lg:max-xl:text-sm",
-      lightText ? "text-white hover:text-white/80" : "hover:text-brand-blue"
+      lightText ? "text-white hover:text-white/80" : "text-brand-charcoal hover:text-brand-blue"
     );
     const underlineClassName = cn(
       "absolute -bottom-1 left-0 h-[2px] w-0 bg-brand-blue transition-all duration-300 group-hover/nav-item:w-full",
