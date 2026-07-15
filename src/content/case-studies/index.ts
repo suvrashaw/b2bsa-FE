@@ -48,27 +48,6 @@ export const CASE_STUDIES_PAGE_STUDIES = STUDIES_DATA as unknown as CaseStudyEnt
 
 export const CASE_STUDIES_PAGE = PAGE_DATA as MarketingPageDefinition;
 
-export interface CaseStudyDetail {
-  challenges: string;
-  client: string;
-  event: string;
-  eventDescription: string;
-  gallery?: string[];
-  image: string;
-  location: string;
-  outcome: string;
-  outcomeStats: string[];
-  requirements: string;
-  services: string[];
-  slug: string;
-  solution: string;
-  title: string;
-}
-
-import CASE_STUDY_DETAILS_DATA from "./details.json";
-
-export const CASE_STUDY_DETAILS: CaseStudyDetail[] = CASE_STUDY_DETAILS_DATA;
-
 const SELECTED_CASE_STUDY_IDS = [
   "sap-sapphire-2023",
   "nrf-2023",

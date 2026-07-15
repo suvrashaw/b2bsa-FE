@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { CASE_STUDY_DETAILS } from "@/content/case-studies";
+import { CASE_STUDY_DETAILS } from "@/content/case-studies/details";
 import { HOME_PAGE } from "@/content/home/content";
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 import { siteUrl } from "@/lib/json-ld";

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo } from "react";
 
-import type { CaseStudyDetail } from "@/content/case-studies";
+import type { CaseStudyDetail } from "@/content/case-studies/details";
 
 import { EventMetadata } from "@/components/items/EventMetadata";
 import { ServicesImageCard } from "@/components/items/ServicesImageCard";

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 import { Suspense } from "react";
 
-import { CASE_STUDIES_PAGE, CASE_STUDY_DETAILS } from "@/content/case-studies";
+import { CASE_STUDIES_PAGE } from "@/content/case-studies";
+import { CASE_STUDY_DETAILS } from "@/content/case-studies/details";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   buildBreadcrumbJsonLd,
