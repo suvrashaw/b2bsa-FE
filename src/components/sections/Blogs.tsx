@@ -4,10 +4,11 @@ import { useReducedMotion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
 
+import type { BlogsContent } from "@/content/home/content";
+
 import { BlogCard, BlogCardGrid } from "@/components/items/BlogCard";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { type BlogsContent, HOME_BLOGS_CONTENT } from "@/content/home/content";
 
 type Blog = BlogsContent["blogs"][number];
 
@@ -72,7 +73,7 @@ const BlogDeckLayout = ({ blogs, ctaLabel, layout = "deck" }: BlogDeckLayoutProp
 
 export interface BlogsProps {
   blogs?: BlogsContent["blogs"];
-  content?: BlogsContent;
+  content: BlogsContent;
   ctaLabel?: BlogsContent["ctaLabel"];
   heading?: BlogsContent["heading"];
   layout?: "deck" | "grid";
@@ -81,14 +82,14 @@ export interface BlogsProps {
 }
 
 export const Blogs = ({
-  content = HOME_BLOGS_CONTENT,
+  content,
   blogs = content.blogs,
   ctaLabel = content.ctaLabel,
   heading = content.heading,
   layout = "deck",
   viewAllHref = "/blogs",
   viewAllLabel = "View All Blogs",
-}: BlogsProps = {}) => {
+}: BlogsProps) => {
   const displayBlogs = blogs.slice(0, 3);
 
   return (

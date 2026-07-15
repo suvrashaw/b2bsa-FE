@@ -9,9 +9,11 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
+  BLOG_CATEGORIES,
   BLOG_CONTACT,
   BLOG_HERO,
   BLOG_PAGE,
+  BLOG_POSTS_SUMMARY,
   BLOG_SERVICE_CAROUSEL,
   SHARED_BLOG_POSTS,
 } from "@/content/blogs";
@@ -59,7 +61,7 @@ const Page = () => {
       <Header />
       <Hero {...BLOG_HERO} variant={BLOG_HERO.variant as "compact" | "default"} />
       <Suspense fallback={<div className="min-h-[800px]" />}>
-        <BlogsSection />
+        <BlogsSection blogCategories={BLOG_CATEGORIES} blogs={BLOG_POSTS_SUMMARY} />
       </Suspense>
       <Carousel autoplayInterval={4000} heading={BLOG_SERVICE_CAROUSEL.heading} id="why-choose-us">
         {BLOG_SERVICE_CAROUSEL.items.map((item, i) => (

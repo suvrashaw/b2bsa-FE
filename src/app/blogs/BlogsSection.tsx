@@ -12,11 +12,10 @@ import {
   useMemo,
 } from "react";
 
-import type { SharedBlogPost } from "@/content/blogs";
+import type { SharedBlogPostSummary } from "@/content/blogs";
 
 import { BlogCardGrid } from "@/components/items/BlogCard";
 import { Pagination } from "@/components/ui/Pagination";
-import { BLOG_CATEGORIES, BLOG_POSTS } from "@/content/blogs";
 import { cn } from "@/lib";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
@@ -64,7 +63,12 @@ const CategoryButton = ({ category, isActive, onChange }: CategoryButtonProps) =
   );
 };
 
-const getCategoryOptions = (blogs: SharedBlogPost[]) => {
+interface BlogCategoryOption {
+  id: string;
+  name: string;
+}
+
+const getCategoryOptions = (blogs: SharedBlogPostSummary[], blogCategories: BlogCategoryOption[]) => {
   const counts = new Map<string, number>();
 
   for (const blog of blogs) {
@@ -73,7 +77,7 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
     }
   }
 
-  const options = BLOG_CATEGORIES.map((category) => ({
+  const options = blogCategories.map((category) => ({
     count: counts.get(category.name) ?? 0,
     id: category.id,
     name: category.name,
@@ -82,13 +86,19 @@ const getCategoryOptions = (blogs: SharedBlogPost[]) => {
   return [{ count: blogs.length, id: ALL_CATEGORY_ID, name: ALL_CATEGORY_NAME }, ...options];
 };
 
-export const BlogsSection = () => {
-  const blogs = BLOG_POSTS.blogs;
+export interface BlogsSectionProps {
+  blogCategories: BlogCategoryOption[];
+  blogs: SharedBlogPostSummary[];
+}
 
+export const BlogsSection = ({ blogCategories, blogs }: BlogsSectionProps) => {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const categories = useMemo(() => getCategoryOptions(blogs), [blogs]);
+  const categories = useMemo(
+    () => getCategoryOptions(blogs, blogCategories),
+    [blogs, blogCategories]
+  );
   const requestedPage = parsePaginationPage(searchParams.get("page"));
   const requestedCategory = searchParams.get("category") ?? ALL_CATEGORY_ID;
   const activeCategory = categories.some((category) => category.id === requestedCategory)

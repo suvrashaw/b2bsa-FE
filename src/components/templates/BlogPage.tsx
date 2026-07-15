@@ -4,6 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
+import type {
+  ContentBlock,
+  LinkedInPost,
+  SharedBlogPost,
+  SharedBlogPostSummary,
+} from "@/content/blogs";
+import type { HomeServiceItem } from "@/content/home/content";
+
 import { BlogsCarouselCard } from "@/components/items/BlogsCarouselCard";
 import { LinkedInCard } from "@/components/items/LinkedInCard";
 import { WhyChooseUsCard } from "@/components/items/WhyChooseUsCard";
@@ -13,22 +21,17 @@ import { Carousel } from "@/components/sections/Carousel";
 import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
 import { Button } from "@/components/ui/Button";
-import { type ContentBlock, SHARED_BLOG_POSTS, type SharedBlogPost } from "@/content/blogs";
-import { LINKEDIN_POSTS } from "@/content/blogs";
-import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 // ─── BlogSidebarTrending ─────────────────────────────────────────────────────
 
 interface BlogSidebarTrendingProps {
+  allPosts: SharedBlogPostSummary[];
   currentId: string;
 }
 
-const BlogSidebarTrending = ({ currentId }: BlogSidebarTrendingProps) => {
-  const trendingPosts = SHARED_BLOG_POSTS.filter((post) => String(post.id) !== currentId).slice(
-    0,
-    3
-  );
+const BlogSidebarTrending = ({ allPosts, currentId }: BlogSidebarTrendingProps) => {
+  const trendingPosts = allPosts.filter((post) => String(post.id) !== currentId).slice(0, 3);
 
   return (
     <section className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
@@ -198,6 +201,9 @@ const BlogSidebarLinkedIn = ({ post }: { post: SharedBlogPost }) => {
 // ─── Blog helpers ────────────────────────────────────────────────────────────
 
 export interface BlogPageProps {
+  allPosts: SharedBlogPostSummary[];
+  linkedInPosts: LinkedInPost[];
+  placeholderServices: HomeServiceItem[];
   post: SharedBlogPost;
 }
 
@@ -320,23 +326,20 @@ const CTA_PRIMARY = {
 const CTA_SECONDARY = { href: "/case-studies", label: "See Our Work" };
 const PLACEHOLDER_IMAGE = "/media/home/hero/home_hero_bg.avif";
 
-export const BlogPage = ({ post }: BlogPageProps) => {
+export const BlogPage = ({ allPosts, linkedInPosts, placeholderServices, post }: BlogPageProps) => {
   const blocks = post.body ?? [];
   const readTime = getReadTime(blocks);
   const placeholderServiceItems = useMemo(
-    () =>
-      HOME_SERVICES_CONTENT.services
-        .slice(0, 5)
-        .map((item) => ({ ...item, image: PLACEHOLDER_IMAGE })),
-    []
+    () => placeholderServices.slice(0, 5).map((item) => ({ ...item, image: PLACEHOLDER_IMAGE })),
+    [placeholderServices]
   );
   const relatedPosts = useMemo(
     () =>
-      SHARED_BLOG_POSTS.filter((p) => String(p.id) !== String(post.id)).map((relatedPost) => ({
+      allPosts.filter((p) => String(p.id) !== String(post.id)).map((relatedPost) => ({
         ...relatedPost,
         image: PLACEHOLDER_IMAGE,
       })),
-    [post.id]
+    [allPosts, post.id]
   );
   const faqItems = post.faqs?.map((faq, index) => ({
     answer: faq.answer,
@@ -405,7 +408,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
 
         <aside className="mt-10 lg:col-span-1 lg:mt-0">
           <div className="space-y-6 lg:sticky lg:top-24">
-            <BlogSidebarTrending currentId={String(post.id)} />
+            <BlogSidebarTrending allPosts={allPosts} currentId={String(post.id)} />
             <BlogSidebarSubscribe />
             <BlogSidebarLinkedIn post={post} />
           </div>
@@ -451,7 +454,7 @@ export const BlogPage = ({ post }: BlogPageProps) => {
         description="Get real-time updates on booth builds, exhibition projects, event staffing, Event lead generation campaigns, and global trade show experiences from our team worldwide."
         heading="Follow Our Latest Event Executions on LinkedIn"
       >
-        {LINKEDIN_POSTS.map((post, i) => (
+        {linkedInPosts.map((post, i) => (
           <LinkedInCard index={i} key={post.id} post={post} />
         ))}
       </Carousel>

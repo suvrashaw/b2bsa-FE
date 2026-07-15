@@ -126,12 +126,21 @@ export interface BlogsSectionContent {
   viewAllLabel?: string;
 }
 
-export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPost[] => {
+// Card/listing UIs never render `body` or `faqs` (the bulk of each post's
+// payload) — client components should read from this summary list instead of
+// SHARED_BLOG_POSTS so that content isn't shipped to the browser unused.
+export type SharedBlogPostSummary = Omit<SharedBlogPost, "body" | "faqs">;
+
+export const BLOG_POSTS_SUMMARY: SharedBlogPostSummary[] = SHARED_BLOG_POSTS.map(
+  ({ body: _body, faqs: _faqs, ...post }) => post
+);
+
+export const getBlogsByTags = (tags: string[], minCount = 5): SharedBlogPostSummary[] => {
   if (!tags || tags.length === 0) {
-    return SHARED_BLOG_POSTS.slice(0, minCount);
+    return BLOG_POSTS_SUMMARY.slice(0, minCount);
   }
 
-  const exactMatches = SHARED_BLOG_POSTS.filter((blog) =>
+  const exactMatches = BLOG_POSTS_SUMMARY.filter((blog) =>
     blog.tags?.some((tag) => tags.includes(tag))
   );
 
@@ -152,7 +161,7 @@ export const LINKEDIN_POSTS: LinkedInPost[] = LINKEDIN_POSTS_DATA;
 
 export const BLOG_POSTS = {
   ...BLOGS_SECTION_DATA,
-  blogs: SHARED_BLOG_POSTS,
+  blogs: BLOG_POSTS_SUMMARY,
 };
 
 export const BLOG_CONTACT = {

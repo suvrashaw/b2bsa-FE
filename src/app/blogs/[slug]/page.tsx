@@ -4,7 +4,14 @@ import { notFound, redirect } from "next/navigation";
 
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { BlogPage } from "@/components/templates/BlogPage";
-import { DEFAULT_BLOG_POST_HREF, DEFAULT_BLOG_POST_ID, SHARED_BLOG_POSTS } from "@/content/blogs";
+import {
+  BLOG_POSTS_SUMMARY,
+  DEFAULT_BLOG_POST_HREF,
+  DEFAULT_BLOG_POST_ID,
+  LINKEDIN_POSTS,
+  SHARED_BLOG_POSTS,
+} from "@/content/blogs";
+import { HOME_SERVICES_CONTENT } from "@/content/home/content";
 import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type BlogPostPageProps = {
@@ -135,7 +142,12 @@ const Page = async ({ params }: BlogPostPageProps) => {
         url={postUrl}
         {...(wordCount > 0 && { wordCount })}
       />
-      <BlogPage post={post} />
+      <BlogPage
+        allPosts={BLOG_POSTS_SUMMARY}
+        linkedInPosts={LINKEDIN_POSTS}
+        placeholderServices={HOME_SERVICES_CONTENT.services}
+        post={post}
+      />
     </>
   );
 };

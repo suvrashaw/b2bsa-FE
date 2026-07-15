@@ -2,10 +2,8 @@ import type { ReactNode } from "react";
 
 import type { MarketingPageDefinition } from "@/content/page-definitions";
 
-import { HOME_BLOG_POSTS } from "@/content/blogs";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
-import BLOGS_DATA from "./blogs.json";
 import CONTACTCONTENT_DATA from "./contactus.json";
 import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
@@ -216,11 +214,6 @@ export const HOME_EVENTS_CONTENT: EventsContent = {
 export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = WHYCHOOSEUSCONTENT_DATA;
 
 export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = TESTIMONIALSCONTENT_DATA;
-
-export const HOME_BLOGS_CONTENT: BlogsContent = {
-  ...BLOGS_DATA,
-  blogs: HOME_BLOG_POSTS,
-};
 
 export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
 
