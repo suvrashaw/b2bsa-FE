@@ -42,13 +42,6 @@
       "id": "conferences-summits",
       "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Engagement Zone Planning"
-    },
-    {
-      "description": "We help brands extend event reach through virtual and hybrid experiences supported by content, streaming, digital engagement, and audience follow-up workflows.",
-      "icon": "Wifi",
-      "id": "hybrid-virtual-experiences",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Hybrid and Virtual Experiences"
     }
   ]
 }

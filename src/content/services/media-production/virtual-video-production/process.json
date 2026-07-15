@@ -1,37 +1,37 @@
 {
   "phases": [
     {
-      "description": "Speaker scheduling, virtual green rooms, session flow, and show timing for multi-speaker events.",
+      "description": "We coordinate virtual events with multiple speakers to ensure a smooth and engaging experience. Every session is managed with careful planning and technical support.",
       "icon": "Users",
       "title": "Multi-Speaker Virtual Event Management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Professional video workflows for crisp virtual sessions, recordings, and post-event distribution.",
+      "description": "Deliver professional virtual events with high-quality HD and 4K video production. Clear visuals help keep your audience connected and engaged.",
       "icon": "Video",
       "title": "HD and 4K Virtual Video Production",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Live moderation support for intros, transitions, audience prompts, and session continuity.",
+      "description": "Our moderation team manages speaker transitions, audience interactions, and live sessions with confidence. This keeps your virtual event organized and on schedule.",
       "icon": "Mic",
       "title": "Live Event Moderation Support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Custom overlays, lower thirds, title cards, branded backgrounds, and visual event identity.",
+      "description": "Create a consistent virtual event experience with custom graphics and branded overlays. Every visual element is designed to strengthen your brand presence.",
       "icon": "Layout",
       "title": "Branded Event Graphics and Overlays",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Streaming support across Zoom, Microsoft Teams, LinkedIn Live, YouTube Live, Vimeo, and custom platforms.",
+      "description": "We help integrate your preferred event platform and manage the technical setup for reliable streaming. Everything is configured for a smooth attendee experience.",
       "icon": "Share2",
       "title": "Platform Integration and Streaming Support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Hybrid workflows that connect onsite speakers, remote speakers, and distributed audiences.",
+      "description": "Connect in-person and virtual audiences through professionally managed hybrid event production. We ensure both experiences are engaging, seamless, and fully synchronized.",
       "icon": "Wifi",
       "title": "Hybrid Event Production Capabilities",
       "image": "/media/home/hero/home_hero_bg.avif"

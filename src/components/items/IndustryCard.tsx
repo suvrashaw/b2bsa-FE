@@ -1,7 +1,8 @@
 "use client";
 
 import { Warp } from "@paper-design/shaders-react";
-import { useCallback, useState } from "react";
+import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib";
@@ -93,7 +94,26 @@ export const IndustryCard = ({
 }: IndustryCardProps) => {
   const shaderConfig = getShaderConfig(index);
   const [isActive, setIsActive] = useState(false);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
   const toggleActive = useCallback(() => setIsActive((prev) => !prev), []);
+
+  useEffect(() => {
+    const node = cardRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        setIsNearViewport(true);
+        observer.disconnect();
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (event.key !== "Enter" && event.key !== " ") return;
@@ -111,6 +131,7 @@ export const IndustryCard = ({
       )}
       onClick={toggleActive}
       onKeyDown={handleKeyDown}
+      ref={cardRef}
       role="button"
       tabIndex={0}
     >
@@ -122,8 +143,13 @@ export const IndustryCard = ({
         )}
       >
         {image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img alt={title} className="size-full object-cover" src={image} />
+          <Image
+            alt={title}
+            className="object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            src={image}
+          />
         ) : (
           <div className="size-full bg-zinc-800" />
         )}
@@ -137,20 +163,22 @@ export const IndustryCard = ({
           isActive && "opacity-100"
         )}
       >
-        <Warp
-          colors={shaderConfig.colors}
-          distortion={shaderConfig.distortion}
-          proportion={shaderConfig.proportion}
-          rotation={0}
-          scale={1}
-          shape={shaderConfig.shape}
-          shapeScale={shaderConfig.shapeScale}
-          softness={shaderConfig.softness}
-          speed={0.8}
-          style={WARP_STYLE}
-          swirl={shaderConfig.swirl}
-          swirlIterations={shaderConfig.swirlIterations}
-        />
+        {isNearViewport && (
+          <Warp
+            colors={shaderConfig.colors}
+            distortion={shaderConfig.distortion}
+            proportion={shaderConfig.proportion}
+            rotation={0}
+            scale={1}
+            shape={shaderConfig.shape}
+            shapeScale={shaderConfig.shapeScale}
+            softness={shaderConfig.softness}
+            speed={0.8}
+            style={WARP_STYLE}
+            swirl={shaderConfig.swirl}
+            swirlIterations={shaderConfig.swirlIterations}
+          />
+        )}
         <div className="absolute inset-0 bg-black/70" />
       </div>
 

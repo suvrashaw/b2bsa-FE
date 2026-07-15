@@ -2,37 +2,37 @@
   "description": "Our event logistics services are designed to support high-impact corporate events with reliable coordination, operational planning, and onsite management support.",
   "phases": [
     {
-      "description": "End-to-end logistics for exhibition stand delivery and removal.",
+      "description": "We coordinate booth logistics to ensure everything reaches the venue safely and on time. Our team manages the process so you can focus on your event.",
       "icon": "Truck",
       "title": "Trade show logistics management",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Assembly, installation, and dismantling coordination for trade shows.",
+      "description": "From delivery to installation, we oversee every step of your booth setup. Everything is coordinated to ensure your exhibit is ready before the event begins.",
       "icon": "Wrench",
       "title": "Booth setup coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Day-of oversight for all event operational activities.",
+      "description": "Our on-site team monitors booth operations and resolves issues as they arise. This helps your event run smoothly from opening to closing.",
       "icon": "ShieldCheck",
       "title": "Onsite event supervision",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "AV, furniture, display, and technical equipment management.",
+      "description": "We organize the delivery, setup, and management of event equipment required for your booth. Every detail is handled to keep your exhibit operating without interruptions.",
       "icon": "Settings",
       "title": "Equipment coordination",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Cross-border freight, customs clearance, and ATA carnet management.",
+      "description": "Exhibiting overseas becomes easier with experienced logistics support. We coordinate shipments, timelines, and local requirements for a hassle-free event experience.",
       "icon": "Plane",
       "title": "International event logistics support",
       "image": "/media/home/hero/home_hero_bg.avif"
     },
     {
-      "description": "Full event lifecycle operational planning and delivery.",
+      "description": "We plan the operational details that keep your event running efficiently. From vendor coordination to execution, every step is carefully managed.",
       "icon": "ClipboardList",
       "title": "Corporate event operations planning",
       "image": "/media/home/hero/home_hero_bg.avif"
