@@ -45,7 +45,7 @@ const Page = () => (
         ),
       ])}
     />
-    <Suspense>
+    <Suspense fallback={<div className="min-h-[1200px]" />}>
       <CaseStudiesClientPage />
     </Suspense>
   </>

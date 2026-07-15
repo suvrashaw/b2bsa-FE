@@ -299,6 +299,7 @@ const HeroBackground = ({
         <Image
           alt=""
           className="object-cover"
+          fetchPriority="high"
           fill
           priority
           src={images?.[currentIndex] || PLACEHOLDER_IMAGE}

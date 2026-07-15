@@ -11,13 +11,13 @@ const nextConfig: NextConfig = {
           value:
             [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn-cookieyes.com https://www.googletagmanager.com https://www.clarity.ms https://embed.tawk.to https://va.tawk.to",
-              "style-src 'self' 'unsafe-inline'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn-cookieyes.com https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms https://embed.tawk.to https://va.tawk.to https://cdn.jsdelivr.net",
+              "style-src 'self' 'unsafe-inline' https://embed.tawk.to",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data: https:",
               "connect-src 'self' https: wss:",
               "media-src 'self' https: data:",
-              "frame-src https://va.tawk.to https://embed.tawk.to",
+              "frame-src 'self' https://va.tawk.to https://embed.tawk.to",
               "object-src 'none'",
               "frame-ancestors 'none'",
               "base-uri 'self'",

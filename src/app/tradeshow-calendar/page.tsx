@@ -73,7 +73,7 @@ const Page = () => {
         primaryCta={EXHIBIT_CTA}
         title={TRADE_SHOW_CALENDAR_HERO.title}
       />
-      <Suspense>
+      <Suspense fallback={<div className="min-h-[1200px]" />}>
         <TradeShowCalendarSection />
       </Suspense>
       <Footer />
