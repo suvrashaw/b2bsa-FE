@@ -3,36 +3,42 @@
     "heading": "Event Experience Creation Services Include",
     "items": [
       {
+        "description": "Every successful event starts with a clear idea. We shape concepts that reflect your goals, connect with your audience, and create memorable experiences from the very beginning.",
         "icon": "Lightbulb",
         "id": "event-concept-development",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Event concept development"
       },
       {
+        "description": "We map every step of your attendee journey to keep people engaged from arrival to follow-up. Every interaction is planned with purpose to improve the overall event experience.",
         "icon": "Map",
         "id": "audience-journey-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Audience journey planning"
       },
       {
+        "description": "Turn your brand into something people can experience, not just see. We create immersive brand moments that leave a lasting impression on your audience.",
         "icon": "Palette",
         "id": "brand-experience-design",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Brand experience design"
       },
       {
+        "description": "From keynote sessions to networking spaces, we plan conference experiences that keep attendees informed, engaged, and connected throughout the event.",
         "icon": "Presentation",
         "id": "conference-summit-experience-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Conference and summit experience planning"
       },
       {
+        "description": "We develop event branding and visual assets that create a consistent look across every touchpoint. Your audience enjoys a professional and memorable brand experience from start to finish.",
         "icon": "Image",
         "id": "event-branding-visual-asset-planning",
         "image": "/media/home/hero/home_hero_bg.avif",
         "label": "Event branding and visual asset planning"
       },
       {
+        "description": "We design interactive engagement zones that encourage conversations, participation, and meaningful connections. These spaces keep visitors involved and make every interaction more valuable.",
         "icon": "Target",
         "id": "engagement-zone-planning",
         "image": "/media/home/hero/home_hero_bg.avif",

@@ -2,36 +2,42 @@
   "description": "Our social media marketing services are designed to help B2B companies create consistent brand communication and audience engagement across digital platforms.",
   "features": [
     {
+      "description": "Build a stronger online presence with social media strategies designed for B2B businesses. We create campaigns that increase visibility and generate meaningful engagement.",
       "icon": "Share2",
       "id": "b2b-social-media-marketing",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "B2B social media marketing"
     },
     {
+      "description": "Reach business decision-makers with targeted LinkedIn marketing campaigns. We help you build brand awareness, generate leads, and strengthen professional connections.",
       "icon": "Users",
       "id": "linkedin-marketing-campaigns",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "LinkedIn marketing campaigns"
     },
     {
+      "description": "Create content that informs, engages, and reflects your brand consistently. From event highlights to thought leadership, we develop content your audience wants to see.",
       "icon": "PenLine",
       "id": "social-media-content-creation",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Social media content creation"
     },
     {
+      "description": "Strengthen your brand presence with messaging that builds credibility and trust. We help position your business consistently across social media channels.",
       "icon": "Target",
       "id": "corporate-brand-positioning",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Corporate brand positioning"
     },
     {
+      "description": "Expand your reach with paid social campaigns designed to attract the right audience. Every campaign is optimized to support your marketing and business goals.",
       "icon": "DollarSign",
       "id": "paid-social-media-campaigns",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Paid social media campaigns"
     },
     {
+      "description": "Measure what matters with clear social media performance reports. We track key metrics and provide insights to help improve future campaigns.",
       "icon": "BarChart3",
       "id": "analytics-and-performance-reporting",
       "image": "/media/home/hero/home_hero_bg.avif",

@@ -79,7 +79,12 @@ const Page = () => {
             heading={LIVE_STREAMING_CAPABILITIES.heading}
           >
             {LIVE_STREAMING_CAPABILITIES_FEATURES.map((item) => (
-              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+              <CapabilityCard
+                description={item.description}
+                icon={item.icon}
+                key={item.id}
+                title={item.label}
+              />
             ))}
           </CardsGrid>
 

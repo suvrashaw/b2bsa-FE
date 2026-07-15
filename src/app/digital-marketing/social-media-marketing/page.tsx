@@ -94,7 +94,12 @@ const Page = () => {
             heading={SMM_CAPABILITIES.heading}
           >
             {SMM_CAPABILITIES_FEATURES.map((item) => (
-              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+              <CapabilityCard
+                description={item.description}
+                icon={item.icon}
+                key={item.id}
+                title={item.label}
+              />
             ))}
           </CardsGrid>
         </>

@@ -2,36 +2,42 @@
   "description": "Our event live streaming services are powered by industry-grade production equipment and experienced live streaming professionals to ensure flawless event delivery.",
   "features": [
     {
+      "description": "Capture every moment from the best angles with a professional multi-camera setup. We deliver a polished viewing experience for both in-person and virtual audiences.",
       "icon": "Camera",
       "id": "multi-camera-production",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Multi-camera production setups"
     },
     {
+      "description": "Stream your event in crystal-clear HD or 4K quality for a professional broadcast experience. High-quality video keeps your audience engaged from start to finish.",
       "icon": "Video",
       "id": "hd-4k-streaming",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "HD and 4K live streaming capabilities"
     },
     {
+      "description": "Our production team manages live camera switching and video mixing in real time. Every transition is seamless, keeping your event running smoothly.",
       "icon": "Shuffle",
       "id": "live-switching",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live switching and video mixing"
     },
     {
+      "description": "Add branded graphics, speaker details, and visual overlays to create a professional live stream. Every element is designed to reinforce your brand throughout the broadcast.",
       "icon": "Layout",
       "id": "live-graphics",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Live graphics and branded overlays"
     },
     {
+      "description": "Whether your event is on-site, remote, or hybrid, our production team provides reliable technical support. We ensure everything runs smoothly behind the scenes.",
       "icon": "Settings",
       "id": "production-support",
       "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Onsite and remote production support"
     },
     {
+      "description": "Reach your audience wherever they are by streaming across multiple platforms at the same time. We help you extend your event's reach without added complexity.",
       "icon": "Share2",
       "id": "multi-platform",
       "image": "/media/home/hero/home_hero_bg.avif",

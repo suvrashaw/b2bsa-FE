@@ -34,6 +34,7 @@ export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE
 
 const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map(
   (item) => ({
+    description: item.description,
     icon: item.icon,
     id: item.id,
     image: item.image,
@@ -54,7 +55,12 @@ const Page = () => {
           </Carousel>
           <CardsGrid cols={3} heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}>
             {servicesIncludeFeatures.map((item) => (
-              <CapabilityCard icon={item.icon} key={item.id} title={item.label} />
+              <CapabilityCard
+                description={item.description}
+                icon={item.icon}
+                key={item.id}
+                title={item.label}
+              />
             ))}
           </CardsGrid>
           <Carousel
