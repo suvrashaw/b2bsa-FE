@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -17,7 +19,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/company/b2b-sales-arrow-llc/";
 
 // ── icons ────────────────────────────────────────────────────────────────────
 
-const ThumbUpIcon = ({ className }: { className?: string }) => (
+const IconSvg = ({ children, className }: { children: ReactNode; className?: string }) => (
   <svg
     className={className}
     fill="none"
@@ -25,56 +27,44 @@ const ThumbUpIcon = ({ className }: { className?: string }) => (
     strokeWidth={1.6}
     viewBox="0 0 24 24"
   >
+    {children}
+  </svg>
+);
+
+const ThumbUpIcon = ({ className }: { className?: string }) => (
+  <IconSvg className={className}>
     <path
       d="M7 10v12M7 10l4-7a3 3 0 0 1 3 3v2h4.5a2 2 0 0 1 1.95 2.45l-1.57 6A2 2 0 0 1 17 18H7"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
+  </IconSvg>
 );
 
 const CommentIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.6}
-    viewBox="0 0 24 24"
-  >
+  <IconSvg className={className}>
     <path
       d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
+  </IconSvg>
 );
 
 const RepostIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.6}
-    viewBox="0 0 24 24"
-  >
+  <IconSvg className={className}>
     <path d="M17 1l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M3 11V9a4 4 0 0 1 4-4h14" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M7 23l-4-4 4-4" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M21 13v2a4 4 0 0 1-4 4H3" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
+  </IconSvg>
 );
 
 const SendIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.6}
-    viewBox="0 0 24 24"
-  >
+  <IconSvg className={className}>
     <path d="M22 2L11 13" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M22 2L15 22l-4-9-9-4 20-7z" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
+  </IconSvg>
 );
 
 // ── animation ─────────────────────────────────────────────────────────────────

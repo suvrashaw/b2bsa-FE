@@ -1,12 +1,12 @@
 {
   "description": "As your enterprise trade show booth builder and exhibition stand builder, we manage every dimension of the build, from fabrication brief to on-site installation, with full accountability for the outcome.",
-  "mobileVideoUrl": "/media/services/tradeshow-booth-solutions/trade-show-booth-builder/hero/mobile.mp4",
-  "mobileVideoWebm": "/media/services/tradeshow-booth-solutions/trade-show-booth-builder/hero/mobile.webm",
+  "mobileVideoUrl": "/media/services/tradeshow-booth-solutions/hero/mobile.mp4",
+  "mobileVideoWebm": "/media/services/tradeshow-booth-solutions/hero/mobile.webm",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Get a Build Quote"
   },
   "title": "Trade Show Booth Builders Who Engineer for Conversion, Not Just Aesthetics",
-  "videoUrl": "/media/services/tradeshow-booth-solutions/trade-show-booth-builder/hero/desktop.mp4",
-  "videoWebm": "/media/services/tradeshow-booth-solutions/trade-show-booth-builder/hero/desktop.webm"
+  "videoUrl": "/media/services/tradeshow-booth-solutions/hero/desktop.mp4",
+  "videoWebm": "/media/services/tradeshow-booth-solutions/hero/desktop.webm"
 }
