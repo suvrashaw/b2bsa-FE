@@ -1,47 +1,66 @@
 {
-  "heading": "Our Trade Show Booth Design Services",
-  "services": [
+  "ctaLabel": "Contact Our Team",
+  "heading": "Booth Sizes and Formats We Design",
+  "items": [
     {
-      "description": "We design booth layouts around how attendees actually move through a crowded exhibition floor, entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
+      "cta": {
+        "href": "/contact-us",
+        "label": "Get 10×10 Booth Quote"
+      },
+      "descriptions": ["Regional shows, first-time exhibitors, satellite presences"],
+      "eyebrow": "100 sq ft",
+      "heading": "10x10 Booth",
       "icon": "box",
-      "id": "architecture",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Spatial Architecture and Traffic Flow"
+      "id": "showcase-10x10",
+      "image": "/media/booth/10x10.avif"
     },
     {
-      "description": "Your exhibition booth design should be unmistakably yours from 30 feet away, translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
-      "icon": "palette",
-      "id": "branding",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Graphic Design and Brand Integration"
+      "cta": {
+        "href": "/contact-us",
+        "label": "Get 10×20 Booth Quote"
+      },
+      "descriptions": ["Product demos with visitor journey and conversation zone"],
+      "eyebrow": "200 sq ft",
+      "heading": "10x20 Inline",
+      "icon": "layers",
+      "id": "showcase-10x20",
+      "image": "/media/booth/10x20.avif"
     },
     {
-      "description": "Touchscreens, live product demos, and digital storytelling that turn passive floor visits into active brand engagement.",
-      "icon": "cpu",
-      "id": "digital",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Interactive and Digital Display Integration"
+      "cta": {
+        "href": "/contact-us",
+        "label": "Get 20×20 Booth Quote"
+      },
+      "descriptions": ["Premium four-sided visibility, demos, meetings, AV zones"],
+      "eyebrow": "400 sq ft",
+      "heading": "20x20 Island",
+      "icon": "maximize-2",
+      "id": "showcase-20x20",
+      "image": "/media/booth/20x20.avif"
     },
     {
-      "description": "For complex products that cannot be shown on a trade show floor, immersive technology that lets buyers explore what they cannot see.",
-      "icon": "monitor",
-      "id": "ar-vr",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "AR/VR Experience Design"
+      "cta": {
+        "href": "/contact-us",
+        "label": "Get Double-Deck Quote"
+      },
+      "descriptions": ["Executive meeting suite + lower engagement zone. Major global shows"],
+      "eyebrow": "Premium",
+      "heading": "Double-Deck Structure",
+      "icon": "building-2",
+      "id": "showcase-double-deck",
+      "image": "/media/booth/30x40.avif"
     },
     {
-      "description": "Private meeting rooms, semi-private discussion areas, and live demo zones, planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
-      "icon": "users",
-      "id": "planning",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Meeting Room and Demo Zone Planning"
-    },
-    {
-      "description": "The most underused commercial tool in exhibition stand design, accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
-      "icon": "sun",
-      "id": "lighting",
-      "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Lighting and Atmosphere Engineering"
+      "cta": {
+        "href": "/contact-us",
+        "label": "Get Custom Booth Quote"
+      },
+      "descriptions": ["Fully bespoke flagship builds for maximum commercial impact"],
+      "eyebrow": "Bespoke",
+      "heading": "Custom Environments",
+      "icon": "sparkles",
+      "id": "showcase-custom",
+      "image": "/media/booth/40x40.avif"
     }
   ]
 }
