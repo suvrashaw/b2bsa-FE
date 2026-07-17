@@ -18,6 +18,7 @@ import {
   BOOTH_BUILDER_CASE_STUDIES,
   BOOTH_BUILDER_CLIENT_LOGOS,
   BOOTH_BUILDER_CONTACT_CTA,
+  BOOTH_BUILDER_DELIVERABLES,
   BOOTH_BUILDER_FAQ,
   BOOTH_BUILDER_FUTURE_READY,
   BOOTH_BUILDER_HERO,
@@ -25,7 +26,6 @@ import {
   BOOTH_BUILDER_PAGE,
   BOOTH_BUILDER_PRICING,
   BOOTH_BUILDER_PROCESS,
-  BOOTH_BUILDER_SHOWCASE_ITEMS,
   BOOTH_BUILDER_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-builder/content";
 
@@ -45,7 +45,7 @@ const boothBuilderSpotlight = {
 
 const EMPTY_CONTACT_MODAL = {};
 
-const SHOWCASE_SERVICES = BOOTH_BUILDER_SHOWCASE_ITEMS.items.map((item) => ({
+const SHOWCASE_SERVICES = BOOTH_BUILDER_DELIVERABLES.items.map((item) => ({
   description: item.descriptions.join(" "),
   icon: item.icon,
   id: item.id,
@@ -90,9 +90,9 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
-          commonCtaLabel={BOOTH_BUILDER_SHOWCASE_ITEMS.ctaLabel}
+          commonCtaLabel={BOOTH_BUILDER_DELIVERABLES.ctaLabel}
           contactModal={EMPTY_CONTACT_MODAL}
-          heading={BOOTH_BUILDER_SHOWCASE_ITEMS.heading}
+          heading={BOOTH_BUILDER_DELIVERABLES.heading}
           serviceLabel=""
           services={SHOWCASE_SERVICES}
           showCommonCta

@@ -112,6 +112,6 @@ export const getDefaultEvents = (): EventCardItem[] => {
 
   return TRADE_SHOW_CALENDAR_EVENTS.filter((event) => toUtcDate(event.endDate) >= todayUtc)
     .toSorted((a, b) => a.startDate.localeCompare(b.startDate))
-    .slice(0, 8)
+    .slice(0, 6)
     .map((event, index) => mapCalendarEventToEvent(event, index));
 };

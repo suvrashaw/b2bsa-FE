@@ -14,6 +14,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
   EVENT_BRANDING_BLOGS_SECTION,
+  EVENT_BRANDING_CAPABILITIES,
   EVENT_BRANDING_CASE_STUDIES,
   EVENT_BRANDING_CLIENT_LOGOS,
   EVENT_BRANDING_CONTACT_CTA,
@@ -23,14 +24,13 @@ import {
   EVENT_BRANDING_INDUSTRIES,
   EVENT_BRANDING_INTRO,
   EVENT_BRANDING_PAGE,
-  EVENT_BRANDING_PROCESS,
   EVENT_BRANDING_WHY_CHOOSE_US,
 } from "@/content/services/global-event-solutions/event-branding-solutions/content";
 import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_BRANDING_PAGE);
 
-const capabilityFeatures = buildCapabilityFeatures(EVENT_BRANDING_PROCESS.phases);
+const capabilityFeatures = buildCapabilityFeatures(EVENT_BRANDING_CAPABILITIES.phases);
 
 const BRANDING_SPOTLIGHT = {
   ...EVENT_BRANDING_INTRO,
@@ -74,8 +74,8 @@ const Page = () => {
       preProcessSections={
         <CardsGrid
           cols={3}
-          description={EVENT_BRANDING_PROCESS.description}
-          heading={EVENT_BRANDING_PROCESS.heading}
+          description={EVENT_BRANDING_CAPABILITIES.description}
+          heading={EVENT_BRANDING_CAPABILITIES.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

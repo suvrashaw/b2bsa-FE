@@ -15,6 +15,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { GES_PAGE } from "@/content/services/global-event-solutions/content";
 import {
+  EVENT_EXPERIENCE_CAPABILITIES,
   EVENT_EXPERIENCE_CONTACT_CTA,
   EVENT_EXPERIENCE_CREATION_BLOGS_SECTION,
   EVENT_EXPERIENCE_DELIVERABLES,
@@ -25,14 +26,13 @@ import {
   EVENT_EXPERIENCE_INTRO,
   EVENT_EXPERIENCE_PAGE,
   EVENT_EXPERIENCE_PROCESS,
-  EVENT_EXPERIENCE_SERVICES_INCLUDE,
   EVENT_EXPERIENCE_WHY_CHOOSE_US,
   EVENT_EXPERIENCE_WHY_MATTERS,
 } from "@/content/services/global-event-solutions/event-experience-creation/content";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_EXPERIENCE_PAGE);
 
-const servicesIncludeFeatures = EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.items.map(
+const servicesIncludeFeatures = EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.items.map(
   (item) => ({
     description: item.description,
     icon: item.icon,
@@ -53,7 +53,7 @@ const Page = () => {
               <WhyChooseUsCard index={i} item={item} key={item.title} />
             ))}
           </Carousel>
-          <CardsGrid cols={3} heading={EVENT_EXPERIENCE_SERVICES_INCLUDE.servicesInclude.heading}>
+          <CardsGrid cols={3} heading={EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.heading}>
             {servicesIncludeFeatures.map((item) => (
               <CapabilityCard
                 description={item.description}

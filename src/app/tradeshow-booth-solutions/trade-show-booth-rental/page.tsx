@@ -18,19 +18,19 @@ import {
   BOOTH_RENTAL_CASE_STUDIES,
   BOOTH_RENTAL_CLIENT_LOGOS,
   BOOTH_RENTAL_CONTACT_CTA,
+  BOOTH_RENTAL_DELIVERABLES,
   BOOTH_RENTAL_FAQ,
   BOOTH_RENTAL_HERO,
   BOOTH_RENTAL_INTRO,
   BOOTH_RENTAL_PAGE,
   BOOTH_RENTAL_PROCESS,
-  BOOTH_RENTAL_RANGE,
   BOOTH_RENTAL_RENT_VS_BUY,
   BOOTH_RENTAL_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-rental/content";
 
 const EMPTY_CONTACT_MODAL = {};
 
-const RENTAL_SERVICES = BOOTH_RENTAL_RANGE.items.map((item) => ({
+const RENTAL_SERVICES = BOOTH_RENTAL_DELIVERABLES.items.map((item) => ({
   description: item.description,
   icon: item.icon,
   id: item.id,
@@ -101,9 +101,9 @@ const Page = () => {
           </CardsGrid>
           <ServicesStack
             cardCtaMode="none"
-            commonCtaLabel={BOOTH_RENTAL_RANGE.ctaLabel}
+            commonCtaLabel={BOOTH_RENTAL_DELIVERABLES.ctaLabel}
             contactModal={EMPTY_CONTACT_MODAL}
-            heading={BOOTH_RENTAL_RANGE.heading}
+            heading={BOOTH_RENTAL_DELIVERABLES.heading}
             serviceLabel=""
             services={RENTAL_SERVICES}
             showCommonCta

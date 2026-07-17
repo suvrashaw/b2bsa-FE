@@ -25,10 +25,10 @@ export const CORPORATE_VIDEO_CONTACT_CTA = {
   ...CONTACT_CTA_DATA,
 };
 
+export { default as CORPORATE_VIDEO_CAPABILITIES } from "./capabilities.json";
 export { default as CORPORATE_VIDEO_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORPORATE_VIDEO_FAQ } from "./faq.json";
 export { default as CORPORATE_VIDEO_HERO } from "./hero.json";
 export { default as CORPORATE_VIDEO_PAGE } from "./page.json";
-export { default as CORPORATE_VIDEO_DELIVERABLES } from "./services.json";
 export { default as CORPORATE_VIDEO_WHY_CHOOSE_US } from "./why-choose-us.json";
 export { default as CORPORATE_VIDEO_WHY } from "./why-spotlight.json";

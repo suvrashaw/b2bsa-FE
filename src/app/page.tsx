@@ -134,17 +134,15 @@ const Home = () => {
         heading={HOME_EVENTS_CONTENT.heading}
         id="events"
       >
-        {getDefaultEvents()
-          .slice(0, 6)
-          .map((event, i) => (
-            <EventsCard
-              ctaLabel={HOME_EVENTS_CONTENT.ctaLabel}
-              event={event}
-              flipStyle="diagonalWipe"
-              index={i}
-              key={event.id}
-            />
-          ))}
+        {getDefaultEvents().map((event, i) => (
+          <EventsCard
+            ctaLabel={HOME_EVENTS_CONTENT.ctaLabel}
+            event={event}
+            flipStyle="diagonalWipe"
+            index={i}
+            key={event.id}
+          />
+        ))}
       </CardsGrid>
 
       <StickyScroll />

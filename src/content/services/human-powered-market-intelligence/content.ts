@@ -17,11 +17,11 @@ export const MARKET_INTELLIGENCE_CONTACT_CTA = {
   ...CONTACT_CTA_DATA,
 };
 
+export { default as MARKET_INTELLIGENCE_CAPABILITIES } from "./capabilities.json";
 export { default as MARKET_INTELLIGENCE_CLIENT_LOGOS } from "./client-logos.json";
 export { default as MARKET_INTELLIGENCE_FAQ } from "./faq.json";
-export { default as MARKET_INTELLIGENCE_HERO } from "./hero.json";
 
+export { default as MARKET_INTELLIGENCE_HERO } from "./hero.json";
 export { default as MARKET_INTELLIGENCE_INTRO } from "./intro.json";
 export { default as MARKET_INTELLIGENCE_PAGE } from "./page.json";
-export { default as MARKET_INTELLIGENCE_CARDS } from "./secondary-services.json";
 export { default as MARKET_INTELLIGENCE_DELIVERABLES } from "./services.json";

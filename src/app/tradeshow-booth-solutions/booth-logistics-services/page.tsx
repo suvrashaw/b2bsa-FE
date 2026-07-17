@@ -16,6 +16,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   EVENT_LOGISTICS_BENEFITS,
   EVENT_LOGISTICS_BLOGS_SECTION,
+  EVENT_LOGISTICS_CAPABILITIES,
   EVENT_LOGISTICS_CASE_STUDIES,
   EVENT_LOGISTICS_CLIENT_LOGOS,
   EVENT_LOGISTICS_CONTACT_CTA,
@@ -26,7 +27,6 @@ import {
   EVENT_LOGISTICS_INDUSTRIES,
   EVENT_LOGISTICS_INTRO,
   EVENT_LOGISTICS_PAGE,
-  EVENT_LOGISTICS_PROCESS,
   EVENT_LOGISTICS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-logistics-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
@@ -34,7 +34,7 @@ import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(EVENT_LOGISTICS_PAGE);
 
-const capabilityFeatures = buildCapabilityFeatures(EVENT_LOGISTICS_PROCESS.phases);
+const capabilityFeatures = buildCapabilityFeatures(EVENT_LOGISTICS_CAPABILITIES.phases);
 
 const Page = () => {
   return (
@@ -74,8 +74,8 @@ const Page = () => {
         <>
           <CardsGrid
             cols={3}
-            description={EVENT_LOGISTICS_PROCESS.description}
-            heading={EVENT_LOGISTICS_PROCESS.heading}
+            description={EVENT_LOGISTICS_CAPABILITIES.description}
+            heading={EVENT_LOGISTICS_CAPABILITIES.heading}
           >
             {capabilityFeatures.map((item) => (
               <CapabilityCard

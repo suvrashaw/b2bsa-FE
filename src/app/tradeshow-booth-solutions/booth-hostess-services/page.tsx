@@ -13,6 +13,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   BOOTH_HOSTESS_BLOGS_SECTION,
+  BOOTH_HOSTESS_CAPABILITIES,
   BOOTH_HOSTESS_CASE_STUDIES,
   BOOTH_HOSTESS_CLIENT_LOGOS,
   BOOTH_HOSTESS_CONTACT_CTA,
@@ -22,7 +23,6 @@ import {
   BOOTH_HOSTESS_INDUSTRIES,
   BOOTH_HOSTESS_INTRO,
   BOOTH_HOSTESS_PAGE,
-  BOOTH_HOSTESS_PROCESS,
   BOOTH_HOSTESS_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/booth-hostess-services/content";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
@@ -36,7 +36,7 @@ const deliverableProps = {
   contactModal: servicesContactModal,
   showCardCtas: false,
 };
-const capabilityFeatures = buildCapabilityFeatures(BOOTH_HOSTESS_PROCESS.phases);
+const capabilityFeatures = buildCapabilityFeatures(BOOTH_HOSTESS_CAPABILITIES.phases);
 
 const Page = () => {
   return (
@@ -75,8 +75,8 @@ const Page = () => {
       preProcessSections={
         <CardsGrid
           cols={3}
-          description={BOOTH_HOSTESS_PROCESS.description}
-          heading={BOOTH_HOSTESS_PROCESS.heading}
+          description={BOOTH_HOSTESS_CAPABILITIES.description}
+          heading={BOOTH_HOSTESS_CAPABILITIES.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

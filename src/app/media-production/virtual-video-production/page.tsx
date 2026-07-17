@@ -14,6 +14,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   VIRTUAL_VIDEO_BLOGS_SECTION,
+  VIRTUAL_VIDEO_CAPABILITIES,
   VIRTUAL_VIDEO_CASE_STUDIES,
   VIRTUAL_VIDEO_CLIENT_LOGOS,
   VIRTUAL_VIDEO_CONTACT_CTA,
@@ -22,7 +23,6 @@ import {
   VIRTUAL_VIDEO_IMAGE_HERO,
   VIRTUAL_VIDEO_INTRO,
   VIRTUAL_VIDEO_PAGE,
-  VIRTUAL_VIDEO_PROCESS,
   VIRTUAL_VIDEO_RELATED_SERVICES,
   VIRTUAL_VIDEO_WHY_CHOOSE_US,
 } from "@/content/services/media-production/virtual-video-production/content";
@@ -30,7 +30,7 @@ import { buildCapabilityFeatures } from "@/lib";
 
 export const metadata: Metadata = getMarketingPageMetadata(VIRTUAL_VIDEO_PAGE);
 
-const capabilityFeatures = buildCapabilityFeatures(VIRTUAL_VIDEO_PROCESS.phases);
+const capabilityFeatures = buildCapabilityFeatures(VIRTUAL_VIDEO_CAPABILITIES.phases);
 
 const Page = () => {
   return (
@@ -68,8 +68,8 @@ const Page = () => {
       preProcessSections={
         <CardsGrid
           cols={3}
-          description={VIRTUAL_VIDEO_PROCESS.description}
-          heading={VIRTUAL_VIDEO_PROCESS.heading}
+          description={VIRTUAL_VIDEO_CAPABILITIES.description}
+          heading={VIRTUAL_VIDEO_CAPABILITIES.heading}
         >
           {capabilityFeatures.map((item) => (
             <CapabilityCard

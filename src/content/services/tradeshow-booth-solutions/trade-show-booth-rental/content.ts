@@ -30,6 +30,6 @@ export { default as BOOTH_RENTAL_HERO } from "./hero.json";
 
 export { default as BOOTH_RENTAL_PAGE } from "./page.json";
 export { default as BOOTH_RENTAL_PROCESS } from "./process.json";
-export { default as BOOTH_RENTAL_RANGE } from "./rental-range.json";
 export { default as BOOTH_RENTAL_RENT_VS_BUY } from "./rental-rent-vs-buy.json";
+export { default as BOOTH_RENTAL_DELIVERABLES } from "./services.json";
 export { default as BOOTH_RENTAL_WHY_CHOOSE_US } from "./why-choose-us.json";

@@ -14,10 +14,10 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { MEDIA_PAGE } from "@/content/services/media-production/content";
 import {
   CORPORATE_VIDEO_BLOGS_SECTION,
+  CORPORATE_VIDEO_CAPABILITIES,
   CORPORATE_VIDEO_CASE_STUDIES,
   CORPORATE_VIDEO_CLIENT_LOGOS,
   CORPORATE_VIDEO_CONTACT_CTA,
-  CORPORATE_VIDEO_DELIVERABLES,
   CORPORATE_VIDEO_FAQ,
   CORPORATE_VIDEO_HERO,
   CORPORATE_VIDEO_INTRO,
@@ -62,8 +62,8 @@ const Page = () => {
       page={CORPORATE_VIDEO_PAGE}
       parentPage={MEDIA_PAGE}
       preProcessSections={
-        <CardsGrid cols={3} heading={CORPORATE_VIDEO_DELIVERABLES.heading}>
-          {CORPORATE_VIDEO_DELIVERABLES.services.map((item) => (
+        <CardsGrid cols={3} heading={CORPORATE_VIDEO_CAPABILITIES.heading}>
+          {CORPORATE_VIDEO_CAPABILITIES.services.map((item) => (
             <CapabilityCard
               description={item.description}
               icon={item.icon}

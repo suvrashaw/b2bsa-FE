@@ -26,12 +26,12 @@ export const CORP_NETWORKING_CONTACT_CTA = {
   ...CONTACT_DATA,
 };
 
+export { default as CORP_NETWORKING_CAPABILITIES } from "./capabilities.json";
 export { default as CORP_NETWORKING_CLIENT_LOGOS } from "./client-logos.json";
 export { default as CORP_NETWORKING_FAQ } from "./faq.json";
 export { default as CORP_NETWORKING_IMAGE_HERO } from "./hero.json";
 export { default as CORP_NETWORKING_INTRO } from "./intro.json";
 export { default as CORP_NETWORKING_EVENT_TYPES } from "./networking-event-types.json";
 export { default as CORP_NETWORKING_PAGE } from "./page.json";
-export { default as CORP_NETWORKING_PROCESS } from "./process.json";
 export { default as CORP_NETWORKING_DELIVERABLES } from "./services.json";
 export { default as CORP_NETWORKING_WHY_CHOOSE_US } from "./why-choose-us.json";

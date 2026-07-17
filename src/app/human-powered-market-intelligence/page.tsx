@@ -10,7 +10,7 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   HPMI_BLOGS_SECTION,
-  MARKET_INTELLIGENCE_CARDS,
+  MARKET_INTELLIGENCE_CAPABILITIES,
   MARKET_INTELLIGENCE_CASE_STUDIES,
   MARKET_INTELLIGENCE_CLIENT_LOGOS,
   MARKET_INTELLIGENCE_CONTACT_CTA,
@@ -23,7 +23,7 @@ import {
 
 export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
 
-const SECONDARY_SERVICES = { ...MARKET_INTELLIGENCE_CARDS, showCommonCta: true };
+const SECONDARY_SERVICES = { ...MARKET_INTELLIGENCE_CAPABILITIES, showCommonCta: true };
 
 const Page = () => {
   return (

@@ -13,6 +13,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
   MODULAR_BOOTH_BLOGS_SECTION,
+  MODULAR_BOOTHS_CAPABILITIES,
   MODULAR_BOOTHS_CASE_STUDIES,
   MODULAR_BOOTHS_CLIENT_LOGOS,
   MODULAR_BOOTHS_CONTACT_CTA,
@@ -21,7 +22,6 @@ import {
   MODULAR_BOOTHS_HERO,
   MODULAR_BOOTHS_INTRO,
   MODULAR_BOOTHS_PAGE,
-  MODULAR_BOOTHS_RANGE_SECTION,
   MODULAR_BOOTHS_WHY,
 } from "@/content/services/tradeshow-booth-solutions/modular-booth-solutions/content";
 
@@ -56,8 +56,8 @@ const Page = () => {
       page={MODULAR_BOOTHS_PAGE}
       parentPage={BS_PAGE}
       preProcessSections={
-        <CardsGrid cols={3} heading={MODULAR_BOOTHS_RANGE_SECTION.heading}>
-          {MODULAR_BOOTHS_RANGE_SECTION.services.map((item) => (
+        <CardsGrid cols={3} heading={MODULAR_BOOTHS_CAPABILITIES.heading}>
+          {MODULAR_BOOTHS_CAPABILITIES.services.map((item) => (
             <CapabilityCard
               description={item.description}
               icon={item.icon}
