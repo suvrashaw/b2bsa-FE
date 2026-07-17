@@ -174,18 +174,10 @@ export const CaseStudies = ({
   );
 
   const cards = resolvedCaseStudies.map((study) => ({
-    client: study.client ?? study.title,
     cta: { href: getStudyHref(study), label: ctaLabel },
     icon: study.icon,
     id: study.id,
     image: study.image,
-    inactiveLabel: study.title,
-    metric: study.metric ?? "",
-    metricLabel: study.metricLabel ?? "",
-    primarySummary: {
-      label: "",
-      text: study.challenge ?? "",
-    },
     secondarySummary: {
       label: "",
       text: study.solution,
