@@ -4,46 +4,46 @@
   "heading": "What's Included in Our Social Media Marketing",
   "services": [
     {
-      "description": "Build a stronger online presence with social media strategies designed for B2B businesses. We create campaigns that increase visibility and generate meaningful engagement.",
+      "description": "Build platform-specific social media strategies aligned with brand goals, audience targeting, and business objectives.",
       "icon": "Target",
       "id": "social-media-strategy-development",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "B2B Social Media Marketing"
+      "title": "Social Media Strategy Development"
     },
     {
-      "description": "Reach business decision-makers with targeted LinkedIn marketing campaigns. We help you build brand awareness, generate leads, and strengthen professional connections.",
+      "description": "Create engaging social media content including graphics, videos, carousels, thought leadership posts, and campaign creatives.",
       "icon": "Palette",
       "id": "content-creation-design",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "LinkedIn Marketing Campaign"
+      "title": "Content Creation & Design"
     },
     {
-      "description": "Create content that informs, engages, and reflects your brand consistently. From event highlights to thought leadership, we develop content your audience wants to see.",
+      "description": "Strengthen B2B brand visibility and professional engagement through strategic LinkedIn marketing campaigns.",
       "icon": "Briefcase",
       "id": "linkedin-marketing-services",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Social Media Content Creation"
+      "title": "LinkedIn Marketing Services"
     },
     {
-      "description": "Strengthen your brand presence with messaging that builds credibility and trust. We help position your business consistently across social media channels.",
+      "description": "Manage organic and paid social media campaigns designed to improve reach, engagement, and lead generation.",
       "icon": "Megaphone",
       "id": "social-media-campaign-management",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Corporate Brand Positioning"
+      "title": "Social Media Campaign Management"
     },
     {
-      "description": "Expand your reach with paid social campaigns designed to attract the right audience. Every campaign is optimized to support your marketing and business goals.",
+      "description": "Improve audience interaction through consistent communication, engagement management, and social listening support.",
       "icon": "MessageSquare",
       "id": "community-engagement-support",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Paid Social Media Campaigns"
+      "title": "Community Engagement Support"
     },
     {
-      "description": "Measure what matters with clear social media performance reports. We track key metrics and provide insights to help improve future campaigns.",
+      "description": "Promote conferences, exhibitions, webinars, and corporate events with event-focused social media campaigns.",
       "icon": "Calendar",
       "id": "event-trade-show-promotion",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Analytics and Performance Reporting"
+      "title": "Event & Trade Show Promotion"
     }
   ]
 }

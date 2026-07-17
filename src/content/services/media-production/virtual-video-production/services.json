@@ -5,46 +5,46 @@
   "showCommonCta": true,
   "services": [
     {
-      "description": "We coordinate virtual events with multiple speakers to ensure a smooth and engaging experience. Every session is managed with careful planning and technical support.",
+      "description": "Produce engaging fireside chat sessions with professional speaker management, branded visuals, live moderation, and seamless virtual delivery.",
       "icon": "MessageSquare",
       "id": "fireside-chat-production",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Multi-Speaker Virtual Event Management"
+      "title": "Fireside Chat Production"
     },
     {
-      "description": "Deliver professional virtual events with high-quality HD and 4K video production. Clear visuals help keep your audience connected and engaged.",
+      "description": "Manage multi-speaker virtual panel discussions with audience interaction features, technical support, and smooth conversation flow.",
       "icon": "Users",
       "id": "panel-discussion-production",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "HD and 4K Virtual Video Production"
+      "title": "Panel Discussion Production"
     },
     {
-      "description": "Our moderation team manages speaker transitions, audience interactions, and live sessions with confidence. This keeps your virtual event organized and on schedule.",
+      "description": "Deliver professional webinars with branded presentations, audience engagement tools, speaker coordination, and reliable event streaming.",
       "icon": "MonitorPlay",
       "id": "webinar-production-services",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Live Event Moderation Support"
+      "title": "Webinar Production Services"
     },
     {
-      "description": "Create a consistent virtual event experience with custom graphics and branded overlays. Every visual element is designed to strengthen your brand presence.",
+      "description": "Create polished executive conversations and leadership discussions optimized for virtual audiences and digital platforms.",
       "icon": "Mic",
       "id": "executive-virtual-interviews",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Branded Event Graphics and Overlays"
+      "title": "Executive Virtual Interviews"
     },
     {
-      "description": "We help integrate your preferred event platform and manage the technical setup for reliable streaming. Everything is configured for a smooth attendee experience.",
+      "description": "Connect physical and virtual audiences through hybrid event video production solutions designed for maximum audience engagement.",
       "icon": "Radio",
       "id": "hybrid-event-production",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Platform Integration and Streaming Support"
+      "title": "Hybrid Event Production"
     },
     {
-      "description": "Connect in-person and virtual audiences through professionally managed hybrid event production. We ensure both experiences are engaging, seamless, and fully synchronized.",
+      "description": "Enhance your online events with custom overlays, branded graphics, intro videos, lower thirds, and visual storytelling elements.",
       "icon": "Palette",
       "id": "virtual-event-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Hybrid Event Production Capabilities"
+      "title": "Virtual Event Branding"
     }
   ]
 }

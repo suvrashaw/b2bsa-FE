@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Booth Logistics Services",
   "services": [
     {
-      "description": "We coordinate booth logistics to ensure everything reaches the venue safely and on time. Our team manages the process so you can focus on your event.",
+      "description": "Manage venue communication, floor planning, setup schedules, and operational coordination for smooth event execution.",
       "icon": "MapPin",
       "id": "venue-coordination",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Logistics Management"
+      "title": "Venue Coordination"
     },
     {
-      "description": "From delivery to installation, we oversee every step of your booth setup. Everything is coordinated to ensure your exhibit is ready before the event begins.",
+      "description": "Coordinate booth installation, branding materials, equipment delivery, and onsite setup support for exhibitions and trade shows.",
       "icon": "Layers",
       "id": "booth-setup",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Booth Setup and Coordination"
+      "title": "Booth Setup & Material Handling"
     },
     {
-      "description": "Our on-site team monitors booth operations and resolves issues as they arise. This helps your event run smoothly from opening to closing.",
+      "description": "Handle transportation logistics, shipment coordination, and event material movement efficiently across locations.",
       "icon": "Globe2",
       "id": "transportation",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "On-Site Event Supervision"
+      "title": "Transportation & Shipment Management"
     },
     {
-      "description": "We organize the delivery, setup, and management of event equipment required for your booth. Every detail is handled to keep your exhibit operating without interruptions.",
+      "description": "Work closely with production teams, suppliers, venue partners, and event vendors to ensure seamless event operations.",
       "icon": "Users",
       "id": "vendor-coordination",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Equipment Coordination"
+      "title": "Vendor Coordination"
     },
     {
-      "description": "Exhibiting overseas becomes easier with experienced logistics support. We coordinate shipments, timelines, and local requirements for a hassle-free event experience.",
+      "description": "Provide onsite logistics management for attendee flow, equipment handling, setup supervision, and operational assistance.",
       "icon": "Target",
       "id": "onsite-support",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "International Event Logistics Support"
+      "title": "Onsite Event Support"
     },
     {
-      "description": "We plan the operational details that keep your event running efficiently. From vendor coordination to execution, every step is carefully managed.",
+      "description": "Oversee event timelines, coordination activities, and operational workflows to ensure successful event delivery.",
       "icon": "Zap",
       "id": "operations-management",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Corporate Event Operations Planning"
+      "title": "Event Operations Management"
     }
   ]
 }

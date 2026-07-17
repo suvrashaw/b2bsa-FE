@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Corporate Event Services",
   "services": [
     {
-      "description": "From planning to execution, we manage every stage of your event with precision. Our team handles the details so you can focus on your guests and business goals.",
+      "description": "Manage event strategy, scheduling, venue coordination, audience experience, and operational planning for successful business events.",
       "icon": "Target",
       "id": "event-planning",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "End-to-End Event Management"
+      "title": "Corporate Event Planning"
     },
     {
-      "description": "We plan conferences and summits that run smoothly and deliver a great attendee experience. Every session, space, and schedule is carefully coordinated for maximum impact.",
+      "description": "Deliver professional conference and executive summit experiences with seamless event coordination and onsite support.",
       "icon": "Mic",
       "id": "conference-summit",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Conference and Summit Planning"
+      "title": "Conference & Summit Management"
     },
     {
-      "description": "Keep your exhibition running without disruptions with reliable on-ground support. We coordinate operations behind the scenes so your team can focus on meaningful conversations.",
+      "description": "Support trade shows and exhibitions with booth management, branding, logistics, staffing, and attendee engagement solutions.",
       "icon": "Presentation",
       "id": "trade-show",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Operational Support"
+      "title": "Trade Show & Exhibition Support"
     },
     {
-      "description": "Create a consistent event experience with branding and production that reflects your business. From visual elements to event assets, every detail is managed with care.",
+      "description": "Organize business networking events, VIP receptions, hospitality experiences, and executive meetups.",
       "icon": "Users",
       "id": "networking",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Event Branding and Production"
+      "title": "Networking Event Solutions"
     },
     {
-      "description": "Our on-site team oversees event operations in real time to keep everything on schedule. We handle the unexpected so your event runs seamlessly from start to finish.",
+      "description": "Enhance event experiences with professional branding, signage, stage setup, visual production, and media support.",
       "icon": "Palette",
       "id": "branding-production",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "On-Site Event Management"
+      "title": "Event Branding & Production"
     },
     {
-      "description": "Managing events across different locations becomes easier with the right logistics partner. We coordinate timelines, vendors, and event requirements to ensure smooth execution anywhere in the world.",
+      "description": "Provide complete event management support from planning and coordination to onsite execution and post-event assistance.",
       "icon": "Zap",
       "id": "end-to-end",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Global Event Logistics Coordination"
+      "title": "End-to-End Event Execution"
     }
   ]
 }

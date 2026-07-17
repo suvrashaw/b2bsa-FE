@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Event Branding Solutions",
   "services": [
     {
-      "description": "Make your booth impossible to miss with branding that attracts attention and reflects your identity. Every element is designed to create a strong first impression on the show floor.",
+      "description": "Create cohesive brand experiences for conferences, executive events, networking sessions, and corporate gatherings.",
       "icon": "Palette",
       "id": "corporate-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Trade Show Booth Branding"
+      "title": "Corporate Event Branding"
     },
     {
-      "description": "Guide, inform, and engage your audience with clear and professionally produced event signage. From directional signs to promotional displays, every piece is built for maximum visibility.",
+      "description": "Design and execute impactful trade show booth branding that increases visibility and audience engagement.",
       "icon": "Presentation",
       "id": "booth-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Event Signage Production"
+      "title": "Booth Branding Services"
     },
     {
-      "description": "Create a polished stage presence with branded backdrops that enhance every presentation and photo opportunity. We ensure your brand stays front and center throughout the event.",
+      "description": "Enhance exhibition spaces with branded backdrops, banners, graphics, signage, and experiential visual elements.",
       "icon": "Layers",
       "id": "exhibition-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Stage and Backdrop Branding"
+      "title": "Exhibition Branding Solutions"
     },
     {
-      "description": "Bring your brand to life through immersive experiences that encourage interaction and leave a lasting impression. Every touchpoint is designed to make your event more memorable.",
+      "description": "Deliver complete onsite event branding including entrance branding, directional signage, stage visuals, and event graphics.",
       "icon": "MapPin",
       "id": "onsite-branding",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Experiential Event Branding"
+      "title": "Onsite Branding Solutions"
     },
     {
-      "description": "From entrance displays to oversized wall graphics, we create bold visuals that stand out in any event space. Every graphic is produced to deliver maximum brand impact.",
+      "description": "Support experiential marketing campaigns and branded activations that encourage audience interaction and engagement.",
       "icon": "Sparkles",
       "id": "brand-activation",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Large Format Event Graphics"
+      "title": "Corporate Brand Activation"
     },
     {
-      "description": "From planning and production to on-site installation, we manage every aspect of your event branding. You get a seamless experience with consistent branding across the entire venue.",
+      "description": "Create immersive and visually engaging event environments that strengthen brand recall and customer experiences.",
       "icon": "Zap",
       "id": "branded-experiences",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "End-to-End Branding Execution"
+      "title": "Branded Event Experiences"
     }
   ]
 }

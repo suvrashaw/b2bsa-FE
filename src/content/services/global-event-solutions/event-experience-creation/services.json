@@ -2,46 +2,53 @@
   "heading": "What We Help You Create",
   "services": [
     {
-      "description": "Every successful event starts with a clear idea. We shape concepts that reflect your goals, connect with your audience, and create memorable experiences from the very beginning.",
+      "description": "We design and manage professional event environments for business audiences, leadership teams, customers, partners, and prospects. Every element is planned to reflect your brand positioning and support meaningful conversations.",
       "icon": "Building2",
       "id": "corporate-event-experiences",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Event Concept Development"
+      "title": "Corporate Event Experiences"
     },
     {
-      "description": "We map every step of your attendee journey to keep people engaged from arrival to follow-up. Every interaction is planned with purpose to improve the overall event experience.",
+      "description": "We help brands introduce new products, platforms, or solutions through immersive launch environments, storytelling-led presentations, live demos, visual content, and audience engagement moments.",
       "icon": "Rocket",
       "id": "product-launch-experiences",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Audience Journey Planning"
+      "title": "Product Launch Experiences"
     },
     {
-      "description": "Turn your brand into something people can experience, not just see. We create immersive brand moments that leave a lasting impression on your audience.",
+      "description": "For high-value prospects and senior decision-makers, we create focused, premium experiences that encourage deeper discussion, relationship building, and trust-led selling.",
       "icon": "Crown",
       "id": "executive-roundtables",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Brand Experience Design"
+      "title": "Executive Roundtables and Private Events"
     },
     {
-      "description": "From keynote sessions to networking spaces, we plan conference experiences that keep attendees informed, engaged, and connected throughout the event.",
+      "description": "We develop interactive brand experiences that help audiences engage with your message, product, or campaign in a more memorable and participative way.",
       "icon": "Sparkles",
       "id": "brand-activations",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Conference and Summit Experience Planning"
+      "title": "Brand Activations"
     },
     {
-      "description": "We develop event branding and visual assets that create a consistent look across every touchpoint. Your audience enjoys a professional and memorable brand experience from start to finish.",
+      "description": "We support scalable event experience planning for brands that need to take their message across multiple cities, regions, or markets with consistency and impact.",
       "icon": "Globe2",
       "id": "roadshows-multi-city",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Event Branding and Visual Asset Planning"
+      "title": "Roadshows and Multi-City Events"
     },
     {
-      "description": "We design interactive engagement zones that encourage conversations, participation, and meaningful connections. These spaces keep visitors involved and make every interaction more valuable.",
+      "description": "From agenda flow to stage experience, attendee engagement, branding, and post-event handoff, we help create structured business events that deliver value for both the brand and the audience.",
       "icon": "Presentation",
       "id": "conferences-summits",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Engagement Zone Planning"
+      "title": "Conferences, Summits, and Partner Events"
+    },
+    {
+      "description": "We help brands extend event reach through virtual and hybrid experiences supported by content, streaming, digital engagement, and audience follow-up workflows.",
+      "icon": "Wifi",
+      "id": "hybrid-virtual-experiences",
+      "image": "/media/home/hero/home_hero_bg.avif",
+      "title": "Hybrid and Virtual Experiences"
     }
   ]
 }

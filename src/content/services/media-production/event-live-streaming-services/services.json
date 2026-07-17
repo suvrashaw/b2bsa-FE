@@ -2,46 +2,46 @@
   "heading": "What's Included in Our Event Live Streaming Services",
   "services": [
     {
-      "description": "Capture every moment from the best angles with a professional multi-camera setup. We deliver a polished viewing experience for both in-person and virtual audiences.",
+      "description": "Dynamic live streams with multiple camera angles for keynotes, panels, and product launches.",
       "icon": "Video",
       "id": "multi-camera",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Multi-Camera Production Setup"
+      "title": "Multi-Camera Live Production"
     },
     {
-      "description": "Stream your event in crystal-clear HD or 4K quality for a professional broadcast experience. High-quality video keeps your audience engaged from start to finish.",
+      "description": "YouTube Live, LinkedIn Live, Vimeo, custom RTMP, private portals, multi-platform simultaneous streaming available.",
       "icon": "Globe",
       "id": "platform",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "HD and 4K Live Streaming Capabilities"
+      "title": "Platform Management"
     },
     {
-      "description": "Our production team manages live camera switching and video mixing in real time. Every transition is seamless, keeping your event running smoothly.",
+      "description": "Speaker names, session titles, sponsor overlays, and live branded transitions.",
       "icon": "Layers",
       "id": "graphics",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Live Switching and Video Mixing"
+      "title": "Real-Time Graphics and Lower Thirds"
     },
     {
-      "description": "Add branded graphics, speaker details, and visual overlays to create a professional live stream. Every element is designed to reinforce your brand throughout the broadcast.",
+      "description": "Q&A, polls, moderated chat, and interactive tools for remote audiences.",
       "icon": "MessageSquare",
       "id": "engagement",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Live Graphics and Branded Overlays"
+      "title": "Live Audience Engagement"
     },
     {
-      "description": "Whether your event is on-site, remote, or hybrid, our production team provides reliable technical support. We ensure everything runs smoothly behind the scenes.",
+      "description": "Sessions archived for post-event webinars, gated content, social clips, and internal use.",
       "icon": "Archive",
       "id": "archive",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "On-Site and Remote Production Support"
+      "title": "Recording and Archive Delivery"
     },
     {
-      "description": "Reach your audience wherever they are by streaming across multiple platforms at the same time. We help you extend your event's reach without added complexity.",
+      "description": "Planning, testing, live troubleshooting, backup workflows, and on-site technical coordination.",
       "icon": "ShieldCheck",
       "id": "support",
       "image": "/media/home/hero/home_hero_bg.avif",
-      "title": "Multi-Platform Live Streaming"
+      "title": "Global Technical Support"
     }
   ]
 }
