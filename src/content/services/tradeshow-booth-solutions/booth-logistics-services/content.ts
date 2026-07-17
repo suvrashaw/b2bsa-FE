@@ -15,7 +15,7 @@ export const EVENT_LOGISTICS_CASE_STUDIES = {
 
 export const EVENT_LOGISTICS_INDUSTRIES = {
   ...INDUSTRIES_DATA,
-  items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item),
+  items: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_LOGISTICS_CONTACT_CTA = {

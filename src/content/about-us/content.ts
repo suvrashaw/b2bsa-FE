@@ -36,7 +36,6 @@ export { default as ABOUT_CORE_VALUES } from "./core-values.json";
 export const ABOUT_HERO: StaticPageHero = HERO_DATA;
 export { default as ABOUT_ORIGIN_TIMELINE } from "./origin-timeline.json";
 export { default as ABOUT_SIGNATURE_SERVICES } from "./services.json";
-export { default as ABOUT_SIGNATURE_SERVICES_STACK } from "./signature-services-stack.json";
 export { default as ABOUT_TEAM_IMAGES } from "./team-images.json";
 
 export { default as ABOUT_VISION_MISSION } from "./vision-mission.json";

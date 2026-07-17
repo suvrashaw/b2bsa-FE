@@ -23,7 +23,7 @@ export const EVENT_BRANDING_CASE_STUDIES = {
 
 export const EVENT_BRANDING_INDUSTRIES = {
   ...INDUSTRIES_DATA,
-  items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item),
+  items: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const EVENT_BRANDING_CONTACT_CTA = {

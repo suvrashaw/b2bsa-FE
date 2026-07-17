@@ -1,6 +1,5 @@
 [
   {
-    "color": "bg-brand-blue",
     "description": "SaaS platforms, enterprise software, cloud infrastructure, and technology product companies.",
     "icon": "Cpu",
     "id": "technology-saas",
@@ -8,7 +7,6 @@
     "title": "Technology & SaaS"
   },
   {
-    "color": "bg-brand-cyan",
     "description": "Financial technology, payments, banking innovation, and investment platforms.",
     "icon": "Coins",
     "id": "fintech",
@@ -16,7 +14,6 @@
     "title": "FinTech"
   },
   {
-    "color": "bg-brand-primary",
     "description": "Pharmaceutical companies, medical device manufacturers, and healthcare technology providers.",
     "icon": "Activity",
     "id": "healthcare-pharma",
@@ -24,7 +21,6 @@
     "title": "Healthcare & Pharma"
   },
   {
-    "color": "bg-brand-blue",
     "description": "Industrial manufacturers, OEMs, and engineering companies at global trade exhibitions.",
     "icon": "Settings",
     "id": "manufacturing",
@@ -32,7 +28,6 @@
     "title": "Manufacturing"
   },
   {
-    "color": "bg-brand-cyan",
     "description": "Airlines, airports, MRO providers, and aviation technology companies at major industry shows.",
     "icon": "Plane",
     "id": "aviation",
@@ -40,7 +35,6 @@
     "title": "Aviation"
   },
   {
-    "color": "bg-brand-primary",
     "description": "Global retailers, e-commerce platforms, and consumer goods brands at major trade events.",
     "icon": "ShoppingBag",
     "id": "retail-ecommerce",
@@ -48,7 +42,6 @@
     "title": "Retail & E-commerce"
   },
   {
-    "color": "bg-brand-blue",
     "description": "TV broadcasters, streaming platforms, content producers, and media technology companies.",
     "icon": "Radio",
     "id": "media-broadcasting",
@@ -56,7 +49,6 @@
     "title": "Media & Broadcasting"
   },
   {
-    "color": "bg-brand-cyan",
     "description": "Mobile operators, network equipment vendors, and telecom technology innovators.",
     "icon": "Wifi",
     "id": "telecommunications",
@@ -64,7 +56,6 @@
     "title": "Telecommunications"
   },
   {
-    "color": "bg-brand-blue",
     "description": "Automotive OEMs, Tier 1 suppliers, and mobility technology companies at global auto shows.",
     "icon": "Wrench",
     "id": "automotive",
@@ -72,7 +63,6 @@
     "title": "Automotive"
   },
   {
-    "color": "bg-brand-primary",
     "description": "Energy producers, utility companies, and cleantech innovators at ADIPEC and similar shows.",
     "icon": "Zap",
     "id": "energy-utilities",

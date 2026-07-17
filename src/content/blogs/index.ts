@@ -8,7 +8,6 @@ import { RESEARCH_SERVICES } from "@/content/services/market-research/content";
 import { MEDIA_SERVICES } from "@/content/services/media-production/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
-import BLOGS_SECTION_DATA from "./blogs-section.json";
 import BLOGS_CONFIG from "./config.json";
 import CONTACT_DATA from "./contactus.json";
 import LINKEDIN_POSTS_DATA from "./linkedin-posts.json";
@@ -158,11 +157,6 @@ export interface LinkedInPost {
 }
 
 export const LINKEDIN_POSTS: LinkedInPost[] = LINKEDIN_POSTS_DATA;
-
-export const BLOG_POSTS = {
-  ...BLOGS_SECTION_DATA,
-  blogs: BLOG_POSTS_SUMMARY,
-};
 
 export const BLOG_CONTACT = {
   ...CONTACT_DATA,

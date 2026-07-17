@@ -22,7 +22,6 @@ import {
   ABOUT_PAGE,
   ABOUT_RECENT_EVENTS,
   ABOUT_SIGNATURE_SERVICES,
-  ABOUT_SIGNATURE_SERVICES_STACK,
   ABOUT_TEAM_IMAGES,
   ABOUT_VALUES,
   ABOUT_VISION_MISSION,
@@ -205,7 +204,7 @@ const Page = () => {
       {/* Signature Services */}
       <ServicesStack
         heading={ABOUT_SIGNATURE_SERVICES.heading}
-        services={ABOUT_SIGNATURE_SERVICES_STACK}
+        services={ABOUT_SIGNATURE_SERVICES.services}
         showChildLinks={false}
       />
 

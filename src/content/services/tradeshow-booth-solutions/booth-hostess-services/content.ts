@@ -19,7 +19,7 @@ export const BOOTH_HOSTESS_CONTACT_CTA = {
 
 export const BOOTH_HOSTESS_INDUSTRIES = {
   ...INDUSTRIES_DATA,
-  items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item),
+  items: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export const BOOTH_HOSTESS_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;

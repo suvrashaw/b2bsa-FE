@@ -20,7 +20,7 @@ export const EVENT_EXPERIENCE_CONTACT_CTA = {
 
 export const EVENT_EXPERIENCE_INDUSTRIES = {
   ...INDUSTRIES_DATA,
-  items: GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item),
+  items: GLOBAL_INDUSTRY_SERVICES,
 };
 
 export { default as EVENT_EXPERIENCE_CAPABILITIES } from "./capabilities.json";

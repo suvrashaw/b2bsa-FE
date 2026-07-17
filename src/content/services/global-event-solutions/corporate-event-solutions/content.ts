@@ -21,7 +21,7 @@ export const CORP_EVENT_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-const industryItems = GLOBAL_INDUSTRY_SERVICES.map(({ color: _color, ...item }) => item);
+const industryItems = GLOBAL_INDUSTRY_SERVICES;
 const aviationIndustry = industryItems.find((s) => s.id === "aviation");
 const otherIndustries = industryItems.filter((s) => s.id !== "aviation");
 
