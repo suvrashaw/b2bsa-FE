@@ -10,9 +10,7 @@ export const toTitleCase = (value: string) =>
 
 export const toHeadingCaps = (value: string) => value.toUpperCase();
 
-export const buildCapabilityFeatures = <
-  T extends { description?: string; icon?: string; image: string; title: string },
->(
+export const buildCapabilityFeatures = <T extends { description?: string; icon?: string; title: string }>(
   phases: T[]
 ) =>
   phases.map((phase) => ({
@@ -22,7 +20,6 @@ export const buildCapabilityFeatures = <
       .toLowerCase()
       .replaceAll(/[^a-z0-9]+/g, "-")
       .replaceAll(/(^-|-$)/g, ""),
-    image: phase.image,
     label: phase.title,
   }));
 

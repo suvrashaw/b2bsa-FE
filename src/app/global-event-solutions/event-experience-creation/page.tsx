@@ -37,7 +37,6 @@ const servicesIncludeFeatures = EVENT_EXPERIENCE_CAPABILITIES.servicesInclude.it
     description: item.description,
     icon: item.icon,
     id: item.id,
-    image: item.image,
     label: item.label,
   })
 );

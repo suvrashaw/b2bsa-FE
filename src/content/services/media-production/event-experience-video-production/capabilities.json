@@ -5,42 +5,36 @@
     {
       "icon": "Camera",
       "id": "multi-camera-event-coverage",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Multi-Camera Event Coverage",
       "description": "Multi-camera coverage for keynotes, sessions, booth activity, and audience reactions."
     },
     {
       "icon": "Film",
       "id": "4k-video-production",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "4K Video Production",
       "description": "Professional camera workflows for sharp, polished event footage and final delivery."
     },
     {
       "icon": "Plane",
       "id": "drone-event-videography",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Drone Event Videography",
       "description": "Aerial venue footage where location, permissions, and event format make it appropriate."
     },
     {
       "icon": "Video",
       "id": "gimbal-cinematic-shots",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Gimbal & Cinematic Shots",
       "description": "Gimbal and motion shots that give event videos a more cinematic, dynamic feel."
     },
     {
       "icon": "Sparkles",
       "id": "branded-motion-graphics",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Branded Motion Graphics",
       "description": "Lower thirds, title cards, logo animations, branded transitions, and event-specific graphics."
     },
     {
       "icon": "Zap",
       "id": "fast-turnaround-post-production",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "label": "Fast Turnaround Post-Production",
       "description": "Fast post-event editing support for immediate publishing and internal communication needs."
     }

@@ -16,6 +16,7 @@ import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
   BOOTH_DESIGN_BLOGS_SECTION,
+  BOOTH_DESIGN_CAPABILITIES,
   BOOTH_DESIGN_CASE_STUDIES,
   BOOTH_DESIGN_CLIENT_LOGOS,
   BOOTH_DESIGN_CONTACT_CTA,
@@ -25,7 +26,6 @@ import {
   BOOTH_DESIGN_INTRO,
   BOOTH_DESIGN_PAGE,
   BOOTH_DESIGN_PROCESS,
-  BOOTH_DESIGN_SECONDARY_SERVICES,
   BOOTH_DESIGN_WHY_CHOOSE_US,
 } from "@/content/services/tradeshow-booth-solutions/trade-show-booth-design/content";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
@@ -34,7 +34,7 @@ export const metadata: Metadata = getMarketingPageMetadata(BOOTH_DESIGN_PAGE);
 
 const EMPTY_CONTACT_MODAL = {};
 
-const SHOWCASE_SERVICES = BOOTH_DESIGN_SECONDARY_SERVICES.items.map((item) => ({
+const SHOWCASE_SERVICES = BOOTH_DESIGN_DELIVERABLES.items.map((item) => ({
   description: item.descriptions.join(" "),
   icon: item.icon,
   id: item.id,
@@ -99,16 +99,16 @@ const Page = () => {
       preProcessSections={
         <ServicesStack
           cardCtaMode="none"
-          commonCtaLabel={BOOTH_DESIGN_SECONDARY_SERVICES.ctaLabel}
+          commonCtaLabel={BOOTH_DESIGN_DELIVERABLES.ctaLabel}
           contactModal={EMPTY_CONTACT_MODAL}
-          heading={BOOTH_DESIGN_SECONDARY_SERVICES.heading}
+          heading={BOOTH_DESIGN_DELIVERABLES.heading}
           serviceLabel=""
           services={SHOWCASE_SERVICES}
           showCommonCta
         />
       }
       process={BOOTH_DESIGN_PROCESS}
-      services={BOOTH_DESIGN_DELIVERABLES}
+      services={BOOTH_DESIGN_CAPABILITIES}
       servicesSectionType="carousel"
       showPhaseNumbers={false}
       spotlight={BOOTH_DESIGN_INTRO}

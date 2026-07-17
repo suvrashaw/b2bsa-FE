@@ -5,42 +5,36 @@
       "description": "We design booth layouts around how attendees actually move through a crowded exhibition floor, entrance angles, demo zones, meeting areas, and visual anchors placed to increase qualified engagement.",
       "icon": "box",
       "id": "architecture",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Spatial Architecture and Traffic Flow"
     },
     {
       "description": "Your exhibition booth design should be unmistakably yours from 30 feet away, translating brand identity into large-format graphics, messaging hierarchy, and surface treatments.",
       "icon": "palette",
       "id": "branding",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Graphic Design and Brand Integration"
     },
     {
       "description": "Touchscreens, live product demos, and digital storytelling that turn passive floor visits into active brand engagement.",
       "icon": "cpu",
       "id": "digital",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Interactive and Digital Display Integration"
     },
     {
       "description": "For complex products that cannot be shown on a trade show floor, immersive technology that lets buyers explore what they cannot see.",
       "icon": "monitor",
       "id": "ar-vr",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "AR/VR Experience Design"
     },
     {
       "description": "Private meeting rooms, semi-private discussion areas, and live demo zones, planned as primary commercial requirements, not afterthoughts, to move qualified prospects from curiosity to serious conversation.",
       "icon": "users",
       "id": "planning",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Meeting Room and Demo Zone Planning"
     },
     {
       "description": "The most underused commercial tool in exhibition stand design, accent lighting, screen placement, and material contrast that increase dwell time and elevate brand premium.",
       "icon": "sun",
       "id": "lighting",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Lighting and Atmosphere Engineering"
     }
   ]

@@ -4,38 +4,32 @@
     {
       "description": "We coordinate booth logistics to ensure everything reaches the venue safely and on time. Our team manages the process so you can focus on your event.",
       "icon": "Truck",
-      "title": "Trade show logistics management",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Trade show logistics management"
     },
     {
       "description": "From delivery to installation, we oversee every step of your booth setup. Everything is coordinated to ensure your exhibit is ready before the event begins.",
       "icon": "Wrench",
-      "title": "Booth setup coordination",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Booth setup coordination"
     },
     {
       "description": "Our on-site team monitors booth operations and resolves issues as they arise. This helps your event run smoothly from opening to closing.",
       "icon": "ShieldCheck",
-      "title": "Onsite event supervision",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Onsite event supervision"
     },
     {
       "description": "We organize the delivery, setup, and management of event equipment required for your booth. Every detail is handled to keep your exhibit operating without interruptions.",
       "icon": "Settings",
-      "title": "Equipment coordination",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Equipment coordination"
     },
     {
       "description": "Exhibiting overseas becomes easier with experienced logistics support. We coordinate shipments, timelines, and local requirements for a hassle-free event experience.",
       "icon": "Plane",
-      "title": "International event logistics support",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "International event logistics support"
     },
     {
       "description": "We plan the operational details that keep your event running efficiently. From vendor coordination to execution, every step is carefully managed.",
       "icon": "ClipboardList",
-      "title": "Corporate event operations planning",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Corporate event operations planning"
     }
   ],
   "heading": "Event Logistics Capabilities & Operational Expertise"

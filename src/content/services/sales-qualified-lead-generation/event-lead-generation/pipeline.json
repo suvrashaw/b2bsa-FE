@@ -1,24 +1,4 @@
 {
-  "heading": "How Your Event Lead Pipeline Will Look",
-  "description": "From booth traffic to CRM-ready opportunities — this is the flow we manage for every event we attend.",
-  "steps": [
-    {
-      "title": "Pre-Event Outreach",
-      "description": "We build targeted prospect lists, run LinkedIn and email warm-up campaigns, and schedule booth meetings before the show opens. Arriving with pre-booked conversations gives your team an immediate pipeline advantage."
-    },
-    {
-      "title": "On-Ground Lead Capture",
-      "description": "Our team deploys to the event floor, actively engages target accounts, and captures contact data in real time using CRM-integrated tools — no badge-swaps that go nowhere."
-    },
-    {
-      "title": "Live Qualification",
-      "description": "Every contact is scored on-site against your ICP: job title, company size, buying authority, and stated timeline. Only buyers who meet your criteria advance to MQL status."
-    },
-    {
-      "title": "CRM Handoff",
-      "description": "Qualified leads are delivered to your sales team within 24 hours of the event closing, with full context notes, qualification scores, and recommended next-step actions."
-    }
-  ],
   "stages": [
     {
       "label": "Leads",

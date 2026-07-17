@@ -24,12 +24,12 @@ export const BOOTH_DESIGN_CONTACT_CTA = {
 
 export const BOOTH_DESIGN_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
+export { default as BOOTH_DESIGN_CAPABILITIES } from "./capabilities.json";
 export { default as BOOTH_DESIGN_CLIENT_LOGOS } from "./client-logos.json";
-export { default as BOOTH_DESIGN_FAQ } from "./faq.json";
 
+export { default as BOOTH_DESIGN_FAQ } from "./faq.json";
 export { default as BOOTH_DESIGN_HERO } from "./hero.json";
 export { default as BOOTH_DESIGN_PAGE } from "./page.json";
 export { default as BOOTH_DESIGN_PROCESS } from "./process.json";
-export { default as BOOTH_DESIGN_SECONDARY_SERVICES } from "./secondary-services.json";
 export { default as BOOTH_DESIGN_DELIVERABLES } from "./services.json";
 export { default as BOOTH_DESIGN_WHY_CHOOSE_US } from "./why-choose-us.json";

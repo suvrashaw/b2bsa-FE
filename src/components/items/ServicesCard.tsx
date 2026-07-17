@@ -113,7 +113,7 @@ export const ServicesCard = ({
           className="object-cover max-md:scale-105"
           fill
           sizes="(max-width: 768px) 100vw, 60vw"
-          src={service.image}
+          src={service.image ?? "/media/home/hero/home_hero_bg.avif"}
         />
         {/* Mobile: blur at top third */}
         <div className="absolute inset-x-0 top-0 h-1/3 backdrop-blur-sm md:hidden" />

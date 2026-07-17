@@ -4,38 +4,32 @@
     {
       "description": "Our professional booth hostesses' welcome visitors, answer basic questions, and create a positive first impression. They help your team stay focused on meaningful business conversations.",
       "icon": "Users2",
-      "title": "Trade show booth staffing",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Trade show booth staffing"
     },
     {
       "description": "Ensure a smooth check-in experience with efficient registration support. We help manage attendee arrivals quickly and professionally.",
       "icon": "ClipboardList",
-      "title": "Conference registration support",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Conference registration support"
     },
     {
       "description": "Make every VIP guest feel valued with dedicated assistance throughout the event. From greeting to coordination, we ensure a seamless experience.",
       "icon": "Award",
-      "title": "VIP guest management",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "VIP guest management"
     },
     {
       "description": "Keep your booth active with hostesses who encourage conversations and guide visitors. Their support helps create a more engaging booth experience.",
       "icon": "MessageSquare",
-      "title": "Audience engagement assistance",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Audience engagement assistance"
     },
     {
       "description": "Connect confidently with international attendees through multilingual hostess support. Clear communication helps every visitor feel welcome and understood.",
       "icon": "Globe",
-      "title": "Multilingual hostess services",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Multilingual hostess services"
     },
     {
       "description": "Our hostesses represent your brand with professionalism and confidence. They help deliver a consistent experience that reflects your company values.",
       "icon": "Shield",
-      "title": "Brand representation support",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Brand representation support"
     }
   ],
   "heading": "Event Staffing Capabilities & Guest Engagement Support"

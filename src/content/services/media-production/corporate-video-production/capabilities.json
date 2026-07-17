@@ -6,42 +6,36 @@
       "description": "Who you are, what you stand for, and why buyers should trust you, for websites, investor comms, and enterprise credibility.",
       "icon": "Star",
       "id": "brand",
-      "image": "/media/services/media-production/corporate-video-production/deliverables-3.avif",
       "title": "Brand and Culture Films"
     },
     {
-      "description": "Complex platforms and solutions simplified into clear video stories buyers understand in 2–3 minutes, eliminating friction from every sales qualification call.",
+      "description": "Complex platforms and solutions simplified into clear video stories buyers understand in 2\u20133 minutes, eliminating friction from every sales qualification call.",
       "icon": "Cpu",
       "id": "product",
-      "image": "/media/home/services/corporate-media-production.avif",
       "title": "Product and Solution Explainer Videos"
     },
     {
       "description": "Leadership perspectives and industry commentary that build credibility and generate the most-shared B2B content format on LinkedIn.",
       "icon": "Users",
       "id": "thought",
-      "image": "/media/services/media-production/corporate-video-production/deliverables-1.avif",
       "title": "Executive Interview and Thought Leadership Series"
     },
     {
       "description": "Polished content for funding narratives, annual reviews, and stakeholder briefings.",
       "icon": "TrendingUp",
       "id": "investor",
-      "image": "/media/home/services/branding.avif",
       "title": "Investor and Board Presentation Videos"
     },
     {
       "description": "Demo videos, product walkthroughs, and objection-handling clips that help sales teams explain value faster and more consistently.",
       "icon": "Zap",
       "id": "sales",
-      "image": "/media/services/media-production/corporate-video-production/deliverables-2.avif",
       "title": "Sales Enablement Video Content"
     },
     {
       "description": "Real outcomes from real customers, the most trusted content format in B2B purchasing decisions.",
       "icon": "MessageSquare",
       "id": "testimonial",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Customer Testimonial and Case Study Films"
     }
   ]

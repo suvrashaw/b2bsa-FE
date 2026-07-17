@@ -5,35 +5,30 @@
       "description": "Concise, leadership-ready findings with context, risks, opportunities, and recommended actions.",
       "icon": "Presentation",
       "id": "exec-briefing",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Executive Strategy Briefing Decks"
     },
     {
       "description": "Full-depth documentation with methodology, findings, and source notes.",
       "icon": "FileText",
       "id": "detailed-reports",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Detailed Research Reports"
     },
     {
       "description": "Interactive findings presentations with real-time Q&A.",
       "icon": "Video",
       "id": "live-briefings",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Live Analyst Briefings"
     },
     {
       "description": "Continuous tracking of competitors, market shifts, and buyer behaviour.",
       "icon": "RefreshCcw",
       "id": "ongoing-subscriptions",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Ongoing Intelligence Subscriptions"
     },
     {
       "description": "Market maps, competitor comparisons, and account views.",
       "icon": "LayoutDashboard",
       "id": "custom-dashboards",
-      "image": "/media/home/hero/home_hero_bg.avif",
       "title": "Custom Dashboards and Data Visualisation"
     }
   ]

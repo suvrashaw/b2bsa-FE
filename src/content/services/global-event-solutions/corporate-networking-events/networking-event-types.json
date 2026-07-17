@@ -2,7 +2,6 @@
   "heading": "Event Types We Cover",
   "services": [
     {
-      "color": "bg-brand-blue",
       "description": "Professional networking experiences designed for leadership teams, investors, partners, and C-level executives.",
       "icon": "Users2",
       "id": "executive-networking-events",
@@ -10,7 +9,6 @@
       "title": "Executive Networking Events"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Corporate networking receptions that encourage business discussions, relationship building, and audience engagement.",
       "icon": "Sparkles",
       "id": "networking-receptions",
@@ -18,7 +16,6 @@
       "title": "Networking Receptions"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Exclusive hospitality events for clients, executives, sponsors, and strategic business partners.",
       "icon": "Star",
       "id": "vip-hospitality-events",
@@ -26,7 +23,6 @@
       "title": "VIP Hospitality Events"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Professional networking dinner event solutions focused on client engagement and relationship development.",
       "icon": "UtensilsCrossed",
       "id": "business-networking-dinners",
@@ -34,7 +30,6 @@
       "title": "Business Networking Dinners"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Networking support for conferences, summits, exhibitions, and trade shows.",
       "icon": "Monitor",
       "id": "conference-networking-sessions",
@@ -42,7 +37,6 @@
       "title": "Conference Networking Sessions"
     },
     {
-      "color": "bg-brand-primary",
       "description": "Organized networking experiences for partner engagement, client appreciation, and business collaboration opportunities.",
       "icon": "Handshake",
       "id": "partner-client-meetups",
@@ -50,7 +44,6 @@
       "title": "Partner & Client Meetups"
     },
     {
-      "color": "bg-brand-blue",
       "description": "Networking event support for trade shows and exhibitions with audience engagement and hospitality coordination.",
       "icon": "Store",
       "id": "trade-show-networking-events",
@@ -58,7 +51,6 @@
       "title": "Trade Show Networking Events"
     },
     {
-      "color": "bg-brand-cyan",
       "description": "Premium hospitality experiences for executive meetings, business gatherings, and relationship-building events.",
       "icon": "Building2",
       "id": "corporate-hospitality-events",

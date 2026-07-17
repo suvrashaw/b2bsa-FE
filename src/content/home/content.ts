@@ -115,7 +115,7 @@ export interface HomeServiceItem {
   href?: string;
   icon: string;
   id: string;
-  image: string;
+  image?: string;
   title: string;
 }
 

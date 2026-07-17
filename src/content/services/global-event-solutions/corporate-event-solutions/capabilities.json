@@ -4,38 +4,32 @@
     {
       "description": "From planning to execution, we manage every stage of your event with precision. Our team handles the details so you can focus on your guests and business goals.",
       "icon": "ClipboardList",
-      "title": "End-to-end event management",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "End-to-end event management"
     },
     {
       "description": "We plan conferences and summits that run smoothly and deliver a great attendee experience. Every session, space, and schedule is carefully coordinated for maximum impact.",
       "icon": "Presentation",
-      "title": "Conference and summit planning",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Conference and summit planning"
     },
     {
       "description": "Keep your exhibition running without disruptions with reliable on-ground support. We coordinate operations behind the scenes so your team can focus on meaningful conversations.",
       "icon": "Settings",
-      "title": "Trade show operational support",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Trade show operational support"
     },
     {
       "description": "Create a consistent event experience with branding and production that reflects your business. From visual elements to event assets, every detail is managed with care.",
       "icon": "Palette",
-      "title": "Event branding and production",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Event branding and production"
     },
     {
       "description": "Our on-site team oversees event operations in real time to keep everything on schedule. We handle the unexpected so your event runs seamlessly from start to finish.",
       "icon": "MapPin",
-      "title": "Onsite event management",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Onsite event management"
     },
     {
       "description": "Managing events across different locations becomes easier with the right logistics partner. We coordinate timelines, vendors, and event requirements to ensure smooth execution anywhere in the world.",
       "icon": "Globe2",
-      "title": "Global event logistics coordination",
-      "image": "/media/home/hero/home_hero_bg.avif"
+      "title": "Global event logistics coordination"
     }
   ],
   "heading": "Corporate Event Planning & Operational Capabilities"
