@@ -9,7 +9,7 @@ import { MEDIA_SERVICES } from "@/content/services/media-production/content";
 import { SQL_SERVICES } from "@/content/services/sales-qualified-lead-generation/content";
 
 import BLOGS_CONFIG from "./config.json";
-import CONTACT_DATA from "./contactus.json";
+import CONTACT_FORM_DATA from "./contact-form.json";
 import LINKEDIN_POSTS_DATA from "./linkedin-posts.json";
 import PAGE_DATA from "./page.json";
 import SERVICECAROUSEL_DATA from "./service-carousel.json";
@@ -158,8 +158,8 @@ export interface LinkedInPost {
 
 export const LINKEDIN_POSTS: LinkedInPost[] = LINKEDIN_POSTS_DATA;
 
-export const BLOG_CONTACT = {
-  ...CONTACT_DATA,
+export const BLOG_CONTACT_FORM = {
+  ...CONTACT_FORM_DATA,
   illustration: null,
 };
 

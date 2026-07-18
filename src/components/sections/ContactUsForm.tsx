@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { type ContactContent, HOME_CONTACT_CONTENT } from "@/content/home/content";
+import { type ContactContent, HOME_CONTACT_FORM } from "@/content/home/content";
 
 interface ContactUsFormProps {
   content?: ContactContent;
@@ -24,7 +24,7 @@ const CONTACTUS_TRANSITION = {
 } as const;
 
 export const ContactUsForm = ({
-  content = HOME_CONTACT_CONTENT,
+  content = HOME_CONTACT_FORM,
   description = content.description,
   form = content.form,
   heading = content.heading,

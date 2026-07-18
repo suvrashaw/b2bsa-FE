@@ -4,7 +4,7 @@ import type { MarketingPageDefinition } from "@/content/page-definitions";
 
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
-import CONTACTCONTENT_DATA from "./contactus.json";
+import CONTACT_FORM_DATA from "./contact-form.json";
 import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
 import PAGE_DATA from "./page.json";
@@ -217,7 +217,7 @@ export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = TESTIMONIALSCONTEN
 
 export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
 
-export const HOME_CONTACT_CONTENT: ContactContent = CONTACTCONTENT_DATA;
+export const HOME_CONTACT_FORM: ContactContent = CONTACT_FORM_DATA;
 
 export const HOME_PAGE = PAGE_DATA as MarketingPageDefinition;
 

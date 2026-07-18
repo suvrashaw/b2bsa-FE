@@ -10,7 +10,7 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Hero } from "@/components/sections/Hero";
 import {
   BLOG_CATEGORIES,
-  BLOG_CONTACT,
+  BLOG_CONTACT_FORM,
   BLOG_HERO,
   BLOG_PAGE,
   BLOG_POSTS_SUMMARY,
@@ -68,7 +68,7 @@ const Page = () => {
           <WhyChooseUsCard index={i} item={item} key={item.title} />
         ))}
       </Carousel>
-      <ContactUsForm {...BLOG_CONTACT} />
+      <ContactUsForm {...BLOG_CONTACT_FORM} />
       <Footer />
     </main>
   );

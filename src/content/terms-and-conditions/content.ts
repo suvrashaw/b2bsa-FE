@@ -1,11 +1,11 @@
 import type { MarketingPageDefinition, StaticPageHero } from "@/content/page-definitions";
 
-import CONTACT_DATA from "./contactus.json";
+import CONTACT_FORM_DATA from "./contact-form.json";
 import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
 
-export const TERMS_CONTACT = {
-  ...CONTACT_DATA,
+export const TERMS_CONTACT_FORM = {
+  ...CONTACT_FORM_DATA,
   illustration: null,
 };
 

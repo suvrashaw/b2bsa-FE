@@ -7,7 +7,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
-  TERMS_CONTACT,
+  TERMS_CONTACT_FORM,
   TERMS_FAQ,
   TERMS_HERO,
   TERMS_PAGE,
@@ -23,7 +23,7 @@ const Page = () => {
       <Header />
       <Hero description={TERMS_HERO.description} images={TERMS_IMAGES} title={TERMS_HERO.title} />
       <FAQ faqs={TERMS_FAQ.faqs} heading={TERMS_FAQ.heading} />
-      <ContactUsForm {...TERMS_CONTACT} />
+      <ContactUsForm {...TERMS_CONTACT_FORM} />
       <Footer />
     </main>
   );

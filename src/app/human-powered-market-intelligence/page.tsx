@@ -10,27 +10,27 @@ import { getBlogsByTags } from "@/content/blogs";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
   HPMI_BLOGS_SECTION,
-  MARKET_INTELLIGENCE_CAPABILITIES,
-  MARKET_INTELLIGENCE_CASE_STUDIES,
-  MARKET_INTELLIGENCE_CLIENT_LOGOS,
-  MARKET_INTELLIGENCE_CONTACT_CTA,
-  MARKET_INTELLIGENCE_DELIVERABLES,
-  MARKET_INTELLIGENCE_FAQ,
-  MARKET_INTELLIGENCE_HERO,
-  MARKET_INTELLIGENCE_INTRO,
-  MARKET_INTELLIGENCE_PAGE,
+  HPMI_CAPABILITIES,
+  HPMI_CASE_STUDIES,
+  HPMI_CLIENT_LOGOS,
+  HPMI_CONTACT_CTA,
+  HPMI_FAQ,
+  HPMI_HERO,
+  HPMI_INTRO,
+  HPMI_PAGE,
+  HPMI_SERVICES,
 } from "@/content/services/human-powered-market-intelligence/content";
 
-export const metadata: Metadata = getMarketingPageMetadata(MARKET_INTELLIGENCE_PAGE);
+export const metadata: Metadata = getMarketingPageMetadata(HPMI_PAGE);
 
-const SECONDARY_SERVICES = { ...MARKET_INTELLIGENCE_CAPABILITIES, showCommonCta: true };
+const SECONDARY_SERVICES = { ...HPMI_CAPABILITIES, showCommonCta: true };
 
 const Page = () => {
   return (
     <ServicePage
-      caseStudies={MARKET_INTELLIGENCE_CASE_STUDIES}
-      clientLogos={MARKET_INTELLIGENCE_CLIENT_LOGOS}
-      contactUs={MARKET_INTELLIGENCE_CONTACT_CTA}
+      caseStudies={HPMI_CASE_STUDIES}
+      clientLogos={HPMI_CLIENT_LOGOS}
+      contactUs={HPMI_CONTACT_CTA}
       customSections={
         <>
           <Carousel
@@ -49,14 +49,14 @@ const Page = () => {
           </Carousel>
         </>
       }
-      faq={MARKET_INTELLIGENCE_FAQ}
-      hero={MARKET_INTELLIGENCE_HERO}
-      page={MARKET_INTELLIGENCE_PAGE}
+      faq={HPMI_FAQ}
+      hero={HPMI_HERO}
+      page={HPMI_PAGE}
       secondaryServices={SECONDARY_SERVICES}
       secondaryServicesSectionType="carousel"
-      services={MARKET_INTELLIGENCE_DELIVERABLES}
+      services={HPMI_SERVICES}
       showServicesCommonCta
-      spotlight={MARKET_INTELLIGENCE_INTRO}
+      spotlight={HPMI_INTRO}
     />
   );
 };

@@ -8,20 +8,20 @@ import CONTACT_CTA_DATA from "./contact.json";
 
 export const HPMI_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 
-export const MARKET_INTELLIGENCE_CASE_STUDIES = {
+export const HPMI_CASE_STUDIES = {
   items: GLOBAL_CASE_STUDIES,
 };
 
-export const MARKET_INTELLIGENCE_CONTACT_CTA = {
+export const HPMI_CONTACT_CTA = {
   ...CINEMATIC_CTA_SHARED,
   ...CONTACT_CTA_DATA,
 };
 
-export { default as MARKET_INTELLIGENCE_CAPABILITIES } from "./capabilities.json";
-export { default as MARKET_INTELLIGENCE_CLIENT_LOGOS } from "./client-logos.json";
-export { default as MARKET_INTELLIGENCE_FAQ } from "./faq.json";
+export { default as HPMI_CAPABILITIES } from "./capabilities.json";
+export { default as HPMI_CLIENT_LOGOS } from "./client-logos.json";
+export { default as HPMI_FAQ } from "./faq.json";
 
-export { default as MARKET_INTELLIGENCE_HERO } from "./hero.json";
-export { default as MARKET_INTELLIGENCE_INTRO } from "./intro.json";
-export { default as MARKET_INTELLIGENCE_PAGE } from "./page.json";
-export { default as MARKET_INTELLIGENCE_DELIVERABLES } from "./services.json";
+export { default as HPMI_HERO } from "./hero.json";
+export { default as HPMI_INTRO } from "./intro.json";
+export { default as HPMI_PAGE } from "./page.json";
+export { default as HPMI_SERVICES } from "./services.json";

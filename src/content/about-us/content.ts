@@ -7,7 +7,7 @@ import EVENTS_SECTION_DATA from "./events.json";
 import FOUNDERSTORY_DATA from "./founder-story.json";
 import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
-import VALUES_DATA from "./values.json";
+import CULTURE_VALUES_DATA from "./culture-values.json";
 
 const ABOUT_EVENT_IDS = new Set([
   "adobe-summit-2026",
@@ -20,8 +20,8 @@ const ABOUT_EVENT_IDS = new Set([
 
 export const ABOUT_FOUNDER_STORY = FOUNDERSTORY_DATA;
 
-export const ABOUT_VALUES = {
-  ...VALUES_DATA,
+export const ABOUT_CULTURE_VALUES = {
+  ...CULTURE_VALUES_DATA,
   centerText: ABOUT_FOUNDER_STORY.story,
 };
 
