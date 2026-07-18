@@ -25,7 +25,7 @@ import GRID_FILTERS_DATA from "./grid-filters.json";
 import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
 
-export const CASE_STUDIES_PAGE_CONTENT = {
+export const CASE_STUDIES_PAGE_DATA = {
   emptyState: EMPTY_STATE_DATA,
   gridFilters: GRID_FILTERS_DATA,
   hero: HERO_DATA,

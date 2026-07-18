@@ -13,13 +13,13 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { Pagination } from "@/components/ui/Pagination";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
-  CASE_STUDIES_PAGE_CONTENT,
+  CASE_STUDIES_PAGE_DATA,
   CASE_STUDIES_PAGE_STUDIES,
   type CaseStudyEntry,
 } from "@/content/case-studies";
 import { applyPagination, parsePaginationPage } from "@/lib/pagination";
 
-const ALL_FILTER = CASE_STUDIES_PAGE_CONTENT.gridFilters[0];
+const ALL_FILTER = CASE_STUDIES_PAGE_DATA.gridFilters[0];
 
 const HERO_LEFT_ANIMATE = { opacity: 1, x: 0 };
 const HERO_LEFT_INITIAL = { opacity: 0, x: -30 };
@@ -195,10 +195,10 @@ export const CaseStudiesClientPage = () => {
     gridContent = (
       <div className="flex min-h-[480px] flex-col items-center justify-center rounded-[2rem] border border-gray-100 bg-brand-gray/40 px-8 py-14 text-center shadow-sm">
         <SectionHeader as="h2" className="text-center">
-          {CASE_STUDIES_PAGE_CONTENT.emptyState.title}
+          {CASE_STUDIES_PAGE_DATA.emptyState.title}
         </SectionHeader>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-          {CASE_STUDIES_PAGE_CONTENT.emptyState.description}
+          {CASE_STUDIES_PAGE_DATA.emptyState.description}
         </p>
       </div>
     );
@@ -218,10 +218,10 @@ export const CaseStudiesClientPage = () => {
             transition={HERO_LEFT_TRANSITION}
           >
             <SectionHeader as="h1" className="leading-[1.05]">
-              {CASE_STUDIES_PAGE_CONTENT.hero.title}
+              {CASE_STUDIES_PAGE_DATA.hero.title}
             </SectionHeader>
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-700">
-              {CASE_STUDIES_PAGE_CONTENT.hero.description}
+              {CASE_STUDIES_PAGE_DATA.hero.description}
             </p>
           </motion.div>
 
@@ -232,12 +232,12 @@ export const CaseStudiesClientPage = () => {
             transition={HERO_RIGHT_TRANSITION}
           >
             <Image
-              alt={CASE_STUDIES_PAGE_CONTENT.hero.image.alt}
+              alt={CASE_STUDIES_PAGE_DATA.hero.image.alt}
               className="object-cover"
               fill
               priority
               sizes="40vw"
-              src={CASE_STUDIES_PAGE_CONTENT.hero.image.src}
+              src={CASE_STUDIES_PAGE_DATA.hero.image.src}
             />
             <div className="absolute inset-0 bg-linear-to-t from-brand-charcoal/50 via-transparent to-transparent" />
           </motion.div>
@@ -247,7 +247,7 @@ export const CaseStudiesClientPage = () => {
       <section className="w-full bg-brand-gray pb-20 md:pb-24">
         <div className="bg-brand-gray/30 py-8">
           <div className="container mx-auto flex max-w-screen-2xl flex-wrap justify-center gap-3 px-4 sm:px-6 md:px-8">
-            {CASE_STUDIES_PAGE_CONTENT.gridFilters.map((filter) => (
+            {CASE_STUDIES_PAGE_DATA.gridFilters.map((filter) => (
               <FilterPill
                 filter={filter}
                 isActive={activeFilter === filter}

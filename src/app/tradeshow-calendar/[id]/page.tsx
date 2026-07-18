@@ -49,7 +49,7 @@ export const generateMetadata = async ({ params }: EventDetailPageProps): Promis
     },
     ...(SUPERSEDED_BY[id] && { robots: { follow: true, index: false } }),
     description,
-    ...(event.seoKeywords && { keywords: event.seoKeywords }),
+    ...(event.secondaryKeywords && { keywords: event.secondaryKeywords }),
     openGraph: {
       description,
       images: event.image

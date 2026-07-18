@@ -7,7 +7,7 @@ import { MotionProvider } from "@/app/providers/MotionProvider";
 import { PartytownScripts } from "@/app/providers/PartytownScripts";
 import { SmoothScrollProvider } from "@/app/providers/SmoothScrollProvider";
 import { StickyContactBar } from "@/components/layout/StickyContactBar";
-import { buildOrganizationJsonLd, siteUrl } from "@/lib";
+import { buildOrganizationJsonLd, JsonLd, siteUrl } from "@/lib";
 
 import "./globals.css";
 
@@ -83,7 +83,6 @@ s0.parentNode.insertBefore(s1, s0);
 // defined on the homepage — see src/app/page.tsx — other pages just
 // reference it via isPartOf: { "@id": `${siteUrl}/#website" }.
 const organizationJsonLd = buildOrganizationJsonLd();
-const ORG_JSON_LD_SCRIPT = { __html: JSON.stringify(organizationJsonLd) };
 
 const UNREGISTER_SW_SCRIPT = {
   __html: `if ("serviceWorker" in navigator) {
@@ -133,11 +132,7 @@ const RootLayout = ({
           id="tawk-to-script"
           strategy="lazyOnload"
         />
-        <Script
-          dangerouslySetInnerHTML={ORG_JSON_LD_SCRIPT}
-          id="organization-json-ld"
-          type="application/ld+json"
-        />
+        <JsonLd data={organizationJsonLd} />
         <Script dangerouslySetInnerHTML={UNREGISTER_SW_SCRIPT} id="unregister-sw" />
         <MotionProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
