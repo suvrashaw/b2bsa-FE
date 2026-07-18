@@ -3,8 +3,11 @@
     "alt": "Booth Logistics Services",
     "src": "/media/home/hero/home_hero_bg.avif"
   },
-  "badge": "Booth Logistics Services",
-  "headingLines": ["Looking for Reliable", "Booth Logistics Services?"],
+  "eyebrow": "Booth Logistics Services",
+  "headingLines": [
+    "Looking for Reliable",
+    "Booth Logistics Services?"
+  ],
   "description": "Partner with B2B Sales Arrow for professional event logistics services that help your brand deliver smooth, organized, and successful corporate event experiences.",
   "primaryCta": {
     "href": "/contact-us",

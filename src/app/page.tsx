@@ -39,7 +39,7 @@ const Testimonials = dynamic(() =>
 /* eslint-enable unicorn/prefer-await */
 import { Button } from "@/components/ui/Button";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
-import { HOME_BLOGS_CONTENT } from "@/content/home/blogs-content";
+import { HOME_BLOGS } from "@/content/home/blogs-content";
 import {
   HOME_EVENTS,
   HOME_FAQ,
@@ -150,7 +150,7 @@ const Home = () => {
       <Testimonials />
 
       <div id="blogs">
-        <Blogs content={HOME_BLOGS_CONTENT} />
+        <Blogs content={HOME_BLOGS} />
       </div>
 
       <FAQ content={HOME_FAQ} />

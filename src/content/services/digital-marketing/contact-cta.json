@@ -1,10 +1,13 @@
 {
-  "badge": "Audit Your Pipeline",
+  "eyebrow": "Audit Your Pipeline",
   "description": "Stop guessing. Start knowing. A performance marketing audit reveals where spend is leaking and where pipeline can improve.",
   "primaryCta": {
     "href": "/contact-us",
     "label": "Request a Free Digital Marketing Audit",
     "opensModal": true
   },
-  "headingLines": ["Stop Guessing.", "Start Knowing."]
+  "headingLines": [
+    "Stop Guessing.",
+    "Start Knowing."
+  ]
 }

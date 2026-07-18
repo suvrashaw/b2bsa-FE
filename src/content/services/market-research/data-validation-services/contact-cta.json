@@ -1,7 +1,9 @@
 {
-  "badge": "Ready to Start",
+  "eyebrow": "Ready to Start",
   "description": "Do not prospect with broken data. Before launching another campaign, make sure the list is worth using.",
-  "headingLines": ["Ready for Clean Data?"],
+  "headingLines": [
+    "Ready for Clean Data?"
+  ],
   "primaryCta": {
     "href": "/contact-us",
     "label": "Validate My List",
