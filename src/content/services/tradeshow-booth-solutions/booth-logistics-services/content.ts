@@ -5,7 +5,7 @@ import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 import BLOG_DATA from "./blog.json";
 import EVENTLOGISTICSCASESTUDIESDATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import INDUSTRIES_DATA from "./industries.json";
 
 export const EVENT_LOGISTICS_CASE_STUDIES = {

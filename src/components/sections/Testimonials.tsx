@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { TestimonialCard } from "@/components/items/TestimonialCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_TESTIMONIALS_CONTENT, type TestimonialsContent } from "@/content/home/content";
+import { HOME_TESTIMONIALS, type TestimonialsContent } from "@/content/home/content";
 
 export interface TestimonialsProps {
   autoplayInterval?: TestimonialsContent["autoplayInterval"];
@@ -18,7 +18,7 @@ export interface TestimonialsProps {
 const CAROUSEL_PERSPECTIVE_STYLE = { perspective: "1000px" };
 
 export const Testimonials = ({
-  content = HOME_TESTIMONIALS_CONTENT,
+  content = HOME_TESTIMONIALS,
   autoplayInterval = content.autoplayInterval,
   heading = content.heading,
   initialIndex = content.initialIndex,

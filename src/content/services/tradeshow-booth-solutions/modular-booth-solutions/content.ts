@@ -22,7 +22,7 @@ export const MODULAR_BOOTHS_CASE_STUDIES = {
 export { default as MODULAR_BOOTHS_CAPABILITIES } from "./capabilities.json";
 
 export { default as MODULAR_BOOTHS_CLIENT_LOGOS } from "./client-logos.json";
-export { default as MODULAR_BOOTHS_CONTACT_CTA } from "./contact.json";
+export { default as MODULAR_BOOTHS_CONTACT_CTA } from "./contact-cta.json";
 export { default as MODULAR_BOOTHS_FAQ } from "./faq.json";
 export { default as MODULAR_BOOTHS_HERO } from "./hero.json";
 

@@ -7,7 +7,7 @@ import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 import BLOG_DATA from "./blog.json";
 import CAPABILITIES_DATA from "./capabilities.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_CTA_DATA from "./contact.json";
+import CONTACT_CTA_DATA from "./contact-cta.json";
 import STREAMING_INTRO_DATA from "./intro.json";
 
 export const LIVE_STREAMING_CASE_STUDIES = {

@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   ABOUT_CORE_VALUES,
+  ABOUT_CULTURE_VALUES,
   ABOUT_FOUNDER_STORY,
   ABOUT_HERO,
   ABOUT_ORIGIN_TIMELINE,
@@ -23,7 +24,6 @@ import {
   ABOUT_RECENT_EVENTS,
   ABOUT_SIGNATURE_SERVICES,
   ABOUT_TEAM_IMAGES,
-  ABOUT_VALUES,
   ABOUT_VISION_MISSION,
   ABOUT_WHO_WE_ARE,
 } from "@/content/about-us/content";
@@ -248,7 +248,7 @@ const Page = () => {
       />
 
       {/* What We Believe In */}
-      <Culture data={ABOUT_VALUES} />
+      <Culture data={ABOUT_CULTURE_VALUES} />
 
       <Footer />
     </main>

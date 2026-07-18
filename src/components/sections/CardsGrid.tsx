@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   type CaseStudiesContent,
-  HOME_CASE_STUDIES_CONTENT,
+  HOME_CASE_STUDIES,
   type CaseStudyItem as HomeCaseStudyItem,
 } from "@/content/home/content";
 import { cn } from "@/lib";
@@ -152,7 +152,7 @@ export interface CaseStudiesProps {
 }
 
 export const CaseStudies = ({
-  content = HOME_CASE_STUDIES_CONTENT,
+  content = HOME_CASE_STUDIES,
   ctaLabel = content.ctaLabel,
   description = DEFAULT_CASE_STUDIES_DESCRIPTION,
   getStudyHref = (study) => study.href ?? viewAllHref,

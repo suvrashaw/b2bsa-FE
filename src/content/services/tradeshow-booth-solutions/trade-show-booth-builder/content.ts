@@ -2,7 +2,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BOOTHBUILDERCASESTUDIESDATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import BOOTH_BUILDER_INTRO_DATA from "./intro.json";
 
 export const BOOTH_BUILDER_INTRO = {

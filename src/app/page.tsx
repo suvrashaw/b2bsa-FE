@@ -41,12 +41,12 @@ import { Button } from "@/components/ui/Button";
 import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import { HOME_BLOGS_CONTENT } from "@/content/home/blogs-content";
 import {
-  HOME_EVENTS_CONTENT,
-  HOME_FAQ_CONTENT,
-  HOME_HERO_CONTENT,
+  HOME_EVENTS,
+  HOME_FAQ,
+  HOME_HERO,
   HOME_PAGE,
+  HOME_SERVICES,
   HOME_SERVICES_CONTACT_MODAL,
-  HOME_SERVICES_CONTENT,
 } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { getDefaultEvents } from "@/content/tradeshow-calendar";
@@ -76,7 +76,7 @@ const Home = () => {
             url: siteUrl,
           }),
           buildWebsiteJsonLd(),
-          buildFaqJsonLd(HOME_FAQ_CONTENT.faqs),
+          buildFaqJsonLd(HOME_FAQ.faqs),
           buildBreadcrumbJsonLd([{ name: "Home", url: siteUrl }], siteUrl),
           buildImageObjectJsonLd({
             caption: "B2B Sales Arrow",
@@ -90,15 +90,15 @@ const Home = () => {
       <Header />
       <div id="home">
         <Hero
-          description={HOME_HERO_CONTENT.description}
+          description={HOME_HERO.description}
           disableTypewriter
-          mobileVideoUrl={HOME_HERO_CONTENT.mobileVideoUrl}
-          mobileVideoWebm={HOME_HERO_CONTENT.mobileVideoWebm}
-          primaryCta={HOME_HERO_CONTENT.primaryCta}
-          rotatingWords={HOME_HERO_CONTENT.rotatingWords}
-          title={HOME_HERO_CONTENT.title}
-          videoUrl={HOME_HERO_CONTENT.videoUrl}
-          videoWebm={HOME_HERO_CONTENT.videoWebm}
+          mobileVideoUrl={HOME_HERO.mobileVideoUrl}
+          mobileVideoWebm={HOME_HERO.mobileVideoWebm}
+          primaryCta={HOME_HERO.primaryCta}
+          rotatingWords={HOME_HERO.rotatingWords}
+          title={HOME_HERO.title}
+          videoUrl={HOME_HERO.videoUrl}
+          videoWebm={HOME_HERO.videoWebm}
         />
       </div>
 
@@ -110,7 +110,7 @@ const Home = () => {
 
       <div id="services">
         <ServicesStack
-          commonCtaLabel={HOME_SERVICES_CONTENT.commonCtaLabel}
+          commonCtaLabel={HOME_SERVICES.commonCtaLabel}
           contactModal={HOME_SERVICES_CONTACT_MODAL}
           showCommonCta
         />
@@ -124,19 +124,19 @@ const Home = () => {
         className="pb-8 md:pb-12 lg:pb-16"
         cols={3}
         cta={
-          HOME_EVENTS_CONTENT.viewAllLabel ? (
+          HOME_EVENTS.viewAllLabel ? (
             <Button asChild variant="primary">
-              <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
+              <Link href="/tradeshow-calendar">{HOME_EVENTS.viewAllLabel}</Link>
             </Button>
           ) : undefined
         }
-        description={HOME_EVENTS_CONTENT.description}
-        heading={HOME_EVENTS_CONTENT.heading}
+        description={HOME_EVENTS.description}
+        heading={HOME_EVENTS.heading}
         id="events"
       >
         {getDefaultEvents().map((event, i) => (
           <EventsCard
-            ctaLabel={HOME_EVENTS_CONTENT.ctaLabel}
+            ctaLabel={HOME_EVENTS.ctaLabel}
             event={event}
             flipStyle="diagonalWipe"
             index={i}
@@ -153,7 +153,7 @@ const Home = () => {
         <Blogs content={HOME_BLOGS_CONTENT} />
       </div>
 
-      <FAQ content={HOME_FAQ_CONTENT} />
+      <FAQ content={HOME_FAQ} />
 
       <div id="contact">
         <ContactUsForm />

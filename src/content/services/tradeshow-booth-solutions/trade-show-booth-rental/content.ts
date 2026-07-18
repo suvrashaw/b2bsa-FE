@@ -5,7 +5,7 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BLOG_DATA from "./blog.json";
 import BOOTHRENTALCASESTUDIESDATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import BOOTHRENTALPROOFBARDATA from "./intro.json";
 
 export const BOOTH_RENTAL_INTRO = {

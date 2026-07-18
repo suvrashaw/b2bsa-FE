@@ -5,7 +5,7 @@ import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import BLOG_DATA from "./blog.json";
 import EVENT_LEAD_CASESTUDIES_DATA from "./case-studies.json";
-import CONTACTCTA_DATA from "./contact.json";
+import CONTACTCTA_DATA from "./contact-cta.json";
 
 export const EVENT_LEAD_GEN_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 

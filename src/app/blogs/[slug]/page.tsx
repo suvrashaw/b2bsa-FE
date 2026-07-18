@@ -11,7 +11,7 @@ import {
   LINKEDIN_POSTS,
   SHARED_BLOG_POSTS,
 } from "@/content/blogs";
-import { HOME_SERVICES_CONTENT } from "@/content/home/content";
+import { HOME_SERVICES } from "@/content/home/content";
 import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, siteUrl } from "@/lib";
 
 type BlogPostPageProps = {
@@ -145,7 +145,7 @@ const Page = async ({ params }: BlogPostPageProps) => {
       <BlogPage
         allPosts={BLOG_POSTS_SUMMARY}
         linkedInPosts={LINKEDIN_POSTS}
-        placeholderServices={HOME_SERVICES_CONTENT.services}
+        placeholderServices={HOME_SERVICES.services}
         post={post}
       />
     </>

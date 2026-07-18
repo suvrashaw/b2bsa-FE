@@ -23,7 +23,7 @@ export const SMM_CASE_STUDIES = {
 };
 
 export { default as SMM_CLIENT_LOGOS } from "./client-logos.json";
-export { default as SMM_CONTACT_CTA } from "./contact.json";
+export { default as SMM_CONTACT_CTA } from "./contact-cta.json";
 export { default as SMM_FAQ } from "./faq.json";
 export { default as SMM_HERO } from "./hero.json";
 export { default as SMM_INDUSTRIES } from "./industries.json";

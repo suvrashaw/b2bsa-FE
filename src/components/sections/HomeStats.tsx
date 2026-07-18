@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { RotatingWordBadge } from "@/components/ui/RotatingWordBadge";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_STATS_CONTENT, type HomeStatItem, type StatsContent } from "@/content/home/content";
+import { HOME_STATS, type HomeStatItem, type StatsContent } from "@/content/home/content";
 
 const ROTATING_WORDS = ["Build Pipelines", "Close Deals", "Drive Revenue"];
 
@@ -35,7 +35,7 @@ const StatCard = ({ stat }: { stat: HomeStatItem }) => (
 );
 
 export const HomeStats = ({
-  content = HOME_STATS_CONTENT,
+  content = HOME_STATS,
   attribution = content.attribution,
   description,
   heading,

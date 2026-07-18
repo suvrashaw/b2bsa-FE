@@ -4,7 +4,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 import CINEMATIC_CTA_SHARED from "@/content/services/cinematic-cta.json";
 
 import BLOG_DATA from "./blog.json";
-import CONTACT_CTA_DATA from "./contact.json";
+import CONTACT_CTA_DATA from "./contact-cta.json";
 
 export const HPMI_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;
 

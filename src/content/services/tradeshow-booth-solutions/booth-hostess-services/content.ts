@@ -5,7 +5,7 @@ import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 import BLOG_DATA from "./blog.json";
 import BOOTHHOSTESSCASESTUDIESDATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import INDUSTRIES_DATA from "./industries.json";
 
 export const BOOTH_HOSTESS_CASE_STUDIES = {

@@ -8,7 +8,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { ContactModal } from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { HOME_WHY_CHOOSE_US_CONTENT, type StickyScrollContent } from "@/content/home/content";
+import { HOME_WHY_CHOOSE_US, type StickyScrollContent } from "@/content/home/content";
 
 const SCALE_ACTIVE = { scale: 1 };
 const SCALE_INACTIVE = { scale: 1.06 };
@@ -63,7 +63,7 @@ const IMAGE_SCALE_TRANSITION = {
 } as const;
 
 export const StickyScroll = ({
-  content = HOME_WHY_CHOOSE_US_CONTENT,
+  content = HOME_WHY_CHOOSE_US,
   heading = content.heading,
   reasons = content.reasons,
   showCta = true,

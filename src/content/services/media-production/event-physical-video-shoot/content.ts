@@ -4,7 +4,7 @@ import { GLOBAL_CASE_STUDIES } from "@/content/case-studies";
 
 import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 
 export const EVENT_PHYSICAL_VIDEO_CASE_STUDIES = {
   ...CASE_STUDIES_DATA,

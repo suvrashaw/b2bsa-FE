@@ -397,7 +397,6 @@ export const BlogPage = ({ allPosts, linkedInPosts, placeholderServices, post }:
             <div className="mt-14 border-t border-gray-200 pt-10">
               <FAQ
                 description=""
-                eyebrow=""
                 faqs={faqItems}
                 heading="Frequently Asked Questions"
                 variant="article"
@@ -427,8 +426,8 @@ export const BlogPage = ({ allPosts, linkedInPosts, placeholderServices, post }:
 
       <ContactUs
         backgroundImage={contactUsBg}
-        badge="Talk to an Expert"
         description="Whether you're planning your next trade show appearance or need event staffing worldwide, our team is ready to help you execute flawlessly."
+        eyebrow="Talk to an Expert"
         headingLines={CTA_HEADING_LINES}
         primaryCta={CTA_PRIMARY}
         secondaryCta={CTA_SECONDARY}

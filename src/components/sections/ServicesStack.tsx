@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { ContactModal, type ContactModalServiceField } from "@/components/ui/ContactModal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
-  HOME_SERVICES_CONTENT,
+  HOME_SERVICES,
   type HomeServiceItem,
   type HomeServicesContent,
 } from "@/content/home/content";
@@ -32,7 +32,7 @@ export const ServicesStack = ({
   cardCtaMode,
   commonCtaLabel,
   contactModal,
-  content = HOME_SERVICES_CONTENT,
+  content = HOME_SERVICES,
   ctaLabel = content.ctaLabel,
   heading = content.heading,
   serviceLabel = content.serviceLabel,

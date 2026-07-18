@@ -11,7 +11,7 @@ export const DATA_VALIDATION_CASE_STUDIES = {
 };
 
 export { default as DATA_VALIDATION_CLIENT_LOGOS } from "./client-logos.json";
-export { default as DATA_VALIDATION_CONTACT_CTA } from "./contact.json";
+export { default as DATA_VALIDATION_CONTACT_CTA } from "./contact-cta.json";
 export { default as DATA_VALIDATION_FAQ } from "./faq.json";
 export { default as DATA_VALIDATION_HERO } from "./hero.json";
 export { default as DATA_VALIDATION_INTRO } from "./intro.json";

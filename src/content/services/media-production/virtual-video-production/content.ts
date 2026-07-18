@@ -5,7 +5,7 @@ import { GLOBAL_PROOF_STATS } from "@/content/services";
 
 import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import VIRTUALVIDEOCONTACTCTA_DATA from "./contact.json";
+import VIRTUALVIDEOCONTACTCTA_DATA from "./contact-cta.json";
 import INTRO_DATA from "./intro.json";
 
 export const VIRTUAL_VIDEO_CASE_STUDIES = {

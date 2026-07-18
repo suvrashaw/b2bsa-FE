@@ -5,7 +5,7 @@ import { GLOBAL_INDUSTRY_SERVICES } from "@/content/services";
 
 import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import INDUSTRIES_DATA from "./industries.json";
 
 export const CORP_NETWORKING_BLOGS_SECTION = BLOG_DATA satisfies BlogsSectionContent;

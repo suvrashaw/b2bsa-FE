@@ -6,13 +6,12 @@ import { type ReactNode, useCallback, useMemo, useState } from "react";
 
 import { FAQItem } from "@/components/items/FAQItem";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { type FAQContent, HOME_FAQ_CONTENT } from "@/content/home/content";
+import { type FAQContent, HOME_FAQ } from "@/content/home/content";
 import { cn } from "@/lib";
 
 export interface FAQProps {
   content?: FAQContent;
   description?: FAQContent["description"];
-  eyebrow?: FAQContent["eyebrow"];
   faqs?: FAQContent["faqs"];
   heading?: FAQContent["heading"];
 }
@@ -54,7 +53,7 @@ interface FAQAccordionProps extends FAQProps {
 }
 
 export const FAQ = ({
-  content = HOME_FAQ_CONTENT,
+  content = HOME_FAQ,
   description = content.description,
   faqs = content.faqs,
   heading = content.heading,

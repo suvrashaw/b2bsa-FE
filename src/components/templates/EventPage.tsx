@@ -13,7 +13,7 @@ import { ContactUs } from "@/components/sections/ContactUs";
 import { FAQ } from "@/components/sections/FAQ";
 import { Hero } from "@/components/sections/Hero";
 import { Spotlight } from "@/components/sections/Spotlight";
-import { HOME_SERVICES_CONTENT } from "@/content/home/content";
+import { HOME_SERVICES } from "@/content/home/content";
 import { type CalendarTradeShow, TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
@@ -88,7 +88,7 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
 
   const serviceItems = useMemo(
     () =>
-      HOME_SERVICES_CONTENT.services
+      HOME_SERVICES.services
         .slice(0, 5)
         .map((item) => ({ ...item, image: item.image ?? PLACEHOLDER_IMAGE })),
     []
@@ -170,8 +170,8 @@ export const EventPage = ({ event, faq }: EventPageProps) => {
       {/* ── 8. ContactUs ────────────────────────────────────────────────── */}
       <ContactUs
         backgroundImage={contactUsBg}
-        badge="Talk to an Expert"
         description="Tell us about your booth goals and we'll build a tailored plan for this event."
+        eyebrow="Talk to an Expert"
         headingLines={contactUsHeadingLines}
         primaryCta={CONTACT_US_PRIMARY_CTA}
         secondaryCta={CONTACT_US_SECONDARY_CTA}

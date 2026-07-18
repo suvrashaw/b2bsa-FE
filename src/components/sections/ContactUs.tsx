@@ -26,8 +26,8 @@ export interface ContactUsProps {
     alt: string;
     src: string;
   };
-  badge?: string;
   description?: string;
+  eyebrow?: string;
   headingLines?: string[];
   primaryCta: {
     href: string;
@@ -106,8 +106,8 @@ export const ContactUs = ({
     alt: "B2B Sales Agency",
     src: "/media/home/hero/home_hero_bg.avif",
   },
-  badge,
   description,
+  eyebrow,
   headingLines,
   primaryCta,
   secondaryCta,
@@ -209,7 +209,7 @@ export const ContactUs = ({
 
       <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
-          {badge ? (
+          {eyebrow ? (
             <motion.div
               className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-5 py-2.5 text-xs font-semibold tracking-[0.18em] text-white uppercase backdrop-blur-md md:text-sm"
               initial="hidden"
@@ -220,7 +220,7 @@ export const ContactUs = ({
               <span className="relative inline-flex size-2.5 rounded-full bg-white">
                 <span className="absolute inset-0 animate-ping rounded-full bg-white/80" />
               </span>
-              {badge}
+              {eyebrow}
             </motion.div>
           ) : null}
 

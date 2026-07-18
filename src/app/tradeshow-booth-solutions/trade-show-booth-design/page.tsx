@@ -11,7 +11,7 @@ import { ServicesStack } from "@/components/sections/ServicesStack";
 import { ServicePage } from "@/components/templates/ServicePage";
 import { Button } from "@/components/ui/Button";
 import { getBlogsByTags } from "@/content/blogs";
-import { HOME_EVENTS_CONTENT } from "@/content/home/content";
+import { HOME_EVENTS } from "@/content/home/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import { BS_PAGE } from "@/content/services/tradeshow-booth-solutions/content";
 import {
@@ -54,16 +54,16 @@ const Page = () => {
             cols={3}
             cta={
               <Button asChild variant="primary">
-                <Link href="/tradeshow-calendar">{HOME_EVENTS_CONTENT.viewAllLabel}</Link>
+                <Link href="/tradeshow-calendar">{HOME_EVENTS.viewAllLabel}</Link>
               </Button>
             }
-            description={HOME_EVENTS_CONTENT.description}
-            heading={HOME_EVENTS_CONTENT.heading}
+            description={HOME_EVENTS.description}
+            heading={HOME_EVENTS.heading}
             id="events"
           >
             {getDefaultEvents().map((event, i) => (
               <EventsCard
-                ctaLabel={HOME_EVENTS_CONTENT.ctaLabel ?? "View Event"}
+                ctaLabel={HOME_EVENTS.ctaLabel ?? "View Event"}
                 event={event}
                 flipStyle="diagonalWipe"
                 index={i}

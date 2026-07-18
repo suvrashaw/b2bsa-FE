@@ -3,11 +3,11 @@ import type { MarketingPageDefinition, StaticPageHero } from "@/content/page-def
 import { TRADE_SHOW_CALENDAR_EVENTS } from "@/content/tradeshow-calendar";
 import { mapCalendarEventToEvent } from "@/content/tradeshow-calendar";
 
+import CULTURE_VALUES_DATA from "./culture-values.json";
 import EVENTS_SECTION_DATA from "./events.json";
 import FOUNDERSTORY_DATA from "./founder-story.json";
 import HERO_DATA from "./hero.json";
 import PAGE_DATA from "./page.json";
-import CULTURE_VALUES_DATA from "./culture-values.json";
 
 const ABOUT_EVENT_IDS = new Set([
   "adobe-summit-2026",

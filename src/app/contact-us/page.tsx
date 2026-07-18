@@ -12,11 +12,11 @@ import { ContactUsForm } from "@/components/sections/ContactUsForm";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
+  CONTACT_CTA,
+  CONTACT_FORM,
   CONTACT_HERO,
   CONTACT_NEXT_STEPS,
   CONTACT_PAGE,
-  CONTACT_US,
-  CONTACT_US_CONTACT_FORM,
 } from "@/content/contact-us/content";
 import { getMarketingPageMetadata } from "@/content/marketing-pages";
 import {
@@ -118,9 +118,9 @@ const Page = () => {
         </div>
       </section>
       <ClientLogos />
-      <ContactUsForm {...CONTACT_US_CONTACT_FORM} sectionClassName="!pt-6 md:!pt-10" />
+      <ContactUsForm {...CONTACT_FORM} sectionClassName="!pt-6 md:!pt-10" />
       <ProcessTimeline heading={CONTACT_NEXT_STEPS.heading} phases={CONTACT_NEXT_STEPS.phases} />
-      <ContactUs {...CONTACT_US} backgroundImage={CONTACT_US_BG} />
+      <ContactUs {...CONTACT_CTA} backgroundImage={CONTACT_US_BG} />
       <Footer />
     </main>
   );

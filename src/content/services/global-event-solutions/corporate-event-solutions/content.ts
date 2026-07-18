@@ -5,7 +5,7 @@ import { GLOBAL_INDUSTRY_SERVICES, GLOBAL_PROOF_STATS } from "@/content/services
 
 import BLOG_DATA from "./blog.json";
 import CASE_STUDIES_DATA from "./case-studies.json";
-import CONTACT_DATA from "./contact.json";
+import CONTACT_DATA from "./contact-cta.json";
 import INDUSTRIES_DATA from "./industries.json";
 import PROOF_BAR_DATA from "./intro.json";
 

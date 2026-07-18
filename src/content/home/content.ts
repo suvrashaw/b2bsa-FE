@@ -9,9 +9,9 @@ import EVENTS_DATA from "./events.json";
 import FAQ_DATA from "./faq.json";
 import PAGE_DATA from "./page.json";
 import SERVICES_DATA from "./services.json";
-import STATSCONTENT_DATA from "./stats.json";
-import TESTIMONIALSCONTENT_DATA from "./testimonials.json";
-import WHYCHOOSEUSCONTENT_DATA from "./why-choose-us.json";
+import STATS_DATA from "./stats.json";
+import TESTIMONIALS_DATA from "./testimonials.json";
+import WHY_CHOOSE_US_DATA from "./why-choose-us.json";
 
 export interface BlogItem {
   category?: string;
@@ -193,11 +193,11 @@ interface UpcomingEventItem {
   title: string;
 }
 
-export const HOME_STATS_CONTENT: StatsContent = STATSCONTENT_DATA;
+export const HOME_STATS: StatsContent = STATS_DATA;
 
-export const HOME_SERVICES_CONTENT: HomeServicesContent = SERVICES_DATA;
+export const HOME_SERVICES: HomeServicesContent = SERVICES_DATA;
 
-export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
+export const HOME_CASE_STUDIES: CaseStudiesContent = {
   ctaLabel: "Full Study",
   heading: "Proven Global Event Solutions: Enterprise Success Stories",
   items: GLOBAL_CASE_STUDIES as unknown as CaseStudyItem[],
@@ -206,19 +206,19 @@ export const HOME_CASE_STUDIES_CONTENT: CaseStudiesContent = {
 
 export const HOME_SERVICES_CONTACT_MODAL = {};
 
-export const HOME_EVENTS_CONTENT: EventsContent = {
+export const HOME_EVENTS: EventsContent = {
   ...EVENTS_DATA,
   events: [],
 };
 
-export const HOME_WHY_CHOOSE_US_CONTENT: StickyScrollContent = WHYCHOOSEUSCONTENT_DATA;
+export const HOME_WHY_CHOOSE_US: StickyScrollContent = WHY_CHOOSE_US_DATA;
 
-export const HOME_TESTIMONIALS_CONTENT: TestimonialsContent = TESTIMONIALSCONTENT_DATA;
+export const HOME_TESTIMONIALS: TestimonialsContent = TESTIMONIALS_DATA;
 
-export const HOME_FAQ_CONTENT: FAQContent = FAQ_DATA;
+export const HOME_FAQ: FAQContent = FAQ_DATA;
 
 export const HOME_CONTACT_FORM: ContactContent = CONTACT_FORM_DATA;
 
 export const HOME_PAGE = PAGE_DATA as MarketingPageDefinition;
 
-export { default as HOME_HERO_CONTENT } from "./hero.json";
+export { default as HOME_HERO } from "./hero.json";
