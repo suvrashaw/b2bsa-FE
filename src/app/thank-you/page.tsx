@@ -13,7 +13,7 @@ import { THANK_YOU_BODY, THANK_YOU_PAGE } from "@/content/thank-you/content";
 export const metadata: Metadata = getMarketingPageMetadata(THANK_YOU_PAGE);
 
 const telHref = `tel:${THANK_YOU_BODY.phone.replaceAll(/[^\d+]/g, "")}`;
-const mailHref = `mailto:${THANK_YOU_BODY.email}`;
+const mailHref = `mailto:${THANK_YOU_BODY.contactEmail}`;
 
 const Page = () => {
   return (
@@ -38,7 +38,7 @@ const Page = () => {
                 <div>
                   <p className="mb-1 font-semibold text-brand-charcoal">Email Us</p>
                   <a className="text-sm text-brand-blue hover:underline" href={mailHref}>
-                    {THANK_YOU_BODY.email}
+                    {THANK_YOU_BODY.contactEmail}
                   </a>
                 </div>
               </div>

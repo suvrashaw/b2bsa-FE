@@ -6,13 +6,13 @@ export interface CaseStudyDetail {
   event: string;
   eventDescription: string;
   gallery?: string[];
+  id: string;
   image: string;
   location: string;
   outcome: string;
   outcomeStats: string[];
   requirements: string;
   services: string[];
-  slug: string;
   solution: string;
   title: string;
 }

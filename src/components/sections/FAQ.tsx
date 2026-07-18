@@ -26,7 +26,7 @@ const ITEM_VIEWPORT = { once: true } as const;
 
 interface FAQAccordionRowProps {
   answer: ReactNode;
-  id: number | string;
+  id: string;
   index: number;
   isOpen: boolean;
   question: string;

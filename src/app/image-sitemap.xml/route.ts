@@ -29,7 +29,7 @@ export const GET = () => {
 
   const caseStudyEntries = CASE_STUDY_DETAILS.filter((s) => s.image).map((study) =>
     imageEntry(
-      `${siteUrl}/case-studies/${study.slug}`,
+      `${siteUrl}/case-studies/${study.id}`,
       study.image,
       study.title,
       study.outcome.split(".", 1)[0]

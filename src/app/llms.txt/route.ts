@@ -41,7 +41,7 @@ export const GET = () => {
     `## Case Studies`,
     ``,
     ...CASE_STUDY_DETAILS.map(
-      (s) => `- [${s.title}](${abs("/case-studies/" + s.slug)}): ${s.outcome.split(".", 1)[0]}.`
+      (s) => `- [${s.title}](${abs("/case-studies/" + s.id)}): ${s.outcome.split(".", 1)[0]}.`
     ),
     ``,
     `## Tradeshow Calendar`,

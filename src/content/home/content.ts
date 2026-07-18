@@ -164,7 +164,7 @@ interface ContactServiceOption {
 
 interface FAQItem {
   answer: ReactNode | string;
-  id: number | string;
+  id: string;
   question: string;
 }
 
@@ -177,7 +177,7 @@ interface StickyScrollReason {
 
 interface TestimonialItem {
   author: string;
-  id: number | string;
+  id: string;
   quote: string;
   rating: number;
   serviceTag?: string;

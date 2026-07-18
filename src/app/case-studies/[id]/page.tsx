@@ -8,17 +8,17 @@ import { buildBreadcrumbJsonLd, buildPageGraph, buildWebPageJsonLd, JsonLd, site
 
 type CaseStudyPageProps = {
   params: Promise<{
-    slug: string;
+    id: string;
   }>;
 };
 
-const findStudyBySlug = (slug: string) => CASE_STUDY_DETAILS.find((study) => study.slug === slug);
+const findStudyById = (id: string) => CASE_STUDY_DETAILS.find((study) => study.id === id);
 
-export const generateStaticParams = () => CASE_STUDY_DETAILS.map((study) => ({ slug: study.slug }));
+export const generateStaticParams = () => CASE_STUDY_DETAILS.map((study) => ({ id: study.id }));
 
 export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<Metadata> => {
-  const { slug } = await params;
-  const study = findStudyBySlug(slug);
+  const { id } = await params;
+  const study = findStudyById(id);
 
   if (!study) {
     return { title: "Case Study Not Found" };
@@ -28,7 +28,7 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
 
   return {
     alternates: {
-      canonical: `/case-studies/${study.slug}`,
+      canonical: `/case-studies/${study.id}`,
     },
     description,
     openGraph: {
@@ -49,12 +49,12 @@ export const generateMetadata = async ({ params }: CaseStudyPageProps): Promise<
 };
 
 const Page = async ({ params }: CaseStudyPageProps) => {
-  const { slug } = await params;
-  const study = findStudyBySlug(slug);
+  const { id } = await params;
+  const study = findStudyById(id);
 
   if (!study) notFound();
 
-  const studyUrl = `${siteUrl}/case-studies/${study.slug}`;
+  const studyUrl = `${siteUrl}/case-studies/${study.id}`;
   const description = study.outcome.split(".", 1)[0] + ".";
 
   return (

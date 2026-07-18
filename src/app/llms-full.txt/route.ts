@@ -77,7 +77,7 @@ export const GET = () => {
     `## Case Studies`,
     ``,
     ...CASE_STUDY_DETAILS.flatMap((study) => [
-      `### [${study.title}](${abs("/case-studies/" + study.slug)})`,
+      `### [${study.title}](${abs("/case-studies/" + study.id)})`,
       ``,
       `Client: ${study.client}`,
       `Event: ${study.event}`,

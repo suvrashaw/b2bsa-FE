@@ -4,42 +4,42 @@
   "initialIndex": 2,
   "testimonials": [
     {
-      "id": 1,
+      "id": "swiss-technology-company",
       "author": "A Swiss Technology Company",
       "quote": "You were a fantastic partner for Sibos 2025. Great execution, quality audience outreach, and excellent on-site support. Your flexibility, professionalism, and ability to adapt really stood out.",
       "rating": 5,
       "serviceTag": "Global Event Solutions"
     },
     {
-      "id": 2,
+      "id": "global-digital-leader-waf",
       "author": "A Global Digital Leader",
       "quote": "Working with B2B Sales Arrow at WAF 2025 was a great experience. The team was proactive, flexible, and made sure everything ran smoothly while helping us reach the right audience.",
       "rating": 5,
       "serviceTag": "Event Audience Generation"
     },
     {
-      "id": 3,
+      "id": "global-revenue-management-provider",
       "author": "A Global Revenue Management Provider",
       "quote": "The team did a great job driving targeted outreach and setting up valuable meetings at SIBOS. We were happy to see several conversations turn into real opportunities for us.",
       "rating": 5,
       "serviceTag": "Active Prospecting"
     },
     {
-      "id": 4,
+      "id": "global-digital-powerhouse",
       "author": "A Global Digital Powerhouse",
       "quote": "Thank you team for delivering a sustainable and seamlessly executed booth experience at ITC 2025. Your smart digital-first approach helped us connect with the right audience while reducing printed collateral.",
       "rating": 5,
       "serviceTag": "Trade Show Booth Design"
     },
     {
-      "id": 5,
+      "id": "it-and-digital-leader",
       "author": "IT and Digital Leader",
       "quote": "Team B2B SA played a key role in making our ADIPEC presence a success through strong execution and meaningful audience engagement. Your ability to connect us with the right industry leaders created valuable business opportunities for our team.",
       "rating": 5,
       "serviceTag": "Audience Engagement"
     },
     {
-      "id": 6,
+      "id": "global-digital-leader-adobe",
       "author": "Global Digital Leader",
       "quote": "Your crew brought incredible energy and dedication to our active prospecting efforts at Adobe Summit. Their proactive approach contributed in making a meaningful impact throughout the event.",
       "rating": 5,
